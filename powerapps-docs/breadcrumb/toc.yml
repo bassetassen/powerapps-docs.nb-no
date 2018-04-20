@@ -1,0 +1,11 @@
+- name: Docs
+  href: /
+  topicHref: /
+  items:
+    - name: PowerApps
+      tocHref: /powerapps/
+      topicHref: /powerapps/
+      items:
+        - name: Veiledet læring
+          tocHref: /powerapps/guided-learning/
+          topicHref: /powerapps/guided-learning/index
