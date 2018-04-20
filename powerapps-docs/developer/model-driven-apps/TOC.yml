@@ -1,0 +1,8 @@
+- name: Oversikt
+  href: overview.md
+- name: Bruke ressurser på nettet
+  href: web-resources.md
+- name: Klientskripting
+  href: client-scripting.md
+- name: Tilpasse kommandoer
+  href: customize-commands.md

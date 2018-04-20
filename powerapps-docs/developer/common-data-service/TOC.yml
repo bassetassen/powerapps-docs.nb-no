@@ -1,0 +1,19 @@
+- name: Oversikt
+  href: overview.md
+- name: Innføring i løsninger
+  href: introduction-solutions.md
+- name: Common Data Service for appdataenheter
+  href: entities.md
+  items:
+    - name: Enhetsmetadata
+      href: entity-metadata.md
+    - name: Attributtmetadata
+      href: entity-attribute-metadata.md
+    - name: Enhetsmetadatarelasjoner
+      href: entity-relationship-metadata.md
+    - name: Enhetsreferanse
+      href: reference/entities/toc.yml
+- name: Bruke forretningslogikk med kode
+  href: apply-business-logic-with-code.md
+- name: Bruke Common Data Service for nettjenester for apper
+  href: use-web-services.md

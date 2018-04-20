@@ -1,0 +1,6 @@
+- name: Komme i gang
+  href: 'get-started.yml#step-1'
+- name: Opprette en app fra SharePoint
+  href: 'create-app-sharepoint.yml#step-1'
+- name: Administrere apper
+  href: 'manage-apps.yml#step-1'

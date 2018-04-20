@@ -1,0 +1,40 @@
+- name: Administrere PowerApps
+  href: index.md
+- name: Hurtigstarter
+  items:
+    - name: Opprette et miljø
+      href: create-environment.md
+    - name: Opprette en DLP-policy
+      href: create-dlp-policy.md
+    - name: Vise aktive brukere i tenanten
+      href: admin-view-user-licenses.md
+    - name: Vise apper i miljøene
+      href: admin-view-apps.md
+- name: Konsepter
+  items:
+    - name: Lisensieringsoversikt
+      href: pricing-billing-skus.md
+    - name: Oversikt over miljøer
+      href: environments-overview.md
+    - name: Innføring i datagrupper
+      href: introduction-to-data-groups.md
+    - name: Oversikt over områder
+      href: regions-overview.md
+- name: Instruksjoner
+  items:
+    - name: Kjøp PowerApps
+      href: signup-for-powerapps-admin.md
+    - name: Administrere lisenser i organisasjonen
+      href: signup-question-and-answer.md
+    - name: Administrere DLP-policyer
+      href: prevent-data-loss.md
+    - name: Opprett en database
+      href: create-database.md
+    - name: Administrere miljøer
+      href: environments-administration.md
+    - name: Konfigurere miljøsikkerhet
+      href: database-security.md
+    - name: Administrere apper i organisasjonen
+      href: admin-manage-apps.md
+    - name: Flytte en app mellom tenanter eller miljøer
+      href: environment-and-tenant-migration.md

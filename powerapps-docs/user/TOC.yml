@@ -1,0 +1,12 @@
+- name: Finne og kjøre apper
+  href: index.md
+- name: I en nettleser
+  href: run-app-browser.md
+- name: På en telefon (lerret)
+  href: run-app-client.md
+- name: På en telefon (modelldreven)
+  href: run-app-client-model-driven.md
+- name: I Microsoft Teams
+  href: open-app-embedded-in-teams.md
+- name: Fra AppSource
+  href: app-source.md
