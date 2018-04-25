@@ -6,6 +6,12 @@
       href: signup-for-powerapps.md
     - name: Registrer deg for PowerApps Community Plan
       href: dev-community-plan.md
+    - name: Hva er nytt
+      href: ./canvas-apps/release-notes.md
+    - name: Vanlige problemer og løsninger
+      href: ./canvas-apps/common-issues-and-resolutions.md
+    - name: Kommende og nylige nettseminarer
+      href: ./canvas-apps/webinars-listing.md
 - name: Lerretsapper
   href: ./canvas-apps/getting-started.md
   items:
@@ -123,12 +129,14 @@
               href: ./canvas-apps/add-scrolling-screen.md
             - name: Opprette en global app
               href: ./canvas-apps/global-apps.md
-            - name: Opprette apper som er enkle å forstå
+            - name: Opprette en app som er enkel å forstå
               href: ./canvas-apps/accessible-apps.md
         - name: Administrere appen
           items:
             - name: Innføring i powerapps.com
               href: ./canvas-apps/intro-maker-portal.md
+            - name: Arbeid med miljøer
+              href: ./canvas-apps/working-with-environments.md
             - name: Redigere en app
               href: ./canvas-apps/edit-app.md
             - name: Endre skjermstørrelse og retning
@@ -195,21 +203,13 @@
           href: ./canvas-apps/connections-list.md
         - name: 'Systemkrav, grenser og konfigurasjon'
           href: ./canvas-apps/limits-and-config.md
-    - name: Ressurser
-      items:
-        - name: Arbeid med miljøer
-          href: ./canvas-apps/working-with-environments.md
-        - name: Hva er nytt
-          href: ./canvas-apps/release-notes.md
-        - name: Vanlige problemer og løsninger
-          href: ./canvas-apps/common-issues-and-resolutions.md
-        - name: Kommende og nylige nettseminarer
-          href: ./canvas-apps/webinars-listing.md
 - name: Modelldrevne apper
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
     - name: Oversikt over eksempelapper
       href: ./model-driven-apps/overview-model-driven-samples.md
+    - name: Lage din første modelldrevne app
+      href: .//model-driven-apps/build-first-model-driven-app.md
     - name: Dele en modelldreven app
       href: ./model-driven-apps/share-model-driven-app.md
     - name: For utviklere

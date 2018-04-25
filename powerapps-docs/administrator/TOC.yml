@@ -38,3 +38,18 @@
       href: admin-manage-apps.md
     - name: Flytte en app mellom tenanter eller miljøer
       href: environment-and-tenant-migration.md
+    - name: Svar på DSR-forespørsler om systemgenererte logger
+      href: powerapps-gdpr-dsr-guide-systemlogs.md
+    - name: Svar på DSR-forespørsler om kundedata for PowerApps
+      href: powerapps-gdpr-dsr-guide.md
+      items:
+        - name: Svar på DSR-forespørsler om eksport
+          href: powerapps-gdpr-export-dsr.md
+        - name: Svar på DSR-forespørsler om sletting
+          href: powerapps-gdpr-delete-dsr.md
+    - name: Svar på DSR-forespørsler om kundedata for CDS for Apps
+      href: common-data-service-gdpr-dsr-guide.md
+- name: Referanse
+  items:
+    - name: PowerShell-støtte for PowerApps (forhåndsversjon)
+      href: powerapps-powershell.md
