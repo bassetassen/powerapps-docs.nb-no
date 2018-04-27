@@ -35,14 +35,18 @@
       items:
         - name: Tilpasse en generert app
           items:
-            - name: Tilpasse en skjerm til å bla gjennom
+            - name: 1 – Gallerier
               href: ./canvas-apps/customize-layout-sharepoint.md
-            - name: Tilpasse et skjema
+            - name: 2 – Skjemaer
               href: ./canvas-apps/customize-forms-sharepoint.md
-            - name: Tilpasse et kort
+            - name: 3 – Kort
               href: ./canvas-apps/customize-card.md
         - name: Opprette en app fra grunnen av
-          href: ./canvas-apps/data-platform-create-app-scratch.md
+          items:
+            - name: Common Data Service for apper
+              href: ./canvas-apps/data-platform-create-app-scratch.md
+            - name: Excel
+              href: ./canvas-apps/get-started-create-from-blank.md
         - name: Dele en app
           href: ./canvas-apps/share-app.md
         - name: Bygge inn en app i Power BI
@@ -95,8 +99,6 @@
       items:
         - name: Tilpasse et SharePoint-listeskjema
           href: ./canvas-apps/customize-list-form.md
-        - name: Opprette en Excel-app fra grunnen av
-          href: ./canvas-apps/get-started-create-from-blank.md
         - name: Tilpasse en app
           items:
             - name: Legge til og konfigurere en kontroll
@@ -131,6 +133,9 @@
               href: ./canvas-apps/global-apps.md
             - name: Opprette en app som er enkel å forstå
               href: ./canvas-apps/accessible-apps.md
+              items:
+                - name: Farge
+                  href: ./canvas-apps/accessible-apps-color.md
         - name: Administrere appen
           items:
             - name: Innføring i powerapps.com
