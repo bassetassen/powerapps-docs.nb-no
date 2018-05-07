@@ -228,8 +228,6 @@
           href: ./common-data-service/data-platform-create-entity.md
         - name: Opprette en egendefinert enhet fra data
           href: ./common-data-service/data-platform-cds-newentity-pq.md
-        - name: Administrere felt
-          href: ./common-data-service/data-platform-manage-fields.md
         - name: Opprette et alternativsett
           href: ./common-data-service/custom-picklists.md
         - name: Opprette en relasjon
@@ -244,6 +242,18 @@
           href: ./common-data-service/create-custom-entity.md
     - name: Eksempler og ressurser
       href: ./common-data-service/samples-resources.md
+    - name: Konsepter
+      items:
+        - name: Lisenskrav for enheter
+          href: ./common-data-service/data-platform-entity-licenses.md
+    - name: Instruksjoner
+      items:
+        - name: Behandle egendefinerte felt i en enhet
+          href: ./common-data-service/data-platform-manage-fields.md
+    - name: Referanse
+      items:
+        - name: Begrensede enheter som krever Dynamics 365-lisenser
+          href: ./common-data-service/data-platform-restricted-entities.md
     - name: For utviklere
       href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
