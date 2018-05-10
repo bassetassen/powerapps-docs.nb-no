@@ -1,31 +1,25 @@
 ---
 title: Hurtigveiledning til bygging av din første modelldrevne app fra grunnen av med PowerApps | Microsoft Docs
 description: Lær hvordan du bygger en enkel modelldrevet app
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: Mattp123
 manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
-ms.workload: na
-ms.tgt_pltfrm: na
 ms.devlang: na
-ms.topic: article
+ms.topic: conceptual
+ms.component: model
 ms.date: 04/18/2018
 ms.author: matp
-ms.openlocfilehash: 23521a1512a971e5f298c944fc8219cef5f7fadd
-ms.sourcegitcommit: d7ed5144f96d1ecc17084c30ed0e2ba3c6b03c26
+ms.openlocfilehash: 3a9696a025608de3c142277da4059e7e8c5ec5ad
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="quickstart-build-your-first-model-driven-app-from-scratch"></a>Hurtigstart: Bygg din første modelldrevne app fra grunnen av
 Utforming av modelldrevne apper er en komponentfokusert tilnærming til apputvikling. I denne hurtigveiledningen oppretter du en modelldrevet app på en forenklet måte ved å bruke en av standardenhetene som er tilgjengelige i [!INCLUDE [powerapps](../../includes/powerapps.md)]-miljøet ditt. 
-
-> [!IMPORTANT]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## <a name="sign-in-to-powerapps"></a>Logg deg på PowerApps
 Logg deg på [PowerApps](https://web.powerapps.microsoft.com/). Hvis du ikke allerede har en [!INCLUDE [powerapps](../../includes/powerapps.md)]-konto, velger du koblingen **Kom i gang gratis**. 
