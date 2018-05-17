@@ -1,7 +1,6 @@
 ---
 title: Svar på DSR-forespørsler om sletting av kundedata | Microsoft Docs
-description: Svar på DSR-forespørsler om sletting av kundedata
-services: powerapps
+description: Gjennomgang av hvordan du svarer på DSR-forespørsler om å slette PowerApps-kundedata
 suite: powerapps
 documentationcenter: na
 author: jamesol-msft
@@ -13,15 +12,15 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/17/2018
+ms.date: 04/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 67e1ad0056f80b892343506ec9a89845e0bca05e
-ms.sourcegitcommit: e3a2819c14ad67cc4ca6640b9064550d0f553d8f
+ms.openlocfilehash: e4f555416aadb90d882717072f614ccb958fa733
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="responding-to-delete-data-subject-rights-dsr-requests-for-customer-data-in-powerapps"></a>Svar på DSR-forespørsler om sletting av kundedata i PowerApps
+# <a name="responding-to-data-subject-rights-dsr-requests-to-delete-powerapps-customer-data"></a>Svar på DSR-forespørsler om kundedata for PowerApps
 
 «Retten til sletting» ved å fjerne personopplysninger fra en organisasjons kundedata er en viktig beskyttelse i EUs personvernforordning (GDPR). Fjerning av personopplysninger omfatter fjerning av systemgenererte logger, men ikke informasjon for revisjonslogger.
 
@@ -29,7 +28,7 @@ PowerApps gir brukere mulighet til å utvikle bransjespesifikke apper som er en 
 
 Her er en oversikt over hvilke personopplysninger som automatisk blir slettet, og hvilke som krever at du går gjennom dem og sletter dem manuelt:
 
-Krever manuell gjennomgang og sletting |   Slettes automatisk når brukeren slettes fra Azure Active Directory.
+Krever manuell gjennomgang og sletting |   Slettes automatisk når brukeren slettes fra Azure Active Directory
 --- | ---
 Miljø\** | Gateway
 Miljøtillatelser\*** | Gatewaytillatelser
@@ -42,26 +41,28 @@ Tillatelser for egendefinerte koblinger |
 
 \** Hver av disse ressursene inneholder oppføringer av typen «Opprettet av» og «Endret av» som inneholder personopplysninger. Av sikkerhetsgrunner beholdes disse oppføringene til ressursen er slettet.
 
-\*** For miljøer som inkluderer en Common Data Service (CDS) for Apps-database, blir miljøtillatelser (det vil si hvilke brukere som er tilordnet miljøoppretter- og administratorroller), lagret som oppføringer i den databasen. Se [Executing DSRs against Common Data Service Customer Data](https://go.microsoft.com/fwlink/?linkid=872251) (Håndtering av DSR-forespørsler om kundedata for Common Data Service) for å få en veiledning i hvordan du svarer på DSR-forespørsler for brukere som bruker CDS for Apps.
+\*** For miljøer som inkluderer en Common Data Service (CDS) for Apps-database, blir miljøtillatelser (det vil si hvilke brukere som er tilordnet miljøoppretter- og administratorroller), lagret som oppføringer i den databasen. For veiledning om hvordan du svarer på DSR-er for brukere av CDS for Apps, se [Svare på DSR-forespørsler for kundedata for Common Data Service for Apps](common-data-service-gdpr-dsr-guide.md).
 
 For data og ressurser som krever manuell gjennomgang, kan du tilordne (om nødvendig) eller slette personopplysninger for en bestemt bruker i PowerApps på følgende steder:
 
-- Nettstedstilgang: [PowerApps-området](https://web.powerapps.com), [PowerApps-administrasjonssenteret](https://admin.powerapps.com/) og [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
-- PowerShell-tilgang: PowerApps-cmdleter (for [apputviklere](https://go.microsoft.com/fwlink/?linkid=871448) og [administratorer](https://go.microsoft.com/fwlink/?linkid=871804)) og cmdleter for [lokale gatewayer](https://go.microsoft.com/fwlink/?linkid=872238)
+* Nettstedstilgang: [PowerApps-området](https://web.powerapps.com), [PowerApps-administrasjonssenteret](https://admin.powerapps.com/) og [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+
+* PowerShell-tilgang: PowerApps-cmdleter (for [apputviklere](https://go.microsoft.com/fwlink/?linkid=871448) og [administratorer](https://go.microsoft.com/fwlink/?linkid=871804)) og cmdleter for [lokale gatewayer](https://go.microsoft.com/fwlink/?linkid=872238).
+
 Her er en oversikt over hvor du kan slette de ulike ressurstypene som kan inneholde personopplysninger:
 
 Ressurser som inneholder personopplysninger | Nettstedstilgang | PowerShell-tilgang
 --- | --- | ---
 Miljø | Administrasjonssenteret for PowerApps |  PowerApps-cmdleter
 Miljøtillatelser**   | Administrasjonssenteret for PowerApps | PowerApps-cmdleter
-Lerretsapp  | Administrasjonssenteret for PowerApps <br> PowerApps-området| PowerApps-cmdleter
+Lerretsapp  | Administrasjonssenteret for PowerApps <br> PowerApps| PowerApps-cmdleter
 Lerretsapptillatelser  | Administrasjonssenteret for PowerApps | PowerApps-cmdleter
 Tilkobling | | Apputvikler: tilgjengelig <br> Administrator: under utvikling
 Tilkoblingstillatelser | | Apputvikler: tilgjengelig <br> Administrator: under utvikling
 Egendefinert kobling | | Apputvikler: tilgjengelig <br> Administrator: under utvikling
 Tillatelser for egendefinerte koblinger | | Apputvikler: tilgjengelig <br> Administrator: under utvikling
 
-\** I CDS for Apps blir miljøtillatelser og tillatelser for modelldrevne apper lagret som oppføringer i instansen for den databasen hvis du har opprettet en database i miljøet. Se [Executing DSRs against Common Data Service Customer Data](https://go.microsoft.com/fwlink/?linkid=872251) (Håndtering av DSR-forespørsler om kundedata for Common Data Service) for å få en veiledning i hvordan du svarer på DSR-forespørsler for brukere som bruker CDS for Apps.
+\** I CDS for Apps blir miljøtillatelser og tillatelser for modelldrevne apper lagret som oppføringer i instansen for den databasen hvis du har opprettet en database i miljøet. For veiledning om hvordan du svarer på DSR-er for brukere av CDS for Apps, se [Svare på DSR-forespørsler for kundedata for Common Data Service for Apps](common-data-service-gdpr-dsr-guide.md).
 
 ## <a name="prerequisites"></a>Forutsetninger
 
@@ -69,17 +70,18 @@ Tillatelser for egendefinerte koblinger | | Apputvikler: tilgjengelig <br> Admin
 Alle brukere som har en gyldig PowerApps-lisens, kan utføre brukeroperasjonene som beskrevet i dette dokumentet, ved hjelp av [PowerApps-området](https://web.powerapps.com) eller [PowerShell-cmdleter for apputviklere](https://go.microsoft.com/fwlink/?linkid=871448).
 
 ### <a name="for-administrators"></a>For administratorer
-For at du skal kunne utføre de administrative operasjonene som er beskrevet i dette dokumentet, ved å bruke [administrasjonssenteret for PowerApps](https://admin.powerapps.com/), administrasjonssenteret for Microsoft Flow eller [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804), må du ha en konto som har følgende tillatelser:
+For at du skal kunne utføre de administrative operasjonene som er beskrevet i dette dokumentet, ved å bruke [administrasjonssenteret for PowerApps](https://admin.powerapps.com/), administrasjonssenteret for Microsoft Flow eller [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804), må du ha følgende:
 
-- En betalt lisens eller prøvelisens på PowerApps Plan 2. Du kan [registrer deg for en prøvelisens](http://web.powerapps.com/trial) og fornye den etter 30 dager.
-- I tillegg kreves det rettigheter for [global administrator for Office 365](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) eller [global administrator for Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) hvis du har behov for å søke via ressursene til en annen bruker. Ellers har du bare tilgang til de miljøene og miljøressursene der du har miljøadministratorrettigheter.
+* En betalt PowerApps Plan 2-lisens eller en prøvelisens på PowerApps Plan 2. Du kan registrere deg for en 30-dagers prøvelisens på [http://web.powerapps.com/trial](http://web.powerapps.com/trial). Prøvelisenser kan fornyes hvis de har utløpt.
+
+* I tillegg kreves det tillatelser for [global administrator for Office 365](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) eller [global administrator for Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) hvis du har behov for å søke via ressursene til en annen bruker. (Merk at miljøadministrator bare har tilgang til miljøer og miljøressurser de har tillatelser til.)
 
 ## <a name="step-1-delete-or-reassign-all-environments-created-by-the-user"></a>Trinn 1: Slett eller tilordne på nytt alle miljøer som er opprettet av brukeren
 Som administrator må du under behandlingen av en DSR-forespørsel om sletting ta to beslutninger for hvert miljø som brukeren har opprettet:
 
-1.  Hvis du finner ut at miljøet ikke brukes av andre i organisasjonen, kan du velge å slette miljøet.
+1. Hvis du finner ut at miljøet ikke brukes av andre i organisasjonen, kan du velge å slette miljøet.
 
-2.  Hvis du finner ut at miljøet er fremdeles nødvendig, kan du velge ikke å slette miljøet og legge til deg selv (eller en annen bruker i organisasjonen) som miljøadministrator.
+2. Hvis du finner ut at miljøet er fremdeles nødvendig, kan du velge ikke å slette miljøet og legge til deg selv (eller en annen bruker i organisasjonen) som miljøadministrator.
 
 > [!IMPORTANT]
 > Hvis du sletter et miljø, slettes alle ressurser i miljøet permanent, inkludert alle apper, flyter, tilkoblinger og så videre. Du bør derfor se gjennom innholdet i et miljø før du sletter det.
@@ -107,7 +109,7 @@ En administrator kan gå gjennom og slette miljøer som er opprettet av en beste
     ![Miljøsletting](./media/powerapps-gdpr-delete-dsr/delete-environment.png)
 
 ### <a name="give-access-to-a-users-environments-using-powershell"></a>Gi tilgang til en brukers miljøer ved hjelp av PowerShell
-En administrator kan gi seg selv (eller en annen bruker i organisasjonen) tilgang til alle miljøer som er opprettet av en bruker, via funksjonen **Set-AdminEnvironmentRoleAssignment** i [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
+En administrator kan gi seg selv (eller en annen bruker i organisasjonen) tilgang til alle miljøer som er opprettet av en bruker, ved å bruke funksjonen **Set-AdminEnvironmentRoleAssignment** i [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
 
 ```
 Add-PowerAppsAccount
@@ -125,7 +127,7 @@ Get-AdminEnvironment -CreatedBy $deleteDsrUserId | Get-AdminEnvironmentRoleAssig
 > Denne funksjonen fungerer bare i miljøer som ikke har en instans av en database i CDS for Apps.
 
 ### <a name="delete-environments-created-by-a-user-using-powershell"></a>Slett miljøer som er opprettet av en bruker, ved hjelp av PowerShell
- En administrator kan slette alle miljøer som er opprettet av en bruker, via funksjonen **Remove-AdminEnvironment** i [PowerShell-cmdleter for PowerApps administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
+ En administrator kan slette alle miljøer som er opprettet av en bruker, ved å bruke funksjonen **Remove-AdminEnvironment** i [PowerShell-cmdleter for PowerApps administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
 
 ```
 Add-PowerAppsAccount
@@ -145,24 +147,24 @@ Du finner mer informasjon i [Administer environments](environments-administratio
 #### <a name="powerapps-admin-center"></a>Administrasjonssenteret for PowerApps
 En administrator kan slette en brukers miljøtillatelser fra [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) ved å følge disse trinnene:
 
-1.  Fra [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) velger du hvert miljø i organisasjonen.
+1. Fra [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) velger du hvert miljø i organisasjonen.
 
     Du må være [global administrator for Office 365](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) eller [global administrator for Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) for å kunne gjennomgå alle miljøer som har blitt opprettet i organisasjonen.
 
     ![Målside for administrasjonssenteret](./media/powerapps-gdpr-delete-dsr/admin-center-landing.png)
 
-2.  Velg **Security** (Sikkerhet).
+2. Velg **Security** (Sikkerhet).
 
     Hvis miljøet ditt ikke har en CDS for Apps-database, ser du en del med **Environment Roles** (Miljøroller).
 
-4.  I **Environment Roles** (Miljøroller) velger du både **Environment Admin** (Miljøadministrator) og **Environment Maker** (Miljøoppretter), og søker deretter etter brukerens navn ved å bruke søkefeltet.
+3. I **Environment Roles** (Miljøroller) velger du både **Environment Admin** (Miljøadministrator) og **Environment Maker** (Miljøoppretter), og søker deretter etter brukerens navn ved å bruke søkefeltet.
 
     ![Miljørollesiden](./media/powerapps-gdpr-delete-dsr/admin-environment-role-share-page.png)
 
 5.  Hvis brukeren har tilgang til en av rollene, fjerner du tillatelsen i skjermbildet **Users** (Brukere) og velger **Save** (Lagre).
 
 #### <a name="powershell"></a>PowerShell
-Administratorer kan slette alle miljørolletildelinger for en bruker i alle miljøer uten en CDS for Apps-database ved hjelp av funksjonen **Remove-AdminEnvironmentRoleAssignment** i [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
+Administratorer kan slette alle miljørolletildelinger for en bruker i alle miljøer uten en CDS for Apps-database ved å bruke funksjonen **Remove-AdminEnvironmentRoleAssignment** i [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
 
 ```
 Add-PowerAppsAccount
@@ -181,7 +183,7 @@ I CDS for Apps blir disse rolletildelingene lagret som oppføringer i instansen 
 ## <a name="step-3-delete-or-reassign-all-canvas-apps-owned-by-a-user"></a>Trinn 3: Slett eller tilordne på nytt alle lerretsapper som eies av en bruker
 
 ### <a name="reassign-a-users-canvas-apps-using-the-powerapps-admin-powershell-cmdlets"></a>Tilordne en brukers lerretsapper på nytt ved hjelp av PowerShell-cmdleter for PowerApps-administratorer
-Hvis en administrator bestemmer seg for ikke å slette en brukers lerretsapper, kan appene som eies av en bruker, tilordnes på nytt via funksjonen **Set-AdminAppOwner** i [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
+Hvis en administrator bestemmer seg for ikke å slette en brukers lerretsapper, kan appene som eies av en bruker, tilordnes på nytt ved å bruke funksjonen **Set-AdminAppOwner** i [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
 
 ```
 Add-PowerAppsAccount
@@ -198,23 +200,23 @@ En bruker kan slette en app fra [PowerApps-området](https://web.powerapps.com).
 ### <a name="delete-a-users-canvas-app-using-the-powerapps-admin-center"></a>Slett en brukers lerretsapp ved hjelp av administrasjonssenteret for PowerApps
 Administratorer kan slette apper som er opprettet av en bruker, fra [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) ved å følge disse trinnene:
 
-1.  Fra [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) velger du hvert miljø i organisasjonen.
+1. Fra [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) velger du hvert miljø i organisasjonen.
 
     Du må være [global administrator for Office 365](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) eller [global administrator for Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) for å kunne gjennomgå alle miljøer som har blitt opprettet i organisasjonen.
 
     ![Målside for administrasjonssenteret](./media/powerapps-gdpr-delete-dsr/admin-center-landing.png)
 
-2.  Velg **Resources** (Ressurser)  >  **Apps** (Apper).
+2. Velg **Resources** (Ressurser)  >  **Apps** (Apper).
 
-3.  Bruk søkefeltet til å søke etter navnet til brukeren. Dette viser alle apper som brukeren har opprettet i dette miljøet:
+3. Bruk søkefeltet til å søke etter navnet til brukeren. Dette viser alle apper som brukeren har opprettet i dette miljøet:
 
     ![Søk etter apper](./media/powerapps-gdpr-delete-dsr/search-apps.png)
 
-4.  Velg **Details** (Detaljer) for hver av appene som eies av brukeren:
+4. Velg **Details** (Detaljer) for hver av appene som eies av brukeren:
 
     ![Velg appdetaljer](./media/powerapps-gdpr-delete-dsr/select-app-details.png)
 
-5.  Velg **Delete** (Slett) for å slette hver app:
+5. Velg **Delete** (Slett) for å slette hver app:
 
 ### <a name="delete-a-users-canvas-app-using-the-powerapps-admin-powershell-cmdlets"></a>Slett en brukers lerretsapp ved hjelp av PowerShell-cmdleter for PowerApps-administratorer
 Hvis en administrator bestemmer seg for å slette alle lerretsapper som eies av en bruker, kan dette gjøres ved hjelp av funksjonen **Remove-AdminApp** i [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
@@ -237,21 +239,21 @@ Når en app blir delt med en bruker, lagrer PowerApps lagrer en oppføring kalt 
 > Rolletildelingen for en appeier kan bare slettes ved å tilordne en ny eier for appen.
 
 ### <a name="powerapps-admin-center"></a>Administrasjonssenteret for PowerApps
-Administratorer kan slette approlletildelinger for en bruker fra [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) ved å følge disse trinnene:
+Administratorer kan slette approlletilordninger for en bruker, fra [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) ved å følge disse trinnene:
 
-1.  Fra [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) velger du hvert miljø i organisasjonen.
+1. Fra [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) velger du hvert miljø i organisasjonen.
 
     Du må være [global administrator for Office 365](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) eller [global administrator for Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) for å kunne gjennomgå alle miljøer som har blitt opprettet i organisasjonen.
 
     ![Målside for administrasjonssenteret](./media/powerapps-gdpr-delete-dsr/admin-center-landing.png)
 
-2.  Velg **Resources** (Ressurser)  >  **Apps** (Apper) for hvert miljø.
+2. Velg **Resources** (Ressurser)  >  **Apps** (Apper) for hvert miljø.
 
-3.  Velg **Share** (Del) for hver av appene i miljøet:
+3. Velg **Share** (Del) for hver av appene i miljøet:
 
     ![Velg appdeling](./media/powerapps-gdpr-delete-dsr/select-admin-share-nofilter.png)
 
-6.  Hvis brukeren har tilgang til appen, fjerner du tillatelsen i skjermbildet **Share** (Del) og velger **Save** (Lagre).
+4. Hvis brukeren har tilgang til appen, fjerner du tillatelsen i skjermbildet **Share** (Del) og velger **Save** (Lagre).
 
     ![Appdelingssiden for administratorer](./media/powerapps-gdpr-delete-dsr/admin-share-page.png)
 
@@ -334,8 +336,7 @@ Get-ConnectorRoleAssignment | Remove-ConnectorRoleAssignment
 Funksjonen som tillater en administrator å finne og slette en brukers koblingsrolletildelinger med [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804), er under utvikling.
 
 ## <a name="step-9-delete-the-users-personal-data-in-microsoft-flow"></a>Trinn 9: Slett brukerens personopplysninger i Microsoft Flow
-PowerApps-lisenser inkluderer alltid Microsoft Flow-funksjoner. I tillegg til å være inkludert i PowerApps-lisensene er Microsoft Flow også tilgjengelig som en frittstående tjeneste.
-Du finner informasjon om hvordan du svarer på DSR-forespørsler for brukere som bruker Microsoft Flow-tjenesten, i [Executing DSRs against Microsoft Flow Customer Data](https://go.microsoft.com/fwlink/?linkid=872250) (Håndtering av DSR-forespørsler om kundedata for Microsoft Flow).
+PowerApps-lisenser inkluderer alltid Microsoft Flow-funksjoner. I tillegg til å være inkludert i PowerApps-lisensene er Microsoft Flow også tilgjengelig som en frittstående tjeneste. Du finner informasjon om hvordan du svarer på svarer på DSR-er for brukere som bruker Microsoft Flow-tjenesten, se [Svar på GDPR DSR-forespørsler for Microsoft Flow](https://go.microsoft.com/fwlink/?linkid=872250).
 
 > [!IMPORTANT]
 > Det anbefales at administratorer utfører dette trinnet for PowerApps-brukere.
@@ -343,7 +344,7 @@ Du finner informasjon om hvordan du svarer på DSR-forespørsler for brukere som
 ## <a name="step-10-delete-the-users-personal-data-in-instances-of-cds-for-apps"></a>Trinn 10: Slett brukerens personopplysninger i CDS for Apps-instanser
 Enkelte PowerApps-lisenser, deriblant PowerApps Community Plan, gir brukerne i organisasjonen muligheten til å opprette instanser av CDS for Apps samt til å opprette og utvikle apper på CDS for Apps. PowerApps Community Plan er en gratislisens som gir brukere muligheten til å prøve CDS for Apps i et enkeltmiljø. Se siden med PowerApps-priser for informasjon om hvilke funksjoner som er inkludert i de ulike PowerApps-lisensene.
 
-Se [Executing DSRs against customer data in CDS for Apps](https://go.microsoft.com/fwlink/?linkid=872251) (Håndtering av DSR-forespørsler om kundedata i CDS for Apps) for å få en veiledning i hvordan du svarer på DSR-forespørsler for brukere som bruker CDS for Apps.
+For veiledning om hvordan du svarer på DSR-er for brukere som bruker CDS for Apps, se [Svar på DSR-forespørsler for kundedata for Common Data Service for Apps](common-data-service-gdpr-dsr-guide.md).
 
 > [!IMPORTANT]
 > Det anbefales at administratorer utfører dette trinnet for PowerApps-brukere.

@@ -226,16 +226,6 @@
       items:
         - name: Opprette en enhet
           href: ./common-data-service/data-platform-create-entity.md
-        - name: Opprette en egendefinert enhet fra data
-          href: ./common-data-service/data-platform-cds-newentity-pq.md
-        - name: Opprette et alternativsett
-          href: ./common-data-service/custom-picklists.md
-        - name: Opprette en relasjon
-          href: ./common-data-service/data-platform-entity-lookup.md
-        - name: Opprette en forretningsregel
-          href: ./common-data-service/data-platform-create-business-rule.md
-        - name: Slette en egendefinert enhet
-          href: ./common-data-service/data-platform-delete-entity.md
     - name: Opplæringer
       items:
         - name: Opprette en egendefinert enhet som inneholder komponenter
@@ -250,6 +240,16 @@
       items:
         - name: Behandle egendefinerte felt i en enhet
           href: ./common-data-service/data-platform-manage-fields.md
+        - name: Opprette en egendefinert enhet fra data
+          href: ./common-data-service/data-platform-cds-newentity-pq.md
+        - name: Opprette et alternativsett
+          href: ./common-data-service/custom-picklists.md
+        - name: Opprette en relasjon mellom enheter
+          href: ./common-data-service/data-platform-entity-lookup.md
+        - name: Opprette en forretningsregel
+          href: ./common-data-service/data-platform-create-business-rule.md
+        - name: Slette en egendefinert enhet
+          href: ./common-data-service/data-platform-delete-entity.md
     - name: Referanse
       items:
         - name: Begrensede enheter som krever Dynamics 365-lisenser

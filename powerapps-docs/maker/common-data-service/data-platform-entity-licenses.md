@@ -1,22 +1,18 @@
 ---
 title: Lisenskrav for enheter | Microsoft Docs
 description: En forklaring av lisenskrav for enheter i Common Data Service (CDS) for apper.
-documentationcenter: na
 author: clwesene
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: conceptual
 ms.component: cds
+ms.topic: conceptual
 ms.date: 05/01/2018
 ms.author: clwesene
-ms.openlocfilehash: 7fc98e359b5daf1a170b63990005121fc2520d53
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.openlocfilehash: 716e1c2b7e670d8a54e1106cd557bb509323ba8d
+ms.sourcegitcommit: b3b6118790d6b7b4285dbcb5736e55f6e450125c
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="license-requirements-for-entities"></a>Lisenskrav for enheter
 Applagere kan bruke de fleste enheter som er tilgjengelige i Common Data Service (CDS) for apper (inkludert egendefinerte enheter og enheter som er en del av Common Data Model) for å opprette apper og flyt for brukere som bare en PowerApps Plan 1- eller Microsoft Flow Plan 1-lisens. I noen tilfeller kan enheter inneholde kompleks forretningslogikk eller er knyttet til Dynamics 365-produkter som krever at appbrukere har en bestemt lisens. Hvis du vil ha mer informasjon om tilgjengelige abonnementer, se [PowerApps-prissiden](https://powerapps.microsoft.com/pricing).

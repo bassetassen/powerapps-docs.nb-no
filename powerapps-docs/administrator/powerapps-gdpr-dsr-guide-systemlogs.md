@@ -1,6 +1,6 @@
 ---
-title: Svar på DSR-forespørsler om systemgenererte logger i PowerApps, Microsoft Flow og Common Data Service | Microsoft Docs
-description: Svar på DSR-forespørsler om systemgenererte logger i PowerApps, Microsoft Flow og Common Data Service
+title: Svar på DSR-forespørsler om systemgenererte logger i PowerApps, Microsoft Flow og Common Data Service for Apps | Microsoft Docs
+description: Gjennomgang av hvordan du svarer på DSR-forespørsler om systemgenererte logger i PowerApps, Microsoft Flow og Common Data Service for Apps
 services: powerapps
 suite: powerapps
 documentationcenter: na
@@ -14,13 +14,13 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/18/2018
+ms.date: 04/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 1b85ac81969407fe4e84c41fd93debeccddb0f05
-ms.sourcegitcommit: e3a2819c14ad67cc4ca6640b9064550d0f553d8f
+ms.openlocfilehash: c3086ce05ba748b5387ec4ae5a1e794658b5677a
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="responding-to-dsr-requests-for-system-generated-logs-in-powerapps-microsoft-flow-and-common-data-service-for-apps"></a>Svar på DSR-forespørsler om systemgenererte logger i PowerApps, Microsoft Flow og Common Data Service for Apps
 Microsoft gir deg muligheten til å få tilgang til, eksportere og slette systemgenererte logger som kan anses som personlige under den brede definisjonen av *personopplysninger* i EUs personvernforordning (GDPR). Her er noen eksempler på systemgenererte logger som kan anses som personlige under GDPR:
@@ -31,7 +31,9 @@ Microsoft gir deg muligheten til å få tilgang til, eksportere og slette system
 Vær oppmerksom på at det ikke er støtte for muligheten til å begrense eller rette opp data i systemgenererte logger. Data i systemgenererte logger utgjør faktiske handlinger utført i Microsoft-skyen, og diagnosedata, inkludert endringer i slike data, går ut over den historiske oversikten over handlinger og gir økt sikkerhetsrisiko og fare for svindel.
 
 ## <a name="accessing-and-exporting-system-generated-logs"></a>Tilgang til og eksport av systemgenererte logger
-Administratorer har tilgang til systemgenererte logger som er knyttet til en brukers bruk av tjenester og programmer for PowerApps, Microsoft Flow og CDS for Apps. Slik får du tilgang til og eksporterer systemgenererte logger:
+Administratorer har tilgang til systemgenererte logger som er knyttet til en brukers bruk av tjenester og programmer for PowerApps, Microsoft Flow og Common Data Service (CDS) for Apps.
+
+Gjør følgende for å få tilgang til og eksporterer systemgenererte logger:
 
 1. Gå til [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/) og logg deg på med legitimasjonen til en global administrator for Office 365.
 
@@ -55,7 +57,7 @@ Tabellen nedenfor gir en oppsummering av tilgang til og eksport av systemgenerer
 | Hvordan ser data i systemgenererte logger ut? |  Her er et eksempel på en oppføring i en systemgenerert logg i JSON-format: <br> [{ <br>"DateTime": "2017-04- 28T12:09:29-07:00",  <br> "AppName": "SharePoint", <br> "Action": "OpenFile", "IP": "154.192.13.131", <br> "DevicePlatform": "Windows 1.0.1607" <br>}]
 
 > [!NOTE]
->  Noen funksjoner tillater ikke eksport eller sletting av systemgenererte logger med personopplysninger, slik at integriteten til denne informasjonen kan beholdes av sikkerhets- og revisjonshensyn.
+>  Av sikkerhetsmessige og revisjonsformål, er det enkelte funksjoner som ikke lar deg eksportere eller slette systemgenererte logger for å beholde integriteten til personlige opplysninger.
 >
 >
 

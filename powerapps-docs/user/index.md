@@ -1,25 +1,18 @@
 ---
-title: Oversiktsemnet Finne og kjøre apper | Microsoft Docs
-description: Oversiktsemnet Finne og kjøre apper
-services: powerapps
-suite: powerapps
-documentationcenter: na
-author: skjerland
+title: Hvordan finner og kjører jeg apper? | Microsoft Docs
+description: Oversikt over hvordan du finner og kjører PowerApps-apper.
+author: SKjerland
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-user
+ms.topic: overview
 ms.date: 03/21/2018
 ms.author: sharik
-ms.openlocfilehash: cc1483fbaffaac51f3c0999996cb3f91fac9e64a
-ms.sourcegitcommit: 4710a56d308efe67fe60a7688143e61f5e5f2b44
+ms.openlocfilehash: 484f6efb0c10bfa5a1d0e5ccdb0939422ddaf835
+ms.sourcegitcommit: 167fd8e589689be26101584ab1b3a26be61808f7
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="how-do-i-find-and-run-apps"></a>Hvordan finner og kjører jeg apper?
 Apputviklere kan opprette tilpassede oppgave – og rollebaserte *lerrets*apper som jobber på samme måte som deg, enten du er en mobil arbeider i felten eller en lege på et travelt sykehus. Utviklere av lerretsapper kan tilpasse nesten alle aspekter av en lerretsapp, og kan koble til flere datakilder for å hjelpe brukere med å fullføre fokuserte oppgaver.
