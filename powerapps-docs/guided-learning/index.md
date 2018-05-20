@@ -9,11 +9,11 @@ ms.component: canvas
 ms.topic: landing-page
 ms.date: 10/27/2017
 ms.author: mblythe
-ms.openlocfilehash: afefa1fcf09cb9c4f732fa94e37bb148262eeb04
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: d79039fd70d2e214b269e0d5be97d208192a16fc
+ms.sourcegitcommit: dc689eb0bc0e60b6f8c2f78a18f7aa114bf84165
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/19/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -38,27 +38,27 @@ ms.lasthandoff: 04/26/2018
 Komme i gang </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-1">Innføring i PowerApps</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=1">Innføring i PowerApps</a>
                                 <span style="margin-left: 32px; align-self: center;">5 m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-2">Deler av PowerApps</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=2">Deler av PowerApps</a>
                                 <span style="margin-left: 32px; align-self: center;">6 m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-3">Relaterte teknologier</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=3">Relaterte teknologier</a>
                                 <span style="margin-left: 32px; align-self: center;">6 m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-4">En rask kikk på hvordan man oppretter apper</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=4">En rask kikk på hvordan man oppretter apper</a>
                                 <span style="margin-left: 32px; align-self: center;">6 m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-5">Opprette din første app</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=5">Opprette din første app</a>
                                 <span style="margin-left: 32px; align-self: center;">5 m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-6">Se gjennom dette avsnittet</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=6">Se gjennom dette avsnittet</a>
                                 <span style="margin-left: 32px; align-self: center;">2 m</span>
                               </li>
                           </ul>
@@ -81,19 +81,19 @@ Komme i gang </h3>
 Opprette en app fra SharePoint </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint.yml#step-1">Generere en app</a>
+                                <a class="barLink" href="create-app-sharepoint.yml?tutorial-step=1">Generere en app</a>
                                 <span style="margin-left: 32px; align-self: center;">3 m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint.yml#step-2">Utforske en generert app</a>
+                                <a class="barLink" href="create-app-sharepoint.yml?tutorial-step=2">Utforske en generert app</a>
                                 <span style="margin-left: 32px; align-self: center;">5 m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint.yml#step-3">Tilpasse appen</a>
+                                <a class="barLink" href="create-app-sharepoint.yml?tutorial-step=3">Tilpasse appen</a>
                                 <span style="margin-left: 32px; align-self: center;">5 m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint.yml#step-4">Utforske appformler</a>
+                                <a class="barLink" href="create-app-sharepoint.yml?tutorial-step=4">Utforske appformler</a>
                                 <span style="margin-left: 32px; align-self: center;">9 m</span>
                               </li>
                             </ul>
@@ -116,15 +116,15 @@ Opprette en app fra SharePoint </h3>
 Administrere apper </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-apps.yml#step-1">Dele apper</a>
+                                <a class="barLink" href="manage-apps.yml?tutorial-step=1">Dele apper</a>
                                 <span style="margin-left: 32px; align-self: center;">5 m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-apps.yml#step-2">Versjoner appene</a>
+                                <a class="barLink" href="manage-apps.yml?tutorial-step=2">Versjoner appene</a>
                                 <span style="margin-left: 32px; align-self: center;">1 m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-apps.yml#step-3">Miljøer</a>
+                                <a class="barLink" href="manage-apps.yml?tutorial-step=3">Miljøer</a>
                                 <span style="margin-left: 32px; align-self: center;">8 m</span>
                               </li>
                           </ul>
