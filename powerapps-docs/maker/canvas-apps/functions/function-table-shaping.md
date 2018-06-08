@@ -1,26 +1,23 @@
 ---
 title: Funksjonene AddColumns, DropColumns, RenameColumns og ShowColumns | Microsoft Docs
 description: Referanseinformasjon, inkludert syntaks og eksempler, for funksjonene AddColumns, DropColumns, RenameColumns og ShowColumns i PowerApps
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: 0b7fe4d8e0b9129be126985bbb49cc5ffecbcd44
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 4ed3bae7b4b8fc10053a1a2fec49e7116ec4d4e4
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997087"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31837307"
 ---
 # <a name="addcolumns-dropcolumns-renamecolumns-and-showcolumns-functions-in-powerapps"></a>Funksjonene AddColumns, DropColumns, RenameColumns og ShowColumns i PowerApps
 Former en [tabell](../working-with-tables.md) ved å legge til, slippe, gi nytt navn til og velge dens [kolonner](../working-with-tables.md#columns).
@@ -32,7 +29,7 @@ Disse funksjonene former en tabell ved å justere kolonnene:
 * Legg til en beregnet kolonne i en tabell (for eksempel en **Total Price**-kolonne som viser resultatet av å multiplisere **Quantity** med **Unit Price**).
 * Endre navnet til en kolonne til noe mer meningsfylt. Dette vises til brukere eller brukes i formler.
 
-En tabell er en verdi i PowerApps, akkurat som en streng eller et tall.  Du kan angi en tabell som et argument i en formel, og funksjoner kan returnere en tabell som et resultat. Funksjonene som dette emnet beskriver, endrer ikke en tabell. I stedet tar de en tabell som et argument og returnerer en ny tabell med en transformering som er brukt.  Se [Arbeide med tabeller](../working-with-tables.md) for mer informasjon.  
+En tabell er en verdi i PowerApps, akkurat som en streng eller et tall.  Du kan angi en tabell som et argument i en formel, og funksjoner kan returnere en tabell som et resultat. Funksjonene som dette emnet beskriver, endrer ikke en tabell. I stedet tar de en tabell som et argument og returnerer en ny tabell med en transformering som er brukt.  Hvis du vil ha mer informasjon, kan du se [arbeide med tabeller](../working-with-tables.md).  
 
 Du kan ikke endre kolonnene i en [datakilden](../working-with-data-sources.md) ved hjelp av disse funksjonene. Du må endre dataene i kilden. Du kan legge til kolonner i en [samling](../working-with-data-sources.md#collections) med **[Collect](function-clear-collect-clearcollect.md)**-funksjonen.  Se [arbeide med datakilder](../working-with-data-sources.md) for mer informasjon.  
 
@@ -55,24 +52,24 @@ Resultatet er en ny tabell med transformasjonen som brukes for alle disse funksj
 ## <a name="syntax"></a>Syntaks
 **AddColumns**( *Table*, *ColumnName1*, *Formula1* [, *ColumnName2*, *Formula2*, ... ] )
 
-* *Table* – obligatorisk.  Tabell til å arbeide på.
+* *Table* – obligatorisk.  Tabellen som funksjonen skal arbeide med.
 * *ColumnName(s)* – obligatorisk. Navn på kolonnen(e) som skal legges til.  Du må angi en streng (for eksempel **"Name"** inkludert anførselstegn) for dette argumentet.
 * *Formula(s)* – obligatorisk.  Formlene som skal evalueres for hver post. Resultatet er lagt til som verdien for den tilsvarende nye kolonnen. Du kan referere til andre kolonner i tabellen i denne formelen.
 
 **DropColumns**( *Table*, *ColumnName1* [, *ColumnName2*, ... ] )
 
-* *Table* – obligatorisk.  Tabell til å arbeide på.
-* *ColumnName(s)* – obligatorisk. Navn på kolonnen(e) som skal slippes. Du må angi en streng (for eksempel **"Name"** inkludert anførselstegn) for dette argumentet.
+* *Table* – obligatorisk.  Tabellen som funksjonen skal arbeide med.
+* *ColumnName(s)* – obligatorisk. Navn på kolonnen(e) som skal utelates. Du må angi en streng (for eksempel **"Name"** inkludert anførselstegn) for dette argumentet.
 
 **RenameColumns**( *Table*, *OldColumneName*, *NewColumnName* )
 
-* *Table* – obligatorisk.  Tabell til å arbeide på.
+* *Table* – obligatorisk.  Tabellen som funksjonen skal arbeide med.
 * *OldColumnName* – obligatorisk. Navnet på kolonnen som skal få nytt navn. Dette navnet må være en streng (for eksempel **"Name"** med doble anførselstegn inkludert).
 * *NewColumnName* – obligatorisk. Erstatningsnavn. Du må angi en streng (for eksempel **"Name"** inkludert doble anførselstegn) for dette argumentet.
 
 **ShowColumns**( *Table*, *ColumnName1* [, *ColumnName2*, ... ] )
 
-* *Table* – obligatorisk.  Tabell til å arbeide på.
+* *Table* – obligatorisk.  Tabellen som funksjonen skal arbeide med.
 * *ColumnName(s)* – obligatorisk. Navn på kolonnen(e) som skal inkluderes. Du må angi en streng (for eksempel **"Name"** inkludert anførselstegn) for dette argumentet.
 
 ## <a name="examples"></a>Eksempler
@@ -84,7 +81,7 @@ Ingen av disse eksemplene endrer **IceCreamSales**-datakilden. Hver funksjon tra
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )** |Legger til en **Revenue**-kolonne til resultatet.  For hver post evalueres **UnitPrice * QuantitySold**, og resultatet plasseres i den nye kolonnen. |<style> img { max-width: none } </style> ![](media/function-table-shaping/icecream-add-revenue.png) |
+| **AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )** |Legger til en **Revenue**-kolonne i resultatet.  For hver post evalueres **UnitPrice * QuantitySold**, og resultatet plasseres i den nye kolonnen. |<style> img { max-width: none; } </style> ![](media/function-table-shaping/icecream-add-revenue.png) |
 | **DropColumns( IceCreamSales, "UnitPrice" )** |Utelater **UnitPrice**-kolonnen fra resultatet. Bruk denne funksjonen til å utelate kolonner, og bruk **ShowColumns** til å inkludere dem. |![](media/function-table-shaping/icecream-drop-price.png) |
 | **ShowColumns( IceCreamSales, "Flavor" )** |Inkluderer bare **Flavor**-kolonnen i resultatet. Bruk denne funksjonen til å inkludere kolonner, og bruk **DropColumns** til å utelate dem. |![](media/function-table-shaping/icecream-select-flavor.png) |
 | **RenameColumns( IceCreamSales, "UnitPrice", "Price")** |Gir nytt navn til **UnitPrice**-kolonnen i resultatet. |![](media/function-table-shaping/icecream-rename-price.png) |

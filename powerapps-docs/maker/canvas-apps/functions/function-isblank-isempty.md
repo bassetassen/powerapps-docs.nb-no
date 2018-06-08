@@ -1,26 +1,23 @@
 ---
 title: Blank-, Coalesce-, IsBlank- og IsEmpty-funksjonene | Microsoft Docs
 description: Referanseinformasjon for funksjonene Blank, Coalesce, IsBlank og IsEmpty i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/24/2017
 ms.author: gregli
-ms.openlocfilehash: f4e104456cd1ae60bfb60b49e3cf28dca89926d8
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 80d06a30dbe334f7fa9691d2a56805d53876693c
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996222"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838561"
 ---
 # <a name="blank-coalesce-isblank-and-isempty-functions-in-powerapps"></a>Blank-, Coalesce-, IsBlank- og IsEmpty-funksjonene i PowerApps
 Tester om en verdi er tom eller en [tabell](../working-with-tables.md) inneholder ingen [poster](../working-with-tables.md#records), og gir en måte å opprette *tom*-verdier på.

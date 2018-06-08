@@ -1,30 +1,27 @@
 ---
 title: Forstå virkemåten for formler | Microsoft Docs
 description: Referanseinformasjon for å arbeide med virkemåten for formler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 11/10/2015
 ms.author: gregli
-ms.openlocfilehash: 7bb0d9f3db9353511e8a5ed85f016049a96f7dae
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 6b097d02b3fe97ff0db362d399cf2b2c3f28e545
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997382"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826365"
 ---
 # <a name="understand-behavior-formulas-in-powerapps"></a>Forstå virkemåten for formler i PowerApps
 
-De fleste formler beregner en verdi.  Som i et Excel-regneark, skjer omberegning automatisk når verdiene endres.  Du kan for eksempel vise en verdi i en **[Etikett](controls/control-text-box.md)**-kontroll i rødt hvis verdien er mindre enn null. Hvis ikke, er den svart. Så du kan angi f.eks. angi **[Color](controls/properties-color-border.md)**-egenskapen for kontrollen til denne formelen:
+De fleste formler beregner en verdi.  Omberegning skjer automatisk når verdiene endres, akkurat som i et Excel-regneark.  Du kan for eksempel vise en verdi i en **[Etikett](controls/control-text-box.md)**-kontroll i rødt hvis verdien er mindre enn null. Hvis ikke, er den svart. Så du kan angi f.eks. angi **[Color](controls/properties-color-border.md)**-egenskapen for kontrollen til denne formelen:
 <br>**If( Value(TextBox1.Text) >= 0, Color.Black, Color.Red )**
 
 Hva betyr det når brukeren velger en **[Knapp](controls/control-button.md)**-kontroll i denne sammenhengen?  Ingen verdi er endret, så det er ikke noe nytt å beregne. Excel har ingenting som tilsvarer en **[Knapp](controls/control-button.md)**-kontroll.  
@@ -44,5 +41,5 @@ Bruk semikolon til å opprette en liste over handlinger som skal utføres. Du ka
 
 * **UpdateContext( { x: 1 } ); Back()**
 
-Handlinger utføres i rekkefølgen de vises i formelen.  Den neste funksjonen starter ikke før den gjeldende funksjonen er fullført. Hvis det oppstår en feil, kan etterfølgende funksjoner ikke starte.
+Handlinger utføres i rekkefølgen de vises i formelen.  Den neste funksjonen starter ikke før den gjeldende funksjonen er fullført. Hvis det oppstår en feil, kan kanskje ikke etterfølgende funksjoner starte.
 

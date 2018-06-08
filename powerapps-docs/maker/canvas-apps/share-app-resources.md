@@ -1,34 +1,31 @@
 ---
-title: Dele ressurser som brukes i appen | Microsoft Docs
+title: Å dele ressurser som brukes i appen | Microsoft Docs
 description: Forstå hvordan ressursene som brukes i appen din deles når en app er delt
-services: ''
-suite: powerapps
 documentationcenter: na
 author: archnair
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/28/2016
 ms.author: archanan
-ms.openlocfilehash: 02df7f1df53842706bf6a41244f470f09de20c90
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: f7943c5204dcab7c59e922bfb096f70d05b94e9b
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997387"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31829006"
 ---
-# <a name="share-app-resources"></a>Dele app-ressurser
+# <a name="share-app-resources"></a>Å dele app-ressurser
 Før du [deler en app](share-app.md) bør du vurdere ressurstypene som den er avhengig av, for eksempel ett eller flere av følgende:
 
-* en kobling til en datakilde
+* en tilkobling til en datakilde
 * en lokal datagateway
 * en egendefinert kobling
-* en Excel-arbeidsbok, eller en annen tjeneste
+* en Excel-arbeidsbok eller en annen tjeneste
 * en flyt
 
 Noen av disse ressursene deles automatisk når du deler appen. Andre ressurser krever at du eller andre som du deler appen med, må utføre ytterligere trinn for at appen skal fungere slik du forventer.
@@ -43,21 +40,21 @@ På [powerapps.com](https://web.powerapps.com) kan du bestemme om en tilkobling 
   ![Del-fanen i Detaljer-siden for tilkobling](./media/share-app-resources/shared-connections.png)
 
 ## <a name="on-premises-data-gateways"></a>Lokale datagatewayer
-Hvis du oppretter og deler en app som inneholder data fra en lokal kilde, deles den [lokale datagatewayen](gateway-management.md) automatisk og visse typer tilkoblinger til gatewayen. For alle tilkoblinger som ikke er delt automatisk, kan du dele den manuelt (som vist i forrige inndeling), eller la appen be brukerne om å opprette sine egne tilkoblinger. Slik viser du tilkoblingene eller tilkoblinger som har blitt konfigurert med en gateway:
+Hvis du oppretter og deler en app som inneholder data fra en lokal kilde, deles den [lokale datagatewayen](gateway-management.md) automatisk og visse typer tilkoblinger til gatewayen. For alle tilkoblinger som ikke er delt automatisk, kan du dele den manuelt (som vist i forrige inndeling), eller la appen be brukerne om å opprette sine egne tilkoblinger. Slik viser du tilkoblingene eller tilkoblinger hvor en gateway har blitt konfigurert:
 
 1. Åpne [powerapps.com](https://web.powerapps.com), klikk eller trykk på **Administrer** i venstre navigasjonsfelt, og klikk eller trykk på **gatewayer**.
-2. Klikk eller trykk på en gateway, og klikk eller trykk deretter på **Connections**-fanen.
+2. Klikk eller trykk på en gateway, og klikk eller trykk deretter på **Tilkoblinger**-fanen.
 
 > [!NOTE]
-> Hvis du deler en eller flere tilkoblinger manuelt, må du kanskje dele dem på nytt under disse forholdene:
+> Hvis du deler én eller flere tilkoblinger manuelt, må du kanskje dele dem på nytt under disse betingelsene:
 
 * Du legger til en lokal datagateway til en app som du allerede har delt.
-* Du endrer settet med personer eller grupper som du har delt en app med som har en lokal datagateway.
+* Du endrer settet med personer eller grupper som du har delt en app med en lokal datagateway med.
 
 ## <a name="custom-connectors"></a>Egendefinerte tilkoblinger
-Når du deler en app som bruker en egendefinert tilkobling, deles den automatisk, men brukerne må opprette egne tilkoblinger til den.
+Når du deler en app som bruker en egendefinert kobling, deles den automatisk, men brukerne må opprette egne tilkoblinger til den.
 
-Du kan vise eller oppdatere tillatelser for en egendefinert tilkobling på [powerapps.com](https://web.powerapps.com). Klikk eller trykk på **Behandle** i det venstre navigasjonsfeltet, klikk eller trykk på **Tilkoblinger** og dklikk eller trykk deretter på **Ny tilkobling** (i øvre høyre hjørne). Klikk eller trykk på **Egendefinert**, deretter klikker eller trykker du på en egendefinert kobling for å vise detaljer om den.
+Du kan vise eller oppdatere tillatelser for en egendefinert kobling på [powerapps.com](https://web.powerapps.com). Klikk eller trykk på **Behandle** i det venstre navigasjonsfeltet, klikk eller trykk på **Tilkoblinger** og dklikk eller trykk deretter på **Ny tilkobling** (i øvre høyre hjørne). Klikk eller trykk på **Egendefinert**, deretter klikker eller trykker du på en egendefinert kobling for å vise detaljer om den.
 
 ## <a name="excel-workbooks"></a>Excel-arbeidsbøker
 Hvis en delt app bruker data som ikke alle brukere har tilgang til (for eksempel en Excel-arbeidsbok i en konto for lagring i skyen), må du [dele dataene](share-app-data.md).

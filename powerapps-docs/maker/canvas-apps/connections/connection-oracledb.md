@@ -1,29 +1,21 @@
 ---
 title: Koble til Oracle Database | Microsoft Docs
 description: Finn ut hvordan du kobler til Oracle Database og bruker den til å bygge apper i PowerApps.
-services: ''
-suite: powerapps
-documentationcenter: na
-author: archnair
-manager: anneta
-editor: ''
-tags: ''
+author: lancedMicrosoft
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 04/14/2017
-ms.author: archanan
-ms.openlocfilehash: dd55314461b2ba4769e50275837dc6fd897fedcc
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: lanced
+ms.openlocfilehash: 2b2a9c26c8187810f5253562a731384293ae5796
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996282"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803355"
 ---
 # <a name="connect-to-an-oracle-database-from-powerapps"></a>Koble til en Oracle Database fra PowerApps
-Vis tabeller og opprett, les, oppdater og slett tabellrader i en Oracle Database etter at du har opprettet en tilkobling og bygget en app i PowerApps. Tilkobling til Oracle Database støtter full delegering av filtrering, sortering og andre funksjoner, men ikke utløsere eller lagrede prosedyrer.
+Vis tabeller, og opprett, les, oppdater og slett tabellrader i en Oracle Database etter at du oppretter en tilkobling og utvikler en app i PowerApps. Tilkobling til Oracle Database støtter full delegering av filtrering, sortering og andre funksjoner, men ikke utløsere eller lagrede prosedyrer.
 
 ## <a name="prerequisites"></a>Forutsetninger
 * Oracle 9 og senere
@@ -94,8 +86,8 @@ PowerApps oppretter en app som inneholder tre skjermbilder og viser data fra tab
    
     Denne feilen oppstår hvis den lokale datagatewayen ikke kan koble til skyen. Hvis du vil kontrollere statusen for gatewayen, kan du logge inn på powerapps.microsoft.com, klikke eller trykke på **Gatewayer** og deretter klikke eller trykke på gatewayen du vil bruke.
    
-    Kontroller at gatewayen kjører og kan koble til Internett. Unngå å installere gatewayen på en datamaskin som kan bli slått av eller gå i hvilemodus. Du kan også prøve å starte den lokale datagateway-tjenesten (PBIEgwService) på nytt.
-2. System.Data.OracleClient krever Oracle-klientprogramvare versjon 8.1.7 eller høyere.
+    Kontroller at gatewayen kjører, og kan koble til Internett. Unngå å installere gatewayen på en datamaskin som kan bli slått av eller gå i hvilemodus. Du kan også prøve å starte den lokale datagateway-tjenesten (PBIEgwService) på nytt.
+2. System.Data.OracleClient krever Oracle-klientprogramvare versjon 8.1.7 eller større.
    
     Denne feilen oppstår hvis Oracle-klient-SDK ikke er installert på den samme datamaskinen som den lokale datagatewayen. For å løse dette problemet kan du [installere den offisielle leverandøren](https://go.microsoft.com/fwlink/p/?LinkID=272376).
 3. Tabellen [Tablename] definerer ingen nøkkelkolonner.

@@ -1,7 +1,6 @@
 ---
 title: Slik oppretter du en app fra grunnen av ved hjelp av en Common Data Service-database | Microsoft Docs
 description: Opprett en app for å legge til, oppdatere og slette poster.
-services: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -9,17 +8,16 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: cb60ea139be12e51ea9faac7f61ca769d80c1af7
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: a0aab890e52b49bb0cac382338a8fa02eec736a0
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996132"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838491"
 ---
 # <a name="create-an-app-from-scratch-using-a-common-data-service-database"></a>Slik oppretter du en app fra grunnen av ved hjelp av en Common Data Service-database
 Bygg en app for å behandle data som er lagret i Common Data Service, ved hjelp av standardenheter (som er innebygd), egendefinerte enheter (som organisasjonen oppretter) eller begge deler.
@@ -42,7 +40,6 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
     Du kan utforme en app fra grunnen av for telefoner og andre enheter (som nettbrett), og dette emnet fokuserer på hvordan du utformer apper for telefoner.
 
 ## <a name="specify-an-entity"></a>Å angi en enhet
-
 1. Klikk eller trykk på **koble til data** midt på skjermen, og deretter, i **Data**-ruten, klikker eller trykker du på **Common Data Service**-tilkoblingen.
 
 1. Skriv eller lim inn de første bokstavene til **Kontoer** i søkeboksen for å filtrere listen over enheter, merk av for **Kontoer**, og klikk eller trykk deretter på **Koble til**.
@@ -123,7 +120,7 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
     ![Neste-ikon](./media/data-platform-create-app-scratch/next-icon.png)
 
 1. Klikk eller trykk på Avbryt-ikonet på **FormScreen**, og angi **OnSelect**-egenskapen til denne formelen:<br>
-`ResetForm(EditForm1);Navigate(FormScreen, ScreenTransition.None)`
+`ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Avbryt-ikon](./media/data-platform-create-app-scratch/cancel-icon.png)
 

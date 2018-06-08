@@ -1,26 +1,23 @@
 ---
 title: Å opprette en Power BI-rapport for å analysere prosjekter i Microsoft Docs
 description: I denne oppgaven skal vi opprette en Power BI-rapport basert på to SharePoint-lister.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 01/10/2018
 ms.author: mblythe
-ms.openlocfilehash: 6f3045a67de492866c3db7d9238a5c4c2111bcb6
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 4863ee2c19c17eb8afcc8913dcfb5f3831af828c
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997687"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31839112"
 ---
 # <a name="create-a-power-bi-report-to-analyze-projects"></a>Å opprette en Power BI-rapport for å analysere prosjekter
 > [!NOTE]

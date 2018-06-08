@@ -1,8 +1,6 @@
 ---
 title: Å tilpasse skjemaer | Microsoft Docs
 description: Angi hvilke data som skal vises, i hvilken rekkefølge de skal vises og i hvilke kontroller.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -10,17 +8,16 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/17/2018
 ms.author: anneta
-ms.openlocfilehash: efb5c4f256f7b8bd24eb0c1d7ae64e4389cf54c2
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 98162ce4d291b976c816326efc5d4c6d4d18c870
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995972"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31829600"
 ---
 # <a name="customize-forms-in-powerapps"></a>Å tilpasse skjemaer i PowerApps
 Tilpass en **visningsskjema**-kontroll og en **redigeringsskjema**-kontroll slik at de viser dataene som er viktigst i den mest intuitive rekkefølgen, for å hjelpe brukere å forstå og oppdatere dataene.

@@ -1,26 +1,18 @@
 ---
 title: Oversikt over tilkoblingen for skylagring | Microsoft Docs
 description: Se hvordan du kobler til en konto for lagring i skyen og viser Excel-data i appen din
-services: ''
-suite: powerapps
-documentationcenter: ''
-author: archnair
-manager: anneta
-editor: ''
-tags: ''
+author: lancedMicrosoft
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/12/2016
-ms.author: archanan
-ms.openlocfilehash: fbe6cf68dace0ae8924f1ec5dc12b1a1ec1cde25
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: lanced
+ms.openlocfilehash: b0141315f041d81b929a53761952d9b5e355c82e
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996262"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803033"
 ---
 # <a name="connect-to-cloud-storage-from-powerapps"></a>Å koble til lagring i skyen fra PowerApps
 PowerApps tilbyr flere tilkoblinger for lagring i skyen. Ved hjelp av noen av disse tilkoblingene kan du lagre en Excel-fil og bruke informasjonen i den i hele appen. Disse tilkoblingene omfatter:  

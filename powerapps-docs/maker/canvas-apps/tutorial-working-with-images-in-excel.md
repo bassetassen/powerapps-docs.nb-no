@@ -1,25 +1,22 @@
 ---
 title: Lagring av bilder i en Excel-fil | Microsoft Docs
 description: Slik lagrer du bilder i en Excel-tabell på en skylagringskonto
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: AFTOwen
-manager: anneta
+manager: kfile
 editor: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/15/2016
 ms.author: anneta
-ms.openlocfilehash: 40d4688ffd0f9afd703077cbf61c6908a7a31c5b
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: c9a70a362071558e415b3077e8ff536088edd2db
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997507"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31835689"
 ---
 # <a name="how-to-save-images-in-an-excel-file-and-then-add-these-images-to-your-app"></a>Slik lagrer du bilder i en Excel-fil, og deretter legger disse bildene inn i appen
 
@@ -80,7 +77,7 @@ I dette eksemplet bruker vi [CreateFirstApp.zip](http://pwrappssamples.blob.core
 > [!NOTE]
 > Når du viser bilder fra en Excel-fil, må banen til disse bildene bruke skråstreker. Når PowerApps lagrer bilder i en Excel-tabell (som i de forrige trinnene), bruker banen omvendte skråstreker. Så du kan også bruke **SavePen_images** fra det forrige eksemplet. Hvis du gjør dette, må du endre banene i Excel-tabellen slik at de bruker skråstreker i stedet for omvendte skråstreker. Ellers vil ikke bildene vises.  
 
-1. Last ned [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) og pakk ut **Ressurs**-mappen i skylagringskontoen.
+1. Last ned [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip), og pakk ut **Ressurs**-mappen i skylagringskontoen.
 2. I et Excel-regneark kan du opprette en tabell som ser omtrent slik ut:
    
     ![Jakke-tabell](./media/tutorial-working-with-images-in-excel/jackets.png)
@@ -92,13 +89,13 @@ I dette eksemplet bruker vi [CreateFirstApp.zip](http://pwrappssamples.blob.core
    
     Galleriet oppdateres automatisk med bildene:  
    
-    ![Jakkebilder](./media/tutorial-working-with-images-in-excel/images.png)
+    ![Bilder av jakker](./media/tutorial-working-with-images-in-excel/images.png)
 
 Når du angir Items-egenskapen, legges det automatisk til en kolonne med navnet **PowerAppsId** i Excel-tabellen.
 
 I Excel-tabellen kan bildebanen også være nettadressen til et bilde. Last ned eksempelfilen [Beregning av gulvbelegg](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) til skylagringskontoen din, legg til `FlooringEstimates`-tabellen som en datakilde i appen din, og angi gallerikontrollen til `FlooringEstimates`. Galleriet oppdateres automatisk med bildene.
 
-## <a name="learn-more"></a>Les mer
+## <a name="learn-more"></a>Mer informasjon
 [Slik legger du til et bilde, en video eller lyd](add-images-pictures-audio-video.md)  
 [Visning av data i et linje-, sektor- eller liggende stolpediagram i appen din](use-line-pie-bar-chart.md)  
 [Slik fungerer tabeller og poster i PowerApps](working-with-tables.md)

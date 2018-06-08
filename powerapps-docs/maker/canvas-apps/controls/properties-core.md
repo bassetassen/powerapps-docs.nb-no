@@ -1,32 +1,29 @@
 ---
 title: Kjerneegenskaper | Microsoft Docs
 description: Referanseinformasjon om egenskapene Deaktivert, Synlig og ReadOnly
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: cad53141d6896ad71caaca77b7bf07fee2ac0600
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 9631d197824b516f90d493c9db4aee75f3f7ce0d
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996237"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31837353"
 ---
 # <a name="core-properties-in-powerapps"></a>Kjerneegenskaper i PowerApps
 Konfigurer hvorvidt brukeren kan se og samhandle med en kontroll.
 
 ### <a name="properties"></a>Egenskaper
-**Standard** – startverdien for en kontroll før den er endret av brukeren.
+**Default** – startverdien for en kontroll før den endres av brukeren.
 
 * Gjelder kontrollene **[Kort](control-card.md)**, **[Avmerkingsboks](control-check-box.md)**, **[Rullegardin](control-drop-down.md)**, **[Galleri](control-gallery.md)**, **[Listeboks](control-list-box.md)**, **[Radio](control-radio.md)**, **[Vurdering](control-rating.md)**, **[Glidebryter](control-slider.md)**, **[Tekstinndata](control-text-input.md)** og **[Veksleknapp](control-toggle.md)**.
 

@@ -1,26 +1,23 @@
 ---
 title: Funksjonene Back og Navigate | Microsoft Docs
 description: Referanseinformasjon for funksjonene Back og Navigate i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/08/2015
 ms.author: gregli
-ms.openlocfilehash: 58f8c4bf55167e7c891a614a2bfb98ef20dcfd7c
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: ecb8b8176dd8489866a5ca88a6b69e1520c3ad69
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996182"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31834462"
 ---
 # <a name="back-and-navigate-functions-in-powerapps"></a>Funksjonene Back og Navigate i PowerApps
 Endre hvilken skjerm som vises.

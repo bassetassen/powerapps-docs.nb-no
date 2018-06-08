@@ -1,26 +1,23 @@
 ---
 title: Funksjonen Sort og SortByColumns | Microsoft Docs
 description: Referanseinformasjon, inkludert syntaks og eksempler for funksjonene Sort og SortByColumns i PowerApps
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: 95cb5176b72c676e10f410c4fc3e01fd99568e59
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 6ba2186e7f6618cdaa6eef8073e5f3897628ae8f
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996697"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838221"
 ---
 # <a name="sort-and-sortbycolumns-functions-in-powerapps"></a>Funksjonene Sort og SortByColumns i PowerApps
 Sorterer en [tabell](../working-with-tables.md).
@@ -82,8 +79,8 @@ Vi bruker [datakilden](../working-with-data-sources.md) **IceCream**, som inneho
 | **Sort( IceCream, Quantity )**<br><br>**SortByColumns( IceCream, "Quantity" )** |Sorterer **IceCream** etter **Quantity**-kolonnen.  **Quantity**-kolonnen inneholder tall, så tabellen er sortert numerisk.  Sorteringsrekkefølgen er stigende som standard. |![](media/function-sort/icecream-quantity-asc.png) |
 | **Sort( IceCream, Quantity, SortOrder.Descending )**<br><br>**SortByColumns( IceCream, "Quantity", SortOrder.Descending )** |Sorterer **IceCream** etter **Quantity**-kolonnen.  **Quantity**-kolonnen inneholder tall, så sorteringen er numerisk.  Sorteringsrekkefølgen er angitt som synkende. |![](media/function-sort/icecream-quantity-desc.png) |
 | **Sort( IceCream, Quantity + OnOrder )** |Sorterer **IceCream** med summen av **Quantity**- og **OnOrder**-kolonnene enkeltvis for hver post. Summen er et tall, så tabellen er sortert numerisk.  Sorteringsrekkefølgen er stigende som standard.  Fordi vi sorterer ved hjelp av en formel og ikke etter rå kolonneverdier, finnes det ingen tilsvarende med bruk av **SortByColumns**. |![](media/function-sort/icecream-total.png) |
-| **Sort( Sort( IceCream, OnOrder ), Quantity )**<br><br>**SortByColumns( IceCream, "OnOrder", Ascending, "Quantity", Ascending )** |Sorterer **IceCream** først etter **OnOrder**-kolonnen og deretter etter **Quantity**-kolonnen.  Vær oppmerksom på at Pistachio var plassert over Vanilla i den første sorteringen, basert på **OnOrder**, og deretter ble de flyttet sammen til sine riktige plasseringer basert på **Quantity**. |![](media/function-sort/icecream-onorder-quantity.png) |
-| **SortByColumns( IceCream, "Flavor", [&nbsp;"Pistachio",&nbsp;"Strawberry"&nbsp;] )** |Sorterer **IceCream** etter **Flavor**-kolonnen basert på enkeltkolonnetabellen som inneholder Pistachio og Strawberry.  Poster som har Pistachio for **Flavor** vises først i resultatet, etterfulgt av poster som inneholder Strawberry.  Verdier i **Flavor**-kolonnen som ikke er et treff, for eksempel Vanilla, vises etter elementene som samsvarte. |![](media/function-sort/icecream-onflavor-sorttable.png) |
+| **Sort( Sort( IceCream, OnOrder ), Quantity )**<br><br>**SortByColumns( IceCream, "OnOrder", Ascending, "Quantity", Ascending )** |Sorterer **IceCream** først etter **OnOrder**-kolonnen og deretter etter **Quantity**-kolonnen.  Vær oppmerksom på at "Pistachio" var plassert over "Vanilla" i den første sorteringen, basert på **OnOrder**, og deretter ble de flyttet sammen til sine riktige plasseringer basert på **Quantity**. |![](media/function-sort/icecream-onorder-quantity.png) |
+| **SortByColumns( IceCream, "Flavor", [&nbsp;"Pistachio",&nbsp;"Strawberry"&nbsp;] )** |Sorterer **IceCream** etter **Flavor**-kolonnen basert på enkeltkolonnetabellen som inneholder Pistachio og Strawberry.  Poster som har "Pistachio" for **Flavor** vises først i resultatet, etterfulgt av poster som inneholder "Strawberry".  Verdier i **Flavor**-kolonnen som ikke er et treff, for eksempel "Vanilla", vises etter elementene som samsvarte. |![](media/function-sort/icecream-onflavor-sorttable.png) |
 
 ### <a name="step-by-step"></a>Trinn for trinn
 Hvis du vil kjøre disse eksemplene selv, kan du opprette datakilden **IceCream** som en [samling](../working-with-data-sources.md#collections):

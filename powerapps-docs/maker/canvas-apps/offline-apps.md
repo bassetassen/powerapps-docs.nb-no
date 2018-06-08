@@ -1,26 +1,23 @@
 ---
 title: Å utvikle apper som fungerer i frakoblet tilstand | Microsoft Docs
 description: Utvikle apper som fungerer i frakoblet tilstand, slik at brukerne kan være produktive enten de er tilkoblet eller frakoblet.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 05/09/2017
 ms.author: mblythe
-ms.openlocfilehash: 20ca1804df900256b6819bc3e062d61a005a38de
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: e73324d6cfce5edf7ece0350b2047dc7842373bb
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997447"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836773"
 ---
 # <a name="develop-offline-capable-apps-with-powerapps"></a>Å utvikle apper som fungerer i frakoblet tilstand med PowerApps
 Ett av de mest vanlige scenarioene du opplever som en utvikler av mobilapper, er å gjøre det mulig for brukerne å være produktive der det er begrensede tilkoblingsmuligheter, eller ingen tilkobling i det hele tatt. PowerApps har et sett med funksjoner og virkemåter som hjelper deg med å utvikle apper fungerer i frakoblet tilstand. Bruk en av disse måtene:

@@ -1,26 +1,23 @@
 ---
 title: Text-egenskaper | Microsoft Docs
 description: Referansemateriale for egenskaper som Text, Tooltip og HintText
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: 6d79f5a93fd89de1c3994f43c285e9d96cb00af6
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 1331cbbab185656929ebede7c804a8c3dfee52ab
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996192"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31835282"
 ---
 # <a name="text-properties-in-powerapps"></a>Text-egenskaper i PowerApps
 Konfigurer teksten som vises på en kontroll i et verktøytips som et tips når brukeren skriver inn data og angi andre tekst-relaterte egenskaper.

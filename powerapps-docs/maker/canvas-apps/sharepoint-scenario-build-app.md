@@ -1,26 +1,23 @@
 ---
 title: Å opprette en app for å styre prosjektene | Microsoft Docs
 description: Vi skal opprette en app fra grunnen av i denne oppgaven. Denne appen lar en bruker tilordne en leder til prosjekter og oppdatere prosjektdetaljer.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: da64b3b8f5453c41bf5e9c6fcf61ce335b47ff71
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: fca166ef388921e08bf71149a8b1274a31a7dc52
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997702"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330633"
 ---
 # <a name="create-an-app-to-manage-projects"></a>Å opprette en app for å styre prosjektene
 > [!NOTE]
@@ -32,8 +29,6 @@ Vi skal opprette en app fra grunnen av i denne oppgaven. Denne appen lar en bruk
 > [Nedlastingspakken](https://aka.ms/o4ia0f) for dette scenariet inkluderer en fullført versjon av denne appen: project-detaljer-app.msapp.
 
 ## <a name="quick-review-of-powerapps-studio"></a>Rask gjennomgang av PowerApps Studio
-Du brukte PowerApps Studio for nett i den siste oppgaven, men vi vil forsikre oss om du forstår alle delene før vi går videre. Du kan fortsette å arbeide i PowerApps Studio for nett, eller du kan bruke [PowerApps Studio for Windows](https://aka.ms/powerappswin).
-
 PowerApps Studio har tre ruter og et bånd, noe som gjør at opplevelsen av app-oppretting ligner på det å opprette en lysbildevisning i PowerPoint:
 
 1. Venstre navigasjonsfelt, som viser en hierarkisk visning av alle skjermbilder og kontroller for appen, samt miniatyrbilder av skjermbildene

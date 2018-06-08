@@ -1,26 +1,23 @@
 ---
 title: Funksjonene If og Switch| Microsoft Docs
 description: Referanseinformasjon for funksjonene If og Switch i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 04/24/2017
 ms.author: gregli
-ms.openlocfilehash: 9254eaf63d816fc8ac9890026f74bdeaeaa9b1a4
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: f4e5510224d5abc7a6d2ccaa286d08c8f170fa10
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997107"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838399"
 ---
 # <a name="if-and-switch-functions-in-powerapps"></a>Funksjonene If og Switch i PowerApps
 Bestemmer om eventuelle betingelser i et sett er sant (**If**) eller om resultatet av en formel samsvarer med en verdi i et sett (**Switch**) og returnerer deretter et resultat eller utfører en handling.
@@ -32,11 +29,11 @@ Funksjonen **If** tester én eller flere betingelser inntil et **sann**-resultat
 
 **If** og **Switch** er svært like, men du bør bruke funksjonen som passer situasjonen din best:
 
-* Bruk **If** til å evaluere en enkel betingelse. Den vanligste syntaksen for denne funksjonen er **If**( *Condition*, *ThenResult*, *DefaultResult* ), som gir det vanlige «hvis ...  deretter ... andre...» mønsteret som brukes i andre programmeringsverktøy.
+* Bruk **If** til å evaluere en enkel betingelse. Den vanligste syntaksen for denne funksjonen er **If**( *Condition*, *ThenResult*, *DefaultResult* ), som gir det vanlige «hvis ...  deretter ... andre ...» mønsteret som brukes i andre programmeringsverktøy.
 * Bruk **If** til å evaluere flere ikke-relaterte betingelser. Du kan angi flere betingelser i PowerApps (i motsetning til Microsoft Excel) uten å måtte neste **If**-formler.
 * Bruk **Switch** til å evaluere en enkel betingelse mot flere mulige treff. Du kan også bruke **If** i dette tilfellet, men du må gjenta formelen for hvert mulige treff.
 
-Du kan bruke begge disse funksjonene i [virkemåte-formler](../working-with-formulas-in-depth.md) til å forgrene mellom to eller flere handlinger. Bare én gren utløser en handling. Betingelser og treff evalueres i rekkefølge, og de stopper hvis en betingelse er **sann** eller finner et treff.
+Du kan bruke begge disse funksjonene i [formler for virkemåte](../working-with-formulas-in-depth.md) til å forgrene mellom to eller flere handlinger. Bare én gren utløser en handling. Betingelser og treff evalueres i rekkefølge, og de stopper hvis en betingelse er **sann** eller finner et treff.
 
 *Tom* returneres hvis ingen betingelser er **sann**, ingen treff finnes og du ikke angir et standardresultat.
 
@@ -50,7 +47,7 @@ Du kan bruke begge disse funksjonene i [virkemåte-formler](../working-with-form
 **Switch**( *Formula*, *Match1*, *Result1* [, *Match2*, *Result2*, ... [, *DefaultResult* ] ] )
 
 * *Formel* – obligatorisk. Formelen som skal evalueres for treff.  Denne formelen er evaluert bare én gang.
-* *Match(s)* – obligatorisk. Verdier som skal sammenlignes med resultatet fra *formelen*.  Hvis et nøyaktig treff blir funnet, returneres det tilhørende *Resultatet*.
+* *Match(s)* – obligatorisk. Verdier som skal sammenlignes med resultatet fra *formelen*.  Hvis et nøyaktig treff blir funnet, returneres det tilhørende *resultatet*.
 * *Result(s)* – obligatorisk. Den tilsvarende verdien skal returneres når det er funnet et nøyaktig treff.
 * *DefaultResult* – valgfritt. Hvis det ikke blir funnet et nøyaktig treff, returneres verdien. Hvis du ikke angir dette argumentet, returneres *tom*.
 
@@ -64,21 +61,21 @@ I eksemplene nedenfor har en **glidebryter**-kontroll (kalt **Slider1**) en verd
 | **If( Slider1.Value&nbsp;=&nbsp;25, "Result1", "Result2" )** |Betingelsen er **sann**, og det tilsvarende resultatet returneres. |«Result1» |
 | **If( Slider1.Value&nbsp;>&nbsp;1000, "Result1" )** |Betingelsen er **usann**, og ingen *DefaultResult* ble angitt. |*tom* |
 | **If( Slider1.Value&nbsp;>&nbsp;1000, "Result1", "Result2" )** |Betingelsen er **usann**, et *DefaultResult* ble angitt, og det returneres. |«Result2» |
-| **If( Slider1.Value&nbsp;=&nbsp;25, "Result1", Slider1.Value&nbsp;>&nbsp;0, "Result2" )** |Den første betingelsen er **sann**, og det tilsvarende resultatet returneres. Den andre betingelsen er også **sann**, men det evalueres ikke fordi den vises i argumentlisten senere enn en betingelse som evalueres til **sann**. |«Result1» |
+| **If( Slider1.Value&nbsp;=&nbsp;25, "Result1", Slider1.Value&nbsp;>&nbsp;0, "Result2" )** |Den første betingelsen er **sann**, og det tilsvarende resultatet returneres. Den andre betingelsen er også **sann**, men den evalueres ikke fordi den vises i argumentlisten senere enn en betingelse som evalueres til **sann**. |«Result1» |
 | **If( IsBlank(&nbsp;Slider1.Value&nbsp;), "Result1", IsNumeric(&nbsp;Slider1.Value&nbsp;), "Result2" )** |Den første betingelsen er **usann** fordi glidebryteren ikke er *tom*. Den andre betingelsen er **sann** fordi verdien til glidebryteren er et tall, og det tilsvarende resultatet returneres. |«Result2» |
 | **If( Slider1.Value&nbsp;>&nbsp;1000, "Result1", Slider1.Value&nbsp;>&nbsp;50, "Result2", "Result3")** |Både første og andre betingelse er **usann**, *DefaultResult* ble angitt, og den returneres. |«Result3» |
 | **Switch( Slider1.Value, 25, "Result1" )** |Verdien til glidebryteren samsvarer med den første verdien som skal kontrolleres, og det tilsvarende resultatet returneres. |«Result1» |
 | **Switch( Slider1.Value, 20, "Result1", 25, "Result2", 30, "Result3" )** |Verdien til glidebryteren samsvarer med den andre verdien som skal kontrolleres, og det tilsvarende resultatet returneres. |«Result2» |
 | **Switch( Slider1.Value, 20, "Result1", 10, "Result2", 0, "Result3", "DefaultResult" )** |Verdien til glidebryteren samsvarer ikke med en verdi som skal kontrolleres.  *DefaultResult* ble angitt, slik at det returneres. |«DefaultResult» |
 
-### <a name="branching-in-behavior-formulas"></a>Forgrening i virkemåten til formler
+### <a name="branching-in-behavior-formulas"></a>Forgrening i formler for virkemåte
 I disse eksemplene har en **[Tekstinndata](../controls/control-text-input.md)**-kontroll kalt **FirstName** verdien «John» skrevet inn i den.
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **If( ! IsBlank ( FirstName.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None) )** |Betingelsen er **sann**, slik at **[Navigate](function-navigate.md)**-funksjonen kjører. Du kan bruke **[IsBlank](function-isblank-isempty.md)**-funksjonen til å teste om et obligatorisk skjemafelt er fylt ut.  Hvis **FirstName** var [tom](function-isblank-isempty.md), vil ikke denne formelen ha noen innvirkning. |**sann**<br><br>Visningen er endret til **Screen1**. |
 | **If( IsBlank( FirstName.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ), Back() )** |Uten **!** operator, betingelsen er **usann**, slik at **[Navigate](function-navigate.md)**-funksjonen ikke kjøres. **[Back](function-navigate.md)**-funksjonen ble angitt som *DefaultResult*, slik at den kjører. |**sann**<br><br>Visningen går tilbake til skjermbildet som tidligere ble vist. |
-| **Switch( FirstName.Text, "Carlos", Navigate(&nbsp;Screen1, ScreenTransition.None ), "Kirstin", Navigate( Screen2, ScreenTransition.None ), "John", Navigate( Screen3, ScreenTransition.None ) )** |Verdien for **FirstName.Text** sammenlignes mot Carlos, Kirstin og John i den rekkefølgen. Appen finner et treff med «John», og går til **Screen3**. |**sann**<br><br>Visningen er endret til **Screen3**. |
+| **Switch( FirstName.Text, "Carlos", Navigate(&nbsp;Screen1, ScreenTransition.None ), "Kirstin", Navigate( Screen2, ScreenTransition.None ), "John", Navigate( Screen3, ScreenTransition.None ) )** |Verdien for **FirstName.Text** sammenlignes mot «Carlos», «Kirstin» og «John» i den rekkefølgen. Appen finner et treff med «John», og går til **Screen3**. |**sann**<br><br>Visningen er endret til **Screen3**. |
 
 ### <a name="step-by-step"></a>Trinn for trinn
 1. Legg til en **[Tekstinndata](../controls/control-text-input.md)**-kontroll, og gi den navnet **Text1** hvis den ikke har det navnet som standard.

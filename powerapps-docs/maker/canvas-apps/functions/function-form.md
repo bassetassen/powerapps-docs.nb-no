@@ -1,26 +1,23 @@
 ---
 title: Funksjonene EditForm, NewForm, SubmitForm, ResetForm og ViewForm | Microsoft Docs
 description: Referanseinformasjon om funksjonene EditForm, NewForm, SubmitForm, ResetForm og ViewForm i PowerApps, i tillegg til syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/06/2017
 ms.author: gregli
-ms.openlocfilehash: 7e64426cfee2b72cd8fda51b889b99b285147fcc
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 6a32068d0de49ea0a6cf752fde0fd486159f39e9
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996402"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836469"
 ---
 # <a name="editform-newform-submitform-resetform-and-viewform-functions-in-powerapps"></a>Funksjonene EditForm, NewForm, SubmitForm, ResetForm og ViewForm i PowerApps
 Vis, rediger eller opprett et element, lagre innholdet og tilbakestill kontrollene i en **[Redigeringskjema](../controls/control-form-detail.md)**-kontroll.
@@ -75,23 +72,23 @@ Den gjeldende modusen kan leses gjennom **Modus**-egenskapen.  Modusen bestemmer
 ## <a name="syntax"></a>Syntaks
 **SubmitForm**( *FormName* )
 
-* *FormName* – Obligatorisk. Form-kontroll som skal sendes til datakilden.
+* *FormName* – obligatorisk. Skjema-kontroll som skal sendes til datakilden.
 
 **EditForm**( *FormName* )
 
-* *FormName* – Obligatorisk.  Form-kontroll som skal byttes til **FormMode.Edit**-modus.
+* *FormName* – obligatorisk.  Skjema-kontroll som skal byttes til **FormMode.Edit**-modus.
 
 **NewForm**( *FormName* )
 
-* *FormName* – Obligatorisk. Form-kontroll som skal byttes til **FormMode.New**-modus.
+* *FormName* – obligatorisk. Skjema-kontroll som skal byttes til **FormMode.New**-modus.
 
 **ResetForm**( *FormName* )
 
-* *FormName* – Obligatorisk. Form-kontroll som skal tilbakestilles til opprinnelige verdier. Bytter også skjemaet fra **FormMode.New**-modus til **FormMode.Edit**-modus.
+* *FormName* – obligatorisk. Skjema-kontroll som skal tilbakestilles til opprinnelige verdier. Bytter også skjemaet fra **FormMode.New**-modus til **FormMode.Edit**-modus.
 
 **ViewForm**( *FormName* )
 
-* *FormName* – Obligatorisk.  Form-kontroll som skal byttes til **FormMode.View**-modus.
+* *FormName* – obligatorisk.  Skjema-kontroll som skal byttes til **FormMode.View**-modus.
 
 ## <a name="examples"></a>Eksempler
 Se [Forstå dataskjemaer](../working-with-forms.md) utfyllende eksempler.

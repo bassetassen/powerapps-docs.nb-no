@@ -1,26 +1,23 @@
 ---
 title: Opplæring for deling av en modelldrevet app med PowerApps | Microsoft Docs
 description: Finn ut hvordan du deler en modelldrevet app i denne opplæringen
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: Mattp123
-manager: brycho
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
-ms.workload: na
-ms.tgt_pltfrm: na
 ms.devlang: na
-ms.topic: article
+ms.topic: conceptual
+ms.component: model
 ms.date: 03/21/2018
 ms.author: matp
-ms.openlocfilehash: 4f971668b506776cfd1a9cce2f61d591a4a0db5e
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.openlocfilehash: 4068bbc4e67adee344544c0ba69895244d3dab83
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30998112"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330380"
 ---
 # <a name="tutorial-share-a-model-driven-app-with-powerapps"></a>Opplæring: Å dele en modelldrevet app med PowerApps
 
@@ -30,9 +27,6 @@ I denne opplæringen skal du utføre oppgaver for å dele en modelldrevet app sl
 - Å opprette en egendefinert sikkerhetsrolle
 - Å tilordne brukere til den egendefinerte sikkerhetsrollen
 - Å legge til sikkerhetsrollen i appen
-
-> [!IMPORTANT]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## <a name="prerequisites"></a>Forutsetninger
 Hvis du vil dele en app, må du ha [!INCLUDE [powerapps](../../includes/powerapps.md)] rollen miljøadministrator eller systemadministrator. 

@@ -1,26 +1,23 @@
 ---
 title: Split-funksjonen | Microsoft Docs
 description: Referanseinformasjon for Split-funksjonen i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 08/28/2017
 ms.author: gregli
-ms.openlocfilehash: e1953767c40edbe27a232678bdeaab8cebfdea17
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 3cb894d044a1e6ac02234bc1fa4c5b9239959015
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996207"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31830674"
 ---
 # <a name="split-function-in-powerapps"></a>Split-funksjonen i PowerApps
 Deler opp en tekststreng i en tabell med delstrenger.

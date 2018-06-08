@@ -1,26 +1,23 @@
 ---
 title: Funksjonene And, Or og Not | Microsoft Docs
 description: Referanseinformasjon for funksjonene And, Or og Not i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: ff908d29efa02a3ebed2b2fa5517da35322518b8
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: a2e62ef2aa0a52bde33ea3e40faf96889597b09b
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995922"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31825905"
 ---
 # <a name="and-or-and-not-functions-in-powerapps"></a>Funksjonene And, Or og Not i PowerApps
 Funksjoner for boolsk logikk, som vanligvis brukes til å behandle resultatene av sammenligninger og tester.

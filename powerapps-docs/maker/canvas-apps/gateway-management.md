@@ -1,28 +1,25 @@
 ---
-title: Administrere en lokal datagateway | Microsoft Docs
+title: Administrer en lokal datagateway | Microsoft Docs
 description: Administrere en lokal datagateway og tilhørende tilkoblinger
-services: ''
-suite: powerapps
 documentationcenter: na
 author: archnair
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/30/2016
 ms.author: archanan
-ms.openlocfilehash: 61ea6c88d8f7365e0fa022ad5edb7598b243ec3f
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: d51d134878b04f3cb10ff876ef488f1390e4ef30
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997397"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826802"
 ---
-# <a name="manage-an-on-premises-data-gateway-in-powerapps"></a>Administrere en lokal datagateway i PowerApps.
+# <a name="manage-an-on-premises-data-gateway-in-powerapps"></a>Administrer en lokal datagateway i PowerApps
 Installer en lokal datagateway for å overføre data på en rask og sikker måte mellom PowerApps og en datakilde som ikke er i skyen, for eksempel en lokal SQL Server-database eller et lokalt SharePoint-område. Vis alle gatewayer som du har administratortillatelser til, og behandle tillatelser og tilkoblinger for disse gatewayene.
 
 Med en gateway kan du koble til lokale data over disse tilkoblingene:
@@ -37,7 +34,7 @@ Med en gateway kan du koble til lokale data over disse tilkoblingene:
 ## <a name="prerequisites"></a>Forutsetninger
 * Brukernavnet og passordet du brukte til å [registrere](../signup-for-powerapps.md) deg for PowerApps.
 * Administrative tillatelser på en gateway. (Du har disse tillatelsene som standard for hver gateway som du installerer, og en administrator for en annen gateway kan gi deg disse tillatelsene for nettopp den gatewayen.)
-* En lisens som støtter tilgang til lokale data ved hjelp av en lokal gateway. For mer informasjon kan du se inndelingen Tilkobling på [prissiden](https://powerapps.microsoft.com/pricing/).
+* En lisens som støtter tilgang til lokale data ved hjelp av en lokal gateway. Hvis du vil ha mer informasjon, kan du se inndelingen Tilkobling på [prissiden](https://powerapps.microsoft.com/pricing/).
 * Gatewayer og lokale tilkoblinger kan bare opprettes og brukes i brukerens [standardmiljø](working-with-environments.md).
 
 ## <a name="install-a-gateway"></a>Installer en gateway
@@ -52,12 +49,12 @@ Med en gateway kan du koble til lokale data over disse tilkoblingene:
     Hvis du vil ha mer informasjon om hvordan du installerer en gateway, kan du se [Forstå lokale datagatewayer](gateway-reference.md).
 
 ## <a name="view-and-manage-gateway-permissions"></a>Vis og administrer gatewaytillatelser
-1. Klikk eller trykk på **gatewayer** i det venstre navigasjonsfeltet i [powerapps.com](https://web.powerapps.com), og deretter klikk eller trykk på en gateway.
+1. Klikk eller trykk på **gatewayer** i det venstre navigasjonsfeltet i [powerapps.com](https://web.powerapps.com), og deretter klikker eller trykker du på en gateway.
 
 2. Legg til en bruker i en gateway ved å klikke eller trykke på **Brukere**, angi en bruker eller gruppe, og deretter angi et tilgangsnivå:
 
-   * **Kan bruke**: Brukere som kan opprette tilkoblinger på gatewayen for å bruke for apper og flyter, men som ikke kan dele gatewayen. Bruk denne tillatelsen for brukere som vil kjøre apper, men ikke dele dem.
-   * **Kan bruke og dele**: Brukere som kan opprette en tilkobling på gatewayen for å bruke på apper og flyter, og dele gatewayen automatisk når de deler en app. Bruk denne tillatelsen for brukere som trenger å dele apper med andre brukere eller organisasjonen.
+   * **Kan bruke**: Brukere som kan opprette tilkoblinger på gatewayen for å bruke på apper og flyter, men som ikke kan dele gatewayen. Bruk denne tillatelsen for brukere som vil kjøre apper, men ikke dele dem.
+   * **Kan bruke og dele**: Brukere som kan opprette en tilkobling på gatewayen for å bruke på apper og flyter, og dele gatewayen automatisk når de deler en app. Bruk denne tillatelsen for brukere som trenger å dele apper med andre brukere eller med organisasjonen.
    * **Administrator**: Administratorer som har full kontroll over gatewayen, inkludert det å legge til brukere, angi tillatelser, opprette tilkoblinger til alle tilgjengelige datakilder og slette gatewayen.
 
 For tillatelsesnivåene **Kan bruke** og **Kan bruke og dele** må du velge datakildene som brukeren kan koble til, over gatewayen.

@@ -1,35 +1,29 @@
 ---
 title: Å starte en flyt i en app i Microsoft Docs
 description: Opprett en flyt som utfører én eller flere oppgaver etter en hendelse som forekommer i en app, for eksempel at en bruker velger en knapp.
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: stepsic-microsoft-com
-manager: anneta
+manager: kfile
 editor: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/05/2017
 ms.author: sharik
-ms.openlocfilehash: 378394fe0c42d0418a62974c26b217ab473d40ed
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 19e30477b7015061a4e4b781e1c53a55d1fda1a7
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997912"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32329621"
 ---
 # <a name="start-a-flow-in-an-app"></a>Å starte en flyt i en app
 Du kan bruke Microsoft Flow til å opprette logikk som utfører én eller flere oppgaver når en hendelse forekommer i en app. Du kan for eksempel konfigurere en knapp slik at når en bruker velger den, opprettes et element i en SharePoint-liste, en e-postmelding eller møteinvitasjon sendes, en fil legges til i skyen, eller alt dette. Du kan konfigurere en kontroll i appen for å starte flyten, som fortsetter å kjøre selv om du lukker PowerApps.
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og følg deretter hvilket som helst av disse trinnene:
-
-  * Installer PowerApps Studio for Windows i [Windows Store](http://aka.ms/powerappsinstall), åpne det, og logg deretter på ved å angi den samme legitimasjonen som du brukte til å registrere deg.
-  * Åpne PowerApps Studio for nett i [powerapps.com](http://web.powerapps.com) ved å klikke eller trykke på **Ny app** øverst til venstre.
+* [Registrer deg](../signup-for-powerapps.md) for PowerApps.
 * Finn ut hvordan du kan [konfigurere en kontroll](add-configure-controls.md).
 
 ## <a name="create-a-flow"></a>Å opprette en flyt

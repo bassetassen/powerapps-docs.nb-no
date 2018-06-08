@@ -1,26 +1,23 @@
 ---
 title: Publisere Power BI-prosjektrapporten og opprette et instrumentbord i Microsoft Docs
 description: I denne oppgaven publiserer vi datasettene og rapportene våre til Power BI-tjenesten, og deretter skal vi opprette et instrumentbord som er basert på rapporten.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 01/30/2018
 ms.author: mblythe
-ms.openlocfilehash: 6f54274af043964f02ef02a5ce97c261a410391d
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: cc738334cc20f2911e17404faf679c0ed6bc2832
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997432"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31830874"
 ---
 # <a name="publish-the-power-bi-project-report-and-create-a-dashboard"></a>Publisere Power BI-prosjektrapporten og opprette et instrumentbord
 > [!NOTE]

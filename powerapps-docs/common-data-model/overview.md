@@ -1,26 +1,17 @@
 ---
 title: Oversikt over Common Data Model | Microsoft Docs
 description: Finn ut hvordan Common Data Model kobler Common Data Service for Apps med Common Data Service for Analytics.
-services: ''
-suite: powerapps
-documentationcenter: na
 author: RobertBruckner
-manager: lmollico
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/14/2018
 ms.author: jdaly
-ms.openlocfilehash: 5fb747d94b5af47717debba2341a9914664a27bd
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 4e9b929558de0b2451bb2df4add4b300d7115848
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995782"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803248"
 ---
 # <a name="common-data-model-overview"></a>Oversikt over Common Data Model
 

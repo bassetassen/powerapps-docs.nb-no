@@ -1,26 +1,23 @@
 ---
 title: Oppretting av en flyt for å behandle prosjektgodkjenninger | Microsoft Docs
 description: I denne oppgaven skal vi opprette en flyt som styrer prosessen med å godkjenne prosjekter.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 01/09/18
 ms.author: mblythe
-ms.openlocfilehash: 4af1571bb72c713c6186f5237d6b3791eb95808b
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 2a3bb307d403d372d0cae89a0eb9d3fd86271768
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997467"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31835890"
 ---
 # <a name="create-a-flow-to-manage-project-approvals"></a>Oppretting av en flyt for å behandle prosjektgodkjenninger
 > [!NOTE]

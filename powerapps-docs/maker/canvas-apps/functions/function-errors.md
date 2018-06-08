@@ -1,26 +1,23 @@
 ---
 title: Errors-funksjonen | Microsoft Docs
-description: Referanseinformasjon, inkludert syntaks og eksempler for Funksjonen Errors i PowerApps
-services: ''
-suite: powerapps
+description: Referanseinformasjon, inkludert syntaks og eksempler for Errors-funksjonen i PowerApps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/11/2015
 ms.author: gregli
-ms.openlocfilehash: 92eb12ccff46fcce5aed1c7a3e39bf02c2c07b4b
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 9e68b7580092c70f7e40ddd1d0b57118f6d592d8
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996307"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836154"
 ---
 # <a name="errors-function-in-powerapps"></a>Errors-funksjonen i PowerApps
 Gir feilinformasjon om tidligere endringer i en [datakilde](../working-with-data-sources.md).
@@ -36,9 +33,9 @@ Du kan unngå feil før de skjer, ved hjelp av **[Validate](function-validate.md
 **Errors**-funksjonen returnerer en [tabell](../working-with-tables.md) over feil, som inneholder følgende [kolonner](../working-with-tables.md#columns):
 
 * **Post**.  Posten i datakilden som hadde feilen.  Denne kolonnen er *tom* hvis feilen oppstod under oppretting av en post.
-* **Kolonne**  Kolonnen som forårsaket feilen, hvis feilen kan tilskrives en enkelt kolonne. Hvis ikke vil denne være *tom*.
+* **Kolonne**.  Kolonnen som forårsaket feilen, hvis feilen kan tilskrives en enkelt kolonne. Hvis ikke vil denne være *tom*.
 * **Melding**.  Beskrivelse av feilen.  Denne feilstrengen kan vises for sluttbrukeren.  Vær oppmerksom på at denne meldingen kan genereres av datakilden, at den kan være lang og inneholde rå kolonnenavn som kanskje ikke gir mening for brukeren.
-* **Feil**.  En feilkode som kan brukes i formler til å bidra til å løse feilen:
+* **Feil**.  En feilkode som kan brukes i formler for å bidra til å løse feilen:
 
 | ErrorKind | Beskrivelse |
 | --- | --- |
@@ -65,7 +62,7 @@ Tabellen som **Errors** returnerer, er [tom](function-isblank-isempty.md) hvis d
 ## <a name="syntax"></a>Syntaks
 **Errors**( *DataSource* [, *Record* ] )
 
-* *DataSource* – obligatorisk. Datakilden som du ønsker å returnere feil til.
+* *DataSource* – nødvendig. Datakilden som du ønsker å returnere feil til.
 * *Post* – valgfritt.  En bestemt post som du vil returnere feil til. Funksjonen returnerer feil for hele datakilden hvis du ikke angir dette argumentet.
 
 ## <a name="examples"></a>Eksempler
@@ -74,7 +71,7 @@ I dette eksemplet skal vi arbeide med datakilden **IceCream**:
 
 ![](media/function-errors/icecream.png)
 
-En bruker laster inn Chocolate-posten via appen til et skjema for dataregistrering og endrer verdien for **Quantity** til 90.  Posten som skal arbeides med, er plassert i [kontekstvariabelen](../working-with-variables.md#create-a-context-variable) **EditRecord**:
+En bruker laster inn sjokolade-posten via appen til et skjema for dataregistrering og endrer verdien fpr **Antall** til 90.  Posten som skal arbeides med, er plassert i [kontekstvariabelen](../working-with-variables.md#create-a-context-variable) **EditRecord**:
 
 * **UpdateContext( { EditRecord: First( Filter( IceCream, Flavor = "Chocolate" ) ) } )**
 
@@ -88,7 +85,7 @@ Uheldigvis ble **Quantity** for Chocolate endret av noen andre til 80 like før 
 
 * **IsEmpty( Errors( IceCream, EditRecord ) )**
 
-som returnerer **usann**, fordi **Errors**-funksjonenen returnerte følgende tabell:
+som returnerer **USANN**, fordi **Errors**-funksjonen returnerte følgende tabell:
 
 | Post | Kolonne | Melding | Feil |
 | --- | --- | --- | --- |
@@ -103,6 +100,6 @@ Du kan også legge til en **Last inn på nytt**-knapp på skjemaet, slik at bruk
 
 * Hvis du vil vise knappen bare når en konflikt har oppstått, kan du angi knappens **[Visible](../controls/properties-core.md)**-egenskap til denne formelen:<br>
     **!IsEmpty( Lookup( Errors( IceCream, EditRecord ), Error = ErrorKind.Conflict ) )**
-* Hvis du vil tilbakestille endringen brukeren velger med knappen, kan du angi knappens **[OnSelect](../controls/properties-core.md)**-egenskap til denne formelen:<br>
+* For å gå tilbake til endringen der brukeren velger knappen, kan du angi **[OnSelect](../controls/properties-core.md)**-egenskapen til denne formelen:<br>
     **ReloadButton.OnSelect = Revert( IceCream, EditRecord )**
 

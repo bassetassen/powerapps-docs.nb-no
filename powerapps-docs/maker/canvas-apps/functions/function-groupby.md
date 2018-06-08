@@ -1,26 +1,23 @@
 ---
 title: Funksjonene GroupBy og Ungroup | Microsoft Docs
-description: Referanseinformasjon, inkludert syntaks og eksempler, for funksjonene GroupBy og Ungroup i PowerApps
-services: ''
-suite: powerapps
+description: Referanseinformasjon for funksjonene GroupBy og Ungroup i PowerApps, inkludert syntaks og eksempler
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: 9fcd60593fe89f54dcd65f4d440d9d78b4b220e1
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: b47e1b36ec86b2bf4ee2167b2599d583b97a0fbc
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997072"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31837968"
 ---
 # <a name="groupby-and-ungroup-functions-in-powerapps"></a>Funksjonene GroupBy og Ungroup i PowerApps
 Grupperer og deler opp [poster](../working-with-tables.md#records) av en [tabell](../working-with-tables.md).
@@ -40,16 +37,16 @@ Du kan også samle resultater basert på en gruppering:
 
 * Bruk **GroupBy**-funksjonen.
 * Bruk **[AddColumns](function-table-shaping.md)**-funksjonen med **[Sum](function-aggregates.md)**, **[Average](function-aggregates.md)**  og andre mengdefunksjoner til å legge til en ny kolonne som er et aggregat av gruppetabellene.
-* Bruk funksjonen **[DropColumns](function-table-shaping.md)** til å slippe gruppetabellen.
+* Bruk funksjonen **[DropColumns](function-table-shaping.md)** for å fjerne gruppetabellen.
 
 **Ungroup** prøver å beholde den opprinnelige rekkefølgen til postene som ble matet til **GroupBy**.  Dette er ikke alltid mulig (for eksempel hvis den opprinnelige tabellen inneholder *tomme* poster).
 
-En tabell er en verdi i PowerApps, akkurat som en streng eller et tall. Du kan angi en tabell som et argument for en funksjon, og en funksjon kan returnere en tabell. **GroupBy** og **Ungroup** endrer ikke en tabell, i stedet tar de en tabell som et argument og returnerer en annen tabell. Se [Arbeide med tabeller](../working-with-tables.md) for mer informasjon.
+En tabell er en verdi i PowerApps, akkurat som en streng eller et tall. Du kan angi en tabell som et argument for en funksjon, og en funksjon kan returnere en tabell. **GroupBy** og **Ungroup** endrer ikke en tabell, i stedet tar de en tabell som et argument og returnerer en annen tabell. Hvis du vil ha mer informasjon, kan du se [arbeide med tabeller](../working-with-tables.md).
 
 ## <a name="syntax"></a>Syntaks
 **GroupBy**( *Table*, *ColumnName1* [, *ColumnName2*, ... ], *GroupColumnName* )
 
-* *Table* – obligatorisk. Tabell som skal grupperes.
+* *Tabell* – obligatorisk. Tabell som skal grupperes.
 * *ColumnName(s)* – obligatorisk.  Kolonnenavnene i *Tabell* som du vil gruppere i poster.  Disse kolonnene blir kolonnene i den resulterende tabellen.
 * *GroupColumnName* – obligatorisk.  Kolonnenavn for lagring av postdata er ikke i *ColumnName(s)*.
   
@@ -58,7 +55,7 @@ En tabell er en verdi i PowerApps, akkurat som en streng eller et tall. Du kan a
 
 **Ungroup**( *Table*, *GroupColumnName* )
 
-* *Table* – obligatorisk. Tabell som skal deles opp.
+* *Tabell* – obligatorisk. Tabell som skal deles opp.
 * *GroupColumnName* – obligatorisk. Kolonnen som inneholder postdata-oppsettet med  **GroupBy**-funksjonen.
   
     > [!NOTE]
@@ -79,7 +76,7 @@ En tabell er en verdi i PowerApps, akkurat som en streng eller et tall. Du kan a
    
     ![](media/function-groupby/citypopulations-collection.png)
 
-### <a name="group-records"></a>Gruppeposter
+### <a name="group-records"></a>Grupper poster
 1. Legg til en annen knapp, og angi **[Text](../controls/properties-core.md)**-egenskapen til **Group**.
 2. Sett **[OnSelect](../controls/properties-core.md)**-egenskapen til denne knappen til denne formelen:
    

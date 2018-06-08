@@ -1,26 +1,23 @@
 ---
 title: Funksjonene Calendar og Clock | Microsoft Docs
 description: Referanseinformasjon for funksjonene Calendar og Clock i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: d04899e4557379f07b9f434b928b35e406a9e9ca
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 0d725f00dc3617449eca9e16aedcf07c1414411f
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996012"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31831604"
 ---
 # <a name="calendar-and-clock-functions-in-powerapps"></a>Funksjonene Calendar og Clock i PowerApps
 Henter informasjon om gjeldende nasjonale innstillinger for kalender og klokke.
@@ -36,8 +33,8 @@ Du kan bruke disse funksjonene til å vise dato og klokkeslett på språket for 
 | **Calendar.MonthsShort()** |Enkeltkolonnetabell som inneholder det forkortede navnet for hver måned, begynner med «jan» for januar. |
 | **Calendar.WeekdaysLong()** |Enkeltkolonnetabell som inneholder det fullstendige navnet på hver ukedag, begynner med «søndag». |
 | **Calendar.WeekdaysShort()** |Enkeltkolonnetabell som inneholder det forkortede navnet på hver ukedag, begynner med «søn» for søndag. |
-| **Clock.AmPm()** |Enkeltkolonnetabell som inneholder den lange angivelsen med store bokstaver, «AM» og «PM».  Hvis språket bruker 24-timers tidsregning, vil tabellen være tom. |
-| **Clock.AmPmShort()** |Enkeltkolonnetabell som inneholder den korte angivelsen med store bokstaver, «A» og «P».  Hvis språket bruker 24-timers tidsregning, vil tabellen være tom. |
+| **Clock.AmPm()** |Enkeltkolonnetabell som inneholder den lange angivelsen med store bokstaver, «AM» og «PM».  Hvis språket bruker 24-timersklokke, vil tabellen være tom. |
+| **Clock.AmPmShort()** |Enkeltkolonnetabell som inneholder den korte angivelsen med store bokstaver, «A» og «P».  Hvis språket bruker 24-timersklokke, vil tabellen være tom. |
 | **Clock.IsClock24()** |Boolsk verdi som angir om en 24-timers klokke brukes for gjeldende nasjonale innstilling. |
 
 Bruk **[Text](function-text.md)**-funksjonen til å formatere verdiene for dato og klokkeslett ved bruk av denne informasjonen.  **[Language](function-language.md)**-funksjonen returnerer gjeldende språk og områdekode.
@@ -64,7 +61,7 @@ Bruk **[Text](function-text.md)**-funksjonen til å formatere verdiene for dato 
    * **Calendar.MonthsLong()**
 3. Brukere av appen din kan nå velge en måned på sitt eget språk.  **MonthsLong** kan erstattes med hvilken som helst av enkeltkolonnetabellene som returneres av **Calendar** for å opprette velgere for ukedag og klokkeslett.
 
-I USA hvor **[Språk](function-language.md)** returnerer «en-US», returnerer **Kalender**-funksjonene følgende:
+I USA, der **[Språk](function-language.md)** returnerer «en-US», returnerer **Kalender**-funksjonene følgende:
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |

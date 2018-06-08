@@ -1,26 +1,23 @@
 ---
 title: Funksjonene Filter, Search og LookUp | Microsoft Docs
 description: Referanseinformasjon for funksjonene Filter og LookUp i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 02/05/2017
 ms.author: gregli
-ms.openlocfilehash: 2a9fa8c08423cfdfb5094547602041b8dda571f2
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 35dec320b52dd934d616ba067932228b0e15ee3d
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996247"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838813"
 ---
 # <a name="filter-search-and-lookup-functions-in-powerapps"></a>Funksjonene Filter, Search og LookUp i PowerApps
 Finner én eller flere [poster](../working-with-tables.md#records) i en [tabell](../working-with-tables.md).
@@ -93,7 +90,7 @@ Hvis du vil opprette denne datakilden som en samling, oppretter du en **[Knapp](
 
 **ClearCollect( Customers, Table( { Name: "Fred Garcia", Company: "Northwind Traders" }, { Name: "Cole Miller", Company: "Contoso" }, { Name: "Glenda Johnson", Company: "Contoso" }, { Name: "Mike Collins", Company: "Adventure Works" }, { Name: "Colleen Jones", Company: "Adventure Works" } ) )**
 
-Som du ser av dette eksemplet, kan du vise en liste over poster i en [**Galleri-kontroll**](../controls/control-gallery.md) nederst på skjermen. Nær toppen av skjermen kan du legge til en [**Tekstinndata**](../controls/control-text-input.md)-kontroll, som heter **SearchInput**, slik at brukerne kan angi hvilke poster som de har interesse av.
+Som du ser av dette eksemplet, kan du vise en liste over poster i en [**Galleri-kontroll**](../controls/control-gallery.md) nederst på skjermen. Nær toppen av skjermen kan du legge til en [**Tekstinndata**](../controls/control-text-input.md)-kontroll, som heter **SearchInput**, slik at brukerne kan angi hvilke poster de har interesse av.
 
 ![](media/function-filter-lookup/customers-ux-unfiltered.png)
 
@@ -105,15 +102,15 @@ Hvis du vil filtrere basert på kolonnen **Name**, angir du egenskapen **Items**
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Filter( Customers, StartsWith( Name, SearchInput.Text ) )** |Filtrerer **Customers**-datakilden for poster der søkestrengen vises i begynnelsen av kolonnen **Name**. Testen skiller ikke mellom små og store bokstaver. Hvis brukeren skriver **bj** i søkeboksen, viser galleriet **Bjarne Høgdal** og **Bjørn Rosendal**. Galleriet viser ikke **Finn Andresen**, fordi kolonnen **Name** for den posten begynner ikke med den søkestrengen. |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-name-co-startswith.png) |
-| **Filter( Customers, SearchInput.Text in Name )** |Filtrerer **Customers**-datakilden for poster der søkestrengen vises hvor som helst i kolonnen **Name**. Testen skiller ikke mellom små og store bokstaver. Hvis brukeren skriver **bj** i søkeboksen, viser galleriet **Bjarne Høgdal,** **Bjørn Rosendal** og **Bjarte Andresen**, fordi søkestrengen finnes et sted i kolonnen **Name** i alle postene. |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-name-co-contains.png) |
-| **Search( Customers, SearchInput.Text, "Name" )** |Funksjonen **Search** ligner på operatoren **in**, og den søker etter et treff hvor som helst i kolonnen **Name** for hver post. Vær oppmerksom på at du må omslutte kolonnenavnet i doble anførselstegn. |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-name-co-contains.png) |
+| **Filter( Customers, StartsWith( Name, SearchInput.Text ) )** |Filtrerer **Kunder**-datakilden for poster der søkestrengen vises i begynnelsen av **Navn**-kolonnen. Testen skiller ikke mellom små og store bokstaver. Hvis brukeren skriver **bj** i søkeboksen, viser galleriet **Bjarne Høgdal** og **Bjørn Rosendal**. Galleriet viser ikke **Finn Andresen**, fordi kolonnen **Name** for den posten begynner ikke med den søkestrengen. |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-name-co-startswith.png) |
+| **Filter( Customers, SearchInput.Text in Name )** |Filtrerer **Kunder**-datakilden for poster der søkestrengen vises hvor som helst i **Navn**-kolonnen. Testen skiller ikke mellom små og store bokstaver. Hvis brukeren skriver **bj** i søkeboksen, viser galleriet **Bjarne Høgdal,** **Bjørn Rosendal** og **Bjarte Andresen**, fordi søkestrengen finnes et sted **Navn**-kolonnen i alle postene. |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-name-co-contains.png) |
+| **Search( Customers, SearchInput.Text, "Name" )** |Funksjonen **Search** ligner på operatoren **in**, og den søker etter et treff hvor som helst i **Navn**-kolonnen for hver post. Vær oppmerksom på at du må omslutte kolonnenavnet i doble anførselstegn. |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-name-co-contains.png) |
 
-Du kan utvide søket til å inkludere kolonnen **Company** så vel som kolonnen **Name**:
+Du kan utvide søket til å inkludere kolonnen **Bedrift** så vel som kolonnen **Navn**:
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **Filter( Customers, StartsWith( Name, SearchInput.Text ) &#124;&#124; StartsWith( Company, SearchInput.Text ) )** |Filtrerer datakilden **Customers** for posten der enten kolonnen **Name** eller **Company** begynner med søkestrengen (for eksempel **bj**).  Operatoren [**&#124;&#124;** ](operators.md) er *sann* hvis begge funksjonene **StartsWith** er *sann*. |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-all-co-startswith.png) |
-| **Filter( Customers, SearchInput.Text in Name &#124;&#124; SearchInput.Text in Company )** |Filtrerer datakilden **Customers** for posten der enten kolonnen **Name** eller **Company** inneholder søkestrengen (for eksempel **bj**). |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-all-co-contains.png) |
-| **Search( Customers, SearchInput.Text, "Name", "Company" )** |Funksjonen **Search** ligner på operatoren **in**, og den søker i datakilden **Customers** for posten der enten kolonnen **Name** eller **Company** inneholder søkestrengen (for eksempel **bj**). Funksjonen **Search** er enklere å lese og skrive enn **Filter** hvis du ønsker å angi flere kolonner og operatorer som **in**. Vær oppmerksom på at du må omslutte kolonnenavnet i doble anførselstegn. |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-all-co-contains.png) |
+| **Filter( Customers, SearchInput.Text in Name &#124;&#124; SearchInput.Text in Company )** |Filtrerer **Kunder**-datakilden for posten der enten **Navn**-kolonnen eller **Bedrift**-kolonnen inneholder søkestrengen (for eksempel **bj**). |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-all-co-contains.png) |
+| **Search( Customers, SearchInput.Text, "Name", "Company" )** |Funksjonen **Search** ligner på operatoren **in**, og den søker i datakilden **Kunder** etter posten der enten **Navn**-kolonnen eller **Bedrift**-kolonnen inneholder søkestrengen (for eksempel **bj**). Funksjonen **Search** er enklere å lese og skrive enn **Filter** hvis du ønsker å angi flere kolonner og operatorer som **in**. Vær oppmerksom på at du må omslutte kolonnenavnet i doble anførselstegn. |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-all-co-contains.png) |
 

@@ -1,26 +1,23 @@
 ---
 title: Funksjonen Refresh | Microsoft Docs
 description: Referanseinformasjon for funksjonen Refresh i PowerApps, inkludert syntaks og eksempel
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/21/2015
 ms.author: gregli
-ms.openlocfilehash: 631b0c8fbfc98d73cf1d944c2a0f3933f8f10c11
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 9ec2711c4a38f26fec2d44681b2606b4a8ecba29
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995857"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31825376"
 ---
 # <a name="refresh-function-in-powerapps"></a>Funksjonen Refresh i PowerApps
 Oppdaterer [postene](../working-with-tables.md#records) i en [datakilde](../working-with-data-sources.md).

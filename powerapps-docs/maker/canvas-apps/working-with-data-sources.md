@@ -1,26 +1,23 @@
 ---
 title: Å forstå datakilder | Microsoft Docs
 description: Referanseinformasjon for å arbeide med tilkoblinger og datakilder i Microsoft PowerApps.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/08/2017
 ms.author: gregli
-ms.openlocfilehash: ae53ebb6c0ae4743ffd4e978e680920a56452a7d
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 5e9b9ec980e6dd4aeacfef42b40fe7f52c19d558
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997517"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838744"
 ---
 # <a name="understand-data-sources-in-powerapps"></a>Å forstå datakilder i PowerApps
 De fleste PowerApps-apper bruker ekstern informasjon som er lagret i skytjenester, kalt **Datakilder**. Et vanlig eksempel er en tabell i en Excel-fil som er lagret i OneDrive for Business. Appene får tilgang til disse datakildene ved hjelp av **Tilkoblinger**.

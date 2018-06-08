@@ -1,28 +1,25 @@
 ---
-title: Last ned-, Start- og Param-funksjoner | Microsoft Docs
+title: Download-, Launch- og Param-funksjoner | Microsoft Docs
 description: Referanseinformasjon, inkludert syntaks og eksempler, for funksjonene Last ned, Start og Param i PowerApps
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: 4ed646431263e96a079483bc514c8154b6d9b653
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 146372c723df6089890100abd67d1175ba4b4a04
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995837"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31828754"
 ---
-# <a name="download-launch-and-param-functions-in-powerapps"></a>Last ned-, Start- og Param-funksjoner i PowerApps
+# <a name="download-launch-and-param-functions-in-powerapps"></a>Download-, Launch- og Param-funksjoner i PowerApps
 Laster ned eller åpner en nettside eller en app med parametere.  
 
 ## <a name="description"></a>Beskrivelse
@@ -30,14 +27,14 @@ Laster ned eller åpner en nettside eller en app med parametere.
 
 **Launch**-funksjonen åpner en nettside eller en app.  Denne funksjonen kan alternativt også sende parametere til appen.  
 
-**Param**-funksjonen henter et parameter som ble sendt til appen når den ble startet.  Hvis det navngitte parameteret ikke ble sendt, returnerer **Param** med *tom*.
+**Param**-funksjonen henter et parameter som ble sendt til appen når den ble startet.  Hvis det navngitte parameteret ikke ble sendt, returnerer **Param** som *tom*.
 
 ## <a name="syntax"></a>Syntaks
-**Last ned** ( *Adresse* )
+**Download** ( *adresse* )
 
 * *Adresse* – obligatorisk.  Adressen til en nettressurs som skal lastes ned.
 
-**Start**( *Adresse* [, *ParameterName1*, *ParameterValue1*,...])
+**Launch**( *Adresse* [, *ParameterName1*, *ParameterValue1*,...])
 
 * *Adresse* – obligatorisk.  Adressen til en nettside eller ID-en til en app som skal startes.
 * *Parameternavn* – valgfritt.  Parameternavn.

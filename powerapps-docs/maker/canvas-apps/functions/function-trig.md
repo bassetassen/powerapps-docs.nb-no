@@ -1,26 +1,23 @@
 ---
 title: Funksjonene Acos, Acot, Asin, Atan, Atan2, Cos, Cot, Degrees, Pi, Radians, Sin og Tan | Microsoft Docs
 description: Referanseinformasjon for funksjonene Abs og Sqrt i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 09/13/2016
 ms.author: gregli
-ms.openlocfilehash: 245c2a41254c244daa79a082d041231340c40872
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 4d255ec8015caaec1ce066e646c6506c182dc722
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997127"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31837738"
 ---
 # <a name="acos-acot-asin-atan-atan2-cos-cot-degrees-pi-radians-sin-and-tan-functions-in-powerapps"></a>Funksjonene Acos, Acot, Asin, Atan, Atan2, Cos, Cot, Degrees, Pi, Radians, Sin og Tan i PowerApps
 Beregner trigonometriske verdier.

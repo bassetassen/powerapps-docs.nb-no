@@ -1,26 +1,23 @@
 ---
 title: Funksjonene DateAdd, DateDiff og TimeZoneOffset | Microsoft Docs
 description: Referanseinformasjon for funksjonene DateAdd, DateDiff og TimeZoneOffset i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 05/23/2017
 ms.author: gregli
-ms.openlocfilehash: 9fdae99e280e088139882271db7328490b3d4fcc
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: eaf538c1189dffd8fb2169f3eda3f525bcf623de
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997052"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31832032"
 ---
 # <a name="dateadd-datediff-and-timezoneoffset-functions-in-powerapps"></a>Funksjonene DateAdd, DateDiff og TimeZoneOffset i PowerApps
 Legger til eller finner differansen i dato/klokkeslett-verdiene og konverterer mellom lokal tid og UTC.
@@ -36,14 +33,14 @@ For begge funksjonene kan enhetene være **Milliseconds**, **Seconds**, **Minute
 
 Du kan bruke **DateAdd** sammen med **TimeZoneOffset** til å konvertere mellom brukerens lokaltid og UTC (universaltid).  Når du legger til **TimeZoneOffset** konverteres lokaltid til UTC, og når du trekker fra differansen (legger til med motsatt fortegn), konverteres UTC til lokaltid.
 
-Se også [Slik arbeider du med datoer og klokkeslett](../show-text-dates-times.md) for mer informasjon.
+Se også [Slik arbeider du med datoer og klokkeslett](../show-text-dates-times.md) hvis du vil ha mer informasjon.
 
 ## <a name="syntax"></a>Syntaks
 **DateAdd**( *DateTime*, *Addition* [, *Units* ] )
 
 * *DateTime* – obligatorisk. Dato/klokkeslett-verdier som funksjonen skal arbeide med.
 * *Addition* – obligatorisk. Tall, i *Units*, som skal legges til *DateTime*.
-* *Units* – valgfritt. Typen *Units* som skal legges til: **Milliseconds**, **Seconds**, **Minutes**, **Hours**, **Days**, **Months**, **Quarters** eller **Years**.  Hvis enheten ikke er angitt, brukes **Days**.
+* *Units* – valgfritt. Typen *Units* (enhet) som skal legges til: **Milliseconds**, **Seconds**, **Minutes**, **Hours**, **Days**, **Months**, **Quarters** eller **Years**.  Hvis enheten ikke er angitt, brukes **Days**.
 
 **DateDiff**( *StartDateTime*, *EndDateTime* [, *Units* ] )
 
@@ -74,7 +71,7 @@ I alle disse eksemplene antas det at gjeldende dato og klokkeslett er **15. juli
 | **DateDiff( Now(), Today(), Minutes )** |Returnerer differansen mellom gjeldende dato/klokkeslett og gjeldende dato (uten klokkeslett) i minutter.  Siden **Now** er senere enn **Today**, vil resultatet være negativt. |–782 |
 
 ### <a name="converting-to-utc"></a>Slik konverterer du til UTC
-Hvis du vil konvertere til UTC (universaltid), kan du legge til **TimeZoneOffset** for det gitte klokkeslettet.  
+Hvis du vil konvertere til UTC, (Coordinated Universal Time), kan du legge til **TimeZoneOffset** for det gitte klokkeslettet.  
 
 Anta for eksempel at gjeldende dato og klokkeslett er **15. juli 2013 kl. 13:02** i tidssonen Stillehavskysten (PDT, UTC–7).  For å fastslå gjeldende klokkeslett i UTC, bruker du følgende:
 

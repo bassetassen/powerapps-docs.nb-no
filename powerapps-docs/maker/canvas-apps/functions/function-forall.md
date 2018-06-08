@@ -1,32 +1,29 @@
 ---
 title: Funksjonen ForAll | Microsoft Docs
-description: Referanseinformasjon, inkludert syntaks og eksempler for funksjonen ForEach i PowerApps
-services: ''
-suite: powerapps
+description: Referanseinformasjon for funksjonen ForEach i PowerApps, inkludert syntaks og eksempler
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: e2e0a0d638f8f0ff5f9924604a43fa38a556f8fe
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 7df5e270e92930fa494ec8a30a59d46d022fd915
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996507"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838244"
 ---
 # <a name="forall-function-in-powerapps"></a>Funksjonen ForAll i PowerApps
 Beregner verdier og utfører handlinger for alle [poster](../working-with-tables.md#records) i en [tabell](../working-with-tables.md).
 
 ## <a name="description"></a>Beskrivelse
-Funksjonen **ForAll** evaluerer en formel for alle poster i en tabell.  Formelen kan beregne en verdi og/eller utføre handlinger, som endring av data eller arbeid med en tilkobling.
+Funksjonen **ForAll** evaluerer en formel for alle poster i en tabell.  Formelen kan beregne en verdi og/eller utføre handlinger, for eksempel endring av data eller arbeide med en tilkobling.
 
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
@@ -35,12 +32,12 @@ Resultatet fra hver formelevaluering returneres i en tabell, i samme rekkefølge
 
 Hvis resultatet av formelen er en enkeltverdi, vil den ferdige tabellen være en enkeltkolonnetabell.  Hvis resultatet av formelen er en post, vil den ferdige tabellen inneholde poster med samme kolonner som resultatposten.  
 
-Hvis formelresultatet er en *tom* verdi, vil det ikke finnes noen poster i resultattabellen for inndataposten.  I slike tilfeller, vil det være færre poster i resultattabellen enn i kildetabellen.
+Hvis formelresultatet er en *tom* verdi, vil det ikke finnes noen poster i resultattabellen for inndataposten.  I slike tilfeller vil det være færre poster i resultattabellen enn i kildetabellen.
 
-### <a name="taking-action"></a>Utføre handling
+### <a name="taking-action"></a>Utfør handling
 Formelen kan inkludere funksjoner som utfører handling, blant annet endring av poster i en datakilde med funksjonene **[Patch](function-patch.md)** og **[Collect](function-clear-collect-clearcollect.md)**.  Formelen kan også kalle opp metoder ved tilkoblinger.  Flere handlinger kan utføres per post ved bruk av [**;**-operatøren](operators.md). Du kan ikke endre tabellen som funksjonen **ForAll** brukes på.
 
-Når du skriver en formel, må du huske på at poster kan behandles i en hvilken som helst rekkefølge og, når det er mulig, parallelt.  Den første posten i tabellen kan behandles etter den siste posten.  Pass på at du ikke bestiller avhengigheter.  Av denne grunn kan du ikke bruke funksjonene **[UpdateContext](function-updatecontext.md)**, **[Clear](function-clear-collect-clearcollect.md)** og **[ClearCollect](function-clear-collect-clearcollect.md)** i funksjonen **ForAll**, da disse enkelt kan brukes til å inneholde variabler som ville vært mottakelige for denne effekten.  Du kan bruke **[Collect](function-clear-collect-clearcollect.md)**, men rekkefølgen på postene som legges til er ikke definert.
+Når du skriver en formel, må du huske på at poster kan behandles i en hvilken som helst rekkefølge og, når det er mulig, parallelt.  Den første posten i tabellen kan behandles etter den siste posten.  Pass på at du ikke bestiller avhengigheter.  Av denne grunn kan du ikke bruke funksjonene **[UpdateContext](function-updatecontext.md)**, **[Tøm](function-clear-collect-clearcollect.md)** og **[ClearCollect](function-clear-collect-clearcollect.md)** i funksjonen **ForAll**, da disse enkelt kan brukes til å inneholde variabler som ville vært mottakelige for denne effekten.  Du kan bruke **[Collect](function-clear-collect-clearcollect.md)**, men rekkefølgen på postene som legges til er ikke definert.
 
 Flere funksjoner som endrer datakilder, inkludert **Collect**, **Remove** og **Update**, returnerer den endrede datakilden som returverdi.  Disse returverdiene kan være store og bruke betydelig med ressurser hvis de returneres for hver post i **ForAll**-tabellen.  Det kan også hende at disse returverdiene ikke er som du forventer, siden **ForAll** kan operere parallelt og kan separere funksjonens bivirkninger slik at de ikke oppnår resultat.  Heldigvis er det slik at hvis returverdien fra **ForAll** ikke brukes, noe som ofte er tilfelle ved funksjoner for dataendring, vil det ikke bli opprettet en returverdi, og det vil ikke være grunn til å bekymre seg over ressurser eller bestilling.  Hvis du imidlertid bruker resultatet fra en **ForAll**, og en av funksjonene returnerer en datakilde, bør du tenke nøye over hvordan du strukturerer resultatet og teste det på mindre datasett først.  
 
@@ -64,7 +61,7 @@ Følgende eksempler bruker **Squares** som [datakilde](../working-with-data-sour
 
 ![](media/function-forall/squares.png)
 
-For å opprette denne datakilden som en samling angir du **Knapp**-kontrollens **OnSelect**-egenskap til denne formelen, åpner Forhåndsvisningsmodus og klikker eller trykker deretter på knappen:
+For å opprette denne datakilden som en samling, angir du **Knappe**-kontrollens **OnSelect**-egenskap til denne formelen, åpner Forhåndsvisningsmodus, og deretter klikker eller trykker du på knappen:
 
 * **ClearCollect( Squares, [ "1", "4", "9" ] )**
 
@@ -78,11 +75,11 @@ Følgende eksempler bruker **Expressions** som [datakilde](../working-with-data-
 
 ![](media/function-forall/translate.png)
 
-For å opprette denne datakilden som en samling angir du **Knapp**-kontrollens **OnSelect**-egenskap til denne formelen, åpner Forhåndsvisningsmodus og klikker eller trykker deretter på knappen:
+For å opprette denne datakilden som en samling, angir du **Knappe**-kontrollens **OnSelect**-egenskap til denne formelen, åpner Forhåndsvisningsmodus, og deretter klikker eller trykker du på knappen:
 
 * **ClearCollect( Expressions, [ "Hello", "Good morning", "Thank you", "Goodbye" ] )**
 
-Dette eksempelet bruker også en [Microsoft Translator](../connections/connection-microsoft-translator.md)-tilkobling.  Hvis du vil legge til denne tilkoblingen i appen din, kan du se emnet om hvordan kan [behandle tilkoblinger](../add-manage-connections.md).
+Dette eksempelet bruker også en [Microsoft Translator](../connections/connection-microsoft-translator.md)-tilkobling.  Hvis du vil legge til denne tilkoblingen i appen din, kan du se emnet om hvordan du [behandler tilkoblinger](../add-manage-connections.md).
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
@@ -94,9 +91,9 @@ Noen ganger trenger du å filtrere, bearbeide, sortere og manipulere data.  Powe
 
 Noen ganger vil du også lage en kopi av resultatet for senere bruk.  Eller du vil flytte informasjon fra en datakilde til en annen.  PowerApps tilbyr funksjonen **Collect** for å kopiere data.
 
-Før du kopierer, bør du likevel tenke nøye over om det virkelig er nødvendig.  Mange situasjoner kan løses ved å filtrere og forme den underliggende datakilden etter behov med en formel. Noen av ulempene ved å lage en kopi er som følger:
+Før du kopierer, bør du likevel tenke nøye over om det virkelig er nødvendig.  Mange situasjoner kan løses ved å filtrere og forme den underliggende datakilden etter behov med en formel. Noen av de negative sidene ved å lage en kopi er:
 
-* To kopier av den samme informasjonen betyr at én av dem kan bli usynkronisert.  
+* To kopier av den samme informasjonen betyr at en av dem kanskje ikke vil være synkronisert.  
 * En kopi kan bruke opp mye av datamaskinens minne, nettverksbåndbredde og/eller tid.  
 * For de fleste datakilder kan ikke kopiering delegeres, noe som begrenser hvor mye data som kan flyttes.      
 
@@ -104,7 +101,7 @@ Følgende eksempler bruker **Products** som [datakilde](../working-with-data-sou
 
 ![](media/function-forall/prod.png)
 
-For å opprette denne datakilden som en samling angir du **Knapp**-kontrollens **OnSelect**-egenskap til denne formelen, åpner Forhåndsvisningsmodus og klikker eller trykker deretter på knappen:
+For å opprette denne datakilden som en samling, angir du **Knappe**-kontrollens **OnSelect**-egenskap til denne formelen, åpner Forhåndsvisningsmodus, og deretter klikker eller trykker du på knappen:
 
 * **ClearCollect( Products, Table( { Product: "Widget", 'Quantity Requested': 6, 'Quantity Available': 3 }, { Product: "Gadget", 'Quantity Requested': 10, 'Quantity Available': 20 }, { Product: "Gizmo", 'Quantity Requested': 4, 'Quantity Available': 11 }, { Product: "Apparatus", 'Quantity Requested': 7, 'Quantity Available': 6 } ) )**
 
@@ -121,7 +118,7 @@ Ikke lag den kopien!  Vi kan bruke følgende formel hvor som helst etter behov:
 
 [Omfanget av en post](../working-with-tables.md#record-scope) opprettes med funksjonene **Filter** og **AddColumns** for å utføre henholdsvis operasjonene sammenligning og subtraksjon, med feltene  **'Quantity Requested'** og **'Quantity Available'** for hver post.
 
-I dette eksempelet kan funksjonen **Filter** delegeres.  Dette er viktig ettersom den kan finne alle produkter som oppfyller kriteriet, selv om dette kun er noen få poster i en tabell med millioner av poster.  På dette tidspunktet kan ikke **ShowColumns** og **AddColumns** delegeres, noe som betyr at det faktiske antallet produkter som må bestilles, vil være begrenset.  Hvis du vet at størrelsen på dette resultatet alltid vil være relativt liten, vil denne tilnærmingen fungere helt greit.
+I dette eksempelet kan funksjonen **Filter** delegeres.  Dette er viktig ettersom den kan finne alle produkter som oppfyller kriteriet, selv om dette kun er noen få poster i en tabell med millioner av poster.  På dette tidspunktet kan ikke **ShowColumns** og **AddColumns** delegeres, noe som betyr at det faktiske antallet produkter som må bestilles, vil være begrenset.  Hvis du vet at resultatet alltid vil være relativt lite, vil denne tilnærmingen være grei.
 
 Siden vi ikke lagde en kopi, vil det ikke finnes noen ekstra kopi av informasjonen som må administreres eller som kan utdateres.  
 
@@ -151,5 +148,5 @@ Til slutt kan vi utføre **Collect**funksjonen direkte i **ForAll**:
 
 Funksjonen **ForAll** kan fortsatt ikke delegeres på dette tidspunktet.  Hvis **Products**-tabellen er stor, vil **ForAll** kun se på det første settet med poster, og det kan hende at vi går glipp av noen produkter som må bestilles.  Denne tilnærmingen er likevel grei for tabeller som vi vet at vil forbli små.
 
-Vær oppmerksom på at vi ikke registrer resultatet fra **ForAll**.  Oppkall av **Collect**-funksjonen utført fra innsiden av funksjonen vil returnere **NewOrder**-datakilden for alle postene, noe som kan føre til store menger data hvis vi skulle registrert det.  
+Vær oppmerksom på at vi ikke registrer resultatet fra **ForAll**.  **Samle inn**-funksjonskall utført fra innsiden vil returnere **NewOrder**-datakilden for alle postene, noe som kan føre til store menger data hvis vi registrerer det.  
 

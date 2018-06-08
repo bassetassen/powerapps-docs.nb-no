@@ -1,25 +1,22 @@
 ---
 title: Å legge til en liste, en rullegardinliste og alternativknapper | Microsoft Docs
 description: Å opprette eller konfigurer alternativer for flervalg i PowerApps
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: lonu
-manager: anneta
+manager: kfile
 editor: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/23/2016
 ms.author: lonu
-ms.openlocfilehash: 8eacac89f7578a83757299b8e627cf757fb1c6d7
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 1fbaf4f9d740084a1ed0d630b94d1cd41713ba03
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996057"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31825560"
 ---
 # <a name="add-a-list-box-a-drop-down-list-or-radio-buttons"></a>Å legge til en liste, en rullegardinliste eller alternativknapper
 PowerApps inkluderer alternativer for enkeltvalg og flervalg, inkludert en liste, en rullegardinliste og alternativknapper. I dette emnet legger vi til disse kontrollene og bruker en **Tabell**-formel for å lage listene. Når et element velges i listen, oppdateres andre kontroller.

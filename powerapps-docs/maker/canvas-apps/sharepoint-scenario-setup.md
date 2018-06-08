@@ -1,40 +1,37 @@
 ---
-title: Konfigurering av lister for SharePoint Online-integrasjon med PowerApps, Microsoft Flow og Power BI | Microsoft Docs
+title: Å konfigurere lister for SharePoint Online-integrasjon med PowerApps, Microsoft Flow og Power BI | Microsoft Docs
 description: I denne oppgaven vil vi konfigurere SharePoint-lister, som skal brukes som en datakilde for apper, flyter, rapporter og instrumentbord.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 12/19/2017
 ms.author: mblythe
-ms.openlocfilehash: ad9033b51142d1bb6b014abe0cc049a0b5c27ee5
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 1dde9695f3fb3f0fe7351a22a1a6f5300fb53da8
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997527"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836951"
 ---
-# <a name="set-up-lists-for-sharepoint-online-integration-with-powerapps-microsoft-flow-and-power-bi"></a>Konfigurering av lister for SharePoint Online-integrasjon med PowerApps, Microsoft Flow og Power BI
+# <a name="set-up-lists-for-sharepoint-online-integration-with-powerapps-microsoft-flow-and-power-bi"></a>Å konfigurere lister for SharePoint Online-integrasjon med PowerApps, Microsoft Flow og Power BI
 > [!NOTE]
 > Denne artikkelen er en del av en opplæringsserie om hvordan du bruker PowerApps, Microsoft Flow og Power BI, med SharePoint Online. Kontroller at du leser [Serie-innføringen](sharepoint-scenario-intro.md), for å få en følelse av det store bildet, i tillegg til relaterte nedlastinger.
 
-SharePoint har massevis av funksjoner for deling og samarbeid, men vi fokuserer på én funksjon for dette scenariet: [SharePoint-lister](https://support.office.com/article/Introduction-to-lists-0A1C3ACE-DEF0-44AF-B225-CFA8D92C52D7). En liste er bare en samling av data som du kan dele med gruppemedlemmer og andre områdebrukere. Vil vi gå gjennom lister som brukes i dette scenariet, og deretter kan du opprette dem i ditt eget SharePoint Online-område.
+SharePoint har massevis av funksjoner for deling og samarbeid, men vi fokuserer på én funksjon for dette scenariet: [SharePoint-lister](https://support.office.com/article/Introduction-to-lists-0A1C3ACE-DEF0-44AF-B225-CFA8D92C52D7). En liste er bare en samling av data som du kan dele med gruppemedlemmer og andre områdebrukere. Vil vi gå gjennom lister som brukes i dette scenarioet, og deretter kan du opprette dem i ditt eget SharePoint Online-område.
 
-## <a name="step-1-understand-the-lists"></a>Trinn 1: Å forstå listene
+## <a name="step-1-understand-the-lists"></a>Trinn 1: Forståelse av listene
 Den første listen er **Prosjektforespørsler**, der en prosjektanmoder legger til en forespørsel. Prosjektgodkjenneren vurderer forespørselen og godkjenner, eller avviser den.
 
 | **Listekolonne** | **Datatype** | **Notater** |
 | --- | --- | --- |
 | Tittel |Enkelt linje med tekst |Standardkolonnen, brukt til prosjektnavn |
-| Beskrivelse |Enkelt linje med tekst | |
+| Beskrivelse |Enkeltlinje med tekst | |
 | ProjectType |Enkelt linje med tekst |Verdier: ny maskinvare, oppgradert maskinvare, ny programvare, oppgradert programvare |
 | RequestDate |Dato | |
 | Anmoder |Enkelt linje med tekst | |
@@ -42,49 +39,49 @@ Den første listen er **Prosjektforespørsler**, der en prosjektanmoder legger t
 | Godkjent |Enkelt linje med tekst |Verdier: venter, ja, ingen |
 
 > [!NOTE]
-> Vi bruker også **ID**-kolonnen, som er generert av SharePoint og skjult som standard. Vi bruker grunnleggende datatyper for enkelhet, men en ekte app kan bruke mer komplekse typer, som for eksempel **Person eller gruppe** for **Requestor**-kolonnen. Hvis du vil ha informasjon om datatyper som støttes av PowerApps, kan du se [Koble til fra Microsoft PowerApps til SharePoint](connections/connection-sharepoint-online.md#known-issues).
+> Vi bruker også **ID**-kolonnen, som er generert av SharePoint og skjult som standard. Vi bruker grunnleggende datatyper for enkelhets skyld, men en ekte app kan bruke mer komplekse typer, som for eksempel **Person eller gruppe** for **Anmoder**-kolonnen. Hvis du vil ha informasjon om datatyper som støttes av PowerApps, kan du se [Koble til fra Microsoft PowerApps til SharePoint](connections/connection-sharepoint-online.md#known-issues).
 
 Den andre listen er **Prosjektdetaljer**, som sporer detaljer for alle godkjente prosjekter, slik som hvilket prosjekt lederen er tilordnet.
 
 | **Listekolonne** | **Datatype** | **Notater** |
 | --- | --- | --- |
 | Tittel |Enkelt linje med tekst |Standardkolonnen, brukt til prosjektnavn |
-| RequestID |Tall |Samsvarer med verdien i **ID**-kolonnen for **Prosjektforespørsel**-listen |
+| RequestID |Tall |Samsvarer med verdien i **ID**-kolonnen i **Prosjektforespørsler**-listen |
 | ApprovedDate |Dato | |
-| Status |Enkelt linje med tekst |Verdier: ikke startet, pågår, fullført |
+| Status |Enkeltlinje med tekst |Verdier: ikke startet, pågår, fullført |
 | ProjectedStartDate |Dato |Når prosjektlederen estimerer at prosjektet skal starte |
 | ProjectedEndDate |Dato |Når prosjektlederen estimerer at prosjektet skal avsluttes |
-| ProjectedDays |Tall |Arbeidsdager; vil vanligvis bli beregnet, men er ikke det i dette scenariet |
+| ProjectedDays |Tall |Arbeidsdager – vil vanligvis bli beregnet, men er ikke det i dette scenarioet |
 | ActualDays |Tall |For fullførte prosjekter |
 | PMAssigned |Enkelt linje med tekst |Prosjektleder |
 
 ## <a name="step-2-create-and-review-the-lists"></a>Trinn 2: Å opprette og se gjennom lister
-Hvis du vil fortsette med scenariet, må du opprette de to SharePoint-listene og fylle dem med eksempeldata. Vi viser deg hvordan du gjør dette ved å opprette listen og lime inn eksempeldata i den. Kontroller at du har Excel-filer fra [Nedlastingspakken](https://aka.ms/o4ia0f).
+Hvis du vil fortsette med scenarioet, må du opprette de to SharePoint-listene og fylle dem med eksempeldata. Vi viser deg hvordan du gjør dette ved å opprette listen og lime inn eksempeldata i den. Kontroller at du har Excel-filer fra [Nedlastingspakken](https://aka.ms/o4ia0f).
 
 > [!NOTE]
 > Bruk Internet Explorer for dette trinnet.
 
 ### <a name="create-the-lists"></a>Å opprette listene
 
-1. Klikk eller trykk på **Ny** og deretter **Liste**, på SharePoint-området i Internet Explorer.
+1. Klikk eller trykk på **Ny** og deretter **Liste** på SharePoint-området i Internet Explorer.
    
-    ![Oppretting av en ny SharePoint-liste](./media/sharepoint-scenario-setup/01-01-01-new-list.png)
+    ![Å opprette en ny SharePoint-liste](./media/sharepoint-scenario-setup/01-01-01-new-list.png)
 
-2. Skriv inn navnet «Prosjektforespørsler», deretter klikk eller trykk på **Opprett**.
+2. Skriv inn navnet «Prosjektforespørsler», og klikk eller trykk deretter på **Opprett**.
    
     ![Å angi navn for ny liste](./media/sharepoint-scenario-setup/01-01-02-create-list.png)
    
-    Listen for **prosjektforespørsler**-listen er opprettet, med standard **Title**-feltet.
+    Listen for **Prosjektforespørselen** er opprettet, med **Tittel**-feltet som standard.
    
     ![Liste for prosjektforespørsler](./media/sharepoint-scenario-setup/01-01-03-initial-list.png)
 
 ### <a name="add-columns-to-the-list"></a>Å legge til kolonner i listen
 
-1. Klikk eller trykk på ![Nytt elementikon](./media/sharepoint-scenario-setup/icon-new.png), deretter **Enkelt linje med tekst**.
+1. Klikk eller trykk på ![Nytt elementikon](./media/sharepoint-scenario-setup/icon-new.png), og deretter **Enkelt linje med tekst**.
    
-    ![Å legge til feltet Enkelt linje med tekst](./media/sharepoint-scenario-setup/01-01-04-add-column.png)
+    ![Å legge til en enkelt linje med tekst-felt](./media/sharepoint-scenario-setup/01-01-04-add-column.png)
 
-2. Skriv inn navnet «Beskrivelse», deretter klikker eller trykker du på **Lagre**.
+2. Skriv inn navnet «Beskrivelse», og klikk eller trykk deretter på **Lagre**.
    
 3. Gjenta trinn **1** og **2** for de andre kolonnene i listen:
    
@@ -110,20 +107,20 @@ Hvis du vil fortsette med scenariet, må du opprette de to SharePoint-listene og
 5. Gjenta listeopprettingen og kopier prosessen for listen for «prosjektdetaljer», ved hjelp av project-details.xlsx-arbeidsboken. Referer til tabellen for prosjektdetaljer i [Trinn 1: Å forstå listene](#step-1-understand-the-lists) for kolonnenavnene og datatypene.
 
 ## <a name="step-3-update-connections-to-samples---optional"></a>Trinn 3: Oppdatering av tilkoblinger til eksempler – valgfritt
-Som nevnt i innføringen til denne opplæringsserien, inkluderte vi to eksempelapper og en rapport i [Nedlastingspakken](https://aka.ms/o4ia0f). Du kan fullføre dette scenariet uten å bruke disse eksemplene, men hvis du vil bruke eksemplene, må du oppdatere tilkoblingene til SharePoint-listene. Du oppdatere dem slik at de bruker *dine* lister som en datakilde, i stedet for våre.
+Som nevnt i innføringen til denne opplæringsserien, inkluderte vi to eksempelapper og en rapport i [Nedlastingspakken](https://aka.ms/o4ia0f). Du kan fullføre dette scenarioet uten å bruke disse eksemplene, men hvis du vil bruke eksemplene, må du oppdatere tilkoblingene til SharePoint-listene. Du oppdatere dem slik at de bruker *dine* lister som en datakilde, i stedet for våre.
 
-### <a name="update-connections-for-the-sample-apps"></a>Oppdatering av tilkoblinger for eksempelappene
+### <a name="update-connections-for-the-sample-apps"></a>Å oppdatere tilkoblinger for eksempelappene
 
 1. Klikk eller trykk på **Åpne** i den venstre ruten i [PowerApps Studio](https://create.powerapps.com/studio/). 
 
-2. Klikk eller trykk på **Bla gjennom**, åpne deretter filen **project-management-app.msapp** du lastet ned.
+2. Klikk eller trykk på **Bla gjennom**, og åpne deretter **project-management-app.msapp**-filen du lastet ned.
 
 3. Klikk eller trykk på **Tillat**, slik at PowerApps kan bruke SharePoint.
 
 4. Klikk eller trykk på **Datakilder** på **Vis**-fanen på båndet.
 
     ![PowerApps-datakilder](./media/sharepoint-scenario-setup/01-03-01-data-sources.png)
-5. Klikk eller trykk på ellipsen (**...**) ved siden av **Prosjektdetaljer** i **Data**-panelet, deretter klikker eller trykker du på **Fjern**.
+5. Klikk eller trykk på ellipsen (**. . .**) ved siden av **Prosjektdetaljer** i **Data**panelet, og klikk eller trykk deretter på **Fjern**.
    
     ![Å fjerne datakilde for prosjektdetaljer](./media/sharepoint-scenario-setup/01-03-02-remove.png)
 6. Klikk eller trykk på **Legg til datakilde**.
@@ -155,28 +152,28 @@ Som nevnt i innføringen til denne opplæringsserien, inkluderte vi to eksempela
    
     ![Datakilder](./media/sharepoint-scenario-setup/01-03-03e-data-sources.png)
 
-10. Klikk eller trykk på ellipsen (**...**) ved siden av **Prosjektdetaljer**, og klikk eller trykk deretter på **Oppdater**.
+10. Klikk eller trykk på ellipsen (**. . .**) ved siden av **Prosjektdetaljer**, og klikk eller trykk deretter på **Oppdater**.
     
-    ![Oppdatering av datakilde for prosjektdetaljer](./media/sharepoint-scenario-setup/01-03-02-remove.png)
+    ![Å oppdatere datakilde for prosjektdetaljer](./media/sharepoint-scenario-setup/01-03-02-remove.png)
 
-11. Klikk ![Kjør app-ikonet](./media/sharepoint-scenario-setup/icon-run-arrow.png) øverst til høyre for å kjøre appen, og kontroller at tilkoblingen fungerer.
+11. Klikk på ![Kjør app-ikonet](./media/sharepoint-scenario-setup/icon-run-arrow.png) øverst til høyre for å kjøre appen, og kontroller at tilkoblingen fungerer.
 
 12. Klikk eller trykk på **Fil**, og lagre deretter appen i skyen. 
 
 12. Gjenta trinnene i denne delen for **project-requests-app.msapp**, ved bruk av listen for **prosjektforespørsler**.
 
-### <a name="update-connections-for-the-sample-report"></a>Oppdatering av tilkoblinger for eksempelrapporten
+### <a name="update-connections-for-the-sample-report"></a>Å oppdatere tilkoblinger for eksempelrapporten
 1. Åpne **project-analysis.pbix** i Power BI Desktop.
 
 2. Klikk eller trykk på **Rediger spørringer** på **Hjem**-fanen på båndet, og deretter **Innstillinger for datakilde**.
    
-    ![Redigering av spørringer](./media/sharepoint-scenario-setup/01-03-04-edit-queries.png)
+    ![Å redigere spørringer](./media/sharepoint-scenario-setup/01-03-04-edit-queries.png)
 
 3. Klikk eller trykk på **Endre kilde**.
    
     ![Innstillinger for datakilde](./media/sharepoint-scenario-setup/01-03-05-settings.png)
 
-4. Angi nettadressen for SharePoint Online-området, klikk eller trykk deretter på **OK**, deretter på **Lukk**.
+4. Angi nettadressen for SharePoint Online-området, og klikk eller trykk deretter **OK**, så **Lukk**.
    
     ![Nettadresse for SharePoint-liste](./media/sharepoint-scenario-setup/01-03-06-list-url.png)
 

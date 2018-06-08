@@ -1,25 +1,18 @@
 ---
 title: Transformer InfoPath-skjemaer til PowerApps | Microsoft Docs
 description: Kom i gang med å transformere InfoPath-skjemaer til PowerApps med mer informasjon om vanlige InfoPath-scenarioer og hvordan du oppretter disse elementene i PowerApps.
-services: powerapps
-documentationcenter: na
-author: dewcatpaint1
-manager: kfile
-editor: ''
-tags: ''
+author: richardriley99
 ms.service: powerapps
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: canvas
 ms.date: 04/05/2018
-ms.author: cathed
-ms.openlocfilehash: 4e81566ec427b4faa064b1ba5891fa2526497b34
-ms.sourcegitcommit: eac8ad7b54a0b0eba6444a38a952dbfd17bc64b5
+ms.author: rriley
+ms.openlocfilehash: 10fe4e9052b9c029046c515c229e95075988597a
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/08/2018
-ms.locfileid: "30998457"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803516"
 ---
 # <a name="transform-your-infopath-forms-to-powerapps"></a>Transformer InfoPath-skjemaer til PowerApps
 

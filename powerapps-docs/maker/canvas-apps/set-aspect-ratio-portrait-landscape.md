@@ -1,36 +1,33 @@
 ---
-title: Endre skjermstørrelse og -retning | Microsoft Docs
+title: Endring av skjermstørrelse og -retning
 description: Trinnvise instruksjoner for å endre innstillinger som skjermstørrelse og -retning
-services: ''
-suite: powerapps
 documentationcenter: na
 author: lonu
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/16/2016
 ms.author: lonu
-ms.openlocfilehash: be123445c1b719012dcb71c7aa93d93dace64935
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: e114f0b4c763f7f89e5a78b3bae7a69c3961bbc8
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997392"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31827509"
 ---
-# <a name="change-screen-size-and-orientation-in-powerapps"></a>Endre skjermstørrelse og -retning i PowerApps
-Tilpasse en app ved å endre skjermstørrelsen og -retningen.
+# <a name="change-screen-size-and-orientation-in-powerapps"></a>Endring av skjermstørrelse og -retning i PowerApps
+Å tilpasse en app ved å endre skjermstørrelsen og -retningen.
 
 ## <a name="prerequisites"></a>Forutsetninger
 1. Opprett en app, eller åpne en for redigering.
 
 2. Klikk eller trykk på **Appinnstillinger** på **Fil**-menyen.
 
-## <a name="change-screen-size-and-orientation"></a>Endre skjermstørrelse og retning
+## <a name="change-screen-size-and-orientation"></a>Endring av skjermstørrelse og -retning
 1. Under **Appinnstillinger** klikker eller trykker du på **Skjermstørrelse og retning**.
 
     ![Alternativ for å endre skjermstørrelsen og -retningen for en app](./media/set-aspect-ratio-portrait-landscape/size-orientation.png)
@@ -39,7 +36,7 @@ Tilpasse en app ved å endre skjermstørrelsen og -retningen.
 
 3. (Bare for nettbrett-apper) Under **Størrelsesforhold** klikker eller trykker du på forholdet som samsvarer med målenheten for denne appen.
 
-    ![Endre størrelsesforholdet for en nettbrett-app](./media/set-aspect-ratio-portrait-landscape/aspect-tablet.png)
+    ![Endring av størrelsesforholdet for en nettbrett-app](./media/set-aspect-ratio-portrait-landscape/aspect-tablet.png)
 
 4. Angi enten **På** eller **Av** under **Lås størrelsesforhold**.
 

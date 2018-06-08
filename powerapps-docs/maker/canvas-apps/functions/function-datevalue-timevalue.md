@@ -1,26 +1,23 @@
 ---
 title: Funksjonene DateValue, TimeValue og DateTimeValue | Microsoft Docs
 description: Referanseinformasjon, inkludert syntaks og eksempler, for funksjonene DateValue, TimeValue og DateTimeValue i PowerApps
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: 9fd392666fd79ec1342e736fe772416d435c0b77
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 396a2d5325b7b72f3637dba1edddeead49594167
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996387"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31832585"
 ---
 # <a name="datevalue-timevalue-and-datetimevalue-functions-in-powerapps"></a>Funksjonene DateValue, TimeValue og DateTimeValue i PowerApps
 Konverterer en dato, et klokkeslett eller begge deler i en streng til en dato/klokkeslett-verdi.
@@ -45,7 +42,7 @@ Datoer må være i ett av disse formatene:
 
 Se funksjonene **[Date](function-date-time.md)**  og **[Time](function-date-time.md)** for å konvertere fra de numeriske verdiene dato, måned, år, time, minutt og sekund.
 
-Se også [Slik arbeider du med datoer og klokkeslett](../show-text-dates-times.md) for mer informasjon.
+Se også [Slik arbeider du med datoer og klokkeslett](../show-text-dates-times.md) hvis du vil ha mer informasjon.
 
 Hvis du vil konvertere tall, kan du se **[Value](function-value.md)**-funksjonen.
 

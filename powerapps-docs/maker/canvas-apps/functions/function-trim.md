@@ -1,36 +1,33 @@
 ---
 title: Funksjonene Trim og TrimEnds | Microsoft Docs
-description: Referanseinformasjon for funksjonene Trim og TrimEnds i PowerApps, inkludert syntaks og et eksempel
-services: ''
-suite: powerapps
+description: Referanseinformasjon for funksjonene Trim og TrimEnds i PowerApps, inkludert syntaks og eksempel
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 09/09/2016
 ms.author: gregli
-ms.openlocfilehash: 7dc9372071b905cf2b95f7355864276d8f344d9c
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 38aa25c46bf8b29c413ca9c3df92f9528bfa97d5
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997357"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31831125"
 ---
 # <a name="trim-and-trimends-functions-in-powerapps"></a>Funksjonene Trim og TrimEnds i PowerApps
 Fjerner ekstra mellomrom fra en tekststreng.
 
 ## <a name="description"></a>Beskrivelse
-**Trimfunksjonen** fjerner alle mellomrom fra en tekststreng bortsett fra enkle mellomrom mellom ord.  
+**Trimfunksjonen** fjerner alle mellomrom fra en tekststreng, bortsett fra enkle mellomrom mellom ord.  
 
 Funksjonen **TrimEnds** fjerner alle mellomrom fra starten og slutten av en tekststreng, men lar mellomrom mellom ord forbli intakt.
 
-Hvis du angir en enkelt tekststreng, vil returverdien for begge funksjonene være strengen der de ekstra mellomrommene er fjernet. Hvis du angir en [enkeltkolonnetabell](../working-with-tables.md) som inneholder strenger, vil returverdien være en enkeltkolonnetabell med trimmede strenger. Hvis du har en flerkolonnetabell, kan du gjøre den om til en enkeltkolonnetabell, som beskrevet i [arbeide med tabeller](../working-with-tables.md).
+Hvis du angir en enkelt tekststreng, vil returverdien for begge funksjonene være strengen der de ekstra mellomrommene er fjernet. Hvis du angir en [enkeltkolonnetabell](../working-with-tables.md) som inneholder strenger, vil returverdien være en enkeltkolonnetabell med trimmede strenger. Hvis du har en flerkolonnetabell, kan du gjøre den om til en enkeltkolonnetabell, som beskrevet i [arbeid med tabeller](../working-with-tables.md).
 
 Ved trimming av mellomrom mellom ord samsvarer **Trim** med funksjonen med samme navn i Microsoft Excel. **TrimEnds** samsvarer imidlertid med programmeringsverktøy som kun trimmer mellomrom fra starten og slutten av hver streng.
 
@@ -46,8 +43,8 @@ Ved trimming av mellomrom mellom ord samsvarer **Trim** med funksjonen med samme
 ## <a name="example"></a>Eksempel
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Trim(&nbsp;"&nbsp;&nbsp;&nbsp;Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World&nbsp;&nbsp;&nbsp;"&nbsp;)** |Fjerner alle mellomrom fra starten og slutten av en streng, og ekstra mellomrom inne i strengen. |"Hello World" |
-| **TrimEnds(&nbsp;"&nbsp;&nbsp;&nbsp;Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World&nbsp;&nbsp;&nbsp;"&nbsp;)** |Fjerner alle mellomrom fra starten og slutten av en streng. |"Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World" |
+| **Trim(&nbsp;"&nbsp;&nbsp;&nbsp;Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World&nbsp;&nbsp;&nbsp;"&nbsp;)** |Fjerner alle mellomrom fra starten og slutten av en streng, og ekstra mellomrom inne i strengen. |«Hello World» |
+| **TrimEnds(&nbsp;"&nbsp;&nbsp;&nbsp;Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World&nbsp;&nbsp;&nbsp;"&nbsp;)** |Fjerner alle mellomrom fra starten og slutten av en streng. |«Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World» |
 
 Følgende eksempler bruker en enkeltkolonnesamling kalt **Mellomrom**, som inneholder disse strengene:
 

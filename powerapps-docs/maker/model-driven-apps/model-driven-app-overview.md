@@ -1,35 +1,29 @@
 ---
 title: Oversikt over hvordan du bygger en modelldrevet app med PowerApps | Microsoft Docs
 description: Trinnvise instruksjoner for oppretting og konfigurering av en enhet som brukes med en PowerApps-app.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: Mattp123
-manager: bycho
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: model
 ms.date: 03/21/2018
 ms.author: matp
-ms.openlocfilehash: 872e06e3d260480f09f66c52b592540bae44bdda
-ms.sourcegitcommit: a9ac8a3ed734cb5f70b61476168d1bff5de844f8
+ms.openlocfilehash: 76571a53c95661d853b7fb326e3c1087a6f432c4
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/30/2018
-ms.locfileid: "30998222"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330932"
 ---
 # <a name="overview-of-building-a-model-driven-app"></a>Oversikt over hvordan du bygger en modelldrevet app
 
 Utforming av modelldrevne apper er en komponentfokusert tilnærming til apputvikling. Utforming av modelldrevne apper krever ikke kode, og du kan lage både enkle eller svært komplekse apper.  I motsetning til ved utforming av lerretsapper, der utformeren har fullstendig kontroll over appens layout, er mye av layouten fastsatt når du utformer modelldrevne apper, og den bestemmes i stor grad av komponentene du legger til i appen. 
 
 ![Eksempel på en modelldrevet app](media/model-driven-app-overview/model-app-sample.png)
-
-> [!IMPORTANT]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 Utforming av modelldrevne apper har følgende fordeler:
 - utformingsmiljøer med fokus på stort utvalg av komponenter og ingen kode 

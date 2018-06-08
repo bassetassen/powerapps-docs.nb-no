@@ -1,26 +1,23 @@
 ---
 title: Tekst-funksjonen | Microsoft Docs
 description: Referanseinformasjon, herunder syntaks og eksempler for Tekst-funksjonen i PowerApps
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: 515afea5dee865400bb096c401b865a21e9d3b47
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: a63a972e7af3c821d2441519c2a887bbe110faac
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996382"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838951"
 ---
 # <a name="text-function-in-powerapps"></a>Text-funksjonen i PowerApps
 Formaterer et tall eller en verdi for dato/klokkeslett, til visning som en tekststreng.
@@ -148,7 +145,7 @@ Oversatte strenger for måned, ukedag, og angivelser av AM/PM samt en passende g
 * *ResultLanguageTag* – valgfritt.  Språkkoden som skal brukes for resultatteksten.  Språket for gjeldende bruker brukes som standard.
 
 ## <a name="examples"></a>Eksempler
-Brukeren som kjører disse formlene, har lokasjon i USA og har valgt engelsk som sitt språk.  **Language**-funksjonen returnerer "en-US".
+Brukeren som kjører disse formlene befinner seg i USA og har valgt engelsk som språket sitt.  **Language**-funksjonen returnerer "en-US".
 
 ### <a name="number"></a>Tall
 | Formel | Beskrivelse | Resultat |

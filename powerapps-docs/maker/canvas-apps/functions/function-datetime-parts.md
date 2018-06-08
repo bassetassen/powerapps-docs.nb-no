@@ -1,26 +1,23 @@
 ---
 title: Funksjonene Day, Month, Year, Hour, Minute, Second og Weekday | Microsoft Docs
 description: Referanseinformasjon, blant annet syntaks og eksempler, for funksjonene Day, Month, Year, Hour, Minute, Second og Weekday i PowerApps
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: 68514c498e4737fdc5a8b78ea6bdfbb16811ba65
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: d927b1834993e39055b9cdc3aeb7d518a66f2cec
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996017"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838652"
 ---
 # <a name="day-month-year-hour-minute-second-and-weekday-functions-in-powerapps"></a>Funksjonene Day, Month, Year, Hour, Minute, Second og Weekday i PowerApps
 Returnerer enkeltkomponenter for en dato/klokkeslett-verdi.

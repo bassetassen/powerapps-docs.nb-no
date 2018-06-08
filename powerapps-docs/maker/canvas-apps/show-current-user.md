@@ -1,25 +1,22 @@
 ---
 title: Å vise detaljer om gjeldende bruker | Microsoft Docs
 description: Sett inn brukerfunksjonen for å vise navnet og e-postadressen til brukeren som er logget på i PowerApps
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: lonu
-manager: anneta
+manager: kfile
 editor: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/16/2016
 ms.author: lonu
-ms.openlocfilehash: b337188360ba592d504a7364fdbeb3a2973b8ee0
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 11177ffa8913afe4d0245708dd8c9b2b0b50c8c2
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997402"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826664"
 ---
 # <a name="show-information-about-a-powerapps-user"></a>Vis informasjon om en PowerApps-bruker
 Brukerfunksjonen kan vise det fullstendige navnet, e-postadressen og bildet som er knyttet til brukeren som er logget på. Du kan bruke denne informasjonen til å automatisk fylle ut et skjema.

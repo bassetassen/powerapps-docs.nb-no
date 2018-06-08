@@ -1,48 +1,45 @@
 ---
 title: Funksjonene Concat og Concatenate | Microsoft Docs
-description: Referanseinformasjon for funksjonene Concat og Concatenate i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
+description: Referanseinformasjon for funksjonene Kjed.sammen og Kjede.sammen i PowerApps, inkludert syntaks og eksempler
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 08/28/2017
 ms.author: gregli
-ms.openlocfilehash: 5f69d51fc1d018a48576cade665ebd19ec1d7c82
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: a735cb17b0e70afcae439044491a603aa50ceae7
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995832"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826158"
 ---
 # <a name="concat-and-concatenate-functions-in-powerapps"></a>Funksjonene Concat og Concatenate i PowerApps
 Kjeder sammen individuelle tekststrenger og strenger i [tabeller](../working-with-tables.md).
 
 ## <a name="description"></a>Beskrivelse
-**Concatenate**-funksjonen kjeder sammen resultatet i en formel som gjelder for alle [postene](../working-with-tables.md#records) i en tabell, og resultatet er en enkeltstreng. Bruk denne funksjonen til å summere strengene i en tabell, på samme måte som **[Sum](function-aggregates.md)**-funksjonen brukes på tall.
+**Concatenate**-funksjonen kjeder sammen resultatet i en formel som gjelder for alle [postene](../working-with-tables.md#records) i en tabell, og resultatet er en enkeltstreng. Bruk denne funksjonen til å summere strengene i en tabell, på samme måte som funksjonen **[Sum](function-aggregates.md)** brukes på tall.
 
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
-Bruk **[Del](function-split.md)**-funksjonen til å fordele en streng om til en tabell med understrenger.
+Bruk funksjonen **[Del](function-split.md)** til å dele en streng inn i en tabell med understrenger.
 
-**Concatenate**-funksjonen kjeder sammen en blanding av individuelle strenger og en enkeltkolonnetabell med strenger. Hvis funksjonen brukes med individuelle strenger, tilsvarer den bruken av **&** [operator](operators.md). Du kan bruke en formel som inkluderer **[ShowColumns](function-table-shaping.md)**-funksjonen for å opprette en enkeltkolonnetabell ut fra en tabell som har flere kolonner.
+**Concatenate**-funksjonen kjeder sammen en blanding av individuelle strenger og en enkeltkolonnetabell med strenger. Hvis funksjonen brukes med individuelle strenger, tilsvarer den bruken av **&**-[operatoren](operators.md). Du kan bruke en formel som inkluderer **[ShowColumns](function-table-shaping.md)**-funksjonen for å opprette en enkeltkolonnetabell ut fra en tabell som har flere kolonner.
 
 ## <a name="syntax"></a>Syntaks
 **Concat**( *Table*, *Formula* )
 
-* *Tabell* – obligatorisk.  Tabellen som funksjonen skal arbeide med.
+* *Tabell* – obligatorisk.  Tabell som skal arbeides på.
 * *Formel* – obligatorisk.  Formel som angis for alle postene i en tabell.
 
 **Concatenate**( *String1* [, *String2*, ...] )
 
-* *Streng(er)* – obligatorisk.  Blanding av individuelle strenger eller en enkeltkolonnetabell med strenger.
+* *Streng(er)* – obligatorisk.  Kombinasjon av individuelle strenger eller en enkeltkolonnetabell med strenger.
 
 ## <a name="examples"></a>Eksempler
 #### <a name="concat"></a>Concat
@@ -54,7 +51,7 @@ Bruk **[Del](function-split.md)**-funksjonen til å fordele en streng om til en 
    
     **Concat(Products, String & " ")**
    
-    Etiketten viser **Fiolin Cello**.
+    Etiketten viser **Violin Cello**.
 
 #### <a name="concatenate"></a>Concatenate
 1. Legg til en **[Tekstinndata](../controls/control-text-input.md)**-kontroll, og gi den navnet **ForfatterNavn**.
@@ -64,6 +61,6 @@ Bruk **[Del](function-split.md)**-funksjonen til å fordele en streng om til en 
    
     Etiketten viser **Av** etterfulgt av navnet ditt.
 
-Hvis du har en **Ansatte**-tabell som inneholder en **Fornavn**-kolonne og en **Etternavn**-kolonne, vil denne formelen kjede sammen dataen i hver kolonnerad.
+Hvis du hadde en **Ansatte**-tabell som inneholdt en **Fornavn**-kolonne og en **Etternavn**-kolonne, vil denne formelen kjede sammen dataene i hver rad til disse kolonnene.
 <br>**Concatenate(Employees.FirstName, " ", Employees.LastName)**
 

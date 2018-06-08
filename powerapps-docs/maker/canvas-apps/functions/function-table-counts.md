@@ -1,26 +1,23 @@
 ---
 title: Funksjonene Count, CountA, CountIf og CountRows | Microsoft Docs
 description: Referanseinformasjon, inkludert syntaks og et eksempel for funksjonene Count og CountA i PowerApps
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: 7849a666f7c4d2639f09f6197974467bbc7f43cc
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 762fa0ae7afe6b3693f74f308ba0a776aa27ed15
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996072"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31832072"
 ---
 # <a name="count-counta-countif-and-countrows-functions-in-powerapps"></a>Funksjonene Count, CountA, CountIf og CountRows i PowerApps
 Teller alle [poster](../working-with-tables.md#records) i en [tabell](../working-with-tables.md), eller teller alle poster som oppfyller en betingelse.

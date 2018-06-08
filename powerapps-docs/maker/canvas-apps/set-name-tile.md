@@ -1,28 +1,25 @@
 ---
-title: Endre navn og flis for appen | Microsoft Docs
+title: Slik endres navn og flis for appen | Microsoft Docs
 description: Trinnvise instruksjoner for å endre innstillinger som appnavn og -ikon
-services: ''
-suite: powerapps
 documentationcenter: na
 author: lonu
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/16/2016
 ms.author: lonu
-ms.openlocfilehash: 257de970a8a9e68f30bcea858622761b08977f3f
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 386ecbd360dc13c21d48e0c134a87e8b7d007547
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997352"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31830183"
 ---
-# <a name="change-app-name-and-icon-in-powerapps"></a>Endre appnavn og -ikon i PowerApps
+# <a name="change-app-name-and-icon-in-powerapps"></a>Endring av appnavn og -ikon i PowerApps
 Tilpass en app ved å endre navnet og flisen.
 
 ## <a name="prerequisites"></a>Forutsetninger
@@ -35,7 +32,7 @@ Klikk eller trykk på **Gi nytt navn til denne appen** under **Appnavn**, og skr
 
 ![Lukke en app](./media/set-name-tile/rename-app.png)
 
-## <a name="change-an-app-tile"></a>Endre en appflis
+## <a name="change-an-app-tile"></a>Slik endrer du en appflis
 Følg ett eller flere av disse trinnene:
 
 * Klikk eller trykk på en annen bakgrunnsfarge fra listen over alternativer.
@@ -55,6 +52,6 @@ Følg ett eller flere av disse trinnene:
 Klikk eller trykk på **Lagre** på **Fil**-menyen for publisere appen din på nytt med de nye innstillingene.
 
 ## <a name="more-resources"></a>Flere ressurser
-* [Del en app](share-app.md)
-* [Slette en app](delete-app.md)
-* [Gjenopprette appen til en tidligere versjon](restore-an-app.md)
+* [Deling av en app](share-app.md)
+* [Sletting av en app](delete-app.md)
+* [Gjenoppretting av appen til en tidligere versjon](restore-an-app.md)

@@ -1,29 +1,26 @@
 ---
 title: Color-opplisting og ColorFade-, ColorValue- og RGBA-funksjoner | Microsoft Docs
 description: Referanseinformasjon for Color-opplisting og funksjonene ColorFade, ColorValue og RGBA i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2015
 ms.author: gregli
-ms.openlocfilehash: da456de295f3b4fe38c98d4482e57372e3fc59a3
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: f4eeabf5708fffa6881b84402280d5639d96cc0a
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996692"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838675"
 ---
-# <a name="color-enumeration-and-colorfade-colorvalue-and-rgba-functions-in-powerapps"></a>Color-opplisting og ColorFade, ColorValue og RGBA-funksjoner i PowerApps
-Bruke innebygde fargeverdier, definere egendefinerte farger og alfa-blanding.
+# <a name="color-enumeration-and-colorfade-colorvalue-and-rgba-functions-in-powerapps"></a>Color-opplisting og funksjonene ColorFade, ColorValue og RGBA i PowerApps
+Å bruke innebygde fargeverdier, definere egendefinerte farger og alfablanding.
 
 ## <a name="description"></a>Beskrivelse
 Med **Color**-opplistingen kan du enkelt få tilgang til fargene som er definert av gjennomgripende stilark (Cascading Style Sheets (CSS)) for HTML.  For eksempel: **Color.Red** returnerer en ren rødfarge.  Listen over disse fargene er inkludert i slutten av denne artikkelen.   
@@ -54,7 +51,7 @@ Med **Color**-opplistingen kan du enkelt få tilgang til fargene som er definert
 * *FadeAmount* – obligatorisk.  Et tall mellom -1 og 1.  -1 gjør en farge fullstendig svart, 0 har ingen innvirkning på fargen og 1 gjør en farge fullstendig hvit.  
 
 ## <a name="built-in-colors"></a>Innebygde farger
-| Farge-opplisting | ColorValue med Hex-kode | RGBA | Fargekart |
+| Color-opplisting | ColorValue med Hex-kode | RGBA | Fargekart |
 | --- | --- | --- | --- |
 | **Color.AliceBlue** |**ColorValue( "#f0f8ff" )** |**RGBA( 240, 248, 255, 1 )** |![aliceblue](./media/function-colors/color-aliceblue.png) |
 | **Color.AntiqueWhite** |**ColorValue( "#faebd7" )** |**RGBA( 7, "250, 235,215, 1 )** |![antiquewhite](./media/function-colors/color-antiquewhite.png) |

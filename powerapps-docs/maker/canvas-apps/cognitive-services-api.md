@@ -1,26 +1,23 @@
 ---
 title: Bruk av Cognitive Services i PowerApps | Microsoft Docs
 description: Utvikle en grunnleggende app som bruker API for tekstanalyse i Microsoft Cognitive Services til å analysere tekst.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 12/08/2017
 ms.author: mblythe
-ms.openlocfilehash: 2e82feb9df4121b24ffd1f5cad7669c6aa58c8e8
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 375738cd5481430f06307b4c98b342c377d9bc4c
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996197"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836360"
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>Bruk av Cognitive Services i PowerApps
 Denne artikkelen viser hvordan du kan utvikle en grunnleggende app som bruker [API for tekstanalyse i Microsoft Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview) til å analysere tekst. Vi viser deg hvordan du konfigurerer API-en for tekstanalyse og kobler til ved hjelp av [Tekstanalyse-koblingen](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Deretter viser vi hvordan du oppretter en app som utfører et oppkall til API-en.

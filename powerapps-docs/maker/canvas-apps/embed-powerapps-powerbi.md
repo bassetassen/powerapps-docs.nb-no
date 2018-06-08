@@ -1,8 +1,6 @@
 ---
 title: Slik bygger du inn en ny app i en Power BI-rapport | Microsoft Docs
 description: Slik bygger du inn en app som bruker samme datakilde og kan filtreres som andre rapportelementer
-services: powerapps
-suite: powerapps
 documentationcenter: na
 author: mgblythe
 manager: kfile
@@ -10,17 +8,16 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: tutorial
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/15/2018
 ms.author: mblythe
-ms.openlocfilehash: 839a9ce79f86fccd9fb91afe3938cc76160f0c08
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 33656e44f782a626eecc28787af984ace7339cd6
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996047"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31830474"
 ---
 # <a name="tutorial-embed-a-new-app-in-a-power-bi-report"></a>Opplæring: Slik bygger du inn en ny app i en Power BI-rapport
 
@@ -32,7 +29,7 @@ I denne opplæringen lærer du hvordan du kan:
 > [!div class="checklist"]
 > * Importere det egendefinerte visualobjektet fra PowerApps til en Power BI-rapport
 > * Opprette en ny app som bruker data fra rapporten
-> * Vise appen i rapporten
+> * Slik vises appen i rapporten
 
 ## <a name="prerequisites"></a>Forutsetninger
 

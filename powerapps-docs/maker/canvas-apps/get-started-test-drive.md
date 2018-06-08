@@ -1,8 +1,6 @@
 ---
 title: Slik oppretter du en app fra en mal | Microsoft Docs
 description: Trinnvise instruksjoner for å opprette en app automatisk basert på en PowerApps-mal, og deretter lagre den.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -10,17 +8,16 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/19/2018
 ms.author: anneta
-ms.openlocfilehash: 809856ca0139377a86894c6a5b8d3be4f2d99c1b
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 29010630412de78945d9d35212210b7ce1a8407f
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997362"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31827900"
 ---
 # <a name="create-an-app-from-a-powerapps-template"></a>Oppretting av en app fra en PowerApps-mal
 Opprett en app automatisk basert på en mal for et bestemt scenario, for eksempel sporing av budsjetter og planlegging av ferier, og kjør deretter appen for å forstå standardvirkemåten.

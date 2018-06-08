@@ -1,26 +1,23 @@
 ---
 title: Remove- og RemoveIf-funksjonene | Microsoft Docs
 description: Referanseinformasjon, inkludert syntaks og eksempler for funksjonene Remove og RemoveIf i PowerApps
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/21/2015
 ms.author: gregli
-ms.openlocfilehash: 1baeebdff0edb728e18f7215ceacadb1317c33b8
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 1f4df70ce3274c4d83c39955df58ebc344038de3
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996532"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31832717"
 ---
 # <a name="remove-and-removeif-functions-in-powerapps"></a>Remove- og RemoveIf-funksjonene i PowerApps
 Fjerner [poster](../working-with-tables.md#records) fra en [datakilde](../working-with-data-sources.md).

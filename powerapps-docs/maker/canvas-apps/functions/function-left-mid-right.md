@@ -1,26 +1,23 @@
 ---
 title: Funksjonene Left, Mid og Right | Microsoft Docs
 description: Referanseinformasjon for funksjonene Left, Mid og Right i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: 2cf54b1225578b2bb2bdefa8c0bd02dc0c9c0283
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 419c272b68c356d4f1cefd5868dd8a15ca1027de
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996112"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31832352"
 ---
 # <a name="left-mid-and-right-functions-in-powerapps"></a>Funksjonene Left, Mid og Right i PowerApps
 Trekker ut den venstre, midterste eller høyre delen av en tekststreng.
@@ -55,7 +52,7 @@ Eksemplene i denne delen bruker en kontroll for innskriving av tekst som [dataki
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Left ( Author.Text, 5 )** |Trekker ut opptil fem tegn fra begynnelsen av strengen. |«E. E.» |
+| **Left( Author.Text, 5 )** |Trekker ut opptil fem tegn fra begynnelsen av strengen. |«E. E.» |
 | **Mid( Author.Text, 7, 4 )** |Trekker ut opptil fire tegn, og starter med det sjuende tegnet fra strengen. |«Cumm» |
 | **Right( Author.Text, 5 )** |Trekker ut opptil fem tegn fra slutten av strengen. |«mings» |
 
@@ -71,7 +68,7 @@ Hvert eksempel i denne delen trekker ut strengene fra **Adresse** [-kolonnen](..
 | **Right( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 7 )** |Trekker ut de sju siste tegnene i hver streng. |![](media/function-left-mid-right/people-table-right.png) |
 
 ### <a name="step-by-step-example"></a>Trinnvis veiledning – eksempel
-1. Importer eller opprett en [samling](../working-with-data-sources.md#collections) kalt **Beholdning** og vis den i et galleri, som den første prosedyren i [Vis bilder og tekst i et galleri](../show-images-text-gallery-sort-filter.md) beskriver.
+1. Importer eller opprett en [samling](../working-with-data-sources.md#collections) kalt **Beholdning**, og vis den i et galleri, som den første prosedyren i [Vis bilder og tekst i et galleri](../show-images-text-gallery-sort-filter.md) beskriver.
 2. Angi **[Tekst](../controls/properties-core.md)**-egenskapen for etiketten nederst i galleriet til denne funksjonen:
    
     **Right(ThisItem.ProductName, 3)**

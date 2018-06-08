@@ -10,17 +10,17 @@ For å bygge en app, klikker du på **PowerApps**, og deretter **Opprette en app
 ![Å generere en app fra listen](./media/learning-spo-app-generate/generate-app.png)
 
 ## <a name="view-the-app-in-powerapps-studio"></a>Å vise appen i PowerApps Studio
-Den nye appen med tre skjermer åpnes i PowerApps Studio. Alle programmer som er generert fra dataene har det samme settet med skjermer:
+Den nye appen, med tre skjermbilder, åpnes i PowerApps Studio. Alle apper som er generert fra dataene, har det samme settet med skjermbilder:
 
-* **Bla gjennom**-skjermen: der du kan bla, sortere, filtrere, og oppdatere dataene som er trukket ut fra listen, samt legge til elementer ved å klikke på (+)-ikonet.
-* **Detaljer**-skjermen: der du viser flere detaljer om et element, og du kan velge å slette, eller redigere elementet.
-* **Rediger/opprett**-skjermen: der du redigerer et eksisterende element, eller oppretter et nytt.
+* **Bla gjennom**-skjermen: der du kan bla gjennom, sortere, filtrere og oppdatere dataene som er trukket ut fra listen, samt legge til elementer ved å klikke på (+)-ikonet.
+* **Detaljer**-skjermen: der du viser flere detaljer om et element og kan velge å slette eller redigere elementet.
+* **Rediger/opprett**-skjermen: der du redigerer et eksisterende element eller oppretter et nytt.
 
 Klikk eller trykk på et ikon øverst til høyre, i venstre navigasjonsfelt, for å bytte til miniatyrbildevisningen.
 
-![Veksle mellom visningene](./media/learning-spo-app-generate/toggle-view.png)
+![Veksling mellom visningene](./media/learning-spo-app-generate/toggle-view.png)
 
-Klikk eller trykk på hvert miniatyrbilde for å vise kontrollene i dette skjermbildet.
+Klikk eller trykk på hvert miniatyrbilde for å vise kontrollene på dette skjermbildet.
 
 ![Den genererte appen](./media/learning-spo-app-generate/generate-finished-app.png)
 

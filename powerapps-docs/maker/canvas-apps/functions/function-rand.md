@@ -1,26 +1,23 @@
 ---
 title: Rand-funksjonen | Microsoft Docs
 description: Referanseinformasjon for Rand-funksjonen i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: 3779d7a2f0471adc7f6262d6c4a857d37017a1a7
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 7c500a95d5a77acd4de9e2f501c3211ec9e11bac
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995982"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31825721"
 ---
 # <a name="rand-function-in-powerapps"></a>Rand-funksjonen i PowerApps
 Returnerer et pseudo-tilfeldig tall.

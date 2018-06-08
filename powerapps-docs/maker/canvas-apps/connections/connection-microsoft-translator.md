@@ -1,26 +1,18 @@
 ---
 title: Oversikt over Microsoft Translator-tilkoblingen | Microsoft Docs
 description: Se hvordan du kobler til Microsoft Translator, gå gjennom noen eksempler, og se alle funksjonene
-services: ''
-suite: powerapps
-documentationcenter: na
-author: archnair
-manager: anneta
-editor: ''
-tags: ''
+author: lancedMicrosoft
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/12/2017
-ms.author: archanan
-ms.openlocfilehash: e5680fbc24475f9eb5776994de1a60cdb1c052ac
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: lanced
+ms.openlocfilehash: c375429b7ac2341766c36ca58e1bbf3c78c9a6d1
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996347"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803401"
 ---
 # <a name="connect-to-microsoft-translator-from-powerapps"></a>Koble til Microsoft Translator fra PowerApps
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)
@@ -106,16 +98,16 @@ Hent språk: Henter alle språkene som Microsoft Translator støtter
 #### <a name="input-properties"></a>Egenskaper for inndata
 Ingen.
 
-#### <a name="output-properties"></a>Egenskaper for utdata
-| Egenskapens navn | Datatype | Kreves | Beskrivelse |
+#### <a name="output-properties"></a>Utdataegenskaper
+| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| Kode |tekststreng |Nei | |
-| Navn |tekststreng |Nei | |
+| Kode |streng |Nei | |
+| Navn |streng |Nei | |
 
 ### <a name="translate"></a>Translate
 Oversett tekst: Oversetter tekst til et angitt språk ved hjelp av Microsoft Translator
 
-#### <a name="input-properties"></a>Egenskaper for inndata
+#### <a name="input-properties"></a>Inndataegenskaper
 | Navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | query |tekststreng |ja |Tekst som skal oversettes |
@@ -129,16 +121,16 @@ Ingen.
 ### <a name="detect"></a>Detect
 Gjenkjenn språk: Gjenkjenner kildespråket til en gitt tekst
 
-#### <a name="input-properties"></a>Egenskaper for inndata
+#### <a name="input-properties"></a>Inndataegenskaper
 | Navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | query |tekststreng |ja |Teksten som språket skal gjenkjennes for |
 
 #### <a name="output-properties"></a>Egenskaper for utdata
-| Egenskapens navn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| Kode |tekststreng |Nei | |
-| Navn |tekststreng |Nei | |
+| Kode |streng |Nei | |
+| Navn |streng |Nei | |
 
 ### <a name="speechlanguages"></a>SpeechLanguages
 Hent talespråk: Henter språkene som er tilgjengelige for talesyntese
@@ -146,16 +138,16 @@ Hent talespråk: Henter språkene som er tilgjengelige for talesyntese
 #### <a name="input-properties"></a>Egenskaper for inndata
 Ingen.
 
-#### <a name="output-properties"></a>Egenskaper for utdata
-| Egenskapens navn | Datatype | Kreves | Beskrivelse |
+#### <a name="output-properties"></a>Utdataegenskaper
+| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| Kode |tekststreng |Nei | |
-| Navn |tekststreng |Nei | |
+| Kode |streng |Nei | |
+| Navn |streng |Nei | |
 
 ### <a name="texttospeech"></a>TextToSpeech
 Tekst til tale: Konverterer en gitt tekst til tale som en lydstrøm i digitallydformat
 
-#### <a name="input-properties"></a>Egenskaper for inndata
+#### <a name="input-properties"></a>Inndataegenskaper
 | Navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | query |tekststreng |ja |Tekst som skal konverteres |
@@ -166,5 +158,5 @@ Ingen.
 
 ## <a name="helpful-links"></a>Nyttige koblinger
 Se alle [tilgjengelige tilkoblinger](../connections-list.md).  
-Lær hvordan du [legger til tilkoblinger](../add-manage-connections.md) i appene dine.
+Finn ut hvordan du [legger til tilkoblinger](../add-manage-connections.md) i appene dine.
 

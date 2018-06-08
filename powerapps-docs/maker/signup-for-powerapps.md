@@ -1,8 +1,6 @@
 ---
 title: Registrer deg for en gratis prøveversjon | Microsoft Docs
 description: Registrer deg for å få en gratis lisens, slik at du kan prøve PowerApps som privatperson i 30 dager.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -10,17 +8,16 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/12/2018
 ms.author: anneta
-ms.openlocfilehash: a982e888e19fecd835a45f0e72e7c02ac4387897
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 485dfcf47f76a042afab80c769f994c6cbf1ceac
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997537"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31835959"
 ---
 # <a name="sign-up-for-a-free-license-to-try-powerapps"></a>Registrer deg for en gratis lisens for å prøve PowerApps
 Hvis du vil lage en app i PowerApps, trenger du en av flere typer lisenser som tilbyr ulike nivåer av funksjonalitet. Hvis organisasjonen har kjøpt en av flere versjoner av Office 365 eller Dynamics 365 for deg, eller hvis organisasjonen har kjøpt lisenser for PowerApps Plan 1 eller Plan 2 for deg, har du allerede en lisens for PowerApps.

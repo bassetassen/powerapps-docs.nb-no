@@ -1,38 +1,35 @@
 ---
 title: Opprett en tilkobling til SharePoint fra PowerApps | Microsoft Docs
 description: På powerapps.com kan du opprette en tilkobling til SharePoint, som du kan bruke for å generere en app automatisk eller utvikle en fra bunnen av.
-services: ''
-suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: anneta
+author: aftowen
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 09/03/2016
-ms.author: sharik
-ms.openlocfilehash: 2b058fc1fd3b3af24485aa20bdab9511aa5d0b79
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: anneta
+ms.openlocfilehash: 16c585f553373faee609683774e7938e8bd165f1
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995962"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31824594"
 ---
 # <a name="create-a-connection-to-sharepoint-from-powerapps"></a>Opprett en tilkobling til SharePoint fra PowerApps
 Opprett en tilkobling enten til SharePoint Online eller SharePoint lokalt, slik at du kan generere en app automatisk eller utvikle en fra bunnen av.
 
 Hvis du ikke allerede er kjent med PowerApps, kan du se [Introduksjon til PowerApps](getting-started.md).
 
-I skrivende stund støtter PowerApps egendefinerte lister, men ikke biblioteker. I tillegg kan du vise data i enkelte typer kolonner, som for eksempel **Valg** og **Bilde**, men du kan ikke oppdatere disse dataene. Hvis du vil ha mer informasjon, kan du se [Kjente problemer](connections/connection-sharepoint-online.md#known-issues).
+I skrivende stund støtter PowerApps egendefinerte lister, men ikke biblioteker. I tillegg kan du vise data i enkelte typer kolonner, som for eksempel **Valg** og **Bilde**, men du kan ikke oppdatere de dataene. Hvis du vil ha mer informasjon, kan du se [Kjente problemer](connections/connection-sharepoint-online.md#known-issues).
 
 ## <a name="specify-a-sharepoint-connection"></a>Angi en SharePoint-tilkobling
 1. Hvis du ikke allerede har registrert deg, kan du [registrere deg for PowerApps](../signup-for-powerapps.md).
 
-2. Logg deg inn på [powerapps.com](https://web.powerapps.com) med samme legitimasjon som du brukte til å registrere deg.
+2. Logg deg på [powerapps.com](https://web.powerapps.com) med samme legitimasjon som du brukte til å registrere deg.
 
 3. Klikk eller trykk på **Behandle** i venstre navigasjonsfelt, og deretter klikker eller trykker du på **Tilkoblinger**.
 
@@ -76,10 +73,10 @@ I skrivende stund støtter PowerApps egendefinerte lister, men ikke biblioteker.
 
     ![Installer en gateway](./media/connect-to-sharepoint/install-gateway.png)
 
-4. Klikk eller trykk på gatewayen du vil bruke under **Velg en gateway**, og deretter klikker eller trykker du på **Legg til tilkobling**.
+4. Klikk eller trykk på gatewayen du vil bruke under **Velg en gateway**, og klikk eller trykk deretter på **Legg til tilkobling**.
 
     ![Velg en gateway](./media/connect-to-sharepoint/choose-gateway.png)
 
 ## <a name="next-steps"></a>Neste trinn
 * [Generer en app automatisk](app-from-sharepoint.md) basert på en liste du angir. Appen har som standard tre skjermbilder: ett for å bla gjennom poster, ett for å vise detaljer om en enkelt post, og ett for å opprette eller oppdatere en post.
-* [Bygg en app fra bunnen av](get-started-create-from-blank.md). Dette emnet var skrevet for Excel, men de samme prinsippene gjelder for SharePoint.
+* [Bygg en app fra bunnen av](get-started-create-from-blank.md). Dette emnet ble skrevet for Excel, men de samme prinsippene gjelder for SharePoint.
