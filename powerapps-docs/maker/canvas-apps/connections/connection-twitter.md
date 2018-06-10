@@ -1,26 +1,18 @@
 ---
 title: Oversikt over Twitter-tilkobling | Microsoft Docs
 description: Slik kobler man til Twitter, går gjennom noen eksempler, og ser alle funksjonene
-services: ''
-suite: powerapps
-documentationcenter: ''
-author: archnair
-manager: anneta
-editor: ''
-tags: ''
+author: lancedMicrosoft
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/12/2017
-ms.author: archanan
-ms.openlocfilehash: 7d39d971cf52c673e6d54dee10d72802de6d9450
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: lanced
+ms.openlocfilehash: bfdd2bc0ed784b9f2302d01f2fc8c176a7d9c4bb
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996537"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803562"
 ---
 # <a name="connect-to-twitter-from-powerapps"></a>Å koble til Twitter fra PowerApps
 ![Twitter](./media/connection-twitter/twittericon.png)

@@ -1,26 +1,23 @@
 ---
 title: Funksjonene EncodeURL og PlainText | Microsoft Docs
 description: Referanseinformasjon for funksjonene URL.kode og Ren tekst i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: a511d731c8dd94c57ec9846d853fec1bef10ab0a
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 7454eacbcfaaacc15eb617e673f48520ca33b6dc
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995897"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31825468"
 ---
 # <a name="encodeurl-and-plaintext-functions-in-powerapps"></a>Funksjonene EncodeURL og PlainText i PowerApps
 Strenger for koder og dekoder.

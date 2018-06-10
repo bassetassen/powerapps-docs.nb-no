@@ -1,26 +1,23 @@
 ---
 title: Funksjonene Replace og Substitute | Microsoft Docs
 description: Referanseinformasjon for funksjonene Replace og Substitute i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: fe8f1e1cc8e54c3abf4b44bbfe46d9f96a7adfe7
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: d08cbb1ae487c7ae4423d67a499f5477a5ea263b
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995867"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31830377"
 ---
 # <a name="replace-and-substitute-functions-in-powerapps"></a>Funksjonene Replace og Substitute i PowerApps
 Erstatt en del av en tekststreng med en annen streng.

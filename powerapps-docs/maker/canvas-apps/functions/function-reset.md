@@ -1,26 +1,23 @@
 ---
 title: Reset-funksjonen | Microsoft Docs
 description: Referanseinformasjon for Reset-funksjonen i PowerApps, inkludert syntaks og eksempel
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/06/2017
 ms.author: gregli
-ms.openlocfilehash: c08776071e694bfe1a9b4a8263ab9eead2547024
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: bc87fd823b37869298b453aba439bda6aabbb112
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995902"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31825836"
 ---
 # <a name="reset-function-in-powerapps"></a>Reset-funksjonen i PowerApps
 Tilbakestiller en kontroll til standardverdien, forkaster brukerendringer.  

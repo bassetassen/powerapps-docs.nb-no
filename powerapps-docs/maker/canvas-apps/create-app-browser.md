@@ -1,33 +1,30 @@
 ---
 title: Å opprette eller redigere apper i en nettleser | Microsoft Docs
 description: Opprette eller redigere apper i en nettleser ved hjelp av PowerApps Studio for nett.
-services: powerapps
-suite: powerapps
 documentationcenter: na
-author: skjerland
+author: aftowen
 manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/08/2018
-ms.author: sharik
-ms.openlocfilehash: 5d120cd0a754b2aa6ad45c5cc81435810e382c61
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: anneta
+ms.openlocfilehash: 4add1e15c1a85b27b83295422dbb6472ac02ad9f
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995917"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32329115"
 ---
 # <a name="create-or-edit-apps-in-powerapps-studio-for-web"></a>Å opprette eller redigere apper i PowerApps Studio for nett
 Opprette og redigere apper i PowerApps Studio for nett, som åpnes i et nettleservindu i Windows eller andre plattformer.
 
 ## <a name="prerequisites"></a>Forutsetninger
 * [Registrer deg](../signup-for-powerapps.md) for PowerApps.
-* Sørg for at du bruker en [nettleser som støttes](limits-and-config.md#supported-browsers-for-powerapps-studio-for-web).
+* Sørg for at du bruker en [nettleser som støttes](limits-and-config.md#supported-browsers-for-powerapps-studio).
 
 ## <a name="open-powerapps-studio-for-web"></a>Å åpne PowerApps Studio for nett
 1. Å logge på [powerapps.com](http://go.microsoft.com/fwlink/p/?LinkId=708209).
