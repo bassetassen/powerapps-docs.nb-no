@@ -1,0 +1,55 @@
+### YamlMime:Tutorial
+title: Å opprette en app fra SharePoint
+metadata:
+  title: Å opprette en app fra SharePoint i Microsoft PowerApps
+  description: Generer en app med tre skjermer fra en SharePoint-liste, og utforsk og oppdater deretter appen.
+  audience: Business User
+  level: Beginner
+  nextTutorialHref: manage-apps
+  nextTutorialTitle: Administrer apper
+  displayType: one-column
+  author: AFTOwen
+  manager: kfile
+  ms.service: powerapps
+  ms.topic: get-started-article
+  ms.date: 10/27/2017
+  ms.author: anneta
+  ms.openlocfilehash: a65eabb4bc42deff686fd40186914fefe77e6e0c
+  ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+  ms.translationtype: HT
+  ms.contentlocale: nb-NO
+  ms.lasthandoff: 03/28/2018
+  ms.locfileid: "30998072"
+items:
+- durationInMinutes: 1
+  content: >
+    Generer en app med tre skjermer fra en SharePoint-liste, og utforsk deretter skjermer og kontroller for appen. Oppdater skjermer, kontroller og felter for appen, og bruk formler for å egendefinere appens virkemåte ytterligere.
+- title: Å generere en app
+  durationInMinutes: 3
+  content: >
+    > [!Video https://www.youtube.com/embed/m6KfAwEdtYU?rel=0]
+
+
+    [!INCLUDE [](includes/learning-spo-app-generate.md)]
+- title: Å utforske en generert app
+  durationInMinutes: 5
+  content: >
+    > [!Video https://www.youtube.com/embed/OJ8a9VINeKU?rel=0]
+
+
+    [!INCLUDE [](includes/learning-spo-app-explore-controls.md)]
+- title: Å tilpasse appen
+  durationInMinutes: 5
+  content: >
+    > [!Video https://www.youtube.com/embed/KydeusvKndQ?rel=0]
+
+
+    [!INCLUDE [](includes/learning-spo-app-customize.md)]
+- title: Å utforske appformler
+  durationInMinutes: 9
+  content: >
+    > [!Video https://www.youtube.com/embed/9TBA19YU7EA?rel=0]
+
+
+    [!INCLUDE [](includes/learning-spo-app-explore-formulas.md)]
+- content: Du har fullført delen **Å opprette en app fra SharePoint** av veiledet læring for Microsoft PowerApps.
