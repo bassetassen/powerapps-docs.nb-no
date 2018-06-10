@@ -1,26 +1,23 @@
 ---
 title: Delegering i Microsoft Docs
 description: Bruk delegering for prosessering av store datasett på en effektiv måte.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/27/2018
 ms.author: gregli
-ms.openlocfilehash: 98cf32e1b379812e1d3175e6403b7c6fd7fb794b
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.openlocfilehash: 0800adf43f5a7d74d0334e9f39216a70b9350d6d
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30998107"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838060"
 ---
 # <a name="understand-delegation"></a>Å forstå delegering
 PowerApps inneholder et kraftig sett med funksjoner for filtrering, sortering og forming av datatabeller, blant annet funksjonene **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)** og **[AddColumns](functions/function-table-shaping.md)**.  Med disse funksjonene kan du gi brukerne fokusert tilgang til informasjonen de trenger.  For de med databasebakgrunn vil bruk av disse funksjonene tilsvare skriving av en databasespørring.  

@@ -1,26 +1,19 @@
 ---
 title: Å oppdage apper via AppSource | Microsoft Docs
 description: Å oppdage apper som er delt med organisasjonen via AppSource
-services: ''
-suite: powerapps
-documentationcenter: na
 author: linhtranms
-manager: anneta
-editor: ''
-tags: ''
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-user
+ms.topic: conceptual
 ms.date: 10/28/2016
 ms.author: litran
-ms.openlocfilehash: 805a74da29a97902eb700bb949f37cca491c05a0
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 3f1eee4a220b46fcae769054eef71c1c8ad41859
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997487"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34074180"
 ---
 # <a name="discover-apps-via-appsource"></a>Å oppdage apper via AppSource
 Apper du bygger og publiserer med PowerApps oppdages og brukes i Dynamics 365 på nettet. Den viser alle appene dine – apper som du spesifikt har valgt å bruke (startet fra en e-post som delte den eller åpnet fra AppSource) eller som en administrator har klargjort for deg. Dette omfatter alle appene dine fra PowerApps, i tillegg til Dynamics 365-appene fra Microsoft. Du kan søke etter apper, filtrere etter miljø og feste apper du bruker oftest til toppen av siden.

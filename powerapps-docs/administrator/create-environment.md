@@ -1,26 +1,18 @@
 ---
 title: Hurtiginnføring for å opprette et miljø i Microsoft Docs
 description: I denne hurtiginnføringen finner du ut mer om hvordan du oppretter et miljø
-services: powerapps
-suite: powerapps
-documentationcenter: na
-author: skjerland
-manager: kfile
-editor: ''
-tags: ''
+author: jimholtz
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-admin
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/21/2018
-ms.author: sharik
-ms.openlocfilehash: a9138c636d70ea4701cbf685c3d7c7965c0e8469
-ms.sourcegitcommit: c5e3991e0e4e9f22a1e094d699f35adabfb97c6c
+ms.author: jimh
+ms.openlocfilehash: f648d68a19c646a2a69a8eebca85ac9e33af0686
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "30998292"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552856"
 ---
 # <a name="quickstart-create-an-environment"></a>Hurtiginnføring: Å opprette et miljø
 Et miljø er et område der du kan lagre, administrere og dele organisasjonens forretningsdata, apper og flyter. De fungerer også som beholdere til å skille apper som kan ha ulike roller, sikkerhetskrav eller målgrupper. Ett enkelt standardmiljø blir automatisk opprettet av PowerApps for hver leietaker og deles av alle brukerne i denne tenanten.
@@ -35,7 +27,7 @@ I denne hurtiginnføringen finner du ut mer om hvordan du oppretter et miljø og
  * Miljøadministrator for PowerApps, global administrator for Office 365 eller administrasjonstillatelser for tenanten til Azure Active Directory. Hvis du vil ha mer informasjon, kan du se [Miljøadministrasjon i PowerApps](environments-administration.md).
 
 ## <a name="sign-in-to-the-powerapps-admin-center"></a>Slik får du tilgang til administrasjonssenteret for PowerApps
-Logg deg på administrasjonssenteret på [https://admin.powerapps.com]([https://admin.powerapps.com).
+Logg deg på administrasjonssenteret på [https://admin.powerapps.com](https://admin.powerapps.com).
 
 ## <a name="create-an-environment-and-database"></a>Å opprette et miljø og en database
 1. Klikk eller trykk på **Miljøer** i navigasjonsruten, og klikk og trykk deretter på **Nytt miljø**.

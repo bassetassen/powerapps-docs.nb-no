@@ -1,24 +1,21 @@
 ---
 title: Modelldrevne eksempelapper
 description: Forstå hvordan du henter, egendefinerer og fjerner modelldrevne eksempelapper.
-services: powerapps
 documentationcenter: na
 author: caburk
 manager: kfile
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.custom: ''
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: model
 ms.date: 03/08/2018
 ms.author: caburk
-ms.openlocfilehash: bc9b0a708afc26e4ded4c1c0928c9aad329bc9dd
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: c9525827c7e8e48c0f5e68e3608c9b6b9f630121
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997587"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31831267"
 ---
 # <a name="model-driven-sample-apps"></a>Modelldrevne eksempelapper
 

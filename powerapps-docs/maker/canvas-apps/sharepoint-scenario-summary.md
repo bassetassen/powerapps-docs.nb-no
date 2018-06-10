@@ -1,26 +1,23 @@
 ---
 title: Trinnvis gjennomgang av integreringsscenario for SharePoint Online | Microsoft Docs
 description: Ta en trinnvis gjennomgang av scenarioet vi har utviklet i denne opplæringsserien.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: 4e5c34c557e165625c23e78f86e5cbb1c0faacba
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: ab2f1fc08ce65261c5a433a098dcd0dec54b0f8c
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997492"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836658"
 ---
 # <a name="walk-end-to-end-through-the-completed-sharepoint-online-integration-scenario"></a>Ta en trinnvis gjennomgang av det komplette integreringsscenariet for SharePoint Online
 > [!NOTE]
