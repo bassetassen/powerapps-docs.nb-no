@@ -1,26 +1,23 @@
 ---
 title: Operatorer | Microsoft Docs
 description: Referanseinformasjon for operatorene i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/24/2017
 ms.author: gregli
-ms.openlocfilehash: 3250251e02170d2dd7bab441bc3c94705216ec00
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 9dce0ac36cd16faaa9c8b9a0b34d15eff086ab2e
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997452"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838037"
 ---
 # <a name="operators-and-data-types-in-powerapps"></a>Operatorer og datatyper i PowerApps
 Noen av disse operatorene er avhengig av språket til forfatteren.  Se [Globale apper](../global-apps.md) for mer informasjon.
