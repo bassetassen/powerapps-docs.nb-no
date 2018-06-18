@@ -41,13 +41,13 @@
               href: ./canvas-apps/customize-forms-sharepoint.md
             - name: 3 – Kort
               href: ./canvas-apps/customize-card.md
-        - name: Opprette en app fra grunnen av
+        - name: Å opprette en app fra grunnen av
           items:
             - name: Common Data Service for apper
               href: ./canvas-apps/data-platform-create-app-scratch.md
             - name: Excel
               href: ./canvas-apps/get-started-create-from-blank.md
-        - name: Dele en app
+        - name: Å dele en app
           href: ./canvas-apps/share-app.md
         - name: Bygge inn en app i Power BI
           href: ./canvas-apps/embed-powerapps-powerbi.md
@@ -59,7 +59,7 @@
           href: ./canvas-apps/help-desk-install.md
     - name: Konsepter
       items:
-        - name: Komme i gang med formler
+        - name: Å komme i gang med formler
           href: ./canvas-apps/working-with-formulas.md
         - name: Tabeller og poster
           href: ./canvas-apps/working-with-tables.md
@@ -99,7 +99,7 @@
       items:
         - name: Tilpasse et SharePoint-listeskjema
           href: ./canvas-apps/customize-list-form.md
-        - name: Tilpasse en app
+        - name: Å tilpasse en app
           items:
             - name: Legge til og konfigurere en kontroll
               href: ./canvas-apps/add-configure-controls.md
@@ -224,7 +224,7 @@
   items:
     - name: Hurtigstarter
       items:
-        - name: Opprette en enhet
+        - name: Å opprette en enhet
           href: ./common-data-service/data-platform-create-entity.md
     - name: Opplæringer
       items:
@@ -246,10 +246,16 @@
           href: ./common-data-service/custom-picklists.md
         - name: Opprette en relasjon mellom enheter
           href: ./common-data-service/data-platform-entity-lookup.md
-        - name: Opprette en forretningsregel
+        - name: Å opprette en forretningsregel
           href: ./common-data-service/data-platform-create-business-rule.md
-        - name: Slette en egendefinert enhet
+        - name: Å slette en egendefinert enhet
           href: ./common-data-service/data-platform-delete-entity.md
+        - name: Å importere eller eksportere data fra en enhet
+          href: ./common-data-service/data-platform-import-export.md
+        - name: Å åpne enhetsdata i Excel
+          href: ./common-data-service/data-platform-excel-addin.md
+        - name: Opprette en Power BI-rapport
+          href: ./common-data-service/data-platform-powerbi-connector.md
     - name: Referanse
       items:
         - name: Begrensede enheter som krever Dynamics 365-lisenser
