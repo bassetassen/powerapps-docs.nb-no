@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 11/11/2017
 ms.author: ankitsar
-ms.openlocfilehash: 8ae6bd0e576abd3a4115e452b286607b5c695acb
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 69e3baaa769282ca8ac7372ba3360829a1624f3d
+ms.sourcegitcommit: 6bfb002180148a3f22a4d1d8d750fc442489ebe4
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31834840"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35291747"
 ---
 # <a name="understand-sharepoint-forms-integration"></a>Forstå integrasjon for SharePoint-skjemaer
 Du kan nå enkelt [tilpasse alle SharePoint-listeskjemaer](customize-list-form.md) i PowerApps. I denne artikkelen forklarer vi i detalj hvordan disse skjemaene fungerer, og hvordan du kan tilpasse dem enda mer.
@@ -76,7 +76,7 @@ Disse standardene sikrer at skjemaet fungerer når det kjører i SharePoint. De 
 ![](./media/sharepoint-form-integration/sharepointintegration-object.png)
 
 >[!NOTE]
->Egenskapene for **SharePointIntegration**-kontrollen er bare tilgjengelige når skjemaet kjører i SharePoint, og de er utilgjengelige når skjemaet tilpasses i PowerApps Studio.
+>Egenskapene for kontrollen for **SharePointIntegration** er bare tilgjengelige når skjemaet kjører i SharePoint, men ikke når skjemaet tilpasses i PowerApps Studio. Disse egenskapene er kanskje ikke tilgjengelige i **OnStart** eller **OnVisible**. 
 
 **SharePointIntegration**-kontrollen har følgende egenskaper:
 
@@ -109,3 +109,5 @@ Nå som du har en bedre forståelse av det standardgenererte skjemaet og **Share
 * Pass på å inkludere **RequestHide()** i **OnSuccess**-formelen i alle skjemaene dine. Hvis du glemmer dette, kan ikke SharePoint vite når skjemaet skal skjules.
 
 * Du kan ikke kontrollere skjulingen av et skjema når en bruker klikker eller trykker på **Avbryt** i SharePoint, så sørg for at du tilbakestiller skjemaene dine i **OnCancel**-formelen i **SharePointIntegration**-kontrollen.
+
+* Egenskapene for kontrollen for **SharePointIntegration** er kanskje ikke tilgjengelige i **OnStart** eller **OnVisible**, og disse hendelsene utføres bare én gang mens listen lastes inn. Du kan bruke formlene **OnNew**, **OnView** eller **OnEdit** for å kjøre Logic før skjemaet vises til brukeren hver gang. 
