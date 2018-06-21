@@ -7,12 +7,12 @@ ms.component: pa-user
 ms.topic: quickstart
 ms.date: 03/07/2018
 ms.author: matp
-ms.openlocfilehash: ba3b52bbbe12fad8773f09f4c753e4a55d09a6f0
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 4aed5f0d34bf88bca706c1c6421ac3b692308ebb
+ms.sourcegitcommit: 63351b1bda5a8dd00786912f95aba9fb3ebfe75c
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34552718"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36261722"
 ---
 # <a name="quickstart-run-an-app-in-a-web-browser"></a>Hurtigstart: å kjøre en app i en nettleser
 Når du oppretter en app, eller noen deler en app med deg, kan du kjøre appen i Windows, iOS, Android eller i en nettleser. I denne hurtigveiledningen lærer du hvordan du kjører en lerret-app eller en modelldrevet app i en nettleser fra [Dynamics 365-hjemmesiden](https://home.dynamics.com).
@@ -20,7 +20,7 @@ Når du oppretter en app, eller noen deler en app med deg, kan du kjøre appen i
 Du trenger et [Microsoft Office 365-abonnement](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) for å følge denne hurtigveiledningen,som inkluderer Dynamics 365 og tilgang til en [nettleser og et operativsystem](../maker/canvas-apps/limits-and-config.md) som er støttet. Du må også sørge for at du har tilgang til en app som du opprettet, eller som noen andre har delt med deg.
 
 ## <a name="sign-in-to-dynamics-365"></a>Å logge deg på Dynamics 365
-Å logge deg på Dynamics 365 på [https://home.dynamics.com]([https://home.dynamics.com).
+Å logge deg på Dynamics 365 på [https://home.dynamics.com](https://home.dynamics.com).
 
 ## <a name="find-an-app-on-the-home-page"></a>Å finne en app på hjemmesiden
 Hjemmesiden kan vise flere typer forretningsapper, men du kan finne en bestemt app ved å skrive inn minst en del av navnet i søkeboksen. Du kan også filtrere listen for å vise bare apper som er opprettet av en bestemt kilde, for eksempel PowerApps. Hvis du vil gjøre dette, klikker eller trykker du på **Filter** og velger deretter kilden.
