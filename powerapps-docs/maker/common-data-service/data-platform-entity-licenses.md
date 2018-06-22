@@ -13,6 +13,7 @@ ms.sourcegitcommit: b3b6118790d6b7b4285dbcb5736e55f6e450125c
 ms.translationtype: HT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34167108"
 ---
 # <a name="license-requirements-for-entities"></a>Lisenskrav for enheter
 Applagere kan bruke de fleste enheter som er tilgjengelige i Common Data Service (CDS) for apper (inkludert egendefinerte enheter og enheter som er en del av Common Data Model) for å opprette apper og flyt for brukere som bare en PowerApps Plan 1- eller Microsoft Flow Plan 1-lisens. I noen tilfeller kan enheter inneholde kompleks forretningslogikk eller er knyttet til Dynamics 365-produkter som krever at appbrukere har en bestemt lisens. Hvis du vil ha mer informasjon om tilgjengelige abonnementer, se [PowerApps-prissiden](https://powerapps.microsoft.com/pricing).

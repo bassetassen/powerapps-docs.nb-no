@@ -17,6 +17,7 @@ ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31829680"
 ---
 # <a name="overview-of-creating-apps-in-powerapps"></a>Oversikt over oppretting av apper i PowerApps
 PowerApps er en utviklingsplattform for bedriftsapper med høy produktivitet, og har tre hovedkomponenter:

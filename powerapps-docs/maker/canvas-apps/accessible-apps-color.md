@@ -11,6 +11,7 @@ ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32329920"
 ---
 # <a name="accessible-colors-in-powerapps"></a>Tilgjengelige farger i PowerApps
 Fargene som brukes i en app, skal være tilpasset for fargeblinde og svaksynte brukere. Alle PowerApps-temaer er tilpassede som standard. Følg disse retningslinjene for å sikre at fargene forblir tilgjengelige når du endrer dem i et program.

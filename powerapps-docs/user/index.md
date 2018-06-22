@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3f5adf07cac1c798f3d4843ed5928505becde30e
 ms.translationtype: HT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/26/2018
+ms.locfileid: "34552672"
 ---
 # <a name="how-do-i-find-and-run-apps"></a>Hvordan finner og kjører jeg apper?
 Apputviklere kan opprette tilpassede oppgave – og rollebaserte *lerrets*apper som jobber på samme måte som deg, enten du er en mobil arbeider i felten eller en lege på et travelt sykehus. Utviklere av lerretsapper kan tilpasse nesten alle aspekter av en lerretsapp, og kan koble til flere datakilder for å hjelpe brukere med å fullføre fokuserte oppgaver.

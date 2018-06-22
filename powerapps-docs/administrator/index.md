@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3f5adf07cac1c798f3d4843ed5928505becde30e
 ms.translationtype: HT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/26/2018
+ms.locfileid: "34552419"
 ---
 # <a name="whats-the-role-of-a-powerapps-administrator"></a>Hva er rollen til en PowerApps-administrator?
 Administrasjon av PowerApps, Microsoft Flow og Common Data Service (CDS) for apper utføres via [administrasjonssenteret for PowerApps](https://admin.powerapps.com).
