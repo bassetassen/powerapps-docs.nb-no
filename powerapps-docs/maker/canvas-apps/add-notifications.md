@@ -1,28 +1,25 @@
 ---
-title: Send et push-varsel | Microsoft Docs
+title: Sende et push-varsel i Microsoft Docs
 description: Finn ut hvordan du sender opprinnelige push-varsler til en app i PowerApps.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: jamesol-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 08/08/2017
 ms.author: jamesol
-ms.openlocfilehash: 29199a60004f2cf77e4c4eaea3d812c4d98fcc20
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 0cf09528f83b2729e50139a3b5f9b5b9c00b6119
+ms.sourcegitcommit: 045c96df42405c60c7675edbadac93455270a021
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996322"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822562"
 ---
-# <a name="send-a-pull-notification-in-powerapps"></a>Send et pull-varsel i PowerApps
+# <a name="send-a-push-notification-in-powerapps"></a>Send et push-varsel i PowerApps
 Push-varsler brukes hovedsakelig i mobilapper for forbruker- og forretningsscenarioer for å engasjere brukere og hjelpe dem med å prioritere viktige oppgaver. I PowerApps kan du sende varsler ved å bruke PowerApps Notification-koblingen. Du kan sende opprinnelige push-varsler til alle apper du lager i PowerApps. Vi har planer om å legge til flere typer varsler i fremtiden.
 
 ![Eksempel på hvordan et push-varsel ser ut](./media/add-notifications/pic1-notification-screenshot.png)
@@ -39,7 +36,7 @@ Legg til push-varsler i appen hvis:
 ## <a name="before-you-start"></a>Før du starter
 Legg til en PowerApps Notification-tilkobling i en app der du har **Bidragsyter**-tillatelse. Hvis du ikke allerede har en app, kan du raskt [lage en app fra en mal](get-started-test-drive.md) og som standard ha den nødvendige tillatelsen. Både den allerede nevnte opplæringen og denne opplæringen bruker en app som er basert på Case Management-malen.
 
-## <a name="send-a-notification-from-a-flow"></a>Send et varsel fra en flyt
+## <a name="send-a-notification-from-a-flow"></a>Å sende et varsel fra en flyt
 > [!NOTE]
 > På det nåværende tidspunktet kan du sende et push-varsel du utløser fra en flyt til kun én bruker eller sikkerhetsgruppe om gangen.
 
@@ -84,7 +81,7 @@ Du kan sende et push-varsel fra en app til en annen, eller til den samme appen.
 ### <a name="pass-parameters"></a>Send parametre
 Push-varselet kan sende bestemte parametre til appen. Bruk for eksempel *Param("CaseID")* for å lese **CaseID**-verdien. Denne parameteren kan raskt identifiseres ved å legge til en **Etikett**-kontroll i appen. Angi**Tekst**-egenskapen for denne kontrollen til **Param("CaseID")**. Hvis brukeren åpner appen fra listen **Alle apper**, er verdien tom. Hvis brukeren åpner appen fra en annen plassering på enheten, er verdien utfylt med**Saks-ID**-verdien.
 
-### <a name="set-the-start-page"></a>Angi startside
+### <a name="set-the-start-page"></a>Å angi startside
 Du kan for eksempel angi at appen skal åpne siden **Saksdetaljer** når du åpner appen:
 
 1. Legg til en **Tidtaker**-kontroll, og angi **OnTimerEnd**-egenskapen for denne kontrollen i denne formelen:

@@ -1,26 +1,23 @@
 ---
 title: Egenskaper for farge og kantlinje | Microsoft Docs
 description: Referanseinformasjon om egenskaper som BorderColor, HoverBorderColor og PressedBorderColor
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: 913e9b78445db03fbd59fedbdd0bf9d992175bf1
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 5c30d0c96d3d6ad8eee0781a6c209419ba70c860
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996437"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838336"
 ---
 # <a name="color-and-border-properties-in-powerapps"></a>Egenskaper for farge og kantlinje i PowerApps
 ## <a name="overview"></a>Oversikt
@@ -49,12 +46,17 @@ Disse egenskapene iverksettes vanligvis når brukeren ikke samhandler med kontro
 
 * Gjelder kontrollene **[Legg til bilde](control-add-picture.md)**, **[Lyd](control-audio-video.md)**, **[Knapp](control-button.md)**, **[Kort](control-card.md)**, **[Avmerkingsboks](control-check-box.md)**, **[Datovelger](control-date-picker.md)**, **[Visningsskjema](control-form-detail.md)**, **[Rullegardin](control-drop-down.md)**, **[Redigeringsskjema](control-form-detail.md)**, **[Eksporter](control-export-import.md)**, **[Galleri](control-gallery.md)**, **[HTML-tekst](control-html-text.md)**, **[Ikon](control-shapes-icons.md)**, **[Bilde](control-image.md)**, **[Importer](control-export-import.md)**, **[Etikett](control-text-box.md)**, **[Listeboks](control-list-box.md)**, **[Mikrofon](control-microphone.md)**, **[PDF-visningsprogram](control-pdf-viewer.md)**, **[Penneinndata](control-pen-input.md)**, **[Radio](control-radio.md)**, **[Vurdering](control-rating.md)**, **[Skjerm](control-screen.md)**, **[Figur](control-shapes-icons.md)**, **[Tekstinndata](control-text-input.md)**, **[Tidtaker](control-timer.md)**, **[Veksleknapp](control-toggle.md)** og **[Video](control-audio-video.md)**.
 
-**FocusedBorderThickness** – tykkelsen på kantlinjen for en kontroll når den har tastaturfokus.
+## <a name="focused"></a>Fokusert
+Disse egenskapene er aktivert når kontrollen er fokusert.
 
-* Gjelder kontrollene **[Legg til bilde](control-add-picture.md)**, **[Lyd](control-audio-video.md)**, **[Knapp](control-button.md)**, **[Kort](control-card.md)**, **[Avmerkingsboks](control-check-box.md)**, **[Datovelger](control-date-picker.md)**, **[Visningsskjema](control-form-detail.md)**, **[Rullegardin](control-drop-down.md)**, **[Redigeringsskjema](control-form-detail.md)**, **[Eksporter](control-export-import.md)**, **[Galleri](control-gallery.md)**, **[HTML-tekst](control-html-text.md)**, **[Ikon](control-shapes-icons.md)**, **[Bilde](control-image.md)**, **[Importer](control-export-import.md)**, **[Etikett](control-text-box.md)**, **[Listeboks](control-list-box.md)**, **[Mikrofon](control-microphone.md)**, **[PDF-visningsprogram](control-pdf-viewer.md)**, **[Penneinndata](control-pen-input.md)**, **[Radio](control-radio.md)**, **[Vurdering](control-rating.md)**, **[Skjerm](control-screen.md)**, **[Figur](control-shapes-icons.md)**, **[Tekstinndata](control-text-input.md)**, **[Veksleknapp](control-toggle.md)** og **[Video](control-audio-video.md)**.
+**FocusedBorderColor** – fargen på kontrollens kantlinje når kontrollen har fokus.
+
+**FocusedBorderThickness** – tykkelsen på kantlinjen for en kontroll når den har fokus.
+
+* Gjelder kontrollene **[Legg til bilde](control-add-picture.md)**, **[Vedlegg](control-attachments.md)**, **[Lyd](control-audio-video.md)**, **[Knapp](control-button.md)**, **[Kamera](control-camera.md)**, **[Avmerkingsboks](control-check-box.md)**, **[Kombinasjonsboks](control-combo-box.md)**, **[Datotvelger](control-date-picker.md)**, **[Rullegardinliste](control-drop-down.md)**, **[Eksporter](control-export-import.md)**, **[Galleri](control-gallery.md)**, **[Ikon](control-shapes-icons.md)**, **[Bilde](control-image.md)**, **[Importer](control-export-import.md)**, **[Etikett](control-text-box.md)**, **[Listeboks](control-list-box.md)**, **[Mikrofon](control-microphone.md)**, **[Radio](control-radio.md)**, **[Vurderinger](control-rating.md)**, **[Figur](control-shapes-icons.md)**, **[Glidebryter](control-slider.md)**, **[Tekstinndata](control-text-input.md)**, **[Tidtaker](control-timer.md)**, **[Veksleknapp](control-toggle.md)**, **[Video](control-audio-video.md)**.
 
 ## <a name="disabled"></a>Deaktivert
-Disse egenskapene er aktivert når kontrollene er deaktivert.  En kontroll kan bli deaktivert hvis **[Deaktiver](properties-core.md)**-egenskapen er satt til *sann*.
+Disse egenskapene er aktivert når kontrollen er deaktivert.  En kontroll kan bli deaktivert hvis **[Deaktiver](properties-core.md)** -egenskapen er satt til *sann*.
 
 **DisabledBorderColor** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
 
@@ -64,7 +66,7 @@ Disse egenskapene er aktivert når kontrollene er deaktivert.  En kontroll kan b
 
 * Gjelder kontrollene **[Legg til bilde](control-add-picture.md)**, **[Knapp](control-button.md)**, **[Avmerkingsboks](control-check-box.md)**, **[Datovelger](control-date-picker.md)**, **[Rullegardin](control-drop-down.md)**, **[Eksporter](control-export-import.md)**, **[Importer](control-export-import.md)**, **[Etikett](control-text-box.md)**, **[Listeboks](control-list-box.md)**, **[Mikrofon](control-microphone.md)**, **[Radio](control-radio.md)** og **[Tekstinndata](control-text-input.md)** og **[Tidtaker](control-timer.md)**.
 
-**DisabledColor** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**DisabledFill** – bakgrunnsfargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
 
 * Gjelder kontrollene **[Legg til bilde](control-add-picture.md)**, **[Knapp](control-button.md)**, **[Avmerkingsboks](control-check-box.md)**, **[Datovelger](control-date-picker.md)**, **[Rullegardin](control-drop-down.md)**, **[Eksporter](control-export-import.md)**, **[HTML-tekst](control-html-text.md)**, **[Bilde](control-image.md)**, **[Importer](control-export-import.md)**, **[Etikett](control-text-box.md)**, **[Listeboks](control-list-box.md)**, **[Mikrofon](control-microphone.md)**, **[Radio](control-radio.md)**, **[Tekstinndata](control-text-input.md)** og **[Tidtaker](control-timer.md)**.
 

@@ -1,29 +1,40 @@
 ---
 title: Vanlige problemer og løsninger for PowerApps | Microsoft Docs
-description: Les om problemer og løsninger for PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
-author: skjerland
-manager: kfile
-editor: ''
-tags: ''
+description: En liste over vanlige problemer og løsninger i PowerApps.
+author: AFTOwen
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/05/2018
-ms.author: sharik
-ms.openlocfilehash: 6df3a0d92f8dd8352f93bdb377ac9c4b446e1e99
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.topic: conceptual
+ms.component: canvas
+ms.date: 05/10/2018
+ms.author: anneta
+ms.openlocfilehash: adbd727617d35b435592306e534a8f618046cc20
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996332"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552879"
 ---
 # <a name="common-issues-and-resolutions-for-powerapps"></a>Vanlige problemer og løsninger for PowerApps
+Denne artikkelen viser noen vanlige problemer som kan oppstå når du bruker PowerApps. Der det er aktuelt, er løsninger tilgjengelig.
+
 ## <a name="recently-addedchanged"></a>Nylig lagt til eller endret
+1. **Å starte et nettsted fra en innebygd app**
+
+    Internet Explorer og Microsoft Edge kan blokkere åpningen av en nettadresse eller et nettsted som er i beskyttet modus, eller har en lavere sikkerhetssone enn webområdet hvor appen er lastet inn. Du løser dette problemet ved å [endre innstillingene for sikkerhet og personvern](https://support.microsoft.com/en-us/help/17479/windows-internet-explorer-11-change-security-privacy-settings) for nettleseren.
+
+1. **Kombinasjonsbokskontroller i gallerier**
+
+    Når du bruker en **kombinasjonsboks**-kontroll i et galleri, beholdes ikke valgene for den når brukeren ruller i galleriet. Dette er ikke et problem hvis du bruker en **kombinasjonsboks**-kontroll i et galleri som ikke ruller. En midlertidig løsning er ikke tilgjengelig.
+
+
+1. **Å bruke et egendefinert bilde som et app-ikon**
+
+    Du kan ikke laste opp et egendefinert bilde som skal brukes som et ikon for appen i PowerApps Studio for Windows (versjon 3.18043). Hvis du vil omgå dette problemet, kan du bruke [PowerApps Studio for nett](https://web.powerapps.com) for å laste opp et egendefinert bilde. Du kan eventuelt bruke ett av ikonene som er inkludert i PowerApps Studio for Windows og tilpasse bakgrunnsfargen.
+
+1. **Å kopiere og lime inn skjermer på tvers av apper**
+
+    Kopiering og innliming av skjermer på tvers av apper støttes ikke. Hvis du vil omgå dette, kan du legge til en ny skjerm i mål-appen, kopiere kontrollene fra skjermen i kilde-appen og deretter lime dem inn på skjermen for mål-appen.
+
 1. **Endring av oppsettet til SharePoint-skjemaer**
 
     Når du prøver å endre oppsettet fra stående (standard) til liggende mens du tilpasser et SharePoint-listeskjema på bestemte språk, kan det hende appen viser flere feil (gule trekanter i kontroller). Du løser disse feilene og beholder liggende retning ved å klikke på **Angre**.
@@ -32,7 +43,7 @@ ms.locfileid: "30996332"
 
     Hvis appen du har opprettet plutselig slutter å fungere, kan det hende du ikke har oppdatert eller publisert den på nytt de siste seks månedene. Du løser dette problemet ved å oppdatere eller publisere appen på nytt, slik at den synkroniseres med den nyeste versjonen av PowerApps. Deretter sørger du for å fortsette å oppdatere eller publisere appen på nytt innen seks måneder etter siste publisering.
 
-1. **Datatabellkontroll**
+1. **Datatabell-kontroll**
 
     Hvis du kopierer og limer inn en **Datatabell**-kontroll der **Elementer**-egenskapen er angitt til en formel som inneholder en **Filter**-funksjon, ender formelen for **Elementer**-egenskapen på den nye **Datatabell**-kontrollen opp med feltnavn som inneholder et **_1**-suffiks. Dette gjør feltnavnene ugyldige og resulterer i at ingen data vises i datatabellen. Du kan omgå dette problemet før du kopierer kontrollen, ved å bekrefte at **Filter**-funksjonen ikke refererer til et felt i datakilden, som har samme navn som en kolonne i **Datatabell**-kontrollen. Hvis den har det, gir du et nytt navn til kolonnen i **Datatabell**-kontrollen. Du kan også fjerne **_1**-suffikset fra de ugyldige feltnavnene, slik at de samsvarer med navnene i enheten.
 
@@ -65,11 +76,11 @@ ms.locfileid: "30996332"
     Hvis du bruker en SharePoint-liste eller en Excel-tabell der et kolonnenavn inneholder et mellomrom, erstattes dette med **\_x0020\_** i PowerApps. **Kolonnenavn** i SharePoint eller Excel vil for eksempel vises som **Column_x0020_Name** i PowerApps når de vises i dataoppsettet eller brukes i en formel.
 
 ## <a name="older"></a>Eldre
-1. **Endring av en flyt i en delt app**
+1. **Å endre en flyt i en delt app**
 
     Hvis du legger til en flyt i en app, deler den og deretter legger til en tjeneste eller endrer en kobling i flyten, må du fjerne flyten fra den delte appen, legge til flyten på nytt og dele appen på nytt. Hvis ikke, får brukere som utløser flyten en godkjenningsfeil.
 
-2. **Bruk av en lokalisert versjon**.
+2. **Å bruke en lokalisert versjon**.
 
     Hvis du kjører versjon 2.0.531 på Windows 8.1, kan du ikke skrive inn en kontroll for **Tekstinndata** hvis enheten er stilt inn på et språk som krever et IME-vindu.
 
@@ -77,23 +88,23 @@ ms.locfileid: "30996332"
 
     En app som inneholder en kamerakontroll kan komme til å krasje hvis du åpner appen på en Windows Phone som kjører bygg 10.0.10586.107. Du unngår dette problemet ved å oppgradere til den nyeste versjonen (for eksempel ved å kjøre [Upgrade Advisor](https://www.microsoft.com/store/p/upgrade-advisor/9nblggh0f5g4)).
 
-4. **Åpne en app fra en mal**.
+4. **Å åpn en app fra en mal**.
 
     Hvis du kjører versjon 2.0.500 eller eldre, vises en feilmelding når du prøver å opprette en app fra en mal. Du må oppgradere for å kunne bruke denne funksjonen.
 
     Hvis du kjører versjon 2.0.510 eller senere, vises kanskje en advarsel når du prøver å opprette en app fra en mal. Du kan imidlertid lukke meldingen og opprette appen.
 
-5. **Skanning av en strekkode**
+5. **Å skanne en strekkode**
 
-    Hvis du vil ha informasjon om begrensninger og anbefalte fremgangsmåter når du bruker en **Strekkode**-kontroll, kan du se [Skanne en strekkode](scan-barcode.md).
+    Hvis du vil ha informasjon om begrensninger og anbefalte fremgangsmåter når du bruker en **Strekkode**-kontroll, kan du se [Å skanne en strekkode](scan-barcode.md).
 
-6. **Oppretting og endring av apper i en nettleser**
+6. **Å opprette og endre apper i en nettleser**
 
-    Du kan gjøre mange, men ikke alle, av de samme tingene i PowerApps Studio for nett, som du kan i PowerApps Studio for Windows. Hvis du vil ha mer informasjon, kan du se [Oppretting av en app i en nettleser](create-app-browser.md).
+    Du kan gjøre mange, men ikke alle, av de samme tingene i PowerApps Studio for nett, som du kan i PowerApps Studio for Windows. Hvis du vil ha mer informasjon, kan du se [Å opprette en app i en nettleser](create-app-browser.md).
 
-7. **Endring av et tittelfelt i en enhet**
+7. **Å endre et tittelfelt i en enhet**
 
-    Hvis du endrer tittelfeltet for en enhet som andre enheter refererer til gjennom ett eller flere oppslag, oppstår en feilmelding når du prøver å lagre endringen. Du kan omgå dette problemet ved å fjerne oppslag for enheten du vil endre tittelfelt for, gjøre endringen og deretter opprette oppslagene på nytt. Hvis du vil ha mer informasjon om oppslag, kan du se [Oppretting av relasjoner mellom enheter](../common-data-service/data-platform-entity-lookup.md).
+    Hvis du endrer tittelfeltet for en enhet som andre enheter refererer til gjennom ett eller flere oppslag, oppstår en feilmelding når du prøver å lagre endringen. Du kan omgå dette problemet ved å fjerne oppslag for enheten du vil endre tittelfelt for, gjøre endringen og deretter opprette oppslagene på nytt. Hvis du vil ha mer informasjon om oppslag, kan du se [Å opprette relasjoner mellom enheter](../common-data-service/data-platform-entity-lookup.md).
 
 8. **Apper som kan kobles til lokal SharePoint**
 
@@ -115,7 +126,7 @@ ms.locfileid: "30996332"
 
      Hvis du vil ha mer informasjon, kan du se [SharePoint Online](connections/connection-sharepoint-online.md#known-issues).
 
-13. **Samtidig redigering støttes ikke. Én forfatter av gangen**.
+13. **Samtidig redigering støttes ikke. Én forfatter om gangen**.
 
      Du kan ødelegge en app eller overskrive andres endringer hvis mer enn én person endrer samme app samtidig. Lukk appen før noen andre redigerer den.
 
@@ -123,11 +134,11 @@ ms.locfileid: "30996332"
 
      I enkelte tilfeller vil ikke en nylig delt app være tilgjengelig umiddelbart. Vent litt, så blir den tilgjengelig.
 
-15. Du kan ikke endre data  **i [Skjemakontrollen](controls/control-form-detail.md) ved å bruke et egendefinert kort**.
+15. Du kan ikke endre data  **i [Skjema-kontrollen](controls/control-form-detail.md) ved å bruke et egendefinert kort**.
 
      Det egendefinerte kortet for lager mangler **[Oppdatering](controls/control-card.md)**-egenskapen, noe som kreves for å skrive tilbake endringer. Du kan omgå dette slik:
 
-    * Velg skjemakontrollen, og sett inn et kort ved å bruke den høyre ruten som er basert på feltet du vil at kortet skal vise.  
+    * Velg skjema-kontrollen, og sett inn et kort ved å bruke den høyre ruten som er basert på feltet du vil at kortet skal vise.  
     * Lås opp kortet, som beskrevet i [Forstå datakort](working-with-cards.md#unlock-a-card).
     * Fjern eller organiser kontrollene på nytt i kortet slik det passer, på samme måte som med det egendefinerte kortet.
 

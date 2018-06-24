@@ -1,32 +1,26 @@
 ---
 title: 'Lyd- og videokontroller: referanse | Microsoft Docs'
 description: Informasjon, deriblant egenskaper og eksempler, om lyd- og videokontroller
-services: ''
-suite: powerapps
-documentationcenter: na
 author: fikaradz
-manager: anneta
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 1661477ced59a678ac278dfcebe5e6f661c3e3f1
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: aae87f408452cd83856c2e1c2e07065d4b8df49f
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996272"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803286"
 ---
 # <a name="audio-and-video-controls-in-powerapps"></a>Lyd- og videokontroller i PowerApps
 En kontroll som spiller av en lydfil, en videofil eller en video på YouTube.
 
 ## <a name="description"></a>Beskrivelse
-En **lyd**kontroll spiller av et lydklipp fra en fil, et opptak fra en  **[mikrofon](control-microphone.md)**-kontroll eller lydsporet fra en videofil. En **video**kontroll spiller av et videoklipp fra en fil eller fra YouTube hvis du angir en nettadresse med valgfri teksting for hørselshemmede.
+En **lyd**kontroll spiller av et lydklipp fra en fil, et opptak fra en  **[mikrofon](control-microphone.md)**-kontroll eller lydsporet fra en videofil.
+
+En **video**-kontroll spiller av et videoklipp fra en fil eller fra YouTube eller Azure Media Services.  Teksting for hørselshemmede kan eventuelt vises når dette angis.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 **Loop** – hvorvidt et lyd- eller videoklipp automatisk starter på nytt så snart det er ferdig.
@@ -36,11 +30,13 @@ En **lyd**kontroll spiller av et lydklipp fra en fil, et opptak fra en  **[mikro
 **ShowControls** – om en lyd- eller videoavspiller for eksempel viser en avspillingsknapp og en glidebryter for volum, og om en pennekontroll for eksempel viser ikoner for tegning, sletting og fjerning.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
+**[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere. Bør være tittelen på video- eller lydklipp.
+
 **AutoPause** – om et lyd- eller videoklipp stanses automatisk hvis brukeren navigerer til en annen skjerm.
 
 **AutoStart** – om en lyd- eller videokontroll automatisk begynner å spille av et klipp når brukeren navigerer til skjermen som inneholder denne kontrollen.
 
-**[Kantlinjefarge](properties-color-border.md)** – fargen på kontrollens kantlinje.
+**[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
 **[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
@@ -51,6 +47,10 @@ En **lyd**kontroll spiller av et lydklipp fra en fil, et opptak fra en  **[mikro
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
+
+**[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
+
+**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -74,6 +74,8 @@ En **lyd**kontroll spiller av et lydklipp fra en fil, et opptak fra en  **[mikro
 
 **Tid** – mediakontrollens gjeldende posisjon.
 
+**[TabIndex](properties-accessibility.md)** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
+
 **[Verktøytips](properties-core.md)** – forklarende tekst som vises når brukeren holder pekeren over en kontroll.
 
 **[Synlig](properties-core.md)** – om kontrollen vises eller skjules.
@@ -91,7 +93,7 @@ En **lyd**kontroll spiller av et lydklipp fra en fil, et opptak fra en  **[mikro
 ### <a name="play-an-audio-or-video-file"></a>Spill av en lyd- eller videofil
 1. Klikk eller trykk på **Media** på **Fil**-menyen, klikk eller trykk på **Videoer** eller **Lyd**, og klikk eller trykk deretter på **Bla gjennom**.
 2. Bla til filen du vil bruke, klikk eller trykk på den og klikk eller trykk deretter på **Åpne**.
-3. Trykk på ESC for å gå tilbake til standardarbeidsområdet, legg til en **lyd**- eller **video**kontroll og angi kontrollens **Media**-egenskap til filen du har lagt til.
+3. Trykk på Esc for å gå tilbake til standardarbeidsområdet, legge til en **lyd**- eller **video**kontroll, og angi kontrollens **Media**-egenskap til den filen du har lagt til.
 
     Lurer du på hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?
 4. Trykk på F5, og spill deretter av klippet ved å klikke eller trykke på avspillingsknappen til kontrollen du har lagt til.
@@ -101,6 +103,40 @@ En **lyd**kontroll spiller av et lydklipp fra en fil, et opptak fra en  **[mikro
 5. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
 
 ### <a name="play-a-youtube-video"></a>Å spille av en YouTube-video
-1. Legg til en **video**kontroll, og angi kontrollens **Media**-egenskap til nettadressen omsluttet av doble anførselstegn, til en YouTube-video.
-2. Trykk på F5, og spill deretter av klippet ved å klikke eller trykke på avspillingsknappen til **video**kontrollen.
+1. Legg til en **video**-kontroll, og angi kontrollens **Media**-egenskap til nettadressen omsluttet av doble anførselstegn.
+2. Trykk på F5, og spill deretter av klippet ved å klikke eller trykke på avspillingsknappen til **video**kontrollen du har lagt til.
 3. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
+
+### <a name="play-a-video-from-azure-media-services"></a>Spill av en video fra Azure Media Services
+1. Når videoene er publisert på AMS, kan du kopiere manifest-nettadressen. Start endepunktet for direkteavspillingen for tjenesten, hvis det ikke allerede er gjort.
+1. Legg til en **video**-kontroll, og angi kontrollens **media**-egenskap til nettadressen for AMS-videoen, omsluttet av doble anførselstegn.
+2. Trykk på F5, og spill deretter av klippet ved å klikke eller trykke på avspillingsknappen til **video**kontrollen du har lagt til.
+3. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
+
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="audio-and-video-alternatives"></a>Lyd- og videoalternativer
+* **ShowControls** må være sann for at brukerne skal kunne høre eller se multimedia i sitt eget tempo. Dette gjør også at brukere kan veksle mellom teksting for hørselshemmede og fullskjermmodus på videospillere.
+* Teksting for hørselshemmede må være angitt for videoer.
+  *  Bruk redigeringsverktøy som leveres av YouTube til å legge til bildetekster for YouTube-videoer.
+  *  Opprett bildetekster i WebVTT-format for andre videoer, last dem opp og angi **ClosedCaptionsUrl** til området for nettadressen. Det finnes flere begrensninger. En server/servere som er vert for videoer og bildetekster må være CORS-aktivert og betjene dem ved hjelp av en HTTPS-protokoll. Underteksting fungerer ikke i Internet Explorer.
+* Vurder å ta med en lyd- eller videoutskrift ved hjelp av én av disse metodene:
+  1. Plasser teksten i en **[etikett](control-text-box.md)**, og plasser den deretter ved siden av multimediaspilleren. Du kan også opprette en **[knapp](control-button.md)** for å veksle visningen av teksten.
+  2. Plasser teksten i en annen skjerm. Opprett en **[knapp](control-button.md)** som navigerer til skjermen, og plasser knappen ved siden av multimediaspilleren.
+  3. Hvis beskrivelsen er kort, kan den plasseres i **[AccessibleLabel](properties-accessibility.md)**.
+
+### <a name="color-contrast"></a>Fargekontrast
+Det må være tilstrekkelig fargekontrast mellom:
+* **[FocusedBorderColor](properties-color-border.md)** og den ytre fargen
+* **[Bilde](properties-visual.md)** og multimediaspiller-kontrollene (hvis aktuelt)
+* **[Fyll](properties-color-border.md)** og multimediaspiller-kontrollene (hvis aktuelt)
+
+Angi teksting for hørselshemmede og/eller utskrift hvis videoinnholdet har problemer knyttet til fargekontrast.
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **[AccessibleLabel](properties-accessibility.md)** bør vises.
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
+* Fokusindikatorer må være godt synlige. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
+* **AutoStart** bør være usann fordi det kan være vanskelig for tastaturbrukere å stoppe avspillingen raskt.

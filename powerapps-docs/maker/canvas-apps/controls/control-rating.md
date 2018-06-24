@@ -1,26 +1,23 @@
 ---
 title: 'Vurdering-kontrollen: referanse | Microsoft Docs'
 description: Informasjon om Vurdering-kontrollen, inkludert egenskaper og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 4dd23b8c94ee4760e40b4513e7a88667f85c3a4b
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 1df75e5de1f0d8a2515b4dcf761593145d72f70a
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996277"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31834657"
 ---
 # <a name="rating-control-in-powerapps"></a>Vurdering-kontrollen i PowerApps
 En kontroll som lar brukere angi en verdi mellom 1 og et maksimalt antall som du angir.
@@ -34,19 +31,23 @@ I denne kontrollen kan brukeren for eksempel angi hvor mye de likte noe ved å v
 **Max** – Den maksimale verdien brukeren kan angi for en glidebryter eller en vurdering.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
-**[BorderColor](properties-color-border.md)** – Fargen på kontrollens kantlinje.
+**[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere.
 
-**[BorderStyle](properties-color-border.md)** – Hvorvidt kontrollens kantlinje er satt til **Solid**, **Dashed**, **Dotted** eller **None**.
+**[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
-**[BorderThickness](properties-color-border.md)** – Tykkelsen på kontrollens kantlinje.
+**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
-**[FocusedBorderThickness](properties-color-border.md)**  – Tykkelsen på kontrollens kantlinje når den har tastaturfokus.
+**[BorderThickness](properties-color-border.md)** – tykkelsen til kontrollens kantlinje.
 
-**[DisplayMode](properties-core.md)** – Hvorvidt kontrollen tillater brukerinndata (**Edit**), bare viser data (**View**) eller er deaktivert (**Disabled**).
+**[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[Fill](properties-color-border.md)** – Bakgrunnsfargen på kontrollen.
+**[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
-**[Height](properties-size-location.md)** – Avstanden mellom kontrollens øvre og nedre kant.
+**[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
+
+**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+
+**[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
 **[OnChange](properties-core.md)** – Hvordan appen reagerer når brukeren endrer verdien på en kontroll (ved å for eksempel justere en glidebryter).
 
@@ -58,19 +59,19 @@ I denne kontrollen kan brukeren for eksempel angi hvor mye de likte noe ved å v
 
 **[Reset](properties-core.md)** – Hvorvidt en kontroll tilbakestilles til standardverdien.
 
-**ShowValue** – Hvorvidt verdien til glidebryteren eller vurderingen vises når en bruker endrer verdien eller holder musepekeren over kontrollen.
+**ShowValue** – Om glidebryterens eller vurderingens verdi vises når en bruker endrer verdien eller holder musepekeren over kontrollen.
 
-**[TabIndex](properties-accessibility.md)** – Tilpasser fanerekkefølgen for kontroller ved kjøretid når den er angitt som en annen verdi enn null.
+**[TabIndex](properties-accessibility.md)** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
 
-**[Tooltip](properties-core.md)** – Forklarende tekst som vises når brukeren holder pekeren over en kontroll.
+**[Verktøytips](properties-core.md)** – forklarende tekst som vises når brukeren holder pekeren over en kontroll.
 
-**[Visible](properties-core.md)** – Hvorvidt kontrollen vises eller skjules.
+**[Synlig](properties-core.md)** – om kontrollen vises eller skjules.
 
-**[Width](properties-size-location.md)** – Avstanden mellom kontrollens venstre og høyre kant.
+**[Bredde](properties-size-location.md)** – avstanden mellom kontrollens venstre og høyre kant.
 
-**[X](properties-size-location.md)** – Avstanden mellom kontrollens venstre kant og den venstre kanten til kontrollens overordnede beholder (eller skjermbilde, hvis det ikke finnes noen overordnet beholder).
+**[X](properties-size-location.md)** – avstanden mellom kontrollens venstre kant og den venstre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
-**[Y](properties-size-location.md)** – Avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermbilde, hvis det ikke finnes noen overordnet beholder).
+**[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 [**Average**( *Value1*, *Value2,* ... )](../functions/function-aggregates.md)
@@ -90,5 +91,26 @@ I denne kontrollen kan brukeren for eksempel angi hvor mye de likte noe ved å v
 5. Klikk eller trykk på færre enn fire stjerner i **Quantitative**.
    
     Tipsteksten i **[Tekstinndata](control-text-input.md)**-kontrollen endres slik at den gjenspeiler den lave vurderingen.
-6. Trykk på Esc for å gå tilbake til standardarbeidsområdet.
+6. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="color-contrast"></a>Fargekontrast
+Det må være tilstrekkelig fargekontrast mellom:
+* **RatingFill** og  **[Fyll](properties-color-border.md)**
+
+Dette er i tillegg til [kravene for standard fargekontrast](../accessible-apps-color.md).
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **[AccessibleLabel](properties-accessibility.md)** bør vises.
+
+    > [!NOTE]
+> Skjermlesere bruker **Vurdering**-kontrollen som alternativknapper.
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
+* Fokusindikatorer må være godt synlige. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
+* Vurder å bruke en annen kontroll hvis det er for mange stjerner. Det kan være kjedelig å navigere med et tastatur, og vanskelig å merke/velge nøyaktig med en berøringsskjerm.
+
+    > [!NOTE]
+> De samme tastatursamhandlingene for alternativknapper kan brukes for **Vurdering**.

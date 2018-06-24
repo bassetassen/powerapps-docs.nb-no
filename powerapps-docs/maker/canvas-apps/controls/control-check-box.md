@@ -1,26 +1,23 @@
 ---
 title: 'Avmerkingsboks-kontrollen: referanse | Microsoft Docs'
 description: Informasjon om Avmerkingsboks-kontrollen, inkludert egenskaper og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 3784e90bbf6ed45d2b67b6211efaab279e37feca
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 649ebff0c6ce78d317cfeaf8978bcd97f4a68b11
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996472"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31837899"
 ---
 # <a name="check-box-control-in-powerapps"></a>Avmerkingsboks-kontrollen i PowerApps
 En kontroll der brukeren kan merke eller fjerne merket for å angi verdien som **sann** eller **usann**.
@@ -29,16 +26,16 @@ En kontroll der brukeren kan merke eller fjerne merket for å angi verdien som *
 Brukeren kan angi en boolsk verdi ved hjelp av denne kjente kontrollen, har vært brukt i GUI-er i flere tiår.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
-**[Default](properties-core.md)** – Startverdien for en kontroll før den endres av brukeren.
+**[Standard](properties-core.md)** – startverdien for en kontroll før den er endret av brukeren.
 
 **[Text](properties-core.md)**  – Tekst som vises på en kontroll eller som brukeren skriver inn i en kontroll.
 
 **[Value](properties-core.md)** – Verdien til en inndatakontroll.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
-**[BorderColor](properties-color-border.md)** – Fargen på kontrollens kantlinje.
+**[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
-**[BorderStyle](properties-color-border.md)** – Hvorvidt kontrollens kantlinje er satt til **Solid**, **Dashed**, **Dotted** eller **None**.
+**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
 **[BorderThickness](properties-color-border.md)** – Tykkelsen på kontrollens kantlinje.
 
@@ -52,27 +49,31 @@ Brukeren kan angi en boolsk verdi ved hjelp av denne kjente kontrollen, har vær
 
 **[Color](properties-color-border.md)**  – Fargen på teksten i kontrollen.
 
-**[DisplayMode](properties-core.md)** – Hvorvidt kontrollen tillater brukerinndata (**Edit**), bare viser data (**View**) eller er deaktivert (**Disabled**).
+**[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)**  – Fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
 
-**[DisabledColor](properties-color-border.md)** – Fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
 
-**[DisabledFill](properties-color-border.md)** – Bakgrunnsfargen på en kontroll hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Disabled**.
+**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
 
-**[Fill](properties-color-border.md)** – Bakgrunnsfargen på kontrollen.
+**[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
-**[Font](properties-text.md)**  – Navnet på skriftserien som teksten vises i.
+**[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
-**[FontWeight](properties-text.md)**  – Tykkelsen på teksten i en kontroll: **Bold**, **Semibold**, **Normal** eller **Lighter**.
+**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
 
-**[Height](properties-size-location.md)** – Avstanden mellom kontrollens øvre og nedre kant.
+**[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[HoverBorderColor](properties-color-border.md)**  – Fargen på kontrollens kantlinje når brukeren holder musepekeren på denne kontrollen.
+**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
+
+**[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
+
+**[HoverBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når brukeren holder musepekeren på denne kontrollen.
 
 **[HoverColor](properties-color-border.md)** – Fargen på teksten i en kontroll når brukeren holder musepekeren over den.
 
-**[HoverFill](properties-color-border.md)**  – Bakgrunnsfargen for en kontroll når brukeren holder musepekeren over den.
+**[HoverFill](properties-color-border.md)** – bakgrunnsfargen for en kontroll når brukeren holder musepekeren over den.
 
 **[Italic](properties-text.md)**  – Hvorvidt teksten i en kontroll er kursiv.
 
@@ -84,37 +85,39 @@ Brukeren kan angi en boolsk verdi ved hjelp av denne kjente kontrollen, har vær
 
 **[PaddingBottom](properties-size-location.md)** – Avstanden mellom teksten i en kontroll og den nederste kanten av kontrollen.
 
-**[PaddingLeft](properties-size-location.md)** – Avstanden mellom teksten i en kontroll og den venstre kanten av kontrollen.
+**[PaddingLeft](properties-size-location.md)** – avstanden mellom teksten i en kontroll og den venstre kanten av kontrollen.
 
-**[PaddingRight](properties-size-location.md)** – Avstanden mellom teksten i en kontroll og den høyre kanten av kontrollen.
+**[PaddingRight](properties-size-location.md)** – avstanden mellom teksten i en kontroll og den høyre kanten av kontrollen.
 
-**[PaddingTop](properties-size-location.md)** – Avstanden mellom teksten i en kontroll og den øverste kanten av kontrollen.
+**[PaddingTop](properties-size-location.md)** – avstanden mellom teksten i en kontroll og den øverste kanten av kontrollen.
 
-**[PressedBorderColor](properties-color-border.md)**  – Fargen på kontrollens kantlinje når brukeren trykker eller klikker på kontrollen.
+**[PressedBorderColor](properties-color-border.md)**  – fargen på kontrollens kantlinje når brukeren trykker eller klikker på kontrollen.
 
-**[PressedColor](properties-color-border.md)** – Fargen på teksten i en kontroll når brukeren trykker eller klikker på kontrollen.
+**[PressedColor](properties-color-border.md)** – fargen på teksten i en kontroll når brukeren trykker eller klikker på kontrollen.
 
-**[PressedFill](properties-color-border.md)** – Bakgrunnsfargen i en kontroll når brukeren trykker eller klikker på kontrollen.
+**[PressedFill](properties-color-border.md)** – bakgrunnsfargen på teksten i en kontroll når brukeren trykker eller klikker på kontrollen.
 
-**[Reset](properties-core.md)** – Hvorvidt en kontroll tilbakestilles til standardverdien.
+**[Tilbakestill](properties-core.md)** – om en kontroll tilbakestilles til standardverdien.
 
-**[Size](properties-text.md)** – Skriftstørrelsen på teksten som vises på en kontroll.
+**[Størrelse](properties-text.md)** – skriftstørrelsen på teksten som vises på en kontroll.
 
-**[Strikethrough](properties-text.md)**  – Hvorvidt det vises en linje gjennom teksten som vises på en kontroll.
+**[Strikethrough](properties-text.md)** – om det vises en linje gjennom teksten som vises på en kontroll.
 
-**[Tooltip](properties-core.md)** – Forklarende tekst som vises når brukeren holder pekeren over en kontroll.
+**[TabIndex](properties-accessibility.md)** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
+
+**[Verktøytips](properties-core.md)** – forklarende tekst som vises når brukeren holder pekeren over en kontroll.
 
 **[Underline](properties-text.md)**  – Hvorvidt det vises en linje under teksten som vises på en kontroll.
 
-**[VerticalAlign](properties-text.md)**  – Plasseringen av tekst på en kontroll i forhold til den loddrette midten av kontrollen.
+**[VerticalAlign](properties-text.md)** – plasseringen av tekst i en kontroll i forhold til det vertikale midtpunktet i kontrollen.
 
-**[Visible](properties-core.md)** – Hvorvidt kontrollen vises eller skjules.
+**[Visible](properties-core.md)** – om kontrollen vises eller skjules.
 
-**[Width](properties-size-location.md)** – Avstanden mellom kontrollens venstre og høyre kant.
+**[Bredde](properties-size-location.md)** – avstanden mellom kontrollens venstre og høyre kant.
 
-**[X](properties-size-location.md)** – Avstanden mellom kontrollens venstre kant og den venstre kanten til kontrollens overordnede beholder (eller skjermbilde, hvis det ikke finnes noen overordnet beholder).
+**[X](properties-size-location.md)** – avstanden mellom kontrollens venstre kant og den venstre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
-**[Y](properties-size-location.md)** – Avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermbilde, hvis det ikke finnes noen overordnet beholder).
+**[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 [**If**(*Betingelse*, *Resultat*)](../functions/function-if.md)
@@ -130,5 +133,23 @@ Brukeren kan angi en boolsk verdi ved hjelp av denne kjente kontrollen, har vær
 3. Trykk på F5, og klikk eller trykk på **chkReserve** for å angi dens **[Value](properties-core.md)**-egenskap som **sann**. Klikk eller trykk deretter på **chkReserve** på nytt for å angi dens **[Value](properties-core.md)**-egenskap som **usann**.
    
     **[Date picker](control-date-picker.md)**-kontrollen vises når **[Value](properties-core.md)**-egenskapen til **chkReserve** er **sann**, men ikke når den er **usann**.
-4. Trykk på Esc for å gå tilbake til standardarbeidsområdet.
+4. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="color-contrast"></a>Fargekontrast
+Det må være tilstrekkelig fargekontrast mellom:
+* **CheckmarkFill** og **CheckboxBackgroundFill**
+* **CheckboxBackgroundFill** og **[Fyll](properties-color-border.md)**
+* **CheckboxBackgroundFill** og **[PressedFill](properties-color-border.md)**
+* **CheckboxBackgroundFill** og **[HoverFill](properties-color-border.md)**
+
+Dette er i tillegg til [kravene for standard fargekontrast](../accessible-apps-color.md).
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **[Tekst](properties-core.md)** må foreligge.
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
+* Fokusindikatorer må være godt synlige. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
+ 

@@ -1,25 +1,23 @@
 ---
 title: 'Datatabell-kontroll: referanse | Microsoft Docs'
 description: Informasjon, inkludert egenskaper og eksempler, om Datatabell-kontrollen
-services: powerapps
 documentationcenter: na
 author: jasongre
-manager: kfend
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 06/05/2017
 ms.author: kfend
-ms.openlocfilehash: 431fb0233fa58d59a62a9d5d2cf07bfdd23d6271
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: aa6e778a1c0426c696aaf48c542eccc4887c0e36
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996202"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836251"
 ---
 # <a name="data-table-control-in-powerapps"></a>Datatabell-kontrollen i PowerApps
 Viser et sett med data i et tabellformat.
@@ -146,3 +144,16 @@ PowerApps introduserte **Datatabell**-kontrollen 5. mai 2017. Denne delen inneho
    
     ![Redigering av skjema som er koblet til datatabellen](./media/control-data-table/connected-form-data-table.png)
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="color-contrast"></a>Fargekontrast
+Det må være tilstrekkelig fargekontrast mellom:
+* [**Farge**](properties-color-border.md) og [**Fyll**](properties-color-border.md)
+* **HeadingColor** og **HeadingFill**
+* **SelectedColor** og **SelectedFill**
+* [**Pekefarge**](properties-color-border.md) og [**Pekefyll**](properties-color-border.md)
+
+Dette er i tillegg til [kravene for standard fargekontrast](../accessible-apps-color.md).
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **NoDataText** må foreligge.

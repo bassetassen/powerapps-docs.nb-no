@@ -1,26 +1,18 @@
 ---
 title: Oversikt over SQL Server-tilkoblingen | Microsoft Docs
 description: Trinnvise instruksjoner for hvordan du kobler til Azure SQL eller en lokal SQL Server-database
-services: ''
-suite: powerapps
-documentationcenter: ''
-author: archnair
-manager: anneta
-editor: ''
-tags: ''
+author: lancedMicrosoft
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/12/2016
-ms.author: archanan
-ms.openlocfilehash: 26bae9c6407ce168eaa06ce29034452a48a1b846
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: lanced
+ms.openlocfilehash: e11521219fcd368801a6e943f45dbc713309ec36
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996352"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803424"
 ---
 # <a name="connect-to-sql-server-from-powerapps"></a>Koble til SQL Server fra PowerApps
 ![SQL Server-ikon](./media/connection-azure-sqldatabase/sqlicon.png)
@@ -29,7 +21,7 @@ Koble til SQL Server, i Azure eller en lokal database, slik at du kan vise infor
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-* [Registrer deg](../../signup-for-powerapps.md) for PowerApps, [installer](http://aka.ms/powerappsinstall) PowerApps Studio, åpne det, og logg på ved å oppgi samme legitimasjon som du brukte til å registrere deg.
+* [Registrer deg](../../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](http://web.powerapps.com) ved å angi samme legitimasjon som du brukte til å registrere deg.
 * Samle inn følgende informasjon for en database som inneholder minst én tabell med en primærnøkkel:
   
   * navnet på databasen
@@ -54,7 +46,7 @@ Koble til SQL Server, i Azure eller en lokal database, slik at du kan vise infor
     ![Legge til en SQL Server-tilkobling](./media/connection-azure-sqldatabase/add-sql-connection.png)
 5. Gjør ett av disse trinnene:
    
-   * Angi **Koble til direkte (skytjenester)**, og skriv deretter inn eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen som du vil bruke.
+   * Angi **Koble til direkte (skytjenester)**, og skriv deretter eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen du vil bruke.
      
        ![Koble til en database i Azure](./media/connection-azure-sqldatabase/connect-azure.png)
    * Angi **Koble til med lokal datagateway**, skriv inn eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen som du vil bruke, og angi godkjenningstypen og gatewayen.
@@ -67,7 +59,7 @@ Koble til SQL Server, i Azure eller en lokal database, slik at du kan vise infor
 7. Klikk eller trykk på et alternativ under **Velg et datasett**, klikk eller trykk på et alternativ under **Velg en tabell** og klikk eller trykk deretter på **Koble til**.
    
     PowerApps oppretter en app som viser data på tre skjermbilder. Heuristikk foreslår hva slags data som skal vises, men du må kanskje tilpasse brukergrensesnittet etter dine behov.
-8. Tilpass appen ved hjelp av teknikker som ligner på dem som beskrives i [Lage en app fra Excel](../get-started-create-from-data.md), fra og med trinnet for endring av oppsettet i appen.
+8. Tilpass appen ved hjelp av teknikker som ligner på de som beskrives i [Lag en app fra Excel](../get-started-create-from-data.md), fra og med trinnet for endring av oppsettet i appen.
 
 ## <a name="build-an-app-from-scratch"></a>Bygge en app fra grunnen av
 1. Logg deg på [powerapps.com](https://web.powerapps.com) med den samme kontoen du brukte til å registrere deg for PowerApps.
@@ -77,10 +69,10 @@ Koble til SQL Server, i Azure eller en lokal database, slik at du kan vise infor
 3. Klikk eller trykk på **Ny tilkobling** i øvre høyre hjørne, og klikk eller trykk deretter på **SQL Server**.
 4. Gjør ett av disse trinnene:
    
-   * Angi **Koble til direkte (skytjenester)**, og skriv deretter inn eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen som du vil bruke.
+   * Angi **Koble til direkte (skytjenester)**, og skriv deretter eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen du vil bruke.
      
        ![Koble til en database i Azure](./media/connection-azure-sqldatabase/connect-azure-portal.png)
-   * Angi **Koble til med lokal datagateway**, skriv inn eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen som du vil bruke, og angi godkjenningstypen og gatewayen.
+   * Angi **Koble til med lokal datagateway**, skriv eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen som du vil bruke, og angi godkjenningstypen og gatewayen.
      
        ![Koble til en database i Azure](./media/connection-azure-sqldatabase/connect-onprem-portal.png)
      
@@ -98,10 +90,10 @@ Koble til SQL Server, i Azure eller en lokal database, slik at du kan vise infor
 4. Klikk eller trykk på **Ny tilkobling**, klikk eller trykk på **SQL Server** og klikk eller trykk deretter på **Koble til**.
 5. Gjør ett av disse trinnene:
    
-   * Angi **Koble til direkte (skytjenester)**, og skriv deretter inn eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen som du vil bruke.
+   * Angi **Koble til direkte (skytjenester)**, og skriv deretter eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen du vil bruke.
      
        ![Koble til en database i Azure](./media/connection-azure-sqldatabase/connect-azure-fromblank.png)
-   * Angi **Koble til med lokal datagateway**, skriv inn eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen som du vil bruke, og angi godkjenningstypen og gatewayen.
+   * Angi **Koble til med lokal datagateway**, skriv eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen som du vil bruke, og angi godkjenningstypen og gatewayen.
      
        ![Koble til en database i Azure](./media/connection-azure-sqldatabase/connect-onprem-fromblank.png)
      

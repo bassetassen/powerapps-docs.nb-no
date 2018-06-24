@@ -1,26 +1,23 @@
 ---
 title: Å tilpasse et SharePoint-listeskjema ved hjelp av PowerApps | Microsoft Docs
 description: Å bruke PowerApps til å tilpasse et listeskjema i SharePoint.
-services: ''
-suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: anneta
+author: aftowen
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 02/05/2018
-ms.author: sharik
-ms.openlocfilehash: 62c3050ecee4d068d5417fe3846abb3495990d8b
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: anneta
+ms.openlocfilehash: 34c4e4126015f9a5f53ef6f07c9c66e4a4141db0
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996142"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330403"
 ---
 # <a name="customize-a-sharepoint-list-form-using-powerapps"></a>Å tilpasse et SharePoint-listeskjema ved hjelp av PowerApps
 
@@ -37,11 +34,11 @@ Klar til å begynne å tilpasse? La oss komme i gang!
 > [!NOTE]
 > Alternativet **Tilpass skjemaer** blir utilgjengelig, eller vil kanskje ikke fungere som det skal, hvis SharePoint-listen inneholder datatyper som PowerApps ikke støtter.
 
-Trykk eller klikk på **PowerApps** på kommandolinjen i SharePoint-listen. Deretter trykker eller klikker du på **Å tilpasse skjemaer**. Dette tar deg til nettversjonen av PowerApps Studio i en nettleser, der PowerApps genererer en skjema-app for én skjerm, som vist i følgende eksempel.
+Trykk eller klikk på **PowerApps** på kommandolinjen i SharePoint-listen. Deretter trykker eller klikker du på **Å tilpasse skjemaer**. Dette tar deg til PowerApps Studio i en nettleser, der PowerApps genererer en skjema-app for én skjerm, som vist i følgende eksempel.
 
 ![Skjema-app for én skjerm](./media/customize-list-form/list-form-app.png)
 
-Hvis du vil gå tilbake til SharePoint-listen, kan du når som helst klikke eller trykke på **Tilbake til SharePoint** øverst til venstre i PowerApps Studio for nett.
+Hvis du vil gå tilbake til SharePoint-listen, kan du når som helst klikke eller trykke på **Tilbake til SharePoint** øverst til venstre i PowerApps Studio.
 
 ## <a name="customize-the-list-form"></a>Å tilpasse listeskjemaet
 
@@ -92,7 +89,7 @@ Hvis du vil ha trinnvise instruksjoner om hvordan du kan skjule felt og gjøre a
 
     * **Å bruke standard-SharePoint-skjemaet** – SharePoint bruker standard-SharePoint-skjemaet for listen.
 
-    * **Å bruke et egendefinert skjema som er opprettet i PowerApps** – SharePoint bruker skjemaet som du tilpasset i PowerApps. (Du kan eventuelt publisere skjemaet på nytt fra **Lagre**-siden i PowerApps Studio for nett.)
+    * **Å bruke et egendefinert skjema som er opprettet i PowerApps** – SharePoint bruker skjemaet som du tilpasset i PowerApps. (Du kan eventuelt publisere skjemaet på nytt fra **Lagre**-siden i PowerApps Studio.)
 
     Du kan veksle frem og tilbake mellom alternativer etter behov.
 
@@ -146,12 +143,12 @@ Hvis du vil ha trinnvise instruksjoner om hvordan du kan skjule felt og gjøre a
 
 1. Trykk eller klikk på **PowerApps** på kommandolinjen i SharePoint-listen. Deretter trykker eller klikker du på **Å tilpasse skjemaer**.
 
-1. Klikk eller trykk på **Fil** i PowerApps Studio for nett, og klikk eller trykk deretter på **Se alle versjoner** på **Lagre**-siden. **Versjoner**-siden åpnes i en ny fane i nettleseren.
+1. Klikk eller trykk på **Fil** i PowerApps Studio, og klikk eller trykk deretter på **Se alle versjoner** på **Lagre**-siden. **Versjoner**-siden åpnes i en ny fane i nettleseren.
 
     > [!NOTE]
     > Hvis du ikke ser **Se alle versjoner**-knappen, klikker eller trykker du på **Lagre**. Knappen skal nå vises.
 
-1. Uten å lukke **Versjoner**-siden eller nettleserfanen, går du tilbake til **Lagre**-siden i den andre nettleserfanen, klikker eller trykker på pilen øverst i venstre navigasjonsrute, og deretter klikker eller trykker du på **Tilbake til SharePoint** for å låse opp skjemaet og avslutte PowerApps Studio for nett.
+1. Uten å lukke **Versjoner**-siden eller nettleserfanen, går du tilbake til **Lagre**-siden i den andre nettleserfanen, klikk eller trykk på pilen øverst i venstre navigasjonsrute, og deretter klikk eller trykk på **Tilbake til SharePoint** for å låse opp skjemaet og avslutte PowerApps Studio.
 
 1. Gå tilbake til **Versjoner**-siden i den andre nettleserfanen, finn versjonen du ønsker å gjenopprette, og klikk deretter på **Gjenopprett**.
 

@@ -1,26 +1,23 @@
 ---
 title: 'Etikettkontroll: referanse | Microsoft Docs'
 description: Informasjon om etikettkontrollen, inkludert egenskaper og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: f0547963060d31f86b32cc2aaff38b116d35036b
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: caa8cf8678a509e4d66442f790b8d89905d48b92
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996362"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838606"
 ---
 # <a name="label-control-in-powerapps"></a>Etikettkontrollen i PowerApps
 En boks som viser data som tekst, tall, datoer eller valuta.
@@ -52,7 +49,7 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
 
 **[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
 
@@ -60,17 +57,21 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
-**[FontWeight](properties-text.md)**  – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
+**[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
+
+**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+
+**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
-**[HoverBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når brukeren holder musepekeren over denne kontrollen.
+**[HoverBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når brukeren holder musepekeren på denne kontrollen.
 
-**[HoverColor](properties-color-border.md)** – fargen på en teksten i en kontroll når brukeren holder musepekeren over den.
+**[HoverColor](properties-color-border.md)** – Fargen på teksten i en kontroll når brukeren holder musepekeren over den.
 
-**[HoverFill](properties-color-border.md)**  – bakgrunnsfargen for en kontroll når brukeren holder musepekeren over den.
+**[HoverFill](properties-color-border.md)** – bakgrunnsfargen for en kontroll når brukeren holder musepekeren over den.
 
-**[Kursiv](properties-text.md)**  – om teksten i en kontroll er i kursiv.
+**[Kursiv](properties-text.md)** – om teksten i en kontroll er i kursiv.
 
 **[LineHeight](properties-text.md)** – avstanden mellom linjer med tekst, elementer i en liste eller lignende.
 
@@ -86,7 +87,7 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 
 **[PaddingTop](properties-size-location.md)** – avstanden mellom teksten i en kontroll og den øverste kanten av kontrollen.
 
-**[PressedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når brukeren trykker eller klikker på kontrollen.
+**[PressedBorderColor](properties-color-border.md)**  – fargen på kontrollens kantlinje når brukeren trykker eller klikker på kontrollen.
 
 **[PressedColor](properties-color-border.md)** – fargen på teksten i en kontroll når brukeren trykker eller klikker på kontrollen.
 
@@ -94,17 +95,19 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 
 **[Størrelse](properties-text.md)** – skriftstørrelsen på teksten som vises på en kontroll.
 
-**[Strikethrough](properties-text.md)**  – om det vises en linje gjennom teksten som vises på en kontroll.
+**[Strikethrough](properties-text.md)** – om det vises en linje gjennom teksten som vises på en kontroll.
+
+**[TabIndex](properties-accessibility.md)** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
 
 **[Verktøytips](properties-core.md)** – forklarende tekst som vises når brukeren holder pekeren over en kontroll.
 
-**[Understrek](properties-text.md)**  – om det vises en linje under teksten som vises på en kontroll.
+**[Underline](properties-text.md)**  – Hvorvidt det vises en linje under teksten som vises på en kontroll.
 
-**[VerticalAlign](properties-text.md)**  – plasseringen av tekst på en kontroll i forhold til den loddrette midten av kontrollen.
+**[VerticalAlign](properties-text.md)** – plasseringen av tekst i en kontroll i forhold til det vertikale midtpunktet i kontrollen.
 
-**[Synlig](properties-core.md)** – om kontrollen vises eller skjules.
+**[Visible](properties-core.md)** – om kontrollen vises eller skjules.
 
-**[Bredde](properties-size-location.md)** – avstanden mellom venstrekanten og høyrekanten til en kontroll.
+**[Width](properties-size-location.md)** – avstanden mellom venstrekanten og høyrekanten på en kontroll.
 
 **Bryt** – om teksten som er for lang til å få plass i en etikett brytes til neste linje.
 
@@ -119,7 +122,7 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 ### <a name="show-a-literal-string"></a>Vise en litteral streng
 * Legg til en etikett, og sett **[Tekst](properties-core.md)**-egenskapen til **«God dag, verden»** (inkludert de doble anførselstegnene).
   
-    Vet du ikke hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?
+    Lurer du på hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?
 
 ### <a name="show-the-result-of-a-formula"></a>Vise resultatet av en formel
 * Legg til en etikett, og angi **[Tekst](properties-core.md)**-egenskapen som en formel, som denne:<br>
@@ -141,3 +144,28 @@ I denne prosedyren oppretter du en samling kalt **CityPopulations**, som innehol
     Når galleriet er valgt, viser den høyre ruten alternativene for galleriet.
 4. Angi den øverste listen i **Gallery1**-ruten til **Populasjon**, angi den midterste listen til **By**, og angi den nederste listen som **Land**.
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+Til tross for navnet er det ikke nødvendig å bruke en **etikett**-kontroll som en etikett for en annen kontroll. Den kan brukes til å vise alle slags tekstsekvenser.
+
+En **etikett** kan brukes som en knapp eller kobling ved å angi **[OnSelect](properties-core.md)**-virkemåte. Når den brukes på denne måten, foreligger det lignende tilgjengelighetshensyn som ved knapper.
+
+### <a name="color-contrast"></a>Fargekontrast
+Det må være tilstrekkelig fargekontrast mellom:
+* **[Farge](properties-color-border.md)** og **[Fyll](properties-color-border.md)**
+* Andre [standardkrav for fargekontrast](../accessible-apps-color.md) gjelder (hvis den brukes som en knapp eller kobling)
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **[Tekst](properties-core.md)** må foreligge.
+
+    > [!NOTE]
+> Skjermlesere behandler **etiketter** som knapper når **[TabIndex](properties-accessibility.md)** er null eller større.
+
+### <a name="low-vision-support"></a>Støtte for nedsatt syn
+* **Etikett** skal se ut som en kobling, hvis den brukes som en kobling.
+    * Angi **[understreking](properties-text.md)** til **sann**
+    * **[HoverColor](properties-color-border.md)** må være forskjellig fra **[Farge](properties-color-border.md)**
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* **[TabIndex](properties-accessibility.md)** må være lik null eller større hvis teksten brukes som en knapp eller kobling. Dette gjør at tastaturbrukere får muligheten til å navigere til den.
+* Fokusindikatorer må være klart synlige hvis teksten brukes som en knapp eller kobling. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.

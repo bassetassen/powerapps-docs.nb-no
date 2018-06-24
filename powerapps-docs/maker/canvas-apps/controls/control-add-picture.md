@@ -1,26 +1,18 @@
 ---
 title: 'Legg til bilde-kontrollen: referanse | Microsoft Docs'
 description: Informasjon om Legg til bilde-kontrollen, inkludert egenskaper og eksempler
-services: ''
-suite: powerapps
-documentationcenter: na
 author: fikaradz
-manager: anneta
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 6a7c60755f5623803d20bec4ec9881108b1116c6
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: e20d76c9e8913197d4b59380a5f91dea3851c959
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996292"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803539"
 ---
 # <a name="add-picture-control-in-powerapps"></a>Legg til bilde-kontrollen i PowerApps
 Tar et bilde eller laster inn bilder fra den lokale enheten.
@@ -28,86 +20,97 @@ Tar et bilde eller laster inn bilder fra den lokale enheten.
 ## <a name="description"></a>Beskrivelse
 Med denne kontrollen kan brukere ta bilder eller laste opp bildefiler fra enheten og oppdatere datakilden med dette innholdet. På en mobil enhet får brukeren se enhetens valgdialog for å velge mellom å ta et bilde eller velge et som allerede finnes.
 
-Denne kontrollen er en sammensatt kontroll og består av to kontroller.  Trykk én gang for å velge den ytre kontrollen som viser bildet som er lastet inn.  Trykk én gang til for å velge den indre etikettkontrollen.
+Denne kontrollen er en gruppert kontroll som inneholder to kontroller: Ett **Bilde** og én **Legg til medier-knapp**. **Bilde**-kontrollen viser det opplastede bildet eller en plassholder hvis det ikke er lastet opp noe bilde. **Legg til medier-knappen** ber deg om å laste opp et bilde.
 
-## <a name="outer-control-properties"></a>Den ytre kontrollens egenskaper
-Disse egenskapene gjelder for den ytre kontrollen.
+Se [Kontrollreferanse for bilde](control-image.md) for **Bilde**-egenskaper.
+
+## <a name="add-media-button-properties"></a>Å legge til egenskaper for media-knapp
+**[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere. Skal beskrive formålet med å legge til et bilde.
+
+**[Juster](properties-text.md)** – plasseringen av teksten i forhold til den vannrette midten av kontrollen.
 
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
-**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
+**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
 **[BorderThickness](properties-color-border.md)** – tykkelsen til kontrollens kantlinje.
 
-**[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Edit**), bare viser data (**View**) eller er deaktivert (**Disabled**).
+**ChangePictureText** – teksten som vises på knappen når et bilde er lastet opp.
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Disabled**.
+**[Farge](properties-color-border.md)** – fargen på teksten i kontrollen.
+
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
+
+**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
 
 **[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
 
+**[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
+
 **Feil** – Hvis det oppstår et problem ved opplasting av et bildet, består denne egenskapen av en streng med en tilhørende feilmelding.
 
-**[Fill](properties-color-border.md)** – Bakgrunnsfargen på kontrollen.
+**[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
-**[Height](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
+**[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
+
+**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+
+**[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
+
+**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
+
+**[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
 **[HoverBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når brukeren holder musepekeren på denne kontrollen.
 
-**[HoverFill](properties-color-border.md)**  – bakgrunnsfargen for en kontroll når brukeren holder musepekeren på den.
+**[HoverColor](properties-color-border.md)** – Fargen på teksten i en kontroll når brukeren holder musepekeren over den.
 
-**Media** – en identifikator for klippet som spilles av en lyd- eller videokontroll.
+**[HoverFill](properties-color-border.md)** – bakgrunnsfargen for en kontroll når brukeren holder musepekeren over den.
 
-**[OnSelect](properties-core.md)** – hvordan appen reagerer når brukeren klikker eller trykker på en kontroll.
+**[Kursiv](properties-text.md)** – om teksten i en kontroll er i kursiv.
+
+**Media** – En identifikator for klippet som spilles av en lyd- eller videokontroll.
+
+**[OnChange](properties-core.md)** – hvordan appen reagerer når brukeren endrer verdien på en kontroll (ved å for eksempel justere en glidebryter).
+
+**[OnSelect](properties-core.md)** – hvordan appen responderer når brukeren klikker eller trykker på en kontroll.
+
+**[Padding](properties-size-location.md)**  – avstanden mellom teksten på en import- eller eksportknapp og kantene på denne knappen.
 
 **[PressedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når brukeren trykker eller klikker på kontrollen.
 
-**[PressedFill](properties-color-border.md)** – bakgrunnsfargen i en kontroll når brukeren trykker eller klikker på kontrollen.
+**[PressedColor](properties-color-border.md)** – fargen på teksten i en kontroll når brukeren trykker eller klikker på kontrollen.
+
+**[PressedFill](properties-color-border.md)** – bakgrunnsfargen på teksten i en kontroll når brukeren trykker eller klikker på kontrollen.
+
+**[Tilbakestill](properties-core.md)** – om en kontroll tilbakestilles til standardverdien.
+
+**[Størrelse](properties-text.md)** – skriftstørrelsen på teksten som vises på en kontroll.
+
+**[Strikethrough](properties-text.md)** – om det vises en linje gjennom teksten som vises på en kontroll.
+
+**[TabIndex](properties-accessibility.md)** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
+
+**[Tekst](properties-core.md)** – teksten som vises på knappen når et bilde ikke er lastet opp.
+
+**[Verktøytips](properties-core.md)** – forklarende tekst som vises når brukeren holder pekeren over en kontroll.
+
+**[Underline](properties-text.md)**  – Hvorvidt det vises en linje under teksten som vises på en kontroll.
+
+**[VerticalAlign](properties-text.md)** – plasseringen av tekst i en kontroll i forhold til det vertikale midtpunktet i kontrollen.
 
 **[Visible](properties-core.md)** – om kontrollen vises eller skjules.
 
-**[Width](properties-size-location.md)** – avstanden mellom venstrekanten og høyrekanten på en kontroll.
+**[Bredde](properties-size-location.md)** – avstanden mellom kontrollens venstre og høyre kant.
 
 **[X](properties-size-location.md)** – avstanden mellom kontrollens venstre kant og den venstre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
-## <a name="inner-text-properties"></a>Den indre tekstens egenskaper
-Disse egenskapene gjelder den indre etiketten, som har standardteksten «Tap or click to add a picture».  Trykk på**Legg til bilde**-kontrollen én gang for å velge denne indre kontrollen, og trykk deretter én gang til.
-
-**[Align](properties-text.md)** – plasseringen av teksten i forhold til den vannrette midten av kontrollen.
-
-**[Color](properties-color-border.md)**  – fargen på teksten i kontrollen.
-
-**[DisabledColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Disabled**.
-
-**[Font](properties-text.md)**  – navnet på skriftserien som teksten vises i.
-
-**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
-
-**[HoverColor](properties-color-border.md)** – fargen på en tekst i en kontroll når brukeren holder musepekeren på den.
-
-**[Italic](properties-text.md)** – om teksten i en kontroll er kursiv.
-
-**[OnChange](properties-core.md)** – hvordan appen reagerer når brukeren endrer verdien på en kontroll (ved å for eksempel justere en glidebryter).
-
-**[Padding](properties-size-location.md)**  – avstanden mellom teksten på en import eller eksport-knapp og kantene av denne knappen.
-
-**[PressedColor](properties-color-border.md)** – fargen på teksten i en kontroll når brukeren trykker eller klikker på kontrollen.
-
-**[Size](properties-text.md)** – skriftstørrelsen på teksten som vises på en kontroll.
-
-**[Strikethrough](properties-text.md)** – om det vises en linje gjennom teksten som vises på en kontroll.
-
-**[Text](properties-core.md)** – tekst som vises på en kontroll, eller som brukeren skriver inn i en kontroll.
-
-**[Underline](properties-text.md)** – om det vises en linje under teksten som vises på en kontroll.
-
-**[VerticalAlign](properties-text.md)** – plasseringen av tekst i en kontroll i forhold til det vertikale midtpunktet i kontrollen.
-
 ## <a name="related-functions"></a>Relaterte funksjoner
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
-## <a name="example"></a>Eksempel
+## <a name="examples"></a>Eksempler
 ### <a name="add-images-to-an-image-gallery-control"></a>Legg til bilder i en Bildegalleri-kontroll
 1. Legg til en **Legg til bilde**-kontroll, og trippelklikk på den.
    
@@ -128,3 +131,17 @@ Disse egenskapene gjelder den indre etiketten, som har standardteksten «Tap or 
 
 Bruk **[SaveData](../functions/function-savedata-loaddata.md)**-funksjonen til å lagre bildene lokalt eller **[Patch](../functions/function-patch.md)**-funksjonen til å lagre dem til en datakilde.
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+De samme retningslinjene for **[Knapp](control-button.md)** og **[Bilde](control-image.md)** gjelder. Vurder i tillegg følgende:
+
+### <a name="color-contrast"></a>Fargekontrast
+* **Legg til medier-knapp** må ha tilstrekkelig kontrast mellom teksten og bakgrunnen. Siden det opplastede bildet kan ha mange ulike farger, kan du bruke et ugjennomsiktig  **[fyll](properties-color-border.md)** på **Legg til medier-knappen** for å sikre konsekvent kontrast.
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **Legg til medier-knapp** må ha **Tekst** og **ChangePictureText** som ber brukeren om å legge til eller endre et bilde.
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* **Legg til medier-knapp** må ha **[TabIndex](properties-accessibility.md)**  lik null eller større slik at tastaturbrukere kan navigere til den.
+* **Legg til medier-knapp** må ha godt synlige fokusindikatorer. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
+ 

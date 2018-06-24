@@ -1,32 +1,29 @@
 ---
 title: Å legge til og konfigurere en kontroll | Microsoft Docs
 description: Trinnvise instruksjoner for å legge til og konfigurere kontroller direkte, fra verktøylinjen, i Egenskaper-fanen eller på formellinjen.
-services: ''
-suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: anneta
+author: aftowen
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 07/10/2017
-ms.author: sharik
-ms.openlocfilehash: e16513c9ce4ec1a4274993640a3e0690d552f07c
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: anneta
+ms.openlocfilehash: 702be2a4f1747b6f3303d1add30d9157f5665ee7
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996157"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330486"
 ---
 # <a name="add-and-configure-a-control-in-powerapps"></a>Å legge til og konfigurere en kontroll i PowerApps
 Legg til forskjellige grensesnittelementer i appen, og konfigurer aspekter ved utseende og virkemåte direkte, fra verktøylinjen, i **Egenskaper**-fanen eller i formellinjen. Disse grensesnittelementene kalles kontroller, og aspektene du konfigurerer, kalles egenskaper.
 
 ## <a name="prerequisites"></a>Forutsetninger
-1. [Registrer deg](../signup-for-powerapps.md) for PowerApps, [installer](http://aka.ms/powerappsinstall) det, åpne det, og logg deg på ved å oppgi samme legitimasjon som du brukte til å registrere deg.
+1. [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com) ved å angi samme legitimasjon som du brukte til å registrere deg.
 
 2. Klikk eller trykk på **Ny** i **Fil**-menyen (nær venstre kant) i PowerApps Studio.
 

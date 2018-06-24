@@ -1,26 +1,23 @@
 ---
 title: 'Kontroll for PDF-visningsprogram: referanse | Microsoft Docs'
 description: Informasjon, inkludert egenskaper og eksempler, om kontrollen for PDF-visningsprogrammet
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: c3ed17faae5963f71531b2fdc2ef9b08ee2569cc
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 7f6350a70bff19df0c83d2082fe8fb463d81d772
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996367"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330840"
 ---
 # <a name="pdf-viewer-control-experimental-in-powerapps"></a>Kontroll for PDF-visningsprogram (eksperimentell) i PowerApps
 En eksperimentell kontroll som viser innholdet i en PDF-fil.
@@ -42,7 +39,7 @@ I tilfelle dokumentet ikke kan åpnes i PowerApps, vises alternativet for å åp
 
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
-**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
+**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
 **[BorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje.
 
@@ -100,8 +97,17 @@ I tilfelle dokumentet ikke kan åpnes i PowerApps, vises alternativet for å åp
 
 ## <a name="example"></a>Eksempel
 * Legg til en kontroll for et **PDF-visningsprogram**, og angi **Dokument**-egenskapen til nettadressen, omsluttet av doble anførselstegn for en PDF-fil som i dette eksemplet:<br>
-  **"http://www.who.int/gho/publications/world_health_statistics/EN_WHS2015_TOC.pdf?ua=1"**
+  **"https://blog.mozilla.org/security/files/2015/05/HTTPS-FAQ.pdf"**
 
     Kontrollen viser PDF-filen.
 
     Lurer du på hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?
+
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+Ikke alle tilgjengelighetsfunksjonene i PDF-dokumenter støttes fordi **PDF-visningsprogrammet** fremdeles er på det eksperimentelle stadiet. Derfor bør **ShowControls** være angitt til **sann**, slik at brukere får muligheten til å åpne dokumentet i et eksternt program.
+
+Slik finner du ut hvordan man oppretter tilgjengelige PDF-dokumenter med standardene [WCAG 2.0](https://www.w3.org/TR/WCAG-TECHS/pdf.html) og [PDF/UA](https://www.pdfa.org/pdfua-the-iso-standard-for-universal-accessibility/).
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* Vurder å legge til en overskrift ved hjelp av en **[etikett](control-text-box.md)** hvis PDF-dokumentet ikke har en tittel. Overskriften kan plasseres rett før **Power BI-visningsprogrammet**.

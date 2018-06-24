@@ -1,40 +1,37 @@
 ---
 title: 'Stolpediagram-kontroll og Linjediagram-kontroll: referanse | Microsoft Docs'
 description: Informasjon, deriblant egenskaper og eksempler, om Stolpediagram-kontroller og Linjediagram-kontroller
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 039b267394ef6be5e3038fa0b07149f69fee6a51
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: e6a5df9283cc0d6f5ab30f27096ba3e7e9e5bff0
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996242"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836274"
 ---
 # <a name="column-chart-and-line-chart-controls-in-powerapps"></a>Stolpediagram- og Linjediagram-kontroller i PowerApps
 Kontroller som viser data som grafer med x- og y-akser.
 
 ## <a name="description"></a>Beskrivelse
-Som standard består **Stolpediagram**-kontroller og **Linjediagram**-kontroller av flere kontroller som er gruppert sammen. Disse kontrollene viser en tittel, data og en forklaring.
+**Stolpediagram** og **Linjediagram** er grupperte kontroller. Hver gruppe inneholder tre kontroller: En **[Etikett](control-text-box.md)** for tittelen, en for diagramgrafikken, og en for **Forklaring**.
 
-## <a name="key-properties"></a>Nøkkelegenskaper
+## <a name="chart-key-properties"></a>Nøkkelegenskaper for diagram
 **[Elementer](properties-core.md)** – kilden til dataene som vises i en kontroll, for eksempel et galleri, en liste eller et diagram.
 
 **NumberOfSeries** – hvor mange kolonner med data som gjenspeiles i et stolpediagram eller linjediagram.
 
-## <a name="all-properties"></a>Alle egenskaper
-**[Kantlinjefarge](properties-color-border.md)** – fargen på kontrollens kantlinje.
+## <a name="additional-chart-properties"></a>Egenskaper for flere diagram
+**[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
 **[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
@@ -42,11 +39,11 @@ Som standard består **Stolpediagram**-kontroller og **Linjediagram**-kontroller
 
 **[Farge](properties-color-border.md)** – fargen på teksten i kontrollen.
 
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
+
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)**  – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
-
-**[Skrift](properties-text.md)**  – navnet på skriftserien som teksten vises i.
+**[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
 **GridStyle** – om et stolpe- eller linjediagram viser x-aksen, y-aksen, begge eller ingen av delene.
 
@@ -92,6 +89,8 @@ Som standard består **Stolpediagram**-kontroller og **Linjediagram**-kontroller
 
 **[Størrelse](properties-text.md)** – skriftstørrelsen på teksten som vises på en kontroll.
 
+**[TabIndex](properties-accessibility.md)** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
+
 **[Synlig](properties-core.md)** – om kontrollen vises eller skjules.
 
 **[Bredde](properties-size-location.md)** – avstanden mellom kontrollens venstre og høyre kant.
@@ -104,11 +103,11 @@ Som standard består **Stolpediagram**-kontroller og **Linjediagram**-kontroller
 
 **YAxisMax** – den maksimale verdien for y-aksen til et linjediagram.
 
-* **YAxisMax**-egenskapen er tilgjengelig for **Stolpediagram**-kontrollen, men ikke for **Linjediagram**-kontrollen.
+* **YAxisMax**-egenskapen er tilgjengelig for **Linjediagram**-kontrollen, men ikke for **Stolpediagram**-kontrollen.
 
 **YAxisMin** – den minste verdien for y-aksen til et linjediagram.
 
-* **YAxisMin**-egenskapen er tilgjengelig for **Stolpediagram**-kontrollen, men ikke for **Linjediagram**-kontrollen.
+* **YAxisMin**-egenskapen er tilgjengelig for **Linjediagram**-kontrollen, men ikke for **Stolpediagram**-kontrollen.
 
 **YLabelAngle** – vinkelen til etikettene ved siden av y-aksen i et stolpe- eller linjediagram.
 
@@ -127,3 +126,28 @@ Som standard består **Stolpediagram**-kontroller og **Linjediagram**-kontroller
    
     Kontrollen viser omsetningsdata for hvert produkt over tre år.
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="color-contrast"></a>Fargekontrast
+Det må være tilstrekkelig fargekontrast mellom:
+* hvert element i **ItemColorSet**
+* hvert element i **ItemColorSet** og bakgrunnsfargen
+* **[Farge](properties-color-border.md)** og bakgrunnsfarge
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* Det må være en **[etikett](control-text-box.md)** rett før diagramgrafikken, som skal fungere som tittelen.
+* Vurder å legge til et sammendrag av diagramgrafikken. For eksempel «linjediagrammet viser en stadig økning i salg mellom mars og august dette året».
+
+    > [!NOTE]
+> Diagramgrafikk og **Forklaring** er skjult for brukere av skjermleseren. Som et alternativ presenteres en tabellform av dataene for dem. De kan også se gjennom knapper som velger dataene i diagrammet.
+
+### <a name="low-vision-support"></a>Støtte for nedsatt syn
+* Det må være en **forklaring** hvis mer enn én dataserie vises.
+* Du bør vurdere å angi **GridStyle** til GridStyle.All, som viser begge akser. Dette hjelper alle brukere å bestemme nøyaktig omfang for dataene.
+* For **Stolpediagram** bør du vurdere å angi **Indikatorer** til **sann**. Dette hjelper brukere med nedsatt syn å bestemme verdien for en kolonne.
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
+
+    > [!NOTE]
+> Når tastaturbrukere navigerer til diagrammet, kan de gå gjennom knappene som velger dataene i diagrammet.
