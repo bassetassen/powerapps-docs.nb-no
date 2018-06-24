@@ -1,295 +1,240 @@
 ---
-title: Å opprette en app fra bunnen av | Microsoft Docs
-description: Å opprette en app fra bunnen av ved å konfigurere hvert grensesnittelement og hver virkemåte til å administrere vanlige data som holder bedriften i gang.
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Å opprette en Excel-app fra grunnen av | Microsoft Docs
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/16/2016
+ms.topic: conceptual
+ms.component: canvas
+ms.date: 04/23/2018
 ms.author: anneta
-ms.openlocfilehash: efc965d607198ed6366f3390960ccdf44b2ea210
-ms.sourcegitcommit: 078ba325480147e6e4da61e319ed53219f1c5cfc
+ms.openlocfilehash: 29f07162ec2815398cda5bcc359f7388df261bc0
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/06/2018
-ms.locfileid: "30998362"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836974"
 ---
-# <a name="create-an-app-from-scratch"></a>Å opprette en app fra bunnen av
-Opprett din egen app fra bunnen av ved å velge blant en rekke datakilder, og du kan legge til flere kilder senere om du ønsker. Angi utseende og virkemåte for hvert grensesnittelement, slik at du kan optimalisere resultatet for bestemte mål og arbeidsflyter. Denne fremgangsmåten er mye mer tidkrevende enn [automatisk generering av en app](get-started-create-from-data.md), men erfarne apputviklere kan lage de beste appene for et gitt behov.
-
-Du oppretter en app med to skjermer ved å følge denne opplæringen. På den ene skjermen kan brukerne bla gjennom et sett med poster:
-
-![En skjerm der en bruker kan bla gjennom et sett med data](./media/get-started-create-from-blank/first-screen-final.png)
-
-På den andre skjermen kan brukere opprette en post, oppdatere ett eller flere felt i en post eller slette en hel post:
-
-![En skjerm der en bruker kan legge til eller oppdatere data](./media/get-started-create-from-blank/changescreen-final.png)
+# <a name="create-an-excel-app-from-scratch"></a>Slik oppretter du en Excel-app fra grunnen av
+Opprett din egen app fra grunnen av basert på Excel-data som er formatert som en tabell, og deretter legger du til data fra andre kilder hvis du ønsker det. Du oppretter en app med to skjermer ved å følge denne opplæringen. På den ene skjermen kan brukerne bla gjennom et sett med poster. På den andre skjermen kan brukere opprette en post, oppdatere ett eller flere felt i en post eller slette en hel post. Denne fremgangsmåten er mye mer tidkrevende enn [automatisk generering av en app](get-started-create-from-data.md), men erfarne apputviklere kan bruke det til å lage de beste appene for et gitt behov.
 
 ## <a name="prerequisites"></a>Forutsetninger
-Du kan bruke din egen Excel-fil og se gjennom denne opplæringen for bare generelle begreper. Dataene i Excel-filen må imidlertid være formatert som en tabell. Hvis du vil ha mer informasjon, kan du se [Formater en tabell i Excel](how-to-excel-tips.md).
-
-For å følge trinnene nedenfor nøyaktig, må du først opprette en Excel-fil ved hjelp av disse eksempeldataene.
+Du må først opprette en Excel-fil ved hjelp av disse eksempeldataene for å følge trinnene i denne opplæringen nøyaktig.
 
 1. Kopier disse dataene, og lim dem deretter inn i en Excel-fil.
 
-   | Startdag | Starttid | Frivillig 1 | Frivillig 2 |
-   | --- | --- | --- | --- |
-   | Lørdag |10–12 |Åmodt |Kollerud |
-   | Lørdag |12–14 |Edland |Stensen |
-   | Lørdag |14–16 |Koch |Kolstad |
-   | Søndag |10–12 |Hustoft |Alvestad |
-   | Søndag |10–12 |Simonsen |Reiersen |
-   | Søndag |10–12 |Bjerklund |Vestre |
+    | StartDay | StartTime | Frivillig | Backup |
+    | --- | --- | --- | --- |
+    | Lørdag |10–12 |Åmodt |Kollerud |
+    | Lørdag |12–14 |Edland |Stensen |
+    | Lørdag |14–16 |Koch |Kolstad |
+    | Søndag |10–12 |Hustoft |Alvestad |
+    | Søndag |10–12 |Simonsen |Reiersen |
+    | Søndag |10–12 |Bjerklund |Vestre |
 
 2. Formater dataene som en tabell, kalt **Tidsplan**, slik at PowerApps kan analysere informasjonen.
 
     Hvis du vil ha mer informasjon, kan du se [Formater en tabell i Excel](how-to-excel-tips.md).
 
-3. Lagre filen under navnet **eventisgnup.xls**, og last den deretter opp i en [skylagringskonto](connections/cloud-storage-blob-connections.md), for eksempel OneDrive.
+3. Lagre filen under navnet **eventisgnup.xls**, lukk den, og deretter laster du den opp til en [skylagringskonto](connections/cloud-storage-blob-connections.md), for eksempel OneDrive.
 
-4. Hvis du er ny PowerApps-bruker:
+> [!IMPORTANT]
+> Du kan bruke din egen Excel-fil og se gjennom denne opplæringen for bare generelle begreper. Dataene i Excel-filen må imidlertid være formatert som en tabell. Hvis du vil ha mer informasjon, kan du se [Formater en tabell i Excel](how-to-excel-tips.md).
 
-   * Finn ut hvordan du kan [legge til en kontroll og angi egenskapene](add-configure-controls.md), noe som bestemmer hvordan kontrollen vises og virker.
-   * Finn ut hvordan du kan [legge til og gi nytt navn til en skjerm](add-screen-context-variables.md).
+## <a name="open-a-blank-app"></a>Å åpne en tom app
+1. Logg deg på [PowerApps](http://web.powerapps.com).
 
-## <a name="create-a-blank-app-and-connect-to-data"></a>Oppretting av en tom app, og tilkobling til data
-1. Klikk eller trykk på **Ny** på **Filmenyen** i PowerApps Studio (nær venstre kant av skjermen).
+    ![Hjemmesiden for PowerApps](./media/get-started-create-from-blank/sign-in.png)
 
-    ![Ny-alternativet på Fil-menyen](./media/get-started-create-from-blank/file-new.png)
+    Du kan utforme en app fra grunnen av for telefoner eller andre enheter (for eksempel nettbrett). Dette emnet fokuserer på å utforme en app for telefoner.
 
-2. Klikk eller trykk på **Telefonoppsett** på **Tom app**-flisen.
+1. Hold pekeren over flisen **Start med en tom app** under **Lag apper som disse**, velg telefonikonet, og velg deretter **Lag denne appen**.
 
-    ![Alternativ for å opprette en app fra data](./media/get-started-create-from-blank/create-from-blank.png)
+    ![Flisen for tom app](./media/get-started-create-from-blank/blank-app.png)
 
-3. Hvis du blir bedt om det, kan du følge omvisningen for å se de viktigste områdene i PowerApps (eller klikk eller trykk på **Hopp over**).
+    PowerApps Studio oppretter en tom app for telefoner.
 
-    ![Hurtigomvisning](./media/get-started-create-from-blank/quick-tour.png)
+1. Hvis dialogboksen **Velkommen til PowerApps Studio** åpnes, velger du **Hopp over**.
 
-    Du kan følge omvisningen når som helst ved å klikke eller trykke på spørsmålstegn-ikonet nær hjørnet øverst til høyre på skjermen, og deretter klikke eller trykke på **Følg omvisningen**.
+## <a name="connect-to-data"></a>Å koble til data
+1. Midt på skjermen kan du velge **koble til data**.
 
-4. Klikk eller trykk på et ikon øverst til høyre i venstre navigasjonsfelt for å bytte til miniatyrbildevisningen.
+1. Velg tilkoblingen for din skylagringskontoen i **Data**-ruten, hvis den vises. Ellers følger du disse trinnene for å legge til en tilkobling:
 
-    ![Å veksle mellom visningene](./media/get-started-create-from-blank/toggle-view.png)
+    1. Velg **Ny tilkobling**, velg flisen for skylagringskontoen din, og deretter velger du **Opprett**.
+    2. Hvis du blir bedt om det, oppgir du legitimasjonen for denne kontoen.
 
-5. Klikk eller trykk på **Legg til datakilde** i ruten til høyre.
+1. Skriv eller lim inn de første bokstavene i **eventsignup** under **Velg en Excel-fil** for å filtrere listen, og velg deretter filen du lastet opp.
 
-    ![Å legge til en datakilde](./media/get-started-create-from-blank/add-data-source.png)
+1. Merk av for **Tidsplan** under **Velg en tabell**, og deretter velger du **Koble til**.
 
-6. Følg ett av disse trinnene:
+## <a name="create-the-view-screen"></a>Å opprette visningsskjermen
 
-   * Hvis du allerede har en tilkobling til skylagringskontoen, klikker eller trykker du på denne.
-   * Hvis du ikke har tilkobling til skylagringskontoen, kan du klikke eller trykke på **Legg til en tilkobling**, klikke eller trykke på kontotypen din eller på **Koble til**, og deretter (hvis du blir bedt om det) oppgir du legitimasjonen din.
+1. Velg pil ned ved siden av **Ny skjerm** på **Hjem**-fanen for å åpne en liste over skjermtyper, og velg deretter **Listeskjerm**.
 
-7. Bla til **eventsignup.xlsx** under **Velg en Excel-fil**, og deretter klikker eller trykker du på den.
-
-    ![Å angi hvilken Excel-fil du ønsker å bruke](./media/get-started-create-from-blank/select-excel-file.png)
-
-8. Merk av for **Tidsplan** under **Velg en tabell**, og klikk eller trykk deretter på **Koble til**.
-
-    ![Å angi hvilken Excel-tabell du ønsker å bruke](./media/get-started-create-from-blank/select-table.png)
-
-    **Datakilder**-fanen i den høyre ruten viser hvilke data datakilder du har lagt til i appen.
-
-    ![Å vise tilkoblede datakilder](./media/get-started-create-from-blank/data-connect.png)
-
-    Denne opplæringen krever bare én datakilde, men du kan legge til flere datakilder senere.
-
-## <a name="show-the-data"></a>Å vise dataene
-1. Klikk eller trykk på **Ny skjerm** på **Hjem**-fanen, og klikk eller trykk deretter på **Listeskjerm**.
-
-    ![Å legge til et oppsett med en overskrift, undertittel og et brødtekstelement](./media/get-started-create-from-blank/add-gallery.png)
+    ![Slik legger du til en listeskjerm](./media/get-started-create-from-blank/add-list-screen.png)
 
     En skjerm er lagt til med flere standardkontroller, for eksempel en søkeboks og en **[Galleri](controls/control-gallery.md)**-kontroll. Galleriet dekker hele skjermen under søkeboksen.
 
-2. Klikk eller trykk hvor som helst i galleriet, unntatt på pilen, for eksempel rett under søkeboksen.
+2. Velg galleriet ved å klikke eller trykke nær midten.
 
-    ![Å velge galleri](./media/get-started-create-from-blank/select-gallery.png)
+    En valgboks med håndtak omgir galleriet.
 
-3. Åpne **Oppsett**-listen i ruten til høyre, og klikk eller trykk deretter på alternativet som viser tittel, undertittel og brødtekst.
+    ![Slik legger du til en listeskjerm](./media/get-started-create-from-blank/select-gallery.png)
 
-    ![Å velge galleri](./media/get-started-create-from-blank/select-layout.png)
+3. I ruten til høyre velger du **CustomGallerySample** for å åpne **Data**-ruten.
 
-4. Klikk eller trykk på **[Items](controls/properties-core.md)** i egenskaperlisten, kopier denne formelen og lim den inn i formellinjen:
+    ![Å åpne dataruten](./media/get-started-create-from-blank/custom-gallery-sample.png)
 
-    **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer_x0020_1"), "Volunteer_x0020_1", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+1. Velg Pil ned under **Datakilde** for å åpne listen over datakilder for appen, og velg deretter **Tidsplan**.
 
-    Hvis du ikke er sikker på hvor egenskapslisten er, kan du se [Legg til og konfigurer kontroller](add-configure-controls.md).
+    ![Å velge en datakilde](./media/get-started-create-from-blank/select-schedule.png)
 
-    > [!NOTE]
-> For Excel- eller SharePoint-datakilder som inneholder kolonnenavn med mellomrom, viser PowerApps mellomrommene som **\_x0020\_**. I dette eksemplet vises kolonnen **"Volunteer 1"** i en formel som **"Volunteer_x0020_1"**.
+1. Velg Pil ned under **Oppsett** for å åpne listen over oppsett, og velg deretter **tittel, undertittel og brødtekst**.
 
-    Dette galleriet viser dataene fra **Tidsplan**-tabellen.
+    ![Slik velger man oppsett](./media/get-started-create-from-blank/select-layout.png)
 
-    ![Tidsplan-dataene i galleriet som standard](./media/get-started-create-from-blank/show-data-default.png)
+1. Endre kolonnen som vises fra **Backup** til **Frivillig** under **Tittel2**.
 
-    En søkeboks kan filtrere galleriet basert på teksten brukeren skriver inn. Hvis en bruker skriver minst én bokstav i søkeboksen, viser galleriet bare postene i **Frivillig 1**-feltet som inneholder teksten brukeren skrev inn.
+     ![Slik endrer man kolonnen i en etikett](./media/get-started-create-from-blank/change-title2.png)
 
-    Sorter-knappen kan sortere poster basert på data i **Frivillig 1**-kolonnen. Hvis en bruker klikker eller trykker på denne knappen, vil sorteringsrekkefølgen veksle mellom stigende og synkende.
+1. Lukk **Data**-ruten ved å velge Lukk-ikonet øverst til høyre.
 
-    Denne formelen inneholder funksjonene **Sort**, **If**, **IsBlank**, **Filter** og **Text**. Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelreferansen](formula-reference.md)
+    Galleriet viser navnet på hver enkelt frivillig, samt dato og klokkeslett for den frivillige sin skifttid.
 
-5. Skriv inn en **i** i søkeboksen, og klikk eller trykk på sorter-knappen én gang (eller et par ganger).
+    ![Tidsplan-dataene i galleriet (usortert)](./media/get-started-create-from-blank/show-data-unsorted.png)
+
+4. Velg galleriet, og bekreft at egenskapslisten viser **[Elementer](controls/properties-core.md)**.
+
+    Som formellinjen viser, er verdien for denne egenskapen **Tidsplan**.
+
+    ![Tidsplan-dataene i galleriet (usortert)](./media/get-started-create-from-blank/set-property.png)
+
+1. Endre verdien for **Elementer**-egenskapen ved å kopiere denne formelen og lime den inn i formellinjen:
+
+    **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer"), "Volunteer", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+
+    Galleriet viser data i alfabetisk rekkefølge etter navn på frivillige.
+
+    ![Tidsplan-dataene i galleriet (sortert)](./media/get-started-create-from-blank/show-data-sorted.png)
+
+    Brukere kan sortere og filtrere galleriet etter navn på frivillige, basert på **SortByColumns**- og **Søk**-funksjonene i denne formelen.
+
+    - Hvis en bruker skriver minst én bokstav i søkeboksen, viser galleriet bare de postene hvor **Frivillig**-feltet inneholder teksten brukeren skrev inn.
+    - Hvis en bruker velger Sorter-knappen, vises postene i stigende eller synkende rekkefølge i galleriet (avhengig av hvor mange ganger brukeren velger knappen), basert på **Frivillig**-feltet.
+
+    Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelreferansen](formula-reference.md).
+
+5. Skriv inn en **i** i søkeboksen, og velg sorteringsknappen ved å klikke eller trykke på den. Velg den deretter én gang til (eller flere ganger, alt ettersom).
 
     Galleriet viser disse resultatene.
 
     ![Å sortere og filtrere galleriet](./media/get-started-create-from-blank/sort-filter.png)
 
-    Mer informasjon om funksjonene **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)** og [andre funksjoner](formula-reference.md)
+1. Fjern all tekst fra Søk-boksen.
 
-6. Velg **[Etikett](controls/control-text-box.md)**-kontrollen øverst på skjermen ved å klikke eller trykke på kontrollen.
-
-    ![Å velge tittellinje](./media/get-started-create-from-blank/select-title-bar.png)
-
-7. Klikk eller trykk på **[Tekst](controls/properties-core.md)** i egenskapslisten, kopier denne teksten, og lim den deretter inn i formellinjen.<br>
-   **Vis poster**
+6. Øverst på skjermen velger du **[Etikett](controls/control-text-box.md)**-kontrollen, og deretter erstatter du **[Tittel]** med **Vis poster**.
 
     ![Å endre tittellinjen](./media/get-started-create-from-blank/change-title-bar.png)
 
-## <a name="create-the-changescreen-and-its-banner"></a>Opprett ChangeScreen og tilhørende banner
-1. Slett **Screen1**, og gi **Screen2** det nye navnet **ViewScreen**.
+## <a name="create-the-change-screen"></a>Slik oppretter man skjermbildet for endring
+1. På **Hjem**-fanen velger du Pil ned ved siden av **Ny skjerm**, og deretter velger du **Skjemaskjerm**.
 
-    ![Å gi nytt navn til skjerm](./media/get-started-create-from-blank/rename-screen.png)
+     ![Å legge til skjemaskjerm](./media/get-started-create-from-blank/add-form-screen.png)
 
-2. Legg til en skjerm, og gi den det nye navnet **ChangeScreen**.
+1. Velg **Koble til data** på skjermen du nettopp la til for å åpne **Data**-ruten, og deretter angir du datakilden til **Tidsplan**.
 
-    ![Å legge til skjerm, og gi den nytt navn](./media/get-started-create-from-blank/add-screen.png)
+1. Merk av i alle avmerkingsboksene under **Felt** for å vise alle feltene i skjemaet.
 
-3. Klikk eller trykk på **Tekst** på **Sett inn**-fanen, og klikk eller trykk deretter på **[Etikett](controls/control-text-box.md)**.
+     ![Å vise felt](./media/get-started-create-from-blank/show-fields.png)
 
-4. Konfigurer **Etikett**-kontrollen du nettopp la til:
+1. Dra **Frivillig**-feltet opp slik at det vises øverst i listen over felt.
 
-   * Angi **Tekst**-egenskapen til denne formelen:
-     <br>**"Change record"**
+     ![Å endre rekkefølge på felt](./media/get-started-create-from-blank/reorder-fields.png)
 
-   * Angi **Fyll**-egenskapen til denne formelen:
-     <br>**RGBA(62, 96, 170, 1)**.
+1. Velg skjemaet, og angi **Element**-egenskapen til dette uttrykket ved å skrive eller lime den inn på formellinjen:<br>**BrowseGallery1.Selected**
 
-   * Angi **Farge**-egenskapen til denne formelen:
-     <br>**RGBA(255, 255, 255, 1)**
+1. Øverst på skjermen velger du **[Etikett](controls/control-text-box.md)**-kontrollen, og deretter erstatter du **[Tittel]** med **Endre poster**.
 
-   * Angi **Juster**-egenskapen til **Midtstilt**.
-   * Angi **X**-egenskapen til **0**.
+    ![Å endre tittellinjen](./media/get-started-create-from-blank/change-title-bar2.png)
 
-   * Angi **Bredde**-egenskapen til **640**.
-     **Etikett**-kontrollen gjenspeiler endringene.
+## <a name="delete-and-rename-screens"></a>Å legge til og gi nytt navn til skjermer
+1. I navigasjonsfeltet til venstre velger du ellipsen (...) for **Skjerm1**, og deretter velger du **Slett**.
 
-     ![ChangeScreen med banner](./media/get-started-create-from-blank/change-screen-blank.png)
+    ![Å slette skjermer](./media/get-started-create-from-blank/delete-screen.png)
 
-## <a name="add-and-configure-a-form"></a>Å legge til og konfigurere et skjema
-1. Klikk eller trykk på **Skjemaer** på **Sett inn**-fanen, og klikk eller trykk deretter på **Rediger**.
+1. Velg ellipsen (...) for **Skjerm2**, velg **Gi nytt navn til**, og deretter skriver eller limer du inn **ViewScreen**.
 
-2. Flytt og endre størrelsen på skjemaet så det dekker mesteparten av skjermen.
+1. Velg ellipsen (...) for **Skjerm3**, velg **Gi nytt navn til**, og deretter skriver eller limer du inn **ChangeScreen**.
 
-    ![Å legge til et skjema](./media/get-started-create-from-blank/add-form.png)
+## <a name="configure-icons-on-the-view-screen"></a>Å konfigurere ikoner på Vis-skjermen
+1. Nær toppen av **ViewScreen** velger du det sirkelformede pilikonet.
 
-    Skjemaet heter **Skjema1** som standard, med mindre du allerede har lagt til og fjernet et skjema. I så fall må du gi skjemaet det nye navnet **Skjema1**.
+    ![Å legge til post](./media/get-started-create-from-blank/refresh-icon.png)
 
-3. Angi **[DataSource](controls/control-form-detail.md)**-egenskapen for **Skjema1** til **Tidsplan**.
+1. Angi **OnSelect**-egenskapen for ikonet til denne formelen:<br>**Refresh(Schedule)**
 
-4. Angi **Element**-egenskapen for **Skjema1** til dette uttrykket:
-   <br>**BrowseGallery1.Selected**
+    Når brukeren velger dette ikonet, oppdateres dataene fra **Tidsplan** fra Excel-filen.
 
-5. Merk av for hvert felt i avmerkingsboksen for å vise det i ruten til høyre.
+    Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelreferanse](formula-reference.md).
 
-    ![Å vise felt i skjema](./media/get-started-create-from-blank/schedule-checkbox.png)
-
-6. Nær bunnen av skjemaet klikker eller trykker du på **Legg til et egendefinert kort**.
-
-    ![Å legge til et egendefinert kort](./media/get-started-create-from-blank/add-custom-card.png)
-
-7. Legg til en **[Etikett](controls/control-text-box.md)**-kontroll i det nye kortet.
-
-8. Angi **[AutoHeight](controls/control-text-box.md)**-egenskapen for den nye kontrollen til **sann**, og angi **[Tekst](controls/properties-core.md)**-egenskapen til denne formelen:
-   <br>**Form1.Error**
-
-    Etiketten viser alle feil i skjemaet.
-
-9. Klikk eller trykk på miniatyrbildet for **ChangeScreen** i venstre navigasjonsrute for å velge det.
-
-10. Klikk eller trykk på **Ikoner**, klikk eller trykk på alternativet for å legge til en **Tilbake-pil**, og flytt deretter pilen til hjørnet nederst til venstre på skjermen, på **Sett inn**-fanen.
-
-11. Angi pilens **[OnSelect](controls/properties-core.md)**-egenskap til denne formelen:
-
-     **ResetForm(Form1);Navigate(ViewScreen,ScreenTransition.None)**
-
-      Når brukeren klikker eller trykker på pilen, åpner **[Navigate](functions/function-navigate.md)**-funksjonen **ViewScreen**.
-
-12. Legg til en **[Knapp](controls/control-button.md)** under skjemaet, og angi knappens **[Tekst](controls/properties-core.md)**-egenskap til **Lagre**.
-
-     ![Å legge til en lagringsknapp](./media/get-started-create-from-blank/add-save-button.png)
-
-13. Angi **[OnSelect](controls/properties-core.md)**-egenskapen for knappen til denne formelen:
-
-    **SubmitForm(Form1); If(Form1.ErrorKind = ErrorKind.None, Navigate(ViewScreen, ScreenTransition.None))**
-
-    Når brukeren klikker eller trykker på knappen, lagrer **[SubmitForm](functions/function-form.md)**-funksjonen alle endringer i datakilden, og **ViewScreen** vises på nytt.
-
-14. Legg til en ny knapp nederst på skjermen, angi **[Tekst](controls/properties-core.md)**-egenskapen til **Fjern**, og angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:
-
-    **Remove(Schedule,BrowseGallery1.Selected);<br>If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))**
-
-    Når brukeren klikker eller trykker på denne knappen, fjerner **[Remove](functions/function-remove-removeif.md)**-funksjonen posten, og **ViewScreen** vises på nytt.
-
-15. Angi **[Synlig](controls/properties-core.md)**-egenskapen for **Fjern**-knappen til denne formelen:
-    <br>**Form1.Mode=FormMode.Edit**
-
-    Dette trinnet skjuler **Fjern**-knappen når brukeren oppretter en post.
-
-    **ChangeScreen** samsvarer med dette eksemplet:
-
-    ![Endelig ChangeScreen](./media/get-started-create-from-blank/changescreen-final.png)
-
-## <a name="set-navigation-from-viewscreen"></a>Å angi navigasjon fra ViewScreen
-1. Klikk eller trykk på miniatyrbildet for **ViewScreen** i venstre navigasjonsrute.
-
-    ![Å åpne ViewScreen](./media/get-started-create-from-blank/select-viewscreen.png)
-
-2. Klikk eller trykk på **Neste-pilen** for å finne den første posten i galleriet.
-
-    ![Neste-pil](./media/get-started-create-from-blank/next-arrow.png)
-
-3. Angi **[OnSelect](controls/properties-core.md)**-egenskapen for pilen til denne formelen:
-
-    **Navigate(ChangeScreen,ScreenTransition.None)**
-
-4. Klikk eller trykk på plussikonet i hjørnet øverst til høyre.
+1. Øverst til høyre av **ViewScreen** velger du pluss-ikonet.
 
     ![Å legge til post](./media/get-started-create-from-blank/add-record.png)
 
-5. Angi **[OnSelect](controls/properties-core.md)**-egenskapen for det valgte ikonet til denne formelen:
+1. Angi **OnSelect**-egenskapen for ikonet til denne formelen:<br>**NewForm(EditForm1);Navigate(ChangeScreen,ScreenTransition.None)**
 
-    **NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)**`
+    Når brukeren velger dette ikonet, vises **ChangeScreen** med tomme felt, slik at brukeren enklere kan opprette en post.
 
-     Når brukeren klikker eller trykker på dette ikonet, vises **ChangeScreen** med tomme felt, slik at brukeren enklere kan opprette en post.
+1. Velg pilen som peker mot høyre for å se den første posten i galleriet.
 
-## <a name="run-the-app"></a>Å kjøre appen
-Når du tilpasser appen, kan du teste endringene ved å kjøre appen i forhåndsvisningsmodus, slik fremgangsmåten i denne inndelingen beskriver.
+    ![Å velge pil](./media/get-started-create-from-blank/select-arrow.png)
 
-1. Klikk eller trykk på det øverste miniatyrbildet i navigasjonsfeltet til venstre for å velge**ViewScreen**.
+1. Angi **OnSelect**-egenskapen for pilen til denne formelen:<br>**EditForm(EditForm1); Navigate(ChangeScreen, ScreenTransition.None)**
 
-    ![Å velge ViewScreen](./media/get-started-create-from-blank/select-viewscreen.png)
+    Når brukeren velger dette ikonet, vises **ChangeScreen** med hvert felt som viser data for den valgte posten, slik at brukeren kan redigere eller slette posten enklere.
 
-2. Åpne Forhåndsvisningsmodus ved å trykke på F5 (eller klikke eller trykke på **Forhåndsvisning-ikonet** nær hjørnet øverst til høyre).
+## <a name="configure-icons-on-the-change-screen"></a>Å konfigurere ikoner på Endre-skjermen
+1. Velg ikonet «x» øverst til venstre på **ChangeScreen**.
 
-    ![Å åpne Forhåndsvisningsmodus](./media/get-started-create-from-blank/open-preview.png)
+    ![Avbryt-ikon](./media/get-started-create-from-blank/cancel-icon.png)
 
-3. Klikk eller trykk på Neste-pilen for å se en post som viser detaljer om denne posten.
+1. Angi **OnSelect**-egenskapen for ikonet til denne formelen:<br>**ResetForm(EditForm1);Navigate(ViewScreen, ScreenTransition.None)**
 
-4. Endre informasjonen i ett eller flere av feltene på **ChangeScreen**, og lagre deretter endringene ved å klikke eller trykke på **Lagre**, eller fjern posten ved å klikke eller trykke på **Fjern**.
+    Når brukeren velger dette ikonet, forkastes eventuelle endringer brukeren har gjort på denne skjermen, og visningsskjermen åpnes.
 
-5. Lukk Forhåndsvisningsmodus ved å trykke på ESC (eller ved å klikke eller trykke på lukkeikonet under tittellinjen).
+1. Velg hakeikonet øverst til høyre.
 
-    ![Lukk Forhåndsvisningsmodus](./media/get-started-create-from-blank/close-preview.png)
+    ![Avmerking-ikon](./media/get-started-create-from-blank/checkmark-icon.png)
+
+1. Angi **OnSelect**-egenskapen for hakemerket til denne formelen:<br>**SubmitForm(EditForm1); Navigate(ViewScreen, ScreenTransition.None)**
+
+    Når brukeren velger dette ikonet, lagres eventuelle endringer brukeren har gjort for skjermen, og visningsskjermen åpnes.
+
+1. Velg **Ikoner** på **Sett inn**-fanen, og deretter velger du **Papirkurv**-ikonet.
+
+1. Angi det nye ikonets **farge**-egenskap til **Hvit**, og flytt det nye ikonet slik at det vises ved siden av hakeikonet.
+
+    ![Papirkurv-ikon](./media/get-started-create-from-blank/trash-icon.png)
+
+1. Angi **OnSelect**-egenskapen for papirkurvikonet til denne formelen:<br>**Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)**
+
+    Når brukeren velger dette ikonet, slettes den valgte posten fra datakilden, og Vis-skjermen åpnes.
+
+## <a name="test-the-app"></a>Testing av appen
+1. Velg **ViewScreen**, og åpne deretter Forhåndsvisning ved å trykke på F5 (eller ved å velge **Forhåndsvisning**-ikonet nær hjørnet øverst til høyre).
+
+    ![Å åpne forhåndsvisningsmodus](./media/get-started-create-from-blank/open-preview.png)
+
+1. Hent en post.
+
+1. Oppdater posten som du har lagt til, og deretter lagrer du endringene.
+
+1. Oppdater posten som du har lagt til, og deretter forkaster du endringene.
+
+1. Slett posten du har lagt til.
+
+1. Åpne forhåndsvisningsmodus ved å trykke på ESC (eller ved å velge Lukk-ikonet nær hjørnet øverst til høyre).
 
 ## <a name="next-steps"></a>Neste trinn
 * Trykk på CTRL+S for å lagre appen i skyen, slik at du kan kjøre den fra andre enheter.
 * [Del appen](share-app.md), slik at andre personer kan kjøre den.
-* Finn ut mer om [gallerier](add-gallery.md), [skjemaer](add-form.md) og [formler](working-with-formulas.md).
+* Finn ut mer om [funksjoner](working-with-formulas.md), for eksempel **Patch**, som du kan bruke til å administrere data uten å opprette et standardskjema.

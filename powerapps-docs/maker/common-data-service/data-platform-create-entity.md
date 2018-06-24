@@ -1,78 +1,92 @@
 ---
-title: Hurtiginnføring i hvordan du oppretter en egendefinert enhet i Microsoft Docs
-description: Hurtiginnføring i hvordan oppretter en egendefinert enhet, basert på en annen enhet eller fra grunnen av.
-services: powerapps
-documentationcenter: na
-author: clwesene
-manager: kfile
-editor: ''
-tags: ''
+title: Å opprette en egendefinert enhet | Microsoft Docs
+description: I denne hurtiginnføringen finner du ut mer om hvordan du oppretter en egendefinert enhet i PowerApps.
+author: Mattp123
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 3/21/2018
-ms.author: clwesene
-ms.openlocfilehash: e22a18bacb258ca46c8f36d647f9ebcc45282929
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.component: cds
+ms.topic: quickstart
+ms.date: 05/01/2018
+ms.author: matp
+ms.openlocfilehash: 66c96f7496266e03491e404de2bb329f82b6a2bf
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30998092"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552925"
 ---
 # <a name="quickstart-create-a-custom-entity"></a>Hurtiginnføring i hvordan oppretter en egendefinert enhet
-Du kan opprette en egendefinert enhet for å lagre data som er spesifikk for din organisasjon. Deretter kan du vise dataene ved å utvikle en app som refererer til enheten. Etter at du har opprettet en enhet, kan du [opprette flere felter eller endre ett eller flere av feltene](data-platform-manage-fields.md) og [bygge relasjoner mellom enheter](data-platform-entity-lookup.md).
+I PowerApps definerer en *enhet* informasjonen du ønsker å spore i form av poster, som typisk inneholder egenskaper som eksempelvis firmanavn, plasseringer, produkter, e-postadresser og telefonnumre. Deretter kan du se nærmere på dataene ved å utvikle en app som refererer til enheten. PowerApps tilbyr standard «bruksklare»-enheter for å dekke vanlige scenarioer i en organisasjon (for eksempel sporing av avtaler), men det kan være ganger da du trenger å opprette egendefinerte enheter for å lagre data som er spesifikke for din organisasjon.
 
-Disse instruksjonene viser deg hvordan du kan opprette en egendefinert enhet manuelt, men du kan også bruke Power Query til å opprette en enhet basert på dine eksisterende data. Hvis du vil ha mer informasjon, kan du se [Slik oppretter du en ny enhet ved bruk av Power Query](data-platform-cds-newentity-pq.md)
+I denne hurtigveiledningen finner du ut hvordan du oppretter en egendefinert enhet kalt Produktgjennomgang, som du kan bruke til å opprette en app som viser rangering og merknader for produkter som firmaet ditt selger.
 
-> [!NOTE]
-> Før du oppretter en enhet, kan du se på [enhetsreferansen](../../developer/common-data-service/reference/about-entity-reference.md). Disse enhetene dekker vanlige scenarioer, for eksempel forretningsforbindelser og kontakter. Hvis ett av disse enhetene oppfyller kravene dine som den er eller etter bare små endringer, kan du spare litt tid ved å starte med denne enheten.
+## <a name="prerequisites"></a>Forutsetninger
+Følgende elementer kreves for å følge denne hurtiginnføringen:
+* En lisens for enten et PowerApps 2-abonnement eller et Microsoft Flow 2-abonnement. Du kan også registrere deg for en [gratis prøveversjon av PowerApps (abonnement 2)](https://web.powerapps.com/signup?redirect=marketing&email=).
+* En sikkerhetsrolle som systemadminstrator eller systemtilpasser i Common Data Service for apper.
+
+## <a name="sign-in-to-powerapps"></a>Å logge deg på PowerApps
+Logg deg på PowerApps på [https://web.powerapps.com]([https://web.powerapps.com).
 
 ## <a name="create-an-entity"></a>Å opprette en enhet
-1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
+1. I navigasjonsruten klikker eller trykker du på **Data** for å utvide den, og deretter klikker eller trykker du på **Enheter**.
 
-    ![Enhetsdetaljer](./media/data-platform-cds-create-entity/entitylist.png "Enhetsliste")
+    ![Liste over enheter og tilknyttede detaljer](./media/data-platform-cds-create-entity/entitylist.png "Enhetsliste")
 
-2. Klikk eller trykk på **Ny enhet** fra kommandolinjen.
-3. Skriv inn et navn som er gjenkjennelig for deg i **Visningsnavn**, slik at du kan henvise til denne enheten i framtiden. Dette brukes også i forum, diagrammer og andre objekter som opprettes ved bruk av denne enheten. Du ser to andre felt som også fylles ut:
+2. Klikk eller trykk på **Ny enhet** i kommandolinjen.
 
-    * Visningsnavn i flertall – dette brukes når du samhandler med denne enheten fra Powerapps elle Flow, og brukes som navnet på enheten i Common Data Service WebAPI. Flertallsnavnet genereres sannsynligvis automatisk, men det kan endres.
-    * Navn – dette er det unike navnet på enheten, det kan ikke inneholde spesialtegn eller mellomrom, og det må være unikt. Navnet inkluderer også et prefiks som ble konfigurert da miljøer ble opprettet. Dette brukes for å sikre at enhetene du oppretter kan eksporteres og importeres i andre miljøer, der andre enheter kan ha samme navn. Dette prefikset kan endres ved å oppdatere prefikset i Publisher for standardmiljøet i Common Data Service.
+    Før du oppretter en enhet, kan du sjekke ut [enhetsreferansen](../../developer/common-data-service/reference/about-entity-reference.md) for en beskrivelse av tilgjengelige standardenheter. Disse enhetene dekker vanlige scenarioer. Hvis én av disse enhetene oppfyller kravene dine som den er eller etter noen små endringer, kan du spare noe tid ved å starte med denne enheten. 
 
-    > [!NOTE]
-    > **Visningsnavn**-feltet kan oppdateres når som helst til en annen visning i appene dine, men **Navn**-feltet kan ikke endres etter at enheten er lagret. Dette kan resultere i at en eksisterende app ødelegges.
+3. Skriv inn **Produktgjennomgang** i **Ny enhet**-ruten i **Visningsnavn**-boksen, og skriv deretter eventuelt inn en beskrivelse (beskrivelser er nyttige hvis andre personer skal bruke enheten). Andre felt i panelet er automatisk utfylt, som beskrevet nedenfor. Når du er ferdig, klikker du på **Neste**.
 
+    * **Visningsnavn i flertall** – dette feltet er automatisk utfylt når du skriver inn et visningsnavn, men du kan endre det om nødvendig. Visningsnavn i flertall – dette brukes når du samhandler med denne enheten fra PowerApps eller Flow, og brukes som navnet på enheten i Common Data Service WebAPI.
+    * **Navn** – dette feltet er også automatisk utfylt når du skriver inn et visningsnavn. Navnet inkluderer også et prefiks som ble konfigurert da miljøer ble opprettet. Dette brukes for å sikre at enhetene du oppretter kan eksporteres og importeres i andre miljøer, der andre enheter kan ha samme navn. Dette prefikset kan endres ved å oppdatere det i Publisher for standardløsningen i Common Data Service. Hvis du vil sørge for at eksisterende apper ikke ødelegges, kan du ikke endre navnet etter å ha lagret enheten.
+     
     ![Ny enhet](./media/data-platform-cds-create-entity/newentitypanel.png "Nytt enhetspanel")
 
-4. Klikk på **Neste**, og du blir deretter omdirigert til Enhetsdetaljer-siden. Hver enhet begynner med ett felt, Primært navn, som standard, og dette feltet brukes når oppslag opprettes mot denne enheten. Det skal som regel brukes for å lagre navnet eller den primære beskrivelsen av dataene som lagres i enheten.
-
-    > [!NOTE]
-    > Navnet og visningsnavnet til **Primært navn**-feltet kan oppdateres før du lagrer enheten første gang. Hvis du for eksempel ønsket å kalle dette feltet Elevnavn i stedet for Primært navn
+4. På detaljsiden for enheten klikker eller trykker du på **Primærnavn**-feltet for å åpne **Primærnavn**-ruten, og deretter erstatter du **Primærnavn** med **Produktgjennomgang** i **Visningsnavn**-boksen. Erstatt **PrimaryName** med **ProductReview** i **Navn**-boksen, og deretter klikker eller trykker du på **Ferdig**.
+ 
+    Hver enhet inneholder som standard et Primært navn-felt som brukes av oppslagsfelt ved oppretting av relasjoner med andre enheter. Feltet skal som regel brukes for å lagre navnet eller den primære beskrivelsen av dataene som lagres i enheten. Navnet og visningsnavnet til Primært navn-feltet kan oppdateres før du lagrer enheten første gang.
 
     ![Enhetsdetaljer](./media/data-platform-cds-create-entity/newentitydetails.png "Nye enhetsdetaljer")
 
-5. (valgfritt) Legg til et tekstfelt i enheten ved å klikke på **Legg til felt**. Skriv inn **Visningsnavn** i Nytt felt-panelet for feltet, og velg datatypen. Hvis du vil ha mer informasjon, kan du se[Å administrere felter i en enhet](data-platform-manage-fields.md).
+5. Hvis du vil legge til et felt til enhet, gjør du følgende:
+ 
+    a. I kommandolinjen klikker eller trykker du på **Legg til felt** for å åpne **Feltegenskaper**-panelet.
+
+    b. Skriv inn **Gjennomgangsdato** i **Visningsnavn**-boksen.
+
+    c. Velg **Bare dato** fra **Datatype**-rullegardinlisten.
+
+    d. Merk av for **Obligatorisk**.
+    
+    e. Klikk eller trykk på **Ferdig**.
+     
+    Hvis du vil ha mer informasjon, kan du se[Å administrere felter i en enhet](data-platform-manage-fields.md).
 
     ![Nytt felt](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Nytt felt-panel")
 
+6. Gjenta de forrige trinnene for å legge til tre felt til med følgende konfigurasjoner:
+    * **Visningsnavn** = Produktvurdering; **Datatype** = Heltall; merk av for **Obligatorisk**
+    * **Visningsnavn** = Navn på korrekturleser; **Datatype** = Tekst
+    * **Visningsnavn** = Kommentar fra korrekturleser; **Datatype** = Tekst
 
-6. Klikk på **Ferdig** for å legge til feltet, og gjenta trinn 5 for å legge til ytterligere felter.
+    Når du er ferdig, skal du ha fem felt som er oppført på enhetens detaljside.
+
+    ![Feltliste](./media/data-platform-cds-create-entity/addedfields.png "liste over felt")
+
+    Vær oppmerksom på at alle enheter har skrivebeskyttede systemfelt. Systemfelt blir som standard ikke vist i listen over felt, selv om de finnes på enheten. Hvis du vil se alle feltene, kan du endre filteret på kommandolinjen fra **Standard** til **Alle**. Hvis du vil ha mer informasjon om metadataene som er knyttet til enheten, kan du se [Enhetsmetadata](../../developer/common-data-service/entity-metadata.md).
+
 7. Klikk på **Lagre enhet** for å lagre enheten og gjøre den tilgjengelig for bruk i apper.
 
-    Enheten vises i listen over enheter i databasen. Hvis du vil se enheter du har opprettet, kan du endre filteret i kommandolinjen fra Standard til Egendefinert
+    Produktgjennomgangen skal vises i listen over enheter i databasen. Hvis du ikke ser den, kan du endre filteret i kommandolinjen fra **Standard** til **Egendefinert**.
 
-## <a name="system-fields"></a>Systemfelt
-Alle enheter har systemfelter. Disse feltene er skrivebeskyttet. Derfor du ikke endre eller slette disse feltene, og du kan ikke tilordne verdier til dem. Systemfelt blir som standard ikke vist i listen over felter, selv om de finnes i enheten. Hvis du vil se alle feltene, kan du endre filteret på kommandolinjen fra **Standard** til **Alle**.
-
-Hvis du vil ha mer informasjon om metadataene som er knyttet til enheten, kan du se [Enhetsmetadata](../../developer/common-data-service/entity-metadata.md)
+    ![Filtrer](./media/data-platform-cds-create-entity/filter.png "Filtrer utvalg")
 
 ## <a name="next-steps"></a>Neste trinn
-* [Administrer felter i en enhet](data-platform-manage-fields.md)
-* [Definer relasjoner mellom enheter](data-platform-entity-lookup.md)
-* [Generer en app ved hjelp av en Common Data Service-database](../canvas-apps/data-platform-create-app.md)
-* [Opprett en app fra grunnen av ved hjelp av en Common Data Service-database](../canvas-apps/data-platform-create-app-scratch.md)
+I denne hurtigveiledningen finner du ut hvordan du oppretter en egendefinert enhet kalt Produktgjennomgang, som du kan bruke til å opprette en app som viser rangering og merknader for hvert produkt som selges av et bestemt firma. Nå skal du få finne ut hvordan du kan definere relasjoner mellom enheter (i dette tilfellet mellom Produktenhet som er standard og den tilpassede enheten din Produktgjennomgang), slik at du kan knytte hvert produkt med gjennomganger og kommentarer de mottar.
+
+> [!div class="nextstepaction"]
+> [Å opprette en relasjon](data-platform-entity-lookup.md)
 
 ## <a name="privacy-notice"></a>Erklæring om personvern
-Med den vanlige datamodellen i Microsoft PowerApps samler vi inn og lagrer egendefinerte enhets- og feltnavn i diagnostiseringssystemene.  Vi bruker denne kunnskapen til å forbedre den vanlige datamodellen for kundene våre. Enhets- og feltnavnene som skapere oppretter, hjelper oss med å forstå scenarioene som er typiske i Microsoft PowerApps-fellesskapet og få rede på hull i tjenestens standarddekning for enheter, som eksempelvis skjemaer knyttet til organisasjoner. Dataene i databasetabeller som er knyttet til disse enhetene, blir ikke åpnet eller brukt av Microsoft eller replisert utenfor området hvor databasen er klargjort. Merk deg imidlertid at den egendefinerte enheten og feltnavnene kan repliseres på tvers av områder og blir slettet i henhold til retningslinjene våre for dataoppbevaring. Microsoft tar vare på personvernet ditt, som ytterligere beskrevet i [Klareringssenteret](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
-
+Med den vanlige datamodellen i Microsoft PowerApps samler vi inn og lagrer egendefinerte enhets- og feltnavn i diagnostiseringssystemene. Vi bruker denne kunnskapen til å forbedre den vanlige datamodellen for kundene våre. Enhets- og feltnavnene som appoppretterne lager, hjelper oss med å forstå scenarioer som er typiske i Microsoft PowerApps-fellesskapet, og få rede på hull i tjenestens standarddekning for enheter, som eksempelvis skjemaer knyttet til organisasjoner. Dataene i databasetabeller som er knyttet til disse enhetene, blir ikke åpnet eller brukt av Microsoft eller replisert utenfor området hvor databasen er klargjort. Merk deg imidlertid at den egendefinerte enheten og feltnavnene kan repliseres på tvers av områder og blir slettet i henhold til retningslinjene våre for dataoppbevaring. Microsoft tar vare på personvernet ditt, som ytterligere beskrevet i [Klareringssenteret](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
