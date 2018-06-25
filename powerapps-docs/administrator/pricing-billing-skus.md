@@ -1,26 +1,19 @@
 ---
 title: Lisensieringsoversikt | Microsoft Docs
-description: Lisensieringsoversikt for Microsoft PowerApps.
-services: ''
-suite: powerapps
-documentationcenter: na
+description: Oversikt over lisensiering i PowerApps.
 author: jamesol-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 01/19/2017
+ms.component: pa-admin
+ms.topic: conceptual
+ms.date: 04/24/2018
 ms.author: jamesol
-ms.openlocfilehash: f3b53905bb335cf61eae3e184d4984d56907fe4c
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 03aa8fc5254529a337f7bbdf40428ab4a1042a92
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995792"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168117"
 ---
 # <a name="licensing-overview"></a>Lisensieringsoversikt
 PowerApps er lisensiert per bruker. Hver bruker som har tilgang til tjenesten for å opprette og kjøre apper trenger en lisens. Office 365- og Dynamics 365-kunder kan umiddelbart dra nytte av PowerApps og Microsoft Flow-funksjoner som er inkludert i disse tilbudene. Kunder som ønsker å utvikle apper og flyter som har tilgang til datakilder utenfor Office 365 og Dynamics 365, eller trenger ytterligere funksjonalitet, kan kjøpe frittstående abonnementer for PowerApps og Microsoft Flow. Det finnes viktige forskjeller i funksjonaliteten mellom disse gruppene med lisenser.
@@ -36,7 +29,7 @@ PowerApps-funksjoner for Office 365 og Dynamics 365 gjør det mulig for brukere 
 |  | Inkluderte abonnementer |
 | --- | --- |
 | Microsoft Office 365-abonnementer som inkluderer PowerApps. |Disse abonnementene inkluderer PowerApps for Office 365: <br><br>Office 365 Business Essentials <br>Office 365 Business Premium <br>Office 365 Education <br>Office 365 Education Plus <br>Office 365 Enterprise E1 <br>Office 365 Enterprise E3 <br>Office 365 Enterprise E3<br><br>*Office 365 Enterprise E2 har samme funksjonalitet som Office 365 Enterprise E1, og Office 365 Enterprise E4 har samme funksjonalitet som Office 365 Enterprise E3.*<br><br>Office 365 Enterprise F1 inkluderer PowerApps for Office 365 Enterprise F1. |
-| Hvilke Microsoft Dynamics 365-apper og -abonnementer inkluderer PowerApps? |Disse appene inkluderer PowerApps for Dynamics 365:<br><br>Dynamics 365 for Sales, Enterprise-utgave <br>Dynamics 365 for Customer Service, Enterprise-utgave <br>Dynamics 365 for Operations, Enterprise-utgave <br>Dynamics 365 for Field Service, Enterprise-utgave <br>Dynamics 365 for Project Service Automation, Enterprise-utgave <br>Dynamics 365 for Team Members, Enterprise-utgave <br>Dynamics 365 for Financials, Business-utgave <br>Dynamics 365 for Team Members, Business-utgave <br><br>Disse abonnementene inkluderer PowerApps-abonnement 2:<br><br>Dynamics 365, Enterprise-utgave, abonnement 1<br>Dynamics 365, Enterprise-utgave, abonnement 2 <br><br>*PowerApps for Dynamics 365 er også inkludert i eksisterende CRM Online Enterprise-, Professional-, Basic- og Essential-abonnementer.* |
+| Hvilke Microsoft Dynamics 365-apper og -abonnementer inkluderer PowerApps? |Disse appene inkluderer PowerApps for Dynamics 365:<br><br>Dynamics 365 for Team Members, Enterprise edition <br>Dynamics 365 for Financials, Firmautgave <br>Dynamics 365 for Team Members, Firmautgave<br>Dynamics 365 for Talent <br><br>Disse abonnementene inkluderer PowerApps-abonnement 2:<br><br>Dynamics 365 Customer Engagement-abonnement, Enterprise Edition<br>Dynamics 365-abonnement, Enterprise Edition <br>Dynamics 365 for Sales, Enterprise Edition <br>Dynamics 365 for Customer Service, Enterprise Edition<br>Dynamics 365 for Case Management, Enterprise Edition <br>Dynamics 365 for Operations, Enterprise-utgave <br>Dynamics 365 for Field Service, Enterprise-utgave <br>Dynamics 365 for Project Service Automation, Enterprise-utgave<br>Microsoft Relationship Sales-løsning <br><br>*PowerApps for Dynamics 365 er også inkludert i eksisterende CRM Online Enterprise-, Professional-, Basic- og Essential-abonnementer.* |
 
 ### <a name="powerapps-for-office-365-enterprise-f1"></a>PowerApps for Office 365 Enterprise F1
 PowerApps er inkludert i Office 365 Enterprise F1, som med brukere kan kjøre apper og automatisere arbeidsflyter. Brukere kan imidlertid ikke opprette apper med dette abonnementet (slik de kan med abonnementer som for eksempel Office 365 E1, E3 og E5). Denne tabellen inneholder detaljer om hva brukere kan gjøre med PowerApps for Office 365 Enterprise F1:
@@ -59,12 +52,12 @@ PowerApps er inkludert i Office 365 Enterprise F1, som med brukere kan kjøre ap
 | Å opprette egendefinerte koblinger for administrering av data i dine egne systemer |Nei |
 | **Common Data Service** | |
 | Å opprette og kjøre apper på Common Data Service |Nei |
-| Å modellere dataene i Common Data Service |Nei |
-| Å opprette en database i Common Data Service |Nei |
+| Modellere dataene i Common Data Service |Nei |
+| Opprette en database i Common Data Service |Nei |
 | **Administrasjon** | |
 | Støtter datapolicyer som Office 365-administratoren oppretter |Ja |
-| Å legge til medarbeidere som miljøopprettere og administratorer |Nei |
-| Å legge til medarbeidere i databaseroller |Nei |
+| Legge til medarbeidere som miljøopprettere og administratorer |Nei |
+| Legge til medarbeidere i databaseroller |Nei |
 | Å opprette datapolicyer for miljøer |Nei |
 
 ### <a name="powerapps-standalone-plan-1-and-plan-2"></a>Frittstående PowerApps-abonnement 1 og 2

@@ -1,54 +1,58 @@
 ---
-title: Hva som er nytt i PowerApps | Microsoft Docs
+title: Hva som er nytt | Microsoft Docs
 description: Oppdateringer for PowerApps, organisert etter utgivelsesdato
-services: powerapps
-suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: kfile
-editor: ''
-tags: ''
+author: AFTOwen
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/21/2018
-ms.author: sharik
-ms.openlocfilehash: e9e5c156e9cb3ad47375be9a237a757a6db1158b
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.topic: conceptual
+ms.component: canvas
+ms.date: 05/21/2018
+ms.author: anneta
+ms.openlocfilehash: ef4360dda5d4003ff91389af78958052bbb1e052
+ms.sourcegitcommit: 68e2c696397f3002dd14e72a4c2054a603a5e2d7
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30998147"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "34851711"
 ---
 # <a name="whats-new-in-powerapps"></a>Hva som er nytt i PowerApps
-For informasjon om kjente begrensninger, kan du se [Vanlige problemer og løsninger](common-issues-and-resolutions.md).
+> [!IMPORTANT]
+> **Annonsering av produktmerknader**<br>
+> Lurer du på noe om kommende og nylig utgitte funksjoner i PowerApps?<br>
+[Vis produktmerknadene](https://docs.microsoft.com/en-us/business-applications-release-notes/april18/powerapps/overview). Vi har tatt med alle detaljer, fra ende til annen, som du kan dra nytte av når du skal planlegge.
 
+For informasjon om kjente begrensninger, kan du se [Vanlige problemer og løsninger](common-issues-and-resolutions.md).
 
 > [!NOTE]
 > Versjoner distribueres over flere dager. Nye eller oppdaterte funksjoner vises kanskje ikke umiddelbart.
 
-## <a name="announcing-the-business-applications-spring-18-release-notes"></a>Annonsering av forretningsappens produktmerknader for våren 2018
+## <a name="may-30"></a>30. mai
+1. [Redigeringskontroll for rik tekst](controls/control-richtexteditor.md) (eksperimentell) – lar sluttbrukere formatere tekst i et WYSIWYG-redigeringsområde. 
 
-Oppdag de nyeste oppdateringene våre forretningsprogrammer, samt en rekke nye muligheter for å bygge dine egne programmer og programutvidelser på plattformen vår. [Last ned PDF-en med produktmerknadene for våren 2018](https://aka.ms/businessappsreleasenotes), som dekker Dynamics 365, PowerApps, Microsoft Flow og Power BI.
+## <a name="may-21"></a>21. mai
+1. La appbrukere få muligheten til å importere og eksportere data fra Excel- eller CSV-filer som er lagret lokalt ved å bruke funksjonene **Hent data fra Excel-fil** og **Eksporter data** som nå er tilgjengelige for oppdaterte Common Data Service (CDS) for apper-miljøer. 
+1. Lar appbrukere [åpne enheter i Excel](../common-data-service/data-platform-excel-addin.md) for å opprette, oppdatere og slette data som er lagret i CDS for apper ved å bruke Excel-tillegget for PowerApps. 
+1. [Å opprette og publisere Power BI-rapporter](../common-data-service/data-platform-powerbi-connector.md) ved hjelp av Power BI Desktop koblet til CDS for apper. 
 
-**Kommer snart:** vi oppdaterer PDF-filen med produktmerknadene ettersom nye funksjoner lanseres, og vi gjør dem også tilgjengelige på en nettside.
+## <a name="april-23"></a>23. april
+* Nedlasting av [vedlegg](controls/control-attachments.md) i Internet Explorer, i egendefinerte listeskjemaer for SharePoint.
 
-## <a name="mar-21"></a>21. mars
-1. Opprett [modelldrevne apper](../model-driven-apps/model-driven-app-overview.md), med utgangspunkt i datamodellen, og som bygges opp via formen på bedriftens kjernedata og -prosesser i Common Data Service, til former, visninger og andre komponenter for modellen. Modelldrevne apper genererer automatisk flotte brukergrensesnitt som virker på flere forskjellige enheter.
-2. [Opprett en database](../../administrator/create-database.md) på den nyeste versjonen av Common Data Service i et miljø.
-3. Common Data Service for apper inneholder nå:
+## <a name="april-9"></a>9. april
+* Kontrollene Klipp ut (CTRL + X), Kopier (CTRL + C) og Lim inn (CTRL + V) &mdash;, inkludert kontrollenes stiler, formler og egenskaper&mdash;på tvers av apper i en nettleser.
 
+## <a name="march-21"></a>21. mars
+1. Opprett [modelldrevne apper](../model-driven-apps/model-driven-app-overview.md) med utgangspunkt i datamodellen, og som bygges opp via formen på bedriftens kjernedata og -prosesser i Common Data Service for apper, for å utforme skjemaer, visninger og andre komponenter. Modelldrevne apper genererer automatisk flotte brukergrensesnitt som virker på flere forskjellige enheter.
+2. [Opprett en database](../../administrator/create-database.md) på den nyeste versjonen av Common Data Service for apper i et miljø.
+3. CDS for apper inkluderer nå:
     - **Flere datatyper** støtter mer komplekse enhetsdefinisjoner og gir bedre opplevelser. (Gjelder for lerret og modelldrevne apper.)
-    - [Opprett og tilpass enheter](../common-data-service/data-platform-create-entity.md) i Common Data Service-for apper direkte fra nettområdet for PowerApps. Den **forbedrede opplevelsen** inkluderer bedre ytelse, et mer brukervennlig grensesnitt og nyttige funksjoner, som for eksempel innebygd oppretting av alternativsett. (Gjelder for lerret og modelldrevne apper.)
+    - [Opprett og tilpass enheter](../common-data-service/data-platform-create-entity.md) i Common Data Service for apper direkte fra nettområdet for PowerApps. Den **forbedrede opplevelsen** inkluderer bedre ytelse, et mer brukervennlig grensesnitt og nyttige funksjoner, som for eksempel innebygd oppretting av alternativsett. (Gjelder for lerret og modelldrevne apper.)
     - Opprett **forretningsregler for serversiden** for validering av dataene som angis i Common Data Service for apper. (Gjelder for lerret og modelldrevne apper.)
     - Opprett **beregnede felt for beregnet verdi** i Common Data Service for apper-enheter direkte fra PowerApps-området. (Gjelder for lerret og modelldrevne apper.)  
-    - Utviklere kan bruke **Software Development Kit** (SDK) for Common Data Service for apper til å opprette kodebaserte tilpasninger for Common Data Service.
+    - Utviklere kan bruke **Software Development Kit** (SDK) for CDS for apper for å opprette kodebaserte tilpasninger for CDS for apper.
     - Viderekomne brukere kan få tilgang til data lagret i Common Data Service for apper gjennom et nytt **Web-API for OData** .
-    - [Importer data](../common-data-service/data-platform-cds-newentity-pq.md) til Common Data Service med **Power Query**. Bruk Power Query på nettet til å importere data direkte til Common Data Service for-apper fra flere kilder
+    - [Importer data](../common-data-service/data-platform-cds-newentity-pq.md) i CDS for apper med **Power Query**. Bruk Power Query på nettet til å importere data direkte til Common Data Service for apper fra flere kilder
 
-## <a name="mar-5"></a>05. mars
+## <a name="march-5"></a>05. mars
 1. Legg til (og slett) [vedlegg](controls/control-attachments.md) til SharePoint-lister.
 2. Åpne eksterne [PDF](controls/control-pdf-viewer.md)-filer i en nettleser. (Eksperimentell funksjon)
 
@@ -72,20 +76,3 @@ Oppdag de nyeste oppdateringene våre forretningsprogrammer, samt en rekke nye m
 
 ## <a name="jan-5"></a>05. jan.
 * Utfør en handling med data fra Power BI-rapporten eller -instrumentbordet ved å integrere et [egendefinert visualobjekt i PowerApps (forhåndsversjon)](https://powerapps.microsoft.com/blog/powerbi-powerapps-visual/), som henter kontekstavhengige data fra Power BI-rapporten.
-
-## <a name="dec-8"></a>08. des.
-1. [Maler for betingelser](working-with-rules.md) for regler utleder felles egenskaper for en kontroll (for eksempel **tekst** eller **verdi**).
-2. Slutt å vise bekreftelsesdialogboksen [ **Definer handlinger** ](working-with-rules.md) når du definerer regelhandlinger.
-
-## <a name="nov-13"></a>13. nov.
-1. Velg flere verdier for samme felt i SharePoint-lister.
-2. [Vis og last ned vedlegg](controls/control-attachments.md) i SharePoint-lister.
-3. [Tilpass SharePoint-listeskjemaer](customize-list-form.md) ved hjelp av PowerApps.
-
-## <a name="nov-10"></a>10. nov.
-* [Gi nytt navn til regler](working-with-rules.md) i en app, og vis regler når den valgte kontrollen er i betingelsen for regelen.
-
-## <a name="oct-30"></a>30. okt.
-1. [Vis alle regler](working-with-rules.md) i en app, ikke bare de for den valgte kontrollen.
-2. Legg til de ikonene som apputviklere etterspør mest.
-3. Forbedret ytelse for apper på Android- og iOS-enheter.

@@ -1,26 +1,23 @@
 ---
 title: 'Galleri-kontrollen: referanse | Microsoft Docs'
 description: Informasjon om Galleri-kontrollen, inkludert egenskaper og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
-author: RickSaling
-manager: anneta
+author: fikaradz
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 05/25/2017
 ms.author: sharik
-ms.openlocfilehash: 9839059cca741e47f5f519a45e7291847c1bc792
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: dde430d6174af5be75a4fc8ae13dabd6f3759899
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996122"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31837261"
 ---
 # <a name="gallery-control-in-powerapps"></a>Galleri-kontrollen i PowerApps
 En kontroll som inneholder andre kontroller og viser et datasett.
@@ -38,11 +35,13 @@ Forhåndsdefinerte maler er tilgjengelig for å for å vise bilde eller tekst og
 **Valgt** – det valgte elementet.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
+**[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere. Bør beskrive hva listen over elementer er.
+
 **AllItems** – alle elementene i et galleri, inkludert ekstra kontroll-verdier som er en del av malen i galleriet.
 
 **[BorderColor](properties-color-border.md)** – fargen på kontrollerens kantlinje.
 
-**[BorderStyle](properties-color-border.md)** – Om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
+**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
 **[BorderThickness](properties-color-border.md)** – tykkelsen til kontrollens kantlinje.
 
@@ -97,3 +96,22 @@ Forhåndsdefinerte maler er tilgjengelig for å for å vise bilde eller tekst og
 * [Å hente lyder](control-microphone.md#example)
 * [Å hente tegninger](control-pen-input.md#create-a-set-of-images)
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="color-contrast"></a>Fargekontrast
+Hvis du skal kunne klikke hvor som helst i et gallerielement for å merke det, må det være tilstrekkelig fargekontrast mellom:
+* **[BorderColor](properties-color-border.md)** og fargen utenfor galleriet (hvis det foreligger en kantlinje)
+* **[Fyll](properties-color-border.md)** og fargen utenfor galleriet (hvis det ikke foreligger en kantlinje)
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **[AccessibleLabel](properties-accessibility.md)** bør vises.
+
+    > [!NOTE]
+> Skjermlesere kunngjør når elementer i galleriet endres. **AccessibleLabel** nevnes også. Dette gir kontekst til kunngjøringen, og er enda viktigere når det finnes flere gallerier på samme skjerm.
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* Vurder å angi **ShowScrollbar** til **sann**. Rullefeltet vises ikke på de fleste skjermenhetene før du begynner å rulle.
+* Hvis du skal kunne klikke hvor som helst i et gallerielement for å merke det, må det også finnes en måte for tastaturbrukere å merke gallerielementet. Legg for eksempel til en **[knapp](control-button.md)** som har egenskapen **OnSelect** angitt til **Select(Parent)**.
+
+    > [!NOTE]
+> Kontroller utenfor galleriet behandles ikke i tastaturnavigasjonsrekkefølgen i galleriet. **[TabIndex](properties-accessibility.md)** for kontroller i et galleri omfattes. Hvis du vil ha mer informasjon, kan du se [egenskaper for tilgjengelighet](properties-accessibility.md).

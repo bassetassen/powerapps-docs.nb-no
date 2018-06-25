@@ -1,26 +1,23 @@
 ---
 title: Innføring i powerapps.com | Microsoft Docs
 description: Et nytt hjem for alle som utvikler apper.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: linhtranms
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/28/2016
 ms.author: litran
-ms.openlocfilehash: fb54cbc163bc1afd8dd43c0539c28c0d0fddf809
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: f29f75522eb01c61c3528e61018fb759980e79f9
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997417"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330219"
 ---
 # <a name="introduction-to-powerappscom"></a>Innføring i powerapps.com
 PowerApps-teamet introduserer på nytt [powerapps.com](http://web.powerapps.com) som det nye hjemmet for apputviklere. Vi har utformet siden på nytt som hovedsiden for kreative som enkelt vil komme i gang med utvikling av apper, bruke Microsoft Common Data Service og administrere appene sine på ett og samme sted. I denne artikkelen veileder jeg deg gjennom følgende:
@@ -38,7 +35,7 @@ Nær topptekstens høyre kant vil du først se en rullegardinliste for miljøer,
 
 ![Topptekst – Miljø](./media/intro-maker-portal/environment.png)
 
-Ved siden av rullegardinlisten for miljøer vil du se et nedlastingsikon. Klikk eller trykk på dette ikonet for å vise en dialogboks med koblinger til å laste ned PowerApps Mobile (for iOS eller Android) eller PowerApps Studio for Windows.
+Ved siden av rullegardinlisten for miljøer vil du se et nedlastingsikon. Klikk eller trykk på dette ikonet for å vise en dialogboks med koblinger for å laste ned PowerApps for mobilenheter (for iOS- eller Android-enheter).
 
 ![Topptekst – Nedlasting](./media/intro-maker-portal/downloads2.png)
 
@@ -63,7 +60,7 @@ Hvis du aldri har logget deg på, opprettet en app eller kjørt en app før, vil
 
 ![Å opprette en app](./media/intro-maker-portal/createapp.png)
 
-Klikk eller trykk på **Slik kommer du i gang** på dette banneret for å vise alternativer for å opprette en app med bruk av **PowerApps Studio for Windows** eller **PowerApps Studio for nett**.
+Klikk eller trykk på **Komme i gang** på dette banneret for å vise alternativer for å opprette en app med bruk av **PowerApps Studio**.
 
 ![Å opprette en app med modus](./media/intro-maker-portal/createmodal2.png)
 
@@ -94,7 +91,7 @@ Under **Common Data Service** vil det vises en annen knapp, avhengig av lisensen
 
 Nedenfor banneret **Bruk Microsoft Common Data Service** ser du et sett med eksempelapper og tilkoblede eksempelapper vi har opprettet som du kan bruke.
 
-* **Eksempelapper** – eksempelapper ble utviklet for forskjellige bedriftsscenarioer med enten telefon- eller nettbrettoppsett. Du kan klikke på en app for raskt å se en oversikt over hva appen gjør, hvilket oppsett appen ble utviklet for, og hva slags egenskaper appen presenterer, for eksempel kamera, GPS og alternativknapper. Dette er en rask måte for nye brukere å finne ut om egenskapene til PowerApps, og du bruke en mal for å opprette en identisk app i PowerApps Studio for Windows.
+* **Eksempelapper** – eksempelapper ble utviklet for forskjellige bedriftsscenarioer med enten telefon- eller nettbrettoppsett. Du kan klikke på en app for raskt å se en oversikt over hva appen gjør, hvilket oppsett appen ble utviklet for, og hva slags egenskaper appen presenterer, for eksempel kamera, GPS og alternativknapper. Dette er en rask måte for nye brukere å finne ut om egenskapene til PowerApps på, og du kan bruke en mal for å opprette en identisk app i PowerApps Studio.
   
     ![Eksempelapper](./media/intro-maker-portal/sampleapps2.png)
 * **Tilkoblede eksempelapper** – disse appene kobler til dataen din via en datatilkobling som for eksempel Office 365, Salesforce, Trello og Wunderlist. Dette settet med apper er forskjellig fra eksempelappene over. Når du klikker eller trykker på en tilkoblet eksempelapp, klargjør du faktisk en ny forekomst av appen (tenk på den som en mal). Den vil be deg om å oppgi legitimasjon for å koble til dataene dine. Det flotte med en tilkoblet eksempelapp er at en forekomst klargjøres for deg nettopp her, og du kan åpne den i PowerApps Studio for å finne ut mer om hvordan den tilsvarende appen ble utviklet. Ulempen er at det kan ta ganske lang tid (opptil ett minutt) å opprette den. Så vær tålmodig, og vent på at nettleseren åpner når du klikker eller trykker på en tilkoblet eksempelapp.
@@ -114,7 +111,7 @@ Vær oppmerksom på at listevisningen kun viser apper i det valgte miljøet. Hvi
 
 ## <a name="whats-new"></a>Hva er nytt?
 
-* Hvis du klikker eller trykker på en app nå, åpnes den i PowerApps Studio for nett eller i en ny fane.
+* Hvis du klikker eller trykker på en app nå, åpnes den i PowerApps Studio i en ny fane.
 * Som standard viser **Apper**-siden alle appene du har tillatelse til å redigere. Velg **Alle apper**-filteret for å vise **Alle apper** (inkludert apper du kun kan bruke).
   
    ![Filter for apper](./media/intro-maker-portal/allapps_filter.png)

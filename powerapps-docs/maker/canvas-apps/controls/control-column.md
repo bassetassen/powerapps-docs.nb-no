@@ -1,25 +1,23 @@
 ---
 title: 'Kolonnekontroll: referanse | Microsoft Docs'
 description: Dette emnet inneholder informasjon om Kolonnekontroll i Microsoft PowerApps.
-services: powerapps
 documentationcenter: na
-author: jasongre
-manager: kfend
+author: fikaradz
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 06/05/2017
 ms.author: kfend
-ms.openlocfilehash: 0e9c04c4786ff4cee11d7aae75245054e93391fa
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: e79314b8e615a931a3ba8116a53b216afe5d145a
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996512"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826044"
 ---
 # <a name="column-control-in-powerapps"></a>Kolonnekontroll i PowerApps
 Leverer skjermopplevelsen for et enkelt felt i en [**Datatabellkontroll**](control-data-table.md).
@@ -65,3 +63,7 @@ Leverer skjermopplevelsen for et enkelt felt i en [**Datatabellkontroll**](contr
    
     ![Størrelsen på Kolonnekontrollen er endret](./media/control-column/post-resize-column.png)
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **DisplayName** må være tilstede.

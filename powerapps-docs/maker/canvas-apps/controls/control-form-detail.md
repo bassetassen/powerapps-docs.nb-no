@@ -1,26 +1,23 @@
 ---
 title: 'Kontroller for Visningsskjema og Redigeringsskjema: referanse | Microsoft Docs'
 description: Informasjon, inkludert egenskaper og eksempler, om kontroller for Visningsskjema og Redigeringsskjema
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/06/2017
 ms.author: gregli
-ms.openlocfilehash: c238a441c147c148fa619e6068579b75d643339a
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 78615949ab5c05b4cf7da56eae23dd1a0194c7ff
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996607"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838698"
 ---
 # <a name="edit-form-and-display-form-controls-in-powerapps"></a>Kontroller for Redigeringsskjema og Visningsskjema i PowerApps
 Vis, rediger og opprett en post i en datakilde.
@@ -180,3 +177,6 @@ Skjemaet bytter fra **Ny**-modus til **Redigeringsmodus** når noen av disse end
 ## <a name="more-information"></a>Mer informasjon
 Du kan se [Dataskjemaer](../working-with-forms.md) for å få en omfattende oversikt over hvordan skjemaer fungerer.
 
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* Vurder å legge til en overskrift i skjemaet ved bruk av en **[etikett](control-text-box.md)**.

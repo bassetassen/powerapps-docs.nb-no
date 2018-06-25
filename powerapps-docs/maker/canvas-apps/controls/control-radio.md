@@ -1,26 +1,23 @@
 ---
 title: 'Radio-kontroll: referanse | Microsoft Docs'
 description: Informasjon om Radio-kontrollen, inkludert egenskaper og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 9cf051ba94e9d43b4c263d627c25affa66e6b843
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 8a95e84449828e77152206817f3d964315074b90
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996062"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31837692"
 ---
 # <a name="radio-control-in-powerapps"></a>Radio-kontrollen i PowerApps
 En liste som viser alle alternativene, men brukeren kan velge bare ett om gangen.
@@ -42,11 +39,9 @@ En **radio**-kontroll, som brukere har flere tiårs erfaring med, bør brukes sa
 
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
-**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
+**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
 **[BorderThickness](properties-color-border.md)** – tykkelsen til kontrollens kantlinje.
-
-**[FocusedBorderThickness](properties-color-border.md)** – Tykkelsen på kontrollens kantlinje når den har tastaturfokus.
 
 **[Farge](properties-color-border.md)** – fargen på teksten i kontrollen.
 
@@ -59,6 +54,10 @@ En **radio**-kontroll, som brukere har flere tiårs erfaring med, bør brukes sa
 **[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
+
+**[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
+
+**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
@@ -104,7 +103,7 @@ En **radio**-kontroll, som brukere har flere tiårs erfaring med, bør brukes sa
 
 **[Strikethrough](properties-text.md)** – om det vises en linje gjennom teksten som vises på en kontroll.
 
-**[TabIndex](properties-accessibility.md)** – tilpasser fanerekkefølgen for kontroller ved kjøretid når den er angitt som en annen verdi enn null.
+**[TabIndex](properties-accessibility.md)** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
 
 **[Verktøytips](properties-core.md)** – forklarende tekst som vises når brukeren holder pekeren over en kontroll.
 
@@ -136,3 +135,20 @@ En **radio**-kontroll, som brukere har flere tiårs erfaring med, bør brukes sa
 4. (valgfritt) I **Radio**-kontrollen velger du det andre alternativet for å bekrefte at den riktige teksten vises.
 5. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="color-contrast"></a>Fargekontrast
+Det må være tilstrekkelig fargekontrast mellom:
+* **RadioSelectionFill** og **RadioBackgroundFill**
+* **CheckboxBackgroundFill** og **[Fyll](properties-color-border.md)**
+
+Dette er i tillegg til [kravene for standard fargekontrast](../accessible-apps-color.md).
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* Det må være en **[verdi](properties-core.md)** for hvert radio-alternativ.
+* Vurder å legge til en **[etikett](control-text-box.md)** rett før **Radio**-kontrollen, som skal fungere som overskrift.
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
+* Fokusindikatorer må være godt synlige. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
+ 

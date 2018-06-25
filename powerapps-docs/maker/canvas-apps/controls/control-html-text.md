@@ -1,26 +1,23 @@
 ---
 title: 'HTML-tekstkontroll: referanse | Microsoft Docs'
 description: Informasjon om HTML-tekstkontrollen, inkludert egenskaper og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: bb652f3ba6decad7cb6f93007eaec6340f230ca1
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: aacd47621148c03eef88dea31763ab4af2658bfc
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995977"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31830794"
 ---
 # <a name="html-text-control-in-powerapps"></a>HTML-tekstkontrollen i PowerApps
 En boks som viser tekst og konverterer HTML-koder til formatering.
@@ -38,7 +35,7 @@ En **HTML-tekst**-kontroll viser ikke bare ren tekst og tall, men konverterer og
 ## <a name="additional-properties"></a>Tilleggsegenskaper
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
-**[BorderStyle](properties-color-border.md)** – Om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
+**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
 **[BorderThickness](properties-color-border.md)** – tykkelsen til kontrollens kantlinje.
 
@@ -86,8 +83,22 @@ En **HTML-tekst**-kontroll viser ikke bare ren tekst og tall, men konverterer og
 
 Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 
-1. Legg til en **HTML-tekst**-kontroll, og angi **HTMLText**-egenskapen dens til denne verdien:<br>
+1. Legg til en **HTML-tekst**-kontroll, og angi dens **HTMLText**-egenskap til denne verdien:<br>
    **Source.Text**
    
      **HTML-tekst**-kontrollen viser den samme teksten som **[Etikett](control-text-box.md)**-kontrollen, men konverterer kodene til de aktuelle tegnene.
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+**HTML-tekst** er ikke ment å være interaktiv. Den bør bare brukes for tekstvisning.
+
+### <a name="color-contrast"></a>Fargekontrast
+Det må være tilstrekkelig fargekontrast mellom:
+* **[Farge](properties-color-border.md)** og **[Fyll](properties-color-border.md)**
+* Tekst med egendefinerte farger og bakgrunner
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **HtmlText** må være til stede.
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* **HtmlText** kan ikke inneholde interaktive elementer som `<button>`, `<a>` eller `<input>`. **[TabIndex](properties-accessibility.md)**-systemet i PowerApps tar ikke hensyn til elementene i **HtmlText**.

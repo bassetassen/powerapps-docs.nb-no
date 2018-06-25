@@ -1,26 +1,23 @@
 ---
 title: 'Penneinndata-kontroll: referanse | Microsoft Docs'
 description: Informasjon om Penneinndata-kontrollen, inkludert egenskaper og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 7e5be9b68b501279329c23f9afe5d451487fa8d1
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 84981a00a516f553d3f1b318f12a6f68064c66b2
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996027"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31832175"
 ---
 # <a name="pen-input-control-in-powerapps"></a>Penneinndata-kontrollen i PowerApps
 En kontroll hvor du kan tegne, viske ut og utheve områder i et bilde.
@@ -34,9 +31,11 @@ Du kan bruke denne kontrollen som en tavle og tegne diagrammer og håndskrive or
 **Modus** – kontrollen er i **Tegne**- eller **Slette**-modus.  Valg av modus er avskrevet.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
+**[AccessibleLabel](properties-accessibility.md)**  – etikett for skjermlesere. Kan brukes til å beskrive formålet med kontrollen samt alternative metoder med inndata.
+
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
-**[BorderStyle](properties-color-border.md)** – Om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
+**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
 **[BorderThickness](properties-color-border.md)** – tykkelsen til kontrollens kantlinje.
 
@@ -91,3 +90,20 @@ Du kan bruke denne kontrollen som en tavle og tegne diagrammer og håndskrive or
 
 Bruk **[SaveData](../functions/function-savedata-loaddata.md)**-funksjonen til å lagre tegningene lokalt eller **[Patch](../functions/function-patch.md)**-funksjonen til å lagre dem til en datakilde.
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="color-contrast"></a>Fargekontrast
+Det må være tilstrekkelig fargekontrast mellom:
+* **[BorderColor](properties-color-border.md)** og fargen utenfor kontrollen (hvis det foreligger en kantlinje)
+* **[Fyll](properties-color-border.md)** og fargen utenfor kontrollen (hvis det ikke foreligger en kantlinje)
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **[AccessibleLabel](properties-accessibility.md)** bør vises.
+
+    > [!IMPORTANT]
+> **Penneinndata** er ikke tilgjengelig for brukere av skjermleseren. Tilby alltid en alternativ form for inndata. Hvis det eksempelvis kreves en skisse, bør du vurdere å legge til en **[Legg til bilde](control-add-picture.md)**-kontroll slik at brukerne kan laste opp et bilde. Begge metodene kan tilbys og brukeren kan velge det de er mest fortrolig med.
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+
+> [!IMPORTANT]
+> **Penneinndata** er ikke tilgjengelig for brukere av skjermleseren. Tilby alltid en alternativ form for inndata. Hvis det eksempelvis kreves en signatur, kan du vurdere å legge til **[Tekstinndata](control-text-input.md)**, slik at brukerne kan angi navnet sitt. Begge metodene kan tilbys og brukeren kan velge det de er mest fortrolig med.

@@ -1,39 +1,33 @@
 ---
 title: 'Vedlegg-kontroll: referanse | Microsoft Docs'
 description: Informasjon om Vedlegg-kontrollen, inkludert egenskaper og eksempler
-services: ''
-suite: powerapps
-documentationcenter: na
 author: fikaradz
-manager: anneta
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 09/29/2017
+ms.topic: reference
+ms.component: canvas
+ms.date: 04/23/2018
 ms.author: fikaradz
-ms.openlocfilehash: 5bb7e4f27ed7ee0a30fb028d4d8dfd20a5fc250b
-ms.sourcegitcommit: 078ba325480147e6e4da61e319ed53219f1c5cfc
+ms.openlocfilehash: 3a24f5d879674d8832b7fe5030e871e7f7ba1626
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/06/2018
-ms.locfileid: "30998332"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803125"
 ---
 # <a name="attachments-control-in-powerapps"></a>Vedlegg-kontrollen i PowerApps
 Dette er en kontroll som lar brukerne laste ned filer på enhetene sine så vel som laste opp og slette filer fra en SharePoint-liste.
 
 ## <a name="limitations"></a>Begrensninger
 Vedlegg-kontrollen har følgende midlertidige begrensninger:
-1. Nedlasting av vedlegg støttes ikke i Internet Explorer.
+1. Nedlasting av vedlegg støttes bare i SharePoint-listeskjemaer i Internet Explorer.
 
 1. Opplasting av vedlegg fungerer bare med datakilder for SharePoint-lister.  Støtte for andre datakilder introduseres trinnvis, og starter med CDS.
 
 1. Opplasting og sletting av funksjonalitet fungerer bare i et skjema.  Vedlegg-kontrollen ser deaktivert ut når den er i redigeringsmodus og ikke i et skjema.   Vær oppmerksom på at hvis du vil lagre filtilføyelsene og slettingene i serverdelen, må sluttbrukeren lagre skjemaet.
 
 1. Du kan bare laste opp filer med opptil 10 MB.  
+
+1. iOS-enheter kan for øyeblikket bare laste opp filer fra dokumenter og skylagringskontoer. Hvis du vil legge ved bilder/videoer, kan du bruke nettleseren på iOS-enheten til å kjøre appen.
 
 ## <a name="description"></a>Beskrivelse
 Med en **Vedlegg**-kontroll kan du åpne filer som er lagret på en datakilde så vel som slette filer fra en SharePoint-liste.
@@ -52,23 +46,29 @@ Med en **Vedlegg**-kontroll kan du åpne filer som er lagret på en datakilde s�
 **[OnSelect](properties-core.md)** – hvordan appen reagerer når brukeren klikker på et vedlegg.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
-**AccessibleLabel** – etiketten som leses av skjermleseren.
+**[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere. Skal beskrive formålet med vedleggene.
 
 **AddAttachmentText** – etiketteksten for koblingen som ble brukt til å legge til et nytt vedlegg.
 
-**[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
+**[BorderColor](properties-color-border.md)** – Fargen på kontrollens kantlinje.
 
-**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
+**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
-**[BorderThickness](properties-color-border.md)**  – tykkelsen på kontrollens kantlinje.
+**[BorderThickness](properties-color-border.md)** – Tykkelsen på kontrollens kantlinje.
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater tillegging og sletting av filer (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
+
+**[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
+
+**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
 **MaxAttachmentsText** – teksten som erstatter Legg til fil-koblingen når kontrollen inneholder maksimalt antall tillatte filer.
 
 **NoAttachmentsText** – informasjonstekst som vises til brukeren når det ikke er noen filer vedlagt.
+
+**[TabIndex](properties-accessibility.md)** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
 
 **[Synlig](properties-core.md)** – om kontrollen er synlig eller skjult.
 
@@ -90,4 +90,31 @@ Med en **Vedlegg**-kontroll kan du åpne filer som er lagret på en datakilde s�
 
     Vedlegg-feltet som er knyttet til SharePoint-listen vises i skjemaet.
 
-Lurer du på hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?
+[Finn ut hvordan du legger til og konfigurerer en kontroll].(../add-configure-controls.md)
+
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="color-contrast"></a>Fargekontrast
+Det må være tilstrekkelig fargekontrast mellom:
+* **ItemColor** og **ItemFill**
+* **ItemHoverColor** og **ItemHoverFill**
+* **ItemPressedColor** og **ItemPressedFill**
+* **AddedItemColor** og **AddedItemFill**
+* **RemovedItemColor** og **RemovedItemFill**
+* **ItemErrorColor** og **ItemErrorFill**
+* **AddAttachmentColor** og **Fyll**
+* **MaxAttachmentsColor** og **Fyll**
+* **NoAttachmentsColor** og **Fyll**
+
+Dette er i tillegg til [kravene for standard fargekontrast](../accessible-apps-color.md).
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+Følgende egenskaper må være til stede:
+* **[AccessibleLabel](properties-accessibility.md)**
+* **AddAttachmentsText**
+* **MaxAttachmentsText**
+* **NoAttachmentsText**
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
+* Fokusindikatorer må være godt synlige. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.

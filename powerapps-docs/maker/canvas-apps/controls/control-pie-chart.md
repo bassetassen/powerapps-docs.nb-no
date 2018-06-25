@@ -1,26 +1,23 @@
 ---
 title: 'Sektordiagram-kontrollen: referanse | Microsoft Docs'
 description: Informasjon om Sektordiagram-kontrollen, inkludert egenskaper og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 1388eac45e5086f677cb83c8db9593fe01a9819f
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: bda839765d797bf87590f037221b116bad781657
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995992"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31833681"
 ---
 # <a name="pie-chart-control-in-powerapps"></a>Sektordiagram-kontrollen i PowerApps
 En kontroll som viser relative verdier sammenlignet med hverandre.
@@ -28,15 +25,17 @@ En kontroll som viser relative verdier sammenlignet med hverandre.
 ## <a name="description"></a>Beskrivelse
 Legg til en **sektordiagram**-kontroll hvis du vil vise relative data fra en tabell som inneholder etikettene i kolonnen lengst til venstre og verdiene i den andre kolonnen fra venstre.
 
-## <a name="key-properties"></a>Nøkkelegenskaper
+Denne kontrollen er en gruppert kontroll som inneholder tre kontroller: en **[etikett](control-text-box.md)** for tittelen, diagramgrafikken og en **forklaring**.
+
+## <a name="chart-key-properties"></a>Nøkkelegenskaper for diagram
 **[Elementer](properties-core.md)** – kilden til dataene som vises i en kontroll, for eksempel et galleri, en liste eller et diagram.
 
 **ShowLabels** – angir om sektordiagrammet skal vise verdien hver av sektorene representerer.
 
-## <a name="additional-properties"></a>Tilleggsegenskaper
+## <a name="additional-chart-properties"></a>Egenskaper for flere diagram
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
-**[BorderStyle](properties-color-border.md)** – Om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
+**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
 **[BorderThickness](properties-color-border.md)** – tykkelsen til kontrollens kantlinje.
 
@@ -68,6 +67,8 @@ Legg til en **sektordiagram**-kontroll hvis du vil vise relative data fra en tab
 
 **[Størrelse](properties-text.md)** – skriftstørrelsen på teksten som vises på en kontroll.
 
+**[TabIndex](properties-accessibility.md)** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
+
 **[Synlig](properties-core.md)** – om kontrollen vises eller skjules.
 
 **[Bredde](properties-size-location.md)** – avstanden mellom kontrollens venstre og høyre kant.
@@ -91,3 +92,27 @@ Legg til en **sektordiagram**-kontroll hvis du vil vise relative data fra en tab
    
     **Sektordiagram**-kontrollen viser omsetningsdata for hvert produkt i forhold til de andre produktene.
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="color-contrast"></a>Fargekontrast
+Det må være tilstrekkelig fargekontrast mellom:
+* hvert element i **ItemColorSet**
+* hvert element i **ItemColorSet** og bakgrunnsfargen
+* **[Farge](properties-color-border.md)** og bakgrunnsfarge
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* Det må være en **[etikett](control-text-box.md)** rett før diagramgrafikken, som skal fungere som tittelen.
+
+    > [!NOTE]
+> Diagramgrafikk og **Forklaring** er skjult for brukere av skjermleseren. Som et alternativ presenteres en tabellform av dataene for dem. De kan også se gjennom knapper som velger dataene i diagrammet.
+
+### <a name="low-vision-support"></a>Støtte for nedsatt syn
+* Det må foreligge en **Forklaring**.
+* Du bør vurdere å sette **ShowLabels** til **sann**. Dette hjelper brukere med nedsatt syn til raskt å finne ut hva hver sektor representerer.
+* Du bør vurdere å sette **LabelPosition** til **LabelPosition.Outside**. Dette øker lesbarheten for etiketter på grunn av en mer konsekvent fargekontrast.
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
+
+    > [!NOTE]
+> Når tastaturbrukere navigerer til diagrammet, kan de gå gjennom knappene som velger dataene i diagrammet.

@@ -1,26 +1,23 @@
 ---
 title: 'Datovelger-kontrollen: referanse | Microsoft Docs'
 description: Informasjon, inkludert egenskaper og eksempler, om Datovelger-kontrollen
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: f2605680c7b6e8f7102fd3459230344863a93f55
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: fe6fc6527348c6d38ba1d7934efb50ea071154d7
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996147"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34583559"
 ---
 # <a name="date-picker-control-in-powerapps"></a>Datovelger-kontrollen i PowerApps
 En kontroll som brukeren kan klikke eller trykk på for å angi en dato.
@@ -41,13 +38,13 @@ Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](c
 **Språk** – angir språket som brukes til å formatere datoer, inklusive navnet på månedene. Hvis denne egenskapen ikke er angitt, bestemmes språket av brukerens enhetsinnstillinger.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
+**[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere.
+
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
 **[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
 **[BorderThickness](properties-color-border.md)** – tykkelsen til kontrollens kantlinje.
-
-**[FocusedBorderThickness](properties-color-border.md)**  – tykkelsen på kontrollens kantlinje når den har tastaturfokus.
 
 **[Farge](properties-color-border.md)** – fargen på teksten i kontrollen.
 
@@ -63,11 +60,19 @@ Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](c
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
+**[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
+
+**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
 **[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
+
+**IconFill** – forgrunnsfargen til datovelgerikonet.
+
+**IconBackground** – bakgrunnsfargen til datovelgerikonet.
 
 **[Kursiv](properties-text.md)** – om teksten i en kontroll er i kursiv.
 
@@ -85,7 +90,7 @@ Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](c
 
 **StartYear** – det første året som brukeren kan angi verdien for i en datovelger-kontroll.
 
-**[TabIndex](properties-accessibility.md)** – tilpasser kategorirekkefølgen ved kjøretid når den ikke er angitt som null.
+**[TabIndex](properties-accessibility.md)** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
 
 **[Synlig](properties-core.md)** – om kontrollen vises eller skjules.
 
@@ -100,14 +105,25 @@ Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](c
 
 ## <a name="example"></a>Eksempel
 1. Legg til en **Datovelger**-kontroll, og gi den navnet **Deadline**.
-   
+
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 2. Legg til en **[Etikett](control-text-box.md)**-kontroll, og angi **[Tekst](properties-core.md)**-egenskapen som denne formelen:
    <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
-   
+
     Vil du ha mer informasjon om **[DateDiff](../functions/function-dateadd-datediff.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
 3. Trykk på F5, velg en dato i **Deadline**, og klikk eller trykk på **OK**.
-   
+
     **[Etikett](control-text-box.md)**-kontrollen viser antall dager mellom dagens dato og datoen du valgte.
 4. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="color-contrast"></a>Fargekontrast
+* [Standardkrav for fargekontrast](../accessible-apps-color.md) gjelder.
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **[AccessibleLabel](properties-accessibility.md)** bør vises.
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
+* Fokusindikatorer må være godt synlige. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.

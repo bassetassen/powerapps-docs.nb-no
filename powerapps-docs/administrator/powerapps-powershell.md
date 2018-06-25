@@ -1,32 +1,25 @@
 ---
-title: PowerShell-støtte | Microsoft Docs
-description: Beskrivelse av ulike PowerShell-cmdleter og en gjennomgang av hvordan du installerer og kjører dem
-services: powerapps
-suite: powerapps
-documentationcenter: na
+title: PowerShell-støtte (forhåndsvisning) | Microsoft Docs
+description: Beskrivelse av ulike PowerShell-cmdleter og en gjennomgang av hvordan du installerer og kjører dem.
 author: jamesol-msft
 manager: kfile
-editor: ''
-tags: ''
-ms-topic: article
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 04/23/2018
+ms.component: pa-admin
+ms.topic: reference
+ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 69508b2127c5c919db4a334045c6eed3bb9374af
-ms.sourcegitcommit: 0a781b50a8551f2e61c22725ef1c43ba4fdf752a
+ms.openlocfilehash: 788f9ec1ce1ac8604606d2d2ad836a0cd12360d4
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552994"
 ---
 # <a name="powershell-support-for-powerapps-preview"></a>PowerShell-støtte for PowerApps (forhåndsversjon)
 Forhåndsversjonen av PowerShell-cmdleter for apputviklere og administratorer er lansert, og nå kan du automatisere mange av overvåkings- og administrasjonsoppgavene som det i dag bare er mulig å utføre manuelt på [PowerApps](https://web.powerapps.com) eller [ PowerApps-administrasjonssenteret](https://admin.powerapps.com).
 
 ## <a name="installation"></a>Installasjon
-Hvis du vil kjøre PowerShell-cmdleter for applagere, gjør du følgende:
+Hvis du vil kjøre PowerShell-cmdleter for app-utviklere, gjør du følgende:
 
 1. Last ned[PowerShell-skriptfilen](https://go.microsoft.com/fwlink/?linkid=872358).
 
@@ -47,19 +40,19 @@ Hvis du vil kjøre PowerShell-cmdleter for applagere, gjør du følgende:
     Import-Module .\Microsoft.PowerApps.PowerShell.psm1 -Force
     ```
 
-6. Før du får tilgang til kommandoene, må du oppgi legitimasjonen din ved å bruke følgende kommando. Denne legitimasjonen er gyldig i opptil ca. 8 timer, og deretter må du logge deg på igjen for å kunne fortsette å bruke cmdletene.
+6.  Det er et [kjent problem](https://powerusers.microsoft.com/t5/Administering-PowerApps/Getting-errors-when-I-try-to-import-the-preview-powerapps/td-p/109036) i dag som også kan kreve at du manuelt fjerner blokkeringen av PowerShell-filer ved hjelp av følgende kommando:
+
+    ```
+    dir . | Unblock-File
+    ```
+7. Før du får tilgang til kommandoene, må du oppgi legitimasjonen din ved å bruke følgende kommando. Denne legitimasjonen er gyldig i opptil ca. 8 timer, og deretter må du logge deg på igjen for å kunne fortsette å bruke cmdletene.
 
     ```
     Add-PowerAppsAccount
     ```
 
-7.  Det er et [kjent problem](https://powerusers.microsoft.com/t5/Administering-PowerApps/Getting-errors-when-I-try-to-import-the-preview-powerapps/td-p/109036) i dag som også kan kreve at du manuelt fjerner blokkeringen av PowerShell-filer ved hjelp av følgende kommando:
 
-    ```
-    dir . | Unblock-File
-    ```
-
-## <a name="powerapps-cmdlets-for-app-makers-preview"></a>PowerApps-cmdleter for apputviklere (forhåndsversjon)
+## <a name="powerapps-cmdlets-for-app-creators-preview"></a>PowerApps-cmdleter for app-utviklere (forhåndsversjon)
 
 ### <a name="prerequisite"></a>Forutsetning
 Brukere med en gyldig lisens for PowerApps kan utføre operasjoner i disse cmdletene, men de vil bare ha tilgang til ressurser (for eksempel apper, flyt osv.) som har blitt opprettet eller delt med dem.
@@ -77,6 +70,7 @@ Brukere med en gyldig lisens for PowerApps kan utføre operasjoner i disse cmdle
 | Les, oppdater og slett tilkoblingstillatelser | Get-ConnectionRoleAssignment <br> Set-ConnectionRoleAssignment <br> Remove-ConnectionRoleAssignment
 | Les og slett koblinger | Get-Connector <br> Remove-Connector
 | Les, oppdater og slett tillatelser for egendefinerte koblinger | Get-ConnectorRoleAssignment <br> Set-ConnectorRoleAssignment <br> Remove-ConnectorRoleAssignment
+
 
 > [!NOTE]
 > Bruk følgende kommandoer for å forstå syntaksen og se eksempler på de ulike cmdletene:
@@ -103,6 +97,13 @@ For å utføre administrasjonsoperasjonene i administrator-cmdletene må du ha f
 | Les og slett lerretsapper | Get-AdminApp <br> Remove-AdminApp
 | Les, oppdater og slett tillatelser for lerretsapper | Get-AdminAppRoleAssignment <br> Remove-AdminAppRoleAssignment <br> Set-AdminAppRoleAssignment <br> Set-AdminAppOwner
 | Les, oppdater og slett flyter | Get-AdminFlow <br> Enable-AdminFlow <br> Disable-AdminFlow <br> Remove-AdminFlow  <br> Remove-AdminFlowOwnerRole
+| Les og slett tilkoblinger | Get-AdminConnection <br> Remove-AdminConnection
+| Les, oppdater og slett tilkoblingstillatelser | Get-AdminConnectionRoleAssignment <br> Set-AdminConnectionRoleAssignment <br> Remove-AdminConnectionRoleAssignment
+| Å lese og slette egendefinerte koblinger | Get-AdminConnector <br> Remove-AdminConnector
+| Les, oppdater og slett tillatelser for egendefinerte koblinger | Get-AdminConnectorRoleAssignment <br> Set-AdminConnectorRoleAssignment <br> Remove-AdminConnectorRoleAssignment
+| Les PowerApps-brukerinnstillinger for en bruker samt bruker-appinnstillinger og varslinger | Get-AdminPowerAppsUserDetails
+| Å lese og slette en brukers Microsoft Flow-innstillinger, som ikke er synlige for brukeren, men som støtter kjøring av flyten | Get-AdminFlowUserDetails <br> Remove-AdminFlowUserDetails
+| Å opprette, lese, oppdatere og slette policyer for hindring av tap av data for organisasjonen | Get-AdminApiPolicy <br> Add-AdminApiPolicy <br> Remove-AdminApiPolicy <br> Set-AdminApiPolicy <br> Add-ConnectorToBusinessDataGroup <br>  Remove-ConnectorFromBusinessDataGroup
 
 > [!NOTE]
 > Bruk følgende kommandoer for å forstå syntaksen og se eksempler på de ulike cmdletene:

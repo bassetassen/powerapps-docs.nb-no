@@ -1,29 +1,23 @@
 ---
-title: Hurtiginnføring for å legge til data i en enhet i Common Data Service ved bruk av Power Query | Microsoft Docs
-description: Hurtiginnføring med trinnvise instruksjoner for å bruke Power Query til å legge til data i en ny eller eksisterende enhet i Common Data Service for apper fra en annen datakilde.
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Å legge til data i en enhet i Common Data Service for apper ved bruk av Power Query | Microsoft Docs
+description: Trinnvise instruksjoner for å bruke Power Query til å legge til data i en ny eller eksisterende enhet i Common Data Service for apper fra en annen datakilde.
 author: AFTOwen
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: cds
 ms.date: 03/21/2018
 ms.author: anneta
-ms.openlocfilehash: 77906602fad6708857a6c34f44d1bc3c7c258f6c
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.openlocfilehash: 60d1843e48a1dc1d310d877bcba67460da557993
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30998132"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168301"
 ---
-# <a name="quickstart-add-data-to-an-entity-in-the-common-data-service-by-using-power-query"></a>Hurtiginnføring: Å legge til data i en enhet i Common Data Service ved hjelp av Power Query
-I denne prosedyren oppretter du en enhet i [Common Data Service for apper](data-platform-intro.md), og fyller den enheten med data fra en OData-feed ved bruk av Power Query. Du kan bruke de samme teknikkene til å integrere data fra disse nettkildene og lokale kildene, blant annet:
+# <a name="add-data-to-an-entity-in-common-data-service-for-apps-by-using-power-query"></a>Å legge til data i en enhet i Common Data Service for apper ved bruk av Power Query
+I denne prosedyren oppretter du en enhet i [Common Data Service for apper](data-platform-intro.md), og fyller denne enheten med data fra en OData-feed ved bruk av Power Query. Du kan bruke de samme teknikkene til å integrere data fra disse nettkildene og lokale kildene, blant annet:
 
 * SQL Server
 * Salesforce
@@ -36,7 +30,7 @@ I denne prosedyren oppretter du en enhet i [Common Data Service for apper](data-
 
 Du kan også filtrere, transformere og kombinere data før du laster det inn i en ny eller eksisterende enhet.
 
-Hvis du ikke har en lisens for PowerApps, kan du [registrere deg gratis](../signup-for-powerapps.md).
+Hvis du ikke har en PowerApps-lisens, kan du [registrere deg gratis](../signup-for-powerapps.md).
 
 ## <a name="prerequisites"></a>Forutsetninger
 For å følge dette emnet, må du bytte til et [miljø](../canvas-apps/working-with-environments.md) der du kan opprette enheter.

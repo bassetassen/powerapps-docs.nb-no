@@ -1,29 +1,22 @@
 ---
 title: Å konfigurere miljøsikkerhet | Microsoft Docs
 description: Dette emnet forklarer hvordan du konfigurerer miljøsikkerhet.
-services: powerapps
-suite: powerapps
-documentationcenter: na
 author: manasmams
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 425600830a64652df7084a0222c02273a1607818
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: d9bd70acaacbbeda98c14337035a233b7c70c181
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995767"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168163"
 ---
 # <a name="configure-environment-security"></a>Å konfigurere miljøsikkerhet
-Common Data Service bruker en rollebasert sikkerhetsmodell for å hjelpe med å sikre tilgang til databasen. Dette emnet forklarer hvordan du oppretter sikkerhetsartefakter du trenger for å sikre en app. Brukeren kontrollerer kjøretidstilgang til data, og disse er adskilt fra Miljø-rollene som styrer miljøadministratorer og miljøskapere. Du kan se en oversikt over miljøer under [Oversikt over miljøer](environments-overview.md).
+Common Data Service bruker en rollebasert sikkerhetsmodell for å hjelpe med å sikre tilgang til databasen. Dette emnet forklarer hvordan du oppretter sikkerhetsartefaktene du trenger for å sikre en app. Brukeren kontrollerer kjøretidstilgang til data, og disse er adskilt fra miljørollene som styrer miljøadministratorer og miljøopprettere. Du kan se en oversikt over miljøer under [Oversikt over miljøer](environments-overview.md).
 
 ## <a name="assign-security-roles-to-users"></a>Å tilordne sikkerhetsroller til brukere
 Sikkerhetsroller kontrollerer en brukers tilgang til data gjennom et sett med tilgangsnivåer og tillatelser. Kombinasjonen av tilgangsnivåer og tillatelser som er inkludert i en bestemt sikkerhetsrolle, angir begrensninger på brukerens visning av data og brukerens samhandling med disse dataene.
@@ -36,23 +29,28 @@ Hvis du vil tilordne en bruker eller en sikkerhetsgruppe til en miljørolle, kan
 
 2. Velg **Sikkerhet**-fanen.
 
-3. Klikk på koblingen for å administrere miljørollene i Dynamics 365.
+3. Vis om brukeren allerede finnes i miljøet, ved å velge **vis listen over brukere i miljøet**.
+    
+    ![](./media/database-security/security-viewuser.png)
 
-    ![](./media/environment-admin/Security-Link-D365.png)
+4. I tilfelle brukeren ikke finnes kan du legge til brukeren fra administrasjonssenteret for PowerApps. Legg til brukeren ved å oppgi e-postadressen for brukeren, i organisasjonen, og velge **Legg til bruker**.
 
-4. Velg brukeren fra listen over brukere i miljøet.
+    ![](./media/database-security/security-adduser.png)
+
+    Vent noen minutter for å finne ut om brukeren er tilgjengelig i listen over brukere i miljøet.
+  
+5. Velg brukeren fra listen over brukere i miljøet.
 
     ![](./media/environment-admin/D365-Select-User.png)
 
-5. Tilordne rollen til brukeren.
+6. Tilordne rollen til brukeren.
 
     ![](./media/environment-admin/D365-Assign-Role.png)
 
     > [!NOTE]
     > Roller kan for øyeblikket bare tilordnes til brukerne. Vi jobber med ennå med å muligheten om å tilordne en roller til en sikkerhetsgruppe.
 
-6. Velg **OK** for å oppdatere tilordningene til miljørollen.
-
+7. Velg **OK** for å oppdatere tilordningene til miljørollen.
 
 ## <a name="predefined-security-roles"></a>Forhåndsdefinerte sikkerhetsroller
 PowerApps-miljøet inneholder forhåndsdefinerte sikkerhetsroller som gjenspeiler vanlige brukeroppgaver med tilgangsnivåer som er definert for å samsvare med målet for beste praksis for sikkerhet, for å gi tilgang til minimum mengde forretningsdata som kreves for å bruke appen.
@@ -70,7 +68,6 @@ PowerApps-miljøet inneholder forhåndsdefinerte sikkerhetsroller som gjenspeile
 - Miljøoppretter-rollen kan ikke bare opprette ressurser i et miljø, men de kan også distribuere appene de bygger i et miljø til andre brukere i organisasjonen. De kan dele appen med individuelle brukere. Du finner mer informasjon i [Dele en app i PowerApps](../maker/canvas-apps/share-app.md).
 
 - Brukerne som oppretter apper som kobles til databasen og som trenger å opprette eller oppdatere enheter og sikkerhetsroller, bør også tilordnes Systemtilpasser-rollen i tillegg til Miljøoppretter-rollen, da Miljøoppretter-rollen ikke har noen rettigheter i databasen.
-
 
 ## <a name="create-or-configure-a-custom-security-role"></a>Å opprette eller konfigurere en egendefinert sikkerhetsrolle
 Hvis appen er basert på en egendefinert enhet, må rettigheter angis eksplisitt før brukere kan arbeide i den. Hvis du vil gjøre dette, kan du velge et av disse alternativene.

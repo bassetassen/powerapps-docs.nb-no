@@ -1,26 +1,23 @@
 ---
 title: Å komme i gang med formler | Microsoft Docs
 description: Å bruke formler til å tilpasse en app.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: 076b9a67d700cc318491471182fe273b2edaaff9
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: e4c2f78fb00e726bd0b0bf3cde4fe4f42d40dddc
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997602"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330886"
 ---
 # <a name="get-started-with-formulas"></a>Å komme i gang med formler
 Konfigurer appen din med formler som ikke bare beregner verdier og utfører andre oppgaver (som de gjør i Excel) men som også responderer på inndata fra brukeren (som kreves av en app).
@@ -36,7 +33,7 @@ Dette emnet gir bare en oversikt over det å arbeide med formler. Bla gjennom [f
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-* [Registrer deg](../signup-for-powerapps.md) for PowerApps, [installer](http://aka.ms/powerappsinstall) det, åpne det, og logg deg på ved å oppgi samme legitimasjon som du brukte til å registrere deg.
+* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com) ved å angi samme legitimasjon som du brukte til å registrere deg.
 * Finn ut hvordan du [konfigurerer en kontroll](add-configure-controls.md) i PowerApps.
 
 ## <a name="show-a-simple-value"></a>Å vise en enkel verdi

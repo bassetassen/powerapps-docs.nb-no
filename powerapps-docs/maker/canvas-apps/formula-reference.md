@@ -1,26 +1,23 @@
 ---
 title: Funksjoner, signaler og opplistinger | Microsoft Docs
 description: Referanseinformasjon for funksjoner, signaler og opplistinger i PowerApps.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 08/28/2017
+ms.topic: reference
+ms.component: canvas
+ms.date: 06/05/2018
 ms.author: gregli
-ms.openlocfilehash: 3ceb9eae42e88e7cfb78492f9e58812481a0881d
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.openlocfilehash: af089f81b8fd96ec022fe32495cb14f2827f28b5
+ms.sourcegitcommit: 045c96df42405c60c7675edbadac93455270a021
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30998177"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822585"
 ---
 # <a name="formula-reference-for-powerapps"></a>Formelreferanse for PowerApps
 Formler kombinerer mange elementer.  Dette er listet opp under:
@@ -223,6 +220,8 @@ Andre elementer omfatter:
 
 **[Not](functions/function-logicals.md)** – boolsk logikk (NOT).  Returnerer **sann** hvis argumentet er **usant**, og returnerer **usann** hvis argumentet er **sant**.  Du kan også bruke [**!**-operatoren](functions/operators.md).
 
+**[Notify](functions/function-showerror.md)** – viser en bannermelding til brukeren.
+
 **[Now](functions/function-now-today-istoday.md)** – returnerer gjeldende dato-/klokkeslett-verdi.
 
 ## <a name="o"></a>O
@@ -284,8 +283,6 @@ Andre elementer omfatter:
 **[Set](functions/function-set.md)** – angir verdien til en global variabel.
 
 **[ShowColumns](functions/function-table-shaping.md)** – returnerer en tabell med bare valgte kolonner.
-
-**[ShowError](functions/function-showerror.md)** – viser en feilmelding til brukeren.
 
 **[Shuffle](functions/function-shuffle.md)** – omorganiserer postene i en tabell i tilfeldig rekkefølge.
 

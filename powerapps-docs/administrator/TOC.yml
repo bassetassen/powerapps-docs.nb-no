@@ -38,6 +38,8 @@
       href: admin-manage-apps.md
     - name: Flytte en app mellom tenanter eller miljøer
       href: environment-and-tenant-migration.md
+    - name: Å eksportere og importere ressurser
+      href: export-import-packages.md
     - name: Svare på DSR-forespørsler
       items:
         - name: Systemgenererte logger

@@ -1,25 +1,22 @@
 ---
 title: Å vise tekst og formatere en dato eller et klokkeslett | Microsoft Docs
 description: Å legge til og formatere datoer og klokkeslett ved hjelp av PowerApps
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: AFTOwen
-manager: anneta
+manager: kfile
 editor: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/16/2016
 ms.author: anneta
-ms.openlocfilehash: 98bd76540e4e4d167535bd66ff556ef343ef7ef6
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: faa8db15596dc0da0d5b5638f5dd9c334517fc7c
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997502"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330955"
 ---
 # <a name="show-text-and-format-dates-and-times-in-powerapps"></a>Å vise tekst og formatere datoer og klokkeslett i PowerApps
 Legg til datoer og klokkeslett, og formater dem for å vise det riktige detaljnivået eller for å gjenspeile de nasjonale innstillingene. Å beregne tidsrommet mellom to datoer, eller beregne en dato som er en viss tid før eller etter en dato du angir. Konverter datoer til eller fra separate verdier for dager, måneder og år, og konvertere klokkeslett til eller fra separate verdier for timer, minutter og sekunder.
@@ -28,7 +25,7 @@ For eksempel kan du legge til data fra brukere om lagerbeholdning eller kundemø
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-* [Registrer deg](../signup-for-powerapps.md) for PowerApps, [installer](http://aka.ms/powerappsinstall) det, åpne det, og logg deg på ved å oppgi samme legitimasjon som du brukte til å registrere deg.
+* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com) ved å angi samme legitimasjon som du brukte til å registrere deg.
 * Opprett en app eller åpne en eksisterende app i PowerApps.
 * Finn ut hvordan du kan [konfigurere en kontroll](add-configure-controls.md) i PowerApps.
 

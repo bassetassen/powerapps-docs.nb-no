@@ -1,26 +1,23 @@
 ---
 title: Lokale datagatewayer i Microsoft Docs
 description: Referanseinformasjon, inkludert installasjon og feilsøking, for lokale datagatewayer
-services: ''
-suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: anneta
+author: aftowen
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/20/2017
-ms.author: sharik
-ms.openlocfilehash: 1b17c7007ad87fa2a1801473a977fd8ec94ffdea
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: anneta
+ms.openlocfilehash: 2c754fa8e479494ae1002e5339d2d8d5eeb2480f
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997862"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330449"
 ---
 # <a name="understand-on-premises-data-gateways-for-microsoft-powerapps"></a>Lokale datagatewayer for Microsoft PowerApps
 ## <a name="installation-and-configuration"></a>Installasjon og konfigurasjon
@@ -29,7 +26,7 @@ ms.locfileid: "30997862"
 Minimum:
 
 * .NET 4.5 Framework
-* 64-bitersversjon av Windows 7 eller Windows Server 2008 R2 (eller nyere)
+* 64-biters versjon av Windows 7 eller Windows Server 2008 R2 (eller nyere)
 
 Anbefalt:
 
@@ -40,15 +37,15 @@ Anbefalt:
 Vurderinger angående design:
 
 * Du kan ikke installere en gateway på en domenekontroller.
-* Du bør ikke installere en gateway på en datamaskin, som f.eks. en bærbar datamaskin, som kan bli slått av, gå i dvale, eller som ikke er tilkoblet Internett, ettersom gatewayen ikke kan kjøre under noen av disse omstendighetene. I tillegg kan gatewayens ytelse svekkes over et trådløst nettverk.
+* Du bør ikke installere en gateway på en datamaskin, for eksempel en bærbar datamaskin, som kan bli slått av, gå i dvale, eller som ikke er tilkoblet Internett, siden gatewayen ikke kan kjøre under noen av disse omstendighetene. I tillegg kan gatewayens ytelse svekkes over et trådløst nettverk.
 
 **Å installere en gateway**
 
 1. [Last ned installasjonsprogrammet](http://go.microsoft.com/fwlink/?LinkID=820931), og kjør det.
 
-    ![Å kjøre installasjonsprogrammet](./media/gateway-reference/run-installer.png)
+    ![Kjør installasjonsprogrammet](./media/gateway-reference/run-installer.png)
 
-2. Klikk eller trykk på **Neste** på den første skjermen i installasjonsveiviseren, for å bekrefte påminnelsen om installasjon av en gateway på en bærbar datamaskin.
+2. Klikk eller trykk på **Neste** på det første skjermbildet i installasjonsveiviseren for å bekrefte påminnelsen om installasjon av en gateway på en bærbar datamaskin.
 
     ![Påminnelsesskjerm](./media/gateway-reference/laptop-reminder.png)
 
@@ -62,19 +59,19 @@ Vurderinger angående design:
 
 6. Klikk eller trykk på alternativet for å registrere en ny gateway eller for å overføre, gjenopprette eller ta over en eksisterende gateway, og klikk eller trykk deretter på **Neste**.
 
-    ![Å velge ny eller eksisterende](./media/gateway-reference/new-existing.png)
+    ![Velg ny eller eksisterende](./media/gateway-reference/new-existing.png)
 
-   * Når du skal konfigurere en gateway, skriver du inn et **navn** for gatewayen og en **gjenopprettingsnøkkel**, klikker eller trykker på **Konfigurer**, og klikker eller trykker deretter på **Lukk**.
+   * Når du skal konfigurere en gateway, skriver du inn et **navn** for gatewayen og en **gjenopprettingsnøkkel**. Klikk eller trykk på **Konfigurer**, og klikk eller trykk deretter på **Lukk**.
 
-       ![Å konfigurere en ny gateway](./media/gateway-reference/configure-new.png)
+       ![Konfigurasjon av ny gateway](./media/gateway-reference/configure-new.png)
 
        Angi en gjenopprettingsnøkkel som inneholder minst åtte tegn, og oppbevar den på et sikkert sted. Du trenger denne nøkkelen hvis du vil overføre, gjenopprette eller ta over gatewayen den hører til.
 
-   * Når du vil overføre, gjenopprette eller ta over en eksisterende gateway, skriver du inn navnet på gatewayen og den tilhørende gjenopprettingsnøkkelen, klikker eller trykker på **Konfigurer**, og følger deretter eventuelle ytterligere instruksjoner.
+   * Når du vil overføre, gjenopprette eller ta over en eksisterende gateway, skriver du inn navnet på gatewayen og den tilhørende gjenopprettingsnøkkelen, deretter klikker eller trykker du på **Konfigurer** og følger eventuelle ytterligere instruksjoner.
 
-       ![Å gjenopprette en eksisterende gateway](./media/gateway-reference/recover-existing.png)
+       ![Gjenoppretting av eksisterende gateway](./media/gateway-reference/recover-existing.png)
 
-**Å starte gatewayen på nytt**
+**Start gatewayen på nytt**
 
 Gatewayen kjøres som en Windows-tjeneste, så du kan starte og stoppe den på flere måter. Du kan for eksempel åpne en ledetekst med høyere tillatelser på den maskinen gatewayen kjører på, og deretter kjøre hvilken som helst av disse kommandoene:
 
@@ -84,11 +81,11 @@ Gatewayen kjøres som en Windows-tjeneste, så du kan starte og stoppe den på f
 * Kjør denne kommandoen for å starte tjenesten:<br>
   **net start PBIEgwService**
 
-**Å konfigurere en brannmur eller en proxy**
+**Konfigurasjon av brannmur eller proxy**
 
-Du finner mer informasjon om hvordan du angir proxy-informasjon for gatewayen under [Konfigurere proxy-innstillinger](https://docs.microsoft.com/power-bi/service-gateway-proxy).
+Du finner mer informasjon om hvordan du angir proxy-informasjon for gatewayen under [Konfigurasjon av proxy-innstillinger](https://docs.microsoft.com/power-bi/service-gateway-proxy).
 
-Du kan bekrefte om brannmuren eller proxyen kanskje blokkerer tilkoblinger ved å kjøre den følgende kommandoen fra en PowerShell-ledetekst. Denne kommandoen tester tilkoblingen til Azure Service Bus. Dette tester kun nettverkstilkoblingen og har ikke noe å gjøre med den skybaserte tjenesten eller gatewayen. Den hjelper deg å finne ut om maskinen din faktisk kan koble til Internett.
+Du kan bekrefte om brannmuren eller proxyen kanskje blokkerer tilkoblinger, ved å kjøre den følgende kommandoen fra en PowerShell-ledetekst. Denne kommandoen tester tilkoblingen til Azure Service Bus. Dette tester bare nettverkstilkoblingen og har ikke noe å gjøre med den skybaserte tjenesten eller gatewayen. Den hjelper deg med å finne ut om maskinen din faktisk kan kobles til Internett.
 
 **Test-NetConnection -ComputerName watchdog.servicebus.windows.net -Port 9350**
 
@@ -103,11 +100,11 @@ Resultatet skal minne om dette eksempelet. Hvis **TcpTestSucceeded** ikke er **s
     PingReplyDetails (RTT) : 0 ms
     TcpTestSucceeded       : True
 
-Hvis du vil være grundig, kan du skifte ut verdiene for **ComputerName** og **Port** med verdiene som står oppført under **Konfigurere porter** senere i dette emnet.
+Hvis du vil være grundig, kan du skifte ut verdiene for **ComputerName** og **Port** med verdiene som står oppført under **Konfigurasjon av porter** senere i dette emnet.
 
 Brannmuren kan også blokkere tilkoblingene som Azure Service Bus foretar til Azure-datasentrene. Hvis dette er tilfellet, bør du hviteliste (oppheve blokkeringen for) IP-adressene for regionen din for disse datasentrene. Du finner en liste over Azure-IP-adresser [her](https://www.microsoft.com/download/details.aspx?id=41653).
 
-**Å konfigurere porter**
+**Konfigurasjon av porter**
 
 Gatewayen oppretter en utgående tilkobling til Azure Service Bus. Den kommuniserer på utgående porter: TCP 443 (standard), 5671, 5672, 9350 til og med 9354. Gatewayen krever ikke innkommende porter.
 
@@ -116,7 +113,7 @@ Finn ut mer om [hybridløsninger](https://azure.microsoft.com/documentation/arti
 Det er anbefalt at du hvitelister IP-adressene for regionen din i brannmuren. Du kan laste ned [IP-listen for Microsoft Azure Datacenter](https://www.microsoft.com/download/details.aspx?id=41653), som oppdateres ukentlig.
 
 > [!NOTE]
-> På IP-listen for Azure Datacenter er adressene oppført i [CIDR-notasjon](http://whatismyipaddress.com/cidr). For eksempel, 10.0.0.0/24 betyr ikke 10.0.0.0 til og med 10.0.0.24.
+> På IP-listen for Azure Datacenter er adressene oppført i [CIDR-notasjon](http://whatismyipaddress.com/cidr). 10.0.0.0/24 betyr for eksempel ikke 10.0.0.0 til og med 10.0.0.24.
 
 Her er en liste over de fullstendig kvalifiserte domenenavnene som brukes av gatewayen.
 
@@ -133,15 +130,19 @@ Her er en liste over de fullstendig kvalifiserte domenenavnene som brukes av gat
 
 **Påloggingskonto**
 
-Brukere logger seg på med en jobb- eller skolekonto. Dette er organisasjonskontoen din. Hvis du registrerte deg for å få et Office 365-tilbud og ikke oppga den faktiske jobbkontoen din, kan den se ut som nancy@contoso.onmicrosoft.com. Kontoen din, i en skytjeneste, er lagret hos en tenant i Azure Active Directory (AAD). I de fleste tilfeller vil ADD-kontoens UPN samsvare med e-postadressen.
+Brukere logger seg på med en jobb- eller skolekonto. Dette er organisasjonskontoen din. Hvis du registrerte deg for å få et Office 365-tilbud og ikke oppga den faktiske jobbkontoen din, kan den se ut som nancy@contoso.onmicrosoft.com. Kontoen din, i en skytjeneste, er lagret i en tenant i Azure Active Directory (AAD). I de fleste tilfeller vil ADD-kontoens UPN samsvare med e-postadressen.
 
 **Windows-tjenestekonto**
 
-Den lokale gatewaykontoen er konfigurert for å bruke *NT SERVICE\PBIEgwService* for legitimasjonen for Windows-tjenesten. Den har som standard rettigheten for Logg på som en tjeneste. Dette er i konteksten til maskinen du installerer gatewayen på.
+Den lokale gatewaykontoen er konfigurert til å bruke *NT SERVICE\PBIEgwService* for legitimasjonen for Windows-tjenesten. Den har som standard rettigheten for pålogging som en tjeneste. Dette er i sammenheng med maskinen du installerer gatewayen på.
 
-Dette er ikke konten som brukes til å koble til de lokale datakildene eller jobb- eller skolekontoen du bruker til å logge på skytjenesten.
+Dette er ikke konten som brukes til å koble til de lokale datakildene eller jobb- eller skolekontoen, som du bruker til å logge deg på skytjenesten.
 
 Hvis det oppstår problemer med proxy-serveren på grunn av godkjenning, kan du endre Windows-tjenestekontoen til en domenebrukerkonto eller en administrert tjeneste-konto som beskrevet av [proxy-konfigurasjonen](https://docs.microsoft.com/power-bi/service-gateway-proxy#changing-the-gateway-service-account-to-a-domain-user).
+
+## <a name="tenant-level-administration"></a>Administrasjon på tenantnivå 
+
+Det finnes for øyeblikket ikke ett enkelt sted der tenantadministratorer kan behandle alle gatewayene som andre brukere har installert og konfigurert.  Hvis du er en tenantadministrator, anbefaler vi at du ber brukerne i organisasjonen om å legge deg til som en administrator for hver gatewayer de installerer. Dette lar deg administrere alle gatewayer i organisasjonen, gjennom siden for gatewayinnstillinger eller via [PowerShell-kommandoer](https://docs.microsoft.com/power-bi/service-gateway-high-availability-clusters#powershell-support-for-gateway-clusters).
 
 ## <a name="frequently-asked-questions"></a>Ofte stilte spørsmål
 #### <a name="general"></a>Generelt
@@ -156,10 +157,10 @@ Hvis det oppstår problemer med proxy-serveren på grunn av godkjenning, kan du 
 * DB2
 
 **Spørsmål:** Trenger jeg en gateway for datakilder i skyen, som for eksempel SQL Azure?  
-**Svar:** Nei. En gateway kobles kun til lokale datakilder.
+**Svar:** Nei. En gateway kobles bare til lokale datakilder.
 
 **Spørsmål:** Hva heter den faktiske Windows-tjenesten?  
-**Svar:** Under Tjenester, heter gatewayen **Power BI Enterprise Gateway Service**.
+**Svar:** Under Tjenester heter gatewayen **Power BI Enterprise Gateway Service**.
 
 **Spørsmål:** Finnes det innkommende tilkoblinger fra gatewayen til skyen?  
 **Svar:** Nei. Gatewayen bruker utgående tilkoblinger til Azure Service Bus.
@@ -171,7 +172,7 @@ Hvis det oppstår problemer med proxy-serveren på grunn av godkjenning, kan du 
 **Svar:** Nei. Gatewayen vil koble til datakilden ved hjelp av tilkoblingsinformasjonen som ble angitt. Tenk på gatewayen som et klientprogram i denne sammenhengen. Den vil bare kunne koble til det servernavnet som ble angitt.
 
 **Spørsmål:** Hva er ventetiden for å kjøre spørringer til en datakilde fra gatewayen? Hvilken arkitektur er best?  
-**Svar:** For å redusere nettverksventetiden bør gatewayen installeres så nær datakilden som mulig. Hvis du kan installere gatewayen på den faktiske datakilden, vil dette minimere ventetiden. Ta også hensyn til datasentre. For eksempel, hvis tjenesten bruker datasenteret USA, vest og du bruker en Azure VM som vert for SQL Server, bør du også ha Azure VM i USA, vest. Dette minimerer ventetiden og du unngår kostnader for utgående trafikk på Azure VM.
+**Svar:** For å redusere nettverksventetiden bør gatewayen installeres så nær datakilden som mulig. Hvis du kan installere gatewayen på den faktiske datakilden, vil dette minimere ventetiden. Ta også hensyn til datasentre. For eksempel, hvis tjenesten bruker datasenteret USA, vest og du bruker en Azure VM som vert for SQL Server, bør du også ha Azure VM i USA, vest. Dette minimerer ventetiden, og du unngår kostnader for utgående trafikk på Azure VM.
 
 **Spørsmål:** Er det noen krav til nettverkets båndbredde?  
 **Svar:** Det anbefales at nettverkstilkoblingen har god gjennomstrømming. Alle miljøer er forskjellige, og mengden data som sendes vil påvirke resultatene. Bruk av ExpressRoute kan bidra til å garantere et gjennomstrømmingsnivå mellom de lokale datasentrene og Azure-datasentrene.
@@ -185,10 +186,10 @@ Du kan bruke tredjepartsverktøyet [Azure Speed Test-appen](http://azurespeedtes
 **Svar:** Dette gjøres ved hjelp av Azure Service Bus. Hvis du vil ha mer informasjon, kan du se [Slik fungerer det](gateway-reference.md#how-the-gateway-works).
 
 **Spørsmål:** Hvor lagres legitimasjonen min?  
-**Svar:** Legitimasjonen du legger inn for en datakilde lagres i kryptert form i gatewayens skytjeneste. Legitimasjonen dekrypteres i den lokale gatewayen.
+**Svar:** Legitimasjonen du legger inn for en datakilde, lagres i kryptert form i gatewayens skytjeneste. Legitimasjonen dekrypteres i den lokale gatewayen.
 
 **Spørsmål:** Kan jeg plassere gatewayen i et perimeternettverk (også kjent som DMZ, demilitarisert sone, og skjermet delnett)?  
-**Svar:** Gatewayen krever tilkobling til datakilden. Hvis datakilden ikke er i perimeternettverket, er det ikke sikkert at gatewayen kan koble til den. For eksempel kan ikke datamaskinen som kjører SQL Server være i perimeternettverket, og du kan ikke koble til denne datamaskinen fra perimeternettverket. Hvis du plasserer gatewayen i perimeternettverket, kan ikke gatewayen nå datamaskinen som kjører SQL Server.
+**Svar:** Gatewayen krever tilkobling til datakilden. Hvis datakilden ikke er i perimeternettverket, er det ikke sikkert at gatewayen kan koble til den. For eksempel kan ikke datamaskinen som kjører SQL Server, være i perimeternettverket, og du kan ikke koble til denne datamaskinen fra perimeternettverket. Hvis du plasserer gatewayen i perimeternettverket, kan ikke gatewayen nå datamaskinen som kjører SQL Server.
 
 #### <a name="high-availabilitydisaster-recovery"></a>Høy tilgjengelighet / nødgjenoppretting
 **Spørsmål:** Foreligger det noen planer for å muliggjøre scenarioer med høy tilgjengelighet med gatewayen?  
@@ -214,7 +215,7 @@ Du kan også se på verktøyene datakilden har for sporing av spørringer. Du ka
 
 Når en bruker samhandler med et element som er tilkoblet en lokal datakilde:  
 
-1. Skytjenesten oppretter en spørring, og sender spørringen sammen med den krypterte legitimasjonen for datakilden til køen for at gatewayen skal behandle den.
+1. Skytjenesten oppretter en spørring og sender spørringen, sammen med den krypterte legitimasjonen for datakilden, til køen for at gatewayen skal behandle den.
 
 2. Gatewayens skytjeneste analyserer spørringen og sender forespørselen til [Azure Service Bus](https://azure.microsoft.com/documentation/services/service-bus/).
 
@@ -227,8 +228,8 @@ Når en bruker samhandler med et element som er tilkoblet en lokal datakilde:
 6. Datakilden sender resultatene tilbake til gatewayen og deretter til skytjenesten. Deretter brukes resultatene av tjenesten.
 
 ## <a name="troubleshooting"></a>Feilsøking
-#### <a name="update-to-the-latest-version"></a>Å oppdatere til den nyeste versjonen
-Hvis gateway-versjonen er utdatert, kan mange problemer oppstå.  Det er generelt god praksis å sørge for at du bruker den nyeste versjonen.  Hvis du ikke har oppdatert gatewayen på en måned eller mer, bør du vurdere å installere den nyeste versjonen og se om du klarer å reprodusere problemet.
+#### <a name="update-to-the-latest-version"></a>Oppdatering til den nyeste versjonen
+Hvis gateway-versjonen er utdatert, kan det oppstå mange problemer.  Det er generelt god praksis å sørge for at du bruker den nyeste versjonen.  Hvis du ikke har oppdatert gatewayen på en måned eller mer, bør du vurdere å installere den nyeste versjonen og se om du klarer å reprodusere problemet.
 
 #### <a name="error-failed-to-add-user-to-group---2147463168---pbiegwservice---performance-log-users---"></a>Feil: Kan ikke legge til brukeren i gruppen.  (-2147463168   PBIEgwService   Performance Log Users   )
 Du kan få denne feilen hvis du prøver å installere gatewayen på en domenekontroller som ikke støttes. Du må distribuere gatewayen på en maskin som ikke er en domenekontroller.

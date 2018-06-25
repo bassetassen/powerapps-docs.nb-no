@@ -1,26 +1,18 @@
 ---
 title: Systemkrav, grenser og konfigurasjonsverdier | Microsoft Docs
 description: Systemkrav, grenser og konfigurasjonsverdier for PowerApps
-services: ''
-suite: PowerApps
-documentationcenter: na
 author: skjerland
-manager: kfile
-editor: ''
-tags: ''
 ms.service: PowerApps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/07/2018
 ms.author: sharik
-ms.openlocfilehash: 84115ea98ec5d7d0fd60d36fc0cd3cc9196980ff
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: ffe1a027e378da3f9c505f4980681a4b5a11dbda
+ms.sourcegitcommit: 68e2c696397f3002dd14e72a4c2054a603a5e2d7
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997312"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "34851757"
 ---
 # <a name="system-requirements-limits-and-configuration-values"></a>Systemkrav, grenser og konfigurasjonsverdier
 Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og konfigurasjonsverdier for PowerApps.
@@ -41,7 +33,7 @@ Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og kon
 | Mozilla Firefox (siste versjon) |Windows 7 SP1, 8.1 og 10 <br> Android 5 eller senere <br>iOS 8 eller senere <br>macOS |
 | Apple Safari (siste versjon) |iOS 8 eller senere <br>macOS |
 
-## <a name="supported-browsers-for-powerapps-studio-for-web"></a>Nettlesere som støttes for PowerApps Studio for nett
+## <a name="supported-browsers-for-powerapps-studio"></a>Nettlesere som støttes for PowerApps Studio
 | **Nettleser** | **Operativsystem** |
 | --- | --- |
 | Google Chrome (siste versjon)<br>(anbefalt) |Windows 7 SP1, 8.1 og 10 <br>macOS |
@@ -66,16 +58,20 @@ Samtaler fra en API som er koblet til via en app (for eksempel SQL-API-en, eller
 
 Du bør bruke disse adressene hvis du for eksempel må hviteliste IP-adresser for en Azure SQL-database.
 
+>   [!IMPORTANT] 
+>   Hvis du har eksisterende konfigurasjoner, kan du oppdatere dem så snart som mulig før 1. september 2018, slik at de inkluderer og samsvarer med IP-adresser i denne listen for områdene der PowerApps-apper finnes.
+
 | Område | Utgående IP |
 | --- | --- |
-| Asia |52.163.91.227, 52.163.89.40, 52.163.89.65, 52.163.95.29, 13.75.89.9, 13.75.91.198, 13.75.92.202, 13.75.92.124 |
-| Australia |13.77.7.172, 13.70.191.49, 13.70.189.7, 13.70.187.251, 13.70.82.210, 13.73.203.158, 13.73.207.42, 13.73.205.35 |
-| Canada |52.233.30.222, 52.233.30.148, 52.233.30.199, 52.233.29.254, 52.232.130.205, 52.229.126.118, 52.229.126.28, 52.229.123.56 |
-| Europa |52.166.241.149, 52.166.244.232, 52.166.245.173, 52.166.243.169, 40.69.45.126, 40.69.45.11, 40.69.45.93, 40.69.42.254 |
-| India |52.172.54.172, 52.172.55.107, 52.172.55.84, 52.172.51.70, 52.172.158.185, 52.172.159.100, 52.172.158.2, 52.172.155.245 |
-| Japan |104.214.137.186, 104.214.139.29, 104.214.140.23, 104.214.138.174, 13.78.85.193, 13.78.84.73, 13.78.85.200, 13.78.86.229 |
-| USA |104.43.232.28, 104.43.232.242, 104.43.235.249, 104.43.234.211, 52.160.93.247, 52.160.91.66, 52.160.92.131, 52.160.95.100, 40.117.101.91, 40.117.98.246, 40.117.101.120, 40.117.100.191 |
-| USA (tidlig tilgang) |52.161.26.191, 52.161.27.42, 52.161.29.40, 52.161.26.33, 13.66.213.240, 13.66.214.51, 13.66.210.166, 13.66.213.29 |
+| Asia | 13.75.36.64 - 13.75.36.79, 13.67.8.240 - 13.67.8.255, 52.175.23.169, 52.187.68.19, 52.163.91.227, 52.163.89.40, 52.163.89.65, 52.163.95.29, 13.75.89.9, 3.75.91.198, 13.75.92.202, 13.75.92.124  |
+| Australia  | 13.70.72.192 - 13.70.72.207, 13.72.243.10, 13.77.50.240 - 13.77.50.255, 13.70.136.174, 13.77.7.172, 13.70.189.7, 13.70.187.251, 13.70.82.210, 13.73.203.158, 13.73.207.42, 13.73.205.35, 13.70.191.49 |
+| Canada | 13.71.170.208 - 13.71.170.223, 13.71.170.224 - 13.71.170.239, 52.237.24.126, 40.69.106.240 - 40.69.106.255, 52.242.35.152, 52.233.30.222, 52.233.30.148, 52.233.30.199, 52.233.29.254, 52.232.130.205, 52.229.126.118, 52.229.126.28, 52.229.123.56 |
+| Europa | 13.69.227.208 - 13.69.227.223, 52.178.150.68, 13.69.64.208 - 13.69.64.223, 52.174.88.118, 52.166.241.149, 52.166.244.232, 52.166.245.173, 52.166.243.169, 40.69.45.126, 40.69.45.11, 40.69.45.93, 40.69.42.254 |
+| India  | 104.211.81.192 - 104.211.81.207, 52.172.211.12, 40.78.194.240 - 40.78.194.255, 13.71.125.22, 104.211.146.224 - 104.211.146.239, 104.211.189.218, 52.172.54.172, 52.172.55.107, 52.172.55.84, 52.172.51.70, 52.172.158.185, 52.172.159.100, 52.172.158.2, 52.172.155.245 |
+| Japan | 13.78.108.0 - 13.78.108.15, 13.71.153.19, 40.74.100.224 - 40.74.100.239, 104.215.61.248, 104.214.137.186, 104.214.139.29, 104.214.140.23, 104.214.138.174, 13.78.85.193, 13.78.84.73, 13.78.85.200, 13.78.86.229 |
+| Storbritannia | 51.140.148.0 - 51.140.148.15, 51.140.80.51, 51.140.211.0 - 51.140.211.15, 51.141.47.105, 51.140.80.51, 51.141.47.105 |
+| USA | 13.89.171.80 - 13.89.171.95, 52.173.245.164, 40.71.11.80 - 40.71.11.95, 40.71.249.205, 40.70.146.208 - 40.70.146.223, 52.232.188.154, 52.162.107.160 - 52.162.107.175, 52.162.242.161, 40.112.243.160 - 40.112.243.175, 104.42.122.49, 104.43.232.28, 104.43.232.242, 104.43.235.249, 104.43.234.211, 52.160.93.247, 52.160.91.66, 52.160.92.131, 52.160.95.100, 40.117.101.91, 40.117.98.246, 40.117.101.120, 40.117.100.191 |
+| USA (tidlig tilgang) | 13.71.195.32 - 13.71.195.47, 52.161.102.22, 13.66.140.128 - 13.66.140.143, 52.183.78.157, 52.161.26.191, 52.161.27.42, 52.161.29.40, 52.161.26.33, 13.66.213.240, 13.66.214.51, 13.66.210.166, 13.66.213.29 |
 
 ## <a name="required-services"></a>Nødvendige tjenester
 Denne listen identifiserer alle tjenester som PowerApps Studio kommuniserer med, og deres bruksområder. Nettverket må **ikke** blokkere disse tjenestene.

@@ -1,26 +1,23 @@
 ---
 title: 'Liste-kontrollen: referanse | Microsoft Docs'
 description: Informasjon om Liste-kontrollen, inkludert egenskaper og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 71f3493064e7b877a501f9b91f93adedb0c68f6a
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 24fc5523b2f1d3cced7cdf4af8c30c65d28757a2
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996487"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31837876"
 ---
 # <a name="list-box-control-in-powerapps"></a>Liste-kontrollen i PowerApps
 En liste der brukeren kan velge ett eller flere elementer.
@@ -36,25 +33,29 @@ En liste der brukeren kan velge ett eller flere elementer.
 [!INCLUDE [long-items](../../../includes/long-items.md)]
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
+**[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere.
+
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
 **[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
 **[BorderThickness](properties-color-border.md)** – tykkelsen til kontrollens kantlinje.
 
-**[FocusedBorderThickness](properties-color-border.md)**  – tykkelsen på kontrollens kantlinje når den har tastaturfokus.
-
-**[Farge](properties-color-border.md)**  – fargen på teksten i kontrollen.
+**[Farge](properties-color-border.md)** – fargen på teksten i kontrollen.
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
 
 **[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
 
 **[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
+
+**[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
+
+**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
@@ -64,9 +65,9 @@ En liste der brukeren kan velge ett eller flere elementer.
 
 **[HoverBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når brukeren holder musepekeren på denne kontrollen.
 
-**[HoverColor](properties-color-border.md)** – fargen på teksten i en kontroll når brukeren holder musepekeren over den.
+**[HoverColor](properties-color-border.md)** – Fargen på teksten i en kontroll når brukeren holder musepekeren over den.
 
-**[HoverFill](properties-color-border.md)**  – bakgrunnsfargen for en kontroll når brukeren holder musepekeren over den.
+**[HoverFill](properties-color-border.md)** – bakgrunnsfargen for en kontroll når brukeren holder musepekeren over den.
 
 **[Kursiv](properties-text.md)** – om teksten i en kontroll er i kursiv.
 
@@ -102,13 +103,13 @@ En liste der brukeren kan velge ett eller flere elementer.
 
 **[Størrelse](properties-text.md)** – skriftstørrelsen på teksten som vises på en kontroll.
 
-**[Gjennomstrekning](properties-text.md)** – om det vises en linje gjennom teksten som vises på en kontroll.
+**[Strikethrough](properties-text.md)** – om det vises en linje gjennom teksten som vises på en kontroll.
 
-**[TabIndex](properties-accessibility.md)** – tilpasser fanerekkefølgen for kontroller ved kjøretid når de er angitt som en annen verdi enn null.
+**[TabIndex](properties-accessibility.md)** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
 
 **[Verktøytips](properties-core.md)** – forklarende tekst som vises når brukeren holder pekeren over en kontroll.
 
-**[Understreking](properties-text.md)** – om det vises en linje under teksten som vises på en kontroll.
+**[Underline](properties-text.md)** – om det vises en linje under teksten som vises på en kontroll.
 
 **[Synlig](properties-core.md)** – om kontrollen vises eller skjules.
 
@@ -150,3 +151,23 @@ En liste der brukeren kan velge ett eller flere elementer.
     ![Navn på gulvbelegg i rullegardinlister](./media/control-list-box/selected-lists.png)
 6. (valgfritt) Trykk på ESC for å gå tilbake til standardarbeidsområdet.
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="color-contrast"></a>Fargekontrast
+Det må være tilstrekkelig fargekontrast mellom:
+* **SelectionColor** og **SelectionFill**
+* **SelectionFill** og **[Fyll](properties-color-border.md)**
+* **[HoverFill](properties-color-border.md)** og **[Fyll](properties-color-border.md)**
+* **[PressedFill](properties-color-border.md)** og **[Fyll](properties-color-border.md)**
+
+Dette er i tillegg til [kravene for standard fargekontrast](../accessible-apps-color.md).
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **[AccessibleLabel](properties-accessibility.md)** bør vises.
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
+* Fokusindikatorer må være godt synlige. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
+
+    > [!NOTE]
+> TAB navigerer til eller bort fra **listeboksen**. Piltastene navigerer innholdet i **listeboksen**.

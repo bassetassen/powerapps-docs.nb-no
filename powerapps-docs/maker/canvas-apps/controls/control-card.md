@@ -1,26 +1,23 @@
 ---
 title: 'Kort-kontroll: referanse | Microsoft Docs'
 description: Informasjon, inkludert egenskaper og eksempler, om Kort-kontrollen
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: e85b7ce4c51e693d566fb50b51be48f9ab3edadd
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 7d44ba120a68d08f5779b8383df5b2263f228438
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996467"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838583"
 ---
 # <a name="card-control-in-powerapps"></a>Kort-kontroll i PowerApps
 Ved bruk av Kort-kontrollen kan du vise og redigere et enkelt felt i **[Visningsskjema](control-form-detail.md)**- eller **[Redigeringsskjema](control-form-detail.md)**-kontrollen.
@@ -102,3 +99,11 @@ Hvis du vil se eksempler på hvordan du egendefinerer, låser opp og oppretter k
 ## <a name="examples"></a>Eksempler
 Se [Slik forstår du datakort](../working-with-cards.md) and [Slik forstår du oppsettet av dataskjemaer](../working-with-form-layout.md) for eksempler.
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="color-contrast"></a>Fargekontrast
+Det må være tilstrekkelig fargekontrast mellom:
+* **[Fyll](properties-color-border.md)** og alle underordnede kontroller. Hvis for eksempel et kort inneholder en **[etikett](control-text-box.md)** og etiketten har gjennomsiktig fyll, blir kortets **[fyll](properties-color-border.md)** den fungerende bakgrunnsfargen for etiketten. Det bør derfor være tilstrekkelig kontrast mellom kortets **[fyll](properties-color-border.md)** og etikettens **[farge](properties-color-border.md)**.
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **DisplayName** må være tilstede.

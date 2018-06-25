@@ -1,26 +1,23 @@
 ---
 title: Å installere og konfigurere eksemplet for teknisk støtte for PowerApps | Microsoft Docs
 description: Trinnvise instruksjoner for installasjon og konfigurasjon av eksemplet for Teknisk støtte for PowerApps.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: caburk
-manager: ''
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 02/20/2018
+ms.topic: sample
+ms.component: canvas
+ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: 97ff0c781933fa8d2896a35f0bd507bfb0b75ea9
-ms.sourcegitcommit: eac8ad7b54a0b0eba6444a38a952dbfd17bc64b5
+ms.openlocfilehash: 4601cabae10f3373f8d2ef18190d71af536811b5
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/08/2018
-ms.locfileid: "30998532"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470047"
 ---
 # <a name="install-and-configure-the-help-desk-powerapps-sample"></a>Å installere og konfigurere eksemplet for teknisk støtte for PowerApps
 
@@ -28,33 +25,33 @@ Trinnvise instruksjoner for installasjon og konfigurasjon av eksemplet for Tekni
 
 Estimert tid for å fullføre disse trinnene: **10 til 15 minutter**
 
-Hvis du vil se en demonstrasjon av denne prosessen, kan du ta en titt på denne videoen.
+> [!TIP]
+> Hvis du vil se en demonstrasjon av denne prosessen, kan du ta en titt på denne [videoen](https://youtu.be/z4cdtD6hB_4).
 
-[![Installasjonsvideo for Teknisk støtte](./media/help-desk-install/help-desk-install-video.png)](https://youtu.be/z4cdtD6hB_4 )
 
 ## <a name="help-desk-powerapps-sample-overview"></a>Oversikt over eksempler for Teknisk støtte for PowerApps
 Teknisk støtte tilbyr en brukervennlig opplevelse for å la brukere etablere kontakt med teknikere. Finn svar raskt på de viktigste spørsmålene, spor fremgang for åpne kundesaker, og se gjennom detaljer for tidligere forespørsler. Denne appen krever litt konfigurasjon for å tilpasses dine behov.
 
 ![Å åpne skjermbildet i Teknisk støtte for PowerApp](./media/help-desk-install/Login-screen.png)
 
-Se denne videoen for å se hvordan du bruker eksemplet for Teknisk støtte for PowerApp.
-
-[![Demonstrasjonsvideo for Teknisk støtte](./media/help-desk-install/help-desk-demo-video.png)](https://youtu.be/sl5fXwwnvzI)
+> [!TIP]
+> Se denne [videoen](https://youtu.be/sl5fXwwnvzI) for å se hvordan du bruker eksemplet for Teknisk støtte for PowerApp.
 
 ## <a name="prerequisites"></a>Forutsetninger
 
 - [Registrer deg](https://web.powerapps.com/) for PowerApps.
+- Må ha en gyldig SharePoint Online-lisens og tillatelse til å opprette lister.
 
 ## <a name="create-the-helpdesk-sharepoint-list"></a>Å opprette kundestøttelisten for SharePoint
 
 Denne listen lagrer forespørsler til teknisk støtte.
 
 1. Åpne en nettleser og gå til https://portal.office.com.
-2. Logge på med en konto som har tillatelse til å opprette lister.
+2. Logg på med en konto som har tillatelse til å opprette SharePoint-lister.
 3. Gå til områdesamlingen der du vil lagre listen til kundestøtte.
 4. Klikk på **tannhjulikonet** i øverste høyre del av nettsiden.
 5. Klikk på **Legg til en app**.
-6. I **Finn en app**-tekstboksen kan du angi **Egendefinert**.
+6. Angi **Egendefinert** i **Finn en app**-tekstboksen.
 7. Klikk på **søkeikonet**.
 8. Klikk på **Egendefinert liste**-appen.
 9. I tekstboksen **Navn** kan du angi **Kundestøtte**.
@@ -66,17 +63,18 @@ Denne listen lagrer forespørsler til teknisk støtte.
 
 ### <a name="create-description-column"></a>Å opprette beskrivende kolonne
 
-1. Klikk på **Opprett kolonne**.
-2. I **Kolonnenavn**-tekstboksen kan du angi **Beskrivelse**.
-3. Velg **Flere linjer med tekst** i alternativknapplisten **Informasjonstypen i denne kolonnen er**.
-4. Velg **Ja** i alternativknapplisten **Krev at denne kolonnen inneholder informasjon**.
-5. Velg **Ren tekst** i alternativknapplisten **Angi type tekst som skal være tillatt**.
-6. Klikk på **OK**.
+1. Velg ellipsen ved siden av listen for brukerstøtte, og klikk deretter på **Innstillinger**.
+2. Klikk på **Opprett kolonne**.
+3. Angi **Beskrivelse** på **Kolonnenavn**-tekstboksen.
+4. Velg **Flere linjer med tekst** i alternativknapplisten **Informasjonstypen i denne kolonnen er**.
+5. Velg **Ja** i alternativknapplisten **Krev at denne kolonnen inneholder informasjon**.
+6. Velg **Ren tekst** i alternativknapplisten **Angi type tekst som skal være tillatt**.
+7. Klikk på **OK**.
 
 ### <a name="create-category-column"></a>Å opprette kategori-kolonne
 
 1. Klikk på **Opprett kolonne**.
-2. I tekstboksen **Kolonnenavn** angir du **Kategori**.
+2. Angi **Kategori** i tekstboksen **Kolonnenavn**.
 3. Velg **Valg** i alternativknapplisten **Informasjonstypen i denne kolonnen er**.
 4. Angi følgende verdier i tekstboksen til **Skriv inn hvert valg på en egen linje**, hver av dem på en egen linje: 
     - Problem med BÆRBAR DATAMASKIN / PC-utstyr
@@ -86,10 +84,10 @@ Denne listen lagrer forespørsler til teknisk støtte.
 7. Skriv **Problem med bærbar datamaskin / PC-utstyr** i tekstboksen **Standardverdi**.
 8. Klikk på **OK**.
 
-### <a name="create--complete-column"></a>Å opprette % fullført-kolonne
+### <a name="create-percentcomplete-column"></a>Opprett PercentComplete-kolonne
 
 1. Klikk på **Opprett kolonne**.
-2. I tekstboksen **Kolonnenavn** angir du **% fullført**.
+2. I tekstboksen **Kolonnenavn** angir du **PercentComplete**.
 3. Velg **Tall (1, 10, 100)** i alternativknapplisten **Informasjonstypen i denne kolonnen er**.
 4. Velg **Nei** i alternativknapplisten **Krev at denne kolonnen inneholder informasjon**.
 5. Klikk på **OK**.
@@ -141,14 +139,13 @@ Denne listen lagrer forespørsler til teknisk støtte.
 
 ## <a name="download-the-help-desk-powerapp"></a>Å laste ned Teknisk støtte for PowerApp
 
-1.  Gå til http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip i en nettleser.
-2.  Last ned PowerApps-pakken, og lagre den til datamaskinen.
+1.  [Last ned](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip) PowerApps-pakken, og lagre den til datamaskinen.
 
 ## <a name="create-connections"></a>Å opprette tilkoblinger
 
 1.  Gå til https://web.powerapps.com i en nettleser.
 2.  Logg deg på ved å angi samme legitimasjon som du brukte til å registrere deg.
-3.  I menyen til venstre velger du **Tilkoblinger**.
+3.  I menyen til venstre velger du **Data**, og deretter **Tilkoblinger**.
     
 ### <a name="create-office-365-outlook-connection"></a>Å opprette Office 365 Outlook-tilkobling
 
@@ -161,7 +158,7 @@ Denne listen lagrer forespørsler til teknisk støtte.
 ### <a name="create-sharepoint-connection"></a>Å legge til en SharePoint-tilkobling
 
 1.  Klikk på **+ Ny tilkobling**.
-2.  I **Søk**-tekstboksen angir du **Outlook**.
+2.  Angi **SharePoint** i **Søk**-tekstboksen.
 3.  Velg **SharePoint** i listen.
 4.  Klikk på **Opprett**.
 5.  I popup-vinduet velger du kontoen du logget på med.
@@ -213,16 +210,14 @@ Denne listen lagrer forespørsler til teknisk støtte.
 
 ## <a name="configure-the-powerapp-to-use-the-sharepoint-list"></a>Konfigurer PowerApp for å bruke SharePoint-listen
 
-1. I nettleseren klikker du på **Apper**.
-2. Klikk på **ellipsen** ved siden av kundstøtte for PowerApp.
-3. Klikk på **Rediger på nettet**.
-4. Klikk på **Tillat**.
+1. Under neste trinn klikker du på **Åpne app**.
+2. Klikk på **Tillat** når du blir spurt om tillatelse.
 
 ### <a name="delete-connections"></a>Å slette tilkoblinger
 
 1. Klikk på **Vis**.
 2. Klikk på **Datakilder**.
-3. I **Data**-ruten klikker du på **ellipsen** ved siden av **Kundestøtte**.
+3. I **Data**-ruten klikker du på **ellipsen** ved siden av SharePoint-tilkoblingen **Kundestøtte**.
 4. Klikk på **Fjern**.
 
 ### <a name="helpdesk-list"></a>Kundestøtte-liste
@@ -252,6 +247,7 @@ Denne listen lagrer forespørsler til teknisk støtte.
     
     > [!TIP] 
     > Hvis du har mer enn én administrator, bruker du semikolon til å avgrense administratorer.  Eksempel: "admin1@microsoft.com","admin2@microsoft.com".
+    > For å sikre at adressene i AdminList samsvarer med formatet PowerApps forventer, velger du Vis > Variabler > Global > MyProfile og ser på e-postkolonnen for å vise det forventede e-postformatet.
 
 5. Klikk på **Fil**.
 6. Klikk på **Lagre**.
@@ -277,7 +273,7 @@ Denne listen lagrer forespørsler til teknisk støtte.
 
 7.  Utvid **bryteren**.
 8.  Utvid **IKKE PÅBEGYNT**-saken.
-9.  Utvid **Send en e-postmelding**-handlingen.
+9.  Utvid handlingen **Tilfelle ikke påbegynt**.
 10. Endre **Til** slik at det samsvarer med e-postadressen for kundestøtteadministrasjonen.
 
     ![Å redigere Flyt-skjermen](./media/help-desk-install/edit-flow-condition-send-email.png) 
@@ -290,6 +286,12 @@ Denne listen lagrer forespørsler til teknisk støtte.
 2. Klikk på **ellipsen** ved siden av Teknisk støtte for PowerApp.
 3. Klikk på **Åpne**. 
 
-Se denne videoen for å se hvordan du bruker eksemplet for Teknisk støtte for PowerApp.
+> [!TIP]
+> Se denne [videoen](https://youtu.be/sl5fXwwnvzI) for å se hvordan du bruker eksemplet for Teknisk støtte for PowerApp.
 
-[![Demonstrasjonsvideo for Teknisk støtte](./media/help-desk-install/help-desk-demo-video.png)](https://youtu.be/sl5fXwwnvzI)
+
+## <a name="next-steps"></a>Neste trinn
+- [Å tilpasse et SharePoint-listeskjema](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/customize-list-form)
+- [Å legge til og konfigurere en kontroll](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/add-configure-controls)
+- [Å redigere og behandle tillatelser for en SharePoint-liste eller et bibliotek](https://support.office.com/en-us/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
+ 

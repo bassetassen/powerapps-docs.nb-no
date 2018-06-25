@@ -1,26 +1,23 @@
 ---
 title: Å formatere en tabell i Excel i Microsoft Docs
 description: Hvis du ønsker å bruke Excel-data, må du formatere dataene i en tabell. Å legge til nøkkelordet «bilde» i kolonnenavn
-services: ''
-suite: powerapps
 documentationcenter: na
 author: yifwang
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 04/03/2016
+ms.topic: conceptual
+ms.component: canvas
+ms.date: 04/03/2018
 ms.author: yifwang
-ms.openlocfilehash: ccece4f2915460e623bf0a7e527a7105e9ff2954
-ms.sourcegitcommit: 078ba325480147e6e4da61e319ed53219f1c5cfc
+ms.openlocfilehash: fd458fe6c8962bbc4443c1de7aad0f1c4eea7fac
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/06/2018
-ms.locfileid: "30998337"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826630"
 ---
 # <a name="format-a-table-in-excel-and-naming-tips"></a>Å formatere en tabell i Excel og navngi tips
 Hvis du ønsker å bruke PowerApps, er det en forutsetning at du formaterer Excel-data som en tabell. Ved å følge innholdet i denne innføringen finner du ut hvordan du formaterer en tabell i Excel, og du får noen tips til hvordan du navngir Excel-kolonner.
@@ -42,3 +39,7 @@ Du finner helt enkelt tabellen ved å gå til **Utforming** under **Tabellverkt�
 Prøv å legg til nøkkelordet «bilde» i bildekolonnen. Dette binder bildekolonnen med en bildekontroll mens du bruker denne tabellen i galleriet med bildekontroller.
 
 ![Å koble Excel-tabeller sammen med bilder](./media/how-to-excel-tips/connect-gallery.png)
+
+## <a name="next-steps"></a>Neste trinn
+* [Generer en app fra Excel i PowerApps](get-started-create-from-data.md) basert på en tabell som du angir. Appen har som standard tre skjermbilder: ett for å bla gjennom poster, ett for å vise detaljer om en enkelt post, og ett for å opprette eller oppdatere en post.
+* [Opprett en app fra grunnen av](get-started-create-from-blank.md) ved hjelp av tabellen du formaterer i Excel. Du kan manuelt opprette og tilpasse appen til å vise, bla gjennom eller redigere dataene i tabellen.
