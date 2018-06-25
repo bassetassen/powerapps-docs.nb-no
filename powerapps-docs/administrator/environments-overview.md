@@ -1,26 +1,19 @@
 ---
 title: Oversikt over miljøer | Microsoft Docs
-description: Hva miljøer er, og hvordan du kan bruke dem
-services: powerapps
-suite: powerapps
-documentationcenter: na
+description: Finn ut mer om miljøer i PowerApps og hvordan du bruker dem
 author: manasmams
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 4b71f931aa3e8263166d52b68ba375917405c2b8
-ms.sourcegitcommit: 078ba325480147e6e4da61e319ed53219f1c5cfc
+ms.openlocfilehash: 4973265baf701851ac5c2e8bca9da541b246c068
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/06/2018
-ms.locfileid: "30998377"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34167796"
 ---
 # <a name="environments-overview"></a>Oversikt over miljøer
 Et miljø er et område der du kan lagre, administrere og dele organisasjonens forretningsdata, apper og flyter. De fungerer også som beholdere til å skille apper som kan ha ulike roller, sikkerhetskrav eller målgrupper. Måten du velger å dra nytte av miljøer på, avhenger av organisasjonen og appene du prøver å bygge. Eksempel:

@@ -1,11 +1,9 @@
 Nå er du kjent med alle delene av PowerApps og alternativer for oppretting av apper, slik at det er på tide å bygge en app. Vi generere en telefonapp fra en SharePoint Online-liste for dette emnet, men du kan bruke data fra mange andre kilder, inkludert Excel, skytjenester som Salesforce og lokale kilder som SQL Server.
 
 ## <a name="connect-to-a-data-source"></a>Koble til en datakilde
-Det første trinnet for å generere en app fra data er å velge hvilket PowerApps Studio som skal brukes, og deretter koble til datakilden. Klikk eller trykk på **ny app** i web.powerapps.com, og velg deretter om du vil bruke PowerApps Studio for Windows eller nettversjonen av PowerApps Studio.
+I web.powerapps.com klikker eller trykker du på **Apper** nær venstre kant, og deretter klikker eller trykker du på **Opprett en app** i banneret.
 
-![Slik kommer du i gang på web.powerapps.com](./media/learning-create-first-app-powerapps/generate-choose-studio.png)
-
-I PowerApps Studio har du muligheten til å starte fra data, fra en mal eller fra bunnen av. Vi bygger en telefonapp for en SharePoint-liste, slik at du kan klikke eller trykke på **Telefonoppsett** i **SharePoint**.
+I PowerApps kan du bygge en app fra data, fra en mal eller fra grunnen av. Vi bygger en telefonapp for en SharePoint-liste, slik at du kan klikke eller trykke på **Telefonoppsett** i **SharePoint**.
 
 ![Telefonapp fra en SharePoint-liste](./media/learning-create-first-app-powerapps/generate-sharepoint-phone.png)
 
@@ -22,7 +20,7 @@ Vellykket! Den nye appen med tre skjermer, åpnes i PowerApps Studio. Alle apper
 * **Detaljer**-skjermen: der du viser flere detaljer om et element og kan velge å slette eller redigere elementet.
 * **Rediger/opprett**-skjermen: der du redigerer et eksisterende element eller oppretter et nytt.
 
-Klikk eller trykk på et ikon øverst til høyre i venstre navigasjonsfelt, for å bytte til miniatyrbildevisningen. 
+Klikk eller trykk på et ikon øverst til høyre, i venstre navigasjonsfelt, for å bytte til miniatyrbildevisningen. 
 
 ![Veksling mellom visningene](./media/learning-create-first-app-powerapps/toggle-view.png)
 

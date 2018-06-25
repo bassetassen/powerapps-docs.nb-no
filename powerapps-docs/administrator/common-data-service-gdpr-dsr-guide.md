@@ -1,25 +1,20 @@
 ---
-title: Svar på DSR-forespørsler om kundedata for CDS for Apps | Microsoft Docs
-description: Gjennomgang av hvordan du svarer på DSR-forespørsler om kundedata for CDS for Apps
-services: powerapps
-suite: powerapps
-documentationcenter: na
+title: Å svare på DSR-forespørsler om kundedata for CDS for apper | Microsoft Docs
+description: Gjennomgang av hvordan du svarer på DSR-forespørsler om kundedata for CDS for apper
 author: jamesol-msft
+ms.reviewer: paulliew
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 04/23/2018
-ms.author: paulliew
-ms.openlocfilehash: 88a3d0c31a9608a901d99a8a901a209f14c13fc0
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.author: jamesol
+ms.openlocfilehash: ef5d646e30f5d09dbfe5f111a3ad018b030f79d9
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168232"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-for-common-data-service-for-apps-customer-data"></a>Svar på DSR-forespørsler om kundedata i Common Data Service for Apps
 
@@ -379,7 +374,7 @@ Fra [PowerApps](http://web.powerapps.com/) gjør du følgende:
 
 11. Klikk på **Søk**, og deretter velger og åpner du Excel-regnearket som du nettopp har oppdatert.
 
-12. Klikk på **Importer**.
+12. Klikk på **Import**.
 
 ### <a name="export"></a>Eksporter
 Du kan eksportere personopplysninger fra hver enhet til et Excel-regneark og vise det.

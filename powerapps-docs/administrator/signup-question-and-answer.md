@@ -1,29 +1,22 @@
 ---
-title: Administrasjon av lisenser i organisasjonen i Microsoft Docs
+title: Å administrere lisenser i organisasjonen | Microsoft Docs
 description: Vanlige spørsmål og svar om lisenser, administrasjon og registrering for PowerApps av brukere i Office 365-tenanten
-services: powerapps
-suite: powerapps
-documentationcenter: na
 author: jamesol-msft
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: jamesol
-ms.openlocfilehash: 5d6db5bded909387b5bc4ef15dc0bf6c163bfa7a
-ms.sourcegitcommit: 078ba325480147e6e4da61e319ed53219f1c5cfc
+ms.openlocfilehash: 8a734ef57a3820e38d52ad2bd87a2ab8979c0348
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/06/2018
-ms.locfileid: "30998367"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168048"
 ---
-# <a name="manage-licenses-in-my-org"></a>Å administere lisenser i organisasjonen
-Dette emnet beskriver hvordan brukerne i organisasjonen kan bruke PowerApps, og hvordan du kan kontrollere tilgang til PowerApps-tjenesten.
+# <a name="manage-powerapps-licenses-in-your-organization"></a>Å administrere PowerApps-lisenser i organisasjonen
+Artikkelen beskriver hvordan brukerne i organisasjonen kan få tilgang til å bruke PowerApps, og hvordan du kan kontrollere tilgang til PowerApps-tjenesten.
 
 ## <a name="sign-up-for-powerapps"></a>Å registrere deg for PowerApps
 ### <a name="what-is-powerapps"></a>Hva er PowerApps?

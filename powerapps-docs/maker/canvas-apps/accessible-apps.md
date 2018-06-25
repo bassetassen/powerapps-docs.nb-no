@@ -1,26 +1,18 @@
 ---
 title: Oppretting av apper som er enkle å forstå | Microsoft Docs
 description: Slik lager du apper som er enkle å forstå for folk med funksjonshemninger
-services: ''
-suite: powerapps
-documentationcenter: na
 author: fikaradz
-manager: anneta
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 04/03/2018
 ms.author: fikaradz
-ms.openlocfilehash: bc8a014909ceb817397107b4f64b59aa0c2013f2
-ms.sourcegitcommit: 97c0db2968dc07d1bcb21d02e6a6a5c345daa2d2
+ms.openlocfilehash: 8a7139f6dbc39bc1585156802e30236aa2b68359
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "30998322"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803079"
 ---
 # <a name="create-accessible-apps"></a>Oppretting av apper som er enkle å forstå
 En app som er enkel å forstå gjør det enklere for brukere med syns-, hørsel- og andre typer hemminger å bruke appen.  I tillegg til at det er et krav for mange myndigheter og organisasjoner, økes brukervennligheten for brukerne, uavhengig av funksjonsnivå, ved å følge retningslinjene nedenfor.

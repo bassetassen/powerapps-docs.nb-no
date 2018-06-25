@@ -1,26 +1,18 @@
 ---
 title: Oversikt over Power BI-tilkoblingen | Microsoft Docs
 description: Å se tilgjengelige Power BI-tilkoblinger
-services: ''
-suite: powerapps
-documentationcenter: na
-author: sirui-sun
-manager: anneta
-editor: ''
-tags: ''
+author: lancedMicrosoft
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/12/2016
-ms.author: sirsu
-ms.openlocfilehash: 593e22f042945bd64a0a54e197325cbcf74f3400
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: lanced
+ms.openlocfilehash: a3a5d24efffd7cd3c9430cafd5050dc96632ee76
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995942"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803171"
 ---
 # <a name="connect-to-power-bi-from-powerapps"></a>Å koble til Power BI fra PowerApps
 ![strøm~~POS=TRUNC BI](./media/connection-powerbi/powerbiicon.png)
@@ -30,7 +22,7 @@ Power BI er en verktøyserie for forretningsanalyse som kan brukes til å analys
 Dette emnet viser deg hvordan du bruker Power BI-tilkoblingen i en app, og lister opp de tilgjengelige funksjonene.
 
 ## <a name="prerequisites"></a>Forutsetninger
-* Tilgang til [powerapps.com](https://powerapps.com) eller har [PowerApps](http://aka.ms/powerappsinstall) installert
+* [Registrer deg](https://web.powerapps.com)
 * Å legge til Power BI-[tilkobling](https://powerapps.microsoft.com/tutorials/add-manage-connections/)
 * Opprett en app fra en [mal](https://powerapps.microsoft.com/tutorials/get-started-test-drive/), fra [data](https://powerapps.microsoft.com/tutorials/get-started-create-from-data/) eller fra [grunnen av](https://powerapps.microsoft.com/tutorials/get-started-create-from-blank/)
 

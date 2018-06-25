@@ -1,26 +1,23 @@
 ---
 title: Å sette opp datavarsler for Power BI-instrumentbordet | Microsoft Docs
 description: I denne oppgaven skal vi legge til et varsel i Power BI, slik at vi får beskjed hvis ventende prosjekter tar for lang tid å godkjenne, og en flyt som svarer når denne varslingen utløses.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: 91d1fc6872992823aaa3c5c7baa9f36efd2fc99f
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 663c5dfcad45e65044958c9d3b8b1aa111840a61
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997457"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31827808"
 ---
 # <a name="set-up-data-alerts-for-the-power-bi-dashboard"></a>Å sette opp datavarsler for Power BI-instrumentbordet
 > [!NOTE]

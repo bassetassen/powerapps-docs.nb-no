@@ -1,26 +1,23 @@
 ---
 title: Kontrollene Eksporter og Import | Microsoft Docs
 description: Informasjon om kontrollene Eksporter og Import, inkludert egenskaper og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 2bc1eddc09fde255fbc1f7a7899ba2f416374e0c
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 958589deb4fdee42cb8e6df13ff15addbc06c07e
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997092"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31830697"
 ---
 # <a name="export-control-and-import-control-in-powerapps"></a>Kontrollene Eksporter og Import i PowerApps
 Kontroller for å eksportere data til en lokal fil og deretter importere dataene til en annen app i PowerApps.
@@ -43,33 +40,37 @@ Aktivering av denne funksjonaliteten i appen din kan føre til sikkerhetsproblem
 
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
-**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
+**[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
 **[BorderThickness](properties-color-border.md)** – tykkelsen til kontrollens kantlinje.
 
-**[Color](properties-color-border.md)**  – fargen på teksten i kontrollen.
+**[Farge](properties-color-border.md)** – fargen på teksten i kontrollen.
 
-**[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Edit**), bare viser data (**View**) eller er deaktivert (**Disabled**).
+**[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
 
-**[DisabledColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Disabled**.
+**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
 
 **[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
 
-**[Fill](properties-color-border.md)** – Bakgrunnsfargen på kontrollen.
+**[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
-**[Font](properties-text.md)**  – navnet på skriftserien som teksten vises i.
+**[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
+
+**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+
+**[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
 **[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
 
-**[Height](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
+**[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
 **[HoverBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når brukeren holder musepekeren på denne kontrollen.
 
-**[HoverColor](properties-color-border.md)** – fargen på en tekst i en kontroll når brukeren holder musepekeren på den.
+**[HoverColor](properties-color-border.md)** – Fargen på teksten i en kontroll når brukeren holder musepekeren over den.
 
-**[HoverFill](properties-color-border.md)**  – bakgrunnsfargen for en kontroll når brukeren holder musepekeren på den.
+**[HoverFill](properties-color-border.md)** – bakgrunnsfargen for en kontroll når brukeren holder musepekeren over den.
 
 **[Italic](properties-text.md)** – om teksten i en kontroll er kursiv.
 
@@ -81,19 +82,21 @@ Aktivering av denne funksjonaliteten i appen din kan føre til sikkerhetsproblem
 
 **[PressedFill](properties-color-border.md)** – bakgrunnsfargen i en kontroll når brukeren trykker eller klikker på kontrollen.
 
-**[RadiusBottomLeft](properties-size-location.md)**  – graden hjørnet nederst til venstre av en kontroll avrundes.
+**[RadiusBottomLeft](properties-size-location.md)** – i hvilken grad hjørnet nederst til venstre i en kontroll avrundes.
 
-**[RadiusBottomRight](properties-size-location.md)**  – graden hjørnet nederst til høyre av en kontroll avrundes.
+**[RadiusBottomRight](properties-size-location.md)**  – i hvilken grad hjørnet nederst til høyre i en kontroll avrundes.
 
-**[RadiusTopLeft](properties-size-location.md)**  – graden hjørnet øverst til venstre av en kontroll avrundes.
+**[RadiusTopLeft](properties-size-location.md)** – i hvilken grad hjørnet øverst til venstre i en kontroll avrundes.
 
-**[RadiusTopRight](properties-size-location.md)**  – graden hjørnet øverst til høyre av en kontroll avrundes.
+**[RadiusTopRight](properties-size-location.md)**  – I hvilken grad hjørnet øverst til høyre i en kontroll avrundes.
 
 **[Size](properties-text.md)** – skriftstørrelsen på teksten som vises på en kontroll.
 
 **[Strikethrough](properties-text.md)** – om det vises en linje gjennom teksten som vises på en kontroll.
 
-**[Text](properties-core.md)** – tekst som vises på en kontroll, eller som brukeren skriver inn i en kontroll.
+**[TabIndex](properties-accessibility.md)** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
+
+**[Text](properties-core.md)**  – Tekst som vises på en kontroll eller som brukeren skriver inn i en kontroll.
 
 **[Underline](properties-text.md)** – om det vises en linje under teksten som vises på en kontroll.
 
@@ -101,14 +104,14 @@ Aktivering av denne funksjonaliteten i appen din kan føre til sikkerhetsproblem
 
 **[Visible](properties-core.md)** – om kontrollen vises eller skjules.
 
-**[Width](properties-size-location.md)** – avstanden mellom venstrekanten og høyrekanten på en kontroll.
+**[Bredde](properties-size-location.md)** – avstanden mellom kontrollens venstre og høyre kant.
 
 **[X](properties-size-location.md)** – avstanden mellom kontrollens venstre kant og den venstre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="example"></a>Eksempel
-1. Legg til en **[Knappekontroll](control-button.md)**, og sett **[OnSelect](properties-core.md)**-egenskapen til denne formelen:
+1. Legg til en **[Knapp](control-button.md)**, og angi **[OnSelect](properties-core.md)**-egenskapen til denne formelen:
    <br>**ClearCollect(Products, {Name:"Europa", Price:"10.99"}, {Name:"Ganymede", Price:"12.49"}, {Name:"Callisto", Price:"11.79"})**
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
@@ -123,3 +126,6 @@ Aktivering av denne funksjonaliteten i appen din kan føre til sikkerhetsproblem
 7. Trykk på F5, klikk eller trykk på **MyData**, klikk eller trykk på filen du eksporterte, og klikk eller trykk deretter på **Åpne**.
 8. Trykk på Esc, klikk eller trykk på **Samlinger** på **Fil**-menyen, og bekreft at den gjeldende appen har dataene som du eksporterte.
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+De samme retningslinjene for **[Knapp](control-button.md)** gjelder fordi **Eksporter** og **Importer** er bare spesialknapper.

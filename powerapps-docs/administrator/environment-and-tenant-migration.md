@@ -1,27 +1,19 @@
 ---
 title: Å overføre apper mellom miljøer og tenanter | Microsoft Docs
-description: Å overføre apper mellom miljøer og tenanter
-services: powerapps
-suite: powerapps
-documentationcenter: na
+description: Gjennomgang av hvordan du overfører PowerApps-apper mellom miljøer og tenanter
 author: jamesol-msft
 manager: kfile
-editor: ''
-tags: ''
-ms-topic: article
+ms-topic: conceptual
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/21/2018
+ms.component: pa-admin
+ms.topic: conceptual
 ms.author: jamesol
-ms.openlocfilehash: 3a63f525a44d1b617ba872dce7936fc97b151967
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 3a064bdb3f75bf45047e3ae0ff465fde1d2b66fa
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995777"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34167841"
 ---
 # <a name="environment-and-tenant-app-migration-through-packaging"></a>Å overføre apper mellom miljøer og tenanter gjennom pakking
 Finn ut hvordan du overfører ressurser fra ett miljø til et annet med pakking. Disse miljøene kan være på samme tenant eller på forskjellige tenanter.
@@ -97,36 +89,36 @@ Eksport av enhet eller tilpassinger av alternativsett eller eventuelle modelldre
 
 1. Velg utformingsmodusen **Modelldrevet (forhåndsvisning)** i miljøet, i http://web.powerapps.com.
 
-  ![Å velge modelldrevet utformingsmodus](./media/environment-and-tenant-migration/select-model-driven.png)
+    ![Å velge modelldrevet utformingsmodus](./media/environment-and-tenant-migration/select-model-driven.png)
 
 2. Velg **Avansert** i navigasjonsfeltet til venstre for å starte løsningsutforsker for miljøets standardløsning
 
-  ![Å velge avansert](./media/environment-and-tenant-migration/select-advanced.png)
+    ![Å velge avansert](./media/environment-and-tenant-migration/select-advanced.png)
 
 3. Velg **Eksporter løsning**, og fullfør de nødvendige trinnene.  En løsningspakkefil lastes ned innen et par sekunder.
 
-  ![Å velge eksport](./media/environment-and-tenant-migration/select-export-solution.png)
+    ![Å velge eksport](./media/environment-and-tenant-migration/select-export-solution.png)
 
 ## <a name="importing-cds-customization-and-model-driven-apps"></a>Å importere CDS-tilpassinger og modelldrevne apper
 Hvis du vil importere en CDS-løsningspakke, må du dessverre foreta en manuell endring i opplevelsen, noe som vi jobber aktivt for å løse:
 
 1. Velg utformingsmodusen **Modelldrevet (forhåndsvisning)** i miljøet, i http://web.powerapps.com.
 
-  ![Å velge modelldrevet utformingsmodus](./media/environment-and-tenant-migration/select-model-driven.png)
+    ![Å velge modelldrevet utformingsmodus](./media/environment-and-tenant-migration/select-model-driven.png)
 
 2. Velg **Avansert** i navigasjonsfeltet til venstre for å starte løsningsutforsker for miljøets standardløsning.
 
-  ![Å velge avansert](./media/environment-and-tenant-migration/select-advanced.png)
+    ![Å velge avansert](./media/environment-and-tenant-migration/select-advanced.png)
 
 3. Kopier nettadressen fra nettleseren, gjør følgende endringer, og gå deretter til den nye nettadressen i nettleseren:
 
-  - Gjeldende nettadressestruktur: https://{orguniquename}.crm.dynamics.com/tools/solution/edit.aspx?id={solutionname}
+    * Gjeldende nettadressestruktur: https://{orguniquename}.crm.dynamics.com/tools/solution/edit.aspx?id={solutionname}
 
-    ![Å redigere nettadresse](./media/environment-and-tenant-migration/edit-url.png)
+        ![Å redigere nettadresse](./media/environment-and-tenant-migration/edit-url.png)
 
-  - Ny nettadressestruktur: https://{orguniquename}.crm.dynamics.com/tools/solution/SolutionImportWizard.aspx
+    * Ny nettadressestruktur: https://{orguniquename}.crm.dynamics.com/tools/solution/SolutionImportWizard.aspx
 
-      ![Å velge pakken](./media/environment-and-tenant-migration/select-package.png)
+        ![Å velge pakken](./media/environment-and-tenant-migration/select-package.png)
 
 4. Velg CDS-løsningspakkefilen du vil importere, og fullfør veiviseren.
 

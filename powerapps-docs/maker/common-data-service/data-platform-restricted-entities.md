@@ -1,22 +1,19 @@
 ---
 title: Begrensede enheter som krever Dynamics 365-lisenser | Microsoft Docs
 description: En liste over begrensede enheter i Common Data Service for apper som krever Dynamics 365-lisenser.
-documentationcenter: na
 author: clwesene
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: reference
 ms.component: cds
+ms.topic: reference
 ms.date: 05/01/2018
 ms.author: clwesene
-ms.openlocfilehash: 508f58b48f2dd51bf25f23905cc3513db90ed1ce
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.openlocfilehash: 79b6e386154b15ae6c625afbebbed18a8a86c420
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168002"
 ---
 # <a name="restricted-entities-requiring-dynamics-365-licenses"></a>Begrensede enheter som krever Dynamics 365-lisenser
 Applagere kan bruke de fleste enheter som er tilgjengelige i Common Data Service (CDS) for apper for å opprette apper og flyt for brukere som bare har en PowerApps Plan 1-lisens. Noen enheter inneholder imidlertid kompleks forretningslogikk som krever at appbrukere har en PowerApps Plan 2 eller Microsoft Flow Plan 2-lisens (Hvis du vil ha mer informasjon, se [Enhetslisenskrav](data-platform-entity-licenses.md)). Et enda mindre sett av enheter knyttet til Dynamics 365-produkter krever at lerret- og modelldrevne appbrukere har en lisens for korresponderende Dynamics 365-produkt hvis de må opprette, oppdatere eller slette poster i enhetene. Disse kalles *begrensede* enheter.

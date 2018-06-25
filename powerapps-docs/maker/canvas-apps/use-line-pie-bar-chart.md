@@ -1,25 +1,22 @@
 ---
 title: Å opprette diagrammer i Microsoft Docs
 description: Vis datakategorier som linjediagrammer, sektordiagrammer eller liggende stolpediagrammer
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: lonu
-manager: anneta
+manager: kfile
 editor: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/23/2016
 ms.author: lonu
-ms.openlocfilehash: 727d19973056a9c738bd0087f99a36889ab50421
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: f4b6f604ecd7557f7b7b54769d66da850e18ef4f
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997562"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32329805"
 ---
 # <a name="show-data-in-a-line-pie-or-bar-chart-in-powerapps"></a>Å vise data i en linje, sektor- eller liggende stolpediagram i PowerApps
 Bruk linjediagrammer, sektordiagrammer og liggende stolpediagrammer til å vise dataene. Når du arbeider med diagrammer, bør dataene som du importerer, struktureres som følgende:
@@ -34,7 +31,7 @@ Skjermen burde for eksempel se omtrent slik ut:
 Du kan opprette og bruke disse diagrammene i PowerApps. La oss komme i gang.
 
 ## <a name="prerequisites"></a>Forutsetninger
-* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og [installer](http://aka.ms/powerappsinstall) deretter PowerApps. Logg på med samme legitimasjon som du brukte til å registrere deg, når du åpner PowerApps,.
+* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com) ved å oppgi samme legitimasjon som du brukte til å registrere deg.
 * Opprett en app fra en [mal](get-started-test-drive.md), fra [data](get-started-create-from-data.md) eller fra [bunnen av](get-started-create-from-blank.md).
 * Finn ut hvordan du [konfigurerer en kontroll](add-configure-controls.md) i PowerApps.
 * Last ned [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip), som inneholder eksempeldata som en XML-fil. Følg trinnene i dette emnet for å importere den direkte til appen. Som et alternativ, dekomprimer ZIP-filen, åpne XML-filen i Excel og lagre det i en [skylagringskonto](connections/cloud-storage-blob-connections.md).

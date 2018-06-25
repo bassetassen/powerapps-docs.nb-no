@@ -1,34 +1,27 @@
 ---
-title: Behandling av egendefinerte felt i en hurtiginnføring i enheter | Microsoft Docs
-description: Hurtiginnføring for opprette, lese, oppdatere og slette egendefinerte felt i en enhet.
-services: powerapps
-documentationcenter: na
+title: Behandling av egendefinerte felt i en enhet | Microsoft Docs
+description: Gjennomgang av hvordan du oppretter, leser, oppdaterer og sletter egendefinerte felt i en enhet i Common Data Service (CDS) for apper.
 author: clwesene
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 3/21/2018
+ms.component: cds
+ms.topic: conceptual
+ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: 2175b684d88d1823fd2672f672e776ca1e26f164
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: a4ec386ef6a7eee02c2ac608bb6e00ed9ee39c19
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997427"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168140"
 ---
-# <a name="quickstart-manage-custom-fields"></a>Hurtiginnføring i å behandle egendefinerte felt
+# <a name="manage-custom-fields-in-an-entity"></a>Behandle egendefinerte felt i en enhet
 Du kan opprette og oppdatere ett eller flere egendefinerte felt i en enhet. Når du oppretter et egendefinert felt, kan du angi et sett med egenskaper som feltnavn, visningsnavn, og typen data det skal inneholde. Hvis du vil ha mer informasjon, kan du se [Attributtmetadata for enhet](../../developer/common-data-service/entity-attribute-metadata.md).
 
 > [!NOTE]
-> Hver enhet har systemfelt, felt som angir når en post sist ble oppdatert, og hvem som oppdaterte det. [Standardenheter](data-platform-intro.md#system-fields) har i tillegg standardfelt. Du kan ikke endre eller slette systemfelt eller standardfelt. Hvis du oppretter et egendefinert felt, får du funksjonalitet i tillegg til disse innebygde feltene.
+> Hver enhet har systemfelt, som eksempelvis felt som angir når en post sist ble oppdatert, og hvem som oppdaterte den. Standardenheter har i tillegg standardfelt. Du kan ikke endre eller slette systemfelt eller standardfelt. Hvis du oppretter et egendefinert felt, får du funksjonalitet i tillegg til disse innebygde feltene.
 
 ## <a name="create-a-field"></a>Å opprett et felt
-
 1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
 
     ![Enhetsdetaljer](./media/data-platform-cds-create-entity/entitylist.png "Enhetsliste")
@@ -65,7 +58,6 @@ Du kan opprette og oppdatere ett eller flere egendefinerte felt i en enhet. Når
     Du blir varslet når operasjonen er fullført. Hvis operasjonen mislykkes, viser en feilmelding problemene som oppstod og hvordan du kan rette dem opp.
 
 ## <a name="create-a-calculated-or-roll-up-field"></a>Oppretting av et beregnet eller opprullingsfelt
-
 Med beregnede felt kan du automatisere manuelle beregninger som brukes i forretningsprosesser. En selger ønsker for eksempel å vite vektet omsetning for en mulighet som er basert på anslått omsetning fra en mulighet, multiplisert med sannsynligheten. Eller selgeren ønsker kanskje å ta i bruk en rabatt automatisk, hvis en bestilling er større enn USD 500. Et beregnet felt kan inneholde verdier fra enkle matematiske operasjoner, eller betingede operasjoner, som for eksempel større enn/eller/hvis/annet, og mange andre. Du kan opprette beregnede felt ved bruk av følgende datatyper:
 
 * Enkeltlinje med tekst
@@ -77,7 +69,6 @@ Med beregnede felt kan du automatisere manuelle beregninger som brukes i forretn
 * Dato og klokkeslett
 
 Hvis du vil ha mer informasjon om uttrykkstypene som støttes og eksempler, kan du se [Definering av beregnede felt](/dynamics365/customer-engagement/customize/define-calculated-fields)
-
 
 ## <a name="update-or-delete-a-field"></a>Oppdater eller slett et felt
 1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com), og trykk eller klikk på **Enheter** i venstre navigasjonsrute. Deretter klikker eller trykker du på en enhet.
@@ -108,5 +99,5 @@ Når du oppretter og endrer felt, må du huske på følgende:
 * [Slik oppretter du en app fra grunnen av ved hjelp av en Common Data Service-database](../canvas-apps/data-platform-create-app-scratch.md)
 
 ## <a name="privacy-notice"></a>Erklæring om personvern
-Med den vanlige datamodellen i Microsoft PowerApps samler vi inn og lagrer egendefinerte enhets- og feltnavn i diagnostiseringssystemene.  Vi bruker denne kunnskapen til å forbedre den vanlige datamodellen for kundene våre. Enhets- og feltnavnene som skapere oppretter, hjelper oss med å forstå scenarioene som er typiske i Microsoft PowerApps-fellesskapet og få rede på hull i tjenestens standarddekning for enheter, som eksempelvis skjema knyttet til organisasjoner. Dataene i databasetabeller som er knyttet til disse enhetene, blir ikke åpnet eller brukt av Microsoft eller replisert utenfor området hvor databasen er klargjort. Merk deg imidlertid at den egendefinerte enheten og feltnavnene kan repliseres på tvers av områder og blir slettet i henhold til retningslinjene våre for dataoppbevaring. Microsoft tar vare på personvernet ditt, som beskrevet i [Klareringssenteret](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
+Med den vanlige datamodellen i Microsoft PowerApps samler vi inn og lagrer egendefinerte enhets- og feltnavn i diagnostiseringssystemene.  Vi bruker denne kunnskapen til å forbedre den vanlige datamodellen for kundene våre. Enhets- og feltnavnene som skapere oppretter, hjelper oss med å forstå scenarioene som er typiske i Microsoft PowerApps-fellesskapet og få rede på hull i tjenestens standarddekning for enheter, som eksempelvis skjemaer knyttet til organisasjoner. Dataene i databasetabeller som er knyttet til disse enhetene, blir ikke åpnet eller brukt av Microsoft eller replisert utenfor området hvor databasen er klargjort. Merk deg imidlertid at den egendefinerte enheten og feltnavnene kan repliseres på tvers av områder og blir slettet i henhold til retningslinjene våre for dataoppbevaring. Microsoft tar vare på personvernet ditt, som ytterligere beskrevet i [Klareringssenteret](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
 

@@ -1,26 +1,18 @@
 ---
 title: Hurtigstart for å laste ned en liste over apper som er opprettet i miljøene dine | Microsoft Docs
-description: I denne hurtigveiledningen lærer du hvordan du laster ned en liste over apper som er opprettet i miljøene dine
-services: powerapps
-suite: powerapps
-documentationcenter: na
-author: skjerland
-manager: kfile
-editor: ''
-tags: ''
+description: I denne hurtigveiledningen finner du ut hvordan du laster ned en liste over apper som er opprettet i miljøene dine.
+author: jimholtz
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-admin
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/21/2018
-ms.author: sharik
-ms.openlocfilehash: debe9dd0ab3aa948537820cccd3304a6b4225c54
-ms.sourcegitcommit: c5e3991e0e4e9f22a1e094d699f35adabfb97c6c
+ms.author: jimh
+ms.openlocfilehash: d9c379ca95bb299c56639bb01803f45c1744d8f2
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "30998247"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552603"
 ---
 # <a name="quickstart-download-a-list-of-apps-created-in-your-environments"></a>Hurtigstart: å laste ned en liste over apper som er opprettet i miljøene dine
 Hvis du er miljøadministrator, kan du vise og laste ned en liste over apper som er opprettet i miljøer som du administrerer. Hvis du er global administrator for Office 365 eller tenantadministrator for Azure Active Directory, kan du laste ned en liste over apper som er opprettet i alle miljøer i organisasjonen din.
@@ -28,11 +20,11 @@ Hvis du er miljøadministrator, kan du vise og laste ned en liste over apper som
 I denne hurtigveiledningen vil du lære hvordan du laster ned en liste over apper som er opprettet i et enkelt miljø til en CSV-fil og deretter viser listen i Excel.
 
 ## <a name="prerequisites"></a>Forutsetninger
- Følgende elementer kreves for å følge denne hurtigveiledningen:
+ Følgende elementer kreves for å følge denne hurtiginnføringen:
  * En lisens for enten et PowerApps 2-abonnement eller et Microsoft Flow 2-abonnement. Du kan også registrere deg for en [gratis prøveversjon av PowerApps (abonnement 2)](https://web.powerapps.com/signup?redirect=marketing&email=).
  * Miljøadministrator for PowerApps, global administrator for Office 365 eller administrasjonstillatelser for tenanten til Azure Active Directory. Hvis du vil ha mer informasjon, kan du se [Miljøadministrasjon i PowerApps](environments-administration.md).
 
-## <a name="sign-in-to-the-powerapps-admin-center"></a>Slik får du tilgang til administrasjonssenteret for PowerApps
+## <a name="sign-in-to-the-powerapps-admin-center"></a>Å logge på administrasjonssenteret for PowerApps
 Logg deg på administrasjonssenteret på [https://admin.powerapps.com]([https://admin.powerapps.com).
 
 ## <a name="download-the-list-of-apps"></a>Å laste ned listen over apper

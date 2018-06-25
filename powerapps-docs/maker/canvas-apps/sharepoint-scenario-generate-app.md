@@ -1,30 +1,27 @@
 ---
 title: Å generere en app for å administrere prosjektforespørsler i Microsoft Docs
 description: I denne oppgaven skal vi generere en grunnleggende *app med tre skjermer* direkte fra en SharePoint-liste.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: 021a323fbb5a1a3331c4eb92ce0b47427b5562b4
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 4ae16517332864066f5b744e85ce3fe48c97a1df
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997497"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32329782"
 ---
 # <a name="generate-an-app-to-handle-project-requests"></a>Å generere en app for å administrere prosjektforespørsler
 > [!NOTE]
-> Denne artikkelen er en del av en opplæringsserie om hvordan du bruker PowerApps, Microsoft Flow og Power BI med SharePoint Online. Sørg for å lese [serieinnføringen](sharepoint-scenario-intro.md) for å få en fornemmelse av det store bildet, i tillegg til relaterte nedlastinger.
+> Denne artikkelen er en del av en opplæringsserie om hvordan du bruker PowerApps, Microsoft Flow og Power BI med SharePoint Online. Sørg for å lese [innføringen for serien](sharepoint-scenario-intro.md) for å få forståelse av det store bildet, i tillegg til relaterte nedlastinger.
 
 Nå som vi har fått på plass SharePoint-listen, kan vi bygge og egendefinere vår første app. PowerApps er integrert med SharePoint, så det er enkelt å generere en grunnleggende *app med tre skjermer* direkte fra en liste. Med denne appen kan du vise sammendrag og detaljert informasjon for hvert listeelement, oppdatere eksisterende listeelementer, og opprette nye listeelementer. Hvis du oppretter en app direkte fra en liste, vises appen som en *visning* for den listen. Du kan deretter kjøre appen i en nettleser, så vel som på en mobiltelefon.
 
@@ -37,13 +34,13 @@ Nå som vi har fått på plass SharePoint-listen, kan vi bygge og egendefinere v
    
     ![Å opprette en app](./media/sharepoint-scenario-generate-app/02-01-01-create-app.png)
 
-2. Gi appen et navn, som for eksempel Prosjektforespørsel-app, og klikk eller trykk deretter på **Opprett**. Når appen er klar, åpnes den i PowerApps Studio for nett.
+2. Gi appen et navn, som for eksempel «Prosjektforespørsel-app», og klikk eller trykk deretter på **Opprett**. Når appen er klar, åpnes den i PowerApps Studio.
    
     ![Å angi et navn for appen](./media/sharepoint-scenario-generate-app/02-01-02-create-app-name.png)
 
 ## <a name="step-2-review-the-app-in-powerapps-studio"></a>Trinn 2: Å vise appen i PowerApps Studio
 
-1. Det venstre navigasjonsfeltet i PowerApps Studio viser en hierarkisk visning av skjermene og kontrollene i appen, som standard.
+1. Det venstre navigasjonsfeltet i PowerApps Studio viser som standard en hierarkisk visning av skjermene og kontrollene i appen.
    
     ![PowerApps Studio hierarkisk visning](./media/sharepoint-scenario-generate-app/02-02-01-studio-screens-hierarchy.png)
 
@@ -55,7 +52,7 @@ Nå som vi har fått på plass SharePoint-listen, kan vi bygge og egendefinere v
    
     (a). **Bla Gjennom**-skjermen, hvor du blar gjennom, sorterer og filtrerer dataene som hentes fra listen.
     
-    (b). **Detaljer**-skjermen, hvor du viser flere detaljer om et element.
+    (b). **Detaljer**-skjermen, hvor du ser flere detaljer om et element.
     
     (c). **Rediger/opprett**-skjermen: der du redigerer et eksisterende element eller oppretter et nytt.
       
@@ -85,7 +82,7 @@ Nå som vi har fått på plass SharePoint-listen, kan vi bygge og egendefinere v
 
 5. Velg **Elementer**-egenskapen, mens **BrowseGallery1** ennå er valgt.
    
-    ![Elementegenskaper](./media/sharepoint-scenario-generate-app/02-03-03-items.png)
+    ![Elementer-egenskaper](./media/sharepoint-scenario-generate-app/02-03-03-items.png)
 
 6. Endre formelen til **SortByColumns(Filter('Project Requests', StartsWith(Title, TextSearchBox1.Text)), "Title", If(SortDescending1, Descending, Ascending))**.
    
@@ -156,7 +153,7 @@ Når du plasserer funksjonene sammen i formelen, skjer følgende:
    
     **StartsWith ( Title, TextSearchBox1.Text )**
    
-    Hvis du for eksempel skrev inn «en» i søkeboksen, ser du fire resultater, inkludert elementer som begynner med «enhet» og «endre». Du ser ikke alle elementene for Mobile enheter, fordi de *begynner ikke med* «en».
+    Hvis du for eksempel skrev inn «en» i søkeboksen, ser du fire resultater, inkludert elementer som begynner med «enhet» og «endre». Du ser ikke alle elementene for «Mobile enheter», fordi de *begynner ikke med* «en».
 
 2. **Filter**-funksjonen *returnerer* rader fra **Prosjektforespørsler**-tabellen. Hvis det ikke er noen tekst i søkeboksen for sammenligning, returnerer **Filter** alle radene.
    

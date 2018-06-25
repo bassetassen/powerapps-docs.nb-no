@@ -1,26 +1,23 @@
 ---
 title: 'Rullegardinkontroll: referanse | Microsoft Docs'
 description: Informasjon om Rullegardin-kontrollen, inkludert egenskaper og eksempler
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 828292cc888d26f2060260826296960f1bd4f98f
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 3df14293f478c24dbe64b84d0c2d1ea50b485fa3
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996177"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31835121"
 ---
 # <a name="drop-down-control-in-powerapps"></a>Rullegardin-kontrollen i PowerApps
 En liste som viser bare det første elementet, med mindre brukeren åpner det.
@@ -38,13 +35,13 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 **Valgt** – det valgte elementet.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
+**[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere.
+
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
 **[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
 **[BorderThickness](properties-color-border.md)** – tykkelsen til kontrollens kantlinje.
-
-**[FocusedBorderThickness](properties-color-border.md)**  – tykkelsen på kontrollens kantlinje når den har tastaturfokus.
 
 **ChevronBackground** – fargen bak den nedovervendte pilen i en rullegardinliste.
 
@@ -54,7 +51,7 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
 
 **[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
 
@@ -62,9 +59,13 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
+**[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
+
+**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[Skrifttykkelse](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Smalere**.
+**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -72,7 +73,7 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 
 **[HoverColor](properties-color-border.md)** – Fargen på teksten i en kontroll når brukeren holder musepekeren over den.
 
-**[HoverFill](properties-color-border.md)**  – bakgrunnsfargen for en kontroll når brukeren holder musepekeren over den.
+**[HoverFill](properties-color-border.md)** – bakgrunnsfargen for en kontroll når brukeren holder musepekeren over den.
 
 **[Kursiv](properties-text.md)** – om teksten i en kontroll er i kursiv.
 
@@ -102,13 +103,13 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 
 **[Størrelse](properties-text.md)** – skriftstørrelsen på teksten som vises på en kontroll.
 
-**[Gjennomstrekning](properties-text.md)** – om det vises en linje gjennom teksten som vises på en kontroll.
+**[Strikethrough](properties-text.md)** – om det vises en linje gjennom teksten som vises på en kontroll.
 
-**[TabIndex](properties-accessibility.md)** – tilpasser fanerekkefølgen for kontroller ved kjøretid når de er angitt som en annen verdi enn null.
+**[TabIndex](properties-accessibility.md)** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
 
 **[Verktøytips](properties-core.md)** – forklarende tekst som vises når brukeren holder pekeren over en kontroll.
 
-**[Understreking](properties-text.md)** – om det vises en linje under teksten som vises på en kontroll.
+**[Underline](properties-text.md)** – om det vises en linje under teksten som vises på en kontroll.
 
 **[Synlig](properties-core.md)** – om kontrollen vises eller skjules.
 
@@ -137,3 +138,20 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
    
     **Tekstgalleri**-kontrollen viser bare disse byene i landet som du valgte.
 
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="color-contrast"></a>Fargekontrast
+Det må være tilstrekkelig fargekontrast mellom:
+* **ChevronFill** og **ChevronBackground**
+* **ChevronHoverFill** og **ChevronHoverBackground**
+* **SelectionColor** og **SelectionFill**
+* **SelectionFill** og **[Fyll](properties-color-border.md)**
+
+Dette er i tillegg til [kravene for standard fargekontrast](../accessible-apps-color.md).
+
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **[AccessibleLabel](properties-accessibility.md)** bør vises.
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
+* Fokusindikatorer må være godt synlige. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.

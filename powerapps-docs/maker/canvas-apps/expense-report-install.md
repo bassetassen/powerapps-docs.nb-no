@@ -1,26 +1,23 @@
 ---
 title: Å installere og konfigurere eksemplet for utgiftsrapport for PowerApps | Microsoft Docs
 description: Trinnvise instruksjoner for installasjon og konfigurasjon av eksemplet for utgiftsrapport for PowerApps.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: caburk
-manager: ''
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 02/20/2018
+ms.topic: sample
+ms.component: canvas
+ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: 0a4c35fe756e6ba9baf899a302d739467e21b591
-ms.sourcegitcommit: eac8ad7b54a0b0eba6444a38a952dbfd17bc64b5
+ms.openlocfilehash: bce21a5fe07cb5bf608c36371a7cbe45e845b2ad
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/08/2018
-ms.locfileid: "30998552"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330587"
 ---
 # <a name="install-and-configure-the-expense-report-powerapps-sample"></a>Å installere og konfigurere eksemplet for utgiftsrapport for PowerApps
 
@@ -64,13 +61,13 @@ Denne listen inneholder utgiftsrapporten.
 
 10. Klikk på **Opprett**.
 
-### <a name="create-costcenter-column"></a>Å opprette CostCenter-kolonnen
+### <a name="create-cost-center-column"></a>Å opprette Kostsenter-kolonnen
 
 1. Klikk på **Utgifter**-listen.
 2. Klikk på **tannhjulikonet** i øverste høyre del av nettsiden.
 3. Klikk på **Listeinnstillinger**.
 4. Klikk på **Opprett kolonne**.
-5. Angi **CostCenter** i tekstboksen **Kolonnenavn**.
+5. Angi **Kostsenter** i tekstboksen **Kolonnenavn**.
 6. Velg **Valg** i alternativknapplisten **Informasjonstypen i denne kolonnen er**.
 7. Angi følgende verdier i tekstboksen til **Skriv inn hvert valg på en egen linje**, hver av dem på en egen linje: 
     - Microsoft
@@ -237,7 +234,7 @@ Denne listen inneholder linjeelementene som er knyttet til utgiftsrapporten.
 ### <a name="create-sharepoint-connection"></a>Å legge til en SharePoint-tilkobling
 
 1.  Klikk på **+ Ny tilkobling**.
-2.  Angi **Outlook** i **Søk**-tekstboksen.
+2.  Angi **SharePoint** i **Søk**-tekstboksen.
 3.  Velg **SharePoint** i listen.
 4.  Klikk på **Opprett**.
 5.  I popup-vinduet velger du kontoen du logget på med.
@@ -263,7 +260,7 @@ Denne listen inneholder linjeelementene som er knyttet til utgiftsrapporten.
     ![Å importere Innstillinger-skjermen](./media/expense-report-install/import-settings-sharepoint.png)
 
 10. Klikk på **Lagre**.
-11. Klikk på det **røde ikonet** for å velge **SharePoint-tilkoblingen**.
+11. Klikk på det **røde ikonet** for **tilkoblingen for godkjenning**.
 12. Klikk på elementet med brukernavnet ditt i listen med tilkoblinger.
 
     ![Å importere Innstillinger-skjermen](./media/expense-report-install/import-settings-approvals.png)
@@ -386,7 +383,10 @@ Se denne videoen for å se hvordan du bruker eksemplet for utgiftsrapport for Po
 
 [![Video om hvordan du installerer utgiftsrapporten](./media/expense-report-install/expense-report-demo-video.png)](https://youtu.be/h6E9cdrOvMU)
 
-
+##<a name="next-steps"></a>Neste trinn
+- [Å tilpasse et SharePoint-listeskjema](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/customize-list-form)
+- [Å legge til og konfigurere en kontroll](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/add-configure-controls)
+- [Å redigere og behandle tillatelser for en SharePoint-liste eller et bibliotek](https://support.office.com/en-us/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
 
 
 

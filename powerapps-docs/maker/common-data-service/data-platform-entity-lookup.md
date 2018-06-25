@@ -1,32 +1,25 @@
 ---
-title: Hurtigstart for enhetsrelasjoner via oppslagsfeltet | Microsoft Docs
-description: Hurtigstart for bygging av en relasjon mellom enheter ved hjelp av et oppslagsfelt
-services: powerapps
-documentationcenter: na
+title: Å bygge en relasjon mellom enheter ved hjelp av et oppslagsfelt | Microsoft Docs
+description: Trinnvise instruksjoner for hvordan du oppretter en relasjon mellom enheter i PowerApps ved hjelp av et oppslagsfelt.
 author: clwesene
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 3/21/2018
+ms.component: cds
+ms.topic: conceptual
+ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: 37450b6e9f43780deaed4ff34b005472501bdb23
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: f1952c2349eb54f2c6348f5abc4dee9a4645348a
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997477"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168439"
 ---
-# <a name="quickstart-create-a-relationship"></a>Hurtigstart: Å opprette en relasjon
+# <a name="create-a-relationship-between-entities"></a>Opprette en relasjon mellom enheter
 Data i én enhet er ofte knyttet til data i en annen enhet. Du kan for eksempel ha en enhet for **lærere** og en enhet for **klasse**, og enheten for **klasse** kan ha en oppslagsrelasjon til enheten for **lærere** for å vise hvilken lærer som har ansvar for klassen. Du kan bruke et oppslagsfelt som viser data fra enheten for **lærere**. Dette kalles ofte et oppslagsfelt.
 
 ## <a name="define-a-relationship"></a>Å definere en relasjon
 Du kan opprette flere typer relasjoner fra én enhet til en annen (eller på tvers av samme enhet). Hver enhet kan ha en relasjon med mer enn én enhet, og hver enhet kan ha mer enn én relasjon med en annen enhet. Noen vanlige relasjonstyper er:
-
 
 * **Mange-til-én** – I denne type relasjon kan hver post i enhet A kan samsvare med mer enn én post i enhet B, men hver post i enhet B kan bare samsvare med én post i enhet A. For eksempel, en klasse som har ett enkelt klasserom. Dette er den vanligste relasjonstypen, og den vises i feltlisten som et **oppslagsfelt**
 * **Én-til-mange** – I denne relasjonstypen kan hver post i enhet B samsvare med mer enn én post i enhet A, men hver post i enhet A kan bare samsvare med én post i enhet B. For eksempel én enkelt lærer, som underviser mange klasser.
@@ -92,5 +85,5 @@ Hvis du [oppretter en app automatisk](../canvas-apps/data-platform-create-app.md
 
 ## <a name="next-steps"></a>Neste trinn
 * [Generer en app ved hjelp av en Common Data Service-database](../canvas-apps/data-platform-create-app.md)
-* [Opprett en app fra grunnen av ved hjelp av en Common Data Service-database](../canvas-apps/data-platform-create-app-scratch.md)
+* [Å opprette en app fra grunnen av ved hjelp av en Common Data Service-database](../canvas-apps/data-platform-create-app-scratch.md)
 

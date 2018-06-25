@@ -1,26 +1,19 @@
 ---
 title: Oversikt over områder | Microsoft Docs
-description: 'Områder i PowerApps: hvor apper er distribuert, tilgjengelig områder og funksjoner som er spesifikke for et område'
-services: ''
-suite: powerapps
-documentationcenter: na
-author: skjerland
-manager: anneta
-editor: ''
-tags: ''
+description: Finn ut om områder i PowerApps
+author: manasmams
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: ab5443ae628a80d52d5bbcb1fa46ceed05391794
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 818d751a45eee6d746d4f318a98169a771787d92
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995772"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34445779"
 ---
 # <a name="regions-overview-in-powerapps"></a>Oversikt over områder i PowerApps
 ## <a name="how-do-i-find-out-where-my-app-is-deployed"></a>Hvordan kan jeg finne ut hvor appen distribueres?
@@ -54,5 +47,4 @@ Opprett og bruk miljøet i området Europa hvis brukerne er i Europa, for optima
 
 > [!NOTE]
 > Lokale datagatewayer er ikke tilgjengelige i India-området eller i egendefinerte miljøer. Du må opprette gatewayer i standardmiljøet.
-
 

@@ -1,28 +1,25 @@
 ---
 title: Å skanne en strekkode | Microsoft Docs
 description: Å skanne en rekke strekkodetyper, for eksempel UPC og Codabar
-services: ''
-suite: powerapps
 documentationcenter: na
 author: aftowen
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/23/2016
 ms.author: anneta
-ms.openlocfilehash: 078c53300c4e1489d179f9c91818a8e23616f3ae
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 6960b41effb109f6f2266ba279b4d51ea51e744f
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997582"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32328724"
 ---
-# <a name="scan-a-barcode-in-microsoft-powerapps"></a>Å skanne en strekkode i Microsoft PowerApps
+# <a name="scan-a-barcode-in-powerapps"></a>Å skanne en strekkode i PowerApps
 Skann flere typer strekkoder ved å opprette en app, og kjøre den på en enhet, for eksempel en telefon som har et kamera. Den numeriske tilsvarende strekkoden vises i en **Etikett**kontroll, og du kan laste opp denne dataen til en rekke [datakilder](connections-list.md).
 
 Hvis du ikke er kjent med PowerApps, kan du se [Komme i gang](getting-started.md).
@@ -39,8 +36,7 @@ Hvis du ikke er kjent med PowerApps, kan du se [Komme i gang](getting-started.md
 ## <a name="create-a-blank-app"></a>Å opprette en tom app
 1. [Registrer deg for PowerApps](../signup-for-powerapps.md), og gjør deretter *en* av følgende:
 
-   * [Åpne PowerApps](https://create.powerapps.com/api/start) i en nettleser på en enhet som har et kamera.
-   * [Installere PowerApps](http://aka.ms/powerappsinstall) fra Windows Store på en enhet som har et kamera. Åpne PowerApps, logg på, og klikk eller trykk på **Ny** på **Fil**-menyen (langs venstre kant).
+1. [Åpne PowerApps](https://create.powerapps.com) i en nettleser på en enhet som har et kamera.
 
 2. Klikk eller trykk på **Telefonoppsett** på **Tom app**-flisen, under **Begynn med et tomt lerret eller en mal**.
 

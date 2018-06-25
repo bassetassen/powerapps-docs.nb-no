@@ -1,26 +1,18 @@
 ---
 title: Oversikt over SharePoint-tilkoblingen | Microsoft Docs
 description: Se de tilgjengelige funksjonene, svarene og eksemplene for SharePoint
-services: ''
-suite: powerapps
-documentationcenter: ''
 author: sarafankit
-manager: anneta
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/12/2017
-ms.author: sharik
-ms.openlocfilehash: f79809b2eb74d4cea2ee9719a3a76e8149a533dc
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: ankitsar
+ms.openlocfilehash: 8a49e0e4e866e7e9eda4834904ee84c082140376
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996087"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803309"
 ---
 # <a name="connect-to-sharepoint-from-powerapps"></a>Koble til SharePoint fra PowerApps
 ![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
@@ -32,14 +24,14 @@ Du kan legge til data fra en egendefinert liste, men ikke fra et bibliotek. I ti
 
 | Kolonnetype | Støtte | Standardkort |
 | --- | --- | --- |
-| Enkeltlinje med tekst |Ja |Vis tekst |
-| Flere linjer med tekst |Ja |Vis tekst |
+| Enkeltlinje med tekst |Ja |Å vise tekst |
+| Flere linjer med tekst |Ja |Å vise tekst |
 | Valg |Ja |Vis oppslag<br>Rediger oppslag<br>Vis flervalg<br>Rediger flervalg |
-| Tall |Ja |Vis prosentandel<br>Vis vurdering<br>Vis tekst |
+| Tall |Ja |Vis prosentandel<br>Vis vurdering<br>Å vise tekst |
 | Valuta |Ja |Vis prosentandel<br>Vis vurdering<br>Vis tekst |
-| Dato og klokkeslett |Ja |Vis tekst |
+| Dato og klokkeslett |Ja |Å vise tekst |
 | Oppslag |Ja |Vis oppslag<br>Rediger oppslag<br>Vis flervalg<br>Rediger flervalg |
-| Boolsk (Ja/Nei) |Ja |Vis tekst<br>Aktiver/deaktiver visning |
+| Boolsk (Ja/Nei) |Ja |Å vise tekst<br>Aktiver/deaktiver visning |
 | Person eller gruppe |Ja |Vis oppslag<br>Rediger oppslag<br>Vis flervalg<br>Rediger flervalg |
 | Hyperkobling |Ja |Vis nettadresse<br>Vis tekst |
 | Bilde |Ja (skrivebeskyttet) |Vis bilde<br>Vis tekst |
@@ -53,15 +45,13 @@ Du kan legge til data fra en egendefinert liste, men ikke fra et bibliotek. I ti
 Kolonner som inneholder mellomrom kan leses av PowerApps, men mellomrommene erstattes med den heksadesimale escape-koden **«\_x0020\_»**. **«Kolonnenavn»** i SharePoint vil for eksempel vises som **«Column_x0020_Name»** i PowerApps når de vises i dataoppsettet eller brukes i en formel.
 
 ## <a name="prerequisites"></a>Forutsetninger
-Åpne PowerApps ved å følge *ett av* disse trinnene:
+1. [Registrer deg](../../signup-for-powerapps.md) for PowerApps.
 
-* [Registrer deg](../../signup-for-powerapps.md) for PowerApps, [installer PowerApps Studio for Windows](http://aka.ms/powerappsinstall), åpne det og logg deg deretter på ved å angi samme legitimasjon som du brukte til å registrere deg.
+1. [Logg deg på](http://web.powerapps.com) PowerApps ved å angi samme legitimasjon som du brukte til å registrere deg.
 
-* [Åpne PowerApps Studio for nett](https://create.powerapps.com/api/start) i en nettleser.
+1. Nær venstre kant velger du **Apper**, og deretter velger du **Opprett en app** i banneret.
 
-    Hvis du vil ha en liste over støttede nettlesere og begrensinger i forhåndsvisningsutgivelsen av PowerApps Studio for nett, kan du se [Opprette eller redigere apper i en nettleser](../create-app-browser.md).
-
-## <a name="create-an-app"></a>Opprette en app
+## <a name="create-an-app"></a>Å opprette en app
 * [Generer en app automatisk](../app-from-sharepoint.md) basert på dataene i en SharePoint-liste.
 
     Appen har som standard tre skjermer: én for å bla gjennom poster, én for å vise detaljer om en enkelt post, og én for å opprette eller oppdatere en post. Når appen er generert, vil du trolig ønske å tilpasse [skjermbildet for nettleseren](../customize-layout-sharepoint.md) og [detaljene og redigere skjermer](../customize-forms-sharepoint.md) for å imøtegå dine behov.
@@ -119,22 +109,22 @@ Kolonner som inneholder mellomrom kan leses av PowerApps, men mellomrommene erst
 
     ![Listen over datakilder som er lagt til appen](./media/connection-sharepoint-online/data-sources-list.png)
 
-## <a name="show-data-in-a-gallery"></a>Vis data i et galleri
+## <a name="show-data-in-a-gallery"></a>Vise data i et galleri
 Bruk formellinjen for å angi **Tekst**-egenskapen for én eller flere **Etikett**-kontroller i galleriet for å vise data fra noen av disse kolonnetypene i et galleri:
 
 * Angi **ThisItem.[ColumnName].Value** for å vise data for **Valg-** eller **Oppslag-** kolonner.
 
-    Angi for eksempel **ThisItem.Location.Value** hvis du har en **Valg**-kolonne ved navn **Location**, og angi **ThisItem.PostalCode.Value** hvis du har en **Oppslag**-kolonne ved navn **PostalCode**.
+    Angi for eksempel **ThisItem.Location.Value** hvis du har en **Valg**-kolonne ved navn **Lokasjon**, og angi **ThisItem.PostalCode.Value** hvis du har en **Oppslag**-kolonne ved navn **PostalCode**.
 
 * Angi **ThisItem.[ColumnName].DisplayName** for å vise visningsnavnet for brukeren eller gruppen for **Person- eller gruppe**-kolonner.
 
     Angi for eksempel **ThisItem.Manager.DisplayName** for å vise visningsnavn fra en **Person- eller gruppe**-kolonne ved navn **Leder**.
 
-    Du kan også vise forskjellig informasjon om brukere, for eksempel e-postadresser eller jobbtitler. Hvis du vil vise en fullstendig liste over alternativer, kan du angi **ThisItem. [ ColumnName].** (med etterfølgende punktum).
+    Du kan også vise forskjellig informasjon om brukere, for eksempel e-postadresser eller jobbtitler. Hvis du vil vise en fullstendig liste over alternativer, kan du angi **ThisItem.[ColumnName].** (med etterfølgende punktum).
 
     **Merk:** For en **CreatedBy**-kolonne angir du **ThisItem.Author.DisplayName** for å vise visningsnavnene på brukerne som opprettet elementer i listen. For en **ModifiedBy**-kolonne angir du **ThisItem.Editor.DisplayName** for å vise visningsnavnene på brukerne som endret elementer i listen.
 
-* For en **Administrerte metadata**-liste angir du **ThisItem.[ColumnName].Label** for å vise data i denne kolonnen.
+* For en **Administrerte metadata**-kolonne angir du **ThisItem.[ColumnName].Label** for å vise data i denne kolonnen.
 
     For eksempel angir du **ThisItem.Languages.Label** hvis du har en **Administrerte metadata**-kolonne kalt **Språk**.
 

@@ -1,27 +1,21 @@
 ---
-title: 'Hurtigstart: Slik sletter du egendefinerte enheter og fjerner data | Microsoft Docs'
-description: 'Hurtigstart: Slette egendefinerte enheter og fjerne alle data'
-services: powerapps
-documentationcenter: na
+title: Å slette en egendefinert enhet | Microsoft Docs
+description: Trinnvise instruksjoner for hvordan du sletter en egendefinert enhet og fjerner alle data i PowerApps
 author: clwesene
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 3/21/2018
+ms.component: cds
+ms.topic: conceptual
+ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: 399d3e8bac215df7612ac12d922dfe644dc59f96
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 6ef9dc3a1c82fdee9927ffd533ed41386345eaf7
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997322"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34167565"
 ---
-# <a name="quickstart-delete-a-custom-entity"></a>Hurtigstart: Slette egendefinerte enheter
+# <a name="delete-a-custom-entity"></a>Slett en egendefinert enhet
 Du kan slette egendefinerte enheter, men ikke standardenheter.
 
 1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
@@ -29,6 +23,7 @@ Du kan slette egendefinerte enheter, men ikke standardenheter.
     ![Enhetsdetaljer](./media/data-platform-cds-create-entity/entitylist.png "Enhetsliste")
 
 2. Du sletter enheten ved å klikke eller trykke på den på listen over enheter og deretter klikke eller trykke på alternativet **Slett enhet** på kommandolinjen.
+
 3. Klikk eller trykk på **Slett** i dialogboksen som åpnes, for å slette enheten.
 
 >[!NOTE]

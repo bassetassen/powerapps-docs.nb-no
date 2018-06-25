@@ -10,7 +10,7 @@ Hver eksempelapp er utformet for et bestemt formål, for eksempel administrasjon
 ![Eksempelapp for gulvlegging for PowerApps](./media/learning-quick-look-powerapps/powerapps-flooring-sample.png)
 
 ## <a name="create-an-app-from-a-template"></a>Oppretting av en app fra en mal
-En annen god måte å starte på, er **å bygge en app fra en mal**. Maler er i hovedsak eksempelapper som du kan åpne for å forstå hvordan de er satt sammen. De bruker eksempeldata slik at du får en følelse av hva som er mulig, og det å åpne dem i PowerApps Studio hjelper deg med å **se hvordan en app lages i praksis**. Vær oppmerksom på at malene er tilgjengelige bare i PowerApps Studio for Windows på dette tidspunktet, ikke i PowerApps Studio for nett.
+En annen god måte å starte på, er **å bygge en app fra en mal**. Maler er i hovedsak eksempelapper som du kan åpne for å forstå hvordan de er satt sammen. De bruker eksempeldata slik at du får en følelse av hva som er mulig, og det å åpne dem i PowerApps Studio hjelper deg med å **se hvordan en app lages i praksis**.
 
 ![Mal for PowerApps-app](./media/learning-quick-look-powerapps/powerapps-templates.png)
 
@@ -24,7 +24,7 @@ Hvis teamet har begynt å bruke PowerApps, kan personer ha **delt apper med deg*
 ![PowerApps-deling](./media/learning-quick-look-powerapps/powerapps-sharing.png)
 
 ## <a name="create-an-app-from-a-data-source"></a>Oppretting av en app fra en datakilde
-Opprett apper i **PowerApps Studio for nett** eller **PowerApps Studio for Windows**. Du vil kunne koble til datakilder og begynne å sette sammen apper i en visuell utformer.
+Opprett apper i **PowerApps Studio**. Du vil kunne koble til datakilder og begynne å sette sammen apper i en visuell utformer.
 
 ![PowerApps-app fra data](./media/learning-quick-look-powerapps/powerapps-app-from-data.png)
 

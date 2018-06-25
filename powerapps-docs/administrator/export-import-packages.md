@@ -1,25 +1,19 @@
 ---
 title: Å eksportere og importere ressurser | Microsoft Docs
-description: Å eksportere og importere ressurser
-services: powerapps
-documentationcenter: na
+description: Finn ut hvordan du eksporterer og importerer ressurser i PowerApps
 author: nimakms
-manager: kfend
-editor: ''
-tags: ''
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 07/28/2017
-ms.author: kfend
-ms.openlocfilehash: c1788d4119d9b4efbeabe8d6fa4fa45f293c2a9d
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: nimak
+ms.openlocfilehash: 752bea42eee356e04c2ab72d28a669ccd2771f70
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995757"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168538"
 ---
 # <a name="export-and-import-resources"></a>Å eksportere og importere ressurser
 Hvis du har opprettet flere miljøer for å støtte utviklingen av databasen og appene dine, må du flytte endringer til ett miljø til et annet miljø. Du kan bruke **Eksporter ressurser** og **Importer ressurser** for å flytte ressursen mellom miljøer.

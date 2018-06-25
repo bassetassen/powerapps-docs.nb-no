@@ -1,25 +1,22 @@
 ---
 title: Å opprette og oppdatere en samling | Microsoft Docs
 description: Å opprette samlinger og legge til kolonner i eksisterende samlinger i PowerApps
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: lonu
-manager: anneta
+manager: kfile
 editor: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 11/30/2015
 ms.author: lonu
-ms.openlocfilehash: de184e286e3a7814020899b7bd820eddfac9c301
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 01065fd1a12b3d55e8726582cead3d86a6e6a8ad
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996557"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330311"
 ---
 # <a name="create-and-update-a-collection-in-your-app"></a>Å opprette og oppdatere en samling i appen
 Bruk en samling til å lagre data som kan brukes i en app. En samling er en gruppe lignende elementer. Du har for eksempel opprettet en MyImages-samling som inneholder alle produktbildene som firmaet selger. Du kan legge til MyImages-samlingen i PowerApps og opprette en app som viser alle bildene av disse produktene. I et annet eksempel kan du opprette en PriceList-samling som viser produktene og prisen for hvert produkt.
@@ -27,7 +24,7 @@ Bruk en samling til å lagre data som kan brukes i en app. En samling er en grup
 Du kan opprette og bruke samlingene i PowerApps. La oss komme i gang.
 
 ### <a name="prerequisites"></a>Forutsetninger
-* [Registrer deg](../signup-for-powerapps.md) for PowerApps, [installer](http://aka.ms/powerappsinstall) det, åpne det, og logg deg på ved å oppgi samme legitimasjon som du brukte til å registrere deg.
+* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com) ved å angi samme legitimasjon som du brukte til å registrere deg.
 * Opprett en app eller åpne en eksisterende app i PowerApps.
 * Finn ut hvordan du [konfigurerer en kontroll](add-configure-controls.md) i PowerApps.
 * Denne fremgangsmåten bruker [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip)-filen som eksempeldata. Zip-filen inneholder en XML-fil som kan konverteres til Excel. PowerApps leser ellers automatisk ZIP-filene og importerer dem. Du kan laste ned og bruke disse eksempeldataene eller importere dine egne.

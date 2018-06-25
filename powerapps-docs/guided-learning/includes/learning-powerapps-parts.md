@@ -9,12 +9,12 @@ I det første veiledede opplæringsemnet lærte du om de viktigste delene av Pow
 Vi forventer ikke at du kan bruke massevis av tid på å lære hva PowerApps *er*, men vi tror det kan være nyttig å informere litt mer.
 
 ## <a name="webpowerappscom"></a>web.powerapps.com
-Hvis du bygger apper, er det her du kommer til å bruke mest tid. Du kan lære fra **eksempelappene og malene** som er tilgjengelige her, og se alle appene du har opprettet. Du kan lage apper i **PowerApps Studio for nett** eller **PowerApps Studio for Windows**, og dele disse appene med enkeltpersoner og organisasjoner. Du kan behandle data: **tilkoblinger**, **gatewayer** og **enheter** (vi går gjennom disse om en liten stund.) Du ser også alle **flytene** som ble opprettet i **flows.microsoft.com**, som du kan integrere med appene dine.
+Hvis du bygger apper, er det her du kommer til å bruke mest tid. Du kan lære fra **eksempelappene og malene** som er tilgjengelige her, og se alle appene du har opprettet. Du kan lage apper i **PowerApps Studio** og dele disse appene med enkeltpersoner og organisasjoner. Du kan behandle data: **tilkoblinger**, **gatewayer** og **enheter** (vi går gjennom disse om en liten stund.) Du ser også alle **flytene** som ble opprettet i **flows.microsoft.com**, som du kan integrere med appene dine.
 
 ![Nettstedet web.powerapps.com](./media/learning-powerapps-parts/powerapps-web-site.png)
 
 ## <a name="powerapps-studio"></a>PowerApps Studio
-**PowerApps Studio** er tilgjengelig som et nettbasert program som du kan bruke i en hvilken som helst moderne nettleser, og som et Windows-program. PowerApps Studio har tre ruter og et bånd, noe som gjør at opplevelsen av app-oppretting **ligner på det å opprette en lysbildevisning i PowerPoint**:
+**PowerApps Studio** er tilgjengelig som et nettbasert program som du kan bruke i en hvilken som helst moderne nettleser. PowerApps Studio har tre ruter og et bånd, noe som gjør at opplevelsen av app-oppretting **ligner på det å opprette en lysbildevisning i PowerPoint**:
 
 1. **Venstre navigasjonsfelt**, der du kan vise et miniatyrbilde for hver skjerm i appen, eller en hierarkisk visning av alle kontrollene i hver skjerm
 2. **Midterste rute**, som viser skjermen du arbeider på

@@ -1,27 +1,21 @@
 ---
-title: Hurtiginnføring i hvordan du oppretter et alternativsett | Microsoft Docs
-description: I denne hurtiginnføringen skal du opprette et alternativsett
-services: powerapps
-documentationcenter: na
+title: Slik oppretter man et alternativsett | Microsoft Docs
+description: Trinnvise instruksjoner for hvordan man oppretter et alternativsett.
 author: clwesene
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 3/21/2018
+ms.component: cds
+ms.topic: conceptual
+ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: 0e4c106e853b39c71e9cd4b40d4bf94f1c506e2e
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 188add46a8e52cfeb75ef1bb670ca3b457963024
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997422"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168600"
 ---
-# <a name="quickstart-create-an-option-set"></a>Hurtiginnføring: Å opprette et alternativsett
+# <a name="create-an-option-set"></a>Å opprette et alternativsett
 
 Med alternativsett kan du inkludere rullegardinlister med fastsatte verdier til en bruker i appen for å sikre datakonsekvens. Dette kalles av og til for nedtrekksmenyer eller valgfelt i andre programmer. De ligner på enheter, og det finnes både standard alternativsett eller muligheten for å opprette egendefinerte alternativsett i appen.
 

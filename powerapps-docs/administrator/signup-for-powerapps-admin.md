@@ -1,26 +1,19 @@
 ---
 title: Å kjøpe PowerApps for organisasjonen | Microsoft Docs
-description: Følg disse trinnene for å registrere deg for PowerApps som en administrator.
-services: powerapps
-suite: powerapps
-documentationcenter: na
+description: Gjennomgang av hvordan du registrerer deg for PowerApps som en administrator.
 author: manasmams
-manager: anneta
-editor: ''
-tags: ''
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 43d39abbd78723202efd756edf6d070724e3157e
-ms.sourcegitcommit: 078ba325480147e6e4da61e319ed53219f1c5cfc
+ms.openlocfilehash: 4b26c16259a7699f1178641ead8c1b5908106468
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/06/2018
-ms.locfileid: "30998357"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168508"
 ---
 # <a name="purchase-powerapps-for-your-organization"></a>Å kjøpe PowerApps for organisasjonen
 Denne artikkelen viser deg hvordan du kjøper PowerApps for organisasjonen som en administrator. Du kan kjøpe PowerApps gjennom PowerApps-nettstedet direkte, gjennom administrasjonssenteret for Office 365, eller gjennom din Microsoft-representant eller -partner. Denne artikkelen tar for seg de tilgjengelige prøvealternativene for PowerApps-abonnement 1 eller 2, og forklarer deretter hvordan du kjøper PowerApps-abonnement 1 eller 2 som en organisasjon. Hvis du vil ha mer informasjon, kan du se [Spørsmål og svar for PowerApps i organisasjonen](signup-question-and-answer.md).

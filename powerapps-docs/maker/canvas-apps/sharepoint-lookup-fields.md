@@ -1,25 +1,23 @@
 ---
 title: Å opprette en relasjon mellom SharePoint-lister via et oppslagsfelt | Microsoft Docs
 description: Å opprette en relasjon mellom SharePoint-lister via et oppslagsfelt.
-services: powerapps
 documentationcenter: na
 author: skjerland
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 01/20/2017
 ms.author: sharik
-ms.openlocfilehash: a1966016b07a79a23880511a5cc0d6da8643adbc
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 0a257df76980bcf1801c9ed98de87ae06c4ae624
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997512"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330081"
 ---
 # <a name="how-to-link-sharepoint-lists-using-lookup-fields"></a>Slik kobler du SharePoint-lister ved hjelp av oppslagsfelt
 Denne opplæringen viser hvordan du kan koble sammen to SharePoint-lister med oppslagsfelt.
@@ -91,10 +89,10 @@ Du gjør dette først, slik at når du legger til data til **Aktiva**-listen, er
 
 6. Legg til flere felt du vil bruke.
 
-## <a name="create-an-app-from-the-assets-list"></a>Opprett en app fra listen over aktivumer
+## <a name="create-an-app-from-the-assets-list"></a>Opprett en app fra listen over aktiva
 Du bruker denne appen til å legge til data i **Aktiva**-listen.
 
-1. Å åpne PowerApps Studio. Hvis du har erfaring med PowerApps, kan du [registrere deg for gratis](https://powerapps.microsoft.com) ved hjelp av organisasjons-e-postadressen og følge instruksjonene for å laste ned PowerApps Studio fra Windows store.
+1. [Logg deg på PowerApps Studio](http://web.powerapps.com). Hvis du er ny med PowerApps, [kan du registrere deg gratis](https://powerapps.microsoft.com) ved hjelp av organisasjons-e-postadressen din.
 
 2. Klikk eller trykk på **Ny** i **Fil**-menyen (langs venstre kant), og klikk eller trykk deretter på **SharePoint**.
 

@@ -1,26 +1,19 @@
 ---
-title: Appanalyse i Microsoft Docs
-description: Vis rapporter for å gå gjennom bruken av og ytelsen til appen din.
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Å vise analyserapporter for appen | Microsoft Docs
+description: Vis rapporter for å gå gjennom bruken av og ytelsen til PowerApps-appene.
 author: jamesol-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 08/29/2017
 ms.author: jamesol
-ms.openlocfilehash: e66978f6134919b18f4cfba913f1bb34394d8832
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: ba4b518cdc1b965a26a7e3fc3722dd23d601e693
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30995752"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168209"
 ---
 # <a name="view-analytics-reports-for-your-app"></a>Å vise analyserapporter for appen din
 Har du utviklet en app og delt den med organisasjonen din?  Er du nysgjerrig på hvor mange av kollegene dine som bruker den daglig?

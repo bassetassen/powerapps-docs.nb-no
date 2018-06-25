@@ -1,25 +1,22 @@
 ---
 title: Å vise, sortere og filtrere data i et galleri | Microsoft Docs
 description: Bruk et galleri for å vise bilder og tekst. Sorter og filtrer bildene i PowerApps.
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: lonu
-manager: anneta
+manager: kfile
 editor: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/02/2015
 ms.author: lonu
-ms.openlocfilehash: 5bf013ffb77b757aed7a900ac4c35c2693859285
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 959431b69d4f432335997697d8f25b5b8815d63c
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997542"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330302"
 ---
 # <a name="show-sort-and-filter-data-in-a-powerapps-gallery"></a>Å vise, sortere og filtrere data i et PowerApps-galleri
 Opprett et galleri for å vise bilder og tekst om flere produkter, og sorter og filtrer informasjonen.
@@ -32,7 +29,7 @@ I PowerApps kan du bruke et galleri for å vise flere relaterte elementer, akkur
 > 
 
 ### <a name="prerequisites"></a>Forutsetninger
-* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og [installer](http://aka.ms/powerappsinstall) PowerApps. Når du åpner PowerApps, logger du på med samme legitimasjon som du brukte til å registrere deg.
+* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com) ved å oppgi samme legitimasjon som du brukte til å registrere deg.
 * Opprett en nettbrett-app fra en [mal](get-started-test-drive.md), fra [data](get-started-create-from-data.md), eller fra [bunnen av](get-started-create-from-blank.md).
 * Finn ut hvordan du kan [konfigurere en kontroll](add-configure-controls.md).
 * Disse trinnene bruker [CreateFirstApp](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) som eksempel for inndata, som inkluderer JPG-bilder. ZIP-filen inneholder en XML-fil som kan konverteres til Excel. PowerApps leser ellers automatisk ZIP-filene og importerer dem. Du kan laste ned og bruke disse eksempeldataene, eller importere dine egne.

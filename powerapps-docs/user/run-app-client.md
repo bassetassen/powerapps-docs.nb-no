@@ -1,26 +1,18 @@
 ---
 title: Hurtiginnføring i hvordan du kjører en arbeidssone-basert app på en mobil enhet i Microsoft Docs
-description: I denne hurtiginnføringen finner du ut hvordan du kjører en arbeidssonebasert app på en mobil enhet
-services: powerapps
-suite: powerapps
-documentationcenter: na
-author: skjerland
-manager: kfile
-editor: ''
-tags: ''
+description: I denne hurtiginnføringen finner du ut hvordan du kjører en lerretsapp på en mobil enhet.
+author: Mattp123
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-user
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/21/2018
-ms.author: sharik
-ms.openlocfilehash: 555a33460109fdb1edc054cd58cb5e6f88126935
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.author: matp
+ms.openlocfilehash: 55fd0bb164fcbb552db68fb89d77c7a7d0807cdc
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30998082"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34553040"
 ---
 # <a name="quickstart-run-a-canvas-app-on-a-mobile-device"></a>Hurtiginnføring: Å kjøre en arbeidssonebasert app på en mobil enhet
 Når du oppretter en app, eller noen deler en app med deg, kan du kjøre appen på Windows, iOS, Android eller i en nettleser. I denne hurtiginnføringen finner du ut hvordan du kjører en arbeidssonebasert app på en mobil enhet. Apper som kjører på en mobil enhet, kan dra nytte av enhetens funksjoner, for eksempel posisjonstjenester og kamera.

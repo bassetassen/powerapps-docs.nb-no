@@ -7,12 +7,12 @@ ms.component: cds
 ms.topic: quickstart
 ms.date: 05/01/2018
 ms.author: matp
-ms.openlocfilehash: 66c96f7496266e03491e404de2bb329f82b6a2bf
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ecbdc81b2688ee9aabf5e0df6416212957ca2642
+ms.sourcegitcommit: 222df368f1f35e9357b0b1adf0e69d7206d8126e
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34552925"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298496"
 ---
 # <a name="quickstart-create-a-custom-entity"></a>Hurtiginnføring i hvordan oppretter en egendefinert enhet
 I PowerApps definerer en *enhet* informasjonen du ønsker å spore i form av poster, som typisk inneholder egenskaper som eksempelvis firmanavn, plasseringer, produkter, e-postadresser og telefonnumre. Deretter kan du se nærmere på dataene ved å utvikle en app som refererer til enheten. PowerApps tilbyr standard «bruksklare»-enheter for å dekke vanlige scenarioer i en organisasjon (for eksempel sporing av avtaler), men det kan være ganger da du trenger å opprette egendefinerte enheter for å lagre data som er spesifikke for din organisasjon.
@@ -25,7 +25,7 @@ Følgende elementer kreves for å følge denne hurtiginnføringen:
 * En sikkerhetsrolle som systemadminstrator eller systemtilpasser i Common Data Service for apper.
 
 ## <a name="sign-in-to-powerapps"></a>Å logge deg på PowerApps
-Logg deg på PowerApps på [https://web.powerapps.com]([https://web.powerapps.com).
+Logg deg på PowerApps på [https://web.powerapps.com](https://web.powerapps.com).
 
 ## <a name="create-an-entity"></a>Å opprette en enhet
 1. I navigasjonsruten klikker eller trykker du på **Data** for å utvide den, og deretter klikker eller trykker du på **Enheter**.

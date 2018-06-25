@@ -32,7 +32,7 @@
       href: create-database.md
     - name: Administrere miljøer
       href: environments-administration.md
-    - name: Konfigurere miljøsikkerhet
+    - name: Å konfigurere miljøsikkerhet
       href: database-security.md
     - name: Administrere apper i organisasjonen
       href: admin-manage-apps.md
@@ -51,6 +51,8 @@
               href: powerapps-gdpr-delete-dsr.md
         - name: CDS for kundedata for apper
           href: common-data-service-gdpr-dsr-guide.md
+        - name: Integrering av data for CDS for apper
+          href: data-integration-gdpr-dsr-guide.md
 - name: Referanse
   items:
     - name: PowerShell-støtte for PowerApps (forhåndsversjon)

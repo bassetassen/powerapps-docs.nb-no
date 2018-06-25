@@ -1,26 +1,23 @@
 ---
 title: IsMatch-funksjonen | Microsoft Docs
 description: Referanseinformasjon, inkludert syntaks, for IsMatch-funksjonen i PowerApps
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 02/05/2017
 ms.author: gregli
-ms.openlocfilehash: b15a394db060617aeae8324094a70aa8cadf6755
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 26bbef6e61845708e20efb3bd201ae61867d1026
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997102"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838422"
 ---
 # <a name="ismatch-function-in-powerapps"></a>IsMatch-funksjonen i PowerApps
 Tester om en tekststreng samsvarer med et mønster.

@@ -1,33 +1,23 @@
 ---
-title: Å kjøre en modelldrevet app på en mobil enhet med PowerApps i Microsoft Docs
-description: En gjennomgang for hvordan du kjører en modelldreven app på en mobil enhet
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Hurtiginnføring i hvordan du kjører en modelldrevet app på en mobil enhet med PowerApps | Microsoft Docs
+description: I denne hurtiginnføringen finner du ut hvordan du kjører en modelldrevet app på en mobil enhet.
 author: Mattp123
-manager: brycho
-editor: ''
-tags: ''
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-user
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/21/2018
 ms.author: matp
-ms.openlocfilehash: 73b8aca29af2e9ee5fa117a7e7b79a8d3dbaca9f
-ms.sourcegitcommit: a9ac8a3ed734cb5f70b61476168d1bff5de844f8
+ms.openlocfilehash: 5556739d0a067e9475cd253efdf733ae91218719
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/30/2018
-ms.locfileid: "30998217"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34074065"
 ---
 # <a name="quickstart-run-a-model-driven-app-on-a-mobile-device"></a>Hurtiginnføring for hvordan du kjører en modelldreven app på en mobil enhet
 
 Etter at appen er opprettet og deretter delt med deg, kan du kjøre appen på en rekke populære mobile enheter som Windows, iOS, Android, eller i en nettleser. I denne hurtiginnføringen finner du ut hvordan du kjører en modelldrevet app på en mobil enhet. 
-
-> [!IMPORTANT]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
 
 Hvis du vil følge denne hurtiginnføringen, og ikke er registrert for PowerApps, kan du [registrere deg gratis](https://web.powerapps.com/signup?redirect=marketing&email=) før du begynner. Du må også sørge for at du har tilgang til en app som du opprettet, eller som noen andre delte med deg.
 

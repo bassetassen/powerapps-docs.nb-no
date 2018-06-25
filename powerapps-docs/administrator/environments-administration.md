@@ -1,26 +1,19 @@
 ---
 title: Administrer miljøer | Microsoft Docs
-description: Administrer miljøer i PowerApps, inkludert oppretting, tildeling av nytt navn, sletting og sikkerhet
-services: powerapps
-suite: powerapps
-documentationcenter: na
+description: Finn ut hvordan du administrer miljøer i PowerApps, inkludert oppretting, tildeling av nytt navn, sletting og sikkerhet
 author: manasmams
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: c11c1d2122cf4306aede621e3c98a95a6ec9a967
-ms.sourcegitcommit: 078ba325480147e6e4da61e319ed53219f1c5cfc
+ms.openlocfilehash: 3e3cd3b7339303e23411f3ef977cc33db6e5e8e0
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/06/2018
-ms.locfileid: "30998382"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34445687"
 ---
 # <a name="administer-environments-in-powerapps"></a>Administrer miljøer i PowerApps
 I [administrasjonssenteret for PowerApps][1] kan du administrere miljøer du har opprettet, samt miljøer der du har blitt lagt til i rollen som miljøadministrator eller systemansvarlig. Du kan utføre disse administrative handlingene fra administrasjonssenteret:
@@ -104,7 +97,7 @@ Hvis et miljø ikke allerede har en database, kan en miljøadministrator opprett
     ![](./media/environment-admin/Create-DB-From-Details.png)
 
 
-Når du har opprettet en database, velger du en sikkerhetsmodell. Hvis du vil ha mer informasjon, kan du se [Konfigurer databasesikkerhet](database-security.md).
+Når du har opprettet en database, velger du en sikkerhetsmodell. Hvis du vil ha mer informasjon, kan du se [Configure environment security](database-security.md) (Konfigurer miljøsikkerhet).
 
 ## <a name="manage-security-for-your-environments"></a>Administrer sikkerhet for miljøene dine
 
@@ -145,9 +138,9 @@ Hvis du vil tilordne en bruker eller en sikkerhetsgruppe til en miljørolle, kan
 
 4. Hvis en database er opprettet i miljøet:
 
-    a. Klikk på koblingen for å administrere miljørollene i Dynamics 365.
+    a. Legg til brukeren i miljøet, og klikk på koblingen for å tilordne en rolle for brukeren.
 
-    ![](./media/environment-admin/Security-Link-D365.png)
+    ![](./media/database-security/security-adduser.png)
 
     b. Velg brukeren fra listen over brukere i miljøet/forekomsten.
 
@@ -161,12 +154,12 @@ Hvis du vil tilordne en bruker eller en sikkerhetsgruppe til en miljørolle, kan
 
 
 > [!NOTE]
-> Brukere eller grupper som er tilordnet disse miljørollene, blir ikke automatisk gitt tilgang til miljøets database (hvis den finnes). De må gis tilgang separat av en eier av databasen. Hvis du vil ha mer informasjon, kan du se [Konfigurer databasesikkerhet](database-security.md).  
+> Brukere eller grupper som er tilordnet disse miljørollene, blir ikke automatisk gitt tilgang til miljøets database (hvis den finnes). De må gis tilgang separat av en eier av databasen. Hvis du vil ha mer informasjon, kan du se [Configure environment security](database-security.md) (Konfigurer miljøsikkerhet).  
 >
 >
 
 ### <a name="database-security"></a>Databasesikkerhet
-Muligheten til å opprette og endre et databaseskjema og koble til dataene som er lagret i en database som er klargjort i miljøet ditt, styres av databasens brukerroller og tillatelsessett. Du kan administrere brukerroller og tillatelsessett for miljøets database fra **Brukerroller**- og **Tillatelsessett**-delen under **Sikkerhet**-fanen. Hvis du vil ha mer informasjon, kan du se [Konfigurer databasesikkerhet](database-security.md).
+Muligheten til å opprette og endre et databaseskjema og koble til dataene som er lagret i en database som er klargjort i miljøet ditt, styres av databasens brukerroller og tillatelsessett. Du kan administrere brukerroller og tillatelsessett for miljødatabasen fra **Brukerroller**- og **Tillatelsessett**-delen på **Sikkerhet**-fanen. Hvis du vil ha mer informasjon, kan du se [Konfigurer databasesikkerhet](database-security.md).
 
 ![](./media/environment-admin/D365-Assign-Role.png)
 

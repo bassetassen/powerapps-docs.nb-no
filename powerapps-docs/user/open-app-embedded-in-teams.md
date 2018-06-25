@@ -1,26 +1,19 @@
 ---
-title: Å legge til og åpne en app i Microsoft Teams | Microsoft Docs
-description: Å legge til en app i en Microsoft Teams-kanal slik at personer du har delt appen med kan åpne den i denne kanalen
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Hurtiginnføring for å legge til og åpne en app i Microsoft Teams | Microsoft Docs
+description: I denne hurtigveiledningen lærer du hvordan du legger til en app til en Microsoft Teams-kanal, slik at personer du har delt appen med kan åpne den i denne kanalen.
 author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-user
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 01/18/2018
 ms.author: mblythe
-ms.openlocfilehash: 02248cc3e98f256df36bb6a57fac6e66c684a8bf
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 9c670a61f89b8bf038bae117614895f18101fe0c
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30997442"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34074134"
 ---
 # <a name="quickstart-add-an-app-to-microsoft-teams"></a>Hurtigstart: Legg til en app i Microsoft Teams
 
