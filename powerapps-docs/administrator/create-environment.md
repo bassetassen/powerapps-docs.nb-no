@@ -8,10 +8,10 @@ ms.topic: quickstart
 ms.date: 03/21/2018
 ms.author: jimh
 ms.openlocfilehash: f648d68a19c646a2a69a8eebca85ac9e33af0686
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
+ms.lasthandoff: 06/26/2018
 ms.locfileid: "34552856"
 ---
 # <a name="quickstart-create-an-environment"></a>Hurtiginnføring: Å opprette et miljø
@@ -26,7 +26,7 @@ I denne hurtiginnføringen finner du ut mer om hvordan du oppretter et miljø og
  * En lisens for enten et PowerApps 2-abonnement eller et Microsoft Flow 2-abonnement. Du kan også registrere deg for en [gratis prøveversjon av PowerApps (abonnement 2)](https://web.powerapps.com/signup?redirect=marketing&email=).
  * Miljøadministrator for PowerApps, global administrator for Office 365 eller administrasjonstillatelser for tenanten til Azure Active Directory. Hvis du vil ha mer informasjon, kan du se [Miljøadministrasjon i PowerApps](environments-administration.md).
 
-## <a name="sign-in-to-the-powerapps-admin-center"></a>Slik får du tilgang til administrasjonssenteret for PowerApps
+## <a name="sign-in-to-the-powerapps-admin-center"></a>Å logge på administrasjonssenteret for PowerApps
 Logg deg på administrasjonssenteret på [https://admin.powerapps.com](https://admin.powerapps.com).
 
 ## <a name="create-an-environment-and-database"></a>Å opprette et miljø og en database

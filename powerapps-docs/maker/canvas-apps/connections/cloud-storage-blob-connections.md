@@ -8,10 +8,10 @@ ms.component: canvas
 ms.date: 07/12/2016
 ms.author: lanced
 ms.openlocfilehash: b0141315f041d81b929a53761952d9b5e355c82e
-ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
+ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/05/2018
+ms.lasthandoff: 06/26/2018
 ms.locfileid: "34803033"
 ---
 # <a name="connect-to-cloud-storage-from-powerapps"></a>Å koble til lagring i skyen fra PowerApps
@@ -33,23 +33,23 @@ PowerApps tilbyr flere tilkoblinger for lagring i skyen. Ved hjelp av noen av di
 ## <a name="connect-to-the-cloud-storage-connection"></a>Å koble til tilkoblingen for skylagring
 1. Utvid **Behandle**på [powerapps.com](https://web.powerapps.com), og velg **Tilkoblinger**:  
    
-    ![Velg tilkoblinger](./media/cloud-storage-blob-connections/connections.png)
+    ![Å velge tilkoblinger](./media/cloud-storage-blob-connections/connections.png)
 2. Velg **Ny tilkobling**, og velg tilkoblingen din for skylagring. Velg for eksempel **OneDrive**.
 3. Du blir bedt om brukernavn og passord i kontoen for skylagring. Angi dette, og velg deretter **Logg på**:  
     ![Å angi brukernavn og passord](./media/cloud-storage-blob-connections/signin.png)
    
     Når du er logget på, er denne tilkoblingen klar til å brukes i appene dine.
-4. Klikk eller trykk på **Datakilder** i appen, på **Vis**-fanen på båndet. I den høyre ruten klikker eller trykker du på **Legg til en datakilde**, klikk eller trykk så på skylagringstilkoblingen, og velg deretter Excel-tabellen.
+4. Klikk eller trykk på **Datakilder** i appen, på **Vis**-fanen på båndet. Klikk eller trykk på **Legg til en datakilde** i den høyre ruten, klikk eller trykk så på skylagringstilkoblingen, og velg deretter Excel-tabellen.
 5. Velg **Koble til**.
    
     Nå er tabellen oppført som en datakilde:
    
-    ![Velg Excel-tabellen](./media/cloud-storage-blob-connections/selecttable.png)
+    ![Å velge Excel-tabellen](./media/cloud-storage-blob-connections/selecttable.png)
    
     > [!NOTE]
 > Husk at Excel-dataene må være formatert som en tabell.
 
-## <a name="using-the-excel-data-in-your-app"></a>Bruke Excel-data i appen
+## <a name="using-the-excel-data-in-your-app"></a>Å bruke Excel-data i appen
 1. Velg **Galleri** på **Sett inn**-fanen, og velg deretter en **Med tekst**-gallerikontroll.
 2. Angi **[Elementer](../controls/properties-core.md)**-egenskapen for galleriet i Excel-tabellen. Hvis Excel-tabellen eksempelvis heter **Tabell1**, angir du den som Tabell1:  
    
@@ -72,7 +72,7 @@ PowerApps tilbyr flere tilkoblinger for lagring i skyen. Ved hjelp av noen av di
 
 [Å forstå tabeller og poster](../working-with-tables.md) gir mer informasjon og noen eksempler.  
 
-## <a name="sharing-your-app"></a>Slik deler du appen
+## <a name="sharing-your-app"></a>Å dele appen
 Du kan dele [appen](../share-app.md), [ressursene](../share-app-resources.md) som for eksempel koblinger og [dataene](../share-app-data.md) med andre i organisasjonen.
 
 Hvis du deler en mappe i Dropbox, må den delte mappen være knyttet til brukerens Dropbox-konto.
@@ -84,7 +84,7 @@ Hvis **Datatypen støttes ikke** eller **Ikke formatert som en tabell** vises n�
 
 Hvis Excel-dataene inneholder en beregnet kolonne, kan du ikke bruke den til å bygge en app, og du kan ikke legge til dataene til en eksisterende app.
 
-### <a name="sharing-excel-tables"></a>Deling av Excel-tabeller
+### <a name="sharing-excel-tables"></a>Å dele Excel-tabeller
 Slik deler du dataene i en Excel-fil:
 
 * I OneDrive for Business kan du dele selve filen.

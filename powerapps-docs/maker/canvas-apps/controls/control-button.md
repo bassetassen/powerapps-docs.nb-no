@@ -8,10 +8,10 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: a5d818bf12bafaa5c557afae1d93b6ba0a6a7d2f
-ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
+ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/05/2018
+ms.lasthandoff: 06/26/2018
 ms.locfileid: "34803447"
 ---
 # <a name="button-control-in-powerapps"></a>Knappkontroll i PowerApps
@@ -48,7 +48,7 @@ Konfigurer **[OnSelect](properties-core.md)**-egenskapen til en **Knapp**-kontro
 
 **[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
-**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+**[FocusedBorderThickness](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
@@ -182,7 +182,7 @@ Du kan også angi fargen til en **Knapp**-kontroll ved å angi **[HoverFill](pro
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
 ### <a name="color-contrast"></a>Fargekontrast
-* [Kontrastkrav for standardfarge](../accessible-apps-color.md) gjelder.
+* [Standardkrav for fargekontrast](../accessible-apps-color.md) gjelder.
 
 ### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
 * **[Tekst](properties-core.md)** må foreligge.
