@@ -8,12 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: d9bd70acaacbbeda98c14337035a233b7c70c181
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 620152a684e5bf0399bd938172f328892b137325
+ms.sourcegitcommit: 44ecb3ace4c865bc592dfb7f0b5fffa289d3b035
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168163"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36306124"
 ---
 # <a name="configure-environment-security"></a>Å konfigurere miljøsikkerhet
 Common Data Service bruker en rollebasert sikkerhetsmodell for å hjelpe med å sikre tilgang til databasen. Dette emnet forklarer hvordan du oppretter sikkerhetsartefaktene du trenger for å sikre en app. Brukeren kontrollerer kjøretidstilgang til data, og disse er adskilt fra miljørollene som styrer miljøadministratorer og miljøopprettere. Du kan se en oversikt over miljøer under [Oversikt over miljøer](environments-overview.md).
@@ -60,7 +60,7 @@ PowerApps-miljøet inneholder forhåndsdefinerte sikkerhetsroller som gjenspeile
 |Systemadministrator     |  Opprette, lese, skrive, slette, tilpasninger, sikkerhetsroller       | Har full tilgang til å tilpasse eller administrere miljøet, inkludert å opprette, endre og tilordne sikkerhetsroller. Kan vise alle dataene i miljøet. Hvis du vil ha mer informasjon, kan du se [Rettigheter som kreves for tilpassing](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
 |Å tilpasse et system     | Opprette (egen), lese (egen), skrive (egen), slette (egen), tilpasninger         | Har full tilgang til å tilpasse miljøet. Kan imidlertid bare vise poster for miljøenheter som de oppretter. Hvis du vil ha mer informasjon, kan du se [Rettigheter som kreves for tilpassing](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
 |Miljøoppretter     |  Ingen       | Kan opprette nye ressurser tilknyttet et miljø, inkludert apper, tilkoblinger, egendefinerte API-er, gatewayer og flyter ved hjelp av Microsoft Flow. Har imidlertid ikke rettigheter til å få tilgang til data i et miljø. Hvis du vil ha mer informasjon, kan du se [Oversikt over miljøer](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
-|Common Data Service-bruker     |  Lese, opprette (egen), skrive (egen), slette (egen)       | Kan kjøre en app i miljøet og utføre vanlige oppgaver for postene som de eier.        |
+|Common Data Service-bruker     |  Lese, opprette (egen), skrive (egen), slette (egen)       | Kan kjøre en app i miljøet og utføre vanlige oppgaver, for eksempel lese alle [program- og CRM Common-enheter](https://github.com/Microsoft/CDM/tree/master/schemaDocuments#click-this-image-to-explore-the-cdm-entities-using-the-entity-navigator), unntatt opprette, skrive og slette egne oppføringer fra disse enhetene (bortsett fra for konto, kontakt og tilkobling der det kan skrives til alle oppføringer uavhengig av hvem som eier dem).          |
 |Representant     | Å handle på vegne av en annen bruker        | Tillater kode for å kjøre som en annen bruker eller representere den.  Brukes vanligvis med en annen sikkerhetsrolle for å gi tilgang til poster. Hvis du vil ha mer informasjon, kan du se [Å representere en annen bruker](https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
 
 *Rettighet har globalt omfang om ikke annet er angitt.
@@ -107,7 +107,6 @@ Hvis du vil ha mer informasjon om tilgang- og omfangsrettigheter, kan du se [Sik
 9. Velg rettighetene **Les, Skriv, Tilføy**
 
 10. Velg **Lagre og lukk**.
-
 
 
 <!--Reference links in article-->

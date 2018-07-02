@@ -7,12 +7,12 @@ ms.topic: overview
 ms.component: canvas
 ms.date: 04/26/2018
 ms.author: anneta
-ms.openlocfilehash: d520f47393c5462f36445e4c8df81617dfddafd2
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 606f5aa15d057387542471f82fd071f4044cfd1e
+ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32329828"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36311596"
 ---
 # <a name="what-are-canvas-apps-in-powerapps"></a>Hva er lerret-apper i PowerApps?
 Utform og bygg en business-app fra et lerret i Microsoft PowerApps uten å skrive kode i et tradisjonelt programmeringsspråk, for eksempel C#. Utforme appen ved å dra og slippe elementer til et lerret, på samme måte som du vil utforme et lysbilde i PowerPoint. Opprett Excel-lignende uttrykk for å angi logikk og arbeide med data. Bygg apper som integrerer forretningsdata fra en [rekke Microsoft-kilder og tredjepartskilder](connections-list.md). Del appen din slik at brukere kan kjøre den i en nettleser eller på en mobil enhet, og bygg inn appen din slik at brukere kan kjøre den i SharePoint, Power BI eller Teams.
@@ -43,7 +43,7 @@ Du kan kjøre dine egne apper – og apper som er delt med deg – på Windows, 
 ## <a name="learn-more"></a>Mer informasjon
 * Utforsk de trinnvise, begrepsmessige referanseemnene i navigasjonsfeltet til venstre.
 * Arbeid i ditt eget tempo gjennom den [veiledede læringen](https://docs.microsoft.com/powerapps/guided-learning/).
-* Se de [kommende webinarene](webinars-listing.md#upcoming-webinars). De kan hjelpe deg til å utnytte funksjonene i PowerApps. Du får også tilgang til [tidligere webinarer](webinars-listing.md#past-webinars) ved behov.
+* Ta en titt på [webinarene](webinars-listing.md) du hele tiden har tilgang til, og som kan hjelpe deg med å utnytte funksjonene i PowerApps.
 
 ## <a name="share-your-experience"></a>Del opplevelsen din
 * Les og legg inn spørsmål i [PowerApps-fellesskapet](https://aka.ms/powerapps-community), der alle som bruker PowerApps kan stille spørsmål og andre kan svare. Før du stiller et spørsmål, må du søke i fellesskapet for å se om spørsmålet ditt allerede har blitt besvart.
