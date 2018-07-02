@@ -1,24 +1,19 @@
 ---
 title: Svar på DSR-forespørsler om sletting av kundedata | Microsoft Docs
-description: Gjennomgang av hvordan du svarer på DSR-forespørsler om å slette PowerApps-kundedata
-suite: powerapps
-documentationcenter: na
+description: Gjennomgang av hvordan du svarer på DSR-forespørsler om å slette PowerApps-kundedata.
 author: jamesol-msft
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 04/23/2018
+ms.component: pa-admin
+ms.topic: conceptual
+ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: e4f555416aadb90d882717072f614ccb958fa733
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: 495d9976b1daa6e7adb20d97c0840b3a1ba90c4b
+ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "34552695"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-to-delete-powerapps-customer-data"></a>Svar på DSR-forespørsler om kundedata for PowerApps
 
@@ -57,10 +52,10 @@ Miljø | Administrasjonssenteret for PowerApps |  PowerApps-cmdleter
 Miljøtillatelser**   | Administrasjonssenteret for PowerApps | PowerApps-cmdleter
 Lerretsapp  | Administrasjonssenteret for PowerApps <br> PowerApps| PowerApps-cmdleter
 Lerretsapptillatelser  | Administrasjonssenteret for PowerApps | PowerApps-cmdleter
-Tilkobling | | Apputvikler: tilgjengelig <br> Administrator: under utvikling
-Tilkoblingstillatelser | | Apputvikler: tilgjengelig <br> Administrator: under utvikling
-Egendefinert kobling | | Apputvikler: tilgjengelig <br> Administrator: under utvikling
-Tillatelser for egendefinerte koblinger | | Apputvikler: tilgjengelig <br> Administrator: under utvikling
+Tilkobling | | Apputvikler: tilgjengelig <br> Administrator: tilgjengelig
+Tilkoblingstillatelser | | Apputvikler: tilgjengelig <br> Administrator: tilgjengelig
+Egendefinert kobling | | Apputvikler: tilgjengelig <br> Administrator: tilgjengelig
+Tillatelser for egendefinerte koblinger | | Apputvikler: tilgjengelig <br> Administrator: tilgjengelig
 
 \** I CDS for Apps blir miljøtillatelser og tillatelser for modelldrevne apper lagret som oppføringer i instansen for den databasen hvis du har opprettet en database i miljøet. For veiledning om hvordan du svarer på DSR-er for brukere av CDS for Apps, se [Svare på DSR-forespørsler for kundedata for Common Data Service for Apps](common-data-service-gdpr-dsr-guide.md).
 
@@ -68,6 +63,26 @@ Tillatelser for egendefinerte koblinger | | Apputvikler: tilgjengelig <br> Admin
 
 ### <a name="for-users"></a>For brukere
 Alle brukere som har en gyldig PowerApps-lisens, kan utføre brukeroperasjonene som beskrevet i dette dokumentet, ved hjelp av [PowerApps-området](https://web.powerapps.com) eller [PowerShell-cmdleter for apputviklere](https://go.microsoft.com/fwlink/?linkid=871448).
+
+#### <a name="unmanaged-tenant"></a>Ikke-administrert tenant
+Hvis du er medlem av en [ikke-administrert tenant](https://docs.microsoft.com/azure/active-directory/domains-admin-takeover), noe som betyr at Azure AD-tenanten ikke har en global administrator, vil du fremdeles kunne følge fremgangsmåten i denne artikkelen for å fjerne personlige data.  Siden det ikke finnes noen global administrator for tenanten din, må du imidlertid følge instruksjonene i [Trinn 11: å slette brukeren fra Azure Active Directory](#step-11-delete-the-user-from-azure-active-directory) nedenfor for å slette din egen konto fra tenanten.
+
+Hvis du vil avgjøre hvorvidt du er medlem av en ikke-administrert tenant, kan du følge disse trinnene:
+
+1. Åpne følgende nettadresse i en nettleser, og pass på å erstatte e-postadressen din i nettadressen:https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1
+
+2. Hvis du er medlem av en **ikke-administrert tenant**, får du se en `"IsViral": true` i svaret.
+```
+{
+  ...
+  "Login": "foobar@unmanagedcontoso.com",
+  "DomainName": "unmanagedcontoso.com",
+  "IsViral": true,
+  ...
+}
+```
+
+3. Ellers hører du til en **administrert tenant**.
 
 ### <a name="for-administrators"></a>For administratorer
 For at du skal kunne utføre de administrative operasjonene som er beskrevet i dette dokumentet, ved å bruke [administrasjonssenteret for PowerApps](https://admin.powerapps.com/), administrasjonssenteret for Microsoft Flow eller [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804), må du ha følgende:
@@ -257,7 +272,7 @@ Administratorer kan slette approlletilordninger for en bruker, fra [administrasj
 
     ![Appdelingssiden for administratorer](./media/powerapps-gdpr-delete-dsr/admin-share-page.png)
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerShell-cmdleter for PowerApps-administratorer
+### <a name="powershell-cmdlets-for-admins"></a>PowerShell-cmdleter for administratorer
 En administrator kan slette alle rolletildelinger for lerretsapper for en bruker ved hjelp av funksjonen **Remove-AdminAppRoleAssignmnet** i [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
 
 ```
@@ -282,7 +297,15 @@ Get-Connection | Remove-Connection
 ```
 
 ### <a name="powershell-cmdlets-for-powerapps-administrators"></a>PowerShell-cmdleter for PowerApps-administratorer
-Funksjonen som tillater en administrator å finne og slette en brukers tilkoblinger med [PowerShell-cmdleter](https://go.microsoft.com/fwlink/?linkid=871804), er under utvikling.
+En administrator kan slette alle tilkoblinger for en bruker ved hjelp av funksjonen **Remove-AdminConnection** i [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
+
+```
+Add-PowerAppsAccount
+$deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+
+#Retrieves all connections for the DSR user and deletes them
+Get-AdminConnection -CreatedBy $deleteDsrUserId | Remove-AdminConnection
+```
 
 ## <a name="step-6-delete-the-users-permissions-to-shared-connections"></a>Trinn 6: Slett brukerens tillatelser til delte tilkoblinger
 
@@ -298,8 +321,16 @@ Get-ConnectionRoleAssignment | Remove-ConnectionRoleAssignment
 > [!NOTE]
 > Eierrolletildelinger kan ikke slettes uten å slette tilkoblingsressursen.
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerShell-cmdleter for PowerApps-administratorer
-Funksjonen som tillater en administrator å finne og slette en brukers tilkoblingsrolletildelinger med [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804), er under utvikling.
+### <a name="powershell-cmdlets-for-admins"></a>PowerShell-cmdleter for administratorer
+En administrator kan slette alle tilkoblinger for en bruker ved hjelp av funksjonen **Remove-AdminConnectionRoleAssignment** i [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
+
+```
+Add-PowerAppsAccount
+$deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+
+#Retrieves all connection role assignments for the DSR user and deletes them
+Get-AdminConnectionRoleAssignment -PrincipalObjectId $deleteDsrUserId | Remove-AdminConnectionRoleAssignment
+```
 
 ## <a name="step-7-delete-custom-connectors-created-by-the-user"></a>Trinn 7: Slett egendefinerte koblinger som er opprettet av brukeren
 Egendefinerte koblinger er et supplement til eksisterende standardkoblinger og gir tilkoblingsmulighet til andre API-er, SaaS og spesialutviklede systemer. Du kan overføre eierskap for egendefinerte koblinger til andre brukere i organisasjonen eller slette den egendefinerte koblingen.
@@ -314,8 +345,16 @@ Add-PowerAppsAccount
 Get-Connector -FilterNonCustomConnectors | Remove-Connector
 ```
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerShell-cmdleter for PowerApps-administratorer
-Funksjonen som tillater en administrator å finne og slette en brukers egendefinerte koblinger med [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804), er under utvikling.
+### <a name="powershell-cmdlets-for-admins"></a>PowerShell-cmdleter for administratorer
+En administrator kan slette alle tilpassede tilkoblinger som er opprettet av en bruker, ved hjelp av funksjonen **Remove-AdminConnector** i [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
+
+```
+Add-PowerAppsAccount
+$deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+
+#Retrieves all custom connectors created by the DSR user and deletes them
+Get-AdminConnector -CreatedBy $deleteDsrUserId | Remove-AdminConnector
+```
 
 ## <a name="step-8-delete-the-users-permissions-to-shared-custom-connectors"></a>Trinn 8: Slett brukerens tillatelser til delte egendefinerte koblinger
 
@@ -332,8 +371,16 @@ Get-ConnectorRoleAssignment | Remove-ConnectorRoleAssignment
 > [!NOTE]
 > Eierrolletildelinger kan ikke slettes uten å slette tilkoblingsressursen.
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerShell-cmdleter for PowerApps-administratorer
-Funksjonen som tillater en administrator å finne og slette en brukers koblingsrolletildelinger med [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804), er under utvikling.
+### <a name="powershell-cmdlets-for-admins"></a>PowerShell-cmdleter for administratorer
+En administrator kan slette alle tilpassede rolletildelinger for koblinger for en bruker, ved hjelp av funksjonen **Remove-AdminConnectorRoleAssignment** i [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
+
+```
+Add-PowerAppsAccount
+$deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+
+#Retrieves all custom connector role assignments for the DSR user and deletes them
+Get-AdminConnectorRoleAssignment -PrincipalObjectId $deleteDsrUserId | Remove-AdminConnectorRoleAssignment
+```
 
 ## <a name="step-9-delete-the-users-personal-data-in-microsoft-flow"></a>Trinn 9: Slett brukerens personopplysninger i Microsoft Flow
 PowerApps-lisenser inkluderer alltid Microsoft Flow-funksjoner. I tillegg til å være inkludert i PowerApps-lisensene er Microsoft Flow også tilgjengelig som en frittstående tjeneste. Du finner informasjon om hvordan du svarer på svarer på DSR-er for brukere som bruker Microsoft Flow-tjenesten, se [Svar på GDPR DSR-forespørsler for Microsoft Flow](https://go.microsoft.com/fwlink/?linkid=872250).
@@ -350,4 +397,19 @@ For veiledning om hvordan du svarer på DSR-er for brukere som bruker CDS for Ap
 > Det anbefales at administratorer utfører dette trinnet for PowerApps-brukere.
 
 ## <a name="step-11-delete-the-user-from-azure-active-directory"></a>Trinn 11: Slett brukeren fra Azure Active Directory
-Når trinnene ovenfor er fullført, er det siste trinnet å slette brukerens konto for Azure Active Directory ved å følge trinnene som er beskrevet i GDPR-dokumentasjonen om DSR-forespørsler for Azure, som finnes i [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRDSR).
+Når trinnene ovenfor er fullført, er det siste trinnet å slette brukerens konto for Azure Active Directory.
+
+### <a name="managed-tenant"></a>Administrert tenant
+Når du er administrator for en administrert Azure AD-tenant, kan du slette brukerens konto ved å følge trinnene som er beskrevet i GDPR-dokumentasjonen om DSR-forespørsler for Azure, som finnes i [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRDSR).
+
+### <a name="unmanaged-tenant"></a>Ikke-administrert tenant
+Hvis du er medlem av en ikke-administrert tenant, må du følge disse trinnene for å kunne slette kontoen fra Azure AD-tenanten:
+
+> [!NOTE]
+> Se [inndelingen Ikke-administrert tenant](#unmanaged-tenant) ovenfor for å se hvordan du kan finne ut hvorvidt du er medlem av en ikke-administrert eller en administrert tenant.
+
+1. Gå til [personvernsiden for arbeid og skole](https://go.microsoft.com/fwlink/?linkid=87312), og logg deg på med Azure AD-kontoen.
+
+2. Velg **Lukk konto**, og følg instruksjonene for å slette kontoen fra Azure AD-tenanten.
+
+    ![Velg appdeling](./media/powerapps-gdpr-delete-dsr/close-account.png)

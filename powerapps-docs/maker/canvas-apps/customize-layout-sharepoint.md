@@ -1,124 +1,131 @@
 ---
-title: Opplæring for tilpassing av et galleri | Microsoft Docs
-description: I denne opplæringen tilpasser du standard Bla gjennom-skjermen, inkludert galleriet, i en app som er generert i PowerApps.
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Opplæring – slik tilpasser du et galleri i en generert app | Microsoft Docs
+description: I denne opplæringen kan du tilpasse dataene som vises i galleriet og andre elementer for en app som har blitt generert automatisk i PowerApps.
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/11/2018
+ms.topic: tutorial
+ms.component: canvas
+ms.date: 05/06/2018
 ms.author: anneta
-ms.openlocfilehash: 30ec6be11b40e01dddfe09cf0ac8af0ed3a8a437
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 88170d5f727ff4e3cfe52ce31719bcbc79e33021
+ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30996117"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "34453588"
 ---
 # <a name="tutorial-customize-a-gallery-in-powerapps"></a>Opplæring: Tilpassing av et galleri i PowerApps
-I denne opplæringen tilpasser du standard Bla gjennom-skjermen, inkludert galleriet, i en app som er generert i PowerApps. Du kan administrere data ved bruk av standardappen uten å tilpasse den, men den blir mye kraftigere og enklere å bruke hvis du gjør følgende endringer:
+I denne opplæringen får du tilpasse en liste over poster, kalt et galleri, og gjøre andre endringer i en app som ble generert automatisk i Microsoft PowerApps. Brukere kan administrere data i appen selv om du ikke gjør disse endringene, men appen vil være enklere å bruke hvis du tilpasser den for organisasjonens behov.
+
+Galleriet for denne opplæringen samsvarer eksempelvis med denne grafikken som standard. E-postadressen er mer fremtredende enn andre typer data, og brukere kan sortere og filtrere galleriet basert på teksten i denne adressen:
+
+![Standard-galleriet](./media/customize-layout-sharepoint/gallery-before.png)
+
+Brukerne kan imidlertid være mer interessert i navnet på kontoen enn i e-postadressen, så du kan konfigurere galleriet til å utheve, sortere og filtrere basert på de viktige dataene for organisasjonen. I tillegg kan du endre tittelen på standardskjermen for å skille den fra de andre skjermene i appen.
+
+![Det endelige galleriet](./media/customize-layout-sharepoint/gallery-after.png)
+
+Du kan også legge til et rullefelt slik at brukere som ikke har berøringsskjermer eller musehjul kan bla gjennom hele galleriet.
 
 > [!div class="checklist"]
-> * Endrer oppsettet
-> * Endrer dataene som vises
-> * Angir kolonnene for filtrering og sortering
-> * Tester filtrering og sortering
-> * Endrer tittelen
-> * Viser et rullefelt
+> * Å endre gallerioppsettet
+> * Endre datatypen som vises i galleriet
+> * Å endre kolonnene hvor brukere kan sortere og søke etter dataene
+> * Å endre tittelen på skjermen
+> * Visning av et rullefelt
 
-Denne opplæringen starter med en app som er generert fra [Common Data Service for apper](../common-data-service/data-platform-intro.md), men samme konsepter gjelder for apper som er generert fra SharePoint, Excel og andre datakilder. 
+Denne opplæringen starter med en app som ble generert fra en bestemt datakilde. De samme prinsippene gjelder imidlertid for alle apper som du genererer i PowerApps, enten fra en SharePoint-liste, en Excel-tabell eller en annen datakilde.
 
-Hvis du ikke har en lisens for PowerApps, kan du [registrere deg gratis](../signup-for-powerapps.md).
+Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https://web.powerapps.com) før du begynner.
 
 ## <a name="prerequisites"></a>Forutsetninger
-Før du begynner denne opplæringen, må du [generere en app](data-platform-create-app.md) fra Common Data Service for apper.
+[Generer en app](data-platform-create-app.md) fra **Kontoer**-enheten for Common Data Service (CDS) for apper.
 
 ## <a name="open-the-generated-app"></a>Slik åpner du den genererte appen
 1. Logg deg på [PowerApps](https://web.powerapps.com), og klikk eller trykk deretter på **Apper** nær venstre kant.
 
-    ![Hjemmesiden for PowerApps](./media/customize-layout-sharepoint/sign-in.png)
+    [![Hjemmesiden for PowerApps](./media/customize-layout-sharepoint/sign-in.png)](./media/customize-layout-sharepoint/sign-in.png#lightbox)
 
-1. Finn appen du har generert, og klikk eller trykk deretter på ellipse-ikonet (**...**) for appen, nær høyre kant.
+1. Finn appen du genererte, velg ellipse-ikonet (**...** ), og velg deretter **Rediger**.
 
-    ![Appliste](./media/customize-layout-sharepoint/open-for-edit.png)
+    ![Å åpne appen for redigering](./media/customize-layout-sharepoint/open-app.png)
 
-1. Klikk eller trykk på alternativet for å redigere appen i menyen som vises. 
+1. Hvis dialogboksen **Velkommen til PowerApps Studio** vises, klikker eller trykker du på **Hopp over**.
 
-## <a name="customize-the-gallery"></a>Tilpassing av galleriet
-1. Klikk eller trykk på et element på Bla gjennom-skjermen, unntatt den første i listen over kontoer.
+## <a name="change-the-layout"></a>Endrer oppsettet
+1. Velg **BrowseGallery1** i den venstre navigasjonsruten.
 
-    **Galleri**-kontrollen velges i dette trinnet. Denne viser listen over kontoer.
+    Når galleriet er valgt, omgis det av en valgboks med håndtak.
 
-    ![Valgt galleri](./media/customize-layout-sharepoint/select-gallery.png)
+    ![Valg av galleri](media/customize-layout-sharepoint/select-gallery-1.png)
 
-1. Klikk eller trykk på **Kontoer** til høyre for **Data**-etiketten, i den høyre ruten.
+1. Nær høyre kant velger du **Kontoer** for å åpne **Data**-ruten.
 
     ![Åpne ** Data**-ruten](./media/customize-layout-sharepoint/open-data-pane.png)
 
-1. Klikk eller trykk på pil ned i **Data**-ruten, for å åpne listen over alternativer under **Oppsett**.
+1. I **Data**-ruten åpner du listen over alternativer under **Oppsett**.
 
     ![Visning av alternativer for oppsett](./media/customize-layout-sharepoint/show-layouts.png)
 
-1. Klikk eller trykk på alternativet som bare viser en tittel, i listen over alternativer.
+1. Velg alternativet som bare viser en tittel i listen over alternativer.
 
     ![Velg oppsett bare med tittel](./media/customize-layout-sharepoint/choose-layout.png)
 
-1. Klikk eller trykk på pil ned i **Data**-ruten, for å åpne listen over alternativer for tittel.
+1. Åpne listen over alternativer for tittelen i **Data**-ruten.
 
-    ![Velg oppsett bare med tittel](./media/customize-layout-sharepoint/show-title-options.png)
+    Navnet på denne kontrollen avsluttes med et tall, for eksempel **Title1**, men tallet kan variere avhengig av andre handlinger du har gjort.
 
-1. Klikk eller trykk på **navn** i listen over alternativer, for å vise dataene i **Galleri**-kontrollen.
+    ![Å åpne listen over alternativer for titteletikett](./media/customize-layout-sharepoint/show-title-options.png)
+
+1. I listen over alternativer velger du **Kontonavn (navn)** og lukker deretter **Data**-ruten.
+
+    Galleriet viser navnet på hver konto.
 
     ![Det endelige galleriet](./media/customize-layout-sharepoint/final-gallery.png)
 
-
-## <a name="set-the-sort-and-search-columns"></a>Angi kolonnene for sortering og søk
-1. Velg **Galleri**-kontroll som beskrevet i den forrige delen.
+## <a name="change-sort-and-search-columns"></a>Å endre kolonnene for sortering og søk
+1. Velg galleriet, som beskrevet i den forrige inndelingen.
 
     ![Valg av galleri](./media/customize-layout-sharepoint/select-gallery-title.png)
 
-2. Kontroller at egenskapslisten viser **Items**  nær det øvre venstre hjørnet.
+2. Bekreft at egenskapslisten viser **Elementer** nær det øvre venstre hjørnet.
 
-    ![Items-egenskap](./media/customize-layout-sharepoint/items-property.png)
+    ![Elementer-egenskaper](./media/customize-layout-sharepoint/items-property.png)
 
-    Verdien for denne egenskapen vises på formellinjen, og bestemmer ikke bare datakilden for galleriet, men også kolonnene for filtrering og sortering.
+    Verdien for denne egenskapen vises på formellinjen. Du setter denne egenskapen til å angi ikke bare datakilden for galleriet, men også kolonnene hvor brukere kan sortere og søke i dataene.
 
-1. Du kan erstatte begge forekomstene av **emailaddress1** til **name** på formellinjen, og behold de doble anførselstegnene rundt hver forekomst.
+1. Kopier denne formelen, og lim den deretter inn i formellinjen.
 
-    Formelen må samsvare med dette eksemplet:
+    ```SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, Descending, Ascending))```
 
-    ![Formel for Items-egenskapen](./media/customize-layout-sharepoint/items-value.png)
+    Ved hjelp av denne formelen kan du kontrollere at:
 
-    Den første forekomsten av **name** angir at brukeren kan filtrere listen slik at den bare viser de postene der kontonavnet inneholder teksten brukeren skrev inn i søkefeltet. Den andre forekomsten av **name** angir at brukeren kan sortere listen alfabetisk etter kontonavn. Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelreferansen](formula-reference.md).
+    - Hvis en bruker skriver inn ett eller flere tegn i søkefeltet, viser galleriet kun kontonavnene som inneholder teksten brukeren skrev inn.
+    - Hvis en bruker velger Sorter-ikonet, sorteres galleriet alfabetisk etter kontonavn i enten stigende eller synkende rekkefølge, avhengig av hvor mange ganger brukeren velger ikonet.
 
-## <a name="test-sorting-and-searching"></a>Test-sortering og søk
-1. Åpne forhåndsvisningsmodus ved å trykke på F5 (eller ved å klikke på avspillingsknappen nær hjørnet øverst til høyre).
+    Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelreferansen](formula-reference.md).
 
-    ![Åpne forhåndsvisningsmodus](./media/customize-layout-sharepoint/open-preview.png)
+### <a name="test-sorting-and-searching"></a>Testing av sortering og søk
+1. Åpne forhåndsvisningsmodus ved å trykke på F5 (eller ved å velge avspillingsknappen nær hjørnet øverst til høyre).
 
-1. Nær øvre høyre hjørne av skjermbildet Bla gjennom, klikk ikonet sorter én eller flere ganger for å endre den alfabetiske sorteringsrekkefølgen mellom stigende og synkende.
+    ![Å åpne forhåndsvisningsmodus](./media/customize-layout-sharepoint/open-preview.png)
+
+1. Nær øvre høyre hjørne av skjermbildet Bla gjennom kan du klikke på sorteringsikonet én eller flere ganger for å endre den alfabetiske sorteringsrekkefølgen mellom stigende og synkende.
 
     ![Testing av sorteringsikonet](./media/customize-layout-sharepoint/sort-button.png)
 
 1. Skriv inn **k** i søkeboksen for å bare vise navnene på kontoene som inneholder bokstaven du skrev inn.
 
-    ![Test søkefeltet](./media/customize-layout-sharepoint/test-filter.png)
+    ![Å teste søkefeltet](./media/customize-layout-sharepoint/test-filter.png)
 
-1. Fjern all tekst fra søkefeltet, og lukk deretter Forhåndsvisningmodus ved å trykke på Esc (eller ved å klikke eller trykke på lukkeikonet *under* tittellinjen til PowerApps).
+1. Fjern all tekst fra søkefeltet, og lukk deretter Forhåndsvisningmodus ved å trykke på ESC (eller ved å klikke eller trykke på lukkeikonet nær øvre høyre hjørne).
 
-## <a name="change-the-title-of-the-screen"></a>Endring av skjermtittel
-1. Klikk eller trykk på skjermtittelen for å velge den.
+## <a name="change-the-screen-title"></a>Å endre tittelen på skjermen
+1. Velg tittelen på skjermen ved å klikke eller trykke på den.
 
     ![Valg av skjermtittel](./media/customize-layout-sharepoint/select-title.png)
 
-1. Pass på at egenskapslisten viser **Text**, og skriv deretter inn **Bla gjennom**, omgitt av doble anførselstegn, på formellinjen.
+1. Pass på at egenskapslisten viser **Tekst**, og erstatt deretter **Kontoer** i formellinjen med **Bla gjennom** (hvor de doble anførselstegnene beholdes).
 
     ![Oppdatering av skjermtittelen](./media/customize-layout-sharepoint/change-screen-title.png)
 
@@ -127,18 +134,18 @@ Før du begynner denne opplæringen, må du [generere en app](data-platform-crea
     ![Ny skjermtittel](./media/customize-layout-sharepoint/new-screen-title.png)
 
 ## <a name="show-a-scroll-bar"></a>Visning av et rullefelt
-Hvis brukerne ikke har berøringsskjermer eller musehjul, konfigurerer du **Galleri**-kontrollen til å vise et rullefelt når brukeren beveger seg over det med musen. På denne måten kan brukerne vise alle kontoene, selv om ikke skjermen kan vise alle samtidig.
+Hvis brukerne ikke har berøringsskjermer eller musehjul, konfigurerer du galleriet til å vise et rullefelt når brukeren holder pekeren over det. På denne måten kan brukerne vise alle kontoene, selv om ikke skjermen kan vise alle samtidig.
 
-1. Velg **Galleri**-kontroll som beskrevet i den første prosedyren.
+1. Velg galleriet, som den første prosedyren beskriver.
 
     ![Valg av galleri](./media/customize-layout-sharepoint/select-gallery-sorted.png)
 
-1. Klikk eller trykk på **Vis rullefelt** på **Galleri**-fanen, og bekreft at verdien for egenskapen er endret til **sann**. 
+1. Velg **Vis rullefelt** på **Galleri**-fanen, og bekreft at verdien for egenskapen er endret til **sann**. 
 
     ![Visning av rullefelt](./media/customize-layout-sharepoint/show-scrollbar.png)
 
 ## <a name="next-steps"></a>Neste trinn
-I denne opplæringen har du tilpasset **Galleri**-kontrollen og tittelen på standard Bla gjennom-skjermen til en generert app. Du kan også tilpasse standardskjermene for å vise detaljer og opprette eller oppdatere kontoer. Disse skjermene inneholder en **Visningsskjema**-kontroll og en **Redigeringsskjema**-kontroll, og du kan endre (for eksempel) hvilke typer data de viser og i hvilken rekkefølge disse blir vist.
+I denne opplæringen har du tilpasset galleriet og gjort andre endringer i standardskjermen for å bla gjennom postene i en generert app. Du kan også tilpasse standardskjermene for å vise detaljer og opprette eller oppdatere kontoer. Når skjermbildet Bla gjennom inneholder et galleri, inneholder de andre to skjermene i appen skjemaer. Du kan for eksempel endre hvilke typer data skjemaet skal vise, og i hvilken rekkefølge.
 
 > [!div class="nextstepaction"]
 > [Tilpassing av skjemaer](customize-forms-sharepoint.md)

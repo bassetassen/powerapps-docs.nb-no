@@ -1,43 +1,51 @@
 ---
 title: ShowError-funksjonen i Microsoft Docs
 description: Referanseinformasjon for ShowError-funksjonen i PowerApps, inkludert syntaks og eksempler
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/21/2018
+ms.topic: reference
+ms.component: canvas
+ms.date: 06/05/2018
 ms.author: gregli
-ms.openlocfilehash: 7c1d5a8c7b35d316a2720d564977170029e28359
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.openlocfilehash: 5b75c2cabedba4caf11aa3f922acc0a71ffca377
+ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30998057"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "34822539"
 ---
-# <a name="showerror-function-in-powerapps"></a>ShowError-funksjonen i PowerApps
-Viser en feil til brukeren.
+# <a name="notify-function-in-powerapps"></a>Funksjonen Notify i PowerApps
+Viser en bannermelding til brukeren.
 
 ## <a name="description"></a>Beskrivelse
-**ShowError**-funksjonen viser en feil til brukeren.  Meldinger vises både når du redigerer appen og når sluttbrukerne bruker appen.
+**Notify**-funksjonen viser en bannermelding til brukeren øverst i skjermen, overlappende med det som vises for øyeblikket.  
 
-**ShowError** kan bare brukes i [formler for virkemåte](../working-with-formulas-in-depth.md).
+Passende farge og ikon brukes avhengig av type melding.   Typen er angitt av det andre argumentet til funksjonen:
 
-**ShowError** returnerer alltid *sann*.
+| NotificationType-argumentet | Beskrivelse |
+| --- | --- |
+| **NotificationType.Error** | Viser meldingen som en feil. |
+| **NotificationType.Information** (standard) | Viser meldingen som informativ.  |
+| **NotificationType.Success** | Viser meldingen som fullført. |
+| **NotificationType.Warning** | Viser meldingen som en advarsel. |
 
-**ShowError** kan pares med [**IfError**](function-iferror.md)-funksjonen for å oppdage og rapportere feil med en feilmelding.
+Meldinger vises både når du redigerer appen og når sluttbrukerne bruker appen.
+
+**Notify** kan bare brukes i [formler for virkemåte](../working-with-formulas-in-depth.md).
+
+**Notify** kan pares med [**IfError**](function-iferror.md)-funksjonen for å oppdage og rapportere feil med en tilpasset feilmelding.
+
+PowerApps kan også sende push-varslinger ved hjelp av en helt annen mekanisme fra **Notify**.  Hvis du vil ha mer informasjon, kan du se [Å sende et varsel i PowerApps](../add-notifications.md).
+
+**Notify** returnerer alltid *sann*.
+
+Merk: Denne funksjonen ble tidligere kalt **ShowError**, når den bare kunne vise feilmeldinger.
 
 ## <a name="syntax"></a>Syntaks
-**ShowError**( *Message* )
+**Notify**( *Message*, [ *NotificationType* ] )
 
-* *Message* – obligatorisk.  Meldingen som skal vises til brukeren. 
+* *Melding* – obligatorisk.  Meldingen som skal vises til brukeren.
+* *NotificationType* – valgfritt.  Type melding som skal vises fra tabellen ovenfor.  **NotificationType.Information** (standard).  
 
 ## <a name="examples"></a>Eksempler
 
@@ -47,10 +55,40 @@ Viser en feil til brukeren.
 
 2. Angi **OnSelect**-egenskapen for **knappen** til:
 
-    **ShowError( "Hello, World" )**
+    **Notify( "Hello, World" )**
 
 3. Klikk eller trykk på knappen.  
 
-    Hver gang knappen trykkes, så vises **Hello, World** til brukeren.
+    Hver gang knappen trykkes på, vises **Hello, World** til brukeren (informativt).
 
-    ![Viser Button.OnSelect, kaller ShowError og viser den resulterende Hello, World-meldingen som en rød bannermelding for brukeren, i redigeringsmiljøet](media/function-showerror/hello-world.png)
+    ![I redigeringsmiljøet vil Button.OnSelect, oppkalle Notify og vise den resulterende Hello, World-meldingen som en rød bannermelding for brukeren](media/function-showerror/hello-world.png)
+
+4. Endre typen melding for å angi en feil.  Legg til et annet argument til formelen:
+
+    **Notify ("Hello, World", NotificationType.Error)**
+
+5. Klikk eller trykk på knappen.
+
+    Hver gang knappen trykkes på, vises meldingen **Hello, World** til brukeren, som en feil.
+
+    ![I redigeringsmiljøet vil Button.OnSelect, oppkalle Notify og vise den resulterende Hello, World-meldingen som en rød bannermelding for brukeren](media/function-showerror/hello-world-error.png)
+
+4. Endre typen melding for å angi en advarsel.  Endre det andre argumentet i formelen:
+
+    **Notify ("Hello, World", NotificationType.Warning)**
+
+5. Klikk eller trykk på knappen.
+
+    Hver gang knappen trykkes på, vises nå meldingen **Hello, World** til brukeren, som en advarsel.
+
+    ![I redigeringsmiljøet vil Button.OnSelect, oppkalle Notify og vise den resulterende Hello, World-meldingen som en rød bannermelding for brukeren](media/function-showerror/hello-world-warning.png)
+
+4. Endre typen melding for å angi vellykket prosess.  Endre det andre argumentet i formelen:
+
+    **Notify ("Hello, World", NotificationType.Success)**
+
+5. Klikk eller trykk på knappen.
+
+    Hver gang knappen trykkes på, vises nå meldingen **Hello, World** til brukeren, som en vellykket prosess.
+
+    ![I redigeringsmiljøet vil Button.OnSelect, oppkalle Notify og vise den resulterende Hello, World-meldingen som en rød bannermelding for brukeren](media/function-showerror/hello-world-success.png)

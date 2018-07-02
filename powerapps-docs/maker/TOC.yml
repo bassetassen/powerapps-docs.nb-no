@@ -596,7 +596,7 @@
           href: ./canvas-apps/connections-list.md
         - name: 'Systemkrav, grenser og konfigurasjon'
           href: ./canvas-apps/limits-and-config.md
-        - name: Hent en økt-ID
+        - name: Få en økt- eller app-ID
           href: ./canvas-apps/get-sessionid.md
 - name: Modelldrevne apper
   href: ./model-driven-apps/model-driven-app-overview.md
