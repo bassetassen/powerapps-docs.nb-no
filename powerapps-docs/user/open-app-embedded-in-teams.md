@@ -2,18 +2,21 @@
 title: Hurtiginnføring for å legge til og åpne en app i Microsoft Teams | Microsoft Docs
 description: I denne hurtigveiledningen lærer du hvordan du legger til en app til en Microsoft Teams-kanal, slik at personer du har delt appen med kan åpne den i denne kanalen.
 author: mgblythe
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 01/18/2018
-ms.author: mblythe
-ms.openlocfilehash: 9c670a61f89b8bf038bae117614895f18101fe0c
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.author: matp
+ms.custom: ''
+ms.reviewer: ''
+ms.assetid: ''
+ms.openlocfilehash: 07543d1724ff2272dfa4e1902d2581fa5034360a
+ms.sourcegitcommit: bcfefb30b12cf94815dd9a0fd8cad29a8272d96e
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34074134"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37925689"
 ---
 # <a name="quickstart-add-an-app-to-microsoft-teams"></a>Hurtigstart: Legg til en app i Microsoft Teams
 
@@ -29,7 +32,7 @@ Du trenger et [Office 365-abonnement ](https://signup.microsoft.com/Signup?Offer
 
 ## <a name="sign-in-to-powerapps"></a>Å logge deg på PowerApps
 
-Å logge deg på PowerApps på [https://web.powerapps.com]([https://web.powerapps.com).
+Å logge deg på PowerApps på [https://web.powerapps.com](https://web.powerapps.com).
 
 ## <a name="add-an-app"></a>Å legge til en app
 
