@@ -6,6 +6,8 @@
   href: run-app-client.md
 - name: På en telefon (modelldreven)
   href: run-app-client-model-driven.md
+- name: På en SharePoint Online-side
+  href: 'https://support.office.com/article/use-the-powerapps-web-part-6285f05e-e441-408a-99d7-aa688195cd1c'
 - name: I Microsoft Teams
   href: open-app-embedded-in-teams.md
 - name: Fra AppSource
