@@ -2,17 +2,19 @@
 title: 'Knapp-kontroll: referanse | Microsoft Docs'
 description: Informasjon, inkludert egenskaper og eksempler, om Knapp-kontrollen
 author: fikaradz
+manager: kvivek
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 5e292b9cab399e4433c5b209fe22f17dd955ea9f
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.reviewer: anneta
+ms.openlocfilehash: 6e27f4b76c1642b8f0fe291e74a2bcc6f68d8035
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37898485"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39017115"
 ---
 # <a name="button-control-in-powerapps"></a>Knappkontroll i PowerApps
 En kontroll som brukeren kan klikke eller trykke på for å samhandle med appen.

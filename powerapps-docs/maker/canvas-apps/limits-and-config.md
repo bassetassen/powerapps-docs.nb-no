@@ -1,18 +1,20 @@
 ---
 title: Systemkrav, grenser og konfigurasjonsverdier | Microsoft Docs
 description: Systemkrav, grenser og konfigurasjonsverdier for PowerApps
-author: skjerland
-ms.service: PowerApps
+author: AFTOwen
+manager: kvivek
+ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 03/07/2018
-ms.author: sharik
-ms.openlocfilehash: e76710bc800782624ca1190086cc19dd47d60939
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.author: anneta
+ms.openlocfilehash: 082b2735fdc2034a807e746d8c230163adf6b569
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37896102"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39016540"
 ---
 # <a name="system-requirements-limits-and-configuration-values"></a>Systemkrav, grenser og konfigurasjonsverdier
 Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og konfigurasjonsverdier for PowerApps.

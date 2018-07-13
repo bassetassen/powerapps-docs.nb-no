@@ -2,17 +2,19 @@
 title: Oversikt over Power BI-tilkoblingen | Microsoft Docs
 description: Å se tilgjengelige Power BI-tilkoblinger
 author: lancedMicrosoft
+manager: kvivek
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/12/2016
 ms.author: lanced
-ms.openlocfilehash: 0666350b9c60fdd3a1ed9cb2a3e7fa7b46bdd683
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 3f90a3b7fc7914caf61cc33abcf6baec87328ece
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37896884"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39015620"
 ---
 # <a name="connect-to-power-bi-from-powerapps"></a>Å koble til Power BI fra PowerApps
 ![strøm~~POS=TRUNC BI](./media/connection-powerbi/powerbiicon.png)

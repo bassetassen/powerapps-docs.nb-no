@@ -2,17 +2,19 @@
 title: 'Strekkodeleser-kontroll: referanse i Microsoft Docs'
 description: Informasjon om Strekkodeleser-kontrollen, inkludert egenskaper og eksempler
 author: fikaradz
+manager: kvivek
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: b8b25f5bfa3ddbce7b1c541afb7a935a2fe4aa36
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.reviewer: anneta
+ms.openlocfilehash: feafd1f7e659cc9d0aa8965e430d567e006180ef
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37898172"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39015252"
 ---
 # <a name="barcode-scanner-control-experimental-in-powerapps"></a>Strekkodeleser-kontrollen (eksperimentell) i PowerApps
 En eksperimentell kontroll som lar brukeren ta bilder ved hjelp av strekkodeleseren på enheten.

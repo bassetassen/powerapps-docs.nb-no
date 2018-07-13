@@ -1,23 +1,20 @@
 ---
 title: 'Mikrofon-kontrollen: referanse | Microsoft Docs'
 description: Informasjon om Mikrofon-kontrollen, inkludert egenskaper og eksempler
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: c79e30a404b1e653f1df6547c9fcc818efc79433
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: e0c0c67ab4681eac8c63ceb860a760053547bf24
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34583513"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39015045"
 ---
 # <a name="microphone-control-in-powerapps"></a>Mikrofon-kontrollen i PowerApps
 En kontroll som gjør at brukere av appen kan spille inn lyder via enheten.

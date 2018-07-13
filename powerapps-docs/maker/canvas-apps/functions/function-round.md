@@ -1,23 +1,20 @@
 ---
 title: Round-, RoundDown- og RoundUp-funksjonene | Microsoft Docs
 description: Referanseinformasjon for funksjonene Round, RoundDown og RoundUp i PowerApps, inkludert syntaks
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: 07771027ea728d65bfb35d79fb67bdef1ac80f1a
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 182106097fb08d6ba2a3689048e9e33c5383ff57
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "31825790"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39016425"
 ---
 # <a name="round-rounddown-and-roundup-functions-in-powerapps"></a>Round-, RoundDown- og RoundUp-funksjoner i PowerApps
 Avrunder et tall.

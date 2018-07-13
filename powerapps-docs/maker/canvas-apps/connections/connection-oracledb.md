@@ -2,17 +2,19 @@
 title: Koble til Oracle Database | Microsoft Docs
 description: Finn ut hvordan du kobler til Oracle Database og bruker den til å bygge apper i PowerApps.
 author: lancedMicrosoft
+manager: kvivek
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/14/2017
 ms.author: lanced
-ms.openlocfilehash: 2b2a9c26c8187810f5253562a731384293ae5796
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 6eea40490b7a41ae95445135fabbc33801386c4d
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803355"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39021991"
 ---
 # <a name="connect-to-an-oracle-database-from-powerapps"></a>Koble til en Oracle Database fra PowerApps
 Vis tabeller, og opprett, les, oppdater og slett tabellrader i en Oracle Database etter at du oppretter en tilkobling og utvikler en app i PowerApps. Tilkobling til Oracle Database støtter full delegering av filtrering, sortering og andre funksjoner, men ikke utløsere eller lagrede prosedyrer.

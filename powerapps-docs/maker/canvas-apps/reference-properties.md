@@ -1,23 +1,20 @@
 ---
 title: Finn egenskaper | Microsoft Docs
 description: Finn en egenskap sortert alfabetisk, etter kontroll eller etter kategori.
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
-ms.topic: conceptual
-ms.component: canvas
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 03/17/2016
 ms.author: gregli
-ms.openlocfilehash: 8d54c632780ac827704535af5d24881685a0e518
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: d1cda8d13faa0c20786f8f7f466951b2fe5eb95e
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34583605"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39018104"
 ---
 # <a name="controls-and-properties-in-powerapps"></a>Kontroller og egenskaper i PowerApps
 Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapene for den. Hver kontrolltype har sitt eget sett med egenskaper. Noen egenskaper, som **Height** og **Width**, er tilgjengelige for nesten alle typer kontroller, mens andre egenskaper, som **CheckboxSize**, er spesifikke for én type kontroll.

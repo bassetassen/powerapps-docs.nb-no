@@ -1,23 +1,20 @@
 ---
 title: 'Datovelger-kontrollen: referanse | Microsoft Docs'
 description: Informasjon, inkludert egenskaper og eksempler, om Datovelger-kontrollen
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: fe6fc6527348c6d38ba1d7934efb50ea071154d7
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: d34761b836f25fcb88d2f77d778501eafd78d511
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34583559"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39017782"
 ---
 # <a name="date-picker-control-in-powerapps"></a>Datovelger-kontrollen i PowerApps
 En kontroll som brukeren kan klikke eller trykk på for å angi en dato.

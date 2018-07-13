@@ -2,17 +2,19 @@
 title: Oversikt over Dynamics 365-tilkoblingen | Microsoft Docs
 description: Å lage en app for å behandle data i Dynamics 365
 author: Mattp123
+manager: kvivek
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
 ms.date: 07/12/2017
 ms.author: matp
-ms.openlocfilehash: 425620f3e20af7945c0e1506cab23a90c5209973
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.reviewer: ''
+ms.openlocfilehash: e29688f52da411d57daa920437d1f0708c9f663e
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803056"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39017023"
 ---
 # <a name="connect-to-dynamics-365-from-powerapps"></a>Å koble til Dynamics 365 fra PowerApps
 Med PowerApps kan du raskt generere, tilpasse, dele og kjøre mobilapper med lite eller ingen kode. Ved hjelp av Dynamics 365-koblingen kan du på bare noen minutter opprette nyttige mobilapper til å dele med organisasjonen.
