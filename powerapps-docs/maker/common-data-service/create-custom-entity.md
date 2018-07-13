@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: tutorial
 ms.date: 05/01/2018
 ms.author: matp
-ms.openlocfilehash: c587ed6488ae498e3ec662016ee1d028023e4095
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a4430637d197530cff793a2fcde1c2485bf59a9f
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168255"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897298"
 ---
 # <a name="tutorial-create-a-custom-entity-that-has-components-in-powerapps"></a>Opplæring: Oppretting av en egendefinert enhet som har PowerApps-komponenter
 
@@ -38,49 +38,49 @@ Logg deg på [PowerApps](https://powerapps.microsoft.com/). Hvis du ikke allered
 1. Utvid **Data** på den venstre navigasjonsruten, velg **Enheter** og velg så **Ny enhet**.
     ![Ny enhet](media/create-custom-entity/create-new-entity.png)
 2. Skriv følgende verdier inn i den høyre ruten, og velg deretter **Neste**.
-  - **Visningsnavn**: *Kjæledyr* 
-  - **Beskrivelse**: *Egendefinert enhet som sporer kjæledyr-tjenester*
+   - **Visningsnavn**: *Kjæledyr* 
+   - **Beskrivelse**: *Egendefinert enhet som sporer kjæledyr-tjenester*
 3. Velg **Lagre enhet**.
 
 ## <a name="add-and-customize-fields"></a>Slik legger du til og tilpasser felt
  
 1. Velg **Primærnavn**-feltet på **Felt**-fanen.
 2. I den høyre ruten kan du gjøre følgende endringer i **Primærnavn**-feltet: 
-  - Endre **Visningsnavn** fra **Primærnavn** til *Navn på kjæledyr*
-  - Velg **Søkbar**  
+   - Endre **Visningsnavn** fra **Primærnavn** til *Navn på kjæledyr*
+   - Velg **Søkbar**  
   
-    ![Endring av primærfeltet](media/create-custom-entity/primary-field.png)
+     ![Endring av primærfeltet](media/create-custom-entity/primary-field.png)
 3. Velg **Ferdig**.
 4. Velg **Legg til** felt på verktøylinjen for enhetsutforming, på **Felt**-fanen. Skriv inn eller velg de følgende verdiene og alternativene i **feltegenskaper**-ruten.
-  - **Visningsnavn**. *Art*
-  - **Datatype**. *Alternativsett*
-  - **Alternativsett**. *Nytt alternativsett*
+   - **Visningsnavn**. *Art*
+   - **Datatype**. *Alternativsett*
+   - **Alternativsett**. *Nytt alternativsett*
 5. Lage alternativsettet
 
-  a. Velg **Legg til nytt element**. 
+   a. Velg **Legg til nytt element**. 
   
-  b. Erstatt **Nytt alternativ** med *Hund*. 
+   b. Erstatt **Nytt alternativ** med *Hund*. 
    
-  c. Velg **Legg til nytt element**. 
+   c. Velg **Legg til nytt element**. 
     
-  d.  Erstatt **Nytt alternativ** med *Katt*. 
+   d.  Erstatt **Nytt alternativ** med *Katt*. 
     
-  e. Velg **Lagre**. 
+   e. Velg **Lagre**. 
 
-  ![Nytt alternativsett](media/create-custom-entity/optionset-add-items.png)
+   ![Nytt alternativsett](media/create-custom-entity/optionset-add-items.png)
 
 6. Velg **Søkbar**, og velg deretter **Ferdig**.
 
 7. Velg **Legg til felt** på verktøylinjen for enhetsutforming. Skriv inn eller velg de følgende verdiene og alternativene i **Feltegenskaper**-ruten, og velg deretter **Ferdig**.
-  - **Visningsnavn**. *Rase*
-  - **Datatype**. *Tekst*
-  - **Søkbar**. *Ja*
+   - **Visningsnavn**. *Rase*
+   - **Datatype**. *Tekst*
+   - **Søkbar**. *Ja*
 
 8. Velg **Legg til felt** på verktøylinjen for enhetsutforming. 
 
 9. Skriv inn eller velg de følgende verdiene og alternativene i **Feltegenskaper**-ruten, og velg deretter **Ferdig**. 
-  - **Visningsnavn**. *Avtaledato*
-  - **Datatype**. *Dato og klokkeslett*
+   - **Visningsnavn**. *Avtaledato*
+   - **Datatype**. *Dato og klokkeslett*
 
 10. Velg **Lagre enhet**.
 
@@ -97,10 +97,10 @@ Legg merke til at når du legger til en relasjon, legges et **Konto**-felt med d
 
 1. Velg **Visninger**-fanen, og velg deretter **Aktive kjæledyr**-visning. Hvis du ikke ser **Aktive kjæledyr**-visningen, velger du **Fjern filter**.
 2. Velg **Legg til kolonner** i visningsutformeren, velg følgende kolonner og velg deretter **OK**.
-  - Konto
-  - Avtaledato 
-  - Rase 
-  - Art
+   - Konto
+   - Avtaledato 
+   - Rase 
+   - Art
 3. Velg **Opprettet på**-fanen, velg **Fjern**, og velg deretter **OK** for å bekrefte slettingen av kolonnen.
 4. Hvis du vil ordne kolonnene, merker du kolonnen du vil flytte, og deretter bruker du pilknappene <- og -> til visningen ser slik ut.
     ![Visning av aktive kjæledyr ](media/create-custom-entity/active-pets-view.png)

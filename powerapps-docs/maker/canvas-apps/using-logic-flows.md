@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 06/05/2017
 ms.author: sharik
-ms.openlocfilehash: 19e30477b7015061a4e4b781e1c53a55d1fda1a7
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 7079dc6194361cc700ccaad6c02ca0bcf8a9f9d6
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32329621"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895918"
 ---
 # <a name="start-a-flow-in-an-app"></a>Å starte en flyt i en app
 Du kan bruke Microsoft Flow til å opprette logikk som utfører én eller flere oppgaver når en hendelse forekommer i en app. Du kan for eksempel konfigurere en knapp slik at når en bruker velger den, opprettes et element i en SharePoint-liste, en e-postmelding eller møteinvitasjon sendes, en fil legges til i skyen, eller alt dette. Du kan konfigurere en kontroll i appen for å starte flyten, som fortsetter å kjøre selv om du lukker PowerApps.
@@ -52,7 +52,7 @@ Du kan bruke Microsoft Flow til å opprette logikk som utfører én eller flere 
    3. I **Områdeadresse**-boksen skriver eller limer du inn nettadressen til et SharePoint-område som inneholder en liste.
 
        > [!NOTE]
-> Angi nettadressen for området som ikke inkludert i listen.
+      > Angi nettadressen for området som ikke inkludert i listen.
 
    4. I **Listenavn**-boksen merker du listen som du vil bruke.
 
@@ -86,7 +86,7 @@ Du kan bruke Microsoft Flow til å opprette logikk som utfører én eller flere 
 6. Velg flyten som du opprettet i forrige trinn, i ruten som vises.
 
     > [!NOTE]
-> Hvis flyten du opprettet ikke er tilgjengelig, må du kontrollere om PowerApps er satt til miljøet som du opprettet flyten i.
+   > Hvis flyten du opprettet ikke er tilgjengelig, må du kontrollere om PowerApps er satt til miljøet som du opprettet flyten i.
 
     ![Å legge til en flyt fra tilpassingsruten](./media/using-logic-flows/add-flow-from-pane.png)
 

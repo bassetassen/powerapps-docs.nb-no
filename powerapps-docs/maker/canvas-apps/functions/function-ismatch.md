@@ -1,23 +1,19 @@
 ---
 title: IsMatch-funksjonen | Microsoft Docs
 description: Referanseinformasjon, inkludert syntaks, for IsMatch-funksjonen i PowerApps
-documentationcenter: na
 author: gregli-msft
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 02/05/2017
 ms.author: gregli
-ms.openlocfilehash: 26bbef6e61845708e20efb3bd201ae61867d1026
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 908602af84c94d4a14dcd2017c2791ee5c25e6ad
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838422"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899253"
 ---
 # <a name="ismatch-function-in-powerapps"></a>IsMatch-funksjonen i PowerApps
 Tester om en tekststreng samsvarer med et mønster.
@@ -134,21 +130,23 @@ Brukeren skriver inn **Hei, verden** i **TextInput1**.
 | **IsMatch( TextInput1.Text, "hei", Contains & IgnoreCase )** |Tester om brukerens inndata inneholder ordet «hei» (skiller ikke mellom store og små bokstaver). |**sann** |
 
 ### <a name="predefined-patterns"></a>Forhåndsdefinerte mønstre
-| Formel | Beskrivelse | Resultat |
-| --- | --- | --- |
-| **IsMatch( "123-45-7890", Digit & Digit & Digit & Hyphen & Digit & Digit & Hyphen & Digit & Digit & Digit & Digit & Digit )** |Samsvarer med et personnummer for USA |**sann** |
-| **IsMatch( "joan@contoso.com", Email )** |Samsvarer med en e-postadresse |**sann** |
-| **IsMatch( "123.456", MultipleDigits & Period & OptionalDigits )** |Samsvarer med en rekke sifre, et punktum og deretter ingen eller flere sifre. |**sann** |
-| **IsMatch( "123", MultipleDigits & Period & OptionalDigits )** |Samsvarer med en rekke sifre, et punktum og deretter ingen eller flere sifre. Et punktum vises ikke i teksten, så dette mønsteret samsvarer ikke. |**usann** |
+
+|                                                            Formel                                                            |                                                                Beskrivelse                                                                |  Resultat   |
+|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| **IsMatch( "123-45-7890", Digit & Digit & Digit & Hyphen & Digit & Digit & Hyphen & Digit & Digit & Digit & Digit & Digit )** |                                              Samsvarer med et personnummer for USA                                               | **sann**  |
+|                                           **IsMatch( "joan@contoso.com", Email )**                                            |                                                         Samsvarer med en e-postadresse                                                          | **sann**  |
+|                              **IsMatch( "123.456", MultipleDigits & Period & OptionalDigits )**                               |                                   Samsvarer med en rekke sifre, et punktum og deretter ingen eller flere sifre.                                   | **sann**  |
+|                                **IsMatch( "123", MultipleDigits & Period & OptionalDigits )**                                 | Samsvarer med en rekke sifre, et punktum og deretter ingen eller flere sifre. Et punktum vises ikke i teksten, så dette mønsteret samsvarer ikke. | **usann** |
 
 ### <a name="regular-expressions"></a>Vanlige uttrykk
-| Formel | Beskrivelse | Resultat |
-| --- | --- | --- |
-| **IsMatch( "986", "\d+" )** |Samsvarer med et heltall større enn null. |**sann** |
-| **IsMatch( "1.02", "\d+(\.\d\d)?" )** |Samsvarer med et positivt valutabeløp. Hvis inndataene inneholder et desimaltegn, må inndataene også inneholde to numeriske tegn etter desimaltegnet. For eksempel er 3.00 gyldig, men ikke 3.1. |**sann** |
-| **IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )** |Samsvarer med et positivt eller negativt valutabeløp. Hvis inndataene inneholder et desimaltegn, må inndataene også inneholde to numeriske tegn etter desimaltegnet. |**sann** |
-| **IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )** |Samsvarer med et personnummer for USA.  Validerer format, type og lengde for det angitte inndatafeltet. Strengen som skal samsvare, må bestå av tre numeriske tegn etterfulgt av en bindestrek og deretter to numeriske tegn etterfulgt av en bindestrek, og deretter fire numeriske tegn. |**sann** |
-| **IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )** |Samme som det forrige eksemplet, men en av bindestrekene er på feil sted i inndataene. |**usann** |
-| **IsMatch( "weakpassword", "(?!^[0-9]\*$)(?!^[a-zA-Z]\*$)([a-zA-Z0-9]{8,10})" )** |Validerer et sterkt passord, som må inneholde 8, 9 eller 10 tegn, i tillegg til minst ett siffer og minst én bokstav. Strengen kan ikke inneholde spesialtegn. |**usann** |
-| **IsMatch( "http://microsoft.com", "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]\*[0-9a-zA-Z])\*(:(0-9)\*)\*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]\*)?" )** |Validerer en nettadresse for HTTP, HTTPS eller FTP. |**sann** |
+
+|                                                                              Formel                                                                              |                                                                                                                                  Beskrivelse                                                                                                                                   |  Resultat   |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+|                                                                    **IsMatch( "986", "\d+" )**                                                                    |                                                                                                                    Samsvarer med et heltall større enn null.                                                                                                                     | **sann**  |
+|                                                               **IsMatch( "1.02", "\d+(\.\d\d)?" )**                                                               |                                        Samsvarer med et positivt valutabeløp. Hvis inndataene inneholder et desimaltegn, må inndataene også inneholde to numeriske tegn etter desimaltegnet. For eksempel er 3.00 gyldig, men ikke 3.1.                                         | **sann**  |
+|                                                            **IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )**                                                             |                                                        Samsvarer med et positivt eller negativt valutabeløp. Hvis inndataene inneholder et desimaltegn, må inndataene også inneholde to numeriske tegn etter desimaltegnet.                                                        | **sann**  |
+|                                                         **IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )**                                                         | Samsvarer med et personnummer for USA.  Validerer format, type og lengde for det angitte inndatafeltet. Strengen som skal samsvare, må bestå av tre numeriske tegn etterfulgt av en bindestrek og deretter to numeriske tegn etterfulgt av en bindestrek, og deretter fire numeriske tegn. | **sann**  |
+|                                                         **IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )**                                                         |                                                                                               Samme som det forrige eksemplet, men en av bindestrekene er på feil sted i inndataene.                                                                                               | **usann** |
+|                                         **IsMatch( "weakpassword", "(?!^[0-9]\*$)(?!^[a-zA-Z]\*$)([a-zA-Z0-9]{8,10})" )**                                         |                                        Validerer et sterkt passord, som må inneholde 8, 9 eller 10 tegn, i tillegg til minst ett siffer og minst én bokstav. Strengen kan ikke inneholde spesialtegn.                                        | **usann** |
+| **IsMatch( "<http://microsoft.com>", "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]\*[0-9a-zA-Z])\*(:(0-9)\*)\*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]\*)?" )** |                                                                                                                     Validerer en nettadresse for HTTP, HTTPS eller FTP.                                                                                                                      | **sann**  |
 

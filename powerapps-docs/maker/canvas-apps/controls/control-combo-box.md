@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 09/13/2017
 ms.author: fikaradz
-ms.openlocfilehash: 1a790627ad1dbd1bebecca84cb41ee29dcf148dd
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 1c8004fd615e5f706103ad4c364f7818dd1cb091
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32329506"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898275"
 ---
 # <a name="combo-box-control-in-powerapps"></a>Kombinasjonsbokskontroll i PowerApps
 En kontroll som gjør det mulig for brukere å foreta valg ut ifra angitte valgmuligheter.  Støtter søk og flervalg.
@@ -62,7 +62,7 @@ For å bruke **Kombinasjonsboks** som personvelger, velger du **Person**-malen i
 
 **[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
-**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+**[FocusedBorderThickness](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -110,11 +110,11 @@ Dette er i tillegg til [kravene for standard fargekontrast](../accessible-apps-c
 * **[AccessibleLabel](properties-accessibility.md)** bør vises.
 
     > [!NOTE]
-> På berøringsskjermer kan skjermleserbrukere navigere innholdet i kombinasjonsboksen sekvensielt. Kombinasjonsboksen fungerer som en knapp som viser eller skjuler innholdet når valgt.
+  > På berøringsskjermer kan skjermleserbrukere navigere innholdet i kombinasjonsboksen sekvensielt. Kombinasjonsboksen fungerer som en knapp som viser eller skjuler innholdet når valgt.
 
 ### <a name="keyboard-support"></a>Tastaturstøtte
 * **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
 * Fokusindikatorer må være godt synlige. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
 
     > [!NOTE]
-> TAB-tasten navigerer til eller bort fra kombinasjonsboksen. Piltastene navigerer innholdet i kombinasjonsboksen. ESC-tasten lukker rullegardinlisten når den åpnes.
+  > TAB-tasten navigerer til eller bort fra kombinasjonsboksen. Piltastene navigerer innholdet i kombinasjonsboksen. ESC-tasten lukker rullegardinlisten når den åpnes.

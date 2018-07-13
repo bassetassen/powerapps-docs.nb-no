@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 3100ebae3d3f9b7cdef839d74e9d289b4059de5d
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 7f78cc61b4e6af34af7bf6944e70e783872bc255
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838468"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897505"
 ---
 # <a name="text-input-control-in-powerapps"></a>Tekstinndata-kontroll i PowerApps
 En boks som brukeren kan skrive inn tekst, tall og andre data i.
@@ -59,7 +59,7 @@ Brukeren kan angi data ved å skrive inn i en kontroll for tekstinndata. Avhengi
 
 **[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
-**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+**[FocusedBorderThickness](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
@@ -149,22 +149,28 @@ Brukeren kan angi data ved å skrive inn i en kontroll for tekstinndata. Avhengi
 6. (valgfritt) Legg til flere navn i samlingen, og trykk deretter på ESC for å gå tilbake til standardarbeidsområdet.
 
 ### <a name="prompt-for-a-password"></a>Å be om et passord
+
 1. Legg til en kontroll for inndatatekst, gi den navnet **inputPassword**, og angi **Modus**-egenskapen til **Passord**.
-2. Legg til en etikett, og angi **[Text](properties-core.md)**-egenskapen til denne formelen:<br>
+
+1. Legg til en etikett, og angi **[Text](properties-core.md)**-egenskapen til denne formelen:<br>
    **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
-   
+
     Vil du ha mer informasjon om **[If](../functions/function-if.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
-3. Trykk på F5, og skriv deretter **P@ssw0rd** i **inputPassword**.
-   
+
+1. Trykk på F5, og skriv deretter **P@ssw0rd** i **inputPassword**.
+
     Når du er ferdig å skrive inn passordet, viser ikke etiketten meldingen **Ingen tilgang** lenger. Den viser deretter **Tilgang innvilget**.
-4. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
-5. (valgfritt) Legg til en kontroll, for eksempel en pil, konfigurer den til å navigere til en annen skjerm, og vis den bare etter at brukeren skriver inn passordet.
-6. (valgfritt) Legg til en knapp, konfigurer **[Text](properties-core.md)**-egenskapen til å vise **Logg på**, legg til en tidtaker og deaktiver kontrollen for inndatatekst for en gitt tid hvis brukeren skriver inn feil passord og deretter klikker eller trykker på **Logg på**-knappen.
+
+1. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
+
+1. (valgfritt) Legg til en kontroll, for eksempel en pil, konfigurer den til å navigere til en annen skjerm, og vis den bare etter at brukeren skriver inn passordet.
+
+1. (valgfritt) Legg til en knapp, konfigurer **[Text](properties-core.md)**-egenskapen til å vise **Logg på**, legg til en tidtaker og deaktiver kontrollen for inndatatekst for en gitt tid hvis brukeren skriver inn feil passord og deretter klikker eller trykker på **Logg på**-knappen.
 
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
 ### <a name="color-contrast"></a>Fargekontrast
-* [Kontrastkrav for standardfarge](../accessible-apps-color.md) gjelder.
+* [Standardkrav for fargekontrast](../accessible-apps-color.md) gjelder.
 
 ### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
 * **[AccessibleLabel](properties-accessibility.md)** bør vises.

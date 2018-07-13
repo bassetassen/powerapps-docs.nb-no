@@ -7,12 +7,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 07/12/2016
 ms.author: lanced
-ms.openlocfilehash: e11521219fcd368801a6e943f45dbc713309ec36
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: d8d5e29fc7f1c551ac637d86886bc658e7414110
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803424"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898011"
 ---
 # <a name="connect-to-sql-server-from-powerapps"></a>Koble til SQL Server fra PowerApps
 ![SQL Server-ikon](./media/connection-azure-sqldatabase/sqlicon.png)
@@ -33,7 +33,7 @@ Koble til SQL Server, i Azure eller en lokal database, slik at du kan vise infor
 * Hvis du skal bruke lokal database, må du finne en [datagateway](../gateway-management.md) som har blitt delt med deg (eller opprette en).
   
     > [!NOTE]
-> Gatewayer og lokale tilkoblinger kan bare opprettes og brukes i brukerens [standardmiljø](../working-with-environments.md).
+  > Gatewayer og lokale tilkoblinger kan bare opprettes og brukes i brukerens [standardmiljø](../working-with-environments.md).
 
 ## <a name="generate-an-app-automatically"></a>Generer en app automatisk
 1. Klikk eller trykk på **Ny** på **Fil**-menyen (nær venstre kant) i PowerApps Studio.
@@ -54,7 +54,7 @@ Koble til SQL Server, i Azure eller en lokal database, slik at du kan vise infor
        ![Koble til en lokal database](./media/connection-azure-sqldatabase/connect-onprem.png)
      
        > [!NOTE]
-> Hvis du ikke har en gateway, må du [installere en](../gateway-reference.md) og deretter klikke eller trykke på **Oppdater gatewaylisten**.
+     > Hvis du ikke har en gateway, må du [installere en](../gateway-reference.md) og deretter klikke eller trykke på **Oppdater gatewaylisten**.
 6. Klikk eller trykk på **Koble til**.
 7. Klikk eller trykk på et alternativ under **Velg et datasett**, klikk eller trykk på et alternativ under **Velg en tabell** og klikk eller trykk deretter på **Koble til**.
    
@@ -77,7 +77,7 @@ Koble til SQL Server, i Azure eller en lokal database, slik at du kan vise infor
        ![Koble til en database i Azure](./media/connection-azure-sqldatabase/connect-onprem-portal.png)
      
        > [!NOTE]
-> Hvis du ikke har en gateway, må du [installere en](../gateway-reference.md) og deretter klikke eller trykke på klokkeretning-ikonet for å oppdatere listen.
+     > Hvis du ikke har en gateway, må du [installere en](../gateway-reference.md) og deretter klikke eller trykke på klokkeretning-ikonet for å oppdatere listen.
 5. Klikk eller trykk på **Opprett** for å opprette tilkoblingen.
 6. Opprett en app ved hjelp av teknikker som ligner på dem som beskrives i [Opprette en app fra grunnen av](../get-started-create-from-blank.md).
 
@@ -98,7 +98,7 @@ Koble til SQL Server, i Azure eller en lokal database, slik at du kan vise infor
        ![Koble til en database i Azure](./media/connection-azure-sqldatabase/connect-onprem-fromblank.png)
      
        > [!NOTE]
-> Hvis du ikke har en gateway, må du [installere en](../gateway-reference.md) og deretter klikke eller trykke på sirkel-ikonet for å oppdatere listen.
+     > Hvis du ikke har en gateway, må du [installere en](../gateway-reference.md) og deretter klikke eller trykke på sirkel-ikonet for å oppdatere listen.
 6. Klikk eller trykk på **Koble til**.
 7. Klikk eller trykk på et alternativ under **Velg et datasett**.
 8. Velg én eller flere avmerkingsbokser under **Velg en tabell**, og klikk eller trykk på **Koble til**.

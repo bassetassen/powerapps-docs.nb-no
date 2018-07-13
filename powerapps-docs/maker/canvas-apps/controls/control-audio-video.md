@@ -7,12 +7,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: aae87f408452cd83856c2e1c2e07065d4b8df49f
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 43328f363926f20d91b49ba422c3bfdae30abbf6
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803286"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898761"
 ---
 # <a name="audio-and-video-controls-in-powerapps"></a>Lyd- og videokontroller i PowerApps
 En kontroll som spiller av en lydfil, en videofil eller en video på YouTube.
@@ -99,7 +99,7 @@ En **video**-kontroll spiller av et videoklipp fra en fil eller fra YouTube elle
 4. Trykk på F5, og spill deretter av klippet ved å klikke eller trykke på avspillingsknappen til kontrollen du har lagt til.
 
     > [!TIP]
-> Avspillingsknappen for **video**kontrollen vises når du holder pekeren over kontrollen.
+   > Avspillingsknappen for **video**kontrollen vises når du holder pekeren over kontrollen.
 5. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
 
 ### <a name="play-a-youtube-video"></a>Å spille av en YouTube-video

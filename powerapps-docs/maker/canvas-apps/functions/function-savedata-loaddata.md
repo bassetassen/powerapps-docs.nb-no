@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: 8dc68646808e40792d3e55aa9ac547aa43a78efb
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: c916784df877b1228fd8d9322a80ccccdc61967f
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827348"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897896"
 ---
 # <a name="savedata-and-loaddata-functions-in-powerapps"></a>Funksjonene SaveData og LoadData i PowerApps
 Lagrer og laster inn en [samling](../working-with-data-sources.md#collections) på nytt.
@@ -39,6 +39,7 @@ Dataene krypteres og lagres på en privat plassering på den lokale enheten, iso
 * *IgnoreNonexistentFile* – valgfritt. Boolsk (**sann**/**usann**) verdi som angir om **LoadData**-funksjonen skal vise eller ignorere feil når den ikke kan finne en samsvarende fil. Hvis du angir **usann**, vises feilene. Hvis du angir **sann**, ignoreres feilene, noe som er nyttig når du er frakoblet. **SaveData** kan opprette en fil hvis enheten er frakoblet (altså hvis **Connection.Connected**-statusen er **usann**).
 
 ## <a name="examples"></a>Eksempler
+
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **Hvis(Tilkobling.Tilkoblet, ClearCollect(LocalTweets, Twitter.SearchTweet(«PowerApps», {maxResults: 100})),LoadData(LocalTweets, «Tweeter», sann))** |Hvis enheten er koblet til, lastes samlingen LocalTweets inn fra Twitter-tjenesten. Ellers lastes samlingen inn fra den lokale filbufferen. |Innholdet gjengis uansett enheten er tilkoblet eller frakoblet. |

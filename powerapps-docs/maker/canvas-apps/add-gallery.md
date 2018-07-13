@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 09/28/2017
 ms.author: sharik
-ms.openlocfilehash: 60ec1fc7f896aeb3391ed794920e987b232d09f3
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 9b2c07e8599ada76aa2f2195fc1240321ed02ef9
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31833492"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898218"
 ---
 # <a name="show-a-list-of-items-in-powerapps"></a>Vis en liste over elementer i PowerApps
 Vis en liste over elementer fra en datakilde ved å legge til en **[Galleri](controls/control-gallery.md)**-kontroll i appen. Dette emnet bruker Excel som datakilde. Filtrer listen ved å konfigurere **Galleri**-kontrollen, for å vise bare elementene som samsvarer med filterkriteriet i en **[Tekstinndata](controls/control-text-input.md)**-kontroll.
@@ -52,7 +52,7 @@ Vis en liste over elementer fra en datakilde ved å legge til en **[Galleri](con
 7. Klikk eller trykk på **Listeskjerm** for å legge til en skjerm som inneholder en **Galleri**-kontroll og andre kontroller, for eksempel et søkefelt.
 
     > [!NOTE]
-> Om du legger til en **Galleri**-kontroll i en ny eller eksisterende skjerm, kan du klikke eller trykke nær bunnen av **Galleri**-kontrollen for å merke den, klikke eller trykke på **Estimater for gulvlegging** i den høyre ruten, og klikke eller trykke på et annet oppsett i **Data**-ruten. La standardoppsettet være aktivert for denne opplæringen.
+   > Om du legger til en **Galleri**-kontroll i en ny eller eksisterende skjerm, kan du klikke eller trykke nær bunnen av **Galleri**-kontrollen for å merke den, klikke eller trykke på **Estimater for gulvlegging** i den høyre ruten, og klikke eller trykke på et annet oppsett i **Data**-ruten. La standardoppsettet være aktivert for denne opplæringen.
 
     ![Velg gallerioppsett](./media/add-gallery/select-layout.png)
 

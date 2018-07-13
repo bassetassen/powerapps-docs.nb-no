@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 11/30/2015
 ms.author: lonu
-ms.openlocfilehash: 01065fd1a12b3d55e8726582cead3d86a6e6a8ad
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: b3bf7c2227d3321a581eb1a568de1ce78ead92ee
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330311"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899897"
 ---
 # <a name="create-and-update-a-collection-in-your-app"></a>Å opprette og oppdatere en samling i appen
 Bruk en samling til å lagre data som kan brukes i en app. En samling er en gruppe lignende elementer. Du har for eksempel opprettet en MyImages-samling som inneholder alle produktbildene som firmaet selger. Du kan legge til MyImages-samlingen i PowerApps og opprette en app som viser alle bildene av disse produktene. I et annet eksempel kan du opprette en PriceList-samling som viser produktene og prisen for hvert produkt.
@@ -84,7 +84,7 @@ Følgende fremgangsmåte viser deg hvordan du oppretter en samling i appen ved h
    ![][10]  
    
     > [!NOTE]
-> Du kan erstatte «innskriving av tekst» med noe annet, som «By» eller «Delstat», slik det ble gjort i bildet.  
+   > Du kan erstatte «innskriving av tekst» med noe annet, som «By» eller «Delstat», slik det ble gjort i bildet.  
 6. Velg **Knapp** på **Sett inn**-fanen. Angi knappens **[OnSelect](controls/properties-core.md)**-egenskap til følgende funksjon:  
    ```Collect(Destinations, {Cities:City!Text, States:States!Text})```  
    
@@ -92,7 +92,7 @@ Følgende fremgangsmåte viser deg hvordan du oppretter en samling i appen ved h
     ![][11]  
    
     > [!NOTE]
-> Du kan bruke den samme funksjonen til å legge til ekstra kolonner i denne samlingen. Du kan for eksempel legge til en annen kontroll for innskriving av tekst for Land for å legge til en Land-kolonne:
+   > Du kan bruke den samme funksjonen til å legge til ekstra kolonner i denne samlingen. Du kan for eksempel legge til en annen kontroll for innskriving av tekst for Land for å legge til en Land-kolonne:
    
     `Collect(Destinations, {Cities:City!Text, States:States!Text}, {Countries:Country!Text})`
 7. Gi nytt navn til knappekontrollen **AddCityStateButton**, og angi **Legg til by og delstat** for **[Tekst](controls/properties-core.md)**-egenskapen:  
@@ -155,7 +155,7 @@ Det finnes noen inndelinger i denne gjennomgangen. Når operasjonen er fullført
     ```Collect(OrderList, {Name:PriceGallery!Selected!Name, Qty:OrderQty!Value, Cost:OrderQty!Value*LookUp(PriceList, PriceGallery!Selected!Name in Name, Price)});SaveData(OrderList, "orderfile")```  
    
     > [!NOTE]
-> Når du velger denne knappen senere i denne prosedyren, må du opprette og lagre en samling med navnet **OrderList**. Samlingen inneholder navnet på et produkt som du angir i galleriet, et antall som du velger med glidebryteren, og de totale kostnadene som beregnes ved å gange antallet med prisen på produktet.
+   > Når du velger denne knappen senere i denne prosedyren, må du opprette og lagre en samling med navnet **OrderList**. Samlingen inneholder navnet på et produkt som du angir i galleriet, et antall som du velger med glidebryteren, og de totale kostnadene som beregnes ved å gange antallet med prisen på produktet.
 4. Velg **Skjerm**-fanen og angi **[OnVisible](controls/control-screen.md)**-egenskapen til følgende uttrykk:  
    
     ```If(IsEmpty(PriceList), LoadData(PriceList, "pricefile"));If(IsEmpty(OrderList), LoadData(OrderList, "orderfile"))```

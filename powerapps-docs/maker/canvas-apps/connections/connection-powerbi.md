@@ -7,12 +7,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/12/2016
 ms.author: lanced
-ms.openlocfilehash: a3a5d24efffd7cd3c9430cafd5050dc96632ee76
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 0666350b9c60fdd3a1ed9cb2a3e7fa7b46bdd683
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803171"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896884"
 ---
 # <a name="connect-to-power-bi-from-powerapps"></a>Å koble til Power BI fra PowerApps
 ![strøm~~POS=TRUNC BI](./media/connection-powerbi/powerbiicon.png)
@@ -30,7 +30,7 @@ Dette emnet viser deg hvordan du bruker Power BI-tilkoblingen i en app, og liste
 ### <a name="list-the-alerts-that-youve-set-up-in-the-power-bi-service"></a>Å vise varsler du har satt opp i Power BI-tjenesten
 1. Velg **Galleri** på **Sett inn**-menyen, og legg til noen av **tekstgalleriene**.
 2. Hvis du vil vise varslene for den gjeldende brukeren, angir du galleriets [Elementer](../controls/properties-core.md)-egenskap til følgende formel:
-   
+
    `PowerBI.GetAlerts()`
 
 Galleriet oppdateres med listen over varsler. For hvert varsel får du varselnavnet, ID-nummer for varselet, og ID-en til gruppens arbeidsområde hvor varselet ble konfigurert. Du trenger ID-en for varselet for å få mer informasjon om det.
@@ -64,6 +64,7 @@ Vis varsler som du har satt opp i Power BI-tjenesten.
 Ingen.
 
 #### <a name="output-properties"></a>Utdataegenskaper
+
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | verdi |matrise |Nei |En matrise for datavarslene som du har satt opp i Power BI-tjenesten. Hvert element i matrisen inkluderer: <ul><li>alertTitle: tittel på varslingen</li><li>alertTitle: ID-en for varslingen</li><li>groupId: ID-en for gruppen som varselet ble opprettet i</li></ul> |
@@ -75,11 +76,13 @@ Vise statusen for et varsel.
 > Forespørsler til dette endepunktet blir begrenset på basis av hvert enkelt varsel hvis det benyttes for hyppig.
 
 #### <a name="input-properties"></a>Inndataegenskaper
+
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | alertId |heltall |Ja |ID-en for varselet, slik det er returnert av GetAlerts |
 
 #### <a name="output-properties"></a>Utdataegenskaper
+
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | tileValue |tall |Nei |Verdien for flisen når varselet ble utløst |

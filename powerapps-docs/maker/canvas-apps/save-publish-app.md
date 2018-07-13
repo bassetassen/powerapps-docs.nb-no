@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 09/14/2017
 ms.author: anneta
-ms.openlocfilehash: e265934336f3646f52b749ddcec5a5e734bd2c50
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 0192abca52f3ca3d28b911e24a9ca9cd07c95393
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31828897"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895849"
 ---
 # <a name="save-and-publish-an-app-in-powerapps"></a>Å lagre og publisere en app i PowerApps
 Når du lagrer endringer i en app, publiserer du den automatisk bare for deg selv og andre som har tillatelse til å redigere den. Når du er ferdig med å gjøre endringer, må du eksplisitt publisere appen for å gjøre den tilgjengelig for alle som den er delt med.
@@ -47,7 +47,7 @@ PowerApps kan også regelmessig lagre appen (hvert 2. minutt). Hvis du har lagre
    ![Å se gjennom publisering](./media/save-publish-app/publish-review.png)
 
    > [!NOTE]
-> Vi anbefaler at du oppdaterer og/eller publiser appen din på nytt innen seks måneder etter siste publisering, for å holde den synkronisert med den nyeste versjonen av PowerApps. Hvis du ikke oppdaterer og/eller publiserer på nytt innen seks måneder, kan appen slutte å fungere uten forhåndsvarsel.
+   > Vi anbefaler at du oppdaterer og/eller publiser appen din på nytt innen seks måneder etter siste publisering, for å holde den synkronisert med den nyeste versjonen av PowerApps. Hvis du ikke oppdaterer og/eller publiserer på nytt innen seks måneder, kan appen slutte å fungere uten forhåndsvarsel.
 
 ## <a name="identify-the-live-version"></a>Å identifisere live-versjon
 Klikk eller trykk på **Apper** på [powerapps.com](https://web.powerapps.com) på **Fil**-menyen (på venstre kant), klikk eller trykk så på Detaljer-ikonet for en app, og deretter klikker eller trykker du på **Versjoner**-fanen.

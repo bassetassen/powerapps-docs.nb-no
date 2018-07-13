@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 07/12/2017
 ms.author: sharik
-ms.openlocfilehash: 4d622eb6cdfaed91547a59be8f5a5dc6651957e5
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: d193c2691f689e935a5dbb92767a16d393098770
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330909"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896746"
 ---
 # <a name="using-multimedia-files-in-powerapps"></a>Bruk av multimediefiler i PowerApps
 Dette emnet forklarer hvordan du bygger inn multimediefiler i appen, laster opp pennetegninger til en datakilde og viser bilder fra en datakilde i appen. Datakilden som brukes i dette emnet, er en Excel-fil i OneDrive for Business.
@@ -48,14 +48,14 @@ Du kan velge hvilken type mediefil du vil legge til (for eksempel bilder, video 
     ![Angi bildeegenskap](./media/add-images-pictures-audio-video/imageproperty.png)
 
     > [!NOTE]
-> Angi bare filnavnet, uten filtypen, i enkle anførselstegn.
+   > Angi bare filnavnet, uten filtypen, i enkle anførselstegn.
 
 7. Hvis du har lagt til en video- eller lydkontroll, angir du **Media**-egenskap for filen du la til:  
 
     ![Angi media-egenskap](./media/add-images-pictures-audio-video/mediaproperty.png)
 
     > [!NOTE]
-> Spill av en YouTube-video ved å angi **Media**-egenskapen til en videokontroll til den relevante nettadressen, omsluttet av doble anførselstegn.
+   > Spill av en YouTube-video ved å angi **Media**-egenskapen til en videokontroll til den relevante nettadressen, omsluttet av doble anførselstegn.
 
 ## <a name="add-media-from-azure-media-services"></a>Legg til media fra Azure Media Services
 1. Logg på Azure Media Services-kontoen, last opp og publiser videoressursen via **AMS > Innstillinger > Ressurser**.

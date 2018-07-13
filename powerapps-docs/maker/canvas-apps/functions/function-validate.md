@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 11/01/2015
 ms.author: gregli
-ms.openlocfilehash: 2b3d91a6da0e17ded435aec74a88ea1bbdd4fac1
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: d1c0a8bdcab3f8a3ba74414ab902092432a34fff
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827739"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899207"
 ---
 # <a name="validate-function-in-powerapps"></a>Funksjonen Validate i PowerApps
 Funksjonen **Validate** kontrollerer hvorvidt verdien av en [enkeltkolonne](../working-with-tables.md#columns) eller en fullstendig [post](../working-with-tables.md#records) er gyldig for en [datakilde](../working-with-data-sources.md).  
@@ -55,12 +55,14 @@ Hvis **Validate** finner et problem, vil funksjonen returnere en feilmelding som
 I disse eksemplene må verdiene i **Prosent**-kolonnen i datakilden for **Resultater** være mellom 0 og 100. Hvis dataen består valideringen, returnerer funksjonen *tom*. Hvis ikke, returnerer funksjonen en feilmelding.
 
 ### <a name="validate-with-a-single-column"></a>Å validere med en enkeltkolonne
+
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **Validate( Scores, Percentage, 10 )** |Kontrollerer om **10** er en gyldig verdi for **Prosent**-kolonnen i datakilden for **Resultater**. |*tom* |
 | **Validate( Scores, Percentage, 120 )** |Kontrollerer om **120** er en gyldig verdi for **Prosent**-kolonnen i datakilden for **Resultater**. |«Verdiene må være mellom 0 og 100.» |
 
 ### <a name="validate-with-a-complete-record"></a>Å validere med en fullstendig post
+
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **Validate( Scores, EditRecord, Gallery.Updates )** |Kontrollerer om **10** er en gyldig verdi for **Prosent**-kolonnen i datakilden for **Resultater**. |*tom* |

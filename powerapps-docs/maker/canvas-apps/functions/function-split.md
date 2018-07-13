@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 08/28/2017
 ms.author: gregli
-ms.openlocfilehash: 3cb894d044a1e6ac02234bc1fa4c5b9239959015
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 7989a795afc0085bfa0e78d4b9d0bebeb26619c6
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31830674"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899276"
 ---
 # <a name="split-function-in-powerapps"></a>Split-funksjonen i PowerApps
 Deler opp en tekststreng i en tabell med delstrenger.
@@ -36,6 +36,7 @@ Bruk **[Concat](function-concatenate.md)**-funksjonen til å sette sammen streng
 * *Skilletegn* – obligatorisk.  Skilletegn som skal brukes i oppdeling av strengen.  Kan være null, ett eller flere tegn.
 
 ## <a name="examples"></a>Eksempler
+
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **Split( "Apples,&nbsp;Oranges,&nbsp;Bananas", "," )** |Deler forskjellig frukt fra hverandre, basert på kommaseparatoren.  Delingen utføres basert på bare kommaet og ikke mellomrommet etter det, noe som resulterer i et mellomrom foran "&nbsp;Oranges" og "&nbsp;Bananas". |<style> img { max-width: none } </style> ![](media/function-split/fruit1.png) |

@@ -7,17 +7,18 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 03/07/2018
 ms.author: sharik
-ms.openlocfilehash: ffe1a027e378da3f9c505f4980681a4b5a11dbda
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: e76710bc800782624ca1190086cc19dd47d60939
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34851757"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896102"
 ---
 # <a name="system-requirements-limits-and-configuration-values"></a>Systemkrav, grenser og konfigurasjonsverdier
 Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og konfigurasjonsverdier for PowerApps.
 
 ## <a name="supported-platforms-for-running-apps-using-the-powerapps-app"></a>Støttede plattformer for å kjøre apper ved hjelp av PowerApps-appen
+
 | **Minimumskrav** | **Anbefalt** |
 | --- | --- |
 | iOS 9.3 eller senere |iOS 10 eller senere med minst 2GB RAM |
@@ -25,6 +26,7 @@ Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og kon
 | Windows 8.1 eller senere (bare PC) |Windows 10 Fall Creators Update med minst 8 GB RAM)|
 
 ## <a name="supported-browsers-for-running-apps"></a>Støttede nettlesere for kjørende apper
+
 | **Nettleser** | **Operativsystem** |
 | --- | --- |
 | Google Chrome (siste versjon)<br>(anbefalt) |Windows 7 SP1, 8.1 og 10 <br>Android 5 eller senere <br>iOS 8 eller senere<br>macOS |
@@ -34,6 +36,7 @@ Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og kon
 | Apple Safari (siste versjon) |iOS 8 eller senere <br>macOS |
 
 ## <a name="supported-browsers-for-powerapps-studio"></a>Nettlesere som støttes for PowerApps Studio
+
 | **Nettleser** | **Operativsystem** |
 | --- | --- |
 | Google Chrome (siste versjon)<br>(anbefalt) |Windows 7 SP1, 8.1 og 10 <br>macOS |
@@ -58,7 +61,7 @@ Samtaler fra en API som er koblet til via en app (for eksempel SQL-API-en, eller
 
 Du bør bruke disse adressene hvis du for eksempel må hviteliste IP-adresser for en Azure SQL-database.
 
->   [!IMPORTANT] 
+> [!IMPORTANT]
 >   Hvis du har eksisterende konfigurasjoner, kan du oppdatere dem så snart som mulig før 1. september 2018, slik at de inkluderer og samsvarer med IP-adresser i denne listen for områdene der PowerApps-apper finnes.
 
 | Område | Utgående IP |

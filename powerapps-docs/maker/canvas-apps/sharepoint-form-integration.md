@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 11/11/2017
 ms.author: ankitsar
-ms.openlocfilehash: 69e3baaa769282ca8ac7372ba3360829a1624f3d
-ms.sourcegitcommit: 6bfb002180148a3f22a4d1d8d750fc442489ebe4
+ms.openlocfilehash: f8f21235170483c908149898f92b57cc6c2cb9aa
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35291747"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896424"
 ---
 # <a name="understand-sharepoint-forms-integration"></a>Forstå integrasjon for SharePoint-skjemaer
 Du kan nå enkelt [tilpasse alle SharePoint-listeskjemaer](customize-list-form.md) i PowerApps. I denne artikkelen forklarer vi i detalj hvordan disse skjemaene fungerer, og hvordan du kan tilpasse dem enda mer.
@@ -66,7 +66,7 @@ Det standardgenererte skjemaet består av følgende kontroller med tilhørende s
 
     * **OnCancel** – Tilbakestiller endringene til **SharePointForm1**. SharePoint skjuler alltid skjemaet når en bruker klikker eller trykker på **Avbryt** i SharePoint.
 
-        **SubmitForm(SharePointForm1)**
+        **ResetForm(SharePointForm1)**
 
 Disse standardene sikrer at skjemaet fungerer når det kjører i SharePoint. De endrer skjemamodusen i PowerApps når brukeren samhandler med det i SharePoint, og de sikrer at endringene blir sendt til SharePoint.
 
@@ -103,8 +103,8 @@ Nå som du har en bedre forståelse av det standardgenererte skjemaet og **Share
 
 * Bruk **OnSave**-formelen for **SharePointIntegration**-kontrollen for å tilpasse hva som skal skje når en bruker klikker eller trykker på **Lagre** i SharePoint. Hvis du har flere skjemaer, må du passe på å bare sende endringene for det skjemaet som brukes i øyeblikket.
 
-    >[!TIP]
-     Angi forskjellige verdier for en variabel i formlene **OnNew**, **OnView** og **OnEdit**. Du kan bruke denne variabelen i **OnSave**-formelen for å finne ut hvilket skjema som brukes.
+  > [!TIP]
+  >    Angi forskjellige verdier for en variabel i formlene **OnNew**, **OnView** og **OnEdit**. Du kan bruke denne variabelen i **OnSave**-formelen for å finne ut hvilket skjema som brukes.
 
 * Pass på å inkludere **RequestHide()** i **OnSuccess**-formelen i alle skjemaene dine. Hvis du glemmer dette, kan ikke SharePoint vite når skjemaet skal skjules.
 

@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: bd07c6ee0a0084171c928c6908c33caae974d765
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 91f1db2f4acd503efce8407dd2c3c60fee6e183e
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31835144"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899138"
 ---
 # <a name="image-control-in-powerapps"></a>Bilde-kontroll i PowerApps
 En kontroll som viser et bilde, for eksempel fra en lokal fil eller en datakilde.
@@ -57,7 +57,7 @@ Hvis du legger til én eller flere **Bilde**-kontroller i appen din, kan du vise
 
 **[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
-**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+**[FocusedBorderThickness](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -145,14 +145,14 @@ Hvis du legger til én eller flere **Bilde**-kontroller i appen din, kan du vise
 * **[AccessibleLabel](properties-accessibility.md)** må være til stede hvis grafikken brukes som en knapp eller på andre måter ikke bare er ment som dekorasjon.
 * **[AccessibleLabel](properties-accessibility.md)** må være tom eller den tomme strengen **«»** hvis grafikken utelukkende er ment som dekorasjon. Dette gjør at skjermlesere ignorerer grafikken.
 * **[AccessibleLabel](properties-accessibility.md)** kan være tom eller den tomme strengen **«»** hvis grafikken inneholder overflødig informasjon.
-    * Dette kan eksempelvis være et **Bilde** av tannhjul med **[AccessibleLabel](properties-accessibility.md)** satt til **Innstillinger**. Dette bildet er ikke brukt som en knapp. Det er ved siden av en **[etikett](control-text-box.md)** som også sier **Innstillinger**. Skjermlesere leser bildet som **Innstillinger**, og etiketten som **Innstillinger** på nytt. Dette blir overflødig. I dette tilfellet trenger ikke **bildet** en **[AccessibleLabel](properties-accessibility.md)**.
+  * Dette kan eksempelvis være et **Bilde** av tannhjul med **[AccessibleLabel](properties-accessibility.md)** satt til **Innstillinger**. Dette bildet er ikke brukt som en knapp. Det er ved siden av en **[etikett](control-text-box.md)** som også sier **Innstillinger**. Skjermlesere leser bildet som **Innstillinger**, og etiketten som **Innstillinger** på nytt. Dette blir overflødig. I dette tilfellet trenger ikke **bildet** en **[AccessibleLabel](properties-accessibility.md)**.
 
     > [!IMPORTANT]
-> Skjermlesere leser alltid **bilder**som har **[TabIndex](properties-accessibility.md)**-verdier lik null eller større, selv hvis**[AccessibleLabel](properties-accessibility.md)** er tom. Dette er fordi de gjengis som knapper. Hvis ingen **[AccessibleLabel](properties-accessibility.md)** er angitt, leser skjermlesere ganske enkelt grafikken som **knapp**.
+    > Skjermlesere leser alltid **bilder**som har **[TabIndex](properties-accessibility.md)**-verdier lik null eller større, selv hvis**[AccessibleLabel](properties-accessibility.md)** er tom. Dette er fordi de gjengis som knapper. Hvis ingen **[AccessibleLabel](properties-accessibility.md)** er angitt, leser skjermlesere ganske enkelt grafikken som **knapp**.
 
 ### <a name="keyboard-support"></a>Tastaturstøtte
 * **[TabIndex](properties-accessibility.md)**-verdien må være null eller større hvis grafikken brukes som en knapp. Dette gjør at tastaturbrukere får muligheten til å navigere til den.
 * Fokusindikatorer må være klart synlige hvis grafikken brukes som en knapp. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
 
     > [!NOTE]
-> Når  **[TabIndex](properties-accessibility.md)**-verdien er null eller større, gjengis **bildet** som en knapp. Det finnes ingen endring i utseendet, men skjermlesere identifiserer bildet som en knapp. Når **[TabIndex](properties-accessibility.md)**-verdien er mindre enn null, identifiseres **bildet** som et bilde.
+  > Når  **[TabIndex](properties-accessibility.md)**-verdien er null eller større, gjengis **bildet** som en knapp. Det finnes ingen endring i utseendet, men skjermlesere identifiserer bildet som en knapp. Når **[TabIndex](properties-accessibility.md)**-verdien er mindre enn null, identifiseres **bildet** som et bilde.

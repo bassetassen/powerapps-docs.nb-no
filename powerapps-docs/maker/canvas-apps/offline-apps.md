@@ -12,15 +12,15 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 05/09/2017
 ms.author: mblythe
-ms.openlocfilehash: e73324d6cfce5edf7ece0350b2047dc7842373bb
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: d374ec8459f4182b11ecf91e28af24a31bb6c055
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31836773"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896838"
 ---
 # <a name="develop-offline-capable-apps-with-powerapps"></a>Å utvikle apper som fungerer i frakoblet tilstand med PowerApps
-Ett av de mest vanlige scenarioene du opplever som en utvikler av mobilapper, er å gjøre det mulig for brukerne å være produktive der det er begrensede tilkoblingsmuligheter, eller ingen tilkobling i det hele tatt. PowerApps har et sett med funksjoner og virkemåter som hjelper deg med å utvikle apper fungerer i frakoblet tilstand. Bruk en av disse måtene:
+Ett av de mest vanlige scenarioene du opplever som utvikler av mobilapper, er å gjøre det mulig for brukerne å være produktive der det er begrensede tilkoblingsmuligheter, eller ingen tilkobling i det hele tatt. PowerApps har et sett med funksjoner og virkemåter som hjelper deg med å utvikle apper fungerer i frakoblet tilstand. Bruk en av disse måtene:
 
 * Start PowerApps-mobilappen når du er frakoblet.
 * Kjør apper du utvikler når du er frakoblet.
@@ -28,7 +28,7 @@ Ett av de mest vanlige scenarioene du opplever som en utvikler av mobilapper, er
 * Bruk [samlinger](../canvas-apps/create-update-collection.md) og nyttefunksjoner som [LoadData og SaveData](../canvas-apps/functions/function-savedata-loaddata.md) for grunnleggende datalagring når du er frakoblet.
 
 ## <a name="how-to-build-offline-capable-apps"></a>Å bygge apper som fungerer i frakoblet tilstand
-Det første du må tenke på i frakoblede scenarioer, er hvordan appene arbeider med data. Apper i PowerApps får tilgang til data hovedsaklig gjennom et sett med [koblinger](../canvas-apps/connections-list.md) i plattformen, som SharePoint, Office 365 og Common Data Service. Du kan også bygge egendefinerte koblinger som lar appene få tilgang til en tjeneste med et avslappende endepunkt. Dette kan være Web API eller en tjeneste som Azure Functions. Alle disse koblingene bruker HTTPS over Internett, noe som betyr at brukerne må være tilkoblet for å få tilgang til dataene og eventuelle andre funksjoner som tjenesten tilbyr.
+Det første du må tenke på i frakoblede scenarioer, er hvordan appene arbeider med data. Apper i PowerApps får tilgang til data hovedsaklig gjennom et sett med [koblinger](../canvas-apps/connections-list.md) i plattformen, som SharePoint, Office 365 og Common Data Service. Du kan også bygge egendefinerte koblinger som lar appene få tilgang til en tjeneste med et avslappende endepunkt. Dette kan være Web API eller en tjeneste som Azure Functions. Alle disse koblingene bruker HTTPS over Internett, noe som betyr at brukerne må være tilkoblet for å få tilgang til dataene og eventuelle andre funksjoner som er inkludert i tjenesten.
 
 ![PowerApps-app med koblinger](./media/offline-apps/online-app.png)
 
@@ -41,29 +41,29 @@ Hvis du ønsker å fokusere på de frakoblede aspektene til apputvikling, skal v
 Appen gjør følgende på et høyt nivå:
 
 1. Ved oppstart av appen (basert på **OnVisible**-egenskapen til den første skjermen):
-   
+
    * Hvis enheten er koblet til Internett, får vi direkte tilgang til Twitter-koblingen for å hente data, og fyller ut en samling med disse dataene.
    * Hvis enheten er i frakoblet modus, laster vi dataene fra en lokal mellomlagringsfil ved bruk av [LoadData](../canvas-apps/functions/function-savedata-loaddata.md).
    * Brukeren kan sende tweets – hvis brukeren er koblet til Internett, kommuniserer vi direkte med Twitter og oppdaterer det lokale mellomlageret.
 2. Hvert femte minutt, hvis koblet til Internett:
-   
+
    * Vi legger inn tweets som finnes i det lokale mellomlageret.
    * Vi oppdaterer det lokale mellomlageret og lagrer det ved bruk av [SaveData](../canvas-apps/functions/function-savedata-loaddata.md).
 
 ### <a name="step-1-create-a-new-phone-app"></a>Trinn 1: Å opprette en ny telefonapp
 1. Åpne PowerApps Studio.
-2. Klikk eller trykk på **Ny** > **Tom app** > **Telefonoppsett’**.
-   
+2. Klikk eller trykk på **Ny** > **Tom app** > **Telefonoppsett**.
+
     ![Tom app – telefonoppsett](./media/offline-apps/blank-app.png)
 
 ### <a name="step-2-add-a-twitter-connection"></a>Trinn 2: Å legge til en Twitter-tilkobling
 
 1. Klikk eller trykk på **Innhold** > **Datakilder**, og velg deretter **Legg til datakilde** på **Datakilder**-panelet.
 
-2. Klikk eller trykk på **Ny forbindelse** , velg **Twitter** og klikk eller trykk på **Opprett**.
+2. Klikk eller trykk på **Ny forbindelse**, velg **Twitter** og klikk eller trykk på **Opprett**.
 
 3. Skriv inn legitimasjonen din, og opprett tilkoblingen.
-   
+
     ![Å legge til en Twitter-tilkobling](./media/offline-apps/twitter-connection.png)
 
 ### <a name="step-3-load-tweets-into-a-localtweets-collection-on-app-startup"></a>Trinn 3: Å laste inn tweets i en LocalTweets-samling ved oppstart av appen
@@ -116,31 +116,31 @@ Sett inn en ny **Etikett**-kontroll, og angi **Tekst**-egenskapen til denne form
 If (Connection.Connected, "Connected", "Offline")
 ```
 
-Denne formelen kontrollerer om enheten er koblet til Internett. Hvis den er det, er teksten i etiketten Tilkoblet. Ellers er den Frakoblet.
+Denne formelen kontrollerer om enheten er koblet til Internett. Hvis den er det, er teksten i etiketten «Tilkoblet». Ellers er den «Frakoblet».
 
-### <a name="step-6-add-a-text-input-to-compose-new-tweets"></a>Trinn 6: Å legge til en tekstinndata for å opprette nye teeets
+### <a name="step-6-add-a-text-input-to-compose-new-tweets"></a>Trinn 6: Å legge til en tekstinndata for å opprette nye tweeets
 
-1. Sett inn en ny **Tekstinndata**-kontroll med navn NewTweetTextInput.
+1. Sett inn en ny **Tekstinndata**-kontroll med navn «NewTweetTextInput».
 
 2. Angi **Reset**-egenskapen til tekstinndataen til **resetNewTweet**.
 
 ### <a name="step-7-add-a-button-to-post-the-tweet"></a>Trinn 7: Å legge til en knapp for å publisere tweet
-1. Legg til en **Knapp**-kontroll, og angi **Tekst**-egenskapen til Tweet.
+1. Legg til en **Knapp**-kontroll, og angi **Tekst**-egenskapen til «Tweet».
 2. Angi knappens **OnSelect**-egenskap til følgende formel:
-   
+
     ```
     If (Connection.Connected,
-   
+
         Twitter.Tweet("", {tweetText: NewTweetTextInput.Text}),
-   
+
         Collect(LocalTweetsToPost, {tweetText: NewTweetTextInput.Text});
-   
+
         SaveData(LocalTweetsToPost, "LocalTweetsToPost")
-   
+
     );
-   
+
     UpdateContext({resetNewTweet: true});
-   
+
     UpdateContext({resetNewTweet: false})
     ```  
 
@@ -159,18 +159,18 @@ Legg til en ny **Tidtaker**-kontroll:
 * Angi **AutoStart**-egenskapen til sann.
 
 * Angi **OnTimerEnd** til følgende formel:
-  
+
     ```
     If(Connection.Connected,
-  
+
         ForAll(LocalTweetsToPost, Twitter.Tweet("", {tweetText: tweetText}));
-  
+
         Clear(LocalTweetsToPost);
-  
+
         Collect(LocalTweetsToPost, {tweetText: NewTweetTextInput.Text});
-  
+
         SaveData(LocalTweetsToPost, "LocalTweetsToPost");
-  
+
         UpdateContext({statusText: "Online data"})
     )
     ```

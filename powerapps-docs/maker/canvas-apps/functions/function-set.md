@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 06/29/2017
 ms.author: gregli
-ms.openlocfilehash: 3615328bf1c272425779998545b0d16ac5626297
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 1fdf6c92fb739f1293c90322b508b46f4ec5733e
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31832608"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898034"
 ---
 # <a name="set-function-in-powerapps"></a>Set-funksjonen i PowerApps
 Angir verdien for en global variabel.
@@ -55,6 +55,7 @@ Globale variabler kan ikke bruke samme navn som en eksisterende samling eller ko
 * *Value* – obligatorisk.  Verdien som skal tilordnes kontekstvariabelen.
 
 ## <a name="examples"></a>Eksempler
+
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **Set(&nbsp;Counter,&nbsp;1&nbsp;)** |Oppretter eller endrer den globale variabelen **Counter**, og angir verdien dens til **1**. |**Counter** har verdien **1**. Du kan referere til denne variabelen med navnet **Counter** i en formel på enhver skjerm. |

@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 11/08/2015
 ms.author: gregli
-ms.openlocfilehash: a784251899e7c51ef8213b6d6f31c2830b08e2dc
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: e7da24eec1a85a1d57ab83476734639ef0f5dd25
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838859"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898080"
 ---
 # <a name="updatecontext-function-in-powerapps"></a>UpdateContext-funksjonen i PowerApps
 Oppretter eller oppdaterer[kontekstvariabler](../working-with-variables.md#create-a-context-variable) på den gjeldende skjermen.
@@ -68,6 +68,7 @@ Alle kontekstvariabler er begrenset til ett skjermbilde. Hvis du vil definere en
 * *ContextVariable2*: *Value2*, ... – valgfritt. Ekstra kontekstvariabler å opprette eller oppdatere, og tilknyttede verdier.
 
 ## <a name="examples"></a>Eksempler
+
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **UpdateContext( {&nbsp;Counter:&nbsp;1&nbsp;} )** |Oppretter eller endrer kontekstvariabelen **Teller**, og angir verdien dens til **1**. |**Counter** har verdien **1**. Du kan referere til denne variabelen med navnet **Counter** i en formel. |
@@ -85,10 +86,10 @@ Alle kontekstvariabler er begrenset til ett skjermbilde. Hvis du vil definere en
 6. Velg **Figurer** på **Mål**-skjermbildet på **Sett inn**-fanen, og velg deretter Tilbake-pilen.
 7. Angi Tilbake-pilens **[OnSelect](../controls/properties-core.md)**-egenskap til denne formelen:<br>**Navigate(Source, ScreenTransition.Fade)**
 8. Trykk på F5 i **Kilde**-skjermbildet, og velg deretter knappen for begge språk.
-   
+
     Etiketten vises på språket som tilsvarer knappen du har valgt på **Mål**-skjermbildet.
 9. Velg Tilbake-pil for å gå tilbake til **Kilde**-skjermbildet, og velg deretter knappen for det andre språket.
-   
+
     Etiketten vises på språket som tilsvarer knappen du har valgt på **Mål**-skjermbildet.
 10. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
 

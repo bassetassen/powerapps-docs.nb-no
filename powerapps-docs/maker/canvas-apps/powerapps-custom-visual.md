@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 03/15/2018
 ms.author: mblythe
-ms.openlocfilehash: da3d21e3f4488f552568a95d856af175f9a042eb
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 9dbc59baf8970582b108ee588904437441107722
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827101"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896378"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>Egendefinert visualobjekt i PowerApps for Power BI
 
@@ -31,11 +31,11 @@ La oss se på fremgangsmåten for å bruke det egendefinerte visualobjektet fra 
 
     ![Egendefinert visualobjekt i Marketplace](./media/powerapps-custom-visual/powerapps-store.png) 
 
-1. Legg til PowerApps-visualobjektet i rapporten, og angi datafeltene som er knyttet til det.
+2. Legg til PowerApps-visualobjektet i rapporten, og angi datafeltene som er knyttet til det.
 
     ![Velg rapportdata](./media/powerapps-custom-visual/add-visual-set-data.png)
 
-1. Du kan velge en eksisterende app eller opprette en. Hvis du velger å opprette en app, kan du velge hvilket miljø du vil opprette den i.
+3. Du kan velge en eksisterende app eller opprette en. Hvis du velger å opprette en app, kan du velge hvilket miljø du vil opprette den i.
 
     ![Ny eller eksisterende app](./media/powerapps-custom-visual/create-new-or-choose-app.png)
 
@@ -45,19 +45,19 @@ La oss se på fremgangsmåten for å bruke det egendefinerte visualobjektet fra 
 
     ![Ny app](./media/powerapps-custom-visual/new-app.png)
 
-1. Nå kan du bruke datafeltene du anga i trinn 2, i PowerApps Studio. `PowerBIIntegration`-objektet fungerer som alle andre skrivebeskyttede datakilder eller -samlinger i PowerApps. Du kan bruke objektet til å fylle ut en kontroll eller føye sammen og filtrere med andre datakilder.
+4. Nå kan du bruke datafeltene du anga i trinn 2, i PowerApps Studio. `PowerBIIntegration`-objektet fungerer som alle andre skrivebeskyttede datakilder eller -samlinger i PowerApps. Du kan bruke objektet til å fylle ut en kontroll eller føye sammen og filtrere med andre datakilder.
 
     ![Egendefinert formel](./media/powerapps-custom-visual/custom-formula.png)
 
     Denne formelen kobler Power BI-data med kundedatakilden: `LookUp(Customer,Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
 
- Power BI-rapporten og forekomsten av PowerApps Studio som ble startet, deler en direkte datatilkobling. Når begge er åpne, kan du filtrere eller endre dataene i rapporten og se de oppdaterte dataene øyeblikkelig gjenspeilet i appen i PowerApps Studio.
+   Power BI-rapporten og forekomsten av PowerApps Studio som ble startet, deler en direkte datatilkobling. Når begge er åpne, kan du filtrere eller endre dataene i rapporten og se de oppdaterte dataene øyeblikkelig gjenspeilet i appen i PowerApps Studio.
 
-1. Når du er ferdig med å bygge eller gjøre endringer i appen, kan du lagre og publisere appen i PowerApps for å se den i Power BI-rapporten.
+5. Når du er ferdig med å bygge eller gjøre endringer i appen, kan du lagre og publisere appen i PowerApps for å se den i Power BI-rapporten.
 
-1. Når du er fornøyd med endringene, kan du dele PowerApps-appen med brukerne av rapporten din, og deretter lagre rapporten.
+6. Når du er fornøyd med endringene, kan du dele PowerApps-appen med brukerne av rapporten din, og deretter lagre rapporten.
 
-1. Dermed har du opprettet en rapport som brukerne kan foreta handlinger i, etter som de får innsikt fra dataene.
+7. Dermed har du opprettet en rapport som brukerne kan foreta handlinger i, etter som de får innsikt fra dataene.
 
     ![Arbeid i rapporten](./media/powerapps-custom-visual/working-report.gif)
 

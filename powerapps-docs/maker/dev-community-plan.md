@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 05/01/2016
 ms.author: mblythe
-ms.openlocfilehash: 70200430b0cee7356d70795440b908a8837ba18d
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 324fa80060a7c07bd5f0708df9fdabdbe7893236
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33078424"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899483"
 ---
 # <a name="powerapps-community-plan-a-free-development-environment-for-individual-use"></a>PowerApps Community Plan: et gratis utviklingsmiljø for individuell bruk
 Hvis du vil utvikle ferdigheter og finne ut mer om PowerApps, Microsoft Flow og Common Data Service, er PowerApps Community Plan riktig abonnement for deg. Med PowerApps Community Plan får du et gratis utviklingsmiljø for individuell bruk, der du kan gjøre følgende:
@@ -77,6 +77,7 @@ Med det individuelle miljøet får du følgende funksjonaliteter:
 \*\*Oppretting av en database med Common Data Service er for øyeblikket ikke tilgjengelig i et enkelt miljø, men blir snart tilgjengelig igjen. Hvis du har opprettet en database tidligere, kan du fortsette å bruke den uten problemer. 
 
 ## <a name="what-are-the-capacity-limits-for-the-individual-environment"></a>Hva er kapasitetsbegrensningene for det individuelle miljøet?
+
 | **Kapasitet** |  |
 | --- | --- |
 | Flytkjøringer per måned |750 |

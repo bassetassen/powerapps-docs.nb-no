@@ -12,16 +12,16 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 01/10/2018
 ms.author: mblythe
-ms.openlocfilehash: 4863ee2c19c17eb8afcc8913dcfb5f3831af828c
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 7ab372f8e8a03da35752614905017e24672480b3
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31839112"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897712"
 ---
 # <a name="create-a-power-bi-report-to-analyze-projects"></a>Å opprette en Power BI-rapport for å analysere prosjekter
 > [!NOTE]
-> Denne artikkelen er en del av en opplæringsserie om hvordan du bruker PowerApps, Microsoft Flow og Power BI med SharePoint Online. Sørg for å lese [serieinnføringen](sharepoint-scenario-intro.md) for å få en følelse av det store bildet, i tillegg til relaterte nedlastinger.
+> Denne artikkelen er en del av en opplæringsserie om hvordan du bruker PowerApps, Microsoft Flow og Power BI med SharePoint Online. Sørg for å lese [serieinnføringen](sharepoint-scenario-intro.md) for å få et inntrykk av det store bildet, i tillegg til relaterte nedlastinger.
 
 I denne oppgaven skal vi opprette en Power BI-rapport basert på de to SharePoint-listene. Vi skal hente listedata inn i Power BI Desktop og bearbeide dem litt, utføre litt grunnleggende datamodellering, og opprette et sett med visualobjekter som forteller oss noe om dataene.
 
@@ -39,48 +39,48 @@ Den følgende skjermen viser de tre visningsikonene til venstre i Power BI Deskt
 
 1. Båndet, som viser vanlige oppgaver forbundet med rapporter og visualiseringer.
 2. **Rapportvisningen**, eller arbeidssonen, der visualiseringer opprettes og ordnes.
-3. **Sider**-faneområdet langs bunnen, der du kan velge eller legge til en rapportside.
-4. **Visualiseringer**-ruten, hvor du endrer visualiseringer, egendefinerer farger eller akser, bruker filtre, drar felter, og mer.
+3. Faneområdet **Sider** langs bunnen, der du kan velge eller legge til en rapportside.
+4. **Visualiseringer**-ruten, hvor du endrer visualiseringer, tilpasser farger eller akser, bruker filtre, drar felter og mer.
 5. **Felter**-ruten, hvor du kan dra spørringselementer og filtre over på **Rapportvisningen** eller til **Filtre**-området i **Visualiseringer**-ruten.
 
-![Visninger og ruter i Power BI Desktop](./media/sharepoint-scenario-build-report/05-00-01-report.png)
+![Faner, visninger og ruter i Power BI Desktop](./media/sharepoint-scenario-build-report/05-00-01-report.png)
 
 **Data**-visningen har tre hovedområder:
 
-1. Båndet, der **Modellering**-fanen er valgt nedenfor. På denne fanen oppretter du tabeller og kolonner, og foretar andre endringer til datamodellen.
+1. Båndet, der **Modellering**-fanen er valgt nedenfor. På denne fanen oppretter du tabeller og kolonner, og foretar andre endringer for datamodellen.
 2. Den midtre ruten, som viser data for den valgte tabellen.
-3. **Felter**-ruten, hvor du kontrollerer hvordan feltene vises i rapporten.
+3. **Felter**-ruten, hvor du kontrollerer hvordan feltene vises i rapportene.
 
 ![Datavisningen i Power BI Desktop](./media/sharepoint-scenario-build-report/05-00-02-data.png)
 
 Vi bruker ikke **Relasjoner**-visningen i denne oppgaven, men du kan finne ut mer om den etter at vi henter inn listedataene i Power BI Desktop.
 
-I **Redigeringsprogram for spørring** bygger du spørringer og transformerer data, og deretter laster inn den forbedrede datamodellen i Power BI Desktop. **Redigeringsprogram for spørring** har fire hovedområder:
+I **Redigeringsprogram for spørring** bygger du spørringer og transformerer data, og deretter laster du inn den forbedrede datamodellen i Power BI Desktop. **Redigeringsprogram for spørring** har fire hovedområder:
 
 1. Båndet, som har mange alternativer for å forme og transformere dataene som du henter inn.
 2. Den venstre ruten, hvor spørringer er oppført og tilgjengelig for utvalg, visning og forming.
 3. Den midtre ruten, hvor data fra den utvalgte spørringen vises og er tilgjengelig for forming.
-4. Vinduet **Spørringsinnstillinger**, som oppfører egenskapene for spørringene og utførte datatransformasjonstrinn.
+4. Vinduet **Spørringsinnstillinger**, som viser egenskapene for spørringene og utførte datatransformasjonstrinn.
 
 ![Redigeringsprogram for spørring for Power BI Desktop](./media/sharepoint-scenario-build-report/05-00-03-query.png)
 
-## <a name="step-1-get-data-into-power-bi-desktop"></a>Trinn 1: Hent data inn i Power BI Desktop
-I dette trinnet skal vi først koble til de to listene. Deretter skal vi ordne dataene ved å fjerne kolonner vi ikke trenger for våre dataanalyser. Vi skal også endre datatypene til noen av de gjenværende kolonnene slik at beregningene fungerer. Hvis du vil ha mer informasjon om hvordan du ordner data i Power BI Desktop, kan du se [Hente data](https://powerbi.microsoft.com/guided-learning/powerbi-learning-1-1-overview-of-power-bi-desktop)-delen i Veiledet læring-kurset.
+## <a name="step-1-get-data-into-power-bi-desktop"></a>Trinn 1: Å hente data inn i Power BI Desktop
+I dette trinnet skal vi først koble til de to listene. Deretter skal vi ordne dataene ved å fjerne kolonner vi ikke trenger for våre dataanalyser. Vi skal også endre datatypene til noen av de gjenværende kolonnene slik at beregningene fungerer. Hvis du vil ha mer informasjon om hvordan du ordner data i Power BI Desktop, kan du se [Hente data](https://powerbi.microsoft.com/guided-learning/powerbi-learning-1-1-overview-of-power-bi-desktop)-delen i Veiledet opplæring-kurset.
 
 ### <a name="connect-to-sharepoint-lists"></a>Å koble til SharePoint-lister
-1. Trykk eller klikk på **Hent data**, deretter **Mer…** på **Hjem**-fanen i Power BI Desktop
+1. Trykk eller klikk på **Hent data** og deretter på **Mer…** på **Hjem**-fanen i Power BI Desktop
    
     ![Å hente data](./media/sharepoint-scenario-build-report/05-01-01-get-data.png)
-2. Klikk eller trykk på **SharePoint Online-liste**, deretter **Koble til** i dialogboksen **Hent data**.
+2. Klikk eller trykk på **SharePoint Online-liste** og deretter på **Koble til** i dialogboksen **Hent data**.
    
-    ![Å koble til SharePoint-liste](./media/sharepoint-scenario-build-report/05-01-02-sharepoint-list.png)
+    ![Å koble til en SharePoint-liste](./media/sharepoint-scenario-build-report/05-01-02-sharepoint-list.png)
 3. Angi nettadressen for SharePoint-området, og klikk eller trykk deretter på **OK**.
    
     ![Nettadresse for SharePoint-liste](./media/sharepoint-scenario-build-report/05-01-03-sharepoint-url.png)
-4. Hvis du får følgende dialogboks, må du sørge for at du er pålogget med riktig legitimasjon, og deretter klikke eller trykke på **Koble til**.
+4. Hvis du får opp følgende dialogboks, må du sørge for at du er pålogget med riktig legitimasjon, og deretter klikke eller trykke på **Koble til**.
    
     ![Legitimasjon for SharePoint-liste](./media/sharepoint-scenario-build-report/05-01-04-credentials.png)
-5. Velg **Prosjektdetaljer** og **Prosjektforespørsler**, og klikk eller trykk på **Rediger**.
+5. Velg **Prosjektdetaljer** og **Prosjektforespørsler**, og klikk eller trykk deretter på **Rediger**.
    
     ![Å velge SharePoint-lister](./media/sharepoint-scenario-build-report/05-01-05-list-navigator.png)
    
@@ -90,25 +90,25 @@ I dette trinnet skal vi først koble til de to listene. Deretter skal vi ordne d
 
 ### <a name="remove-unnecessary-columns-from-the-tables"></a>Å fjerne unødvendige kolonner fra tabellene
 1. Klikk eller trykk på **Prosjektdetaljer** i navigasjonsruten til venstre.
-2. Velg kolonnen **FileSystemObjectType** i den midtre ruten, klikk eller trykk deretter på **Fjern kolonner**.
+2. Velg kolonnen **FileSystemObjectType** i den midtre ruten, og klikk eller trykk deretter på **Fjern kolonner**.
    
     ![Å fjerne kolonner](./media/sharepoint-scenario-build-report/05-01-07-remove-column.png)
 3. Fjern de to kolonnene etter **Id**-kolonnen: **ServerRedirectedEmbedURL** og **ContentTypeId**. 
-> [!TIP]
-> Bruk SKIFT til å velge begge kolonnene, og klikk eller trykk deretter på **Fjern kolonner**.
+   > [!TIP]
+   > Bruk SKIFT til å velge begge kolonnene, og klikk eller trykk deretter på **Fjern kolonner**.
 4. Fjern alle kolonnene til høyre for **PMAssigned**-kolonnen (totalt 22 kolonner). Tabellen skal samsvare med følgende bilde:
    
     ![Prosjektdetaljer-tabellen i redigeringsprogrammet for spørring](./media/sharepoint-scenario-build-report/05-01-08-table-details.png)
-5. Gjenta prosessen du nettopp gjorde, nå for **Prosjektforespørsler**: fjern **FileSystemObjectType**, **ServerRedirectedEmbedURL**, **ContentTypeId**, og alle kolonnene til høyre for **Godkjent**-kolonnen (totalt 22 kolonner). Tabellen skal samsvare med følgende bilde:
+5. Gjenta prosessen du nettopp gjorde, nå for **Prosjektforespørsler**: fjern **FileSystemObjectType**, **ServerRedirectedEmbedURL**, **ContentTypeId** og alle kolonnene til høyre for **Godkjent**-kolonnen (totalt 22 kolonner). Tabellen skal samsvare med følgende bilde:
    
     ![ Prosjektforespørsler-tabellen i redigeringsprogrammet for spørring](./media/sharepoint-scenario-build-report/05-01-09-table-requests.png)
 
 ### <a name="change-the-data-type-on-project-details-columns"></a>Å endre datatypen i Prosjektdetaljer-kolonnene
-1. Velg **ProjectedDays**-kolonnen, klikk eller trykk på **Datatype: hvilken som helst**, og deretter **Heltall**.
+1. Velg **ProjectedDays**-kolonnen, klikk eller trykk på **Datatype: hvilken som helst**, og deretter på **Heltall**.
    
-    ![Endre datatypen til et heltall](./media/sharepoint-scenario-build-report/05-01-10-datatype-number.png)
+    ![Å endre datatypen til et heltall](./media/sharepoint-scenario-build-report/05-01-10-datatype-number.png)
 2. Gjenta forrige trinn for **ActualDays**-kolonnen.
-3. Velg **ApprovedDate**-kolonnen, klikk eller trykk på **Datatype: hvilken som helst**, og deretter **Dato**.
+3. Velg **ApprovedDate**-kolonnen, klikk eller trykk på **Datatype: hvilken som helst**, og deretter på **Dato**.
    
     ![ Å endre datatype til dato](./media/sharepoint-scenario-build-report/05-01-11-datatype-date.png)
 
@@ -116,27 +116,27 @@ I dette trinnet skal vi først koble til de to listene. Deretter skal vi ordne d
 
 ### <a name="change-the-data-type-on-project-requests-columns"></a>Å endre datatypen i Prosjektforespørsler-kolonnene
 
-1. Velg **EstimatedDays**-kolonnen, klikk eller trykk på **Datatype: hvilken som helst**, og deretter **Heltall**.
+1. Velg **EstimatedDays**-kolonnen, klikk eller trykk på **Datatype: hvilken som helst**, og deretter på **Heltall**.
 
-2. Velg **RequestDate**-kolonnen, klikk eller trykk på **Datatype: hvilken som helst**, og deretter **Dato**.
+2. Velg **RequestDate**-kolonnen, klikk eller trykk på **Datatype: hvilken som helst**, og deretter på **Dato**.
 
 ### <a name="apply-and-save-changes"></a>Å bruke og lagre endringer
 
-1. Klikk eller trykk på **Lukk og bruk** på **Hjem**-fanen for å lukke redigeringsprogrammet for spørring, og gå tilbake til hovedvinduet til Power BI Desktop.
+1. Klikk eller trykk på **Lukk og bruk** på **Hjem**-fanen for å lukke redigeringsprogrammet for spørring og gå tilbake til hovedvinduet til Power BI Desktop.
    
-    ![Lukke og bruke endringer](./media/sharepoint-scenario-build-report/05-01-12-close-apply.png)
+    ![Å lukke og bruke endringer](./media/sharepoint-scenario-build-report/05-01-12-close-apply.png)
 
-2. Klikk eller trykk på **Fil**, deretter **Lagre**, og lagre med navnet project-analysis.pbix.
+2. Klikk eller trykk på **Fil** og deretter på **Lagre**, og lagre med navnet project-analysis.pbix.
 
-## <a name="step-2-improve-the-data-model"></a>Trinn 2: Forbedre datamodellen
-Nå som vi har hentet inn dataene fra våre SharePoint-lister til Power BI Desktop, skal vi ta for oss datamodellering. Datamodellering kan være en tidskrevende prosess, men vi skal raskt vise deg noen interessante ting du kan gjøre for å få mer ut av listedataene i Power BI Desktop:
+## <a name="step-2-improve-the-data-model"></a>Trinn 2: Å forbedre datamodellen
+Nå som vi har hentet inn dataene fra våre SharePoint-lister og til Power BI Desktop, skal vi ta for oss datamodellering. Datamodellering kan være en tidkrevende prosess, men vi skal raskt vise deg noen interessante ting du kan gjøre for å få mer ut av listedataene i Power BI Desktop:
 
 * Å endre hvordan to tabeller er relatert til hverandre
 * Å legge til en datatabell slik at vi kan utføre beregninger basert på ukedager
 * Å legge til beregnede kolonner for å beregne varigheten mellom prosjektmilepæler
 * Å legge til målinger for å beregne variansen i forventede kontra faktiske dager for et prosjekt
 
-Etter at disse trinnene er fullført, kan vi bygge visualiseringer som drar nytte av forbedringene til modellen vår. Hvis du vil ha mer informasjon om hvordan du modellerer data i Power BI Desktop, kan du se [Modellering](https://powerbi.microsoft.com/guided-learning/powerbi-learning-2-1-intro-modeling-data)-delen i Veiledet læring-kurset.
+Etter at disse trinnene er fullført, kan vi bygge visualiseringer som drar nytte av forbedringene til modellen vår. Hvis du vil ha mer informasjon om hvordan du modellerer data i Power BI Desktop, kan du se [Modellering](https://powerbi.microsoft.com/guided-learning/powerbi-learning-2-1-intro-modeling-data)-delen i Veiledet opplæring-kurset.
 
 ### <a name="change-table-relationships"></a>Å endre tabellrelasjoner
 Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mellom dem basert på **Id**-kolonnen i begge tabellene. Relasjonene skal faktisk være mellom **Id**-kolonnen i **Prosjektforespørsler**-tabellen og **RequestId**-kolonnen i **Prosjektdetaljer**-tabellen. La oss rette opp i det:
@@ -149,7 +149,7 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
    
     ![Å behandle relasjoner](./media/sharepoint-scenario-build-report/05-02-02-manage-relationships.png)
 
-3. Sørg for at den eksisterende relasjonen er utvalgt, klikk eller trykk på **Slett**, deretter **Slett** på nytt for å bekrefte.
+3. Sørg for at den eksisterende relasjonen er valgt, klikk eller trykk på **Slett**, og deretter på **Slett** på nytt for å bekrefte.
    
     ![Å slette en relasjon](./media/sharepoint-scenario-build-report/05-02-03-delete-relationship.png)
 
@@ -161,7 +161,7 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
    
    2. Velg **Prosjektdetaljer** for den andre tabellen, og **RequestId**-kolonnen.
    
-   3. Skjermen skal nå se ut som på følgende bilde. Når du er klar, klikker eller trykker du på **OK**, deretter **Lukk**.
+   3. Skjermen skal nå se ut som på følgende bilde. Når du er klar, klikker eller trykker du på **OK**, deretter på **Lukk**.
       
        ![Å opprette en relasjon](./media/sharepoint-scenario-build-report/05-02-04-create-relationship.png)
 
@@ -173,7 +173,7 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
    
     ![Formellinje med Dates = CALENDARAUTO()](./media/sharepoint-scenario-build-report/05-02-06-formula-bar.png)
    
-    Denne formelen oppretter en tabell med navn **Datoer** med én enkelt datokolonne. Tabeller inneholder datoer fra din andre tabell, og den oppdateres automatisk hvis flere datoer legges til (det vil si, hvis dataene oppdateres).
+    Denne formelen oppretter en tabell med navnet **Datoer** med én enkelt datokolonne. Tabellen inneholder alle datoer fra din andre tabell, og den oppdateres automatisk hvis flere datoer legges til (det vil si, hvis dataene oppdateres).
    
     Denne formelen og de andre i denne delen bruker dataanalyseuttrykk (DAX), et formelspråk for Power BI og andre teknologier. Hvis du vil ha mer informasjon, kan du se [Grunnleggende om DAX i Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-quickstart-learn-dax-basics).
 3. Trykk på ENTER for å opprette **Datoer**-tabellen.
@@ -192,7 +192,7 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
     ![Å legge til kolonnen IsWeekDay](./media/sharepoint-scenario-build-report/05-02-08-column-isweekday.png)
 
 ### <a name="add-a-calculated-column-to-the-project-details-table"></a>Å legge til en beregnet kolonne i Prosjektdetaljer-tabellen
-1. Klikk eller trykk på **Prosjektdetaljer**-tabellen i den høyre ruten, deretter **Ny kolonne**.
+1. Klikk eller trykk på **Prosjektdetaljer**-tabellen i den høyre ruten, og deretter på **Ny kolonne**.
    
     ![Ny kolonne](./media/sharepoint-scenario-build-report/05-02-00-modeling-column.png)
 2. Skriv inn denne formelen i formellinjen:
@@ -212,12 +212,12 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
     ```
    
     Denne formelen beregner forskjellen i dager mellom da et prosjekt ble godkjent og da det er forventet å begynne. Den bruker kolonnen **IsWeekday** fra **Datoer**-tabellen, så den teller bare ukedager.
-3. Trykk Enter for å legge til kolonnen **ApprovedStartDiff** i **Prosjektdetaljer**-tabellen.
+3. Trykk på ENTER for å legge til kolonnen **ApprovedStartDiff** i **Prosjektdetaljer**-tabellen.
    
     ![Å legge til kolonnen ApprovedStartDiff](./media/sharepoint-scenario-build-report/05-02-09-column-approvedstartdiff.png)
 
 ### <a name="add-a-calculated-column-to-the-project-requests-table"></a>Å legge til en beregnet kolonne i Prosjektforespørsler-tabellen
-1. Klikk eller trykk på **Prosjektforespørsler**-tabellen i den høyre ruten, deretter **Ny kolonne**.
+1. Klikk eller trykk på **Prosjektforespørsler**-tabellen i den høyre ruten, deretter på **Ny kolonne**.
    
     ![Ny kolonne](./media/sharepoint-scenario-build-report/05-02-00-modeling-column.png)
 2. Skriv inn denne formelen i formellinjen:
@@ -236,13 +236,13 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
     )
     ```
    
-    Denne formelen beregner forskjellen i dager mellom da et prosjekt ble forespurt og dagens dato (NOW()). Formelen teller også her bare ukedagene. Denne kolonnen brukes for å finne det prosjektet som har ventet lengst.
+    Denne formelen beregner forskjellen i dager mellom da et prosjekt ble forespurt og dagens dato (NOW()). Formelen teller også her bare ukedagene. Denne kolonnen brukes for å finne det prosjektet som har hatt status som ventende lengst.
 3. Trykk på ENTER for å legge til kolonnen **RequestDateAge** i **Prosjektforespørsler**-tabellen.
    
     ![Å legge til kolonnen RequestDateAge](./media/sharepoint-scenario-build-report/05-02-10-column-requestdateage.png)
 
 ### <a name="add-a-measure-to-the-project-details-table"></a>Å legge til et mål i en Prosjektdetaljer-tabell
-1. Klikk eller trykk på **Prosjektdetaljer**-tabellen i den høyre ruten, deretter **Nytt mål**.
+1. Klikk eller trykk på **Prosjektdetaljer**-tabellen i den høyre ruten, deretter på **Nytt mål**.
    
     ![Nytt mål](./media/sharepoint-scenario-build-report/05-02-00-modeling-measure.png)
 2. Skriv inn denne formelen i formellinjen:
@@ -257,13 +257,13 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
     )
     ```
    
-    Denne formelen beregner variansen mellom faktiske og forventede dager for et prosjekt. Vi legger dette til som et mål, i stedet for en beregnet kolonne, og formelen returnerer de riktige resultatene uansett hvordan dataene er filtrert eller samlet i en rapport.
+    Denne formelen beregner variansen mellom faktiske og forventede dager for et prosjekt. Vi legger dette til som et mål i stedet for en beregnet kolonne, og formelen returnerer de riktige resultatene uansett hvordan dataene er filtrert eller samlet i en rapport.
 3. Trykk på ENTER for å legge til målet **VarProjectedActual** i **Prosjektdetaljer**-tabellen.
    
     ![Å legge til målet VarProjectedActual](./media/sharepoint-scenario-build-report/05-02-11-measure-varprojectedactual.png)
 
 ### <a name="add-a-measure-to-the-project-requests-table"></a>Å legge til et mål i en Prosjektforespørsler-tabell
-1. Klikk eller trykk på **Prosjektforespørsler**-tabellen i den høyre ruten, deretter **Nytt mål**.
+1. Klikk eller trykk på **Prosjektforespørsler**-tabellen i den høyre ruten, deretter på **Nytt mål**.
    
     ![Nytt mål](./media/sharepoint-scenario-build-report/05-02-00-modeling-measure.png)
 2. Skriv inn denne formelen i formellinjen:
@@ -278,32 +278,32 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
     )
     ```
    
-    Denne formelen finner prosjektet som har ventet lengst, basert på den beregnede kolonnen vi definerte tidligere.
+    Denne formelen finner prosjektet som har hatt status som ventende lengst, basert på den beregnede kolonnen vi definerte tidligere.
 3. Trykk på ENTER for å legge til målet **MaxDaysPending** i **Prosjektforespørsler**-tabellen.
    
     ![Å legge til målet MaxDaysPending](./media/sharepoint-scenario-build-report/05-02-12-measure-maxdayspending.png)
 
-## <a name="step-3-create-report-visualizations"></a>Trinn 3: Opprett rapportvisualiseringer
-Nå har vi kommet til det trinnet som mange tenker på når det kommer til dataanalyser: opprette visualiseringer slik at vi kan finne mønstre i dataene våre. I dette trinnet skal vi opprette fire visualiseringer:
+## <a name="step-3-create-report-visualizations"></a>Trinn 3: Å opprette rapportvisualiseringer
+Nå har vi kommet til det trinnet som mange tenker på når det kommer til dataanalyser: å opprett visualiseringer slik at vi kan finne mønstre i dataene våre. I dette trinnet skal vi opprette fire visualiseringer:
 
 * Et kolonnediagram som viser forventede dager kontra faktiske dager for et prosjekt
 * Et kolonnediagram som viser variansen for hvert prosjekt
 * Et kort som viser prosjektet som har ventet lengst
 * En tabell som viser tiden mellom godkjenningen og oppstarten for et prosjekt
 
-Etter at vi har opprettet disse rapportvisualiseringene i Power BI Desktop, skal vi publisere dataene og rapportene til Power BI-tjenesten slik at vi kan opprette og dele instrumentbordene. Hvis du vil ha mer informasjon om hvordan du oppretter rapporter i Power BI Desktop, kan du se [Visualiseringer](https://powerbi.microsoft.com/guided-learning/powerbi-learning-3-1-intro-visualizations)-delen i Veiledet læring-kurset.
+Etter at vi har opprettet disse rapportvisualiseringene i Power BI Desktop, skal vi publisere dataene og rapportene til Power BI-tjenesten slik at vi kan opprette og dele instrumentbordene. Hvis du vil ha mer informasjon om hvordan du oppretter rapporter i Power BI Desktop, kan du se [Visualiseringer](https://powerbi.microsoft.com/guided-learning/powerbi-learning-3-1-intro-visualizations)-delen i Veiledet opplæring-kurset.
 
 ### <a name="create-a-bar-chart-to-show-projected-versus-actual"></a>Å opprette et stolpediagram for å vise forventet kontra faktisk
 1. Klikk eller trykk på **Rapportvisning**-ikonet. Vi fortsetter i denne visningen i Power BI Desktop.
    
     ![Rapportvisning](./media/sharepoint-scenario-build-report/05-03-01-report-view.png)
-2. Klikk eller trykk på ruten **Gruppert stående stolpediagram** i **Visualiseringer**-ruten til høyre.
+2. Klikk eller trykk på **Gruppert stående stolpediagram** i **Visualiseringer**-ruten til høyre.
    
-    ![Visualiseringer – Gruppert stående stolpediagram](./media/sharepoint-scenario-build-report/05-03-00-visuals-column.png)
-3. Dra **PMAssigned** og **Title** fra **Prosjektdetaljer** i **Felter**-ruten til **Akse** i **Visualiseringer**-ruten.
+    ![Visualiseringer – gruppert stående stolpediagram](./media/sharepoint-scenario-build-report/05-03-00-visuals-column.png)
+3. Dra **PMAssigned** og **Tittel** fra **Prosjektdetaljer** i **Felter**-ruten til **Akse** i **Visualiseringer**-ruten.
    
     ![Akse i Visualiseringer-ruten](./media/sharepoint-scenario-build-report/05-03-00-axis.png)
-4. Dra **ActualDays** and **ProjectedDays** fra **Prosjektdetaljer** i **Felter**-ruten til **Verdi** i **Visualiseringer**-ruten.
+4. Dra **ActualDays** og **ProjectedDays** fra **Prosjektdetaljer** i **Felter**-ruten til **Verdi** i **Visualiseringer**-ruten.
    
     ![Verdi i Visualiseringer-ruten](./media/sharepoint-scenario-build-report/05-03-03-value-projected.png)
 5. Visualiseringen skal nå se ut som på følgende bilde.
@@ -314,16 +314,16 @@ Etter at vi har opprettet disse rapportvisualiseringene i Power BI Desktop, skal
    ![Å filtrere etter Status-kolonnen](./media/sharepoint-scenario-build-report/05-03-05-filters-projected.png)
    
    Diagrammet filtreres nå for å vise bare fullførte prosjekter. Det gir mening fordi vi sammenligner forventede dager med faktiske dager.
-7. Klikk på pilene øverst til venstre i diagrammet for å flytte opp og ned i hierarkiet til prosjektledere og prosjekter. På følgende bilde ser du hvordan det ser ut å drille ned i prosjekter.
+7. Klikk på pilene øverst til venstre i diagrammet for å flytte opp og ned i hierarkiet til prosjektledere og prosjekter. På følgende bilde ser du hvordan det ser ut når man driller ned i prosjekter.
    
    ![Å drille ned i et kolonnediagram](./media/sharepoint-scenario-build-report/05-03-06-chart-projected-drill.png)
 
 ### <a name="create-a-bar-chart-to-show-variance-from-projected"></a>Å opprette et stolpediagram for å vise variansen fra forventet
 1. Klikk eller trykk på arbeidssonen utenfor visualiseringen du nettopp opprettet.
-2. Klikk eller trykk på ruten **Gruppert stående stolpediagram** i **Visualiseringer**-ruten til høyre.
+2. Klikk eller trykk på **Gruppert stående stolpediagram** i **Visualiseringer**-ruten til høyre.
    
-    ![Visualiseringer – Gruppert stående stolpediagram](./media/sharepoint-scenario-build-report/05-03-00-visuals-column.png)
-3. Dra **PMAssigned** og **Title** fra **Prosjektdetaljer** i **Felter**-ruten til **Akse** i **Visualiseringer**-ruten.
+    ![Visualiseringer – gruppert stående stolpediagram](./media/sharepoint-scenario-build-report/05-03-00-visuals-column.png)
+3. Dra **PMAssigned** og **Tittel** fra **Prosjektdetaljer** i **Felter**-ruten til **Akse** i **Visualiseringer**-ruten.
    
     ![Akse i Visualiseringer-ruten](./media/sharepoint-scenario-build-report/05-03-00-axis.png)
 4. Dra **VarProjectedActual** fra **Prosjektdetaljer** i **Felter**-ruten til **Verdi** i **Visualiseringer**-ruten.
@@ -339,7 +339,7 @@ Etter at vi har opprettet disse rapportvisualiseringene i Power BI Desktop, skal
    
     Du kan se av dette diagrammet hvor mye mer variasjon det er for prosjekter som ble kjørt av Jostein Bergersen kontra Linda Skistad. Drill ned for å se variasjonen etter prosjekt, og om forventede dager var flere eller færre enn de faktiske dagene.
    
-    ![VarProjectedActual etter Title](./media/sharepoint-scenario-build-report/05-03-09-chart-variance-drill.png)
+    ![VarProjectedActual etter Tittel](./media/sharepoint-scenario-build-report/05-03-09-chart-variance-drill.png)
 6. Før vi oppretter flere visualiseringer, skal vi flytte og endre størrelse på de du allerede har opprettet slik at de passer ved siden av hverandre.
    
     ![Å tilpasse diagrammer ved siden av hverandre](./media/sharepoint-scenario-build-report/05-03-10-two-charts.png)
@@ -370,7 +370,7 @@ Etter at vi har opprettet disse rapportvisualiseringene i Power BI Desktop, skal
 2. Klikk eller trykk på **Tabell** i **Visualiseringer**-ruten til høyre.
    
     ![Visualiseringer – tabell](./media/sharepoint-scenario-build-report/05-03-15-visuals-table.png)
-3. Dra**PMAssigned**, **Title** og **ApprovedStartDiff** fra **Prosjektdetaljer** i **Felter**-ruten til **Verdier** i **Visualiseringer**-ruten.
+3. Dra**PMAssigned**, **Tittel** og **ApprovedStartDiff** fra **Prosjektdetaljer** i **Felter**-ruten til **Verdier** i **Visualiseringer**-ruten.
    
     ![Verdier i Visualiseringer-ruten](./media/sharepoint-scenario-build-report/05-03-16-value-diff.png)
 4. Dra **ProjectedStartDate** fra **Prosjektdetaljer** i **Felter**-ruten til **Filtre**-området til **Visualiseringer**-ruten, deretter merker du av for alle datoene bortsett fra **(tom)**.
@@ -378,11 +378,11 @@ Etter at vi har opprettet disse rapportvisualiseringene i Power BI Desktop, skal
     ![Å filtrere etter ProjectedStartDate](./media/sharepoint-scenario-build-report/05-03-17-filters-diff.png)
 5. Endre størrelsen på kolonnene i tabellen slik at du kan se alle dataene, og sorter etter **ApprovedStartDiff**, i synkende rekkefølge. Visualiseringen skal nå se ut som på følgende bilde.
    
-    ![Tabell med verdie for ApprovedStartDiff](./media/sharepoint-scenario-build-report/05-03-18-chart-diff.png)
+    ![Tabell med verdier for ApprovedStartDiff](./media/sharepoint-scenario-build-report/05-03-18-chart-diff.png)
 6. Klikk eller trykk på Pil ned for **ApprovedStartDiff** i **Verdier**-området, deretter klikker eller trykker du på **Gjennomsnitt**. Nå kan vi se gjennomsnittlig varighet mellom godkjenningen og oppstarten for et prosjekt.
    
     ![Å beregne gjennomsnitt](./media/sharepoint-scenario-build-report/05-03-20a-average-menu.png)
-7. Klikk eller trykk på Pil ned for **ApprovedStartDiff** på nytt, klikk eller trykk på **Betinget formatering**, deretter klikker eller trykker du på **Bakgrunnsfargeskalaer**.
+7. Klikk eller trykk på Pil ned for **ApprovedStartDiff** på nytt, klikk eller trykk på **Betinget formatering**, og deretter klikker eller trykker du på **Bakgrunnsfargeskalaer**.
    
    ![Betinget formatering](./media/sharepoint-scenario-build-report/05-03-20b-conditional-menu.png)
 8. Angi farger for feltene **Minimum** og **Maksimum** som vist nedenfor, og klikk eller trykk deretter på **OK**.
@@ -395,7 +395,7 @@ Etter at vi har opprettet disse rapportvisualiseringene i Power BI Desktop, skal
    
    Som du kan se så pleier prosjektene som Jostein Bergesen kjører, å starte mye senere enn godkjenningen. Det kan være andre faktorer enn den tilordnede lederen, men det kan være greit å se nærmere på dette.
 
-Da har vi kommet til slutten av rapportdelen, og du har nå en fullstendig rapport basert på data som ble importert fra SharePoint og ordnet og modellert i Power BI Desktop. Hvis alt gikk etter planen, skal rapporten din se ut som følgende bilde.
+Da har vi kommet til slutten av rapportdelen, og du har nå en fullstendig rapport basert på data som ble importert fra SharePoint og ordnet og modellert i Power BI Desktop. Hvis alt gikk etter planen, skal rapporten din se ut som på følgende bilde.
 
 ![Fullstendig rapport](./media/sharepoint-scenario-build-report/05-03-23-report-completed.png)
 

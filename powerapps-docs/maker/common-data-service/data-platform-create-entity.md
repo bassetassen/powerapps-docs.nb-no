@@ -7,12 +7,12 @@ ms.component: cds
 ms.topic: quickstart
 ms.date: 05/01/2018
 ms.author: matp
-ms.openlocfilehash: ecbdc81b2688ee9aabf5e0df6416212957ca2642
-ms.sourcegitcommit: 222df368f1f35e9357b0b1adf0e69d7206d8126e
+ms.openlocfilehash: 45a341d28b4138ce03ce50d7325f9daa0f159d1a
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298496"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897436"
 ---
 # <a name="quickstart-create-a-custom-entity"></a>Hurtiginnføring i hvordan oppretter en egendefinert enhet
 I PowerApps definerer en *enhet* informasjonen du ønsker å spore i form av poster, som typisk inneholder egenskaper som eksempelvis firmanavn, plasseringer, produkter, e-postadresser og telefonnumre. Deretter kan du se nærmere på dataene ved å utvikle en app som refererer til enheten. PowerApps tilbyr standard «bruksklare»-enheter for å dekke vanlige scenarioer i en organisasjon (for eksempel sporing av avtaler), men det kan være ganger da du trenger å opprette egendefinerte enheter for å lagre data som er spesifikke for din organisasjon.
@@ -38,10 +38,10 @@ Logg deg på PowerApps på [https://web.powerapps.com](https://web.powerapps.com
 
 3. Skriv inn **Produktgjennomgang** i **Ny enhet**-ruten i **Visningsnavn**-boksen, og skriv deretter eventuelt inn en beskrivelse (beskrivelser er nyttige hvis andre personer skal bruke enheten). Andre felt i panelet er automatisk utfylt, som beskrevet nedenfor. Når du er ferdig, klikker du på **Neste**.
 
-    * **Visningsnavn i flertall** – dette feltet er automatisk utfylt når du skriver inn et visningsnavn, men du kan endre det om nødvendig. Visningsnavn i flertall – dette brukes når du samhandler med denne enheten fra PowerApps eller Flow, og brukes som navnet på enheten i Common Data Service WebAPI.
-    * **Navn** – dette feltet er også automatisk utfylt når du skriver inn et visningsnavn. Navnet inkluderer også et prefiks som ble konfigurert da miljøer ble opprettet. Dette brukes for å sikre at enhetene du oppretter kan eksporteres og importeres i andre miljøer, der andre enheter kan ha samme navn. Dette prefikset kan endres ved å oppdatere det i Publisher for standardløsningen i Common Data Service. Hvis du vil sørge for at eksisterende apper ikke ødelegges, kan du ikke endre navnet etter å ha lagret enheten.
+   * **Visningsnavn i flertall** – dette feltet er automatisk utfylt når du skriver inn et visningsnavn, men du kan endre det om nødvendig. Visningsnavn i flertall – dette brukes når du samhandler med denne enheten fra PowerApps eller Flow, og brukes som navnet på enheten i Common Data Service WebAPI.
+   * **Navn** – dette feltet er også automatisk utfylt når du skriver inn et visningsnavn. Navnet inkluderer også et prefiks som ble konfigurert da miljøer ble opprettet. Dette brukes for å sikre at enhetene du oppretter kan eksporteres og importeres i andre miljøer, der andre enheter kan ha samme navn. Dette prefikset kan endres ved å oppdatere det i Publisher for standardløsningen i Common Data Service. Hvis du vil sørge for at eksisterende apper ikke ødelegges, kan du ikke endre navnet etter å ha lagret enheten.
      
-    ![Ny enhet](./media/data-platform-cds-create-entity/newentitypanel.png "Nytt enhetspanel")
+     ![Ny enhet](./media/data-platform-cds-create-entity/newentitypanel.png "Nytt enhetspanel")
 
 4. På detaljsiden for enheten klikker eller trykker du på **Primærnavn**-feltet for å åpne **Primærnavn**-ruten, og deretter erstatter du **Primærnavn** med **Produktgjennomgang** i **Visningsnavn**-boksen. Erstatt **PrimaryName** med **ProductReview** i **Navn**-boksen, og deretter klikker eller trykker du på **Ferdig**.
  
@@ -66,15 +66,15 @@ Logg deg på PowerApps på [https://web.powerapps.com](https://web.powerapps.com
     ![Nytt felt](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Nytt felt-panel")
 
 6. Gjenta de forrige trinnene for å legge til tre felt til med følgende konfigurasjoner:
-    * **Visningsnavn** = Produktvurdering; **Datatype** = Heltall; merk av for **Obligatorisk**
-    * **Visningsnavn** = Navn på korrekturleser; **Datatype** = Tekst
-    * **Visningsnavn** = Kommentar fra korrekturleser; **Datatype** = Tekst
+   * **Visningsnavn** = Produktvurdering; **Datatype** = Heltall; merk av for **Obligatorisk**
+   * **Visningsnavn** = Navn på korrekturleser; **Datatype** = Tekst
+   * **Visningsnavn** = Kommentar fra korrekturleser; **Datatype** = Tekst
 
-    Når du er ferdig, skal du ha fem felt som er oppført på enhetens detaljside.
+     Når du er ferdig, skal du ha fem felt som er oppført på enhetens detaljside.
 
-    ![Feltliste](./media/data-platform-cds-create-entity/addedfields.png "liste over felt")
+     ![Feltliste](./media/data-platform-cds-create-entity/addedfields.png "liste over felt")
 
-    Vær oppmerksom på at alle enheter har skrivebeskyttede systemfelt. Systemfelt blir som standard ikke vist i listen over felt, selv om de finnes på enheten. Hvis du vil se alle feltene, kan du endre filteret på kommandolinjen fra **Standard** til **Alle**. Hvis du vil ha mer informasjon om metadataene som er knyttet til enheten, kan du se [Enhetsmetadata](../../developer/common-data-service/entity-metadata.md).
+     Vær oppmerksom på at alle enheter har skrivebeskyttede systemfelt. Systemfelt blir som standard ikke vist i listen over felt, selv om de finnes på enheten. Hvis du vil se alle feltene, kan du endre filteret på kommandolinjen fra **Standard** til **Alle**. Hvis du vil ha mer informasjon om metadataene som er knyttet til enheten, kan du se [Enhetsmetadata](../../developer/common-data-service/entity-metadata.md).
 
 7. Klikk på **Lagre enhet** for å lagre enheten og gjøre den tilgjengelig for bruk i apper.
 

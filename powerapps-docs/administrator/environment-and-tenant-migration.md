@@ -8,12 +8,12 @@ ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.author: jamesol
-ms.openlocfilehash: 3a064bdb3f75bf45047e3ae0ff465fde1d2b66fa
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 9a846f3c47111b1b83881ed01026951469b236cc
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34167841"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898333"
 ---
 # <a name="environment-and-tenant-app-migration-through-packaging"></a>Å overføre apper mellom miljøer og tenanter gjennom pakking
 Finn ut hvordan du overfører ressurser fra ett miljø til et annet med pakking. Disse miljøene kan være på samme tenant eller på forskjellige tenanter.
@@ -112,13 +112,13 @@ Hvis du vil importere en CDS-løsningspakke, må du dessverre foreta en manuell 
 
 3. Kopier nettadressen fra nettleseren, gjør følgende endringer, og gå deretter til den nye nettadressen i nettleseren:
 
-    * Gjeldende nettadressestruktur: https://{orguniquename}.crm.dynamics.com/tools/solution/edit.aspx?id={solutionname}
+   * Gjeldende nettadressestruktur: https://{orguniquename}.crm.dynamics.com/tools/solution/edit.aspx?id={solutionname}
 
-        ![Å redigere nettadresse](./media/environment-and-tenant-migration/edit-url.png)
+       ![Å redigere nettadresse](./media/environment-and-tenant-migration/edit-url.png)
 
-    * Ny nettadressestruktur: https://{orguniquename}.crm.dynamics.com/tools/solution/SolutionImportWizard.aspx
+   * Ny nettadressestruktur: https://{orguniquename}.crm.dynamics.com/tools/solution/SolutionImportWizard.aspx
 
-        ![Å velge pakken](./media/environment-and-tenant-migration/select-package.png)
+       ![Å velge pakken](./media/environment-and-tenant-migration/select-package.png)
 
 4. Velg CDS-løsningspakkefilen du vil importere, og fullfør veiviseren.
 

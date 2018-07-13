@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 08/28/2017
 ms.author: lanced
-ms.openlocfilehash: dc68b0f404c2a8d636deb4e77c2ada4582ed3a37
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: baa4c71efb54cea6f04cd45b895009a3c3ce17c7
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31836750"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899299"
 ---
 # <a name="overview-of-connectors-for-powerapps"></a>Oversikt over koblinger for PowerApps
 Dataene er i kjernen for de fleste apper, inkludert de du oppretter i PowerApps. Dataene er lagret i en *datakilde*, og du importerer disse dataene inn i appen ved å opprette en *tilkobling*. Tilkoblingen bruker en bestemt *tilkobling* for å kommunisere med datakilden. PowerApps har koblinger for mange populære tjenester og lokale datakilder, inkludert SharePoint, SQL Server, Office 365, Salesforce, Twitter og mer. Hvis du vil komme i gang med å legge til data til en app, kan du se [Å legge til en datatilkobling i PowerApps](add-data-connection.md).
@@ -46,7 +46,7 @@ Standardkoblinger fungerer annerledes, avhengig av hvilken type datakilde de kob
     [Å opprette en app fra grunnen av](get-started-create-from-blank.md)
 
     > [!NOTE]
-> Hvis du vil koble til data i Excel, må arbeidsboken være lagret i en skylagringstjeneste som OneDrive. Hvis du vil ha mer informasjon, kan du se [Å koble til lagring i skyen fra PowerApps](connections/cloud-storage-blob-connections.md).
+  > Hvis du vil koble til data i Excel, må arbeidsboken være lagret i en skylagringstjeneste som OneDrive. Hvis du vil ha mer informasjon, kan du se [Å koble til lagring i skyen fra PowerApps](connections/cloud-storage-blob-connections.md).
 
 * Andre koblinger fungerer med funksjonsbaserte datakilder, for eksempel Twitter, Facebook og Office 365 Outlook. Når du arbeider med disse datakildene, returneres dataene til PowerApps basert på bestemte funksjonsanrop i den underliggende tjenesten. Med Twitter-koblingen ringer du for eksempel opp `Twitter.MyFollowers()` for å returnere en liste over følgerene dine. Du kan fortsatt bruke disse dataene i et skjema eller galleri, men det krever litt mer arbeid enn med tabelldata. Hvis du vil ha mer informasjon, kan du se [Å koble til Twitter fra PowerApps](connections/connection-twitter.md).
 

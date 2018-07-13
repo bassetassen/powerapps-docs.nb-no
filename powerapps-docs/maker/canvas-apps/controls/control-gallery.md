@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 05/25/2017
 ms.author: sharik
-ms.openlocfilehash: dde430d6174af5be75a4fc8ae13dabd6f3759899
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: fcb482844e430444fd95bb2d0c85a8da23c91d84
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31837261"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897735"
 ---
 # <a name="gallery-control-in-powerapps"></a>Galleri-kontrollen i PowerApps
 En kontroll som inneholder andre kontroller og viser et datasett.
@@ -107,11 +107,11 @@ Hvis du skal kunne klikke hvor som helst i et gallerielement for å merke det, m
 * **[AccessibleLabel](properties-accessibility.md)** bør vises.
 
     > [!NOTE]
-> Skjermlesere kunngjør når elementer i galleriet endres. **AccessibleLabel** nevnes også. Dette gir kontekst til kunngjøringen, og er enda viktigere når det finnes flere gallerier på samme skjerm.
+  > Skjermlesere kunngjør når elementer i galleriet endres. **AccessibleLabel** nevnes også. Dette gir kontekst til kunngjøringen, og er enda viktigere når det finnes flere gallerier på samme skjerm.
 
 ### <a name="keyboard-support"></a>Tastaturstøtte
 * Vurder å angi **ShowScrollbar** til **sann**. Rullefeltet vises ikke på de fleste skjermenhetene før du begynner å rulle.
 * Hvis du skal kunne klikke hvor som helst i et gallerielement for å merke det, må det også finnes en måte for tastaturbrukere å merke gallerielementet. Legg for eksempel til en **[knapp](control-button.md)** som har egenskapen **OnSelect** angitt til **Select(Parent)**.
 
     > [!NOTE]
-> Kontroller utenfor galleriet behandles ikke i tastaturnavigasjonsrekkefølgen i galleriet. **[TabIndex](properties-accessibility.md)** for kontroller i et galleri omfattes. Hvis du vil ha mer informasjon, kan du se [egenskaper for tilgjengelighet](properties-accessibility.md).
+  > Kontroller utenfor galleriet behandles ikke i tastaturnavigasjonsrekkefølgen i galleriet. **[TabIndex](properties-accessibility.md)** for kontroller i et galleri omfattes. Hvis du vil ha mer informasjon, kan du se [egenskaper for tilgjengelighet](properties-accessibility.md).

@@ -8,12 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 000f15ea7b1fa4e11cbe49b44e57017daf973a89
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 8eb651bcd4ad9320dc8995864249f619bb76ab77
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552971"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896861"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-to-export-powerapps-customer-data"></a>Svar på DSR-forespørsler om eksport av kundedata for PowerApps
 «Retten til dataportabilitet» gir en bruker rett til å be om en kopi av personopplysningene sine i et elektronisk format (det vil si et strukturert, velkjent, maskinlesbart og interoperabelt format) som kan overføres til en annen datakontrollør:
@@ -39,7 +39,7 @@ Tilkoblingstillatelser  | | Apputvikler: tilgjengelig <br> Administrator: tilgje
 PowerApps-brukerinnstillinger, brukerappinnstillinger og varslinger | | Apputvikler: tilgjengelig <br> Administrator: tilgjengelig
 
 > ** I Common Data Service (CDS) for Apps blir miljøtillatelser og tillatelser for modelldrevne apper lagret som oppføringer i databaseinstansen for CDS for Apps hvis du har opprettet en database i miljøet. For å få en veiledning i hvordan du svarer på DSR-forespørsler for brukere som bruker CDS for Apps, se [Svar på forespørsler om dataemnerettigheter for kundedata for Common Data Service for Apps](common-data-service-gdpr-dsr-guide.md).
-
+> 
 > *** En administrator kan bare få tilgang til disse ressursene fra [PowerApps-portalen](https://web.powerapps.com) hvis eieren av ressursen eksplisitt har gitt vedkommende tilgang. Hvis administratoren ikke har fått tilgang, må han eller hun bruke [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804).
 
 ## <a name="prerequisites"></a>Forutsetninger

@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: caa8cf8678a509e4d66442f790b8d89905d48b92
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: cfc47e95cff02dfcbcc2d3ff456e32a4ca2c675e
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838606"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899447"
 ---
 # <a name="label-control-in-powerapps"></a>Etikettkontrollen i PowerApps
 En boks som viser data som tekst, tall, datoer eller valuta.
@@ -59,7 +59,7 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 
 **[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
-**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+**[FocusedBorderThickness](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
 **[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
 
@@ -129,7 +129,7 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
   **Today()**
   
     > [!NOTE]
-> Når du angir en formel, bruker du ikke anførselstegn med mindre ett av argumentene i formelen er en litteral streng. I så fall må du omslutte argumentet i doble anførselstegn og ikke hele formelen.
+  > Når du angir en formel, bruker du ikke anførselstegn med mindre ett av argumentene i formelen er en litteral streng. I så fall må du omslutte argumentet i doble anførselstegn og ikke hele formelen.
   
     Vil du ha mer informasjon om **[Today](../functions/function-now-today-istoday.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
 
@@ -159,7 +159,7 @@ Det må være tilstrekkelig fargekontrast mellom:
 * **[Tekst](properties-core.md)** må foreligge.
 
     > [!NOTE]
-> Skjermlesere behandler **etiketter** som knapper når **[TabIndex](properties-accessibility.md)** er null eller større.
+  > Skjermlesere behandler **etiketter** som knapper når **[TabIndex](properties-accessibility.md)** er null eller større.
 
 ### <a name="low-vision-support"></a>Støtte for nedsatt syn
 * **Etikett** skal se ut som en kobling, hvis den brukes som en kobling.

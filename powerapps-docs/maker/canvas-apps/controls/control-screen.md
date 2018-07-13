@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: d03e587d86262bcecf59012e36af0c3dc27b29a3
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 165b6544808da234773c2b7a2cdd0014d6fe5c2d
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31831427"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898715"
 ---
 # <a name="screen-control-in-powerapps"></a>Skjermkontroll i PowerApps
 Et brukergrensesnitt-element som inneholder én eller flere andre kontroller i en app.
@@ -83,4 +83,4 @@ I tillegg til tekst, bør du vurdere å kontrollere fargekontrast med viktige gr
 * Det må foreligge et beskrivende navn for hver **skjerm**. Skjermnavnet kan vises og redigeres på samme måte som andre kontroller: i trevisningen i Kontroller-ruten eller i toppteksten i Egenskaper-ruten.
 
     > [!NOTE]
-> Når en ny **skjerm** er lastet inn, vil skjermlesere lese opp navnet. 
+  > Når en ny **skjerm** er lastet inn, vil skjermlesere lese opp navnet. 

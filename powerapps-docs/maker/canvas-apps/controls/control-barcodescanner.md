@@ -7,12 +7,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 22b5cf081755f25b3aff33c36137547882fe3812
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: b8b25f5bfa3ddbce7b1c541afb7a935a2fe4aa36
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803478"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898172"
 ---
 # <a name="barcode-scanner-control-experimental-in-powerapps"></a>Strekkodeleser-kontrollen (eksperimentell) i PowerApps
 En eksperimentell kontroll som lar brukeren ta bilder ved hjelp av strekkodeleseren på enheten.
@@ -32,19 +32,9 @@ Hvis du legger til denne kontrollen, kan brukeren oppdatere en datakilde med ett
 
 **[BorderThickness](properties-color-border.md)** – tykkelsen til kontrollens kantlinje.
 
-**Brightness** – hvor mye lys brukeren sannsynligvis oppfatter i et bilde.
-
-**Contrast** – hvor enkelt brukeren kan skille mellom lignende farger i et bilde.
-
-**[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
+**[DisplayMode](properties-core.md)** – Hvorvidt kontrollen tillater brukerinndata (**Edit**), bare viser data (**View**) eller er deaktivert (**Disabled**).
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
-
-**[OnSelect](properties-core.md)** – hvordan appen reagerer når brukeren klikker eller trykker på en kontroll.
-
-**OnStream** – hvordan appen svarer når **Strøm**-egenskapen oppdateres.
-
-**Bilde** – bildet som brukeren tar.
 
 **ShowLiveBarcodeDetection** – om visuelle hjelpemidler vises for å angi statusen til strekkodegjenkjenning. Gule rektangler representerer områder som undersøkes. En grønn linje på tvers av et rektangel angir vellykket strekkodeidentifikasjon.
 
@@ -63,8 +53,6 @@ Hvis du legger til denne kontrollen, kan brukeren oppdatere en datakilde med ett
 **[X](properties-size-location.md)** – avstanden mellom kontrollens venstre kant og den venstre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
-
-**Zoom** – Hvor mye et bilde fra en strekkodeleser prosentvis forstørres eller visningen av en fil i PDF-visningsprogram.
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
@@ -87,4 +75,4 @@ Hvis du legger til denne kontrollen, kan brukeren oppdatere en datakilde med ett
 * **[AccessibleLabel](properties-accessibility.md)** bør vises.
 
     > [!NOTE]
-> Skjermleserne kunngjør når en ny strekkode har blitt funnet. Verdien vil ikke kunngjøres. Så lenge strekkoden er synlig så vil skjermlesere gi en påminnelse hvert 5. sekund om at den samme strekkoden fremdeles identifiseres.
+  > Skjermleserne kunngjør når en ny strekkode har blitt funnet. Verdien vil ikke kunngjøres. Så lenge strekkoden er synlig så vil skjermlesere gi en påminnelse hvert 5. sekund om at den samme strekkoden fremdeles identifiseres.

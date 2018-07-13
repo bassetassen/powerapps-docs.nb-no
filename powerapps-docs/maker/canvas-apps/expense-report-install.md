@@ -12,12 +12,12 @@ ms.topic: sample
 ms.component: canvas
 ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: bce21a5fe07cb5bf608c36371a7cbe45e845b2ad
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 9ce265df67dd980653766b7bf9d57376c671e18a
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330587"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899966"
 ---
 # <a name="install-and-configure-the-expense-report-powerapps-sample"></a>Å installere og konfigurere eksemplet for utgiftsrapport for PowerApps
 
@@ -241,23 +241,23 @@ Denne listen inneholder linjeelementene som er knyttet til utgiftsrapporten.
 
 ## <a name="import-the-expense-report-powerapp"></a>Å importere utgiftsrapporten for SharePoint
 
-1.  Gå til https://web.powerapps.com i en nettleser.
-2.  Logg deg på ved å angi samme legitimasjon som du brukte til å registrere deg.
-3.  I menyen til venstre velger du **Apper**. 
-4.  Klikk på **importer pakke (forhåndsvisning)**.
+1. Gå til https://web.powerapps.com i en nettleser.
+2. Logg deg på ved å angi samme legitimasjon som du brukte til å registrere deg.
+3. I menyen til venstre velger du **Apper**. 
+4. Klikk på **importer pakke (forhåndsvisning)**.
     
-    ![Et skjermbilde for Importer pakke](./media/expense-report-install/import-package.png)
+   ![Et skjermbilde for Importer pakke](./media/expense-report-install/import-package.png)
 
-5.  Klikk på **Last opp**-knappen, og velg den PowerApp-pakken som du lastet ned i forrige trinn.
-6.  For ressurstypene **App** og **Flyt** kan du angi **IMPORT AV OPPSETT** til **Opprett som ny**.
-7.  Angi **IMPORT AV OPPSETT** til **Velg under import** for **SharePoint-** og **Outlook**-tilkoblinger.
+5. Klikk på **Last opp**-knappen, og velg den PowerApp-pakken som du lastet ned i forrige trinn.
+6. For ressurstypene **App** og **Flyt** kan du angi **IMPORT AV OPPSETT** til **Opprett som ny**.
+7. Angi **IMPORT AV OPPSETT** til **Velg under import** for **SharePoint-** og **Outlook**-tilkoblinger.
     
-    ![Å importere Innstillinger-skjermen](./media/expense-report-install/import-settings.png)
+   ![Å importere Innstillinger-skjermen](./media/expense-report-install/import-settings.png)
 
-8.  Klikk på det **røde ikonet** for å velge **SharePoint-tilkoblingen**.
-9.  Klikk på elementet med brukernavnet ditt i listen med tilkoblinger.
+8. Klikk på det **røde ikonet** for å velge **SharePoint-tilkoblingen**.
+9. Klikk på elementet med brukernavnet ditt i listen med tilkoblinger.
 
-    ![Å importere Innstillinger-skjermen](./media/expense-report-install/import-settings-sharepoint.png)
+   ![Å importere Innstillinger-skjermen](./media/expense-report-install/import-settings-sharepoint.png)
 
 10. Klikk på **Lagre**.
 11. Klikk på det **røde ikonet** for **tilkoblingen for godkjenning**.
@@ -265,9 +265,9 @@ Denne listen inneholder linjeelementene som er knyttet til utgiftsrapporten.
 
     ![Å importere Innstillinger-skjermen](./media/expense-report-install/import-settings-approvals.png)
 
-13.  Klikk på **Lagre**.
-14.  Klikk på det **røde ikonet** for å velge **Office 365 Outlook-tilkoblingen**.
-15.  Klikk på elementet med brukernavnet ditt i listen med tilkoblinger.
+13. Klikk på **Lagre**.
+14. Klikk på det **røde ikonet** for å velge **Office 365 Outlook-tilkoblingen**.
+15. Klikk på elementet med brukernavnet ditt i listen med tilkoblinger.
 
     ![Å importere Innstillinger-skjermen](./media/expense-report-install/import-settings-office365outlook.png)
 
@@ -383,7 +383,7 @@ Se denne videoen for å se hvordan du bruker eksemplet for utgiftsrapport for Po
 
 [![Video om hvordan du installerer utgiftsrapporten](./media/expense-report-install/expense-report-demo-video.png)](https://youtu.be/h6E9cdrOvMU)
 
-##<a name="next-steps"></a>Neste trinn
+## <a name="next-steps"></a>Neste trinn
 - [Å tilpasse et SharePoint-listeskjema](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/customize-list-form)
 - [Å legge til og konfigurere en kontroll](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/add-configure-controls)
 - [Å redigere og behandle tillatelser for en SharePoint-liste eller et bibliotek](https://support.office.com/en-us/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)

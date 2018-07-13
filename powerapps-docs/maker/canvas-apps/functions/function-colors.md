@@ -1,23 +1,19 @@
 ---
 title: Color-opplisting og ColorFade-, ColorValue- og RGBA-funksjoner | Microsoft Docs
 description: Referanseinformasjon for Color-opplisting og funksjonene ColorFade, ColorValue og RGBA i PowerApps, inkludert syntaks og eksempler
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2015
 ms.author: gregli
-ms.openlocfilehash: f4eeabf5708fffa6881b84402280d5639d96cc0a
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 6615dfee8f7c867bb25c237633fe031d614d517d
+ms.sourcegitcommit: 6d9fe9967841e381b108a7fb53c9057e295336ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838675"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948645"
 ---
 # <a name="color-enumeration-and-colorfade-colorvalue-and-rgba-functions-in-powerapps"></a>Color-opplisting og funksjonene ColorFade, ColorValue og RGBA i PowerApps
 Å bruke innebygde fargeverdier, definere egendefinerte farger og alfablanding.
@@ -51,6 +47,7 @@ Med **Color**-opplistingen kan du enkelt få tilgang til fargene som er definert
 * *FadeAmount* – obligatorisk.  Et tall mellom -1 og 1.  -1 gjør en farge fullstendig svart, 0 har ingen innvirkning på fargen og 1 gjør en farge fullstendig hvit.  
 
 ## <a name="built-in-colors"></a>Innebygde farger
+
 | Color-opplisting | ColorValue med Hex-kode | RGBA | Fargekart |
 | --- | --- | --- | --- |
 | **Color.AliceBlue** |**ColorValue( "#f0f8ff" )** |**RGBA( 240, 248, 255, 1 )** |![aliceblue](./media/function-colors/color-aliceblue.png) |

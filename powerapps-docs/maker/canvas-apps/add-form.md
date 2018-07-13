@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 10/06/2017
 ms.author: sharik
-ms.openlocfilehash: d24777ec34759a98421784995f5a73b0dfc1d2d2
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a68986c39ffe251f55c10a26386c8430398d2718
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31826273"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895826"
 ---
 # <a name="show-edit-or-add-a-record-from-a-table-in-powerapps"></a>Å vise, redigere eller legge til en post fra en tabell i PowerApps
 Hvis du vil vise alle feltene i en post, kan du legge til og konfigurere en **[Visningsskjema](controls/control-form-detail.md)**-kontroll. Hvis du vil redigere noen av feltene i en post (eller legge til en post) og lagre endringene tilbake til en datakilde, kan du legge til og konfigurere en **[Redigeringsskjema](controls/control-form-detail.md)**-kontroll.
@@ -36,7 +36,7 @@ Hvis du vil vise alle feltene i en post, kan du legge til og konfigurere en **[V
     **FlooringEstimates.Name**
 
     > [!NOTE]
-> Hvis du ikke er sikker på hvordan du legger til en kontroll, gir nytt navn til den eller angir en egenskap, kan du se [Å legge til og konfigurere kontroller](add-configure-controls.md).
+   > Hvis du ikke er sikker på hvordan du legger til en kontroll, gir nytt navn til den eller angir en egenskap, kan du se [Å legge til og konfigurere kontroller](add-configure-controls.md).
 
     Listen viser navnene på gulvprodukter fra datakilden.
 
@@ -45,7 +45,7 @@ Hvis du vil vise alle feltene i en post, kan du legge til og konfigurere en **[V
     ![Å legge til et skjema](./media/add-form/add-a-form.png)
 
     > [!NOTE]
-> Dette emnet beskriver **Redigeringsskjema**-kontrollen, men lignende prinsipper gjelder for **Visningsskjema**-kontrollen.
+   > Dette emnet beskriver **Redigeringsskjema**-kontrollen, men lignende prinsipper gjelder for **Visningsskjema**-kontrollen.
 
 3. Angi skjemaets **[DataSource](controls/control-form-detail.md)**-egenskap som **FlooringEstimates** og **[Elementer](controls/control-form-detail.md)**-egenskapen som denne formelen:
 
@@ -56,7 +56,7 @@ Hvis du vil vise alle feltene i en post, kan du legge til og konfigurere en **[V
 4. Klikk eller trykk på avmerkingsboksen i **Data**-ruten for hvert felt for å vise det.
 
     > [!NOTE]
-> Hvis **Data**-ruten er lukket, åpner du den ved å velge skjemaet i ruten til venstre og deretter klikke eller trykke på **Data** i ruten til høyre.
+   > Hvis **Data**-ruten er lukket, åpner du den ved å velge skjemaet i ruten til venstre og deretter klikke eller trykke på **Data** i ruten til høyre.
 
     ![Å vise felt i skjema](./media/add-form/checkbox.png)
 

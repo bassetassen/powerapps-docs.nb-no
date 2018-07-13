@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 4/18/2018
 ms.author: audrie
-ms.openlocfilehash: c0711ed071c1635373a66f5b61259f56d468cc9a
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: bffc102ad61a05ae8f2b6a26276cbeec718483f6
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311665"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898195"
 ---
 # <a name="powerapps-webinar-listing"></a>Liste over webinarer om PowerApps #
 Disse nettseminarene kan hjelpe deg med å dra nytte av verktøyene og funksjonene i Microsoft PowerApps. Nettseminarer er tilgjengelige på forespørsel etter direktesendingen. Obs! I noen tilfeller må du skrive inn registreringsinformasjonen på nytt, og deretter vil du motta en kobling til opptaket via e-post. 

@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 06/17/2017
 ms.author: gregli
-ms.openlocfilehash: 2b64ebdf91effe812d3fd81d0d1e0bb854147a19
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 45baa2450dbb081b800263a9119729e1c2846008
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31839158"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899460"
 ---
 # <a name="understand-data-form-layout-in-microsoft-powerapps"></a>Slik forstår du oppsett for dataskjemaer i Microsoft PowerApps
 I PowerApps kan du enkelt opprette skjemaer som er attraktive og effektive å bruke. Ta for eksempel i betraktning denne grunnleggende formen for registrering av salgsordre:
@@ -51,23 +51,23 @@ Hvis PowerApps er nytt for deg (eller du bare har generert apper automatisk), m�
 1. Legg til en tom skjerm der du vil legge til skjemaet.
    
     Utenfor denne opplæringen, kan du plassere **Galleri**- og **[Redigeringsskjema](controls/control-form-detail.md)**-kontrollene i den samme skjermen, men du får mer plass å arbeide med hvis du legger dem til på separate skjermer.
-2. Øverst på det nye skjermbildet, kan du legge til en **[Etikett](controls/control-text-box.md)**-kontroll, og angi **Tekst**-egenskapen til dette uttrykket:
+2. Øverst på den nye skjermen, kan du legge til en **[Etikett](controls/control-text-box.md)**-kontroll, og angi **Tekst**-egenskapen til dette uttrykket:
    <br>**"Sales Order " & Gallery1.Selected.SalesOrderId**
    
     Etiketten viser salgsordre-nummer for posten som du har valgt i galleriet.
 3. (valgfritt) Formater etiketten som følger:
    
-    1. Angi **Juster**-egenskapen til **Midtstilt**.
+   1. Angi **Juster**-egenskapen til **Midtstilt**.
    
-    2. Angi **Størrelse**-egenskapen til **20**.
+   2. Angi **Størrelse**-egenskapen til **20**.
    
-    3. Angi **Fyll**-egenskapen til **Marineblå**.
+   3. Angi **Fyll**-egenskapen til **Marineblå**.
    
-    4. Angi **Farge**-egenskapen til **Hvit**.
+   4. Angi **Farge**-egenskapen til **Hvit**.
    
-    5. Angi **Bredde**-egenskapen til **Parent.Width**.
+   5. Angi **Bredde**-egenskapen til **Parent.Width**.
    
-    6. Angi **X**- og **Y**-egenskapen til **0**.
+   6. Angi **X**- og **Y**-egenskapen til **0**.
       
       ![Tittellinje](./media/working-with-form-layout/title-bar.png)
 
@@ -142,17 +142,17 @@ Leveringsadressen består av flere deler med informasjon som vi ønsker å grupp
 
 1. Velg kortet for **Første linje i leveringsadresse**, velg deretter etiketten i kortet, og slett de tre første ordene fra teksten.
    
-    ![Gi nytt navn til den første etikettlinjen i leveringsadresse for salgsordre](./media/working-with-form-layout/delivery-address-rename.png)
+    ![Å gi nytt navn til den første etikettlinjen i leveringsadresse for salgsordre](./media/working-with-form-layout/delivery-address-rename.png)
 2. Velg kortet for **Andre linje i leveringsadresse**, velg deretter etiketten i kortet, og slett all tekst i det.
    
-    Det kan være fristende å ganske enkelt fjerne etiketten, og i mange tilfeller vil det fungere bra. Men formler kan være avhengige av at denne kontrollen finnes. En tryggere tilnærming er å fjerne teksten eller angi **Synlig**-egenskapen for kontrollen til **USANN**.
+    Det kan være fristende å ganske enkelt fjerne etiketten, og i mange tilfeller vil det fungere bra. Men formler kan være avhengige av at denne kontrollen finnes. En tryggere tilnærming er å fjerne teksten eller angi **Synlig**-egenskapen for kontrollen til **usann**.
    
     ![Gi nytt navn til den andre etikettlinjen i leveringsadresse for salgsordre](./media/working-with-form-layout/delivery-address-rename-2.png)
 3. Flytt inndata tekstboksen over etiketten for å redusere avstanden mellom første og andre linjene av adressen i det samme kortet.
    
     Høyden på kortet krymper når innholdet tar opp mindre plass.
    
-    ![Gi nytt navn til den andre etikettlinjen i leveringsadresse for salgsordre](./media/working-with-form-layout/delivery-address-move-input.png)
+    ![Å gi nytt navn til den andre etikettlinjen i leveringsadresse for salgsordre](./media/working-with-form-layout/delivery-address-move-input.png)
 
 La oss nå rette oppmerksomheten mot tredje linje i adressen. I likhet med det vi nettopp gjorde, kan vi forkorte teksten i hver etikett for disse kortene og ordne Tekstinndata-boksen til å stå til høyre for hver etikett. Her er fremgangsmåten for **Tilstand**-kortet:
 
@@ -164,7 +164,7 @@ La oss nå rette oppmerksomheten mot tredje linje i adressen. I likhet med det v
 | 4 |Du kan endre størrelse på etikettkontrollen for å få plass til den nye tekststørrelsen ved hjelp av sidene på håndtakene. |![Slik endrer du en kontroll i et kort](./media/working-with-form-layout/state-morph-4b.png) |
 | 5 |Velg Tekstinndata-kontrollen i dette kortet. |![Slik velger du en annen kontroll i kortet](./media/working-with-form-layout/state-morph-6.png) |
 | 6 |Du kan endre størrelse på Tekstinndata-kontrollen til ønsket størrelse ved hjelp av sidene på håndtakene. |![Slik endrer du en kontroll i et kort](./media/working-with-form-layout/state-morph-6b.png) |
-| 7 |Dra Tekstinndata-boksen opp og til høyre for etiketten, og slipp deretter Tekstinndata-boksen. |![Slik flytter du en kontroll i et kort](./media/working-with-form-layout/state-morph-7b.png) |
+| 7 |Dra Tekstinndata-boksen opp og til høyre for etiketten, og slipp deretter Tekstinndata-boksen. |![Å flytte en kontroll i et kort](./media/working-with-form-layout/state-morph-7b.png) |
 | Våre endringer i **Tilstand**-kortet er nå fullført. |![Endringene i kortet er nå fullført](./media/working-with-form-layout/state-morph-8.png) | |
 
 Resultatet for den fullstendige tredje adresselinjen:
@@ -173,14 +173,14 @@ Resultatet for den fullstendige tredje adresselinjen:
 
 Vær oppmerksom på at mange av kortene begynner med en dynamisk formel for egenskapene. Tekstinndata-kontrollen som vi endret størrelsen på og flyttet tidligere, hadde for eksempel en **Bredde**-egenskap basert på bredden på det overordnede området. Når du flytter eller endrer størrelse på en kontroll, erstattes disse dynamisk formlene med statiske verdier. Hvis du vil, kan du gjenopprette de dynamiske formlene ved hjelp av formellinjen.
 
-## <a name="turning-off-snap-to-columns"></a>Slik slår du av Festing til kolonner
+## <a name="turning-off-snap-to-columns"></a>Slå av Festing til kolonner
 Noen ganger vil du ha bedre kontroll enn det standarden med 12 kolonner kan gi. For disse tilfellene kan du slå av **Fest til kolonner** og deretter plassere kort manuelt. Skjemaet vil fortsette å feste seg til 12 kolonner, men du kan også holde nede ALT for å manuelt plassere og endre størrelsen på et kort slik du ønsker.
 
 I vårt eksempel har alle de fire komponentene som utgjør den tredje adresselinjen nøyaktig samme bredde. Men dette er kanskje ikke det beste oppsettet, siden bynavn er lengre enn forkortelser for tilstand, og Tekstinndata-boksen for land/områder er korte på grunn av lengden på etiketten.
 
 Hvis du vil optimalisere området, kan du slå av **Fest til kolonner** i den høyre ruten, og deretter holde nede ALT mens du endrer størrelse og plassering for disse kortene. Alle kontroller viser svart bildetekst når du holder nede ALT. Denne virkemåten er etter utforming standard til å vise kontrollnavn.
 
-![Slik flytter og endrer du størrelse ved bruk av ALT](./media/working-with-form-layout/delivery-address-alt-resize.png)
+![Flytte og endre størrelse ved bruk av ALT-tasten](./media/working-with-form-layout/delivery-address-alt-resize.png)
 
 Etter forsiktig plassering har resultatet riktig størrelse for hvert felt, og til og med for vannrett avstanden mellom feltene:
 
@@ -212,7 +212,7 @@ La oss ta en titt på **X**-, **Y**- og **Bredde**-egenskaper for kortene i skje
 ### <a name="overflowing-rows"></a>Overflytende rader
 Hva skjer hvis kortene i en rad er for brede til å få plass på denne raden? Vanligvis trenger du ikke å bekymre deg om dette. Med **Fest til kolonner** slått på, vil disse tre egenskapene justeres automatisk slik at alt passer fint inn i rader uten overflyt.
 
-Men med **Fest til kolonner** slått av, eller med en formel-basert **Bredde** på ett eller flere av kortene, kan det oppstå overflyt av en rad. I dette tilfellet vil kortene automatisk tekstbrytes, noe som fører til at en ny rad opprettes. La oss for eksempel manuelt endre **Bredde**-egenskapen for **Bestillingsreferanse for kunde**-kortet vårt (første rad, tredje elementet) til **500**:
+Men med **Fest til kolonner** slått av, eller med en formel-basert **Bredde** på ett eller flere av kortene, kan det oppstå overflyt av en rad. I dette tilfellet vil kortene automatisk tekstbrytes, noe som fører til at en ny rad opprettes. La oss for eksempel manuelt endre **Bredde**-egenskapen for kortet **Bestillingsreferanse for kunde** (første rad, tredje elementet) til **500**:
 
 ![Manuell endring av størrelse på et kort, dynamisk tilpasning til en ny rad](./media/working-with-form-layout/manual-size-500.png)
 
@@ -223,45 +223,45 @@ Du kan bruke denne virkemåten til å opprette et fullstendig dynamisk oppsett d
 ### <a name="filling-spaces-widthfit"></a>Å fylle mellomrom: WidthFit
 Overflyten i det siste eksemplet opprettet et mellomrom etter **Ordrestatus**-kortet, som var det andre kortet i den første raden. Vi kan manuelt justere på **Bredde**-egenskapene for de to gjenstående kortene til å fylle ut området, men denne tilnærmingen er langtekkelig.
 
-Som et alternativ kan du bruke **WidthFit**-egenskapen. Hvis denne egenskapen er angitt til **SANN** for én eller flere kort i en rad, vil resten av området på raden bli jevnt fordelt mellom dem. Denne virkemåten er grunnen til at vi tidligere nevnte at **Bredde**-egenskapen for et kort er et *minimum*, og at det som faktisk vises kan være bredere. Denne egenskapen vil aldri føre til at et kort reduseres, bare utvides.
+Som et alternativ kan du bruke **WidthFit**-egenskapen. Hvis denne egenskapen er satt til **sann** for én eller flere kort i en rad, vil resten av området på raden bli jevnt fordelt mellom dem. Denne virkemåten er grunnen til at vi tidligere nevnte at **Bredde**-egenskapen for et kort er et *minimum*, og at det som faktisk vises kan være bredere. Denne egenskapen vil aldri føre til at et kort reduseres, bare utvides.
 
-Hvis du vi angi **WidthFit** til **SANN** på **Ordrestatus**-kortet, vil den fylle den tilgjengelige plassen mens det første kortet forblir uendret:
+Hvis du vi angi **WidthFit** til **sann** på **Ordrestatus**-kortet, vil den fylle den tilgjengelige plassen, mens det første kortet forblir uendret:
 
-![Med WidthFit angitt til SANN på det andre kortet](./media/working-with-form-layout/manual-widthfit-1.png)
+![Med WidthFit satt til sann på andre kort](./media/working-with-form-layout/manual-widthfit-1.png)
 
-Hvis vi også vil sette **WidthFit** til **SANN** på **Bestillingsdato**-kortet, vil begge kortene dele den tilgjengelige plassen likt:
+Hvis vi også vil sette **WidthFit** til **sann** på **Bestillingsdato**-kortet, vil begge kortene dele den tilgjengelige plassen likt:
 
-![Med WidthFit angitt til SANN på første og andre kort](./media/working-with-form-layout/manual-widthfit-2.png)
+![Med WidthFit satt til sann på første og andre kort](./media/working-with-form-layout/manual-widthfit-2.png)
 
 Vær oppmerksom på at håndtakene på disse kortene tar hensyn til den ekstra bredden oppgitt for **WidthFit**, ikke minimumsbredden som oppgis for **Bredde**-egenskapen. Det kan være forvirrende å endre **Bredde**-egenskapen mens **WidthFit** er aktivert. Du vil kanskje deaktivere den, gjøre endringer i **Bredde**, og deretter slå den på igjen.
 
-Når kan **WidthFit** være nyttig? Hvis du har et felt som bare brukes i enkelte situasjoner, kan du angi **Synlig**-egenskapen til **USANN**, og de andre kortene på raden vil automatisk fylle området rundt det. Du vil kanskje bruke en formel som viser et felt bare når et annet felt har en bestemt verdi.
+Når kan **WidthFit** være nyttig? Hvis du har et felt som bare brukes i enkelte situasjoner, kan du angi **Synlig**-egenskapen til **usann**, og de andre kortene på raden vil automatisk fylle området rundt det. Du vil kanskje bruke en formel som viser et felt bare når et annet felt har en bestemt verdi.
 
-Vi konfigurerer **Synlig**-egenskapen for **Ordrestatus**-feltet til en statisk **USANN**:
+Vi konfigurerer **Synlig**-egenskapen for **Ordrestatus**-feltet til en statisk **usann**:
 
 ![Med WidthFit angitt til SANN på første kortet med usynlig ordrestatus](./media/working-with-form-layout/manual-widthfit-3.png)
 
-Med det andre kortet effektivt fjernet, kan det tredje kortet nå returnere til den samme raden som det første kortet. Det første kortet har fortsatt **WidthFit** angitt til **SANN**, slik at kun det utvides for å fylle den tilgjengelige plassen.
+Med det andre kortet effektivt fjernet, kan det tredje kortet nå returnere til den samme raden som det første kortet. Det første kortet har fortsatt **WidthFit** satt til **sann**, slik at kun det utvides for å fylle den tilgjengelige plassen.
 
 Fordi **Ordrestatus** er usynlig, kan du ikke velge det like enkelt på arbeidssonen. Du kan imidlertid velge en kontroll, synlig eller ikke, i den hierarkiske listen over kontroller på venstre side av skjermen.
 
 ### <a name="height"></a>Høyde
-**Høyde**-egenskapen styrer høyden på hvert kort. Kort har **WidthFit** angitt som **Høyde**, og det er alltid angitt til **SANN**. Tenk deg at en **HeightFit**-egenskap finnes, men ikke let etter den i produktet fordi egenskapen er ikke eksponert ennå.
+**Høyde**-egenskapen styrer høyden på hvert kort. Kort er tilsvarende for **WidthFit** som for **Høyde**, og de er alltid satt til **sann**. Tenk deg at en **HeightFit**-egenskap finnes, men ikke let etter den i produktet fordi egenskapen er ikke eksponert ennå.
 
 Du kan ikke slå av denne virkemåten, slik at det kan være utfordrende å endre høyden på kort. Alle kortene i en rad ser ut til å ha samme høyde som det høyeste kortet. Du ser kanskje på en rad som dette:
 
-![Med WidthFit angitt til SANN på det første kortet med usynlig ordrestatus](./media/working-with-form-layout/height-3.png)
+![Med WidthFit satt til sann på det første kortet med usynlig ordrestatus](./media/working-with-form-layout/height-3.png)
 
 Hvilket kort gjør raden høy? I den forrige grafikken var **Totalbeløp**-kortet valgt, og så ut til å være høyt, men **Høyde**-egenskapen er angitt til **80** (samme som høyden på den første raden). Hvis du vil redusere høyden på en rad, må du redusere **Høyde** for det høyeste kortet i denne raden, og du kan ikke identifisere det høyeste kortet uten å gå gjennom **Høyde**-egenskapen for hvert kort.
 
 ### <a name="autoheight"></a>AutoHeight
-Et kort kan også være høyere enn forventet hvis det inneholder en kontroll der **AutoHeight**-egenskapen er satt til **SANN**. Mange kort inneholder for eksempel en etikett som viser en feilmelding, hvis feltverdien forårsaker et problem for validering.
+Et kort kan også være høyere enn forventet hvis det inneholder en kontroll der **AutoHeight**-egenskapen er satt til **sann**. Mange kort inneholder for eksempel en etikett som viser en feilmelding, hvis feltverdien forårsaker et problem for validering.
 
 Uten noen tekst som skal vises (ingen feil), vil etiketten skjules til null i høyde. Hvis du ikke visste bedre, ville du ikke visst at det var der, og det er slik det skal være:
 
-![Kort som inneholder kontroller med AutoHeight satt til SANN, som ikke viser en høyde](./media/working-with-form-layout/autoheight-0.png)
+![Kort som inneholder kontroller med AutoHeight satt til sann, som ikke viser en høyde](./media/working-with-form-layout/autoheight-0.png)
 
-Listen over kontroller viser **ErrorMessage1** på venstre side av skjermen, som er vår etikettkontroll. Når du oppdaterer en app, kan du velge denne kontrollen til å gi den litt høyde og vise håndtakene som du kan bruke til å plassere og endre størrelse på kontrollen. «A»-en i en blå boks indikerer at kontrollen har **AutoHeight** angitt til **SANN**:
+Listen over kontroller viser **ErrorMessage1** på venstre side av skjermen, som er vår etikettkontroll. Når du oppdaterer en app, kan du velge denne kontrollen til å gi den litt høyde og vise håndtakene som du kan bruke til å plassere og endre størrelse på kontrollen. «A»-en i en blå boks indikerer at kontrollen har **AutoHeight** satt til **sann**:
 
 ![I redigeringsmodus viser AutoHeight-kontrollene noe høyde som gjør dra-og-slipp enklere](./media/working-with-form-layout/autoheight-1.png)
 

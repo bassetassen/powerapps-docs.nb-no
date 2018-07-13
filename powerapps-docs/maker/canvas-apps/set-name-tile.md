@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 10/16/2016
 ms.author: lonu
-ms.openlocfilehash: 386ecbd360dc13c21d48e0c134a87e8b7d007547
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a4bafb954b5723e813fade2ee633a51f4d8385e0
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31830183"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895872"
 ---
 # <a name="change-app-name-and-icon-in-powerapps"></a>Endring av appnavn og -ikon i PowerApps
 Tilpass en app ved å endre navnet og flisen.
@@ -46,7 +46,7 @@ Følg ett eller flere av disse trinnene:
 * Klikk eller trykk på **Bla gjennom fil**, og klikk eller trykk på bildet du vil bruke. Deretter klikker eller trykker du på **Åpne**.
 
     > [!NOTE]
-> Bruk et ikon med firkantet form for best resultat.
+  > Bruk et ikon med firkantet form for best resultat.
 
 ## <a name="next-step"></a>Neste trinn
 Klikk eller trykk på **Lagre** på **Fil**-menyen for publisere appen din på nytt med de nye innstillingene.

@@ -13,11 +13,11 @@ ms.component: canvas
 ms.date: 10/21/2015
 ms.author: gregli
 ms.openlocfilehash: 3046aa93941a07d44345e09b442cb57b623946c3
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.sourcegitcommit: 6d9fe9967841e381b108a7fb53c9057e295336ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31834348"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38078443"
 ---
 # <a name="update-and-updateif-functions-in-powerapps"></a>Update- og UpdateIf-funksjonene i PowerApps
 Oppdaterer [poster](../working-with-tables.md#records) i en [datakilde](../working-with-data-sources.md).

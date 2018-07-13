@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 04/27/2016
 ms.author: gregli
-ms.openlocfilehash: a9cd26ad41ceaa5b94678a3ef87bf0ab6dda98a1
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: bf66c1f7596b8a3ef4c8495db3f0ac2af8165d8c
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330679"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899690"
 ---
 # <a name="understand-data-forms-in-microsoft-powerapps"></a>Å forstå dataskjemaer i Microsoft PowerApps
 Legg til tre typer kontroller, slik at brukeren kan bla gjennom etter en post, vise detaljer om denne posten og redigere eller opprette en post:
@@ -157,7 +157,7 @@ For å følge resten av dette emnet nøyaktig, kan du lage en SharePoint-liste m
 * Opprett en app fra grunnen av, for telefoner, og [koble den til datakilden](add-data-connection.md).
   
     > [!NOTE]
-> Apper for nettbrett er svært like, men du vil kanskje ha et annet [skjermoppsett](#screen-design) for å få fullt utbytte av den ekstra skjermplassen.
+  > Apper for nettbrett er svært like, men du vil kanskje ha et annet [skjermoppsett](#screen-design) for å få fullt utbytte av den ekstra skjermplassen.
   
     Eksemplene i resten av emnet er basert på en datakilde med navnet **Ice Cream**.
 

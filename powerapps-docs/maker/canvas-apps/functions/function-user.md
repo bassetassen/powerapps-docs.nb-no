@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 11/07/2016
 ms.author: gregli
-ms.openlocfilehash: 2053f69146bcd952f61916ef9e41150791a243a5
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 9ec6730a03781bdbffc9c80d815e960de2ce6064
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31828061"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899069"
 ---
 # <a name="user-function-in-powerapps"></a>User-funksjonen i PowerApps
 Returnerer informasjon om gjeldende bruker.
@@ -44,10 +44,10 @@ Gjeldende PowerApps-bruker har følgende informasjon:
 * E-postadresse: **john.doe@contoso.com**
 * Bilde: ![](media/function-user/john-doe-picture.png) 
 
-| Formel | Beskrivelse | Resultat |
-| --- | --- | --- |
-| **User()** |Informasjonen som returneres er for den gjeldende brukeren av PowerApps. |{ FullName:&nbsp;"John Doe", Email:&nbsp;"john.doe@contoso.com", Image:&nbsp;"blob:1234...5678" } |
-| **User().Email** |E-postadressen til gjeldende bruker av PowerApps. |"john.doe@contoso.com" |
-| **User().FullName** |Fullt navn på gjeldende bruker av PowerApps. |"John Doe" |
-| **User().Image** |Nettadressen til bildet til gjeldende bruker av PowerApps.  Angi **Image**-egenskapen for **Bilde**-kontrollen som denne verdien, for å vise bildet i appen. |"blob:1234...5678"<br><br>Med **ImageControl.Image**:<br>![](media/function-user/john-doe-picture.png) |
+|       Formel       |                                                                    Beskrivelse                                                                    |                                                 Resultat                                                  |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+|     **User()**      |                                             Informasjonen som returneres er for den gjeldende brukeren av PowerApps.                                             |    { FullName:&nbsp;"John Doe", Email:&nbsp;"john.doe@contoso.com", Image:&nbsp;"blob:1234...5678" }    |
+|  **User().Email**   |                                                 E-postadressen til gjeldende bruker av PowerApps.                                                  |                                         "john.doe@contoso.com"                                          |
+| **User().FullName** |                                                   Fullt navn på gjeldende bruker av PowerApps.                                                    |                                               "John Doe"                                                |
+|  **User().Image**   | Nettadressen til bildet til gjeldende bruker av PowerApps.  Angi **Image**-egenskapen for **Bilde**-kontrollen som denne verdien, for å vise bildet i appen. | "blob:1234...5678"<br><br>Med **ImageControl.Image**:<br>![](media/function-user/john-doe-picture.png) |
 

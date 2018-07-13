@@ -7,12 +7,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: a5d818bf12bafaa5c557afae1d93b6ba0a6a7d2f
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 5e292b9cab399e4433c5b209fe22f17dd955ea9f
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803447"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898485"
 ---
 # <a name="button-control-in-powerapps"></a>Knappkontroll i PowerApps
 En kontroll som brukeren kan klikke eller trykke på for å samhandle med appen.
@@ -141,7 +141,7 @@ Legg til en formel som sletter **Tekstinndata**-kontrollen mellom oppføringene.
     **UpdateContext({Total:Total + Value(Source.Text)});<br>UpdateContext({ClearInput: ""})**
    
     > [!NOTE]
-> Adskill flere formler med semikolon «**;**».
+   > Adskill flere formler med semikolon «**;**».
 3. Angi **[standardegenskapen](properties-core.md)** for **Source** til **ClearInput**.
 4. Trykk på **F5**, og test deretter appen ved å legge til flere tall.
 

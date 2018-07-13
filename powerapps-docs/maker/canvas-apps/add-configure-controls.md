@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 07/10/2017
 ms.author: anneta
-ms.openlocfilehash: 702be2a4f1747b6f3303d1add30d9157f5665ee7
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: c3b1fb9802541159726a33cacd07c6f9743de0e2
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330486"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896700"
 ---
 # <a name="add-and-configure-a-control-in-powerapps"></a>Å legge til og konfigurere en kontroll i PowerApps
 Legg til forskjellige grensesnittelementer i appen, og konfigurer aspekter ved utseende og virkemåte direkte, fra verktøylinjen, i **Egenskaper**-fanen eller i formellinjen. Disse grensesnittelementene kalles kontroller, og aspektene du konfigurerer, kalles egenskaper.
@@ -68,7 +68,7 @@ I denne prosedyren legger du til og konfigurerer en **Etikett**-kontroll, men du
     ![En valgt etikett](./media/add-configure-controls/selected-text-box.png)
 
     > [!IMPORTANT]
-> Hvis en kontroll er valgt når du velger en ny kontroll eller et tomt område på skjermen, er ikke det første elementet lenger valgt.
+   > Hvis en kontroll er valgt når du velger en ny kontroll eller et tomt område på skjermen, er ikke det første elementet lenger valgt.
 2. Gjør **Etikett**-kontrollen smalere ved å dra i et håndtak på høyre kant av valgboksen til venstre. (Det midterste håndtaket vises bare hvis du zoomer inn.)
 
     ![En etikett med endret størrelse](./media/add-configure-controls/shorter-text-box.png)
@@ -173,7 +173,7 @@ I stedet for å konfigurere en kontroll direkte, i **Egenskaper**-fanen eller fr
     ![I dag-funksjonen](./media/add-configure-controls/today-function.png)
 
     > [!TIP]
-> Du kan [formatere datoer og klokkeslett](show-text-dates-times.md) på forskjellige måter, i tillegg til å utføre beregninger på dem.
+   > Du kan [formatere datoer og klokkeslett](show-text-dates-times.md) på forskjellige måter, i tillegg til å utføre beregninger på dem.
 
 ## <a name="configure-two-controls-to-interact-with-each-other"></a>Konfigurering av to kontroller så de kan samhandle med hverandre
 I denne prosedyren må du legge til en avmerkingsboks og deretter konfigurere etiketten du allerede har, så den vises bare når avmerkingsboksen er merket.

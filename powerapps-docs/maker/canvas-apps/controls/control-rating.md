@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 1df75e5de1f0d8a2515b4dcf761593145d72f70a
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 2cdf88c21e9cd8dd957fa5cf704280df325e85fd
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31834657"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898310"
 ---
 # <a name="rating-control-in-powerapps"></a>Vurdering-kontrollen i PowerApps
 En kontroll som lar brukere angi en verdi mellom 1 og et maksimalt antall som du angir.
@@ -45,7 +45,7 @@ I denne kontrollen kan brukeren for eksempel angi hvor mye de likte noe ved å v
 
 **[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
-**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+**[FocusedBorderThickness](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -105,7 +105,7 @@ Dette er i tillegg til [kravene for standard fargekontrast](../accessible-apps-c
 * **[AccessibleLabel](properties-accessibility.md)** bør vises.
 
     > [!NOTE]
-> Skjermlesere bruker **Vurdering**-kontrollen som alternativknapper.
+  > Skjermlesere bruker **Vurdering**-kontrollen som alternativknapper.
 
 ### <a name="keyboard-support"></a>Tastaturstøtte
 * **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
@@ -113,4 +113,4 @@ Dette er i tillegg til [kravene for standard fargekontrast](../accessible-apps-c
 * Vurder å bruke en annen kontroll hvis det er for mange stjerner. Det kan være kjedelig å navigere med et tastatur, og vanskelig å merke/velge nøyaktig med en berøringsskjerm.
 
     > [!NOTE]
-> De samme tastatursamhandlingene for alternativknapper kan brukes for **Vurdering**.
+  > De samme tastatursamhandlingene for alternativknapper kan brukes for **Vurdering**.

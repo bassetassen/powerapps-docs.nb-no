@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 04/23/2018
 ms.author: anneta
-ms.openlocfilehash: 29f07162ec2815398cda5bcc359f7388df261bc0
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: bf802668ff56729c1d28fc460495a680fc3c6570
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31836974"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896815"
 ---
 # <a name="create-an-excel-app-from-scratch"></a>Slik oppretter du en Excel-app fra grunnen av
 Opprett din egen app fra grunnen av basert på Excel-data som er formatert som en tabell, og deretter legger du til data fra andre kilder hvis du ønsker det. Du oppretter en app med to skjermer ved å følge denne opplæringen. På den ene skjermen kan brukerne bla gjennom et sett med poster. På den andre skjermen kan brukere opprette en post, oppdatere ett eller flere felt i en post eller slette en hel post. Denne fremgangsmåten er mye mer tidkrevende enn [automatisk generering av en app](get-started-create-from-data.md), men erfarne apputviklere kan bruke det til å lage de beste appene for et gitt behov.
@@ -84,31 +84,31 @@ Du må først opprette en Excel-fil ved hjelp av disse eksempeldataene for å f�
 
     ![Å åpne dataruten](./media/get-started-create-from-blank/custom-gallery-sample.png)
 
-1. Velg Pil ned under **Datakilde** for å åpne listen over datakilder for appen, og velg deretter **Tidsplan**.
+4. Velg Pil ned under **Datakilde** for å åpne listen over datakilder for appen, og velg deretter **Tidsplan**.
 
     ![Å velge en datakilde](./media/get-started-create-from-blank/select-schedule.png)
 
-1. Velg Pil ned under **Oppsett** for å åpne listen over oppsett, og velg deretter **tittel, undertittel og brødtekst**.
+5. Velg Pil ned under **Oppsett** for å åpne listen over oppsett, og velg deretter **tittel, undertittel og brødtekst**.
 
     ![Slik velger man oppsett](./media/get-started-create-from-blank/select-layout.png)
 
-1. Endre kolonnen som vises fra **Backup** til **Frivillig** under **Tittel2**.
+6. Endre kolonnen som vises fra **Backup** til **Frivillig** under **Tittel2**.
 
      ![Slik endrer man kolonnen i en etikett](./media/get-started-create-from-blank/change-title2.png)
 
-1. Lukk **Data**-ruten ved å velge Lukk-ikonet øverst til høyre.
+7. Lukk **Data**-ruten ved å velge Lukk-ikonet øverst til høyre.
 
     Galleriet viser navnet på hver enkelt frivillig, samt dato og klokkeslett for den frivillige sin skifttid.
 
     ![Tidsplan-dataene i galleriet (usortert)](./media/get-started-create-from-blank/show-data-unsorted.png)
 
-4. Velg galleriet, og bekreft at egenskapslisten viser **[Elementer](controls/properties-core.md)**.
+8. Velg galleriet, og bekreft at egenskapslisten viser **[Elementer](controls/properties-core.md)**.
 
     Som formellinjen viser, er verdien for denne egenskapen **Tidsplan**.
 
     ![Tidsplan-dataene i galleriet (usortert)](./media/get-started-create-from-blank/set-property.png)
 
-1. Endre verdien for **Elementer**-egenskapen ved å kopiere denne formelen og lime den inn i formellinjen:
+9. Endre verdien for **Elementer**-egenskapen ved å kopiere denne formelen og lime den inn i formellinjen:
 
     **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer"), "Volunteer", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
@@ -118,22 +118,22 @@ Du må først opprette en Excel-fil ved hjelp av disse eksempeldataene for å f�
 
     Brukere kan sortere og filtrere galleriet etter navn på frivillige, basert på **SortByColumns**- og **Søk**-funksjonene i denne formelen.
 
-    - Hvis en bruker skriver minst én bokstav i søkeboksen, viser galleriet bare de postene hvor **Frivillig**-feltet inneholder teksten brukeren skrev inn.
-    - Hvis en bruker velger Sorter-knappen, vises postene i stigende eller synkende rekkefølge i galleriet (avhengig av hvor mange ganger brukeren velger knappen), basert på **Frivillig**-feltet.
+   - Hvis en bruker skriver minst én bokstav i søkeboksen, viser galleriet bare de postene hvor **Frivillig**-feltet inneholder teksten brukeren skrev inn.
+   - Hvis en bruker velger Sorter-knappen, vises postene i stigende eller synkende rekkefølge i galleriet (avhengig av hvor mange ganger brukeren velger knappen), basert på **Frivillig**-feltet.
 
-    Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelreferansen](formula-reference.md).
+     Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelreferansen](formula-reference.md).
 
-5. Skriv inn en **i** i søkeboksen, og velg sorteringsknappen ved å klikke eller trykke på den. Velg den deretter én gang til (eller flere ganger, alt ettersom).
+10. Skriv inn en **i** i søkeboksen, og velg sorteringsknappen ved å klikke eller trykke på den. Velg den deretter én gang til (eller flere ganger, alt ettersom).
 
-    Galleriet viser disse resultatene.
+     Galleriet viser disse resultatene.
 
-    ![Å sortere og filtrere galleriet](./media/get-started-create-from-blank/sort-filter.png)
+     ![Å sortere og filtrere galleriet](./media/get-started-create-from-blank/sort-filter.png)
 
-1. Fjern all tekst fra Søk-boksen.
+11. Fjern all tekst fra Søk-boksen.
 
-6. Øverst på skjermen velger du **[Etikett](controls/control-text-box.md)**-kontrollen, og deretter erstatter du **[Tittel]** med **Vis poster**.
+12. Øverst på skjermen velger du **[Etikett](controls/control-text-box.md)**-kontrollen, og deretter erstatter du **[Tittel]** med **Vis poster**.
 
-    ![Å endre tittellinjen](./media/get-started-create-from-blank/change-title-bar.png)
+     ![Å endre tittellinjen](./media/get-started-create-from-blank/change-title-bar.png)
 
 ## <a name="create-the-change-screen"></a>Slik oppretter man skjermbildet for endring
 1. På **Hjem**-fanen velger du Pil ned ved siden av **Ny skjerm**, og deretter velger du **Skjemaskjerm**.

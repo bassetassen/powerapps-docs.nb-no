@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: 396a2d5325b7b72f3637dba1edddeead49594167
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a0f55de520a180a646e1e73aac423abc74bfed1d
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31832585"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896240"
 ---
 # <a name="datevalue-timevalue-and-datetimevalue-functions-in-powerapps"></a>Funksjonene DateValue, TimeValue og DateTimeValue i PowerApps
 Konverterer en dato, et klokkeslett eller begge deler i en streng til en dato/klokkeslett-verdi.
@@ -61,7 +61,7 @@ Hvis du for eksempel skriver inn **10/11/2014** i en kontroll for tekstinndata m
     Etiketten viser **Lørdag 11. oktober, 2014** hvis datamaskinen er konfigurert med **engelsk** som nasjonal innstilling.
   
     > [!NOTE]
-> Du kan bruke flere alternativer i tillegg til **LongDateTime**, med **DateTimeFormat**-parameteren. Hvis du vil vise en liste over disse alternativene, skriver du inn parameteren i funksjonsboksen, etterfulgt av et utropstegn.
+  > Du kan bruke flere alternativer i tillegg til **LongDateTime**, med **DateTimeFormat**-parameteren. Hvis du vil vise en liste over disse alternativene, skriver du inn parameteren i funksjonsboksen, etterfulgt av et utropstegn.
 * **Text(DateValue(Startdate.Text, "fr"), DateTimeFormat.LongDate)**
   
     Etiketten viser **Mandag 10. november 2014**.
@@ -80,7 +80,7 @@ Hvis du skriver inn **10/11/2014 1:50:24.765 PM** i en kontroll for tekstinndata
     Etiketten viser **Lørdag 11 oktober 2014 1:50:24 PM** hvis datamaskinen er konfigurert med «engelsk» som nasjonal innstilling.
   
     > [!NOTE]
-> Du kan bruke flere alternativer i tillegg til **LongDateTime**, med **DateTimeFormat**-parameteren. Hvis du vil vise en liste over disse alternativene, skriver du inn parameteren i funksjonsboksen, etterfulgt av et utropstegn.
+  > Du kan bruke flere alternativer i tillegg til **LongDateTime**, med **DateTimeFormat**-parameteren. Hvis du vil vise en liste over disse alternativene, skriver du inn parameteren i funksjonsboksen, etterfulgt av et utropstegn.
 * **Text(DateTimeValue(Start.Text, "fr"), DateTimeFormat.LongDateTime)**
   
     Etiketten viser **Mandag 10. november 2014 1:50:24 PM**.

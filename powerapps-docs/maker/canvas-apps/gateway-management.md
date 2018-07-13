@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 10/30/2016
 ms.author: archanan
-ms.openlocfilehash: d51d134878b04f3cb10ff876ef488f1390e4ef30
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 939758c1550f1006f00bd9a386eb4b9cbcd69af0
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31826802"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899920"
 ---
 # <a name="manage-an-on-premises-data-gateway-in-powerapps"></a>Administrer en lokal datagateway i PowerApps
 Installer en lokal datagateway for å overføre data på en rask og sikker måte mellom PowerApps og en datakilde som ikke er i skyen, for eksempel en lokal SQL Server-database eller et lokalt SharePoint-område. Vis alle gatewayer som du har administratortillatelser til, og behandle tillatelser og tilkoblinger for disse gatewayene.
@@ -67,7 +67,7 @@ For tillatelsesnivåene **Kan bruke** og **Kan bruke og dele** må du velge data
 3. Hvis du vil dele en tilkobling, klikker eller trykker du på **Del**, og deretter legger du til eller fjerner brukere.
 
     > [!NOTE]
-> Du kan bare dele enkelte typer tilkoblinger, for eksempel SQL Server. Du finner mer informasjon i [Ressurser for deling av apper](share-app-resources.md).
+   > Du kan bare dele enkelte typer tilkoblinger, for eksempel SQL Server. Du finner mer informasjon i [Ressurser for deling av apper](share-app-resources.md).
 
 Hvis du vil ha mer informasjon om hvordan du administrerer en tilkobling, kan du se [Behandle tilkoblingene dine](add-manage-connections.md).
 

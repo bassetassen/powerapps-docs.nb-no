@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: a63a972e7af3c821d2441519c2a887bbe110faac
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: fece9b928cdbfa955ada994e4cdd637eea3f7ac8
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838951"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899713"
 ---
 # <a name="text-function-in-powerapps"></a>Text-funksjonen i PowerApps
 Formaterer et tall eller en verdi for dato/klokkeslett, til visning som en tekststreng.
@@ -31,6 +31,7 @@ Formaterer et tall eller en verdi for dato/klokkeslett, til visning som en tekst
 Hvis du vil ha mer informasjon, kan du se[Slik arbeider du med datoer og klokkeslett](../show-text-dates-times.md).
 
 ### <a name="predefined-datetime-formats"></a> Forhåndsdefinerte formater for dato/klokkeslett
+
 | Forhåndsdefinert format | Beskrivelse |
 | --- | --- |
 | **DateTimeFormat.LongDate** |År, måned, dag i måneden og dagen i uken. Navnet på måneden og dagen i uken forkortes ikke. |
@@ -46,6 +47,7 @@ Hvis du vil ha mer informasjon, kan du se[Slik arbeider du med datoer og klokkes
 | **DateTimeFormat.UTC** |Verdien for dato/klokkeslett konverteres til UTC basert på tidssonen til den gjeldende brukeren, og blir formatert i henhold til ISO 8601-standarden. |
 
 ### <a name="number-placeholders"></a>Plassholdere for tall
+
 | Plassholder | Beskrivelse |
 | --- | --- |
 | **0** (*null*) |Viser ubetydelige nuller hvis et tall har færre sifre enn det er nuller i formatet. For eksempel kan du bruke formatet **#,00**, hvis du vil vise **8,9** som **8,90**. |
@@ -56,28 +58,29 @@ Hvis du vil ha mer informasjon, kan du se[Slik arbeider du med datoer og klokkes
 Tallet blir avrundet til så mange desimaler som det er plassholdere hvis et tall har flere sifre til høyre for desimaltegnet enn det er plassholdere i formatet. De ekstra sifrene vises hvis det er flere sifre til venstre for desimaltegnet enn det er plassholdere. Tall som er mindre enn 1 starter med et desimaltegn (for eksempel **,47**), hvis formatet bare inneholder nummertegn (#) til venstre for desimaltegnet.
 
 ### <a name="date-and-time-placeholders"></a>Plassholdere for dato og klokkeslett
-| Plassholder | Beskrivelse |
-| --- | --- |
-| **m** |Viser måneden som et tall uten foranstilt null. |
-| **mm** |Viser måneden som et tall med foranstilt null når det passer. |
-| **mmm** |Viser måneden som en forkortelse (**jan.** til **des.**). |
-| **mmmm** |Viser måneden med fullt navn (**januar** til **desember**). |
-| **d** |Viser dagen som et tall uten foranstilt null. |
-| **dd** |Viser dagen som et tall med foranstilt null når det passer. |
-| **ddd** |Viser dagen som en forkortelse (**sø.** til **lø.**). |
-| **dddd** |Viser dagen med fullt navn (**søndag** til **lørdag**). |
-| **yy** |Viser året som et tosifret tall. |
-| **yyyy** |Viser året som et firesifret tall. |
-| **h** |Viser timen som et tall uten foranstilt null. |
-| **hh** |Viser timen som et tall med foranstilt null når det passer. Hvis formatet inneholder **AM** eller **PM**, blir timen vist basert på 12-timers klokken. Ellers vises timen basert på 24-timers klokken. |
-| **m** |Viser minuttet som et tall uten foranstilt null.  > [!NOTE]
-> **m**- eller **mm**-koden må stå umiddelbart etter **h**- eller **hh**-koden, eller rett før **ss**-koden, hvis ikke returnerer **Text** måneden i stedet for minutter. |
-| **mm** |Viser minuttet som et tall med foranstilt null når det passer. > [!NOTE]
-> **m**- eller **mm**-plassholderen må stå umiddelbart etter **h**- eller **hh**-plassholderen, eller umiddelbart foran **ss**-plassholderen. Ellers returnerer **Text** måneden i stedet for minutter. |
-| **s** |Viser sekundet som et tall uten foranstilt null. |
-| **ss** |Viser sekundet som et tall med foranstilt null når det passer. |
-| **f** |Viser deler av sekunder. |
-| **AM/PM**, **am/pm**, **A/P**, **a/p** |Viser timen basert på en 12-timers klokke. **Text** returnerer "AM", "am", "A" eller "a" for klokkeslett fra midnatt til midt på dagen, og "PM", "pm", "P" eller "p" for klokkeslett fra midt på dagen frem til midnatt |
+
+|                                                                                                 Plassholder                                                                                                  |                                                                                                     Beskrivelse                                                                                                     |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                                                                                                    **m**                                                                                                     |                                                                               Viser måneden som et tall uten foranstilt null.                                                                                |
+|                                                                                                    **mm**                                                                                                    |                                                                        Viser måneden som et tall med foranstilt null når det passer.                                                                         |
+|                                                                                                   **mmm**                                                                                                    |                                                                             Viser måneden som en forkortelse (**jan.** til **des.**).                                                                             |
+|                                                                                                   **mmmm**                                                                                                   |                                                                          Viser måneden med fullt navn (**januar** til **desember**).                                                                           |
+|                                                                                                    **d**                                                                                                     |                                                                                Viser dagen som et tall uten foranstilt null.                                                                                 |
+|                                                                                                    **dd**                                                                                                    |                                                                         Viser dagen som et tall med foranstilt null når det passer.                                                                          |
+|                                                                                                   **ddd**                                                                                                    |                                                                              Viser dagen som en forkortelse (**sø.** til **lø.**).                                                                              |
+|                                                                                                   **dddd**                                                                                                   |                                                                            Viser dagen med fullt navn (**søndag** til **lørdag**).                                                                            |
+|                                                                                                    **yy**                                                                                                    |                                                                                      Viser året som et tosifret tall.                                                                                       |
+|                                                                                                   **yyyy**                                                                                                   |                                                                                      Viser året som et firesifret tall.                                                                                      |
+|                                                                                                    **h**                                                                                                     |                                                                                Viser timen som et tall uten foranstilt null.                                                                                |
+|                                                                                                    **hh**                                                                                                    | Viser timen som et tall med foranstilt null når det passer. Hvis formatet inneholder **AM** eller **PM**, blir timen vist basert på 12-timers klokken. Ellers vises timen basert på 24-timers klokken. |
+|                                                                                                    **m**                                                                                                     |                                                                         Viser minuttet som et tall uten foranstilt null.  > [!NOTE]                                                                          |
+|            > **m**- eller **mm**-koden må stå umiddelbart etter **h**- eller **hh**-koden, eller rett før **ss**-koden, hvis ikke returnerer **Text** måneden i stedet for minutter.            |                                                                                                                                                                                                                     |
+|                                                                                                    **mm**                                                                                                    |                                                                   Viser minuttet som et tall med foranstilt null når det passer. > [!NOTE]                                                                   |
+| > **m**- eller **mm**-plassholderen må stå umiddelbart etter **h**- eller **hh**-plassholderen, eller umiddelbart foran **ss**-plassholderen. Ellers returnerer **Text** måneden i stedet for minutter. |                                                                                                                                                                                                                     |
+|                                                                                                    **s**                                                                                                     |                                                                               Viser sekundet som et tall uten foranstilt null.                                                                               |
+|                                                                                                    **ss**                                                                                                    |                                                                        Viser sekundet som et tall med foranstilt null når det passer.                                                                        |
+|                                                                                                    **f**                                                                                                     |                                                                                         Viser deler av sekunder.                                                                                          |
+|                                                                                    **AM/PM**, **am/pm**, **A/P**, **a/p**                                                                                    |               Viser timen basert på en 12-timers klokke. **Text** returnerer "AM", "am", "A" eller "a" for klokkeslett fra midnatt til midt på dagen, og "PM", "pm", "P" eller "p" for klokkeslett fra midt på dagen frem til midnatt                |
 
 ### <a name="literal-placeholders"></a>Litterale plassholdere
 Du kan inkludere hvilke som helst av disse tegnene i formatstrengen.  De vil vises i resultatet av **Text** i nåværende tilstand. Ekstra tegn er reservert for fremtidige plassholdere, så du bør ikke bruke dem.
@@ -148,6 +151,7 @@ Oversatte strenger for måned, ukedag, og angivelser av AM/PM samt en passende g
 Brukeren som kjører disse formlene befinner seg i USA og har valgt engelsk som språket sitt.  **Language**-funksjonen returnerer "en-US".
 
 ### <a name="number"></a>Tall
+
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **Text(&nbsp;1234.59,&nbsp;"####.#"&nbsp;)** |Formaterer tallet med én desimal. |"1234.6" |
@@ -169,6 +173,7 @@ Brukeren som kjører disse formlene befinner seg i USA og har valgt engelsk som 
 | **Text( Now(), "d-mmm-yy" )** |Formateres ved hjelp av plassholdertegn: <ul><li>**d** for en ensifret eller tosifret dag i måneden<li>**-** kopiert til resultatet som et litteralt tegn<li>**mmm** for en forkortelse av måneden på tre bokstaver<li>**-** kopiert til resultatet som et annet litteralt tegn<li>**yy** for en tosifret forkortelse for året</ul> |"23-Nov-15" |
 
 ### <a name="global-apps"></a>Globale apper
+
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **Text( 1234567.89, "[$-en-US]$ #,###" )** |Tolkes **,** som et skilletegn for grupperinger, plassert for hvert tredje tegn og **$** som det gjeldende valutasymbolet. Siden ingen desimaler skal vises, er verdien avrundet oppover til neste heltall. **[$-en-US]** er valgfritt i dette tilfellet, da dette er standard. |"$ 1,234,568" |

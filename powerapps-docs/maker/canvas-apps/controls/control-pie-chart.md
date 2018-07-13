@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: bda839765d797bf87590f037221b116bad781657
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: fe61a36278ce4f5fe2fb5ff16bdc0a86dc911e5e
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31833681"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899115"
 ---
 # <a name="pie-chart-control-in-powerapps"></a>Sektordiagram-kontrollen i PowerApps
 En kontroll som viser relative verdier sammenlignet med hverandre.
@@ -104,7 +104,7 @@ Det må være tilstrekkelig fargekontrast mellom:
 * Det må være en **[etikett](control-text-box.md)** rett før diagramgrafikken, som skal fungere som tittelen.
 
     > [!NOTE]
-> Diagramgrafikk og **Forklaring** er skjult for brukere av skjermleseren. Som et alternativ presenteres en tabellform av dataene for dem. De kan også se gjennom knapper som velger dataene i diagrammet.
+  > Diagramgrafikk og **Forklaring** er skjult for brukere av skjermleseren. Som et alternativ presenteres en tabellform av dataene for dem. De kan også se gjennom knapper som velger dataene i diagrammet.
 
 ### <a name="low-vision-support"></a>Støtte for nedsatt syn
 * Det må foreligge en **Forklaring**.
@@ -115,4 +115,4 @@ Det må være tilstrekkelig fargekontrast mellom:
 * **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
 
     > [!NOTE]
-> Når tastaturbrukere navigerer til diagrammet, kan de gå gjennom knappene som velger dataene i diagrammet.
+  > Når tastaturbrukere navigerer til diagrammet, kan de gå gjennom knappene som velger dataene i diagrammet.

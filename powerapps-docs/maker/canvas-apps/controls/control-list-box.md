@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 24fc5523b2f1d3cced7cdf4af8c30c65d28757a2
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: e43d786cf8eac8bb4ca6b13c953281614559c132
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31837876"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899414"
 ---
 # <a name="list-box-control-in-powerapps"></a>Liste-kontrollen i PowerApps
 En liste der brukeren kan velge ett eller flere elementer.
@@ -55,7 +55,7 @@ En liste der brukeren kan velge ett eller flere elementer.
 
 **[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
-**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+**[FocusedBorderThickness](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
@@ -170,4 +170,4 @@ Dette er i tillegg til [kravene for standard fargekontrast](../accessible-apps-c
 * Fokusindikatorer må være godt synlige. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
 
     > [!NOTE]
-> TAB navigerer til eller bort fra **listeboksen**. Piltastene navigerer innholdet i **listeboksen**.
+  > TAB navigerer til eller bort fra **listeboksen**. Piltastene navigerer innholdet i **listeboksen**.

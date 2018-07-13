@@ -7,12 +7,12 @@ ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
 ms.author: jimh
-ms.openlocfilehash: f648d68a19c646a2a69a8eebca85ac9e33af0686
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 857c080ff3b8205b9c74099954cd5156697deb77
+ms.sourcegitcommit: 26932abc6fcdc5e6723b64b506532bb182ab3f8d
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552856"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37026215"
 ---
 # <a name="quickstart-create-an-environment"></a>Hurtiginnføring: Å opprette et miljø
 Et miljø er et område der du kan lagre, administrere og dele organisasjonens forretningsdata, apper og flyter. De fungerer også som beholdere til å skille apper som kan ha ulike roller, sikkerhetskrav eller målgrupper. Ett enkelt standardmiljø blir automatisk opprettet av PowerApps for hver leietaker og deles av alle brukerne i denne tenanten.
@@ -37,8 +37,6 @@ Logg deg på administrasjonssenteret på [https://admin.powerapps.com](https://a
 
     ![Fil og Del](./media/create-environment/new-environment-dialog.png)
 3. Når miljøet er opprettet, mottar du en bekreftelsesmelding i dialogboksen, og du blir bedt om å opprette en database. Klikk eller trykk på **Opprett database** for å få tilgang til Common Data Service.
-
-    **OBS!** Du kan for øyeblikket bare opprette en database i den lokale regionen til Azure Active Directory-tenanten.
 
     ![Fil og Del](./media/create-environment/create-database-dialog.png)
 4. Velg valutaen og språket for dataene som er lagret i databasen. Du kan ikke endre valutaen eller språket når databasen er opprettet. Når du er ferdig, klikker eller trykker du på **Opprett database**.

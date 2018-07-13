@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 05/21/2018
 ms.author: clwesene
-ms.openlocfilehash: d8323eb103751a1be78aeea0093b9d6651ddc3e2
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: bb0bec7cf459eb9084aea4db7264350b7913e578
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34445870"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898763"
 ---
 # <a name="create-a-power-bi-report"></a>Opprette en Power BI-rapport
 Common Data Service for apper lar deg koble deg direkte til dataene med Power BI Desktop for å opprette rapporter og publisere dem til Power BI. Fra Power BI kan rapporter brukes i instrumentbord, deles med andre brukere og fås tilgang til på tvers av plattformer i Power BI-apper for mobilenheter.
@@ -57,11 +57,11 @@ Hvis du vil bruke Power BI med Common Data Service for apper, trenger du følgen
 
 4. Navigatøren viser deg alle enheter som er tilgjengelige for ditt miljø, gruppert i tre mapper. Utvid **Common Data Model**-mappen.
 
-    * Common Data Model – dette er standardenheter som er ofte brukt og som er tilgjengelig i alle miljøer som en del av Common Data Model.
-    * Egendefinerte enheter – er enheter som du har opprettet eller importert i miljøet ditt.
-    * System – inneholder alle enheter i miljøet, inkludert Common Data Model og Egendefinerte enheter.
+   * Common Data Model – dette er standardenheter som er ofte brukt og som er tilgjengelig i alle miljøer som en del av Common Data Model.
+   * Egendefinerte enheter – er enheter som du har opprettet eller importert i miljøet ditt.
+   * System – inneholder alle enheter i miljøet, inkludert Common Data Model og Egendefinerte enheter.
 
-    ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport4.png "Power BI Desktop")
+     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport4.png "Power BI Desktop")
 
 5. Velg **Konto**-enheten for å se en forhåndsvisning av dataene i den høyre ruten, og klikk på **Last inn**.
 

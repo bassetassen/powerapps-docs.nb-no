@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 08/15/2017
 ms.author: archanan
-ms.openlocfilehash: 87f1895801ec7d1121b042d6baf097b79801f019
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: f1d9b6463cc597d13fa1b9c1389fbfcc6d5b5ded
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31830240"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896286"
 ---
 # <a name="delegable-data-sources"></a>Datakilder som kan delegeres
 Som beskrevet i detalj i artikkelen [Forstå delegering](delegation-overview.md), handler delegering om at PowerApps delegerer behandlingen av data til datakilden i stedet for å flytte data til appen for å behandles lokalt.
@@ -46,6 +46,7 @@ Dette dokumentet viser gjeldende status for støttet delegering for hver enkelt 
 Denne listen over datakilder og funksjoner og predikater som kan delegeres, oppdateres regelmessig for å gjenspeile gjeldende status for støtte for delegering i PowerApps.
 
 ### <a name="top-level-delegable-functions"></a>Funksjoner på øverste nivå som kan delegeres
+
 | &nbsp; | Common Data Service | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 | --- | --- | --- | --- | --- | --- |
 | Gjennomsnitt |Nei |Nei |Ja |Nei |Nei |
@@ -61,6 +62,7 @@ Denne listen over datakilder og funksjoner og predikater som kan delegeres, oppd
 <sup>1</sup>Bare for strengfelt
 
 ### <a name="filter-and-lookup-delegable-predicates"></a>Filtrer og slå opp for predikater som kan delegeres
+
 | &nbsp; | Common Data Service | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 | --- | --- | --- | --- | --- | --- |
 | Ikke |Ja |Nei |Ja |Ja |Ja |

@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: b47e1b36ec86b2bf4ee2167b2599d583b97a0fbc
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 290f4447d7a5793677cfa426edac85963363a9d1
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31837968"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896654"
 ---
 # <a name="groupby-and-ungroup-functions-in-powerapps"></a>Funksjonene GroupBy og Ungroup i PowerApps
 Grupperer og deler opp [poster](../working-with-tables.md#records) av en [tabell](../working-with-tables.md).
@@ -51,7 +51,7 @@ En tabell er en verdi i PowerApps, akkurat som en streng eller et tall. Du kan a
 * *GroupColumnName* – obligatorisk.  Kolonnenavn for lagring av postdata er ikke i *ColumnName(s)*.
   
     > [!NOTE]
-> Du må spesifisere hvert mellomrom med **«\_x0020\_»** for SharePoint- og Excel-datakilder som inneholder kolonnenavn med mellomrom. Du kan for eksempel angi **«ColumnName»** som **«Column_x0020_Name»**.
+  > Du må spesifisere hvert mellomrom med **«\_x0020\_»** for SharePoint- og Excel-datakilder som inneholder kolonnenavn med mellomrom. Du kan for eksempel angi **«ColumnName»** som **«Column_x0020_Name»**.
 
 **Ungroup**( *Table*, *GroupColumnName* )
 
@@ -59,7 +59,7 @@ En tabell er en verdi i PowerApps, akkurat som en streng eller et tall. Du kan a
 * *GroupColumnName* – obligatorisk. Kolonnen som inneholder postdata-oppsettet med  **GroupBy**-funksjonen.
   
     > [!NOTE]
-> Du må spesifisere hvert mellomrom med **«\_x0020\_»** for SharePoint- og Excel-datakilder som inneholder kolonnenavn med mellomrom. Du kan for eksempel angi **«ColumnName»** som **«Column_x0020_Name»**.
+  > Du må spesifisere hvert mellomrom med **«\_x0020\_»** for SharePoint- og Excel-datakilder som inneholder kolonnenavn med mellomrom. Du kan for eksempel angi **"ColumnName"** som **"Column_x0020_Name"**.
 
 ## <a name="examples"></a>Eksempler
 ### <a name="create-a-collection"></a>Opprett en samling

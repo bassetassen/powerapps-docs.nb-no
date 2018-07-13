@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 05/23/2017
 ms.author: gregli
-ms.openlocfilehash: eaf538c1189dffd8fb2169f3eda3f525bcf623de
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 26991baa1feb1ef4821beaf791454def21960d4f
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31832032"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896631"
 ---
 # <a name="dateadd-datediff-and-timezoneoffset-functions-in-powerapps"></a>Funksjonene DateAdd, DateDiff og TimeZoneOffset i PowerApps
 Legger til eller finner differansen i dato/klokkeslett-verdiene og konverterer mellom lokal tid og UTC.
@@ -56,6 +56,7 @@ Se også [Slik arbeider du med datoer og klokkeslett](../show-text-dates-times.m
 I alle disse eksemplene antas det at gjeldende dato og klokkeslett er **15. juli 2013 kl. 13:02**.
 
 ### <a name="simple-dateadd"></a>Enkel DateAdd
+
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **Text( DateAdd( Now(), 3 ),<br>"dd-mm-yyyy hh:mm" )** |Legger til tre dager (standardenheter) til gjeldende dato og klokkeslett. |"18-07-2013 13:02" |
@@ -64,6 +65,7 @@ I alle disse eksemplene antas det at gjeldende dato og klokkeslett er **15. juli
 | **Text( DateAdd( Now(), &#8209;30, Minutes ),<br>"dd-mm-yyyy hh:mm" )** |Trekker fra 30 minutter fra gjeldende dato og klokkeslett. |"15-07-2013 12:32" |
 
 ### <a name="simple-datediff"></a>Enkel DateDiff
+
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **DateDiff( Now(), DateValue("1/1/2014") )** |Returnerer differansen mellom de to enhetene i standardenheten **Days** |170 |

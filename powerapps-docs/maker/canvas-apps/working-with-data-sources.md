@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 03/08/2017
 ms.author: gregli
-ms.openlocfilehash: 5e9b9ec980e6dd4aeacfef42b40fe7f52c19d558
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 4cdc1116de5882b69814bd91b4006debb8c5f5cf
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838744"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899345"
 ---
 # <a name="understand-data-sources-in-powerapps"></a>Å forstå datakilder i PowerApps
 De fleste PowerApps-apper bruker ekstern informasjon som er lagret i skytjenester, kalt **Datakilder**. Et vanlig eksempel er en tabell i en Excel-fil som er lagret i OneDrive for Business. Appene får tilgang til disse datakildene ved hjelp av **Tilkoblinger**.
@@ -54,7 +54,7 @@ Du kan bruke tabelldatakilder på samme måte som du bruker en intern PowerApps-
 * Datakilden har de samme kolonnenavnene og datatypene som den underliggende tabellen i tilkoblingen.
   
     > [!NOTE]
-> PowerApps erstatter mellomrommene med **"\_x0020\_"** for SharePoint- og Excel-datakilder som inneholder kolonnenavn med mellomrom. **Kolonnenavn** i SharePoint eller Excel vil for eksempel vises som **"Column_x0020_Name"** i PowerApps når de vises i dataoppsettet, eller når de brukes i en formel.
+  > PowerApps erstatter mellomrommene med **"\_x0020\_"** for SharePoint- og Excel-datakilder som inneholder kolonnenavn med mellomrom. **Kolonnenavn** i SharePoint eller Excel vil for eksempel vises som **"Column_x0020_Name"** i PowerApps når de vises i dataoppsettet, eller når de brukes i en formel.
 * Datakilden lastes automatisk inn fra tjenesten når appen lastes inn.  Du kan fremtvinge oppdatering av dataene ved hjelp av **[Refresh](functions/function-refresh.md)**-funksjonen.
 * Når brukere kjører en app, kan de opprette, endre og slette poster, og skyve disse endringene tilbake til den underliggende tabellen i tjenesten.
   * Poster kan opprettes med funksjonene **[Patch](functions/function-patch.md)** og **[Collect](functions/function-clear-collect-clearcollect.md)**.  

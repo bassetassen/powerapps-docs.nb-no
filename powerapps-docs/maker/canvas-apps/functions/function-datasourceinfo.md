@@ -7,12 +7,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 11/11/2015
 ms.author: gregli
-ms.openlocfilehash: 5f156e5f7d0acb48090ac921aa92f31f3a6d20ea
-ms.sourcegitcommit: 222df368f1f35e9357b0b1adf0e69d7206d8126e
+ms.openlocfilehash: 67354776e7af05fb619033462c52665ce3aa046c
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298473"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898632"
 ---
 # <a name="datasourceinfo-function-in-powerapps"></a>DataSourceInfo-funksjonen i PowerApps
 Returnerer informasjon om en [datakilde](../working-with-data-sources.md).
@@ -59,7 +59,7 @@ Du kan bruke **DataSourceInfo** til å få informasjon om en bestemt kolonne for
 * *ColumnName* – valgfritt. For informasjon på kolonnenivå – kolonnenavnet som en streng. Kolonnen **Telefon** ville for eksempel ha blitt sendt som **"Telefon"**, inklusive doble anførselstegn. *ColumnName*-argumentet kan ikke brukes for informasjon på datakilde-nivå.
   
     > [!NOTE]
-> For SharePoint og Excel-datakilder som inneholder kolonnenavn med mellomrom, må du spesifisere hvert mellomrom med **"\_x0020\_"**. Du kan for eksempel angi **"ColumnName"** som **"Column_x0020_Name"**.
+  > For SharePoint og Excel-datakilder som inneholder kolonnenavn med mellomrom, må du spesifisere hvert mellomrom med **"\_x0020\_"**. Du kan for eksempel angi **"ColumnName"** som **"Column_x0020_Name"**.
 
 ## <a name="examples"></a>Eksempler
 Eksemplene i denne delen bruker denne datakilden, kalt **IceCream**:

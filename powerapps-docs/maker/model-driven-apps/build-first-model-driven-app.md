@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 04/18/2018
 ms.author: matp
-ms.openlocfilehash: 3d7aa26696adb187906c9c793c546abd1b97764f
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: c1c03202cb95500bb019a3c23a68e0e8d5418cc9
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34583490"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898402"
 ---
 # <a name="quickstart-build-your-first-model-driven-app-from-scratch"></a>Hurtigstart: Bygg din første modelldrevne app fra grunnen av
 Utforming av modelldrevne apper er en komponentfokusert tilnærming til apputvikling. I denne hurtigveiledningen oppretter du en modelldrevet app på en forenklet måte ved å bruke en av standardenhetene som er tilgjengelige i [!INCLUDE [powerapps](../../includes/powerapps.md)]-miljøet ditt. 
@@ -27,43 +27,43 @@ Logg deg på [PowerApps](https://web.powerapps.com/). Hvis du ikke allerede har 
 
 ## <a name="create-your-model-driven-app"></a>Lag den modelldrevne appen
 
-1.  Velg miljøet du vil bruke, eller gå til [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) for å opprette et nytt.
-2.  I navigasjonsruten til venstre velger du **Model-driven** (Modelldrevet). 
+1. Velg miljøet du vil bruke, eller gå til [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) for å opprette et nytt.
+2. I navigasjonsruten til venstre velger du **Model-driven** (Modelldrevet). 
 
-    ![Modelldrevet](media/build-first-model-driven-app/choose-design-mode.png)
+   ![Modelldrevet](media/build-first-model-driven-app/choose-design-mode.png)
 
-  > [!IMPORTANT]
-  > Hvis den **modelldrevne** utformingsmodusen ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment).   
+   > [!IMPORTANT]
+   > Hvis den **modelldrevne** utformingsmodusen ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment).   
 
 3. I ruten til venstre velger du **Apps** (Apper) og deretter **Create an app** (Opprett en app).
 
-4.  På siden **Create a New App** (Opprett en ny app) skriver du inn følgende informasjon og velger deretter **Done** (Fullført): 
-  - **Name** (Navn): Skriv inn et navn på appen, for eksempel *Minførsteapp*. 
-  - **Description** (Beskrivelse): Skriv inn en kort beskrivelse av hva appen er eller gjør, for eksempel *Dette er min første app*.
-Du finner informasjon om ytterligere appegenskaper i [Opprette en app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).
+4. På siden **Create a New App** (Opprett en ny app) skriver du inn følgende informasjon og velger deretter **Done** (Fullført): 
+   - **Name** (Navn): Skriv inn et navn på appen, for eksempel *Minførsteapp*. 
+   - **Description** (Beskrivelse): Skriv inn en kort beskrivelse av hva appen er eller gjør, for eksempel *Dette er min første app*.
+   Du finner informasjon om ytterligere appegenskaper i [Opprette en app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).
  
-    ![Opprett-ny-app](media/build-first-model-driven-app/create-new-app.png)
+   ![Opprett-ny-app](media/build-first-model-driven-app/create-new-app.png)
 
 ## <a name="add-components-to-your-app"></a>Legg til komponenter i appen din
 Fra verktøyet for apputforming kan du legge til komponenter i appen.
-1.  Velg pilen for **Open the Site Map Designer** (Åpne verktøy for utforming av områdekart) for å åpne verktøyet for utforming av områdekart. 
+1. Velg pilen for **Open the Site Map Designer** (Åpne verktøy for utforming av områdekart) for å åpne verktøyet for utforming av områdekart. 
 
-    ![Opprett-nytt-områdekart](media/build-first-model-driven-app/new-sitemap.png)
+   ![Opprett-nytt-områdekart](media/build-first-model-driven-app/new-sitemap.png)
 
-2.  I verktøyet for utforming av områdekart velger du **New Subarea** (Nytt underområde). I ruten til høyre velger du fanen **Properties** (Egenskaper) og deretter følgende egenskaper.
-  - **Type** (Type): Entity (Enhet)
-  - **Entity** (Enhet): Account (Konto)
+2. I verktøyet for utforming av områdekart velger du **New Subarea** (Nytt underområde). I ruten til høyre velger du fanen **Properties** (Egenskaper) og deretter følgende egenskaper.
+   - **Type** (Type): Entity (Enhet)
+   - **Entity** (Enhet): Account (Konto)
 
-    ![Legg til komponenter i områdekartet](media/build-first-model-driven-app/sitemap.png)
+   ![Legg til komponenter i områdekartet](media/build-first-model-driven-app/sitemap.png)
 
-3.  Velg **Save And Close** (Lagre og lukk).
-4.  På apputformingslerretet velger du **Forms** (Skjemaer). Under gruppen **Main Forms** (Hovedskjemaer) i ruten til høyre velger du deretter skjemaet **Account** (Konto).
+3. Velg **Save And Close** (Lagre og lukk).
+4. På apputformingslerretet velger du **Forms** (Skjemaer). Under gruppen **Main Forms** (Hovedskjemaer) i ruten til høyre velger du deretter skjemaet **Account** (Konto).
 
-    ![Hovedskjema for konto](media/build-first-model-driven-app/main-form.png)
+   ![Hovedskjema for konto](media/build-first-model-driven-app/main-form.png)
 
-5.  På apputformingslerretet velger du **Views** (Visninger). Deretter velger du visningene **Active Accounts** (Aktive kontoer), **All Accounts** (Alle kontoer) og **My Active Accounts** (Mine aktive kontoer).
+5. På apputformingslerretet velger du **Views** (Visninger). Deretter velger du visningene **Active Accounts** (Aktive kontoer), **All Accounts** (Alle kontoer) og **My Active Accounts** (Mine aktive kontoer).
 
-    ![Kontovisninger](media/build-first-model-driven-app/views.png)
+   ![Kontovisninger](media/build-first-model-driven-app/views.png)
 
 6. På apputformingslerretet velger du **Charts** (Diagrammer). Deretter velger du diagrammet **Accounts by Industry** (Kontoer etter bransje).
 7. På verktøylinjen i apputformingen velger du **Save** (Lagre).

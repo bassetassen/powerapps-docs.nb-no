@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 08/08/2017
 ms.author: jamesol
-ms.openlocfilehash: 0cf09528f83b2729e50139a3b5f9b5b9c00b6119
-ms.sourcegitcommit: 045c96df42405c60c7675edbadac93455270a021
+ms.openlocfilehash: 1ab3b17d03b2fd21fceb0675ca55d33302f67d31
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34822562"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897764"
 ---
 # <a name="send-a-push-notification-in-powerapps"></a>Send et push-varsel i PowerApps
 Push-varsler brukes hovedsakelig i mobilapper for forbruker- og forretningsscenarioer for å engasjere brukere og hjelpe dem med å prioritere viktige oppgaver. I PowerApps kan du sende varsler ved å bruke PowerApps Notification-koblingen. Du kan sende opprinnelige push-varsler til alle apper du lager i PowerApps. Vi har planer om å legge til flere typer varsler i fremtiden.
@@ -41,19 +41,19 @@ Legg til en PowerApps Notification-tilkobling i en app der du har **Bidragsyter*
 > På det nåværende tidspunktet kan du sende et push-varsel du utløser fra en flyt til kun én bruker eller sikkerhetsgruppe om gangen.
 
 1. Opprett en utløser i [Microsoft Flow](https://flow.microsoft.com), som angir når push-varselet skal sendes.
-   
+
     Du ønsker for eksempel kanskje å sende et varsel når en post legges til i **Saks**-enheten i Common Data Service.
-   
+
     ![Skjermbilde av oppretting av en flyt med en Common Data Service-utløser](./media/add-notifications/pic4-step1-flowupdated.png)
 2. Opprett en handling for flyten ved å bruke **PowerApps Notification**-koblingen, og angi **App-ID** for appen du vil sende varsler til.
-   
+
     Du kan også gi nytt navn til tilkoblingen for å gjenspeile scenarioet.
-   
+
     ![Skjermbilde av oppretting av en kobling til PowerApps som vil motta disse push-varslene](./media/add-notifications/pic5-step2-create-connection.jpg)
 3. (valgfritt) Send parametre til appen når den åpnes (etter at brukeren har trykket på push-varselet).
-   
+
     I eksemplet vårt sender vi feltene **Saks-ID** og **Opprinnelig eier** for den valgte kontakten.
-   
+
     ![Skjermbilde av sending av valgfrie parametre til push-varselet](./media/add-notifications/pic6-step3-configure-notif.jpg)
 
 ## <a name="send-a-notification-from-an-app"></a>Send et varsel fra en app
@@ -61,20 +61,20 @@ Du kan sende et push-varsel fra en app til en annen, eller til den samme appen.
 
 1. Åpne [PowerApps](https://web.powerapps.com/), og gå til appen du ønsker å sende push-varsler til.
 2. Kopier **App-ID** for denne appen under fanen**Detaljer**.
-   
+
     ![Hent App-ID](./media/add-notifications/grab-id.png)
 3. Under fanen **Tilkoblinger** oppretter du en tilkobling til PowerApps Notifications-koblingen og limer inn app-ID-en du kopierte i forrige trinn.
-   
+
     ![Opprett tilkobling](./media/add-notifications/create-connection.png)
 4. Legg til tilkoblingen i utløserappen.
-   
+
     I eksemplet vårt bruker vi den samme appen som utløserapp. Brukeren som overfører saken på nytt, utløser også et push-varsel til den nye sakseieren.
-   
+
     ![Legg til en tilkobling](./media/add-notifications/add-connection.png)
 5. Kall opp **SendPushNotification**-metoden fra push-varseltilkoblingen.
-   
+
     I eksemplet vårt utløser vi dette varselet ved å bruke **OnSuccess**-egenskapen i et skjema.
-   
+
     ![PowerApps-formel](./media/add-notifications/powerapps-function.png)
 
 ## <a name="load-a-specific-page-and-context-when-a-user-taps-the-notification"></a>Last inn en bestemt side og kontekst når brukeren trykker på varselet
@@ -91,16 +91,18 @@ Du kan for eksempel angi at appen skal åpne siden **Saksdetaljer** når du åpn
 
 > [!TIP]
 > Det er en god ide å opprette en unik førsteside for varselet i appen:
-
->1. Opprett en tom side som appen ikke allerede åpner, legg til en **Tekstinndata**-kontroll og angi kontrollens **timer.Duration**-verdi.
->2. Når du oppretter appen, angir du en verdi for tidtakeren som ikke er null. Når du er klar til å publisere appen, angir du verdien til **0** for umiddelbart å utløse tidtakeren.
+> 
+> 1. Opprett en tom side som appen ikke allerede åpner, legg til en **Tekstinndata**-kontroll og angi kontrollens **timer.Duration**-verdi.
+> 2. Når du oppretter appen, angir du en verdi for tidtakeren som ikke er null. Når du er klar til å publisere appen, angir du verdien til **0** for umiddelbart å utløse tidtakeren.
 
 ## <a name="syntax"></a>Syntaks
+
 | Navn | Beskrivelse |
 | --- | --- |
 | SendPushNotification |Sender et push-varsel til appen som er angitt i tilkoblingsinnstillingene for varselet. |
 
 ### <a name="parameters"></a>Parametere
+
 | Navn | Type | Beskrivelse |
 | --- | --- | --- |
 | mottakere |Strengmatrise, obligatorisk |En liste over: <ul> <li>e-postadresser for brukere eller sikkerhetsgrupper</li> <li>objekt-ID-er for brukere eller sikkerhetsgrupper i Azure Active Directory</li></ul> |

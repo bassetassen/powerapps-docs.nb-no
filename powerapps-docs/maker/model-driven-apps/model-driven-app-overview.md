@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 03/21/2018
 ms.author: matp
-ms.openlocfilehash: 76571a53c95661d853b7fb326e3c1087a6f432c4
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: eceaf1886bf77b85d6d6b3faae3f32428223cb7e
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330932"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899506"
 ---
 # <a name="overview-of-building-a-model-driven-app"></a>Oversikt over hvordan du bygger en modelldrevet app
 
@@ -30,7 +30,7 @@ Utforming av modelldrevne apper har følgende fordeler:
 - du kan lage komplekse, responsive apper med liknende brukergrensesnitt på tvers av mange enheter, fra stasjonær PC til mobile enheter
 - du kan utforme egenskaper som er lignende de som er tilgjengelige i Dynamics 365-plattformen for kundeengasjement 
 - appen kan distribueres som en løsning
- 
+
 ## <a name="the-approach-to-model-driven-app-making"></a>Tilnærming for laging av modelldrevne apper
 Ved laging av modelldrevne apper finnes det i hovedsak tre viktige fokusområder.
 
@@ -54,6 +54,7 @@ En godt utformet modelldrevet app består av flere komponenter som utformeren ve
 
 ### <a name="data"></a>Data
 Disse komponentene bestemmer hvilke data appen baseres på.
+
 
 
 |Komponent  |Beskrivelse  |Utforming  |

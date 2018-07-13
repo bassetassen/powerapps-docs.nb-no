@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 6d4f8f0393b7cb2d6471f159193327f07e648357
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: c175b1b35d063f4e20321c494d5472afa2776990
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31836911"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899575"
 ---
 # <a name="timer-control-in-powerapps"></a>Tidtaker-kontrollen i PowerApps
 En kontroll som kan finne ut hvordan appen responderer etter en viss tid har passert.
@@ -61,7 +61,7 @@ Vær oppmerksom på at du må forhåndsvise appen for at tidtakeren kan kjøre i
 
 **[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
-**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+**[FocusedBorderThickness](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
@@ -165,6 +165,6 @@ Noen scenarioer er fritatt fra disse kravene. Finn ut mer i [WCAG 2.0-retningsli
 * Ikke bruk **[Tekst](properties-core.md)** for tidssensitiv og viktig informasjon. Brukere av skjermleseren vil ikke bli varslet om endringer i **[Tekst](properties-core.md)**.
 
     > [!NOTE]
-> Skjermlesere leser opp hvor lang tid som er brukt hvert 5. sekund. Tidtakeren **[Tekst](properties-core.md)** vil imidlertid ikke bli inkludert i opplesingen.
+  > Skjermlesere leser opp hvor lang tid som er brukt hvert 5. sekund. Tidtakeren **[Tekst](properties-core.md)** vil imidlertid ikke bli inkludert i opplesingen.
 
 * Vurder å legge til en **[Etikett](control-text-box.md)** for å vise hvor lang tid som er brukt. Bruk tidtakerens **[Tekst](properties-core.md)** for å instruere brukeren om å starte eller stoppe tidtakeren.

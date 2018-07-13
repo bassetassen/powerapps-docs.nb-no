@@ -12,12 +12,12 @@ ms.topic: sample
 ms.component: canvas
 ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: 4601cabae10f3373f8d2ef18190d71af536811b5
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: e7ed897af79831f9d8db7ae6da6719b3e6977807
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34470047"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896976"
 ---
 # <a name="install-and-configure-the-help-desk-powerapps-sample"></a>Å installere og konfigurere eksemplet for teknisk støtte for PowerApps
 
@@ -173,27 +173,27 @@ Denne listen lagrer forespørsler til teknisk støtte.
 
 ## <a name="import-the-help-desk-powerapp"></a>Å importere Teknisk støtte for PowerApp
 
-1.  Gå til https://web.powerapps.com i en nettleser.
-2.  Logg deg på ved å angi samme legitimasjon som du brukte til å registrere deg.
-3.  I menyen til venstre velger du **Apper**. 
-4.  Klikk på **importer pakke (forhåndsvisning)**.
+1. Gå til https://web.powerapps.com i en nettleser.
+2. Logg deg på ved å angi samme legitimasjon som du brukte til å registrere deg.
+3. I menyen til venstre velger du **Apper**. 
+4. Klikk på **importer pakke (forhåndsvisning)**.
     
-    ![Et skjermbilde for Importer pakke](./media/help-desk-install/import-package.png)
+   ![Et skjermbilde for Importer pakke](./media/help-desk-install/import-package.png)
 
-5.  Klikk på **Last opp**-knappen, og velg den PowerApp-pakken som du lastet ned i forrige trinn.
-6.  For ressurstypene **App** og **Flyt** kan du angi **IMPORT AV OPPSETT** til **Opprett som ny**.
-7.  Angi **IMPORT AV OPPSETT** til **Velg under import** for **SharePoint-** og **Outlook**-tilkoblinger.
+5. Klikk på **Last opp**-knappen, og velg den PowerApp-pakken som du lastet ned i forrige trinn.
+6. For ressurstypene **App** og **Flyt** kan du angi **IMPORT AV OPPSETT** til **Opprett som ny**.
+7. Angi **IMPORT AV OPPSETT** til **Velg under import** for **SharePoint-** og **Outlook**-tilkoblinger.
     
-    ![Å importere Innstillinger-skjermen](./media/help-desk-install/import-settings.png)
+   ![Å importere Innstillinger-skjermen](./media/help-desk-install/import-settings.png)
 
-8.  Klikk på det **røde ikonet** for å velge **SharePoint-tilkoblingen**.
-9.  Klikk på elementet med brukernavnet ditt i listen med tilkoblinger.
+8. Klikk på det **røde ikonet** for å velge **SharePoint-tilkoblingen**.
+9. Klikk på elementet med brukernavnet ditt i listen med tilkoblinger.
 
-    ![Å importere Innstillinger-skjermen](./media/help-desk-install/import-settings-sharepoint.png)
+   ![Å importere Innstillinger-skjermen](./media/help-desk-install/import-settings-sharepoint.png)
 
 10. Klikk på **Lagre**.
-11.  Klikk på det **røde ikonet** for å velge **Office 365 Outlook-tilkoblingen**.
-12.  Klikk på elementet med brukernavnet ditt i listen med tilkoblinger.
+11. Klikk på det **røde ikonet** for å velge **Office 365 Outlook-tilkoblingen**.
+12. Klikk på elementet med brukernavnet ditt i listen med tilkoblinger.
 
     ![Å importere Innstillinger-skjermen](./media/help-desk-install/import-settings-office365outlook.png)
 
@@ -241,13 +241,13 @@ Denne listen lagrer forespørsler til teknisk støtte.
 1. Velg **LoginScreen**.
 2. Velg **OnStart** i rullegardinlisten.
 3. Utvid formelvinduet, og finn **AdminList**-samlingen.
-4. Erstatt **user@microsoft.com** med kundestøtteadministrator(er).
+4. Erstatt <strong>user@microsoft.com</strong> med kundestøtteadministrator(er).
 
     ![Å oppdatere administratorliste](./media/help-desk-install/Change-admin.png)
     
-    > [!TIP] 
-    > Hvis du har mer enn én administrator, bruker du semikolon til å avgrense administratorer.  Eksempel: "admin1@microsoft.com","admin2@microsoft.com".
-    > For å sikre at adressene i AdminList samsvarer med formatet PowerApps forventer, velger du Vis > Variabler > Global > MyProfile og ser på e-postkolonnen for å vise det forventede e-postformatet.
+   > [!TIP]
+   > Hvis du har mer enn én administrator, bruker du semikolon til å avgrense administratorer.  Eksempel: "admin1@microsoft.com","admin2@microsoft.com".
+   > For å sikre at adressene i AdminList samsvarer med formatet PowerApps forventer, velger du Vis > Variabler > Global > MyProfile og ser på e-postkolonnen for å vise det forventede e-postformatet.
 
 5. Klikk på **Fil**.
 6. Klikk på **Lagre**.

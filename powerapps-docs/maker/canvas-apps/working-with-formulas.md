@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: e4c2f78fb00e726bd0b0bf3cde4fe4f42d40dddc
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ed4e83fab0cf5a08c4b274863f11070471fc44a4
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330886"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898726"
 ---
 # <a name="get-started-with-formulas"></a>Å komme i gang med formler
 Konfigurer appen din med formler som ikke bare beregner verdier og utfører andre oppgaver (som de gjør i Excel) men som også responderer på inndata fra brukeren (som kreves av en app).
@@ -70,7 +70,7 @@ I Excel kan du angi en bestemt type data, for eksempel tallet **42** eller uttry
     I Excel kan du vise et tall, for eksempel **42**, ved å skrive det inn i en celle eller ved å skrive inn en formel som løses til dette nummeret, for eksempel slik: **=SUM(30,12)**. Du kan oppnå den samme effekten i PowerApps ved å angi **Tekst**-egenskapen for en kontroll, for eksempel en etikett, til **42** eller **Sum(30,12)**. Cellen og etiketten viser alltid dette tallet uavhengig av andre endringer i regnearket eller appen.
    
     > [!NOTE]
-> I PowerApps skal du ikke sette et likhetstegn eller et plusstegn før en formel, som du gjør i Excel. Formellinjen behandler som standard alt du skriver inn der som en formel. Du skal heller ikke omgi en formel med doble anførselstegn ("), som du gjorde tidligere for å angi en tekststreng.
+   > I PowerApps skal du ikke sette et likhetstegn eller et plusstegn før en formel, som du gjør i Excel. Formellinjen behandler som standard alt du skriver inn der som en formel. Du skal heller ikke omgi en formel med doble anførselstegn ("), som du gjorde tidligere for å angi en tekststreng.
 5. I **[Tekst](controls/properties-core.md)**-egenskapen for etiketten erstatter du **"Hello World"** med **Sum(1,2,3)**.
    
     ![Å skrive inn den delvise funksjonen Sum(1,2,3 uten en avsluttende parentes viser feil](./media/working-with-formulas/label-sum-partial.png)
@@ -98,7 +98,7 @@ I Excel kan du bruke betinget formatering for å vise eksempelvis negative verdi
 1. Angi **[Farge](controls/properties-color-border.md)**-egenskapen for etiketten til denne formelen:<br>**If( Value(TextBox1.Text) < 0, Red, Black )**
    
     > [!NOTE]
-> I en formel angir du egenskapen for en kontroll ved å angi navnet på kontrollen, etterfulgt av et punktum, etterfulgt av navnet på egenskapen. Angi for eksempel **[Tekst](controls/properties-core.md)**-egenskapen for **TextBox1** ved å skrive inn **TextBox1.Text**.
+   > I en formel angir du egenskapen for en kontroll ved å angi navnet på kontrollen, etterfulgt av et punktum, etterfulgt av navnet på egenskapen. Angi for eksempel **[Tekst](controls/properties-core.md)**-egenskapen for **TextBox1** ved å skrive inn **TextBox1.Text**.
    
     ![Illustrasjon av oppdatert beregning i PowerApps hvor fargen på en etikett endres, basert på verdien sin](./media/working-with-formulas/recalc-color1.png)
 2. I **TextInput1** og **TextInput2** kan du angi to tall som resulterer i et negativt tall når de legges sammen.

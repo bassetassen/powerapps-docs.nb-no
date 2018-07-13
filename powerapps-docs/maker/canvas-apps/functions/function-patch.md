@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/21/2015
 ms.author: gregli
-ms.openlocfilehash: d0b2ff351f7026967359f1b4d386a71d7ed5441f
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 02664d3715b2e5b43a56a041e9de8b294559a862
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838721"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899161"
 ---
 # <a name="patch-function-in-powerapps"></a>Patch-funksjonen i PowerApps
 Endrer eller oppretter én eller flere [poster](../working-with-tables.md#records) i en [datakilde](../working-with-data-sources.md), eller fletter poster utenfor en datakilde.
@@ -102,6 +102,7 @@ Når de forrige formlene har blitt vurdert, avsluttes datakilden med disse verdi
 ![](media/function-patch/icecream-after.png)
 
 #### <a name="merge-records-outside-of-a-data-source"></a>Å flette poster (utenfor en datakilde)
+
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **Patch(&nbsp;{&nbsp;Name:&nbsp;"James",&nbsp;Score:&nbsp;90&nbsp;}, {&nbsp;Name:&nbsp;"Jim",&nbsp;Passed:&nbsp;true&nbsp;} )** |Fletter to poster utenfor en datakilde:<br><ul><li>Verdiene i **Navn**-kolonnen for hver post samsvarer ikke. Resultatet inneholder verdien (**Jim**) i posten som er nærmere slutten av argumentlisten, i stedet for verdien (**James**) i posten som er nærmere begynnelsen.</li><li>Den første posten inneholder en kolonne (**Score**) som ikke finnes i den andre posten. Resultatet inneholder kolonnen med den tilhørende verdien (**90**).</li><li>Den andre posten inneholder en kolonne (**Passed**) som ikke finnes i den første posten. Resultatet inneholder kolonnen med den tilhørende verdien (**true**). |{&nbsp;Name:&nbsp;"Jim", Score:&nbsp;90, Passed:&nbsp;true&nbsp;} |

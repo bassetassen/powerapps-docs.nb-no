@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 10/23/2016
 ms.author: anneta
-ms.openlocfilehash: 6960b41effb109f6f2266ba279b4d51ea51e744f
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 3e1bc218e6be8dcbbb1a72672aedf1de5d1cd7e9
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32328724"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895941"
 ---
 # <a name="scan-a-barcode-in-powerapps"></a>Å skanne en strekkode i PowerApps
 Skann flere typer strekkoder ved å opprette en app, og kjøre den på en enhet, for eksempel en telefon som har et kamera. Den numeriske tilsvarende strekkoden vises i en **Etikett**kontroll, og du kan laste opp denne dataen til en rekke [datakilder](connections-list.md).
@@ -36,18 +36,18 @@ Hvis du ikke er kjent med PowerApps, kan du se [Komme i gang](getting-started.md
 ## <a name="create-a-blank-app"></a>Å opprette en tom app
 1. [Registrer deg for PowerApps](../signup-for-powerapps.md), og gjør deretter *en* av følgende:
 
-1. [Åpne PowerApps](https://create.powerapps.com) i en nettleser på en enhet som har et kamera.
+2. [Åpne PowerApps](https://create.powerapps.com) i en nettleser på en enhet som har et kamera.
 
-2. Klikk eller trykk på **Telefonoppsett** på **Tom app**-flisen, under **Begynn med et tomt lerret eller en mal**.
+3. Klikk eller trykk på **Telefonoppsett** på **Tom app**-flisen, under **Begynn med et tomt lerret eller en mal**.
 
     ![Å opprette en app fra grunnen av](./media/scan-barcode/create-from-blank.png)
 
-3. Bli kjent med nøkkelområder i appen ved å ta Introduksjonsinnføringen (eller klikke eller trykke på **Hopp over**), hvis du ikke har brukt PowerApps før.
+4. Bli kjent med nøkkelområder i appen ved å ta Introduksjonsinnføringen (eller klikke eller trykke på **Hopp over**), hvis du ikke har brukt PowerApps før.
 
     ![Å åpne skjermbildet for hurtiginnføringen](./media/scan-barcode/quick-tour.png)
 
     > [!NOTE]
-> Hvis du ønsker å se innføringen senere, kan du det ved å klikke eller trykke på spørsmålstegn-ikonet nær hjørnet øverst til høyre, og deretter klikke eller trykke på **Ta Introduksjonsinnføringen**.
+   > Hvis du ønsker å se innføringen senere, kan du det ved å klikke eller trykke på spørsmålstegn-ikonet nær hjørnet øverst til høyre, og deretter klikke eller trykke på **Ta Introduksjonsinnføringen**.
 
 ## <a name="add-a-barcode-control"></a>Å legge til en strekkodekontroll
 1. Klikk eller trykk på **Media** på **Sett inn**-fanen, og klikk eller trykk deretter på **Strekkode**.
@@ -61,7 +61,7 @@ Hvis du ikke er kjent med PowerApps, kan du se [Komme i gang](getting-started.md
 3. Klikk eller trykk på **Barcode1** på **Hjem**-fanen, og skriv eller lim deretter inn **MyScanner** under **Gi nytt navn**.
 
     > [!TIP]
-> Den første **Strekkode**-kontrollen du legger til, heter, som standard **Barcode1**. Hvis du sletter denne kontrollen og legger til en annen **Strekkode**-kontroll, får den, som standard navnet **Barcode2**. Ved å manuelt gi nytt navn til en kontroll, sikrer du at formler refererer til kontrollen med riktig navn.
+   > Den første **Strekkode**-kontrollen du legger til, heter, som standard **Barcode1**. Hvis du sletter denne kontrollen og legger til en annen **Strekkode**-kontroll, får den, som standard navnet **Barcode2**. Ved å manuelt gi nytt navn til en kontroll, sikrer du at formler refererer til kontrollen med riktig navn.
 
     ![Å gi nytt navn til strekkodekontrollen](./media/scan-barcode/rename-barcode.png)
 

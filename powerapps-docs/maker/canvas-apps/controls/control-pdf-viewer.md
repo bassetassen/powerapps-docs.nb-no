@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 7f6350a70bff19df0c83d2082fe8fb463d81d772
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: c47fb9a120f41166bbe23d55de6b502209a0f20d
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330840"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898492"
 ---
 # <a name="pdf-viewer-control-experimental-in-powerapps"></a>Kontroll for PDF-visningsprogram (eksperimentell) i PowerApps
 En eksperimentell kontroll som viser innholdet i en PDF-fil.
@@ -96,15 +96,17 @@ I tilfelle dokumentet ikke kan åpnes i PowerApps, vises alternativet for å åp
 **Zoom** – hvor mye et bilde fra et kamera prosentvis forstørres eller hvor mye som vises i et PDF-visningsprogram.
 
 ## <a name="example"></a>Eksempel
-* Legg til en kontroll for et **PDF-visningsprogram**, og angi **Dokument**-egenskapen til nettadressen, omsluttet av doble anførselstegn for en PDF-fil som i dette eksemplet:<br>
+
+Legg til en kontroll for et **PDF-visningsprogram**, og angi **Dokument**-egenskapen til nettadressen, omsluttet av doble anførselstegn for en PDF-fil som i dette eksemplet:
+
   **"https://blog.mozilla.org/security/files/2015/05/HTTPS-FAQ.pdf"**
 
-    Kontrollen viser PDF-filen.
+    The control shows the PDF file.
 
-    Lurer du på hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?
-
+    Don't know how to [add and configure a control](../add-configure-controls.md)?
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+
 Ikke alle tilgjengelighetsfunksjonene i PDF-dokumenter støttes fordi **PDF-visningsprogrammet** fremdeles er på det eksperimentelle stadiet. Derfor bør **ShowControls** være angitt til **sann**, slik at brukere får muligheten til å åpne dokumentet i et eksternt program.
 
 Slik finner du ut hvordan man oppretter tilgjengelige PDF-dokumenter med standardene [WCAG 2.0](https://www.w3.org/TR/WCAG-TECHS/pdf.html) og [PDF/UA](https://www.pdfa.org/pdfua-the-iso-standard-for-universal-accessibility/).

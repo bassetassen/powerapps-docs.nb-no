@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 10/16/2016
 ms.author: jamesol
-ms.openlocfilehash: 8a763565ff8b48f95f68bdfd91fc21382ad9338f
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 8c96a83ae67a8a06aa96b4f4ba091e361430683d
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827831"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896125"
 ---
 # <a name="share-excel-data-used-by-your-app"></a>Å dele Excel-data som brukes av appen
 Du kan dele Excel-data med appbrukerne i en [skykonto](connections/cloud-storage-blob-connections.md), for eksempel OneDrive.
@@ -48,7 +48,7 @@ Hvis du vil ha mer informasjon, kan du se [Dele mapper i Dropbox](https://www.dr
     ![Del-kommandoen](./media/share-app-data/onedrive-share.png)
    
     > [!NOTE]
-> Del selve filen og ikke mappen som inneholder filen i OneDrive for Business.
+   > Del selve filen og ikke mappen som inneholder filen i OneDrive for Business.
 3. I dialogboksen velger du **E-post**.
    
     ![Del via e-post](./media/share-app-data/onedrive-email.png)
@@ -72,5 +72,5 @@ Hvis du vil ha mer informasjon, kan du se [Dele OneDrive-filer og -mapper](https
 Hvis du vil ha mer informasjon, kan du se [Dele Google Drive-filer og -mapper](https://support.google.com/drive/answer/2494822).
 
 ### <a name="known-limitations"></a>Kjente begrensninger
-Hvis du vil ha informasjon om hvordan du deler Excel-data i organisasjonen, kan du [se gjennom disse begrensningene](connections/cloud-storage-blob-connections.md#known-limitations).
+Hvis du vil ha informasjon om hvordan du deler Excel-data innad i organisasjonen, kan du [se gjennom disse begrensningene](connections/cloud-storage-blob-connections.md#known-limitations).
 

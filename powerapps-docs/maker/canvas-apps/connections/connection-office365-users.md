@@ -7,12 +7,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 06/07/2016
 ms.author: lanced
-ms.openlocfilehash: a1e0ddd7dad50ec269a0946163cc7b822ddb0681
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 679d9b905aa1b7d7b1b731de400e6e133787769b
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803493"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897114"
 ---
 # <a name="connect-to-office-365-users-connection-from-powerapps"></a>Å koble til Office 365-brukere fra PowerApps
 ![Office 365-brukere](./media/connection-office365-users/office365icon.png)
@@ -27,7 +27,7 @@ Dette emnet viser deg hvordan du legger til Office 365-brukere som en tilkobling
 
 ## <a name="add-a-connection"></a>Å legge til en tilkobling
 1. [Legg til en datatilkobling](../add-data-connection.md), og velg **Office 365-brukere**:  
-   
+
     ![Å koble til Office 365](./media/connection-office365-users/add-office.png)
 2. Velg **Koble til**, og hvis du blir bedt om å logge på, angir du jobbkontoen din.
 
@@ -37,7 +37,7 @@ Tilkoblingen til Office 365-brukere er opprettet og lagt til i appen din. Den er
 ### <a name="show-information-about-the-current-user"></a>Å vise informasjon om gjeldende bruker
 1. Velg **Etikett** på menyen **Sett inn**
 2. Du angir **[Tekst](../controls/properties-core.md)**-egenskapen i funksjonsfeltet til én av følgende formler:
-   
+
     `Office365Users.MyProfile().Department`  
     `Office365Users.MyProfile().DisplayName`  
     `Office365Users.MyProfile().GivenName`  
@@ -54,13 +54,13 @@ Etiketten viser informasjonen du oppgav om den gjeldende brukeren.
 
 ### <a name="show-information-about-another-user"></a>Å vise informasjon om en annen bruker
 1. Velg **Tekst** på **Sett inn**-menyen, og velg **Tekstinndata**. Endre navnet til **InfoAbout**:  
-   
+
     ![Å gi en kontroll et nytt navn](./media/connection-office365-users/renameinfoabout.png)
 2. Skriv eller lim inn en e-postadresse til en bruker i organisasjonen i **InfoAbout**. Skriv for eksempel inn *yourName*@*yourCompany.com*.
 3. Legg til en **Etikett** (**Sett inn**-meny), og angi **[Tekst](../controls/properties-core.md)**-egenskapen til én av følgende formler:
-   
+
    * Slik viser du informasjon om en annen bruker:  
-     
+
        `Office365Users.UserProfile(InfoAbout.Text).Department`  
        `Office365Users.UserProfile(InfoAbout.Text).DisplayName`  
        `Office365Users.UserProfile(InfoAbout.Text).GivenName`  
@@ -73,7 +73,7 @@ Etiketten viser informasjonen du oppgav om den gjeldende brukeren.
        `Office365Users.UserProfile(InfoAbout.Text).UserPrincipalName`  
        `Office365Users.UserProfile(InfoAbout.Text).AccountEnabled`  
    * Slik viser du informasjon om en leder til en annen bruker:  
-     
+
        `Office365Users.Manager(InfoAbout.Text).Department`  
        `Office365Users.Manager(InfoAbout.Text).DisplayName`  
        `Office365Users.Manager(InfoAbout.Text).GivenName`  
@@ -100,28 +100,28 @@ Hvis du oppretter en kontakt og velger kontakten i bla gjennom-skjermen i appen,
 1. Legg til en **Tekstinndata**-kontroll (**Sett inn**-meny > **Tekst**), og endre navnet til **InfoAbout**.
 2. Oppgi e-postadresse til en bruker i organisasjonen i **InfoAbout**. Du kan for eksempel oppgi *yourManagersName*@*yourCompany.com*
 3. Legg til et **Med tekst**-galleri (**Sett inn**-meny > **Galleri**), og angi **[Elementer](../controls/properties-core.md)**-egenskapen til følgende formel:
-   
+
     `Office365Users.DirectReports(InfoAbout.Text)`
-   
+
     Galleriet viser informasjon om direkterapportene for brukeren du oppgav.
-   
+
     Når galleriet er valgt, viser den høyre ruten alternativene for galleriet.
 4. Velg **JobTitle** i den andre listen. Velg **DisplayName** i den tredje listen. Galleriet er oppdatert til å vise disse verdiene.  
-   
+
 > [!NOTE]
 > Den første boksen er en bildekontroll. Hvis du ikke har et bilde, kan du slette bildekontrollen og legge til en etikett i stedet. [Å legge til og konfigurere kontroller](../add-configure-controls.md) er en god ressurs.
 
 ### <a name="search-for-users"></a>Å søke etter brukere
 1. Legg til en **Tekstinndata**-kontroll (**Sett inn**-meny > **Tekst**), og endre navnet til **SearchTerm**. Oppgi et navn du vil søke etter. Angi for eksempel fornavnet ditt.
 2. Legg til et **Med tekst**-galleri (**Sett inn**-meny > **Galleri**), og angi **[Elementer](../controls/properties-core.md)**-egenskapen til følgende formel:
-   
+
     `Office365Users.SearchUser({searchTerm: SearchTerm.Text})`
-   
+
     Galleriet viser brukere hvis navn inneholder søketeksten du oppgav.
-   
+
     Når galleriet er valgt, viser den høyre ruten alternativene for galleriet.
 3. Velg **E-post** i den andre listen. Velg **DisplayName** i den tredje listen.
-   
+
     Den andre og tredje etiketten i galleriet oppdateres.
 
 ## <a name="view-the-available-functions"></a>Å vise de tilgjengelige funksjonene
@@ -142,6 +142,7 @@ Hent min profil: henter profilen til den gjeldende brukeren.
 Ingen.
 
 #### <a name="output-properties"></a>Utdataegenskaper
+
 | Egenskapsnavn | Type | Beskrivelse |
 | --- | --- | --- |
 | Avdeling |streng |Avdelingen til brukeren. |
@@ -160,11 +161,13 @@ Ingen.
 Hent brukerprofil: henter en bestemt brukerprofil.
 
 #### <a name="input-properties"></a>Inndataegenskaper
+
 | Navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | ID |streng |ja |Brukers hovednavn eller e-post-ID |
 
 #### <a name="output-properties"></a>Utdataegenskaper
+
 | Egenskapsnavn | Type | Beskrivelse |
 | --- | --- | --- |
 | Avdeling |streng |Avdelingen til brukeren. |
@@ -183,11 +186,13 @@ Hent brukerprofil: henter en bestemt brukerprofil.
 Hent leder: henter brukerprofilen for lederen til den angitte brukeren
 
 #### <a name="input-properties"></a>Inndataegenskaper
+
 | Navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | ID |streng |ja |Brukers hovednavn eller e-post-ID |
 
 #### <a name="output-properties"></a>Utdataegenskaper
+
 | Egenskapsnavn | Type | Beskrivelse |
 | --- | --- | --- |
 | Avdeling |streng |Avdelingen til brukeren. |
@@ -206,11 +211,13 @@ Hent leder: henter brukerprofilen for lederen til den angitte brukeren
 Henter direkterapporter
 
 #### <a name="input-properties"></a>Inndataegenskaper
+
 | Navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | ID |streng |ja |Brukers hovednavn eller e-post-ID |
 
 #### <a name="output-properties"></a>Utdataegenskaper
+
 | Egenskapsnavn | Type | Beskrivelse |
 | --- | --- | --- |
 | Avdeling |streng |Avdelingen til brukeren. |
@@ -229,11 +236,13 @@ Henter direkterapporter
 Søk etter brukere: henter søkeresultater for brukerprofilene
 
 #### <a name="input-properties"></a>Inndataegenskaper
+
 | Navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | searchTerm |streng |nei |Søkestreng. Gjelder for: visningsnavn, fornavn, etternavn, e-post, e-post-kallenavn og brukers hovednavn |
 
 #### <a name="output-properties"></a>Utdataegenskaper
+
 | Egenskapsnavn | Type | Beskrivelse |
 | --- | --- | --- |
 | Avdeling |streng |Avdelingen til brukeren. |
