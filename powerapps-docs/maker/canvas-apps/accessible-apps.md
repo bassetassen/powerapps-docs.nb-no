@@ -2,20 +2,24 @@
 title: Oppretting av apper som er enkle å forstå | Microsoft Docs
 description: Slik lager du apper som er enkle å forstå for folk med funksjonshemninger
 author: fikaradz
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/03/2018
 ms.author: fikaradz
-ms.openlocfilehash: 8a7139f6dbc39bc1585156802e30236aa2b68359
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 909f71a61ca3df73b41eb9e1fe0f3dc3f52d1527
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803079"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39018725"
 ---
 # <a name="create-accessible-apps"></a>Oppretting av apper som er enkle å forstå
 En app som er enkel å forstå gjør det enklere for brukere med syns-, hørsel- og andre typer hemminger å bruke appen.  I tillegg til at det er et krav for mange myndigheter og organisasjoner, økes brukervennligheten for brukerne, uavhengig av funksjonsnivå, ved å følge retningslinjene nedenfor.
+
+Bruk **[Tilgjengelighetskontrollen](accessibility-checker.md)** til å se gjennom potensielle problemer med tilgjengelighet i appen. 
 
 ## <a name="layout-and-color"></a>Oppsett og farger
 Sunn fornuft og ukomplisert utforming gjør det enkelt for alle brukere å forstå appene.  Legg merke til forslagene nedenfor når du skal gjøre vanskelige tilpasninger i apper.  Alle PowerApps-temaer er enkle å forstå som standard.
@@ -59,4 +63,7 @@ Hvis du har et signaturfelt som bruker PenInput-kontrollen, må du aktivere en a
 
 
 
-Relatert: **[Egenskaper for tilgjengelighet](controls/properties-accessibility.md)**
+Relatert:
+- [Egenskaper for tilgjengelighet](controls/properties-accessibility.md)
+- [Bruk tilgjengelighetskontrollen](accessibility-checker.md)
+- [Tilgjengelige farger i PowerApps](accessible-apps-color.md)
