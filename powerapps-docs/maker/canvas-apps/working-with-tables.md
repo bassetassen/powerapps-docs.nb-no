@@ -1,23 +1,18 @@
 ---
 title: Å forstå tabeller i Microsoft Docs
 description: Referanseinformasjon for å arbeide med tabeller, kolonner og poster
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
 ms.component: canvas
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: 42a7c0db6aaf46d8cdbd112cf72c6f95f58dc9ec
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 6144d66849316dc2b355b0cb9a56959e10f8a319
+ms.sourcegitcommit: 76ffec3b4d9c18a01f19c583435541ae165a8234
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31839181"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37864265"
 ---
 # <a name="understand-tables-and-records-in-powerapps"></a>Å forstå tabeller og poster i PowerApps
 Du kan opprette en app som har tilgang til informasjon i Microsoft Excel, SharePoint, SQL Server og flere andre kilder som lagrer data i poster og tabeller. Hvis du vil arbeide mest mulig effektivt med denne typen data, kan du se gjennom begrepene som ligger til grunn for disse strukturene.
@@ -91,26 +86,28 @@ Akkurat som med tall, beregnes formler som involverer tabeller og poster automat
 
 La oss gå gjennom noen enkle eksempler.
 
-1. Legg til en kontroll for **Tekstgalleri**, og angi **[Elementer](controls/properties-core.md)**-egenskapen til navnet på en tabell.
-   
-    Som standard viser galleriet plassholdertekst fra en tabell kalt **TextualGallerySample**. Galleriets **[Elementer](controls/properties-core.md)**-egenskap angis automatisk til denne tabellen.
-   
-    > [!NOTE]
-> Noen av kontrollene har blitt omorganisert og forstørret for illustrasjonsformål.
-   
+1. Opprett en tom app for en telefon, og legg til en loddrett **[Galleri](controls/control-gallery.md)**-kontroll som inneholder andre kontroller.
+
+    Som standard viser skjermen plassholdertekst fra en tabell kalt **CustomGallerySample**. **[Elementer](controls/properties-core.md)**-egenskapen til skjermens **[Gallery](controls/control-gallery.md)**-kontroll angis automatisk for den tabellen.
+
     ![](media/working-with-tables/gallery-items.png)
+
+    > [!NOTE]
+    > Noen av kontrollene har blitt omorganisert og forstørret for illustrasjonsformål.
+
 2. I stedet for å angi **[Elementer](controls/properties-core.md)**-egenskapen til navnet på en tabell, kan du angi en formel som inneholder navnet på tabellen som et argument, som i dette eksemplet:<br>
-   **Sort(TextualGallerySample, Heading, Descending)**
-   
+    **Sort(CustomGallerySample, SampleHeading, Descending)**
+
     Denne formelen inneholder **[Sort](functions/function-sort.md)**-funksjonen, som tar navnet på en tabell som første argument. og navnet på en kolonne i denne tabellen som det andre argumentet. Funksjonen støtter også et valgfritt tredje argument, som stipulerer at du vil sortere dataene i synkende rekkefølge.
-   
+
     ![](media/working-with-tables/gallery-items-sort.png)
+
 3. Angi **[Elementer](controls/properties-core.md)**-egenskapen til en formel som tar formelen fra det forrige trinnet som et argument og returnerer en tabell, som i dette eksemplet:<br>
-   **FirstN(Sort(TextualGallerySample, Heading, Descending), 2)**
-   
+   **FirstN(Sort(CustomGallerySample, SampleHeading, Descending), 2)**
+
     I denne formelen bruker du **[FirstN](functions/function-first-last.md)**-funksjonen til å vise et bestemt antall poster i en tabell. Bruk **[Sort](functions/function-sort.md)**-funksjonen som det første argumentet til **[FirstN](functions/function-first-last.md)**, og et tall (i dette tilfellet **2**) som det andre argumentet, som angir hvor mange poster for som skal vises.
    
-    Hele formelen returnerer en tabell som inneholder de to første postene i **TextualGallerySample**-tabellen, sortert etter **Overskrift**-kolonnen i synkende rekkefølge.
+    Hele formelen returnerer en tabell som inneholder de to første postene i **CustomGallerySample**-tabellen, sortert etter **SampleHeading**-kolonnen i synkende rekkefølge.
    
     ![](media/working-with-tables/gallery-items-sort-firstn.png)
 
@@ -139,7 +136,7 @@ Hvis du angir en datakilde som et argument for én av disse funksjonene, vil det
 * **[Update](functions/function-update-updateif.md)**, **[UpdateIf](functions/function-update-updateif.md)** – oppdaterer poster som oppfyller ett eller flere vilkår som du angir.
 * **[Fjern](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)** – sletter poster som oppfyller ett eller flere vilkår du angir.
 
-Følgende kontroller har egenskaper som er tabeller:
+Disse egenskapene angis til verdier som er tabeller:
 
 * **Elementer** – gjelder gallerier og listebokser. Tabell til å vise i galleriet.
 * **SelectedItems** – gjelder for listebokser. Tabell over elementer som brukeren har valgt.
@@ -150,24 +147,27 @@ Du kan også bygge en formel som beregner data for en individuell post, tar en i
 1. Legg til en knapp, og angi knappens **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:<br>
     **Collect( SelectedRecord, Gallery1.Selected )**
 
-2. Hvis knappen ikke er valgt, klikker du på den for å merke den, og deretter klikker du på den på nytt for å kjøre formelen.
+2. Velg knappen mens du holder nede ALT.
 
 3. Velg **Samlinger** i **Fil**-menyen.
 
-![](media/working-with-tables/selected-collection.png)
+    ![](media/working-with-tables/selected-collection.png)
 
-Denne formelen returnerer en post som ikke bare inneholder data fra gjeldende post som er valgt i galleriet, men også hver kontroll i galleriet. Posten inneholder for eksempel både en **Brødtekst**-kolonne, som samsvarer med **Brødtekst**-kolonnen i den opprinnelige tabellen, og en **Body1**-kolonne, som representerer etiketten som viser data fra denne kolonnen. Velg tabellikonet i **Brødtekst1**-kolonnen for å drille ned i dataene.
+Denne formelen returnerer en post som ikke bare inneholder data fra gjeldende post som er valgt i galleriet, men også hver kontroll i galleriet. Posten inneholder for eksempel både en **SampleText**-kolonne, som samsvarer med **SampleText**-kolonnen i den opprinnelige tabellen, og en **Subtitle1**-kolonne, som representerer etiketten som viser data fra denne kolonnen. Velg tabellikonet i **Subtitle1**-kolonnen for å drille ned i dataene.
+
+> [!NOTE]
+> **Subtitle1**-kolonnen kan ha navnet **Subtitle2** eller lignende, hvis du har lagt til andre elementer enn de som kreves for dette emnet.
 
 Nå som du har valgt posten, kan du trekke ut enkeltfelten fra den med **.** -operatoren.
 
-1. Trykk på ESC for å gå tilbake til standardarbeidsområdet, og legg deretter til en etikett nedenfor galleriet.
+1. Legg til en **[Etikett](controls/control-text-box.md)**-kontroll, og flytt den deretter under galleriet på bunnen.
 
-2. Angi **[Farge](controls/properties-core.md)**-egenskapen for etiketten til denne formelen:<br>
-    **Gallery.Selected.Heading**
+1. Angi etikettens **[Tekst](controls/properties-core.md)**-egenskap til dette uttrykket:<br>
+    **"Selected: " & Gallery1.Selected.SampleHeading**
    
     ![](media/working-with-tables/gallery-selected.png)
 
-Du har tatt **Merket**-egenskapen, som er en post, og pakket ut **Overskrift**-egenskapen fra den.  
+Du har tatt **Merket**-egenskapen, som er en post, og pakket ut **SampleHeading**-egenskapen fra den.
 
 Du kan også bruke en post som en beholder til generelt bruk for relaterte navngitte verdier.
 
@@ -235,10 +235,10 @@ Vær oppmerksom på at i det ovenstående brukte vi doble anførselstegn (") noe
 ### <a name="disambiguation"></a>Tvetydighet
 Feltnavnene som ble lagt til ved bruk av postområdet overstyrer de samme navnene fra ellers i appen.  Når dette skjer, har du fremdeles tilgang til verdiene som er utenfor postområdet ved bruk av operatoren [**@** Tvetydighet](functions/operators.md):
 
-* Hvis du vil ha tilgang til verdiene fra nestede postområder, bruker du **@** operatoren med samme navn som tabellen der operatoren arbeider ved bruk av mønsteret ***Table *[@* FieldName*]**.  
-* Hvis du vil ha tilgang til globale verdier, som datakilder, samlinger og kontekstvariabler, bruker du mønsteret **[@*ObjectName*]** (uten en tabellangivelse).
+* Hvis du vil ha tilgang til verdiene fra nestede postområder, bruker du **@** operatoren med samme navn som tabellen der operatoren arbeider ved bruk av mønsteret:<br>_Table_**[@**_FieldName_**]**
+* Hvis du vil ha tilgang til globale verdier, som datakilder, samlinger og kontekstvariabler, bruker du mønsteret **[@**_ObjectName_**]** (uten en tabellangivelse).
 
-Hvis tabellen som styres er et uttrykk, for eksempel **Filter( *tabell*, ... )**, kan ikke operatoren Tvetydighet brukes.  Bare det innerste postomfanget har tilgang til felt fra dette tabelluttrykket ved å ikke bruke operatoren Tvetydighet.
+Hvis tabellen som styres er et uttrykk, for eksempel **Filter(** _Table_**,** ... **)**, kan ikke tvetydighetsoperatoren brukes.  Bare det innerste postomfanget har tilgang til felt fra dette tabelluttrykket ved å ikke bruke operatoren Tvetydighet.
 
 Anta for eksempel at du har en samling **X**:
 

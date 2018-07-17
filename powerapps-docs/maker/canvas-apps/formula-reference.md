@@ -1,23 +1,19 @@
 ---
 title: Funksjoner, signaler og opplistinger | Microsoft Docs
 description: Referanseinformasjon for funksjoner, signaler og opplistinger i PowerApps.
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 06/05/2018
 ms.author: gregli
-ms.openlocfilehash: af089f81b8fd96ec022fe32495cb14f2827f28b5
-ms.sourcegitcommit: 045c96df42405c60c7675edbadac93455270a021
+ms.openlocfilehash: b131f9da9dbf0624185fc837c5582c9ef0477089
+ms.sourcegitcommit: 6d9fe9967841e381b108a7fb53c9057e295336ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34822585"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948600"
 ---
 # <a name="formula-reference-for-powerapps"></a>Formelreferanse for PowerApps
 Formler kombinerer mange elementer.  Dette er listet opp under:
@@ -65,6 +61,8 @@ Andre elementer omfatter:
 
 **[Char](functions/function-char.md)** – oversetter en tegnkode til en streng.
 
+**[Choices](functions/function-choices.md)** – returnerer en tabell med de mulige verdiene for en oppslagskolonne.
+
 **[Clear](functions/function-clear-collect-clearcollect.md)** – sletter alle data fra en [samling](working-with-data-sources.md#collections).
 
 **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – sletter alle data fra en samling og legger deretter til et sett med [poster](working-with-tables.md#records).
@@ -86,6 +84,8 @@ Andre elementer omfatter:
 **[Concat](functions/function-concatenate.md)** – kjeder sammen strenger i en datakilde.  
 
 **[Concatenate](functions/function-concatenate.md)** – kjeder sammen strenger.
+
+**[Concurrent](functions/function-concurrent.md)** – evaluerer flere formler samtidig mot hverandre. 
 
 **[Connection](functions/signals.md)** – returnerer informasjon om nettverkstilkoblingen.
 
@@ -279,6 +279,8 @@ Andre elementer omfatter:
 **[Search](functions/function-filter-lookup.md)** – finner poster i en tabell som inneholder en streng i én av kolonnene.  
 
 **[Second](functions/function-datetime-parts.md)** – henter den andre delen av en dato-/klokkeslett-verdi.
+
+**[Select](functions/function-select.md)** – simulerer en valgt handling på en kontroll som fører til at **OnSelect**-formelen evalueres.
 
 **[Set](functions/function-set.md)** – angir verdien til en global variabel.
 

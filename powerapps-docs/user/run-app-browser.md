@@ -5,19 +5,29 @@ author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 03/07/2018
+ms.date: 07/09/2018
 ms.author: matp
-ms.openlocfilehash: 4aed5f0d34bf88bca706c1c6421ac3b692308ebb
-ms.sourcegitcommit: 63351b1bda5a8dd00786912f95aba9fb3ebfe75c
+manager: kvivek
+ms.custom: ''
+ms.reviewer: ''
+ms.assetid: ''
+ms.openlocfilehash: b0b0cb39cf0a7d49ca24d31c2803ae463df2f97e
+ms.sourcegitcommit: bcfefb30b12cf94815dd9a0fd8cad29a8272d96e
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36261722"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37925643"
 ---
 # <a name="quickstart-run-an-app-in-a-web-browser"></a>Hurtigstart: å kjøre en app i en nettleser
 Når du oppretter en app, eller noen deler en app med deg, kan du kjøre appen i Windows, iOS, Android eller i en nettleser. I denne hurtigveiledningen lærer du hvordan du kjører en lerret-app eller en modelldrevet app i en nettleser fra [Dynamics 365-hjemmesiden](https://home.dynamics.com).
 
-Du trenger et [Microsoft Office 365-abonnement](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) for å følge denne hurtigveiledningen,som inkluderer Dynamics 365 og tilgang til en [nettleser og et operativsystem](../maker/canvas-apps/limits-and-config.md) som er støttet. Du må også sørge for at du har tilgang til en app som du opprettet, eller som noen andre har delt med deg.
+Hvis du vil følge denne hurtiginnføringen, trenger du:
+- En PowerApps-lisens. Dette er tilgjengelig med et PowerApps-abonnement som for eksempel [prøveversjon på PowerApps-abonnement 2](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps), eller et [Microsoft Office 365](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1)- eller [Dynamics 365](https://dynamics.microsoft.com/pricing/)-abonnement som inkluderer PowerApps. 
+- Tilgang til en app som du opprettet, eller som noen andre har delt med deg.
+- Tilgang til støttet nettleser og operativsystem.
+   - For lerretsapper kan du se: [Systemkrav, grenser og konfigurasjonsverdier](../maker/canvas-apps/limits-and-config.md)
+   - For modelldrevne apper kan du se: [Støttede nettlesere og mobilenheter](https://docs.microsoft.com/dynamics365/customer-engagement/admin/supported-web-browsers-and-mobile-devices)
+
 
 ## <a name="sign-in-to-dynamics-365"></a>Å logge deg på Dynamics 365
 Å logge deg på Dynamics 365 på [https://home.dynamics.com](https://home.dynamics.com).

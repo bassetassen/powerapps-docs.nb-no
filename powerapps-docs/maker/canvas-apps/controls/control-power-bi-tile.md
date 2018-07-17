@@ -1,41 +1,50 @@
 ---
 title: 'Kontrollen Power BI-flis: referanse | Microsoft Docs'
 description: Informasjon, inkludert egenskaper og eksempler, om kontrollen for Power BI-flis
-documentationcenter: na
 author: fikaradz
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 07/07/2016
 ms.author: fikaradz
-ms.openlocfilehash: e7bc2e7e0aafa4d933c47bcf47300dc243c38523
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 9df201f5d2fd4017debe47626aedaaa2c735682f
+ms.sourcegitcommit: 16a2eeaa4ad9218682143411b609cb961dbcfa91
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827147"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886382"
 ---
 # <a name="power-bi-tile-control-in-powerapps"></a>Kontrollen for Power BI-flis i PowerApps
+
 En kontroll som viser en [Power BI](https://powerbi.microsoft.com)-flis i en app.
 
+Har du ikke Power BI? [Registrer deg](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
+
 ## <a name="description"></a>Beskrivelse
-Dra nytte av eksisterende dataanalyser og rapportering ved å vise **[Power BI-flisene](https://docs.microsoft.com/power-bi/service-dashboard-tiles)** i appene dine.  Velg flisen du ønsker å vise, ved å angi egenskapene **Workspace**, **Dashboard** og **Tile** i **Data**-fanen i panelet for alternativer.
+
+Dra nytte av eksisterende dataanalyser og rapportering ved å vise **[Power BI-flisene](https://docs.microsoft.com/power-bi/service-dashboard-tiles)** i appene dine. Angi flisen du ønsker å vise, ved å angi egenskapene **Arbeidsområde**, **Instrumentbord** og **Flis** i **Data**-fanen i panelet for alternativer.
 
 ## <a name="sharing-and-security"></a>Deling og sikkerhet
-Når PowerApp deles, blir den tilgjengelig for alle brukere som har tilgangsrettigheter til appen.  Men for å kunne gjøre Power BI-innhold synlig for brukerne, må instrumentbordet der flisen kommer fra, være [delt](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports) med brukeren på Power BI.  Dette sikrer at Power BI-delingstillatelser er fulgt når Power BI-innhold er tilgjengelig i en app.
+
+Når du deler en app som inneholder Power BI-innhold, må du dele både selve appen og [instrumentbordet](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports) hvor flisen kommer fra. Ellers vises ikke Power BI-innholdet, selv ikke for brukere som åpner appen. Apper som inneholder Power BI-innhold respekterer tillatelsene for det innholdet.
+
+## <a name="performance"></a>Ytelse
+
+Det er ikke anbefalt å ha mer enn tre Power BI-fliser lastet inn samtidig i appen. Du kan kontrollere hvordan du laster og fjerner fliser ved å stille inn **LoadPowerBIContent**-egenskapen.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
+
 **Workspace** – Power BI-arbeidsområdet flisen kommer fra.
 
 **Dashboard** – Power BI-instrumentbordet flisen kommer fra.
 
-**Tile** – navnet på Power BI-flisen du vil vise.
+**Flis** – navnet på Power BI-flisen du vil vise.
+
+**LoadPowerBIContent** – når den er angitt til sann, lastes Power BI-innholdet og vises. Når den er angitt til usann, fjernes Power BI-innholdet, noe som frigir minne og optimaliserer ytelsen.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
+
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
 **[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
@@ -46,9 +55,9 @@ Når PowerApp deles, blir den tilgjengelig for alle brukere som har tilgangsrett
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
-**[OnSelect](properties-core.md)** – Hvordan appen responderer når brukeren klikker eller trykker på en kontroll. Standard virkemåte fører brukeren til Power BI-rapporten som er forbundet med flisen.
+**[OnSelect](properties-core.md)** – hvordan appen responderer når brukeren klikker eller trykker på en kontroll. Power BI-rapporten som er tilknyttet med flisen åpnes som standard.
 
-**[Visible](properties-core.md)** – Hvorvidt kontrollen vises eller skjules.
+**[Synlig](properties-core.md)** – om kontrollen vises eller skjules.
 
 **[Bredde](properties-size-location.md)** – avstanden mellom kontrollens venstre og høyre kant.
 
@@ -57,18 +66,19 @@ Når PowerApp deles, blir den tilgjengelig for alle brukere som har tilgangsrett
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="example"></a>Eksempel
-1. Legg til en kontroll for en **Power BI-flis** fra **Sett inn**-fanen på **Kontroller**-menyen.  
-2. I **Data**-fanen på panelet Alternativer velger du Mitt arbeidsområde for **Arbeidsområde**-innstillingen.  Velg et instrumentbord fra listen over instrumentbord og en flis fra listen over fliser.
-   
-    Kontrollen gjengir Power BI-flisen.
-   
-    Vet du ikke hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?
-   
-   Har du ikke Power BI? [Registrer deg](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
 
+1. Åpne **Kontroller**-menyen på **Sett inn**-fanen, og legg deretter til en **Power BI tile**-kontroll.
+
+    Lurer du på hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?
+
+2. Klikk eller trykk på **Mitt arbeidsområde** for **Arbeidsområde**-innstillingen, på **Data**-fanen til Innstillinger-panelet.
+
+3. Velg et instrumentbord i listen over instrumentbord, og velg deretter en flis i listen over fliser.
+
+    Kontrollen gjengir Power BI-flisen.
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+
 **Power BI-flisen** er ganske enkelt en beholder for Power BI innhold. Finn ut hvordan du oppretter tilgjengelig innhold med disse [tilgjengelighetstipsene for Power BI](https://docs.microsoft.com/power-bi/desktop-accessibility).
 
-### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
-* Vurder å legge til en overskrift ved hjelp av en **[Etikett](control-text-box.md)** hvis Power BI-innholdet ikke har en tittel. Overskriften kan plasseres rett før **Power BI-flisen**.
+Vurder å legge til en overskrift ved hjelp av en **[Etikett](control-text-box.md)**-kontroll for å støtte skjermlesere, hvis Power BI-innholdet ikke har en tittel. Du kan plassere etiketten rett før Power BI-flisen.

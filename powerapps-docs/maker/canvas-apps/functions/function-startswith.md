@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 07/24/2017
 ms.author: gregli
-ms.openlocfilehash: c01a69f311378e8e818036c866b96a78f223baf9
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: f2c1807f221d3134bbf39c74ae2939babbdd256e
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31837129"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899368"
 ---
 # <a name="endswith-and-startswith-functions-in-powerapps"></a>EndsWith- og StartsWith-funksjonen i PowerApps
 Tester om én tekststreng begynner eller slutter med en annen tekststreng.
@@ -29,7 +29,7 @@ Tester om én tekststreng begynner eller slutter med en annen tekststreng.
 
 Testene med begge funksjonene skiller ikke mellom små eller store bokstaver.  Returverdien til begge er en boolsk **sann**- eller **usann**-verdi.  
 
-Bruk **EndsWith** og **StartsWith** med **[Filter](function-filter-lookup.md)**-funksjonen for å søke i dataene i appen din. Du kan også bruke **[in](operators.md#in-and-exactin-operators)**-operatoren eller **[Search](function-filter-lookup.md)**-funksjonen for å søke hvor som helst i tekststrenger, ikke bare i begynnelsen eller slutten.  Funksjonene du velger avhenger av behovet til appen og hvilke funksjoner som kan [delegeres](../delegation-overview.md) for din bestemte datakilde.  Hvis én av disse funksjonene ikke kan delegeres, vises det en blå prikk under redigeringstiden for å advare deg om denne begrensningen.
+Bruk **EndsWith** og **StartsWith** med **[Filter](function-filter-lookup.md)**-funksjonen for å søke i dataene i appen din. Du kan også bruke **[in](operators.md#in-and-exactin-operators)**-operatoren eller **[Search](function-filter-lookup.md)**-funksjonen for å søke hvor som helst i tekststrenger, ikke bare i begynnelsen eller slutten.  Funksjonene du velger avhenger av behovet til appen og hvilke funksjoner som kan [delegeres](../delegation-overview.md) for din bestemte datakilde.  Hvis én av disse funksjonene ikke kan delegeres, vises det en delegeringsadvarsel under redigeringen for å advare deg om denne begrensningen.
 
 ## <a name="syntax"></a>Syntaks
 **EndsWith**( *Text*, *EndText* )
@@ -43,6 +43,7 @@ Bruk **EndsWith** og **StartsWith** med **[Filter](function-filter-lookup.md)**-
 * *StartText* – obligatorisk.  Teksten det skal søkes etter i begynnelsen av *Text*.  Hvis *StartText* er en tom streng, returnerer **StartsWith***sann*.
 
 ## <a name="examples"></a>Eksempler
+
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **EndsWith( "Hello World", "world" )** |Tester om **"Hello World"** slutter på **"world"**.  Testen skiller ikke mellom små og store bokstaver. |**sann** |

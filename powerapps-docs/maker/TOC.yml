@@ -257,6 +257,8 @@
               href: ./canvas-apps/functions/function-concatenate.md
             - name: Concatenate
               href: ./canvas-apps/functions/function-concatenate.md
+            - name: Samtidig
+              href: ./canvas-apps/functions/function-concurrent.md
             - name: Tilkobling
               href: ./canvas-apps/functions/signals.md
             - name: Antall
@@ -628,7 +630,7 @@
           href: ./common-data-service/data-platform-entity-licenses.md
     - name: Instruksjoner
       items:
-        - name: Behandle egendefinerte felt i en enhet
+        - name: Behandle egendefinerte felter i en enhet
           href: ./common-data-service/data-platform-manage-fields.md
         - name: Opprette en egendefinert enhet fra data
           href: ./common-data-service/data-platform-cds-newentity-pq.md

@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 07/06/2017
 ms.author: gregli
-ms.openlocfilehash: 78615949ab5c05b4cf7da56eae23dd1a0194c7ff
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ac74f459c35e7b2ec123540a5cf55c1ad6a21c0a
+ms.sourcegitcommit: 8d9e5f44bcd5cecd24de2c99d5ba04df9ea67275
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838698"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37406027"
 ---
 # <a name="edit-form-and-display-form-controls-in-powerapps"></a>Kontroller for Redigeringsskjema og Visningsskjema i PowerApps
 Vis, rediger og opprett en post i en datakilde.
@@ -151,9 +151,9 @@ Skjemaet bytter fra **Ny**-modus til **Redigeringsmodus** når noen av disse end
 
 * Denne egenskapen gjelder bare for **Redigeringsskjema**-kontrollen.
 * **Gyldig**-egenskapen til en **Skjema**-kontroll samler **Gyldig**-egenskapene for alle **[Kort](control-card.md)**-kontrollene i skjemaet. **Gyldig**-egenskapen for et skjema er **sann** bare hvis dataene i alle kortene i skjemaet er gyldige. Hvis ikke er **Gyldig**-egenskapen for skjemaet **usann**.
-* Angi **Aktivert** for knappen til denne formelen for å aktivere en knapp så den lagrer endringer bare når dataene i et skjema er gyldige, men fremdeles ikke har blitt sendt inn:
+* Angi **DisplayMode** for knappen til denne formelen for å aktivere en knapp så den lagrer endringer bare når dataene i et skjema er gyldige, men fremdeles ikke har blitt sendt inn:
   
-    **SubmitButton.Enabled = IsBlank( Form.Error ) || Form.Valid**
+    **SubmitButton.DisplayMode = If(IsBlank( Form.Error ) || Form.Valid, DisplayMode.Edit, DisplayMode.Disabled)**
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.

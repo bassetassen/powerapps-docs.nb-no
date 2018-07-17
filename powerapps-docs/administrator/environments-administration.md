@@ -8,12 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 3e3cd3b7339303e23411f3ef977cc33db6e5e8e0
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 7fb35c1c59062b892fdd8e3a905d3ee485f6cf61
+ms.sourcegitcommit: 26932abc6fcdc5e6723b64b506532bb182ab3f8d
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34445687"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37026238"
 ---
 # <a name="administer-environments-in-powerapps"></a>Administrer miljøer i PowerApps
 I [administrasjonssenteret for PowerApps][1] kan du administrere miljøer du har opprettet, samt miljøer der du har blitt lagt til i rollen som miljøadministrator eller systemansvarlig. Du kan utføre disse administrative handlingene fra administrasjonssenteret:
@@ -57,6 +57,10 @@ Når du åpner administrasjonssenteret, vises Miljøer-fanen som standard. Den v
 Hvis du er medlem av rollen som global administrator for Azure AD- eller Office 365-leier, vises alle miljøer som har blitt opprettet av brukere i leieren din fordi du er automatisk miljøadministrator for alle.
 
 ## <a name="rename-your-environment"></a>Gi nytt navn til miljøet ditt
+
+> [!IMPORTANT]
+> Følg disse trinnene i denne inndelingen for å gi et nytt navn til et produksjonsmiljø som ikke inneholder en database. Du kan ikke gi nytt navn på prøveversjonsmiljøer, og du må bruke administrasjonssenteret for Dynamics 365 for å gi nytt navn på produksjonsmiljøer som inneholder en database.
+
 1. Åpne [administrasjonssenteret for PowerApps][1], finn miljøet som du vil gi et nytt navn til, på listen, og klikk eller trykk på det.
 
     ![](./media/environment-admin/environment-list-updated3.png)
@@ -191,10 +195,6 @@ Du kan få en feil når du prøver å opprette en database i følgende scenarioe
 1. **Standardmiljø**: For øyeblikket støttes ikke oppretting av en database i et standardmiljø i leieren. 
 
 2. **Miljø for individuell bruk**: Du får et miljø for individuell bruk når du registrerer deg via PowerApps Community Plan. Hvis du ikke har opprettet databasen ennå, kan du for øyeblikket ikke klargjøre en database i miljøet for individuell bruk. 
-
-3. **Miljø i et annet område enn AAD-leierens hjemmeområde**: For øyeblikket kan du bare klargjøre en database i miljøer som er opprettet i hjemmeområdet for Azure Active Directory-leieren din. Muligheten til å klargjøre en database i de andre områdene, kommer snart. Så pass på at området er det samme som leierens standardplassering hvis du vil opprette en database i den.
-
-4. **Opprette databaser som ikke støttes i bestemte områder**: Det finnes visse områder, der oppretting av databaser fremdeles ikke er tilgjengelig. Dette gjelder for eksempel land i Sør-Amerika. Så hvis leierens hjemsted er i Sør-Amerika, kan du for øyeblikket ikke klargjøre en database i noen miljøer. 
     
 Vi arbeider med å aktivere alle scenarioene over.
 Hvis du får andre feilmeldinger, eller hvis du har flere spørsmål, kan du ta kontakt med oss [her][5]

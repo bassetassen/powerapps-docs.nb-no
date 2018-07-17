@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 03/21/2018
 ms.author: gregli
-ms.openlocfilehash: 2bd8ba7dc9b764399165c75361215cee2edb4e7b
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ebd4454184f684dbf85ec2b8a9056395b92dc47f
+ms.sourcegitcommit: 234de505a0e8c42459d87053fa00ea3e0ea0b909
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31831450"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37092787"
 ---
 # <a name="iferror-function-in-powerapps"></a>IfError-funksjonen i PowerApps
 Oppdager feil, og oppgir en alternativ verdi eller utfører en handling.
@@ -30,7 +30,7 @@ Oppdager feil, og oppgir en alternativ verdi eller utfører en handling.
 
 Bruk **IfError** for å erstatte feilverdier med en gyldig verdi.  Hvis det for eksempel er mulig at brukerinndata kan føre til en deling på null, erstatter du den med null eller en annen gyldig verdi som passer for appen, slik at nedstrømsberegninger kan fortsette.
 
-Bruk **IfError** i [formler for virkemåte](../working-with-formulas-in-depth.md) for å utføre handlinger, kontrollere resultatene for feil, og utfører (ved behov) ytterligere handlinger eller viser en feilmelding til brukeren med [**ShowError**](function-showerror.md).
+Bruk **IfError** i [formler for virkemåte](../working-with-formulas-in-depth.md) for å utføre handlinger, kontrollere resultatene for feil, og utfører (ved behov) ytterligere handlinger eller viser en feilmelding til brukeren med [**Notify**](function-showerror.md).
 
 Hvis alle argumentene til **IfError** resulterer i en feil, returneres verdien av det siste argumentet (som er en feilverdi). 
 
@@ -46,7 +46,7 @@ Hvis alle argumentene til **IfError** resulterer i en feil, returneres verdien a
 | --- | --- | --- |
 | **IfError( 1, 2 )** |Det første argumentet er ikke en feil.  Det returneres, og etterfølgende argumenter evalueres ikke.   | 1 |
 | **IfError( 1/0, 2 )** | Det første argumentet returnerer en feilverdi (på grunn av deling med null).  Det andre argumentet evalueres, og en ikke-feilverdi blir ikke funnet eller returnert. | 2 | 
-| **IfError( 1/0, ShowError( "Division by Zero" ) )** | Det første argumentet returnerer en feilverdi (på grunn av deling med null).  Det andre argumentet evalueres og vises en melding til brukeren.  Returverdien til **IfError** er returverdien til **ShowError**, påtvunget til den samme typen som det første argumentet til **IfError** (et tall). | 1 |
+| **IfError( 1/0, Notify( «Det oppstod et internt problem», NotificationType.Error ) )** | Det første argumentet returnerer en feilverdi (på grunn av deling med null).  Det andre argumentet evalueres og vises en melding til brukeren.  Returverdien til **IfError** er returverdien til **Notify**, påtvunget til den samme typen som det første argumentet til **IfError** (et tall). | 1 |
 | **IfError( 1/0, 1/0, 2, 1/0, 3 )** | Det første argumentet returnerer en feilverdi (på grunn av deling med null).  Det andre argumentet evalueres, noe som også resulterer i en feilverdi (en annen deling på null).  Det tredje argumentet evalueres, og en feilverdi blir ikke funnet eller returnert.  Det fjerde og femte argumentet ignoreres.  | 2 |
 
 ### <a name="step-by-step"></a>Trinn for trinn

@@ -1,40 +1,42 @@
 ---
 title: 'Radio-kontroll: referanse | Microsoft Docs'
 description: Informasjon om Radio-kontrollen, inkludert egenskaper og eksempler
-documentationcenter: na
 author: fikaradz
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
-ms.date: 10/25/2016
+ms.date: 07/06/2018
 ms.author: fikaradz
-ms.openlocfilehash: 8a95e84449828e77152206817f3d964315074b90
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 4b24d016eb97ca5670a1705adfe063315cb7ebca
+ms.sourcegitcommit: 16a2eeaa4ad9218682143411b609cb961dbcfa91
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31837692"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886359"
 ---
 # <a name="radio-control-in-powerapps"></a>Radio-kontrollen i PowerApps
-En liste som viser alle alternativene, men brukeren kan velge bare ett om gangen.
+
+En Inndata-kontroll som viser flere alternativer, og brukerne kan bare velge ett om gangen.
 
 ## <a name="description"></a>Beskrivelse
-En **radio**-kontroll, som brukere har flere tiårs erfaring med, bør brukes sammen med bare et par alternativer som utelukker hverandre.
+
+En **Radio**-kontroll, en standard kontroll for HTML-inndata, passer best med bare et par, gjensidig utelukkende alternativer.
+
+Kontrollen kan ha et vannrett eller loddrett oppsett.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
-**[Standard](properties-core.md)** – startverdien for en kontroll før den er endret av brukeren.
+
+**[Standard](properties-core.md)** – verdien til kontrollen før brukeren endrer den.
 
 **[Elementer](properties-core.md)** – kilden til dataene som vises i en kontroll, for eksempel et galleri, en liste eller et diagram.
 
-[!INCLUDE [long-items](../../../includes/long-items.md)]
+**Oppsett** – om alternativene plasseres loddrett eller vannrett.
 
 **[Verdi](properties-core.md)** – verdien til en inndatakontroll.
 
 ## <a name="all-properties"></a>Alle egenskaper
+
 **[Juster](properties-text.md)** – plasseringen av teksten i forhold til den vannrette midten av kontrollen.
 
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
@@ -57,7 +59,7 @@ En **radio**-kontroll, som brukere har flere tiårs erfaring med, bør brukes sa
 
 **[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
-**[FocusedBorderThickness](properties-color-border.md)** – tykkelsen på kontrollens kantlinje når kontrollen er fokusert.
+**[FocusedBorderThickness](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
@@ -118,37 +120,44 @@ En **radio**-kontroll, som brukere har flere tiårs erfaring med, bør brukes sa
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
+
 [**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Eksempel
-1. Legg til en **radio**-kontroll, gi den navnet **Priser**, og angi **[Elementer](properties-core.md)**-egenskapen til denne verdien:
-   <br>**["Standard", "Premium"]**
-   
-    Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
-2. Legg til en **[etikett](control-text-box.md)**-kontroll, flytt den under **Radio**-kontrollen, og angi **[Tekst](properties-core.md)**-egenskapen i **[Etikett](control-text-box.md)**-kontrollen til denne formelen:
-   <br>**If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
-   
-    Vil du ha mer informasjon om **[If](../functions/function-if.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
-3. Trykk på F5, og velg deretter et alternativ i **Radio**-kontrollen.
-   
-    **[Etikett](control-text-box.md)**-kontrollen viser den aktuelle teksten for valget.
-4. (valgfritt) I **Radio**-kontrollen velger du det andre alternativet for å bekrefte at den riktige teksten vises.
-5. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
 
+1. Legg til en **radio**-kontroll, gi den navnet **Priser**, og angi **[Elementer](properties-core.md)**-egenskapen til denne verdien:
+
+    **["Standard", "Premium"]**
+
+    Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
+
+2. Legg til en **[etikett](control-text-box.md)**-kontroll, flytt den under **Radio**-kontrollen, og angi **[Tekst](properties-core.md)**-egenskapen i **[Etikett](control-text-box.md)**-kontrollen til denne formelen:
+
+    **If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
+
+    Vil du ha mer informasjon om **[If](../functions/function-if.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
+
+3. Velg et alternativ i **Radio**-kontrollen mens du holder nede ALT.
+
+    **[Etikett](control-text-box.md)**-kontrollen viser den aktuelle teksten for valget.
+
+4. (valgfritt) Hold nede ALT, og velg det andre alternativet for å bekrefte at den riktige teksten vises.
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+
 ### <a name="color-contrast"></a>Fargekontrast
-Det må være tilstrekkelig fargekontrast mellom:
+
+I tillegg til [kravene om standard fargekontrast](../accessible-apps-color.md) må du sikre at det er tilstrekkelig fargekontrast mellom:
+
 * **RadioSelectionFill** og **RadioBackgroundFill**
 * **CheckboxBackgroundFill** og **[Fyll](properties-color-border.md)**
 
-Dette er i tillegg til [kravene for standard fargekontrast](../accessible-apps-color.md).
+### <a name="screen-reader-support"></a>Støtte for skjermleser
 
-### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
-* Det må være en **[verdi](properties-core.md)** for hvert radio-alternativ.
+* Sørg for at hver alternativ har en **[verdi](properties-core.md)**.
 * Vurder å legge til en **[etikett](control-text-box.md)** rett før **Radio**-kontrollen, som skal fungere som overskrift.
 
 ### <a name="keyboard-support"></a>Tastaturstøtte
-* **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
-* Fokusindikatorer må være godt synlige. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
- 
+
+* Angi **[TabIndex](properties-accessibility.md)**-egenskapen til null eller større, slik at tastaturbrukere kan navigere til den.
+* Angi egenskapene **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** slik at fokusindikatorer vises tydelig.

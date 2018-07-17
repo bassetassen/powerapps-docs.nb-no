@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 03/08/2018
 ms.author: caburk
-ms.openlocfilehash: c9525827c7e8e48c0f5e68e3608c9b6b9f630121
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 36e5efec10a3f849b6366368eed7b3b9e7af3f8c
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31831267"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898379"
 ---
 # <a name="model-driven-sample-apps"></a>Modelldrevne eksempelapper
 
@@ -70,7 +70,7 @@ Hvis du ønsker å spille av eller redigere modelldrevne eksempelapper, må appe
 
     ![Å slette løsningen](media/overview-model-driven-samples/delete-solution.png)
 
-*Du kan alternativt gå til listen over løsninger ved å klikke på **Avansert** i Maker-portalen og slette alt i nettadressen etter .dynamics.com/*
+<em>Du kan alternativt gå til listen over løsninger ved å klikke på **Avansert</em>* i Maker-portalen og slette alt i nettadressen etter .dynamics.com/*
 
 > [!IMPORTANT]
 > Slett ikke andre systemløsninger med mindre du er klar over innvirkningen av dette.

@@ -1,34 +1,33 @@
 ---
-title: Slik oppretter du en app fra grunnen av ved hjelp av en Common Data Service-database | Microsoft Docs
+title: Å opprette en app fra grunnen av ved hjelp av Common Data Service for Apps | Microsoft Docs
 description: Opprett en app for å legge til, oppdatere og slette poster.
-documentationcenter: na
 author: AFTOwen
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
 ms.component: canvas
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: a0aab890e52b49bb0cac382338a8fa02eec736a0
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 47a40ed5eea6176e9ef217ecfdcc66f7586b6b6e
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838491"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899782"
 ---
-# <a name="create-an-app-from-scratch-using-a-common-data-service-database"></a>Slik oppretter du en app fra grunnen av ved hjelp av en Common Data Service-database
-Bygg en app for å behandle data som er lagret i Common Data Service, ved hjelp av standardenheter (som er innebygd), egendefinerte enheter (som organisasjonen oppretter) eller begge deler.
+# <a name="create-an-app-from-scratch-using-common-data-service-for-apps"></a>Å opprette en app fra grunnen av ved hjelp av Common Data Service for Apps
+
+Bygg en app for å behandle data som er lagret i Common Data Service for Apps, ved hjelp av standardenheter (som er innebygd), egendefinerte enheter (som organisasjonen oppretter) eller begge deler.
 
 Når du bygger en app fra Common Data Service, trenger du ikke å opprette en tilkobling fra PowerApps, slik du gjør med datakilder som SharePoint, Dynamics 365 eller Salesforce. Du trenger bare å angi hvilke enheter du vil vise, administrere eller bruke for begge aktivitetene i appen.
 
 ## <a name="prerequisites"></a>Forutsetninger
+
 - Før du oppretter appen fra grunnen av, må du gjøre deg selv kjent med det grunnleggende om PowerApps ved å [generere en app](data-platform-create-app.md), og deretter egendefinere appens [galleri](customize-layout-sharepoint.md), [skjemaer](customize-forms-sharepoint.md) og [kort](customize-card.md).
 - [Bytt til et miljø](working-with-environments.md) der databasen ble opprettet med eksempeldata. Hvis du har en gyldig lisense, kan du [opprette et miljø](../../administrator/create-environment.md) for å oppfylle dette behovet.
 
 ## <a name="open-a-blank-app"></a>Slik åpner man en tom app
+
 1. Logg deg på [PowerApps](http://web.powerapps.com).
 
     ![Hjemmesiden for PowerApps](./media/data-platform-create-app-scratch/sign-in.png)
@@ -40,6 +39,7 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
     Du kan utforme en app fra grunnen av for telefoner og andre enheter (som nettbrett), og dette emnet fokuserer på hvordan du utformer apper for telefoner.
 
 ## <a name="specify-an-entity"></a>Å angi en enhet
+
 1. Klikk eller trykk på **koble til data** midt på skjermen, og deretter, i **Data**-ruten, klikker eller trykker du på **Common Data Service**-tilkoblingen.
 
 1. Skriv eller lim inn de første bokstavene til **Kontoer** i søkeboksen for å filtrere listen over enheter, merk av for **Kontoer**, og klikk eller trykk deretter på **Koble til**.
@@ -49,6 +49,7 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 1. Lukk **Data**-ruten ved å klikke eller trykke på Lukk-ikonet øverst til høyre.
 
 ## <a name="add-a-list-screen"></a>Slik legger du til en listeskjerm
+
 1. Klikk eller trykk på Pil ned for **Ny skjerm** på **Hjem**-fanen, og klikk eller trykk deretter på **Listeskjerm**.
 
     ![Slik legger du til en listeskjerm](./media/data-platform-create-app-scratch/list-screen.png)
@@ -59,13 +60,13 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
     Denne formelen angir at:
 
-    - Galleriet skal vise data fra **Kontoer**-enheten.
-    - Dataene skal sorteres i stigende rekkefølge før en bruker klikker eller trykker på sorteringsknappen for å veksle sorteringsrekkefølgen.
-    - Hvis en bruker skriver eller limer inn ett eller flere tegn i søkefeltet, viser listen bare de kontoene som inneholder tegnene som bruker oppgav.
+   - Galleriet skal vise data fra **Kontoer**-enheten.
+   - Dataene skal sorteres i stigende rekkefølge før en bruker klikker eller trykker på sorteringsknappen for å veksle sorteringsrekkefølgen.
+   - Hvis en bruker skriver eller limer inn ett eller flere tegn i søkefeltet, viser listen bare de kontoene som inneholder tegnene som bruker oppgav.
 
-    Du kan bruke [disse og mange andre funksjoner](formula-reference.md) for å angi hvordan appen vises og virker.
+     Du kan bruke [disse og mange andre funksjoner](formula-reference.md) for å angi hvordan appen vises og virker.
 
-    ![Slik angir du galleriets Element-egenskap](./media/data-platform-create-app-scratch/gallery-items.png)
+     ![Slik angir du galleriets Element-egenskap](./media/data-platform-create-app-scratch/gallery-items.png)
 
 1. Angi at galleriets oppsett skal vises bare navnet på hver konto, og konfigurer tittellinjen til å vise ordet **Bla gjennom**, som [Tilpassing av galleri](customize-layout-sharepoint.md) beskriver.
 
@@ -80,6 +81,7 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
     ![Å gi Bla gjennom-skjermen et nytt navn, galleri](./media/data-platform-create-app-scratch/rename-browse.png)
 
 ## <a name="add-a-form-screen"></a>Skjermen Legg til et skjema
+
 1. Gjenta det første trinnet til den forrige prosedyren, men legger også til en **Skjemaskjerm** i stedet for en **Listeskjerm**.
 
 1. Angi skjemaets **DataSource**-egenskap til **Kontoer** og **Elementer**-egenskap til **BrowseGallery.Selected**, som vist i **Avansert-fanen** i ruten til høyre.
@@ -104,39 +106,47 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 1. Endre navnet på denne skjermen til **FormScreen**.
 
 ## <a name="configure-icons"></a>Konfigurering av porter
-1. Klikk eller trykk på sirkelikonet nær toppen av skjermen på **BrowseScreen**, og angi **OnSelect**-egenskapen til denne formelen:<br>
-`Refresh(Accounts)`
+
+1. Klikk eller trykk på sirkelikonet nær toppen av skjermen på **BrowseScreen**, og angi **OnSelect**-egenskapen til denne formelen:
+
+    `Refresh(Accounts)`
 
     ![Oppdater-ikon](./media/data-platform-create-app-scratch/refresh-icon.png)
 
-1. Klikk eller trykk på plussikonet, og angi **OnSelect**-egenskapen til denne formelen:<br>
-`NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
+1. Klikk eller trykk på plussikonet, og angi **OnSelect**-egenskapen til denne formelen:
+
+    `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Legg til-ikon](./media/data-platform-create-app-scratch/plus-icon.png)
 
-1. Klikk eller trykk på den første pilen som peker mot høyre, og angi **OnSelect**-egenskapen til denne formelen:<br>
-`EditForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
+1. Klikk eller trykk på den første pilen som peker mot høyre, og angi **OnSelect**-egenskapen til denne formelen:
+
+    `EditForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Neste-ikon](./media/data-platform-create-app-scratch/next-icon.png)
 
-1. Klikk eller trykk på Avbryt-ikonet på **FormScreen**, og angi **OnSelect**-egenskapen til denne formelen:<br>
-`ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
+1. Klikk eller trykk på Avbryt-ikonet på **FormScreen**, og angi **OnSelect**-egenskapen til denne formelen:
+
+    `ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Avbryt-ikon](./media/data-platform-create-app-scratch/cancel-icon.png)
 
-1. Klikk eller trykk på Avmerking-ikonet, og angi **OnSelect**-egenskapen til denne formelen:<br>
-`SubmitForm(EditForm1); Navigate(BrowseScreen, ScreenTransition.None)`
+1. Klikk eller trykk på Avmerking-ikonet, og angi **OnSelect**-egenskapen til denne formelen:
+
+    `SubmitForm(EditForm1); Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Avmerking-ikon](./media/data-platform-create-app-scratch/checkmark-icon.png)
 
 1. Klikk eller trykk på **Ikoner** på **Sett inn**-fanen, og klikk eller trykk deretter på **Papirkurv**-ikonet.
 
-1. Angi **Papirkurv**-ikonets **Farge**-egenskap til **Hvit** og **OnSelect**-egenskap til denne formelen:<br>
-`Remove(Accounts, BrowseGallery.Selected); Navigate(BrowseScreen, ScreenTransition.None)`
+1. Angi **Papirkurv**-ikonets **Farge**-egenskap til **Hvit** og **OnSelect**-egenskap til denne formelen:
+
+    `Remove(Accounts, BrowseGallery.Selected); Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Papirkurv-ikon](./media/data-platform-create-app-scratch/trash-icon.png)
 
 ## <a name="test-the-app"></a>Test appen
+
 1. Velg **BrowseScreen** i den venstre navigeringsruten, og åpne deretter forhåndsvisningsmodus ved å trykke på F5 (eller ved å klikke på avspillingsikonet nær hjørnet øverst til høyre).
 
     ![Å åpne Forhåndsvisning](./media/data-platform-create-app-scratch/open-preview.png)
@@ -146,5 +156,5 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 1. Legg til en konto, rediger kontoen du la til, begynn å oppdater kontoen men avbryt endringene, og slett deretter kontoen.
 
 ## <a name="next-steps"></a>Neste trinn
-[Åpne én eller flere eksempelapper](open-and-run-a-sample-app.md), og utforsk forskjellige typer apper du kan opprette.
 
+[Åpne én eller flere eksempelapper](open-and-run-a-sample-app.md), og utforsk forskjellige typer apper du kan opprette.

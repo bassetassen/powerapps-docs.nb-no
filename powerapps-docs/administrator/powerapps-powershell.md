@@ -8,12 +8,12 @@ ms.component: pa-admin
 ms.topic: reference
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 788f9ec1ce1ac8604606d2d2ad836a0cd12360d4
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 2cb1e1b83cffee2ccea0a4d4b563de44aaa3e68c
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552994"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896194"
 ---
 # <a name="powershell-support-for-powerapps-preview"></a>PowerShell-støtte for PowerApps (forhåndsversjon)
 Forhåndsversjonen av PowerShell-cmdleter for apputviklere og administratorer er lansert, og nå kan du automatisere mange av overvåkings- og administrasjonsoppgavene som det i dag bare er mulig å utføre manuelt på [PowerApps](https://web.powerapps.com) eller [ PowerApps-administrasjonssenteret](https://admin.powerapps.com).
@@ -58,6 +58,7 @@ Hvis du vil kjøre PowerShell-cmdleter for app-utviklere, gjør du følgende:
 Brukere med en gyldig lisens for PowerApps kan utføre operasjoner i disse cmdletene, men de vil bare ha tilgang til ressurser (for eksempel apper, flyt osv.) som har blitt opprettet eller delt med dem.
 
 ### <a name="cmdlet-list"></a>Cmdlet-liste
+
 | Formål | Cmdlet |
 | --- | --- |
 | Les miljøer | Get-PowerAppsEnvironment <br> Get-FlowEnvironment
@@ -90,13 +91,15 @@ For å utføre administrasjonsoperasjonene i administrator-cmdletene må du ha f
 * I tillegg kreves det tillatelser for [global administrator for Office 365](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) eller [global administrator for Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) hvis du har behov for å søke via ressursene til en annen bruker. (Merk at miljøadministrator bare har tilgang til miljøer og miljøressurser de har tillatelser til.)
 
 ### <a name="cmdlet-list"></a>Cmdlet-liste
+
 | Formål | Cmdleter
 | --- | ---
 | Les og slett miljøer | Get-AdminEnvironment <br> Remove-AdminEnvironment
 | Les, oppdater og slett miljøtillatelser <br><br> *Cmdleter fungerer bare for miljøer som ikke har en database for Common Data Service (CDS) for Apps.* | Get-AdminEnvironmentRoleAssignment <br> Set-AdminEnvironmentRoleAssignment <br> Remove-AdminEnvironmentRoleAssignment
 | Les og slett lerretsapper | Get-AdminApp <br> Remove-AdminApp
 | Les, oppdater og slett tillatelser for lerretsapper | Get-AdminAppRoleAssignment <br> Remove-AdminAppRoleAssignment <br> Set-AdminAppRoleAssignment <br> Set-AdminAppOwner
-| Les, oppdater og slett flyter | Get-AdminFlow <br> Enable-AdminFlow <br> Disable-AdminFlow <br> Remove-AdminFlow  <br> Remove-AdminFlowOwnerRole
+| Les, oppdater og slett flyter | Get-AdminFlow <br> Enable-AdminFlow <br> Disable-AdminFlow <br> Remove-AdminFlow
+| Les, oppdater og slett flyttillatelser | Get-AdminFlowOwnerRole <br> Set-AdminFlowOwnerRole <br> Remove-AdminFlowOwnerRole
 | Les og slett tilkoblinger | Get-AdminConnection <br> Remove-AdminConnection
 | Les, oppdater og slett tilkoblingstillatelser | Get-AdminConnectionRoleAssignment <br> Set-AdminConnectionRoleAssignment <br> Remove-AdminConnectionRoleAssignment
 | Å lese og slette egendefinerte koblinger | Get-AdminConnector <br> Remove-AdminConnector

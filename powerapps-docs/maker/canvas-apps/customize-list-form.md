@@ -1,177 +1,204 @@
 ---
-title: Å tilpasse et SharePoint-listeskjema ved hjelp av PowerApps | Microsoft Docs
-description: Å bruke PowerApps til å tilpasse et listeskjema i SharePoint.
-documentationcenter: na
-author: aftowen
-manager: kfile
-editor: ''
-tags: ''
+title: Å tilpasse et SharePoint-listeskjema | Microsoft Docs
+description: Bruk PowerApps for å tilpasse skjemaet der brukerne oppretter og oppdaterer oppføringer i en SharePoint-liste.
+author: AFTOwen
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
 ms.component: canvas
-ms.date: 02/05/2018
+ms.date: 06/11/2018
 ms.author: anneta
-ms.openlocfilehash: 34c4e4126015f9a5f53ef6f07c9c66e4a4141db0
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 1ab7b6bc5f8e2617fc3d66bcdac40b930805d14d
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330403"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37900104"
 ---
-# <a name="customize-a-sharepoint-list-form-using-powerapps"></a>Å tilpasse et SharePoint-listeskjema ved hjelp av PowerApps
+# <a name="customize-a-sharepoint-list-form-by-using-powerapps"></a>Å tilpasse et SharePoint-listeskjema ved bruk av PowerApps
 
-Du kan nå enkelt tilpasse alle SharePoint-listeskjemaer i PowerApps. Mye av det du har gjort med InfoPath for å tilpasse listeskjemaer i SharePoint, kan du nå gjøre innebygd i en nettleser med PowerApps. I tillegg gir PowerApps deg muligheten til å gjøre så mye mer!
+Du kan enkelt tilpasse skjemaet fra en SharePoint-liste ved å åpne PowerApps i nettleseren. Du trenger ikke å skrive vanlig kode, som C#, eller laste ned en annen app, som InfoPath. Når du publiserer endringene, bygges skjemaet inn i SharePoint-listen. Det blir tilgjengelig for alle brukerne. I PowerApps kan du også se gjennom analyserapporter, enkelt opprette betinget formatering, og koble til andre datakilder.
 
-PowerApps er direkte integrert med SharePoint – det er ikke nødvendig å laste ned en annen app til datamaskinen. Og med PowerApps kan du opprette rikholdig tilpassede skjemaer uten å måtte skrive inn noe kode. Så snart de er publisert, er skjemaene innebygd i SharePoint-listen, og er tilgjengelige for alle brukere av listen.
-
-Og fordi PowerApps er sømløst integrert i SharePoint, er det ikke nødvendig å administrere skjemaer fra to steder: Tillatelser er arvet fra, og administreres via SharePoint. Det beste av alt er at når du integrerer PowerApps med SharePoint, får du tilgang til mange kraftige funksjoner, som analyserapporter, enkle pek-og-klikk-regler for betinget formatering og tilkoblinger til andre datakilder.
-
-Klar til å begynne å tilpasse? La oss komme i gang!
-
-## <a name="create-a-custom-list-form-app-in-powerapps"></a>Å opprette en app for egendefinerte listeskjemaer i PowerApps
+Hvis du vil følge trinnene i dette emnet, oppretter du en enkel liste slik at du kan se hvordan tilpassingen fungerer, og deretter kan du ta i bruk de samme konseptene i din egen liste.
 
 > [!NOTE]
-> Alternativet **Tilpass skjemaer** blir utilgjengelig, eller vil kanskje ikke fungere som det skal, hvis SharePoint-listen inneholder datatyper som PowerApps ikke støtter.
+> Hvis alternativet **Tilpass skjemaer** ikke er tilgjengelig eller ikke fungere som det skal for listen, kan det hende at den inneholder datatyper som [PowerApps ikke støtter](connections/connection-sharepoint-online.md#known-issues). Du kan heller ikke flytte skjemaet til en annen liste eller et annet [miljø](working-with-environments.md).
 
-Trykk eller klikk på **PowerApps** på kommandolinjen i SharePoint-listen. Deretter trykker eller klikker du på **Å tilpasse skjemaer**. Dette tar deg til PowerApps Studio i en nettleser, der PowerApps genererer en skjema-app for én skjerm, som vist i følgende eksempel.
+## <a name="prerequisites"></a>Forutsetninger
 
-![Skjema-app for én skjerm](./media/customize-list-form/list-form-app.png)
+Opprett en liste som inneholder disse kolonnene på et SharePoint-område:
 
-Hvis du vil gå tilbake til SharePoint-listen, kan du når som helst klikke eller trykke på **Tilbake til SharePoint** øverst til venstre i PowerApps Studio.
+- **ProductName** (enkelt linje med tekst)
+- **Detaljer** (ja/nei)
+- **Pris** (valuta)
+- **Tilgjengelighet** (data uten tidspunkt)
+- **Farge** (valg)
 
-## <a name="customize-the-list-form"></a>Å tilpasse listeskjemaet
+## <a name="open-the-form-in-powerapps"></a>Å åpne skjemaet i PowerApps
 
-PowerApps tilbyr mange måter å tilpasse skjemaet på. Her er noen eksempler:
+1. Åpne listen du opprettet, og velg deretter **Ny** i kommandolinjen.
 
-* [Å endre størrelse og retning](set-aspect-ratio-portrait-landscape.md)
-* [Å formatere teksten](controls/properties-text.md)
-* [Å legge til bilder](add-images-pictures-audio-video.md) eller [diagrammer](use-line-pie-bar-chart.md)
-* [Å legge til egendefinert datavalidering](functions/function-validate.md)
-* [Å legge til regler](working-with-rules.md)
-* [Å opprette flere visninger](https://powerapps.microsoft.com/blog/separate-custom-forms/)
+    Skjemaet åpnes og viser feltene du har lagt til, i tillegg til **Tittel** og **Vedlegg**.
 
-La oss, for å illustrere det, si at skjemaet har et **AccountID**-felt som du ikke vil skal vises.
+1. Velg **Tilpasse** nær toppen av skjemaet.
 
-![Å velge AccountID-felt](./media/customize-list-form/select-card.png)
+    PowerApps Studio åpner i den samme nettleserfanen.
 
-Å skjule feltet er lett i PowerApps – du fjerner ganske enkelt merket for **AccountID** i alternativene for skjematilpasning.
+1. Hvis dialogboksen **Velkommen til PowerApps Studio** åpnes, velger du **Hopp over**.
 
-![Å fjerne merket for AccountID](./media/customize-list-form/checkbox.png)
+## <a name="hide-extra-fields"></a>Å skjule ekstra felter
 
-Hvis du vil ha trinnvise instruksjoner om hvordan du kan skjule felt og gjøre andre endringer i skjemaet, kan du se [Å tilpasse skjemaer i PowerApps](customize-forms-sharepoint.md). Hvis du vil ha en fullstendig liste over ressurser, kan du se [Microsoft PowerApps-dokumenter](https://docs.microsoft.com/powerapps/).
+PowerApps viser skjemaet ditt midt på skjermen, men det inneholder noen felter som du muligens ikke ønsker å vise.
 
-## <a name="save-and-publish-the-list-form-back-to-sharepoint"></a>Å lagre og publisere listeskjemaet tilbake til SharePoint
+- Fjern merket for disse feltene i **Data**-ruten.
 
-1. Når du er ferdig, klikker eller trykker du på **Fil**, og deretter klikker eller trykker du på **Lagre**. Dette lagrer endringene til PowerApps-skjemaappen.
+  - **Tittel**
+  - **Endret**
+  - **Opprettet**
+  - **Opprettet av**
+  - **Endret av**
+  - **ID**
 
-1. Hvis du vil publisere skjemaet tilbake til SharePoint slik at andre kan bruke det, klikker eller trykker du på **Publiser til SharePoint**. Du trenger ikke å bekymre deg om å dele skjemaet – skjemaet arver tillatelser fra SharePoint-listen.
+    De feltene forsvinner fra visningen, og bare feltene du opprettet vises.
 
-    ![Å publisere til SharePoint](./media/customize-list-form/publish-to-sharepoint.png)  
+    ![Feltliste](./media/customize-list-form/field-list.png)
 
-## <a name="view-your-list-form-in-sharepoint"></a>Å vise listeskjemaet i SharePoint
+## <a name="set-conditional-formatting"></a>Å angi betinget formatering
 
-1. Hvis du vil se det tilpassede skjemaet, klikker eller trykker du på **Tilbake til SharePoint**, og deretter klikker eller trykker du på et element i SharePoint-listen. Skjemaet åpnes linjebundet til høyre i nettleservinduet.
+Du kan konfigurere feltene **Pris**, **Tilgjengelighet** og **Farger** slik at de bare vises hvis **Detaljer** er angitt til ja.
 
-    ![Å åpne skjemaet linjebundet i SharePoint](./media/customize-list-form/list-form-open.png)
+1. Velg **Pris**-kortet ved å klikke eller trykke på det.
 
-1. Hvis du vil [tilpasse skjemaet ytterligere](sharepoint-form-integration.md), klikker eller trykker du på **Tilpass**, og gjør deretter endringene. Når du er ferdig, må du huske å lagre endringene.
+    ![Å velge Tilgjengelighet-kortet](./media/customize-list-form/select-card.png)
 
-    ![Tilpasse-knappen](./media/customize-list-form/customize-button.png)
+1. Velg **Synlig** i egenskapslisten.
 
-    Du kan tilpasse og lagre så mange ganger du vil, men endringene vil ikke være synlige i SharePoint før du klikker eller trykker på **Publiser til SharePoint**.
+    ![Å velge Synlig-egenskapen](./media/customize-list-form/select-property.png)
 
-## <a name="toggle-between-using-the-default-sharepoint-form-and-the-custom-form"></a>Å veksle mellom å bruke standard-SharePoint-skjemaet og det egendefinerte skjemaet
+1. Skriv eller lim inn denne formelen i formellinjen:
 
-1. Fra listen i SharePoint kan du klikke eller trykke på **Innstillinger**, og deretter klikke eller trykke på **Listeinnstillinger**. Klikk eller trykk så på **Skjemainnstillinger**.
+    **If(DataCardValue3.Value = true, true)**
 
-1. Klikk eller trykk på én av følgende på **Skjemainnstillinger**-siden, og deretter klikker eller trykker du på **OK**.
+    ![Å angi verdien til Synlig-egenskapen](./media/customize-list-form/build-formula.png)
 
-    * **Å bruke standard-SharePoint-skjemaet** – SharePoint bruker standard-SharePoint-skjemaet for listen.
+1. Gjenta de tre siste trinnene med **Tilgjengelighet**- og **Farge**-kortet.
 
-    * **Å bruke et egendefinert skjema som er opprettet i PowerApps** – SharePoint bruker skjemaet som du tilpasset i PowerApps. (Du kan eventuelt publisere skjemaet på nytt fra **Lagre**-siden i PowerApps Studio.)
+1. Velg **Detaljer**-bryteren (ved å klikke eller trykke på den) flere ganger mens du holder nede ALT.
+
+    De tre feltene som du konfigurerte, vises og forsvinner fra skjemaet.
+
+1. (valgfritt) Du kan tilpasse skjemaet på en rekke måter, inkludert disse:
+
+    - Endre størrelsen, retningen eller begge deler (for eksempel for å [skjemaet bredere](set-aspect-ratio-portrait-landscape.md)).
+    - Legge til en kontroll slik at brukerne kan [laste opp vedlegg](controls/properties-text.md).
+    - Opprette et [oppslagsfelt](sharepoint-lookup-fields.md).
+
+## <a name="save-publish-and-show-the-form"></a>Å lagre, publisere og vise skjemaet
+
+1. Åpne **Fil**-menyen, velg **Lagre**, og deretter velger du **Publiser til SharePoint** to ganger.
+
+1. Velg tilbakepilen øverst til venstre, og velg deretter **Tilbake til SharePoint**.
+
+1. Velg **Ny** i kommandolinjen for å åpne det egendefinerte skjemaet.
+
+1. Velg **Detaljer**-bryteren flere ganger for å skule og vise de tre siste feltene.
+
+Hvis du vil [tilpasse skjemaet enda mer](sharepoint-form-integration.md), åpner du det, velger **Tilpasse** nær toppen av skjemaet, og deretter utfører, lagrer og publiserer du endringene.
+
+## <a name="use-the-default-form"></a>Å bruke standardskjemaet
+
+1. Åpne Innstillinger-siden fra SharePoint-listen (ved å velge tannhjulikonet øverst til høyre), og deretter velger du **Listeinnstillinger**.
+
+2. Velg **Skjemainnstillinger** under **Generelle innstillinger**.
+
+3. Velg én av disse alternativene på **Skjemainnstillinger**-siden, og velg deretter **OK**.
+
+    - **Å bruke standard SharePoint-skjema** – Når en bruker åpner listen og velger **Ny** i kommandolinjen, vises standardskjemaet for listen.
+
+    - **Å bruke et egendefinert skjema i PowerApps** – Når en bruker åpner listen og velger **Ny** i kommandolinjen, vises standardskjemaet. (Som et alternativ kan du publisere skjemaet på nytt i PowerApps.)
 
     Du kan veksle frem og tilbake mellom alternativer etter behov.
 
     ![Alternativer for skjemainnstillinger](./media/customize-list-form/form-settings.png)
 
-## <a name="delete-the-custom-list-form"></a>Å slette det egendefinerte listeskjemaet
+## <a name="delete-the-custom-form"></a>Å slette det egendefinerte skjemaet
 
-1. Fra listen i SharePoint kan du klikke eller trykke på **Innstillinger**, og deretter klikke eller trykke på **Listeinnstillinger**. Klikk eller trykk så på **Skjemainnstillinger**.
+1. Åpne Innstillinger-siden fra SharePoint-listen (ved å velge tannhjulikonet øverst til høyre), og deretter velger du **Listeinnstillinger**.
 
-1. På **Skjemainnstillinger**-siden klikker eller trykker du på **Bruk standard-SharePoint-skjemaet**, og deretter klikker eller trykker du på **Slett standardskjema** under **Bruk et egendefinert skjema som er opprettet i PowerApps**. Dette vil slette det egendefinerte skjemaet som du opprettet i PowerApps, og skjemaet vil gå tilbake til å være et standard SharePoint-skjema.
+1. Velg **Skjemainnstillinger** under **Generelle innstillinger**.
+
+1. Velg **Bruk standard SharePoint-skjema** på **Skjemainnstillinger**-siden, og velg deretter **Slett egendefinert skjema**.
 
     ![Å slette det egendefinerte skjemaet](./media/customize-list-form/use-default-sharepoint.png)
 
-## <a name="top-questions-about-list-form-customization"></a>De vanligste spørsmålene om tilpasning av listeskjema
+## <a name="q--a"></a>Spørsmål og svar
 
-### <a name="customizing-forms-versus-creating-apps"></a>Tilpasning av skjemaer sammenlignet med å lage apper
+### <a name="forms-vs-apps"></a>Skjemaer kontra apper
 
-**Spørsmål:** Hvordan skiller et tilpasset listeskjema seg fra en frittstående app som jeg oppretter fra SharePoint eller PowerApps?
+**Spørsmål:** Hvordan skiller et egendefinert skjema seg fra en frittstående app som jeg oppretter fra SharePoint eller PowerApps?
 
-**Svar:** Listeskjema-appen som du opprettet fra SharePoint er en spesiell type PowerApps-app som bare kan brukes i en SharePoint-liste. Disse listeskjema-appene vises ikke i applisten i PowerApps Studio for nett eller PowerApps Mobile, og du kan ikke kjøre dem andre steder enn i SharePoint-listen.
+**Svar:** Hvis du tilpasser skjemaet for en SharePoint-liste, vises ikke skjemaet som en app i PowerApps Studio eller PowerApps Mobil. Du kan bare åpne skjemaet fra listen det ble opprettet fra.
 
-**Spørsmål:** Når bør jeg opprette et egendefinert listeskjema, og når bør jeg opprette en frittstående app?
+**Spørsmål:** Når bør jeg tilpasse et skjema for å behandle data i en sharePoint-liste, og når bør jeg opprette en frittstående app?
 
-**Svar:** Hvis du vil at brukerne skal få tilgang til skjemaet ved hjelp av SharePoint, og du ønsker å tilpasse hvordan de oppretter, viser eller redigerer listeelementer, foreslår vi at du oppretter et egendefinert listeskjema fra SharePoint. Hvis du vil opprette en fullstendig tilpasset opplevelse for brukerne som de kan bruke uavhengig av SharePoint-området, anbefaler vi du oppretter en frittstående app.
+**Svar** Tilpass et skjema hvis du ønsker at brukerne skal kunne behandle data uten å forlate SharePoint (for eksempel, i en nettleser på en stasjonær datamaskin). Du oppretter en app hvis du ønsker at brukerne skal kunne behandle data utenfor SharePoint (for eksempel, på en mobil enhet).
 
-**Spørsmål:** Kan jeg tilpasse et listeskjema og opprette en frittstående app for den samme listen?
+**Spørsmål:** Kan jeg tilpasse et skjema og opprette en app for den samme listen?
 
-**Svar:** Ja. Frittstående apper og egendefinerte listeskjemaer er uavhengige av hverandre. Du kan tilpasse og administrere dem enkeltvis.
+**Svar:** Ja.
 
-**Spørsmål:** Er tilpasningsfunksjonene for å tilpasse et listeskjema de samme som for å tilpasse en frittstående app?
+**Spørsmål:** Kan jeg tilpasse en liste og opprette en app ved bruk av de samme funksjonene?
 
-**Svar:** Ja. Du kan [legge til og konfigurere kontroller](add-configure-controls.md), [koble til tilgjengelige datakilder](add-data-connection.md) eller [legge til dine egne datakilder](../canvas-apps/register-custom-api.md), akkurat som du kan med frittstående apper.
+**Svar:** Ja.
 
-**Spørsmål:** Kan jeg opprette egendefinerte listeskjemaer i et annet miljø enn standardmiljøet i organisasjonen min?
+**Spørsmål:** Kan jeg tilpasse et skjema i et annet miljø enn standardmiljøet i organisasjonen min?
 
-**Svar:** Nei. For øyeblikket kan du bare opprette egendefinerte listeskjemaer i organisasjonens standard PowerApps-miljø. Du kan ikke opprette egendefinerte listeskjemaer i (eller overføre dem til) et annet miljø.
+**Svar:** Nei.
 
-### <a name="managing-your-custom-list-form"></a>Å behandle det egendefinerte listeskjemaet
+### <a name="manage-your-custom-form"></a>Å behandle det egendefinerte skjemaet
 
-**Spørsmål:** Hvordan får jeg en direkte kobling til listeskjemaet mitt som jeg kan dele med andre?
+**Spørsmål:** Hvordan kan jeg enkelt dele skjemaet med andre?
 
-**Svar:** Åpne skjemaet i SharePoint-listen, og klikk eller trykk deretter på **Kopier kobling**.
+**Svar** Åpne skjemaet, velg **Kopier kobling**, og deretter kan du sende koblingen til de du ønsker skal bruke skjemaet.
 
-**Spørsmål:** Kan jeg oppdatere listeskjemaet uten å gjøre endringene mine synlige for andre?
+**Spørsmål:** Kan jeg oppdatere skjemaet uten å gjøre endringene mine synlige for andre?
 
-**Svar:** Ja. Du kan tilpasse og lagre så mange ganger du vil, men endringene vil ikke være synlige for andre før du klikker eller trykker på **[Publiser til SharePoint](customize-list-form.md#save-and-publish-the-list-form-back-to-sharepoint)**.
+**Svar:** Ja. Du kan endre skjemaet og lagre det så mange ganger du vil, men endringene vil ikke være synlige for andre før du velger **Publiser til SharePoint**.
 
 **Spørsmål:** Kan jeg gå tilbake til en tidligere versjon hvis jeg gjør en feil når jeg tilpasser listeskjemaet?
 
-**Svar:** Ja. Hvis du gjør endringer i skjemaet og lagrer disse endringene, og deretter finner ut at du har gjort en feil, kan du gjenopprette en tidligere versjon av skjemaet ved hjelp av PowerApps:
+**Svar:** Ja.
 
-1. Trykk eller klikk på **PowerApps** på kommandolinjen i SharePoint-listen. Deretter trykker eller klikker du på **Å tilpasse skjemaer**.
+1. Åpne listen, velg **PowerApps** på kommandolinjen, og velg deretter **Tilpass skjemaer**.
 
-1. Klikk eller trykk på **Fil** i PowerApps Studio, og klikk eller trykk deretter på **Se alle versjoner** på **Lagre**-siden. **Versjoner**-siden åpnes i en ny fane i nettleseren.
+1. Velg **Fil** i PowerApps Studio, velg deretter **Se alle versjoner**. **Versjoner**-siden åpnes i en ny fane i nettleseren.
 
     > [!NOTE]
-    > Hvis du ikke ser **Se alle versjoner**-knappen, klikker eller trykker du på **Lagre**. Knappen skal nå vises.
+    > Hvis du ikke ser **Se alle versjoner**-knappen, velger du **Lagre**. Knappen skal nå vises.
 
-1. Uten å lukke **Versjoner**-siden eller nettleserfanen, går du tilbake til **Lagre**-siden i den andre nettleserfanen, klikk eller trykk på pilen øverst i venstre navigasjonsrute, og deretter klikk eller trykk på **Tilbake til SharePoint** for å låse opp skjemaet og avslutte PowerApps Studio.
+1. Gå tilbake til **Lagre**-siden i den andre nettleserfanen uten å lukke **Versjoner**-siden eller nettleserfanen. Klikk eller trykk på pilen øverst i venstre navigasjonsrute, og deretter klikk eller trykk på **Tilbake til SharePoint** for å låse opp skjemaet og avslutte PowerApps Studio.
 
-1. Gå tilbake til **Versjoner**-siden i den andre nettleserfanen, finn versjonen du ønsker å gjenopprette, og klikk deretter på **Gjenopprett**.
+1. Gå tilbake til **Versjoner**-siden i den andre nettleserfanen, finn versjonen du ønsker å gjenopprette, og velg deretter **Gjenopprett**.
 
     > [!NOTE]
     > Hvis du får en feilmelding om at gjenopprettingen mislyktes fordi skjemaet er låst av en annen bruker, må du vente til brukeren låser opp skjemaet, og prøve på nytt.
 
-**Spørsmål:** Kan jeg flytte det egendefinerte listeskjemaet fra én liste til en annen?
+**Spørsmål:** Kan jeg flytte skjemaet fra én liste til en annen?
 
-**Svar:** Nei. Denne funksjonaliteten støttes ikke.
+**Svar:** Nei.
 
-### <a name="administering-custom-list-forms"></a>Administrasjon av egendefinerte listeskjemaer
+### <a name="administer-your-custom-form"></a>Å administrere det egendefinerte skjemaet
 
-**Spørsmål:** Hvordan kan jeg dele det egendefinerte listeskjemaet med andre?
+**Spørsmål:** Hvordan deler jeg skjemaet mitt?
 
 **Svar:** Du trenger ikke å dele skjemaet – skjemaet arver tillatelser fra SharePoint-listen. Når du er ferdig med å tilpasse det, [publiserer du det bare tilbake til SharePoint](customize-list-form.md#save-and-publish-the-list-form-back-to-sharepoint) slik at andre kan bruke det.
 
-**Spørsmål:** Hvem kan tilpasse listeskjemaer?
+**Spørsmål:** Hvem kan tilpasse skjemaer?
 
 **Svar:** Alle med SharePoint-tillatelser til å administrere, utforme eller redigere den tilhørende listen.
 
 **Spørsmål:** Trenger jeg en PowerApps-lisens for å opprette eller bruke egendefinerte listeskjemaer?
 
-**Svar:** Hvis du har noen [Office 365-abonnementer som inkluderer PowerApps](../../administrator/pricing-billing-skus.md#licenses), kan du opprette eller bruke egendefinerte listeskjemaer.
+**Svar:** Du trenger et [Office 365-abonnement som inkluderer PowerApps](../../administrator/pricing-billing-skus.md#licenses).
 
 **Spørsmål:** Hva skjer når gjestebrukere har tilgang til en liste som har et egendefinert skjema?
 
@@ -181,9 +208,9 @@ Hvis du vil ha trinnvise instruksjoner om hvordan du kan skjule felt og gjøre a
 
 **Svar:** Hvis du er tenant-administrator for PowerApps eller har administratortillatelser i standardmiljøet for PowerApps i organisasjonen, gjør du følgende:
 
-1. Gå til [Administrasjonssenteret for PowerApps](https://admin.powerapps.com), og velg standardmiljøet for organisasjonen fra listen over miljøer.
+1. Velg standardmiljøet for organisasjonen fra listen over miljøer i [Administrasjonssenteret for PowerApps](https://admin.powerapps.com).
 
-1. Øverst på siden for standardmiljø klikker eller trykker du på **Ressurser**.
+1. Velg **Ressurser** øverst på siden for standardmiljø.
 
 1. Se etter apper med en **SharePoint-skjema**-apptype fra listen over apper – dette er de tilpassede skjemaene.
 

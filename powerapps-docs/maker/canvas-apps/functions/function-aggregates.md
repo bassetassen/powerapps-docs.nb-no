@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 08/15/2017
 ms.author: gregli
-ms.openlocfilehash: e488383acbd163383079b5078e464cab89e677ad
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a8cd998744d609c253a31271aab34a30b1e998f3
+ms.sourcegitcommit: a622db0fb3d44fa5e7ebc4bfdc77cd6acb3646be
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31829052"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37843231"
 ---
 # <a name="average-max-min-stdevp-sum-and-varp-functions-in-powerapps"></a>Funksjonene Average, Max, Min, StdevP, Sum og VarP i PowerApps
 Aggregatfunksjoner som oppsummerer et sett med tall.
@@ -44,7 +44,7 @@ Du kan angi verdiene for disse funksjonene som:
 
 Disse funksjonene fungerer bare på numeriske verdier. Andre typer verdier, for eksempel strenger eller poster, blir oversett. Bruk **[Value](function-value.md)**-funksjonen til å konvertere en streng til et tall.
 
-Funksjonene **Average**, **Max**, **Min** og **Sum** kan delegeres når de brukes med en [datakilde som støtter delegering for disse funksjonene](../delegation-list.md).  **StdevP** og **VarP** kan imidlertid ikke delegeres for noen datakilder.  Hvis delegering ikke støttes, hentes bare den første delen av dataene, og deretter brukes funksjonen lokalt.  Resultatet kan ikke representere den fullstendige historikken.  En blå prikk vises i redigeringsmodus for å minne deg på denne begrensningen, og for å foreslå at du bytter til delegerbare alternativer der det er mulig. Se [oversikten over delegering](../delegation-overview.md) for mer informasjon.
+Funksjonene **Average**, **Max**, **Min** og **Sum** kan delegeres når de brukes med en [datakilde som støtter delegering for disse funksjonene](../delegation-list.md).  **StdevP** og **VarP** kan imidlertid ikke delegeres for noen datakilder.  Hvis delegering ikke støttes, hentes bare den første delen av dataene, og deretter brukes funksjonen lokalt.  Resultatet kan ikke representere den fullstendige historikken.  En delegeringsadvarsel under redigeringen for å minne deg på denne begrensningen, og for å foreslå at du bytter til delegerbare alternativer der det er mulig. Se [oversikten over delegering](../delegation-overview.md) for mer informasjon.
 
 ## <a name="syntax"></a>Syntaks
 **Average**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Max**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Min**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Sum**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**StdevP**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**VarP**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )
