@@ -2,17 +2,19 @@
 title: Opplæring – slik tilpasser du et galleri i en generert app | Microsoft Docs
 description: I denne opplæringen kan du tilpasse dataene som vises i galleriet og andre elementer for en app som har blitt generert automatisk i PowerApps.
 author: AFTOwen
+manager: kvivek
 ms.service: powerapps
 ms.topic: tutorial
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 05/06/2018
 ms.author: anneta
-ms.openlocfilehash: 80baf43cbde0811d4ab5a7f5212aff767a9f6103
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: bb02f12bf452d1928408ea7c266469b524607b5f
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37899943"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39016793"
 ---
 # <a name="tutorial-customize-a-gallery-in-powerapps"></a>Opplæring: Tilpassing av et galleri i PowerApps
 
