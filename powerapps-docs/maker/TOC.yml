@@ -134,7 +134,9 @@
             - name: Opprette en app som er enkel å forstå
               href: ./canvas-apps/accessible-apps.md
               items:
-                - name: Farge
+                - name: Finn tilgjengelighetsproblemer
+                  href: ./canvas-apps/accessibility-checker.md
+                - name: Bruk farge for tilgjengelighet
                   href: ./canvas-apps/accessible-apps-color.md
         - name: Administrere appen
           items:
@@ -630,7 +632,7 @@
           href: ./common-data-service/data-platform-entity-licenses.md
     - name: Instruksjoner
       items:
-        - name: Behandle egendefinerte felter i en enhet
+        - name: Behandle egendefinerte felt i en enhet
           href: ./common-data-service/data-platform-manage-fields.md
         - name: Opprette en egendefinert enhet fra data
           href: ./common-data-service/data-platform-cds-newentity-pq.md
