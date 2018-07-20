@@ -1,23 +1,20 @@
 ---
 title: Integrasjon av skjemaer i SharePoint | Microsoft Docs
 description: Forstå hvordan tilpassede skjemaer fungerer med SharePoint
-documentationcenter: na
 author: sarafankit
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/11/2017
 ms.author: ankitsar
-ms.openlocfilehash: f8f21235170483c908149898f92b57cc6c2cb9aa
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: f717213a2f545c5cd7358c21b3cf9490aaf1708d
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37896424"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39020956"
 ---
 # <a name="understand-sharepoint-forms-integration"></a>Forstå integrasjon for SharePoint-skjemaer
 Du kan nå enkelt [tilpasse alle SharePoint-listeskjemaer](customize-list-form.md) i PowerApps. I denne artikkelen forklarer vi i detalj hvordan disse skjemaene fungerer, og hvordan du kan tilpasse dem enda mer.

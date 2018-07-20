@@ -1,23 +1,20 @@
 ---
 title: Integrering av PowerApps på nettsteder og andre tjenester| Microsoft Docs
 description: Bygg inn apper på nettsteder og andre tjenester.
-documentationcenter: na
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 10/20/2017
 ms.author: mblythe
-ms.openlocfilehash: 0f4ea37d93b20a768fa16d1dcdb41f921336f043
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ed0863d8d7987e7e7f129a9804b35e00e76aad36
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827055"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39023808"
 ---
 # <a name="integrate-powerapps-into-websites-and-other-services"></a>Integrering av PowerApps på nettsteder og andre tjenester
 Appene du utvikler er gjerne mest nyttige når de er tilgjengelige direkte hvor arbeidet utføres. Med PowerApps kan du bygge inn apper i en iframe, slik at du kan integrere disse appene på nettsteder og andre tjenester, for eksempel Power BI eller SharePoint.

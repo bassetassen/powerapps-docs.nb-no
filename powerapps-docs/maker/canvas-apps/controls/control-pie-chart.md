@@ -1,23 +1,20 @@
 ---
 title: 'Sektordiagram-kontrollen: referanse | Microsoft Docs'
 description: Informasjon om Sektordiagram-kontrollen, inkludert egenskaper og eksempler
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: fe61a36278ce4f5fe2fb5ff16bdc0a86dc911e5e
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 32fb27a48b9f5cc2a4ff697e49ee74a51d3d626a
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37899115"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39017437"
 ---
 # <a name="pie-chart-control-in-powerapps"></a>Sektordiagram-kontrollen i PowerApps
 En kontroll som viser relative verdier sammenlignet med hverandre.

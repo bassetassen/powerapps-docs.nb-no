@@ -1,23 +1,20 @@
 ---
 title: Slik oppretter du en regel i Microsoft Docs
 description: Trinnvise instruksjoner for bygging av app-logikken ved oppretting av regler
-documentationcenter: na
 author: karthik-1
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/10/2017
 ms.author: sharik
-ms.openlocfilehash: f8578625ea3661a9070bddcc5b2ff63c6ecde4fd
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 05868c7bae9e08d4853ba6dc77a157fc90cbbde5
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31828015"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39021492"
 ---
 # <a name="create-a-rule-in-powerapps"></a>Slik oppretter du en regel i PowerApps
 Opprett regler for å automatisk endre en app som er basert på vilkår du angir. Du kan for eksempel vise listeelementer i rødt, gult eller grønt, basert på status, eller vise en knapp for godkjenning bare for enkelte brukere (for eksempel ledere).

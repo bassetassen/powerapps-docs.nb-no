@@ -1,23 +1,20 @@
 ---
 title: 'Vekslekontroll: referanse | Microsoft Docs'
 description: Informasjon, inkludert egenskaper og eksempler, om vekslekontrollen
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 0344a43707170bccebfd01d8b3a1bba24f3c183f
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a2361e2572d62ca4a2574cd668ba0f1834d04ab9
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31836865"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39022463"
 ---
 # <a name="toggle-control-in-powerapps"></a>Vekslekontrollen i PowerApps
 En kontroll som brukeren kan slå på eller av ved å flytte håndtaket.

@@ -1,21 +1,20 @@
 ---
 title: Å generere en app fra Excel | Microsoft Docs
 description: Slik bruker du PowerApps til å automatisk generere en app ved hjelp av en Excel-fil som er lagret i en skylagringskonto
-documentationcenter: na
-author: AFTOWen
-manager: kfile
+author: AFTOwen
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: 54d53d5f3385be4b5d38a2bf220da139ba3bd3a4
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 4830721ba697f78987abd972dd1122250bacb9e8
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827262"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39020243"
 ---
 # <a name="generate-an-app-from-excel-in-powerapps"></a>Å generere en app fra Excel i PowerApps
 I dette emnet vil du automatisk generere din første app i PowerApps ved hjelp av data fra en Excel-tabell. Du velger en Excel-fil, genererer en app og kjører deretter appen du genererer. Alle genererte apper inkluderer skjermer for å bla gjennom poster, vise postdetaljer og opprette eller oppdatere poster. Du kan raskt få en fungerende app ved hjelp av Excel-data ved å generere en app, og deretter kan du tilpasse appen for bedre å møte dine behov. 

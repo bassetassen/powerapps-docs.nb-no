@@ -1,23 +1,20 @@
 ---
 title: Å vise, redigere eller legge til en post fra en tabell | Microsoft Docs
 description: Å bruke et skjema til å vise, redigere eller legge til en post fra en tabell i datakilden.
-documentationcenter: na
 author: karthik-1
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/06/2017
 ms.author: sharik
-ms.openlocfilehash: a68986c39ffe251f55c10a26386c8430398d2718
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: b98c5d165ba6de983a874f0a34fb92c5db8a69cd
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37895826"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39018955"
 ---
 # <a name="show-edit-or-add-a-record-from-a-table-in-powerapps"></a>Å vise, redigere eller legge til en post fra en tabell i PowerApps
 Hvis du vil vise alle feltene i en post, kan du legge til og konfigurere en **[Visningsskjema](controls/control-form-detail.md)**-kontroll. Hvis du vil redigere noen av feltene i en post (eller legge til en post) og lagre endringene tilbake til en datakilde, kan du legge til og konfigurere en **[Redigeringsskjema](controls/control-form-detail.md)**-kontroll.

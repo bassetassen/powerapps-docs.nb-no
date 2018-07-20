@@ -1,25 +1,22 @@
 ---
 title: Trinnvis gjennomgang av integreringsscenario for SharePoint Online | Microsoft Docs
 description: Ta en trinnvis gjennomgang av scenarioet vi har utviklet i denne opplæringsserien.
-documentationcenter: na
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: ab2f1fc08ce65261c5a433a098dcd0dec54b0f8c
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 6c362c39aa99490c8c2043b36a05e107b94e0a26
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31836658"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39014953"
 ---
-# <a name="walk-end-to-end-through-the-completed-sharepoint-online-integration-scenario"></a>Ta en trinnvis gjennomgang av det komplette integreringsscenariet for SharePoint Online
+# <a name="walk-end-to-end-through-the-completed-sharepoint-online-integration-scenario"></a>Ta en trinnvis gjennomgang av det komplette integreringsscenarioet for SharePoint Online
 > [!NOTE]
 > Denne artikkelen er en del av en opplæringsserie om hvordan du bruker PowerApps, Microsoft Flow og Power BI med SharePoint Online. Sørg for å lese [serieinnføringen](sharepoint-scenario-intro.md) for å få en fornemmelse av det store bildet, i tillegg til relaterte nedlastinger.
 
@@ -77,10 +74,10 @@ Vi har dekket et stort område i denne opplæringsserien, fra utvikling av apper
    
     ![Ikke-tilordnet SharePoint-listeelement](./media/sharepoint-scenario-summary/09-03-01-unassigned.png)
 2. Klikk eller trykk på **App for prosjektstyring** på SharePoint-området.
-3. Klikk eller trykk på **Tilordne leder** på det første skjermbildet.
+3. Klikk eller trykk på **Tilordne leder** på den første skjermen.
    
     ![Å tilordne en leder til et prosjekt](./media/sharepoint-scenario-summary/09-03-02-intro-screen.png)
-4. På **Tilordne leder**-skjermbildet ser du de to ikke-tilordnede prosjektene fra listen. Velg **Mobilenheter for utformingsteamet**-prosjektet.
+4. På **Tilordne leder**-skjermen ser du de to ikke-tilordnede prosjektene fra listen. Velg **Mobilenheter for utformingsteamet**-prosjektet.
    
     ![Ikke-tilordnet prosjekt som er valgt i appen](./media/sharepoint-scenario-summary/09-03-03-selected.png)
 5. I **Leder**-tekstinndataene skriver du inn «Ingjerd Espeseth», og deretter klikker du på **OK**.
@@ -93,10 +90,10 @@ Vi har dekket et stort område i denne opplæringsserien, fra utvikling av apper
     ![Tilordnet SharePoint-listeelement](./media/sharepoint-scenario-summary/09-03-05-assigned.png)
 
 ## <a name="step-4-add-time-estimates-for-the-project"></a>Trinn 4: Å legge til tidsestimater for prosjektet
-1. Klikk eller trykk på ![Tilbake-ikon](./media/sharepoint-scenario-summary/icon-back.png) for å gå tilbake til det første skjermbildet, klikk eller trykk deretter på **Oppdater detaljer**.
+1. Klikk eller trykk på ![Tilbake-ikonet](./media/sharepoint-scenario-summary/icon-back.png) for å gå tilbake til den første skjermen, og klikk eller trykk deretter på **Oppdater detaljer**.
    
     ![Å oppdatere prosjektdetaljer](./media/sharepoint-scenario-summary/09-04-00-intro-screen.png)
-2. På **Vis prosjekter**-skjermbildet skriver du inn «Mobil» i søkeboksen.
+2. På **Vis prosjekter**-skjermen skriver du inn «Mobil» i søkeboksen.
    
     ![Å søke i appen](./media/sharepoint-scenario-summary/09-04-01-search-mobile.png)
 3. Klikk på ![detaljer-pilikonet](./media/sharepoint-scenario-summary/icon-details-arrow.png) for **Mobilenheter for utformingsteam**-elementet.
@@ -108,7 +105,7 @@ Vi har dekket et stort område i denne opplæringsserien, fra utvikling av apper
 
    * **ProjectedStartDate**-feltet = «3/6/2017»
 
-   * **ProjectedStartDate**-feltet = «3/24/2017»
+   * **ProjectedEndDate**-feltet = «24/3/2017»
 
    * **ProjectedDays**-feltet = «15»
      
@@ -131,30 +128,30 @@ Vi har dekket et stort område i denne opplæringsserien, fra utvikling av apper
 4. Drill inn i visualiseringen, og du vil se at mye av variansen kommer fra to prosjekter som tok mye lengre tid enn anslått.
    
     ![Diagram som viser detaljer for variansen](./media/sharepoint-scenario-summary/09-05-03-chart-variance-drill.png)
-5. Se gjennom tabellen som viser hvor lang tid det tar for prosjekter å gå fra godkjent til startdato for prosjekt.
+5. Se gjennom tabellen som viser hvor lang tid det tar fra godkjenning av prosjekter til planlagt oppstartdato.
    
     ![Tabell som viser forskjeller for startdatoer](./media/sharepoint-scenario-summary/09-05-04-chart-diff-completed.png)
    
     Som vi nevnte da vi opprettet denne visualiseringen, tar prosjektene som er tilordnet til Bjarne Kollerud lenger tid før det starter, hvorav to prosjekter tar mye lenger tid enn resten.
 
 ## <a name="step-6-respond-to-pending-project-delays"></a>Trinn 6: Svar på ventende forsinkede leveringer
-1. Klikk eller trykk på datasettet **Prosjektanalyse** i Power BI-tjenesten, og deretter klikker eller trykker du på **OPPDATER NÅ**. Oppdateringen utløser varselet vi satte opp for ventende prosjekter.
+1. Klikk eller trykk på datasettet **Prosjektanalyse** i Power BI-tjenesten, og deretter klikker eller trykker du på **OPPDATER NÅ**. Oppdateringen utløser varselet vi konfigurerer for ventende prosjekter.
    
-    ![Å oppdatere datasettet](./media/sharepoint-scenario-summary/09-06-01-refresh.png)
+    ![Oppdater datasettet nå](./media/sharepoint-scenario-summary/09-06-01-refresh.png)
 2. Når oppdateringen er fullført, viser **varslingssenteret** øverst til høyre et nytt varsel-ikon.
    
     ![Varslingssenter for Power BI](./media/sharepoint-scenario-summary/09-06-02-alert.png)
    
-    Dette kan ta en stund, så kom tilbake hvis du ikke ser det med en gang.
+    Dette kan ta litt tid, så kom tilbake hvis du ikke ser endringen umiddelbart.
 3. Åpne varslingssenteret for å se detaljene for varselet som ble utløst.
    
     ![Varsling for datavarsel](./media/sharepoint-scenario-summary/09-06-03-notification.png)
-4. Se i innboksen etter vedkommende som opprettet varselet (i vårt tilfelle var det Linda Skistad).
+4. Sjekk innboksen for personen som opprettet varselet (Linda Skistad i vårt tilfelle).
    
-    ![Varslings-e-post fra Power BI](./media/sharepoint-scenario-summary/09-06-04-email-powerbi.png)
-5. Se i innboksen etter vedkommende som du la til i datavarselflyten (i vårt tilfelle var det Jan Høvik).
+    ![E-postvarsel fra Power BI](./media/sharepoint-scenario-summary/09-06-04-email-powerbi.png)
+5. Sjekk innboksen for personen du har lagt til i flyten for datavarsler (Jan Høvik i vårt tilfelle).
    
-    ![Varslings-e-post fra Microsoft Flow](./media/sharepoint-scenario-summary/09-06-05-email-flow.png)
+    ![E-postvarsel fra Microsoft Flow](./media/sharepoint-scenario-summary/09-06-05-email-flow.png)
 6. Nå som du har informasjon om ventende prosjekter, kan du gå tilbake og godkjenne de som har ventet på din oppmerksomhet.
 
 Dette fører oss til konklusjonen for vår trinnvise gjennomgang, og for hele denne opplæringsserien. Vi oppfordrer deg til å fortsette reisen din ved å sjekke ut følgende nettsteder:
@@ -166,5 +163,5 @@ Dette fører oss til konklusjonen for vår trinnvise gjennomgang, og for hele de
 * [SharePoint](http://sharepoint.microsoft.com)
 * [Microsoft Tech-fellesskapet](https://techcommunity.microsoft.com/)
 
-Gi oss tilbakemeldinger om denne serien i kommentarene, om dere har noen forslag til tillegg eller ideer for ytterligere innhold som vil hjelpe deg med å arbeide med teknologiene vi har tatt for oss.
+Gi oss beskjed i kommentarfeltet hvis du har tilbakemeldinger på denne serien, forslag til tillegg eller ideer til tilleggsinnhold som kan hjelpe deg med å arbeide med teknologier som vi har omtalt.
 

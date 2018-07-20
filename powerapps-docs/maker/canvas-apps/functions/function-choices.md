@@ -2,17 +2,19 @@
 title: Choices-funksjonen | Microsoft Docs
 description: Referanseinformasjon, inkludert syntaks, for Choices-funksjonen i PowerApps
 author: gregli-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/15/2018
 ms.author: gregli
-ms.openlocfilehash: ec39a9970c2135e9cf4633f8266d9b2980d8cd9b
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 8f0985203017ec21d49fa98be870208c6ecf3ea5
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37895964"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39022175"
 ---
 # <a name="choices-function-in-powerapps"></a>Choices-funksjonen i PowerApps
 Returnerer en tabell med de mulige verdiene for en oppslagskolonne.

@@ -1,23 +1,20 @@
 ---
 title: Innføring i powerapps.com | Microsoft Docs
 description: Et nytt hjem for alle som utvikler apper.
-documentationcenter: na
 author: linhtranms
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/28/2016
 ms.author: litran
-ms.openlocfilehash: f29f75522eb01c61c3528e61018fb759980e79f9
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 400df9944b21788e08b0a55e3e0a148f2eccb972
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330219"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39017345"
 ---
 # <a name="introduction-to-powerappscom"></a>Innføring i powerapps.com
 PowerApps-teamet introduserer på nytt [powerapps.com](http://web.powerapps.com) som det nye hjemmet for apputviklere. Vi har utformet siden på nytt som hovedsiden for kreative som enkelt vil komme i gang med utvikling av apper, bruke Microsoft Common Data Service og administrere appene sine på ett og samme sted. I denne artikkelen veileder jeg deg gjennom følgende:

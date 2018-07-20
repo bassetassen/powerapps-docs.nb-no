@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/05/2018
 ms.author: rriley
-ms.openlocfilehash: 74445d4a9398afe00407e7b1a1eae5b7d773dd22
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: b57d62d3e64ea08905ddcc8627cf6921d421fb18
+ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020404"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39094729"
 ---
 # <a name="transform-your-infopath-forms-to-powerapps"></a>Transformer InfoPath-skjemaer til PowerApps
 
@@ -134,6 +134,6 @@ Med PowerApps kan du kalle opp én app fra en annen app, så i stedet for det vo
 
 Takket være informasjonen over er du nå klar til å ta skrittet ut i verden og ta den med storm, med én PowerApps-app om gangen. Under finner du noen koblinger som kan være nyttige etter hvert som du prøver deg frem. Den ene av disse koblingene leder til webområdet til PowerApps-fellesskapet. Bli en del av fellesskapet i dag, og utvid ferdighetene dine raskere enn du vil klare på egen hånd.
 
-[**Formelreferanse**](https://docs.microsoft.com/en-us/powerapps/formula-reference) – Bare det å se gjennom standardfunksjonene er alltid en god kilde til inspirasjon.
+[**Formelreferanse**](https://docs.microsoft.com/powerapps/formula-reference) – Bare det å se gjennom standardfunksjonene er alltid en god kilde til inspirasjon.
 
 [**PowerApps-fellesskapet**](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) – Se eksempler, kom i kontakt med andre, still spørsmål, svar på andres spørsmål og bidra til å få PowerApps-fellesskapet å vokse.

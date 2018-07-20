@@ -1,22 +1,20 @@
 ---
 title: Å opprette og oppdatere en samling | Microsoft Docs
 description: Å opprette samlinger og legge til kolonner i eksisterende samlinger i PowerApps
-documentationcenter: ''
 author: lonu
-manager: kfile
-editor: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/30/2015
 ms.author: lonu
-ms.openlocfilehash: b3bf7c2227d3321a581eb1a568de1ce78ead92ee
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 27b5a3453c2c0a89239d3e319ee6f39afd034492
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37899897"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39023279"
 ---
 # <a name="create-and-update-a-collection-in-your-app"></a>Å opprette og oppdatere en samling i appen
 Bruk en samling til å lagre data som kan brukes i en app. En samling er en gruppe lignende elementer. Du har for eksempel opprettet en MyImages-samling som inneholder alle produktbildene som firmaet selger. Du kan legge til MyImages-samlingen i PowerApps og opprette en app som viser alle bildene av disse produktene. I et annet eksempel kan du opprette en PriceList-samling som viser produktene og prisen for hvert produkt.

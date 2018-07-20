@@ -1,22 +1,20 @@
 ---
 title: Å opprette diagrammer i Microsoft Docs
 description: Vis datakategorier som linjediagrammer, sektordiagrammer eller liggende stolpediagrammer
-documentationcenter: ''
 author: lonu
-manager: kfile
-editor: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/23/2016
 ms.author: lonu
-ms.openlocfilehash: f4b6f604ecd7557f7b7b54769d66da850e18ef4f
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 9172c897940a0b8529ff16e09cc8889dec6e3f2a
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32329805"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39021738"
 ---
 # <a name="show-data-in-a-line-pie-or-bar-chart-in-powerapps"></a>Å vise data i en linje, sektor- eller liggende stolpediagram i PowerApps
 Bruk linjediagrammer, sektordiagrammer og liggende stolpediagrammer til å vise dataene. Når du arbeider med diagrammer, bør dataene som du importerer, struktureres som følgende:

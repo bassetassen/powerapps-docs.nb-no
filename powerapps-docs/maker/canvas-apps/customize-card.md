@@ -1,23 +1,20 @@
 ---
 title: Tilpass et kort | Microsoft Docs
 description: Endre standardkontrollen som vises i et kort, i et Detaljer- eller Rediger-skjema i PowerApps
-documentationcenter: ''
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: aa9d5785f1c005da7c22c63bd94cb41e1a643ad3
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 56a46493ef15eff7d65d19f12affb2a58dbba0b6
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31829315"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39023440"
 ---
 # <a name="customize-a-card-in-powerapps"></a>Tilpass et kort i PowerApps
 Utfør grunnleggende tilpasning (uten å låse opp et kort), for eksempel ved å endre kontrollen til kortet. Utfør avansert tilpasning ved å låse opp kortet og for eksempel legge til en kontroll som ikke er tilgjengelig for dette kortet som standard.
@@ -26,7 +23,7 @@ Hvis du vil ha en oversikt, kan du se [Forstå datakort](working-with-cards.md).
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-* Lær hvordan du [legger til og konfigurerer kontroller](add-configure-controls.md).
+* Finn ut hvordan du [legger til og konfigurerer kontroller](add-configure-controls.md) i PowerApps.
 * Du kan se gjennom dette emnet og få innblikk i generelle begreper, eller du kan følge det nøyaktig ved å fullføre prosedyrene i disse temaene:
 
   1. [Generere en app](data-platform-create-app.md).

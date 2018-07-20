@@ -1,23 +1,20 @@
 ---
 title: Å bygge inn Power BI-prosjektrapporter i SharePoint Online i Microsoft Docs
 description: I denne oppgaven skal vi bygge inn Power BI-rapporten i det samme SharePoint Online-området som er vert for de to listene våre.
-documentationcenter: na
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 01/30/2018
 ms.author: mblythe
-ms.openlocfilehash: 0a71bc45fbcc3c36337571b9d80ade0d2cf9cbe2
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 9e97020ae14ce6da9674e64559b42f98e45269f4
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827555"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39023233"
 ---
 # <a name="embed-the-power-bi-project-report-in-sharepoint-online"></a>Å bygge inn Power BI-prosjektrapporten i SharePoint Online
 > [!NOTE]

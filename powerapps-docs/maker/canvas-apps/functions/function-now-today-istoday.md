@@ -2,17 +2,19 @@
 title: Funksjonene Now, Today og IsToday | Microsoft Docs
 description: Referanseinformasjon for Now-, Today- og IsToday-funksjonene i PowerApps, inkludert syntaks og eksempler
 author: gregli-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/09/2018
 ms.author: gregli
-ms.openlocfilehash: 690144a8d5aef2d7608f0e4104661620840b02ad
-ms.sourcegitcommit: 6bfb002180148a3f22a4d1d8d750fc442489ebe4
+ms.openlocfilehash: 7b0b046c4c18f2f0bbbb8afd63a33aca2c46b340
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35291701"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39014309"
 ---
 # <a name="now-today-and-istoday-functions-in-powerapps"></a>Funksjonene for Now, Today, og IsToday i PowerApps
 Returnerer gjeldende dato og klokkeslett, og tester om en dato/klokkeslett-verdi er i dag.

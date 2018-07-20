@@ -2,17 +2,19 @@
 title: Concurrent-funksjonen | Microsoft Docs
 description: Referanseinformasjon, inkludert syntaks, for Concurrent-funksjonen i PowerApps
 author: gregli-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/26/2018
 ms.author: gregli
-ms.openlocfilehash: 0c885322402d8afcd8391fb7eb3904d188129ff0
-ms.sourcegitcommit: d68432b9e9b800c50c5e7fd0be6691e51fd725c6
+ms.openlocfilehash: 19eb6a11749ad6119fcc3812be9307da30080dc7
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874138"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39021094"
 ---
 # <a name="concurrent-function-in-powerapps"></a>Concurrent-funksjonen i PowerApps
 Evaluerer flere formler samtidig mot hverandre.

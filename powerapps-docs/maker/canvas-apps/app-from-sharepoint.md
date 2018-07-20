@@ -1,21 +1,20 @@
 ---
 title: Quickstart for å generere en app i PowerApps fra SharePoint | Microsoft Docs
 description: Generer en app automatisk i PowerApps for å behandle data i en SharePoint-liste
-documentationcenter: na
 author: AFTOwen
-manager: kfile
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 03/12/2018
 ms.author: anneta
-ms.openlocfilehash: 314fa5a1a49aba3bc3d7f0f59d583f81283a67a0
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: b9404b2ac7d67f9594b77ee73de55b46a94e7afa
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31824732"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39016816"
 ---
 # <a name="quickstart-for-generating-an-app-in-powerapps-from-sharepoint"></a>Hurtigstart for å generere en app i PowerApps fra SharePoint
 
@@ -27,12 +26,12 @@ Du kan opprette en liste som er mye mer komplisert med mange kolonner av ulike t
 
 Hvis du ikke har en lisens for PowerApps, kan du [registrere deg gratis](../signup-for-powerapps.md).
 
-## <a name="generate-an-app"></a>Generere en app
+## <a name="generate-an-app"></a>Å generere en app
 1. Logg deg på [PowerApps](https://web.powerapps.com).
 
     ![Hjemmesiden for PowerApps](./media/app-from-sharepoint/sign-in.png)
 
-1. Under **Lag apper som disse**, holder du pekeren over **Begynn fra data**, og deretter velger du **Lag denne appen**.
+1. Under **Lag apper som disse** holder du pekeren over **Begynn fra data**, og deretter velger du **Lag denne appen**.
 
     ![Alternativ for å opprette en app](./media/app-from-sharepoint/make-this-app.png)
 

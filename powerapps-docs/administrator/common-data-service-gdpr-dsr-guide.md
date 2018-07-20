@@ -9,12 +9,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 04/23/2018
 ms.author: jamesol
-ms.openlocfilehash: ef5d646e30f5d09dbfe5f111a3ad018b030f79d9
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 2a393bb2ebedde2a08f1ed1534d815e64325077b
+ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168232"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39094752"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-for-common-data-service-for-apps-customer-data"></a>Svar på DSR-forespørsler om kundedata i Common Data Service for Apps
 
@@ -102,8 +102,8 @@ Du kan finne personlige data fra CDS for Apps-brukere i følgende ressurser:
 
 |Ressurs | Formål | Nettstedstilgang | Programmatisk tilgang
 | --- | --- | --- | ---
-| Enhetsoppføring | Det er kjent som brukerenhetssystemet, og lagrer en brukers personlige data. | [Administrasjonssenteret for PowerApps](https://admin.powerapps.com) | Gjennom [Web-API](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
-| Revisjonshistorikk | Gir kunder tillatelse til å identifisere ressurser som brukere opprettet, hatt fikk tilgang til, endret eller slettet på et enhetsnivå. | [Administrasjonssenteret for PowerApps](https://admin.powerapps.com) | Gjennom [Web-API](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
+| Enhetsoppføring | Det er kjent som brukerenhetssystemet, og lagrer en brukers personlige data. | [Administrasjonssenteret for PowerApps](https://admin.powerapps.com) | Gjennom [Web-API](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
+| Revisjonshistorikk | Gir kunder tillatelse til å identifisere ressurser som brukere opprettet, hatt fikk tilgang til, endret eller slettet på et enhetsnivå. | [Administrasjonssenteret for PowerApps](https://admin.powerapps.com) | Gjennom [Web-API](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
 
 #### <a name="user"></a>Bruker
 Brukers personlige data er lagret i Azure Active Directory-og synkroniseres automatisk med alle CDS for Apps-miljøer. Systemansvarlige kan ikke oppdatere disse personopplysningene data direkte i CDS for Apps mens brukeren er aktiv&mdash;de må oppdatere opplysningene direkte i administrasjonssenteret for Office 365. Systemansvarlige kan legge til personlige data (for eksempel egendefinerte attributter) direkte til CDS for Apps, men de må behandle disse dataene manuelt.
@@ -199,7 +199,7 @@ Fra [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) gjør 
 
 3. Gå til **Innstillinger** > **Sikkerhet** > **Brukere**, og velg deretter **Visning av deaktiverte brukere**.
 
-4. Opprett og Last ned en Excel-malfil fra brukerens personlige data. Hvis du vil ha trinnvise instruksjoner, se [Opprett en ny Excel-mal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates#create-a-new-excel-template).
+4. Opprett og Last ned en Excel-malfil fra brukerens personlige data. Hvis du vil ha trinnvise instruksjoner, se [Opprett en ny Excel-mal](https://docs.microsoft.com/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates#create-a-new-excel-template).
 
 8. Åpne den nedlastede filen for Excel-malen, fjern brukerens personlige data og lagre deretter filen.
 

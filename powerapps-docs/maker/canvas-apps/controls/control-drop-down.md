@@ -1,23 +1,20 @@
 ---
 title: 'Rullegardinkontroll: referanse | Microsoft Docs'
 description: Informasjon om Rullegardin-kontrollen, inkludert egenskaper og eksempler
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 3df14293f478c24dbe64b84d0c2d1ea50b485fa3
-ms.sourcegitcommit: 6d9fe9967841e381b108a7fb53c9057e295336ea
+ms.openlocfilehash: 9b26af9a2a1fb9b187023ec3ccc9cd86580aa4cf
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38083061"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39017920"
 ---
 # <a name="drop-down-control-in-powerapps"></a>Rullegardin-kontrollen i PowerApps
 En liste som viser bare det første elementet, med mindre brukeren åpner det.

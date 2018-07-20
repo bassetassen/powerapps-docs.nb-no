@@ -1,22 +1,20 @@
 ---
 title: Egendefinerte koblinger til innholdskoblinger | Microsoft Docs
 description: Koblinger til innhold for å opprette, bruke, dele og sertifisere egendefinerte koblinger.
-documentationcenter: ''
 author: mgblythe
-manager: kfile
-editor: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 05/05/2017
 ms.author: mblythe
-ms.openlocfilehash: 9f8e64efc3f7ff91fad0eba1cf20274c89aaeabe
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 411082faef59516d9d6b660e08b5cbaf263da042
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827394"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39022152"
 ---
 # <a name="custom-connectors-in-powerapps"></a>Egendefinerte koblinger i PowerApps
 

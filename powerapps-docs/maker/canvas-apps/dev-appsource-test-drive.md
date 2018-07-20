@@ -1,23 +1,20 @@
 ---
 title: Å la kunder testkjøre appene dine på AppSource | Microsoft Docs
 description: Å bruk AppSource til å dele apper med kunder, og generere kundeemner for virksomheten din.
-documentationcenter: na
 author: linhtranms
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 05/08/2017
 ms.author: litran
-ms.openlocfilehash: 11f0e0b8a0aa0dce59588c2e1eea21885f19b741
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: fb51ab2c671d695350e452dc6fb29efa583adfea
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31836383"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39023693"
 ---
 # <a name="let-customers-test-drive-your-apps-on-appsource"></a>Å la kunder testkjøre appene dine på AppSource
 Har du en lidenskap for å bygge apper i PowerApps? Har du en app du vil dele med kunder? Vi støtter nå en løsning for PowerApps-testversjon på [AppSource.com](https://appsource.microsoft.com), som en måte å dele apper med kunder samt generere kundeemner for bedriften din.

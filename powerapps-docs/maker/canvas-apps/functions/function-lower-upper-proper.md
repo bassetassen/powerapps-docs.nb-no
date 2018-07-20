@@ -1,23 +1,20 @@
 ---
 title: Funksjonene Lower, Upper og Proper| Microsoft Docs
 description: Referanseinformasjon for funksjonene Lower, Upper og Proper i PowerApps, inkludert syntaks og eksempler
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: e57ea9208f0ea3b7dd9ada7ebd9055a99ddc141c
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: dbfc53352b0e22db1e809cd9c1ced2001f732051
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31831781"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39019966"
 ---
 # <a name="lower-upper-and-proper-functions-in-powerapps"></a>Funksjonene Lower, Upper og Proper i PowerApps
 Konverterer bokstaver i en tekststreng slik at alle bokstavene blir små, alle blir store eller det blir en blanding av små og store bokstaver.
