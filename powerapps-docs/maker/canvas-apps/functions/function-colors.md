@@ -5,15 +5,16 @@ author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2015
 ms.author: gregli
-ms.openlocfilehash: 6615dfee8f7c867bb25c237633fe031d614d517d
-ms.sourcegitcommit: 6d9fe9967841e381b108a7fb53c9057e295336ea
+ms.openlocfilehash: fe07a27d88bec7af2d97d76cab208ed67ca621c9
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37948645"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39021393"
 ---
 # <a name="color-enumeration-and-colorfade-colorvalue-and-rgba-functions-in-powerapps"></a>Color-opplisting og funksjonene ColorFade, ColorValue og RGBA i PowerApps
 Å bruke innebygde fargeverdier, definere egendefinerte farger og alfablanding.

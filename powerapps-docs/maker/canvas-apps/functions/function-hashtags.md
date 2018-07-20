@@ -1,23 +1,20 @@
 ---
 title: HashTags-funksjonen | Microsoft Docs
 description: Referanseinformasjon for HashTags-funksjonen i PowerApps, inkludert syntaks og eksempler
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: ebeecf7ae429f9e18c1b41b7c0f0ddd7da5be07c
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: c2b4cff0cc9d579cd76dad97a3ab1b160f4089ea
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31826218"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39022060"
 ---
 # <a name="hashtags-function-in-powerapps"></a>HashTags-funksjonen i PowerApps
 Henter ut emneknaggene (#strenger) fra en streng.

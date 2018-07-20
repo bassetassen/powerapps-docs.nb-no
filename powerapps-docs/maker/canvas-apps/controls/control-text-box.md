@@ -1,23 +1,20 @@
 ---
 title: 'Etikettkontroll: referanse | Microsoft Docs'
 description: Informasjon om etikettkontrollen, inkludert egenskaper og eksempler
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: cfc47e95cff02dfcbcc2d3ff456e32a4ca2c675e
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 85e409c517939b786eb677a7acdbd08ed81a5944
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37899447"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39022497"
 ---
 # <a name="label-control-in-powerapps"></a>Etikettkontrollen i PowerApps
 En boks som viser data som tekst, tall, datoer eller valuta.

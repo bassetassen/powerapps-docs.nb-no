@@ -1,23 +1,20 @@
 ---
 title: 'Kombinasjonsbokskontroll: referanse | Microsoft Docs'
 description: Informasjon, inkludert egenskaper og eksempler, om kombinasjonsbokskontrollen
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 09/13/2017
 ms.author: fikaradz
-ms.openlocfilehash: 1c8004fd615e5f706103ad4c364f7818dd1cb091
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 30e2b07a95c326b897e5b3386d888f3537db85fd
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37898275"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39015666"
 ---
 # <a name="combo-box-control-in-powerapps"></a>Kombinasjonsbokskontroll i PowerApps
 En kontroll som gjør det mulig for brukere å foreta valg ut ifra angitte valgmuligheter.  Støtter søk og flervalg.

@@ -1,23 +1,20 @@
 ---
 title: 'Kontroller for Visningsskjema og Redigeringsskjema: referanse | Microsoft Docs'
 description: Informasjon, inkludert egenskaper og eksempler, om kontroller for Visningsskjema og Redigeringsskjema
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 07/06/2017
 ms.author: gregli
-ms.openlocfilehash: ac74f459c35e7b2ec123540a5cf55c1ad6a21c0a
-ms.sourcegitcommit: 8d9e5f44bcd5cecd24de2c99d5ba04df9ea67275
+ms.openlocfilehash: 6e34b107c9ad47b5eee7711f5c2b474eb3f1a836
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37406027"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39017851"
 ---
 # <a name="edit-form-and-display-form-controls-in-powerapps"></a>Kontroller for Redigeringsskjema og Visningsskjema i PowerApps
 Vis, rediger og opprett en post i en datakilde.

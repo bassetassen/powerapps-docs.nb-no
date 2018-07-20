@@ -1,23 +1,20 @@
 ---
 title: Å formatere en tabell i Excel i Microsoft Docs
 description: Hvis du ønsker å bruke Excel-data, må du formatere dataene i en tabell. Å legge til nøkkelordet «bilde» i kolonnenavn
-documentationcenter: na
 author: yifwang
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/03/2018
 ms.author: yifwang
-ms.openlocfilehash: fd458fe6c8962bbc4443c1de7aad0f1c4eea7fac
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ddc6b9715a3282dbfcce9ae5f63be50ea1406e69
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31826630"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39023670"
 ---
 # <a name="format-a-table-in-excel-and-naming-tips"></a>Å formatere en tabell i Excel og navngi tips
 Hvis du ønsker å bruke PowerApps, er det en forutsetning at du formaterer Excel-data som en tabell. Ved å følge innholdet i denne innføringen finner du ut hvordan du formaterer en tabell i Excel, og du får noen tips til hvordan du navngir Excel-kolonner.

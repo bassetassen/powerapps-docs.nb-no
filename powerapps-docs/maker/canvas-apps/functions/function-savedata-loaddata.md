@@ -1,23 +1,20 @@
 ---
 title: Funksjonene SaveData og LoadData| Microsoft Docs
 description: Referanseinformasjon for funksjonene SaveData og LoadData i PowerApps, inkludert syntaks
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: c916784df877b1228fd8d9322a80ccccdc61967f
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 26fd26df5b0d2e083288a8a4be63f3ed9d46c610
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37897896"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39014424"
 ---
 # <a name="savedata-and-loaddata-functions-in-powerapps"></a>Funksjonene SaveData og LoadData i PowerApps
 Lagrer og laster inn en [samling](../working-with-data-sources.md#collections) på nytt.

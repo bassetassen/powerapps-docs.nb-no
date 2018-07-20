@@ -1,17 +1,19 @@
 ---
 title: Å opprette en Excel-app fra grunnen av | Microsoft Docs
 author: AFTOwen
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 04/23/2018
 ms.author: anneta
-ms.openlocfilehash: bf802668ff56729c1d28fc460495a680fc3c6570
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 267480158d7e44afd06962779b98c0468436841a
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37896815"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39022612"
 ---
 # <a name="create-an-excel-app-from-scratch"></a>Slik oppretter du en Excel-app fra grunnen av
 Opprett din egen app fra grunnen av basert på Excel-data som er formatert som en tabell, og deretter legger du til data fra andre kilder hvis du ønsker det. Du oppretter en app med to skjermer ved å følge denne opplæringen. På den ene skjermen kan brukerne bla gjennom et sett med poster. På den andre skjermen kan brukere opprette en post, oppdatere ett eller flere felt i en post eller slette en hel post. Denne fremgangsmåten er mye mer tidkrevende enn [automatisk generering av en app](get-started-create-from-data.md), men erfarne apputviklere kan bruke det til å lage de beste appene for et gitt behov.

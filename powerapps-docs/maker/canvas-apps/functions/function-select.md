@@ -2,17 +2,19 @@
 title: Velg-funksjon | Microsoft Docs
 description: Referanseinformasjon, inkludert syntaks, for Velg-funksjonen i PowerApps
 author: gregli-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/11/2018
 ms.author: gregli
-ms.openlocfilehash: 8d84dcf1496e9f8f21ba059deb89549b6f238c97
-ms.sourcegitcommit: 63351b1bda5a8dd00786912f95aba9fb3ebfe75c
+ms.openlocfilehash: b7cc200057e730ea7ae828a84edccdd82abb9e2d
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36261778"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39016080"
 ---
 # <a name="select-function-in-powerapps"></a>Velg-funksjonen i PowerApps
 Simulerer en valgt handling på en kontroll som fører til at **OnSelect**-formelen evalueres.

@@ -1,22 +1,20 @@
 ---
 title: Å legge til bilder i Excel | Microsoft Docs
 description: Trinnvise instruksjoner for å legge til bildefiler og tegninger med penn til Excel i en konto for lagring i skyen
-documentationcenter: ''
-author: aftowen
-manager: kfile
-editor: ''
+author: AFTOwen
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 10/25/2016
 ms.author: anneta
-ms.openlocfilehash: 29da2a8814b0de7d34915f9992aeb963743785d2
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: cc3609991ffb68f6846cb73b7ccfa37227d0c8e7
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32328839"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39019490"
 ---
 # <a name="add-images-to-excel-from-powerapps"></a>Å legge til bilder til Excel fra PowerApps
 Opprette en app automatisk hvor brukere kan vise, legge til eller slette bilder fra filer eller tegninger fra en **Penn**-kontroll. Appen er basert på en Excel-fil som du oppretter og laster opp til en konto for lagring i skyen.

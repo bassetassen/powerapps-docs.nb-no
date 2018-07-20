@@ -1,22 +1,20 @@
 ---
 title: Å starte en flyt i en app i Microsoft Docs
 description: Opprett en flyt som utfører én eller flere oppgaver etter en hendelse som forekommer i en app, for eksempel at en bruker velger en knapp.
-documentationcenter: ''
 author: stepsic-microsoft-com
-manager: kfile
-editor: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/05/2017
 ms.author: sharik
-ms.openlocfilehash: 7079dc6194361cc700ccaad6c02ca0bcf8a9f9d6
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: c395a548d0a920a21e8d4128f75a3b01deb9de3a
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37895918"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39019369"
 ---
 # <a name="start-a-flow-in-an-app"></a>Å starte en flyt i en app
 Du kan bruke Microsoft Flow til å opprette logikk som utfører én eller flere oppgaver når en hendelse forekommer i en app. Du kan for eksempel konfigurere en knapp slik at når en bruker velger den, opprettes et element i en SharePoint-liste, en e-postmelding eller møteinvitasjon sendes, en fil legges til i skyen, eller alt dette. Du kan konfigurere en kontroll i appen for å starte flyten, som fortsetter å kjøre selv om du lukker PowerApps.

@@ -2,17 +2,19 @@
 title: Liste over webinarer | Microsoft Docs
 description: Viser en liste over tidligere og fremtidige nettseminarer, inkludert klokkeslett/dato og hvilke emner som tas opp.
 author: audrieMSFT
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 4/18/2018
 ms.author: audrie
-ms.openlocfilehash: bffc102ad61a05ae8f2b6a26276cbeec718483f6
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 76abd84afc5b4814cfbf2ef14923c1c13e87befb
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37898195"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39021830"
 ---
 # <a name="powerapps-webinar-listing"></a>Liste over webinarer om PowerApps #
 Disse nettseminarene kan hjelpe deg med å dra nytte av verktøyene og funksjonene i Microsoft PowerApps. Nettseminarer er tilgjengelige på forespørsel etter direktesendingen. Obs! I noen tilfeller må du skrive inn registreringsinformasjonen på nytt, og deretter vil du motta en kobling til opptaket via e-post. 

@@ -1,23 +1,20 @@
 ---
 title: Å legge til en skjerm med rulling| Microsoft Docs
 description: Opprett en skjerm som brukerne kan rulle for å vise flere typer innhold enn skjermen kan vise om gangen.
-documentationcenter: na
 author: lonu
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: lonu
-ms.openlocfilehash: fd7b418de7a78220dfc1019c923749fb8e6ddf5c
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 4a8b92e012f9669f2b445ef864d3360ef42fbc01
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31825330"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39015988"
 ---
 # <a name="add-a-scrolling-screen-in-powerapps"></a>Å legge til en skjerm med rulling i PowerApps
 Opprett en skjerm som brukerne kan rulle for å vise ulike elementer. Du kan for eksempel opprette en app som viser data i et stolpediagram og linjediagram. Ved å legge til en rullende skjerm kan du legge til flere kontroller, som brukerne kan vise hvis de ruller.

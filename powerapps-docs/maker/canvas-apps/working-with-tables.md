@@ -2,17 +2,19 @@
 title: Å forstå tabeller i Microsoft Docs
 description: Referanseinformasjon for å arbeide med tabeller, kolonner og poster
 author: gregli-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: 6144d66849316dc2b355b0cb9a56959e10f8a319
-ms.sourcegitcommit: 76ffec3b4d9c18a01f19c583435541ae165a8234
+ms.openlocfilehash: 6e1a87324c0a004390ceb5d1ce4846325fe18bc7
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37864265"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39021186"
 ---
 # <a name="understand-tables-and-records-in-powerapps"></a>Å forstå tabeller og poster i PowerApps
 Du kan opprette en app som har tilgang til informasjon i Microsoft Excel, SharePoint, SQL Server og flere andre kilder som lagrer data i poster og tabeller. Hvis du vil arbeide mest mulig effektivt med denne typen data, kan du se gjennom begrepene som ligger til grunn for disse strukturene.

@@ -1,22 +1,20 @@
 ---
 title: Å vise tekst og formatere en dato eller et klokkeslett | Microsoft Docs
 description: Å legge til og formatere datoer og klokkeslett ved hjelp av PowerApps
-documentationcenter: ''
 author: AFTOwen
-manager: kfile
-editor: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 10/16/2016
 ms.author: anneta
-ms.openlocfilehash: faa8db15596dc0da0d5b5638f5dd9c334517fc7c
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 625d76af5acc554ff9ab6c20d69f542cf959cd95
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330955"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39018081"
 ---
 # <a name="show-text-and-format-dates-and-times-in-powerapps"></a>Å vise tekst og formatere datoer og klokkeslett i PowerApps
 Legg til datoer og klokkeslett, og formater dem for å vise det riktige detaljnivået eller for å gjenspeile de nasjonale innstillingene. Å beregne tidsrommet mellom to datoer, eller beregne en dato som er en viss tid før eller etter en dato du angir. Konverter datoer til eller fra separate verdier for dager, måneder og år, og konvertere klokkeslett til eller fra separate verdier for timer, minutter og sekunder.

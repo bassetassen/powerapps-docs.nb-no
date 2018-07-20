@@ -1,23 +1,20 @@
 ---
 title: Slik legger du til en datatilkobling i en app | Microsoft Docs
 description: Slik legger du til en datatilkobling i en eksisterende eller en tom app
-documentationcenter: na
 author: lancedMicrosoft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/06/2018
 ms.author: lanced
-ms.openlocfilehash: 44ee7b992f5817a5d6b8d791b05e1db671d3e6ba
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 734e36b00658455198b64317b6f068c0018755a4
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31826986"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39018495"
 ---
 # <a name="add-a-data-connection-in-powerapps"></a>Slik legger du til en datatilkobling i PowerApps
 I PowerApps kan du legge til en datatilkobling i en eksisterende app eller i en app som du oppretter fra grunnen av. Appen kan koble til SharePoint, Salesforce, OneDrive eller [mange andre datakilder](connections-list.md).

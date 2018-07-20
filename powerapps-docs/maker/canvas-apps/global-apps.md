@@ -1,23 +1,20 @@
 ---
 title: Global støtte | Microsoft Docs
 description: Bygg apper som brukes over hele verden.
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: 68f81dffa4ba861978dacb1b7ad6830b0736ed6e
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: dbca12ff3acc4327f88269a2333fe066c7f2fbec
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31837152"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39019806"
 ---
 # <a name="global-support"></a>Global støtte
 PowerApps er et globalt produkt.  Du kan bygge og bruke apper på mange ulike språk og i mange ulike områder.

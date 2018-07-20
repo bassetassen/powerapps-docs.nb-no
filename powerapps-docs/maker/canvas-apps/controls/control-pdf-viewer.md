@@ -1,23 +1,20 @@
 ---
 title: 'Kontroll for PDF-visningsprogram: referanse | Microsoft Docs'
 description: Informasjon, inkludert egenskaper og eksempler, om kontrollen for PDF-visningsprogrammet
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: c47fb9a120f41166bbe23d55de6b502209a0f20d
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 44272022daf547de64ebd175f29630175c7e3757
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37898492"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39016563"
 ---
 # <a name="pdf-viewer-control-experimental-in-powerapps"></a>Kontroll for PDF-visningsprogram (eksperimentell) i PowerApps
 En eksperimentell kontroll som viser innholdet i en PDF-fil.

@@ -1,23 +1,20 @@
 ---
 title: Egenskapene for størrelse og plassering | Microsoft Docs
 description: Referansemateriale for egenskaper som høyde og bredde
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: 7df2782bc18d1c999383226e31033035fb59cea1
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 9c4ab469ef95dcb0dbb6f108ebbd111f585ded2d
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31839089"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39018863"
 ---
 # <a name="size-and-location-properties-in-powerapps"></a>Egenskapene for størrelse og plassering i PowerApps
 ## <a name="overview"></a>Oversikt
@@ -41,11 +38,11 @@ Konfigurerer hvor stor en kontroll (eller et element i en kontroll) er, og hvor 
 
 * Gjelder for **[Etikett](control-text-box.md)**
 
-**Bredde** – avstanden mellom venstrekanten og høyrekanten til en kontroll.
+**Bredde** – avstanden mellom kontrollens venstre og høyre kant.
 
-* EGjelder kontrollene **[Legg til bilde](control-add-picture.md)**, **[Lyd](control-audio-video.md)**, **[Knapp](control-button.md)**, **[Kamera](control-camera.md)**, **[Kort](control-card.md)**, **[Avmerkingsboks](control-check-box.md)**, **[Stolpediagram](control-column-line-chart.md)**, **[Datovelger](control-date-picker.md)**, **[Visningsskjema](control-form-detail.md)**, **[Rullegardin](control-drop-down.md)**, **[Redigeringsskjema](control-form-detail.md)**, **[Eksporter](control-export-import.md)**, **[Galleri](control-gallery.md)**, **[HTML-tekst](control-html-text.md)**, **[Ikon](control-shapes-icons.md)**, **[Bilde](control-image.md)**, **[Etikett](control-text-box.md)**, **[Import](control-export-import.md)**, **[Linjediagram](control-column-line-chart.md)**, **[Listeboks](control-list-box.md)**, **[Mikrofon](control-microphone.md)**, **[PDF-visningsprogram](control-pdf-viewer.md)**, **[Penneinndata](control-pen-input.md)**, **[Sektordiagram](control-pie-chart.md)**, **[Radio](control-radio.md)**, **[Vurdering](control-rating.md)**, **[Figur](control-shapes-icons.md)**, **[Glidebryter](control-slider.md)**, **[Tekstinndata](control-text-input.md)**, **[Tidtaker](control-timer.md)**, **[Veksleknapp](control-toggle.md)** og **[Video](control-audio-video.md)**.
+* Gjelder kontrollene **[Legg til bilde](control-add-picture.md)**, **[Lyd](control-audio-video.md)**, **[Knapp](control-button.md)**, **[Kamera](control-camera.md)**, **[Kort](control-card.md)**, **[Avmerkingsboks](control-check-box.md)**, **[Stolpediagram](control-column-line-chart.md)**, **[Datovelger](control-date-picker.md)**, **[Visningsskjema](control-form-detail.md)**, **[Rullegardin](control-drop-down.md)**, **[Redigeringsskjema](control-form-detail.md)**, **[Eksporter](control-export-import.md)**, **[Galleri](control-gallery.md)**, **[HTML-tekst](control-html-text.md)**, **[Ikon](control-shapes-icons.md)**, **[Bilde](control-image.md)**, **[Etikett](control-text-box.md)**, **[Import](control-export-import.md)**, **[Linjediagram](control-column-line-chart.md)**, **[Listeboks](control-list-box.md)**, **[Mikrofon](control-microphone.md)**, **[PDF-visningsprogram](control-pdf-viewer.md)**, **[Penneinndata](control-pen-input.md)**, **[Sektordiagram](control-pie-chart.md)**, **[Radio](control-radio.md)**, **[Vurdering](control-rating.md)**, **[Figur](control-shapes-icons.md)**, **[Glidebryter](control-slider.md)**, **[Tekstinndata](control-text-input.md)**, **[Tidtaker](control-timer.md)**, **[Veksleknapp](control-toggle.md)** og **[Video](control-audio-video.md)**.
 
-**WidthFit** – om en kontroll automatisk vokser horisontalt å fylle ut et tomt område i en beholderkontroll, som eksempelvis en **[Rediger skjema](control-form-detail.md)**-kontroll. Hvis flere kort har denne egenskapen er satt til **sann**, deles plassen mellom dem. Hvis du vil ha mer informasjon, kan du se [Forstå oppsett for dataskjema](../working-with-form-layout.md).
+**WidthFit** – om en kontroll automatisk utvides horisontalt for å fylle ut et tomt område i en beholderkontroll, for eksempel en **[Redigeringsskjema](control-form-detail.md)**-kontroll. Hvis flere kort har denne egenskapen er satt til **sann**, deles plassen mellom dem. Hvis du vil ha mer informasjon, kan du se [Forstå oppsett for dataskjema](../working-with-form-layout.md).
 
 * Gjelder for **[Kort](control-card.md)**
 

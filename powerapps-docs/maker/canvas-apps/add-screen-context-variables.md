@@ -1,23 +1,20 @@
 ---
 title: Å legge til en skjerm og navigere mellom skjermer | Microsoft Docs
 description: Å legge til en skjerm til en app og bruke neste- og tilbake-pilene til å veksle mellom skjermer i PowerApps
-documentationcenter: na
 author: aftowen
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 07/10/2017
 ms.author: anneta
-ms.openlocfilehash: 19c06fa9bfc7098227e5f30a1c913522d9e6e7a3
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: c7a100b6df278812ea93da8c4f5c503a841d4109
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31825261"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39022014"
 ---
 # <a name="add-a-screen-and-navigate-between-screens"></a>Å legge til en skjerm og navigere mellom skjermer
 Opprett en app med flere skjermer, og legg til måter for brukere å navigere mellom dem på.

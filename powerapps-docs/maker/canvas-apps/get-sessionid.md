@@ -2,17 +2,19 @@
 title: Få en økt-ID eller en app-ID | Microsoft Docs
 description: Slik får du en økt-ID eller en app-ID for feilsøking i PowerApps
 author: AFTOwen
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 06/18/2018
-ms.author: anneta, brimcg
-ms.openlocfilehash: add591d1bf565f3ad89e0138257fdf365d6add8e
-ms.sourcegitcommit: 1126caa4c7516cd4dffcff7e0c3eca440a333a58
+ms.author: anneta
+ms.openlocfilehash: 2e9b1a38de104ce1bf5a17969ca2c79792ac6fd4
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36304688"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39022267"
 ---
 # <a name="get-a-session-id-or-an-app-id"></a>Få en økt-ID eller en app-ID
 Hvis det oppstår et problem med en app som ble opprettet i PowerApps, kan du hjelpe Microsoft med å feilsøke problemet mye mer effektivt hvis du gir dem en økt-ID, app-ID eller begge deler for dette problemet.

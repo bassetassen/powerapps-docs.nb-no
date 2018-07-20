@@ -1,23 +1,20 @@
 ---
 title: Å legge til og konfigurere en kontroll | Microsoft Docs
 description: Trinnvise instruksjoner for å legge til og konfigurere kontroller direkte, fra verktøylinjen, i Egenskaper-fanen eller på formellinjen.
-documentationcenter: na
-author: aftowen
-manager: kfile
-editor: ''
-tags: ''
+author: AFTOwen
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 07/10/2017
 ms.author: anneta
-ms.openlocfilehash: c3b1fb9802541159726a33cacd07c6f9743de0e2
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 8a2849c32eaf474d1aa5bb981a09a3594cead600
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37896700"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39020128"
 ---
 # <a name="add-and-configure-a-control-in-powerapps"></a>Å legge til og konfigurere en kontroll i PowerApps
 Legg til forskjellige grensesnittelementer i appen, og konfigurer aspekter ved utseende og virkemåte direkte, fra verktøylinjen, i **Egenskaper**-fanen eller i formellinjen. Disse grensesnittelementene kalles kontroller, og aspektene du konfigurerer, kalles egenskaper.
