@@ -1,23 +1,20 @@
 ---
 title: Revert-funksjonen | Microsoft Docs
 description: Referanseinformasjon for Revert-funksjonen i PowerApps, inkludert syntaks og eksempel
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/21/2015
 ms.author: gregli
-ms.openlocfilehash: 08cb0690904a4b63645828678232769b66a439a1
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: c02bc4321498d28cbc664f144f1dc396e4052cbd
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31828222"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39019714"
 ---
 # <a name="revert-function-in-powerapps"></a>Revert-funksjonen i PowerApps
 Oppdaterer og fjerner feil for [postene](../working-with-tables.md#records) til en [datakilde](../working-with-data-sources.md).

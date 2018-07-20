@@ -1,23 +1,20 @@
 ---
 title: Å legge til og administrere tilkoblinger til datakilder i skytjenester | Microsoft Docs
 description: Å legge til, slette og oppdatere tilkoblinger til datakilder, blant annet SharePoint, SQL Server, OneDrive for Business, Salesforce og Office 365
-documentationcenter: na
 author: lancedMicrosoft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 03/09/2017
 ms.author: lanced
-ms.openlocfilehash: 63db86984ef68571329aa953cb6bbaac505d834e
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 40b215e0f7e8d681b5d857d08ce2677f2d271ef1
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31828377"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39019836"
 ---
 # <a name="manage-your-connections-in-powerapps"></a>Å administrere tilkoblingene dine i PowerApps
 På [powerapps.com](https://web.powerapps.com) kan du opprette tilkobling fra PowerApps til en eller flere datakilder, slette en tilkobling eller oppdatere legitimasjon.
