@@ -1,23 +1,20 @@
 ---
-title: Å opprette en app for å styre prosjektene | Microsoft Docs
-description: Vi skal opprette en app fra grunnen av i denne oppgaven. Denne appen lar en bruker tilordne en leder til prosjekter og oppdatere prosjektdetaljer.
-documentationcenter: na
+title: Å opprette en app for å administrere prosjekter | Microsoft Docs
+description: I denne oppgaven skal vi opprette en app fra grunnen av. Denne appen lar en bruker tilordne en leder til prosjekter og oppdatere prosjektdetaljer.
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: fcf1bcec976e34f07745c315d75569bbc86e583f
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: b4daabf019236a4245db324121a6745290c8b3ab
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37899529"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39021623"
 ---
 # <a name="create-an-app-to-manage-projects"></a>Å opprette en app for å styre prosjektene
 > [!NOTE]

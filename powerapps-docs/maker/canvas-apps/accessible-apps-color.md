@@ -2,19 +2,22 @@
 title: Tilgjengelige farger | Microsoft Docs
 description: Retningslinjer for fargekontrast i PowerApps
 author: tahoon
+manager: kvivek
 ms.service: powerapps
 ms.topic: article
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/23/2018
 ms.author: tahoon
-ms.openlocfilehash: 56a11edcd1c43313e9b380ca8ac1c8a68d85772d
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.openlocfilehash: 289026f18d341381d64423e76effb1abf586557c
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32329920"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39014815"
 ---
 # <a name="accessible-colors-in-powerapps"></a>Tilgjengelige farger i PowerApps
-Fargene som brukes i en app, skal være tilpasset for fargeblinde og svaksynte brukere. Alle PowerApps-temaer er tilpassede som standard. Følg disse retningslinjene for å sikre at fargene forblir tilgjengelige når du endrer dem i et program.
+Fargene som brukes i en app, skal være tilpasset for fargeblinde og svaksynte brukere. Alle PowerApps-temaer er tilpassede som standard. Følg disse retningslinjene for å sikre at fargene forblir tilgjengelige når du endrer dem i et program. Det finnes flere verktøy tilgjengelige på nettet som kan hjelpe deg med å oppdage problemer knyttet til fargekontrast.
 
 ## <a name="minimum-contrast-for-text"></a>Minimum kontrast for tekst
 * Teksten og bakgrunnen må ha en kontrast på minst 4,5:1
@@ -58,4 +61,4 @@ Sørg for at appen ikke bruker bare farge til å formidle informasjon. For eksem
 Ekstra hjelpemidler, som et **[ikon](controls/control-shapes-icons.md)** eller tekststiler som **[kursiv](controls/properties-text.md)** og **[understreking](controls/properties-text.md)**, kan bidra til å formidle betydning.
 
 ## <a name="next-steps"></a>Neste trinn
-Finn ut mer om [egenskaper for tilgjengelighet](controls/properties-accessibility.md) i PowerApps-kontrollene.
+Finn ut mer om [egenskaper for tilgjengelighet](controls/properties-accessibility.md) i PowerApps-kontroller, og prøv å [bruke Tilgjengelighetskontrollen](accessibility-checker.md).

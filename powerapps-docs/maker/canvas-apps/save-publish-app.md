@@ -1,23 +1,20 @@
 ---
 title: Å lagre og publisere en app | Microsoft Docs
 description: Trinnvise instruksjoner for å lagre og publisere appen for app- opprettere
-documentationcenter: na
-author: aftowen
-manager: kfile
-editor: ''
-tags: ''
+author: AFTOwen
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 09/14/2017
 ms.author: anneta
-ms.openlocfilehash: 0192abca52f3ca3d28b911e24a9ca9cd07c95393
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: a605467b1d7448e3f53cccd49d025cdaca3f8f25
+ms.sourcegitcommit: 0d69781f6f9362ffd4bb0b61aab14371968fbb46
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37895849"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39119455"
 ---
 # <a name="save-and-publish-an-app-in-powerapps"></a>Å lagre og publisere en app i PowerApps
 Når du lagrer endringer i en app, publiserer du den automatisk bare for deg selv og andre som har tillatelse til å redigere den. Når du er ferdig med å gjøre endringer, må du eksplisitt publisere appen for å gjøre den tilgjengelig for alle som den er delt med.
@@ -47,7 +44,7 @@ PowerApps kan også regelmessig lagre appen (hvert 2. minutt). Hvis du har lagre
    ![Å se gjennom publisering](./media/save-publish-app/publish-review.png)
 
    > [!NOTE]
-   > Vi anbefaler at du oppdaterer og/eller publiser appen din på nytt innen seks måneder etter siste publisering, for å holde den synkronisert med den nyeste versjonen av PowerApps. Hvis du ikke oppdaterer og/eller publiserer på nytt innen seks måneder, kan appen slutte å fungere uten forhåndsvarsel.
+   > Når du publiserer en lerretsapp, oppgraderes appen til å kjøre den nyeste versjonen av PowerApps. Dette betyr at du kan dra nytte av alle de nyeste funksjonene og ytelsesoppgraderingene vi har lagt til siden du publiserte sist. Hvis du ikke har publisert oppdateringer på flere måneder, ser du sannsynligvis en umiddelbar ytelsesfordel ved å publisere på nytt nå.
 
 ## <a name="identify-the-live-version"></a>Å identifisere live-versjon
 Klikk eller trykk på **Apper** på [powerapps.com](https://web.powerapps.com) på **Fil**-menyen (på venstre kant), klikk eller trykk så på Detaljer-ikonet for en app, og deretter klikker eller trykker du på **Versjoner**-fanen.

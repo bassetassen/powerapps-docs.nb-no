@@ -49,6 +49,11 @@
               href: ./canvas-apps/get-started-create-from-blank.md
         - name: Å dele en app
           href: ./canvas-apps/share-app.md
+          items:
+            - name: Å dele Excel-data
+              href: ./canvas-apps/share-app-data.md
+            - name: Å dele app-ressurser
+              href: ./canvas-apps/share-app-resources.md
         - name: Bygge inn en app i Power BI
           href: ./canvas-apps/embed-powerapps-powerbi.md
     - name: Eksempler
