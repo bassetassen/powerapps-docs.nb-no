@@ -69,7 +69,7 @@ Hvis du er medlem av en [ikke-administrert tenant](https://docs.microsoft.com/az
 
 Hvis du vil avgjøre hvorvidt du er medlem av en ikke-administrert tenant, kan du følge disse trinnene:
 
-1. Åpne følgende nettadresse i en nettleser, og pass på å erstatte e-postadressen din i nettadressen:https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1
+1. Åpne følgende nettadresse i en nettleser, og pass på å erstatte e-postadressen din i nettadressen: https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1
 
 2. Hvis du er medlem av en **ikke-administrert tenant**, får du se en `"IsViral": true` i svaret.
    ```
