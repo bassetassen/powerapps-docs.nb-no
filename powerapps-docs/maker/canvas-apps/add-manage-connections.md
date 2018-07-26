@@ -9,15 +9,15 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 03/09/2017
 ms.author: lanced
-ms.openlocfilehash: 40b215e0f7e8d681b5d857d08ce2677f2d271ef1
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: c114b803539c2d64695a0bd8c9d976d2604569eb
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39019836"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195224"
 ---
 # <a name="manage-your-connections-in-powerapps"></a>Å administrere tilkoblingene dine i PowerApps
-På [powerapps.com](https://web.powerapps.com) kan du opprette tilkobling fra PowerApps til en eller flere datakilder, slette en tilkobling eller oppdatere legitimasjon.
+På [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) kan du opprette tilkobling fra PowerApps til en eller flere datakilder, slette en tilkobling eller oppdatere legitimasjon.
 
 Appens datatilkobling kan kobles til SharePoint, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel og mange andre [datakilder](connections-list.md).
 
@@ -32,7 +32,7 @@ Det neste trinnet etter denne artikkelen er å vise og administrere data fra dat
 
 ## <a name="prerequisites"></a>Forutsetninger
 1. [Registrer deg](../signup-for-powerapps.md) for PowerApps.
-2. Logg deg på [powerapps.com](https://web.powerapps.com) med samme legitimasjon som du brukte til å registrere deg.
+2. Logg deg på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) med samme legitimasjon som du brukte til å registrere deg.
 
 ## <a name="background-on-data-connections"></a>Bakgrunn på datatilkoblinger
 De fleste PowerApps-apper bruker ekstern informasjon kalt **datakilder**, som oppbevares i skytjenester. Et vanlig eksempel er en tabell i en Excel-fil lagret i OneDrive for Business. Apper får tilgang til disse datakildene ved hjelp av **Tilkoblinger**.
@@ -43,17 +43,17 @@ Det finnes andre typer datakilder som ikke er tabeller, blant annet e-post, kale
 
 Ved bruk av kontrollene **[Galleri](controls/control-gallery.md)**, **[Visningsskjema](controls/control-form-detail.md)** og **[Redigeringsskjema](controls/control-form-detail.md)**, er det enkelt å oppdatere en app som leser og skriver data fra en datakilde. Les artikkelen [Forstå dataskjemaer](working-with-forms.md) for å komme i gang.
 
-I tillegg til å opprette og administrere tilkoblinger på [powerapps.com](https://web.powerapps.com), oppretter du også tilkoblinger når du utfører disse oppgavene:
+I tillegg til å opprette og administrere tilkoblinger på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), oppretter du også tilkoblinger når du utfører disse oppgavene:
 
 * Automatisk genererer en [app fra data](app-from-sharepoint.md), som for eksempel en egendefinert SharePoint-liste.
 * Oppdaterer en eksisterende app, eller oppretter en fra bunnen av som beskrevet i [å legge til en tilkobling](add-data-connection.md).
 * Åpner en app som er opprettet av en annen bruker og [delt med deg](share-app.md).
 
 > [!NOTE]
-> Hvis du ønsker å bruke PowerApps Studio i stedet, kan du åpne **Fil**-menyen og klikke eller trykke på **Tilkoblinger**, så åpnes [powerapps.com](https://web.powerapps.com) slik at du kan opprette eller administrere tilkoblinger der.
+> Hvis du ønsker å bruke PowerApps Studio i stedet, kan du åpne **Fil**-menyen og klikke eller trykke på **Tilkoblinger**, så åpnes [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) slik at du kan opprette eller administrere tilkoblinger der.
 
 ## <a name="create-a-new-connection"></a>Å opprette en ny tilkobling
-1. Hvis du ikke allerede har gjort det, logger du deg på [powerapps.com](https://web.powerapps.com).
+1. Hvis du ikke allerede har gjort det, logger du deg på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. Klikk eller trykk på **Tilkoblinger** i venstre navigasjonsfelt.
    
     ![Å administrere tilkoblinger](./media/add-manage-connections/open-connections.png)

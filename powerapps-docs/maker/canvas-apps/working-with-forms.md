@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/27/2016
 ms.author: gregli
-ms.openlocfilehash: ec6526ff4cd690d6bcf5cbf3dcc98c6ee7b8ae28
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: b2eb001ee426dc3449b440a357c67bc47b702d42
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018150"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195753"
 ---
 # <a name="understand-data-forms-in-microsoft-powerapps"></a>Å forstå dataskjemaer i Microsoft PowerApps
 Legg til tre typer kontroller, slik at brukeren kan bla gjennom etter en post, vise detaljer om denne posten og redigere eller opprette en post:
@@ -33,7 +33,7 @@ Som dette emnet beskriver, kan du kombinere disse kontrollene med formler for å
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com) ved å angi samme legitimasjon som du brukte til å registrere deg.
+* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å angi samme legitimasjon som du brukte til å registrere deg.
 * Finn ut hvordan du [konfigurerer en kontroll](add-configure-controls.md) i PowerApps.
 
 ## <a name="explore-a-generated-app"></a>Å utforske en generert app

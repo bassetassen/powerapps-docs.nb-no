@@ -9,18 +9,18 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 07/10/2017
 ms.author: anneta
-ms.openlocfilehash: 8a2849c32eaf474d1aa5bb981a09a3594cead600
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 24f0479db0707e667263f5b160d6785560fe604b
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020128"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195592"
 ---
 # <a name="add-and-configure-a-control-in-powerapps"></a>Å legge til og konfigurere en kontroll i PowerApps
 Legg til forskjellige grensesnittelementer i appen, og konfigurer aspekter ved utseende og virkemåte direkte, fra verktøylinjen, i **Egenskaper**-fanen eller i formellinjen. Disse grensesnittelementene kalles kontroller, og aspektene du konfigurerer, kalles egenskaper.
 
 ## <a name="prerequisites"></a>Forutsetninger
-1. [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com) ved å angi samme legitimasjon som du brukte til å registrere deg.
+1. [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å angi samme legitimasjon som du brukte til å registrere deg.
 
 2. Klikk eller trykk på **Ny** i **Fil**-menyen (nær venstre kant) i PowerApps Studio.
 

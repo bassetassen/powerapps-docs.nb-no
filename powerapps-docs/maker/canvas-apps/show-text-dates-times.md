@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 10/16/2016
 ms.author: anneta
-ms.openlocfilehash: 625d76af5acc554ff9ab6c20d69f542cf959cd95
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: d6f88534b4839381037243400ef69f292df8fb97
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018081"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195707"
 ---
 # <a name="show-text-and-format-dates-and-times-in-powerapps"></a>Å vise tekst og formatere datoer og klokkeslett i PowerApps
 Legg til datoer og klokkeslett, og formater dem for å vise det riktige detaljnivået eller for å gjenspeile de nasjonale innstillingene. Å beregne tidsrommet mellom to datoer, eller beregne en dato som er en viss tid før eller etter en dato du angir. Konverter datoer til eller fra separate verdier for dager, måneder og år, og konvertere klokkeslett til eller fra separate verdier for timer, minutter og sekunder.
@@ -23,7 +23,7 @@ For eksempel kan du legge til data fra brukere om lagerbeholdning eller kundemø
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com) ved å angi samme legitimasjon som du brukte til å registrere deg.
+* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å angi samme legitimasjon som du brukte til å registrere deg.
 * Opprett en app eller åpne en eksisterende app i PowerApps.
 * Finn ut hvordan du kan [konfigurere en kontroll](add-configure-controls.md) i PowerApps.
 

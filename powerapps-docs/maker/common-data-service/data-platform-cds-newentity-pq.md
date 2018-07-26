@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.component: cds
 ms.date: 03/21/2018
 ms.author: anneta
-ms.openlocfilehash: 60d1843e48a1dc1d310d877bcba67460da557993
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: c5da71198f33661766d8fc214816c2e714736360
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168301"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218767"
 ---
 # <a name="add-data-to-an-entity-in-common-data-service-for-apps-by-using-power-query"></a>Å legge til data i en enhet i Common Data Service for apper ved bruk av Power Query
 I denne prosedyren oppretter du en enhet i [Common Data Service for apper](data-platform-intro.md), og fyller denne enheten med data fra en OData-feed ved bruk av Power Query. Du kan bruke de samme teknikkene til å integrere data fra disse nettkildene og lokale kildene, blant annet:
@@ -37,7 +37,7 @@ For å følge dette emnet, må du bytte til et [miljø](../canvas-apps/working-w
 
 ## <a name="specify-the-source-data"></a>Å angi kildedataene
 
-1. Logg inn i [PowerApps](https://web.powerapps.com), og klikk eller trykk deretter på Ned-pilen for **Data** nær den venstre kanten.
+1. Logg inn i [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og klikk eller trykk deretter på Ned-pilen for **Data** nær den venstre kanten.
 
     ![Hjemmesiden for PowerApps](./media/data-platform-cds-newentity-pq/sign-in.png)
 

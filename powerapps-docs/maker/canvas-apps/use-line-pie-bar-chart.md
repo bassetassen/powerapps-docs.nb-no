@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/23/2016
 ms.author: lonu
-ms.openlocfilehash: 9172c897940a0b8529ff16e09cc8889dec6e3f2a
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 5fecc52a5100f2ed0d045fd0ebdc3834f83d5b39
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021738"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195914"
 ---
 # <a name="show-data-in-a-line-pie-or-bar-chart-in-powerapps"></a>Å vise data i en linje, sektor- eller liggende stolpediagram i PowerApps
 Bruk linjediagrammer, sektordiagrammer og liggende stolpediagrammer til å vise dataene. Når du arbeider med diagrammer, bør dataene som du importerer, struktureres som følgende:
@@ -29,7 +29,7 @@ Skjermen burde for eksempel se omtrent slik ut:
 Du kan opprette og bruke disse diagrammene i PowerApps. La oss komme i gang.
 
 ## <a name="prerequisites"></a>Forutsetninger
-* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com) ved å oppgi samme legitimasjon som du brukte til å registrere deg.
+* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å oppgi samme legitimasjon som du brukte til å registrere deg.
 * Opprett en app fra en [mal](get-started-test-drive.md), fra [data](get-started-create-from-data.md) eller fra [bunnen av](get-started-create-from-blank.md).
 * Finn ut hvordan du [konfigurerer en kontroll](add-configure-controls.md) i PowerApps.
 * Last ned [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip), som inneholder eksempeldata som en XML-fil. Følg trinnene i dette emnet for å importere den direkte til appen. Som et alternativ, dekomprimer ZIP-filen, åpne XML-filen i Excel og lagre det i en [skylagringskonto](connections/cloud-storage-blob-connections.md).

@@ -9,24 +9,24 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/06/2018
 ms.author: anneta
-ms.openlocfilehash: 50913e593cf279d0d1870cbe88fa1a3703059811
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 3481bd697e29855a075598975e26d14121a49a0a
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39016034"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195362"
 ---
 # <a name="quickstart-generate-an-app-from-common-data-service-for-apps-in-powerapps"></a>Hurtiginnføring: å generere en app fra Common Data Service for apper i PowerApps
 
 I denne hurtiginnføringen skal du bruke Microsoft PowerApps til å automatisk generere en app basert på en liste over eksempelkontoer i [Common Data Service (CDS) for apper](../common-data-service/data-platform-intro.md). I denne appen kan du bla gjennom alle kontoene, vise detaljer for en enkelt konto og opprette, oppdatere eller slette en konto.
 
-Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https://web.powerapps.com) før du begynner.
+Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) før du begynner.
 
 ## <a name="prerequisites"></a>Forutsetninger
 Hvis du ønsker å følge med i denne hurtiginnføringen, må du [bytte til et miljø](working-with-environments.md) der en database i CDS for apper har blitt opprettet, inneholder data og tillater oppdateringer. Hvis det ikke finnes et slikt miljø og du har administratorrettigheter, kan du [opprette et miljø](../../administrator/environments-administration.md#create-an-environment) som oppfyller dette kravet.
 
 ## <a name="generate-an-app"></a>Å generere en app
-1. Logg deg på [PowerApps](https://web.powerapps.com), og (om nødvendig) bytt miljøer som angitt tidligere i dette emnet.
+1. Logg deg på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og (om nødvendig) bytt miljøer som angitt tidligere i dette emnet.
 
     ![Hjemmesiden for PowerApps](./media/data-platform-create-app/sign-in.png)
 

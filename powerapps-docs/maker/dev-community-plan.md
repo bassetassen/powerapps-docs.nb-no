@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.date: 05/01/2016
 ms.author: anneta
 ms.reviewer: ''
-ms.openlocfilehash: 533234c7a0ca3cc69e30eb077ff0bd39d1d50a11
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: a187e50bd4d1819d1579c6db219588e3582f5c25
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017092"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195684"
 ---
 # <a name="powerapps-community-plan-a-free-development-environment-for-individual-use"></a>PowerApps Community Plan: et gratis utviklingsmiljø for individuell bruk
 Hvis du vil utvikle ferdigheter og finne ut mer om PowerApps, Microsoft Flow og Common Data Service, er PowerApps Community Plan riktig abonnement for deg. Med PowerApps Community Plan får du et gratis utviklingsmiljø for individuell bruk, der du kan gjøre følgende:
@@ -33,7 +33,7 @@ Alle som har en [jobb- eller skolekonto](signup-for-powerapps.md#faq), kan regis
 ## <a name="where-can-i-sign-up-for-the-powerapps-community-plan"></a>Hvor kan jeg registrere meg for PowerApps Community Plan?
 Registrer deg på [nettstedet til PowerApps Community Plan](https://powerapps.microsoft.com/communityplan). Hvis du er en eksisterende bruker av PowerApps med Office 365 eller Dynamics 365, kan du også [opprette et miljø for individuell bruk](https://web.powerapps.com/community/signup).
 
-Når du har registrert deg for Community Plan, blir du omdirigert til [PowerApps-området](https://web.powerapps.com) og føres til ditt individuelle miljø. Miljøet får ditt navn, for eksempel «Ola Nordmanns miljø». Hvis det allerede finnes et miljø med dette navnet, får det individuelle miljøet navnet «Ola Nordmanns (1) miljø».  Det følgende bildet viser hvordan miljøet ser ut.
+Når du har registrert deg for Community Plan, blir du omdirigert til [PowerApps-området](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) og føres til ditt individuelle miljø. Miljøet får ditt navn, for eksempel «Ola Nordmanns miljø». Hvis det allerede finnes et miljø med dette navnet, får det individuelle miljøet navnet «Ola Nordmanns (1) miljø».  Det følgende bildet viser hvordan miljøet ser ut.
 
 ![Individuelt miljø for Community Plan](./media/dev-community-plan/individual-environment.png)
 

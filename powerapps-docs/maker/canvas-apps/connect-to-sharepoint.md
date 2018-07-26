@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 09/03/2016
 ms.author: anneta
-ms.openlocfilehash: 1b9ff639e053218c74515be574f92146fc8ced36
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 0e0b98277548d188071bcd29b9e3168de5818321
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020519"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195868"
 ---
 # <a name="create-a-connection-to-sharepoint-from-powerapps"></a>Opprett en tilkobling til SharePoint fra PowerApps
 Opprett en tilkobling enten til SharePoint Online eller SharePoint lokalt, slik at du kan generere en app automatisk eller utvikle en fra bunnen av.
@@ -26,7 +26,7 @@ I skrivende stund støtter PowerApps egendefinerte lister, men ikke biblioteker.
 ## <a name="specify-a-sharepoint-connection"></a>Angi en SharePoint-tilkobling
 1. Hvis du ikke allerede har registrert deg, kan du [registrere deg for PowerApps](../signup-for-powerapps.md).
 
-2. Logg deg på [powerapps.com](https://web.powerapps.com) med samme legitimasjon som du brukte til å registrere deg.
+2. Logg deg på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) med samme legitimasjon som du brukte til å registrere deg.
 
 3. Klikk eller trykk på **Behandle** i venstre navigasjonsfelt, og deretter klikker eller trykker du på **Tilkoblinger**.
 

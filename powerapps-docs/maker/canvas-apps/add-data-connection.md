@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/06/2018
 ms.author: lanced
-ms.openlocfilehash: 734e36b00658455198b64317b6f068c0018755a4
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 471f4b69b913236d99e6309c8b8bb4e12f85a7b9
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018495"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195040"
 ---
 # <a name="add-a-data-connection-in-powerapps"></a>Slik legger du til en datatilkobling i PowerApps
 I PowerApps kan du legge til en datatilkobling i en eksisterende app eller i en app som du oppretter fra grunnen av. Appen kan koble til SharePoint, Salesforce, OneDrive eller [mange andre datakilder](connections-list.md).
@@ -26,7 +26,7 @@ Det [neste trinnet](#next-steps) etter denne artikkelen er å vise og behandle d
 * Koble til SQL Server, og oppdater en tabell fra appen din.
 
 ## <a name="prerequisites"></a>Forutsetninger
-[Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](http://web.powerapps.com) ved å angi samme legitimasjon som du brukte til å registrere deg.
+[Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å angi samme legitimasjon som du brukte til å registrere deg.
 
 ## <a name="add-a-data-source"></a>Å legge til en datakilde
 1. Hold pekeren over flisen **Start fra grunnen av** på **Hjem**-fanen, og velg deretter **Opprett denne appen.**

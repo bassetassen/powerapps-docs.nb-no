@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: 56a46493ef15eff7d65d19f12affb2a58dbba0b6
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 68b02c1dd2b6c22f5b1ec049f753a175ad8c09db
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023440"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195065"
 ---
 # <a name="customize-a-card-in-powerapps"></a>Tilpass et kort i PowerApps
 Utfør grunnleggende tilpasning (uten å låse opp et kort), for eksempel ved å endre kontrollen til kortet. Utfør avansert tilpasning ved å låse opp kortet og for eksempel legge til en kontroll som ikke er tilgjengelig for dette kortet som standard.
@@ -33,7 +33,7 @@ Hvis du vil ha en oversikt, kan du se [Forstå datakort](working-with-cards.md).
 ## <a name="customize-a-locked-card"></a>Tilpass et låst kort
 I denne prosedyren bytter du ut en **[Tekstinndata](controls/control-text-input.md)**-kontroll med en **[Glidebryter](controls/control-slider.md)**-kontroll uten å låse opp kortet.
 
-1. Logg deg på [PowerApps](http://web.powerapps.com).
+1. Logg deg på [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![Hjemmesiden for PowerApps](./media/customize-card/sign-in.png)
 

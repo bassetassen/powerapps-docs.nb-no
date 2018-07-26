@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: 13e00081ce01b44feeea6fc1d6fff9556c020298
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 5cf2a312ddba83312805f6b3b517738f1bc1da78
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168278"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218031"
 ---
 # <a name="create-a-business-rule"></a>Å opprette en forretningsregel
 
@@ -42,7 +42,7 @@ Du må bytte til et [miljø](../canvas-apps/working-with-environments.md) hvor d
 
 ## <a name="create-a-business-rule"></a>Å opprette en forretningsregel
   
-1. Logg deg på [PowerApps](https://web.powerapps.com), og klikk eller trykk deretter på Ned-pilen for **Data** nær den venstre kanten.
+1. Logg deg på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og klikk eller trykk deretter på Ned-pilen for **Data** nær den venstre kanten.
 
 2. Klikk eller trykk på **Enheter** i listen som vises.
   

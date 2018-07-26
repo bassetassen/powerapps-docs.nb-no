@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/30/2015
 ms.author: lonu
-ms.openlocfilehash: 27b5a3453c2c0a89239d3e319ee6f39afd034492
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 98407181bc654874d749bb57da22c9fde1259fb6
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023279"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195500"
 ---
 # <a name="create-and-update-a-collection-in-your-app"></a>Å opprette og oppdatere en samling i appen
 Bruk en samling til å lagre data som kan brukes i en app. En samling er en gruppe lignende elementer. Du har for eksempel opprettet en MyImages-samling som inneholder alle produktbildene som firmaet selger. Du kan legge til MyImages-samlingen i PowerApps og opprette en app som viser alle bildene av disse produktene. I et annet eksempel kan du opprette en PriceList-samling som viser produktene og prisen for hvert produkt.
@@ -22,7 +22,7 @@ Bruk en samling til å lagre data som kan brukes i en app. En samling er en grup
 Du kan opprette og bruke samlingene i PowerApps. La oss komme i gang.
 
 ### <a name="prerequisites"></a>Forutsetninger
-* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com) ved å angi samme legitimasjon som du brukte til å registrere deg.
+* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å angi samme legitimasjon som du brukte til å registrere deg.
 * Opprett en app eller åpne en eksisterende app i PowerApps.
 * Finn ut hvordan du [konfigurerer en kontroll](add-configure-controls.md) i PowerApps.
 * Denne fremgangsmåten bruker [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip)-filen som eksempeldata. Zip-filen inneholder en XML-fil som kan konverteres til Excel. PowerApps leser ellers automatisk ZIP-filene og importerer dem. Du kan laste ned og bruke disse eksempeldataene eller importere dine egne.

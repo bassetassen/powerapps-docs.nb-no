@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 01/20/2017
 ms.author: sharik
-ms.openlocfilehash: 58097eec0bc483d8c38bf354513b70573e43049d
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 342fcc36fb8dba9cfaa42c94089329ad19501af8
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023532"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39194953"
 ---
 # <a name="how-to-link-sharepoint-lists-using-lookup-fields"></a>Slik kobler du SharePoint-lister ved hjelp av oppslagsfelt
 Denne opplæringen viser hvordan du kan koble sammen to SharePoint-lister med oppslagsfelt.
@@ -89,7 +89,7 @@ Du gjør dette først, slik at når du legger til data til **Aktiva**-listen, er
 ## <a name="create-an-app-from-the-assets-list"></a>Opprett en app fra listen over aktiva
 Du bruker denne appen til å legge til data i **Aktiva**-listen.
 
-1. [Logg deg på PowerApps Studio](http://web.powerapps.com). Hvis du er ny med PowerApps, [kan du registrere deg gratis](https://powerapps.microsoft.com) ved hjelp av organisasjons-e-postadressen din.
+1. [Logg deg på PowerApps Studio](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Hvis du er ny med PowerApps, [kan du registrere deg gratis](https://powerapps.microsoft.com) ved hjelp av organisasjons-e-postadressen din.
 
 2. Klikk eller trykk på **Ny** i **Fil**-menyen (langs venstre kant), og klikk eller trykk deretter på **SharePoint**.
 

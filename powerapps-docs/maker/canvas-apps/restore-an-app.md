@@ -9,18 +9,18 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: jamesol
-ms.openlocfilehash: cf5e8e4c7dcd2c1ae5b381b79a086471e24db787
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 3f59dac57fcdd344645f7af53c75e9fa1cb1a7a3
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020082"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195086"
 ---
 # <a name="restore-an-app-to-a-previous-version"></a>Å gjenopprette appen til en tidligere versjon
 Denne artikkelen viser deg hvordan du gjenoppretter en app til en tidligere versjon som er lagret i skyen fra PowerApps-kontoen din.
 
 ## <a name="restore-an-app-from-your-account"></a>Å gjenopprette en app fra kontoen din
-1. Åpne [powerapps.com](https://web.powerapps.com), og klikk eller trykk på **Apper** i navigasjonsfeltet til venstre.
+1. Åpne [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og klikk eller trykk på **Apper** i navigasjonsfeltet til venstre.
 
     ![Venstre navigasjonsfelt](./media/restore-an-app/file-apps.png)
 

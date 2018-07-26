@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/08/2018
 ms.author: anneta
-ms.openlocfilehash: 796d23be4c8b69a6f901b4338bda0000f8afb452
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 25a06525fba038dda2deebb333f53583301540f7
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023095"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195169"
 ---
 # <a name="create-or-edit-apps-in-powerapps-studio-for-web"></a>Å opprette eller redigere apper i PowerApps Studio for nett
 Opprette og redigere apper i PowerApps Studio for nett, som åpnes i et nettleservindu i Windows eller andre plattformer.
@@ -34,7 +34,7 @@ PowerApps Studio for nett åpnes i en ny fane i nettleseren din, der du kan oppr
 ## <a name="known-limitations"></a>Kjente begrensninger
 1. **Å opprette en tilkobling.**
 
-    Hvis du vil [opprette en tilkobling](add-manage-connections.md) til en datakilde som krever godkjenning, kan du bruke [powerapps.com](https://web.powerapps.com), og deretter [legge til tilkoblingen](add-data-connection.md) til en app i PowerApps Studio for nett.
+    Hvis du vil [opprette en tilkobling](add-manage-connections.md) til en datakilde som krever godkjenning, kan du bruke [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og deretter [legge til tilkoblingen](add-data-connection.md) til en app i PowerApps Studio for nett.
 2. **Å redigere og lagre en app lokalt**.
 
     Bruk PowerApps Studio for Windows til å redigere og lagre apper lokalt for best resultat. Du kan ikke lagre endringer i en lokal app i en nettleser, eller du må lagre en ny fil i stedet for å erstatte filen som du åpnet.

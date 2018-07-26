@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: 188add46a8e52cfeb75ef1bb670ca3b457963024
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: b2b472ae33bd16761d25fc965f24afc6bb9b957e
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168600"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218422"
 ---
 # <a name="create-an-option-set"></a>Å opprette et alternativsett
 
@@ -23,7 +23,7 @@ Du kan opprette alternativsett på to måter, enten fra listen over alternativse
 
 ## <a name="creating-an-option-set-while-adding-a-field"></a>Å opprette et alternativsett mens du legger til et felt
 
-1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
+1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
 
     ![Enhetsdetaljer](./media/data-platform-cds-create-entity/entitylist.png "Enhetsliste")
 
@@ -61,7 +61,7 @@ Du kan opprette alternativsett på to måter, enten fra listen over alternativse
 
 ## <a name="creating-an-option-set-from-the-option-set-list"></a>Å opprette et alternativsett fra listen over alternativsett
 
-1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com), og trykk eller klikk på **Alternativsett** i venstre navigasjonsrute.
+1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og trykk eller klikk på **Alternativsett** i venstre navigasjonsrute.
 
     ![Alternativsett](./media/data-platform-cds-newoptionset/optionsetlist.png "Liste over alternativsett")
 

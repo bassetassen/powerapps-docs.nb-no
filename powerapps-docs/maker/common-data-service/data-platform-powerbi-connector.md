@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 05/21/2018
 ms.author: clwesene
-ms.openlocfilehash: bb0bec7cf459eb9084aea4db7264350b7913e578
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 5fffcbcd8f58ae05f3fe5b3b4f871cf39d003321
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37898763"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218192"
 ---
 # <a name="create-a-power-bi-report"></a>Opprette en Power BI-rapport
 Common Data Service for apper lar deg koble deg direkte til dataene med Power BI Desktop for å opprette rapporter og publisere dem til Power BI. Fra Power BI kan rapporter brukes i instrumentbord, deles med andre brukere og fås tilgang til på tvers av plattformer i Power BI-apper for mobilenheter.
@@ -29,7 +29,7 @@ Hvis du vil bruke Power BI med Common Data Service for apper, trenger du følgen
 
 ## <a name="finding-your-common-data-service-for-apps-environment-url"></a>Slik finner du nettadressen for miljøet til Common Data Service for apper
 
-1. Åpne [PowerApps](https://web.powerapps.com), og velg miljøet du har tenkt å koble til. Klikk deretter på **tannhjulet for innstillinger** øverst til høyre og klikk på **Avanserte tilpasninger**
+1. Åpne [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og velg miljøet du har tenkt å koble til. Klikk deretter på **tannhjulet for innstillinger** øverst til høyre og klikk på **Avanserte tilpasninger**
 
     ![CDS for apper-miljøet](./media/data-platform-cds-powerbi-connector/CDSEnv1.png "CDS for apper-miljøet")
 

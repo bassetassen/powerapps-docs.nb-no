@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 04/26/2018
 ms.author: anneta
-ms.openlocfilehash: 965396dbeb087e2dfb52a151825884fc5a98c6e1
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 005bc37baea420ba1734789d1ef36fd0bbcc3b8f
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39016402"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195431"
 ---
 # <a name="what-are-canvas-apps-in-powerapps"></a>Hva er lerret-apper i PowerApps?
 Utform og bygg en business-app fra et lerret i Microsoft PowerApps uten å skrive kode i et tradisjonelt programmeringsspråk, for eksempel C#. Utforme appen ved å dra og slippe elementer til et lerret, på samme måte som du vil utforme et lysbilde i PowerPoint. Opprett Excel-lignende uttrykk for å angi logikk og arbeide med data. Bygg apper som integrerer forretningsdata fra en [rekke Microsoft-kilder og tredjepartskilder](connections-list.md). Del appen din slik at brukere kan kjøre den i en nettleser eller på en mobil enhet, og bygg inn appen din slik at brukere kan kjøre den i SharePoint, Power BI eller Teams.
@@ -54,5 +54,5 @@ Du kan kjøre dine egne apper – og apper som er delt med deg – på Windows, 
 
 ## <a name="next-steps"></a>Neste trinn
 - [Registrer deg for en gratis lisens.](../signup-for-powerapps.md)
-- [Logg deg på PowerApps.](https://web.powerapps.com)
+- [Logg deg på PowerApps.](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 - [Åpne en eksempelapp.](open-and-run-a-sample-app.md)

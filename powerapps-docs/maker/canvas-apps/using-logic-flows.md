@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/05/2017
 ms.author: sharik
-ms.openlocfilehash: c395a548d0a920a21e8d4128f75a3b01deb9de3a
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 9d681cc889a3f39fb0785ab0cba86e37ebe185b3
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39019369"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195891"
 ---
 # <a name="start-a-flow-in-an-app"></a>Å starte en flyt i en app
 Du kan bruke Microsoft Flow til å opprette logikk som utfører én eller flere oppgaver når en hendelse forekommer i en app. Du kan for eksempel konfigurere en knapp slik at når en bruker velger den, opprettes et element i en SharePoint-liste, en e-postmelding eller møteinvitasjon sendes, en fil legges til i skyen, eller alt dette. Du kan konfigurere en kontroll i appen for å starte flyten, som fortsetter å kjøre selv om du lukker PowerApps.
@@ -25,7 +25,7 @@ Du kan bruke Microsoft Flow til å opprette logikk som utfører én eller flere 
 * Finn ut hvordan du kan [konfigurere en kontroll](add-configure-controls.md).
 
 ## <a name="create-a-flow"></a>Å opprette en flyt
-1. Logg deg på [powerapps.com](http://web.powerapps.com), og klikk eller trykk deretter på **Flyter** i navigasjonsfeltet til venstre.
+1. Logg deg på [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og klikk eller trykk deretter på **Flyter** i navigasjonsfeltet til venstre.
 
 2. Velg **Opprett fra tom** på **Mine flyter**-siden.
 

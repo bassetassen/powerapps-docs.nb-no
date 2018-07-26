@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/17/2018
 ms.author: anneta
-ms.openlocfilehash: 842e19360c5f1536489f978cf880d941a6dee7d6
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: aefe350c2294f9d8cbae32eee1db1f600c8a65da
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39019990"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195109"
 ---
 # <a name="customize-forms-in-powerapps"></a>Å tilpasse skjemaer i PowerApps
 Tilpass en **visningsskjema**-kontroll og en **redigeringsskjema**-kontroll slik at de viser dataene som er viktigst i den mest intuitive rekkefølgen, for å hjelpe brukere å forstå og oppdatere dataene.
@@ -27,7 +27,7 @@ Hvis du ikke allerede er kjent med PowerApps, kan du se [Introduksjon til PowerA
 [Å genere en app](data-platform-create-app.md) fra Common Data Service, og deretter [tilpasse galleriet](customize-layout-sharepoint.md) i denne appen.
 
 ## <a name="show-and-hide-cards"></a>Å vise og skjule kort
-1. Logg deg på [PowerApps](http://web.powerapps.com).
+1. Logg deg på [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![Hjemmesiden for PowerApps-området](./media/customize-forms-sharepoint/sign-in.png)
 

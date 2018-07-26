@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/14/2016
 ms.author: litran
-ms.openlocfilehash: 04ed5dfb76cb26f629f36514a05eda9690669926
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 865e5f419d5ff318ce232fff16b9240039129a29
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020634"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39194994"
 ---
 # <a name="working-with-environments-and-microsoft-powerapps"></a>Å arbeide med miljøer og Microsoft PowerApps
 Du kan arbeide i forskjellige miljøer og enkelt å bytte mellom dem med PowerApps. For en oversikt over miljøer, kan du se [Miljøoversikt](../../administrator/environments-overview.md), som forklarer i detalj hvorfor du bruker miljøer, og hvordan du kan opprette og administrere dem. Omfanget av denne artikkelen dekker følgende emner om miljø:
@@ -39,7 +39,7 @@ Du kan opprette apper i et miljø som du oppretter, eller som du har fått tilga
 
 Hvis du vil opprette en app i det rette miljøet, gjør du ett av følgende:
 
-- [Logg deg på](http://web.powerapps.com) PowerApps Studio hvis det ikke er åpent allerede, og velg deretter miljøet du ønsker å opprette appen din i. Velg så **Apper** nær venstre kant, og velg til slutt **Opprett en app**.
+- [Logg deg på](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) PowerApps Studio hvis det ikke er åpent allerede, og velg deretter miljøet du ønsker å opprette appen din i. Velg så **Apper** nær venstre kant, og velg til slutt **Opprett en app**.
 
 - Hvis PowerApps Studio er åpen, velger du miljøet på nytt øverst til høyre.
 
@@ -54,6 +54,6 @@ Hvis du vil opprette en app i det rette miljøet, gjør du ett av følgende:
     ![Slik bytter du miljø i Studio](./media/working-with-environments/new-app.PNG)
 
 ## <a name="view-apps-in-the-right-environment"></a>Slik viser du en app i riktig miljø
-Enten du arbeider i [powerapps.com](http://web.powerapps.com) eller PowerApps Studio, er listen over apper, tilkoblinger osv. som du ser alltid filtrert basert på miljøet som er valgt i rullegardinlisten. Hvis du ikke ser appene du leter etter, må du alltid bekrefte om riktig miljø er valgt.
+Enten du arbeider i [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) eller PowerApps Studio, er listen over apper, tilkoblinger osv. som du ser alltid filtrert basert på miljøet som er valgt i rullegardinlisten. Hvis du ikke ser appene du leter etter, må du alltid bekrefte om riktig miljø er valgt.
 
 Hvis du vil ha mer informasjon om miljøer, kan du se [denne oversikten](../../administrator/environments-overview.md).

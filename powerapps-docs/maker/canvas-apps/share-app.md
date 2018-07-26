@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 07/11/2018
 ms.author: anneta
-ms.openlocfilehash: 197eb5223c0945a7cb80d8b187aaf44c871e798c
-ms.sourcegitcommit: 79a58f1b6880cbc512b64cde71a4d532cebe5bed
+ms.openlocfilehash: 9c4bdc6e56f84b6724fcbe44cfe1f3e4c065edb3
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39137026"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195316"
 ---
 # <a name="share-an-app-in-powerapps"></a>Å dele en app i PowerApps
 
@@ -33,7 +33,7 @@ Du må lagre appen i skyen (ikke lokalt) og deretter publisere den før du deler
 
 ## <a name="share-an-app"></a>Å dele en app
 
-1. [Logg deg på](https://web.powerapps.com) PowerApps, og velg deretter **Apper** nær venstre kant.
+1. [Logg deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) PowerApps, og velg deretter **Apper** nær venstre kant.
 
     ![Vise listen over apper](./media/share-app/file-apps.png)
 
@@ -59,7 +59,7 @@ Du må lagre appen i skyen (ikke lokalt) og deretter publisere den før du deler
 
     Hvis du gir brukere tillatelse til å endre appen, inneholder meldingen også en egen kobling for å åpne appen for redigering i PowerApps Studio.
 
-    Uavhengig av om du sender en invitasjon, kan brukere kjøre appen fra AppSource på [Dynamics 365](http://home.dynamics.com). Brukere som har **Kan redigere**-tillatelse kan også redigere appen fra [PowerApps](http://web.powerapps.com).
+    Uavhengig av om du sender en invitasjon, kan brukere kjøre appen fra AppSource på [Dynamics 365](http://home.dynamics.com). Brukere som har **Kan redigere**-tillatelse kan også redigere appen fra [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Angi tillatelser for hver bruker eller sikkerhetsgruppe, og velg deretter **Lagre**.
 
@@ -85,7 +85,7 @@ Hvis du oppretter en app basert på Common Data Service for apper, må du også 
 
 #### <a name="create-a-security-role"></a>Slik oppretter du en sikkerhetsrolle
 
-1. [Logg deg på PowerApps](https://web.powerapps.com), og kontroller at du er i samme miljø som appen du vil dele.
+1. [Logg deg på PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og kontroller at du er i samme miljø som appen du vil dele.
 
 1. Velg tannhjulikonet i hjørnet øverst til høyre, og velg deretter **Avanserte tilpassinger**.
 

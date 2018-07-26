@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: f1952c2349eb54f2c6348f5abc4dee9a4645348a
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 8562219c373a8880f7cc89f791b6c6373b6df0b3
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168439"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39217939"
 ---
 # <a name="create-a-relationship-between-entities"></a>Opprette en relasjon mellom enheter
 Data i én enhet er ofte knyttet til data i en annen enhet. Du kan for eksempel ha en enhet for **lærere** og en enhet for **klasse**, og enheten for **klasse** kan ha en oppslagsrelasjon til enheten for **lærere** for å vise hvilken lærer som har ansvar for klassen. Du kan bruke et oppslagsfelt som viser data fra enheten for **lærere**. Dette kalles ofte et oppslagsfelt.
@@ -29,7 +29,7 @@ Du kan opprette flere typer relasjoner fra én enhet til en annen (eller på tve
 
 Hvis du vil legge til en oppslagsrelasjon til en enhet, kan du opprette en relasjon under **Relasjoner**-fanen og angi enheten du vil opprette en relasjon med.
 
-1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
+1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
 
     ![Enhetsdetaljer](./media/data-platform-cds-create-entity/entitylist.png "Enhetsliste")
 
@@ -53,7 +53,7 @@ Hvis du vil legge til en oppslagsrelasjon til en enhet, kan du opprette en relas
 
 Hvis du vil legge til en én-til-mange-relasjon, kan du opprette en relasjon under **Relasjoner**-fanen og angi enheten du vil opprette en relasjon med.
 
-1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
+1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
 
     ![Enhetsdetaljer](./media/data-platform-cds-create-entity/entitylist.png "Enhetsliste")
 

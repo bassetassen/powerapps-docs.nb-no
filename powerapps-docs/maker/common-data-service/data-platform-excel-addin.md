@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 05/21/2018
 ms.author: clwesene
-ms.openlocfilehash: 8dbf6088104270d9251b70eec9adf0642de2f879
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: ad1a2de5491a1725ada2e95c3eccc6513de9e304
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34445873"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218491"
 ---
 # <a name="open-entity-data-in-excel"></a>Å åpne enhetsdata i Excel
 Ved at du åpner enhetsdata i Microsoft Excel, kan du raskt og enkelt vise og redigere data ved å bruke Excel-tillegget for Microsoft PowerApps. Excel-tillegget for PowerApps krever Microsoft Excel 2016.
@@ -21,12 +21,12 @@ Ved at du åpner enhetsdata i Microsoft Excel, kan du raskt og enkelt vise og re
 ![Excel-tillegg](./media/data-platform-cds-excel-addin/ExcelAddin.png "Excel-tillegg for PowerApps")
 
 ## <a name="open-entity-data-in-excel"></a>Å åpne enhetsdata i Excel
-1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com), og trykk eller klikk på **Enheter** i venstre navigasjonsrute. Alle enhetene vises.
+1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og trykk eller klikk på **Enheter** i venstre navigasjonsrute. Alle enhetene vises.
 2. Klikk på ellipsen (...) til høyre for enheten du er interessert i.
 3. Klikk på **Åpne i Excel**, og deretter åpner du arbeidsboken som er generert. Denne arbeidsboken har bindingsinformasjon for enheten, en peker til miljøet ditt, og en peker til Excel-tillegget for PowerApps.  
 4. Klikk på **Aktiver redigering** i Excel for å aktivere Excel-tillegget for PowerApps til å kjøre. Excel-tillegget kjører i en rute til høyre for Excel-vinduet.
 5. Hvis dette er første gang du kjører Excel-tillegget for PowerApps, klikker du på **Stol på dette tillegget** for at Excel-tillegget kan kjøre.
-6. Hvis du blir bedt om å logge deg på, kan du klikke på **Logg på**, og deretter logger du deg på ved bruk av den samme legitimasjonen du brukte på[powerapps.com](https://web.powerapps.com). Excel-tillegget tar i bruk en tidligere påloggingskontekst, og logger deg automatisk på hvis dette er mulig. Bekreft derfor brukernavnet øverst til høyre i Excel-tillegget.
+6. Hvis du blir bedt om å logge deg på, kan du klikke på **Logg på**, og deretter logger du deg på ved bruk av den samme legitimasjonen du brukte på[powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Excel-tillegget tar i bruk en tidligere påloggingskontekst, og logger deg automatisk på hvis dette er mulig. Bekreft derfor brukernavnet øverst til høyre i Excel-tillegget.
 
 Excel-tillegget leser automatisk dataene for enheten du valgte. Vær oppmerksom på at det ikke er noe data i arbeidsboken før Excel-tillegget leser det inn.
 

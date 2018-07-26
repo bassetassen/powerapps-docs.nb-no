@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.date: 07/12/2017
 ms.author: matp
 ms.reviewer: ''
-ms.openlocfilehash: e29688f52da411d57daa920437d1f0708c9f663e
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 9bd73487d744f5597f934603bbf1d742ff08baea
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017023"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195408"
 ---
 # <a name="connect-to-dynamics-365-from-powerapps"></a>Å koble til Dynamics 365 fra PowerApps
 Med PowerApps kan du raskt generere, tilpasse, dele og kjøre mobilapper med lite eller ingen kode. Ved hjelp av Dynamics 365-koblingen kan du på bare noen minutter opprette nyttige mobilapper til å dele med organisasjonen.
@@ -25,7 +25,7 @@ Ved å følge trinnene i dette emnet oppretter du en app der brukere kan bla gje
 For å følge denne opplæringen trenger du en Microsoft Office 365-konto som omfatter et Dynamics 365-abonnement.
 
 ## <a name="create-a-connection"></a>Å opprette en kobling
-1. [Logg deg på PowerApps](https://web.powerapps.com/).
+1. [Logg deg på PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. Klikk eller trykk på **Tilkoblinger** i venstre navigasjonsrute.
    
     ![Alternativet Tilkobling i Fil-menyen](./media/connection-dynamics-crmonline/file-connections.png)
@@ -43,7 +43,7 @@ For å følge denne opplæringen trenger du en Microsoft Office 365-konto som om
     En tilkobling er opprettet.
 
 ## <a name="generate-an-app-automatically"></a>Å generere en app automatisk
-1. [Logg deg på PowerApps](https://web.powerapps.com/), og klikk deretter på **Ny app** nær nedre venstre hjørne.
+1. [Logg deg på PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og klikk deretter på **Ny app** nær nedre venstre hjørne.
    
     ![Ny app](./media/connection-dynamics-crmonline/new-app.png)
 2. Klikk på **Telefonoppsett** under **Start med dataene dine** på **Dynamics 365**-flisen.

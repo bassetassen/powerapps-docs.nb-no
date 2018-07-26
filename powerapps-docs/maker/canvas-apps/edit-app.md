@@ -9,18 +9,18 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/19/2017
 ms.author: sharik
-ms.openlocfilehash: b1e9f514973313a1028aa3b1958bf8e01ff2c167
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: b5678437ea1e604ce2932307d897f280f4633fc0
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023785"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39194955"
 ---
 # <a name="edit-an-app-in-powerapps"></a>Rediger en app i PowerApps
 Du kan redigere alle apper du har utviklet, som du eier eller har **Kan redigere**-tillatelse for. Du kan redigere en app i PowerApps Studio. Hvis du prøver å redigere en app som er åpnet for redigering et annet sted, vil du motta en beskjed om at du eller en annen bruker allerede har den åpen.
 
 ## <a name="verify-your-permissions"></a>Bekreft tillatelsen din
-1. Logg på [PowerApps](https://web.powerapps.com), og klikk eller trykk deretter på **Apper** i **Fil**-menyen (nær venstre kant).
+1. Logg på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og klikk eller trykk deretter på **Apper** i **Fil**-menyen (nær venstre kant).
    
     ![Alternativ for apper i Fil-menyen](./media/edit-app/file-apps.png)
 

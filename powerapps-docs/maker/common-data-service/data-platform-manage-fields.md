@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: a4ec386ef6a7eee02c2ac608bb6e00ed9ee39c19
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a9fff4cc61f6416ef8dbc3c03d96be7082fe3a51
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168140"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218744"
 ---
 # <a name="manage-custom-fields-in-an-entity"></a>Behandle egendefinerte felt i en enhet
 Du kan opprette og oppdatere ett eller flere egendefinerte felt i en enhet. Når du oppretter et egendefinert felt, kan du angi et sett med egenskaper som feltnavn, visningsnavn, og typen data det skal inneholde. Hvis du vil ha mer informasjon, kan du se [Attributtmetadata for enhet](../../developer/common-data-service/entity-attribute-metadata.md).
@@ -22,7 +22,7 @@ Du kan opprette og oppdatere ett eller flere egendefinerte felt i en enhet. Når
 > Hver enhet har systemfelt, som eksempelvis felt som angir når en post sist ble oppdatert, og hvem som oppdaterte den. Standardenheter har i tillegg standardfelt. Du kan ikke endre eller slette systemfelt eller standardfelt. Hvis du oppretter et egendefinert felt, får du funksjonalitet i tillegg til disse innebygde feltene.
 
 ## <a name="create-a-field"></a>Å opprett et felt
-1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
+1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
 
     ![Enhetsdetaljer](./media/data-platform-cds-create-entity/entitylist.png "Enhetsliste")
 
@@ -71,7 +71,7 @@ Med beregnede felt kan du automatisere manuelle beregninger som brukes i forretn
 Hvis du vil ha mer informasjon om uttrykkstypene som støttes og eksempler, kan du se [Definering av beregnede felt](/dynamics365/customer-engagement/customize/define-calculated-fields)
 
 ## <a name="update-or-delete-a-field"></a>Oppdater eller slett et felt
-1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com), og trykk eller klikk på **Enheter** i venstre navigasjonsrute. Deretter klikker eller trykker du på en enhet.
+1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og trykk eller klikk på **Enheter** i venstre navigasjonsrute. Deretter klikker eller trykker du på en enhet.
 2. I feltlisten for enheten du valgte kan du klikke eller trykke på et felt, og deretter følge ett av disse trinnene:
    
    * Du kan endre én eller flere egenskaper for feltet.

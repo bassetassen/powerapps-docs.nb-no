@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: b40abdc4c8d5d8a33a9aec32a1826476500405c8
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 7f9a724b61404ac0947a9c75f91396b35328086b
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017874"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195270"
 ---
 # <a name="get-started-with-formulas"></a>Å komme i gang med formler
 Konfigurer appen din med formler som ikke bare beregner verdier og utfører andre oppgaver (som de gjør i Excel) men som også responderer på inndata fra brukeren (som kreves av en app).
@@ -30,7 +30,7 @@ Dette emnet gir bare en oversikt over det å arbeide med formler. Bla gjennom [f
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com) ved å angi samme legitimasjon som du brukte til å registrere deg.
+* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å angi samme legitimasjon som du brukte til å registrere deg.
 * Finn ut hvordan du [konfigurerer en kontroll](add-configure-controls.md) i PowerApps.
 
 ## <a name="show-a-simple-value"></a>Å vise en enkel verdi

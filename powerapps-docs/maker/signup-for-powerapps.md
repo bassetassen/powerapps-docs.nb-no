@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.date: 03/12/2018
 ms.author: anneta
 ms.reviewer: ''
-ms.openlocfilehash: ddbd2f610ecba6d801efde2a00a9cb492e2382e3
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 62afc8fc0ce754ed797683a61c061db16370f904
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021554"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195201"
 ---
 # <a name="sign-up-for-a-free-license-to-try-powerapps"></a>Registrer deg for en gratis lisens for å prøve PowerApps
 Hvis du vil lage en app i PowerApps, trenger du en av flere typer lisenser som tilbyr ulike nivåer av funksjonalitet. Hvis organisasjonen har kjøpt en av flere versjoner av Office 365 eller Dynamics 365 for deg, eller hvis organisasjonen har kjøpt lisenser for PowerApps Plan 1 eller Plan 2 for deg, har du allerede en lisens for PowerApps.
@@ -74,7 +74,7 @@ Ellers blir du bedt om å sjekke e-posten din.
 
 Velg koblingen i e-postmeldingen for å bekrefte e-postadressen, og oppgi mer informasjon (hvis du blir bedt om det).
 
-Velg **Start** når denne dialogboksen vises, og begynn å bruke [PowerApps](http://web.powerapps.com).
+Velg **Start** når denne dialogboksen vises, og begynn å bruke [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ![Klikk på Start](./media/signup-for-powerapps/almost-there.png)
 
@@ -118,7 +118,7 @@ Etter 30 dager blir du bedt om å sende en forespørsel om utvidelse av prøvepe
 * Hvis du bare har tilgang til PowerApps gjennom prøveversjonen (som du registrerte deg for på [PowerApps-nettstedet](http://powerapps.microsoft.com/) eller [prissiden](http://powerapps.microsoft.com/pricing)), kan du be om 30 dagers utvidelse av prøveperioden for å beholde tilgangen til PowerApps.
 
 ### <a name="when-will-my-trial-license-expire"></a>Når utløper lisensen min for prøveversjonen?
-Hvis du vil finne ut når lisensen for prøveversjonen utløper, kan du velge tannhjulikonet i øvre høyre hjørne på [PowerApps-nettstedet](http://web.powerapps.com), og deretter velge **Abonnement(er)**.
+Hvis du vil finne ut når lisensen for prøveversjonen utløper, kan du velge tannhjulikonet i øvre høyre hjørne på [PowerApps-nettstedet](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og deretter velge **Abonnement(er)**.
 
 ![](./media/signup-for-powerapps/show-duration.png)
 

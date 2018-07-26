@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: 4830721ba697f78987abd972dd1122250bacb9e8
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 2af0c39aca43d316e79b4f928e114dcfb88caf31
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020243"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39194856"
 ---
 # <a name="generate-an-app-from-excel-in-powerapps"></a>Å generere en app fra Excel i PowerApps
 I dette emnet vil du automatisk generere din første app i PowerApps ved hjelp av data fra en Excel-tabell. Du velger en Excel-fil, genererer en app og kjører deretter appen du genererer. Alle genererte apper inkluderer skjermer for å bla gjennom poster, vise postdetaljer og opprette eller oppdatere poster. Du kan raskt få en fungerende app ved hjelp av Excel-data ved å generere en app, og deretter kan du tilpasse appen for bedre å møte dine behov. 
@@ -30,7 +30,7 @@ Hvis du ønsker å følge dette emnet helt etter boken, kan du laste ned [Floori
 > Du kan også bruke din egen Excel-fil, men dataene må være formatert som en tabell. Hvis du vil ha mer informasjon, kan du se [Å formatere en tabell i Excel](how-to-excel-tips.md). 
 
 ## <a name="generate-the-app"></a>Å generere appen
-1. Logg deg på [PowerApps](https://web.powerapps.com).
+1. Logg deg på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![Hjemmesiden for PowerApps](./media/get-started-create-from-data/sign-in.png)
 

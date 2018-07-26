@@ -9,15 +9,15 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/28/2016
 ms.author: litran
-ms.openlocfilehash: 400df9944b21788e08b0a55e3e0a148f2eccb972
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 9c1b6bde62f0260dca7eba1d723049aadc3e72c9
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017345"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195339"
 ---
 # <a name="introduction-to-powerappscom"></a>Innføring i powerapps.com
-PowerApps-teamet introduserer på nytt [powerapps.com](http://web.powerapps.com) som det nye hjemmet for apputviklere. Vi har utformet siden på nytt som hovedsiden for kreative som enkelt vil komme i gang med utvikling av apper, bruke Microsoft Common Data Service og administrere appene sine på ett og samme sted. I denne artikkelen veileder jeg deg gjennom følgende:
+PowerApps-teamet introduserer på nytt [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) som det nye hjemmet for apputviklere. Vi har utformet siden på nytt som hovedsiden for kreative som enkelt vil komme i gang med utvikling av apper, bruke Microsoft Common Data Service og administrere appene sine på ett og samme sted. I denne artikkelen veileder jeg deg gjennom følgende:
 
 * toppteksten
 * hjemmesiden
@@ -45,7 +45,7 @@ Ved siden av innstillinger vises et spørsmålstegnikon for hjelp. Klikk eller t
 ![Topptekst – Help](./media/intro-maker-portal/help_items2.png)
 
 ## <a name="homepage"></a>Hjemmeside
-Når du logger inn på [powerapps.com](http://web.powerapps.com), vil du som standard komme til hjemmesiden. Vi har endret oppsettet på denne hjemmesiden for å hjelpe deg med å komme raskt i gang, enten du utvikler apper eller vil utforske Common Data Service.
+Når du logger inn på [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), vil du som standard komme til hjemmesiden. Vi har endret oppsettet på denne hjemmesiden for å hjelpe deg med å komme raskt i gang, enten du utvikler apper eller vil utforske Common Data Service.
 
 Hvis du har logget deg på PowerApps tidligere og kjørt eller utviklet noen apper, vil den første inndelingen du ser på hjemmesiden være en liste over **Nylig brukte apper**. De er sortert etter datoen da de sist ble åpnet.
 
@@ -96,7 +96,7 @@ Nedenfor banneret **Bruk Microsoft Common Data Service** ser du et sett med ekse
     ![Tilkoblede eksempelapper](./media/intro-maker-portal/connectedsampleapps2.png)
 
 ## <a name="new-apps-page"></a>Ny Apper-side
-Du får tilgang til **Apper**-siden via det venstre navigasjonsfeltet på [powerapps.com](http://web.powerapps.com).
+Du får tilgang til **Apper**-siden via det venstre navigasjonsfeltet på [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ![Venstre navigasjon](./media/intro-maker-portal/leftnav2.png)
 

@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/30/2016
 ms.author: archanan
-ms.openlocfilehash: e7dc9a2386d75a6f03744286b7ed265a8d385370
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: fb561ca5458a22880d93c712aa2e2b2ada884605
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018541"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39194893"
 ---
 # <a name="manage-an-on-premises-data-gateway-in-powerapps"></a>Administrer en lokal datagateway i PowerApps
 Installer en lokal datagateway for å overføre data på en rask og sikker måte mellom PowerApps og en datakilde som ikke er i skyen, for eksempel en lokal SQL Server-database eller et lokalt SharePoint-område. Vis alle gatewayer som du har administratortillatelser til, og behandle tillatelser og tilkoblinger for disse gatewayene.
@@ -35,7 +35,7 @@ Med en gateway kan du koble til lokale data over disse tilkoblingene:
 * Gatewayer og lokale tilkoblinger kan bare opprettes og brukes i brukerens [standardmiljø](working-with-environments.md).
 
 ## <a name="install-a-gateway"></a>Installer en gateway
-1. Klikk eller trykk på **Gatewayer** i det venstre navigasjonsfeltet i [powerapps.com](https://web.powerapps.com).
+1. Klikk eller trykk på **Gatewayer** i det venstre navigasjonsfeltet i [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![Gatewayer i venstre navigasjonsfelt](./media/gateway-management/manage-gateway.png)
 
@@ -46,7 +46,7 @@ Med en gateway kan du koble til lokale data over disse tilkoblingene:
     Hvis du vil ha mer informasjon om hvordan du installerer en gateway, kan du se [Forstå lokale datagatewayer](gateway-reference.md).
 
 ## <a name="view-and-manage-gateway-permissions"></a>Vis og administrer gatewaytillatelser
-1. Klikk eller trykk på **gatewayer** i det venstre navigasjonsfeltet i [powerapps.com](https://web.powerapps.com), og deretter klikker eller trykker du på en gateway.
+1. Klikk eller trykk på **gatewayer** i det venstre navigasjonsfeltet i [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og deretter klikker eller trykker du på en gateway.
 
 2. Legg til en bruker i en gateway ved å klikke eller trykke på **Brukere**, angi en bruker eller gruppe, og deretter angi et tilgangsnivå:
 
@@ -57,7 +57,7 @@ Med en gateway kan du koble til lokale data over disse tilkoblingene:
 For tillatelsesnivåene **Kan bruke** og **Kan bruke og dele** må du velge datakildene som brukeren kan koble til, over gatewayen.
 
 ## <a name="view-and-manage-gateway-connections"></a>Vis og administrer gateway-tilkoblinger
-1. Klikk eller trykk på **gatewayer** i det venstre navigasjonsfeltet i [powerapps.com](https://web.powerapps.com), og klikk eller trykk deretter på en gateway.
+1. Klikk eller trykk på **gatewayer** i det venstre navigasjonsfeltet i [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og klikk eller trykk deretter på en gateway.
 
 2. Klikk eller trykk på **Tilkoblinger**, og deretter klikker eller trykker du på en tilkobling for å vise detaljene, redigere innstillingene eller slette den.
 

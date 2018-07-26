@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 08/08/2017
 ms.author: jamesol
-ms.openlocfilehash: 45311aefca51d8d1a4fc6c8cc6dabc33872842df
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: f9b606246b0b1114aec1bec2fc2767b518215148
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020841"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195569"
 ---
 # <a name="send-a-push-notification-in-powerapps"></a>Send et push-varsel i PowerApps
 Push-varsler brukes hovedsakelig i mobilapper for forbruker- og forretningsscenarioer for å engasjere brukere og hjelpe dem med å prioritere viktige oppgaver. I PowerApps kan du sende varsler ved å bruke PowerApps Notification-koblingen. Du kan sende opprinnelige push-varsler til alle apper du lager i PowerApps. Vi har planer om å legge til flere typer varsler i fremtiden.
@@ -56,7 +56,7 @@ Legg til en PowerApps Notification-tilkobling i en app der du har **Bidragsyter*
 ## <a name="send-a-notification-from-an-app"></a>Send et varsel fra en app
 Du kan sende et push-varsel fra en app til en annen, eller til den samme appen.
 
-1. Åpne [PowerApps](https://web.powerapps.com/), og gå til appen du ønsker å sende push-varsler til.
+1. Åpne [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og gå til appen du ønsker å sende push-varsler til.
 2. Kopier **App-ID** for denne appen under fanen**Detaljer**.
 
     ![Hent App-ID](./media/add-notifications/grab-id.png)

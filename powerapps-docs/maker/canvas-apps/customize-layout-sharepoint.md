@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/06/2018
 ms.author: anneta
-ms.openlocfilehash: bb02f12bf452d1928408ea7c266469b524607b5f
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: fa5aa70beba25130144c5da9dac4fbaa383dfc67
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39016793"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195615"
 ---
 # <a name="tutorial-customize-a-gallery-in-powerapps"></a>Opplæring: Tilpassing av et galleri i PowerApps
 
@@ -39,7 +39,7 @@ Du kan også legge til et rullefelt slik at brukere som ikke har berøringsskjer
 
 Denne opplæringen starter med en app som ble generert fra en bestemt datakilde. De samme prinsippene gjelder imidlertid for alle apper som du genererer i PowerApps, enten fra en SharePoint-liste, en Excel-tabell eller en annen datakilde.
 
-Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https://web.powerapps.com) før du begynner.
+Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) før du begynner.
 
 ## <a name="prerequisites"></a>Forutsetninger
 
@@ -47,7 +47,7 @@ Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https:/
 
 ## <a name="open-the-generated-app"></a>Slik åpner du den genererte appen
 
-1. Logg deg på [PowerApps](https://web.powerapps.com), og klikk eller trykk deretter på **Apper** nær venstre kant.
+1. Logg deg på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og klikk eller trykk deretter på **Apper** nær venstre kant.
 
     [![Hjemmesiden for PowerApps](./media/customize-layout-sharepoint/sign-in.png)](./media/customize-layout-sharepoint/sign-in.png#lightbox)
 

@@ -9,18 +9,18 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/12/2017
 ms.author: sharik
-ms.openlocfilehash: 8c04681f3d39a6022f8f962e7a76673fb90ad65b
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 5c6c7b2973f85c1ebc3040e41d83653250599717
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017667"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195017"
 ---
 # <a name="using-multimedia-files-in-powerapps"></a>Bruk av multimediefiler i PowerApps
 Dette emnet forklarer hvordan du bygger inn multimediefiler i appen, laster opp pennetegninger til en datakilde og viser bilder fra en datakilde i appen. Datakilden som brukes i dette emnet, er en Excel-fil i OneDrive for Business.
 
 ## <a name="prerequisites"></a>Forutsetninger
-[Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com) ved å oppgi samme legitimasjon som du brukte til å registrere deg.
+[Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å oppgi samme legitimasjon som du brukte til å registrere deg.
 
 ## <a name="add-media-from-a-file-or-the-cloud"></a>Legg til media fra en fil eller fra skyen
 Du kan velge hvilken type mediefil du vil legge til (for eksempel bilder, video eller lyd).

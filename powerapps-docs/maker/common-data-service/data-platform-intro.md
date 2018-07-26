@@ -8,12 +8,12 @@ ms.topic: overview
 ms.component: cds
 ms.date: 05/01/2018
 ms.author: matp
-ms.openlocfilehash: 586750edf476a9145e2822522cc0b4b5ad729539
-ms.sourcegitcommit: 7296649d03ebc33dc5ddb9e7c551869dc781f154
+ms.openlocfilehash: 6a8bc8f24ce0f772f5c98852838095f233c4317f
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35250827"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218077"
 ---
 # <a name="what-is-common-data-service-for-apps"></a>Hva er Common Data Service for apper?
 Common Data Service (CDS) for apper lar deg lagre og behandle data som brukes av forretningsprogrammer på en sikker måte. Data i CDS for apper lagres i et sett med enheter. En *enhet* er et sett med poster som brukes til å lagre data. Det ligner en tabell i en database. CDS for apper inkluderer et grunnleggende sett med standardenheter som dekker vanlige scenarioer, men du kan også opprette egendefinerte enheter som er spesifikke for din organisasjon, og fylle dem med data ved hjelp av Power Query. Apputviklere kan deretter bruke PowerApps til å bygge rike programmer ved hjelp av disse dataene.
@@ -70,7 +70,7 @@ Enheter i Common Data Service for apper kan dra nytte av omfattende serverside-l
 * **Forretningslogikk med kode** støtter mer avanserte scenarier for utviklere for å utvide programmet direkte via kode. Hvis du vil ha mer informasjon, kan du se [Å bruke forretningslogikk med kode](../../developer/common-data-service/apply-business-logic-with-code.md).
 
 ## <a name="developer-capabilities"></a>Utviklerfunksjoner
-I tillegg til funksjonene som er tilgjengelige via [PowerApps](https://web.powerapps.com)-portalen, inneholder CDS for apper også funksjoner for utviklere for en programmatisk tilgang til metadata og data for å opprette enheter og forretningslogikk samt samhandle med dataene. Hvis du vil ha mer informasjon, kan du se [Oversikt for utviklere over Common Data Service for apper](../../developer/common-data-service/overview.md)
+I tillegg til funksjonene som er tilgjengelige via [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-portalen, inneholder CDS for apper også funksjoner for utviklere for en programmatisk tilgang til metadata og data for å opprette enheter og forretningslogikk samt samhandle med dataene. Hvis du vil ha mer informasjon, kan du se [Oversikt for utviklere over Common Data Service for apper](../../developer/common-data-service/overview.md)
 
 ## <a name="next-steps"></a>Neste trinn
 Slik kommer du i gang med å bruke CDS for apper ved å:
@@ -79,4 +79,4 @@ Slik kommer du i gang med å bruke CDS for apper ved å:
 * [bruke Power Query](./data-platform-cds-newentity-pq.md) til å koble til en nettbasert eller lokal datakilde, og importere den direkte til Common Data Service for apper.
 
 ## <a name="privacy-notice"></a>Erklæring om personvern
-Med den vanlige datamodellen i Microsoft PowerApps samler vi inn og lagrer egendefinerte enhets- og feltnavn i diagnostiseringssystemene. Vi bruker denne kunnskapen til å forbedre den vanlige datamodellen for kundene våre. Enhets- og feltnavnene som app-oppretterne lager, hjelper oss med å forstå Scenarioer som er typiske i Microsoft PowerApps-fellesskapet, og få rede på hull i tjenestens standarddekning for enheter, som eksempelvis skjemaer knyttet til organisasjoner. Dataene i databasetabeller som er knyttet til disse enhetene, blir ikke åpnet eller brukt av Microsoft eller replisert utenfor området hvor databasen er klargjort. Merk deg imidlertid at den egendefinerte enheten og feltnavnene kan repliseres på tvers av områder og blir slettet i henhold til retningslinjene våre for dataoppbevaring. Microsoft tar vare på personvernet ditt, som ytterligere beskrevet i [Klareringssenteret](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
+Med den vanlige datamodellen i Microsoft PowerApps samler vi inn og lagrer egendefinerte enhets- og feltnavn i diagnostiseringssystemene. Vi bruker denne kunnskapen til å forbedre den vanlige datamodellen for kundene våre. Enhets- og feltnavnene som appoppretterne lager, hjelper oss med å forstå scenarioer som er typiske i Microsoft PowerApps-fellesskapet, og få rede på hull i tjenestens standarddekning for enheter, som eksempelvis skjemaer knyttet til organisasjoner. Dataene i databasetabeller som er knyttet til disse enhetene, blir ikke åpnet eller brukt av Microsoft eller replisert utenfor området hvor databasen er klargjort. Merk deg imidlertid at den egendefinerte enheten og feltnavnene kan repliseres på tvers av områder og blir slettet i henhold til retningslinjene våre for dataoppbevaring. Microsoft tar vare på personvernet ditt, som ytterligere beskrevet i [Klareringssenteret](https://www.microsoft.com/trustcenter/Privacy/default.aspx).

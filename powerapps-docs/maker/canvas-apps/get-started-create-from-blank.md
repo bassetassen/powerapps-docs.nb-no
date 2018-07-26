@@ -8,12 +8,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 04/23/2018
 ms.author: anneta
-ms.openlocfilehash: 267480158d7e44afd06962779b98c0468436841a
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 330751210322190fddefb6c399025578bb9878b5
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39022612"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195293"
 ---
 # <a name="create-an-excel-app-from-scratch"></a>Slik oppretter du en Excel-app fra grunnen av
 Opprett din egen app fra grunnen av basert på Excel-data som er formatert som en tabell, og deretter legger du til data fra andre kilder hvis du ønsker det. Du oppretter en app med to skjermer ved å følge denne opplæringen. På den ene skjermen kan brukerne bla gjennom et sett med poster. På den andre skjermen kan brukere opprette en post, oppdatere ett eller flere felt i en post eller slette en hel post. Denne fremgangsmåten er mye mer tidkrevende enn [automatisk generering av en app](get-started-create-from-data.md), men erfarne apputviklere kan bruke det til å lage de beste appene for et gitt behov.
@@ -42,7 +42,7 @@ Du må først opprette en Excel-fil ved hjelp av disse eksempeldataene for å f�
 > Du kan bruke din egen Excel-fil og se gjennom denne opplæringen for bare generelle begreper. Dataene i Excel-filen må imidlertid være formatert som en tabell. Hvis du vil ha mer informasjon, kan du se [Formater en tabell i Excel](how-to-excel-tips.md).
 
 ## <a name="open-a-blank-app"></a>Å åpne en tom app
-1. Logg deg på [PowerApps](http://web.powerapps.com).
+1. Logg deg på [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![Hjemmesiden for PowerApps](./media/get-started-create-from-blank/sign-in.png)
 

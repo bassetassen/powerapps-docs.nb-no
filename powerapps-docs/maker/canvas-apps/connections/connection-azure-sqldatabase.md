@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.date: 07/12/2016
 ms.author: lanced
 ms.reviewer: anneta
-ms.openlocfilehash: e1a07bc9c166ac37ad0efa7ae50dca87332cb3e2
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: a3862dbd0210d2975b276d86741709b24d6d08f6
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020910"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195477"
 ---
 # <a name="connect-to-sql-server-from-powerapps"></a>Koble til SQL Server fra PowerApps
 ![SQL Server-ikon](./media/connection-azure-sqldatabase/sqlicon.png)
@@ -23,7 +23,7 @@ Koble til SQL Server, i Azure eller en lokal database, slik at du kan vise infor
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-* [Registrer deg](../../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](http://web.powerapps.com) ved å angi samme legitimasjon som du brukte til å registrere deg.
+* [Registrer deg](../../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å angi samme legitimasjon som du brukte til å registrere deg.
 * Samle inn følgende informasjon for en database som inneholder minst én tabell med en primærnøkkel:
   
   * navnet på databasen
@@ -64,7 +64,7 @@ Koble til SQL Server, i Azure eller en lokal database, slik at du kan vise infor
 8. Tilpass appen ved hjelp av teknikker som ligner på de som beskrives i [Lag en app fra Excel](../get-started-create-from-data.md), fra og med trinnet for endring av oppsettet i appen.
 
 ## <a name="build-an-app-from-scratch"></a>Bygge en app fra grunnen av
-1. Logg deg på [powerapps.com](https://web.powerapps.com) med den samme kontoen du brukte til å registrere deg for PowerApps.
+1. Logg deg på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) med den samme kontoen du brukte til å registrere deg for PowerApps.
 2. Klikk eller trykk på **Tilkoblinger** i venstre navigasjonsfelt:  
    
     ![Administrere tilkoblinger](./media/connection-azure-sqldatabase/manage-connections.png)

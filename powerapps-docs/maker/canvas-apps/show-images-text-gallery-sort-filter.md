@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/02/2015
 ms.author: lonu
-ms.openlocfilehash: d3a56d146982965eaa07247ef57d3e2d67db2b9a
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 51a93009f187b31cd0d3159f97c78ff5bd60ae33
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021853"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195546"
 ---
 # <a name="show-sort-and-filter-data-in-a-powerapps-gallery"></a>Å vise, sortere og filtrere data i et PowerApps-galleri
 Opprett et galleri for å vise bilder og tekst om flere produkter, og sorter og filtrer informasjonen.
@@ -27,7 +27,7 @@ I PowerApps kan du bruke et galleri for å vise flere relaterte elementer, akkur
 > 
 
 ### <a name="prerequisites"></a>Forutsetninger
-* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com) ved å oppgi samme legitimasjon som du brukte til å registrere deg.
+* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å oppgi samme legitimasjon som du brukte til å registrere deg.
 * Opprett en nettbrett-app fra en [mal](get-started-test-drive.md), fra [data](get-started-create-from-data.md), eller fra [bunnen av](get-started-create-from-blank.md).
 * Finn ut hvordan du kan [konfigurere en kontroll](add-configure-controls.md).
 * Disse trinnene bruker [CreateFirstApp](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) som eksempel for inndata, som inkluderer JPG-bilder. ZIP-filen inneholder en XML-fil som kan konverteres til Excel. PowerApps leser ellers automatisk ZIP-filene og importerer dem. Du kan laste ned og bruke disse eksempeldataene, eller importere dine egne.

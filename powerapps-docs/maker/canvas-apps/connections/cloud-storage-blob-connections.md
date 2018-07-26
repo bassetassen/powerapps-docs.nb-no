@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.date: 07/12/2016
 ms.author: lanced
 ms.reviewer: anneta
-ms.openlocfilehash: 3d7813280f0d17eca327e86a827da72e33f191e3
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 8e6aa988344c1ac04c2ff11eaa9d828cc8b929bc
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021025"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195661"
 ---
 # <a name="connect-to-cloud-storage-from-powerapps"></a>Å koble til lagring i skyen fra PowerApps
 PowerApps tilbyr flere tilkoblinger for lagring i skyen. Ved hjelp av noen av disse tilkoblingene kan du lagre en Excel-fil og bruke informasjonen i den i hele appen. Disse tilkoblingene omfatter:  
@@ -33,7 +33,7 @@ PowerApps tilbyr flere tilkoblinger for lagring i skyen. Ved hjelp av noen av di
   4. Lagre endringene.
 
 ## <a name="connect-to-the-cloud-storage-connection"></a>Å koble til tilkoblingen for skylagring
-1. Utvid **Behandle**på [powerapps.com](https://web.powerapps.com), og velg **Tilkoblinger**:  
+1. Utvid **Behandle**på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og velg **Tilkoblinger**:  
    
     ![Å velge tilkoblinger](./media/cloud-storage-blob-connections/connections.png)
 2. Velg **Ny tilkobling**, og velg tilkoblingen din for skylagring. Velg for eksempel **OneDrive**.

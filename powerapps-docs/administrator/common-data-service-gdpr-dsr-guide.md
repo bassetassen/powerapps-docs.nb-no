@@ -9,12 +9,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 04/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 2a393bb2ebedde2a08f1ed1534d815e64325077b
-ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
+ms.openlocfilehash: b550d5fe7e36c36177fff017adcf9d9034c93dd4
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094752"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218054"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-for-common-data-service-for-apps-customer-data"></a>Svar på DSR-forespørsler om kundedata i Common Data Service for Apps
 
@@ -52,7 +52,7 @@ Følgende handlinger er dekket i denne artikkelen:
 
 CDS for Apps og den forrige versjonen av Common Data Service (CDS) har separate prosesser for samhandling med personopplysninger.
 
-Du kan identifisere hvilken type CDS-miljø du har, ved å logge på [PowerApps](https://web.powerapps.com) og følge disse trinnene:
+Du kan identifisere hvilken type CDS-miljø du har, ved å logge på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) og følge disse trinnene:
 
 1. I rullegardinlisten **Miljø** velger du miljø.
 2. I navigasjonsruten klikker eller trykker du **Data**, og klikker eller trykker **enheter**.
@@ -308,7 +308,7 @@ Du kan finne personlige data fra brukere av den forrige versjonen av CDS i følg
 
 |Ressurs | Formål | Nettstedstilgang |  Programmatisk tilgang
 | --- | --- | --- | ---
-|Enhetsoppføringer | Registrerer forretningstransaksjoner i de respektive forretningsenhetene. | [PowerApps](https://web.powerapps.com) |      Nei
+|Enhetsoppføringer | Registrerer forretningstransaksjoner i de respektive forretningsenhetene. | [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) |    Nei
 
 #### <a name="entity-records"></a>Enhetsoppføringer
 Enkeltpersonens personopplysninger kan lagres i en hvilken som helst forretningsenhet.

@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/11/2018
 ms.author: anneta
-ms.openlocfilehash: 2051fdf0d9cb1d5fb2f796b22f55e8b59c52a692
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 293c5874e47d740d645b331aade04df662500db8
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018311"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39194833"
 ---
 # <a name="quickstart-create-a-canvas-app-from-a-sample-in-powerapps"></a>Hurtiginnføring: Lage en lerretsapp fra en eksempelapp i PowerApps
 I denne hurtiginnføringen skal du lage en lerretsapp fra en eksempelapp, slik at du kan studere utformingsmulighetene og oppdage konsepter du kan bruke når du utvikler dine egne lerretsapper.
@@ -24,7 +24,7 @@ Hver eksempelapp viser et virkelig scenario, men bruker fiktive data. Hvis du vi
 Hvis du ikke har en PowerApps-lisens, kan du [registrere deg gratis](../signup-for-powerapps.md).
 
 ## <a name="open-a-sample-app"></a>Åpne en eksempelapp
-1. Logg deg på [PowerApps](https://web.powerapps.com).
+1. Logg deg på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![](./media/open-and-run-a-sample-app/sign-in.png)
 
