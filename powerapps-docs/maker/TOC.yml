@@ -49,6 +49,11 @@
               href: ./canvas-apps/get-started-create-from-blank.md
         - name: Å dele en app
           href: ./canvas-apps/share-app.md
+          items:
+            - name: Å dele Excel-data
+              href: ./canvas-apps/share-app-data.md
+            - name: Å dele app-ressurser
+              href: ./canvas-apps/share-app-resources.md
         - name: Bygge inn en app i Power BI
           href: ./canvas-apps/embed-powerapps-powerbi.md
     - name: Eksempler
@@ -73,6 +78,8 @@
           href: ./canvas-apps/working-with-variables.md
         - name: formler
           href: ./canvas-apps/working-with-formulas-in-depth.md
+        - name: Forhåndsvisnings- og eksperimentelle funksjoner
+          href: ./canvas-apps/working-with-experimental.md
         - name: Datoer og klokkeslett
           href: ./canvas-apps/show-text-dates-times.md
         - name: Datakilder
@@ -134,7 +141,9 @@
             - name: Opprette en app som er enkel å forstå
               href: ./canvas-apps/accessible-apps.md
               items:
-                - name: Farge
+                - name: Finn tilgjengelighetsproblemer
+                  href: ./canvas-apps/accessibility-checker.md
+                - name: Bruk farge for tilgjengelighet
                   href: ./canvas-apps/accessible-apps-color.md
         - name: Administrere appen
           items:
@@ -614,13 +623,6 @@
 - name: Common Data Service for apper
   href: ./common-data-service/data-platform-intro.md
   items:
-    - name: Lisensiering
-      href: ./common-data-service/data-platform-entity-licenses.md
-      items:
-        - name: Enheter med kompleks forretningslogikk
-          href: ./common-data-service/data-platform-complex-entities.md
-        - name: Begrensede enheter som krever Dynamics 365-lisenser
-          href: ./common-data-service/data-platform-restricted-entities.md
     - name: Hurtigstarter
       items:
         - name: Å opprette en enhet
@@ -651,6 +653,13 @@
           href: ./common-data-service/data-platform-excel-addin.md
         - name: Opprette en Power BI-rapport
           href: ./common-data-service/data-platform-powerbi-connector.md
+    - name: Lisensiering
+      href: ./common-data-service/data-platform-entity-licenses.md
+      items:
+        - name: Enheter med kompleks forretningslogikk
+          href: ./common-data-service/data-platform-complex-entities.md
+        - name: Begrensede enheter som krever Dynamics 365-lisenser
+          href: ./common-data-service/data-platform-restricted-entities.md
     - name: For utviklere
       href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
