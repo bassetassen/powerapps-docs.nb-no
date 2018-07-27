@@ -8,12 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 4e12faf91b0ce19a4d2ef2ba2e4d9bbca8fb7093
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: b38f0d1b029708e8130363d54ccc1354084b0ae4
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37896309"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218169"
 ---
 # <a name="environments-overview"></a>Oversikt over miljøer
 Et miljø er et område der du kan lagre, administrere og dele organisasjonens forretningsdata, apper og flyter. De fungerer også som beholdere til å skille apper som kan ha ulike roller, sikkerhetskrav eller målgrupper. Måten du velger å dra nytte av miljøer på, avhenger av organisasjonen og appene du prøver å bygge. Eksempel:
@@ -75,7 +75,7 @@ Standardmiljøet er navngitt på følgende måte: «{Azure AD-leietakernavn} (st
 Du kan opprette miljøer for ulike formål. Hensikten med et prøveversjonsmiljø er å prøve ut miljøet og databasen med Common Data Service-opplevelsen. Det utløper etter bestemt periode. Du finner mer informasjon i [Å administrere miljøer i PowerApps](environments-administration.md).
 
 ## <a name="choosing-an-environment"></a>Å velge et miljø
-Med lanseringen av miljøer vil du nå se en ny opplevelse når du kommer til [https://web.powerapps.comhttps://web.powerapps.com](https://web.powerapps.com).  Appene, tilkoblingene og andre elementer som er synlige i området filtreres nå, basert på det gjeldende miljøet som er valgt.  Det gjeldende miljøet er angitt i velgeren for miljøet nær høyre kant av toppteksten. Hvis du vil velge et annet miljø, kan du klikke eller trykke på velgeren, slik at en liste over tilgjengelige miljøer vises. Klikk eller trykk på det du vil åpne.
+Med lanseringen av miljøer vil du nå se en ny opplevelse når du kommer til [https://web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  Appene, tilkoblingene og andre elementer som er synlige i området filtreres nå, basert på det gjeldende miljøet som er valgt.  Det gjeldende miljøet er angitt i velgeren for miljøet nær høyre kant av toppteksten. Hvis du vil velge et annet miljø, kan du klikke eller trykke på velgeren, slik at en liste over tilgjengelige miljøer vises. Klikk eller trykk på det du vil åpne.
 
 Et miljø vises i velgeren hvis du oppfyller én av følgende betingelser:
 
