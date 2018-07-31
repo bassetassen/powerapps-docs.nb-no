@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 12/08/2017
 ms.author: anneta
-ms.openlocfilehash: c47ddbbc2d50d05f1d4a913aaf7e9c743d5519e0
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 6175633b2fbec4e9949882c587916adb349290d4
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020657"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195454"
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>Bruk av Cognitive Services i PowerApps
 Denne artikkelen viser hvordan du kan utvikle en grunnleggende app som bruker [API for tekstanalyse i Microsoft Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview) til å analysere tekst. Vi viser deg hvordan du konfigurerer API-en for tekstanalyse og kobler til ved hjelp av [Tekstanalyse-koblingen](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Deretter viser vi hvordan du oppretter en app som utfører et oppkall til API-en.
@@ -71,7 +71,7 @@ Nå som API-en for tekstanalyse er oppe og går, kobler du til fra PowerApps og 
 ### <a name="create-the-app-and-add-a-connection"></a>Opprette appen og legge til en tilkobling
 Først må du opprette en tom telefonapp og legge til en tilkobling med **Tekstanalyse**-koblingen. Hvis du trenger mer informasjon om disse oppgavene, kan du se [Oppretting av en app fra bunnen av ](get-started-create-from-blank.md)og [Administrering av tilkoblinger i PowerApps](add-manage-connections.md).
 
-1. Velg **Start med en tom app** > ![Telefonapp-ikon](./media/cognitive-services-api/icon-phone-app.png) (telefon) > **Lag denne appen**, i [web.powerapps.com](https://web.powerapps.com).
+1. Velg **Start med en tom app** > ![Telefonapp-ikon](./media/cognitive-services-api/icon-phone-app.png) (telefon) > **Opprett denne appen** i [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![Starte med en tom app](./media/cognitive-services-api/start-from-blank.png)
 

@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: 9ffb88629dbac2df514b1072cf21cd8aa82899d7
-ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
+ms.openlocfilehash: aca695c8c2ae90e0d5d843dcb0dfb562cbef5a05
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094660"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195730"
 ---
 # <a name="install-and-configure-the-expense-report-powerapps-sample"></a>Å installere og konfigurere eksemplet for utgiftsrapport for PowerApps
 
@@ -209,7 +209,7 @@ Denne listen inneholder linjeelementene som er knyttet til utgiftsrapporten.
 
 ## <a name="create-connections"></a>Å opprette tilkoblinger
 
-1.  Gå til https://web.powerapps.com i en nettleser.
+1.  Gå til [web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) i en nettleser.
 2.  Logg deg på ved å angi samme legitimasjon som du brukte til å registrere deg.
 3.  I menyen til venstre velger du **Tilkoblinger**.
 

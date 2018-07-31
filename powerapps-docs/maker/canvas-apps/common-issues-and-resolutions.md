@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/10/2018
 ms.author: anneta
-ms.openlocfilehash: 92153c1d7fc72f6905faf55817f7f785ffdaa1ce
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: d5603ffacc0246dcffd1c54ab63b4e404250a7d5
+ms.sourcegitcommit: fc235972d0d4661f55df7a71e2dcedafd42706b0
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39016494"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202302"
 ---
 # <a name="common-issues-and-resolutions-for-powerapps"></a>Vanlige problemer og løsninger for PowerApps
 Denne artikkelen viser noen vanlige problemer som kan oppstå når du bruker PowerApps. Der det er aktuelt, er løsninger tilgjengelig.
@@ -31,7 +31,7 @@ Denne artikkelen viser noen vanlige problemer som kan oppstå når du bruker Pow
 
 1. **Å bruke et egendefinert bilde som et app-ikon**
 
-    Du kan ikke laste opp et egendefinert bilde som skal brukes som et ikon for appen i PowerApps Studio for Windows (versjon 3.18043). Hvis du vil omgå dette problemet, kan du bruke [PowerApps Studio for nett](https://web.powerapps.com) for å laste opp et egendefinert bilde. Du kan eventuelt bruke ett av ikonene som er inkludert i PowerApps Studio for Windows og tilpasse bakgrunnsfargen.
+    Du kan ikke laste opp et egendefinert bilde som skal brukes som et ikon for appen i PowerApps Studio for Windows (versjon 3.18043). Hvis du vil omgå dette problemet, kan du bruke [PowerApps Studio for nett](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) for å laste opp et egendefinert bilde. Du kan eventuelt bruke ett av ikonene som er inkludert i PowerApps Studio for Windows og tilpasse bakgrunnsfargen.
 
 1. **Å kopiere og lime inn skjermer på tvers av apper**
 
@@ -71,11 +71,15 @@ Denne artikkelen viser noen vanlige problemer som kan oppstå når du bruker Pow
 
 6. **Kjøring av en app på Windows 8.1**
 
-    Hvis du installerer [denne oppdateringen for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), kan du ikke kjøre apper du åpner i PowerApps Studio i dette operativsystemet. Du kan imidlertid fremdeles kjøre apper du åpner i [powerapps.com](https://web.powerapps.com), eller ved bruk av PowerApps Mobile.
+    Hvis du installerer [denne oppdateringen for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), kan du ikke kjøre apper du åpner i PowerApps Studio i dette operativsystemet. Du kan imidlertid fremdeles kjøre apper du åpner i [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), eller ved bruk av PowerApps Mobile.
 
 7. **Kolonnenavn med mellomrom**
 
-    Hvis du bruker en SharePoint-liste eller en Excel-tabell der et kolonnenavn inneholder et mellomrom, erstattes dette med **\_x0020\_** i PowerApps. **Kolonnenavn** i SharePoint eller Excel vil for eksempel vises som **Column_x0020_Name** i PowerApps når de vises i dataoppsettet eller brukes i en formel.
+    Hvis du bruker en SharePoint-liste eller en Excel-tabell der et kolonnenavn inneholder et mellomrom, erstattes dette med **\_x0020\_** i PowerApps. **Kolonnenavn** i SharePoint eller Excel, vil for eksempel vises som **Column_x0020_Name** i PowerApps når det vises i dataoppsettet, eller brukes i en formel.
+
+8. <a name="out-of-memory"></a>**Leseren går tom for minne**
+
+    Hvis du går tom for minne mens du bruker PowerApps, bør du laste ned en 64-biters versjon av Chrome, Edge eller Internet Explorer.
 
 ## <a name="older"></a>Eldre
 1. **Å endre en flyt i en delt app**

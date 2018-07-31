@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: 6145f321f3a9322433cdc32b779479871ab4dbf1
-ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
+ms.openlocfilehash: 4ee281e211891dab812c4ae447dff3d967ffeff3
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094775"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195776"
 ---
 # <a name="install-and-configure-the-help-desk-powerapps-sample"></a>Å installere og konfigurere eksemplet for teknisk støtte for PowerApps
 
@@ -36,7 +36,7 @@ Teknisk støtte tilbyr en brukervennlig opplevelse for å la brukere etablere ko
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-- [Registrer deg](https://web.powerapps.com/) for PowerApps.
+- [Registrer deg](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) for PowerApps.
 - Må ha en gyldig SharePoint Online-lisens og tillatelse til å opprette lister.
 
 ## <a name="create-the-helpdesk-sharepoint-list"></a>Å opprette kundestøttelisten for SharePoint
@@ -140,7 +140,7 @@ Denne listen lagrer forespørsler til teknisk støtte.
 
 ## <a name="create-connections"></a>Å opprette tilkoblinger
 
-1.  Gå til https://web.powerapps.com i en nettleser.
+1.  Gå til [web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) i en nettleser.
 2.  Logg deg på ved å angi samme legitimasjon som du brukte til å registrere deg.
 3.  I menyen til venstre velger du **Data**, og deretter **Tilkoblinger**.
     
