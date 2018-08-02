@@ -2,18 +2,18 @@
 title: Lisensieringsoversikt | Microsoft Docs
 description: Oversikt over lisensiering i PowerApps.
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: jamesol
-ms.openlocfilehash: 03aa8fc5254529a337f7bbdf40428ab4a1042a92
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 475b1f9b1aace4dc9632379e8a4e3522a90f42b2
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168117"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349045"
 ---
 # <a name="licensing-overview"></a>Lisensieringsoversikt
 PowerApps er lisensiert per bruker. Hver bruker som har tilgang til tjenesten for å opprette og kjøre apper trenger en lisens. Office 365- og Dynamics 365-kunder kan umiddelbart dra nytte av PowerApps og Microsoft Flow-funksjoner som er inkludert i disse tilbudene. Kunder som ønsker å utvikle apper og flyter som har tilgang til datakilder utenfor Office 365 og Dynamics 365, eller trenger ytterligere funksjonalitet, kan kjøpe frittstående abonnementer for PowerApps og Microsoft Flow. Det finnes viktige forskjeller i funksjonaliteten mellom disse gruppene med lisenser.

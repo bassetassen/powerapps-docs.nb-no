@@ -2,18 +2,18 @@
 title: Slik svarer du på DSR-forespørsler om systemgenererte logger i PowerApps, Microsoft Flow og Common Data Service for apper | Microsoft Docs
 description: Gjennomgang av hvordan du svarer på DSR-forespørsler om systemgenererte logger i PowerApps, Microsoft Flow og Common Data Service for apper
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 18bba11ce747b1e04be6013bf41419c34232865a
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 0511022621d891a6e45b27f1440e614df8b105a0
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37897252"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349137"
 ---
 # <a name="responding-to-dsr-requests-for-system-generated-logs-in-powerapps-microsoft-flow-and-common-data-service-for-apps"></a>Svar på DSR-forespørsler om systemgenererte logger i PowerApps, Microsoft Flow og Common Data Service for Apps
 Microsoft gir deg muligheten til å få tilgang til, eksportere og slette systemgenererte logger som kan anses som personlige under den brede definisjonen av *personopplysninger* i EUs personvernforordning (GDPR). Her er noen eksempler på systemgenererte logger som kan anses som personlige under GDPR:
@@ -106,7 +106,7 @@ Hvis du vil finne ut om du er bruker av en administrert eller ikke-administrert 
 1. Åpne følgende nettadresse i en nettleser, og pass på å erstatte e-postadressen din i nettadressen:[ https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1](https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1).
 
 2. Hvis du er medlem av en **ikke-administrert tenant**, får du se en `"IsViral": true` i svaret.
-   ```
+  ```
       {
       ...
       "Login": "foobar@unmanagedcontoso.com",
@@ -114,6 +114,6 @@ Hvis du vil finne ut om du er bruker av en administrert eller ikke-administrert 
       "IsViral": **true**,
       ...
       }
-   ```
+  ```
 
 3. Ellers hører du til en administrert tenant.

@@ -2,18 +2,18 @@
 title: Å administrere lisenser i organisasjonen | Microsoft Docs
 description: Vanlige spørsmål og svar om lisenser, administrasjon og registrering for PowerApps av brukere i Office 365-tenanten
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: jamesol
-ms.openlocfilehash: 8a734ef57a3820e38d52ad2bd87a2ab8979c0348
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 1f46541fcfe485bf497a59d25432ac1dec8d7b3e
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168048"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349781"
 ---
 # <a name="manage-powerapps-licenses-in-your-organization"></a>Å administrere PowerApps-lisenser i organisasjonen
 Artikkelen beskriver hvordan brukerne i organisasjonen kan få tilgang til å bruke PowerApps, og hvordan du kan kontrollere tilgang til PowerApps-tjenesten.

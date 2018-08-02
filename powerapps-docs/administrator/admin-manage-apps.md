@@ -6,15 +6,15 @@ ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
-ms.author: jimh
-ms.openlocfilehash: 8ef92fec0245bbe27529be0acb214cad7d2b928e
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.author: jimholtz
+ms.openlocfilehash: 9d900d2ebceb2ad3cca0c567b80d5d1fac4963ff
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552557"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349965"
 ---
-# <a name="manage-apps-created-in-your-organization"></a>Å administrere apper som er opprettet i organisasjonen
+# <a name="manage-apps-created-in-your-organization"></a>Å administrere apper som er opprettet i organisasjonen 
 Hvis du er en miljøadministrator, en global administrator for Office 365 eller tenantadministrator for Azure Active Directory, kan du administrere appene som er opprettet i organisasjonen din.
 
 Administratorer kan gjøre følgende i administrasjonssenteret for PowerApps:

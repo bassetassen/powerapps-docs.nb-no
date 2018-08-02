@@ -2,18 +2,18 @@
 title: Datagrupper | Microsoft Docs
 description: Gjennomgang av hvordan du bruker datagrupper i PowerApps.
 author: manasmams
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 8899a77d73f67a1b437a60218b3536d2989d5b8c
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 6a6217c0a344d0501c8a856b0632397044ceb465
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168324"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349643"
 ---
 # <a name="data-groups"></a>Datagrupper
 Med datagrupper kan du enkelt kategorisere tjenester i en [policy for hindring av datatap (DLP)](prevent-data-loss.md). De to tilgjengelige datagruppene er gruppene **Bare forretningsdata** og **Ingen forretningsdata er tillatt**. Organisasjoner kan selv bestemme hvilke tjenester de plasserer i en bestemt datagruppe. En god måte å kategorisere tjenester på, er å plassere dem i grupper, basert på innvirkningen på organisasjonen. Alle tjenester plasseres i datagruppen **Ingen forretningsdata er tillatt** som standard. Du administrerer tjenestene i en datagruppe når du oppretter eller endrer egenskapene til en DLP-policy fra administrasjonssenteret.

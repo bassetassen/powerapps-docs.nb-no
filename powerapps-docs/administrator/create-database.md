@@ -3,18 +3,18 @@ title: Å opprette en Common Data Service for apper-database | Microsoft Docs
 description: Gjennomgang av hvordan du oppretter en Common Data Service (CDS) for apper-database.
 services: powerapps
 author: manasmams
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: ccd2b03f5f71b2a5037274363ddf9c4082f7071c
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
+ms.openlocfilehash: 940789049a345c9f03bc008dc87b60e84b61af70
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218698"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39348815"
 ---
 # <a name="create-a-common-data-service-for-apps-database"></a>Å opprette en Common Data Service for apper-database
 Du kan opprette en database og utvikle apper ved hjelp av Common Data Service for apper som et datalager. Du kan enten opprette dine egne egendefinerte enheter, eller du kan bruke de forhåndsdefinerte enhetene. Hvis du vil opprette en database, må du først opprette et miljø, eller tilordnes til en eksisterende miljø som **miljøadministrator**. Du må dessuten være tilordnet den riktige lisensen. Hvis du vil ha informasjon om kjøp av et abonnement for å bruke CDS for apper, kan du se [Prisinformasjon](pricing-billing-skus.md).
@@ -42,7 +42,7 @@ Det finnes mange måter å opprette en database på:
 
 
 ## <a name="create-a-database-in-the-entities-pane-of-powerapps"></a>Å opprette en database i Enheter-ruten i PowerApps
-1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
+1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
 
 2. Klikk på **Opprett database** for å opprette databasen.
 

@@ -3,18 +3,18 @@ title: Å svare på DSR-forespørsler om kundedata for CDS for apper | Microsoft
 description: Gjennomgang av hvordan du svarer på DSR-forespørsler om kundedata for CDS for apper
 author: jamesol-msft
 ms.reviewer: paulliew
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 04/23/2018
 ms.author: jamesol
-ms.openlocfilehash: b550d5fe7e36c36177fff017adcf9d9034c93dd4
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
+ms.openlocfilehash: de7af5aa10f2f39057806c6ad170dc32e85c9f02
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218054"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349022"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-for-common-data-service-for-apps-customer-data"></a>Svar på DSR-forespørsler om kundedata i Common Data Service for Apps
 
@@ -52,7 +52,7 @@ Følgende handlinger er dekket i denne artikkelen:
 
 CDS for Apps og den forrige versjonen av Common Data Service (CDS) har separate prosesser for samhandling med personopplysninger.
 
-Du kan identifisere hvilken type CDS-miljø du har, ved å logge på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) og følge disse trinnene:
+Du kan identifisere hvilken type CDS-miljø du har, ved å logge på [PowerApps](https://web.powerapps.com) og følge disse trinnene:
 
 1. I rullegardinlisten **Miljø** velger du miljø.
 2. I navigasjonsruten klikker eller trykker du **Data**, og klikker eller trykker **enheter**.
@@ -102,8 +102,8 @@ Du kan finne personlige data fra CDS for Apps-brukere i følgende ressurser:
 
 |Ressurs | Formål | Nettstedstilgang | Programmatisk tilgang
 | --- | --- | --- | ---
-| Enhetsoppføring | Det er kjent som brukerenhetssystemet, og lagrer en brukers personlige data. | [Administrasjonssenteret for PowerApps](https://admin.powerapps.com) | Gjennom [Web-API](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
-| Revisjonshistorikk | Gir kunder tillatelse til å identifisere ressurser som brukere opprettet, hatt fikk tilgang til, endret eller slettet på et enhetsnivå. | [Administrasjonssenteret for PowerApps](https://admin.powerapps.com) | Gjennom [Web-API](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
+| Enhetsoppføring | Det er kjent som brukerenhetssystemet, og lagrer en brukers personlige data. | [Administrasjonssenteret for PowerApps](https://admin.powerapps.com) | Gjennom [Web-API](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
+| Revisjonshistorikk | Gir kunder tillatelse til å identifisere ressurser som brukere opprettet, hatt fikk tilgang til, endret eller slettet på et enhetsnivå. | [Administrasjonssenteret for PowerApps](https://admin.powerapps.com) | Gjennom [Web-API](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
 
 #### <a name="user"></a>Bruker
 Brukers personlige data er lagret i Azure Active Directory-og synkroniseres automatisk med alle CDS for Apps-miljøer. Systemansvarlige kan ikke oppdatere disse personopplysningene data direkte i CDS for Apps mens brukeren er aktiv&mdash;de må oppdatere opplysningene direkte i administrasjonssenteret for Office 365. Systemansvarlige kan legge til personlige data (for eksempel egendefinerte attributter) direkte til CDS for Apps, men de må behandle disse dataene manuelt.
@@ -199,7 +199,7 @@ Fra [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) gjør 
 
 3. Gå til **Innstillinger** > **Sikkerhet** > **Brukere**, og velg deretter **Visning av deaktiverte brukere**.
 
-4. Opprett og Last ned en Excel-malfil fra brukerens personlige data. Hvis du vil ha trinnvise instruksjoner, se [Opprett en ny Excel-mal](https://docs.microsoft.com/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates#create-a-new-excel-template).
+4. Opprett og Last ned en Excel-malfil fra brukerens personlige data. Hvis du vil ha trinnvise instruksjoner, se [Opprett en ny Excel-mal](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates#create-a-new-excel-template).
 
 8. Åpne den nedlastede filen for Excel-malen, fjern brukerens personlige data og lagre deretter filen.
 
@@ -308,7 +308,7 @@ Du kan finne personlige data fra brukere av den forrige versjonen av CDS i følg
 
 |Ressurs | Formål | Nettstedstilgang |  Programmatisk tilgang
 | --- | --- | --- | ---
-|Enhetsoppføringer | Registrerer forretningstransaksjoner i de respektive forretningsenhetene. | [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) |    Nei
+|Enhetsoppføringer | Registrerer forretningstransaksjoner i de respektive forretningsenhetene. | [PowerApps](https://web.powerapps.com) |      Nei
 
 #### <a name="entity-records"></a>Enhetsoppføringer
 Enkeltpersonens personopplysninger kan lagres i en hvilken som helst forretningsenhet.

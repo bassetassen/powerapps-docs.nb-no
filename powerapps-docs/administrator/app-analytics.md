@@ -2,23 +2,23 @@
 title: Å vise analyserapporter for appen | Microsoft Docs
 description: Vis rapporter for å gå gjennom bruken av og ytelsen til PowerApps-appene.
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 08/29/2017
 ms.author: jamesol
-ms.openlocfilehash: 9abac88875c85551fe4d4f91413a1752e35b8320
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
+ms.openlocfilehash: d114630b9716c98079274f30c9b78f02b70576d4
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218859"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349735"
 ---
 # <a name="view-analytics-reports-for-your-app"></a>Å vise analyserapporter for appen din
 Har du utviklet en app og delt den med organisasjonen din?  Er du nysgjerrig på hvor mange av kollegene dine som bruker den daglig?
 
-Vi introduserer den første analyserapporten for PowerApps som nå er tilgjengelig fra [web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc); **Bruksrapport for apper**.
+Vi introduserer den første analyserapporten for PowerApps som nå er tilgjengelig fra [web.powerapps.com](https://web.powerapps.com); **Bruksrapport for apper**.
 
 Bruksrapport for apper gir deg muligheten til å spore hvor mange brukere som har brukt appen din i løpet av de siste 30 dagene, inndelt etter dag, enhetsplattform og sted.
 
@@ -30,7 +30,7 @@ Alle rapporter er tilgjengelig for alle brukere med tillatelse til å redigere i
 ## <a name="where-do-i-find-my-apps-reports"></a>Hvor finner jeg rapportene for appen min?
 Du kan vise rapportene for appen via følgende trinn:
 
-1. Gå til [web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Gå til [web.powerapps.com](https://web.powerapps.com).
 2. Velg **Apper** fra venstre navigasjonsfelt
    
     ![Venstre navigasjonsfelt](./media/app-analytics/left-nav.png)
