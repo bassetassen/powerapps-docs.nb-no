@@ -2,18 +2,18 @@
 title: Oversikt over miljøer | Microsoft Docs
 description: Finn ut mer om miljøer i PowerApps og hvordan du bruker dem
 author: manasmams
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: b38f0d1b029708e8130363d54ccc1354084b0ae4
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
+ms.openlocfilehash: 3e954db3ed224afa100d89be6aa03d7a2139a9d7
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218169"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349942"
 ---
 # <a name="environments-overview"></a>Oversikt over miljøer
 Et miljø er et område der du kan lagre, administrere og dele organisasjonens forretningsdata, apper og flyter. De fungerer også som beholdere til å skille apper som kan ha ulike roller, sikkerhetskrav eller målgrupper. Måten du velger å dra nytte av miljøer på, avhenger av organisasjonen og appene du prøver å bygge. Eksempel:
@@ -39,13 +39,13 @@ Miljøer har to innebygde roller som gir tilgang til tillatelser i et miljø:
 
 * Miljøadministratorrollen kan utføre alle administrative handlinger i et miljø, inkludert følgende:
 
-  * Å legge til eller fjerne en bruker eller gruppe fra enten rollen som miljøadministrator eller miljøoppretter
+    * Å legge til eller fjerne en bruker eller gruppe fra enten rollen som miljøadministrator eller miljøoppretter
 
-  * Å klargjøre en Common Data Service-database for miljøet
+    * Å klargjøre en Common Data Service-database for miljøet
 
-  * Å vise og administrere alle ressurser som er opprettet i et miljø
+    * Å vise og administrere alle ressurser som er opprettet i et miljø
 
-  * Å angi policyer for hindring av datatap. Hvis du vil ha mer informasjon, kan du se [Policyer for hindring av datatap](prevent-data-loss.md).
+    * Å angi policyer for hindring av datatap. Hvis du vil ha mer informasjon, kan du se [Policyer for hindring av datatap](prevent-data-loss.md).
 
     Når du har opprettet databasen i miljøet, kan du bruke Systemansvarlig-rollen i stedet for Miljøetadministrator-rollen.
 
@@ -75,7 +75,7 @@ Standardmiljøet er navngitt på følgende måte: «{Azure AD-leietakernavn} (st
 Du kan opprette miljøer for ulike formål. Hensikten med et prøveversjonsmiljø er å prøve ut miljøet og databasen med Common Data Service-opplevelsen. Det utløper etter bestemt periode. Du finner mer informasjon i [Å administrere miljøer i PowerApps](environments-administration.md).
 
 ## <a name="choosing-an-environment"></a>Å velge et miljø
-Med lanseringen av miljøer vil du nå se en ny opplevelse når du kommer til [https://web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  Appene, tilkoblingene og andre elementer som er synlige i området filtreres nå, basert på det gjeldende miljøet som er valgt.  Det gjeldende miljøet er angitt i velgeren for miljøet nær høyre kant av toppteksten. Hvis du vil velge et annet miljø, kan du klikke eller trykke på velgeren, slik at en liste over tilgjengelige miljøer vises. Klikk eller trykk på det du vil åpne.
+Med lanseringen av miljøer vil du nå se en ny opplevelse når du kommer til [https://web.powerapps.comhttps://web.powerapps.com](https://web.powerapps.com).  Appene, tilkoblingene og andre elementer som er synlige i området filtreres nå, basert på det gjeldende miljøet som er valgt.  Det gjeldende miljøet er angitt i velgeren for miljøet nær høyre kant av toppteksten. Hvis du vil velge et annet miljø, kan du klikke eller trykke på velgeren, slik at en liste over tilgjengelige miljøer vises. Klikk eller trykk på det du vil åpne.
 
 Et miljø vises i velgeren hvis du oppfyller én av følgende betingelser:
 
