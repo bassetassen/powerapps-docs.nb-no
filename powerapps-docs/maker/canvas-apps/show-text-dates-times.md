@@ -1,6 +1,6 @@
 ---
-title: Å vise tekst og formatere en dato eller et klokkeslett | Microsoft Docs
-description: Å legge til og formatere datoer og klokkeslett ved hjelp av PowerApps
+title: Vis tekst, datoer og klokkeslett i en lerretsapp | Microsoft Docs
+description: Vis tekst, datoer og klokkeslett i en lerretsapp i PowerApps
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,15 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 10/16/2016
 ms.author: anneta
-ms.openlocfilehash: d6f88534b4839381037243400ef69f292df8fb97
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 8f4bf8908b8e83fe5976a52356db163cbb3a9813
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195707"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470688"
 ---
-# <a name="show-text-and-format-dates-and-times-in-powerapps"></a>Å vise tekst og formatere datoer og klokkeslett i PowerApps
-Legg til datoer og klokkeslett, og formater dem for å vise det riktige detaljnivået eller for å gjenspeile de nasjonale innstillingene. Å beregne tidsrommet mellom to datoer, eller beregne en dato som er en viss tid før eller etter en dato du angir. Konverter datoer til eller fra separate verdier for dager, måneder og år, og konvertere klokkeslett til eller fra separate verdier for timer, minutter og sekunder.
+# <a name="show-text-dates-and-times-in-powerapps"></a>Vis tekst, datoer og klokkeslett i PowerApps
+Legg til datoer og klokkeslett i en lerretsapp i PowerApps, og formater dem slik at de viser det riktige detaljnivået eller gjenspeiler den nasjonale innstillingen. Å beregne tidsrommet mellom to datoer, eller beregne en dato som er en viss tid før eller etter en dato du angir. Konverter datoer til eller fra separate verdier for dager, måneder og år, og konvertere klokkeslett til eller fra separate verdier for timer, minutter og sekunder.
 
 For eksempel kan du legge til data fra brukere om lagerbeholdning eller kundemøter, data fra en ekstern kilde, eller data fra et annet program som er opprettet i PowerApps. Rund av til nærmeste minutt for enkelhets skyld, hvis dataene inneholder klokkeslett ned til millisekund. Beregn hvor mange dager som står igjen før en viktig milepæl. Hvis du vil planlegge møter hver femte dag, kan du automatisk beregne disse datoene. Hvis 10. mai 1985 lagres i separate felt for dagen, måneden og året, kan du konsolidere dem til en enkelt verdi. Og motsatt kan du også skille hver dato til separate verdier, hvis appen din administrerer dem separat.
 

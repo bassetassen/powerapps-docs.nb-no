@@ -1,6 +1,6 @@
 ---
-title: Å forstå tabeller i Microsoft Docs
-description: Referanseinformasjon for å arbeide med tabeller, kolonner og poster
+title: Slik fungerer tabeller i lerretsapper | Microsoft Docs
+description: Referanseinformasjon om hvordan du arbeider med lerretsapptabeller, -kolonner og -poster i PowerApps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: 6e1a87324c0a004390ceb5d1ce4846325fe18bc7
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: e0fce2e574644f8ec8077e86dc3a5b4ee5f2cd3a
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021186"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469906"
 ---
-# <a name="understand-tables-and-records-in-powerapps"></a>Å forstå tabeller og poster i PowerApps
-Du kan opprette en app som har tilgang til informasjon i Microsoft Excel, SharePoint, SQL Server og flere andre kilder som lagrer data i poster og tabeller. Hvis du vil arbeide mest mulig effektivt med denne typen data, kan du se gjennom begrepene som ligger til grunn for disse strukturene.
+# <a name="understand-canvas-app-tables-and-records-in-powerapps"></a>Slik fungerer lerretsapptabeller og -poster i PowerApps
+
+Du kan opprette en lerretsapp i PowerApps, som har tilgang til informasjon i Microsoft Excel, SharePoint, SQL Server og flere andre kilder der det lagres data i poster og tabeller. Hvis du vil arbeide mest mulig effektivt med denne typen data, kan du se gjennom begrepene som ligger til grunn for disse strukturene.
 
 * En post inneholder én eller flere kategorier med informasjon om en person, et sted eller en ting. En post kan for eksempel inneholde navnet, e-postadressen og telefonnummeret til en enkeltkunde. Andre verktøy refererer til en post som en rad eller et element.
 * En tabell inneholder én eller flere poster som inneholder de samme kategoriene av informasjon. En tabell kan for eksempel inneholde navnene, e-postadressene og telefonnumrene til 50 kunder.

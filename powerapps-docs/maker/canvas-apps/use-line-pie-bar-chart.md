@@ -1,6 +1,6 @@
 ---
-title: Å opprette diagrammer i Microsoft Docs
-description: Vis datakategorier som linjediagrammer, sektordiagrammer eller liggende stolpediagrammer
+title: Opprett et diagram i en lerretsapp | Microsoft Docs
+description: Vis datakategorier som linjediagrammer, sektordiagrammer eller liggende stolpediagrammer i en lerretsapp i PowerApps
 author: lonu
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/23/2016
 ms.author: lonu
-ms.openlocfilehash: 5fecc52a5100f2ed0d045fd0ebdc3834f83d5b39
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 63244a05d81f807609c965892f6a84e30577b490
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195914"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471148"
 ---
 # <a name="show-data-in-a-line-pie-or-bar-chart-in-powerapps"></a>Å vise data i en linje, sektor- eller liggende stolpediagram i PowerApps
-Bruk linjediagrammer, sektordiagrammer og liggende stolpediagrammer til å vise dataene. Når du arbeider med diagrammer, bør dataene som du importerer, struktureres som følgende:
+
+Bruk linjediagrammer, sektordiagrammer og liggende stolpediagrammer til å vise dataene dine i en lerretsapp. Når du arbeider med diagrammer, bør dataene du importerer, struktureres basert på disse kriteriene:
 
 * Hver serie bør være i den første raden.
 * Etiketter må være i kolonnen lengst til venstre.
@@ -29,6 +30,7 @@ Skjermen burde for eksempel se omtrent slik ut:
 Du kan opprette og bruke disse diagrammene i PowerApps. La oss komme i gang.
 
 ## <a name="prerequisites"></a>Forutsetninger
+
 * [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å oppgi samme legitimasjon som du brukte til å registrere deg.
 * Opprett en app fra en [mal](get-started-test-drive.md), fra [data](get-started-create-from-data.md) eller fra [bunnen av](get-started-create-from-blank.md).
 * Finn ut hvordan du [konfigurerer en kontroll](add-configure-controls.md) i PowerApps.

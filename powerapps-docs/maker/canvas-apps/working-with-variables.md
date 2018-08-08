@@ -1,6 +1,6 @@
 ---
-title: Å forstå variabler | Microsoft Docs
-description: Referanseinformasjon for å arbeide med tilstand, kontekstvariabler og samlinger
+title: Slik fungerer variabler i lerretsapper | Microsoft Docs
+description: Referanseinformasjon om å arbeide med tilstand, kontekstvariabler og samlinger i lerretsapper
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/06/2017
 ms.author: gregli
-ms.openlocfilehash: b5986c927b75ed7a6e38af913cbfb9877121d0a5
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: db7e770b2f2e7fa974dbf25a7a7fecf5b8229aa9
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017828"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469929"
 ---
-# <a name="understand-variables-in-powerapps"></a>Å forstå variabler i PowerApps
-Hvis du har brukt et annet programmeringsverktøy, for eksempel Visual Basic eller JavaScript, kan det hende du spør: **hvor er variablene?** PowerApps er litt annerledes, og krever en annen fremgangsmåte. I stedet for hente en variabel, kan du stille deg selv spørsmålet: **Hva ville jeg gjort i Excel?**
+# <a name="understand-canvas-app-variables-in-powerapps"></a>Slik fungerer lerretsappvariabler i PowerApps
+
+Hvis du har brukt et annet programmeringsverktøy, for eksempel Visual Basic eller JavaScript, kan det hende du spør: **hvor er variablene?** PowerApps er litt annerledes, og krever en annen fremgangsmåte. I stedet for hente en variabel når du bygger en lerretsapp, kan du stille deg selv spørsmålet: **Hva ville jeg gjort i Excel?**
 
 I andre verktøy kan du kanskje eksplisitt ha utført en beregning og lagret resultatet i en variabel. PowerApps og Excel omberegner imidlertid automatisk formler etter som inndataene endres, slik at du vanligvis ikke trenger å opprette og oppdatere variabler. Ved å følge denne fremgangsmåten når det er mulig, kan du enklere opprette, forstå og vedlikeholde appen.
 
@@ -26,6 +27,7 @@ I noen tilfeller må du bruke variabler i PowerApps, noe som utvider Excel sin m
 Generelt bør du unngå å bruke variabler. Men noen ganger er det bare en variabel som kan aktivere opplevelsen som du vil ha.
 
 ## <a name="translate-excel-into-powerapps"></a>Å oversette Excel til PowerApps
+
 ### <a name="excel"></a>Excel
 La oss gå gjennom hvordan Excel fungerer. En celle kan inneholde en verdi, for eksempel et tall eller en streng, eller en formel som er basert på verdiene i andre celler. Etter at brukeren angir en annen verdi i en celle, vil Excel automatisk beregne formler som er avhengige av den nye verdien på nytt. Du trenger å gjøre noe programmering for å aktivere denne virkemåten.
 

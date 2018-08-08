@@ -1,6 +1,6 @@
 ---
-title: Å legge til en liste, en rullegardinliste og alternativknapper | Microsoft Docs
-description: Å opprette eller konfigurer alternativer for flervalg i PowerApps
+title: Legg til en liste, en rullegardinliste og alternativknapper i en lerretsapp | Microsoft Docs
+description: Opprett eller konfigurer alternativer for flervalg i en lerretsapp i PowerApps
 author: lonu
 manager: kvivek
 ms.service: powerapps
@@ -9,19 +9,21 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/23/2016
 ms.author: lonu
-ms.openlocfilehash: ecdd1cc5aa9ccbad7c2973f8ad899b213dcd96f3
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: b4988157a8f194f7b1148cff79de1b5ce44add14
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023831"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471033"
 ---
-# <a name="add-a-list-box-a-drop-down-list-or-radio-buttons"></a>Å legge til en liste, en rullegardinliste eller alternativknapper
-PowerApps inkluderer alternativer for enkeltvalg og flervalg, inkludert en liste, en rullegardinliste og alternativknapper. I dette emnet legger vi til disse kontrollene og bruker en **Tabell**-formel for å lage listene. Når et element velges i listen, oppdateres andre kontroller.
+# <a name="add-a-list-box-a-drop-down-list-or-radio-buttons-to-a-canvas-app-in-powerapps"></a>Legg til en liste, en rullegardinliste eller alternativknapper i en lerretsapp i PowerApps
+
+PowerApps inneholder alternativer for enkeltvalg og flervalg, inkludert en liste, en rullegardinliste og alternativknapper. I dette emnet legger vi til disse kontrollene og bruker en **Tabell**-formel for å lage listene. Når et element velges i listen, oppdateres andre kontroller.
 
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
 ## <a name="add-a-list-box"></a>Å legge til en listeboks
+
 1. Velg **Kontroller** på **Sett inn**-fanen, og velg deretter **Listeboks**:  
 
     ![][2]  

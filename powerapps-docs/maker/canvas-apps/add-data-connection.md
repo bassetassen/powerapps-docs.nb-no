@@ -1,6 +1,6 @@
 ---
-title: Slik legger du til en datatilkobling i en app | Microsoft Docs
-description: Slik legger du til en datatilkobling i en eksisterende eller en tom app
+title: Legg til en datatilkobling i en lerretsapp | Microsoft Docs
+description: Legg til en datatilkobling i en eksisterende lerretsapp eller en tom app
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/06/2018
 ms.author: lanced
-ms.openlocfilehash: 471f4b69b913236d99e6309c8b8bb4e12f85a7b9
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: bf53c71a5dfbbfecbf6a094f26c9866e7f94f84d
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195040"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471056"
 ---
-# <a name="add-a-data-connection-in-powerapps"></a>Slik legger du til en datatilkobling i PowerApps
-I PowerApps kan du legge til en datatilkobling i en eksisterende app eller i en app som du oppretter fra grunnen av. Appen kan koble til SharePoint, Salesforce, OneDrive eller [mange andre datakilder](connections-list.md).
+# <a name="add-a-data-connection-to-a-canvas-app-in-powerapps"></a>Legg til en datatilkobling i en lerretsapp i PowerApps
+
+Legg til en datatilkobling i en eksisterende lerretsapp eller i en app du oppretter fra grunnen av, i PowerApps. Appen kan koble til SharePoint, Salesforce, OneDrive eller [mange andre datakilder](connections-list.md).
 
 Det [neste trinnet](#next-steps) etter denne artikkelen er å vise og behandle data fra datakilden i appen din, som i disse eksemplene:
 
@@ -26,6 +27,7 @@ Det [neste trinnet](#next-steps) etter denne artikkelen er å vise og behandle d
 * Koble til SQL Server, og oppdater en tabell fra appen din.
 
 ## <a name="prerequisites"></a>Forutsetninger
+
 [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å angi samme legitimasjon som du brukte til å registrere deg.
 
 ## <a name="add-a-data-source"></a>Å legge til en datakilde

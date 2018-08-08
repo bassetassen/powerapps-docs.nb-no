@@ -1,6 +1,6 @@
 ---
-title: Slik forstår du oppsett for dataskjemaer i Microsoft Docs
-description: Opprett flotte skjemaoppsett ved hjelp av rader og kolonner.
+title: Slik fungerer oppsett for dataskjemaer for lerretsapper | Microsoft Docs
+description: Opprett flotte skjemaoppsett i lerretsapper i PowerApps ved å bruke rader og kolonner.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,29 +9,32 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/17/2017
 ms.author: gregli
-ms.openlocfilehash: 050e665a7a5c2a05ab9abfc989134028d303da4d
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 7676c2d93eb5bbf55620a4d36f1f4818d52472d0
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017736"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470619"
 ---
-# <a name="understand-data-form-layout-in-microsoft-powerapps"></a>Slik forstår du oppsett for dataskjemaer i Microsoft PowerApps
-I PowerApps kan du enkelt opprette skjemaer som er attraktive og effektive å bruke. Ta for eksempel i betraktning denne grunnleggende formen for registrering av salgsordre:
+# <a name="understand-data-form-layout-for-canvas-apps-in-powerapps"></a>Slik fungerer oppsett for dataskjemaer for lerretsapper i PowerApps
+
+Opprett et flott og effektivt skjema på en enkel måte når du bygger en lerretsapp i PowerApps. Ta for eksempel i betraktning denne grunnleggende formen for registrering av salgsordre:
 
 ![Eksempel på salgsordre](./media/working-with-form-layout/sales-order.png)
 
 I denne opplæringen går vi gjennom trinnene for å opprette dette skjemaet. Vi skal også se på noen avanserte emner, for eksempel dynamisk skalering av feltene, for å fylle tilgjengelig plass.
 
 ## <a name="before-you-start"></a>Før du starter
+
 Hvis PowerApps er nytt for deg (eller du bare har generert apper automatisk), må du [bygge en app fra grunnen av](get-started-create-from-blank.md) før du fordyper deg i dette emnet. Ved å bygge en app fra grunnen av blir du kjent med nødvendige konsepter, for eksempel å legge til datakilder og kontroller, som er nevnt, men som ikke er beskrevet i dette emnet.
 
 ## <a name="add-a-gallery"></a>Å legge til et galleri
+
 1. Opprett en nettbrettapp fra grunnen av.
-   
+
     Alt som beskrives i dette emnet gjelder også for telefonoppsett, men telefonapper har ofte bare én loddrett kolonne.
 2. Legg til **Salgsordre**-enheten i [Common Data Service-](../common-data-service/data-platform-intro.md) som en datakilde for appen.
-   
+
     Du kan bruke alle datakilder, inkludert SharePoint-lister og Excel-tabeller utenfor denne opplæringen.
 3. Legg til en loddrett **Galleri**-kontroll, og angi **Element**-egenskapen til **Salgsordre**.
    

@@ -1,6 +1,6 @@
 ---
-title: Å forstå skjemaer | Microsoft Docs
-description: Å bruke skjemaer til å samle og vise informasjon fra en datakilde.
+title: Slik fungerer lerretsappskjemaer | Microsoft Docs
+description: Legg til et skjema i en lerretsapp i PowerApps, slik at du kan samle inn og vise informasjon fra en datakilde.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/27/2016
 ms.author: gregli
-ms.openlocfilehash: b2eb001ee426dc3449b440a357c67bc47b702d42
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: c7bd68f37cc469b054a75012d4166c05375db6ff
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195753"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470251"
 ---
-# <a name="understand-data-forms-in-microsoft-powerapps"></a>Å forstå dataskjemaer i Microsoft PowerApps
-Legg til tre typer kontroller, slik at brukeren kan bla gjennom etter en post, vise detaljer om denne posten og redigere eller opprette en post:
+# <a name="understand-canvas-app-forms-in-microsoft-powerapps"></a>Slik fungerer lerretsappskjemaer i Microsoft PowerApps
+
+Legg til tre typer kontroller i en lerretsapp, slik at brukeren kan bla gjennom etter en post, vise detaljer om denne posten og redigere eller opprette en post:
 
 | Aktivitet | Kontroll | Beskrivelse |
 | --- | --- | --- |

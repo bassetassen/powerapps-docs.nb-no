@@ -1,26 +1,26 @@
 ---
-title: Opprette en policy for hindring av tap av data (DLP) ved hjelp av en hurtiginnføring | Microsoft Docs
+title: Opprett en policy for hindring av datatap (DLP) | Microsoft Docs
 description: I denne hurtiginnføringen lærer du hvordan du oppretter en policy for hindring av tap av data (DLP) i PowerApps
 author: jimholtz
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/30/2018
-ms.author: jimh
-ms.openlocfilehash: da4be42ea0374d6cb50da2f9a9b17eef15d5b316
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.author: jimholtz
+ms.openlocfilehash: 49898aed97e2361704c88bcc1cd098a8fc0f101e
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552373"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349459"
 ---
-# <a name="quickstart-create-a-data-loss-prevention-dlp-policy"></a>Hurtiginnføring: oppretting av en policy for hindring av tap av data (DLP)
+# <a name="create-a-data-loss-prevention-dlp-policy"></a>Opprett en policy for hindring av datatap (DLP)
 Hvis du vil beskytte dataene i organisasjonen, kan du i PowerApps opprette og håndheve DLP-policyene, som angir hvilke forbrukerkoblinger bestemte forretningsdata kan deles med. Disse policyene som angir hvordan data kan deles, er referert til som policyer for hindring av tap av data (DLP). DLP-policyer kontroller at dataene behandles på en ensartet måte på tvers av organisasjonen, og hindrer viktige forretningsdata fra å utilsiktet bli publisert til koblinger som sosiale medier.
 
-I denne hurtiginnføringen lærer du hvordan du oppretter en DLP-policy for et enkelt miljø, som hindrer data som er lagret i Common Data Service-og SharePoint-databasene fra å publiseres til Twitter.
+Dette emnet tar for seg hvordan du oppretter en DLP-policy for et enkeltmiljø som hindrer at data som er lagret i Common Data Service- og SharePoint-databasene, publiseres på Twitter.
 
 ## <a name="prerequisites"></a>Forutsetninger
-**Ett**av følgende elementer kreves for å følge denne hurtiginnføringen:
+**Ett** av følgende elementer er nødvendig for å følge denne fremgangsmåten:
 * Administratortillatelser for tenanten til Azure Active Directory
 * Globale administratortillatelser for Office 365
 * Administratortillatelser for PowerApps-miljøet pluss et PowerApps-abonnement 2, Microsoft Flow-abonnement 2 eller en [prøveversjon av en PowerApps-abonnement 2](https://web.powerapps.com/signup?redirect=marketing&email=)-lisens
@@ -41,7 +41,7 @@ Logg på administrasjonssenteret på [https://admin.powerapps.com]([https://admi
 
     ![](./media/create-dlp-policy/select-environment.png)
 
-    Hvis du er en tenantadministrator, kan du opprette DLP-policyer som gjelder for én eller flere miljøer, eller for alle miljøer i tenanten (inkludert de som er opprettet ved hjelp av en prøveversjon av en lisens). Klikk eller trykk på **Bruk bare for utvalgte miljøer** for denne hurtiginnføringen. Deretter velger du et miljø fra rullegardinlisten og klikker eller trykker på **Fortsett**.
+    Hvis du er en tenantadministrator, kan du opprette DLP-policyer som gjelder for én eller flere miljøer, eller for alle miljøer i tenanten (inkludert de som er opprettet ved hjelp av en prøveversjon av en lisens). Klikk eller trykk på **Bruk bare på utvalgte miljøer** for dette emnet. Velg et miljø fra rullegardinlisten, og klikk eller trykk på **Fortsett**.
 
     ![](./media/create-dlp-policy/select-environment-tenant.png)
 
@@ -64,7 +64,7 @@ Sikker datatilgang for Contoso-policyen opprettes og vises i listen over policye
 Det er god praksis for administratorer å dele en liste over DLP-policyer med sin organisasjon, slik at brukere er klar over policyer før oppretting av apper.
 
 ## <a name="next-steps"></a>Neste trinn
-I denne hurtiginnføringen lærte du hvordan du oppretter en DLP-policy for et enkelt miljø for å hindre at viktige forretningsdata ved et uhell blir publisert til koblinger som for eksempel Twitter. Hvis du vil lære mer om DLP-policyer, kan du se artikkelen om hvordan du administrerer dem.
+Dette emnet har tatt for seg hvordan du oppretter en DLP-policy for et enkeltmiljø for å hindre at viktige forretningsdata ved et uhell publiseres til koblinger som for eksempel Twitter. Hvis du vil lære mer om DLP-policyer, kan du se artikkelen om hvordan du administrerer dem.
 
 > [!div class="nextstepaction"]
 > [Å behandle policyer for hindring av datatap](prevent-data-loss.md)

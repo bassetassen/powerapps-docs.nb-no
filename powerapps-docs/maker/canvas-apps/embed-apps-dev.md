@@ -1,6 +1,6 @@
 ---
 title: Integrering av PowerApps på nettsteder og andre tjenester| Microsoft Docs
-description: Bygg inn apper på nettsteder og andre tjenester.
+description: Bygg inn lerretsapper på nettsteder og i andre tjenester.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,15 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 10/20/2017
 ms.author: mblythe
-ms.openlocfilehash: ed0863d8d7987e7e7f129a9804b35e00e76aad36
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: e48da773f34eb2abedd65c3ea88aab1bb184da02
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023808"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470780"
 ---
 # <a name="integrate-powerapps-into-websites-and-other-services"></a>Integrering av PowerApps på nettsteder og andre tjenester
-Appene du utvikler er gjerne mest nyttige når de er tilgjengelige direkte hvor arbeidet utføres. Med PowerApps kan du bygge inn apper i en iframe, slik at du kan integrere disse appene på nettsteder og andre tjenester, for eksempel Power BI eller SharePoint.
+Appene du utvikler er gjerne mest nyttige når de er tilgjengelige direkte hvor arbeidet utføres. Med PowerApps kan du bygge inn lerretsapper i en iframe, slik at du kan integrere disse appene på nettsteder og i andre tjenester, for eksempel Power BI eller SharePoint.
 
 I dette emnet viser vi deg hvordan du angir parametere for innebygging av apper. Deretter bygger vi inn ressursbestillingsappen på et nettsted.
 

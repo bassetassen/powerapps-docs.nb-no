@@ -1,59 +1,66 @@
 ---
-title: Oversikt over Common Data Model | Microsoft Docs
-description: Finn ut hvordan Common Data Model kobler Common Data Service for Apps med Common Data Service for Analytics.
+title: Hva er Common Data Model? | Microsoft Docs
+description: Common Data Model er en standardisert, modulær, utvidbar samling av dataskjemaer publisert av Microsoft som er ment å gjøre det enklere å bygge, bruke og analysere data.
 author: RobertBruckner
 ms.service: powerapps
 ms.topic: article
-ms.date: 03/14/2018
-ms.author: jdaly
-ms.openlocfilehash: 4e9b929558de0b2451bb2df4add4b300d7115848
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.date: 07/24/2018
+ms.author: robruc
+ms.openlocfilehash: 1469646301c273067ad035428f03c452ae223604
+ms.sourcegitcommit: abe4d4728db7f56088f618af5b820af78e7099c9
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803248"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39331998"
 ---
-# <a name="common-data-model-overview"></a>Oversikt over Common Data Model
+# <a name="what-is-the-common-data-model"></a>Hva er Common Data Model?
 
-**Common Data Model** (CDM) er en definisjon av standard enheter med åpen kilde som representerer brukte konsepter og aktiviteter på tvers av en rekke forretnings- og programdomener. Common Data Model tilbyr *veldefinerte, modulbaserte og utvidbare* forretningsenheter som konto, forretningsenhet, sak, kontakt, kundeemne, salgsmulighet og produkt, samt samhandlinger og relasjoner mellom leverandører, arbeidere og kunder, for eksempel aktiviteter og servicenivåavtaler. 
+Hvis du noen gang har støtt på utfordringer med data som er *nesten* like, eller som *burde* fungere sammen, og deretter har brukt mye krefter på å transformere felter og tabeller slik at de fungerer med de andre dataene dine, så vet du at felles dataelementer kan spare deg for krefter, effektivisere fremtidig utvikling og muliggjøre raskere analyse. Common Data Model (CDM) kan gi deg disse funksjonene med mer.
 
-Common Data Model er implementert i Microsofts [Common Data Service for Apps](../maker/common-data-service/data-platform-intro.md) og Common Data Service for Analytics<!-- TODO add link when available  -->. Disse tjenestene inneholder data som samsvarer med definisjonen for Common Data Model. Ved å bygge på toppen av disse tjenestene kan pakkede programmer og analytiske løsninger fungere med veldefinerte enhetsfigurer og delingsdata, uavhengig av hvor dataene kom fra opprinnelig eller ble opprettet. Egendefinerte bransjespesifikke apper og analytiske løsninger kan bruke de samme enhetene for datadeling og dermed støtter dine behov og forretningskrav. 
+**Common Data Model (CDM)** er en standardisert, modulær, utvidbar samling av dataskjemaer publisert av Microsoft som er ment å gjøre det enklere å bygge, bruke og analysere data. Denne samlingen av forhåndsdefinerte skjemaer, som består av *enheter*, *attributter*, *semantiske metadata* og *relasjoner*, representerer konsepter og aktiviteter som brukes ofte, for eksempel Konto og Kampanje, for å forenkle oppretting, aggregasjon og analyse av data. Mer informasjon: [CDM-repositoriet på GitHub](https://aka.ms/cdmrepo)
 
-Microsoft og våre partnere er forpliktet til å bygge programmene våre oppå Common Data Service og lagre forretningsdataene i CDM-form. Det finnes en *stor og voksende samling av løsninger som fungerer effektivt sammen når dataene er lagret i CDM-form*. Det betyr at du kan implementere nye forretningsprosesser og få innsikt i forretningsdriften raskt uten friksjon eller kompleksitet. Diagrammet nedenfor viser at programmer oppå Common Data Services bruker Common Data Model-enheter.
+![Common Data Model](media/cdm-entities.png)
 
-![Programmer oppå Common Data Services bruker Common Data Model-enheter](media/cdm-overview.png)
+Mer informasjon:[CDM-plakat](https://aka.ms/cdmposter)
 
-Common Data Model forenkler utfordringene med databehandling ved å slå sammen data i en kjent form med *strukturell og semantisk konsekvens på tvers av programmer og distribusjoner*. Det hjelper deg med å integrere og *gjøre data entydig*. Dette er data som samles inn fra forretningsprosesser, digitale samhandlinger, produkttelemetri, samhandlinger mellom personer og så videre. 
+## <a name="why-use-the-common-data-model"></a>Fordeler ved å bruke Common Data Model
 
-Data som er lagret i Common Data Service for Apps, *integreres enkelt og automatisk* med Common Data Service for Analytics for kunder som bruker begge tjenestene. Du kan starte fra forretnings- og transaksjonsdata du allerede eier (for eksempel kundeemner, kampanjeinformasjon, tidligere kundekjøp) og kombinere dem med data fra andre kilder (for eksempel nettlogger eller produkttelemetri) for å få et enhetlig bilde.
+CDM forenkler dataadministrasjon og programutvikling ved å slå sammen data i en kjent form, og ved å bruke strukturell og semantisk konsekvens på tvers av flere programmer og distribusjoner. Når dataene er i CDM, kan du med andre ord bruke dem i mange forskjellige programmer, effektivisere opprettelsen eller bruken av andre programmer slik at de kan nyttiggjøre seg av de eksisterende dataene, og lage rapporter for hvert av dem (eller alle) på en enkel måte. I tillegg kan dataintegratorer som henter data fra mange forskjellige systemer, fokusere på å plassere dataene i CDM i stedet for å bygge en ny modell for hvert program.
 
-Common Data Model er også *utvidbar* – du kan legge til felter i de egendefinerte enhetene som følger med CDM, eller så kan du opprette dine egne egendefinerte enheter. CDM-standarden definerer et felles språk for forretningsenheter som dekker hele utvalget av forretningsprosesser på tvers av salg, tjenester, markedsføring, operasjoner, økonomi, talenter og handel, og for kunden, personene og produktenhetene i kjernen av forretningsprosessene til et firma. Common Data Model tilrettelegger for dataintegrasjon på tvers av flere kanaler, serviceimplementeringer og leverandører.
+Tenk deg at du har tre forretningsprogrammer – ett program for materialer, ett for produksjon og ett for salg. Ofte ville hvert av disse programmene ha blitt opprettet med ulike strukturer som ville ha representert en enhet, for eksempel *Konto*, som er nesten lik (men som ikke er det). Med CDM ville du ha kunnet bygge dataene dine i et standardisert format (ved hjelp av CDM-enheter, -attributter, og -relasjoner), og deretter kunne hvert av disse programmene ha brukt de samme dataene som grunnlag. Hvert program kunne selvfølgelig hatt egne tilleggsdata og -skjemaer, basert på funksjonaliteten til hvert program. Når det gjelder utvikling, ville imidlertid programmene og rapportene ha kunnet hente de felles dataelementene raskt, smertefritt og trygt.
 
-Common Data Model og Common Data Service gir en omfattende og produktiv utviklingsplattform gjennom disse funksjonene:
+Og enn hvis det blir behov for å opprette et fjerde program? Dataene dine ligger klare i CDM-skjemaet, slik at du kan fokusere på forretningslogikk i stedet for dataproblemer og trege transformasjoner i utviklingsarbeidet.
 
-- **Definisjon av standard enheter** – Common Data Model gir en definisjon av enheter som representerer enhetene som brukes mest på tvers av forretnings- og produktivitetsprogrammer. Offentlig CDM GitHub-repositorium [(https://github.com/Microsoft/CDM)](https://github.com/Microsoft/CDM) blir kontinuerlig forbedret med kjerneenheter som dekker hele forretningsprosesslandskapet, flere vertikale datamodeller for bransjen og kryssomfattende kilder, som undersøkelser, søkemotorer og produkttelemetri.
-- **Dataintegrering** – Bruk Power Query som innebygd nettopplevelse til å importere og visuelt transformere data fra dine eksisterende systemer og til å kombinere data fra nettbaserte og lokale datakilder uten kode eller med lav kode. Du kan bruke ferdighetene dine til å transformere Excel- og Power BI-data på en enkel måte. Se [Å legge til data i en enhet i Common Data Service ved hjelp av Power Query](../maker/common-data-service/data-platform-cds-newentity-pq.md).
-    
-    Når du importerer data til Common Data Service, kan du tilordne den til standard Common Data Model-enheter eller opprette og tilordne den til nye enheter. Maler for integrering og tilordning av data som er klare til bruk, forenkler tilkobling til vanlige datakilder som Salesforce. Disse malene for tilordning tilpasses og utvides fullstendig. Dette skjermbildet viser importering av eksterne data og tilordning av dem til standard enheter i Power Query. 
-    
-    ![Importere eksterne data og tilordne dem til standard enheter i Power Query ](media/cdm-mapping-entities.png)<br />
+Med andre ord tilbyr CDM følgende for dataene dine:
 
-- **Utvidbarhet** – du kan utvide enhetene uten å forstyrre datadeling med andre apper.
-- **Pålitelighet** – fordi du kan bruke vanlige enheter, kan du bygge gjenbrukbare komponenter som er bundet til enhetene. Common Data Model støtter fleksibilitet og versjonskontroll som beskytter utviklingsinvesteringen din.
-- **Enhetskonsekvens på tvers av distribusjoner** – løsningene dine kan koble informasjon fra produktivitetsplattformer med data fra forretningsprogrammer. Du kan for eksempel koble en avtale i kalenderen eller en Microsoft Outlook-oppgave til en salgsmulighet. 
+-   **Strukturell og semantisk konsekvens** på tvers av programmer og distribusjoner.
 
-[Common Data Service for Apps](../maker/common-data-service/data-platform-intro.md) implementerer Common Data Model, som gjør at du kan gjøre følgende med utvikling av forretningsprogrammer:
+-   **Forenklet integrering og entydige data**, som samles inn fra prosesser, digitale samhandlinger, produkttelemetri, samhandlinger mellom personer og så videre.
 
-- **Å dra nytte av pakkede forretningsprogrammer** – Dynamics 365-programmer for markedsføring, salg, service, talenter, økonomi og operasjon, og bruk i tillegg tredjepartsprogrammer som er bygd på toppen av Common Data Service for Apps.
-- **Å tilpasse programmer og utvikle opprinnelige utvidelser for dine behov** – De som tilpasser og utvikler appene distribuerer programløsninger med en veldefinert livssyklus for programmet. Løsninger er måten programmer og utvidelser distribueres på. Se [Innføring i løsninger](../developer/common-data-service/introduction-solutions.md).
-- **Å bygge ingen kode / lav kode, modelldrevet og WYSIWYG-lerretsapper med PowerApps** – Bruk de samme delte enhetene som opprettes/brukes av de pakkede programmene eller andre tredjepartsprogrammer, og opprette flere frittstående apper. Se: 
-    - [Å bygge en modelldrevet app](../maker/model-driven-apps/model-driven-app-overview.md)
-    - [Å bygge en lerretsapp](../maker/canvas-apps/getting-started.md) 
-- **Å automatisere forretningsprosesser med Flow** – Bruk en forretningsprosessflyt for å definere et sett med faser og trinn for å oppnå et ønsket resultat. Se [Å opprette en flyt som bruker Common Data Service](/flow/common-data-model-intro)
- 
-Den kommende offentlige forhåndsvisningen av **Common Data Service for Analytics**<!-- TODO add link when available  --> implementerer også Common Data Model, støtter dataanalyse av forretningsdata i standardisert form, inkludert:
+-   **En enhetlig figur**, der dataintegreringer kan **kombinere eksisterende forretningsdata med andre kilder** og bruke disse dataene holistisk til å utvikle nye programmer eller utlede innsikt.
 
-- **Pakkede og tilpassede analytiske løsninger basert på standard dataenheter** – analytiske programmer, for eksempel salginnsikt, som sporer historisk salgsytelse, gir konsekvent innsikt uavhengig av hvor dataene opprinnelig ble brukt, fordi dataintegreringen tilordner data fra andre kilder (for eksempel Salesforce.com) til enhetsfigurer for Common Data Model. Dette forenkler den analytiske løsningen slik at den kan fokusere på data-semantikk for veldefinerte enheter, for eksempel kundeemner og salgsmuligheter.
-- **Integrering av Power Query-data med ingen kode / lav kode** – Bruk den innebygde opplevelsen til å opprette, fylle ut, transformere og berike enheter. 
-- **Bruk din egen Azure-lagring** – dra nytte av Azure-datastakken for å gjøre data tilgjengelig for Common Data Service for Analytics. Enhetene er lagret i samme felles datamodellformat, gjenkjent av analytiske løsninger.
+-   **Mulighet til å utvide skjemaet og CDM-enhetene** for å skreddersy Common Data Model for organisasjonen.
 
+Du kan bruke CDM til å opprette nye datarepositorier som samsvarer med skjemaet, og du kan transformere eksisterende data til Common Data Model-skjemaet. Uansett hva du har tenkt til å gjøre med dataene etterpå, kan effektiviteten som følger av standardiseringen, få fart på og strømlinjeforme prosessen.
+
+## <a name="who-uses-the-common-data-model"></a>Hvem bruker Common Data Model?
+
+CDM brukes av en rekke kunder, partnere og produkter, der alle har samme mål om å slå sammen data i en velkjent form med semantisk betydning.
+
+-   **Programutviklere**: Uavhengig av om disse brukerne benytter kodebaserte plattformer eller en plattform med svært lite eller ingen kode, for eksempel PowerApps, må de lagre og behandle data for programmene sine.
+
+-   **Dataintegratorer**: Disse brukerne er ansvarlige for å hente data fra en rekke systemer, slik at de kan brukes av programmer.
+
+Historisk sett har arbeidet med å bygge programmer vært nært knyttet til dataintegrering, men med CDM og plattformene som støtter den, kan disse prosessene skje uavhengig av hverandre.
+
+## <a name="common-data-model-in-action"></a>Common Data Model i praksis
+
+Microsoft og Microsofts partnere bruker CDM til sine egne programmer og tilbud og utvikler tilleggstjenester og -tilbud basert på CDM-skjemaer. Eksemplene nedenfor viser hvordan organisasjoner bruker CDM:
+
+-   **Common Data Service (CDS) for apper**, som støtter Dynamics og PowerApps, lagrer data i samsvar med CDM-definisjonen. Mange av de opprinnelige forretningsenhetene som er inkludert i CDM, kom faktisk fra Dynamics-tilbud, for eksempel Dynamics 365 for Sales og Dynamics 365 for Marketing.
+
+-   **Industrivertikaler**, for eksempel Helsevesen, samarbeider tett med Microsoft om å utvide CDM for deres bestemte forretningskonsepter, for eksempel *Pasient*- og *Omsorgsplan*, slik at de kan dele data og utvikle tjenester som gjør det mulig for partnere å utveksle data på en enkel måte, opprette interoperable programmer og tjenester og opprette raske analyser som er enkle å dele.
+
+## <a name="next-step"></a>Neste trinn
+
+[Slik bruker du Common Data Model](use-common-data-model.md): beskriver CDM i detalj og tar for seg brukstilfeller for oppretting av nye data i CDM eller transformering av eksisterende data til CDM.

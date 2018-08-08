@@ -2,28 +2,28 @@
 title: PowerShell-støtte (forhåndsvisning) | Microsoft Docs
 description: Beskrivelse av ulike PowerShell-cmdleter og en gjennomgang av hvordan du installerer og kjører dem.
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: reference
-ms.date: 05/23/2018
+ms.date: 07/31/2018
 ms.author: jamesol
-ms.openlocfilehash: b6ee687fdfe6da8550d76193a7c9219aae5ae291
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
+ms.openlocfilehash: e45b23d4efc474bcd48069b9823d1ef80cf5ea4a
+ms.sourcegitcommit: a0a8782d3c8d24cecf0796d405a61f745f0ffd91
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218836"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367619"
 ---
 # <a name="powershell-support-for-powerapps-preview"></a>PowerShell-støtte for PowerApps (forhåndsversjon)
-Forhåndsversjonen av PowerShell-cmdleter for apputviklere og administratorer er lansert, og nå kan du automatisere mange av overvåkings- og administrasjonsoppgavene som det i dag bare er mulig å utføre manuelt på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) eller [ PowerApps-administrasjonssenteret](https://admin.powerapps.com).
+Forhåndsversjonen av PowerShell-cmdleter for apputviklere og administratorer er lansert, og nå kan du automatisere mange av overvåkings- og administrasjonsoppgavene som det i dag bare er mulig å utføre manuelt på [PowerApps](https://web.powerapps.com) eller [ PowerApps-administrasjonssenteret](https://admin.powerapps.com).
 
 ## <a name="installation"></a>Installasjon
 Hvis du vil kjøre PowerShell-cmdleter for app-utviklere, gjør du følgende:
 
 1. Last ned[PowerShell-skriptfilen](https://go.microsoft.com/fwlink/?linkid=2006349).
 
-2. Pakk ut filen i en mappe. 
+2. Pakk ut filen i en mappe.
 
 3. Åpne et PowerShell-kommandovindu (som administrator) i den samme mappen.
 
@@ -71,7 +71,7 @@ Brukere med en gyldig lisens for PowerApps kan utføre operasjoner i disse cmdle
 | Formål | Cmdlet |
 | --- | --- |
 | Les miljøer | Get-PowerAppEnvironment *(tidligere Get-PowerAppsEnvironment)* <br> Get-FlowEnvironment
-| Les, oppdater og slett en lerretsapp | Get-App <br> Remove-App <br> Publish-App <br> Set-AppDisplayName <br> Get-AppVersion <br> Restore-AppVersion
+| Les, oppdater og slett en lerretsapp | Get-PowerApp *(tidligere Get-App)* <br> Remove-PowerApp *(tidligere Remove-App)* <br> Publish-PowerApp *(tidligere Publish-App)* <br> Set-AppDisplayName *(tidligere Set-PowerAppDisplayName)*<br> Get-PowerAppVersion *(tidligere Get-AppVersion)* <br> Restore-PowerAppVersion *(tidligere Restore-AppVersion)*
 | Les, oppdater og slett tillatelser for lerretsapper | Get-PowerAppRoleAssignment *(tidligere Get-AppRoleAssignment)* <br> Set-PowerAppRoleAssignment *(tidligere Set-AppRoleAssignment)* <br> Remove-PowerAppRoleAssignment *(tidligere Remove-AppRoleAssignment)*
 | Les, oppdater og slett en flyt | Get-Flow <br> Get-FlowRun <br> Enable-Flow <br> Disable-Flow <br> Remove-Flow
 | Les, oppdater og slett flyttillatelser | Get-FlowOwnerRole <br> Set-FlowOwnerRole <br> Remove-FlowOwnerRole
@@ -122,9 +122,9 @@ For å utføre administrasjonsoperasjonene i administrator-cmdletene må du ha f
 > [!NOTE]
 > Bruk følgende kommandoer for å forstå syntaksen og se eksempler på de ulike cmdletene:
 >```
->Get-Help Get-AdminEnvironment
->Get-Help Get-AdminEnvironment -Examples
->Get-Help Get-AdminEnvironment -Detailed
+>Get-Help Get-AdminPowerAppEnvironment
+>Get-Help Get-AdminPowerAppEnvironment -Examples
+>Get-Help Get-AdminPowerAppEnvironment -Detailed
 >```
 
 ## <a name="questions"></a>Spørsmål?

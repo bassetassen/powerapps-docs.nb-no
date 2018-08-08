@@ -1,6 +1,6 @@
 ---
-title: Å vise detaljer om gjeldende bruker | Microsoft Docs
-description: Sett inn brukerfunksjonen for å vise navnet og e-postadressen til brukeren som er logget på i PowerApps
+title: Vis detaljer om den gjeldende brukeren i en lerretsapp | Microsoft Docs
+description: Vis navnet og e-postadressen til brukeren som er pålogget i en lerretsapp i PowerApps
 author: lonu
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: lonu
-ms.openlocfilehash: 90a7ca39626e8eec8151bc3d5ced25a5701a126e
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 53d235a54aca1523cf243a315f5309bced1f15a9
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39016264"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471194"
 ---
-# <a name="show-information-about-a-powerapps-user"></a>Vis informasjon om en PowerApps-bruker
-Brukerfunksjonen kan vise det fullstendige navnet, e-postadressen og bildet som er knyttet til brukeren som er logget på. Du kan bruke denne informasjonen til å automatisk fylle ut et skjema.
+# <a name="show-information-about-a-powerapps-user-in-a-canvas-app"></a>Vis informasjon om en PowerApps-bruker i en lerretsapp
+
+Vis det fullstendige navnet, e-postadressen og bildet som er knyttet til brukeren som er pålogget i en lerretsapp i PowerApps. Du kan for eksempel bruke denne informasjonen til å fylle ut et skjema automatisk.
 
 Du kan for eksempel bruke denne funksjonen til å:
 
@@ -30,6 +31,7 @@ I utgangspunktet kan du bruke denne hvor som helst hvor brukere kan dra nytte av
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
 ## <a name="show-user-details"></a>Vis brukerdetaljer
+
 1. Klikk eller trykk på **Media** på **Sett inn**-fanen, og klikk eller trykk deretter på **Bilde**.
    
    ![][2]

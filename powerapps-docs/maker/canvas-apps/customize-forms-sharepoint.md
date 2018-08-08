@@ -1,6 +1,6 @@
 ---
-title: Å tilpasse skjemaer | Microsoft Docs
-description: Angi hvilke data som skal vises, i hvilken rekkefølge de skal vises og i hvilke kontroller.
+title: Tilpass et skjema i en lerretsapp | Microsoft Docs
+description: Angi hvilke data som skal vises i et lerretsappskjema i PowerApps, hvilken rekkefølge de skal vises i, og i hvilke kontroller.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,24 +9,27 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/17/2018
 ms.author: anneta
-ms.openlocfilehash: aefe350c2294f9d8cbae32eee1db1f600c8a65da
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 14ea731907624f882ae117a09c7f799a25389fe6
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195109"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471447"
 ---
-# <a name="customize-forms-in-powerapps"></a>Å tilpasse skjemaer i PowerApps
-Tilpass en **visningsskjema**-kontroll og en **redigeringsskjema**-kontroll slik at de viser dataene som er viktigst i den mest intuitive rekkefølgen, for å hjelpe brukere å forstå og oppdatere dataene.
+# <a name="customize-a-canvas-app-form-in-powerapps"></a>Tilpass et lerretsappskjema i PowerApps
+
+Tilpass en **Visningsskjema**-kontroll og en **Redigeringsskjema**-kontroll i en lerretsapp slik at de viser de viktigste dataene i den mest intuitive rekkefølgen, for å gjøre det enkelt for brukerne å forstå og oppdatere dataene.
 
 Hvert skjema består av ett eller flere kort, som viser data fra en bestemt kolonne i datakilden. Ved å følge trinnene i dette emnet kan du angi hvilke kort som skal vises i et skjema og flytte kortene opp og ned innenfor et skjema.
 
 Hvis du ikke allerede er kjent med PowerApps, kan du se [Introduksjon til PowerApps](getting-started.md).
 
 ## <a name="prerequisites"></a>Forutsetninger
+
 [Å genere en app](data-platform-create-app.md) fra Common Data Service, og deretter [tilpasse galleriet](customize-layout-sharepoint.md) i denne appen.
 
 ## <a name="show-and-hide-cards"></a>Å vise og skjule kort
+
 1. Logg deg på [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![Hjemmesiden for PowerApps-området](./media/customize-forms-sharepoint/sign-in.png)

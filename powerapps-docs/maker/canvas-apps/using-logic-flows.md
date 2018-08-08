@@ -1,6 +1,6 @@
 ---
-title: Å starte en flyt i en app i Microsoft Docs
-description: Opprett en flyt som utfører én eller flere oppgaver etter en hendelse som forekommer i en app, for eksempel at en bruker velger en knapp.
+title: Start en flyt i en lerretsapp | Microsoft Docs
+description: Opprett en flyt som utfører en eller flere oppgaver etter en hendelse som forekommer i en lerretsapp, for eksempel at en bruker velger en knapp.
 author: stepsic-microsoft-com
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/05/2017
 ms.author: sharik
-ms.openlocfilehash: 9d681cc889a3f39fb0785ab0cba86e37ebe185b3
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 9096b00b7d1f08ebdb9e767ffcbcd9837aa797cf
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195891"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470458"
 ---
-# <a name="start-a-flow-in-an-app"></a>Å starte en flyt i en app
-Du kan bruke Microsoft Flow til å opprette logikk som utfører én eller flere oppgaver når en hendelse forekommer i en app. Du kan for eksempel konfigurere en knapp slik at når en bruker velger den, opprettes et element i en SharePoint-liste, en e-postmelding eller møteinvitasjon sendes, en fil legges til i skyen, eller alt dette. Du kan konfigurere en kontroll i appen for å starte flyten, som fortsetter å kjøre selv om du lukker PowerApps.
+# <a name="start-a-flow-in-a-canvas-app"></a>Start en flyt i en lerretsapp
+
+Du kan bruke Microsoft Flow til å opprette logikk som utfører én eller flere oppgaver når en hendelse forekommer i en lerretsapp. Du kan for eksempel konfigurere en knapp slik at når en bruker velger den, opprettes et element i en SharePoint-liste, en e-postmelding eller møteinvitasjon sendes, en fil legges til i skyen, eller alt dette. Du kan konfigurere en kontroll i appen for å starte flyten, som fortsetter å kjøre selv om du lukker PowerApps.
 
 ## <a name="prerequisites"></a>Forutsetninger
 
@@ -25,6 +26,7 @@ Du kan bruke Microsoft Flow til å opprette logikk som utfører én eller flere 
 * Finn ut hvordan du kan [konfigurere en kontroll](add-configure-controls.md).
 
 ## <a name="create-a-flow"></a>Å opprette en flyt
+
 1. Logg deg på [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og klikk eller trykk deretter på **Flyter** i navigasjonsfeltet til venstre.
 
 2. Velg **Opprett fra tom** på **Mine flyter**-siden.

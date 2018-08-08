@@ -1,6 +1,6 @@
 ---
-title: Å opprette en app fra grunnen av ved hjelp av Common Data Service for Apps | Microsoft Docs
-description: Opprett en app for å legge til, oppdatere og slette poster.
+title: Opprett en lerretsapp fra grunnen av ved hjelp av Common Data Service for apper | Microsoft Docs
+description: Opprett en lerretsapp i PowerApps for å legge til, oppdatere og slette poster i Common Data Service for apper.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: b7506ff3380855c6e3c51b22918366dde9c8549c
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: df2ed422cdfbaf8689dae7c8f3e6b54eba093b74
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195132"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471355"
 ---
-# <a name="create-an-app-from-scratch-using-common-data-service-for-apps"></a>Å opprette en app fra grunnen av ved hjelp av Common Data Service for Apps
+# <a name="create-a-canvas-app-from-scratch-using-common-data-service-for-apps"></a>Opprett en lerretsapp fra grunnen av ved hjelp av Common Data Service for apper
 
-Bygg en app for å behandle data som er lagret i Common Data Service for Apps, ved hjelp av standardenheter (som er innebygd), egendefinerte enheter (som organisasjonen oppretter) eller begge deler.
+Bygg en lerretsapp for å behandle data som er lagret i Common Data Service for apper, ved hjelp av standardenheter (som er innebygd), egendefinerte enheter (som organisasjonen oppretter) eller begge deler.
 
 Når du bygger en app fra Common Data Service, trenger du ikke å opprette en tilkobling fra PowerApps, slik du gjør med datakilder som SharePoint, Dynamics 365 eller Salesforce. Du trenger bare å angi hvilke enheter du vil vise, administrere eller bruke for begge aktivitetene i appen.
 

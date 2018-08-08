@@ -1,6 +1,6 @@
 ---
-title: Å installere og konfigurere eksemplet for utgiftsrapport for PowerApps | Microsoft Docs
-description: Trinnvise instruksjoner for installasjon og konfigurasjon av eksemplet for utgiftsrapport for PowerApps.
+title: Installer og konfigurer utgiftsrapporteksemplet for lerretsapper | Microsoft Docs
+description: Trinnvise instruksjoner for installering og konfigurering av utgiftsrapporteksemplet for lerretsapper i PowerApps.
 author: caburk
 manager: kvivek
 ms.service: powerapps
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: aca695c8c2ae90e0d5d843dcb0dfb562cbef5a05
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: f0fc0d9407511730145002bf109957b0878398bc
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195730"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470044"
 ---
-# <a name="install-and-configure-the-expense-report-powerapps-sample"></a>Å installere og konfigurere eksemplet for utgiftsrapport for PowerApps
+# <a name="install-and-configure-the-expense-report-sample-for-canvas-apps-in-powerapps"></a>Installer og konfigurer utgiftsrapporteksemplet for lerretsapper i PowerApps
 
-Trinnvise instruksjoner for installasjon og konfigurasjon av eksemplet for utgiftsrapport for PowerApps.
+Trinnvise instruksjoner for installering og konfigurering av utgiftsrapporteksemplet.
 
 Estimert tid for å fullføre disse trinnene: **10 til 15 minutter**
 
@@ -26,7 +26,8 @@ Hvis du vil se en demonstrasjon av denne prosessen, kan du ta en titt på denne 
 
 [![Video om hvordan du installerer utgiftsrapporten](./media/expense-report-install/expense-report-install-video.png)](https://youtu.be/DOR28V5kCkw)
 
-## <a name="expense-report-powerapps-sample-overview"></a>Oversikt over eksempler for Utgiftsrapport for PowerApps
+## <a name="overview-of-the-sample"></a>Oversikt over eksemplet
+
 Spor utgiftsrapporter fra sending til godkjennelse. Legg sammen elementer som individuelle utgifter og send for godkjennelse når det er klart. Denne appen krever litt konfigurasjon for å tilpasses dine behov.
 
 ![Åpningsskjerm for utgiftsrapport i PowerApps](./media/expense-report-install/expense-report-powerapp.png)

@@ -1,6 +1,6 @@
 ---
-title: Bygg multimediefiler inn i en app, og last opp | Microsoft Docs
-description: Vis multimediefiler i en app, og last dem opp til en datakilde
+title: Bygg inn multimediefiler i en lerretsapp og last dem opp | Microsoft Docs
+description: Vis multimediefiler i en lerretsapp, og last dem opp til en datakilde
 author: karthik-1
 manager: kvivek
 ms.service: powerapps
@@ -9,20 +9,23 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/12/2017
 ms.author: sharik
-ms.openlocfilehash: 5c6c7b2973f85c1ebc3040e41d83653250599717
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 1b0c830dd5d0fb625bc8ac407bda47023036ed7f
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195017"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470182"
 ---
 # <a name="using-multimedia-files-in-powerapps"></a>Bruk av multimediefiler i PowerApps
-Dette emnet forklarer hvordan du bygger inn multimediefiler i appen, laster opp pennetegninger til en datakilde og viser bilder fra en datakilde i appen. Datakilden som brukes i dette emnet, er en Excel-fil i OneDrive for Business.
+
+Dette emnet tar for seg hvordan du bygger inn multimediefiler i lerretsappen, laster opp pennetegninger til en datakilde og viser bilder fra en datakilde i lerretsappen. Datakilden som brukes i dette emnet, er en Excel-fil i OneDrive for Business.
 
 ## <a name="prerequisites"></a>Forutsetninger
+
 [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å oppgi samme legitimasjon som du brukte til å registrere deg.
 
 ## <a name="add-media-from-a-file-or-the-cloud"></a>Legg til media fra en fil eller fra skyen
+
 Du kan velge hvilken type mediefil du vil legge til (for eksempel bilder, video eller lyd).
 
 1. Velg **Media** i fanen **Innhold**.

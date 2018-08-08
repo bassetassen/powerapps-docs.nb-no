@@ -1,6 +1,6 @@
 ---
-title: Å forstå datakilder | Microsoft Docs
-description: Referanseinformasjon for å arbeide med tilkoblinger og datakilder i Microsoft PowerApps.
+title: Slik fungerer datakilder for lerretsapper | Microsoft Docs
+description: Referanseinformasjon om å arbeide med tilkoblinger og datakilder for lerretsapper.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,29 +9,33 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 03/08/2017
 ms.author: gregli
-ms.openlocfilehash: d8fd771d9407d0ca2601471a06c727b16a751f2a
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: a4dd3d2d21aa8e4f8501c9bc9812ba6658683f03
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020891"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470389"
 ---
-# <a name="understand-data-sources-in-powerapps"></a>Å forstå datakilder i PowerApps
-De fleste PowerApps-apper bruker ekstern informasjon som er lagret i skytjenester, kalt **Datakilder**. Et vanlig eksempel er en tabell i en Excel-fil som er lagret i OneDrive for Business. Appene får tilgang til disse datakildene ved hjelp av **Tilkoblinger**.
+# <a name="understand-data-sources-for-canvas-apps-in-powerapps"></a>Slik fungerer datakilder for lerretsapper i PowerApps
+
+De fleste lerretsapper i PowerApps bruker ekstern informasjon som er lagret i skytjenester, kalt **Datakilder**. Et vanlig eksempel er en tabell i en Excel-fil lagret i OneDrive for Business. Appene får tilgang til disse datakildene ved hjelp av **Tilkoblinger**.
 
 Denne artikkelen beskriver de ulike typene datakilder, og hvordan du arbeider med datakilder for tabeller.
 
-Det er enkelt å opprette en app som utfører grunnleggende lesing og skriving for en datakilde. Men noen ganger vil du ha mer kontroll over hvordan data flyter inn og ut av appen.  Denne artikkelen beskriver hvordan funksjonene **[Patch](functions/function-patch.md)**, **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Validate](functions/function-validate.md)** og **[Errors](functions/function-errors.md)** gir mer kontroll.
+Det er enkelt å opprette en app som utfører grunnleggende lesing fra og skriving til en datakilde. Men noen ganger vil du ha mer kontroll over hvordan data flyter inn og ut av appen.  Denne artikkelen beskriver hvordan funksjonene **[Patch](functions/function-patch.md)**, **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Validate](functions/function-validate.md)** og **[Errors](functions/function-errors.md)** gir mer kontroll.
 
 ## <a name="kinds-of-data-sources"></a>Datakildetyper
+
 Datakilder kan være koblet til en skytjeneste, eller de kan være lokale for en app.
 
 ### <a name="connected-data-sources"></a>Tilkoblede datakilder
-De vanligste datakildene er **Tabeller**, som du kan bruke til å hente og lagre informasjon. Du kan bruke **tilkoblinger** til datakilder for å lese og skrive data i Microsoft Excel-arbeidsbøker, SharePoint-lister, SQL-tabeller og mange andre formater, som kan lagres i skytjenester som OneDrive for Business, DropBox, SQL Server osv.
+
+De vanligste datakildene er **Tabeller**, som du kan bruke til å hente og lagre informasjon. Du kan bruke **tilkoblinger** til datakilder til å lese og skrive data i Microsoft Excel-arbeidsbøker, SharePoint-lister, SQL-tabeller og en rekke andre formater, som kan lagres i skytjenester, for eksempel OneDrive for Business, DropBox og SQL Server.
 
 Andre datakilder enn tabeller inkluderer e-post, kalendere, Twitter og varslinger, men denne artikkelen omhandler ikke disse andre datakildetypene.
 
 ### <a name="local-data-sources"></a>Lokale datakilder
+
 Ved hjelp av kontrollene **[Galleri](controls/control-gallery.md)**, **[Visningsskjema](controls/control-form-detail.md)**, og **[Redigeringsskjema](controls/control-form-detail.md)**, er det enkelt å opprette en app som leser og skriver data fra en datakilde.  For å komme i gang kan du lese artikkelen [Forstå dataskjemaer](working-with-forms.md).  
 
 Disse kontrollene brukes når du ber PowerApps om å opprette en app fra data. Bak kulissene bruker appen en intern tabell til å lagre og manipulere dataene som kommer fra datakilden.
@@ -39,6 +43,7 @@ Disse kontrollene brukes når du ber PowerApps om å opprette en app fra data. B
 En spesiell datakildetype er [Samling](working-with-data-sources.md#collections), som er lokal for appen og ikke støttes av en tilkobling til en tjeneste i skyen, slik at informasjonen ikke kan deles på tvers av enheter for samme bruker, eller mellom brukere. Samlinger kan lastes inn og lagres lokalt.
 
 ### <a name="kinds-of-tables"></a>Tabelltyper
+
 Tabeller som er interne for en PowerApps-app er faste verdier, på samme måte som at et tall eller en streng er en verdi. Interne tabeller blir ikke lagret noe sted, de eksisterer bare i appens minne. Du kan ikke endre strukturen og dataene i en tabell direkte. Det du i stedet kan gjøre, er å opprette en ny tabell gjennom en formel: du kan bruke denne formelen til å lage en endret kopi av den opprinnelige tabellen.
 
 Eksterne tabeller blir lagret i en datakilde for senere henting og deling.  PowerApps tilbyr «tilkoblinger» for å lese og skrive lagrede data.  Du har tilgang til flere tabeller med informasjon i en tilkobling.  Du velger hvilke tabeller som skal brukes i appen, og hver av dem blir til en egen *datakilde*.  

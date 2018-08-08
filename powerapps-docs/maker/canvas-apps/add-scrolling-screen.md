@@ -1,6 +1,6 @@
 ---
-title: Å legge til en skjerm med rulling| Microsoft Docs
-description: Opprett en skjerm som brukerne kan rulle for å vise flere typer innhold enn skjermen kan vise om gangen.
+title: Legg til en skjerm med rulling i en lerretsapp | Microsoft Docs
+description: Opprett en skjerm i PowerApps der brukerne kan rulle for å vise flere typer innhold enn skjermen kan vise om gangen, i en lerretsapp.
 author: lonu
 manager: kvivek
 ms.service: powerapps
@@ -9,24 +9,27 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: lonu
-ms.openlocfilehash: 4a8b92e012f9669f2b445ef864d3360ef42fbc01
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 742710a3814c87d9888e70cb50c635dddab904d1
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39015988"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471263"
 ---
-# <a name="add-a-scrolling-screen-in-powerapps"></a>Å legge til en skjerm med rulling i PowerApps
-Opprett en skjerm som brukerne kan rulle for å vise ulike elementer. Du kan for eksempel opprette en app som viser data i et stolpediagram og linjediagram. Ved å legge til en rullende skjerm kan du legge til flere kontroller, som brukerne kan vise hvis de ruller.
+# <a name="add-a-scrolling-screen-to-a-canvas-app-in-powerapps"></a>Legg til en skjerm med rulling i en lerretsapp i PowerApps
+
+Opprett en skjerm der brukerne kan rulle for å vise ulike elementer, i en lerretsapp. Du kan for eksempel opprette en telefonapp som viser data i flere diagrammer, som brukerne kan vise hvis de ruller.
 
 Når du legger til flere kontroller i en inndeling, opprettholder kontrollene sine relative plasseringen i denne inndelingen, uansett om det er en app for telefon eller nettbrett. Merk at skjermstørrelsen og skjermretningen kan bestemme hvordan avsnittene er ordnet.  
 
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
 ## <a name="create-a-scrolling-screen"></a>Å legge til en skjerm med rulling
+
 1. Klikk eller trykk på **Ny skjerm** på **Hjem**-fanen:
-   
+
     ![Alternativ for å legge til en skjerm i en app][1]
+
 2. Klikk eller trykk på **Oppsett** på **Hjem**-fanen, og klikk eller trykk på alternativet om å legge til et uendelig rullende lerret:  
    
     ![Alternativ for å legge til et uendelig rulling lerret][2]

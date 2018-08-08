@@ -1,25 +1,25 @@
 ---
-title: Hurtiginnføring i hvordan du laster ned en liste over aktive brukere i tenanten | Microsoft Docs
+title: Last ned en liste over aktive brukere i leieren | Microsoft Docs
 description: I denne hurtiginnføringen lærer du hvordan du laster ned en liste over aktive brukere i tenanten
 author: jimholtz
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
-ms.author: jimh
-ms.openlocfilehash: 1488b0231009ef3dd3b0b93e21a14a61f3d1c3cd
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.author: jimholtz
+ms.openlocfilehash: e2c00f4ab10b2dc6cecc63d9539ffcf86a5bfcb8
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552488"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39348861"
 ---
-# <a name="quickstart-download-a-list-of-active-users-in-your-tenant"></a>Hurtiginnføring: Slik laster du ned en liste over aktive brukere i tenanten
+# <a name="download-a-list-of-active-users-in-your-tenant"></a>Last ned en liste over aktive brukere i leieren
 Hvis du er en global 365-administrator eller administrator for tenanten til Azure Active Directory, kan du laste ned en liste over aktive brukere i tenanten, slik at du ikke bare kan se hvem som har tilgang til PowerApps, Microsoft Flow eller begge, men også lisensene tilordnet til disse brukerne.
 
-I denne hurtiginnføringen vil du lære hvordan du laster ned en liste over aktive brukere av en CSV-fil og deretter viser listen i Excel.
+Dette emnet tar for seg hvordan du laster ned en liste over aktive brukere til en CSV-fil, og deretter viser denne listen i Excel.
 
-Du må være global administrator for Office 365 eller ha administrasjonstillatelser for tenanten til Microsoft Azure Active Directory for å følge denne hurtiginnføringen.
+Du må være global administrator for Office 365 eller ha administrasjonstillatelser for leieren i Azure Active Directory for å følge denne fremgangsmåten.
 
 ## <a name="sign-in-to-the-powerapps-admin-center"></a>Å logge på administrasjonssenteret for PowerApps
 Logg på administrasjonssenteret på [https://admin.powerapps.com]([https://admin.powerapps.com).
@@ -45,7 +45,7 @@ Hvis en bruker har forlatt organisasjonen, vil listen vise **Ukjent** i kolonner
 Hvis du vil legge til brukerlisenser, kan du åpne [administrasjonssenteret for Office 365](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 ## <a name="next-steps"></a>Neste trinn
-I denne hurtiginnføringen lærer du hvordan du laster ned en liste over aktive brukere i tenanten. Hvis du vil lære hvordan du laster ned og viser en liste over apper som er opprettet i miljøene dine, kan du fortsette til neste hurtiginnføring.
+Dette emnet har tatt for seg hvordan du laster ned en liste over aktive brukere i leieren din. Hvis du finne ut hvordan du laster ned og viser en liste over apper som er opprettet i miljøene dine, fortsetter du til neste emne.
 
 > [!div class="nextstepaction"]
 > [Last ned en liste over apper som er opprettet i miljøene dine](admin-view-apps.md)

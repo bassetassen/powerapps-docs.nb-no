@@ -1,7 +1,7 @@
 ---
-title: Å legge til en skjerm og navigere mellom skjermer | Microsoft Docs
-description: Å legge til en skjerm til en app og bruke neste- og tilbake-pilene til å veksle mellom skjermer i PowerApps
-author: aftowen
+title: Legg til en skjerm i en lerretsapp og naviger mellom skjermer | Microsoft Docs
+description: Legg til en skjerm i en lerretsapp og bruk neste- og tilbake-pilene til å veksle mellom skjermer i PowerApps
+author: AFTOwen
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
@@ -9,21 +9,24 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 07/10/2017
 ms.author: anneta
-ms.openlocfilehash: c7a100b6df278812ea93da8c4f5c503a841d4109
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 17ec7dd0723e219e1eaf9ad3b112faf049cf7d12
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39022014"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469952"
 ---
-# <a name="add-a-screen-and-navigate-between-screens"></a>Å legge til en skjerm og navigere mellom skjermer
-Opprett en app med flere skjermer, og legg til måter for brukere å navigere mellom dem på.
+# <a name="add-a-screen-to-a-canvas-app-and-navigate-between-screens"></a>Legg til en skjerm i en lerretsapp og naviger mellom skjermer
+
+Opprett en lerretsapp med flere skjermer, og legg til måter brukerne kan navigere mellom dem på.
 
 ## <a name="prerequisites"></a>Forutsetninger
+
 * Finn ut hvordan du kan [konfigurere en kontroll](add-configure-controls.md).
 * Å opprette eller åpne en app.
 
 ## <a name="add-and-rename-a-screen"></a>Å legge til og gi nytt navn til en skjerm
+
 1. Klikk eller trykk på **Hjem** på **Ny skjerm**-fanen.
 
     ![Å legge til Skjerm-alternativet på Hjem-fanen](./media/add-screen-context-variables/add-screen.png)

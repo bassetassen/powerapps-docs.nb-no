@@ -1,6 +1,6 @@
 ---
-title: Å utvikle apper som fungerer i frakoblet tilstand | Microsoft Docs
-description: Utvikle apper som fungerer i frakoblet tilstand, slik at brukerne kan være produktive enten de er tilkoblet eller frakoblet.
+title: Utvikle lerretsapper som fungerer i frakoblet tilstand | Microsoft Docs
+description: Utvikle lerretsapper som fungerer i frakoblet tilstand, slik at brukerne kan være produktive enten de er tilkoblet eller frakoblet.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -9,22 +9,24 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/09/2017
 ms.author: mblythe
-ms.openlocfilehash: cb2ed2404f7270367b3a26bf8eccb733b09fee23
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 9035809f989ad4b0215d4a8eba5d693d145b7f66
+ms.sourcegitcommit: 0f6d7bb9e524202c065b9a7ef92a7f54bdc4bc7c
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023141"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39471217"
 ---
-# <a name="develop-offline-capable-apps-with-powerapps"></a>Å utvikle apper som fungerer i frakoblet tilstand med PowerApps
-Ett av de mest vanlige scenarioene du opplever som utvikler av mobilapper, er å gjøre det mulig for brukerne å være produktive der det er begrensede tilkoblingsmuligheter, eller ingen tilkobling i det hele tatt. PowerApps har et sett med funksjoner og virkemåter som hjelper deg med å utvikle apper fungerer i frakoblet tilstand. Bruk en av disse måtene:
+# <a name="develop-offline-capable-canvas-apps-with-powerapps"></a>Utvikle lerretsapper som fungerer i frakoblet tilstand med PowerApps
 
-* Start PowerApps-mobilappen når du er frakoblet.
+Et av de vanligste scenarioene du opplever som utvikler av mobilapper, er å gjøre det mulig for brukerne å være produktive der det er begrensede tilkoblingsmuligheter, eller ingen tilkobling i det hele tatt. PowerApps har et sett med funksjoner og virkemåter som hjelper deg å utvikle lerretsapper som fungerer i frakoblet tilstand. Bruk en av disse måtene:
+
+* Start PowerApps Mobile når du er frakoblet.
 * Kjør apper du utvikler når du er frakoblet.
 * Fastslå når en app er frakoblet, tilkoblet, eller bruker en forbruksmålt tilkobling ved bruk av [Tilkobling](../canvas-apps/functions/signals.md#connection)-signalobjektet.
 * Bruk [samlinger](../canvas-apps/create-update-collection.md) og nyttefunksjoner som [LoadData og SaveData](../canvas-apps/functions/function-savedata-loaddata.md) for grunnleggende datalagring når du er frakoblet.
 
 ## <a name="how-to-build-offline-capable-apps"></a>Å bygge apper som fungerer i frakoblet tilstand
+
 Det første du må tenke på i frakoblede scenarioer, er hvordan appene arbeider med data. Apper i PowerApps får tilgang til data hovedsaklig gjennom et sett med [koblinger](../canvas-apps/connections-list.md) i plattformen, som SharePoint, Office 365 og Common Data Service. Du kan også bygge egendefinerte koblinger som lar appene få tilgang til en tjeneste med et avslappende endepunkt. Dette kan være Web API eller en tjeneste som Azure Functions. Alle disse koblingene bruker HTTPS over Internett, noe som betyr at brukerne må være tilkoblet for å få tilgang til dataene og eventuelle andre funksjoner som er inkludert i tjenesten.
 
 ![PowerApps-app med koblinger](./media/offline-apps/online-app.png)

@@ -1,24 +1,25 @@
 ---
-title: Innføring i administrasjonssenteret i Microsoft Docs
+title: Innføring i administrasjonssenteret for forretningsprogramplattformen | Microsoft Docs
 description: Innføring i administrasjonssenteret for PowerApps.
 author: msftman
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: overview
 ms.date: 03/21/2017
 ms.author: deonhe
-ms.openlocfilehash: 1a6fc44ba32d7b6adbf7995221d4232af3e564ea
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 3639851e3f37f2db794816aa9199018de5a5e7be
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34167956"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349919"
 ---
-# <a name="introduction-to-the-admin-center-for-powerapps"></a>Innføring i administrasjonssenteret for PowerApps
+# <a name="introduction-to-the-business-application-platform-admin-center"></a>Innføring i administrasjonssenteret for forretningsprogramplattformen
+
 ![oversikt](./media/introduction-to-the-admin-center/overview.png)  
 
-I [administrasjonssenteret](https://admin.powerapps.com) kan du:
+I [administrasjonssenteret for forretningsprogramplattformen](https://admin.powerapps.com) kan du:
 
 * Administrere brukere, tillatelser og roller i [miljøer](environments-administration.md). (PowerApps P2-abonnement kreves)
 * Administrer [policyer for hindring av datatap](prevent-data-loss.md), som styrer hvordan forretningsdata deles med tjenester i PowerApps. (PowerApps P2-abonnement eller globale Office 365-administratortillatelser kreves)

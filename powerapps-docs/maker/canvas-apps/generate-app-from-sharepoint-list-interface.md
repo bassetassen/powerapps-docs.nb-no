@@ -1,6 +1,6 @@
 ---
-title: Å generere en app fra SharePoint-lister i Microsoft Docs
-description: Generer en app med tre skjermbilder som lar brukeren administrere oppføringer på en SharePoint-liste, enten området er lokalt eller ligger i skyen.
+title: Generer en lerretsapp fra en SharePoint-liste | Microsoft Docs
+description: Generer en lerretsapp med tre skjermer for å behandle elementer fra en SharePoint-liste, enten området er lokalt eller ligger i skyen.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: 46cf610351cf00d8d947c4006c31a3d5971951d0
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 9230c96c1b1c5e07ea5129f73a8edd95772aad84
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39022468"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471424"
 ---
-# <a name="generate-an-app-from-within-sharepoint-using-powerapps"></a>Å generere en app fra SharePoint ved hjelp av PowerApps
+# <a name="generate-a-canvas-app-from-within-sharepoint-by-using-powerapps"></a>Generer en lerretsapp fra SharePoint ved hjelp av PowerApps
 
-Med PowerApps kan du automatisk generere apper som lar brukerne administrere oppføringer på en egendefinert SharePoint Online-liste. Appen har tre skjermbilder der brukerne kan:
+Med PowerApps kan du automatisk generere en lerretsapp som gjør at brukerne kan behandle oppføringer i en egendefinert SharePoint Online-liste. Appen har tre skjermer, der brukerne kan gjøre følgende:
 
 * bla gjennom alle postene i listen (**BrowseScreen1**)
 * vise alle felt for en bestemt post (**DetailsScreen1**)

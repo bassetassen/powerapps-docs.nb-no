@@ -1,6 +1,6 @@
 ---
-title: Å opprette en relasjon mellom SharePoint-lister via et oppslagsfelt | Microsoft Docs
-description: Å opprette en relasjon mellom SharePoint-lister via et oppslagsfelt.
+title: Opprett en relasjon mellom SharePoint-lister via et oppslagsfelt i en lerretsapp | Microsoft Docs
+description: Opprett en relasjon mellom SharePoint-lister i PowerApps via et oppslagsfelt i en lerretsapp.
 author: skjerland
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,19 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 01/20/2017
 ms.author: sharik
-ms.openlocfilehash: 342fcc36fb8dba9cfaa42c94089329ad19501af8
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 9ad61bdf115a79fe8284dad520a2e9710a59648b
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39194953"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470527"
 ---
-# <a name="how-to-link-sharepoint-lists-using-lookup-fields"></a>Slik kobler du SharePoint-lister ved hjelp av oppslagsfelt
-Denne opplæringen viser hvordan du kan koble sammen to SharePoint-lister med oppslagsfelt.
+# <a name="how-to-link-sharepoint-lists-using-a-lookup-field-in-powerapps"></a>Slik kobler du sammen SharePoint-lister ved hjelp av et oppslagsfelt i PowerApps
+
+Denne opplæringen tar for seg hvordan du kan koble sammen to SharePoint-lister med et oppslagsfelt i en lerretsapp.
 
 ## <a name="overview"></a>Oversikt
+
 SharePoint inneholder to typer oppslagsfelt:
 
 * **Oppslag**: koblinger til en annen liste. Eksempelvis kan en *ordre*-liste kan ha et oppslagsfelt som er koblet til kunder i en *kunde*-liste
@@ -27,7 +29,8 @@ SharePoint inneholder to typer oppslagsfelt:
 
 I denne opplæringen bygger du en app som bruker disse typene oppslagsfelt.
 
-### <a name="what-do-you-use-lookup-fields-for"></a>Hva bruker du oppslagsfelt til?
+### <a name="why-use-a-lookup-field"></a>Fordeler ved å bruke et oppslagsfelt
+
 Data i en virksomhet er store og komplekse. Data i en SharePoint-liste er ofte knyttet til data i en annen liste. Oppslagsfelt er den primære måten slike forretningsdata samles på.
 
 Du kan for eksempel ha en **ordre**-liste som har et oppslagsfelt som er koblet til en **kunde**-liste for å vise hvilken kunde som la inn ordren. Med oppslagsfeltet i **ordre**-listen kan du også få andre data fra **kunde**-listen. Du kan også bruke et oppslagsfelt til å koble **ordre**-listen til en **produkt**-liste og hente frem informasjonen du trenger om produktet som er bestilt, for eksempel produktbilder, spesifikasjoner, produsentdetaljer og så videre.

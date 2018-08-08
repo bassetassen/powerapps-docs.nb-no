@@ -1,6 +1,6 @@
 ---
-title: Egendefinerte koblinger til innholdskoblinger | Microsoft Docs
-description: Koblinger til innhold for å opprette, bruke, dele og sertifisere egendefinerte koblinger.
+title: Koblinger til innhold om egendefinerte koblinger | Microsoft Docs
+description: Koblinger til innhold for å opprette, bruke, dele og sertifisere egendefinerte koblinger i PowerApps.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/05/2017
 ms.author: mblythe
-ms.openlocfilehash: 411082faef59516d9d6b660e08b5cbaf263da042
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 78a2dd6f9c5772a738ca38e79162be82f3a57139
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39022152"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471125"
 ---
 # <a name="custom-connectors-in-powerapps"></a>Egendefinerte koblinger i PowerApps
 
-Uten å måtte skrive noe kode kan du bygge arbeidsflyter og apper med [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps), [Microsoft Flow](https://flow.microsoft.com) og [PowerApps](https://powerapps.microsoft.com). For å hjelpe deg med å integrere data og forretningsprosesser tilbyr disse tjenestene mer enn [180 koblinger](https://docs.microsoft.com/connectors/) for Microsoft-tjenester og produkter, i tillegg til andre tjenester, som for eksempel GitHub, Salesforce, Twitter og flere. 
+Du kan utvikle arbeidsflyter og lerretsapper med [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps), [Microsoft Flow](https://flow.microsoft.com) og [PowerApps](https://powerapps.microsoft.com) uten å skrive kode. For å hjelpe deg med å integrere dataene og forretningsprosessene dine har disse tjenestene [mer enn 180 koblinger](https://docs.microsoft.com/connectors/) for Microsoft-tjenester og -produkter, i tillegg til andre tjenester, som for eksempel GitHub, Salesforce og Twitter.
 
 Noen ganger ønsker du imidlertid kanskje å kommunisere med API-er, tjenester og systemer som ikke er tilgjengelige som forhåndsbygde koblinger. For å støtte flere skreddersydde scenarioer kan du bygge *egendefinerte koblinger* med egne utløsere og handlinger. Vi har et komplett sett med grunnleggende og avanserte opplæringer for egendefinerte koblinger på nettstedet for dokumentasjon for koblinger. Vi anbefaler at du begynner med [oversikten over egendefinerte koblinger](https://docs.microsoft.com/connectors/custom-connectors/), men du kan også gå rett til følgende emner for mer informasjon om et bestemt område:
 

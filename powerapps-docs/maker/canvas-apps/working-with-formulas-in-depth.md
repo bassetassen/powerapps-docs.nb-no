@@ -1,6 +1,6 @@
 ---
-title: Forstå virkemåten for formler | Microsoft Docs
-description: Referanseinformasjon for å arbeide med virkemåten for formler
+title: Slik fungerer formler for virkemåte i en lerretsapp | Microsoft Docs
+description: Referanseinformasjon om hvordan du arbeider med former for virkemåte, som endrer tilstanden til en lerretsapp i PowerApps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,18 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/10/2015
 ms.author: gregli
-ms.openlocfilehash: 8ac9cfc2a949cf059d84b5338220e0366094e24b
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: e0e7aabc06014c69aae640b799463431b6800dad
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39015597"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471470"
 ---
-# <a name="understand-behavior-formulas-in-powerapps"></a>Forstå virkemåten for formler i PowerApps
+# <a name="understand-behavior-formulas-for-canvas-apps-in-powerapps"></a>Slik fungerer formler for virkemåte i lerretsapper i PowerApps
 
 De fleste formler beregner en verdi.  Omberegning skjer automatisk når verdiene endres, akkurat som i et Excel-regneark.  Du kan for eksempel vise en verdi i en **[Etikett](controls/control-text-box.md)**-kontroll i rødt hvis verdien er mindre enn null. Hvis ikke, er den svart. Så du kan angi f.eks. angi **[Color](controls/properties-color-border.md)**-egenskapen for kontrollen til denne formelen:
-<br>**If( Value(TextBox1.Text) >= 0, Color.Black, Color.Red )**
+
+**If( Value(TextBox1.Text) >= 0, Color.Black, Color.Red )**
 
 Hva betyr det når brukeren velger en **[Knapp](controls/control-button.md)**-kontroll i denne sammenhengen?  Ingen verdi er endret, så det er ikke noe nytt å beregne. Excel har ingenting som tilsvarer en **[Knapp](controls/control-button.md)**-kontroll.  
 

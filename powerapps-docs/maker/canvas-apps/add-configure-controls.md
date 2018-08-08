@@ -1,6 +1,6 @@
 ---
-title: Å legge til og konfigurere en kontroll | Microsoft Docs
-description: Trinnvise instruksjoner for å legge til og konfigurere kontroller direkte, fra verktøylinjen, i Egenskaper-fanen eller på formellinjen.
+title: Legg til og konfigurer en lerretsappkontroll | Microsoft Docs
+description: Trinnvise instruksjoner for å legge til og konfigurere lerretsappkontroller direkte, fra verktøylinjen, i Egenskaper-fanen eller på formellinjen.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,19 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 07/10/2017
 ms.author: anneta
-ms.openlocfilehash: 24f0479db0707e667263f5b160d6785560fe604b
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: dca3ec23b436f96013e9f5102c8b63c6c7d44935
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195592"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470366"
 ---
-# <a name="add-and-configure-a-control-in-powerapps"></a>Å legge til og konfigurere en kontroll i PowerApps
-Legg til forskjellige grensesnittelementer i appen, og konfigurer aspekter ved utseende og virkemåte direkte, fra verktøylinjen, i **Egenskaper**-fanen eller i formellinjen. Disse grensesnittelementene kalles kontroller, og aspektene du konfigurerer, kalles egenskaper.
+# <a name="add-and-configure-a-canvas-app-control-in-powerapps"></a>Legg og konfigurer en lerretsappkontroll i PowerApps
+
+Legg til forskjellige grensesnittelementer i lerretsappen, og konfigurer aspekter ved utseendet og virkemåten deres direkte, fra verktøylinjen, på **Egenskaper**-fanen eller på formellinjen. Disse grensesnittelementene kalles kontroller, og aspektene du konfigurerer, kalles egenskaper.
 
 ## <a name="prerequisites"></a>Forutsetninger
+
 1. [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å angi samme legitimasjon som du brukte til å registrere deg.
 
 2. Klikk eller trykk på **Ny** i **Fil**-menyen (nær venstre kant) i PowerApps Studio.

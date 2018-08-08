@@ -1,6 +1,6 @@
 ---
-title: Slik bygger du inn en ny app i en Power BI-rapport | Microsoft Docs
-description: Slik bygger du inn en app som bruker samme datakilde og kan filtreres som andre rapportelementer
+title: Bygg inn en ny lerretsapp i en Power BI-rapport | Microsoft Docs
+description: Bygg inn en lerretsapp som bruker samme datakilde og kan filtreres som andre rapportelementer
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/15/2018
 ms.author: mblythe
-ms.openlocfilehash: 05fe624be450dfcce0d16ae2f178c86ddf361201
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: a5239a5d7ca1600b281558461f2a08969cabb633
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018679"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470964"
 ---
-# <a name="tutorial-embed-a-new-app-in-a-power-bi-report"></a>Opplæring: Slik bygger du inn en ny app i en Power BI-rapport
+# <a name="embed-a-new-canvas-app-in-a-power-bi-report"></a>Bygg inn en ny lerretsapp i en Power BI-rapport
 
-Med Power BI kan du utvide funksjonene ved å legge til *egendefinerte visualobjekter* i en rapport. I denne opplæringen bruker du det egendefinerte visualobjektet fra PowerApps til å opprette en ny app som er innebygd i eksempelrapporten. Appen samhandler med andre elementer i denne rapporten.
+Med Power BI kan du utvide funksjonene ved å legge til *egendefinerte visualobjekter* i en rapport. I denne opplæringen bruker du det egendefinerte visualobjektet fra PowerApps til å opprette en lerretsapp som er innebygd i en eksempelrapport. Appen samhandler med andre elementer i denne rapporten.
 
 Hvis du ikke har et PowerApps-abonnement, kan du [opprette en gratiskonto](../signup-for-powerapps.md) før du begynner.
 

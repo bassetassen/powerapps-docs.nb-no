@@ -1,6 +1,6 @@
 ---
-title: Slik oppretter du en app fra en mal | Microsoft Docs
-description: Trinnvise instruksjoner for å opprette en app automatisk basert på en PowerApps-mal, og deretter lagre den.
+title: Opprett en lerretsapp fra en mal | Microsoft Docs
+description: Trinnvise instruksjoner for å opprette en lerretsapp automatisk basert på en PowerApps-mal.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,21 +9,23 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/19/2018
 ms.author: anneta
-ms.openlocfilehash: 3827255726be017fe594a2c54389df7c622f7307
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 8b750760ab10c33d17f0e73f8b90a59e6a7b84f7
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195247"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471240"
 ---
-# <a name="create-an-app-from-a-powerapps-template"></a>Oppretting av en app fra en PowerApps-mal
-Opprett en app automatisk basert på en mal for et bestemt scenario, for eksempel sporing av budsjetter og planlegging av ferier, og kjør deretter appen for å forstå standardvirkemåten.
+# <a name="create-a-canvas-app-from-a-template-in-powerapps"></a>Opprett en lerretsapp fra en mal i PowerApps
+
+Opprett en lerretsapp automatisk basert på en mal for et bestemt scenario, for eksempel sporing av budsjetter og planlegging av ferier, og kjør deretter appen for å forstå standardvirkemåten.
 
 Hvis du vil opprette en app fra en mal, må du ha en skylagringskonto (for eksempel DropBox, OneDrive eller Google Drive) til å lagre malens eksempeldata.
 
 Hvis du ikke har en lisens for PowerApps, kan du [registrere deg gratis](../signup-for-powerapps.md).
 
 ## <a name="create-an-app"></a>Å opprette en app
+
 1. Logg deg på [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![Hjemmesiden for PowerApps](./media/get-started-test-drive/sign-in.png)

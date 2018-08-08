@@ -1,6 +1,6 @@
 ---
-title: Å installere og konfigurere eksemplet for teknisk støtte for PowerApps | Microsoft Docs
-description: Trinnvise instruksjoner for installasjon og konfigurasjon av eksemplet for Teknisk støtte for PowerApps.
+title: Installer og konfigurer brukerstøtteeksemplet for lerretsapper | Microsoft Docs
+description: Trinnvise instruksjoner for installering og konfigurering av brukerstøtteeksemplet for lerretsapper i PowerApps.
 author: caburk
 manager: kvivek
 ms.service: powerapps
@@ -9,24 +9,24 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: 4ee281e211891dab812c4ae447dff3d967ffeff3
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 3d6b418ac6738071f16ec4cf75c81c2850d67f74
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195776"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470412"
 ---
-# <a name="install-and-configure-the-help-desk-powerapps-sample"></a>Å installere og konfigurere eksemplet for teknisk støtte for PowerApps
+# <a name="install-and-configure-the-help-desk-sample-in-powerapps"></a>Installer og konfigurer brukerstøtteeksemplet i PowerApps
 
-Trinnvise instruksjoner for installasjon og konfigurasjon av eksemplet for Teknisk støtte for PowerApps.
+Trinnvise instruksjoner for installering og konfigurering av brukerstøtteeksemplet for lerretsapper i PowerApps.
 
 Estimert tid for å fullføre disse trinnene: **10 til 15 minutter**
 
 > [!TIP]
-> Hvis du vil se en demonstrasjon av denne prosessen, kan du ta en titt på denne [videoen](https://youtu.be/z4cdtD6hB_4).
+> Hvis du vil se en demonstrasjon av prosessen, kan du ta en titt på denne [videoen](https://youtu.be/z4cdtD6hB_4).
 
+## <a name="overview-of-the-sample"></a>Oversikt over eksemplet
 
-## <a name="help-desk-powerapps-sample-overview"></a>Oversikt over eksempler for Teknisk støtte for PowerApps
 Teknisk støtte tilbyr en brukervennlig opplevelse for å la brukere etablere kontakt med teknikere. Finn svar raskt på de viktigste spørsmålene, spor fremgang for åpne kundesaker, og se gjennom detaljer for tidligere forespørsler. Denne appen krever litt konfigurasjon for å tilpasses dine behov.
 
 ![Å åpne skjermbildet i Teknisk støtte for PowerApp](./media/help-desk-install/Login-screen.png)

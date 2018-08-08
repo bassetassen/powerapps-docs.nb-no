@@ -1,26 +1,26 @@
 ---
-title: Hurtigstart for å laste ned en liste over apper som er opprettet i miljøene dine | Microsoft Docs
+title: Last ned en liste over programmer som er opprettet i miljøene dine | Microsoft Docs
 description: I denne hurtigveiledningen finner du ut hvordan du laster ned en liste over apper som er opprettet i miljøene dine.
 author: jimholtz
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
-ms.author: jimh
-ms.openlocfilehash: d9c379ca95bb299c56639bb01803f45c1744d8f2
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.author: jimholtz
+ms.openlocfilehash: f5bf3cd5e4fb6be96b8b1853390df1ee8f9bd027
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552603"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349827"
 ---
-# <a name="quickstart-download-a-list-of-apps-created-in-your-environments"></a>Hurtigstart: å laste ned en liste over apper som er opprettet i miljøene dine
+# <a name="download-a-list-of-apps-created-in-your-environments"></a>Last ned en liste over programmer som er opprettet i miljøene dine
 Hvis du er miljøadministrator, kan du vise og laste ned en liste over apper som er opprettet i miljøer som du administrerer. Hvis du er global administrator for Office 365 eller tenantadministrator for Azure Active Directory, kan du laste ned en liste over apper som er opprettet i alle miljøer i organisasjonen din.
 
-I denne hurtigveiledningen vil du lære hvordan du laster ned en liste over apper som er opprettet i et enkelt miljø til en CSV-fil og deretter viser listen i Excel.
+Dette emnet tar for seg hvordan du laster ned en liste over programmer som er opprettet i et enkeltmiljø, til en CSV-fil, og deretter viser denne listen i Excel.
 
 ## <a name="prerequisites"></a>Forutsetninger
- Følgende elementer kreves for å følge denne hurtiginnføringen:
+ Følgende elementer er nødvendige for å følge denne fremgangsmåten:
  * En lisens for enten et PowerApps 2-abonnement eller et Microsoft Flow 2-abonnement. Du kan også registrere deg for en [gratis prøveversjon av PowerApps (abonnement 2)](https://web.powerapps.com/signup?redirect=marketing&email=).
  * Miljøadministrator for PowerApps, global administrator for Office 365 eller administrasjonstillatelser for tenanten til Azure Active Directory. Hvis du vil ha mer informasjon, kan du se [Miljøadministrasjon i PowerApps](environments-administration.md).
 
@@ -43,7 +43,7 @@ Når CSV-filen er opprettet, kan du åpne den i Excel. Listen inneholder navnet 
 ![Fil og Del](./media/admin-view-apps/excel-view.png)
 
 ## <a name="next-steps"></a>Neste trinn
-I denne hurtigveiledningen lærte du hvordan du laster ned og viser en liste over apper som er opprettet i et miljø i organisasjonen. Deretter kan du lære hvordan du administrerer apper som er opprettet i organisasjonen.
+Dette emnet har tatt for seg hvordan du laster ned og viser en liste over programmer som er opprettet i et miljø i organisasjonen din. Deretter kan du lære hvordan du administrerer apper som er opprettet i organisasjonen.
 
 > [!div class="nextstepaction"]
 > [Administrere apper som er opprettet i organisasjonen](admin-manage-apps.md)

@@ -2,27 +2,27 @@
 title: Behandling av policyer for hindring av datatap (DLP) | Microsoft Docs
 description: Gjennomgang av hvordan du behandler policyer for hindring av datatap for PowerApps.
 author: manasmams
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 158abc3969090e081df41b6b52036d71b6949150
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 81117e352f3ad5131572cff2a61117042f47df38
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34445710"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349413"
 ---
 # <a name="manage-data-loss-prevention-dlp-policies"></a>Behandle policyer for hindring av datatap
 Organisasjonens data er kritiske for bedriftens suksess. Dataene skal være lett tilgjengelige ved beslutningstakinger, men de skal være beskyttet slik at de ikke er delt med målgrupper som ikke burde ha tilgang. Hvis du vil beskytte disse dataene, kan du i PowerApps opprette og håndheve DLP-policyene, som angir hvilke forbrukerkoblinger bestemte forretningsdata kan deles med. En organisasjon som bruker PowerApps ønsker nok for eksempel ikke at forretningsdataene deres som er lagret i SharePoint skal publiseres automatisk til Twitter-feeden.
 
 Hvis du vil opprette, redigere eller slette DLP-policyer, må du ha enten miljøadministrator-tillatelser eller tenantadministrator-tillatelser for Azure Active Directory. Hvis du vil ha mer informasjon, kan du se [Miljøadministrasjon i PowerApps](environments-administration.md).
 
-Hvis du vil ha instruksjoner om hvordan du oppretter en DLP-policy, kan du se [Hurtigstart: opprett en datapolicy for tap av data (DLP)](create-dlp-policy.md).
+Hvis du vil ha instruksjoner om hvordan du oppretter en DLP-policy, kan du se [Opprett en policy for hindring av datatap (DLP)](create-dlp-policy.md).
 
-## <a name="find-a-dlp-policy"></a>Å opprette en DLP-policy
+## <a name="find-a-dlp-policy"></a>Å finne en DLP-policy
 1. Logg deg på administrasjonssenteret på [https://admin.powerapps.com]([https://admin.powerapps.com).
 2. Klikk eller trykk på **Datapolicyer** i navigasjonsruten. Hvis du har en lang liste med policyer, bruker du **Søk**-boksen for å finne bestemte DLP-policyer.
 

@@ -1,6 +1,6 @@
 ---
-title: Å komme i gang med formler | Microsoft Docs
-description: Å bruke formler til å tilpasse en app.
+title: Kom i gang med formler i en lerretsapp | Microsoft Docs
+description: Bruk formler til å tilpasse en lerretsapp i PowerApps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: 7f9a724b61404ac0947a9c75f91396b35328086b
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 266949870403dbe0d8a90f096b811478ace90732
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195270"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470665"
 ---
-# <a name="get-started-with-formulas"></a>Å komme i gang med formler
-Konfigurer appen din med formler som ikke bare beregner verdier og utfører andre oppgaver (som de gjør i Excel) men som også responderer på inndata fra brukeren (som kreves av en app).
+# <a name="get-started-with-canvas-app-formulas-in-powerapps"></a>Kom i gang med lerretsappformler i PowerApps
+
+Konfigurer lerretsappen din med formler som ikke bare beregner verdier og utfører andre oppgaver (slik de gjør i Excel), men som også responderer på brukerinndata (som kreves av en app).
 
 * I Excel bygger du formler som eksempelvis fyller ut celler og oppretter tabeller og diagrammer.
 * I PowerApps oppretter du lignende formler når du konfigurerer kontroller i stedet for celler. I tillegg kan du opprette formler som gjelder spesielt for apper i stedet for regneark.

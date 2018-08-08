@@ -1,6 +1,6 @@
 ---
-title: Å vise, redigere eller legge til en post fra en tabell | Microsoft Docs
-description: Å bruke et skjema til å vise, redigere eller legge til en post fra en tabell i datakilden.
+title: Vis, rediger eller legg til en post fra en tabell i en lerretsapp | Microsoft Docs
+description: Bruk et lerretsappskjema til å vise, redigere eller legge til en post fra en tabell i datakilden.
 author: karthik-1
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/06/2017
 ms.author: sharik
-ms.openlocfilehash: b98c5d165ba6de983a874f0a34fb92c5db8a69cd
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: a8c786e499bdc1e4dacc0adbf2bee489d56229ce
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018955"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469975"
 ---
 # <a name="show-edit-or-add-a-record-from-a-table-in-powerapps"></a>Å vise, redigere eller legge til en post fra en tabell i PowerApps
-Hvis du vil vise alle feltene i en post, kan du legge til og konfigurere en **[Visningsskjema](controls/control-form-detail.md)**-kontroll. Hvis du vil redigere noen av feltene i en post (eller legge til en post) og lagre endringene tilbake til en datakilde, kan du legge til og konfigurere en **[Redigeringsskjema](controls/control-form-detail.md)**-kontroll.
+
+Hvis du vil vise alle feltene i en post, kan du legge til og konfigurere en **[Visningsskjema](controls/control-form-detail.md)**-kontroll i en lerretsapp. Hvis du vil redigere noen av feltene i en post (eller legge til en post) og lagre endringene i en datakilde igjen, kan du legge til og konfigurere en **[Redigeringsskjema](controls/control-form-detail.md)**-kontroll i en lerretsapp.
 
 ## <a name="prerequisites"></a>Forutsetninger
 

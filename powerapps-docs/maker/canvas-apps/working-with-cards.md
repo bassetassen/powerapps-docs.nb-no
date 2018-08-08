@@ -1,6 +1,6 @@
 ---
 title: Å forstå datakort i Microsoft Docs
-description: Bruk skjemakort til å samle og vise informasjon fra en datakilde.
+description: Bruk skjemakort til å samle inn og vise informasjon fra en datakilde i PowerApps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,23 +9,25 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: 81e0213caee1d4eed466edebe3d13cbfa1c3e7e2
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: a229f77ea569c56e18fd955a66ce48a5e02f84a9
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020772"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470941"
 ---
-# <a name="understand-data-cards"></a>Å forstå datakort
-**[Kort](controls/control-card.md)**-kontrollene er byggesteinene i **[Redigeringsskjema](controls/control-form-detail.md)**- og **[Vis skjema](controls/control-form-detail.md)**-kontrollene. Skjemaet representerer hele posten, og hvert kort representerer et enkelt felt for den aktuelle posten.
+# <a name="understand-data-cards-in-powerapps"></a>Slik fungerer datakort i PowerApps
+
+**[Kort](controls/control-card.md)**-kontrollene er byggesteinene i **[Redigeringsskjema](controls/control-form-detail.md)**- og **[Vis skjema](controls/control-form-detail.md)**-kontrollene i lerretsapper. Skjemaet representerer hele posten, og hvert kort representerer et enkelt felt for den aktuelle posten.
 
 Du kan lettest samhandle med kort i ruten til høyre, når du har valgt en skjemakontroll i utformingsområdet. I denne ruten, kan du velge hvilke felt du vil vise, hvordan du viser hvert felt og i hvilken rekkefølge de skal vises. Dette eksemplet viser en kontroll for **Redigeringsskjema** i en app som er bygd fra en SharePoint-liste, kalt **Aktiva**.
 
-![](./media/working-with-cards/first-screen.png)
+![Første skjerm](./media/working-with-cards/first-screen.png)
 
 For å komme i gang med kort kan du se [Legge til et skjema](add-form.md) og [Forstå dataskjemaer](working-with-forms.md). Resten av dette emnet inneholder mer detaljert informasjon om hvordan kort fungerer, og hvordan du kan tilpasse, eller til og med opprette dine egne kort.
 
 ## <a name="predefined-cards"></a>Forhåndsdefinerte kort
+
 PowerApps tilbyr et forhåndsdefinert sett med kort for strenger, tall og andre datatyper. Du kan se variasjonene som er tilgjengelige, og endre kortet som brukes for et felt, i ruten til høyre:
 
 ![](./media/working-with-cards/selected-card.png)

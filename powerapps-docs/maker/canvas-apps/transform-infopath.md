@@ -1,6 +1,6 @@
 ---
-title: Transformer InfoPath-skjemaer til PowerApps | Microsoft Docs
-description: Kom i gang med å transformere InfoPath-skjemaer til PowerApps med mer informasjon om vanlige InfoPath-scenarioer og hvordan du oppretter disse elementene i PowerApps.
+title: Transformer InfoPath-skjemaet ditt til en lerretsapp | Microsoft Docs
+description: Begynn å transformere InfoPath-skjemaet ditt til PowerApps med informasjon om vanlige scenarioer og hvordan du oppretter disse elementene i en lerretsapp.
 author: richardriley99
 manager: kvivek
 ms.service: powerapps
@@ -9,22 +9,22 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/05/2018
 ms.author: rriley
-ms.openlocfilehash: b57d62d3e64ea08905ddcc8627cf6921d421fb18
-ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
+ms.openlocfilehash: a249d0a9096117badfe3e4eb7ad9dcf6b75662a1
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094729"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470113"
 ---
-# <a name="transform-your-infopath-forms-to-powerapps"></a>Transformer InfoPath-skjemaer til PowerApps
+# <a name="transform-your-infopath-form-to-powerapps"></a>Transformer InfoPath-skjemaet ditt til PowerApps
 
 Er du en person som bygger fantastiske ting i InfoPath, og som ønsker å levere disse fantastiske tingene på en mer robust plattform?
 
 ## <a name="key-advantages-of-powerapps-over-infopath"></a>De viktigste fordelene med PowerApps i forhold til InfoPath
 
-Hvis du er som de fleste priviligerte InfoPath-brukere, har du allerede brukt de unike evnene dine til å bygge flotte skjemaer en stund. Selv om du er veldig fornøyd med skjemaene du lager, vet du at de har sine begrensninger: den &quot;klassiske&quot; utformingen, de gir ikke de beste opplevelsene på mobile enheter, usikkerheten om fremtidig bruk samt du er alltid låst når det gjelder å koble til andre tjenester uten å skrive kode.
+Som de fleste privilegerte InfoPath-brukere har du brukt de unike ferdighetene dine til å bygge flotte skjemaer en stund nå. Du er veldig fornøyd med skjemaene, men du vet også at de har sine begrensninger: den &quot;klassiske&quot; utformingen, en mindre optimal opplevelse på mobilenheter, usikkerheten om fremtidig bruk samt å alltid stå fast når du skal koble til andre tjenester uten å skrive kode.
 
-PowerApps-teamet har tatt disse og flere andre utfordringer på alvor. De har jobbet hardt for å gi deg bedre opplevelser med PowerApps. Målet er å gi deg muligheten til å lage apper ved å dra nytte av forretningsevnene dine samt ferdighetene du har med eksisterende teknologi, slik at du kan bruke PowerApps til raskt å bygge og distribuere de riktige forretningsløsningene uten å skrive kode.
+PowerApps-teamet har tatt disse og mange andre utfordringer på alvor. De har arbeidet hardt for å gi deg bedre opplevelser og gjøre det mulig for deg å opprette lerretsapper ved å dra nytte av forretnings- og teknologiferdighetene du besitter. Ved å bruke PowerApps kan du raskt utvikle og distribuere de riktige forretningsløsningene uten å skrive kode.
 
 **PowerApps sikrer en kraftfull fremtid**  
 PowerApps er en SaaS-plattform (Software as a Service), som er utviklet for å gi deg muligheten til raskt å bygge apper med høy funksjonsevne som du kan distribuere på nettet, til SharePoint, Dynamics 365, Teams, Power BI eller til en mobil enhet uten ekstra arbeid. Siden de er så enkle å distribuere (du trenger bare å gi noen URL-adressen til den publiserte appen), er de like enkle å oppdatere.

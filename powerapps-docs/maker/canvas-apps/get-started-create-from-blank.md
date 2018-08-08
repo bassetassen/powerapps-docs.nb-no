@@ -1,5 +1,6 @@
 ---
-title: Å opprette en Excel-app fra grunnen av | Microsoft Docs
+title: Opprett en lerretsapp fra grunnen av basert på Excel-data | Microsoft Docs
+description: Denne opplæringen beskriver hvordan du oppretter en lerretsapp med to skjermer, slik at brukerne kan opprette, redigere og slette poster i en Excel-fil.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -8,17 +9,19 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 04/23/2018
 ms.author: anneta
-ms.openlocfilehash: 330751210322190fddefb6c399025578bb9878b5
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: dafd6e4aafdc8f4709d25b9de8e6b997665c3d4a
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195293"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469848"
 ---
-# <a name="create-an-excel-app-from-scratch"></a>Slik oppretter du en Excel-app fra grunnen av
-Opprett din egen app fra grunnen av basert på Excel-data som er formatert som en tabell, og deretter legger du til data fra andre kilder hvis du ønsker det. Du oppretter en app med to skjermer ved å følge denne opplæringen. På den ene skjermen kan brukerne bla gjennom et sett med poster. På den andre skjermen kan brukere opprette en post, oppdatere ett eller flere felt i en post eller slette en hel post. Denne fremgangsmåten er mye mer tidkrevende enn [automatisk generering av en app](get-started-create-from-data.md), men erfarne apputviklere kan bruke det til å lage de beste appene for et gitt behov.
+# <a name="create-an-canvas-app-from-scratch-based-on-excel-data"></a>Opprett en lerretsapp fra grunnen av basert på Excel-data
+
+Opprett din egen lerretsapp fra grunnen av basert på Excel-data som er formatert som en tabell, og legg deretter til data fra andre kilder hvis du ønsker det. Du oppretter en app med to skjermer ved å følge denne opplæringen. På den ene skjermen kan brukerne bla gjennom et sett med poster. På den andre skjermen kan brukere opprette en post, oppdatere ett eller flere felt i en post eller slette en hel post. Denne fremgangsmåten er mye mer tidkrevende enn [automatisk generering av en app](get-started-create-from-data.md), men erfarne apputviklere kan bruke det til å lage de beste appene for et gitt behov.
 
 ## <a name="prerequisites"></a>Forutsetninger
+
 Du må først opprette en Excel-fil ved hjelp av disse eksempeldataene for å følge trinnene i denne opplæringen nøyaktig.
 
 1. Kopier disse dataene, og lim dem deretter inn i en Excel-fil.

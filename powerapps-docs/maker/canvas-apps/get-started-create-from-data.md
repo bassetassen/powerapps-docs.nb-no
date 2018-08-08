@@ -1,6 +1,6 @@
 ---
-title: Å generere en app fra Excel | Microsoft Docs
-description: Slik bruker du PowerApps til å automatisk generere en app ved hjelp av en Excel-fil som er lagret i en skylagringskonto
+title: Generer en lerretsapp fra Excel | Microsoft Docs
+description: Bruk PowerApps til å generere en lerretsapp automatisk ved hjelp av en Excel-fil som er lagret på en skylagringskonto.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: 2af0c39aca43d316e79b4f928e114dcfb88caf31
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: f6051ca8348e8417302f49261d7ccac56a8aa9c9
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39194856"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470090"
 ---
-# <a name="generate-an-app-from-excel-in-powerapps"></a>Å generere en app fra Excel i PowerApps
-I dette emnet vil du automatisk generere din første app i PowerApps ved hjelp av data fra en Excel-tabell. Du velger en Excel-fil, genererer en app og kjører deretter appen du genererer. Alle genererte apper inkluderer skjermer for å bla gjennom poster, vise postdetaljer og opprette eller oppdatere poster. Du kan raskt få en fungerende app ved hjelp av Excel-data ved å generere en app, og deretter kan du tilpasse appen for bedre å møte dine behov. 
+# <a name="generate-a-canvas-app-from-excel-in-powerapps"></a>Generer en lerretsapp fra Excel i PowerApps
+
+Dette emnet beskriver hvordan du genererer din første lerretsapp i PowerApps automatisk ved hjelp av data fra en Excel-tabell. Du velger en Excel-fil, genererer en app og kjører deretter appen du genererer. Alle genererte apper inkluderer skjermer for å bla gjennom poster, vise postdetaljer og opprette eller oppdatere poster. Du kan raskt få en fungerende app ved hjelp av Excel-data ved å generere en app, og deretter kan du tilpasse appen for bedre å møte dine behov. 
 
 Excel-filen må være i en konto for lagring i skyen, for eksempel OneDrive, Google Drive eller Dropbox. Dette emnet bruker OneDrive for Business.
 

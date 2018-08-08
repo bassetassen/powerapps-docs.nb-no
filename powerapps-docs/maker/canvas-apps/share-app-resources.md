@@ -1,6 +1,6 @@
 ---
-title: Å dele ressurser som brukes i appen | Microsoft Docs
-description: Forstå hvordan ressursene som brukes i appen din deles når en app er delt
+title: Del ressurser som brukes i lerretsappen | Microsoft Docs
+description: Slik deler du ressurser lerretsappen bruker i PowerApps
 author: archnair
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/28/2016
 ms.author: archanan
-ms.openlocfilehash: 09d4f26139ae33195c666a2eb71d70e02b035f69
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 881a0eb85d252131d6249c171c95c0711e4887d4
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39194902"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471401"
 ---
-# <a name="share-app-resources"></a>Å dele app-ressurser
-Før du [deler en app](share-app.md) bør du vurdere ressurstypene som den er avhengig av, for eksempel ett eller flere av følgende:
+# <a name="share-canvas-app-resources-in-powerapps"></a>Del lerretsappressurser i PowerApps
+
+Før du [deler en lerretsapp](share-app.md), bør du vurdere ressurstypene den er avhengig av, for eksempel en eller flere av følgende:
 
 * en tilkobling til en datakilde
 * en lokal datagateway
@@ -30,6 +31,7 @@ Noen av disse ressursene deles automatisk når du deler appen. Andre ressurser k
 Du kan også dele tilkoblinger, egendefinerte koblinger og lokale datagatewayer med hele organisasjonen.
 
 ## <a name="connections"></a>Tilkoblinger
+
 Enkelte typer tilkoblinger, for eksempel SQL Server, deles automatisk, men krever at andre brukere oppretter sine egne tilkoblinger til datakilden eller kilder i appen.
 
 På [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) kan du bestemme om en tilkobling skal deles automatisk, og du kan oppdatere delingstillatelser. Klikk eller trykk på **Behandle** i det venstre navigasjonsfeltet, klikk eller trykk på **Tilkoblinger** og klikk eller trykk deretter på en tilkobling. Hvis **Del**-fanen vises, deles tilkoblingen automatisk.

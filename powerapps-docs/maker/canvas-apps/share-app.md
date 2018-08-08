@@ -1,6 +1,6 @@
 ---
-title: Å dele en app i Microsoft Docs
-description: Del appen ved å gi andre brukere tillatelse til å kjøre eller endre den
+title: Del en lerretsapp | Microsoft Docs
+description: Del lerretsappen ved å gi andre brukere tillatelse til å kjøre eller endre den
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 07/11/2018
 ms.author: anneta
-ms.openlocfilehash: 9c4bdc6e56f84b6724fcbe44cfe1f3e4c065edb3
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: eaea8049b573b619881ae0a2b6ecb2618e4bf192
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195316"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470642"
 ---
-# <a name="share-an-app-in-powerapps"></a>Å dele en app i PowerApps
+# <a name="share-a-canvas-app-in-powerapps"></a>Del en lerretsapp i PowerApps
 
-Når du har utviklet en app som skal ta seg av et forretningsbehov, angir du hvilke brukere i organisasjonen som kan kjøre, endre og dele appen på nytt. Angi hver bruker etter navn, eller angi en sikkerhetsgruppe i Azure Active Directory. Hvis alle kan dra nytte av appen, angir du at hele organisasjonen kan kjøre den.
+Når du har utviklet en lerretsapp som skal ta seg av et forretningsbehov, angir du hvilke brukere i organisasjonen som kan kjøre appen, og hvilke som kan endre den og til og med dele den på nytt. Angi hver bruker etter navn, eller angi en sikkerhetsgruppe i Azure Active Directory. Hvis alle kan dra nytte av appen, angir du at hele organisasjonen kan kjøre den.
 
 > [!IMPORTANT]
 > Du må også administrere tillatelser for datakilden eller -kildene som appen er basert på, slik som [Common Data Service for apper](#common-data-service-for-apps) eller [Excel](share-app-data.md), for at en delt app skal fungere som forventet. Du må kanskje også dele [andre ressurser](share-app-resources.md) som appen avhenger av, for eksempel flyter, gatewayer eller tilkoblinger.

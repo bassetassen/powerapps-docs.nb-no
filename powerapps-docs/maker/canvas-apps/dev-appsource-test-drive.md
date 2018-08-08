@@ -1,6 +1,6 @@
 ---
-title: Å la kunder testkjøre appene dine på AppSource | Microsoft Docs
-description: Å bruk AppSource til å dele apper med kunder, og generere kundeemner for virksomheten din.
+title: Tilby kunder en testversjon av lerretsappen din på AppSource | Microsoft Docs
+description: Bruk AppSource til å dele en lerretsapp med kunder, og generere kundeemner for virksomheten din.
 author: linhtranms
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/08/2017
 ms.author: litran
-ms.openlocfilehash: fb51ab2c671d695350e452dc6fb29efa583adfea
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 6499c0c2a7eb87ff56ec9e248f4a16e8b6c647f9
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023693"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470550"
 ---
-# <a name="let-customers-test-drive-your-apps-on-appsource"></a>Å la kunder testkjøre appene dine på AppSource
-Har du en lidenskap for å bygge apper i PowerApps? Har du en app du vil dele med kunder? Vi støtter nå en løsning for PowerApps-testversjon på [AppSource.com](https://appsource.microsoft.com), som en måte å dele apper med kunder samt generere kundeemner for bedriften din.
+# <a name="let-customers-test-drive-your-canvas-app-on-appsource"></a>Tilby kunder en testversjon av lerretsappen din på AppSource
+
+Er du glad i å bygge lerretsapper i PowerApps? Vil du dele en lerretsapp med kunder? [AppSource.com](https://appsource.microsoft.com) støtter testversjonsløsninger for PowerApps som en måte å dele apper med kunder på og generere kundeemner for bedriften din.
 
 ## <a name="what-is-a-test-drive-solution"></a>Hva er en testversjon?
+
 Med en testversjon kan kundene prøve en ekte app uten å måtte registrere seg for et PowerApps-abonnement eller installere programmer. Kundene logger seg bare på AppSource.com ved bruk av Azure Active Directory (AAD)-kontoen sin, og kjører appen i nettleseren. Uten en testversjon kan kundene bare lese om appen eller se en video som beskriver den. Med testversjon får kundene en bedre forståelse av hva løsningen er og hvilke funksjoner appen har. Og de kan faktisk prøve appen også. Kundene har ingen mulighet til å se hvordan appen er bygget, noe som beskytter åndsverket. Vi samler inn og deler kundeemneinformasjon for brukere som starter testversjonsappen, for å hjelpe deg med vekst i virksomheten din.
 
 Her kan du se et eksempel på en [appoppføring](https://go.microsoft.com/fwlink/?linkid=848867) på AppSource.com:

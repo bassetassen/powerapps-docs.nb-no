@@ -1,5 +1,5 @@
 ---
-title: Å skanne en strekkode | Microsoft Docs
+title: Skann en strekkode i en lerretsapp | Microsoft Docs
 description: Å skanne en rekke strekkodetyper, for eksempel UPC og Codabar
 author: AFTOwen
 manager: kvivek
@@ -9,19 +9,21 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 10/23/2016
 ms.author: anneta
-ms.openlocfilehash: befc72b875f7876bc0f9f907a094f0d97314c03c
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 631277dc533d9792f08bf6a94bf9c345889c6795
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023325"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470596"
 ---
 # <a name="scan-a-barcode-in-powerapps"></a>Å skanne en strekkode i PowerApps
-Skann flere typer strekkoder ved å opprette en app, og kjøre den på en enhet, for eksempel en telefon som har et kamera. Den numeriske tilsvarende strekkoden vises i en **Etikett**kontroll, og du kan laste opp denne dataen til en rekke [datakilder](connections-list.md).
+
+Skann flere typer strekkoder ved å opprette en lerretsapp og kjøre den på en enhet, for eksempel en telefon som har et kamera. Den numeriske tilsvarende strekkoden vises i en **Etikett**kontroll, og du kan laste opp denne dataen til en rekke [datakilder](connections-list.md).
 
 Hvis du ikke er kjent med PowerApps, kan du se [Komme i gang](getting-started.md).
 
 ## <a name="known-limitations"></a>Kjente begrensninger
+
 * Strekkoder må være minst 1 tomme (2,5 cm) høy og 1,5 tommer (4 cm) bred.
 * Hvis du vil skanne strekkoder ved hjelp av en telefon, må du holde den i stående retning, og flytte den sakte fra 7 tommer (18 cm) til 10 tommer (25 cm) bort fra strekkoden.
 * Lang strekkodetyper (for eksempel I2of5, som kan ha 15 eller flere tegn) kan gi avkuttet eller ellers feil resultater, spesielt hvis strekkoden ikke er tydelig skrevet ut.

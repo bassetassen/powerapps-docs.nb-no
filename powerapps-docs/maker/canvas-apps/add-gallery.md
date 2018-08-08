@@ -1,6 +1,6 @@
 ---
-title: Vis en liste over elementer | Microsoft Docs
-description: Bruk et galleri for å vise en liste over elementer i appen, og filtrer listen ved å angi et vilkår.
+title: Vis en liste over elementer i en lerretsapp | Microsoft Docs
+description: Bruk et galleri for å vise en liste over elementer i lerretsappen, og filtrer listen ved å angi et kriterium.
 author: karthik-1
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 09/28/2017
 ms.author: sharik
-ms.openlocfilehash: 4806d65416816897542973644da592f7e6b2e252
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 753a4508890f5ab007bef2a1f4d81bb46043a089
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020979"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470504"
 ---
 # <a name="show-a-list-of-items-in-powerapps"></a>Vis en liste over elementer i PowerApps
-Vis en liste over elementer fra en datakilde ved å legge til en **[Galleri](controls/control-gallery.md)**-kontroll i appen. Dette emnet bruker Excel som datakilde. Filtrer listen ved å konfigurere **Galleri**-kontrollen, for å vise bare elementene som samsvarer med filterkriteriet i en **[Tekstinndata](controls/control-text-input.md)**-kontroll.
+
+Vis en liste over elementer fra en datakilde ved å legge til en **[Galleri](controls/control-gallery.md)**-kontroll i lerretsappen. Dette emnet bruker Excel som datakilde. Filtrer listen ved å konfigurere **Galleri**-kontrollen, for å vise bare elementene som samsvarer med filterkriteriet i en **[Tekstinndata](controls/control-text-input.md)**-kontroll.
 
 ## <a name="prerequisites"></a>Forutsetninger
+
 * Finn ut hvordan du [legger til og konfigurerer en kontroll](add-configure-controls.md) i PowerApps.
 
 * Konfigurering av eksempeldataene:
