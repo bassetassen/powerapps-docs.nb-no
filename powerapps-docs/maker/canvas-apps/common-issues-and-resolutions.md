@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 08/02/2018
 ms.author: anneta
-ms.openlocfilehash: 34932178930e36d686c0e040dc707e2aacb083c2
-ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
+ms.openlocfilehash: ef2a7a040edefcbffff9283a95afbce60bb7ed53
+ms.sourcegitcommit: f9857749d74e97b400acc7ee42b8d6ab2025f344
 ms.translationtype: HT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 08/02/2018
-ms.locfileid: "39470343"
+ms.locfileid: "39476925"
 ---
 # <a name="common-issues-and-resolutions-for-powerapps"></a>Vanlige problemer og løsninger for PowerApps
 
@@ -31,7 +31,7 @@ Denne artikkelen viser noen vanlige problemer som kan oppstå når du bruker Pow
 
 1. **Ny publisering av apper** (2. august 2018)
 
-    Hvis du ikke har oppdatert appen din på flere måneder, må du publisere den på nytt for å synkronisere med den nyeste versjonen av PowerApps, som inkluderer ytelsesforbedringer og andre løsninger.
+    Hvis du ikke har oppdatert appen på flere måneder, må du publisere den på nytt for å synkronisere den med den nyeste versjonen av PowerApps, som inkluderer ytelsesforbedringer og andre løsninger.
 
 1. <a name="out-of-memory"></a>**Leseren går tom for minne** (23. juli 2018)
 
