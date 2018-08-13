@@ -152,4 +152,4 @@ Hvis du legger til én eller flere **Bilde**-kontroller i appen din, kan du vise
 * Fokusindikatorer må være klart synlige hvis grafikken brukes som en knapp. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
 
     > [!NOTE]
-  > Når  **[TabIndex](properties-accessibility.md)**-verdien er null eller større, gjengis **bildet** som en knapp. Det finnes ingen endring i utseendet, men skjermlesere identifiserer bildet som en knapp. Når **[TabIndex](properties-accessibility.md)**-verdien er mindre enn null, identifiseres **bildet** som et bilde.
+  > Når **[TabIndex](properties-accessibility.md)**-verdien er null eller større, gjengis **bildet** som en knapp. Det finnes ingen endring i utseendet, men skjermlesere identifiserer bildet som en knapp. Når **[TabIndex](properties-accessibility.md)**-verdien er mindre enn null, identifiseres **bildet** som et bilde.
