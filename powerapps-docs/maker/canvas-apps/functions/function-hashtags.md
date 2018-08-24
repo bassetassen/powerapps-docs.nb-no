@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: c2b4cff0cc9d579cd76dad97a3ab1b160f4089ea
-ms.sourcegitcommit: 0f6d7bb9e524202c065b9a7ef92a7f54bdc4bc7c
+ms.openlocfilehash: 66fad5a1afd9086bf07da88a93ac68b756dfb3d6
+ms.sourcegitcommit: 521a7b8e6ae72a211045b54d153a8a8c8f59172e
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39022060"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40021322"
 ---
 # <a name="hashtags-function-in-powerapps"></a>HashTags-funksjonen i PowerApps
 Henter ut emneknaggene (#strenger) fra en streng.
@@ -38,7 +38,7 @@ Henter ut emneknaggene (#strenger) fra en streng.
 ### <a name="step-by-step"></a>Trinn for trinn
 1. Legg til en **[Tekstinndata](../controls/control-text-input.md)**-kontroll, gi den navnet **Tweet**, og skriv inn denne setningen:
    
-    **This #app is #AMAZING and can #coUnt123 or #123abc but not #1-23 or #$\*(#@")**
+    **This #app is #AMAZING and can #coUnt123 or #123abc but not #1-23 or #$\*(#\@")**
 2. Legg til et loddrett egendefinert galleri, og angi **[Elementer](../controls/properties-core.md)**-egenskapen som denne funksjonen:
    
     **HashTags(Tweet.Text)**

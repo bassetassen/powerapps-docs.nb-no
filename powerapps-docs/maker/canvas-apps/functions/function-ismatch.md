@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 02/05/2017
 ms.author: gregli
-ms.openlocfilehash: ac13b62e77b5d8ed35939983b3989b5edb13361c
-ms.sourcegitcommit: 0f6d7bb9e524202c065b9a7ef92a7f54bdc4bc7c
+ms.openlocfilehash: 281e94f959fc87aae53e6881cf86ee0db5e53115
+ms.sourcegitcommit: 521a7b8e6ae72a211045b54d153a8a8c8f59172e
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39018012"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40021299"
 ---
 # <a name="ismatch-function-in-powerapps"></a>IsMatch-funksjonen i PowerApps
 Tester om en tekststreng samsvarer med et mønster.
@@ -68,7 +68,7 @@ Med forhåndsdefinerte mønstre er det enkelt å samsvare med et sett med tegn e
 | **Any** |Samsvarer med et hvilket som helst tegn. |**.** |
 | **Comma** |Samsvarer med et komma. |**,** |
 | **Digit** |Samsvarer med ett enkelt siffer (fra 0 til 9). |**\\d** |
-| **Email** |Samsvarer med en e-postadresse som inneholder en krøllalfa (@) og et domenenavn som inneholder et punktum (.) |**.+@.+\\.[^\\.]{2,}** |
+| **Email** |Samsvarer med en e-postadresse som inneholder en krøllalfa (\@) og et domenenavn som inneholder et punktum (.) |**.+\@.+\\.[^\\.]{2,}** |
 | **Hyphen** |Samsvarer med en bindestrek. |**\\-** |
 | **LeftParen** |Samsvarer med en venstreparentes «(». |**\\(** |
 | **Letter** |Samsvarer med en bokstav. |**\\p{L}** |

@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/09/2017
 ms.author: mblythe
-ms.openlocfilehash: 9035809f989ad4b0215d4a8eba5d693d145b7f66
-ms.sourcegitcommit: 0f6d7bb9e524202c065b9a7ef92a7f54bdc4bc7c
+ms.openlocfilehash: 9f02b752444153681e30b39c3fa9d8a8b9e0cd6d
+ms.sourcegitcommit: 521a7b8e6ae72a211045b54d153a8a8c8f59172e
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39471217"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40021391"
 ---
 # <a name="develop-offline-capable-canvas-apps-with-powerapps"></a>Utvikle lerretsapper som fungerer i frakoblet tilstand med PowerApps
 
@@ -103,7 +103,7 @@ Denne formelen kontrollerer om enheten er koblet til Internett:
 
 3. Legg til fire **Etikett**-kontroller for å vise dataene fra hver tweet, og angi **Tekst**-egenskapen til:
    * **ThisItem.TweetText**
-   * **ThisItem.UserDetails.FullName & " @" & ThisItem.UserDetails.UserName**
+   * **ThisItem.UserDetails.FullName & " \@" & ThisItem.UserDetails.UserName**
    * **"RT: " & ThisItem.RetweetCount**
    * **Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)**
 4. Legg til en **Bilde**-kontroll, og angi **Bilde**-egenskapen til **ThisItem.UserDetails.ProfileImageUrl**.
