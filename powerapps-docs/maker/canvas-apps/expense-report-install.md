@@ -9,32 +9,32 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: f0fc0d9407511730145002bf109957b0878398bc
-ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 5c2d9e2b815d1ff2c3dc80bc6c37f1c2e78364ac
+ms.sourcegitcommit: b35470285b96750d660335284d830b4d0028befb
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39470044"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "42859508"
 ---
 # <a name="install-and-configure-the-expense-report-sample-for-canvas-apps-in-powerapps"></a>Installer og konfigurer utgiftsrapporteksemplet for lerretsapper i PowerApps
 
-Trinnvise instruksjoner for installering og konfigurering av utgiftsrapporteksemplet.
+Trinnvise instruksjoner for installering og konfigurering av utgiftsrapporteksemplet. Du kan også forhåndsvise eksempelappen [her](https://aka.ms/previewmyexpenses).
 
 Estimert tid for å fullføre disse trinnene: **10 til 15 minutter**
 
-Hvis du vil se en demonstrasjon av denne prosessen, kan du ta en titt på denne videoen.
-
-[![Video om hvordan du installerer utgiftsrapporten](./media/expense-report-install/expense-report-install-video.png)](https://youtu.be/DOR28V5kCkw)
-
-## <a name="overview-of-the-sample"></a>Oversikt over eksemplet
+> [!TIP]
+> Se [denne videoen](https://youtu.be/kJXZPILfbwU) for en demonstrasjon av hvordan du bruker eksempelappen for utgiftsrapport. 
 
 Spor utgiftsrapporter fra sending til godkjennelse. Legg sammen elementer som individuelle utgifter og send for godkjennelse når det er klart. Denne appen krever litt konfigurasjon for å tilpasses dine behov.
 
 ![Åpningsskjerm for utgiftsrapport i PowerApps](./media/expense-report-install/expense-report-powerapp.png)
 
-Se denne videoen for å se hvordan du bruker eksemplet for utgiftsrapport for PowerApp.
-
-[![Video om hvordan du installerer utgiftsrapporten](./media/expense-report-install/expense-report-demo-video.png)](https://youtu.be/h6E9cdrOvMU)
+> [!TIP]
+> Se [denne](https://youtu.be/h6E9cdrOvMU) videoen for å se hvordan du bruker eksemplet for utgiftsrapport for PowerApps.
 
 ## <a name="prerequisites"></a>Forutsetninger
 
@@ -377,9 +377,6 @@ Denne listen inneholder linjeelementene som er knyttet til utgiftsrapporten.
 2. Klikk på **ellipsen** ved siden av utgiftsrapporten for PowerApp.
 3. Klikk på **Åpne**.
 
-Se denne videoen for å se hvordan du bruker eksemplet for utgiftsrapport for PowerApp.
-
-[![Video om hvordan du installerer utgiftsrapporten](./media/expense-report-install/expense-report-demo-video.png)](https://youtu.be/h6E9cdrOvMU)
 
 ## <a name="next-steps"></a>Neste trinn
 - [Å tilpasse et SharePoint-listeskjema](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)
