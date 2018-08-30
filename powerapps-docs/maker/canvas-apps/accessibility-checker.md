@@ -1,6 +1,6 @@
 ---
-title: Å gjennomgå en lerretsapp for tilgjengelighet | Microsoft Docs
-description: Å identifisere måter å gjøre en lerretsapp mer tilgjengelig på for brukere med syns-, hørsel- og andre typer hemminger
+title: Gjennomgå en lerretsapp for tilgjengelighet | Microsoft Docs
+description: Identifiser måter å gjøre en lerretsapp mer tilgjengelig på for brukere med syns-, hørsel- og andre typer hemminger
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: article
@@ -13,7 +13,7 @@ ms.contentlocale: nb-NO
 ms.lasthandoff: 07/13/2018
 ms.locfileid: "39023992"
 ---
-# <a name="review-a-canvas-app-for-accessibility-in-powerapps"></a>Å gjennomgå en lerretsapp for tilgjengelighet i PowerApps
+# <a name="review-a-canvas-app-for-accessibility-in-powerapps"></a>Gjennomgå en lerretsapp for tilgjengelighet i PowerApps
 
 Brukere med syns-, hørsel- eller andre hemminger kan lettere bruke lerretsappen hvis du tar tilgjengelighet i betraktning når du utformer hvordan appen skal se ut og fungere. Hvis du ikke er sikker på hvordan du gjør appen mer tilgjengelig, kan du kjøre tilgjengelighetskontrollen i PowerApps Studio. Dette verktøyet finner ikke bare potensielle tilgjengelighetsproblemer, men forklarer også hvorfor hvert av dem kan være et potensielt problem for brukere som har en bestemt funksjonshemning, og tilbyr forslag til hvordan du løser hvert problem.
 Tilgjengelighetskontrollen oppdager problemer med skjermleser og tastatur for deg, og du kan finne informasjon om hvordan du løser problemer med fargekontrast ved hjelp av [tilgjengelige farger](accessible-apps-color.md).
@@ -42,7 +42,7 @@ Tilgjengelighetskontrollen hjelper deg med å identifisere innstillinger du kans
 
 5. Hvis du bestemmer deg for å ta for deg et problem, merker du det for å åpne den berørte egenskapen.
 
-6. Når du endrer én eller flere egenskaper, velger du **Merk av på nytt** for å oppdatere listen over problemer.
+6. Når du endrer en eller flere egenskaper, velger du **Merk av på nytt** for å oppdatere listen over problemer.
 
     Reparerte enheter forsvinner fra listen, og nye enheter kan vises.
 
@@ -61,7 +61,7 @@ Tilgjengelighetskontrollen klassifiserer hvert problem som en feil, en advarsel 
 | **Mangler tilgjengelig etikett**           | Feil    | Når den tilgjengelige etikettegenskapen til en interaktiv kontroll ikke inneholder tekst. En interaktiv kontroll kan være interaktiv i seg selv, som en knapp, eller ha interaktive egenskaper. Du kan for eksempel ha angitt **OnSelect**-egenskapen til et bilde eller angitt **TabIndex**-egenskapen til 0 eller høyere.  | Rediger den tilgjengelige etikettegenskapen for å beskrive elementet. | Hvis den tilgjengelige etikettegenskapen ikke inneholder tekst, forstår ikke personer som ikke kan se skjermen, hva som vises på bilder og i kontroller. |
 | **Fokus vises ikke**                | Feil    | Når **FocusBorderThickness** for en kontroll er angitt til 0. Det er god praksis å påse at det er god fargekontrast mellom fokuskantlinjen og selve kontrollen, slik at det er lett å se. | Endre egenskapen **FocusedBorderThickness** til en verdi som er høyere enn 0.  | Hvis fokus ikke vises, kan ikke personer som ikke bruker mus, se fokus når de samhandler med appen.   |
 | **Manglende teksting for hørselshemmede**                   | Advarsel  | Når egenskapen **ClosedCaptionsURL** for en **Lyd**- eller **Video**-kontroll er tom. | Angi egenskapen **ClosedCaptionsURL** til nettadressen for teksting for hørselshemmede. | Uten teksting for hørselshemmede er det ikke sikkert funksjonshemmede vil oppfatte informasjonen fra et video- eller lydsegment. |
-| **Mangler nyttige kontrollinnstillinger**   | Advarsel  | Når én eller flere innstillinger (for eksempel å vise etiketter og markører for diagrammer og vise standardkontroller for **Lyd**-, **Video**- og **Penneinndata**-kontroller) er slått av. | Velg advarselen, og angi deretter egenskapen til **sann**. | Når du endrer denne egenskapsinnstillingen, gir du brukeren bedre informasjon om hvordan kontrollene i appen fungerer. |
+| **Mangler nyttige kontrollinnstillinger**   | Advarsel  | Når én eller flere innstillinger (for eksempel å vise etiketter og markører for diagrammer og vise standardkontroller for **Lyd**-, **Video**- og **Penneinndata**-kontroller) er slått av. | Velg advarselen, og angi deretter **sann** for egenskapen. | Når du endrer denne egenskapsinnstillingen, gir du brukeren bedre informasjon om hvordan kontrollene i appen fungerer. |
 | **HTML er ikke tilgjengelig**           | Advarsel  | Når en annen kontroll enn en HTML-tekstkontroll inneholder HTML. I så fall støtter ikke PowerApps tilgjengeligheten til egendefinerte HTML-elementer. | Bruk en annen metode enn HTML, eller fjern HTML fra dette elementet. | Appen vil ikke fungere på riktig måte, eller være tilgjengelig, hvis du legger til interaktive HTML-elementer. |
 | **Slå av autostart**                 | Advarsel  | Når **Lyd**- eller **Video**-kontrollens **Autostart**-egenskap er angitt til **sann**. | Angi kontrollens **Autostart**-egenskap til **usann**. | Video- og lydfiler som spilles av automatisk, kan forstyrre brukerne. La dem velge om de vil spille av et klipp. |
 | **Endre skjermnavn**                 | Tips      | Når en skjerm har et standardnavn som leses opp av skjermlesere når brukere navigerer i appen. | Gi skjermen et navn som beskriver hva som er på skjermen, eller hva den brukes til.| Blinde, svaksynte eller personer med lesevansker er avhengige av skjermnavn for å navigere med skjermleseren. |
@@ -71,6 +71,6 @@ Tilgjengelighetskontrollen klassifiserer hvert problem som en feil, en advarsel 
 
 ## <a name="next-steps"></a>Neste trinn
 
-- [Å opprette apper som er enkle å forstå](accessible-apps.md)
+- [Opprett apper som er enkle å forstå](accessible-apps.md)
 - [Tilgjengelige farger](accessible-apps-color.md)
 - [Egenskaper for tilgjengelighet](controls/properties-accessibility.md)
