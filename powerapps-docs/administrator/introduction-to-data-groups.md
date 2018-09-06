@@ -8,12 +8,18 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 6a6217c0a344d0501c8a856b0632397044ceb465
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: e2424207cdc70f2f8135fa6ef5559cec2fc637d9
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349643"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42834002"
 ---
 # <a name="data-groups"></a>Datagrupper
 Med datagrupper kan du enkelt kategorisere tjenester i en [policy for hindring av datatap (DLP)](prevent-data-loss.md). De to tilgjengelige datagruppene er gruppene **Bare forretningsdata** og **Ingen forretningsdata er tillatt**. Organisasjoner kan selv bestemme hvilke tjenester de plasserer i en bestemt datagruppe. En god måte å kategorisere tjenester på, er å plassere dem i grupper, basert på innvirkningen på organisasjonen. Alle tjenester plasseres i datagruppen **Ingen forretningsdata er tillatt** som standard. Du administrerer tjenestene i en datagruppe når du oppretter eller endrer egenskapene til en DLP-policy fra administrasjonssenteret.

@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 10/20/2017
 ms.author: mblythe
-ms.openlocfilehash: e48da773f34eb2abedd65c3ea88aab1bb184da02
-ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: c9cd4008bcb93e05d696fec082e400ee9661785b
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39470780"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42835399"
 ---
 # <a name="integrate-powerapps-into-websites-and-other-services"></a>Integrering av PowerApps på nettsteder og andre tjenester
 Appene du utvikler er gjerne mest nyttige når de er tilgjengelige direkte hvor arbeidet utføres. Med PowerApps kan du bygge inn lerretsapper i en iframe, slik at du kan integrere disse appene på nettsteder og i andre tjenester, for eksempel Power BI eller SharePoint.

@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/24/2018
 ms.author: fikaradz
-ms.openlocfilehash: 604b48a70f54a011e803342191e51dda12cbca3a
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: e469cc3769c8deeb5046dc79f34b9ae42788b2d2
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39016149"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42865178"
 ---
 # <a name="rich-text-editor-control-experimental-in-powerapps"></a>Redigeringskontrollen for rik tekst (eksperimentell) i PowerApps
 En eksperimentell kontroll som gjør at sluttbrukere kan formatere teksten i et WYSIWYG-redigeringsområde.  Utdataformatet er HTML.

@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/01/2017
 ms.author: fikaradz
-ms.openlocfilehash: a6f475277e7cde25fea350634aa60e8b150e304d
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: b724bff09e02a3f69166b3c3357833804c8172b6
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018587"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42834846"
 ---
 # <a name="show-items-of-different-heights-in-a-powerapps-gallery"></a>Å vise elementer med ulike høyder i et galleri for PowerApps
 Hvis forskjellige elementer i datasettet inneholder forskjellige mengder med data i samme felt, kan du vise elementer som inneholder flere data i sin helhet, uten å legge til en tom plass etter elementer som inneholder færre data. Legg til og konfigurer en gallerikontroll for **fleksibel høyde**, slik at du kan:

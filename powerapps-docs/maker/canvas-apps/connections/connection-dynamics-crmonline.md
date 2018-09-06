@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.date: 07/12/2017
 ms.author: matp
 ms.reviewer: ''
-ms.openlocfilehash: 9bd73487d744f5597f934603bbf1d742ff08baea
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 3c061d43a766bfdcd0a560c5959756f79751a7f2
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195408"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42849147"
 ---
 # <a name="connect-to-dynamics-365-from-powerapps"></a>Å koble til Dynamics 365 fra PowerApps
 Med PowerApps kan du raskt generere, tilpasse, dele og kjøre mobilapper med lite eller ingen kode. Ved hjelp av Dynamics 365-koblingen kan du på bare noen minutter opprette nyttige mobilapper til å dele med organisasjonen.

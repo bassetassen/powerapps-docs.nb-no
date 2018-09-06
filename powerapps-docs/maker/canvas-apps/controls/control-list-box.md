@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 30c55591e410b5526fc85b76b06002c2266e1867
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: a2cb87cf68457771605e78970b8d7a923af61fce
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39016586"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42835176"
 ---
 # <a name="list-box-control-in-powerapps"></a>Liste-kontrollen i PowerApps
 En liste der brukeren kan velge ett eller flere elementer.
@@ -27,7 +31,7 @@ En liste der brukeren kan velge ett eller flere elementer.
 
 **[Elementer](properties-core.md)** – kilden til dataene som vises i en kontroll, for eksempel et galleri, en liste eller et diagram.
 
-[!INCLUDE [long-items](../../../includes/long-items.md)]
+Når du legger til et galleri, eller en liste, viser egenskapslisten **Elementer** som standard. På denne måten kan du enkelt angi dataene som den nye kontrollen skal vise. Du kan for eksempel angi **Elementer**-egenskapen for et galleri til **Konto**-tabellen i Salesforce, en tabell med navn **Beholdning** som du opprettet i Excel og lastet opp i skyen, eller en SharePoint-liste med navn **ConferenceSpeakers**.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
 **[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere.

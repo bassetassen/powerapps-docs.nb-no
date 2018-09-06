@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/14/2016
 ms.author: litran
-ms.openlocfilehash: 865e5f419d5ff318ce232fff16b9240039129a29
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: c4e02adfdd5c1c4e49bb1a605ccfff463369f750
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39194994"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42835294"
 ---
 # <a name="working-with-environments-and-microsoft-powerapps"></a>Å arbeide med miljøer og Microsoft PowerApps
 Du kan arbeide i forskjellige miljøer og enkelt å bytte mellom dem med PowerApps. For en oversikt over miljøer, kan du se [Miljøoversikt](../../administrator/environments-overview.md), som forklarer i detalj hvorfor du bruker miljøer, og hvordan du kan opprette og administrere dem. Omfanget av denne artikkelen dekker følgende emner om miljø:

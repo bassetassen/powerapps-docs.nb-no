@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 03/11/2017
 ms.author: aneesa
-ms.openlocfilehash: 8915d8dc6f87b60a040dc26891cf45b9e243bb72
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: ee8573cb9ae4df5ac42deefad4ac67aede3a3502
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023969"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42836281"
 ---
 # <a name="use-the-entity-form-control"></a>Bruke enhetsskjemakontrollen
 Opprett apper på en raskere måte ved å bruke **enhetsskjemakontrollen** til å legge til funksjonsrike skjemaer for Common Data Service-enheter.

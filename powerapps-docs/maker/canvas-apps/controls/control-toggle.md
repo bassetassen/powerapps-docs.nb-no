@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: a2361e2572d62ca4a2574cd668ba0f1834d04ab9
-ms.sourcegitcommit: 0f6d7bb9e524202c065b9a7ef92a7f54bdc4bc7c
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 6ab5ddf93351547afb752e838ab4929c7138df87
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39022463"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42849229"
 ---
 # <a name="toggle-control-in-powerapps"></a>Vekslekontrollen i PowerApps
 En kontroll som brukeren kan slå på eller av ved å flytte håndtaket.

@@ -7,12 +7,18 @@ ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
 ms.author: jimholtz
-ms.openlocfilehash: e2c00f4ab10b2dc6cecc63d9539ffcf86a5bfcb8
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: 41f557b7b4def385a505e3bc3047354add81955e
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39348861"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42832452"
 ---
 # <a name="download-a-list-of-active-users-in-your-tenant"></a>Last ned en liste over aktive brukere i leieren
 Hvis du er en global 365-administrator eller administrator for tenanten til Azure Active Directory, kan du laste ned en liste over aktive brukere i tenanten, slik at du ikke bare kan se hvem som har tilgang til PowerApps, Microsoft Flow eller begge, men også lisensene tilordnet til disse brukerne.

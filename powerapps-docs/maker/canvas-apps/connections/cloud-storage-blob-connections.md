@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.date: 07/12/2016
 ms.author: lanced
 ms.reviewer: anneta
-ms.openlocfilehash: 8e6aa988344c1ac04c2ff11eaa9d828cc8b929bc
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 10a6178c63495b929eb6e5885ded9394b31a11ef
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195661"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42850170"
 ---
 # <a name="connect-to-cloud-storage-from-powerapps"></a>Å koble til lagring i skyen fra PowerApps
 PowerApps tilbyr flere tilkoblinger for lagring i skyen. Ved hjelp av noen av disse tilkoblingene kan du lagre en Excel-fil og bruke informasjonen i den i hele appen. Disse tilkoblingene omfatter:  
