@@ -11,12 +11,17 @@ manager: kvivek
 ms.custom: ''
 ms.reviewer: ''
 ms.assetid: ''
-ms.openlocfilehash: 83670a844c62a6daea489d5484641e9c457653f8
-ms.sourcegitcommit: bcfefb30b12cf94815dd9a0fd8cad29a8272d96e
+search.audienceType:
+- enduser
+search.app:
+- PowerApps
+- D365CE
+ms.openlocfilehash: 8396d62e0f427d005f6b9e486820316be869ed15
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37925666"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42826733"
 ---
 # <a name="how-do-i-find-and-run-apps"></a>Hvordan finner og kjører jeg apper?
 Apputviklere kan opprette tilpassede oppgave – og rollebaserte *lerrets*apper som jobber på samme måte som deg, enten du er en mobil arbeider i felten eller en lege på et travelt sykehus. Utviklere av lerretsapper kan tilpasse nesten alle aspekter av en lerretsapp, og kan koble til flere datakilder for å hjelpe brukere med å fullføre fokuserte oppgaver.
