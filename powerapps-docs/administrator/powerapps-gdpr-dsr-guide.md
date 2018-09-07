@@ -8,12 +8,18 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: ae73d5df51b2656fc4f33e7258078140a180926d
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: fddbb40e7b4b5d94b1df02e32af6316cce0a17d9
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349206"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42862891"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-for-powerapps-customer-data"></a>Svar på DSR-forespørsler om kundedata for PowerApps
 
@@ -68,7 +74,7 @@ Modelldrevne apper og tillatelser for modelldrevne apper  | Utforming av modelld
 
 I PowerApps kan du finne personopplysninger for en bestemt bruker på følgende måter:
 
-- **Nettstedstilgang**: [PowerApps-området](https://web.powerapps.com), [PowerApps-administrasjonssenteret](https://admin.powerapps.com/) og [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+- **Nettstedstilgang**: [PowerApps-området](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), [PowerApps-administrasjonssenteret](https://admin.powerapps.com/) og [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 - **PowerShell-tilgang**: PowerApps-cmdleter (for [apputviklere](https://go.microsoft.com/fwlink/?linkid=871448) og [administratorer](https://go.microsoft.com/fwlink/?linkid=871804)) og [cmdleter for lokale gatewayer](https://go.microsoft.com/fwlink/?linkid=872238)
 
 Du finner detaljerte instruksjoner om hvordan du kan bruke disse metodene til å finne personopplysninger for en bestemt bruker for hver av disse ressurstypene, i [Responding to Data Subject Rights (DSR) requests to export PowerApps customer data](powerapps-gdpr-export-dsr.md) (Svar på DSR-forespørsler om eksport av kundedata for PowerApps).

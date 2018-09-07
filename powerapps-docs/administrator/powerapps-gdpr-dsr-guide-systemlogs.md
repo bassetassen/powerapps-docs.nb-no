@@ -8,12 +8,18 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 0511022621d891a6e45b27f1440e614df8b105a0
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: d2edace99a540fae449efb6d5d9badf5251cb33c
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349137"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42864883"
 ---
 # <a name="responding-to-dsr-requests-for-system-generated-logs-in-powerapps-microsoft-flow-and-common-data-service-for-apps"></a>Svar på DSR-forespørsler om systemgenererte logger i PowerApps, Microsoft Flow og Common Data Service for Apps
 Microsoft gir deg muligheten til å få tilgang til, eksportere og slette systemgenererte logger som kan anses som personlige under den brede definisjonen av *personopplysninger* i EUs personvernforordning (GDPR). Her er noen eksempler på systemgenererte logger som kan anses som personlige under GDPR:
@@ -103,13 +109,13 @@ Slik sletter du systemgenererte logger:
 
 ## <a name="determining-tenant-type"></a>Å fastslå tenanttype
 Hvis du vil finne ut om du er bruker av en administrert eller ikke-administrert tenant, kan du utføre følgende handlinger:
-1. Åpne følgende nettadresse i en nettleser, og pass på å erstatte e-postadressen din i nettadressen:[ https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1](https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1).
+1. Åpne følgende nettadresse i en nettleser, og pass på å erstatte e-postadressen din i nettadressen:[ https://login.windows.net/common/userrealm/name@contoso.com?api-version=2.1](https://login.windows.net/common/userrealm/name@contoso.com?api-version=2.1).
 
 2. Hvis du er medlem av en **ikke-administrert tenant**, får du se en `"IsViral": true` i svaret.
   ```
       {
       ...
-      "Login": "foobar@unmanagedcontoso.com",
+      "Login": "name@unmanagedcontoso.com",
       "DomainName": "unmanagedcontoso.com",
       "IsViral": **true**,
       ...

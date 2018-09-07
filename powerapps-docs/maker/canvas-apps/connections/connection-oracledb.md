@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/14/2017
 ms.author: lanced
-ms.openlocfilehash: 6eea40490b7a41ae95445135fabbc33801386c4d
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: f431373b2c36a84b54a3241ad2d49af019c37419
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021991"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42858431"
 ---
 # <a name="connect-to-an-oracle-database-from-powerapps"></a>Koble til en Oracle Database fra PowerApps
 Vis tabeller, og opprett, les, oppdater og slett tabellrader i en Oracle Database etter at du oppretter en tilkobling og utvikler en app i PowerApps. Tilkobling til Oracle Database støtter full delegering av filtrering, sortering og andre funksjoner, men ikke utløsere eller lagrede prosedyrer.

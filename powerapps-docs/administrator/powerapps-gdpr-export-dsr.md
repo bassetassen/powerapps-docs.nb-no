@@ -8,17 +8,23 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: cea8cf64a27e8468e9256df4e2e1239c32950df3
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: 59cf670ee4b0aa9f9845a86a1d89bcb64329f2d4
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349482"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42856776"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-to-export-powerapps-customer-data"></a>Svar på DSR-forespørsler om eksport av kundedata for PowerApps
 «Retten til dataportabilitet» gir en bruker rett til å be om en kopi av personopplysningene sine i et elektronisk format (det vil si et strukturert, velkjent, maskinlesbart og interoperabelt format) som kan overføres til en annen datakontrollør:
 
-* Nettstedstilgang: [PowerApps-portalen](https://web.powerapps.com), [PowerApps-administrasjonssenteret](https://admin.powerapps.com/) og [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+* Nettstedstilgang: [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), [PowerApps-administrasjonssenteret](https://admin.powerapps.com/) og [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 
 * PowerShell-tilgang: PowerApps [cmdleter for apputviklere](https://go.microsoft.com/fwlink/?linkid=871448), [cmdleter for administratorer](https://go.microsoft.com/fwlink/?linkid=871804) og [cmdleter for lokale gatewayer](https://go.microsoft.com/fwlink/?linkid=872238)
 
@@ -40,12 +46,12 @@ PowerApps-brukerinnstillinger, brukerappinnstillinger og varslinger | | Apputvik
 
 > ** I Common Data Service (CDS) for Apps blir miljøtillatelser og tillatelser for modelldrevne apper lagret som oppføringer i databaseinstansen for CDS for Apps hvis du har opprettet en database i miljøet. For å få en veiledning i hvordan du svarer på DSR-forespørsler for brukere som bruker CDS for Apps, se [Svar på forespørsler om dataemnerettigheter for kundedata for Common Data Service for Apps](common-data-service-gdpr-dsr-guide.md).
 
-> *** En administrator kan bare få tilgang til disse ressursene fra [PowerApps-portalen](https://web.powerapps.com) hvis eieren av ressursen eksplisitt har gitt vedkommende tilgang. Hvis administratoren ikke har fått tilgang, må han eller hun bruke [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804).
+> *** En administrator kan bare få tilgang til disse ressursene fra [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) hvis eieren av ressursen eksplisitt har gitt vedkommende tilgang. Hvis administratoren ikke har fått tilgang, må han eller hun bruke [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804).
 
 ## <a name="prerequisites"></a>Forutsetninger
 
 ### <a name="for-users"></a>For brukere
-Alle brukere som har en gyldig PowerApps-lisens, kan utføre brukeroperasjonene som beskrevet i dette dokumentet, ved hjelp av [PowerApps-portalen](https://web.powerapps.com) eller [cmdleter for apputviklere](https://go.microsoft.com/fwlink/?linkid=871448).
+Alle brukere som har en gyldig PowerApps-lisens, kan utføre brukeroperasjonene som beskrevet i dette dokumentet, ved hjelp av [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) eller [cmdleter for apputviklere](https://go.microsoft.com/fwlink/?linkid=871448).
 
 ### <a name="for-admins"></a>For administratorer
 For at du skal kunne utføre administrasjonsoperasjonene som er beskrevet i dette dokumentet, ved å bruke administrasjonssenteret for PowerApps, administrasjonssenteret for Microsoft Flow eller [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804), må du ha en følgende:
@@ -126,7 +132,7 @@ I CDS for Apps blir rolletildelingene lagret som oppføringer i databaseinstanse
 ## <a name="step-3-export-personal-data-contained-within-canvas-apps-created-by-the-user"></a>Trinn 3: Eksporter personopplysninger innenfor lerretsapper opprettet av brukeren
 
 ### <a name="powerapps-portal"></a>PowerApps-portalen
-En bruker kan eksportere en app fra [PowerApps-portalen](https://web.powerapps.com). Du finner trinnvise instruksjoner om hvordan du eksporterer en app, i [Exporting an app](environment-and-tenant-migration.md#exporting-an-app) (Eksport av apper).
+En bruker kan eksportere en app fra [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Du finner trinnvise instruksjoner om hvordan du eksporterer en app, i [Exporting an app](environment-and-tenant-migration.md#exporting-an-app) (Eksport av apper).
 
 ### <a name="powerapps-admin-center"></a>Administrasjonssenteret for PowerApps
 Administratorer kan eksportere apper som er opprettet av en bruker, fra [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) ved å følge disse trinnene:
@@ -147,7 +153,7 @@ Administratorer kan eksportere apper som er opprettet av en bruker, fra [adminis
 
     ![Gi en bruker tilgang](./media/powerapps-gdpr-export-dsr/grant-access.png)
 
-5. Når du har tilgang til alle brukernes apper, kan du eksportere en app fra [PowerApps-portalen](https://web.powerapps.com). Du finner trinnvise instruksjoner om hvordan du eksporterer en app, i [Exporting an app](environment-and-tenant-migration.md#exporting-an-app) (Eksport av apper).
+5. Når du har tilgang til alle brukernes apper, kan du eksportere en app fra [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Du finner trinnvise instruksjoner om hvordan du eksporterer en app, i [Exporting an app](environment-and-tenant-migration.md#exporting-an-app) (Eksport av apper).
 
 ### <a name="powershell-cmdlets-for-admins"></a>PowerShell-cmdleter for administratorer
 Administratorer kan eksportere apper som har blitt opprettet av en bruker, ved hjelp av funksjonen **Get-AdminApp** i [PowerShell-cmdleter for PowerApps-administratorer](https://go.microsoft.com/fwlink/?linkid=871804):
@@ -274,7 +280,7 @@ Get-AdminConnectorRoleAssignment -PrincipalObjectId $userId | ConvertTo-Json | O
 ~~~~
  
 ## <a name="step-9-export-powerapps-notifications-user-settings-and-user-app-settings"></a>Trinn 9: Eksporter varslinger, brukerinnstillinger og brukerappinnstillinger for PowerApps
-PowerApps sender flere typer varslinger til brukere, blant annet når en app deles med dem og når en eksport i CDS for Apps er fullført. Brukernes varslingshistorikk er synlig for dem i [PowerApps-portalen](https://web.powerapps.com).
+PowerApps sender flere typer varslinger til brukere, blant annet når en app deles med dem og når en eksport i CDS for Apps er fullført. Brukernes varslingshistorikk er synlig for dem i [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 PowerApps lagrer også flere forskjellige brukerinnstillinger og innstillinger som brukes til å levere kjøretiden og portalen for PowerApps, deriblant når en bruker åpnet et program sist, festet en app og så videre.
 
@@ -292,15 +298,15 @@ Administratorer kan eksportere PowerApps-varsler, brukerinnstillinger, og bruker
 ~~~~
 Add-PowerAppsAccount
 $userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
-Get-AdminPowerAppsUserDetails -WriteToFile -OutputFilePath "UserDetails.json" -UserPrincipalName foobar@microsoft.com
+Get-AdminPowerAppsUserDetails -WriteToFile -OutputFilePath "UserDetails.json" -UserPrincipalName name@microsoft.com
 ~~~~
 
 ## <a name="step-10-export-personal-data-contained-for-a-user-stored-gateway-or-in-the-users-gateway-permissions"></a>Trinn 10: Eksporter personopplysningene for en brukerlagret gateway eller i brukerens gatewaytillatelser
 
 ### <a name="powerapps-portal"></a>PowerApps-portalen
-Brukere kan eksportere personopplysningene som lagret i gatewaytjenesten fra [PowerApps-portalen](https://web.powerapps.com) ved å følge disse trinnene:
+Brukere kan eksportere personopplysningene som lagret i gatewaytjenesten fra [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å følge disse trinnene:
 
-1. I standardmiljøet for tenanten, fra [PowerApps-portalen](https://web.powerapps.com), velger du **Gatewayer**, og deretter velger du **Detaljer** for hver gateway du har tilgang til.
+1. I standardmiljøet for tenanten, fra [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), velger du **Gatewayer**, og deretter velger du **Detaljer** for hver gateway du har tilgang til.
 
     ![Målside for gateway](./media/powerapps-gdpr-export-dsr/gateway-select-details.png)
 

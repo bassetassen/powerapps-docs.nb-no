@@ -7,12 +7,18 @@ ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/30/2018
 ms.author: jimholtz
-ms.openlocfilehash: 49898aed97e2361704c88bcc1cd098a8fc0f101e
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: 2ebacd128846e45cc936e3f66560f6fcf27d50b8
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349459"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42840684"
 ---
 # <a name="create-a-data-loss-prevention-dlp-policy"></a>Opprett en policy for hindring av datatap (DLP)
 Hvis du vil beskytte dataene i organisasjonen, kan du i PowerApps opprette og håndheve DLP-policyene, som angir hvilke forbrukerkoblinger bestemte forretningsdata kan deles med. Disse policyene som angir hvordan data kan deles, er referert til som policyer for hindring av tap av data (DLP). DLP-policyer kontroller at dataene behandles på en ensartet måte på tvers av organisasjonen, og hindrer viktige forretningsdata fra å utilsiktet bli publisert til koblinger som sosiale medier.

@@ -8,12 +8,18 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 9cde5c7b2127359ab21a9e89aa83841d87cae49e
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: 5f27622e7d2021b095452ed7887fe5e979cbc81d
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349068"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42848556"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-to-delete-powerapps-customer-data"></a>Svar på DSR-forespørsler om kundedata for PowerApps
 
@@ -40,7 +46,7 @@ Tillatelser for egendefinerte koblinger |
 
 For data og ressurser som krever manuell gjennomgang, kan du tilordne (om nødvendig) eller slette personopplysninger for en bestemt bruker i PowerApps på følgende steder:
 
-* Nettstedstilgang: [PowerApps-området](https://web.powerapps.com), [PowerApps-administrasjonssenteret](https://admin.powerapps.com/) og [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+* Nettstedstilgang: [PowerApps-området](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), [PowerApps-administrasjonssenteret](https://admin.powerapps.com/) og [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 
 * PowerShell-tilgang: PowerApps-cmdleter (for [apputviklere](https://go.microsoft.com/fwlink/?linkid=871448) og [administratorer](https://go.microsoft.com/fwlink/?linkid=871804)) og cmdleter for [lokale gatewayer](https://go.microsoft.com/fwlink/?linkid=872238).
 
@@ -62,20 +68,20 @@ Tillatelser for egendefinerte koblinger | | Apputvikler: tilgjengelig <br> Admin
 ## <a name="prerequisites"></a>Forutsetninger
 
 ### <a name="for-users"></a>For brukere
-Alle brukere som har en gyldig PowerApps-lisens, kan utføre brukeroperasjonene som beskrevet i dette dokumentet, ved hjelp av [PowerApps-området](https://web.powerapps.com) eller [PowerShell-cmdleter for apputviklere](https://go.microsoft.com/fwlink/?linkid=871448).
+Alle brukere som har en gyldig PowerApps-lisens, kan utføre brukeroperasjonene som beskrevet i dette dokumentet, ved hjelp av [PowerApps-området](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) eller [PowerShell-cmdleter for apputviklere](https://go.microsoft.com/fwlink/?linkid=871448).
 
 #### <a name="unmanaged-tenant"></a>Ikke-administrert tenant
 Hvis du er medlem av en [ikke-administrert tenant](https://docs.microsoft.com/azure/active-directory/domains-admin-takeover), noe som betyr at Azure AD-tenanten ikke har en global administrator, vil du fremdeles kunne følge fremgangsmåten i denne artikkelen for å fjerne personlige data.  Siden det ikke finnes noen global administrator for tenanten din, må du imidlertid følge instruksjonene i [Trinn 11: å slette brukeren fra Azure Active Directory](#step-11-delete-the-user-from-azure-active-directory) nedenfor for å slette din egen konto fra tenanten.
 
 Hvis du vil avgjøre hvorvidt du er medlem av en ikke-administrert tenant, kan du følge disse trinnene:
 
-1. Åpne følgende nettadresse i en nettleser, og pass på å erstatte e-postadressen din i nettadressen: https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1
+1. Åpne følgende nettadresse i en nettleser, og pass på å erstatte e-postadressen din i nettadressen: https://login.windows.net/common/userrealm/name@contoso.com?api-version=2.1
 
 2. Hvis du er medlem av en **ikke-administrert tenant**, får du se en `"IsViral": true` i svaret.
 ```
 {
   ...
-  "Login": "foobar@unmanagedcontoso.com",
+  "Login": "name@unmanagedcontoso.com",
   "DomainName": "unmanagedcontoso.com",
   "IsViral": true,
   ...
@@ -210,7 +216,7 @@ Get-AdminApp -Owner $deleteDsrUserId | Set-AdminAppOwner -AppOwner $newAppOwnerU
 ```
 
 ### <a name="delete-a-users-canvas-app-using-the-powerapps-site"></a>Slett en brukers lerretsapp ved hjelp av PowerApps-området
-En bruker kan slette en app fra [PowerApps-området](https://web.powerapps.com). Du finner den fullstendige fremgangsmåten om hvordan du sletter en app, i delen om appsletting.
+En bruker kan slette en app fra [PowerApps-området](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Du finner den fullstendige fremgangsmåten om hvordan du sletter en app, i delen om appsletting.
 
 ### <a name="delete-a-users-canvas-app-using-the-powerapps-admin-center"></a>Slett en brukers lerretsapp ved hjelp av administrasjonssenteret for PowerApps
 Administratorer kan slette apper som er opprettet av en bruker, fra [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) ved å følge disse trinnene:

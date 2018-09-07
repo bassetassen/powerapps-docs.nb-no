@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/02/2015
 ms.author: lonu
-ms.openlocfilehash: 51a93009f187b31cd0d3159f97c78ff5bd60ae33
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: e782b7082e8dbf0d4efee2060131aa620e7a4af1
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195546"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42844462"
 ---
 # <a name="show-sort-and-filter-data-in-a-powerapps-gallery"></a>Å vise, sortere og filtrere data i et PowerApps-galleri
 Opprett et galleri for å vise bilder og tekst om flere produkter, og sorter og filtrer informasjonen.

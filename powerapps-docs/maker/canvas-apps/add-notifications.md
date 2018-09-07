@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 08/08/2017
 ms.author: jamesol
-ms.openlocfilehash: f9b606246b0b1114aec1bec2fc2767b518215148
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 031a481cda2a6f51aa5c455bd03c0fe5b79f7c60
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195569"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42830175"
 ---
 # <a name="send-a-push-notification-in-powerapps"></a>Send et push-varsel i PowerApps
 Push-varsler brukes hovedsakelig i mobilapper for forbruker- og forretningsscenarioer for å engasjere brukere og hjelpe dem med å prioritere viktige oppgaver. I PowerApps kan du sende varsler ved å bruke PowerApps Notification-koblingen. Du kan sende opprinnelige push-varsler til alle apper du lager i PowerApps. Vi har planer om å legge til flere typer varsler i fremtiden.
