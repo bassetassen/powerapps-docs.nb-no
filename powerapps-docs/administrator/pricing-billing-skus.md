@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 04/24/2018
+ms.date: 09/11/2018
 ms.author: jamesol
 search.audienceType:
 - admin
@@ -14,12 +14,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: 4eb1cdb3fb54780c693bb764bdf6d9de1e7088b5
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 301592978d483d1b6ff5930a01f6c6c0119c779e
+ms.sourcegitcommit: 87122dba00b4177ef736d87ecdde79581649ba42
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42864383"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44499549"
 ---
 # <a name="licensing-overview"></a>Lisensieringsoversikt
 PowerApps er lisensiert per bruker. Hver bruker som har tilgang til tjenesten for å opprette og kjøre apper trenger en lisens. Office 365- og Dynamics 365-kunder kan umiddelbart dra nytte av PowerApps og Microsoft Flow-funksjoner som er inkludert i disse tilbudene. Kunder som ønsker å utvikle apper og flyter som har tilgang til datakilder utenfor Office 365 og Dynamics 365, eller trenger ytterligere funksjonalitet, kan kjøpe frittstående abonnementer for PowerApps og Microsoft Flow. Det finnes viktige forskjeller i funksjonaliteten mellom disse gruppene med lisenser.
@@ -92,7 +92,7 @@ Hvis du vil utvikle ferdigheter og finne ut mer om PowerApps, Microsoft Flow og 
 PowerApps-lisenser inkluderer alltid Microsoft Flow-funksjoner.  I tillegg til å være inkludert i PowerApps-lisensene er Microsoft Flow også tilgjengelig som en frittstående tjeneste. Gå til [PowerApps-prissiden][2] for å få mer informasjon om de bestemte Microsoft Flow-funksjonene som er inkludert i de ulike PowerApps-lisensene.
 
 ## <a name="resource-capacity-is-included-with-each-license"></a>Ressurskapasitet er inkludert i hver lisens
-Per bruker-lisensene ovenfor leveres med inkludert kapasitet for ressurser som brukes når en app eller en flyt kjøres. Disse ressursene inkluderer datalagring, fillagring og flytkjøring. Kapasitetene som er inkludert i per bruker-lisenser er samlet på tenantnivå, og når kapasiteten til tenanten er oppbrukt, kan kunder kjøpe ekstra kapasitet gjennom tilleggslisenser. Den maksimale kapasiteten for Common Data Service er 10 GB per database og 5 TB for fillagring per miljø. Hvis du kjøper ekstra kapasitet og den tilgjengelige kapasiteten (med lisenser og tillegg kombinert) er større enn den maksimale kapasiteten, kan du bruke den totale mengden i flere miljøer. Gå til [PowerApps-prissiden][2] for å få informasjon om kapasitetsmengden som er inkludert i de ulike PowerApps-lisensene.
+Per bruker-lisensene ovenfor leveres med inkludert kapasitet for ressurser som brukes når en app eller en flyt kjøres. Disse ressursene inkluderer datalagring, fillagring og flytkjøring. Kapasitetene som er inkludert i per bruker-lisenser er samlet på tenantnivå, og når kapasiteten til tenanten er oppbrukt, kan kunder kjøpe ekstra kapasitet gjennom tilleggslisenser. Hvis du kjøper ekstra kapasitet og den tilgjengelige kapasiteten (med lisenser og tillegg kombinert) er større enn den maksimale kapasiteten, kan du bruke den totale mengden i flere miljøer. Gå til [PowerApps-prissiden][2] for å få informasjon om kapasitetsmengden som er inkludert i de ulike PowerApps-lisensene.
 
 ## <a name="powerapps-licensing-examples"></a>Lisensieringseksempler i PowerApps
 La oss ta en titt på et eksempel. ABC Inc. har 1 000 ansatte, hvorav 700 ansatte er lisensierte med Office 365 Enterprise 3. Fra starten av oppretter en Power-bruker et bransjeprogram som forenkler hvordan kundeordrer spores. Senere arbeider personalavdelingen sammen med IT-avdelingen om utrulling av en app for rapportering av ferie og fravær, og appen bygger på Common Data Service.
