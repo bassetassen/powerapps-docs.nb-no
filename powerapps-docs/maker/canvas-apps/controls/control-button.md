@@ -147,7 +147,7 @@ Legg til en formel som sletter **Tekstinndata**-kontrollen mellom oppføringene.
     **UpdateContext({Total:Total + Value(Source.Text)});<br>UpdateContext({ClearInput: ""})**
    
     > [!NOTE]
-   > Adskill flere formler med semikolon «**;**».
+   > Adskill flere formler med semikolon « **;** ».
 3. Angi **[standardegenskapen](properties-core.md)** for **Source** til **ClearInput**.
 4. Trykk på **F5**, og test deretter appen ved å legge til flere tall.
 
