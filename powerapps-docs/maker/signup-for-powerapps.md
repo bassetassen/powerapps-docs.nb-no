@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.date: 03/12/2018
 ms.author: anneta
 ms.reviewer: ''
-ms.openlocfilehash: 62afc8fc0ce754ed797683a61c061db16370f904
-ms.sourcegitcommit: 0f6d7bb9e524202c065b9a7ef92a7f54bdc4bc7c
+ms.openlocfilehash: cfe9dd8d7a1a1342e7db4fb2786f68942bec7784
+ms.sourcegitcommit: 967812754d8e5b1ff72baa35ffbe548f3b9b0085
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39195201"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726910"
 ---
 # <a name="sign-up-for-a-free-license-to-try-powerapps"></a>Registrer deg for en gratis lisens for å prøve PowerApps
 Hvis du vil lage en app i PowerApps, trenger du en av flere typer lisenser som tilbyr ulike nivåer av funksjonalitet. Hvis organisasjonen har kjøpt en av flere versjoner av Office 365 eller Dynamics 365 for deg, eller hvis organisasjonen har kjøpt lisenser for PowerApps Plan 1 eller Plan 2 for deg, har du allerede en lisens for PowerApps.
@@ -93,7 +93,7 @@ Velg **Start** når denne dialogboksen vises, og begynn å bruke [PowerApps](htt
     I den [fullstendige listen over koblinger](./canvas-apps/connections-list.md), vises Premium-tilkoblinger med et merke:
 
     ![](./media/signup-for-powerapps/premium-badge.png)
-* **Tilgang til administrasjonssenteret for PowerApps**, der du kan administrere miljøer, databaser, brukertillatelser og datapolicyer. [Finn ut mer](../administrator/introduction-to-the-admin-center.md)
+* **Tilgang til administrasjonssenteret for PowerApps**, der du kan administrere miljøer, databaser, brukertillatelser og datapolicyer. [Finn ut mer](../administrator/admin-guide.md)
 * **Lag apper i modelldrevet modus**, der du kan legge til komponenter i en app og la PowerApps opprette oppsettet og andre elementer i brukergrensesnittet. 
 
 Hvis du vil ha mer informasjon om funksjoner og kapasitet i lisensen for prøveversjonen, kan du se på [prissiden](https://powerapps.microsoft.com/pricing/).
