@@ -15,18 +15,25 @@ ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 03/19/2018
 ms.author: jdaly
-ms.openlocfilehash: c07a6505c0a08eca706c08cc2e4d607cd5322dfe
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+search.audienceType:
+- developer
+search.app:
+- PowerApps
+- D365CE
+ms.openlocfilehash: 3b0e2d70a9295bdf1a8a6d6a71cb6075677bb991
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36949292"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42844058"
 ---
 # <a name="common-data-service-for-apps-developer-overview"></a>Oversikt for utviklere – Common Data Service for Apps
+
 PowerApps tilbyr firmaer, uavhengige programvareleverandører og systemintegratorer en kraftig plattform for å bygge apper for forretningsområde. Det nye tillegget til PowerApps i denne versjonen er utvidelsen av Common Data Service, nå kalt Common Data Service for Apps. Det inneholder nå kjernefunksjonaliteten for Dynamics 365-plattformen som driver Dynamics 365 for salg, markedsføring og kundeservice.
 
 
 ## <a name="get-started"></a>Kom i gang
+
 Hvis du allerede har erfaring med Dynamics 365 for salg, markedsføring eller kundeserviceapper, vil du se at du kan bruke din erfaring for å tilpasse og utvide Common Data Service for Apps.
 
 Hvis du er ny i Dynamics 365 for salg, markedsføring eller kundeserviceapper, gir følgende emner en overordnet oversikt over viktige konsepter som hjelper deg i gang med arbeidet med Common Data Service for Apps.
@@ -52,7 +59,7 @@ Følgende verktøy er distribuert i NuGet-pakker. [Veiledning for utviklere: Å 
 |Registreringsverktøy for programtillegg `PluginRegistration.exe`|Verktøy som brukes til å abonnere .NET-samling for programtilleggklasser i serverhendelser. <br />Mer informasjon: <br />[Opprette et programtillegg](apply-business-logic-with-code.md#create-a-plug-in)<br />[Dynamics 365 Customer Engagement – Veiledning for utviklere: Gjennomgang: Registrere et programtillegg ved hjelp av registreringsverktøy for programtillegg](/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool)|
 |SolutionPackager-verktøy `SolutionPackager.exe`|Et verktøy som kan reversere oppdeling av en komprimert løsningsfil for Common Data Service for Apps til flere XML-filer og andre filer slik at disse filene kan enkelt administreres av et system for kildekontroll.<br /> Mer informasjon: <br />[Teamutvikling av løsninger](introduction-solutions.md#team-development-of-solutions)<br />[Dynamics 365 Customer Engagement – Veiledning for utviklere: Å bruke verktøyet SolutionPackager for å komprimerer og trekke ut en løsningsfil](/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)|
 
-### <a name="net-sdk-assemblies"></a>.NET SDK-samlinger 
+### <a name="net-sdk-assemblies"></a>.NET SDK-samlinger
 
 Følgende er samlinger .NET-utviklere kan bruke. De nyeste versjonene er tilgjengelige for nedlasting i de tilsvarende NuGet-pakkene.
 

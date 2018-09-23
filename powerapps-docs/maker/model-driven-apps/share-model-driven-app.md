@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 03/21/2018
 ms.author: matp
-ms.openlocfilehash: 134ae4dfb5fe111c4c40e96efa1e79a3993c4a46
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 5c166f7fffa217a918d690c9176058d8e81b3f99
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37899759"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39663051"
 ---
 # <a name="tutorial-share-a-model-driven-app-with-powerapps"></a>Opplæring: Å dele en modelldrevet app med PowerApps
 
@@ -56,7 +56,7 @@ Hvis du vil ha mer informasjon om tilgang- og omfangsrettigheter, kan du se [Sik
 4. Velg handlinger, for eksempel omfanget lese, skrive eller slette fra utformingsverktøyet for sikkerhetsrolle for å utføre denne handlingen. Omfang avgjør hvor dypt eller høyt i miljøets hierarki brukeren kan utføre en bestemt handling. Skriv inn *Dyrefrisørteknikere* i **Rollenavn**-boksen.
 5. Velg **Egendefinerte enheter**-fanen, og finn deretter den egendefinerte enheten du vil bruke. I dette eksemplet brukes den egendefinerte enheten med navnet **Kjæledyr**. 
 6. Velg hver av følgende rettigheter fire ganger på **Kjæledyr**-raden til globalt organisasjonsomfang ![Globalt organisasjonsomfang](media/share-model-driven-app/organizational-scope-privilege.png) er valgt: **Lese, skrive og tilføye**
-   ![Ny sikkerhetsrolle](media/share-model-driven-app/custom-security-role.png)
+![Ny sikkerhetsrolle](media/share-model-driven-app/custom-security-role.png)
 7. Fordi dyrefrisørappen også har en relasjon med kontoenheten, velger du **Kjernepost**-fanen, og på **Konto**-raden velger du **Les** fire ganger til globalt organisasjonsomfang ![Globalt organisasjonsomfang](media/share-model-driven-app/organizational-scope-privilege.png) er valgt. 
 8. Velg **Lagre og lukk**. 
 9. Skriv inn *Dyrefrisørplanleggere* i **Rollenavn**-boksen i sikkerhetsrolleutformingen. 
@@ -68,10 +68,6 @@ Hvis du vil ha mer informasjon om tilgang- og omfangsrettigheter, kan du se [Sik
 
 ## <a name="assign-security-roles-to-users"></a>Å tilordne sikkerhetsroller til brukere
 Sikkerhetsroller kontrollerer en brukers tilgang til data gjennom et sett med tilgangsnivåer og tillatelser. Kombinasjonen av tilgangsnivåer og tillatelser som er inkludert i en bestemt sikkerhetsrolle, angir begrensninger på brukerens visning av data og brukerens samhandling med disse dataene.
-
-> [!IMPORTANT]
-> Hvis du vil bruke en modelldrevet app, må alle brukerne i miljøet minst ha sikkerhetsrollen Common Data Service User. Dette er uavhengig av andre sikkerhetsroller som du måtte tilordne. Sikkerhetsrollen Common Data Service User gir tilstrekkelig rettigheter for å utføre de grunnleggende oppgavene som kreves for å bruke en app.
-> Vær oppmerksom på at de som har sikkerhetsrollen Common Data Service User også har skrivetilgang til standardposter for konto-, kontakt- og tilkoblingsenhet, uavhengig av hvem som eier dem. Hvis du ikke ønsker at appbrukerne skal ha rettigheter til disse postene, oppretter du en egendefinert sikkerhetsrolle. Den enkleste måten er å kopiere sikkerhetsrollen Common Data Service User og fjerne de nødvendige rettighetene. Hvis du vil ha mer informasjon, kan du se [Å kopiere en sikkerhetsrolle](https://docs.microsoft.com/dynamics365/customer-engagement/admin/copy-security-role)
 
 ### <a name="assign-a-security-role-to-pet-grooming-technicians"></a>Tilordne en sikkerhetsrolle til dyrefrisørteknikere
 1. Velg **Sikkerhetsbrukere** fra dialogboksen **Del denne appen** under **Tilordne brukere til sikkerhetsrollen**.
@@ -129,7 +125,7 @@ Disse forhåndsdefinerte rollene er tilgjengelige med et [!INCLUDE [powerapps](.
 *Rettighet har globalt omfang om ikke annet er angitt.
 
 ## <a name="next-steps"></a>Neste trinn
-[Hurtigstart: Kjøre en modelldreven app på en mobilenhet](../../user/run-app-client-model-driven.md)
+[Å kjøre en modelldreven app på en mobil enhet](../../user/run-app-client-model-driven.md)
 
 
 

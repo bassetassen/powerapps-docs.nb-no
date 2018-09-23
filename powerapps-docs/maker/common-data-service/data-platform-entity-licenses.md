@@ -6,23 +6,23 @@ manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
-ms.date: 07/25/2018
+ms.date: 05/01/2018
 ms.author: clwesene
-ms.openlocfilehash: 758d5b5ff2c552a4c4ccbf210062f35d4e53209c
-ms.sourcegitcommit: efea7ed5ad8e80c87ba423fb094fa94b4e864d75
+ms.openlocfilehash: 4350f7141adf0fbce3e74271d6aff48c18c857e2
+ms.sourcegitcommit: 2bcc36916f0c591466eb3e007c2d30b99f2315c6
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39265514"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40009263"
 ---
 # <a name="license-requirements-for-entities"></a>Lisenskrav for enheter
 Apputviklere kan bruke de fleste enheter som er tilgjengelige i Common Data Service (CDS) for apper (inkludert egendefinerte enheter og enheter som er en del av Common Data Model) for å opprette apper og flyt for brukere som har en lisens for PowerApps-abonnement 1 eller Microsoft Flow-abonnement 1. I noen tilfeller kan enheter inneholde kompleks forretningslogikk eller er knyttet til Dynamics 365-programmer som krever at appbrukere har en bestemt lisens. 
 
 
-|Enhet  |Beskrivelse  |Krav  |
+|Enhet    |Beskrivelse    |Krav    |
 |---------|---------|---------|
-|Enheter med kompleks forretningslogikk  | Dette er enheter som bruker kompleks forretningslogikk på serversiden. For eksempel en hvilken som helst enhet som bruker en arbeidsflyt i sanntid eller en kodeplugin-modul.     | [PowerApps-abonnement 2](https://powerapps.microsoft.com/pricing/) eller [Flow-abonnement 2](https://flow.microsoft.com/pricing/)  | 
-|Begrensede enheter    | Dette er enheter som ikke er standard med Common Data Service for apper, men er inkludert i et Dynamics 365 Customer Engagement-program eller en tredjepartsløsning. For eksempel kunnskapsartikkelen, mål og berettigede enheter.    | [Et Dynamics 365-abonnement](https://dynamics.microsoft.com/pricing/)    |
+|Enheter med kompleks forretningslogikk   | Dette er enheter som bruker kompleks forretningslogikk på serversiden. For eksempel en hvilken som helst enhet som bruker en arbeidsflyt i sanntid eller en kodeplugin-modul.       |  [PowerApps-abonnement 2](https://powerapps.microsoft.com/pricing/) eller [Flow-abonnement 2](https://flow.microsoft.com/pricing/)        |
+|Begrensede enheter  |  Dette er enheter som ikke er standard med Common Data Service for apper, men er inkludert i et Dynamics 365 Customer Engagement-program eller en tredjepartsløsning. For eksempel kunnskapsartikkelen, mål og berettigede enheter.     |  [Et Dynamics 365-abonnement](https://dynamics.microsoft.com/pricing/)      | 
 
 
 > [!NOTE]
@@ -37,7 +37,7 @@ Enheter som inkluderer følgende kompleks serversidelogikk krever at brukere av 
     > [!NOTE]
     >  Bare arbeidsflyter som konverteres til en sanntidsarbeidsflyt vurderes i sanntid og er synkrone. Arbeidsflyter som kjører i bakgrunnen kan fortsatt brukes med den riktige PowerApps-planen, og krever ikke flere lisenser.
 
-Hvis du vil vite om du har lagt til kompleks forretningslogikk til enheter, se gjennom listen over plugin-modulsamlinger og arbeidsflyter som er konfigurert i miljøet ditt. Hvis du vil se en liste over enheter som kan inneholde serversidelogikk når du har installert et Dynamics 365-program, kan du se [Komplekse enheter som krever lisenser for PowerApps-abonnement 2](data-platform-complex-entities.md) 
+Hvis du vil vite om du har lagt til kompleks forretningslogikk til enheter, se gjennom listen over plugin-modulsamlinger og arbeidsflyter som er konfigurert i miljøet ditt. Hvis du vil se en liste over enheter som kan inneholde serversidelogikk når du har installert et Dynamics 365-program, kan du se [Komplekse enheter som krever lisenser for PowerApps-abonnement 2](data-platform-complex-entities.md)  
 
 ### <a name="impacting-license-requirements-when-adding-complex-business-logic"></a>Påvirker lisenskrav når du legger til kompleks forretningslogikk
 Applagere kan legge til kodeplugin-moduler og sanntidsarbeidsflyter til enheter i CDS for apper, men å gjøre det kan endre lisenskrav for brukere av apper som allerede er distribuert. Applagere bør være forsiktige når de legger til kompleks forretningslogikk til en enhet og bør først sjekke hvilke enheter som bruker enheten og om brukere av disse appene har passende lisenser.

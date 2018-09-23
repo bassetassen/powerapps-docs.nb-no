@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/16/2018
 ms.author: gregli
-ms.openlocfilehash: d976a81603d48d72ecb2dc7c279b59d0e70800eb
-ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 741cec402c6a5b5ea30700badd265f5e950203e9
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094831"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42858479"
 ---
 # <a name="understand-experimental-and-preview-features-in-powerapps"></a>Forhåndsvisnings- og eksperimentelle funksjoner i PowerApps
 
@@ -51,9 +55,9 @@ Mot slutten av forhåndsvisningen kan det hende vi aktiverer funksjonen for alle
 ## <a name="documentation"></a>Dokumentasjon
 
 Hvor finner jeg informasjon om disse funksjonene?  Vi behandler forhåndsvisningsfunksjoner som ferdige funksjoner, og du kan finne ut mer om dem på samme måte som du gjør med andre produktfunksjoner: 
-- [PowerApps-dokumentasjon](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started). Vi gir grunnleggende informasjon om den nye funksjonen: fordelene, hvordan du kommer i gang og referanseinformasjon.
+- [PowerApps-dokumentasjon](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started). Vi gir grunnleggende informasjon om den nye funksjonen: fordelene, hvordan du kommer i gang og referanseinformasjon.
 - [Fellesskapsforum for PowerApps](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  Andre utforsker den nye funksjonen sammen med deg. Lær av deres erfaringer, og del dine egne.
-- [PowerApps-blogg](https://powerapps.microsoft.com/en-us/blog/).  Ofte, men ikke alltid, følger et blogginnlegg med en ny funksjon.
+- [PowerApps-blogg](https://powerapps.microsoft.com/blog/).  Ofte, men ikke alltid, følger et blogginnlegg med en ny funksjon.
 
 Eksperimentelle funksjoner er forskjellige.  Arbeid med funksjonene pågår, og vi anser dem ikke som ferdige. Den korte beskrivelsen i **Appinnstillinger**-ruten (se nedenfor) kan være den eneste informasjonen om dem. Eksperimentelle funksjoner vises vanligvis ikke i dokumentasjonen. Fellesskapsforumet er sannsynligvis den beste kilden til informasjon.  I noen tilfeller beskriver et tidlig blogginnlegg funksjonen.  Hvis du ikke finner nok informasjon, kan du stille spørsmål i foraene eller vente på at funksjonene skal gå videre til Forhåndsvisningsfasen.
 

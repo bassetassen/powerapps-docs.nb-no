@@ -1,0 +1,1 @@
+strøm~~POS=TRUNC BI
