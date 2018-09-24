@@ -1,0 +1,1 @@
+© 2017 Microsoft. Med enerett.
