@@ -1,1 +1,0 @@
-Kognitive tjenester

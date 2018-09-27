@@ -1,1 +1,0 @@
-Klikk på **Lagre**.
