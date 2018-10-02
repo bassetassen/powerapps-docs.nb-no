@@ -1,128 +1,141 @@
 ---
-title: Å importere eller eksportere data fra Common Data Service for apper
-description: Ved hjelp av Get-Data fra Excel og Eksporter Data funksjonalitet på masseimport og eksportere data fra Excel- eller CSV-filer i enheter i Common Data Service (CDS) for apper
+title: Importere eller eksportere data fra Common Data Service for Apps
+description: Masseimportere og -eksportere data fra Excel- eller CSV-filer til enheter i Common Data Service for Apps ved hjelp av Hent data fra Excel- og Eksporter data-funksjonaliteten
 author: sabinn-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.component: cds
 ms.date: 05/14/2018
 ms.author: sabinn
-ms.openlocfilehash: 7f3e16be5bba1874759e0f9e40dc455f1e29c2bc
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697582"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="import-or-export-data-from-the-common-data-service-for-apps"></a>Å importere eller eksportere data fra Common Data Service for apper
+# <a name="import-or-export-data-from-common-data-service-for-apps"></a>Importere eller eksportere data fra Common Data Service for Apps
 
-Hvis du vil ha muligheten til å masseimportere og -eksportere data fra Excel- eller CSV-filer, kan du bruke Hent data fra Excel-filer og Eksporter data-funksjoner for oppdaterte Common Data Service (CDS) for apper-miljøer.
+Hvis du vil masseimportere og -eksportere data fra Microsoft Excel- eller CSV-filer, bruker du Hent data fra Excel-fil og Eksporter data-funksjonene for oppdaterte Common Data Service for Apps-miljøer.
 
-Det finnes to måter man kan importere filen til enheten på fra Excel- eller csv-filer
+Det er to måter du kan importere filer til enheter på fra Excel- eller CSV-filer.
 
-## <a name="option-1-import-by-creating-and-modifying-a-file-template"></a>Alternativ 1: Å importere ved å opprette og endre en filmal
+## <a name="option-1-import-by-creating-and-modifying-a-file-template"></a>Alternativ 1: Importer ved å opprette og endre en filmal
 
-Hver enhet har obligatoriske felt som må finnes i inndatafilen. For en mer sømløs tilnærming anbefaler vi at du oppretter en mal ved først å eksportere data fra enheten og bruke den samme filen (endret med dataene) til å importere data til enheten. Dette vil spare deg for tid og krefter versus det å måtte ta høyde for de påkrevde feltene for hver enhet.
+Hver enhet har obligatoriske felt som må finnes i inndatafilen din. Vi anbefaler at du oppretter en mal. Først eksporterer du data fra enheten. Bruk samme fil (endret med dataene dine) for å importere data til enheten. Denne malen sparer tid og anstrengelser. Du trenger ikke ta hensyn til de obligatoriske feltene for hver enhet.
 
-1. Å klargjøre filmalen
+1. Klargjør filmalen.
 
-    - Start ved å eksportere enhetsdata til en CSV-fil ved å følge trinnene under Eksportering av data til CSV
-    - Angi en plan for å sikre at dataene er unike ved enten å bruke primærnøkler eller alternative nøkler.
-    - Se inndelingen nedenfor om hvordan du sikrer unikhet før du importerer data til enheten
+    a. Eksporter enhetsdataene til CSV-filen. Følg fremgangsmåten i **Eksporter data til CSV**.  
+    b. Definer en plan for å kontrollere at dataene er unike. Bruk **hovednøkler** eller **alternative nøkler**.  
+    c. Se delen nedenfor for instruksjoner om hvordan du kontrollerer at data er unike før du importerer dem til en enhet. 
 
-1. Å endre filen med dataene
+1. Endre filen med dataene.
 
-    - Slik kopierer du data fra Excel- eller CSV-filen til malen du nettopp opprettet
+    - Kopier data fra Excel- eller CSV-filen til malen du nettopp opprettet.
 
-1. Å importere filen
-    - Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com/), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
-    - Velg enheten du vil importere data til
-    - Klikk på ellipsen eller menyen øverst og velg **Hent data**, og klikk eller trykk på **Hent data fra Excel**
-
-> [!NOTE]
-> For å importere data til mer enn én enhet, velger du **Hent data** i menyen øverst, og deretter klikker eller trykker du på **Hent data fra Excel**. Du skal kunne velge flere enheter og trykke på **Neste**
-
-![Eksempel på å importere data til kontoenhet](./media/data-platform-import-export/import-data-to-account.png)
-
-- Dette fører deg til **Importer data**-skjermen der du kan velge å importere data via en Excel- eller CSV-fil
-- Klikk eller trykk på **Last opp**
-- Velg filen, og følg instruksjonene for å begynne å laste opp filen
-
-![Eksempel på opplastingsfil til konto-enhet](./media/data-platform-import-export/upload-account.png)
-
-- Når filen er lastet opp og tilordningsstatusen er grønn, klikker du på **Importer** øverst til høyre. Hvis det oppstår feil under tilordningen, kan du referere til inndelingen nedenfor for å navigere og løse feilene med tilordningen.
-
-![Eksempel på vellykket tilordningsstatus og Importer-knappen](./media/data-platform-import-export/success-map-imp.png)
-
-- Så snart **importen er gjennomført**, viser den deg alle innsettinger og oppdateringer
-
-![Eksempel på vellykket import som viser antallet innsettinger og oppdateringer](./media/data-platform-import-export/success-imp-insert.png)
-
-> [!NOTE]
-> Vi bruker Upsert-logikk (oppdatering eller sett inn) til enten å oppdatere posten hvis den allerede finnes, eller til å sette inn en ny post.
-
-## <a name="option-2-import-by-bringing-your-own-source-file"></a>Alternativ 2: Å importere ved å bruke din egen kildefil
-
-Hvis du er en erfaren bruker og er godt kjent med de obligatoriske feltene for en gitt enhet for Common Data service for apper-enheten, kan du definere din egen Excel- eller CSV-kildefil og følge trinnene som er beskrevet under **Importer filen**
-
-## <a name="navigating-mapping-errors"></a>Navigere tilordningsfeil
-
-Hvis det oppstår tilordningsfeil, klikker du på **Tilordne status** etter du har lastet opp filen. Bruk deretter følgende fremgangsmåte til å kontrollere og rette opp felttilordningsfeil.
-
-- Bruk rullegardinlisten nede til høyre under **Vis** til å gå gjennom **ikke-tilordnede felt**, **felt med feil** eller **obligatoriske felt**
-
-> [!TIP]
-> Avhengig av om du får en advarsel eller feil, kan du starte med å undersøke **ikke-tilordnede felt** eller **felt med feil** via rullegardinlisten i **felttilordninger**
-
-![Eksempel på et delvis samsvar på grunn av advarsler med felttilordninger](./media/data-platform-import-export/partial-match.png)
-
-![Eksempel på navigering av felttilordningsproblemer](./media/data-platform-import-export/navigate-mappings.png)
-
-![ Eksempel på undersøkelser og korrigeringer av advarsler med felttilordninger](./media/data-platform-import-export/inspect-warnings.png)
-
-- Når du har korrigert alle feil eller advarsler, klikker du på **Lagre endringer** øverst til høyre, som fører deg tilbake til **Importer data**-skjermen
-- Så snart **tilordningstatus**-kolonnen angir **Fullført** i grønt, klikker du på **Importer** øverst til høyre
-- Så snart du får meldingen om at **importen er gjennomført**, viser den deg alle innsettinger og oppdateringer
-
-## <a name="ensuring-uniqueness-while-importing-data-into-entity-from-excel-or-csv"></a>Dette sikrer unikhet under import av data til enheter fra Excel eller CSV
-
-Enheter for Common Data Service for apper bruker en primærnøkkel til å identifisere poster på en unik måte i en tabell for CDS-enheter. Primærnøkkelen for en CDS-enhet er en globalt unik identifikator (GUID) og danner standardgrunnlaget for post-identifikasjon. Dataoperasjoner som for eksempel importering av data til CDS-enheter vil vise til standard primærnøklene.
-
-Eksempel: Primærnøkkelen for kontoenheten accountid
-
-![Eksport av en eksempelfil fra konto-enhet som viser accountid som primærnøkkel](./media/data-platform-import-export/export-pk.png)
-
-Noen ganger er kanskje ikke primærnøkkelen tilstrekkelig og/eller den imøtegår ikke gjeldende behov under integrering av data fra en ekstern kilde. I dette tilfellet lar CDS deg definere alternative nøkler som unikt identifiserer en post i stedet for den primære nøkkelen.
-
-Eksempel: Du kan angi transactioncurrencyid som en alternativ nøkkel for konto-enhet ved hjelp av en naturlig nøkkelbasert ID (f.eks. bruke «Amerikanske dollar» i stedet for en GUID-verdi *88c6c893-5b45-e811-a953-000d3a33bcb9* vist ovenfor). Du kan også velge valutasymbol eller valutanavn som nøkler.
-
-![Eksempel på å opprette alternativ nøkkel i valuta-enhet](./media/data-platform-import-export/create-ak.png)
-
-![Eksporter eksempelfil fra konto-enhet som viser valutanavnet som naturlig nøkkel](./media/data-platform-import-export/export-nk.png)
-
-Brukeren kan fortsatt bruke primærnøkler som identifikator når de har angitt alternative nøkler. Så i eksemplet ovenfor er den første filen fremdeles gyldig, og angitte GUIDer er gyldige data.
-
-## <a name="export-data-to-csv"></a>Å eksportere data til CSV
-
-Du kan gjøre en engangs dataeksport fra en standardenhet eller en egendefinert enhet, og du kan eksportere data fra mer enn én enhet om gangen. Hvis du eksporterer data fra mer enn én enhet, eksporteres hver enhet til sin egen Microsoft csv-fil.
-
-1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com/), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
-1. Velg enheten du vil eksportere data fra
-1. Klikk på ellipsen eller menyen øverst, og velg **Eksporter**, og klikk eller trykk på **Data**
-
-    ![Eksempel på eksport av data fra konto-enhet](./media/data-platform-import-export/export-account.png)
+1. Importer filen.  
+    a. På [powerapps.com](https://web.powerapps.com/) utvider du **Data**-delen. Velg **Enheter** i venstre navigasjonsrute.  
+    b. Velg enheten du vil importere data til.  
+    c. Velg ellipsen eller menyen øverst. Velg **Hent data**. Velg **Hent data fra Excel**.  
 
     > [!NOTE]
-    > Ved eksport av data fra flere enheter velger du **Eksporter** i den øverste menyen, og deretter klikker eller trykker du på **Data**. Du skal kunne velge flere enheter
+    > Hvis du vil importere data til mer enn én enhet, velger du **Hent Data** på den øverste menyen. Velg **Hent data fra Excel**. Deretter kan du velge flere enheter og velge **Neste**.
 
-1. Når eksporten er fullført, skal du kunne **laste ned eksporterte data** som skal vise deg en kobling til den nedlastbare CSV-filen
+    > [!div class="mx-imgBorder"] 
+    > ![Eksempel på import av data til en **Forretningsforbindelse**-enhet](./media/data-platform-import-export/import-data-to-account.png)
 
-    ![Eksempel-eksport som viser en vellykket eksport med kobling til nedlastbar fil](./media/data-platform-import-export/export-success.png)
+    d. I **Importer data**-skjermbildet velger du om du vil importere data fra en Excel- eller CSV-fil.  
+    e. Velg **Last opp**.  
+    f. Velg filen din. Følg instruksjonene for å laste opp filen.  
+
+    > [!div class="mx-imgBorder"] 
+    > ![Eksempel på opplasting av en fil til en **Forretningsforbindelse**-enhet](./media/data-platform-import-export/upload-account.png)
+
+    g. Når filen er lastet opp og **Tilordningsstatus** er grønn, velger du **Importer** i det øvre høyre hjørnet. Se neste del for å navigere og rette opp tilordningsfeil.  
+
+    > [!div class="mx-imgBorder"] 
+    > ![Eksempel på vellykket **Tilordningsstatus** og **Importer**-knappen](./media/data-platform-import-export/success-map-imp.png)
+
+    h. Når importen er fullført, kan du se totalt antall innsettinger og oppdateringer.  
+
+    > [!div class="mx-imgBorder"] 
+    > ![Eksempel på vellykket import som viser antall innsettinger og oppdateringer](./media/data-platform-import-export/success-imp-insert.png)
+
+    > [!NOTE]
+    > Bruk Upsert-logikken (oppdater og sett inn) for å oppdatere oppføringen hvis den allerede finnes, eller for å sette inn en ny oppføring.
+
+## <a name="option-2-import-by-bringing-your-own-source-file"></a>Alternativ 2: Importer ved å hente din egen kildefil
+
+Hvis du er en erfaren bruker og kjenner til de obligatoriske feltene for en gitt enhet for Common Data Service for Apps-enheter, kan du definere din egen Excel- eller CSV-kildefil. Følg fremgangsmåten i **Importer filen**.
+
+## <a name="navigate-mapping-errors"></a>Navigere i tilordningsfeil
+
+Hvis du får tilordningsfeil når du har lastet opp filen, velger du **Tilordningsstatus**. Gjør følgende for å undersøke og rette opp felttilordningsfeilene.
+
+1. Bruk rullegardinmenyen til høyre under **Vis** for å gå gjennom **Felt som ikke er tilordnet**, **Felt med feil** eller **Obligatoriske felt**.
+
+    > [!TIP]
+    > Avhengig av om du får en advarsel eller feil, kan du undersøke **Felt som ikke er tilordnet** eller **Felt med feil** via rullegardinmenyen i **Felttilordninger**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Eksempel på delvis samsvar på grunn av advarsler med felttilordninger](./media/data-platform-import-export/partial-match.png)
+
+    > [!div class="mx-imgBorder"] 
+    > ![Eksempel på navigering i felttilordningsfeil](./media/data-platform-import-export/navigate-mappings.png)
+
+    > [!div class="mx-imgBorder"] 
+    > ![Eksempel på å undersøke og korrigere advarsler med felttilordninger](./media/data-platform-import-export/inspect-warnings.png)
+
+2. Når du har løst alle feil og advarsler, velger du **Lagre endringer** i det øvre høyre hjørnet. Du går tilbake til **Importer data**-skjermbildet.
+3. Når **Tilordningsstatus**-kolonnen viser **Fullført** i grønt, velger du **Importer** i det øvre høyre hjørnet.
+4. Når du får meldingen **Importen ble fullført**, viser den totalt antall innsettinger og oppdateringer.
+
+## <a name="ensure-uniqueness-when-you-import-data-into-an-entity-from-excel-or-csv"></a>Sikre unikhet når du importerer data til en enhet fra Excel eller CSV
+
+Common Data Service for Apps-enheter bruker en primærnøkkel for å entydig identifisere oppføringer i en Common Data Service-enhetstabell. Primærnøkkelen for en Common Data Service-enhet er en globalt unik identifikator (GUID). Den er standardgrunnlag for identifikasjon av oppføringer. Dataoperasjoner som import av data til Common Data Service-enheter viser standard primærnøkler.
+
+Eksempel:  
+Primærnøkkelen for en **Forretningsforbindelse**-enhet er **accountid**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Eksempeleksportfil fra en **Forretningsforbindelse**-enhet som viser **accountid** som primærnøkkel](./media/data-platform-import-export/export-pk.png)
+
+Noen ganger kan det hende at en primærnøkkel ikke fungerer når du integrerer data fra en ekstern kilde. Bruk Common Data Service for å definere alternative nøkler som unikt identifiserer en oppføring i stedet for primærnøkkelen.
+
+Eksempel:  
+For en **Forretningsforbindelse**-enhet kan du angi **transactioncurrencyid** som alternativ nøkkel ved hjelp av naturlig nøkkelbasert identifikasjon. Bruk for eksempel **Amerikanske dollar** i stedet for GUID-verdien **88c6c893-5b45-e811-a953-000d3a33bcb9** som ble vist tidligere. Du kan også velge **valutasymbol** eller **valutanavn** som nøkler.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Eksempel på oppretting av en alternativ nøkkel i en **Valuta**-enhet](./media/data-platform-import-export/create-ak.png)
+
+   > [!div class="mx-imgBorder"] 
+   > ![Eksempeleksportfil fra en **Forretningsforbindelse**-enhet som viser **valutanavn** som naturlig nøkkel](./media/data-platform-import-export/export-nk.png)
+
+Brukere kan fortsatt bruke primærnøkler som identifikatorer etter de har angitt alternative nøkler. I det foregående eksemplet er den første filen fortsatt gyldig hvis GUID-er er gyldige data.
+
+## <a name="export-data-to-csv"></a>Eksporter data til CSV
+
+Du kan utføre en engangs dataeksport fra en standardenhet eller egendefinert enhet. Og du kan eksportere data fra flere enheter om gangen. Hvis du eksporterer data fra flere enheter, eksporteres hver enhet til sin egen Microsoft CSV-fil.
+
+1. På [powerapps.com](https://web.powerapps.com/) utvider du **Data**-delen. Velg **Enheter** i venstre navigasjonsrute.
+1. Velg enheten du vil eksportere data fra.
+1. Velg ellipsen eller menyen øverst. Velg **Eksporter**. Velg **Data**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Eksempel på eksport av data fra en **Forretningsforbindelse**-enhet](./media/data-platform-import-export/export-account.png)
+
+    > [!NOTE]
+    > Hvis du vil eksportere data fra flere enheter, velger du **Eksporter** på den øverste menyen. Velg **Data**. Du kan velge flere enheter.
+
+1. Når eksporten er fullført, kan du **Last ned eksporterte data**. Denne nedlastingen gir deg en kobling til den nedlastbare CSV-filen.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Eksempeleksport som viser vellykket eksport med kobling til nedlastbar fil](./media/data-platform-import-export/export-success.png)
 
 ## <a name="unsupported-data-types"></a>Datatyper som ikke støttes
 
-Følgende datatyper støttes ikke for øyeblikket
+Følgende datatyper støttes ikke for øyeblikket.
 
 - Tidssone
-- Flervalg av alternativsett
+- Alternativsett med flere valg
 - Bilde

@@ -1,131 +1,140 @@
 ---
-title: Opplæring for hvordan du oppretter en egendefinert enhet som har komponenter med PowerApps | Microsoft Docs
-description: Håndbok med trinnvise instruksjoner for oppretting og konfigurering av en enhet som brukes med en PowerApps-app.
+title: Opplæring for å opprette en egendefinert enhet som har komponenter med PowerApps | Microsoft Docs
+description: Opplæring med trinnvise instruksjoner for å opprette og konfigurere en enhet for bruk med en PowerApps-app.
 author: Mattp123
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: tutorial
-ms.date: 05/01/2018
+ms.date: 06/22/2018
 ms.author: matp
-ms.openlocfilehash: f611ef7be4d91b76f0be24116aabc7795d332520
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218468"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="tutorial-create-a-custom-entity-that-has-components-in-powerapps"></a>Opplæring: Oppretting av en egendefinert enhet som har PowerApps-komponenter
 
-Med [!INCLUDE [powerapps](../../includes/powerapps.md)] kan du skreddersy appen slik at den passer godt til organisasjonens bransje, terminologi og unike forretningsprosesser. [!INCLUDE [powerapps](../../includes/powerapps.md)] apputvikling inkluderer å legge til standard ferdiglagde enheter eller opprette egendefinerte enheter. En enhet definerer informasjonen du ønsker å spore i form av poster, noe som vanligvis inneholder egenskaper som for eksempel firmanavn, plassering, produkter, e-post og telefon. 
+# <a name="tutorial-create-a-custom-entity-that-has-components-in-powerapps"></a>Opplæring: Opprette en egendefinert enhet som har komponenter i PowerApps
 
-I denne opplæringen oppretter du en enhet, og deretter legger du til eller tilpasser viktige komponenter, som foreksempel felt, relasjoner, visninger og former. Du finner ut hvordan du kan gjøre følgende:
+Med PowerApps kan du skreddersy appen slik at den passer til organisasjonens bransje, terminologi og unike forretningsprosesser. Utvikling av PowerApps-apper består av å legge til standard medfølgende enheter eller opprette egendefinerte enheter. En enhet definerer informasjonen du vil spore ved hjelp av oppføringer, som vanligvis inneholder egenskaper som firmanavn, sted, produkter, e-post og telefon. 
+
+I denne opplæringen oppretter du en enhet og legger deretter til eller tilpasser viktige komponenter, for eksempel felt, relasjoner, visninger og skjemaer. Du lærer hvordan du gjør følgende.
 
 - Opprette en egendefinert enhet
-- Legge til egendefinerte felt på enheten din
+- Legge til egendefinerte felt i enheten
 - Legge til en enhetsrelasjon
 - Tilpasse en visning 
 - Tilpasse et skjema
 
-Denne opplæringen følger firmaet Contoso, som er et dyrefrisørfirma som steller hunder og katter. Contoso trenger en app for sporing av klienter og kjæledyr, som kan brukes av ansatte på en rekke enheter.
+Opplæringen følger selskapet Contoso, som er en virksomhet for kjæledyrstell som pleier hunder og katter. Contoso trenger en app for kunde- og kjæledyrsporing som kan brukes av ansatte på tvers av flere enheter.
 
-## <a name="prerequisites"></a>Forutsetninger
+## <a name="prerequisites"></a>Forhåndskrav
 
-Logg deg på [PowerApps](https://powerapps.microsoft.com/). Hvis du ikke allerede har en [!INCLUDE [powerapps](../../includes/powerapps.md)]konto, velger du koblingen **Kom i gang gratis** fra [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Hvis du ikke allerede har en PowerApps-konto, velger du **Kom i gang gratis**-koblingen fra [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## <a name="create-a-custom-entity"></a>Opprette en egendefinert enhet
 
-1. Utvid **Data** på den venstre navigasjonsruten, velg **Enheter** og velg så **Ny enhet**.
-    ![Ny enhet](media/create-custom-entity/create-new-entity.png)
-2. Skriv følgende verdier inn i den høyre ruten, og velg deretter **Neste**.
-   - **Visningsnavn**: *Kjæledyr* 
-   - **Beskrivelse**: *Egendefinert enhet som sporer kjæledyr-tjenester*
+1. Utvid **Data** i den venstre navigasjonsruten, velg **Enheter**, og velg deretter **Ny enhet**.
+    > [!div class="mx-imgBorder"] 
+    > ![ny enhet](media/create-custom-entity/create-new-entity.png)
+2. Angi følgende verdier i ruten til høyre, og velg deretter **Neste**.
+  - **Visningsnavn**: *Kjæledyr* 
+  - **Beskrivelse**: *Egendefinert enhet for å spore kjæledyrtjenester*
 3. Velg **Lagre enhet**.
 
-## <a name="add-and-customize-fields"></a>Slik legger du til og tilpasser felt
+## <a name="add-and-customize-fields"></a>Legge til og tilpasse felt
  
-1. Velg **Primærnavn**-feltet på **Felt**-fanen.
-2. I den høyre ruten kan du gjøre følgende endringer i **Primærnavn**-feltet: 
-   - Endre **Visningsnavn** fra **Primærnavn** til *Navn på kjæledyr*
-   - Velg **Søkbar**  
+1. I listen over enheter velger du **Kjæledyr**-enheten som ble opprettet i forrige del.
+2. I **Felt**-kategorien velger du **Kjæledyr**-feltet.
+3. I den høyre ruten kan du gjøre følgende endringer i **Visningsnavn**-feltet: 
+  - Endre **visningsnavnet** fra **Kjæledyr** til *Navn på kjæledyr*.
+  - Velg **Søkbar**.  
   
-     ![Endring av primærfeltet](media/create-custom-entity/primary-field.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Endre hovedfelt](media/create-custom-entity/primary-field.png)
 3. Velg **Ferdig**.
-4. Velg **Legg til** felt på verktøylinjen for enhetsutforming, på **Felt**-fanen. Skriv inn eller velg de følgende verdiene og alternativene i **feltegenskaper**-ruten.
-   - **Visningsnavn**. *Art*
-   - **Datatype**. *Alternativsett*
-   - **Alternativsett**. *Nytt alternativsett*
-5. Lage alternativsettet
+4. I **Felt**-kategorien på verktøylinjen enhetsutforming velger du **Legg til felt**. I **Feltegenskaper**-ruten angir eller velger du følgende verdier og alternativer.
+  - **Visningsnavn**. *Art*
+  - **Datatype**. *Alternativsett*
+  - **Alternativsett**. *Nytt alternativsett*
+5. Opprett alternativsettet
 
-   a. Velg **Legg til nytt element**. 
+  a. Velg **Legg til nytt element**. 
   
-   b. Erstatt **Nytt alternativ** med *Hund*. 
+  b. Erstatt **Nytt alternativ** med *Hund*. 
    
-   c. Velg **Legg til nytt element**. 
+  c. Velg **Legg til nytt element**. 
     
-   d.  Erstatt **Nytt alternativ** med *Katt*. 
+  d.  Erstatt **Nytt alternativ** med *Katt*. 
     
-   e. Velg **Lagre**. 
+  e. Velg **Lagre**. 
 
-   ![Nytt alternativsett](media/create-custom-entity/optionset-add-items.png)
+  > [!div class="mx-imgBorder"] 
+  > ![Nytt alternativsett](media/create-custom-entity/optionset-add-items.png)
 
 6. Velg **Søkbar**, og velg deretter **Ferdig**.
 
-7. Velg **Legg til felt** på verktøylinjen for enhetsutforming. Skriv inn eller velg de følgende verdiene og alternativene i **Feltegenskaper**-ruten, og velg deretter **Ferdig**.
-   - **Visningsnavn**. *Rase*
-   - **Datatype**. *Tekst*
-   - **Søkbar**. *Ja*
+7. På verktøylinjen enhetsutforming velger du **Legg til felt**. I **Feltegenskaper**-ruten angir eller velger du følgende verdier og velger deretter **Ferdig**.
+  - **Visningsnavn**. *Rase*
+  - **Datatype**. *Tekst*
+  - **Søkbar**. *Ja*
 
-8. Velg **Legg til felt** på verktøylinjen for enhetsutforming. 
+8. På verktøylinjen enhetsutforming velger du **Legg til felt**. 
 
-9. Skriv inn eller velg de følgende verdiene og alternativene i **Feltegenskaper**-ruten, og velg deretter **Ferdig**. 
-   - **Visningsnavn**. *Avtaledato*
-   - **Datatype**. *Dato og klokkeslett*
+9. I **Feltegenskaper**-ruten angir eller velger du følgende verdier og velger deretter **Ferdig**. 
+  - **Visningsnavn**. *Avtaledato*
+  - **Datatype**. *Dato og klokkeslett*
 
 10. Velg **Lagre enhet**.
 
-## <a name="add-a-relationship"></a>Oppretting av en relasjon
+## <a name="add-a-relationship"></a>Legge til en relasjon
 
-1. Velg **Relasjoner**-fanen, og velg deretter **Legg til relasjon** på verktøylinjen for enhetsutforming. Velg avslutningsvis **Mange-til-én**. 
-2. I ruten til høyre i **Beslektet**-listen velger du **Konto**.
+1. Velg **Relasjoner**-kategorien, på verktøylinjen for enhetsutforming velger du **Legg til relasjon**, og velger deretter **Mange-til-én**. 
+2. I ruten til høyre i **Relatert**-listen velger du **Forretningsforbindelse**.
 3. Velg **Ferdig**.
 4. Velg **Lagre enhet**.
 
-Legg merke til at når du legger til en relasjon, legges et **Konto**-felt med datatypen **Oppslag** automatisk til i listen over felt på **Felt**-fanen. ![Oppslagsfelt for konto](media/create-custom-entity/account-lookup-field.png)
+  Legg merke til at når du legger til en mange-til-én-relasjon legges et **Forretningsforbindelse**-felt med datatypen **Oppslag** automatisk til i listen over felt i **Felt**-kategorien.
+  > [!div class="mx-imgBorder"]
+  > ![Oppslagsfelt for forretningsforbindelse](media/create-custom-entity/account-lookup-field.png)
 
 ## <a name="customize-a-view"></a>Tilpasse en visning
 
-1. Velg **Visninger**-fanen, og velg deretter **Aktive kjæledyr**-visning. Hvis du ikke ser **Aktive kjæledyr**-visningen, velger du **Fjern filter**.
-2. Velg **Legg til kolonner** i visningsutformeren, velg følgende kolonner og velg deretter **OK**.
-   - Konto
-   - Avtaledato 
-   - Rase 
-   - Art
-3. Velg **Opprettet på**-fanen, velg **Fjern**, og velg deretter **OK** for å bekrefte slettingen av kolonnen.
-4. Hvis du vil ordne kolonnene, merker du kolonnen du vil flytte, og deretter bruker du pilknappene <- og -> til visningen ser slik ut.
-    ![Visning av aktive kjæledyr ](media/create-custom-entity/active-pets-view.png)
+1. Velg kategorien **Visninger**, og velg deretter **Aktive kjæledyr**-visningen. Hvis du ikke ser **Aktive kjæledyr**-visningen, velger du **Fjern filter**.
+2. I visningsutformingen velger du **Legg til kolonner**, velger følgende kolonner, og velger deretter **OK**.
+  - Forretningsforbindelse
+  - Avtaledato 
+  - Rase 
+  - Art
+3. Velg **Opprettet den**-kolonnen, velg **Fjern**, og velg deretter **OK** for å bekrefte at kolonnen skal fjernes.
+4. For å ordne kolonnene velger du kolonnen du vil flytte, og bruker deretter <- og -> pilknappene til visningen ser slik ut.
+    > [!div class="mx-imgBorder"] 
+    > ![Visning av aktive kjæledyr](media/create-custom-entity/active-pets-view.png)
 5. Velg **Lagre og lukk** på verktøylinjen for visningsutforming.  
 
-## <a name="model-driven-apps-only-customize-the-main-form"></a>Bare modell-drevne apper: Tilpass hovedskjema
+## <a name="model-driven-apps-only-customize-the-main-form"></a>Bare modelldrevne apper: Tilpasse hovedskjemaet
 
-Hopp over dette trinnet hvis du bare vil bruke kjæledyr-enheten i en lerretsapp. 
+Hopp over dette trinnet hvis du bare vil bruke kjæledyrenheten i en lerretsapp. 
 
-1. Velg **Modelldrevet** i den [!INCLUDE [powerapps](../../includes/powerapps.md)] venstre navigasjonsruten.
-2. Utvid **Data** på den venstre navigasjonsruten, velg **Enheter** og velg så **Kjæledyr**.
-3. Velg **Skjemaer**-fanen, og velg deretter **Informasjon** ved siden av **Hoved**-skjematypen for å åpne redigeringsprogrammet for skjema.
-    ![Redigering av hovedskjema](media/create-custom-entity/main-form-edit.png)
-4. Du kan dra og slippe feltene **Art**, **Rase**, **Avtaledato** og **Konto** i redigeringsprogrammet for skjema, som er plassert i Generelt-delen i skjemalerretet i Feltutforsker-ruten, til skjemaet ser slik ut.
-    ![Valg av felt for hovedskjema](media/create-custom-entity/main-form-edit2.png) 
+1. Velg **Modelldrevet** i den venstre navigasjonsruten i PowerApps.
+2. Utvid **Data** i den venstre navigasjonsruten, velg **Enheter**, og velg deretter **Kjæledyr**.
+3. Velg kategorien **Skjemaer**, og velg deretter **Informasjon** ved siden av **Hoved**-skjematypen for å åpne skjemaredigeringsprogrammet.
+    > [!div class="mx-imgBorder"] 
+    > ![Redigere hovedskjema](media/create-custom-entity/main-form-edit.png)
+4. I skjemaredigeringsprogrammet drar og slipper du feltet **Art**, **Rase**, **Avtaledato** og **Forretningsforbindelse** i ruten Feltutforsker i Generelt-delen på skjemalerretet til skjemaet ser slik ut.
+    > [!div class="mx-imgBorder"] 
+    > ![Velge felt for hovedskjema](media/create-custom-entity/main-form-edit2.png) 
 5. Velg **Lagre**.
 6. Velg **Publiser**.
-7. Velg **Lagre og lukk** for å lukke skjemautformeren.
+7. Velg **Lagre og lukk** for å lukke skjemautformingen.
 
-## <a name="add-the-custom-entity-to-an-app"></a>Slik legger du til den egendefinerte enheten i en app
+## <a name="add-the-custom-entity-to-an-app"></a>Legge til den egendefinerte enheten i en app
 
-Enheten er nå klar til å brukes til å utvikle enten et lerret eller en modelldrevet app. 
+Nå er enheten klar til å brukes for å bygge et lerret eller en modelldrevet app. 
 
 ## <a name="next-steps"></a>Neste trinn
 
-I denne opplæringen har du sett hvordan du oppretter en enhet som kan brukes til å opprette en nyttig app. 
-- Hvis du vil lære hvordan du oppretter en modelldreven app, kan du se [Slik lager du din første modelldrevne app](../model-driven-apps/build-first-model-driven-app.md).
-- Hvis du vil lære hvordan du oppretter en lerretsapp, kan du se [Oppretting av en app fra grunnen av](../canvas-apps/get-started-create-from-blank.md).
+Du har lært hvordan du oppretter en enhet som kan brukes til å opprette en nyttig app, i denne opplæringen. 
+- Hvis du vil vite hvordan du oppretter en modelldrevet app, kan du se [Lage din første modelldrevne app](../model-driven-apps/build-first-model-driven-app.md).
+- Hvis du vil vite hvordan du oppretter en lerretsapp, kan du se [Opprette en app fra bunnen](../canvas-apps/get-started-create-from-blank.md).

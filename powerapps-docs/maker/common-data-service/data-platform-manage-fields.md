@@ -1,6 +1,6 @@
 ---
-title: Behandling av egendefinerte felt i en enhet | Microsoft Docs
-description: Gjennomgang av hvordan du oppretter, leser, oppdaterer og sletter egendefinerte felt i en enhet i Common Data Service (CDS) for apper.
+title: Administrere egendefinerte felt i en enhet | Microsoft Docs
+description: 'Gjennomgang av hvordan du oppretter, leser, oppdaterer og sletter egendefinerte felt i en enhet i Common Data Service (CDS) for Apps.'
 author: clwesene
 manager: kfile
 ms.service: powerapps
@@ -8,21 +8,21 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: a9fff4cc61f6416ef8dbc3c03d96be7082fe3a51
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218744"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="manage-custom-fields-in-an-entity"></a>Behandle egendefinerte felt i en enhet
-Du kan opprette og oppdatere ett eller flere egendefinerte felt i en enhet. Når du oppretter et egendefinert felt, kan du angi et sett med egenskaper som feltnavn, visningsnavn, og typen data det skal inneholde. Hvis du vil ha mer informasjon, kan du se [Attributtmetadata for enhet](../../developer/common-data-service/entity-attribute-metadata.md).
+
+# <a name="manage-custom-fields-in-an-entity"></a>Administrere egendefinerte felt i en enhet
+Du kan opprette og oppdatere ett eller flere egendefinerte felt i en enhet. Når du oppretter et egendefinert felt, kan du angi en rekke egenskaper, for eksempel feltnavnet, visningsnavnet og datatypen som det skal inneholde. Hvis du vil ha mer informasjon, kan du se [Attributtmetadata for enhet](../../developer/common-data-service/entity-attribute-metadata.md).
 
 > [!NOTE]
-> Hver enhet har systemfelt, som eksempelvis felt som angir når en post sist ble oppdatert, og hvem som oppdaterte den. Standardenheter har i tillegg standardfelt. Du kan ikke endre eller slette systemfelt eller standardfelt. Hvis du oppretter et egendefinert felt, får du funksjonalitet i tillegg til disse innebygde feltene.
+> Hver enhet har systemfelt, for eksempel felt som angir når en oppføring sist ble oppdatert, og hvem som oppdaterte den. I tillegg har standardenheter standardfelt. Du kan ikke endre eller slette systemfelt eller standardfelt. Hvis du oppretter et egendefinert felt, må det inneholde funksjonalitet utover disse innebygde feltene.
 
-## <a name="create-a-field"></a>Å opprett et felt
-1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
+## <a name="create-a-field"></a>Opprette et felt
+1. På [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) utvider du **Data**-delen og klikker eller trykker på **Enheter** i den venstre navigasjonsruten.
 
     ![Enhetsdetaljer](./media/data-platform-cds-create-entity/entitylist.png "Enhetsliste")
 
@@ -30,37 +30,37 @@ Du kan opprette og oppdatere ett eller flere egendefinerte felt i en enhet. Når
 
 3. Legg til et nytt felt i enheten ved å klikke på **Legg til felt**.
 
-4. I Nytt felt-panelet angir du **visningsnavn** for feltet. **Navn**-feltet blir automatisk utfylt og brukes som det unike navnet for feltet. **Visningsnavnet** brukes ofte når du presenterer dette feltet for brukerne dine, og **Navn**-feltet brukes når du bygger en app, i uttrykk og formler.
+4. I Nytt felt-panelet angir du **Visningsnavn** for feltet. **Navn** fylles ut automatisk og brukes som det unike navnet på feltet. **Visningsnavn** brukes når du presenterer dette feltet til brukerne. **Navn** brukes når du bygger appen, i uttrykk og formler.
 
     > [!NOTE]
-    > **Visningsnavn**-feltet kan oppdateres når som helst til en annen visning i appene dine, men **Navn**-feltet kan ikke endres etter at enheten er lagret. Dette kan resultere i at en eksisterende app ødelegges.
+    > **Visningsnavn**-felt kan bli oppdatert når som helst for å vises annerledes i apper. **Navn**-feltet kan ikke endres etter at enheten er lagret, siden dette kan føre til brudd i en eksisterende app.
 
-    ![Nytt felt](./media/data-platform-cds-create-entity/newfieldpanel.png "Nytt felt-panel")
+    ![Nytt felt](./media/data-platform-cds-create-entity/newfieldpanel.png "Panelet for nytt felt")
 
-5. Velg **datatypen** til feltet. Dette kontrollerer måten informasjonen lagres så vel som hvordan den presenteres i appene. Tekst lagres for eksempel annerledes enn et desimaltall eller en nettadresse. Hvis du vil ha mer detaljert informasjon om tilgjengelige datatyper, kan du se [Attributtmetadata for enhet](../../developer/common-data-service/entity-attribute-metadata.md).
+5. Velg **Datatype** for feltet. Dette kontrollerer hvordan informasjonen lagres og hvordan den vises i apper. For eksempel lagres tekst forskjellig for et desimaltall eller en URL-adresse. For mer informasjon om datatypene som er tilgjengelig, kan du se [Attributtmetadata for enhet](../../developer/common-data-service/entity-attribute-metadata.md).
 
-    Hvis du blir bedt om det, angir du ytterligere informasjon for datatypen som angav. Forskjellige felt presenteres avhengig av datatypen. Hvis du oppretter et felt av typen Alternativsett eller Flervalg av alternativsett, kan du velge **Nytt alternativsett** og opprette et nytt alternativsett når du oppretter feltet. Hvis du vil ha mer informasjon, kan du se [Oppretting av et alternativsett](custom-picklists.md)
+    Hvis du blir bedt om det, kan du angi ytterligere informasjon om datatypen du har angitt. Avhengig av datatype vises det andre felt. Hvis du oppretter et felt av typen Alternativsett eller Alternativsett med flere valg, kan du velge **Nytt alternativsett** og opprette et nytt alternativsett når du oppretter feltet. Hvis du vil ha mer informasjon, kan du se [Opprette alternativsett](custom-picklists.md).
 
-    ![Nytt felt](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Nytt felt-panel")
+    ![Nytt felt](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Panelet for nytt felt")
 
 
-7. Merk av for om du vil anbefale dette feltet som obligatorisk i appene dine, under **Obligatorisk**. Dette fører ikke til streng håndhevelse gjennom alle tilkoblingene til Common Data Service. Hvis du må sikre at feltet fylles ut, oppretter du en [forretningsregel](data-platform-create-business-rule.md)
+7. Under **Obligatorisk** merker du av hvis du vil anbefale dette feltet som obligatorisk i apper. Dette sørger ikke for hard håndhevelse gjennom alle tilkoblinger til Common Data Service. Hvis du vil sikre at feltet fylles ut, oppretter du en [forretningsregel](data-platform-create-business-rule.md)
 
-8. Merk av for om du trenger at dette feltet er tilgjengelig i Visninger, Diagrammer, Instrumentbord og Avansert søk, under **Søkbar**. I de fleste tilfellene bør du merke av for dette.
+8. Under **Søkbar** merker du av hvis du har behov for at dette feltet skal være tilgjengelig i visninger, diagrammer, instrumentbord og avansert søk. I de fleste tilfeller må dette være merket av for.
 
-9. Klikk eller trykk på **Ferdig** for å lukke feltpanelet og gå tilbake til enheten. Du kan gjenta trinnene 3–9 for hvert tilleggsfelt.
+9. Klikk eller trykk **Fullført** for å lukke feltpanelet og gå tilbake til enheten. Du kan gjenta trinn 3 til 9 for hvert ekstra felt.
    
     > [!IMPORTANT]
-    > Feltet er ikke lagret og opprettet før du lagrer endringene i enheten.
+    > Feltet blir ikke endelig opprettet før du lagrer endringene i enheten.
 
-10. Klikk eller trykk på **Lagre enhet** for å fullføre endringene, og lagre dem til Common Data Service.
+10. Klikk eller trykk **Lagre enhet** for å fullføre endringene og lagre dem i Common Data Service.
 
-    Du blir varslet når operasjonen er fullført. Hvis operasjonen mislykkes, viser en feilmelding problemene som oppstod og hvordan du kan rette dem opp.
+    Du blir varslet når handlingen er fullført. Hvis den mislykkes, angir en feilmelding problemene som oppstod, og hvordan du kan rette dem.
 
-## <a name="create-a-calculated-or-roll-up-field"></a>Oppretting av et beregnet eller opprullingsfelt
-Med beregnede felt kan du automatisere manuelle beregninger som brukes i forretningsprosesser. En selger ønsker for eksempel å vite vektet omsetning for en mulighet som er basert på anslått omsetning fra en mulighet, multiplisert med sannsynligheten. Eller selgeren ønsker kanskje å ta i bruk en rabatt automatisk, hvis en bestilling er større enn USD 500. Et beregnet felt kan inneholde verdier fra enkle matematiske operasjoner, eller betingede operasjoner, som for eksempel større enn/eller/hvis/annet, og mange andre. Du kan opprette beregnede felt ved bruk av følgende datatyper:
+## <a name="create-a-calculated-or-roll-up-field"></a>Opprette et beregnet felt eller et felt for beregnet verdi
+Med beregnede felt kan du automatisere manuelle beregninger som brukes i forretningsprosessene. En selger vil for eksempel vite hva vektet omsetning er for en salgsmulighet, som er basert på den beregnede omsetningen fra en salgsmulighet multiplisert med sannsynligheten. Eller de vil legge på en rabatt automatisk hvis en ordre er større enn 500 kroner. Et beregnet felt kan inneholde verdier fra vanlige matematiske eller betingede operasjoner, for eksempel større enn og hvis-ellers. Beregnede felt kan opprettes ved hjelp av følgende datatyper:
 
-* Enkeltlinje med tekst
+* En enkelt linje med tekst
 * Alternativsett
 * To alternativer
 * Heltall
@@ -68,36 +68,36 @@ Med beregnede felt kan du automatisere manuelle beregninger som brukes i forretn
 * Valuta
 * Dato og klokkeslett
 
-Hvis du vil ha mer informasjon om uttrykkstypene som støttes og eksempler, kan du se [Definering av beregnede felt](/dynamics365/customer-engagement/customize/define-calculated-fields)
+Hvis du vil ha mer informasjon om hvilke uttrykk som støttes, og eksempler, se [Definere beregnede felt](/dynamics365/customer-engagement/customize/define-calculated-fields)
 
-## <a name="update-or-delete-a-field"></a>Oppdater eller slett et felt
-1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og trykk eller klikk på **Enheter** i venstre navigasjonsrute. Deretter klikker eller trykker du på en enhet.
-2. I feltlisten for enheten du valgte kan du klikke eller trykke på et felt, og deretter følge ett av disse trinnene:
+## <a name="update-or-delete-a-field"></a>Oppdatere eller slette et felt
+1. På [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) utvider du **Data**-delen og klikker eller trykker på **Enheter** i den venstre navigasjonsruten, og deretter klikker du eller trykker på en enhet.
+2. I listen over felt for enheten du valgte, klikk eller trykk et felt, og gjør deretter ett av følgende:
    
-   * Du kan endre én eller flere egenskaper for feltet.
-   * Du kan slette feltet ved å klikke eller trykke på ellipsen (...) i nærheten av høyre kant av feltet, og deretter klikke eller trykke på **Slett**.
+   * Endre én eller flere egenskaper for det valgte feltet.
+   * Slett feltet ved å klikke eller trykke ellipsen (…) nær høyre kant av feltet og deretter klikke eller trykke **Slett**.
 
-3. Klikk eller trykk på **Lagre enhet** for å sende inn endringene.
+3. Klikk eller trykk **Lagre enhet** for å sende inn endringene.
    
     > [!IMPORTANT]
-    > Endringene går tapt hvis du ikke lagrer dem før du åpner en ny side i nettleseren, eller avslutter nettleseren.
+    > Endringene vil gå tapt hvis du ikke lagrer dem før du åpner en annen side i nettleseren eller avslutter nettleseren.
 
-    Du blir varslet når operasjonen er fullført. Hvis operasjonen mislykkes, viser en feilmelding problemene som oppstod og hvordan du kan rette dem opp.
+    Du blir varslet når handlingen er fullført. Hvis den mislykkes, angir en feilmelding problemene som oppstod, og hvordan du kan rette dem.
 
-## <a name="best-practices-and-restrictions"></a>Anbefalte fremgangsmåter og begrensninger
-Når du oppretter og endrer felt, må du huske på følgende:
+## <a name="best-practices-and-restrictions"></a>Gode fremgangsmåter og begrensninger
+Husk følgende når du oppretter og endrer felt:
 
-* Du kan ikke endre eller slette systemfelt eller verdiene deres.
-* Du kan ikke endre eller slette et standardfelt, legge til et felt som krever data, eller foreta noen annen handling som kan ødelegge appen som baserer seg på enheten, i en standardenhet.
-* I en egendefinert enhet må du sørge for at endringene du foretar deg, ikke ødelegger en app som baserer seg på den enheten.
-* Du må gi hvert egendefinert felt et navn som er unikt i enheten, og du kan ikke gi feltet et nytt navn etter at du har opprettet det.
+* Du kan ikke endre eller slette systemfelt eller verdiene i dem.
+* I en standardenhet kan du ikke endre eller slette et standardfelt, legge til et felt som krever data, eller gjøre andre endringer som kan bryte en app som avhenger av denne enheten.
+* I en egendefinert enhet må du kontrollere at endringene du gjør, ikke vil bryte en app som avhenger av denne enheten.
+* Du må gi hvert egendefinert felt et navn som er unikt i enheten, og du kan ikke endre navnet på et felt etter at du har opprettet det.
 
 ## <a name="next-steps"></a>Neste trinn
-* [Definering av relasjoner mellom enheter](data-platform-entity-lookup.md)
-* [Definering av en forretningsregel](data-platform-create-business-rule.md)
-* [Oppretting av en app ved bruk av enheter](../canvas-apps/data-platform-create-app.md)
-* [Slik oppretter du en app fra grunnen av ved hjelp av en Common Data Service-database](../canvas-apps/data-platform-create-app-scratch.md)
+* [Definere relasjoner mellom enheter](data-platform-entity-lookup.md)
+* [Opprette en forretningsregel](data-platform-create-business-rule.md)
+* [Opprette en app ved hjelp av enheter](../canvas-apps/data-platform-create-app.md)
+* [Opprette en app fra bunnen ved å bruke en Common Data Service-database](../canvas-apps/data-platform-create-app-scratch.md)
 
-## <a name="privacy-notice"></a>Erklæring om personvern
-Med den vanlige datamodellen i Microsoft PowerApps samler vi inn og lagrer egendefinerte enhets- og feltnavn i diagnostiseringssystemene.  Vi bruker denne kunnskapen til å forbedre den vanlige datamodellen for kundene våre. Enhets- og feltnavnene som skapere oppretter, hjelper oss med å forstå scenarioene som er typiske i Microsoft PowerApps-fellesskapet og få rede på hull i tjenestens standarddekning for enheter, som eksempelvis skjemaer knyttet til organisasjoner. Dataene i databasetabeller som er knyttet til disse enhetene, blir ikke åpnet eller brukt av Microsoft eller replisert utenfor området hvor databasen er klargjort. Merk deg imidlertid at den egendefinerte enheten og feltnavnene kan repliseres på tvers av områder og blir slettet i henhold til retningslinjene våre for dataoppbevaring. Microsoft tar vare på personvernet ditt, som ytterligere beskrevet i [Klareringssenteret](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
+## <a name="privacy-notice"></a>Personvernerklæring
+Med Common Data Model for Microsoft PowerApps samler vi inn og lagrer egendefinerte enhets- og feltnavn i diagnosesystemene våre.  Vi bruker denne kunnskapen til å forbedre Common Data Model for kundene våre. Enhets- og feltnavnene som oppretterne lager, hjelper oss å forstå scenarioer som er vanlige i Microsoft PowerApps-fellesskapet, og fastslår mangler i tjenestens standardenhetsdekning, for eksempel skjemaer som er relatert til organisasjoner. Dataene i databasetabellene som er knyttet til disse enhetene, brukes ikke eller er ikke tilgjengelige for Microsoft eller replikeres utenfor området der databasen klargjøres. Vær imidlertid oppmerksom på at de egendefinerte enhets- og feltnavnene kan replikeres på tvers av områder, og slettes i henhold til våre oppbevaringspolicyer for data. Microsoft går inn for å verne om dine personlige opplysninger som beskrevet ytterligere i vårt [Klareringssenter](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
 

@@ -1,6 +1,6 @@
 ---
-title: Å åpne enhetsdata i Excel | Microsoft Docs
-description: Å åpne enhetsdata i Excel for interaktiv visning og redigering.
+title: Åpne enhetsdata i Excel | Microsoft Docs
+description: Åpne enhetsdata i Excel for interaktiv visning og redigering.
 author: clwesene
 manager: kfile
 ms.service: powerapps
@@ -8,77 +8,76 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 05/21/2018
 ms.author: clwesene
-ms.openlocfilehash: ad1a2de5491a1725ada2e95c3eccc6513de9e304
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218491"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="open-entity-data-in-excel"></a>Å åpne enhetsdata i Excel
-Ved at du åpner enhetsdata i Microsoft Excel, kan du raskt og enkelt vise og redigere data ved å bruke Excel-tillegget for Microsoft PowerApps. Excel-tillegget for PowerApps krever Microsoft Excel 2016.
+# <a name="open-entity-data-in-excel"></a>Åpne enhetsdata i Excel
+Ved å åpne enhetsdata i Microsoft Excel, kan du raskt og enkelt vise og redigere data ved hjelp av Microsoft PowerApps Excel-tillegget. PowerApps Excel-tillegget krever Microsoft Excel 2016.
 
-![Excel-tillegg](./media/data-platform-cds-excel-addin/ExcelAddin.png "Excel-tillegg for PowerApps")
+![Excel-tillegg](./media/data-platform-cds-excel-addin/ExcelAddin.png "PowerApps Excel-tillegg")
 
-## <a name="open-entity-data-in-excel"></a>Å åpne enhetsdata i Excel
-1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og trykk eller klikk på **Enheter** i venstre navigasjonsrute. Alle enhetene vises.
-2. Klikk på ellipsen (...) til høyre for enheten du er interessert i.
-3. Klikk på **Åpne i Excel**, og deretter åpner du arbeidsboken som er generert. Denne arbeidsboken har bindingsinformasjon for enheten, en peker til miljøet ditt, og en peker til Excel-tillegget for PowerApps.  
-4. Klikk på **Aktiver redigering** i Excel for å aktivere Excel-tillegget for PowerApps til å kjøre. Excel-tillegget kjører i en rute til høyre for Excel-vinduet.
-5. Hvis dette er første gang du kjører Excel-tillegget for PowerApps, klikker du på **Stol på dette tillegget** for at Excel-tillegget kan kjøre.
-6. Hvis du blir bedt om å logge deg på, kan du klikke på **Logg på**, og deretter logger du deg på ved bruk av den samme legitimasjonen du brukte på[powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Excel-tillegget tar i bruk en tidligere påloggingskontekst, og logger deg automatisk på hvis dette er mulig. Bekreft derfor brukernavnet øverst til høyre i Excel-tillegget.
+## <a name="open-entity-data-in-excel"></a>Åpne enhetsdata i Excel
+1. På [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) utvider du **Data**-delen og klikker eller trykker på **Enheter** i den venstre navigasjonsruten. Alle enhetene vises.
+2. Klikk på ellipsen (…) til høyre for enheten som du er interessert i.
+3. Klikk på **Åpne i Excel**, og åpne deretter arbeidsboken som er generert. Denne arbeidsboken har bindingsinformasjon for enheten, en peker til miljøet ditt og en peker til PowerApps Excel-tillegget.  
+4. Klikk på **Aktiver redigering** i Excel for å aktivere PowerApps Excel-tillegget for kjøring. Excel-tillegget kjører i en rute til høyre i Excel-vinduet.
+5. Hvis dette er første gang du har kjørt PowerApps Excel-tillegget, klikker du på **Klarer dette tillegget** for å tillate at Excel-tillegget kjører.
+6. Hvis du blir bedt om å logge på, klikker du på **Logg på**, og logger deretter på ved å bruke den samme legitimasjonen som du brukte på [powerapps.com](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Excel-tillegget vil bruke en tidligere påloggingskontekst og logge deg på automatisk hvis det er mulig. Bekreft derfor brukernavnet øverst til høyre i Excel-tillegget.
 
-Excel-tillegget leser automatisk dataene for enheten du valgte. Vær oppmerksom på at det ikke er noe data i arbeidsboken før Excel-tillegget leser det inn.
+Excel-tillegget leser automatisk dataene for enheten du valgte. Vær oppmerksom på at det ikke er data i arbeidsboken før Excel-tillegget leser dem inn.
 
-## <a name="view-and-refresh-data-in-excel"></a>Å vise og oppdatere data i Excel
-Etter at Excel-tillegget leser enhetsdataene inn i arbeidsboken, kan du oppdatere dataene når som helst ved å klikke på **Oppdater** i Excel-tillegget.
+## <a name="view-and-refresh-data-in-excel"></a>Vise og oppdatere data i Excel
+Når Excel-tillegget har lest enhetsdata til arbeidsboken, kan du oppdatere dataene når som helst ved å klikke på **Oppdater** i Excel-tillegget.
 
-## <a name="edit-data-in-excel"></a>Å redigere data i Excel
-Du kan endre enhetsdata ved behov, og deretter publisere det ved å klikke på **Publiser** i Excel-tillegget.
+## <a name="edit-data-in-excel"></a>Redigere data i Excel
+Du kan endre enhetsdata ved behov, og deretter publisere dem tilbake ved å klikke på **Publiser** i Excel-tillegget.
 
-Hvis du vil redigere en post, velger du en celle i arbeidsboken, og deretter endrer du celleverdien.
+Hvis du vil redigere en oppføring, merker du en celle i regnearket, og endrer deretter celleverdien.
 
-Hvis du vil legge til en ny post, følger du ett av disse trinnene:
+Hvis du vil legge til en ny oppføring, følger du én av disse fremgangsmåtene:
 
-* Klikk hvor som helst i arbeidsboken, og klikk deretter på **Ny** i Excel-tillegget.
-* Klikk i den siste raden i arbeidsboken, og trykk deretter på TAB til pekeren har beveget seg utenfor den siste kolonnen i den raden. Dette oppretter en ny rad.
-* Klikk i raden umiddelbart nedenfor arbeidsboken, og begynn å skrive inn data i en celle. Du kan flytte fokus vekk fra cellen, og arbeidsboken utvides for å inkludere den nye raden.
+* Klikk hvor som helst i regnearket, og klikk deretter på **Ny** i Excel-tillegget.
+* Klikk i den siste raden i regnearket, og trykk deretter på Tab-tasten til markøren flytter ut av den siste kolonnen i denne raden, og det opprettes en ny rad.
+* Klikk i raden like nedenfor regnearket, og begynn å skrive inn data i en celle. Når du flytter fokuset ut av denne cellen, utvides regnearket for å ta med den nye raden.
 
-Hvis du vil slette en post, følger du ett av disse trinnene:
+Hvis du vil slette en oppføring, følger du én av disse fremgangsmåtene:
 
-* Høyreklikk på radtallet ved siden av arbeidsbokraden for å slette, og klikk deretter på **Slett**.
-* Høyreklikk i arbeidsraden for å slette, og klikk deretter på **Slett** > **Tabellrader**.
+* Høyreklikk på radnummeret ved siden av regnearkraden du vil slette, og klikk deretter på **Slett**.
+* Høyreklikk i regnearkraden du vil slette, og klikk deretter på **Slett** > **Tabellrader**.
 
-## <a name="add-or-remove-columns"></a>Å legge til og fjerne kolonner
-Du kan bruke utformingsprogrammet til å justere kolonnene og enhetene som automatisk legges til i arbeidsboken.
+## <a name="add-or-remove-columns"></a>Legge til eller fjerne kolonner
+Du kan bruke utformingen for å justere kolonnene og enhetene som automatisk legges til i regnearket.
 
-1. Aktiver utformingsprogrammet for datakilden i Excel-tillegget ved å klikke på **Options**-knappen (tannhjulsymbolet), og merk deretter av for **Aktiver utforming**.
-2. Klikk **Utforming** i Excel-tillegget. Alle datakildene er oppført.
-3. Klikk på **Edit**-knappen (blyantsymbolet) ved siden av datakilden.
-4. Juster listen i **Utvalgte felt**-feltet ved behov:
-   * Hvis du vil legge til et felt fra **Tilgjengelige felt**-feltet til **Utvalgte felt**-feltet, klikk på feltet, og klikk deretter på **Legg til**. Du kan alternativt dobbeltklikke på feltet.
-   * Hvis du vil fjerne et felt fra **Valgte felt**-feltet, klikker på feltet, og klikker deretter på **Fjern**. Du kan alternativt dobbeltklikke på feltet.
-   * Hvis du vil endre rekkefølgen til felt, klikker du på feltet i **Valgte felt**-feltet, og klikk deretter på **Opp** eller **Ned**.
-5. Ta i bruk endringene til datakildene ved å klikke på **Oppdater**, og klikk deretter på **Ferdig** for å avslutte utformingsprogrammet. Hvis du la til et felt (kolonne), klikker du på **Oppdater** for å hente et oppdatert sett med data.
-
-> [!NOTE]
-> Kontroller at du alltid inkluderer ID-en og obligatoriske felt i arbeidsboken, da du kan motta feilmeldinger når du publiserer.
+1. Aktiver datakildeutformingen i Excel-tillegget ved å klikke på **Alternativer**-knappen (tannhjulsymbolet) og deretter merke av for **Aktiver utforming**.
+2. Klikk på **Utforming** i Excel-tillegget. Alle datakildene vises.
+3. Ved siden av datakilden klikker du på **Rediger**-knappen (blyantsymbolet).
+4. Juster listen i feltet **Valgte felt** etter behov:
+   * Hvis du vil legge til et felt fra **Tilgjengelige felt**-feltet i **Valgte felt**-feltet, klikker du på feltet og deretter på **Legg til**. Du kan også dobbeltklikke på feltet.
+   * Hvis du vil fjerne et felt fra **Valgte felt**-feltet, klikker du på feltet, og klikker deretter på **Fjern**. Du kan også dobbeltklikke på feltet.
+   * Hvis du vil endre rekkefølgen på felt, klikker du på feltet i **Valgte felt**-feltet, og klikker deretter på **Opp** eller **Ned**.
+5. Bruk endringene i datakilden ved å klikke på **Oppdater**, og klikk deretter på **Ferdig** for å avslutte utformingen. Hvis du la til et felt (kolonne), klikker du på **Oppdater** for å hente inn et oppdatert sett med data.
 
 > [!NOTE]
-> Når du legger til oppslagsfelt, må du kontrollere at du legger til både ID-en og Vis-feltene.
+> Sørg for at du alltid tar med ID-en og obligatoriske felt i arbeidsboken, siden du kan få feil når du publiserer.
+
+> [!NOTE]
+> Når du legger til oppslagsfelt, må du sørge for å legge til både ID-en og Visnings-feltene.
 
 ## <a name="troubleshooting"></a>Feilsøking
-Du kan løse et par problemer gjennom et par enkle trinn.
+Det er noen få problemer som kan løses gjennom noen enkle trinn.
 
-* Ikke alle enheter støtter redigering og oppretting av nye poster. Disse enhetene åpnes i Excel og lar deg vise data, men publisering vil bli deaktivert.
-* Oppslagsfelt må redigeres ved hjelp av tillegget for å sikre at den riktige posten er referert til. Oppdatering av disse feltene via kopiering og innliming eller ved å skrive direkte inn i feltet støttes ikke.
+* Ikke alle enheter støtter redigering og oppretting av nye oppføringer. Disse enhetene åpnes i Excel og lar deg vise data, men publisering blir deaktivert.
+* Oppslagsfelt må redigeres ved hjelp av tillegget for å sikre at det refereres til riktig oppføring. Oppdatering av disse feltene via kopier og lim inn eller ved å skrive inn direkte i feltet, støttes ikke.
 
 
-Hvis det oppstår noe problemer som ikke er beskrevet her, kontakter du oss via [kundestøttesidene](https://powerapps.microsoft.com/support/).
+Hvis du opplever et problem som ikke er beskrevet her, kan du kontakte oss via [støttesidene](https://powerapps.microsoft.com/support/).
 
 ## <a name="next-steps"></a>Neste trinn
-* [Administrer felter i en enhet](data-platform-manage-fields.md)
-* [Definer relasjoner mellom enheter](data-platform-entity-lookup.md)
-* [Å generere en app ved hjelp av Common Data Service for apper](../canvas-apps/data-platform-create-app.md)
-* [Å opprette en app fra grunnen av ved hjelp av Common Data Service for apper](../canvas-apps/data-platform-create-app-scratch.md)
+* [Administrere felt i en enhet](data-platform-manage-fields.md)
+* [Definere relasjoner mellom enheter](data-platform-entity-lookup.md)
+* [Generere en app ved å bruke Common Data Service for Apps](../canvas-apps/data-platform-create-app.md)
+* [Opprette en app fra bunnen ved å bruke Common Data Service for Apps](../canvas-apps/data-platform-create-app-scratch.md)
 

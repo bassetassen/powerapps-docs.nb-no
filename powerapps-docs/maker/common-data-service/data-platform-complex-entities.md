@@ -1,6 +1,6 @@
 ---
-title: Komplekse enheter som krever lisenser for PowerApps-abonnement 2 | Microsoft Docs
-description: En liste over komplekse enheter i Common Data Service for apper som krever en lisens for PowerApps-abonnement 2.
+title: Komplekse enheter som krever PowerApps Plan 2-lisenser | Microsoft Docs
+description: En liste over komplekse enheter i Common Data Service (CDS) for Apps som krever en PowerApps Plan 2-lisens.
 author: clwesene
 manager: kvivek
 ms.service: powerapps
@@ -8,54 +8,53 @@ ms.component: cds
 ms.topic: reference
 ms.date: 07/17/2018
 ms.author: clwesene
-ms.openlocfilehash: 76c101f35e236ac6bf037d2b5b748ca1b943d61d
-ms.sourcegitcommit: efea7ed5ad8e80c87ba423fb094fa94b4e864d75
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39266265"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="complex-entities-and-licensing"></a>Komplekse enheter og lisensiering
-Enheter som inkluderer følgende kompleks serversidelogikk krever at brukere av en app eller flyt som bruker disse enhetene har en lisens for PowerApps Plan 2 eller Microsoft Flow Plan 2:
 
-* Kodeplugin-moduler. Mer informasjon: [Utvikling av plugin-modul](https://docs.microsoft.com/dynamics365/customer-engagement/developer/plugin-development)
+# <a name="complex-entities-and-licensing"></a>Komplekse enheter og lisensiering
+Enheter som inneholder følgende komplekse serversidelogikk, krever at brukere av en app eller flyt som bruker disse enhetene, har en PowerApps Plan 2- eller Microsoft Flow Plan 2-lisens:
+
+* Plugin-moduler med kode. Hvis du vil ha mer informasjon: [Utvikling av plugin-moduler](https://docs.microsoft.com/dynamics365/customer-engagement/developer/plugin-development)
 * Sanntidsarbeidsflyter. Mer informasjon: [Arbeidsflytprosesser](https://docs.microsoft.com/dynamics365/customer-engagement/customize/workflow-processes)
 
     > [!IMPORTANT]
-    >  Bare arbeidsflyter som konverteres til en sanntidsarbeidsflyt vurderes i sanntid og er synkrone. Arbeidsflyter som kjører i bakgrunnen kan fortsatt brukes med den riktige PowerApps-planen, og krever ikke flere lisenser.
+    >  Bare arbeidsflyter som er konvertert til en sanntidsarbeidsflyt, vurderes som i sanntid og synkroniserte. Arbeidsflyter som kjører i bakgrunnen, kan fremdeles brukes med riktig PowerApps-plan og krever ikke flere lisenser.
 
-Hvis du vil vite om du har lagt til kompleks forretningslogikk til enheter, se gjennom listen over plugin-modulsamlinger og arbeidsflyter som er konfigurert i miljøet ditt.
+Hvis du vil vite om du har lagt til kompleks forretningslogikk i enhetene, kan du se listen over plugin-modulsamlinger og arbeidsflyter som er konfigurert i miljøet.
 
-## <a name="complex-entities-installed-with-dynamics-365"></a>Komplekse enheter som ble installert med Dynamics 365
-Tabellen nedenfor viser enheter som inneholder kompleks serversidelogikk fra produsenten som en del av Dynamics 365-programinstallasjonen. Denne listen er ment som en veiledning. Listen over komplekse enheter kan variere avhengig av hvilke Dynamics 365-programmer og -versjoner er installert i miljøet ditt.
+## <a name="complex-entities-installed-with-dynamics-365"></a>Komplekse enheter som er installert med Dynamics 365
+Tabellen nedenfor viser enheter som inneholder medfølgende kompleks serversidelogikk som en del av Dynamics 365-programinstallasjonen. Denne listen er ment som en veiledning. Listen over komplekse enheter kan variere avhengig av hvilke Dynamics 365-programmer og -versjoner som er installert i miljøet ditt.
 
 > [!NOTE]
->  Hvis du bruker Common Data Service og ikke har installert et Dynamics 365-program eller en tredjepartsløsning, inneholder ikke miljøet ditt enheter med kompleks serversidelogikk.
+>  Hvis du bruker Common Data Service og ikke har installert et Dynamics 365-program eller en tredjepartsløsning, vil ikke miljøet ha enheter som inneholder kompleks serversidelogikk.
 
-* Konto
+* Forretningsforbindelse
 * Avtale
 * Avtalebestillingsdato
-* Avtalebestillingshendelse
+* Hendelse for avtalebestilling
 * Avtalebestillingsprodukt
-* Avtalebestillingstjeneste
-* Tjenesteoppgave for avtalebestilling
+* Avtalebestillingsservice
+* Serviceoppgave for avtalebestilling
 * Avtalebestillingsoppsett
-* Dato for avtalefaktura
-* Produkt for avtalefaktura
+* Avtalefakturadato
+* Avtalefakturaprodukt
 * Avtalefakturaoppsett
-* Understatus for avtale
+* Delstatus for avtale
 * Ressurs som kan reserveres
 * Bestilling av ressurs som kan reserveres
-* Bestillingsoverskrift for ressurs som kan reserveres
+* Overskrift for bestilling av ressurs som kan reserveres
 * Kategori for ressurs som kan reserveres
-* Kategori for ressurse som kan reserveres
-* Karakteristikk for ressurs som kan reserveres
+* Kategoritilknytning for ressurs som kan reserveres
+* Kjennetegn for ressurs som kan reserveres
 * Ressursgruppe som kan reserveres
-* Bestillingsvarsling
-* Status for bestillingsvarsling
+* Bestillingsvarsel
+* Bestillingsvarselstatus
 * Bestillingsstatus
-* Tilfelle
-* Karakteristikk
+* Kjennetegn
 * Kompetansekrav (avskrevet)
 * Konkurrent
 * Kontakt
@@ -63,112 +62,112 @@ Tabellen nedenfor viser enheter som inneholder kompleks serversidelogikk fra pro
 * Delegering
 * Utgift
 * Feltberegning
-* Prislisteelement for felttjeneste
-* Filter
+* Prislisteelement for Field Service
+* Filtrer
 * Følg
 * Hendelsestype
 * Produkt for hendelsestype
-* Hendelsestypetjeneste
-* Tjenesteoppgave for hendelsestype
+* Service for hendelsestype
+* Serviceoppgave for hendelsestypen
 * Integreringsjobb
-* Integreringsjobbdetaljer
-* Beholdningsjustering
-* Produkt for beholdningsjustering
-* Beholdningsoverføring
+* Integreringsjobbdetalj
+* Lagerjustering
+* Lagerjusteringsprodukt
+* Overføring av lagerbeholdning
 * Faktura
 * Fakturafrekvens
 * Fakturalinje
 * Fakturalinjedetalj
-* Journal
+* Logg
 * Journallinje
 * Kundeemne
 * Obs!
-* Datakilde OData v4
+* OData v4-datakilde
 * Salgsmulighet
 * Salgsmulighetslinje
-* Detalj for salgsmulighetslinje
+* Detalj for salgsmulighetslinjer
 * Ordre
-* Produkt for ordrefakturering
-* Oppsett av ordrefakturering
+* Ordrefaktureringsprodukt
+* Ordrefaktureringsoppsett
 * Ordrelinje
 * Betaling
 * Betalingsdetalj
 * Innleggskonfigurasjon
-* Konfigurasjon av innleggsregel
+* Konfigurasjon for regel for innlegg
 * Postnummer
 * Prisliste
 * Prislisteelement
 * Produkt
 * Prosjekt
-* Prosjektgodkjennelse
-* Detalj for prosjektkontraktlinje
+* Prosjektgodkjenning
+* Detalj for prosjektkontraktlinjer
 * Milepæl for prosjektkontraktlinje
-* Ressurskategori for prosjektkontraktlinje
-* Transaksjonskategori for prosjektkontraktlinje
+* Ressurskategori for prosjektkontraktlinjer
+* Transaksjonskategori for prosjektkontraktlinjer
 * Prosjektparameter
 * Prosjektfaser
 * Statusbruker for prosjektoppgave
-* Registrering av prosjektgruppemedlem
+* Registrering for prosjektteammedlem
 * Bestilling
-* Regning for bestilling
-* Produkt for bestilling
-* Kvittering for bestilling
-* Produktkvittering for bestilling
-* Understatus for bestilling
+* Bestillingsfaktura
+* Bestillingsprodukt
+* Bestillingsbekreftelse
+* Produkt for bestillingsbekreftelse
+* Underordnet status for bestilling
 * Køelement
 * Tilbud
 * Tilbudsbestillingshendelse
-* Produkt for tilbudsbestilling
-* Tilbudsbestillingstjeneste
-* Tjenesteoppgave for tilbudsbestilling
-* Oppsett av tilbudsbestilling
-* Produkt for tilbudsfakturering
-* Oppsett av tilbudsfakturering
+* Tilbudsbestillingsprodukt
+* Tilbudsbestillingsservice
+* Serviceoppgave for tilbudsbestilling
+* Tilbudsbestillingsoppsett
+* Tilbudsfaktureringsprodukt
+* Tilbudsfaktureringsoppsett
 * Tilbudslinje
 * Tilbudslinjedetalj
-* Milepæl for tilbudslinje
+* Milepæler for tilbudslinjer
 * Ressurskategori for tilbudslinje
 * Transaksjonskategori for tilbudslinje
-* Prisliste for tilbudsprosjekt
-* Vurderingsmodell
-* Vurderingsverdi
-* Kravkarakteristikk
-* Ressurskategori for krav
-* Ressurspreferanse for krav
+* Prosjektprisliste for tilbud
+* Rangeringsmodell
+* Rangeringsverdi
+* Kravkjennetegn
+* Kravressurskategori
+* Kravressurspreferanse
 * Kravstatus
 * Ressursforespørsel
 * Ressurskrav
-* Ressurskravdetalj
-* RMA
-* RMA-produkt
-* RMA-kvittering
-* Produkt for RMA-kvittering
-* Understatus for RMA
-* Kompetansekrav til rolle
+* Detalj om ressurskrav
+* ARM
+* ARM-produkt
+* ARM-mottak
+* ARM-mottaksprodukt
+* Delstatus for ARM
+* Rollekompetansekrav
 * Rollepris
 * RTV
 * RTV-produkt
-* Understatus for RTV
-* Mva-kode
-* Mva-kodedetalj
+* Delstatus for RTV
+* Avgiftskode
+* Detalj for avgiftskode
 * Tidsoppføring
 * Tidsgruppe
-* Tidsgruppedetalj
-* Fraværsforespørsel
-* Pris for transaksjonskategori
+* Detalj for tidsgruppe
+* Forespørsel om fritid
+* Pris for transaksjonskategorier
 * Bruker
-* Vis
+* Visning
 * Veggvisning
 * Lager
 * Arbeidsordre
 * Arbeidsordrehendelse
-* Produkt for arbeidsordre
-* Arbeidsordretjeneste
-* Tjenesteoppgave for arbeidsordre
-* Understatus for arbeidsordre
+* Arbeidsordreprodukt
+* Arbeidsordreservice
+* Serviceoppgave for arbeidsordre
+* Delstatus for arbeidsordre
 * Arbeidsmal
 
 
 ## <a name="licensing"></a>Lisensiering
-Hvis du vil ha mer informasjon om PowerApps- og Dynamics 365-lisenser, kan du se siden [Lisensoversikt](../../administrator/pricing-billing-skus.md).
+Hvis du vil ha mer informasjon om PowerApps- og Dynamics 365-lisenser, kan du se [Lisensieringsoversikt](../../administrator/pricing-billing-skus.md)-siden.
 

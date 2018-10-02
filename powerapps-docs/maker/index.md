@@ -1,6 +1,6 @@
 ---
 title: Oversikt over oppretting av apper | Microsoft Docs
-description: Oversikt over oppretting av apper i lerret eller modelldreven modus med Common Data Service
+description: Oversikt over oppretting av apper i lerretsmodus eller modelldrevet modus samt integrering av Common Data Service
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -8,43 +8,38 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.date: 03/18/2018
 ms.author: anneta
-ms.reviewer: ''
-ms.openlocfilehash: 3d95f017b064f61a539906268ebb73fff1e1d04f
-ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094614"
+ms.reviewer: null
 ---
+
 # <a name="overview-of-creating-apps-in-powerapps"></a>Oversikt over oppretting av apper i PowerApps
-PowerApps er en utviklingsplattform for bedriftsapper med høy produktivitet, og har tre hovedkomponenter:
+PowerApps er en utviklingsplattform for høy produktivitet for forretningsapper, og den har tre hovedkomponenter:
 
-- [Lerretsapper](canvas-apps/getting-started.md) bruk mulighetene i et tomt lerret og start med brukeropplevelsen. Opprett et skreddersydd grensesnitt og koble det til én av 200 datakilder. Du kan opprette lerretsapper for nett-, mobil- og nettbrettprogrammer.
-- [Modelldrevne apper](model-driven-apps/model-driven-app-overview.md) starter med datamodellen. De utvikles basert på bedriftens data og prosesser i Common Data Service og modellerer skjemaer, visninger og andre komponenter. Modelldrevne apper genererer automatisk brukergrensesnitt som virker på flere forskjellige enheter.
-- [Common Data Service](common-data-service/data-platform-intro.md) er dataplattformen som følger med PowerApps, og som gjør det mulig å lagre og modellere bedriftsdata. Det er plattformen Dynamics 365-programmer utvikles på. Hvis du bruker Dynamics 365, er dataene dine allerede i Common Data Service.
+- [Lerretapper](canvas-apps/getting-started.md) starter med brukererfaring, der det lages et svært skreddersydd grensesnittet med kraften til et tomt lerret, og du kan koble det til over 200 datakilder. Du kan bygge lerretapper for web-, mobil- og nettbrettapper.
+- [Modelldrevede apper](model-driven-apps/model-driven-app-overview.md) starter med datamodellen og utvikler seg fra kjerneforretningsdataene dine og behandler dem i Common Data Service for å modellere skjemaer, visninger og andre komponenter. Modelldrevede apper genererer et enestående brukergrensesnitt automatisk som responderer på tvers av enheter.
+- [Common Data Service](common-data-service/data-platform-intro.md) er dataplattformen som leveres med PowerApps, og der kan du lagre og modellere forretningsdata. Det er plattformen som Dynamics 365-apper bygges på. Hvis du er Dynamics-kunde, finnes dataene dine allerede i Common Data Service.
 
-Det er enkelt å opprette din første app. Vi har et 30-dagers prøveabonnement og et kostnadsfritt fellesskapsabonnement. Finn ut hva som passer best for deg, og kom i gang.
+Det er enkelt å prøve å lage sin første app. Vi har en 30-dagers prøveversjonsplan og en gratis fellesskapsplan. Finn ut hvilken som er best for deg, og så er det bare å starte.
 
-## <a name="canvas-apps"></a>Lerretsapper
-Med fleksibiliteten i lerretsapper kan du arrangere brukeropplevelsen og grensesnittet slik du vil ha det. La kreativitet og forretningssans vise deg hvordan appene skal se ut.
+## <a name="canvas-apps"></a>Lerretapper
+Lerretapper gir deg fleksibiliteten til å ordne brukeropplevelsen og grensesnittet slik du ønsker. Bruk kreativitet og forretningssans til å utforme appers utseende og virkemåte.
 
-Du kan begynne å utvikle appen med Microsoft-verktøy der dataene befinner seg, for eksempel:
+Du kan starte med å bygge appen din fra Microsoft-verktøy der dataene er, for eksempel:
 
 - [Fra en SharePoint-liste](canvas-apps/generate-app-from-sharepoint-list-interface.md)
 - [Fra et Power BI-instrumentbord](canvas-apps/embed-powerapps-powerbi.md)
 
-Det er enkelt å opprette en lerretsapp. Med PowerApps kan du finne eller opprette appen din på flere måter:
+Det er enkelt å opprette en lerretapp. Med PowerApps kan du finne eller opprette appen din på flere måter:
 
 - [Fra data](canvas-apps/app-from-sharepoint.md)
 - [Fra et eksempel](canvas-apps/open-and-run-a-sample-app.md)
-- [Fra en kilde for Common Data Service](canvas-apps/data-platform-create-app.md)
+- [Fra en Common Data Service-kilde](canvas-apps/data-platform-create-app.md)
 - [Fra et tomt lerret](canvas-apps/data-platform-create-app-scratch.md)
 - [Via AppSource](../user/app-source.md)
 
-## <a name="model-driven-apps"></a>Modelldrevne apper
-Når du oppretter en modelldreven app, kan du bruke kraften i Common Data Service til å konfigurere skjemaer, forretningsregler og prosessflyter på en rask måte. Du kan opprette en modelldreven app fra nettområdet for PowerApps.
+## <a name="model-driven-apps"></a>Modelldrevede apper
+Når du oppretter en modelldrevet app, kan du bruke all kraften i Common Data Service til raskt å konfigurere skjemaer, forretningsregler og prosessflyter. Du kan opprette en modelldrevet app fra nettstedet for PowerApps.
 
-Det er enkelt å komme i gang med modelldrevne apper, og du kan begynne med disse emnene:
+Det er enkelt å komme i gang med modelldrevede apper, og du kan begynne med disse emnene:
 
 - [Opprette en app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app)
 - [Opprette og utforme skjemaer](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-design-forms)
@@ -54,8 +49,8 @@ Det er enkelt å komme i gang med modelldrevne apper, og du kan begynne med diss
 - [Legge til sikkerhet](https://docs.microsoft.com/dynamics365/customer-engagement/customize/manage-access-apps-security-roles)
 - [Legge til forretningslogikk](https://docs.microsoft.com/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 
-## <a name="common-data-service-for-apps"></a>Common Data Service for apper
-Common Data Service gjør det mulig å lagre og behandle data i et sett med standard og egendefinerte enheter på en sikker måte, og du kan legge til felt i disse enhetene når du trenger dem.
+## <a name="common-data-service-for-apps"></a>Common Data Service for Apps
+Med Common Data Service kan du sikkert lagre og behandle data i et sett med standardenheter og egendefinerte enheter, og du kan legge til felt i de enhetene når du trenger.
 
 Det er enkelt å komme i gang med Common Data Service. Du kan for eksempel starte med disse elementene:
 - [Opprette en egendefinert enhet](common-data-service/data-platform-create-entity.md)
@@ -63,7 +58,7 @@ Det er enkelt å komme i gang med Common Data Service. Du kan for eksempel start
 - [Opprette egendefinerte alternativsett](common-data-service/custom-picklists.md)
 - [Opprette en forretningsregel](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
 
-Når du har opprettet appen, kan du [dele den](canvas-apps/share-app.md) med medlemmene i teamet ditt.
+Etter at du har laget appen, kan du [dele den](canvas-apps/share-app.md) med teammedlemmene dine.
 
 
 

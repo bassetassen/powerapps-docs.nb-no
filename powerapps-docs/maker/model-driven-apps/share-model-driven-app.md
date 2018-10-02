@@ -1,6 +1,6 @@
 ---
-title: Opplæring for deling av en modelldrevet app med PowerApps | Microsoft Docs
-description: Finn ut hvordan du deler en modelldrevet app i denne opplæringen
+title: Opplæring for deling av en modelldrevet app med PowerApps | MicrosoftDocs
+description: I denne opplæringen kan du lære hvordan du deler en modelldrevet app
 documentationcenter: ''
 author: Mattp123
 manager: kfile
@@ -12,120 +12,125 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 03/21/2018
 ms.author: matp
-ms.openlocfilehash: 5c166f7fffa217a918d690c9176058d8e81b3f99
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39663051"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="tutorial-share-a-model-driven-app-with-powerapps"></a>Opplæring: Å dele en modelldrevet app med PowerApps
 
-[!INCLUDE [powerapps](../../includes/powerapps.md)]-apper bruker rollebasert sikkerhet for deling. De grunnleggende begrepene i rollebasert sikkerhet er at en sikkerhetsrolle inneholder rettigheter som definerer et sett med handlinger som kan utføres i appen. Alle appbrukere må tilordnes til én eller flere forhåndsdefinerte eller egendefinerte roller. Roller kan også tilordnes til grupper. Når en bruker eller gruppe er tilordnet til én av disse rollene, får denne personen eller gruppemedlemmene et sett med rettigheter som er tilknyttet denne rollen. 
+# <a name="tutorial-share-a-model-driven-app-with-powerapps"></a>Opplæring: Dele en modelldrevet app med PowerApps
 
-I denne opplæringen skal du utføre oppgaver for å dele en modelldrevet app slik at andre kan bruke den. Du lærer hvordan du gjør følgende:
-- Å opprette en egendefinert sikkerhetsrolle
-- Å tilordne brukere til den egendefinerte sikkerhetsrollen
-- Å legge til sikkerhetsrollen i appen
+[!INCLUDE [powerapps](../../includes/powerapps.md)]-apper bruker rollebasert sikkerhet for deling. Det grunnleggende konseptet i rollebasert sikkerhet er at en sikkerhetsrolle inneholder rettighetene som angir et sett med handlinger som kan utføres i appen. Alle appbrukere må være tilordnet til én eller flere forhåndsdefinerte eller egendefinerte roller. Roller kan også tilordnes til team. Når en bruker eller et team er tilordnet en av disse rollene, får personen eller teammedlemmene settet med rettigheter som er tilknyttet denne rollen. 
 
-## <a name="prerequisites"></a>Forutsetninger
-Hvis du vil dele en app, må du ha [!INCLUDE [powerapps](../../includes/powerapps.md)] rollen miljøadministrator eller systemadministrator. 
+I denne opplæringen utfører du oppgavene for deling av en modelldrevet app, slik at andre kan bruke den. Du lærer hvordan du gjør følgende.
+- Opprette en egendefinert sikkerhetsrolle
+- Tilordne brukere til den egendefinerte sikkerhetsrollen
+- Tilordne sikkerhetsrollen til en app
 
-## <a name="sign-in-to-powerapps"></a>Logg deg på PowerApps
-Logg deg på [PowerApps](https://powerapps.microsoft.com/). Hvis du ikke allerede har en [!INCLUDE [powerapps](../../includes/powerapps.md)]-konto, velger du koblingen **Kom i gang gratis**.
+## <a name="prerequisites"></a>Forhåndskrav
+For å dele en app må du ha rollen som [!INCLUDE [powerapps](../../includes/powerapps.md)]-miljøadministrator eller -systemansvarlig. 
 
-## <a name="share-an-app"></a>Dele en app 
-Denne opplæringen følger firmaet Contoso, som driver med pleie og stell av hunder og katter. En app som inneholder en egendefinert enhet for å spore virksomheten med pleie og stell av kjæledyr er allerede opprettet og publisert. Nå må appen deles slik at ansatte av firmaet kan bruke den. Administratoren eller den som opprettet appen kan tilordne én eller flere sikkerhetsroller for brukere og for appen for å dele den. 
+## <a name="sign-in-to-powerapps"></a>Logg på PowerApps
+Logg på [PowerApps](https://powerapps.microsoft.com/). Hvis du ikke allerede har en [!INCLUDE [powerapps](../../includes/powerapps.md)]-konto, velger du **Kom i gang gratis**-koblingen.
 
-## <a name="create-or-configure-a-security-role"></a>Å opprette eller konfigurere en sikkerhetsrolle
-[!INCLUDE [powerapps](../../includes/powerapps.md)]Miljøet inneholder [forhåndsdefinerte sikkerhetsroller](#about-predefined-security-roles) som gjenspeiler vanlige brukeroppgaver med tilgangsnivåer som er definert for å samsvare med målet for beste praksis for sikkerhet, for å gi tilgang til minimum mengde forretningsdata som kreves for å bruke appen. Husk at Contoso-appen for pleie og stell av kjæledyr er basert på en egendefinert enhet. Fordi enheten er egendefinert, må rettigheter angis eksplisitt før brukere kan arbeide i den. Hvis du vil gjøre dette, kan du velge et av disse alternativene.
-- Å utvide en eksisterende forhåndsdefinert sikkerhetsrolle, slik at den inkluderer rettigheter til poster basert på den egendefinerte enheten. 
-- Å opprette en egendefinert sikkerhetsrolle for å administrere rettigheter for brukere av appen. 
+## <a name="share-an-app"></a>Del en app 
+Opplæringen følger selskapet Contoso, som er en virksomhet for kjæledyrstell som pleier hunder og katter. En app som inneholder en egendefinert enhet for å spore virksomheten for kjæledyrstell, er allerede opprettet og publisert. Nå må appen deles slik at de ansatte i virksomheten kan bruke den. For å dele appen tilordner en administrator eller apputvikler én eller flere sikkerhetsroller til brukerne og appen. 
 
-Fordi miljøet som opprettholder dyrefrisørpostene, også brukes for andre apper som Contoso-virksomheten driver, opprettes en egendefinert sikkerhetsrolle som er spesifikk for dyrefrisørappen. I tillegg er to forskjellige sett med tilgangsrettigheter nødvendig.
-- Dyrefrisørteknikere trenger bare å lese, oppdatere og legge ved andre poster slik at sikkerhetsrollen får rettigheter til å lese, skrive og tilføye. 
-- Dyrefrisørplanleggere trenger alle rettighetene som teknikerne har, i tillegg til muligheten til å opprette, legge til, slette og dele. Sikkerhetsrollen får dermed rettigheter til å opprette, lese, skrive, tilføye, slette, tilordne, tilføye til og dele.
+## <a name="create-or-configure-a-security-role"></a>Opprette eller konfigurere en sikkerhetsrolle
+[!INCLUDE [powerapps](../../includes/powerapps.md)]-miljøet omfatter [forhåndsdefinerte sikkerhetsroller](#about-predefined-security-roles) som gjenspeiler vanlige kundeoppgaver med tilgangsnivåer definert slik at de passer målet sikkerhet gode fremgangsmåter for å gi tilgang til minimumsmengden av forretningsdata som kreves for å bruke programmet. Husk at Contoso-appen for kjæledyrstell er basert på en egendefinert enhet. Siden enheten er egendefinert, må rettigheter angis eksplisitt før brukere kan arbeide med den. Du kan velge ett av følgende for å gjøre dette.
+- Vis en eksisterende forhåndsdefinert sikkerhetsrolle, slik at den inneholder rettigheter til oppføringer som er basert på den egendefinerte enheten. 
+- Opprett en egendefinert sikkerhetsrolle for å administrere tilgangsrettigheter for brukere av appen. 
 
-Hvis du vil ha mer informasjon om tilgang- og omfangsrettigheter, kan du se [Sikkerhetsroller](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges#security-roles).
+Fordi miljøet som opprettholder oppføringene for kjæledyrstell, også brukes til andre apper Contoso-virksomheten kjører, opprettes en egendefinert sikkerhetsrolle spesifikk for appen for kjæledyrstell. I tillegg kreves to forskjellige sett med tilgangsrettigheter.
+- Teknikere hos kjæledyrforretningen trenger bare å lese, oppdatere og tilknytte andre oppføringer, slik at sikkerhetsrollen har lese-, skrive- og tilføyingsrettigheter. 
+- Planleggere trenger alle rettigheter som teknikerne har, pluss muligheten til å opprette, legge til, slette og dele, slik at sikkerhetsrollen deres har rettigheter til å opprette, lese, skrive, tilføye, slette, tilordne, tilføye i og dele rettigheter.
 
-## <a name="create-a-custom-security-role"></a>Å opprette en egendefinert sikkerhetsrolle
-1. Velg **Modelldrevne** > **apper** > **…**> **Delingskobling** på [!INCLUDE [powerapps](../../includes/powerapps.md)]-området.
-2. Velg **Sikkerhetsinnstilling** fra dialogboksen **Del denne appen** under **Opprett en sikkerhetsrolle**.
-3. Velg **Ny** på **Innstillinger**-siden.  
+Hvis du vil ha mer informasjon om tilgangs- og omfangsrettigheter, kan du se [Sikkerhetsroller](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges#security-roles).
 
-4. Velg handlinger, for eksempel omfanget lese, skrive eller slette fra utformingsverktøyet for sikkerhetsrolle for å utføre denne handlingen. Omfang avgjør hvor dypt eller høyt i miljøets hierarki brukeren kan utføre en bestemt handling. Skriv inn *Dyrefrisørteknikere* i **Rollenavn**-boksen.
-5. Velg **Egendefinerte enheter**-fanen, og finn deretter den egendefinerte enheten du vil bruke. I dette eksemplet brukes den egendefinerte enheten med navnet **Kjæledyr**. 
-6. Velg hver av følgende rettigheter fire ganger på **Kjæledyr**-raden til globalt organisasjonsomfang ![Globalt organisasjonsomfang](media/share-model-driven-app/organizational-scope-privilege.png) er valgt: **Lese, skrive og tilføye**
-![Ny sikkerhetsrolle](media/share-model-driven-app/custom-security-role.png)
-7. Fordi dyrefrisørappen også har en relasjon med kontoenheten, velger du **Kjernepost**-fanen, og på **Konto**-raden velger du **Les** fire ganger til globalt organisasjonsomfang ![Globalt organisasjonsomfang](media/share-model-driven-app/organizational-scope-privilege.png) er valgt. 
+## <a name="create-a-custom-security-role"></a>Opprette en egendefinert sikkerhetsrolle
+1. På [!INCLUDE [powerapps](../../includes/powerapps.md)]-nettstedet velger du **Modelldrevet** > **Apper** > **...**> **Del kobling**.
+2. Fra dialogboksen **Del denne appen** under **Opprett en sikkerhetsrolle** velger du **Sikkerhetsinnstilling**.
+3. På **Innstillinger**-siden velger du **Ny**.  
+
+4. Fra designeren for sikkerhetsrolle kan du velge handlinger, for eksempel lese, skrive eller slette, og omfanget for å utføre handlingen. Omfang avgjør hvor dypt eller høy i miljøhierarkiet brukeren kan utføre en bestemt handling. I **Rollenavn**-boksen angir du *Teknikere hos kjæledyrforretning*.
+5. Velg kategorien **Egendefinerte enheter**, og deretter finner du den egendefinerte enheten du vil ha. I dette eksemplet brukes den egendefinerte enheten kalt **Kjæledyr**. 
+6. På **Kjæledyr**-raden, velg hver av følgende rettigheter fire ganger til det globale organisasjonsomfanget ![globalt organisasjonsomfang](media/share-model-driven-app/organizational-scope-privilege.png) er valgt: **Les, Skriv og Tilføy**
+> [!div class="mx-imgBorder"] 
+> ![Ny sikkerhetsrolle.](media/share-model-driven-app/custom-security-role.png)
+7. Fordi kjæledyrappen også har en relasjon til forretningsforbindelsesenheten, kan du velge kategorien **Kjerneoppføringer** og på den **Forretningsforbindelse**-raden velge **Lese** fire ganger til det globale organisasjonsomfanget ![globalt organisasjonsomfang](media/share-model-driven-app/organizational-scope-privilege.png) er valgt. 
 8. Velg **Lagre og lukk**. 
-9. Skriv inn *Dyrefrisørplanleggere* i **Rollenavn**-boksen i sikkerhetsrolleutformingen. 
-10. Velg **Egendefinerte enheter**-fanen, og finn deretter **Kjæledyr**-enheten. 
-11. Velg hver av disse rettighetene fire ganger på **Kjæledyr**-raden til globalt organisasjonsomfang ![Globalt organisasjonsomfang](media/share-model-driven-app/organizational-scope-privilege.png) er valgt: **Opprette, lese, skrive, slette, tilføye, tilføye til, tilordne, dele**
-12. Ettersom dyrefrisørappen også har en relasjon med kontoenheten og planleggerne må kunne opprette og endre kontoposter, velger du **Kjernepost**-fanen, og på **Konto**-raden velger du hver av følgende rettigheter fire ganger til globalt organisasjonsomfang ![Globalt organisasjonsomfang](media/share-model-driven-app/organizational-scope-privilege.png) er valgt. 
-    **Opprette, lese, skrive, slette, tilføye, tilføye til, tilordne, dele**
+9. I redigeringsprogrammet for sikkerhetsrolle i **Rollenavn**-boksen skriver du inn *Planleggere hos kjæledyrforretning*. 
+10. Velg kategorien **Egendefinerte enheter**, og deretter finner du **Kjæledyr**-enheten. 
+11. På **Kjæledyr**-raden, velg hver av følgende rettigheter fire ganger til det globale organisasjonsomfanget ![globalt organisasjonsomfang](media/share-model-driven-app/organizational-scope-privilege.png) er valgt: **Opprett, Les, Skriv, Slett, Tilføy, Tilføy i, Tilordne, Del**
+12. Fordi kjæledyrappen også har en relasjon til forretningsforbindelsesenheten, og planleggere må kunne opprette og endre forretningsforbindelsesoppføringer, kan du velge kategorien **Kjerneoppføringer** og på den **Forretningsforbindelse**-raden velge hver av følgende rettigheter fire ganger til det globale organisasjonsomfanget ![globalt organisasjonsomfang](media/share-model-driven-app/organizational-scope-privilege.png) er valgt. 
+    **Opprette, Lese, Skrive, Slette, Tilføye, Tilføye i, Tilodrne, Dele**
 13. Velg **Lagre og lukk**.
 
-## <a name="assign-security-roles-to-users"></a>Å tilordne sikkerhetsroller til brukere
-Sikkerhetsroller kontrollerer en brukers tilgang til data gjennom et sett med tilgangsnivåer og tillatelser. Kombinasjonen av tilgangsnivåer og tillatelser som er inkludert i en bestemt sikkerhetsrolle, angir begrensninger på brukerens visning av data og brukerens samhandling med disse dataene.
+## <a name="assign-security-roles-to-users"></a>Tilordne sikkerhetsroller til brukere
+Sikkerhetsroller kontrollere en brukers tilgang til data via et sett med tilgangsnivåer og tillatelser. Kombinasjonen av tilgangsnivåer og tillatelser som er inkludert i en bestemt sikkerhetsrolle, angir begrensninger for brukerens visning av data og samhandling med disse dataene.
 
-### <a name="assign-a-security-role-to-pet-grooming-technicians"></a>Tilordne en sikkerhetsrolle til dyrefrisørteknikere
-1. Velg **Sikkerhetsbrukere** fra dialogboksen **Del denne appen** under **Tilordne brukere til sikkerhetsrollen**.
-2. Velg dyrefrisørene fra listen som vises.
+### <a name="assign-a-security-role-to-pet-grooming-technicians"></a>Tilordne en sikkerhetsrolle til teknikere i kjæledyrforretningen
+1. Fra dialogboksen **Del denne appen** under **Tilordne brukere til sikkerhetsrollen** velger du **Sikkerhetsbrukere**.
+2. I listen som vises, velger du kjæledyrpleierne.
 3. Velg **Behandle roller**.
 
-    ![Behandle roller](media/share-model-driven-app/select-users-for-security-roles.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Behandle roller](media/share-model-driven-app/select-users-for-security-roles.png)
 
-4. Når dialogboksen **Administrer brukerroller** vises, velger du sikkerhetsrollen **Dyrefrisørteknikere** som du opprettet tidligere, og velger deretter **OK**.
+4. I dialogboksen **Behandle brukerroller** velger du sikkerhetsrollen **Teknikere hos kjæledyrforretning** du opprettet tidligere, og deretter velger du **OK**.
 
-### <a name="assign-a-security-role-to-pet-grooming-schedulers"></a>Tilordne en sikkerhetsrolle til dyrefrisørplanleggere
-1. Velg **Sikkerhetsbrukere** fra dialogboksen **Del denne appen** under **Tilordne brukere til en sikkerhetsrolle**.
-2. Velg dyrefrisørplanleggerne fra listen som vises.
+### <a name="assign-a-security-role-to-pet-grooming-schedulers"></a>Tilordne en sikkerhetsrolle til planleggere i kjæledyrforretningen
+1. Fra dialogboksen **Del denne appen** under **Tilordne brukere til en sikkerhetsrolle** velger du **Sikkerhetsbrukere**.
+2. I listen som vises, velger du planleggerne hos kjæledyrforretningen.
 3. Velg **Behandle roller**.
-4. Når dialogboksen **Administrer brukerroller** vises, velger du sikkerhetsrollen **Planleggere i dyrefrisørvirksomheten** som du opprettet tidligere, og velger deretter **OK**.
+4. I dialogboksen **Behandle brukerroller** velger du sikkerhetsrollen **Planleggere hos kjæledyrforretning** du opprettet tidligere, og deretter velger du **OK**.
 
 
-## <a name="add-security-roles-to-the-app"></a>Legge til sikkerhetsroller i appen
-Deretter må en eller flere sikkerhetsroller tilordnes til appen. Brukere får tilgang til appene basert på sikkerhetsroller som de er tilordnet til.
-1. Velg **Mine apper** fra dialogboksen **Del denne appen** under **Legg til sikkerhetsrollen i appen**.
-2. Velg **Flere alternativer (...)**  og deretter **Behandle roller** i nedre høyre hjørne av appflisen for Contoso-appen for dyrefrisørvirksomheten.
+## <a name="add-security-roles-to-the-app"></a>Legge til sikkerhetsroller for appen
+Nå må én eller flere sikkerhetsroller tilordnes i appen. Brukerne vil ha tilgang til apper basert på sikkerhetsrollene som de er tilordnet.
+1. Fra dialogboksen **Del denne appen** under **Legg til sikkerhetsrollen i appen** velger du **Mine apper**.
+2. I nedre høyre hjørne av appflisen i Contoso-appen for kjæledyrstell velger du **Flere alternativer (...)** og deretter **Behandle roller**.
 
     ![Behandle roller for appen](media/share-model-driven-app/manage-roles.png)
 
-4. Du kan bruke **Roller**-delen til velge om du vil gi apptilgang til alle sikkerhetsroller eller valgte roller. Velg rollene **Dyrefrisørplanleggere** og **Dyrefrisørteknikere** som du opprettet tidligere.
+4. I **Roller**-delen kan du velge om du vil gi appen til alle sikkerhetsroller eller utvalgte roller. Velg rollene **Planleggere hos kjæledyrforretning** og **Teknikere hos kjæledyrforretning** du opprettet tidligere.
 
-    ![Velge sikkerhetsroller for appen](media/share-model-driven-app/app-security-roles.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Velge sikkerhetsroller for appen](media/share-model-driven-app/app-security-roles.png)
 
 5. Velg **Lagre**.
  
 ## <a name="share-the-link-to-your-app"></a>Dele koblingen til appen
-1. Kopier nettadressen som vises i dialogboksen **Del denne appen** under **Del koblingen til appen direkte med brukere**.
+1. Fra dialogboksen **Del denne appen** under **Del koblingen til appen din direkte med brukere** kopierer du URL-adressen som vises.
  
 2. Velg **Lukk**.
-3. Lim inn appens nettadresse slik at brukerne kan få tilgang til den, for eksempel på et SharePoint-område eller sende det via e-post.
+3. Lim inn URL-adressen til appen på et sted slik at brukerne dine kan få tilgang til den, for eksempel ved å legge den inn på et SharePoint-område eller sende via e-post.
 
-![Dele koblingen](media/share-model-driven-app/share-model-driven-URL.PNG)
+> [!div class="mx-imgBorder"] 
+> ![Del koblingen](media/share-model-driven-app/share-model-driven-URL.PNG)
 
-Du kan også finne appens nettadresse på **Egenskaper**-fanen i apputformingen. 
-    
-![Kopiere nettadressen til en app](media/share-model-driven-app/app-designer-copy-web-url.png)
+Du kan også finne URL-adressen til appen i kategorien **Egenskaper** i apputformingen. 
+
+> [!div class="mx-imgBorder"] 
+> ![Kopier URL-adresse for app](media/share-model-driven-app/app-designer-copy-web-url.png)
 
 ## <a name="about-predefined-security-roles"></a>Om forhåndsdefinerte sikkerhetsroller
-Disse forhåndsdefinerte rollene er tilgjengelige med et [!INCLUDE [powerapps](../../includes/powerapps.md)]-miljø.
+Disse forhåndsdefinerte rollene er tilgjengelig med et [!INCLUDE [powerapps](../../includes/powerapps.md)]-miljø.
 
 
 |Sikkerhetsrolle  |*Rettigheter  |Beskrivelse |
 |---------|---------|---------|
-|Miljøoppretter     |  Ingen       | Kan opprette nye ressurser tilknyttet et miljø, inkludert apper, tilkoblinger, egendefinerte API-er, gatewayer og flyter ved hjelp av Microsoft Flow. Har imidlertid ikke rettigheter til å få tilgang til data i et miljø. Hvis du vil ha mer informasjon, kan du se [Oversikt over miljøer](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
-|Systemadministrator     |  Opprette, lese, skrive, slette, tilpasninger, sikkerhetsroller       | Har full tilgang til å tilpasse eller administrere miljøet, inkludert å opprette, endre og tilordne sikkerhetsroller. Kan vise alle dataene i miljøet. Hvis du vil ha mer informasjon, kan du se [Rettigheter som kreves for tilpassing](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
-|Å tilpasse et system     | Opprette (egen), lese (egen), skrive (egen), slette (egen), tilpasninger         | Har full tilgang til å tilpasse miljøet. Kan imidlertid bare vise poster for miljøenheter som de oppretter. Mer informasjon: [Rettigheter som kreves for tilpassing](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
-|Common Data Service-bruker     |  Lese, opprette (egen), skrive (egen), slette (egen)       | Kan kjøre en app i miljøet og utføre vanlige oppgaver for postene som de eier.        |
-|Representant     | Å handle på vegne av en annen bruker        | Tillater kode for å kjøre som en annen bruker eller representere den.  Brukes vanligvis med en annen sikkerhetsrolle for å gi tilgang til poster. Hvis du vil ha mer informasjon, kan du se [Å representere en annen bruker](https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
+|Miljøoppretter     |  Ingen       | Kan opprette nye ressurser som er knyttet til et miljø, inkludert apper, tilkoblinger, egendefinerte API-er, gatewayer og strømmer, ved hjelp av Microsoft Flow. Har imidlertid ikke rettigheter til å få tilgang til data i et miljø. Mer informasjon: [Oversikt over miljøer](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
+|Systemansvarlig     |  Opprette, lese, skrive, slette, tilpassinger, sikkerhetsroller       | Har full tillatelse til å tilpasse eller administrere miljøet, inkludert opprette, endre og tilordne sikkerhetsroller. Kan vise alle data i miljøet Mer informasjon: [Rettigheter som kreves for tilpassing](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
+|Systemtilpasser     | Opprette (selv), lese (selv), skrive (selv), slette (selv), tilpassinger         | Har alle tillatelser til å tilpasse miljøet Kan imidlertid bare vise oppføringer for miljøenheter de oppretter. Mer informasjon: [Rettigheter som kreves for tilpassing](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
+|Common Data Service-bruker     |  Lese, opprette (selv), skrive (selv), slette (selv)       | Kan kjøre en app i miljøet og utføre vanlige oppgaver for oppføringene som de eier.        |
+|Representant     | Handle på vegne av en annen bruker        | Kan kjøre kode som en annen bruker eller representere.  Brukes vanligvis med en annen sikkerhetsrolle for å gi tilgang til oppføringer. Mer informasjon: [Representere en annen bruker](https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
 
-*Rettighet har globalt omfang om ikke annet er angitt.
+*Rettighet er globalt omfang, med mindre annet er oppgitt.
 
 ## <a name="next-steps"></a>Neste trinn
-[Å kjøre en modelldreven app på en mobil enhet](../../user/run-app-client-model-driven.md)
+[Kjør en modelldrevet app på en mobilenhet](../../user/run-app-client-model-driven.md)
 
 
 

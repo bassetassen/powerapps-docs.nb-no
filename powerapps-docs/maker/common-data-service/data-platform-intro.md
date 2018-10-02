@@ -1,6 +1,6 @@
 ---
-title: Hva er Common Data Service for apper? | Microsoft Docs
-description: Innføring i Common Data Service for apper, enheter og serverside-logikk.
+title: Hva er Common Data Service for Apps? | Microsoft Docs
+description: 'Innføring i Common Data Service (CDS) for Apps, enheter og logikk på serversiden.'
 author: clwesene
 manager: kfile
 ms.service: powerapps
@@ -8,75 +8,76 @@ ms.topic: overview
 ms.component: cds
 ms.date: 05/01/2018
 ms.author: matp
-ms.openlocfilehash: 6a8bc8f24ce0f772f5c98852838095f233c4317f
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218077"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="what-is-common-data-service-for-apps"></a>Hva er Common Data Service for apper?
-Common Data Service (CDS) for apper lar deg lagre og behandle data som brukes av forretningsprogrammer på en sikker måte. Data i CDS for apper lagres i et sett med enheter. En *enhet* er et sett med poster som brukes til å lagre data. Det ligner en tabell i en database. CDS for apper inkluderer et grunnleggende sett med standardenheter som dekker vanlige scenarioer, men du kan også opprette egendefinerte enheter som er spesifikke for din organisasjon, og fylle dem med data ved hjelp av Power Query. Apputviklere kan deretter bruke PowerApps til å bygge rike programmer ved hjelp av disse dataene.
 
-![Skjermbilde som viser en oversikt over forretningsprogramplattformen. ](./media/data-platform-cds-intro/platform.png "Plattformoversikt")
+# <a name="what-is-common-data-service-for-apps"></a>Hva er Common Data Service for Apps?
+Common Data Service (CDS) for Apps lar deg sikkert lagre og behandle dataene som brukes av forretningsprogrammer. Dataene i CDS for Apps er lagret i et sett av enheter. En *enhet* er et sett med oppføringer som er brukt til å lagre data, tilsvarende hvordan en tabell lagrer data i en database. CDS for Apps omfatter et basissett med standardenheter som dekker vanlige scenarioer, men du kan også opprette egendefinerte enheter som er spesifikke for organisasjonen og fylle ut dem med data ved hjelp av Power Query. Apputviklere kan deretter bruke PowerApps til å lage omfattende programmer ved hjelp av dataene.
 
-Hvis du vil ha informasjon om kjøp av et abonnement for å bruke CDS for apper, kan du se [Prisinformasjon](../../administrator/pricing-billing-skus.md).
+![Skjermbilde med oversikt over forretningsprogramplattformen.](./media/data-platform-cds-intro/platform.png "Plattformoversikt")
 
-## <a name="why-use-common-data-service-for-apps"></a>Hvorfor bruke Common Data Service for apper?
-Med enheter i Common Data Service (både standard og egendefinert) får man et sikkert og skybasert lagringsalternativ for dataene. Med enheter kan du opprette en forretningsfokusert definisjon av organisasjonens data for bruk i appene. Hvis du ikke er sikker på om enheter er det beste alternativet, kan du ta en titt på disse fordelene:
+For informasjon om kjøp av et abonnement for å bruke CDS for Apps, se [Prisinformasjon](../../administrator/pricing-billing-skus.md).
 
-* **Enkelt å administrere** &ndash; både metadataene og dataene lagres i skyen. Du trenger ikke å bekymre deg for måten de lagres på.
-* **Enkelt å sikre** &ndash; data lagres på en sikker måte slik at brukere kun kan se dem hvis du gir dem tilgang. Rollebasert sikkerhet lar deg styre tilgang til enheter for forskjellige brukere i organisasjonen.
-* **Få tilgang til dataene for Dynamics 365** &ndash; Dataene fra appene for Dynamics 365 er også lagret i Common Data Service for apper, slik at du raskt kan bygge apper som drar nytte av dataene for Dynamics 365, og utvide appene med bruk av PowerApps.
-* **Rike metadata** &ndash; datatyper og relasjoner utnyttes direkte i PowerApps.
-* **Logikk og validering** &ndash; definer beregnede felt, forretningsregler, arbeidsflyter og flyter for forretningsprosesser for å sikre datakvalitet og generere forretningsprosesser.
-* **Produktivitetsverktøy** &ndash; enheter er tilgjengelige i tilleggene for Microsoft Excel for å øke produktiviteten og sikre at dataene er tilgjengelige.
+## <a name="why-use-common-data-service-for-apps"></a>Hvorfor bruke Common Data Service for Apps?
+Standardenheter og tilpassede enheter i CDS for Apps utgjør et sikkert og skybasert lagringsalternativ for dataene. Enheter lar deg opprette en bedriftsfokusert definisjon av organisasjonens data for bruk i mobilapper. Hvis du ikke er sikker på om enheter er det beste alternativet, kan du vurdere følgende fordeler:
 
-## <a name="dynamics-365-and-the-common-data-service-for-apps"></a>Dynamics 365 og Common Data Service for apper
+* **Enkel å administrere** &ndash; Begge metadata og data lagres i skyen. Du trenger ikke å bekymre deg om detaljene om hvordan de er lagret.
+* **Enkel å sikre** &ndash; Dataene er lagret på en sikker måte, slik at brukere bare kan se dem hvis du gir dem tilgang. Rollebasert sikkerhet gjør det mulig å kontrollere tilgang til enheter for ulike brukere i organisasjonen.
+* **Tilgang til Dynamics 365-dataene** &ndash; Data fra Dynamics 365-programmer er også lagret i Common Data Service for Apps, slik at du raskt kan bygge programmer som bruker Dynamics 365-dataene, og utvide appene ved hjelp av PowerApps.
+* **Avanserte metadata** &ndash; Datatyper og relasjoner utnyttes direkte fra PowerApps.
+* **Logikk og validering** &ndash; Definer beregnede felt, forretningsregler, arbeidsflyter og forretningsprosessflyter for å sørge for datakvalitet og drive forretningsprosesser.
+* **Produktivitetsverktøy** &ndash; Enheter som er tilgjengelige i tillegg for Microsoft Excel, for å øke produktiviteten og sikre datatilgjengelighet.
 
-Apper for Dynamics 365, for eksempel Dynamics 365 for Sales, Service eller Talent, bruker også Common Data Service for apper til å lagre og sikre data som brukes av appene. Dette gjør det mulig å bygge apper med PowerApps og Common Data Service for apper direkte mot kjernen for forretningsdataene som allerede brukes i Dynamics 365, uten behov for integrering.
+## <a name="dynamics-365-and-the-common-data-service-for-apps"></a>Dynamics 365 og Common Data Service for Apps
 
-* **Bygg apper mot Dynamics 365** &ndash; Bygg apper raskt mot forretningsdataene i PowerApps eller ved hjelp av Pro Developer SDK.
-* **Administrer gjenbrukbar forretningslogikk og regler** &ndash; Forretningsregler og logikk som allerede er definert i enhetene for Dynamics 365, brukes i PowerApps til å sikre datakonsekvens uavhengig av hvordan brukerne har tilgang til dataene, eller gjennom hvilket program.
-* **Gjenbrukbare ferdigheter på tvers av Dynamics 365 og PowerApps** &ndash; Brukere med tidligere ferdigheter i PowerApps eller Dynamics 365, kan nå benytte disse ferdighetene på tvers av den nye plattformen for Common Data Service for apper. Oppretting av enheter, skjemaer, diagrammer og så videre, er nå vanlig på tvers av appene.
+Dynamics 365-programmer, for eksempel Dynamics 365 for Sales, Service eller Talent, bruker også Common Data Service for Apps til å lagre og sikre data som brukes av programmene. Dette gjør det mulig for deg å bygge programmer ved hjelp av PowerApps og Common Data Service for Apps direkte mot kjerneforretningsdataene som allerede brukes i Dynamics 365, uten behov for integrering.
+
+* **Bygg apper mot Dynamics 365-dataene** &ndash; Bygg apper raskt mot forretningsdataene i PowerApps eller med Pro Developer SDK.
+* **Administrer gjenbrukbar forretningslogikk og -regler** &ndash; Forretningsregler og -logikk som allerede er definert i Dynamics 365-enhetene dine, brukes i PowerApps for å sørge for datakonsistens, uavhengig av hvordan brukerne får tilgang til dataene, eller uansett app.
+* **Gjenbrukbare ferdigheter på tvers av Dynamics 365 og PowerApps** &ndash; Brukere med ferdigheter tidligere i PowerApps eller Dynamics 365 kan nå bruke disse ferdigheter på tvers av den nye plattformen Common Data Service for Apps. Opprette enheter, skjemaer, diagrammer osv er nå felles på tvers av programmer.
 
     > [!NOTE]
-    > Dynamics 365 for Finance and Operations krever for øyeblikket konfigurasjonen av dataintegratoren for å gjøre forretningsdataene fra Finance and Operations tilgjengelig i Common Data Service for apper.
+    > Dynamics 365 for Finance and Operations krever for øyeblikket konfigurasjon av Data Integrator for å gjøre forretningsdataene fra Finance and Operations tilgjengelige i Common Data Service for Apps.
 
-## <a name="integrating-data-into-the-common-data-service"></a>Slik integrerer du data i Common Data Service
+## <a name="integrating-data-into-the-common-data-service"></a>Integrere data i Common Data Service
 
-Det innebærer vanligvis data fra mer enn én kilde når du bygger en app. Selv om dette noen ganger kan gjøres på appnivå, finnes det også tilfeller der integrering av disse dataene i et felles lager, gjør det mulig med en enklere bygging av apper og et enkelt sett med logikk for å vedlikeholde og arbeide med dataene. Common Data Service for apper gjør det mulig å integrere data fra flere kilder i et enkelt lager som deretter kan brukes i PowerApps, Flow og Power BI, sammen med data som allerede er tilgjengelige fra appene i Dynamics 365.
+Bygging av en app inkluderer vanligvis data fra flere kilder, mens dette noen ganger kan utføres på programnivå, og det er også tilfeller der integrering av disse dataene samlet til et felles lager tillater en enklere appbyggeopplevelse, og ett enkelt sett med logikk for å vedlikeholde og bruke dataene. Common Data Service for Apps gjør det mulig å integrere data fra flere kilder til ett enkelt lager, som deretter kan brukes i PowerApps, flyten og Power BI sammen med dataene som allerede er tilgjengelige fra Dynamics 365-programmene.
 
-* **Planlagt integrering med andre systemer** &ndash; Data som beholdes i en annen app kan synkroniseres regelmessig med Common Data Service for apper, slik at du kan dra nytte av andre appdata i PowerApps.
-* **Transformer og importer data ved hjelp av PowerQuery** &ndash; Transformering av data ved importering til Common Data Service kan gjøres via PowerQuery fra mange nettbaserte datakilder, et vanlige verktøy som brukes på tvers av Excel og Power BI.
-* **Engangsimport av data** &ndash; Enkel import og eksport av filer i Excel og CSV kan brukes for et engangstilfelle eller for sjelden import av data i Common Data Service for apper.
+* **Planlagt integrering med andre systemer** &ndash; Data som skal beholdes i et annet program, kan regelmessig synkroniseres med Common Data Service for Apps for at du skal bruke data fra andre programmer i PowerApps.
+* **Transformere og importere data ved hjelp av PowerQuery** &ndash; Transformering av data når du importerer til Common Data Service kan utføres via PowerQuery fra mange online datakilder, et vanlig verktøy som brukes på tvers av Excel og Power BI.
+* **Éngangsimport av data** &ndash; Enkel import og eksport til Excel- og CSV-filer kan brukes for éngangs eller sjelden import av data til Common Data Service for Apps.
 
+Hvis du vil ha mer informasjon om hvordan du integrerer data i Common Data Service, se [Legge til data i en enhet i Common Data Service for Apps ved hjelp av Power Query](data-platform-cds-newentity-pq.md).
 
-## <a name="interacting-with-entities"></a>Å arbeide med enheter
-Når du utvikler en app, kan du bruke standardenheter, egendefinerte enheter eller begge deler. Common Data Service-tjenesten for apper tilbyr standardenheter som standard. Disse er utformet (i henhold til anbefalte fremgangsmåter) med tanke på å skulle fange opp de vanligste konseptene og scenariene for en organisasjon.
+## <a name="interacting-with-entities"></a>Samhandle med enheter
+Når du utvikler en app, kan du bruke standardenheter, egendefinerte enheter eller begge deler. CDS for Apps inneholder standardenheter som standard. Disse er utviklet, i henhold til gode fremgangsmåter, for å fange opp de mest vanlige konseptene og scenarioene i en organisasjon.
 
-![Skjermbilde som viser en liste over enheter. ](./media/data-platform-cds-intro/entitylist.png "Enhetsliste")
+![Skjermbilde viser en liste over enheter.](./media/data-platform-cds-intro/entitylist.png "Enhetsliste")
 
-Hvis du vil ha en fullstendig liste over enheter, kan du se [Enhetsreferanse](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference).
+For en fullstendig liste over enheter, kan du se [enhetsreferansen](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference).
 
-Du kan utvide funksjonaliteten til standardenheter ved å opprette én eller flere egendefinerte enheter for å lagre informasjon som er unik for organisasjonen. Hvis du vil ha mer informasjon, kan du se [Hvordan opprette en egendefinert enhet](create-custom-entity.md).
+Du kan utvide funksjonaliteten til standardenheter ved å opprette en eller flere egendefinerte enheter for å lagre informasjon som er unik for organisasjonen. Hvis du vil ha mer informasjon, kan du se [Slik oppretter du en egendefinert enhet](create-custom-entity.md).
 
 ## <a name="logic-and-validation"></a>Logikk og validering
-Enheter i Common Data Service for apper kan dra nytte av omfattende serverside-logikk og validering for å sikre datakvalitet og redusere gjentakende kode i hver app som oppretter og bruker data i en enhet.
+Enheter i CDS for Apps kan dra nytte av rik logikk på serversiden og validering for å sikre datakvalitet og redusere repeterende kode i hver app som oppretter og bruker data i en enhet.
 
-* **Forretningsregler** kan validere data på tvers av flere felt og enheter og aktivere advarsler og feilmeldinger, uavhengig av appen som brukes til å opprette dataene. Hvis du vil ha mer informasjon, kan du se [Oppretting av en forretningsregel](./data-platform-create-business-rule.md).
-* **Flyter for forretningsprosesser** hjelper brukere å sikre at data angis konsekvent og følger de samme trinnene hver gang. Flyter for forretningsprosesser støttes for øyeblikket bare for modelldrevne apper. Hvis du vil ha mer informasjon, kan du se [Oversikt over flyter for forretningsprosesser](/dynamics365/customer-engagement/customize/business-process-flows-overview).
-* **Arbeidsflyter** lar deg automatisere forretningsprosesser uten brukermedvirkning. Hvis du vil ha mer informasjon, kan du se [Oversikt over arbeidsflyter](/dynamics365/customer-engagement/customize/workflow-processes).
-* **Forretningslogikk med kode** støtter mer avanserte scenarier for utviklere for å utvide programmet direkte via kode. Hvis du vil ha mer informasjon, kan du se [Å bruke forretningslogikk med kode](../../developer/common-data-service/apply-business-logic-with-code.md).
+* **Forretningsregler** Valider data på tvers av flere felt og enheter og gi advarsels- og feilmeldinger, uavhengig av appen som brukes til å opprette dataene. Hvis du vil ha mer informasjon, kan du se [Opprette en forretningsregel](./data-platform-create-business-rule.md).
+* **Forretningsprosessflyter** Rettled brukere for å sikre at de skriver inn data konsekvent og følger de samme trinnene hver gang. Forretningsprosessflyter støttes for øyeblikket bare for modelldrevne apper. For mer informasjon, se [Oversikt over forretningsprosessflyter](/dynamics365/customer-engagement/customize/business-process-flows-overview).
+* **Arbeidsflyter** lar deg automatisere forretningsprosesser uten brukerhandling. Hvis du vil ha mer informasjon, kan du se [Oversikt over arbeidsflyter](/dynamics365/customer-engagement/customize/workflow-processes).
+* **Forretningslogikk med kode** støtter avanserte utviklerscenarier for å utvide programmet direkte via kode. Hvis du vil ha mer informasjon, kan du se [Bruke forretningslogikk med kode](../../developer/common-data-service/apply-business-logic-with-code.md).
 
-## <a name="developer-capabilities"></a>Utviklerfunksjoner
-I tillegg til funksjonene som er tilgjengelige via [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-portalen, inneholder CDS for apper også funksjoner for utviklere for en programmatisk tilgang til metadata og data for å opprette enheter og forretningslogikk samt samhandle med dataene. Hvis du vil ha mer informasjon, kan du se [Oversikt for utviklere over Common Data Service for apper](../../developer/common-data-service/overview.md)
+## <a name="developer-capabilities"></a>Funksjoner for utviklere
+I tillegg til funksjonene som er tilgjengelige via [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-portalen, inneholder CDS for Apps også funksjoner som utviklere kan bruke til programmatisk tilgang til metadata og data, for å opprette enheter og forretningslogikk, i tillegg til å samhandle med data. Hvis du vil ha mer informasjon, kan du se [Oversikt over Common Data Service for apputviklere](../../developer/common-data-service/overview.md)
 
 ## <a name="next-steps"></a>Neste trinn
-Slik kommer du i gang med å bruke CDS for apper ved å:
-* [generere en app ved hjelp av en Common Data Service-database](../canvas-apps/data-platform-create-app-scratch.md).
-* [opprette en egendefinert enhet ](create-custom-entity.md) og deretter [opprette en app som bruker denne enheten](../canvas-apps/data-platform-create-app.md).
-* [bruke Power Query](./data-platform-cds-newentity-pq.md) til å koble til en nettbasert eller lokal datakilde, og importere den direkte til Common Data Service for apper.
+Slik kommer du i gang med CDS for Apps:
+* [Opprett en app ved å bruke en Common Data Service-database](../canvas-apps/data-platform-create-app-scratch.md).
+* [Opprett en egendefinert enhet](create-custom-entity.md) og [opprett deretter en app som bruker enheten](../canvas-apps/data-platform-create-app.md).
+* [Bruk Power Query](./data-platform-cds-newentity-pq.md) til å koble til en elektronisk eller lokal datakilde og importere dataene direkte i CDS for Apps.
 
-## <a name="privacy-notice"></a>Erklæring om personvern
-Med den vanlige datamodellen i Microsoft PowerApps samler vi inn og lagrer egendefinerte enhets- og feltnavn i diagnostiseringssystemene. Vi bruker denne kunnskapen til å forbedre den vanlige datamodellen for kundene våre. Enhets- og feltnavnene som appoppretterne lager, hjelper oss med å forstå scenarioer som er typiske i Microsoft PowerApps-fellesskapet, og få rede på hull i tjenestens standarddekning for enheter, som eksempelvis skjemaer knyttet til organisasjoner. Dataene i databasetabeller som er knyttet til disse enhetene, blir ikke åpnet eller brukt av Microsoft eller replisert utenfor området hvor databasen er klargjort. Merk deg imidlertid at den egendefinerte enheten og feltnavnene kan repliseres på tvers av områder og blir slettet i henhold til retningslinjene våre for dataoppbevaring. Microsoft tar vare på personvernet ditt, som ytterligere beskrevet i [Klareringssenteret](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
+## <a name="privacy-notice"></a>Personvernerklæring
+Med Common Data Model for Microsoft PowerApps samler og lagrer Microsoft egendefinert enhets- og feltnavn i diagnosesystemene våre. Vi bruker denne kunnskapen til å forbedre Common Data Model for kundene våre. Enhets- og feltnavnene som appoppretterne lager, hjelper oss å forstå scenarioer som er vanlige i Microsoft PowerApps-fellesskapet, og fastslår mangler i tjenestens standardenhetsdekning, for eksempel skjemaer som er relatert til organisasjoner. Dataene i databasetabellene som er knyttet til disse enhetene, brukes ikke eller er ikke tilgjengelige for Microsoft eller replikeres utenfor området der databasen klargjøres. Vær imidlertid oppmerksom på at de egendefinerte enhets- og feltnavnene kan replikeres på tvers av områder, og slettes i henhold til våre oppbevaringspolicyer for data. Microsoft går inn for å verne om dine personlige opplysninger som beskrevet ytterligere i vårt [Klareringssenter](https://www.microsoft.com/trustcenter/Privacy/default.aspx).

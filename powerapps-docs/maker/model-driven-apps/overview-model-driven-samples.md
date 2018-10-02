@@ -1,6 +1,6 @@
 ---
 title: Modelldrevne eksempelapper
-description: Forstå hvordan du henter, egendefinerer og fjerner modelldrevne eksempelapper.
+description: 'Forstå hvordan du kan skaffe, tilpasse og fjerne modelldrevne eksempelapper.'
 documentationcenter: na
 author: caburk
 manager: kvivek
@@ -10,77 +10,77 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 03/08/2018
 ms.author: caburk
-ms.openlocfilehash: 0b34a32281fb4f64bc918de81b3920edf5a7000b
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39664431"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
+
 # <a name="model-driven-sample-apps"></a>Modelldrevne eksempelapper
 
-I [powerapps.com](https://powerapps.com) kan du bruke en eksempelapp til å utforske utformingsmuligheter og oppdage begreper som du kan bruke når du utvikler apper. Hver eksempelapp bruker fiktive data til å vise et virkelig scenario. 
+I [powerapps.com](https://powerapps.com), bruk en eksempelapp til å utforske utformingsmuligheter og oppdage konsepter som du kan bruke når du utvikler egne apper. Hver eksempelapp bruker oppdiktede data til å vise et virkelighetsnært scenario. 
 
-Sørg for å lese dokumentasjonen som er spesifikk for hver eksempelapp for mer detaljer. 
+Se dokumentasjonen spesifikk for hver eksempelapp for å få mer informasjon. 
 
-![Eksempelapp for innsamling](media/overview-model-driven-samples/fundraiser-app1.png)
+![Eksempelapp – pengeinnsamling](media/overview-model-driven-samples/fundraiser-app1.png)
 
 
-## <a name="get-sample-apps"></a>Å hente eksempelapper
+## <a name="get-sample-apps"></a>Skaffe eksempelapper
 
-Hvis du ønsker å spille av eller redigere modelldrevne eksempelapper, må appene først klargjøres i Common Data Service-databasen. Du oppretter først prøvemiljø og -database, og sørg for at du merker av for **Inkluder eksempelapper and -data**.
+For å se på eller redigere modelldrevne eksempelapper må først appene klargjøres i en Common Data Service-database. Opprett først et prøveversjonsmiljø og en database, og merk av for **Inkluderer eksempelapper og data**.
 
-![Å opprette en database](media/overview-model-driven-samples/create-database1.png)
+![Opprett database](media/overview-model-driven-samples/create-database1.png)
 
 
 > [!IMPORTANT]
-> Dette alternativet installerer alle tilgjengelige eksempelapper i databasen. Eksempelapper brukes for utdannings- og demonstrasjonsformål, og vi anbefaler ikke at du installerer dem i produksjonsdatabaser. 
+> Dette alternativet installerer alle tilgjengelige eksempelapper i databasen. Eksempelapper er til opplæring og demonstrasjon, og vi anbefaler ikke installasjonen av dem i produksjonsdatabaser. 
 
-## <a name="customize-a-sample-app"></a>Å egendefinere en eksempelapp
+## <a name="customize-a-sample-app"></a>Tilpasse en eksempelapp
 
-1. Logg deg på [powerapps.com](https://powerapps.com), og velg **Modelldrevet** for utformingsmodus. 
+1. Logg på [powerapps.com](https://powerapps.com), og velg **Modelldrevet** for utformingsmodusen. 
 
-    ![Å velge en utformingsmodus](media/overview-model-driven-samples/choose-design-mode.png)
+    ![Velg utformingsmodus](media/overview-model-driven-samples/choose-design-mode.png)
 
-2. Beveg pekeren over eksempelappen på startskjermen og klikk på **Egendefiner**.
-3. Apputformingsprogrammet åpnes og gir deg mange alternativer for egendefinering av appen. 
-4. Hvis du ønsker flere alternativer for egendefinering, klikker du på **Avansert** fra navigasjonen til venstre i portalen.
+2. Fra startsiden beveger du musen over eksempelappen og klikker **Tilpass**.
+3. Apputformingen åpnes og gir deg flere alternativer for å tilpasse appen. 
+4. For flere tilpassingsalternativer klikker du **Avansert** fra den venstre navigasjonsruten i portalen.
 
-## <a name="remove-sample-apps-and-data"></a>Å fjerne eksempelapper og -data 
-- Hvis du sletter en eksempelapp, må du også slette den tilsvarende  [administrerte løsningen](https://docs.microsoft.com/dynamics365/customer-engagement/developer/uninstall-delete-solution). 
-- Hvis du sletter løsningen, så slettes også eventuelle spesifikke eksempeldata for de egendefinerte enhetene i appen.
-- Hvis det ble foretatt endringer i eksempelappen, kan det hende det finnes [avhengigheter](https://docs.microsoft.com/dynamics365/customer-engagement/developer/dependency-tracking-solution-components). Dette må fjernes før du kan slette løsningen.
+## <a name="remove-sample-apps-and-data"></a>Fjerne eksempelapper og data 
+- Sletting av en eksempelapp krever sletting av den tilsvarende [administrerte løsningen](https://docs.microsoft.com/dynamics365/customer-engagement/developer/uninstall-delete-solution). 
+- Hvis du sletter en løsning, slettes også eventuelle eksempeldata som er spesifikke for de egendefinerte enhetene for appen.
+- Hvis tilpassinger ble gjort i eksempelappen, kan det være [avhengigheter](https://docs.microsoft.com/dynamics365/customer-engagement/developer/dependency-tracking-solution-components), som må fjernes før løsningen slettes.
 
-### <a name="steps"></a>Trinn
-1. Logg deg på [administrasjonsportalen for PowerApps](https://admin.powerapps.com).
+### <a name="steps"></a>Trinn.
+1. Logge på [PowerApps-administrasjonsportalen](https://admin.powerapps.com).
 
 2. Velg et miljø.
 
-3. Klikk på **administrasjonssenteret for Dynamics 365**. 
+3. Klikk **Dynamics 365 Administration Center** 
 
-    ![Administrasjonssenteret for Dynamics 365](media/overview-model-driven-samples/admin-center.png)
+    ![Administrasjonssenter for Dynamics 365](media/overview-model-driven-samples/admin-center.png)
 
-4. Velg databasen fra listen, og klikk på **ÅPNE**.
+4. Velg databasen fra listen, og klikk **Åpne**.
 
-    ![Å velge database](media/overview-model-driven-samples/select-database.png)
+    ![Velge database](media/overview-model-driven-samples/select-database.png)
 
-5. Gå til **Innstillinger/Løsninger**.
+5. Naviger til **Innstillinger/Løsninger**.
 
-6. Velg løsningen for appen som skal slettes, og klikk deretter på **Slett**.
+6. Velg løsningen for appen som skal slettes, og klikk **Slett**.
 
-    ![Å slette løsningen](media/overview-model-driven-samples/delete-solution.png)
+    ![Slette løsning](media/overview-model-driven-samples/delete-solution.png)
 
-*Du kan alternativt gå til listen over løsninger ved å klikke på **Avansert** i Maker-portalen og slette alt i nettadressen etter .dynamics.com/*
+*Du kan også gå til listen over løsninger ved å klikke **Avansert** i utviklingsportalen og slette alt i URL-adressen etter .dynamics.com/*.
 
 > [!IMPORTANT]
-> Slett ikke andre systemløsninger med mindre du er klar over innvirkningen av dette.
+> Ikke slett andre systemløsninger med mindre du er oppmerksom på virkningen.
 
-## <a name="install-or-uninstall-sample-data"></a>Å installere eller avinstallere eksempeldata
-1. Følg trinnene 1-4 ovenfor.
-2. Gå til **Innstillinger/Dataadministrasjon/Eksempeldata**.
-3. Hvis eksempeldata er installert, er alternativet for å fjerne tilgjengelig. Ellers så er alternativet for å installere tilgjengelig. 
+## <a name="install-or-uninstall-sample-data"></a>Installere eller avinstallere eksempeldata
+1. Følg trinn 1–4 ovenfor.
+2. Naviger til **Innstillinger / Databehandling / Eksempeldata**.
+3. Hvis eksempeldata er installert, er det mulig å fjerne dem. Ellers er alternativet for installering tilgjengelig. 
 
-    ![Å fjerne eksempeldata](media/overview-model-driven-samples/remove-sample-data.png)
+    ![fjerne eksempeldata](media/overview-model-driven-samples/remove-sample-data.png)
 
 
 

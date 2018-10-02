@@ -1,6 +1,6 @@
 ---
-title: Å opprette en PowerBI-rapport | Microsoft Docs
-description: Koble til dataene fra PowerBI-skrivebordet ved hjelp av Common Data Service for apper-koblingen.
+title: Opprette en PowerBI-rapport | Microsoft Docs
+description: Koble til dataene fra PowerBI Desktop ved hjelp av Common Data Service for Apps.
 author: clwesene
 manager: kfile
 ms.service: powerapps
@@ -8,103 +8,102 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 05/21/2018
 ms.author: clwesene
-ms.openlocfilehash: 5fffcbcd8f58ae05f3fe5b3b4f871cf39d003321
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218192"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
 # <a name="create-a-power-bi-report"></a>Opprette en Power BI-rapport
-Common Data Service for apper lar deg koble deg direkte til dataene med Power BI Desktop for å opprette rapporter og publisere dem til Power BI. Fra Power BI kan rapporter brukes i instrumentbord, deles med andre brukere og fås tilgang til på tvers av plattformer i Power BI-apper for mobilenheter.
+Med Common Data Service for Apps kan du koble direkte til dataene dine med Power BI Desktop for å opprette rapporter og publisere dem til Power BI. Fra Power BI kan rapporter brukes i instrumentbordene, deles med andre brukere og åpnes på tvers av plattformer i Power BI-mobilapper.
 
 ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/PBIDesktop.png "Power BI Desktop")
 
-## <a name="prerequisites"></a>Forutsetninger
+## <a name="prerequisites"></a>Forhåndskrav
 
-Hvis du vil bruke Power BI med Common Data Service for apper, trenger du følgende:
+Hvis du vil bruke Power BI med Common Data Service for Apps, trenger du følgende:
 
 * Last ned og installer Power BI Desktop, som er et gratis program som kjører på den lokale datamaskinen. Du kan laste ned Power BI Desktop [her](https://powerbi.microsoft.com/desktop/).
-* Common Data Service for apper-miljøet med opprettertillatelse til å få tilgang til portalen og lese tillatelsene for å få tilgang til data i enheter.
+* Common Data Service for Apps-miljøet med beslutningstakertillatelser for å få tilgang til portalen lesetillatelser for å få tilgang til data i enheter.
 
-## <a name="finding-your-common-data-service-for-apps-environment-url"></a>Slik finner du nettadressen for miljøet til Common Data Service for apper
+## <a name="finding-your-common-data-service-for-apps-environment-url"></a>Finne URL-adressen for Common Data Service for Apps-miljøet
 
-1. Åpne [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og velg miljøet du har tenkt å koble til. Klikk deretter på **tannhjulet for innstillinger** øverst til høyre og klikk på **Avanserte tilpasninger**
+1. Åpne [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), velg miljøet du skal koble deg til, klikk på **innstillingstannhjulet** i øvre høyre hjørne, og klikk på **Avanserte tilpassinger**
 
-    ![CDS for apper-miljøet](./media/data-platform-cds-powerbi-connector/CDSEnv1.png "CDS for apper-miljøet")
+    ![CDS for Apps-miljøet](./media/data-platform-cds-powerbi-connector/CDSEnv1.png "CDS for Apps-miljøet")
 
-2. Klikk på **Ressurser** under inndelingen Ressurser for utviklere, dette vil åpne en ny fane.
+2. Klikk **Ressurser** under Utviklerressurser-delen, noe som vil åpne en ny kategori.
 
-    ![CDS for apper-miljøet](./media/data-platform-cds-powerbi-connector/CDSEnv2.png "CDS for apper-miljøet")
+    ![CDS for Apps-miljøet](./media/data-platform-cds-powerbi-connector/CDSEnv2.png "CDS for Apps-miljøet")
 
-3. Kopier roten av nettadressen i den nye fanen, dette er den unike nettadressen for miljøet ditt. Nettadressen vil være i formatet **https://yourenvironmentid.crm.dynamics.com/** – sørg for at du ikke kopierer resten av nettadressen. Behold dette på et nyttig sted slik at du kan bruke det når du oppretter en PowerBI-rapport.
+3. Kopier roten til URL-adressen i den nye fanen, som er den unike URL-adressen for miljøet. URL-adressen skal være i formatet **https://yourenvironmentid.crm.dynamics.com/**. Pass på at du ikke kopierer resten av URL-adressen. Holde dette et sted praktisk slik at du kan bruke den når du oppretter PowerBI-rapporten.
 
-    ![CDS for apper-miljøet](./media/data-platform-cds-powerbi-connector/CDSEnv3.png "CDS for apper-miljøet")
+    ![CDS for Apps-miljøet](./media/data-platform-cds-powerbi-connector/CDSEnv3.png "CDS for Apps-miljøet")
 
-## <a name="connecting-to-common-data-service-for-apps-from-power-bi-desktop"></a>Å koble til Common Data Service for apper fra Power BI Desktop
+## <a name="connecting-to-common-data-service-for-apps-from-power-bi-desktop"></a>Koble til Common Data Service for Apps fra Power BI Desktop
 
-1. Start **Power BI Desktop**. Hvis det er første gang, kan det være at du får opp en velkomstskjerm eller blir tatt direkte til et tomt lerret – uansett så klikker du på **Hent data** og velger **Mer** for å åpne den fullstendige listen over datakilder som er tilgjengelige for Power BI Desktop.
+1. Start **Power BI Desktop**. Hvis det er første gang, kan det vises en velkomstskjerm, eller du blir tatt rett til et tomt lerret – uansett klikker du **Hent Data** og velger **Mer** for å åpne den fullstendige listen over datakilder tilgjengelig for Power BI Desktop.
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport1.png "Power BI Desktop")
 
-2. Klikk på **Elektroniske tjenester** og **Common Data Service for apper (beta)** fra listen over koblinger. Klikk på **Koble til**.
+2. Klikk **Online Services** og **Common Data Service for Apps (Beta)** fra listen over kontakter. Klikk **Koble til**.
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport2.png "Power BI Desktop")
 
-3. Lim inn **nettadresse for miljøet til Common Data Service for apper** i **nettadresse for server**-feltet, og klikk på **OK**. Hvis dette er første gang, blir du bedt om å logge på med samme legitimasjon som du bruker til å koble til PowerApps og Common Data Service for apper.
+3. Lim inn **URL-adressen for Common Data Service for Apps** i feltet **URL-adresse for server**, og klikk **OK**. Hvis dette er første gang, blir du bedt om å logge på med den samme legitimasjonen som du bruker til å koble til PowerApps og Common Data Service for Apps.
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport3.png "Power BI Desktop")
 
-4. Navigatøren viser deg alle enheter som er tilgjengelige for ditt miljø, gruppert i tre mapper. Utvid **Common Data Model**-mappen.
+4. Navigatøren viser alle enheter som er tilgjengelige for miljøet ditt, gruppert i tre mapper. Utvid mappen **Common Data Model**.
 
-   * Common Data Model – dette er standardenheter som er ofte brukt og som er tilgjengelig i alle miljøer som en del av Common Data Model.
-   * Egendefinerte enheter – er enheter som du har opprettet eller importert i miljøet ditt.
-   * System – inneholder alle enheter i miljøet, inkludert Common Data Model og Egendefinerte enheter.
+    * Common Data Model – dette er standardenheter som vanligvis brukes. og som er tilgjengelige i alle miljøer som en del av Common Data Model.
+    * Egendefinerte enheter – er enheter som du har opprettet eller importert i organisasjonen.
+    * System – inneholder alle enheter i miljøet, inkludert Common Data Model og egendefinerte enheter.
 
-     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport4.png "Power BI Desktop")
+    ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport4.png "Power BI Desktop")
 
-5. Velg **Konto**-enheten for å se en forhåndsvisning av dataene i den høyre ruten, og klikk på **Last inn**.
+5. Velg **Forretningsforbindelse**-enheten for å vise en forhåndsvisning av dataene i ruten til høyre, og klikk **Last**.
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport5.png "Power BI Desktop")
 
-6. Enheten er nå lastet inn i rapporten, og du kan begynne å bygge rapporter. Eller du kan gjenta denne prosessen for å legge til flere enheter.
+6. Enheten lastes nå inn i rapporten, og du kan begynne å bygge rapporter eller gjenta dette for å legge til flere enheter.
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport6.png "Power BI Desktop")
 
-7. Klikk på **Navn**-feltet i Felt-ruten for å legge til en ny visualisering på rapportlerretet. Nå kan du gjenta denne prosessen og endre visualiseringer for å bygge en rapport.
+7. Klikk **Navn**-feltet i panelet for å legge til en visualisering på rapportlerretet. Du kan nå gjenta denne prosessen og endre visualiseringer for å bygge rapporten.
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop")
 
 
-## <a name="using-option-sets"></a>Å bruke alternativsettene
+## <a name="using-option-sets"></a>Bruke alternativsett
 
-Alternativsett brukes i enheter for å vise en rullegardinliste med verdier til en bruker i apper og flyter. Når Power BI-koblingen brukes, presenteres alternativsett-felt som to kolonner, som viser både den unike verdien og visningsverdien.
+Alternativsett brukes i enheter til å gi en bruker en rullegardinliste med verdier i apper og flyter. Når du bruker alternativsettett for Power BI-kontakten, vises felt som to kolonner for å vise både den unike verdien og visningsverdien.
 
-Hvis du eksempelvis hadde et alternativsett på enheten kalt ApprovalStatus, ville du se to felt i Power BI:
+Hvis du for eksempel har et alternativsett for enheten som kalles ApprovalStatus, vil du se to felt i Power BI:
 
-* ApprovalStatus – dette vil vise en unik heltallsverdi for hvert element i alternativsettet. Dette er til hjelp når det benyttes filtre, slik at de ikke blir påvirket hvis du gjør fremtidige endringer for visningsnavnet.
-* ApprovalStatus_display – dette viser det egendefinerte visningsnavnet for elementet og brukes vanligvis når du presenterer alternativet i en tabell eller et diagram.
+* ApprovalStatus – dette viser en unik heltallsverdi for hver vare i alternativsettet. Dette er nyttig når du bruker filtre, slik at de ikke blir berørt hvis du gjør endringer i visningsnavnet senere.
+* ApprovalStatus_display – dette viser det egendefinerte visningsnavnet for elementet og brukes vanligvis når presenterer alternativet i en tabell eller et diagram.
 
-    |ApproalStatus|ApprovalStatus_Display|
+    |ApprovalStatus|ApprovalStatus_Display|
     |---------|---------|
-    1|Sendt inn
-    2|I gjennomgang
+    1|Innsendt
+    2|Til gjennomgang
     3|Godkjent
-    4|Avvist
+    4|Avslått
 
-## <a name="navigating-relationships"></a>Å navigere relasjoner
+## <a name="navigating-relationships"></a>Navigere i relasjoner
 
-Relasjoner i Common Data Service for apper krever at du oppretter en relasjon i Power BI Desktop mellom de to enhetene ved hjelp av et GUID-felt. Dette er en systemgenerert, unik identifikator som sikrer at relasjoner er opprettet for opprettelsespostene der hvor tvetydighet eller duplisering kan foreligge med andre felt. Du kan lese mer om administrasjon av relasjoner i Power BI Desktop [her](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
+Relasjoner i Common Data Service for Apps krever at du oppretter en relasjon i PowerBI Desktop mellom de to enhetene ved hjelp av et GUID-felt. Dette er en systemgenerert unik ID som sørger for at relasjoner opprettes for opprettetede oppføringer der tvetydighet eller duplisering kan forekome med andre felt. Du kan les mer om behandling av relasjoner i Power BI Desktop [her](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
 
-Mens noen relasjoner kan opprettes automatisk, kan du fortsatt se gjennom og sikre at riktige relasjonene opprettes når du oppretter rapporten:
+Mens enkelte relasjoner kan opprettes automatisk, kan du fortsatt se gjennom og sikre at de riktige relasjonene opprettes når du oppretter rapporten:
 
-* Oppslagsfeltet i enheten inneholder GUID-en for oppføringen i den relaterte enheten.
-* Den relaterte enheten vil ha et felt i formatet «[EntityName]id» som inneholder GUID-en, for eksempel Accountid eller MyCustomEntityid
-* Ved å bruke funksjonen Behandle relasjoner, kan du opprette en ny relasjon mellom oppslagsfeltet og ID-feltet for den relaterte enheten.
+* Oppslagsfelt for enheten inneholder GUID-en til oppføringen i den relaterte enheten.
+* Den relaterte enheten har et felt i formatet "[EntityName]id, som inneholder GUID-en, for eksempel Accountid eller MyCustomEntityid.
+* Ved hjelp av funksjonen for å behandle relasjoner i PowerBI Desktop kan du opprette en ny relasjon mellom oppslagsfeltet og ID-feltet i den relaterte enheten.
 
 
 ## <a name="next-steps"></a>Neste trinn
-* [Administrer felter i en enhet](data-platform-manage-fields.md)
-* [Definer relasjoner mellom enheter](data-platform-entity-lookup.md)
+* [Administrere felt i en enhet](data-platform-manage-fields.md)
+* [Definere relasjoner mellom enheter](data-platform-entity-lookup.md)
 
 
