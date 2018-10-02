@@ -1,63 +1,79 @@
+items:
 - name: Administrere PowerApps
   href: admin-guide.md
   items:
-    - name: Komme i gang
-      items:
-        - name: Hva er rollen til en PowerApps-administrator?
-          href: overview-role-powerapps-admin.md
-    - name: Lisensiering
-      items:
-        - name: Lisensieringsoversikt
-          href: pricing-billing-skus.md
-        - name: Administrere lisenser i organisasjonen
-          href: signup-question-and-answer.md
-        - name: Kjøp PowerApps
-          href: signup-for-powerapps-admin.md
-    - name: Behandle PowerApps
-      items:
-        - name: Vise apper i miljøene
-          href: admin-view-apps.md
-        - name: Administrere apper i organisasjonen
-          href: admin-manage-apps.md
-        - name: Flytte en app mellom tenanter eller miljøer
-          href: environment-and-tenant-migration.md
-        - name: PowerShell-støtte for PowerApps (forhåndsversjon)
-          href: powerapps-powershell.md
+  - name: Komme i gang
+    items:
+    - name: Hva er rollen til en PowerApps-administrator?
+      href: overview-role-powerapps-admin.md
+    - name: Hvitbok om PowerApps-distribusjon for virksomheter
+      href: admin-powerapps-enterprise-deployment.md
+  - name: Lisensiering
+    items:
+    - name: Lisensieringsoversikt
+      href: pricing-billing-skus.md
+    - name: Administrere lisenser i organisasjonen
+      href: signup-question-and-answer.md
+    - name: Kjøp PowerApps
+      href: signup-for-powerapps-admin.md
+  - name: Behandle PowerApps
+    items:
+    - name: Vise apper i miljøene
+      href: admin-view-apps.md
+    - name: Administrere apper i organisasjonen
+      href: admin-manage-apps.md
+    - name: Flytte en app mellom tenanter eller miljøer
+      href: environment-and-tenant-migration.md
+    - name: PowerShell-støtte for PowerApps (forhåndsversjon)
+      href: powerapps-powershell.md
+  - name: Dataintegrasjon
+    items:
+    - name: Integrer data i CDS for apper
+      href: data-integrator.md
     - name: Svare på DSR-forespørsler
-      href: powerapps-gdpr-dsr-guide-systemlogs.md
       items:
-        - name: Systemgenererte logger
-          href: powerapps-gdpr-dsr-guide-systemlogs.md
-        - name: Kundedata for PowerApps
-          href: powerapps-gdpr-dsr-guide.md
-          items:
-            - name: Eksportere data
-              href: powerapps-gdpr-export-dsr.md
-            - name: Slette data
-              href: powerapps-gdpr-delete-dsr.md
-        - name: CDS for kundedata for apper
-          href: common-data-service-gdpr-dsr-guide.md
-    - name: Administrere miljøer
-      href: environments-administration.md
-      items:
-        - name: Oversikt over miljøer
-          href: environments-overview.md
-        - name: Oversikt over områder
-          href: regions-overview.md
-        - name: Å opprette et miljø
-          href: create-environment.md
-        - name: Opprett en database
-          href: create-database.md
-    - name: Å konfigurere miljøsikkerhet
-      href: database-security.md
-      items:
-        - name: Innføring i datagrupper
-          href: introduction-to-data-groups.md
-        - name: Å opprette en DLP-policy
-          href: create-dlp-policy.md
-        - name: Administrere DLP-policyer
-          href: prevent-data-loss.md
-    - name: Behandle abonnementer og brukerkontoer
-      items:
-        - name: Vise aktive brukere i tenanten
-          href: admin-view-user-licenses.md
+      - name: Systemgenererte logger
+        href: powerapps-gdpr-dsr-guide-systemlogs.md
+      - name: Integreringer av data for CDS for apper
+        href: data-integration-gdpr-dsr-guide.md
+      - name: Kundedata for PowerApps
+        href: powerapps-gdpr-dsr-guide.md
+        items:
+        - name: Eksportere data
+          href: powerapps-gdpr-export-dsr.md
+        - name: Slette data
+          href: powerapps-gdpr-delete-dsr.md
+      - name: CDS for kundedata for apper
+        href: common-data-service-gdpr-dsr-guide.md
+  - name: Administrere miljøer
+    href: environments-administration.md
+    items:
+    - name: Oversikt over miljøer
+      href: environments-overview.md
+    - name: Oversikt over områder
+      href: regions-overview.md
+    - name: Å opprette et miljø
+      href: create-environment.md
+    - name: Opprett en database
+      href: create-database.md
+    - name: Forhåndsvisningsmiljøer
+      href: preview-environments.md
+  - name: Å konfigurere miljøsikkerhet
+    href: database-security.md
+    items:
+    - name: Innføring i datagrupper
+      href: introduction-to-data-groups.md
+    - name: Å opprette en DLP-policy
+      href: create-dlp-policy.md
+    - name: Administrere DLP-policyer
+      href: prevent-data-loss.md
+  - name: Behandle abonnementer og brukerkontoer
+    items:
+    - name: Vise aktive brukere i tenanten
+      href: admin-view-user-licenses.md
+ms.openlocfilehash: 555f8872c3aaa5e656dfe3b3ad72004de63d8d7c
+ms.sourcegitcommit: 2bcf40aeaa35420dc43f5803f4e57ff0f6afb57b
+ms.translationtype: HT
+ms.contentlocale: nb-NO
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46468839"
