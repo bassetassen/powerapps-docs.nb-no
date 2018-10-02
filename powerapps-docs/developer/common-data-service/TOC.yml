@@ -16,9 +16,9 @@ items:
     href: entity-relationship-metadata.md
   - name: Enhetsreferanse
     href: reference/entities/toc.yml
-- name: Bruke forretningslogikk med kode
+- name: Bruk forretningslogikk med kode
   href: apply-business-logic-with-code.md
-- name: Bruke Common Data Service for nettjenester for apper
+- name: Bruk Common Data Service for nettjenester for apper
   href: use-web-services.md
 ms.openlocfilehash: eaae08e6521e3324d58234e0e6af91e331e804b8
 ms.sourcegitcommit: d927af337a829a329a4e971f886849dcea82deac
