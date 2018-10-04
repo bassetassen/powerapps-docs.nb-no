@@ -7,7 +7,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 03/21/2018
+ms.date: 10/03/2018
 ms.author: manasma
 search.audienceType:
 - admin
@@ -15,12 +15,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: 9b62d72cf04b56c945d0c85038e2264e9685828b
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: c7de26bff38ee0425e8bb3f9bc0da72317f0a6cf
+ms.sourcegitcommit: 6e2fa2665ded6ac6fd271e1a12f4e3227ebc8865
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42837589"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48246124"
 ---
 # <a name="create-a-common-data-service-for-apps-database"></a>Å opprette en Common Data Service for apper-database
 Du kan opprette en database og utvikle apper ved hjelp av Common Data Service for apper som et datalager. Du kan enten opprette dine egne egendefinerte enheter, eller du kan bruke de forhåndsdefinerte enhetene. Hvis du vil opprette en database, må du først opprette et miljø, eller tilordnes til en eksisterende miljø som **miljøadministrator**. Du må dessuten være tilordnet den riktige lisensen. Hvis du vil ha informasjon om kjøp av et abonnement for å bruke CDS for apper, kan du se [Prisinformasjon](pricing-billing-skus.md).
@@ -68,7 +68,7 @@ Du kan tilordne flere brukere til forhåndsangitte roller, eller du kan til og m
 
 
 ## <a name="license-and-security-permissions"></a>Tillatelser for lisenser og sikkerhet
-Hvis du vil opprette en database, må du være administrator i det valgte miljøet, og den riktige lisensen må tilordnes til deg. Fra miljøet kan du konfigurere sikkerhetstillatelser ytterligere for andre brukere ved å velge **Sikkerhet**-fanen. Hvis du vil ha mer informasjon, kan du se [Konfigurer databasesikkerhet](database-security.md) og [Sikkerhetsmodell](https://docs.microsoft.c../maker/common-data-service/entity-reference/security-model).
+Hvis du vil opprette en database, må du være administrator i det valgte miljøet, og den riktige lisensen må tilordnes til deg. Fra miljøet kan du konfigurere sikkerhetstillatelser ytterligere for andre brukere ved å velge **Sikkerhet**-fanen. Hvis du vil ha mer informasjon, kan du se [Å konfigurere miljøsikkerhet](database-security.md).
 
 ## <a name="privacy-notice"></a>Erklæring om personvern
 Med den vanlige datamodellen i Microsoft PowerApps samler vi inn og lagrer egendefinerte enhets- og feltnavn i diagnostiseringssystemene.  Vi bruker denne kunnskapen til å forbedre den vanlige datamodellen for kundene våre. Enhets- og feltnavnene som skapere oppretter, hjelper oss med å forstå scenarioene som er typiske i Microsoft PowerApps-fellesskapet og få rede på hull i tjenestens standarddekning for enheter, som eksempelvis skjemaer knyttet til organisasjoner. Dataene i databasetabeller som er knyttet til disse enhetene, blir ikke åpnet eller brukt av Microsoft eller replisert utenfor området hvor databasen er klargjort. Merk deg imidlertid at den egendefinerte enheten og feltnavnene kan repliseres på tvers av områder og blir slettet i henhold til retningslinjene våre for dataoppbevaring. Microsoft tar vare på personvernet ditt, som ytterligere beskrevet i [Klareringssenteret](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
