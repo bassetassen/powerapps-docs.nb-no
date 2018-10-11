@@ -13,17 +13,17 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f639f82e6fc927f693b8f8353cdc125c487e4c1f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 73ce15ff171ce72b9364844ed77f6e3aed079a64
+ms.sourcegitcommit: 3dc330d635aaf5bc689efa6bd39826d6e396c832
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42829960"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48875811"
 ---
 # <a name="connect-to-power-bi-from-powerapps"></a>Å koble til Power BI fra PowerApps
 ![strøm~~POS=TRUNC BI](./media/connection-powerbi/powerbiicon.png)
 
-Power BI er en verktøyserie for forretningsanalyse som kan brukes til å analysere data og dele innsikter. Overvåk bedriften din og få svar raskt med avanserte instrumentbord tilgjengelig på alle enheter. I appen din kan du kontrollere statusen for datavarsler som du har satt opp i Power BI-tjenesten. Hvis du vil ha mer informasjon om datavarsler i Power BI, kan du gå til [dokumentasjonssiden](https:// https://docs.microsoft.com/power-bi/service-set-data-alerts).
+Power BI er en verktøyserie for forretningsanalyse som kan brukes til å analysere data og dele innsikter. Overvåk bedriften din og få svar raskt med avanserte instrumentbord tilgjengelig på alle enheter. I appen din kan du kontrollere statusen for datavarsler som du har satt opp i Power BI-tjenesten. Hvis du vil ha mer informasjon om datavarsler i Power BI, kan du gå til [dokumentasjonssiden](https://docs.microsoft.com/power-bi/service-set-data-alerts).
 
 Dette emnet viser deg hvordan du bruker Power BI-tilkoblingen i en app, og lister opp de tilgjengelige funksjonene.
 

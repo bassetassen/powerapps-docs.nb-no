@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: fc2940f726c23c79bcf894bb61c3e6b884ca7112
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 218fb97f6cd523275c0ba296ea120d487cf67e4c
+ms.sourcegitcommit: c26976af24a3e510e4eced78cf5c48cc2f71cae2
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865781"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025675"
 ---
 # <a name="customize-a-sharepoint-list-form-by-using-powerapps"></a>Å tilpasse et SharePoint-listeskjema ved bruk av PowerApps
 
@@ -31,7 +31,7 @@ Hvis du vil følge trinnene i dette emnet, oppretter du en enkel liste slik at d
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-Opprett en liste som inneholder disse kolonnene på et SharePoint-område:
+Opprett en liste på et SharePoint-område, og legg til disse kolonnene:
 
 - **ProductName** (enkelt linje med tekst)
 - **Detaljer** (ja/nei)
@@ -53,18 +53,11 @@ Opprett en liste som inneholder disse kolonnene på et SharePoint-område:
 
 ## <a name="hide-extra-fields"></a>Å skjule ekstra felter
 
-PowerApps viser skjemaet ditt midt på skjermen, men det inneholder noen felter som du muligens ikke ønsker å vise.
+PowerApps viser skjemaet ditt midt på skjermen, men det inneholder felter som du ikke trenger.
 
-- Fjern merket for disse feltene i **Data**-ruten.
+- Fjern merket for **Tittel**- og **Vedlegg**-feltene i **Data**-ruten.
 
-  - **Tittel**
-  - **Endret**
-  - **Opprettet**
-  - **Opprettet av**
-  - **Endret av**
-  - **ID**
-
-    De feltene forsvinner fra visningen, og bare feltene du opprettet vises.
+    Disse feltene forsvinner fra visningen, og bare feltene du la til, vises.
 
     ![Feltliste](./media/customize-list-form/field-list.png)
 
@@ -86,7 +79,7 @@ Du kan konfigurere feltene **Pris**, **Tilgjengelighet** og **Farger** slik at d
 
     ![Å angi verdien til Synlig-egenskapen](./media/customize-list-form/build-formula.png)
 
-1. Gjenta de tre siste trinnene med **Tilgjengelighet**- og **Farge**-kortet.
+1. Gjenta de tre siste trinnene med **Tilgjengelighet**- og **Farge**-kort.
 
 1. Velg **Detaljer**-bryteren (ved å klikke eller trykke på den) flere ganger mens du holder nede ALT.
 
@@ -109,6 +102,8 @@ Du kan konfigurere feltene **Pris**, **Tilgjengelighet** og **Farger** slik at d
 1. Velg **Detaljer**-bryteren flere ganger for å skule og vise de tre siste feltene.
 
 Hvis du vil [tilpasse skjemaet enda mer](sharepoint-form-integration.md), åpner du det, velger **Tilpasse** nær toppen av skjemaet, og deretter utfører, lagrer og publiserer du endringene.
+
+Hvis du oppretter én eller flere elementer med dette skjemaet, vil **Tittel**-feltet være tomt. Du kan skjule dette feltet ved å endre standardvisningen.
 
 ## <a name="use-the-default-form"></a>Å bruke standardskjemaet
 

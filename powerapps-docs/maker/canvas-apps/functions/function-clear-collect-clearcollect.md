@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 73279ba8fc0b640c24deb179a3737874bc0a55bf
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 8a7c52962c23df5f2efcf76c04aeba528e94217c
+ms.sourcegitcommit: 464ee88a958dda11c5de5603c608deab6c9cdcab
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42835758"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48578746"
 ---
 # <a name="collect-clear-and-clearcollect-functions-in-powerapps"></a>Funksjonene Collect, Clear og ClearCollect i PowerApps
 Oppretter og tømmer [samlinger](../working-with-data-sources.md#collections) og legger til [poster](../working-with-tables.md#records) i valgt [datakilde](../working-with-data-sources.md).
@@ -82,10 +82,27 @@ I disse eksemplene tømmer du en samling som heter **IceCream**, og legger til d
 | **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  )** |Legger til to poster i **IceCream**-samlingen med et antall iskrem med pistasj- og appelsinsmak. |![](media/function-clear-collect-clearcollect/icecream-collect.png)<br><br>Datakilden **IceCream** har også blitt endret. |
 | **Clear( IceCream )** |Fjerner alle postene fra **IceCream**-samlingen. |![](media/function-clear-collect-clearcollect/icecream-clear.png)<br><br>Datakilden **IceCream** har også blitt endret. |
 
-### <a name="step-by-step"></a>Trinn for trinn
+### <a name="collect-a-static-list"></a>Samle inn en statisk liste
+
 1. Legg til en knapp, og angi knappens **[OnSelect](../controls/properties-core.md)**-egenskap som denne formelen:<br>**Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)**
    
-    Denne funksjonen oppretter en samling som heter **Products** og inneholder én rad for hver av tre produktnavn.
-2. Trykk på F5, klikk på knappen, og trykk deretter på ESC for å gå tilbake til utformingsområdet.
-3. (valgfritt) Klikk på **Samlinger** på **Innhold**-fanen for å vise en forhåndsvisning av samlingen du opprettet.
+    Denne funksjonen oppretter en samling som heter **Products** og inneholder en rad for hvert av tre produktnavn.
+    
+1. Velg knappen mens du holder nede ALT.
 
+1. (valgfritt) Hvis du vil forhåndsvise samlingen som du opprettet, kan du velge **Samlinger** på **Fil-menyen**.
+
+### <a name="put-a-sharepoint-list-into-a-collection"></a>Legge til en SharePoint-liste i en samling
+
+1. [Opprett en tilkobling til en SharePoint-liste](../connect-to-sharepoint.md). 
+
+1. Legg til en knapp, og angi **[OnSelect](../controls/properties-core.md)**-egenskapen til denne funksjonen, noe som erstatter *ListName* med navnet på SharePoint-listen:<br>
+**Collect**(**MySPCollection**, *ListName*)
+
+    Denne funksjonen oppretter en samling som heter **MySPCollection**, og som inneholder de samme dataene som SharePoint-listen.
+    
+1. Velg knappen mens du holder nede ALT.
+
+1. (valgfritt) Hvis du vil forhåndsvise samlingen som du opprettet, kan du velge **Samlinger** på **Fil-menyen**.
+
+Hvis du vil ha informasjon om hvordan du viser data fra en SharePoint-liste (for eksempel datoer, valg og personer) i et galleri, kan du se [Vis data i et galleri](../connections/connection-sharepoint-online.md#show-data-in-a-gallery). Hvis du vil ha informasjon om hvordan du viser data i et skjema (med rullegardinlister, datovelgere og personvelgere), kan du se [Kontroller for redigeringsskjema og visningsskjema](../controls/control-form-detail.md).

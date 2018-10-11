@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 03/21/2018
+ms.date: 10/03/2018
 ms.author: manasma
 search.audienceType:
 - admin
@@ -14,12 +14,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: 71358a1c476655ab4e80d94f9e6846b9a35684f4
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: c5199488f3250d131f42665dfc6f9ad1fc1ae221
+ms.sourcegitcommit: 6e2fa2665ded6ac6fd271e1a12f4e3227ebc8865
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42857640"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48246078"
 ---
 # <a name="configure-environment-security"></a>Å konfigurere miljøsikkerhet
 Common Data Service bruker en rollebasert sikkerhetsmodell for å hjelpe med å sikre tilgang til databasen. Dette emnet forklarer hvordan du oppretter sikkerhetsartefaktene du trenger for å sikre en app. Brukeren kontrollerer kjøretidstilgang til data, og disse er adskilt fra miljørollene som styrer miljøadministratorer og miljøopprettere. Du kan se en oversikt over miljøer under [Oversikt over miljøer](environments-overview.md).
@@ -66,7 +66,7 @@ PowerApps-miljøet inneholder forhåndsdefinerte sikkerhetsroller som gjenspeile
 |Systemadministrator     |  Opprette, lese, skrive, slette, tilpasninger, sikkerhetsroller       | Har full tilgang til å tilpasse eller administrere miljøet, inkludert å opprette, endre og tilordne sikkerhetsroller. Kan vise alle dataene i miljøet. Hvis du vil ha mer informasjon, kan du se [Rettigheter som kreves for tilpassing](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
 |Å tilpasse et system     | Opprette (egen), lese (egen), skrive (egen), slette (egen), tilpasninger         | Har full tilgang til å tilpasse miljøet. Kan imidlertid bare vise poster for miljøenheter som de oppretter. Hvis du vil ha mer informasjon, kan du se [Rettigheter som kreves for tilpassing](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
 |Miljøoppretter     |  Ingen       | Kan opprette nye ressurser tilknyttet et miljø, inkludert apper, tilkoblinger, egendefinerte API-er, gatewayer og flyter ved hjelp av Microsoft Flow. Har imidlertid ikke rettigheter til å få tilgang til data i et miljø. Hvis du vil ha mer informasjon, kan du se [Oversikt over miljøer](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
-|Common Data Service-bruker     |  Lese, opprette (egen), skrive (egen), slette (egen)       | Kan kjøre en app i miljøet og utføre vanlige oppgaver for postene som de eier.        |
+|Common Data Service-bruker     |  Lese (egen), opprette (egen), skrive (egen), slette (egen)       | Kan kjøre en app i miljøet og utføre vanlige oppgaver for postene som de eier.        |
 |Representant     | Å handle på vegne av en annen bruker        | Tillater kode for å kjøre som en annen bruker eller representere den.  Brukes vanligvis med en annen sikkerhetsrolle for å gi tilgang til poster. Hvis du vil ha mer informasjon, kan du se [Å representere en annen bruker](https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
 
 *Rettighet har globalt omfang om ikke annet er angitt.
