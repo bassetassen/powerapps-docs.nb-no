@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5d4e88ca0a1e683d2f72e02625e6228d1063352f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 09d2bc10d465510887b546df8341c8798df136c1
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42831811"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316822"
 ---
 # <a name="quickstart-create-a-canvas-app-from-a-sample-in-powerapps"></a>Hurtiginnføring: Lage en lerretsapp fra en eksempelapp i PowerApps
 I denne hurtiginnføringen skal du lage en lerretsapp fra en eksempelapp, slik at du kan studere utformingsmulighetene og oppdage konsepter du kan bruke når du utvikler dine egne lerretsapper.
@@ -30,11 +30,9 @@ Hvis du ikke har en PowerApps-lisens, kan du [registrere deg gratis](../signup-f
 ## <a name="open-a-sample-app"></a>Åpne en eksempelapp
 1. Logg deg på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-    ![](./media/open-and-run-a-sample-app/sign-in.png)
-
 1. Hold pekeren over en eksempelapp i listen over eksempelapper, (for eksempel **Kostnadsberegner**) med musen.
 
-    ![](./media/open-and-run-a-sample-app/sample-tile.png)
+    ![](./media/open-and-run-a-sample-app/cost-estimator.png)
 
 1. Klikk eller trykk på telefonikonet for å lage en versjon av appen for mobilenheter (eller la nettbrettikonet være valgt), og klikk eller trykk deretter på **Lag denne appen**.
 
