@@ -1,6 +1,6 @@
 ---
-title: Lage din første modelldrevne app fra bunnen med PowerApps | Microsoft Docs
-description: Finn ut hvordan du lager en enkel modelldrevet app
+title: Bygg din første modelldrevne app fra grunnen av med PowerApps | Microsoft Docs
+description: Lær hvordan du bygger en enkel modelldrevet app
 documentationcenter: ''
 author: Mattp123
 manager: kvivek
@@ -12,66 +12,66 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 04/18/2018
 ms.author: matp
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: 36e189c75ef4c53ac97805fae38094e25c2c4804
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: nb-NO
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39663951"
 ---
-
-# <a name="build-your-first-model-driven-app-from-scratch"></a>Lage din første modelldrevne app fra bunnen
-Modelldrevet apputforming er en komponentfokusert metode for apputvikling. I dette emnet forenkler du hvordan du oppretter en modelldrevet app ved hjelp av standardenhetene som er tilgjengelige i PowerApps-miljøet.
+# <a name="build-your-first-model-driven-app-from-scratch"></a>Bygg din første modelldrevne app fra grunnen av
+Utforming av modelldrevne apper er en komponentfokusert tilnærming til apputvikling. I dette emnet forenkler du hvordan du oppretter en modelldrevet app, ved å bruke en av standardenhetene som er tilgjengelige i PowerApps-miljøet ditt.
 
 > [!TIP]
-> Start her for å lære alt om utvikling av modelldrevne apper: [Forstå modelldrevne appkomponenter](model-driven-app-components.md). 
+> Hvis du vil finne ut alt om å bygge modelldrevne apper, kan du starte her: [Slik fungerer modelldrevne appkomponenter](model-driven-app-components.md). 
 
-## <a name="sign-in-to-powerapps"></a>Logg på PowerApps
-Logg på [PowerApps](https://web.powerapps.com/). Hvis du ikke allerede har en [!INCLUDE [powerapps](../../includes/powerapps.md)]-konto, velger du **Kom i gang gratis**-koblingen. 
+## <a name="sign-in-to-powerapps"></a>Å logge deg på PowerApps
+Logg deg på [PowerApps](https://web.powerapps.com/). Hvis du ikke allerede har en [!INCLUDE [powerapps](../../includes/powerapps.md)]-konto, velger du koblingen **Kom i gang gratis**. 
 
-## <a name="create-your-model-driven-app"></a>Opprette modelldrevet app
+## <a name="create-your-model-driven-app"></a>Lag den modelldrevne appen
 
-1.  Velg miljøet du vil bruke, eller gå til [PowerApps-administrasjonssenteret](https://admin.powerapps.com/) for å opprette et nytt.
-2.  Velg **Modelldrevet** fra den venstre navigasjonsruten. 
+1.  Velg miljøet du vil bruke, eller gå til [administrasjonssenteret for PowerApps](https://admin.powerapps.com/) for å opprette et nytt.
+2.  I navigasjonsruten til venstre velger du **Model-driven** (Modelldrevet). 
 
     ![Modelldrevet](media/build-first-model-driven-app/choose-design-mode.png)
 
   > [!IMPORTANT]
-  > Hvis utformingsmodusen **Modelldrevet** ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment).   
+  > Hvis den **modelldrevne** utformingsmodusen ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment).   
 
-3. Velg **Apper** fra den venstre ruten, og velg deretter **Opprett en app**.
+3. I ruten til venstre velger du **Apps** (Apper) og deretter **Create an app** (Opprett en app).
 
-4.  På **Opprett en ny app**-siden angir du følgende detaljer, og velger deretter **Ferdig**: 
-  - **Navn**: Angi et navn på appen, for eksempel *MinFørsteApp*. 
-  - **Beskrivelse**: Skriv inn en kort beskrivelse av hva appen er eller gjør, for eksempel *Dette er den første appen min*.
-For informasjon om de ekstra appegenskapene, kan du se [Opprette en app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).
+4.  På siden **Create a New App** (Opprett en ny app) skriver du inn følgende informasjon og velger deretter **Done** (Fullført): 
+  - **Name** (Navn): Skriv inn et navn på appen, for eksempel *Minførsteapp*. 
+  - **Description** (Beskrivelse): Skriv inn en kort beskrivelse av hva appen er eller gjør, for eksempel *Dette er min første app*.
+Du finner informasjon om ytterligere appegenskaper i [Opprette en app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).
  
-    ![Opprette ny app](media/build-first-model-driven-app/create-new-app.png)
+    ![Opprett-ny-app](media/build-first-model-driven-app/create-new-app.png)
 
-## <a name="add-components-to-your-app"></a>Legge til komponenter i appen
-Fra apputformingen kan du legge til komponenter i appen.
-1.  Velg **Åpne områdekartutforming**-pilen for å åpne områdekartutformingen. 
+## <a name="add-components-to-your-app"></a>Legg til komponenter i appen din
+Fra verktøyet for apputforming kan du legge til komponenter i appen.
+1.  Velg pilen for **Open the Site Map Designer** (Åpne verktøy for utforming av områdekart) for å åpne verktøyet for utforming av områdekart. 
 
-    ![Opprette nytt områdekart](media/build-first-model-driven-app/new-sitemap.png)
+    ![Opprett-nytt-områdekart](media/build-first-model-driven-app/new-sitemap.png)
 
-2.  Velg **Nytt underområde** i områdekartutformingen , i den høyre ruten velger du **Egenskaper**-kategorien, og velg deretter følgende egenskaper.
-  - **Type**: Enhet
-  - **Enhet**: Forretningsforbindelse
+2.  I verktøyet for utforming av områdekart velger du **New Subarea** (Nytt underområde). I ruten til høyre velger du fanen **Properties** (Egenskaper) og deretter følgende egenskaper.
+  - **Type** (Type): Entity (Enhet)
+  - **Entity** (Enhet): Account (Konto)
 
-    ![Legge til komponenter i områdekartet](media/build-first-model-driven-app/sitemap.png)
+    ![Legg til komponenter i områdekartet](media/build-first-model-driven-app/sitemap.png)
 
-3.  Velg **Lagre og lukk**.
-4.  I apputformingslerretet velger du **Skjemaer**, og deretter i den høyre ruten under **Hovedskjemaer**-gruppen velger du **Forretningsforbindelse**-skjemaet.
+3.  Velg **Save And Close** (Lagre og lukk).
+4.  På apputformingslerretet velger du **Forms** (Skjemaer). Under gruppen **Main Forms** (Hovedskjemaer) i ruten til høyre velger du deretter skjemaet **Account** (Konto).
 
-    ![Hovedskjema for forretningsforbindelse](media/build-first-model-driven-app/main-form.png)
+    ![Hovedskjema for konto](media/build-first-model-driven-app/main-form.png)
 
-5.  I apputformingslerretet velger du **Visninger**, og deretter velger du visningene **Aktive forretningsforbindelser**, **Alle forretningsforbindelser** og **Mine aktive forretningsforbindelser**.
+5.  På apputformingslerretet velger du **Views** (Visninger). Deretter velger du visningene **Active Accounts** (Aktive kontoer), **All Accounts** (Alle kontoer) og **My Active Accounts** (Mine aktive kontoer).
 
-    ![Forretningsforbindelsesvisninger](media/build-first-model-driven-app/views.png)
+    ![Kontovisninger](media/build-first-model-driven-app/views.png)
 
-6. I apputformingslerretet velger du **Diagrammer**, og deretter velger du **Forretningsforbindelser etter bransje**-diagrammet.
-7. Velg **Lagre** på verktøylinjen for apputforming.
+6. På apputformingslerretet velger du **Charts** (Diagrammer). Deretter velger du diagrammet **Accounts by Industry** (Kontoer etter bransje).
+7. På verktøylinjen i apputformingen velger du **Save** (Lagre).
 
-    ![Lagre på verktøylinjen for apputforming](media/build-first-model-driven-app/app-designer-toolbar.png)
+    ![Lagre på verktøylinjen i apputformingen](media/build-first-model-driven-app/app-designer-toolbar.png)
  
 <!-- ##  Validate your app
 This step checks for component dependencies that are required for the app to work, but haven't yet been added to the app. 
@@ -83,15 +83,15 @@ This step checks for component dependencies that are required for the app to wor
 2. Select **Add Dependencies**.
 3. On the app designer toolbar, select **Save**.  -->
 
-## <a name="publish-your-app"></a>Publisere appen
-Velg **Publiser** på verktøylinjen for apputforming.
+## <a name="publish-your-app"></a>Publiser appen din
+På verktøylinjen i apputformingen velger du **Publish** (Publiser).
 
-Når publiseringen av appen er ferdig, er den klar til å kjøres eller deles med andre.
+Når du har publisert appen, kan du kjøre den eller dele den med andre.
 
-![Enkel app for forretningsforbindelsesenheten](media/build-first-model-driven-app/accounts-quickstart-app.png)
+![En enkel kontoenhetsapp](media/build-first-model-driven-app/accounts-quickstart-app.png)
 
 ## <a name="next-steps"></a>Neste trinn
-I dette emnet skal du lage en enkel modelldrevet app. 
-- Hvis du vil se hvordan appen din ser ut når du kjører den, kan du se [Kjør en modelldrevet app på en mobilenhet](../../user/run-app-client-model-driven.md).
-- Hvis du vil vite hvordan du deler appen, kan du se [Dele en modelldrevet app](share-model-driven-app.md).
-- For å komme i gang og lære alt om utvikling av modelldrevne apper, kan du se [Forstå modelldrevne appkomponenter](model-driven-app-components.md).
+I dette emnet bygget du en enkel modelldrevet app. 
+- Hvis du vil se hvordan appen din ser ut når du kjører den, kan du se [Kjør en modelldrevet app på en mobil enhet](../../user/run-app-client-model-driven.md).
+- Hvis du vil finne ut hvordan du deler appen, kan du se [Del en modelldrevet app](share-model-driven-app.md).
+- Hvis du vil komme i gang med å finne ut alt om å bygge modelldrevne apper, kan du se: [Slik fungerer modelldrevne appkomponenter](model-driven-app-components.md)
