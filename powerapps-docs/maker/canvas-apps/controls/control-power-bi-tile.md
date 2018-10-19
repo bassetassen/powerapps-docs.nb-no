@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ab5542adb68bbd07e2725197230000bdd02b320f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: ba7d48104d9fdf85573029cc510af2c29d3f6ca0
+ms.sourcegitcommit: 5db6e3ac3a622de313a1102417397e126c3f92f2
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833765"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45640358"
 ---
 # <a name="power-bi-tile-control-in-powerapps"></a>Kontrollen for Power BI-flis i PowerApps
 
@@ -61,6 +61,8 @@ Det er ikke anbefalt å ha mer enn tre Power BI-fliser lastet inn samtidig i app
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
 **[OnSelect](properties-core.md)** – hvordan appen responderer når brukeren klikker eller trykker på en kontroll. Power BI-rapporten som er tilknyttet med flisen åpnes som standard.
+
+**TileUrl** – nettadressen som Power BI-tjenesten bruker til å spørre om flisen. Du kan sende en enkelt parameter til Power BI-flisen ved å legge til parameteren i nettadressen (eksempel: ... & "&$filter=Town/Province eq '" & ListBox1.Selected.Abbr & "'"). Du kan bruke bare Er lik-operatoren i parameteren.
 
 **[Synlig](properties-core.md)** – om kontrollen vises eller skjules.
 

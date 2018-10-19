@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 19199ade5c7f89f9d3d113b41ac9651a9b007ef6
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 38745810321807e69d5eba8e1f2c281dafa73ae5
+ms.sourcegitcommit: 5db6e3ac3a622de313a1102417397e126c3f92f2
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42847900"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45640450"
 ---
 # <a name="understand-canvas-app-tables-and-records-in-powerapps"></a>Slik fungerer lerretsapptabeller og -poster i PowerApps
 
@@ -40,7 +40,7 @@ Du kan bygge et utvalg av formler som tar navnet på en tabell som et argument, 
 ### <a name="records"></a>Poster
 Hver post inneholder minst én kategori med informasjon for en person, et sted eller en ting. Eksemplet ovenfor viser en post for hvert produkt (**sjokolade**, **brød**, og **vann**), og en kolonne for hver kategori med informasjon (**pris**, **antall på lager**, og **antall i ordre**).
 
-I en formel kan du referere til en post som står alene, utenfor konteksten til en tabell ved hjelp av klammeparenteser. Posten **{ Name: "Strawberries", Price: 7.99 }** er for eksempel ikke knyttet til en tabell.
+I en formel kan du referere til en post som står alene, utenfor konteksten til en tabell ved hjelp av klammeparenteser. Posten **{ Name: "Strawberries", Price: 7.99 }** er for eksempel ikke knyttet til en tabell. Vær oppmerksom på at feltnavn, for eksempel **Name** og **Price** i eksempelet over, ikke står i doble anførselstegn.
 
 ### <a name="fields"></a>Felt
 Et felt er et enkeltstående stykke informasjon i en post. Du kan visualisere denne type av felt som en verdi i en kolonne for en bestemt post.

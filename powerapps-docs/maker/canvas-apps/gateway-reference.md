@@ -1,6 +1,6 @@
 ---
-title: Lokale datagatewayer i Microsoft Docs
-description: Referanseinformasjon, inkludert installasjon og feilsøking, for lokale datagatewayer
+title: Lokale datagatewayer for lerretsapper | Microsoft Docs
+description: Referanseinformasjon om lokale datagatewayer, inkludert installasjon i PowerApps og feilsøking
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,14 +9,18 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 10/20/2017
 ms.author: anneta
-ms.openlocfilehash: f39bebd27aad378a5bbf8bff592fa50ea44db679
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 5dcc07f3ba9b9b4baca39cf2090a2c57cb7e67b7
+ms.sourcegitcommit: 967812754d8e5b1ff72baa35ffbe548f3b9b0085
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017759"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726933"
 ---
-# <a name="understand-on-premises-data-gateways-for-microsoft-powerapps"></a>Lokale datagatewayer for Microsoft PowerApps
+# <a name="understand-on-premises-data-gateways-for-canvas-apps"></a>Lokale datagatewayer for lerretsapper
 ## <a name="installation-and-configuration"></a>Installasjon og konfigurasjon
 **Forutsetninger**
 
@@ -26,7 +30,6 @@ Minimum:
 * 64-biters versjon av Windows 7 eller Windows Server 2008 R2 (eller nyere)
 
 Anbefalt:
-
 * 8-kjerners CPU
 * 8 GB minne
 * 64-bitersversjon av Windows 2012 R2 (eller nyere)
@@ -50,7 +53,7 @@ Vurderinger angående design:
 
 4. Klikk eller trykk på **Ja** i dialogboksene **Brukerkontokontroll** for å fortsette.
 
-5. Klikk eller trykk på **Logg på** på den neste skjermen i veiviseren.
+5. På den neste skjermen i veiviseren klikker eller trykker du på **Logg på** og angir samme legitimasjon som du bruker til å logge deg på PowerApps.
 
     ![Logg på](./media/gateway-reference/sign-in.png)
 
@@ -190,7 +193,7 @@ Du kan bruke tredjepartsverktøyet [Azure Speed Test-appen](http://azurespeedtes
 
 #### <a name="high-availabilitydisaster-recovery"></a>Høy tilgjengelighet / nødgjenoppretting
 **Spørsmål:** Foreligger det noen planer for å muliggjøre scenarioer med høy tilgjengelighet med gatewayen?  
-**Svar:** Vi har planer om dette, men det foreligger ingen tidsramme for dette enda.
+**Svar:** Høy tilgjengelighet er mulig ved å føye sammen to eller flere gatewayer i samme klynge.  Gatewayklynger med høy tilgjengelighet krever oppdateringen fra november 2017 eller nyere for lokal datagateway.  Se [kunngjøringen i blogginnlegget](https://powerapps.microsoft.com/en-us/blog/gateway-high-availability-for-powerapps-and-flow) for mer informasjon.
 
 **Spørsmål:** Hvilke alternativer er tilgjengelige for nødgjenoppretting?  
 **Svar:** Du kan bruke gjenopprettingsnøkkelen til å gjenopprette eller flytte en gateway. Angi gjenopprettingsnøkkelen når du installerer gatewayen.

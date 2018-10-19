@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a0ffeded77bf08958aaa22c21d33f7063009b4bd
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: d8cb7bdfa995d2289f881b6d21074efd6cf11ac4
+ms.sourcegitcommit: 5db6e3ac3a622de313a1102417397e126c3f92f2
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42868408"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45640404"
 ---
 # <a name="label-control-in-powerapps"></a>Etikettkontrollen i PowerApps
 En boks som viser data som tekst, tall, datoer eller valuta.
@@ -76,7 +76,9 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 
 **[LineHeight](properties-text.md)** – avstanden mellom linjer med tekst, elementer i en liste eller lignende.
 
-**[OnSelect](properties-core.md)** – hvordan appen reagerer når brukeren klikker eller trykker på en kontroll.
+**Live** – hvordan skjermleseren kunngjør endringer i etikettens tekst.  Verdiene kan være **Off**, **Assertive** og **Polite**. Denne egenskapen er nyttig for å kunngjøre dynamiske endringer i appens brukergrensesnitt på en tilgjengelig måte.
+
+**[OnSelect](properties-core.md)** – hvordan appen responderer når brukeren klikker eller trykker på en kontroll.
 
 **Overflyt** – om et rullefelt vises i en etikett hvis **Bryt**-egenskapen er satt til **sann** og verdien av kontrollens **[Tekst](properties-core.md)**-egenskap inneholder flere tegn enn kontrollen kan vise om gangen.
 
