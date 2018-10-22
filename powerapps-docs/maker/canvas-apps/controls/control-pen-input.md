@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 37e5a701bb21d6454699b449f34629746d1547d1
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: bad3dcf3b0268a8bb08036fec709281b2cbba253
+ms.sourcegitcommit: e4fe4b27651b62edb67e5995fc5955577d8ac5b8
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42860161"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49075361"
 ---
 # <a name="pen-input-control-in-powerapps"></a>Penneinndata-kontrollen i PowerApps
 En kontroll hvor du kan tegne, viske ut og utheve områder i et bilde.
@@ -27,6 +27,8 @@ En kontroll hvor du kan tegne, viske ut og utheve områder i et bilde.
 Du kan bruke denne kontrollen som en tavle og tegne diagrammer og håndskrive ord som kan konverteres til maskinskrevet tekst.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
+**Bilde** – utdataegenskap som representerer bildet som tegnes av sluttbrukeren.
+
 **[Farge](properties-color-border.md)** – fargen på inndatastrøkene.
 
 **Modus** – kontrollen er i **Tegne**- eller **Slette**-modus.  Valg av modus er avskrevet.
@@ -46,9 +48,9 @@ Du kan bruke denne kontrollen som en tavle og tegne diagrammer og håndskrive or
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
-**Input** – inndata.
+**Inndata** – **Avskrevet.** Angir om inndataene støtter mus, penn eller berøringsinndata.  Standardverdi (7) støtter alle tre.
 
-**[OnSelect](properties-core.md)** – hvordan appen reagerer når brukeren klikker eller trykker på en kontroll.
+**[OnSelect](properties-core.md)** – hvordan appen responderer når brukeren klikker eller trykker på en kontroll.
 
 **[SelectionColor](properties-color-border.md)** – tekstfargen for et merket element, elementer i en liste eller fargen på markeringsverktøyet i en pennekontroll.
 

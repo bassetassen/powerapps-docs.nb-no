@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 10/03/2018
+ms.date: 10/10/2018
 ms.author: manasma
 search.audienceType:
 - admin
@@ -14,12 +14,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: c5199488f3250d131f42665dfc6f9ad1fc1ae221
-ms.sourcegitcommit: 6e2fa2665ded6ac6fd271e1a12f4e3227ebc8865
+ms.openlocfilehash: 3c8bdcb855b1e15cbebeb2a51fedf8aea7684286
+ms.sourcegitcommit: c4369e5f31bb08716f1af1416f3f7510a4b926d5
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48246078"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072523"
 ---
 # <a name="configure-environment-security"></a>Å konfigurere miljøsikkerhet
 Common Data Service bruker en rollebasert sikkerhetsmodell for å hjelpe med å sikre tilgang til databasen. Dette emnet forklarer hvordan du oppretter sikkerhetsartefaktene du trenger for å sikre en app. Brukeren kontrollerer kjøretidstilgang til data, og disse er adskilt fra miljørollene som styrer miljøadministratorer og miljøopprettere. Du kan se en oversikt over miljøer under [Oversikt over miljøer](environments-overview.md).
@@ -71,14 +71,15 @@ PowerApps-miljøet inneholder forhåndsdefinerte sikkerhetsroller som gjenspeile
 
 *Rettighet har globalt omfang om ikke annet er angitt.
 
-- Miljøoppretter-rollen kan ikke bare opprette ressurser i et miljø, men de kan også distribuere appene de bygger i et miljø til andre brukere i organisasjonen. De kan dele appen med individuelle brukere. Du finner mer informasjon i [Dele en app i PowerApps](../maker/canvas-apps/share-app.md).
+- Miljøoppretter-rollen kan ikke bare opprette ressurser i et miljø, men de kan også distribuere appene de bygger i et miljø til andre brukere i organisasjonen. De kan dele appen med individuelle brukere. Du finner mer informasjon i [Å dele en app i PowerApps](../maker/canvas-apps/share-app.md).
 
-- Brukerne som oppretter apper som kobles til databasen og som trenger å opprette eller oppdatere enheter og sikkerhetsroller, bør også tilordnes Systemtilpasser-rollen i tillegg til Miljøoppretter-rollen, da Miljøoppretter-rollen ikke har noen rettigheter i databasen.
+- Brukerne som oppretter apper som kobles til databasen, og som trenger å opprette eller oppdatere enheter og sikkerhetsroller, bør også tilordnes rollen som systemtilpasser i tillegg til rollen som miljøoppretter, da rollen som miljøoppretter ikke har noen rettigheter i databasen.
 
 ## <a name="create-or-configure-a-custom-security-role"></a>Å opprette eller konfigurere en egendefinert sikkerhetsrolle
-Hvis appen er basert på en egendefinert enhet, må rettigheter angis eksplisitt før brukere kan arbeide i den. Hvis du vil gjøre dette, kan du velge et av disse alternativene.
-- Å utvide en eksisterende forhåndsdefinert sikkerhetsrolle, slik at den inkluderer rettigheter til poster basert på den egendefinerte enheten.
-- Å opprette en egendefinert sikkerhetsrolle for å administrere rettigheter for brukere av appen.
+Hvis appen din bruker en egendefinert enhet, må rettighetene gis eksplisitt i en sikkerhetsrolle før appen din kan brukes.  Du kan legge til disse rettighetene i en eksisterende sikkerhetsrolle, eller du kan opprette en egendefinert sikkerhetsrolle. Det finnes et minimum av rettigheter som kreves for at den nye sikkerhetsrollen kan brukes – se [Minimum av rettigheter for å kjøre appen](#minimum-privileges-to-run-app).
+
+> [!TIP]
+> Hvis du vil opprette en egendefinert sikkerhetsrolle med minimumet av rettigheter som kreves for å kjøre en app, kan du se inndelingen nedenfor: [Minimum av rettigheter for å kjøre appen](#minimum-privileges-to-run-app).
 
 Det kan hende at miljøet opprettholder postene som kan brukes av flere apper, så det kan hende du trenger flere sikkerhetsroller for å få tilgang til data med ulike rettigheter. Eksempel:
 - Det kan hende at noen brukere (Type A) bare trenger å lese, oppdatere og legge ved andre poster slik at sikkerhetsrollen får rettigheter til å lese, skrive og tilføye.
@@ -114,7 +115,17 @@ Hvis du vil ha mer informasjon om tilgang- og omfangsrettigheter, kan du se [Sik
 
 10. Velg **Lagre og lukk**.
 
+## <a name="minimum-privileges-to-run-app"></a>Minimum av rettigheter for å kjøre appen
+Når du oppretter en egendefinert sikkerhetsrolle, må du inkludere et minimum av rettigheter til sikkerhetsrollen for at en bruker skal kjøre en app. Vi har opprettet en løsning som du kan importere, og som gir en sikkerhetsrolle minimumet av rettighetene som kreves.  
 
+Begynn med å laste ned løsningen fra Download Center: [CDS for apper – minimum av rettigheter til sikkerhetsrollen](http://download.microsoft.com/download/6/5/5/6552A30E-05F4-45F0-AEE3-9BB01E13118A/MinprivilegeSecRole_1_0_0_0.zip).
+
+Følg deretter instruksjonene for å importere løsningen: [Importer, oppdater og eksporter løsninger](../maker/common-data-service/import-update-export-solutions.md).
+
+Når du importerer løsningen, opprettes rollen **min prv apps use** som du kan kopiere (se: [Opprett en sikkerhetsrolle ved å kopiere rolle](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/create-edit-security-role#create-a-security-role-by-copy-role)). Når rollen er kopiert, kan du gå til hver fane – Kjerneoppføringer, Forretningsadministrasjon, Tilpassing og så videre – og angi de nødvendige rettighetene. 
+
+> [!IMPORTANT]
+> Du bør prøve løsningen i et utviklingsmiljø før du importerer til et produksjonsmiljø. 
 
 <!--Reference links in article-->
 [1]: https://admin.powerapps.com

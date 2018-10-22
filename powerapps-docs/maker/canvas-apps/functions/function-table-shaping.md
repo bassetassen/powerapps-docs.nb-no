@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/07/2015
+ms.date: 08/24/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6a7d511143a0b16e04ae31263dec9f6a4e04689e
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 056c5e1142b3a34776e72f788f5b2cef9e3b2a27
+ms.sourcegitcommit: 3dc330d635aaf5bc689efa6bd39826d6e396c832
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42864360"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48875903"
 ---
 # <a name="addcolumns-dropcolumns-renamecolumns-and-showcolumns-functions-in-powerapps"></a>Funksjonene AddColumns, DropColumns, RenameColumns og ShowColumns i PowerApps
 Former en [tabell](../working-with-tables.md) ved å legge til, slippe, gi nytt navn til og velge dens [kolonner](../working-with-tables.md#columns).
@@ -42,7 +42,7 @@ Formelen evalueres for hver post i tabellen.
 
 Funksjonen **DropColumns** utelukker kolonner fra en tabell.  Alle andre kolonner forblir uendret. **DropColumns** utelukker kolonner, og **ShowColumns** inkluderer kolonner.
 
-Funksjonen **RenameColumns** gir nytt navn til kolonner i en tabell. Alle andre kolonner beholder de opprinnelige navnene.
+Bruk funksjonen **RenameColumns** til å gi nytt navn til én eller flere kolonner i en tabell ved å gi minst ett argumentpar som angir navnet på en kolonne i tabellen (det gamle navnet som du vil erstatte) og navnet på en kolonne som ikke finnes i tabellen (det nye navnet som du vil bruke). Det gamle navnet må allerede finnes i tabellen, og det nye navnet må ikke finnes. Hvert kolonnenavn kan vises bare én gang i argumentlisten som enten et gammelt eller et nytt kolonnenavn. Hvis du vil gi et eksisterende kolonnenavn som nytt navn til en kolonne, må du først fjerne den eksisterende kolonnen med **DropColumns** eller få den eksisterende kolonnen ut av veien med nytt navn ved å neste én **RenameColumns**-funksjon i en annen.
 
 Funksjonen **ShowColumns** inkluderer kolonner i en tabell og utelukker alle andre kolonner. Du kan bruke **ShowColumns** til å opprette en enkeltkolonnetabell fra en flerkolonnetabell.  **ShowColumns** inneholder kolonner, og **DropColumns** utelukker kolonner.  
 
@@ -62,11 +62,11 @@ Resultatet er en ny tabell med transformasjonen som brukes for alle disse funksj
 * *Table* – obligatorisk.  Tabellen som funksjonen skal arbeide med.
 * *ColumnName(s)* – obligatorisk. Navn på kolonnen(e) som skal utelates. Du må angi en streng (for eksempel **"Name"** inkludert anførselstegn) for dette argumentet.
 
-**RenameColumns**( *Table*, *OldColumneName*, *NewColumnName* )
+**RenameColumns**( *Table*, *OldColumneName1*, *NewColumnName1* [, *OldColumnName2*, *NewColumnName2*, ... ] )
 
-* *Table* – obligatorisk.  Tabellen som funksjonen skal arbeide med.
-* *OldColumnName* – obligatorisk. Navnet på kolonnen som skal få nytt navn. Dette navnet må være en streng (for eksempel **"Name"** med doble anførselstegn inkludert).
-* *NewColumnName* – obligatorisk. Erstatningsnavn. Du må angi en streng (for eksempel **"Name"** inkludert doble anførselstegn) for dette argumentet.
+* *Tabell* – obligatorisk.  Tabellen som funksjonen skal arbeide med.
+* *OldColumnName* – obligatorisk. Navnet på en kolonne som skal få nytt navn, fra den opprinnelige tabellen. Dette elementet vises først i argumentparet (eller først i hvert argumentpar hvis formelen inneholder mer enn ett par). Dette navnet må være en streng (for eksempel **"Name"** inkludert doble anførselstegn).
+* *NewColumnName* – obligatorisk. Erstatningsnavn. Dette elementet vises sist i argumentparet (eller sist i hvert argumentpar hvis formelen inneholder mer enn ett par). Du må angi en streng (for eksempel **"Customer Name"** inkludert doble anførselstegn) for dette argumentet.
 
 **ShowColumns**( *Table*, *ColumnName1* [, *ColumnName2*, ... ] )
 
@@ -86,6 +86,7 @@ Ingen av disse eksemplene endrer **IceCreamSales**-datakilden. Hver funksjon tra
 | **DropColumns( IceCreamSales, "UnitPrice" )** |Utelater **UnitPrice**-kolonnen fra resultatet. Bruk denne funksjonen til å utelate kolonner, og bruk **ShowColumns** til å inkludere dem. |![](media/function-table-shaping/icecream-drop-price.png) |
 | **ShowColumns( IceCreamSales, "Flavor" )** |Inkluderer bare **Flavor**-kolonnen i resultatet. Bruk denne funksjonen til å inkludere kolonner, og bruk **DropColumns** til å utelate dem. |![](media/function-table-shaping/icecream-select-flavor.png) |
 | **RenameColumns( IceCreamSales, "UnitPrice", "Price")** |Gir nytt navn til **UnitPrice**-kolonnen i resultatet. |![](media/function-table-shaping/icecream-rename-price.png) |
+| **RenameColumns( IceCreamSales, "UnitPrice", "Price", "QuantitySold", "Number")** |Gir nytt navn til kolonnene **UnitPrice** og **QuantitySold** i resultatet. |![](media/function-table-shaping/icecream-rename-price-quant.png) |
 | **DropColumns(<br>RenameColumns(<br>AddColumns( IceCreamSales, "Revenue",<br>UnitPrice * QuantitySold ),<br>"UnitPrice", "Price" ),<br>"Quantity" )** |Utfører transformeringene av den følgende tabellen i rekkefølge fra innsiden av formelen: <ol><li>Legger til en **Revenue**-kolonne basert på per post-beregningen av **UnitPrice * Quantity**.<li>Endrer navnet **UnitPrice** til **Price**.<li>Utelater **Quantity**-kolonnen.</ol>  Vær oppmerksom på at rekkefølgen er viktig. For eksempel kan vi ikke beregne med **UnitPrice** når den har fått nytt navn. |![](media/function-table-shaping/icecream-all-transforms.png) |
 
 ### <a name="step-by-step"></a>Trinn for trinn
