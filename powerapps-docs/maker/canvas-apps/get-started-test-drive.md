@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 738ec650827cf24e793c0bfda1a71f962cdc2d15
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: ea5912a043dc00fa197a2070c11610c358c3201d
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42859906"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316727"
 ---
 # <a name="create-a-canvas-app-from-a-template-in-powerapps"></a>Opprett en lerretsapp fra en mal i PowerApps
 
@@ -32,9 +32,7 @@ Hvis du ikke har en lisens for PowerApps, kan du [registrere deg gratis](../sign
 
 1. Logg deg på [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-    ![Hjemmesiden for PowerApps](./media/get-started-test-drive/sign-in.png)
-
-1. Under **Lag apper som disse** holder du pekeren over **Begynn fra data**, og deretter klikker eller trykker du på **Lag denne appen**.
+1. Hold pekeren over **Begynn fra data** under **Lag din egen app**, og klikk eller trykk deretter på **Lag denne appen**.
 
     ![Å lage denne app-flisen](./media/get-started-test-drive/make-this-app.png)
 

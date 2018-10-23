@@ -13,30 +13,26 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ad52396eda0c8db46dd38cb7176524df5feb7416
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: da9c8f85844e37d6af8e1063b36496c820fbfa07
+ms.sourcegitcommit: e2a9d1a6090cdd8aa78515b49f38ed2365217ea6
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834662"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384252"
 ---
 # <a name="attachments-control-in-powerapps"></a>Vedlegg-kontrollen i PowerApps
-Dette er en kontroll som lar brukerne laste ned filer på enhetene sine så vel som laste opp og slette filer fra en SharePoint-liste.
+Dette er en kontroll som lar brukerne laste ned filer på enhetene sine samt laste opp og slette filer fra en SharePoint-liste eller Common Data Service for apper-enhet.
 
 ## <a name="limitations"></a>Begrensninger
-Vedlegg-kontrollen har følgende midlertidige begrensninger:
-1. Nedlasting av vedlegg støttes bare i SharePoint-listeskjemaer i Internet Explorer.
+Vedleggskontrollen har disse begrensningene:
+1. Vedlegg støttes med SharePoint-lister og CDS for apper-enheter.
 
-1. Opplasting av vedlegg fungerer bare med datakilder for SharePoint-lister.  Støtte for andre datakilder introduseres trinnvis, og starter med CDS.
-
-1. Opplasting og sletting av funksjonalitet fungerer bare i et skjema.  Vedlegg-kontrollen ser deaktivert ut når den er i redigeringsmodus og ikke i et skjema.   Vær oppmerksom på at hvis du vil lagre filtilføyelsene og slettingene i serverdelen, må sluttbrukeren lagre skjemaet.
+1. Opplasting og sletting av funksjonalitet fungerer bare i et skjema.  Vedlegg-kontrollen ser deaktivert ut når den er i redigeringsmodus og ikke i et skjema. Vær oppmerksom på at hvis du vil lagre filtilføyelsene og slettingene i serverdelen, må sluttbrukeren lagre skjemaet.
 
 1. Du kan bare laste opp filer med opptil 10 MB.  
 
-1. iOS-enheter kan for øyeblikket bare laste opp filer fra dokumenter og skylagringskontoer. Hvis du vil legge ved bilder/videoer, kan du bruke nettleseren på iOS-enheten til å kjøre appen.
-
 ## <a name="description"></a>Beskrivelse
-Med en **Vedlegg**-kontroll kan du åpne filer som er lagret på en datakilde så vel som slette filer fra en SharePoint-liste.
+Med en **Vedlegg**-kontroll kan du åpne filer som er lagret på en datakilde, samt slette filer fra en SharePoint-liste eller CDS for apper-enhet.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 **[Elementer](properties-core.md)** – kilden som beskriver filene som kan lastes ned.
@@ -86,7 +82,7 @@ Med en **Vedlegg**-kontroll kan du åpne filer som er lagret på en datakilde s�
 
 
 ## <a name="example"></a>Eksempel
-1. Opprett en app fra dataene ved bruk av en SharePoint-liste som datakilde.  Du kan alternativt legge til et skjema i appen og angi en SharePoint-liste som datakilden.
+1. Opprett en app fra dataene ved bruk av en SharePoint-liste som datakilde. Alternativt kan du legge til et skjema i appen og angi en SharePoint-liste som datakilden.
 
 2. Velg **Skjema**-kontrollen i trevisningen til venstre.
 

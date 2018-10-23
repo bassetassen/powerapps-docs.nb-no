@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 93d29f0a49a70077f975bed659203b4fb7d66489
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: a9f85907da60e836c1a1115f31c6faf9ea05da9b
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833469"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49317072"
 ---
 # <a name="what-are-canvas-apps-in-powerapps"></a>Hva er lerret-apper i PowerApps?
 Utform og bygg en business-app fra et lerret i Microsoft PowerApps uten å skrive kode i et tradisjonelt programmeringsspråk, for eksempel C#. Utforme appen ved å dra og slippe elementer til et lerret, på samme måte som du vil utforme et lysbilde i PowerPoint. Opprett Excel-lignende uttrykk for å angi logikk og arbeide med data. Bygg apper som integrerer forretningsdata fra en [rekke Microsoft-kilder og tredjepartskilder](connections-list.md). Del appen din slik at brukere kan kjøre den i en nettleser eller på en mobil enhet, og bygg inn appen din slik at brukere kan kjøre den i SharePoint, Power BI eller Teams.
@@ -33,9 +33,9 @@ Du kan automatisk generere en app fra én av disse kildene for å komme i gang, 
 - [SharePoint](app-from-sharepoint.md)
 - [Excel](get-started-create-from-data.md)
 
-På PowerApps-området velger du **Begynn med data**, eller velg en eksempelapp, for eksempel **Service Desk** eller **Budget Tracker**.
+[Logg deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) PowerApps og velg **Begynn med data**, eller velg en eksempelapp, for eksempel **Service Desk** eller **Budget Tracker**.
 
-![PowerApps-området](./media/getting-started/sample-apps.png)
+![PowerApps-området](./media/getting-started/create-page-samples.png)
 
 Når du genererer en app automatisk, kan du tilpasse standardutseende og funksjonalitet basert på brukernes arbeidsflyter. Det kan for eksempel hende at du ønsker å endre hvilke datatyper som vises, hvordan de sorteres, eller om brukerne angir et tall ved å skrive det inn eller ved å justere en glidebryter. Legg til og tilpass [skjermer](add-screen-context-variables.md), [gallerier](customize-layout-sharepoint.md), [skjemaer](customize-forms-sharepoint.md) og andre kontroller.
 

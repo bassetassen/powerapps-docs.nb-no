@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a1ee0b02465853306881ca4379182aef42bffd84
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 3128d284d5b03da9a7c8b5798365b60f7092988b
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833543"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316911"
 ---
 # <a name="create-an-canvas-app-from-scratch-based-on-excel-data"></a>Opprett en lerretsapp fra grunnen av basert på Excel-data
 
@@ -51,13 +51,11 @@ Du må først opprette en Excel-fil ved hjelp av disse eksempeldataene for å f�
 ## <a name="open-a-blank-app"></a>Å åpne en tom app
 1. Logg deg på [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-    ![Hjemmesiden for PowerApps](./media/get-started-create-from-blank/sign-in.png)
-
     Du kan utforme en app fra grunnen av for telefoner eller andre enheter (for eksempel nettbrett). Dette emnet fokuserer på å utforme en app for telefoner.
 
-1. Hold pekeren over flisen **Start med en tom app** under **Lag apper som disse**, velg telefonikonet, og velg deretter **Lag denne appen**.
+1. Hold pekeren over flisen **Lag din egen app** under **Start fra tom**, velg telefonikonet, og velg deretter **Lag denne appen**.
 
-    ![Flisen for tom app](./media/get-started-create-from-blank/blank-app.png)
+    ![Flisen for tom app](./media/get-started-create-from-blank/start-from-blank.png)
 
     PowerApps Studio oppretter en tom app for telefoner.
 

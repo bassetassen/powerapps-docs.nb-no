@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b90024e3864420c541b0e0e1ef0ad1d86b900aa0
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 45b5d85998825cdafc2bbea7badaa5d7cde2f092
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42852280"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49317049"
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service-for-apps"></a>Opprett en lerretsapp fra grunnen av ved hjelp av Common Data Service for apper
 
@@ -35,11 +35,9 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 1. Logg deg på [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-    ![Hjemmesiden for PowerApps](./media/data-platform-create-app-scratch/sign-in.png)
+1. Hold pekeren over flisen **Lag din egen app** under **Start fra tom**, klikk eller trykk på telefonikonet, og klikk eller trykk deretter på **Lag denne appen**.
 
-1. Hold pekeren over flisen **Start med en tom app** under **Opprett slike apper**, klikk eller trykk på telefonikonet, og klikk eller trykk deretter på **Lag denne appen**.
-
-    ![Flisen for tom app](./media/data-platform-create-app-scratch/blank-app.png)
+    ![Flisen for tom app](./media/data-platform-create-app-scratch/start-from-blank.png)
 
     Du kan utforme en app fra grunnen av for telefoner og andre enheter (som nettbrett), og dette emnet fokuserer på hvordan du utformer apper for telefoner.
 

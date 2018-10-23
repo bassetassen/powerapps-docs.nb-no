@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 965c779a752d0bfd864a06d5fa886b0187839123
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: d41ef04d3cd070373f6772bdfced029a7d09e244
+ms.sourcegitcommit: ebd39753e2a0b60c1d8c016e38c00dd1accf5d0c
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42836897"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49307865"
 ---
 # <a name="html-text-control-in-powerapps"></a>HTML-tekstkontrollen i PowerApps
 En boks som viser tekst og konverterer HTML-koder til formatering.
@@ -80,7 +80,7 @@ En **HTML-tekst**-kontroll viser ikke bare ren tekst og tall, men konverterer og
 ## <a name="example"></a>Eksempel
 1. Legg til en **[Etikett](control-text-box.md)**-kontroll, kalt **Kilde**, og angi **[Tekst](properties-core.md)**-egenskapen til denne strengen:
 
-\<p > Vi har gjort en uvanlig \&nbsp; \&quot; dyp \&quot; globalisering og lokalisering. \<p>
+«\<p > Vi har\&nbsp;gjort en uvanlig \&dyp\& globalisering og lokalisering.\<p>»
 
 Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 

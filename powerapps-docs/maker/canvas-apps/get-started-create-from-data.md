@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 8e657023956793ab74094100ca2d5649e7c818b6
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: b1531289c55772aaa9ee521c92cc8b5dbfe16ad4
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42850813"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49317026"
 ---
 # <a name="generate-a-canvas-app-from-excel-in-powerapps"></a>Generer en lerretsapp fra Excel i PowerApps
 
@@ -37,11 +37,9 @@ Hvis du ønsker å følge dette emnet helt etter boken, kan du laste ned [Floori
 ## <a name="generate-the-app"></a>Å generere appen
 1. Logg deg på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-    ![Hjemmesiden for PowerApps](./media/get-started-create-from-data/sign-in.png)
+1. Hold pekeren over **Begynn fra data** under **Lag din egen app**, og velg deretter **Lag denne appen**.
 
-1. Under **Lag apper som disse** holder du pekeren over **Begynn fra data**, og deretter velger du **Lag denne appen**.
-
-    ![Alternativ for å opprette en app](./media/get-started-create-from-data/make-this-app.png)
+    ![Alternativ for å opprette en app](./media/get-started-create-from-data/start-from-data.png)
 
 1. Klikk eller trykk på **Telefonoppsett** under **Start med dataene** på flisen for skylagringskontoen.
 

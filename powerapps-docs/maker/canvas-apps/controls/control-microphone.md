@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b668e8ae118bea5f288e1b3806854e4621295984
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 302c2fad419146f03fe47e25b8a7563564ee7e2d
+ms.sourcegitcommit: 5a1864d1531b55b332749437674fd1378e1f55ca
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42852140"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307819"
 ---
 # <a name="microphone-control-in-powerapps"></a>Mikrofon-kontrollen i PowerApps
 En kontroll som gjør at brukere av appen kan spille inn lyder via enheten.
@@ -26,7 +26,7 @@ En kontroll som gjør at brukere av appen kan spille inn lyder via enheten.
 ## <a name="description"></a>Beskrivelse
 App-brukerne kan opprette lydopptak hvis enheten der appen kjøres har en mikrofon.
 
-Lyd er lagret i 3gp-format i Android, og AAC-format i iOS.
+Lyd er lagret i 3gp-format i Android, AAC-format i iOS og OGG-format i nettlesere.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 **Mic** – ID-nummeret til mikrofonen som appen bruker for enheter med mer enn én mikrofon.

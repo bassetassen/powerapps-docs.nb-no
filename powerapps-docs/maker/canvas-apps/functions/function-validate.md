@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bec00071d1b354872bf3b140e5c879fe8857ffec
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: d92236d630005b4608719efaadef4537984bc3d6
+ms.sourcegitcommit: 5a1864d1531b55b332749437674fd1378e1f55ca
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865674"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307842"
 ---
 # <a name="validate-function-in-powerapps"></a>Funksjonen Validate i PowerApps
 Funksjonen **Validate** kontrollerer hvorvidt verdien av en [enkeltkolonne](../working-with-tables.md#columns) eller en fullstendig [post](../working-with-tables.md#records) er gyldig for en [datakilde](../working-with-data-sources.md).  
@@ -66,6 +66,6 @@ I disse eksemplene må verdiene i **Prosent**-kolonnen i datakilden for **Result
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Validate( Scores, EditRecord, Gallery.Updates )** |Kontrollerer om **10** er en gyldig verdi for **Prosent**-kolonnen i datakilden for **Resultater**. |*tom* |
-| **Validate( Scores, EditRecord, Gallery.Updates )** |Kontrollerer om **120** er en gyldig verdi for **Prosent**-kolonnen i datakilden for **Resultater**. |«Verdiene må være mellom 0 og 100.» |
+| **Validate( Scores, EditRecord, Gallery.Updates )** |Kontrollerer om verdier i alle kolonner er gyldige for datakilden **Poengsummer**. I dette eksemplet er verdien i **Prosent**-kolonnen **10**. |*tom* |
+| **Validate( Scores, EditRecord, Gallery.Updates )** | Kontrollerer om verdier i alle kolonner er gyldige for datakilden **Poengsummer**. I dette eksemplet er verdien i **Prosent**-kolonnen **120**. |«Verdiene må være mellom 0 og 100.» |
 
