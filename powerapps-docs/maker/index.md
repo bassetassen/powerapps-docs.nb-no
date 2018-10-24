@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.date: 03/18/2018
 ms.author: anneta
 ms.reviewer: ''
-ms.openlocfilehash: bcba4a6142299d253c484c0af46afad091735e80
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
+ms.openlocfilehash: c3e40df2d2ecc13e2c466aa91178ccb5d23548fe
+ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49636379"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806092"
 ---
 # <a name="overview-of-creating-apps-in-powerapps"></a>Oversikt over oppretting av apper i PowerApps
 
@@ -32,7 +32,7 @@ Med fleksibiliteten i lerretsapper kan du arrangere brukeropplevelsen og grenses
 
 Du kan begynne å utvikle appen med Microsoft-verktøy der dataene befinner seg, for eksempel:
 
-- [Fra en SharePoint-liste](canvas-apps/generate-app-from-sharepoint-list-interface.md)
+- [Fra en SharePoint-liste](canvas-apps/app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online)
 - [Fra et Power BI-instrumentbord](canvas-apps/embed-powerapps-powerbi.md)
 
 Det er enkelt å opprette en lerretsapp. Med PowerApps kan du finne eller opprette appen din på flere måter:
