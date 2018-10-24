@@ -9,14 +9,15 @@ ms.custom: canvas
 ms.date: 03/18/2018
 ms.author: anneta
 ms.reviewer: ''
-ms.openlocfilehash: 3d95f017b064f61a539906268ebb73fff1e1d04f
-ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
+ms.openlocfilehash: bcba4a6142299d253c484c0af46afad091735e80
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094614"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49636379"
 ---
 # <a name="overview-of-creating-apps-in-powerapps"></a>Oversikt over oppretting av apper i PowerApps
+
 PowerApps er en utviklingsplattform for bedriftsapper med høy produktivitet, og har tre hovedkomponenter:
 
 - [Lerretsapper](canvas-apps/getting-started.md) bruk mulighetene i et tomt lerret og start med brukeropplevelsen. Opprett et skreddersydd grensesnitt og koble det til én av 200 datakilder. Du kan opprette lerretsapper for nett-, mobil- og nettbrettprogrammer.
@@ -26,6 +27,7 @@ PowerApps er en utviklingsplattform for bedriftsapper med høy produktivitet, og
 Det er enkelt å opprette din første app. Vi har et 30-dagers prøveabonnement og et kostnadsfritt fellesskapsabonnement. Finn ut hva som passer best for deg, og kom i gang.
 
 ## <a name="canvas-apps"></a>Lerretsapper
+
 Med fleksibiliteten i lerretsapper kan du arrangere brukeropplevelsen og grensesnittet slik du vil ha det. La kreativitet og forretningssans vise deg hvordan appene skal se ut.
 
 Du kan begynne å utvikle appen med Microsoft-verktøy der dataene befinner seg, for eksempel:
@@ -42,6 +44,7 @@ Det er enkelt å opprette en lerretsapp. Med PowerApps kan du finne eller oppret
 - [Via AppSource](../user/app-source.md)
 
 ## <a name="model-driven-apps"></a>Modelldrevne apper
+
 Når du oppretter en modelldreven app, kan du bruke kraften i Common Data Service til å konfigurere skjemaer, forretningsregler og prosessflyter på en rask måte. Du kan opprette en modelldreven app fra nettområdet for PowerApps.
 
 Det er enkelt å komme i gang med modelldrevne apper, og du kan begynne med disse emnene:
@@ -55,16 +58,28 @@ Det er enkelt å komme i gang med modelldrevne apper, og du kan begynne med diss
 - [Legge til forretningslogikk](https://docs.microsoft.com/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 
 ## <a name="common-data-service-for-apps"></a>Common Data Service for apper
+
 Common Data Service gjør det mulig å lagre og behandle data i et sett med standard og egendefinerte enheter på en sikker måte, og du kan legge til felt i disse enhetene når du trenger dem.
 
 Det er enkelt å komme i gang med Common Data Service. Du kan for eksempel starte med disse elementene:
+
 - [Opprette en egendefinert enhet](common-data-service/data-platform-create-entity.md)
 - [Administrere felt](common-data-service/data-platform-manage-fields.md)
 - [Opprette egendefinerte alternativsett](common-data-service/custom-picklists.md)
-- [Opprette en forretningsregel](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
+- [Definering av en forretningsregel](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
+
+## <a name="canvas-and-model-driven-artifacts"></a>Lerret og modelldrevne artefakter
+
+Mens vi slår sammen erfaringene til lerret og modelldrevne apper, vil disse artefaktene være relevant for enten lerretsapper eller modelldrevne apper.
+
+| Artefakt            | Apptype     |
+|---------------------|--------------|
+| Enhet > Visninger      | Modelldrevet |
+| Enhet > Skjemaer      | Modelldrevet |
+| Enhet > Instrumentbord | Modelldrevet |
+| Tilkoblinger         | Lerret       |
+| Gatewayer            | Lerret       |
+| Egendefinerte tilkoblinger   | Lerret       |
+| Apper > Import       | Lerret       |
 
 Når du har opprettet appen, kan du [dele den](canvas-apps/share-app.md) med medlemmene i teamet ditt.
-
-
-
-

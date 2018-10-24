@@ -5,7 +5,7 @@ author: sabinn-msft
 ms.service: powerapps
 ms.topic: how-to
 ms.component: cds
-ms.date: 09/19/2018
+ms.date: 10/15/2018
 ms.author: sabinn
 search.audienceType:
 - admin
@@ -13,12 +13,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: b8cebc6f9db8a1a7c1a060aad461f4f32fcee05b
-ms.sourcegitcommit: 2bcf40aeaa35420dc43f5803f4e57ff0f6afb57b
+ms.openlocfilehash: dfbc420dfb4945cdda635e3cbaadb1acb446753b
+ms.sourcegitcommit: ebd39753e2a0b60c1d8c016e38c00dd1accf5d0c
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46469747"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328698"
 ---
 # <a name="integrate-data-into-common-data-service-for-apps"></a>Integrer data i Common Data Service for apper
 
@@ -88,6 +88,9 @@ Før du kan opprette et dataintegreringsprosjekt, må du klargjøre en tilkoblin
 
     > [!div class="mx-imgBorder"] 
     > ![Tilkoblingsliste](media/data-integrator/CreateConnection1780.png "Tilkoblingsliste")
+
+> [!NOTE]
+> Kontroller at kontoen du angir for hver tilkobling, har tilgang til enheter for tilhørende programmer. Kontoen for hver tilkobling kan i tillegg være i ulike leiere. 
 
 ### <a name="how-to-create-a-connection-set"></a>Slik oppretter du et tilkoblingssett
 
@@ -169,8 +172,6 @@ Prosjekter muliggjør flyt av data mellom systemer. Et prosjekt inneholder tilor
 
 ### <a name="execution-history"></a>Kjøringslogg
 
-<!--note from editor: Do you think most people reading this will know what "upsert" means?-->
-
 Kjøringslogg viser loggen over alle prosjektkjøringer med prosjektnavn, tidsstempel for når prosjektet ble kjørt, samt status for kjøringen sammen med antall upserter og/eller feil.
 
 -   Eksempel på prosjektkjøringslogg.
@@ -228,6 +229,12 @@ Vær også oppmerksom på at under Varslinger kan du velge å motta varslinger p
 
 > [!div class="mx-imgBorder"] 
 > ![E-postvarsel](media/data-integrator/EmailNotification780.png "E-postvarsel")
+
+> [!NOTE]
+> - Vi støtter for øyeblikket planlegging av 50 integreringsprosjekter til enhver tid, per betalte leier. Du kan imidlertid opprette flere prosjekter og kjøre dem interaktivt.
+Vi har en ekstra begrensning for prøveversjon-leiere. Et planlagt prosjekt kjører bare de første 50 kjøringene.
+> - Selv om vi støtter at prosjekter skal kjøres hvert minutt, må du huske at dette kan legge mye belastning på appene dine og derfor påvirke den totale ytelsen. Vi oppfordrer brukere til å teste prosjektkjøringer under reelle innlastingsforhold og optimalisere ytelsen ved å bruke færre oppdateringer.
+Vi anbefaler ikke kjøring av mer enn fem prosjekter per minutt, per leier i produksjonsmiljøer.
 
 ## <a name="customizing-projects-templates-and-mappings"></a>Tilpasse prosjekter, maler og tilordninger 
 

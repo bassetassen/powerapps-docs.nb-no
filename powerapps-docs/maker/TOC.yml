@@ -1,5 +1,5 @@
 items:
-- name: Finne og kjøre apper
+- name: Finn og kjør apper
   href: ../user/index.md
   items:
   - name: I en nettleser
@@ -14,7 +14,7 @@ items:
     href: ../user/open-app-embedded-in-teams.md
   - name: Fra AppSource
     href: ../user/app-source.md
-- name: Å opprette apper
+- name: Opprett apper
   href: index.md
   items:
   - name: Prøv PowerApps gratis
@@ -23,7 +23,7 @@ items:
       href: signup-for-powerapps.md
     - name: PowerApps Community Plan
       href: dev-community-plan.md
-  - name: Å logge deg på PowerApps
+  - name: Logg deg på PowerApps
     href: ./canvas-apps/intro-maker-portal.md
   - name: Hva er nytt
     href: ./canvas-apps/release-notes.md
@@ -39,7 +39,7 @@ items:
       href: ./canvas-apps/help-desk-install.md
     - name: Meeting Capture-app
       href: ./canvas-apps/sample-meeting-capture.md
-  - name: Å opprette din første app
+  - name: Opprett din første app
     items:
     - name: 1. Generer en app fra dataene.
       items:
@@ -63,26 +63,26 @@ items:
         href: ./canvas-apps/data-platform-create-app-scratch.md
       - name: Fra Excel
         href: ./canvas-apps/get-started-create-from-blank.md
-    - name: Oppretting av en app fra en mal
+    - name: Opprett en app fra en mal
       href: ./canvas-apps/get-started-test-drive.md
   - name: Design og bygg en app
     items:
-    - name: Å koble til data
+    - name: Koble til data
       href: ./canvas-apps/connections-list.md
       items:
-      - name: Å legge til en tilkobling
+      - name: Legg til en tilkobling
         href: ./canvas-apps/add-data-connection.md
-      - name: Administrere tilkoblinger
+      - name: Administrer tilkoblinger
         href: ./canvas-apps/add-manage-connections.md
       - name: Koble til SharePoint
         href: ./canvas-apps/connect-to-sharepoint.md
-      - name: Klargjøre Excel-data
+      - name: Klargjør Excel-data
         href: ./canvas-apps/how-to-excel-tips.md
       - name: Delegering
         href: ./canvas-apps/delegation-overview.md
       - name: Datakilder som kan delegeres
         href: ./canvas-apps/delegation-list.md
-      - name: Administrere gatewayer
+      - name: Administrer gatewayer
         href: ./canvas-apps/gateway-management.md
       - name: Forstå gatewayer
         href: ./canvas-apps/gateway-reference.md
@@ -93,13 +93,13 @@ items:
     - name: Utform grensesnittet
       href: ./canvas-apps/add-configure-controls.md
       items:
-      - name: Legge til en skjerm
+      - name: Legg til en skjerm
         href: ./canvas-apps/add-screen-context-variables.md
       - name: Vis en tabell med elementer
         href: ./canvas-apps/add-gallery.md
-      - name: Vise elementer med ulike høyder
+      - name: Vis elementer med ulike høyder
         href: ./canvas-apps/gallery-dynamic-sizing.md
-      - name: Å legge til et skjema
+      - name: Legg til et skjema
         href: ./canvas-apps/add-form.md
         items:
         - name: Forstå skjemaer
@@ -110,13 +110,13 @@ items:
           href: ./canvas-apps/working-with-cards.md
       - name: Legg til en liste
         href: ./canvas-apps/add-list-box-drop-down-list-radio-button.md
-      - name: Legge til et diagram
+      - name: Legg til et diagram
         href: ./canvas-apps/use-line-pie-bar-chart.md
-      - name: Legge til multimedia
+      - name: Legg til multimedia
         href: ./canvas-apps/add-images-pictures-audio-video.md
-      - name: Skanne en strekkode
+      - name: Skann en strekkode
         href: ./canvas-apps/scan-barcode.md
-      - name: Legge til en skjerm med rulling
+      - name: Legg til en skjerm med rulling
         href: ./canvas-apps/add-scrolling-screen.md
       - name: Legg til Power BI-data
         href: ./canvas-apps/powerapps-custom-visual.md
@@ -214,11 +214,11 @@ items:
         href: ./canvas-apps/show-text-dates-times.md
       - name: Opprett en samling
         href: ./canvas-apps/create-update-collection.md
-      - name: Vise den gjeldende brukeren
+      - name: Vis den gjeldende brukeren
         href: ./canvas-apps/show-current-user.md
       - name: Koble sammen lister ved hjelp av oppslag
         href: ./canvas-apps/sharepoint-lookup-fields.md
-      - name: Legge til en flyt
+      - name: Legg til en flyt
         href: ./canvas-apps/using-logic-flows.md
       - name: Referanse for formler
         href: ./canvas-apps/formula-reference.md
@@ -533,7 +533,7 @@ items:
           href: ./canvas-apps/functions/function-datetime-parts.md
         - name: År
           href: ./canvas-apps/functions/function-datetime-parts.md
-    - name: Opprette en global app
+    - name: Opprett en global app
       href: ./canvas-apps/global-apps.md
     - name: Gjør en app tilgjengelig
       href: ./canvas-apps/accessible-apps.md
@@ -544,55 +544,55 @@ items:
         href: ./canvas-apps/accessible-apps-color.md
     - name: Forhåndsvisnings- og eksperimentelle funksjoner
       href: ./canvas-apps/working-with-experimental.md
-  - name: Lagre og publisere en app
+  - name: Lagre og publiser en app
     href: ./canvas-apps/save-publish-app.md
-  - name: Å dele en app
+  - name: Del en app
     href: ./canvas-apps/share-app.md
     items:
-    - name: Å dele Excel-data
+    - name: Del Excel-data
       href: ./canvas-apps/share-app-data.md
-    - name: Å dele app-ressurser
+    - name: Del appressurser
       href: ./canvas-apps/share-app-resources.md
-    - name: Bygge inn en app i Power BI
+    - name: Bygg inn en app i Power BI
       href: ./canvas-apps/embed-powerapps-powerbi.md
-  - name: Å administrere en app
+  - name: Administrer en app
     items:
-    - name: Redigere en app
+    - name: Rediger en app
       href: ./canvas-apps/edit-app.md
-    - name: Slette en app
+    - name: Slett en app
       href: ./canvas-apps/delete-app.md
     - name: Gjenopprett en tidligere versjon
       href: ./canvas-apps/restore-an-app.md
     - name: Endre navn og flis for appen
       href: ./canvas-apps/set-name-tile.md
-    - name: Endring av skjermstørrelse og -retning
+    - name: Endre skjermstørrelse og -retning
       href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
-  - name: Tilpasse et SharePoint-listeskjema
+  - name: Tilpass et SharePoint-listeskjema
     href: ./canvas-apps/customize-list-form.md
     items:
     - name: Forstå integrasjon for SharePoint-skjemaer
       href: ./canvas-apps/sharepoint-form-integration.md
-  - name: Integrere med andre teknologier
+  - name: Integrer med andre teknologier
     items:
     - name: SharePoint Online
       items:
       - name: Oversikt over SharePoint Online-integrering
         href: ./canvas-apps/sharepoint-scenario-intro.md
-      - name: Opprette SharePoint Online-lister
+      - name: Opprett SharePoint Online-lister
         href: ./canvas-apps/sharepoint-scenario-setup.md
-      - name: Generere en app
+      - name: Generer en app
         href: ./canvas-apps/sharepoint-scenario-generate-app.md
-      - name: Opprette en flyt for godkjenninger
+      - name: Opprett en flyt for godkjenninger
         href: ./canvas-apps/sharepoint-scenario-approval-flow.md
-      - name: Opprette en app fra grunnen av
+      - name: Opprett en app fra grunnen av
         href: ./canvas-apps/sharepoint-scenario-build-app.md
-      - name: Opprette en Power BI-rapport
+      - name: Opprett en Power BI-rapport
         href: ./canvas-apps/sharepoint-scenario-build-report.md
-      - name: Publisere Power BI-rapporten
+      - name: Publiser Power BI-rapporten
         href: ./canvas-apps/sharepoint-scenario-publish-report.md
-      - name: Bygge inn Power BI-rapporten
+      - name: Bygg inn Power BI-rapporten
         href: ./canvas-apps/sharepoint-scenario-embed-report.md
-      - name: Opprette en flyt for varsler
+      - name: Opprett en flyt for varsler
         href: ./canvas-apps/sharepoint-scenario-alerts-flow.md
       - name: Gå gjennom det ferdige scenarioet
         href: ./canvas-apps/sharepoint-scenario-summary.md
@@ -603,9 +603,9 @@ items:
   - name: For utviklere
     href: ./canvas-apps/dev-enterprise-intro.md
     items:
-    - name: Opprette og sertifisere egendefinerte koblinger
+    - name: Opprett og sertifiser egendefinerte koblinger
       href: ./canvas-apps/register-custom-api.md
-    - name: Integrere med nettområder og andre teknologier
+    - name: Integrer med nettområder og andre teknologier
       href: ./canvas-apps/embed-apps-dev.md
     - name: Utvikle apper som fungerer i frakoblet tilstand
       href: ./canvas-apps/offline-apps.md
@@ -616,7 +616,7 @@ items:
   items:
   - name: Utforsk eksempelapper
     href: ./model-driven-apps/overview-model-driven-samples.md
-  - name: Å opprette din første app
+  - name: Opprett din første app
     href: ./model-driven-apps/build-first-model-driven-app.md
   - name: Utform og bygg en app
     items:
@@ -636,7 +636,7 @@ items:
       - name: Bruk apputforming til å bygge en app
         href: ./model-driven-apps/design-custom-business-apps-using-app-designer.md
         items:
-        - name: Å opprette en app
+        - name: Opprett en app
           href: ./model-driven-apps/create-edit-app.md
         - name: Opprett et områdekart for en app
           href: ./model-driven-apps/create-site-map-app.md
@@ -752,15 +752,15 @@ items:
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
   - name: Valider og publiser en app
     href: ./model-driven-apps/validate-app.md
-  - name: Å dele en app
+  - name: Del en app
     href: ./model-driven-apps/share-model-driven-app.md
-  - name: Å administrere en app
+  - name: Administrer en app
     items:
     - name: Behandle appegenskaper
       href: ./model-driven-apps/manage-app-properties.md
     - name: Spesifiser egenskaper for United Interface-apper
       href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md
-    - name: Slette en app
+    - name: Slett en app
       href: ./model-driven-apps/delete-model-driven-app.md
   - name: Avansert apputvikling og tilpassing
     href: ./model-driven-apps/advanced-navigation.md
@@ -785,9 +785,9 @@ items:
   - name: Arbeid med enheter
     href: ./common-data-service/entity-overview.md
     items:
-    - name: Å opprette en enhet
+    - name: Opprett en enhet
       href: ./common-data-service/data-platform-create-entity.md
-    - name: Opprette en egendefinert enhet som inneholder komponenter
+    - name: Opprett en egendefinert enhet som inneholder komponenter
       href: ./common-data-service/create-custom-entity.md
     - name: Legg til data i en enhet ved hjelp av Power Query
       href: ./common-data-service/data-platform-cds-newentity-pq.md
@@ -936,7 +936,7 @@ items:
       href: ./common-data-service/data-platform-complex-entities.md
     - name: Begrensede enheter som krever Dynamics 365-lisenser
       href: ./common-data-service/data-platform-restricted-entities.md
-  - name: Opprette en Power BI-rapport
+  - name: Opprett en Power BI-rapport
     href: ./common-data-service/data-platform-powerbi-connector.md
   - name: Opprett et tema
     href: ./common-data-service/change-color-scheme-add-logo-match-organizations-brand.md
@@ -959,7 +959,7 @@ items:
     href: https://powerapps.microsoft.com/blog/
   - name: Fora
     href: https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1
-- name: Feilsøke
+- name: Feilsøk
   items:
   - name: Systemkrav, grenser og konfigurasjon
     href: ./canvas-apps/limits-and-config.md
@@ -969,7 +969,7 @@ items:
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Få en økt- eller app-ID
     href: ./canvas-apps/get-sessionid.md
-  - name: Feilsøke Power Query
+  - name: Feilsøk Power Query
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Støtte
     href: https://powerapps.microsoft.com/support/

@@ -1,24 +1,24 @@
 ---
 title: 'Kontroller for Visningsskjema og Redigeringsskjema: referanse | Microsoft Docs'
 description: Informasjon, inkludert egenskaper og eksempler, om kontroller for Visningsskjema og Redigeringsskjema
-author: gregli-msft
+author: aneesmsft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/06/2017
-ms.author: gregli
+ms.author: aneesa
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4c81288b27d1dc2f5cccf966e4de9d7a043789d0
-ms.sourcegitcommit: 382b3b0e1760aa3124c04d84b59605a1fe16be72
+ms.openlocfilehash: 91f84ebbec83c5734e910680f4ab3a79077164df
+ms.sourcegitcommit: ce621966a34061dda2f75232403847e21816ffa9
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46563615"
+ms.lasthandoff: 09/30/2018
+ms.locfileid: "47459459"
 ---
 # <a name="edit-form-and-display-form-controls-in-powerapps"></a>Kontroller for Redigeringsskjema og Visningsskjema i PowerApps
 Vis, rediger og opprett en post i en datakilde.
@@ -33,7 +33,11 @@ Hvis du legger til en **[Galleri](control-gallery.md)**-kontroll, kan du konfigu
 ### <a name="record-selection"></a>Postutvalg
 Du angir **DataSource**-egenskapen til en tabell med poster, og du angir **Element**-egenskapen for skjemaet til å vise en bestemt post i den aktuelle tabellen, uansett skjematype. Du kan for eksempel angi **Element**-egenskapen for et skjema til **SelectedItem**-egenskapen for en **[Galleri](control-gallery.md)**-kontroll. Når brukeren velger en post i galleriet, vises den samme posten i skjemaet, bortsett fra at skjemaet kan vise flere felt. Hvis brukeren returnerer til galleriet og velger en annen post, endres **SelectedItem**-egenskapen for galleriet. Denne endringen oppdaterer **Element**-egenskapen for skjemaet, som deretter viser den nylig valgte posten.
 
-Du finner mer informasjon om hvordan du angir **Element**-egenskapen for et skjema (for eksempel ved å bruke en **Rullegardin**-kontroll i stedet for en **Galleri**-kontroll), i [Vis, rediger eller legg til en post](../add-form.md).
+Du kan også angi **Element**-egenskapen for et skjema ved hjelp av **Rullegardinliste**-kontrollen, som [Vis, rediger eller legg til en post](../add-form.md) beskriver, eller en funksjon som for eksempel **Oppslag** eller **Først**. Du kan for eksempel angi **Element**-egenskapen til en av disse formlene til å vise Fabrikam-oppføringen i **Kontoer**-enheten i Common Data Service for apper:
+
+```First(Accounts)```
+
+```Lookup(Accounts, "Fabrikam" in name)```
 
 Hver enkelt skjemakontroll inneholder én eller flere **[Kort](control-card.md)**-kontroller. Ved å angi **[DataField](control-card.md)**-egenskapen for et kort [angir du hvilket felt kortet viser samt andre detaljer](../add-form.md).
 
