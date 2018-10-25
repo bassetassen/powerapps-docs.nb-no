@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b1531289c55772aaa9ee521c92cc8b5dbfe16ad4
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
+ms.openlocfilehash: 3d29387c907808f90225f1ff67257d289de2b0a9
+ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49317026"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806137"
 ---
 # <a name="generate-a-canvas-app-from-excel-in-powerapps"></a>Generer en lerretsapp fra Excel i PowerApps
 
@@ -28,13 +28,15 @@ Excel-filen må være i en konto for lagring i skyen, for eksempel OneDrive, Goo
 
 Hvis du ikke har en PowerApps-lisens, kan du [registrere deg gratis](../signup-for-powerapps.md).
 
-## <a name="prerequisites"></a>Forutsetninger ##
+## <a name="prerequisites"></a>Forutsetninger
+
 Hvis du ønsker å følge dette emnet helt etter boken, kan du laste ned [Flooring Estimates](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx)-filen i Excel og lagre den i [skylagringskontoen](connections/cloud-storage-blob-connections.md).
 
 > [!IMPORTANT]
 > Du kan også bruke din egen Excel-fil, men dataene må være formatert som en tabell. Hvis du vil ha mer informasjon, kan du se [Å formatere en tabell i Excel](how-to-excel-tips.md). 
 
 ## <a name="generate-the-app"></a>Å generere appen
+
 1. Logg deg på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Hold pekeren over **Begynn fra data** under **Lag din egen app**, og velg deretter **Lag denne appen**.
@@ -54,6 +56,7 @@ Hvis du ønsker å følge dette emnet helt etter boken, kan du laste ned [Floori
     ![Alternativ for å opprette en app](./media/get-started-create-from-data/choose-table.png)
 
 ## <a name="run-the-app"></a>Å kjøre appen
+
 1. Åpne forhåndsvisningsmodus ved å trykke på F5 (eller ved å klikke på avspillingsikonet nær hjørnet øverst til høyre).
 
     ![Å åpne Forhåndsvisning](./media/get-started-create-from-data/open-preview.png)
@@ -73,6 +76,7 @@ Hvis du ønsker å følge dette emnet helt etter boken, kan du laste ned [Floori
 1. Klikk eller trykk på Neste-pilen for posten som du har lagt til, og klikk eller trykk så på papirkurvikonet for å slette posten.
 
 ## <a name="next-steps"></a>Neste trinn
+
 Tilpass standard Bla gjennom-skjermen slik at den passer dine behov. Du kan for eksempel sortere og filtrere listen etter produktnavn og ikke kategori.
 
 > [!div class="nextstepaction"]

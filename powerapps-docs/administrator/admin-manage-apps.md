@@ -5,7 +5,7 @@ author: jimholtz
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 03/21/2018
+ms.date: 10/24/2018
 ms.author: jimholtz
 search.audienceType:
 - admin
@@ -13,12 +13,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: ac0ae8032ea64734030bf95ff9b473553e462b3b
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: f4dd7ddb4eaaef56b5720287842a2b84cd10d345
+ms.sourcegitcommit: 097ddfb25eb0f09f0229b866668c2b02fa57df55
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42835153"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991819"
 ---
 # <a name="manage-apps-created-in-your-organization"></a>Å administrere apper som er opprettet i organisasjonen 
 Hvis du er en miljøadministrator, en global administrator for Office 365 eller tenantadministrator for Azure Active Directory, kan du administrere appene som er opprettet i organisasjonen din.
@@ -49,7 +49,6 @@ Administratorer kan gjøre følgende i administrasjonssenteret for PowerApps:
 4. Gjør noe av følgende:
 
     * Klikk eller trykk på papirkurv-ikonet for å slette appen.
-    * Endre eieren av appen.
     * Vise datatilkoblinger, flyter, og andre detaljer som er knyttet til appen.
     * Klikk eller trykk på **Del** for å vise eller endre brukerne som appen deles med.
 
