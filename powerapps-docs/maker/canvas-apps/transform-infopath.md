@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3e17015c05d23f4bd9f8a0906e7b1d9d00e2c38f
-ms.sourcegitcommit: 6e2fa2665ded6ac6fd271e1a12f4e3227ebc8865
+ms.openlocfilehash: c2d72368b36f2de854a0aa575f9ef44f2f966ace
+ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48246055"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806229"
 ---
 # <a name="transform-your-infopath-form-to-powerapps"></a>Transformer InfoPath-skjemaet ditt til PowerApps
 
@@ -76,7 +76,7 @@ Følg disse trinnene for å komme i gang:
 
 PowerApps bygger en app til deg som du kan tilpasse.
 
-I den første appen begynner du med en enkel, tilpasset liste med bare et par ulike typer felter. På denne måten kan du bygge et solid grunnlag uten å bli overveldet. Ikke bekymre deg, du vil raskt få taket på det og kan gå videre til mer kompliserte apper. Se denne [dokumentasjonen](generate-app-from-sharepoint-list-interface.md) eller denne [fellesskapsvideoen](https://youtu.be/BnYe_7fpZRM) for å få hjelp til å gå gjennom den første appen din. Eksempelet under viser vanlige InfoPath-jobber og hvordan du utfører dem i PowerApps. Hver av disse bygger på en enkel SharePoint-listeapp.
+I den første appen begynner du med en enkel, tilpasset liste med bare et par ulike typer felter. På denne måten kan du bygge et solid grunnlag uten å bli overveldet. Ikke bekymre deg, du vil raskt få taket på det og kan gå videre til mer kompliserte apper. Se denne [dokumentasjonen](app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online) eller denne [fellesskapsvideoen](https://youtu.be/BnYe_7fpZRM) for å få hjelp til å gå gjennom den første appen din. Eksempelet under viser vanlige InfoPath-jobber og hvordan du utfører dem i PowerApps. Hver av disse bygger på en enkel SharePoint-listeapp.
 
 ## <a name="how-do-you-do-that-with-powerapps"></a>Hvordan gjør du dette med PowerApps?
 
