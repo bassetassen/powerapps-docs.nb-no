@@ -1,1 +1,0 @@
-Gå til **Innstillinger** > **Dokumentbehandling**.
