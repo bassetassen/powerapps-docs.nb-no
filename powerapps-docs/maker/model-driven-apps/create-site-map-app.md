@@ -1,238 +1,238 @@
 ---
-title: Opprette et områdekart for modelldrevet app for en app i PowerApps | MicrosoftDocs
+title: Opprett et modelldrevet områdekart for en app i PowerApps | MicrosoftDocs
 description: Lær hvordan du oppretter et områdekart for appen
 keywords: ''
 ms.date: 05/29/2018
 ms.service: crm-online
-ms.custom: null
+ms.custom: ''
 ms.topic: article
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - powerapps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- powerapps
 author: Mattp123
 ms.assetid: 2461bd71-6cb4-46b7-8d1f-6a0aa3dca809
 ms.author: matp
 manager: kvivek
-ms.reviewer: null
-ms.suite: null
-ms.tgt_pltfrm: null
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 caps.latest.revision: 18
 topic-status: Drafting
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: 2c3f1f4f22df6ed8b4824f1942e3fd202362ea9d
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: nb-NO
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39692539"
 ---
+# <a name="tutorial-create-a-model-driven-app-site-map-for-an-app-using-the-site-map-designer"></a>Opplæring: Opprett et modelldrevet områdekart for en app ved bruk av utforming av områdekart
 
-# <a name="tutorial-create-a-model-driven-app-site-map-for-an-app-using-the-site-map-designer"></a>Opplæring: Opprette et områdekart for modelldrevet app for en app ved hjelp av områdekartutformingen
+I denne opplæringen skal du utføre flere områdekartoppgaver som å opprette et nytt områdekart, og legge til område, gruppe og underområde.
 
-Du kan utføre flere områdekartoppgaver i denne opplæringen, for eksempel opprette et nytt områdekart og legge til et område, en gruppe og et underområde.
+Områdekart definerer navigasjonen for appen. Opprett et områdekart for appen på en enkel måte ved bruk av den flisbaserte utformingen av områdekart. Bruk utformingsprogrammet til å dra komponenter over på lerretet, forhåndsvise arbeidet, og umiddelbart publisere områdekartet. Systemtilpassere eller brukere med nødvendige tillatelser kan raskt opprette områdekart for apper.  
+  
+Med utformingen av områdekart kan du også definere området, underområdet eller gruppefliser på de språkene som støttes av miljøet.  
+  
+Et standard områdekart er tilgjengelig. Du kan redigere dette områdekartet eller konfigurere områdekart for nye apper ved bruk av utforming av områdekart. Utformingen av områdekart er integrert i apputforming.  
 
-Områdekart definerer navigasjonen for appen din. Du kan opprette et områdekart for appen din på en enkel måte ved hjelp av flisbasert områdekartutforming. Bruk utformingsverktøyet til å dra og slippe komponenter på utforminglerretet, forhåndsvise arbeidet og publisere områdekartet umiddelbart. Systemtilpassere eller brukere med nødvendige rettigheter kan raskt lage områdekart for apper.  
-  
-Områdekartutformingen lar deg også definere område-, underområde- eller gruppetitler på språkene som støttes av miljøet.  
-  
-Det finnes et standard områdekart. Du kan redigere dette områdekartet eller konfigurere områdekart for nye apper ved hjelp av områdekartutformingen. Områdekartutformingen er integrert med apputformingen.  
+## <a name="prerequisites"></a>Forutsetninger
+Kontroller at du har Systemansvarlig- eller Systemtilpasser-sikkerhetsrollen, eller tilsvarende tillatelser.  Enhver bruker med følgende rettigheter kan også opprette apper:  
+-   Opprette, Lese og Skrive for appenheten  
+-   Lese og Skrive for tilpassingsenheten  
+-   Lese for løsningsenheten
 
-## <a name="prerequisites"></a>Forhåndskrav
-Sørg for at du har sikkerhetsrollen som systemansvarlig eller systemtilpasser eller tilsvarende tillatelser.  Brukere med følgende rettigheter kan også opprette apper:  
--   Opprettings-, lese- og skriverettigheter på appenheten  
--   Lese- og skriverettigheter på tilpassingsenheten  
--   Leserettigheter på løsningsenheten
-
-Du kan vise eller angi disse rettighetene i kategorien **Tilpassing** for en sikkerhetsrolle.
+Du kan også vise eller angi disse rettighetene på **Tilpassing**-fanen i en sikkerhetsrolle.
   
-## <a name="create-a-site-map-for-an-app"></a>Opprette et områdekart for en app  
+## <a name="create-a-site-map-for-an-app"></a>Opprett et områdekart for en app  
   
-1. På apputformingslerretet, i **Områdekart**-området, velger du **Åpne områdekartutforming** ![Knappen Åpne områdekartutforming](media/dynamics365-open-designer.PNG "Knappen Åpne områdekartutforming").  
+1. Velg **Åpne utforming av områdekart** ![knappen Åpne utforming av områdekart](media/dynamics365-open-designer.PNG "Åpne utforming av områdekart") på lerretet for apputforming, i **Områdekart**-området.  
   
-     Områdekartutformingen åpnes med et lerret automatisk fylt ut med ett område, én gruppe og ett underområde. Velg område-, gruppe- eller underområdeflisen for å endre egenskapene.  
+     Utforming av områdekart åpner et lerret som er forhåndsutfylt med ett område, én gruppe og ett underområde. Velg område-, gruppe- eller underområdeflisen for å endre egenskapene.  
   
     > [!NOTE]
-    >  Når du velger **Åpne områdekartutforming**-knappen ![Åpne områdekartutforming-knappen](media/dynamics365-open-designer.PNG "Åpne områdekartutforming-knappen") fra apputformingslerretet, opprettes automatisk et nytt områdekart (hvis ikke det finnes noe eksisterende områdekart) med samme navn som appnavnet og med samme unike navn som det unike navnet på appen. 
+    >  Hvis du velger **Åpne utforming av områdekart** ![knappen Åpne utforming av områdekart](media/dynamics365-open-designer.PNG "knappen Åpne utforming av områdekart") fra lerretet for apputforming, oppretter automatisk et nytt områdekart (hvis det ikke allerede eksisterer et), og det nye områdekartet får samme navn og unike navn som appens navn og unike navn. 
 
-   ![Velge områdekart](media/app-designer-sitemap-location.png "Velge et områdekart") 
+   ![Velg områdekart](media/app-designer-sitemap-location.png "Velg et områdekart") 
   
-2.  [Legge til et område i områdekartet](create-site-map-app.md#bkmk_AddArea).  
+2.  [Legg til et område i områdekartet](create-site-map-app.md#bkmk_AddArea).  
   
 3.  [Legg til en gruppe i områdekartet](create-site-map-app.md#bkmk_AddGroup).  
   
-4.  [Legg til et underområde i en gruppe i områdekartet](create-site-map-app.md#bkmk_AddSubarea).  
+4.  [Legg til et underområde i områdekartet](create-site-map-app.md#bkmk_AddSubarea).  
   
 5.  Velg **Lagre**.  
   
     > [!NOTE]
-    >  Det nye områdekartet knyttes til appen når du går tilbake til apputformingen og velger **Lagre**. Når et områdekart er konfigurert, vises **Konfigurert** i flisen for områdekartet. Hvis ikke vises **Ikke konfigurert** i flisen.  Hvis du åpner områdekartutformingen fra apputformingen og konfigurerer et nytt områdekart, men lukker nettleseren før du knytter områdekartet til appen, knyttes områdekartet automatisk til appen neste gang du åpner apputformingen, basert på det unike appnavnet.  
+    >  Det nye områdekartet tilknyttes med appen når du går tilbake til apputforming og velger **Lagre**. Når du har konfigurert et områdekart, vises **Konfigurert** på områdekartflisen. Ellers vises **Ikke konfigurert** på flisen.  Hvis du åpner utforming av områdekart fra apputforming og konfigurerer et nytt områdekart, men lukker nettleseren før du tilknyttet områdekartet med appen, tilknyttes områdekartet automatisk med appen nesten gang du åpner apputforming, basert på appens unike navn.  
   
 6.  Velg **Publiser**.  
   
-## <a name="edit-the-default-site-map"></a>Redigere standard områdekart 
+## <a name="edit-the-default-site-map"></a>Rediger standard områdekart 
 
- Ditt miljø leveres med et standard områdekart.  
+ Miljøet inkluderer et standard områdekart.  
   
-1. Åpne løsningsutforskeren.  
+1. Åpne løsningutforsker.  
   
 2. Velg **Klientutvidelser** under **Komponenter** i løsningsvinduet.  
 
-3. Velg **Legg til eksisterende** > **Områdekart** på komponentverktøylinjen.
+3. Velg **Legg til eksisterende** > **Områdekart** på verktøylinjen for komponenten.
 
-4. I listen over løsningskomponenter velger du områdekartet kalt **Områdekart**, og deretter **OK**.
+4. Velg områdekartet med navn **Områdekart** i listen over løsningskomponenter, og velg deretter **OK**.
   
-5.  Dobbeltklikk for å velge områdekartet du la til, som har visningsnavnet **Områdekart** og tilstanden **Administrert**. Du kan også velge områdekartet og velge **Rediger** på handlingsverktøylinjen.  
+5.  Dobbeltklikk for å velge områdekartet du la til med visningsnavnet **Områdekart**, og som befinner seg i **Behandlet**-tilstanden. Du kan også velge områdekartet, og deretter velge **Rediger** på verktøylinjen.  
   
-     Områdekartet åpnes i områdekartutformingen.  
+     Områdekartet åpnes i utforming av områdekart.  
   
-6.  [Legge til et område i områdekartet](create-site-map-app.md#bkmk_AddArea).  
+6.  [Legg til et område i områdekartet](create-site-map-app.md#bkmk_AddArea).  
   
 7.  [Legg til en gruppe i områdekartet](create-site-map-app.md#bkmk_AddGroup).  
   
-8.  [Legg til et underområde i en gruppe i områdekartet](create-site-map-app.md#bkmk_AddSubarea).  
+8.  [Legg til et underområde i områdekartet](create-site-map-app.md#bkmk_AddSubarea).  
   
 9. Velg **Lagre**.  
   
 10. Velg **Publiser**.  
   
 <a name="bkmk_AddArea"></a>   
-## <a name="add-an-area-to-the-site-map"></a>Legge til et område i områdekartet  
+## <a name="add-an-area-to-the-site-map"></a>Legg til et område i områdekartet  
   
-1.  Velg **Legg til**-knappen ![Legg til-knappen i utformingen](media/dynamics365-designer-addbutton.PNG "Legg til-knappen i utformingen") på lerretet for områdekartutforming, og velg deretter **Område**.  
+1.  Velg **Legg til** ![Legg til-knapp på utformeren](media/dynamics365-designer-addbutton.PNG "Legg til-knapp på utformeren") på lerretet for utforming av områdekart, og velg deretter **Område**.  
   
      eller  
   
-     Fra kategorien **Komponenter** drar og slipper du **Område**-flisen til den tomme boksen på lerretet. Du vil se den tomme boksen når du flytter flisen til riktig sted på lerretet.  
+     Dra **Område**-flisen til den tomme boksen på lerretet, fra **Komponenter**-fanen. Du ser den tomme boksen når du flytter flisen til riktig plass på lerretet.  
   
-2.  Velg området du nettopp la til. Du vil se kategorien **Egenskaper** uthevet i ruten til høyre for lerretet.  
+2.  Velg området du nettopp la til. Du ser **Egenskaper**-fanen uthevet i ruten til høyre for lerretet.  
   
 3.  Legg til eller rediger egenskaper for området.  
   
      Gjør følgende under **Generelt**:  
   
-    - **TIttel**: Angi tittelen for området på originalspråket for organisasjonen.  
+    - **Tittel**: Skriv inn tittelen for området på originalspråket for organisasjonen.  
   
-    - **Ikon**: Et standardprogramikon velges. Velg et annet ikon for området i listen over webressurser som er tilgjengelige i løsningen.  
+    - **Ikon**: Et standard programikon er valgt. Velg et annet ikon for området fra listen over nettressurser som er tilgjengelig i løsningen.  
   
-    - **ID**: En unik ID genereres automatisk, men du kan angi en annen om ønskelig. Vi anbefaler at du bruker den angitte ID-en fordi hvis ID-en du angir, ikke er unik, kan brukere få en feil når du bruker appen, eller du kan få en feil når du importerer en løsning som inneholder dette områdekartet.  
+    - **ID**: En unik ID genereres automatisk, men du kan skrive inn en ID manuelt hvis du ønsker det. Vi anbefaler at du bruker den angitte ID-en. Grunnen til det er at hvis ID-en du oppgir ikke er unik, kan brukerne få en feil når de prøver å bruke appen, eller du kan få en feil når du importerer en løsning som inneholder dette områdekartet.  
   
-    - **Vis grupper**: Merk av for denne avmerkingsboksen for å vise grupper med underområder i navigasjonsruten.  
+    - **Vis grupper**: Merk av for dette alternativet for å vise grupper tilhørende underområder i navigasjonsruten.  
   
      Gjør følgende under **Avansert**:  
   
-    - **Flere titler**: Hvis organisasjonen bruker flere språk, velger du et språk (Nasjonal innstilling) for tittelen, skriver inn tittelen, og velger deretter **Legg til** ![Legg til-knappen i områdekartutforming](media/add-icon-sitemap-designer.png "Legg til-knappen i områdekartutforming"). Du kan opprette, redigere eller slette titler på så mange språk som organisasjonen din bruker. Du kan imidlertid bare ha én tittel per språk.  
+    - **Flere titler**: Hvis organisasjonen bruker flere språk, velger du et språk (nasjonal innstilling) for tittelen, skriver inn tittelen, og velger deretter **Legg til** ![Legg til-knapp på utforming av områdekart](media/add-icon-sitemap-designer.png "Legg til-knapp på utforming av områdekart"). Du kan opprette, redigere eller slette titler for like mange språk som organisasjonen bruker. Du kan imidlertid bare ha én tittel per språk.  
   
-    - **Flere beskrivelser**: Hvis organisasjonen bruker flere språk, velger du et språk for beskrivelsen, skriver inn beskrivelsen, og velger deretter **Legg til** ![Legg til-knappen i områdekartutforming](media/add-icon-sitemap-designer.png "Legg til-knappen i områdekartutforming"). Du kan opprette, redigere eller slette beskrivelser på så mange språk som organisasjonen din bruker. Du kan imidlertid bare ha én beskrivelse per språk.  
+    - **Flere beskrivelser**: Hvis organisasjonen bruker flere språk, velger du et språk for beskrivelsen, skriver inn beskrivelsen, og velger deretter **Legg til** ![Legg til-knapp på utforming av områdekart](media/add-icon-sitemap-designer.png "Legg til-knapp på utforming av områdekart"). Du kan opprette, redigere eller slette beskrivelser for like mange språk som organisasjonen bruker. Du kan imidlertid bare ha én beskrivelse per språk.  
   
-    - **URL-adresse**: Skriv inn URL-adressen som skal gjengis for Dynamics 365 for Outlook-mappen som representerer området.  
+    - **Nettadresse**: Angi nettadressen for Dynamics 365 for Outlook-mappen som representerer området.  
   
 <a name="bkmk_AddGroup"></a>   
 ## <a name="add-a-group-to-the-site-map"></a>Legg til en gruppe i områdekartet  
   
-1.  Velg området du vil legge til gruppen i, på lerretet for områdekartutformingen.  
-2.  Velg **Legg til** ![Legg til-knappen i utformingen](media/dynamics365-designer-addbutton.PNG "Legg til-knappen i utformingen"), og velg deretter **Gruppe**.  
+1.  Velg området du ønsker å legge til i gruppen, på lerretet for utforming av områdekart.  
+2.  Velg **Legg til** ![Legg til-knapp på utformeren](media/dynamics365-designer-addbutton.PNG "Legg til-knapp på utformeren"), og velg deretter **Grupper**.  
   
      eller  
   
-     Fra kategorien **Komponenter** drar og slipper du **Gruppe**-flisen til en tom boks under **Område** på lerretet. Du vil se den tomme boksen når du flytter flisen til riktig sted på lerretet.  
+     Dra **Gruppe**-flisen til en tom boks fra **Komponenter**-fanen, under **Område** på lerretet. Du ser den tomme boksen når du flytter flisen til riktig plass på lerretet.  
   
 3.  Velg gruppen du nettopp la til.  
   
-4.  Legg til eller rediger gruppeegenskaper i kategorien **Egenskaper**:  
+4.  Legg til eller rediger gruppeegenskapene på **Egenskaper**-fanen:  
   
      Gjør følgende under **Generelt**:  
   
-    - **TIttel**: Angi tittelen for gruppen på originalspråket for organisasjonen.  
+    - **Tittel**: Skriv inn tittelen for gruppen på originalspråket for organisasjonen.  
   
-    - **ID**: En unik ID genereres automatisk. Angi en annen hvis det er nødvendig. Vi anbefaler at du bruker den automatiske ID-en fordi hvis ID-en du angir, ikke er unik, kan det oppstå en feil når du importerer en løsning som inneholder dette områdekartet.  
+    - **ID**: En unik ID genereres automatisk. Du kan oppgi en annen ID hvis du ønsker det. Vi anbefaler at du bruker den automatiske ID-en. Grunnen til det er at hvis ID-en du oppgir ikke er unik, kan du få en feil når du importerer en løsning som inneholder dette områdekartet.  
   
      Gjør følgende under **Avansert**:  
   
-    - **Flere titler**: Hvis organisasjonen bruker flere språk, velger du et språk (nasjonal innstilling) for tittelen, skriver inn tittelen for gruppen, og velger deretter **Legg til** ![Legg til-knappen i områdekartutforming](media/add-icon-sitemap-designer.png "Legg til-knappen i områdekartutforming"). Du kan opprette, redigere eller slette titler på så mange språk som organisasjonen din bruker. Du kan imidlertid bare ha én tittel per språk.  
+    - **Flere titler**: Hvis organisasjonen bruker flere språk, velger du et språk (nasjonal innstilling) for tittelen, skriver inn tittelen for gruppen, og velger deretter **Legg til** ![Legg til-knapp på utforming av områdekart](media/add-icon-sitemap-designer.png "Legg til-knapp på utforming av områdekart"). Du kan opprette, redigere eller slette titler for like mange språk som organisasjonen bruker. Du kan imidlertid bare ha én tittel per språk.  
   
-    - **Flere beskrivelser**: Hvis organisasjonen bruker flere språk, velger du et språk for beskrivelsen, skriver inn beskrivelsen for gruppen, og velger deretter **Legg til** ![Legg til-knappen i områdekartutforming](media/add-icon-sitemap-designer.png "Legg til-knappen i områdekartutforming"). Du kan opprette, redigere eller slette beskrivelser på så mange språk som organisasjonen din bruker. Du kan imidlertid bare ha én beskrivelse per språk.  
+    - **Flere beskrivelser**: Hvis organisasjonen bruker flere språk, velger du et språk for beskrivelsen, skriver inn beskrivelsen for gruppen, og velger deretter **Legg til** ![Legg til-knapp på utforming av områdekart](media/add-icon-sitemap-designer.png "Legg til-knapp på utforming av områdekart"). Du kan opprette, redigere eller slette beskrivelser for like mange språk som organisasjonen bruker. Du kan imidlertid bare ha én beskrivelse per språk.  
   
-    - **URL-adresse**: Skriv inn URL-adressen som skal gjengis for Dynamics 365 for Outlook-mappen som representerer gruppen.  
+    - **Nettadresse**: Angi nettadressen for Dynamics 365 for Outlook-mappen som representerer gruppen.  
   
-    - **Angi som profil**: Merk av for denne avmerkingsboksen for å angi om denne gruppen representerer en profil som kan velges av en bruker, for arbeidsområdet. Gruppen som er angitt som en profil som kan velges av en bruker, gjøres tilgjengelig som alternativer under personlige alternativer. Dette gjelder bare for grupper i området **Arbeidsområde**.  
+    - **Angi som profil**: Merk av for dette alternativet for å angi om gruppen representerer en profil for arbeidsplassen, som kan velges av brukeren. Gruppen som angis som profilen som kan velges av brukeren, gjøres tilgjengelig som alternativer i dine personlige alternativer. Dette gjelder bare for grupper i **Arbeidsplass**-området.  
   
 <a name="bkmk_AddSubarea"></a>   
-## <a name="add-a-subarea-to-a-group-in-the-site-map"></a>Legg til et underområde i en gruppe i områdekartet  
+## <a name="add-a-subarea-to-a-group-in-the-site-map"></a>Legg til et underområde i områdekartet  
   
-1.  Velg **Legg til**-knappen ![Legg til-knappen i utformingen](media/dynamics365-designer-addbutton.PNG "Legg til-knappen i utformingen") på lerretet for områdekartutforming, og velg deretter **Underområde**.  
+1.  Velg **Legg til** ![Legg til-knapp på utformeren](media/dynamics365-designer-addbutton.PNG "Legg til-knapp på utformeren") på lerretet for utforming av områdekart, og velg deretter **Underområde**.  
   
      eller  
   
-     Fra kategorien **Komponenter** drar og slipper du **Underområde**-flisen til en tom boks under **Gruppe**-delen på lerretet. Du vil se den tomme boksen når du flytter flisen til riktig sted på lerretet.  
+     Dra **Underområde**-flisen til en tom boks fra **Komponenter**-fanen, under **Gruppe**-delen på lerretet. Du ser den tomme boksen når du flytter flisen til riktig plass på lerretet.  
   
 2.  Velg underområdet du nettopp la til.  
   
-3.  Legg til eller rediger underområdeegenskaper i kategorien **Egenskaper**:  
+3.  Legg til eller rediger egenskapene for underområdet på **Egenskaper**-fanen:  
   
      Gjør følgende under **Generelt**:  
   
-    - **Type**: Velg om underområdet du legger til, er et instrumentbord, en enhet, en webressurs eller URL-adresse.  
+    - **Type**: Velg om underområdet du legger til er et instrumentbord, en enhet, nettressurs eller nettadresse.  
   
-    - **Enhet**: Velg enheten som underområdet er for. Dette feltet er deaktivert hvis typen underområde er en annen enn **Enhet** i **Type**-rullegardinlisten.  
+    - **Enhet**: Velg enheten som underområdet gjelder for. Dette feltet er deaktivert hvis underområdetypen ikke er angitt som **Enhet** i **Type**-rullegardinlisten.  
   
-    - **URL-adresse**: Angi en URL-adresse for hovedsiden i programmet som skal vises når dette underområdet velges. Dette feltet er deaktivert hvis du har valgt **Enhet** i **Type** -rullegardinlisten.  
+    - **Nettadresse**: Angi en nettadresse for hovedsiden til programmet som skal vises, når dette underområdet er valgt. Dette feltet er deaktivert hvis du valgte **Enhet** i **Type**-rullegardinlisten.  
   
-    - **Standard instrumentbord**: Velg standard instrumentbord som skal vises for dette underområdet. Dette feltet er deaktivert hvis du ikke har valgt **Instrumentbord** i **Type**-rullegardinlisten.  
+    - **Standardinstrumentbordet**: Velg standardinstrumentbordet som skal vises for dette underområdet. Dette feltet er deaktivert hvis du ikke valgte **Instrumentbord** i **Type**-rullegardinlisten.  
   
-    - **TIttel**: Angi tittelen for underområdet på originalspråket for organisasjonen.  
+    - **Tittel**: Skriv inn tittelen for underområdet på originalspråket for organisasjonen.  
   
-    - **Ikon**: Et standardprogramikon velges. Velg et annet ikon for underområdet i listen over webressurser som er tilgjengelige i løsningen.  
+    - **Ikon**: Et standard programikon er valgt. Velg et annet ikon for underområdet fra listen over nettressurser som er tilgjengelig i løsningen.  
   
-    - **ID**. En unik ID genereres automatisk. Angi en annen unik ID hvis det er nødvendig.  
+    - **ID**. En unik ID genereres automatisk. Du kan oppgi en annen unik ID hvis du ønsker det.  
   
-    - **Parameteroverføring**. Merk av i denne avmerkingsboksen for å sende informasjon om organisasjonen og språkkonteksten til URL-adressen. Det er bare merket av for denne avmerkingsboksen når underområdetypen er en webressurs eller et URL-adressebasert underområde.  
+    - **Parameteroverføring**. Velg denne boksen for å overføre informasjon om organisasjonen og språkkontekst til nettadressen. Dette alternativet er bare merket av når underområdetypen er en nettressurs eller et nettadressebasert underområde.  
   
      Gjør følgende under **Avansert**:  
  
-    - **Rettigheter**: Dette definerer om et underområde vises basert på rettighetene som er tilgjengelige i sikkerhetsroller tilordnet brukeren. Velg navnet på enheten for å kontrollere rettighetene og deretter merke av for å tilordne tilgangsrettigheter. 
+    - **Rettigheter**: Dette definerer om et underområde vises basert på rettigheter som er tilgjengelig i sikkerhetsrollene som er tilordnet til brukeren. Velg navnet på enheten som du ønsker å kontrollere rettigheter for, og merk deretter av for å tilordne rettigheter. 
   
-    - **Flere titler**: Hvis organisasjonen bruker flere språk, velger du et språk for tittelen, angir tittelen for underområdet, og velger deretter **Legg til**. Du kan opprette, redigere eller slette titler på så mange språk som organisasjonen din bruker. Du kan imidlertid bare ha én tittel per språk.  
+    - **Flere titler**: Hvis organisasjonen bruker flere språk, velger du språket for tittelen, skriver inn tittelen for underområdet, og velger deretter **Legg til**. Du kan opprette, redigere eller slette titler for like mange språk som organisasjonen bruker. Du kan imidlertid bare ha én tittel per språk.  
   
-    - **Flere beskrivelser**: Hvis organisasjonen bruker flere språk, velger du et språk for beskrivelsen, angir beskrivelsen for underområdet, og velger deretter **Legg til**. Du kan opprette, redigere eller slette beskrivelser på så mange språk som organisasjonen din bruker. Du kan imidlertid bare ha én beskrivelse per språk.  
+    - **Flere beskrivelser**: Hvis organisasjonen bruker flere språk, velger du språket for beskrivelsen, skriver inn beskrivelsen av underområdet, og velger deretter **Legg til**. Du kan opprette, redigere eller slette beskrivelser for like mange språk som organisasjonen bruker. Du kan imidlertid bare ha én beskrivelse per språk.  
   
-    - **SKU-er**: Velg versjonene av Dynamics 365 customer engagement som viser dette underområdet.  
+    - **SKU-er**: Velg versjonene av Dynamics 365 Customer Engagement som viser dette underområdet.  
   
-    - **Klient**: Velg hvilken type klient som viser dette underområdet.  
+    - **Klient**: Velg klienttypen som viser dette underområdet.  
   
-    - **Outlook-snarvei**: Velg ikonet for å vise Dynamics 365 for Outlook.  
+    - **Outlook-snarvei**: Velg ikonet som skal vises i Dynamics 365 for Outlook.  
   
-    - **Tilgjengelighet i frakoblet modus**: Merk av i denne avmerkingsboksen for å gjøre dette underområdet tilgjengelig for brukere når de er frakoblet i Dynamics 365 for Outlook.  
+    - **Frakoblet tilgjengelighet**: Merk av for dette alternativet hvis du vil gjøre dette underområdet tilgjengelig for brukerne, mens de er frakoblet når de bruker Dynamics 365 for Outlook.  
   
-## <a name="organize-areas-groups-and-subareas"></a>Organisere områder, grupper og underområder  
- Du kan organisere områdene, gruppene og underområdene dine ved å dra dem til nye plasseringer. En beholder vises der du kan slippe flisene. Her er noen ting du kan gjøre:  
+## <a name="organize-areas-groups-and-subareas"></a>Organiser områder, grupper og underområder  
+ Du kan organisere områdene, gruppene og underområdene ved dra dem til nye plasseringer. En beholderboks der du drar over filene, vises. Dette er noe av det du kan gjøre:  
   
--   Flytte et underområde til en ny plassering innenfor samme gruppe eller en annen gruppe under det samme området.  
+-   Flytt et underområde til en ny plassering i samme gruppe eller en annen gruppe under samme området.  
   
--   Flytte et underområde til en ny plassering innenfor en gruppe under et annet område.  
+-   Flytt et underområde til en ny plassering i gruppen under et annet området.  
   
--   Flytte en gruppe til en ny plassering innenfor det samme området.  
+-   Flytt en gruppe til en ny plassering i samme område.  
   
--   Flytte en gruppe til en ny plassering i et annet område.  
+-   Flytt en gruppe til en ny plassering i et annet område.  
   
--   Flytte et område til en ny plassering.  
+-   Flytt et område til en ny plassering.  
   
-## <a name="clone-a-component-in-a-site-map"></a>Klone en komponent i et områdekart  
- Hvis du vil lage en kopi av en eksisterende komponent, velger du komponenten og deretter **Klon**.  Alle detaljer for den klonede komponenten er de samme som basiskomponenten bortsett fra ID og tittel. ID-en genereres tilfeldig. 
+## <a name="clone-a-component-in-a-site-map"></a>Klon en komponent i et områdekart  
+ Hvis du vil ta en kopi av en eksisterende komponent, velger du komponenten, og velger deretter **Klon** på verktøylinjen.  Alle detaljene til den klonede komponenten er de samme som grunnkomponenten, bortsett fra ID-en og tittelen. ID-en genereres tilfeldig. 
   
- Når du kloner et område, legges det klonede området til, til høyre for det merkede området. Når du kloner en gruppe, legges den klonede gruppen til, til høyre for den merkede gruppen. Når du kloner et underområde, legges det klonede underområdet til, under det merkede underområdet.  
+ Når du kloner et område, blir det klonede området lagt til til høyre for det gjeldende merkede området. Når du kloner en gruppe, blir den klonede gruppen lagt til til høyre for den gjeldende merkede gruppen. Når du kloner et underområde, blir det klonede underområdet lagt til nedenfor det gjeldende merkede underområdet.  
   
-## <a name="delete-an-area-group-or-subarea-from-a-site-map"></a>Slette et område, en gruppe eller et underområde fra et områdekart  
- Hvis du vil slette en komponent i et områdekart, velger du komponentflisen og deretter **Slett** på verktøylinjen. Når du sletter et område, slettes også alle grupper og underområder i området. På samme måte, når du sletter en gruppe, slettes gruppen og underområdene i denne.  
+## <a name="delete-an-area-group-or-subarea-from-a-site-map"></a>Slett en gruppe, et område eller underområde fra et områdekart  
+ Hvis du vil slette en områdekartkomponent, velger du komponenttittelen, og velger deretter **Slett** på verktøylinjen. Når du sletter et område, slettes også alle gruppene og underområdene i det området. Når du sletter en gruppe, slettes også gruppen og underområdene i gruppen.  
   
-## <a name="clients-supported"></a>Klienter som støttes  
- Følgende tabell beskriver klientene som støttes for ulike områdekart.  
+## <a name="clients-supported"></a>Støttede klienter  
+ Den følgende tabellen forklarer klientene som støttes for ulike områdekart.  
  
-|Områdekart|Klienter som støttes|  
+|Områdekart|Støttede klienter|  
 |---------------|-----------------------|  
-|Nye apper| Enhetlig grensesnitt og Dynamics 365 Customer Engagement-webappen |  
-|Områdekart for den egendefinerte Dynamics 365-appen | Dynamics 365 customer engagement-webappen og Dynamics 365 for Outlook |  
-|Standard forretningsapper (Sales, Sales-hub, Customer Service, Customer Service-hub, Field Service, Project Service Automation)| Dynamics 365 Customer Engagement-webappen og Enhetlig grensesnitt|  
+|Nye apper| Forenet grensesnitt og nettappen Dynamics 365 Customer Engagement |  
+|Områdekart for Dynamics 365 – egendefinert app | Nettappen Dynamics 365 Customer Engagement og Dynamics 365 for Outlook |  
+|Standard forretningsapper (Sales, Sales Hub, Customer Service, Customer Service Hub, Field Service, Project Service Automation)| Nettappen Dynamics 365 Customer Engagement og Forenet grensesnitt|  
  
   
 ### <a name="next-steps"></a>Neste trinn  
- [Opprette eller redigere en app](create-edit-app.md)   
- [Legge til eller redigere appkomponenter](add-edit-app-components.md)
+ [Opprett eller rediger en app](create-edit-app.md)   
+ [Legg til eller rediger appkomponenter](add-edit-app-components.md)

@@ -1,0 +1,1 @@
+Programblokkering for sammensatt brukergrensesnitt

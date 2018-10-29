@@ -1,0 +1,1 @@
+Microsoft gir ikke støtte for denne evalueringsfunksjonaliteten. Teknisk kundestøtte for Microsoft Dynamics 365 kan ikke hjelpe deg med problemer eller spørsmål. evalueringsfunksjonaliteten er ikke ment for bruk i produksjon, og er underlagt et separat [tilleggsvilkår for bruk](http://go.microsoft.com/fwlink/p/?LinkId=511446).

@@ -1,5 +1,5 @@
 ---
-title: Generer en lerretsapp i PowerApps fra SharePoint | Microsoft Docs
+title: Generer en lerretsapp fra en SharePoint-liste | Microsoft Docs
 description: Generer en lerretsapp i PowerApps automatisk for å behandle data i en SharePoint-liste
 author: AFTOwen
 manager: kvivek
@@ -7,29 +7,42 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 03/12/2018
+ms.date: 08/09/2018
 ms.author: anneta
-ms.openlocfilehash: cb68c454053a36f49b72afa1718ca0d67ad364af
-ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 3a229715d1041ca7d695c5c45f72631f2b4c67e9
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39469883"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42861550"
 ---
-# <a name="generate-a-canvas-app-in-powerapps-from-sharepoint-data"></a>Generer en lerretsapp i PowerApps fra SharePoint-data
+# <a name="generate-a-canvas-app-in-powerapps-from-a-sharepoint-list"></a>Generer en lerretsapp i PowerApps fra en SharePoint-liste
 
-Dette emnet beskriver hvordan du bruker PowerApps til å generere din første lerretsapp automatisk basert på en liste du oppretter i SharePoint. I denne appen kan du bla gjennom alle elementene i listen, vise detaljer for et enkelt element og opprette, oppdatere eller slette et element.
+Dette emnet beskriver hvordan du bruker PowerApps til å generere en lerretsapp automatisk basert på elementer i en SharePoint-liste. Du kan generere appen fra PowerApps eller SharePoint Online. Fra PowerApps kan du også generere en app basert på en liste i et lokalt SharePoint-område, hvis du [kobler deg til området](connect-to-sharepoint.md) gjennom en datagateway.
 
-Du kan lære konsepter og teknikker fra denne hurtigveiledningen hvis du har en liste i SharePoint. Hvis du vil følge denne hurtigveiledningen nøyaktig, kan du opprette en liste, kalt **SimpleApp**, som inneholder en kolonne med navnet **Tittel** i et SharePoint Online-område. I listen kan du opprette oppføringer for **Vanilla**, **Chocolate**, og **Strawberry**.
+Appen du genererer, inneholder tre skjermbilder:
 
-Du kan opprette en liste som er mye mer komplisert med mange kolonner av ulike typer, for eksempel tekst, datoer, tall og valuta. Prinsippene for generering av appen endres ikke. Du kan også generere en app fra en liste i et lokalt SharePoint-område hvis du [kobler deg til området](connect-to-sharepoint.md) gjennom en datagateway.
+- Du kan bla gjennom alle elementene i listen, på bla gjennom-skjermen.
+- Du kan vise all informasjonen om et enkelt element i listen, på detaljer-skjermen.
+- Du kan opprette et element eller oppdatere informasjon om et eksisterende element, på rediger-skjermen.
 
-Hvis du ikke har en lisens for PowerApps, kan du [registrere deg gratis](../signup-for-powerapps.md).
+Du kan ta i bruk konseptene og teknikkene i dette emnet i enhver liste i SharePoint. Slik gjør du det:
 
-## <a name="generate-an-app"></a>Å generere en app
+1. Opprett en liste med navn **SimpleApp** i et SharePoint Online-område.
+2. I kolonnen med navnet **Tittel** kan du opprette oppføringer for **Vanilje**, **Sjokolade** og **Jordbær**.
+
+Prinsippene for å generere en app endres ikke selv om du oppretter en liste som er mye mer komplisert med mange kolonner av ulike typer, for eksempel tekst, datoer, tall og valuta.
+
+> [!IMPORTANT]
+> PowerApps støtter ikke alle typer SharePoint-data. Hvis du vil ha mer informasjon, kan du se [Kjente problemer](connections/connection-sharepoint-online.md#known-issues).
+
+## <a name="generate-an-app-from-within-powerapps"></a>Generer en app i PowerApps
+
 1. Logg deg på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-
-    ![Hjemmesiden for PowerApps](./media/app-from-sharepoint/sign-in.png)
 
 1. Under **Lag apper som disse** holder du pekeren over **Begynn fra data**, og deretter velger du **Lag denne appen**.
 
@@ -49,14 +62,41 @@ Hvis du ikke har en lisens for PowerApps, kan du [registrere deg gratis](../sign
 
 1. Under **Velg en liste** velger du **SimpleApp**, og deretter velger du **Koble**.
 
-Etter noen minutter åpnes appen til Bla gjennom-skjermen, som viser elementene du opprettet i listen. Hvis listen har data i flere kolonner enn bare **Tittel**, viser appen disse dataene. Nær toppen av skjermen viser en tittellinje ikoner for å oppdatere listen, sortere listen og opprette et element i listen. Under tittellinjen inneholder en søkeboks muligheten til å filtrere listen basert på teksten du skriver eller limer inn. 
+    Etter noen minutter åpnes appen til Bla gjennom-skjermen, som viser elementene du opprettet i listen. Hvis listen har data i flere kolonner enn bare **Tittel**, viser appen disse dataene. Nær toppen av skjermen viser en tittellinje ikoner for å oppdatere listen, sortere listen og opprette et element i listen. Under tittellinjen inneholder en søkeboks muligheten til å filtrere listen basert på teksten du skriver eller limer inn. 
 
-![Bla gjennom-skjermen](./media/app-from-sharepoint/browse-screen.png)
+    ![Bla gjennom-skjermen](./media/app-from-sharepoint/browse-screen.png)
 
-Du vil sannsynligvis gjøre flere endringer før du bruker denne appen eller deler den med andre. Som en anbefalt fremgangsmåte lagrer du arbeidet ditt så langt ved å trykke på Ctrl-S før du fortsetter. Gi appen et navn, og velg deretter **Lagre**.
+    Du vil sannsynligvis gjøre flere endringer før du bruker denne appen eller deler den med andre. Som en anbefalt fremgangsmåte lagrer du arbeidet ditt så langt ved å trykke på Ctrl-S før du fortsetter. Gi appen et navn, og velg deretter **Lagre**.
+
+## <a name="generate-an-app-from-within-sharepoint-online"></a>Generer en app i SharePoint Online
+
+Hvis du fra kommandolinjen i SharePoint Online oppretter en app basert på en egendefinert liste, vises appen som en visning av den aktuelle listen. Du kan også kjøre appen på iOS- og Android-enheter, og i nettlesere.
+
+1. Åpne en egendefinert liste i SharePoint Online, åpne en egendefinert liste, velg **PowerApps** på kommandolinjen. Deretter velger du **Opprett en app**.
+
+    ![Å opprette en app](./media/app-from-sharepoint/generate-new-app.png)
+
+2. Skriv inn navn på appen i panelet som vises, og velger deretter **Opprett**.
+
+    ![Gi navn til appen](./media/app-from-sharepoint/app-name.png)
+
+    En ny fane vises i nettleseren som viser appen som du genererte automatisk ved hjelp av SharePoint-listen. Appen vises i PowerApps Studio, der du kan tilpasse den.
+
+    ![Standardapp](./media/app-from-sharepoint/default-app.png)
+
+3. (Valgfritt) Oppdater nettleserfanen for SharePoint-listen (ved å velge den og for eksempel trykke på F5), og følg deretter denne fremgangsmåten for å kjøre eller administrere appen:
+
+    - Hvis du vil kjøre appen (i en separat nettleserfane), velger du **Åpne**.
+    - Hvis du vil la andre i organisasjonen kjøre appen, velger du **Gjør denne visningen offentlig**.
+
+        Hvis du vil la andre redigere appen, [deler du den](share-app.md) med **Kan redigere**-tillatelser.
+
+    - Hvis du vil fjerne visningen fra SharePoint, velger du **Fjern denne visningen**.
+
+        Hvis du vil fjerne appen fra PowerApps, [sletter du appen](delete-app.md).
 
 ## <a name="next-steps"></a>Neste trinn
-I denne hurtigveiledningen opprettet du en app for å behandle data i en SharePoint-liste. Som et neste trinn kan du generere en app fra en mer komplisert liste og deretter tilpasse appen (fra skjermbildet Bla gjennom og videre) for å passe bedre til dine behov.
+I dette emnet opprettet du en app for å behandle data i en SharePoint-liste. Som et neste trinn kan du generere en app fra en mer komplisert liste og deretter tilpasse appen (fra skjermbildet Bla gjennom og videre) for å passe bedre til dine behov.
 
 > [!div class="nextstepaction"]
 > [Tilpasse et standard Bla gjennom-skjermbilde](customize-layout-sharepoint.md)

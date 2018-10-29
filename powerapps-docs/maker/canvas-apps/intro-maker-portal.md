@@ -1,132 +1,133 @@
 ---
-title: Innføring i powerapps.com | Microsoft Docs
+title: Logg deg på for første gang | Microsoft Docs
 description: Et nytt hjem for alle som utvikler apper.
-author: linhtranms
+author: AFTOwen
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 10/28/2016
-ms.author: litran
-ms.openlocfilehash: 9c1b6bde62f0260dca7eba1d723049aadc3e72c9
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.reviewer: ''
+ms.date: 08/06/2018
+ms.author: anneta
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 3ecf468f8c1b15d20b144aa127fe31c13dba484e
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195339"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42849753"
 ---
-# <a name="introduction-to-powerappscom"></a>Innføring i powerapps.com
-PowerApps-teamet introduserer på nytt [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) som det nye hjemmet for apputviklere. Vi har utformet siden på nytt som hovedsiden for kreative som enkelt vil komme i gang med utvikling av apper, bruke Microsoft Common Data Service og administrere appene sine på ett og samme sted. I denne artikkelen veileder jeg deg gjennom følgende:
+# <a name="sign-in-to-powerapps-for-the-first-time"></a>Logg deg på PowerApps for første gang
 
-* toppteksten
-* hjemmesiden
-* **Apper**-siden
+Når du logger deg på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), ser du en rekke alternativer for å opprette dine egne apper, åpne apper du eller andre har opprettet, og utføre relaterte oppgaver. Disse oppgavene varierer fra helt enkle, som å identifisere lisensen eller lisensene som gir deg tilgang, til litt mer avanserte funksjoner som å opprette egendefinerte tilkoblinger til bestemte datakilder.
 
-## <a name="header"></a>Topptekst
-Når du registrerer deg og logger deg på powerapps.com første gang, vil du legge merke til den nye toppteksten til siden. Office-rutemenyen ligger nær topptekstens venstre kant. Herfra får du rask tilgang til alle andre Office-produkter som PowerPoint, OneNote og Word, i tillegg til Microsoft Flow og Dynamics 365.
+Du kan velge alternativer i tre generelle områder:
 
-![Rutemeny for topptekst](./media/intro-maker-portal/waffle.png)
+- toppteksten langs toppen av siden
 
-Nær topptekstens høyre kant vil du først se en rullegardinliste for miljøer, hvor du enkelt kan skifte mellom miljøer. **Standardmiljø** er sannsynligvis valgt som standard. [Finn ut mer om miljøer](../../administrator/environments-overview.md).
+    ![Topptekst](media/intro-maker-portal/header.png)
 
-![Topptekst – Miljø](./media/intro-maker-portal/environment.png)
+- navigasjonsfeltet langs den venstre kanten av siden
 
-Ved siden av rullegardinlisten for miljøer vil du se et nedlastingsikon. Klikk eller trykk på dette ikonet for å vise en dialogboks med koblinger for å laste ned PowerApps for mobilenheter (for iOS- eller Android-enheter).
+    ![Navigasjonsfelt](media/intro-maker-portal/nav-bar.png)
 
-![Topptekst – Nedlasting](./media/intro-maker-portal/downloads2.png)
+- de store ikonene som er veldig tydelig midt på siden
 
-Ved siden av nedlastingsikonet vil du se et tannhjulikon for innstillinger. Klikk eller trykk på dette ikonet for å vise koblinger til tilkoblinger, gatewayer og administrasjonssenteret.
+    ![Midten av hjemmesiden](media/intro-maker-portal/center-area.png)
 
-![Topptekst – Brukerinnstillinger](./media/intro-maker-portal/settings_items2.png)
+For best resultat begynner du ved å sikre at hjemmesiden er angitt til riktig miljø.
 
-Ved siden av innstillinger vises et spørsmålstegnikon for hjelp. Klikk eller trykk på dette ikonet for å vise koblinger til Veiledet opplæring, Dokumentasjon, Støtte, Fellesskap, Blogger, Juridisk og Personvern.
+## <a name="choose-an-environment"></a>Velg et miljø
 
-![Topptekst – Help](./media/intro-maker-portal/help_items2.png)
+Enten du oppretter en app, en flyt, en datatilkobling eller en enhet i Common Data Service for apper, er mye av det du gjør i PowerApps forbeholdt et bestemt miljø. Miljøer skaper grenser mellom ulike typer arbeid. En organisasjon kan for eksempel ha separate miljøer for ulike avdelinger. Mange organisasjoner bruker miljøer til å separere apper som fremdeles er under utvikling, fra de som er klar for omfattende bruk. Du har kanskje tilgang til flere miljøer eller bare ett. Hvis du har de riktige tillatelsene, kan det hende du kan opprette dine egne miljøer.
 
-## <a name="homepage"></a>Hjemmeside
-Når du logger inn på [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), vil du som standard komme til hjemmesiden. Vi har endret oppsettet på denne hjemmesiden for å hjelpe deg med å komme raskt i gang, enten du utvikler apper eller vil utforske Common Data Service.
+Hvis du vil bekrefte hvilket miljø du befinner deg i, finner du miljøbryteren til høyre for toppteksten.
 
-Hvis du har logget deg på PowerApps tidligere og kjørt eller utviklet noen apper, vil den første inndelingen du ser på hjemmesiden være en liste over **Nylig brukte apper**. De er sortert etter datoen da de sist ble åpnet.
+![Miljøbryter](media/intro-maker-portal/environment-switcher.png)
 
-![Nylig brukte apper](./media/intro-maker-portal/recentapps2.png)
+Hvis du oppretter en app i ett miljø, kan du ikke se den fra et annet miljø. De som ønsker å kjøre appen din, må i tillegg ha tilgang til miljøet der appen ble opprettet.
 
-Nær hjørnet øverst til høyre finner du en pil med navnet **Apper** som kobler deg direkte til **Apper**-siden, slik at du kan se alle appene dine.
+> [!IMPORTANT]
+> Sørg for at du befinner deg i riktig miljø *før* du oppretter en app, en fly eller en lignende komponent. Det er ikke enkelt å flytte komponenter fra ett miljø til et annet.
 
-Hvis du aldri har logget deg på, opprettet en app eller kjørt en app før, vil du ikke se inndelingen **Nylig brukte apper**. I stedet vil du se banneret **Opprett en app**.
+Hvis du vil ha mer informasjon, kan du se [Oversikt over miljøer](../../administrator/environments-overview.md).
 
-![Å opprette en app](./media/intro-maker-portal/createapp.png)
+## <a name="choose-an-app-type"></a>Velg an apptype
 
-Klikk eller trykk på **Komme i gang** på dette banneret for å vise alternativer for å opprette en app med bruk av **PowerApps Studio**.
+I PowerApps kan du opprette og kjøre disse apptypene:
 
-![Å opprette en app med modus](./media/intro-maker-portal/createmodal2.png)
+- **Lerretapper** støtter utforming av egendefinert brukergrensesnitt og tilkobling til data fra en rekke kilder.
+- **Modelldrevne apper** har et standard brukergrensesnitt, og kobler bare til data i Common Data Service (CDS) for apper. Du kan imidlertid opprette andre elementer, som visninger, instrumentbord og ulike typer forretningslogikk, på en enklere måte.
 
-Ved siden av **Slik kommer du i gang** finner du koblinger til våre opplæringsvideoer om hvordan du raskt kan opprette en app fra data (i enten SharePoint eller PowerApps) og deretter dele appen. Pil-koblingen **Finn ut mer** tar deg til et emne om hvordan du oppretter en app fra eksisterende data.
+**Hjemmesiden** viser som standard alternativer for oppretting og kjøring av lerretapper. Hvis du vil se modelldrevne alternativer i stedet for, velger du et miljø som har en CDS for apper-database, og du åpner deretter menyen nede til venstre.
 
-Nedenfor **Opprett en app**-banneret finner du banneret for **Bruk Microsoft Common Data Service**.
+![Veksle mellom lerret-apper og modelldrevne apper](media/intro-maker-portal/mode-switcher.png)
 
-![Microsoft Common Data Service](./media/intro-maker-portal/cds2.png)
+## <a name="play-or-edit-an-app"></a>Spill av eller rediger en app
 
-Under **Common Data Service** vil det vises en annen knapp, avhengig av lisensen eller tillatelsen din.
+Hvis du allerede har opprettet en app (eller noen andre har opprettet og delt den med deg), kan du spille den av eller redigere den fra **Apper**-siden.
 
-* Hvis **Start prøveversjon**-knappen vises, betyr det at du ikke har en PowerApps P2-lisens, som Common Data Service krever. Klikk eller trykk på denne knappen for å åpne siden hvor du kan registrere deg for en gratis, 90-dagers prøveversjon av denne lisensen. [Finn ut mer om PowerApps-lisenser](../signup-for-powerapps.md).
-* Hvis knappen **Slik kommer du i gang** vises, betyr det at du er i et miljø som ikke har en Common Data Service-database eller at du ikke har tilgang til den. Klikk eller trykk på denne knappen for å opprette et miljø og en database samtidig, slik at du kan begynne å bruke Common Data Services for appene dine. [Finn ut mer om oppretting av miljøer](../../administrator/environments-administration.md).
-  
-    ![Å opprette et miljø og en database](./media/intro-maker-portal/createenvanddb2.png)
-  
-    Hvis du ikke vil opprette et miljø, kan du alltid bytte til et miljø som du har tilgang til.
-* Hvis **Opprett database**-knappen vises, betyr det at du er i et miljø som ikke har en Common Data Service-database, men du har tillatelse til å opprette en.
-  
-    ![Å opprette en database](./media/intro-maker-portal/cds-createdb2.png)
-  
-    Hvis du klikker eller trykker på denne knappen, klargjøres en database for dette miljøet.
-  
-    ![Å opprette en database](./media/intro-maker-portal/cds_createdb22.png)
-* Hvis knappen **Bla gjennom enheter** vises, betyr det at du er i et miljø som allerede har en klargjort en Common Data Service-database, og at du har tilgang til den. Klikk eller trykk på denne knappen for å åpne **Enheter**-siden.
-  
-    ![Å opprette en database](./media/intro-maker-portal/cds_browseentities2.png)
+- Du finner en lerretsapp ved å filtrere basert på vilkår som om du åpnet den nylig.
 
-Nedenfor banneret **Bruk Microsoft Common Data Service** ser du et sett med eksempelapper og tilkoblede eksempelapper vi har opprettet som du kan bruke.
+    ![Liste over lerretsapper](media/intro-maker-portal/org-apps.png)
 
-* **Eksempelapper** – eksempelapper ble utviklet for forskjellige bedriftsscenarioer med enten telefon- eller nettbrettoppsett. Du kan klikke på en app for raskt å se en oversikt over hva appen gjør, hvilket oppsett appen ble utviklet for, og hva slags egenskaper appen presenterer, for eksempel kamera, GPS og alternativknapper. Dette er en rask måte for nye brukere å finne ut om egenskapene til PowerApps på, og du kan bruke en mal for å opprette en identisk app i PowerApps Studio.
-  
-    ![Eksempelapper](./media/intro-maker-portal/sampleapps2.png)
-* **Tilkoblede eksempelapper** – disse appene kobler til dataen din via en datatilkobling som for eksempel Office 365, Salesforce, Trello og Wunderlist. Dette settet med apper er forskjellig fra eksempelappene over. Når du klikker eller trykker på en tilkoblet eksempelapp, klargjør du faktisk en ny forekomst av appen (tenk på den som en mal). Den vil be deg om å oppgi legitimasjon for å koble til dataene dine. Det flotte med en tilkoblet eksempelapp er at en forekomst klargjøres for deg nettopp her, og du kan åpne den i PowerApps Studio for å finne ut mer om hvordan den tilsvarende appen ble utviklet. Ulempen er at det kan ta ganske lang tid (opptil ett minutt) å opprette den. Så vær tålmodig, og vent på at nettleseren åpner når du klikker eller trykker på en tilkoblet eksempelapp.
-  
-    ![Tilkoblede eksempelapper](./media/intro-maker-portal/connectedsampleapps2.png)
+    Du kan også søke etter en app eller ved å skrive inn en eller flere tegn i søkefeltet, som vises nær hjørnet øverst til høyre. Når du finner appen du ønsker, velger du ellipseikonet for å vise alternativer for avspilling eller redigering av appen.
 
-## <a name="new-apps-page"></a>Ny Apper-side
-Du får tilgang til **Apper**-siden via det venstre navigasjonsfeltet på [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+    ![Ellipse-menyen](media/intro-maker-portal/ellipsis-menu.png)
 
-![Venstre navigasjon](./media/intro-maker-portal/leftnav2.png)
+- Du kan ikke filtrere listen over modelldrevne apper, men du kan søke etter en app ved å skrive inn en eller flere tegn i søkefeltet, som vises nær hjørnet øverst til høyre. Når du finner appen du ønsker, velger du ellipseikonet for å vise alternativer for avspilling eller redigering av appen.
 
-**Apper**-siden lot deg tidligere bytte mellom flisvisning og listevisning. Etter 26. oktober 2016 støttes bare listevisning.
+    ![Liste over modelldrevne apper med en åpen ellipse-meny](media/intro-maker-portal/model-driven-list.png)
 
-![Listevisning over apper](./media/intro-maker-portal/listview2.png)
+## <a name="create-an-app"></a>Å opprette en app
 
-Vær oppmerksom på at listevisningen kun viser apper i det valgte miljøet. Hvis du vil vise apper i et annet miljø, kan du bytte til det via miljøskifteren i toppteksten. [Finn ut mer om å skifte miljøer](working-with-environments.md).
+Det er flere måter du kan opprette apper på, fra **Hjemmesiden**:
 
-## <a name="whats-new"></a>Hva er nytt?
+- [generere en lerretsapp automatisk fra et sett med data](data-platform-create-app.md)
+- [egendefinere et forhåndsbygd utvalg av en lerretsapp](open-and-run-a-sample-app.md)
+- [bygge en lerretsapp fra en tom skjerm](data-platform-create-app-scratch.md)
+- [lage dine egne modelldrevne apper](../model-driven-apps/overview-model-driven-samples.md)
+- [egendefinere en forhåndsbygd utvalg for en modelldrevet app](../model-driven-apps/build-first-model-driven-app.md)
 
-* Hvis du klikker eller trykker på en app nå, åpnes den i PowerApps Studio i en ny fane.
-* Som standard viser **Apper**-siden alle appene du har tillatelse til å redigere. Velg **Alle apper**-filteret for å vise **Alle apper** (inkludert apper du kun kan bruke).
-  
-   ![Filter for apper](./media/intro-maker-portal/allapps_filter.png)
+## <a name="learn-more"></a>Mer informasjon
 
-Vi har også:
+Det er to måter du kan få mer informasjon om enten lerretsapper eller modelldrevne apper på:
 
-* **Apper jeg kan bruke**, som lister opp alle apper som har blitt delt med deg med Brukertillatelse (kan bare kjøre appen). Vær oppmerksom på at du kan også få tak i disse appene i [Dynamics 365](http://home.dynamics.com).
-* **Apper jeg eier**, som lister opp alle apper du har utviklet.
-* **Apper jeg bidrar til**, som lister opp alle apper som har blitt delt med deg med Bidragsytertillatelse.
-* **Eksempelapper**, som lister opp alle eksempelapper (ikke tilkoblede eksempelapper).
+- Velg **Lær** i venstre navigasjonsfelt.
+- Velg spørsmålstegnikonet i toppteksten.
 
-Hvis du klikker eller trykker på informasjonssirkelen, vil appens informasjonsside åpnes.
+    ![Liste over modelldrevne apper med en åpen ellipse-meny](media/intro-maker-portal/help-icon.png)
 
-![App-detaljer](./media/intro-maker-portal/ibubble.png)
+Begge alternativene viser koblinger til denne dokumentasjonssettet, PowerApps-fellesskapet (hvor du kan dele informasjon med brukere i andre organisasjoner), og PowerApps-bloggen (hvor de nyeste funksjonene kunngjøres).
 
-Hvis du klikker på ellipsen til en app, vil alternativer som Spill av, Rediger, Del og Detaljer vises.
+## <a name="other-common-tasks"></a>Andre vanlige oppgaver
 
-![App-alternativer](./media/intro-maker-portal/ellipsis.png)
+Ved å velge alternativer i toppteksten og venstre navigasjonsfelt, kan du gjøre mer enn bare å opprette og åpne apper.
 
-Det er hovedsaklig det som er nytt på powerapps.com, som er rettet mot de som utvikler apper. Vi håper dette er nyttig for deg. Legg gjerne inn en kommentar om hva du liker så langt, og hva du har lyst til å se. Vi setter stor pris på tilbakemelding fra deg!
+### <a name="from-the-header"></a>Fra toppteksten
 
+- Velg PIL NED for å laste ned mobilklienten og andre klienter du kan bruke til å kjøre apper.
+
+    Hvis du vil ha mer informasjon, kan du se [Finn og kjør apper](../../user/index.md).
+
+- Velg tannhjulikonet for å utføre oppgaver som å koble til datakilder, identifisere PowerApps-lisensen eller -lisensene, og åpne siden der du kan utføre administrative oppgaver.
+
+    Hvis du vil ha mer informasjon, kan du se disse emnene:
+
+  - [Oversikt over koblinger for lerretsapper](connections-list.md)
+  - [Opprett og sertifiser egendefinerte koblinger for lerretsapper](register-custom-api.md)
+  - [Administrer en lokal datagateway](gateway-management.md)
+  - [Administrer PowerApps](../../administrator/index.md)
+  - [Lisensieringsoversikt](../../administrator/pricing-billing-skus.md)
+  - [Oversikt over hvordan du bygger en modelldrevet app](../model-driven-apps/model-driven-app-overview.md)
+
+### <a name="from-the-left-navigation-bar"></a>Fra venstre navigasjonsfelt
+
+Utvid funksjonene til appene ved å utføre disse oppgavene:
+
+- Administrer enheter, alternativsett og dataintegrering i [Common Data Service for apper](../common-data-service/data-platform-intro.md).
+- Konfigurer forretningslogikk i [Microsoft Flow](https://docs.microsoft.com/flow/getting-started).
+- Opprett, pakk inn og vedlikeholde [løsninger](../../developer/common-data-service/introduction-solutions.md).

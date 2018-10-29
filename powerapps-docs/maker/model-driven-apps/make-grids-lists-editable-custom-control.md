@@ -1,6 +1,6 @@
 ---
-title: Gjøre rutenett (lister) i modelldrevne apper redigerbare ved hjelp av Egendefinert kontroll for redigerbart rutenett med PowerApps | MicrosoftDocs
-description: Finn ut hvordan du bruker den egendefinerte kontrollen for redigerbart rutenett
+title: Gjør modelldrevne apprutenett (lister) redigerbare ved bruk av den egendefinerte kontrollen Redigerbart rutenett med PowerApps | MicrosoftDocs
+description: Lær hvordan du bruke den egendefinerte kontrollen Redigerbart rutenett
 ms.custom: ''
 ms.date: 06/27/2018
 ms.reviewer: ''
@@ -9,133 +9,134 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - powerapps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- powerapps
 ms.assetid: cefbc0c2-769b-4230-ab5a-b28a84630a42
 caps.latest.revision: 8
 author: Mattp123
 ms.author: matp
 manager: kvivek
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: 704280dbed2177ba9a5467e2897980f78c31b050
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: nb-NO
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39696578"
 ---
-# <a name="make-model-driven-app-grids-lists-editable-using-the-editable-grid-custom-control"></a>Gjøre rutenett (lister) i modelldrevne apper redigerbare ved hjelp av Egendefinert kontroll for redigerbart rutenett
+# <a name="make-model-driven-app-grids-lists-editable-using-the-editable-grid-custom-control"></a>Gjør modelldrevne apprutenett (lister) redigerbare ved bruk av den egendefinerte kontrollen Redigerbart rutenett
 
-I tidligere versjoner av Dynamics CRM kunne ikke brukerne skrive inn data direkte i rutenett (også kalt lister) eller delrutenett i skjemaer. De måtte velge oppføringen i rutenettet for å kunne åpne et skjema, redigere dataene, og deretter lagre, som krevde flere trinn. Med redigerbare rutenett kan brukere gjøre omfattende redigering direkte fra rutenett og delrutenett, enten de bruker en webapp, et nettbrett eller en telefon.  
+I tidligere versjoner av Dynamics CRM kunne ikke brukerne angi data direkte i rutenett (noen ganger kalt lister) eller delrutenett i skjemaer. De måtte velge posten i rutenettet for å åpne et skjema, redigere dataene og deretter lagre, noe som krevde flere trinn. Med redigerbare rutenett kan brukerne gjøre omfattende innebygde redigeringer direkte fra rutenett og delrutenett, enten de bruker en nettapp, et nettbrett eller en telefon.  
   
  ![Eksempler på redigerbart rutenett](media/editable-grid-examples.png "Eksempler på redigerbart rutenett")  
   
- Når redigerbare rutenett er aktivert gjennom den egendefinerte kontrollen for redigerbare rutenett, kan brukere redigere de fleste typer felt, inkludert grunnleggende oppslagsfelt og alternativsett.  
+ Når du aktiverer redigerbare rutenett gjennom den egendefinerte kontrollen Redigerbart rutenett, kan brukerne redigere de fleste felttyper i tillegg til grunnleggende oppslagsfelter og alternativsett.  
 
-**Støtte for redigerbare rutenett:**
+**Redigerbare rutenett støtter:**
   
--   Innebygd redigering av oppføringer på enhets- eller delrutenettnivå (inkluderer egendefinerte enheter)  
+-   Innebygd redigering av poster på enhets- eller delrutenettsnivå (inkludert egendefinerte enheter)  
   
 -   Systemvisninger og personlige visninger  
   
--   Webklienter og mobile klienter  
+-   Nett- og mobilklienter  
   
--   Navigering med tastatur eller mus  
+-   Navigasjon med tastatur eller mus  
   
--   Gruppering og sortering (du kan gruppere etter / sortere etter enhver kolonne i gjeldende visning)  
+-   Gruppering og sortering (du kan gruppere/sortere etter enhver kolonne i den gjeldende visningen)  
   
 -   Filtrering  
   
--   Flytte og endre størrelsen på kolonner  
+-   Flytting og endring av størrelsen på kolonner  
   
 -   Paginering  
   
--   Lagring av endringer fra én økt til en annen for gruppering, sortering, filtrering, paginering og flytting og endring av størrelsen på kolonner  
+-   Lagring av endringer fra én økt til en annen for gruppering, sortering, filtrering, paginering, og flytting og endring av størrelsen på kolonner  
   
--   Oppslagkonfigurasjon  
+-   Oppslagskonfigurasjon  
   
--   Beregnede felt og felt for beregnet verdi  
+-   Beregnede felter og felter for beregnet verdi  
   
--   Forretningsregler (Vis feilmelding, Angi feltverdi, Angi som nødvendig for selskapet, Angi standardverdi, Lås eller lås opp felt)  
+-   Forretningsregler (Vis feilmelding, Angi feltverdi, Angi nødvendig for selskapet, Angi standardverdi, Lås eller lås opp felt)  
   
 -   JavaScript-hendelser  
   
 -   Aktivering eller deaktivering av celler basert på sikkerhetsrolle  
   
--   Brukere kan fortsatt bruke søk og diagrammer og får tilgang til handlingslinjen som med skrivebeskyttede rutenett  
+-   Brukerne kan fortsatt bruke søke og diagrammer, og de får tilgang til handlingsfeltet på lik linje med skrivebeskyttede rutenett  
   
-## <a name="make-main-grids-editable"></a>Gjøre hovedrutenett redigerbare  
+## <a name="make-main-grids-editable"></a>Gjøre primære rutenett redigerbare  
   
-1.  Åpne [løsningsutforskeren](advanced-navigation.md#solution-explorer).  
+1.  Åpne [løsningsutforsker](advanced-navigation.md#solution-explorer).  
   
-2.  I **Enheter**-listen åpner du den aktuelle enheten, velger kategorien **Kontroller** og velger deretter **Legg til kontroll**.  
+2.  Åpne riktig enhet fra **Enheter**-listen, velg **Kontroller**-fanen, og velg deretter **Legg til kontroll**.  
   
-     ![Legg til egendefinert kontroll for redigerbare rutenett](media/add-editable-grids-custom-control.png "Legg til egendefinert kontroll for redigerbare rutenett")  
+     ![Legg til den egendefinerte kontrollen Redigerbart rutenett](media/add-editable-grids-custom-control.png "Legg til den egendefinerte kontrollen Redigerbart rutenett")  
   
-3.  I dialogboksen **Legg til kontroll** velger du **Redigerbart rutenett** og velger deretter **Legg til**.  
+3.  Merk av for **Redigerbart rutenett** i dialogboksen **Legg til kontroll**, og velg deretter **Legg til**.  
   
-4.  I **Redigerbart rutenett**-raden som er lagt til, velger du formfaktoren(e) du vil bruke rutenettet på. Dette gjør kontrollen for redigerbart rutenett til standardkontroll for valgt(e) formfaktor(er).  
+4.  Velg formfaktoren(e) som du vil ta i bruk rutenettet for, i **Redigerbart rutenett**-raden som ble lagt til. Dette gjør den egendefinerte kontrollen Redigerbart rutenett til standardkontrollen for de(n) utvalgte formfaktoren(e).  
   
-     ![Rad i redigerbart rutenett med formfaktorutvalg](media/editable-grid-row-wit-factor-selection.png "Rad i redigerbart rutenett med formfaktorutvalg")    
+     ![Redigerbart rutenett-rad med utvalg formfaktor](media/editable-grid-row-wit-factor-selection.png "Redigerbart rutenett-rad med utvalg formfaktor")    
 
    > [!NOTE]
-   >  Under kjøring kan brukerne veksle mellom redigerbare rutenett og skrivebeskyttede rutenett.  
+   >  Brukerne kan veksle mellom redigerbare rutenett og skrivebeskyttede rutenett under kjøring.  
       
-5.  Hvis du vil legge til et oppslag, går du til alternativgruppen **Redigerbart rutenett**, velger **Legg til oppslag**, og deretter i dialogboksen **Konfigurer egenskapen «Legg til oppslag»**:  
+5.  Hvis du vil legge til oppslag, velger du **Legg til oppslag** i **Redigerbart rutenett**-alternativgruppen, og deretter i dialogboksen **Konfigurer egenskapen «Legg til oppslag»**:  
   
-    1.  I listen **Tilgjengelige visninger** velger du visningen du vil legge til oppslaget for (velg for eksempel **Mine aktive forretningsforbindelser**).  
+    1.  Velg visningen du vil legge til oppslaget i (for eksempel, velg **Mine aktive kontoer**), i **Tilgjengelige visninger**-listen.  
   
-    2.  I listen **Tilgjengelige kolonner** velger du oppslagskolonnen du vil legge til (velg for eksempel**Primær kontakt**).  
+    2.  Velg oppslagskolonnen du vil legge til (for eksempel, velg**Hovedkontakt**), i **Tilgjengelige kolonner**-listen.  
   
-    3.  I listen **Standardvisning** velger du datakilden for oppslagsfeltet.  
+    3.  Velg datakilden for oppslagsfeltet i **Standardvisning**-listen.  
   
-    4.  Hvis du vil begrense oppføringene som vises, merker du av for **Bare vis oppføringer hvor**, og velger deretter kriteriene fra listen. Velg deretter **OK**.  
+    4.  Hvis du ønsker å begrense postene som vises, merker du av for **Bare vis poster der**. Deretter velger du vilkårene fra listen, og velger **OK**.  
   
-         ![Legge til oppslag i kontrollen Redigerbart rutenett](media/add-lookup-in-editable-grid-control.png "Legge til oppslag i kontrollen Redigerbart rutenett")  
+         ![Legg til oppslag Redigerbart rutenett-kontrollen](media/add-lookup-in-editable-grid-control.png "Legg til oppslag Redigerbart rutenett-kontrollen")  
      
-6.  Hvis du har et nestet rutenett, velger du blyantknappen for **Nestet rutenettvisning**, og deretter velger du enheten og visningen for det nestede rutenettet. For **Overordnet ID for nestet rutenett** velger du relasjonen for enhetene. Feltet ParentAccountID knytter for eksempel sammen enhetene **Forretningsforbindelse** og **Kontakt**.  
+6.  Hvis du har et nestet rutenett, velger du blyantknappen for **Nestet rutenettvisning**, og deretter velger du enheten og visningen for det nestede rutenettet. Velg relasjonen for enhetene for **Overordnet ID for nestet rutenett**. ParentAccountID-feltet kobler for eksempel sammen **Konto**- og **Kontakt**-enhetene.  
   
     > [!NOTE]
-    >  Nestede rutenett er bare tilgjengelige for telefoner og nettbrett, ikke weben.  
+    >  Nestede rutenett er bare tilgjengelig for telefoner og nettbrett, ikke på nettet.  
   
-7.  Hvis du ikke vil at brukeren skal kunne gruppere data etter en kolonne i visningen (du vil spare plass for eksempel), velger du blyantknappen i **Grupper etter kolonne**-raden, og deretter i **Konfigurer egenskapen "Grupper av kolonne"** velger **Deaktivert** og velger deretter **OK**.  
+7.  Hvis du ikke vil la brukeren gruppere data etter en hvilken som helst kolonne i visningen (du ønsker å spare plass, for eksempel), velger du blyantknappen i **Grupper etter kolonne**-raden. Deretter velger du **Deaktivert** i dialogboksen **Konfigurer egenskapen «Grupper etter kolonne»**. Til slutt velger du**OK**.  
   
     > [!TIP]
     >  Dette er mest nyttig for delrutenett i skjemaer.  
   
-8.  Hvis du vil legge til JavaScript-hendelser, velger du kategorien **Hendelser**, og deretter velger du de aktuelle enhetene, feltene og hendelsene. Mer informasjon: [Dokumentasjon for utviklere: Bruke redigerbare rutenett](/dynamics365/customer-engagement/developer/customize-dev/use-editable-grids-dynamics-365.md)  
+8.  Hvis du vil legge til JavaScript-hendelser, velger du **Hendelser**-fanen. Deretter velger du de riktige enhetene, feltene og hendelsene. Mer informasjon: [Utviklerdokumentasjon: Bruk redigerbare rutenett](/dynamics365/customer-engagement/developer/customize-dev/use-editable-grids-dynamics-365.md)  
   
-     ![Legge til hendelser i kontrollen Redigerbart rutenett](media/add-events-in-editable-grid-control.png "Legge til hendelser i kontrollen Redigerbart rutenett")  
+     ![Legg til hendelser i Redigerbart rutenett-kontrollen](media/add-events-in-editable-grid-control.png "Legg til hendelser i Redigerbart rutenett-kontrollen")  
   
-9. Hvis du vil lagre arbeidet, velger du **Lagre** på handlingslinjen.  
+9. Hvis du vil lagre arbeidet ditt, velger du **Lagre** på handlingsfeltet.  
   
-10. Når du er klar til å gjøre endringer tilgjengelige for teamet, velger du **Publiser** på handlingslinjen.  
+10. Når du er klar til å gjøre endringene tilgjengelig for teamet ditt, velger du **Publiser** på handlingsfeltet.  
   
-11. Hvis du vil teste endringene, går til visningen som du angav i trinn 5, og gjør deretter noen redigeringsendringer.  
+11. Hvis du vil teste endringene, går du til visningen du angav i trinn 5. Deretter utfører du enkelte innebygde endringer.  
   
-## <a name="make-a-sub-grid-on-a-form-editable"></a>Gjøre et delrutenett på et skjema redigerbart
+## <a name="make-a-sub-grid-on-a-form-editable"></a>Gjør et delrutenett på et skjema redigerbart
 
 > [!NOTE] 
-> - For å lagre en endring i redigerbart rutenett i et delrutenett, må brukeren eksplisitt lagre før navigering ut av skjemaet.
-> - Hvis du bruker gamle skjemaer (versjoner før Dynamics CRM 2016) og aktiverer et redigerbart rutenett for et delrutenett, gjengis ikke det redigerbare delrutenettet. Hvis det er nødvendig, kan systemansvarlige deaktivere gamle skjemaer i systeminnstillingene.
+> - Hvis brukeren lagrer en endring i et redigerbart rutenett i et delrutenett, må vedkommende uttrykkelig lagre før de lukker skjemaet.
+> - Hvis du bruker eldre skjemaer (versjoner før Dynamics CRM 2016) og aktiverer et redigerbart rutenett på et delrutenett, gjengis ikke det redigerbare delrutenettet. Systemansvarlige kan slå av eldre skjemaer i systeminnstillinger, ved behov.
   
-1.  Åpne [løsningsutforskeren](advanced-navigation.md#solution-explorer).  
+1.  Åpne [løsningsutforsker](advanced-navigation.md#solution-explorer).  
   
 2.  Åpne skjemaet som inneholder delrutenettet.  
   
-3.  Velg den aktuelle kontrollen, og velg deretter **Endre egenskaper** på båndet.  
+3.  Velg den riktige kontrollen, og velg deretter **Endre egenskaper** på båndet.  
   
-4.  I dialogboksen **Angi egenskaper** velger du **Kontroller**, velger **Legg til kontroll** og følger deretter de samme trinnene som er oppført ovenfor.  
+4.  Velg **Kontroller** i dialogboksen **Angi egenskaper**, velg **Legg til kontroll**, og deretter følger du de samme trinnene som er oppført ovenfor.  
   
 ## <a name="supported-standard-entities"></a>Støttede standardenheter  
   
 ||||  
 |-|-|-|  
-|**Web/nettbrett/telefon**|**Bare nettbrett/telefon**|**Bare Web**|  
-|Forretningsforbindelse<br /><br /> Avtale<br /><br /> Ressurs som kan reserveres<br /><br /> Bestilling av ressurs som kan reserveres<br /><br /> Overskrift for bestilling av ressurs som kan reserveres<br /><br /> Kategori for ressurs som kan reserveres<br /><br /> Kategoritilknytning for ressurs som kan reserveres<br /><br /> Kjennetegn for ressurs som kan reserveres<br /><br /> Ressursgruppe som kan reserveres<br /><br /> Bestillingsstatus<br /><br /> Sak<br /><br /> Kategori<br /><br /> Kjennetegn<br /><br /> Konkurrent<br /><br /> Kontakt<br /><br /> E-post<br /><br /> Rettighet<br /><br /> Tilbakemelding<br /><br /> Faktura<br /><br /> Kunnskapsartikkel<br /><br /> Visninger av kunnskapsartikkel<br /><br /> Kunnskapsbaseoppføring<br /><br /> Kundeemne<br /><br /> Salgsmulighet<br /><br /> Ordre<br /><br /> Telefonsamtale<br /><br /> Prisliste<br /><br /> Produkt<br /><br /> Kø<br /><br /> Tilbud<br /><br /> Rangeringsmodell<br /><br /> Rangeringsverdi<br /><br /> KPI-forekomst for serviceavtale<br /><br /> Sosial aktivitet<br /><br /> Sosial profil<br /><br /> Synkroniseringsfeil<br /><br /> Oppgave<br /><br /> Team<br /><br /> Bruker|Aktivitet<br /><br /> Vedlegg<br /><br /> Regelelement for kanaltilgangsprofil<br /><br /> Konkurrentadresse<br /><br /> Tilkobling<br /><br /> Tilkoblingsrolle<br /><br /> E-postsignatur<br /><br /> E-postmal<br /><br /> Utløpt prosess<br /><br /> Fakturaprodukt<br /><br /> Kunnskapsartikkelhendelse<br /><br /> Salg for emne til salgsmulighet<br /><br /> Prosess<br /><br /> Postboks<br /><br /> Ny prosess<br /><br /> Obs!<br /><br /> Salgsmulighetsprodukt<br /><br /> Salgsprosess for salgsmulighet<br /><br /> Ordreprodukt<br /><br /> Organisasjon<br /><br /> Prosess for telefon til sak<br /><br /> Prislisteelement<br /><br /> Køelement<br /><br /> Tilbudsprodukt<br /><br /> Sharepoint-dokument<br /><br /> Oversettelsesprosess|Kampanje<br /><br /> Kampanjeaktivitet<br /><br /> Kampanjesvar<br /><br /> Kanaltilgangsprofil<br /><br /> Regel for kanaltilgangsprofil<br /><br /> Kontrakt<br /><br /> Rettighetsmal<br /><br /> Ekstern part<br /><br /> Telefaks<br /><br /> Brev<br /><br /> Markedsføringsliste<br /><br /> Posisjon<br /><br /> Hurtigkampanje<br /><br /> Regelmessig avtale<br /><br /> Salgsmateriell<br /><br /> Serviceavtale|  
+|**Nett/nettbrett/telefon**|**Bare nettbrett/telefon**|**Bare nett**|  
+|Konto<br /><br /> Avtale<br /><br /> Ressurs som kan reserveres<br /><br /> Bestilling av ressurs som kan reserveres<br /><br /> Bestillingsoverskrift for ressurs som kan reserveres<br /><br /> Kategori for ressurs som kan reserveres<br /><br /> Kategori for ressurse som kan reserveres<br /><br /> Karakteristikk for ressurs som kan reserveres<br /><br /> Ressursgruppe som kan reserveres<br /><br /> Bestillingsstatus<br /><br /> Tilfelle<br /><br /> Kategori<br /><br /> Karakteristikk<br /><br /> Konkurrent<br /><br /> Kontakt<br /><br /> E-post<br /><br /> Rettigheter<br /><br /> Tilbakemeldinger<br /><br /> Faktura<br /><br /> Kunnskapsartikkel<br /><br /> Kunnskapsartikkel-visninger<br /><br /> Kunnskapsbasepost<br /><br /> Kundeemne<br /><br /> Salgsmulighet<br /><br /> Ordre<br /><br /> Telefonsamtale<br /><br /> Prisliste<br /><br /> Produkt<br /><br /> Kø<br /><br /> Tilbud<br /><br /> Vurderingsmodell<br /><br /> Vurderingsverdi<br /><br /> SLA KPI-forekomst<br /><br /> Sosial aktivitet<br /><br /> Sosiale profil<br /><br /> Synkroniseringsfeil<br /><br /> Oppgave<br /><br /> Team<br /><br /> Bruker|Aktivitet<br /><br /> Vedlegg<br /><br /> Regelelement for kanaltilgangsprofil<br /><br /> Adresse for konkurrent<br /><br /> Tilkobling<br /><br /> Tilkoblingsrolle<br /><br /> E-postsignatur<br /><br /> E-postmal<br /><br /> Utløpt prosess<br /><br /> Fakturer produkt<br /><br /> Kunnskapsartikkel-hendelse<br /><br /> Salgsprosessen Kundeemne til<br /><br /> Prosess<br /><br /> Postboks<br /><br /> Ny prosess<br /><br /> Obs!<br /><br /> Produkt for salgsmulighet<br /><br /> Salgsprosessen Salgsmulighet<br /><br /> Bestill produkt<br /><br /> Organisasjon<br /><br /> Prosessen Telefon til sak<br /><br /> Prislisteelement<br /><br /> Køelement<br /><br /> Tilbud for produkt<br /><br /> Sharepoint-dokument<br /><br /> Oversettelsesprosess|Kampanje<br /><br /> Kampanjeaktivitet<br /><br /> Kampanjesvar<br /><br /> Kanaltilgangsprofil<br /><br /> Regel for kanaltilgangsprofil<br /><br /> Kontrakt<br /><br /> Rettighetsmal<br /><br /> Eksterne part<br /><br /> Fax<br /><br /> Brev<br /><br /> Markedsføringsliste<br /><br /> Plassering<br /><br /> Hurtigkampanje<br /><br /> Regelmessig avtale<br /><br /> Salgslitteratur<br /><br /> SLA|  
  
-##  <a name="data-types-that-arent-editable-in-an-editable-grid"></a>Datatyper som ikke er redigerbare i et redigerbart rutenett
-Følgende datatyper kan ikke redigeres i redigerbare rutenett: Kunde- og Partylist-oppslagsfelt, sammensatte (adresse)felt, tilstands-/statusfelt, felt knyttet til oppslagsenheter (for eksempel forretningsforbindelsesenheten inkluderer et kontaktoppslag, der Kontakt-feltet kan redigeres, men EmailAdress(Contact)-feltet kan ikke redigeres).  
+##  <a name="data-types-that-arent-editable-in-an-editable-grid"></a>Datatyper som ikke kan redigeres i et redigerbart rutenett
+De følgende datatypene kan ikke redigeres i redigerbare rutenett: Felter for Kunde og PartyList-oppslag, Sammensatt-felter (adresse), Delstats-/statusfelter, felter for enhetsoppslag (for eksempel, kontoenheten inneholder et kontaktoppslag der Kontakt-feltet kan redigeres, men EmailAdress(Contact)-feltet kan ikke redigeres).  
  
 ## <a name="next-steps"></a>Neste trinn  
- [Bruke hurtigtaster i redigerbare rutenett](https://docs.microsoft.com/dynamics365/customer-engagement/basics/keyboard-shortcuts#editable-grids-views)
+ [Bruk hurtigtaster i redigerbare rutenett](https://docs.microsoft.com/dynamics365/customer-engagement/basics/keyboard-shortcuts#editable-grids-views)
 

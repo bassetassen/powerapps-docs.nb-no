@@ -6,17 +6,23 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: reference
-ms.date: 07/31/2018
+ms.date: 08/23/2018
 ms.author: jamesol
-ms.openlocfilehash: e45b23d4efc474bcd48069b9823d1ef80cf5ea4a
-ms.sourcegitcommit: a0a8782d3c8d24cecf0796d405a61f745f0ffd91
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: 0d5d2cee770e03c4e587db0bff624f34395ed92c
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39367619"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42864432"
 ---
 # <a name="powershell-support-for-powerapps-preview"></a>PowerShell-støtte for PowerApps (forhåndsversjon)
-Forhåndsversjonen av PowerShell-cmdleter for apputviklere og administratorer er lansert, og nå kan du automatisere mange av overvåkings- og administrasjonsoppgavene som det i dag bare er mulig å utføre manuelt på [PowerApps](https://web.powerapps.com) eller [ PowerApps-administrasjonssenteret](https://admin.powerapps.com).
+Forhåndsversjonen av PowerShell-cmdleter for apputviklere og administratorer er lansert, og nå kan du automatisere mange av overvåkings- og administrasjonsoppgavene som det i dag bare er mulig å utføre manuelt på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) eller [ PowerApps-administrasjonssenteret](https://admin.powerapps.com).
 
 ## <a name="installation"></a>Installasjon
 Hvis du vil kjøre PowerShell-cmdleter for app-utviklere, gjør du følgende:
@@ -126,6 +132,15 @@ For å utføre administrasjonsoperasjonene i administrator-cmdletene må du ha f
 >Get-Help Get-AdminPowerAppEnvironment -Examples
 >Get-Help Get-AdminPowerAppEnvironment -Detailed
 >```
+
+## <a name="version-history"></a>Versjonslogg
+| Versjon | Dato | Oppdateringer |
+| --- | --- | --- |
+| 1.0 | 23.04.2018 | <ol> <li> Første oppstart av PowerApps-cmdleter for apputviklere (forhåndsversjon) inkludert administrative cmdleter for miljøer, apper, flyter, flytgodkjenning, tilkoblinger og egendefinerte koblinger </li> <li> Første start av PowerApps-cmdleter for administratorer (forhåndsversjon) inkludert administrative cmdleter for miljøer, apper og flyter </li></ol>|
+| 2.0 | 24.05.2018 | <ol> <li> Mindre feilrettinger i både cmdletene for apputviklere og administratorer </li> <li> La til følgende nye administrative cmdleter: <br> Get-AdminConnection <br> Remove-AdminConnection <br> Get-AdminConnectionRoleAssignment <br> Set-AdminConnectionRoleAssignment <br>Remove-AdminConnectionRoleAssignment <br>Get-AdminConnector  <br>Remove-AdminConnector <br>Set-AdminConnectorRoleAssignment  <br>Get-AdminConnectorRoleAssignment  <br>Remove-AdminConnectorRoleAssignment <br>Get-AdminPowerAppsUserDetails <br>Get-AdminFlowUserDetails <br>Remove-AdminFlowUserDetails <br>Get-AdminApiPolicy  <br>Add-AdminApiPolicy <br>Remove-AdminApiPolicy <br>Set-AdminApiPolicy <br>Add-ConnectorToBusinessDataGroup  <br>Remove-ConnectorFromBusinessDataGroup </li> </ol>
+| 3.0 | 30.07.2018 | <ol> <li> La til muligheten om å sende legitimasjon til Add-PowerAppsAccount (for å aktivere regelmessige skripting) </li> <li>  Mindre feilrettinger i både cmdletene for apputviklere og administratorer </li> <li> La til prefikset for «PowerApp» eller «Flyt» i hver cmdlet for apputviklere </li> <li>  La til prefikset for «AdminPowerApp» eller «Flyt» i hver cmdlet for administratorer </li> <li> La til følgende nye administrative cmdleter: <br> New-AdminPowerAppEnvironment <br> Set-AdminPowerAppEnvironmentDisplayName <br> New-AdminPowerAppCdsDatabase <br> Get-AdminPowerAppCdsDatabaseLanguages <br> Get-AdminPowerAppCdsDatabaseCurrencies <br> Get-AdminPowerAppEnvironmentLocations <br> Get-AdminPowerAppConnectionReferences <br> Set-AdminPowerAppAsFeatured <br> Clear-AdminPowerAppAsFeatured <br> Set-AdminPowerAppAsHero <br> Clear-AdminPowerAppAsHero <br> Set-AdminPowerAppApisToBypassConsent <br> Clear-AdminPowerAppApisToBypassConsent <br> Remove-AdminFlowApprovals </li></ol>
+| 4.0 | 15.08.2018 | La til en valgfri parameter i New-AdminPowerAppCdsDatabase for å gjøre funksjonen synkron, som standard (det vil si, den returnerer ikke før databasen er klargjort)
+| 5.0 | 24.08.2018 | Løste et problem der admin-cdmleter for Flow ikke returnerte data for enkelte brukere, basert på deres sikkerhetsinnstillinger
 
 ## <a name="questions"></a>Spørsmål?
 

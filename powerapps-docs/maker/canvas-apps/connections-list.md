@@ -1,6 +1,6 @@
 ---
-title: Oversikt over koblinger | Microsoft Docs
-description: Oversikt over alle tilgjengelige tilkoblinger du kan bruke til å utvikle apper
+title: Oversikt over koblinger for lerretsapper | Microsoft Docs
+description: Oversikt over alle tilgjengelige tilkoblinger du kan bruke til å utvikle lerretsapper
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,57 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 08/28/2017
 ms.author: lanced
-ms.openlocfilehash: 15da6ed2ce6b44c17645ac11d1b049b95e157703
-ms.sourcegitcommit: 47be38a23c96ba7478fd777065f5db41181af40b
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 20a725ff417ad1a36b83b6a24ca1aaecc667da14
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39164752"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42834566"
 ---
-# <a name="overview-of-connectors-for-powerapps"></a>Oversikt over koblinger for PowerApps
-Dataene er i kjernen for de fleste apper, inkludert de du oppretter i PowerApps. Dataene er lagret i en *datakilde*, og du importerer disse dataene inn i appen ved å opprette en *tilkobling*. Tilkoblingen bruker en bestemt *tilkobling* for å kommunisere med datakilden. PowerApps har koblinger for mange populære tjenester og lokale datakilder, inkludert SharePoint, SQL Server, Office 365, Salesforce, Twitter og mer. Hvis du vil komme i gang med å legge til data til en app, kan du se [Å legge til en datatilkobling i PowerApps](add-data-connection.md).
+# <a name="overview-of-canvas-app-connectors-for-powerapps"></a>Oversikt over lerretsappkoblinger for PowerApps
+Dataene er i kjernen for de fleste apper, inkludert de du oppretter i PowerApps. Dataene er lagret i en *datakilde*, og du importerer disse dataene inn i appen ved å opprette en *tilkobling*. Tilkoblingen bruker en bestemt *tilkobling* for å kommunisere med datakilden. PowerApps har koblinger for mange populære tjenester og lokale datakilder, inkludert SharePoint, SQL Server, Office 365, Salesforce og Twitter. Hvis du vil komme i gang med å legge til data i en lerretsapp, kan du se [Legg til en datatilkobling i PowerApps](add-data-connection.md).
 
-Tabellen nedenfor inneholder koblinger til mer informasjon om våre mest populære koblinger. Hvis du vil ha en fullstendig liste over koblinger, kan du se [Alle koblinger](#all-connectors).
+En kobling kan inneholde **tabeller** med data eller **handlinger**. Noen koblinger inneholder bare tabeller, noen inneholder bare handlinger, og noen inneholder begge. Koblingen kan også være enten en standardkobling eller egendefinert kobling.
+
+## <a name="tables"></a>Tabeller
+
+Hvis koblingen inneholder tabeller, legger du til datakilden. Deretter velger du tabellen i datakilden som du ønsker å administrere. PowerApps henter både tabelldata fra appen og oppdateringsdata fra datakilden. Du kan for eksempel legge til en datakilde som inneholder en tabell med navn **Leksjoner**. Deretter angir du **Elementer**-egenskapen til en kontroll, som et galleri eller skjema, til denne verdien i formellinjen:
+
+ ![Elementer-egenskapen for vanlig datakilde](./media/connections-list/ItemPropertyPlain.png)
+
+Du kan angi dataene som appen henter ved å tilpasse **Elementer**-egenskapen for kontrollen som viser deg dataene. Hvis vi fortsetter fra forrige eksempel, kan du sortere eller filtrere dataene i **Leksjoner**-tabellen ved bruk av navnet som et argument for **Søk**- og **SortByColumn**-funksjonene. I denne grafikken angis formelen som **Elementer**-egenskapen er angitt til, og den spesifiserer at dataene sorteres og filtreres basert på teksten i **TextSearchBox1**. 
+
+ ![Elementer-egenskapen for utvidet datakilde](./media/connections-list/ItemPropertyExpanded.png)
+
+Hvis du vil ha mer informasjon om hvordan du tilpasser formlene med tabeller, kan du se disse emnene:
+
+  [Å forstå datakilder i PowerApps](working-with-data-sources.md)<br> 
+  [Å generere en app fra Excel-data](get-started-create-from-data.md)<br> 
+  [Å opprette en app fra grunnen av](get-started-create-from-blank.md)<br>
+  [Slik fungerer tabeller og poster i PowerApps](working-with-tables.md)
+
+  > [!NOTE]
+  > Hvis du vil koble til data i en Excel-arbeidsbok, må den være lagret i en skylagringstjeneste som OneDrive. Hvis du vil ha mer informasjon, kan du se [Å koble til lagring i skyen fra PowerApps](connections/cloud-storage-blob-connections.md).
+
+## <a name="actions"></a>Handlinger
+
+Hvis koblingen inneholder handlinger, må du fremdeles velge datakildene som før. I stedet for å velge en tabell som neste trinn kan du heller koble til en kontroll i en handling manuelt, ved å redigere **Elementer**-egenskapen til kontrollen som viser dataene. Formelen som du angir **Elementer**-egenskapen for, angir handlingen som henter dataene. Appen henter for eksempel ikke data hvis du kobler til Yammer, og deretter angir **Elementer**-egenskapen til navnet på datakilden. Hvis du vil fylle ut en kontroll med data, angir du en handling som **GetMessagesInGroup(5033622).messages**.
+
+![Elementer-egenskapen for handling-datakilde](./media/connections-list/ItemPropertyAction.png)
+
+Hvis du må håndtere egendefinerte dataoppdateringer for handlingskoblinger, bygger du en formel som inkluderer **Patch**-funksjonen. Identifiser handlingen og feltene som du skal binde til handlingen, i formelen.  
+
+Hvis du vil ha mer informasjon om hvordan du tilpasser formlene for egendefinerte oppdateringer, kan du se disse emnene:
+
+[Patch](functions/function-patch.md)<br>[Collect](functions/function-clear-collect-clearcollect.md)<br>[Update](functions/function-update-updateif.md)
+
+## <a name="popular-connectors"></a>Populære koblinger
+
+Denne tabellen inneholder koblinger til mer informasjon om våre mest populære koblinger. Hvis du vil ha en fullstendig liste over koblinger, kan du se [Alle koblinger](#all-connectors).
 
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |
@@ -29,26 +69,10 @@ Tabellen nedenfor inneholder koblinger til mer informasjon om våre mest populæ
 | ![Dynamics 365](./media/connections-list/dynamics-365.png) |[**Dynamics 365**](connections/connection-dynamics-crmonline.md) |&nbsp; |![OneDrive](./media/connections-list/onedrive.png) |[**OneDrive**](connections/cloud-storage-blob-connections.md) |
 | ![Office 365-brukere](./media/connections-list/office365.png) |[**Office 365-brukere**](connections/connection-office365-users.md) |&nbsp; |![Dropbox](./media/connections-list/dropbox.png) |[**Dropbox**](connections/cloud-storage-blob-connections.md) |
 
-## <a name="types-of-connectors"></a>Typer koblinger
-PowerApps har to typer koblinger: *standardkoblinger*, som de som er oppført ovenfor, og *egendefinerte koblinger*. Hvis du kobler til en datakilde som PowerApps støtter med en standardkobling, kan du bruke denne koblingen. Hvis du trenger å koble til en annen kilde, for eksempel en tjeneste som du har opprettet, kan du se [Registrere og bruke egendefinerte koblinger](../canvas-apps/register-custom-api.md).
+## <a name="standard-and-custom-connectors"></a>Standardkoblinger og egendefinerte koblinger
+PowerApps inneholder *standardkoblinger* for mange vanlig brukte datakilder, som de som ble nevnt ovenfor. Hvis PowerApps har en standard kobling for datakildetypen du ønsker å bruke, må du bruke den koblingen. Hvis du ønsker å koble til andre datakildetyper, for eksempel en tjeneste som du har opprettet, kan du se [Registrer og bruk egendefinerte koblinger](../canvas-apps/register-custom-api.md).
 
-Standardkoblinger fungerer annerledes, avhengig av hvilken type datakilde de kobler seg til og hvordan dataene returneres av datakilden:
+## <a name="all-standard-connectors"></a>Alle standardkoblinger
+Se [Referanse for Microsoft-kobling](https://docs.microsoft.com/connectors/) for en liste over alle standardkoblingene. Premium-koblinger krever PowerApps-abonnement 1 eller 2. Hvis du vil ha mer informasjon, kan du se [PowerApps-abonnementer](https://powerapps.microsoft.com/pricing/).
 
-* Noen koblinger er kompatible med datakilder i tabellform, for eksempel SharePoint, SQL Server og Excel. Når du arbeider med disse datakildene, returneres dataene til PowerApps som en tabell. PowerApps bruker sine egen funksjoner, for eksempel [Patch()](functions/function-patch.md), [Collect()](functions/function-clear-collect-clearcollect.md), [Update()](functions/function-update-updateif.md) og så videre, for å samhandle med dataene. Tabelldata er også enkle å bruke i skjemaer og gallerier, der et felt i en tabell vises som et felt i et galleri eller et skjema. Hvis du vil ha mer informasjon, kan du se følgende artikler:
-
-    [Å forstå datakilder i PowerApps](working-with-data-sources.md)
-
-    [Å generere en app fra Excel-data](get-started-create-from-data.md)
-
-    [Å opprette en app fra grunnen av](get-started-create-from-blank.md)
-
-    > [!NOTE]
-  > Hvis du vil koble til data i Excel, må arbeidsboken være lagret i en skylagringstjeneste som OneDrive. Hvis du vil ha mer informasjon, kan du se [Å koble til lagring i skyen fra PowerApps](connections/cloud-storage-blob-connections.md).
-
-* Andre koblinger fungerer med funksjonsbaserte datakilder, for eksempel Twitter, Facebook og Office 365 Outlook. Når du arbeider med disse datakildene, returneres dataene til PowerApps basert på bestemte funksjonsanrop i den underliggende tjenesten. Med Twitter-koblingen ringer du for eksempel opp `Twitter.MyFollowers()` for å returnere en liste over følgerene dine. Du kan fortsatt bruke disse dataene i et skjema eller galleri, men det krever litt mer arbeid enn med tabelldata. Hvis du vil ha mer informasjon, kan du se [Å koble til Twitter fra PowerApps](connections/connection-twitter.md).
-
-## <a name="all-connectors"></a>Alle koblinger
-Se [Referanse for Microsoft-kobling](https://docs.microsoft.com/connectors/) for en liste over alle koblingene våre. Premium-koblinger krever PowerApps-abonnement 1 eller 2. Hvis du vil ha mer informasjon, kan du se [PowerApps-abonnementer](https://powerapps.microsoft.com/pricing/).
-
-
-Hvis du har spørsmål om en bestemt kobling, kan du bruke [PowerApps-foraene](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1). Hvis du har en idé for en ny kobling eller et forslag til forbedringer, kan du bruke [Ideer for PowerApps](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).
+Du kan stille spørsmål om en bestemt kobling i [PowerApps-forumene](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1), og du kan foreslå koblinger som kan legges til eller andre forbedringer i [PowerApps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).

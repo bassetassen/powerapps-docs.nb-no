@@ -1,0 +1,18 @@
+|Alternativ   |Beskrivelse  |
+|---------|---------|
+|**Tilgangsteam**|Opprett teammaler for denne enheten. |
+|**Tillat Hurtigoppretting**|Etter at du har opprettet og publisert et **Hurtigopprettingsskjema** for denne enheten, kan brukerne opprette en ny post ved bruk av **Opprett**-knappen i navigasjonsruten. Hvis du vil ha mer informasjon, kan du se [Opprett og utform skjemaer](../maker/model-driven-apps/create-design-forms.md)<br /><br /> Når dette er aktivert for en egendefinert aktivitetsenhet, blir den egendefinerte aktiviteten synlig i gruppen med aktivitetsenheter når man bruker **Opprett**-knappen i navigasjonsruten. Fordi aktiviteter ikke støtter hurtigopprettingsskjema, blir imidlertid hovedskjemaet brukt når du klikker på ikonet for den egendefinerte enheten.|
+|**Områder som viser denne enheten**|Velg én av de tilgjengelige områdekartområdene i nettprogrammet for å vise denne enheten. Dette gjelder ikke for modelldrevne apper.|
+|**Revisjon**|Når revisjon er aktivert for organisasjonen, kan du endre det slik at enhetsposter kan registreres over tid. Når du aktiverer revisjon for en enhet, er revisjon også aktivert for alle feltene. Du kan velge eller fjerne felt som du ønsker å aktivere revisjon for.|
+|**Sporing av endringer**|Aktiverer datasynkronisering permanent ved å oppdage hvilke data som har endret seg siden dataene først ble trukket ut eller sist synkronisert.  |
+|**Farge**|Angi en farge som skal brukes for enheten i modelldrevne apper.|
+|**Beskrivelse**|Oppgi en detaljert beskrivelse av formålet med enheten.|
+|**Dokumentbehandling**|Etter at andre oppgaver har blitt utført for å aktivere dokumentbehandling for organisasjonen, kan du aktivere denne funksjonen slik at enheten kan delta i integrering med SharePoint. |
+|**Duplikatregistrering**|Hvis duplikatregistrering er aktivert for organisasjonen, kan du opprette duplikatregistreringsregler for denne enheten.|
+|**Aktiver for mobil**|Gjør denne enheten tilgjengelige i appene Dynamics 365 for telefoner og nettbrett. Du kan også gjøre enheten **skrivebeskyttet på mobile enheter**.<br /><br /> Hvis skjemaene for en enhet krever en utvidelse som ikke støttes i apper for Dynamics 365 for telefoner og nettbrett, bruker du denne innstillingen til å sikre at brukerne av mobilapper ikke kan redigere dataene for disse enhetene.|
+|**Aktiver for Phone Express**|Gjør denne enheten tilgjengelige i appen Dynamics 365 for telefoner.|
+|**Utskriftsfletting**|Personer kan bruke denne enheten med utskriftsfletting.|
+|**Frakoblede funksjoner for Dynamics 365 for Outlook**|Om dataene i denne enheten blir tilgjengelig mens programmet Dynamics 365 for Outlook ikke er koblet til nettverket.|
+|**Hovedbilde**|Systemenheter som støtter bilder, har allerede et **Bilde**-felt. Du kan velge om du vil vise dataene i dette feltet som bildet for posten, ved å angi dette feltet til **[None]** eller **Standardbilde**.<br /><br /> Du må først opprette et bildefelt for egendefinerte enheter. Hver enhet kan bare ha ett bildefelt. Etter at du oppretter det, kan du endre denne innstillingen for å angi hovedbildet. Mer informasjon: [Bildefelter](../maker/common-data-service/types-of-fields.md#image-fields) |
+|**Leseruten i Dynamics 365 for Outlook**|Om enheten blir synlig i leseruten for appen Dynamics 365 for Outlook.|
+|**Bruk egendefinert hjelp**|Når dette er aktivert, kan du angi en Hjelp-nettadresse for å kontrollere hvilken side brukerne ser når de klikker på Hjelp-knappen i programmet. Bruk dette til å gi en veiledning som er spesifikk for bedriftsprosessene for enheten.|

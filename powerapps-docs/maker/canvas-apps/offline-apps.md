@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/09/2017
 ms.author: mblythe
-ms.openlocfilehash: 9f02b752444153681e30b39c3fa9d8a8b9e0cd6d
-ms.sourcegitcommit: 521a7b8e6ae72a211045b54d153a8a8c8f59172e
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: a255489f243ca8586f349e617e5af2023e88732b
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40021391"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42864406"
 ---
 # <a name="develop-offline-capable-canvas-apps-with-powerapps"></a>Utvikle lerretsapper som fungerer i frakoblet tilstand med PowerApps
 
@@ -24,6 +28,11 @@ Et av de vanligste scenarioene du opplever som utvikler av mobilapper, er å gj�
 * Kjør apper du utvikler når du er frakoblet.
 * Fastslå når en app er frakoblet, tilkoblet, eller bruker en forbruksmålt tilkobling ved bruk av [Tilkobling](../canvas-apps/functions/signals.md#connection)-signalobjektet.
 * Bruk [samlinger](../canvas-apps/create-update-collection.md) og nyttefunksjoner som [LoadData og SaveData](../canvas-apps/functions/function-savedata-loaddata.md) for grunnleggende datalagring når du er frakoblet.
+
+> [!NOTE]
+> Dette funksjonsområdet er fremdeles under utvikling og er for øyeblikket ikke optimalisert for hvert scenario. Funksjonene til SaveData() til en lokal enhet og LoadData() fra den enheten fungerer best i sin gjeldende implementering over relativt små mengder data (for eksempel, dusinvis av tekstposter i en tabell), som generelt ikke overskrider 2 MB. Dette er nyttig for noen grunnleggende «frakoblede» scenarioer, i tillegg til å øke oppstartsytelsen til lerretsapper ved å bufre data lokalt. Hvis du imidlertid bruker denne funksjonen til å lagre store mengder data (for eksempel, lagre tusenvis av rader i en tabell eller bufre store bilder eller videoer), kan det føre til feil eller uventet virkemåte med den gjeldende implementeringen – dette bør unngås. Funksjonene løser ikke flettekonflikter automatisk når en enhet returnerer tilbake fra frakoblet tilstand – konfigurasjonen for hvilke data som er lagret og hvordan man håndterer tilkoblinger, er opp til oppretteren når du skriver uttrykk.
+>
+> Vi arbeider for å utvide funksjonene til frakoblede apper, øke stabiliteten og størrelsesbegrensningene, og (i fremtiden) automatisk håndtere avgjørelser om hva som skal lagres og hvordan man håndterer konflikter. Kom tilbake hit og les [PowerApps-bloggen](https://powerapps.microsoft.com/blog/) for oppdateringer når de blir tilgjengelige.
 
 ## <a name="how-to-build-offline-capable-apps"></a>Å bygge apper som fungerer i frakoblet tilstand
 
