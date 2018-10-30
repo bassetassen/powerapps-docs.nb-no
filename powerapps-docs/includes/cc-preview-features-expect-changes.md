@@ -1,0 +1,1 @@
+Vi forventer endringer i denne funksjonen, så du bør ikke bruke den i produksjon. Brukes bare i test- og utviklingsmiljøer.

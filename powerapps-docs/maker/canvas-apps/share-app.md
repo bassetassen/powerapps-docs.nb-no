@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 07/11/2018
 ms.author: anneta
-ms.openlocfilehash: eaea8049b573b619881ae0a2b6ecb2618e4bf192
-ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 926d2b4b0d24f07a9a4cd42216e7d737db57308c
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39470642"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42853846"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>Del en lerretsapp i PowerApps
 
@@ -81,7 +85,11 @@ Du må lagre appen i skyen (ikke lokalt) og deretter publisere den før du deler
 
 ### <a name="common-data-service-for-apps"></a>Common Data Service for apper
 
-Hvis du oppretter en app basert på Common Data Service for apper, må du også påse at brukerne som kjører den har riktige tillatelser for enheten eller enhetene appen er avhengig av. Disse brukerne må spesifikt tilhøre en sikkerhetsrolle som kan utføre oppgaver, som for eksempel oppretting, lesing, skriving og sletting av relevante poster. Hvis du har **Systemansvarlig**- eller **Systemtilpasser**-tillatelser for databasen i dette miljøet, kan du opprette en egendefinert rolle, og deretter legge brukere til den.
+Hvis du oppretter en app basert på Common Data Service (CDS) for apper, må du også påse at brukerne som kjører den har riktige tillatelser for enheten eller enhetene appen er avhengig av. Disse brukerne må spesifikt tilhøre en sikkerhetsrolle som kan utføre oppgaver, som for eksempel oppretting, lesing, skriving og sletting av relevante poster. I mange tilfeller oppretter du én eller flere egendefinerte sikkerhetsroller, med nøyaktig de samme tillatelsene som brukerne trenger for å bruke appene. Du kan deretter tilordne rollen eller rollene til brukerne, ved behov. 
+
+#### <a name="prerequisite"></a>Forutsetning
+
+Hvis du vil utføre de to neste prosedyrene, må du ha **Systemadministrator**-tillatelser for en CDS for apper-database.
 
 #### <a name="create-a-security-role"></a>Slik oppretter du en sikkerhetsrolle
 

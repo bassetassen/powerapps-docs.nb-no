@@ -9,17 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/30/2015
 ms.author: lonu
-ms.openlocfilehash: 98407181bc654874d749bb57da22c9fde1259fb6
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: c1043d32fc4ab4213d2ac2e690ef69e13fec8ed3
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195500"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42831653"
 ---
 # <a name="create-and-update-a-collection-in-your-app"></a>Å opprette og oppdatere en samling i appen
 Bruk en samling til å lagre data som kan brukes i en app. En samling er en gruppe lignende elementer. Du har for eksempel opprettet en MyImages-samling som inneholder alle produktbildene som firmaet selger. Du kan legge til MyImages-samlingen i PowerApps og opprette en app som viser alle bildene av disse produktene. I et annet eksempel kan du opprette en PriceList-samling som viser produktene og prisen for hvert produkt.
-
-Du kan opprette og bruke samlingene i PowerApps. La oss komme i gang.
 
 ### <a name="prerequisites"></a>Forutsetninger
 * [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å angi samme legitimasjon som du brukte til å registrere deg.
@@ -28,23 +30,30 @@ Du kan opprette og bruke samlingene i PowerApps. La oss komme i gang.
 * Denne fremgangsmåten bruker [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip)-filen som eksempeldata. Zip-filen inneholder en XML-fil som kan konverteres til Excel. PowerApps leser ellers automatisk ZIP-filene og importerer dem. Du kan laste ned og bruke disse eksempeldataene eller importere dine egne.
 
 ## <a name="create-a-single-column-collection"></a>Å opprette en enkeltkolonne-samling
-Følgende fremgangsmåte viser deg hvordan du oppretter en samling i appen ved hjelp av Innsamling-funksjonen, og hvordan du legger til elementer i samlingen din.
+Du kan bruke **Collect**-funksjonen til å opprette en samling, og legge til elementer i den.
 
-1. Å åpne appen.
-2. Velg **Tekst** på **Sett inn**-fanen, og velg **Tekstinndata**:  
-   ![][1]  
-3. Velg **Text1** i hjørnet øverst til venstre, angi **Mål** som nytt navn for kontrollen:  
-   ![][2]  
-4. Velg **Knapp** på **Sett inn**-fanen for å legge til en knappkontroll i utformingen. **[OnSelect](controls/properties-core.md)**-egenskapen vises i rullegardinlisten. Konfigurer den til følgende funksjon:  
+1. Velg **Tekst** på **Sett inn**-fanen i en app, og velg **Tekstinndata**:
+
+   ![][1]
+
+1. Velg **Text1** i hjørnet øverst til venstre, angi **Mål** som nytt navn for kontrollen:
+
+   ![][2]
+
+1. Velg **Knapp** på **Sett inn**-fanen for å legge til en knappkontroll i utformingen. **[OnSelect](controls/properties-core.md)**-egenskapen vises i rullegardinlisten. Konfigurer den til følgende funksjon:  
    
     ```Collect(Destinations, Destination!Text)```
    
-    Den skal se slik ut:  
-    ![][3]  
-5. Velg knappeteksten, og angi **Legg til**:  
-   ![][5]  
-6. Velg **Legg til**-knappen, og flytt den under tekstkontrollen. Du kan flytte den hvor som helst:  
-   ![][6]  
+    Den skal se slik ut:
+
+    ![][3]
+
+5. Velg knappeteksten, og angi **Legg til**:
+
+   ![][5]
+
+1. Velg **Legg til**-knappen, og flytt den under tekstkontrollen. Du kan flytte den hvor som helst:  
+   ![][6]
 
 Du brukte Innsamling-funksjonen til å opprette en samling med navnet **Mål** i disse trinnene. Du har også lagt til en knappkontroll, og når den blir valgt, legger den til nye elementer i samlingen. Nå kan du se hva du har opprettet:
 

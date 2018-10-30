@@ -1,6 +1,6 @@
 ---
-title: Slik endres navn og flis for appen | Microsoft Docs
-description: Trinnvise instruksjoner for å endre innstillinger som appnavn og -ikon
+title: Endre appnavn og -ikon for en lerretsapp | Microsoft Docs
+description: Trinnvise instruksjoner for å endre innstillinger som appnavn og -ikon for en lerretsapp i PowerApps
 author: lonu
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: lonu
-ms.openlocfilehash: ae78a86578032d5110a5558d60274fd6728438b9
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 74e56e5819ff4171f5f16a4ebc8b5da39c8c0c8a
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39014930"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42825330"
 ---
-# <a name="change-app-name-and-icon-in-powerapps"></a>Endring av appnavn og -ikon i PowerApps
-Tilpass en app ved å endre navnet og flisen.
+# <a name="change-app-name-and-icon-for-a-canvas-app-in-powerapps"></a>Endre appnavn og -ikon for en lerretsapp i PowerApps
+Tilpass en lerretsapp ved å endre navnet og ikonet.
 
 ## <a name="prerequisites"></a>Forutsetninger
 1. Opprett en app, eller åpne en for redigering.

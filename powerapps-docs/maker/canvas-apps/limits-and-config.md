@@ -1,6 +1,6 @@
 ---
-title: Systemkrav, grenser og konfigurasjonsverdier | Microsoft Docs
-description: Systemkrav, grenser og konfigurasjonsverdier for PowerApps
+title: Systemkrav, grenser og konfigurasjonsverdier for lerretsapper | Microsoft Docs
+description: Systemkrav, grenser og konfigurasjonsverdier for lerretsapper som er bygget i PowerApps
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,21 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/07/2018
 ms.author: anneta
-ms.openlocfilehash: 3c334baf876c64085621520daef9a0f153d54107
-ms.sourcegitcommit: 0f6d7bb9e524202c065b9a7ef92a7f54bdc4bc7c
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: f8df0b9c4d2dc186a4b583b1f61da33a97ae4010
+ms.sourcegitcommit: 3aeb9381fbeb66cf08355d9a3d0f00ce2737e256
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39476879"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43163731"
 ---
-# <a name="system-requirements-limits-and-configuration-values"></a>Systemkrav, grenser og konfigurasjonsverdier
+# <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>Systemkrav, grenser og konfigurasjonsverdier for lerretsapper
 Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og konfigurasjonsverdier for PowerApps.
 
-## <a name="supported-platforms-for-running-apps-using-the-powerapps-app"></a>Støttede plattformer for å kjøre apper ved hjelp av PowerApps-appen
+## <a name="supported-platforms-for-running-canvas-apps-using-the-powerapps-app"></a>Støttede plattformer for å kjøre lerretsapper ved hjelp av PowerApps-appen
 
 | **Minimumskrav** | **Anbefalt** |
 | --- | --- |
@@ -27,7 +31,7 @@ Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og kon
 | Android 5 eller senere |Android 7 eller senere med minst 4GB RAM |
 | Windows 8.1 eller senere (bare PC) |Windows 10 Fall Creators Update med minst 8 GB RAM)|
 
-## <a name="supported-browsers-for-running-apps"></a>Støttede nettlesere for kjørende apper
+## <a name="supported-browsers-for-running-canvas-apps"></a>Støttede nettlesere for å kjøre lerretsapper
 
 | **Nettleser** | **Operativsystem** |
 | --- | --- |
@@ -64,7 +68,7 @@ Samtaler fra en API som er koblet til via en app (for eksempel SQL-API-en, eller
 Du bør bruke disse adressene hvis du for eksempel må hviteliste IP-adresser for en Azure SQL-database.
 
 > [!IMPORTANT]
->   Hvis du har eksisterende konfigurasjoner, kan du oppdatere dem så snart som mulig før 1. september 2018, slik at de inkluderer og samsvarer med IP-adresser i denne listen for områdene der PowerApps-apper finnes.
+>   Hvis du har eksisterende konfigurasjoner, kan du oppdatere dem så snart som mulig før 30. september 2018, slik at de inkluderer og samsvarer med IP-adresser i denne listen for områdene der PowerApps-apper finnes.
 
 | Område | Utgående IP |
 | --- | --- |

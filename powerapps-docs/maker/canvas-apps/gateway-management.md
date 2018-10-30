@@ -1,5 +1,5 @@
 ---
-title: Administrer en lokal datagateway | Microsoft Docs
+title: Administrer en lokal datagateway for lerretsapper | Microsoft Docs
 description: Administrere en lokal datagateway og tilhørende tilkoblinger
 author: archnair
 manager: kvivek
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/30/2016
 ms.author: archanan
-ms.openlocfilehash: fb561ca5458a22880d93c712aa2e2b2ada884605
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 85806799a5f5ea91a4671a27e71cf95daabcd01a
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39194893"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42863853"
 ---
 # <a name="manage-an-on-premises-data-gateway-in-powerapps"></a>Administrer en lokal datagateway i PowerApps
-Installer en lokal datagateway for å overføre data på en rask og sikker måte mellom PowerApps og en datakilde som ikke er i skyen, for eksempel en lokal SQL Server-database eller et lokalt SharePoint-område. Vis alle gatewayer som du har administratortillatelser til, og behandle tillatelser og tilkoblinger for disse gatewayene.
+Installer en lokal datagateway for å overføre data på en rask og sikker måte mellom en lerretsapp som er bygget i PowerApps og en datakilde som ikke er i skyen, for eksempel en lokal SQL Server-database eller et lokalt SharePoint-område. Vis alle gatewayer som du har administratortillatelser til, og behandle tillatelser og tilkoblinger for disse gatewayene.
 
 Med en gateway kan du koble til lokale data over disse tilkoblingene:
 

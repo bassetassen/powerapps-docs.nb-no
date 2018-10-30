@@ -1,6 +1,6 @@
 ---
-title: Hurtiginnføring for å legge til og åpne en app i Microsoft Teams | Microsoft Docs
-description: I denne hurtigveiledningen lærer du hvordan du legger til en app til en Microsoft Teams-kanal, slik at personer du har delt appen med kan åpne den i denne kanalen.
+title: Å legge til og åpne en app i Microsoft Teams | Microsoft Docs
+description: Lær hvordan du legger til en app i en Microsoft Teams-kanal, slik at personer du har delt appen med, kan åpne den i denne kanalen.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -11,16 +11,21 @@ ms.author: matp
 ms.custom: ''
 ms.reviewer: ''
 ms.assetid: ''
-ms.openlocfilehash: a5adb035fdde271ffe07cb6d0a46f332ae55c43f
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
+search.audienceType:
+- enduser
+search.app:
+- PowerApps
+- D365CE
+ms.openlocfilehash: 0e98f22c3dc0f66893e0cc027488ced5d1dd3535
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218376"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42850465"
 ---
-# <a name="quickstart-add-an-app-to-microsoft-teams"></a>Hurtigstart: Legg til en app i Microsoft Teams
+# <a name="add-an-app-to-microsoft-teams"></a>Legg til en app i Microsoft Teams
 
-Microsoft Teams er et chat-basert samarbeidsplattform som er bygd på Office 365-teknologier. Du kan tilpasse Teams-opplevelsen ved å legge til PowerApps-lerretapper i gruppene i Teams. I denne hurtigveiledningen kan du lære hvordan du legger til eksempelappen Produktpresentasjon til en Teams-kanal og deretter åpner appen fra denne kanalen. 
+Microsoft Teams er et chat-basert samarbeidsplattform som er bygd på Office 365-teknologier. Du kan tilpasse Teams-opplevelsen ved å legge til PowerApps-lerretapper i gruppene i Teams. I dette emnet kan du lære hvordan du legger til eksempelappen Produktpresentasjon i en Teams-kanal, og deretter åpner appen fra denne kanalen. 
 
 ![App som er innebygd i Microsoft Teams](./media/open-app-embedded-in-teams/embedded-app.png)
 
@@ -28,7 +33,7 @@ Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https:/
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-Du trenger et [Office 365-abonnement ](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) og en [kanal i Teams](https://www.youtube.com/watch?v=he2f1quaR7M) for å følge denne hurtigveiledningen.
+Du trenger et [Office 365-abonnement ](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) og en [kanal i Teams](https://www.youtube.com/watch?v=he2f1quaR7M) for å følge denne prosedyren.
 
 ## <a name="sign-in-to-powerapps"></a>Å logge deg på PowerApps
 
@@ -87,7 +92,7 @@ Hvis du vil fjerne appen fra kanalen, kan du velge **Produktpresentasjon**-fanen
 
 ## <a name="next-steps"></a>Neste trinn
 
-I denne hurtigveiledningen har du lagt til eksempelappen Produktpresentasjon til en Teams-kanal og deretter åpnet appen fra denne kanalen. Hvis du vil lære mer om PowerApps, kan du fortsette til PowerApps-opplæringen.
+I dette emnet har du lagt til eksempelappen Produktpresentasjon i en Teams-kanal, og deretter åpnet appen fra denne kanalen. Hvis du vil lære mer om PowerApps, kan du fortsette til PowerApps-opplæringen.
 
 > [!div class="nextstepaction"]
 > [PowerApps-opplæring](../maker/canvas-apps/get-started-create-from-blank.md)

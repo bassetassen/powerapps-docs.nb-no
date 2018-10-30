@@ -1,6 +1,6 @@
 ---
-title: Å lagre og publisere en app | Microsoft Docs
-description: Trinnvise instruksjoner for å lagre og publisere appen for app- opprettere
+title: Lagre og publiser en lerretsapp | Microsoft Docs
+description: Trinnvise instruksjoner for å lagre og publisere lerretsapper for appopprettere
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 09/14/2017
 ms.author: anneta
-ms.openlocfilehash: faaf3ef6eefc41ad5b1d7cb2e6e34db57632cfaf
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: f52338d4eed8942259e7ae15a8df3b05c45a703d
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39194810"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42837016"
 ---
-# <a name="save-and-publish-an-app-in-powerapps"></a>Å lagre og publisere en app i PowerApps
-Når du lagrer endringer i en app, publiserer du den automatisk bare for deg selv og andre som har tillatelse til å redigere den. Når du er ferdig med å gjøre endringer, må du eksplisitt publisere appen for å gjøre den tilgjengelig for alle som den er delt med.
+# <a name="save-and-publish-a-canvas-app-in-powerapps"></a>Lagre og publiser en lerretsapp i PowerApps
+Når du lagrer endringer i en lerretsapp, publiserer du den automatisk bare for deg selv og andre som har tillatelse til å redigere den. Når du er ferdig med å gjøre endringer, må du eksplisitt publisere appen for å gjøre den tilgjengelig for alle som den er delt med.
 
 Hvis du vil ha informasjon om hvordan du deler en app, kan du se [Å dele en app](share-app.md).
 

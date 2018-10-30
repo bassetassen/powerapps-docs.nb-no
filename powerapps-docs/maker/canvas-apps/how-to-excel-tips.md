@@ -1,6 +1,6 @@
 ---
 title: Å formatere en tabell i Excel i Microsoft Docs
-description: Hvis du ønsker å bruke Excel-data, må du formatere dataene i en tabell. Å legge til nøkkelordet «bilde» i kolonnenavn
+description: Hvis du vil bruke Excel-data i PowerApps, må du formatere dataene som en tabell. Å legge til nøkkelordet «bilde» i kolonnenavn
 author: yifwang
 manager: kvivek
 ms.service: powerapps
@@ -9,31 +9,35 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/03/2018
 ms.author: yifwang
-ms.openlocfilehash: ddc6b9715a3282dbfcce9ae5f63be50ea1406e69
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: ea4bda4857c89a9e28359f63811e70744f111499
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023670"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42830961"
 ---
 # <a name="format-a-table-in-excel-and-naming-tips"></a>Å formatere en tabell i Excel og navngi tips
-Hvis du ønsker å bruke PowerApps, er det en forutsetning at du formaterer Excel-data som en tabell. Ved å følge innholdet i denne innføringen finner du ut hvordan du formaterer en tabell i Excel, og du får noen tips til hvordan du navngir Excel-kolonner.
+I PowerApps kan du opprette en lerretsapp basert på Excel-data, men bare hvis den er formatert som en tabell. Ved å følge innholdet i denne innføringen finner du ut hvordan du formaterer en tabell i Excel, og du får noen tips til hvordan du navngir Excel-kolonner.
 
 ## <a name="how-to-format-a-table-in-excel"></a>Å formatere en tabell i Excel
-Du kan konvertere dataene til en tabell ved å klikke på **Formater som tabell** på **Hjem**-fanen til Excel.
+Du kan konvertere dataene til en tabell ved å velge **Formater som tabell** på **Hjem**-fanen til Excel.
 
 ![Å formatere en tabell i Excel](./media/how-to-excel-tips/format-table.png)
 
-En annen måte du kan formatere en tabell på er å opprette en tabell fra **Sett inn**-fanen.
+Du kan også opprette en tabell ved å velge **Tabell** på **Sett inn**-fanen.
 
 ![Å sette inn en tabell i Excel](./media/how-to-excel-tips/insert-table.png)
 
-Du finner helt enkelt tabellen ved å gå til **Utforming** under **Tabellverktøy**, og deretter gir du tabellen et navn. Det er nyttig å gi tabellen et beskrivende navn, spesielt når det finnes flere tabeller i én Excel-fil.
+Du finner helt enkelt tabellen ved å gå til **Utforming** under **Tabellverktøy**, og deretter gir du tabellen et navn. Det er nyttig å gi tabellen et beskrivende navn, spesielt når den samme Excel-filen inneholder mer enn én tabell.
 
 ![Å gi nytt navn til en tabell i Excel](./media/how-to-excel-tips/rename-table.png)
 
 ## <a name="naming-tips-in-excel"></a>Tips for hvordan du navngir tabeller i Excel
-Prøv å legg til nøkkelordet «bilde» i bildekolonnen. Dette binder bildekolonnen med en bildekontroll mens du bruker denne tabellen i galleriet med bildekontroller.
+Hvis en kolonne i tabellen inneholder bilder, inkludert «bilde» i navnet på kolonnen. Dette nøkkelordet binder den kolonnen til en bildekontroll i et galleri.
 
 ![Å koble Excel-tabeller sammen med bilder](./media/how-to-excel-tips/connect-gallery.png)
 

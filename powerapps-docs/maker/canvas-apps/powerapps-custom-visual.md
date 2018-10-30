@@ -1,20 +1,24 @@
 ---
 title: Egendefinert visualobjekt i PowerApps for Power BI | Microsoft Docs
 description: Prosedyre og begrensninger for innebygging av en lerretsapp som bruker samme datakilde og kan filtreres som andre rapportelementer i Power BI
-author: mgblythe
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/15/2018
-ms.author: mblythe
-ms.openlocfilehash: 0da480a482415ad174f10204f14f31adbd3607f2
-ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
+ms.author: chmoncay
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 4f7a2e4002d3d9c8e38ad43418130d0ed9414361
+ms.sourcegitcommit: 3aeb9381fbeb66cf08355d9a3d0f00ce2737e256
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39469998"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43164329"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>Egendefinert visualobjekt i PowerApps for Power BI
 
@@ -66,12 +70,12 @@ La oss se på fremgangsmåten for å bruke det egendefinerte visualobjektet fra 
 
 PowerApps-visualobjektet er tilgjengelig i forhåndsvisning og har disse begrensningene:
 
-- Du kan ikke opprette eller endre apper når du bruker PowerApps-visualobjektet i Power BI Desktop, Internet Explorer eller Mozilla Firefox. Vi anbefaler at du først publiserer rapporten til Power BI-tjenesten. Deretter kan du bruke Microsoft Edge eller Google Chrome til å opprette nye apper og endre apper.
+- Du kan ikke opprette eller endre apper når du bruker PowerApps-visualobjektet i Power BI Desktop, Internet Explorer eller Mozilla Firefox. Vi anbefaler at du først publiserer rapporten til Power BI-tjenesten. Deretter kan du bruke Microsoft Edge eller Google Chrome til å opprette og oppdatere apper.
 - Hvis du endrer datafeltene som er tilknyttet visualobjektet, må du redigere appen fra Power BI-tjenesten ved å velge ellipsen (…) og deretter **Redigere**. Ellers blir ikke endringene overført til PowerApps, og appen vil fungere på uventede måter.
 - Det egendefinerte PowerApps-visualobjektet kan ikke utløse en oppdatering av Power BI-rapporten eller Power BI-datakilden. Hvis du skriver tilbake data fra appen til samme datakilde som rapporten, gjenspeiles ikke endringene umiddelbart. Endringene gjenspeiles i den neste planlagte oppdateringen.
 - Det egendefinerte PowerApps-visualobjektet kan ikke filtrere dataene eller sende data tilbake til rapporten.
 - Du må dele PowerApps-appen adskilt fra rapporten. Finn ut mer om [deling av apper i PowerApps](share-app.md).
-- Mobilappen for Power BI støtter ikke egendefinerte PowerApps-visualobjekter.
+- Rapportserver for Power BI og mobilappen for Power BI støtter ikke egendefinerte PowerApps-visualobjekter.
 
 ## <a name="next-steps"></a>Neste trinn
 

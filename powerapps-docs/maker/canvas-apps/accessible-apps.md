@@ -1,6 +1,6 @@
 ---
-title: Oppretting av apper som er enkle å forstå | Microsoft Docs
-description: Slik lager du apper som er enkle å forstå for folk med funksjonshemninger
+title: Opprett tilgjengelig lerretsapper | Microsoft Docs
+description: Slik lager du tilgjengelige lerretsapper for folk med funksjonshemninger
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/03/2018
 ms.author: fikaradz
-ms.openlocfilehash: 909f71a61ca3df73b41eb9e1fe0f3dc3f52d1527
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 119b7e6ff590f63ad938016c5f0127f5d6521d65
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018725"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42834386"
 ---
-# <a name="create-accessible-apps"></a>Oppretting av apper som er enkle å forstå
-En app som er enkel å forstå gjør det enklere for brukere med syns-, hørsel- og andre typer hemminger å bruke appen.  I tillegg til at det er et krav for mange myndigheter og organisasjoner, økes brukervennligheten for brukerne, uavhengig av funksjonsnivå, ved å følge retningslinjene nedenfor.
+# <a name="create-accessible-canvas-apps-in-powerapps"></a>Opprett tilgjengelige lerretsapper i PowerApps
+En tilgjengelig lerretsapp gjør det enklere for brukere med syns-, hørsel- og andre typer hemminger å bruke appen.  I tillegg til at det er et krav for mange myndigheter og organisasjoner, økes brukervennligheten for brukerne, uavhengig av funksjonsnivå, ved å følge retningslinjene nedenfor.
 
 Bruk **[Tilgjengelighetskontrollen](accessibility-checker.md)** til å se gjennom potensielle problemer med tilgjengelighet i appen. 
 

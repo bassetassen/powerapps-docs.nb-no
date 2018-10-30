@@ -1,6 +1,6 @@
 ---
-title: Rediger en app | Microsoft Docs
-description: Trinnvise instruksjoner for hvordan du redigerer apper og scenarioer med låste økter.
+title: Rediger en lerretsapp | Microsoft Docs
+description: Trinnvise instruksjoner for hvordan du redigerer lerretsapper og scenarioer med låste økter i PowerApps.
 author: karthik-1
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/19/2017
 ms.author: sharik
-ms.openlocfilehash: b5678437ea1e604ce2932307d897f280f4633fc0
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 97dc8b245da9dc48a67f22243f11cf26b7bd6d8e
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39194955"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42835079"
 ---
-# <a name="edit-an-app-in-powerapps"></a>Rediger en app i PowerApps
-Du kan redigere alle apper du har utviklet, som du eier eller har **Kan redigere**-tillatelse for. Du kan redigere en app i PowerApps Studio. Hvis du prøver å redigere en app som er åpnet for redigering et annet sted, vil du motta en beskjed om at du eller en annen bruker allerede har den åpen.
+# <a name="edit-a-canvas-app-in-powerapps"></a>Rediger en lerretsapp i PowerApps
+Du kan redigere alle lerretsapper du har utviklet, som du eier eller har **Kan redigere**-tillatelse for. Du kan redigere en app i PowerApps Studio. Hvis du prøver å redigere en app som er åpnet for redigering et annet sted, vil du motta en beskjed om at du eller en annen bruker allerede har den åpen.
 
 ## <a name="verify-your-permissions"></a>Bekreft tillatelsen din
 1. Logg på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og klikk eller trykk deretter på **Apper** i **Fil**-menyen (nær venstre kant).

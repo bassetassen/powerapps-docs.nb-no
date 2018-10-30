@@ -1,6 +1,6 @@
 ---
-title: Global støtte | Microsoft Docs
-description: Bygg apper som brukes over hele verden.
+title: Bygg global støtte inn i lerretsapper | Microsoft Docs
+description: Bruk PowerApps til å bygge apper som brukes over hele verden.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: dbca12ff3acc4327f88269a2333fe066c7f2fbec
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 7ccd505d53377617bd13cda775cce489c554bc64
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39019806"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42862580"
 ---
-# <a name="global-support"></a>Global støtte
-PowerApps er et globalt produkt.  Du kan bygge og bruke apper på mange ulike språk og i mange ulike områder.
+# <a name="build-global-support-into-canvas-apps"></a>Bygg global støtte inn i lerretsapper
+PowerApps er et globalt produkt. Du kan bygge og bruke lerretsapper på mange ulike språk og i mange ulike områder.
 
 Teksten som vises i PowerApps har blitt oversatt til en rekke språk, både når du bygger og kjører apper.  Du ser menyelementer, dialogbokser, båndfaner og annen tekst på ditt eget språk.  Innskriving og visning av datoer og tall er også tilpasset for ditt bestemte språk og område.  For eksempel bruker enkelte områder i verden «.» som et desimalskilletegn mens andre bruker «,».  
 

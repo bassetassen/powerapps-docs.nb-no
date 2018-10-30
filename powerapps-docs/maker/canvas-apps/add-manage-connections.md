@@ -1,6 +1,6 @@
 ---
-title: Å legge til og administrere tilkoblinger til datakilder i skytjenester | Microsoft Docs
-description: Å legge til, slette og oppdatere tilkoblinger til datakilder, blant annet SharePoint, SQL Server, OneDrive for Business, Salesforce og Office 365
+title: Legg til og administrer tilkoblinger fra lerretsapper | Microsoft Docs
+description: Legg til, slett og oppdater tilkoblinger fra lerretsapper til datakilder, blant annet SharePoint, SQL Server og OneDrive for Business
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,21 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 03/09/2017
 ms.author: lanced
-ms.openlocfilehash: c114b803539c2d64695a0bd8c9d976d2604569eb
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: d2a7da93835e5fbe588a8683bbdb0393d5b76ee5
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195224"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42834047"
 ---
-# <a name="manage-your-connections-in-powerapps"></a>Å administrere tilkoblingene dine i PowerApps
-På [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) kan du opprette tilkobling fra PowerApps til en eller flere datakilder, slette en tilkobling eller oppdatere legitimasjon.
+# <a name="manage-canvas-app-connections-in-powerapps"></a>Administrer tilkoblinger til lerretsapper i PowerApps
+På [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) kan du opprette tilkobling til en eller flere datakilder, slette en tilkobling eller oppdatere legitimasjon.
 
-Appens datatilkobling kan kobles til SharePoint, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel og mange andre [datakilder](connections-list.md).
+Lerretsappens datatilkobling kan kobles til SharePoint, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel og mange andre [datakilder](connections-list.md).
 
 Det neste trinnet etter denne artikkelen er å vise og administrere data fra datakilden i appen din, som i eksemplene under:
 

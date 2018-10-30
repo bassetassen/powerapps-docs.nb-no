@@ -1,6 +1,6 @@
 ---
-title: Hurtiginnføring i hvordan du kjører en arbeidssone-basert app på en mobil enhet i Microsoft Docs
-description: I denne hurtiginnføringen finner du ut hvordan du kjører en lerretsapp på en mobil enhet.
+title: Kjør en lerretsapp på en mobil enhet | Microsoft Docs
+description: Lær hvordan du kjører en lerretsapp på en mobil enhet.
 author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
@@ -10,17 +10,22 @@ ms.author: matp
 ms.custom: ''
 ms.reviewer: ''
 ms.assetid: ''
-ms.openlocfilehash: a80042065a830bb9d34007131cccbd995279e3dd
-ms.sourcegitcommit: bcfefb30b12cf94815dd9a0fd8cad29a8272d96e
+search.audienceType:
+- enduser
+search.app:
+- PowerApps
+- D365CE
+ms.openlocfilehash: ace1a40e8d7900d93e2ff902705f6f50e1d7a193
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37925712"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42851888"
 ---
-# <a name="quickstart-run-a-canvas-app-on-a-mobile-device"></a>Hurtiginnføring: Å kjøre en arbeidssonebasert app på en mobil enhet
-Når du oppretter en app, eller noen deler en app med deg, kan du kjøre appen på Windows, iOS, Android eller i en nettleser. I denne hurtiginnføringen finner du ut hvordan du kjører en arbeidssonebasert app på en mobil enhet. Apper som kjører på en mobil enhet, kan dra nytte av enhetens funksjoner, for eksempel posisjonstjenester og kamera.
+# <a name="run-a-canvas-app-on-a-mobile-device"></a>Kjør en lerretsapp på en mobil enhet
+Når du oppretter en app, eller noen deler en app med deg, kan du kjøre appen i Windows, iOS, Android eller i en nettleser. I dette emnet lærer du hvordan du kjører en arbeidssonebasert app på en mobil enhet. Apper som kjører på en mobil enhet, kan dra nytte av enhetens funksjoner, for eksempel posisjonstjenester og kamera.
 
-Hvis du ønsker å følge denne hurtiginnføringen, og du ikke har registrert deg for PowerApps, kan du [registrere deg gratis](https://web.powerapps.com/signup?redirect=marketing&email=) før du begynner. Deretter kan du laste ned PowerApps fra [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) eller [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) på en iPhone-, iPad- eller Android-enhet som kjører et [operativsystem som støttes](../maker/canvas-apps/limits-and-config.md). Du må også sørge for at du har tilgang til en arbeidssoneapp som du opprettet, eller som noen andre delte med deg.
+Hvis du ønsker å følge denne prosedyren, og du ikke har registrert deg for PowerApps, kan du [registrere deg gratis](https://web.powerapps.com/signup?redirect=marketing&email=) før du begynner. Deretter kan du laste ned PowerApps fra [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) eller [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) på en iPhone-, iPad- eller Android-enhet som kjører et [operativsystem som støttes](../maker/canvas-apps/limits-and-config.md). Du må også sørge for at du har tilgang til en arbeidssoneapp som du opprettet, eller som noen andre delte med deg.
 
 ## <a name="open-powerapps-and-sign-in"></a>Å åpne PowerApps og logge seg på
 Åpne PowerApps på en mobil enhet og logg deg på ved bruk av legitimasjonen for Azure Active Directory.
@@ -77,7 +82,7 @@ Du kan feste en app til startskjermen for enhetene for rask tilgang. Trykk på e
 Hvis du vil lukke en app, bruker du fingeren til å sveipe fra venstre kant mot høyre i appen. På en Android-enhet kan du også trykke på Tilbake-knappen, og deretter bekrefte at du har tenkt å lukke appen.
 
 ## <a name="next-steps"></a>Neste trinn
-I denne hurtiginnføringen finner du ut hvordan du kjører en arbeidssonebasert app på en mobil enhet. Du kan også kjøre modelldrevne apper på en mobil enhet.
+I dette emnet lærte du hvordan du kjører en lerretsapp på en mobil enhet. Du kan også kjøre modelldrevne apper på en mobil enhet.
 
 > [!div class="nextstepaction"]
 > [Å kjøre en modelldreven app på en mobil enhet](run-app-client-model-driven.md)

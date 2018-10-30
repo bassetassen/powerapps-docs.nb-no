@@ -6,14 +6,20 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 03/21/2018
+ms.date: 08/29/2018
 ms.author: manasma
-ms.openlocfilehash: 3e954db3ed224afa100d89be6aa03d7a2139a9d7
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: e160098075b78a0a4de98da9c9915d0bef26d183
+ms.sourcegitcommit: b8eee36e680036accb0e7d9fc7a434906af1c4d2
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349942"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43297332"
 ---
 # <a name="environments-overview"></a>Oversikt over miljøer
 Et miljø er et område der du kan lagre, administrere og dele organisasjonens forretningsdata, apper og flyter. De fungerer også som beholdere til å skille apper som kan ha ulike roller, sikkerhetskrav eller målgrupper. Måten du velger å dra nytte av miljøer på, avhenger av organisasjonen og appene du prøver å bygge. Eksempel:
@@ -22,6 +28,7 @@ Et miljø er et område der du kan lagre, administrere og dele organisasjonens f
 * Du kan opprette separate miljøer som grupperer test- og produksjonsversjonene av appene dine.
 * Du kan opprette separate miljøer som samsvarer med bestemte grupper eller avdelinger i firmaet, hvorpå alle inneholder relevante data og apper for hver målgruppe.
 * Du kan også opprette separate miljøer for forskjellige globale filialer av firmaet.  
+* Få tidlig tilgang til de kommende PowerApps-funksjonene ved å delta i [forhåndsversjonsprogrammet for PowerApps](preview-environments.md).
 
 ## <a name="environment-scope"></a>Omfang av miljøet
 Hvert miljø opprettes under en Azure AD-tenant, og ressursene kan bare åpnes av brukere i denne tenanten. Et miljø er også bundet til en geografisk plassering, for eksempel USA. Når du oppretter et program i et miljø, rutes appen bare til datasentre i denne geografiske plasseringen. Alle elementer som du oppretter i dette miljøet (inkludert tilkoblinger, gatewayer, flyter som bruker Microsoft Flow og så videre), er også bundet til plasseringen av det tilhørende miljøet.
@@ -75,7 +82,7 @@ Standardmiljøet er navngitt på følgende måte: «{Azure AD-leietakernavn} (st
 Du kan opprette miljøer for ulike formål. Hensikten med et prøveversjonsmiljø er å prøve ut miljøet og databasen med Common Data Service-opplevelsen. Det utløper etter bestemt periode. Du finner mer informasjon i [Å administrere miljøer i PowerApps](environments-administration.md).
 
 ## <a name="choosing-an-environment"></a>Å velge et miljø
-Med lanseringen av miljøer vil du nå se en ny opplevelse når du kommer til [https://web.powerapps.comhttps://web.powerapps.com](https://web.powerapps.com).  Appene, tilkoblingene og andre elementer som er synlige i området filtreres nå, basert på det gjeldende miljøet som er valgt.  Det gjeldende miljøet er angitt i velgeren for miljøet nær høyre kant av toppteksten. Hvis du vil velge et annet miljø, kan du klikke eller trykke på velgeren, slik at en liste over tilgjengelige miljøer vises. Klikk eller trykk på det du vil åpne.
+Med lanseringen av miljøer vil du nå se en ny opplevelse når du kommer til [https://web.powerapps.com https://web.powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  Appene, tilkoblingene og andre elementer som er synlige i området filtreres nå, basert på det gjeldende miljøet som er valgt.  Det gjeldende miljøet er angitt i velgeren for miljøet nær høyre kant av toppteksten. Hvis du vil velge et annet miljø, kan du klikke eller trykke på velgeren, slik at en liste over tilgjengelige miljøer vises. Klikk eller trykk på det du vil åpne.
 
 Et miljø vises i velgeren hvis du oppfyller én av følgende betingelser:
 

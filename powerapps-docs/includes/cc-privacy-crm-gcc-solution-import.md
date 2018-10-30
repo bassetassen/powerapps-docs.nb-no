@@ -1,0 +1,1 @@
+Når du aktiverer en løsning, samtykker du i å dele data med et eksternt system. Data som er importert fra eksterne systemer til Microsoft Dynamics 365 (på nett), er underlagt [Personvern og informasjonskapsler for Microsoft](http://go.microsoft.com/fwlink/p/?LinkID=521839).

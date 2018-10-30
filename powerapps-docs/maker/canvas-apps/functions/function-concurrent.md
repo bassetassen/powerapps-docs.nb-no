@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/26/2018
 ms.author: gregli
-ms.openlocfilehash: 19eb6a11749ad6119fcc3812be9307da30080dc7
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: a0fdddcf906a04914ea9ba9a8572798ea5d55378
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021094"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42834823"
 ---
 # <a name="concurrent-function-in-powerapps"></a>Concurrent-funksjonen i PowerApps
 Evaluerer flere formler samtidig mot hverandre.
@@ -53,7 +57,7 @@ Du kan bare bruke **Concurrent** i [formler for virkemåte](../working-with-form
 
     **ClearCollect( Product, '[SalesLT].[Product]' );<br> ClearCollect( Customer, '[SalesLT].[Customer]' );<br> ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );<br> ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )**
 
-3. Slå på utviklerverktøyene for å overvåke nettverkstrafikken mens appen kjører, i [Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/network) eller [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/).
+3. Slå på utviklerverktøyene for å overvåke nettverkstrafikken mens appen kjører, i [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) eller [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/).
 
 1. (valgfritt) Slå på nettverksbegrensning for å overdrive effektene av denne sammenligningen.
 

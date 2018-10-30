@@ -9,18 +9,22 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: 6c362c39aa99490c8c2043b36a05e107b94e0a26
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: df3c186bb41621e7ec6087a9da55fc037e286b1a
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39014953"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42850194"
 ---
 # <a name="walk-end-to-end-through-the-completed-sharepoint-online-integration-scenario"></a>Ta en trinnvis gjennomgang av det komplette integreringsscenarioet for SharePoint Online
 > [!NOTE]
-> Denne artikkelen er en del av en opplæringsserie om hvordan du bruker PowerApps, Microsoft Flow og Power BI med SharePoint Online. Sørg for å lese [serieinnføringen](sharepoint-scenario-intro.md) for å få en fornemmelse av det store bildet, i tillegg til relaterte nedlastinger.
+> Denne artikkelen er en del av en opplæringsserie om hvordan du bruker PowerApps, Microsoft Flow og Power BI med SharePoint Online. Sørg for å lese [innføringen for serien](sharepoint-scenario-intro.md) for å få forståelse av det store bildet, i tillegg til relaterte nedlastinger.
 
-Vi har dekket et stort område i denne opplæringsserien, fra utvikling av apper og flyter til å opprette rapporter og bygge dem inn i SharePoint. Vi håper du har lært mye og har nok innsyn i hvordan du integrerer disse teknologiene, slik at du kan integrere apper, flyter og rapporter i SharePoint som er basert på dine egne behov. Før vi fullfører vil vi gå gjennom scenariet fra start til slutt, og se hvordan alle komponentene samvirker.
+Vi har dekket et stort område i denne opplæringsserien, fra utvikling av lerretsapper og flyter til å opprette rapporter og bygge dem inn i SharePoint. Vi håper du har lært mye og har nok innsyn i hvordan du integrerer disse teknologiene, slik at du kan integrere lerretsapper, flyter og rapporter i SharePoint som er basert på dine egne behov. Før vi fullfører vil vi gå gjennom scenariet fra start til slutt, og se hvordan alle komponentene samvirker.
 
 ## <a name="step-1-add-a-project-to-the-project-requests-list"></a>Trinn 1: Å legge til et prosjekt i Prosjektforespørsler-listen
 1. Klikk eller trykk på **Alle elementer** i **Prosjektforespørsler-listen**, og deretter klikker eller trykker du på **Prosjektforespørsler-appen**.

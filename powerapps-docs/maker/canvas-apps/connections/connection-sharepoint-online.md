@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/12/2017
 ms.author: ankitsar
-ms.openlocfilehash: 8019068155c88465f0f4202807fe763f2e4787b6
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 0a13d2602f06f436d4b805669b004f1ee63daeb9
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195523"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42836739"
 ---
 # <a name="connect-to-sharepoint-from-powerapps"></a>Koble til SharePoint fra PowerApps
 ![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
@@ -103,7 +107,7 @@ Kolonner som inneholder mellomrom kan leses av PowerApps, men mellomrommene erst
 
     ![Velge tabellene i SharePoint](./media/connection-sharepoint-online/select-sp-tables.png)
 
-    Ikke alle typer lister vises som standard. Hvis navnet på listen du vil bruke ikke vises, kan du bla til bunnen og deretter skrive inn listenavnet i boksen som inneholder **Skriv inn navn på egendefinert liste**.
+    Ikke alle typer lister vises som standard. PowerApps støtter egendefinerte lister, ikke malbaserte lister.  Hvis navnet på listen du vil bruke ikke vises, kan du bla til bunnen og deretter skrive inn listenavnet i boksen som inneholder **Skriv inn navn på egendefinert liste**.
 
     ![Egendefinert liste i SharePoint](./media/connection-sharepoint-online/custom-list.png)
 

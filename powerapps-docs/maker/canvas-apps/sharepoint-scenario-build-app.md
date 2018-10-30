@@ -1,6 +1,6 @@
 ---
-title: Å opprette en app for å administrere prosjekter | Microsoft Docs
-description: I denne oppgaven skal vi opprette en app fra grunnen av. Denne appen lar en bruker tilordne en leder til prosjekter og oppdatere prosjektdetaljer.
+title: Opprett en lerretsapp for å administrere prosjekter | Microsoft Docs
+description: I denne oppgaven skal vi opprette en lerretsapp fra grunnen av. Denne appen lar en bruker tilordne en leder til prosjekter og oppdatere prosjektdetaljer.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -9,18 +9,22 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: b4daabf019236a4245db324121a6745290c8b3ab
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 6b55fe94e7d781147e3e3511769c4d72ca3d90de
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021623"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42842375"
 ---
-# <a name="create-an-app-to-manage-projects"></a>Å opprette en app for å styre prosjektene
+# <a name="create-a-canvas-app-to-manage-projects"></a>Opprett en lerretsapp for å administrere prosjekter
 > [!NOTE]
-> Denne artikkelen er en del av en opplæringsserie om hvordan du bruker PowerApps, Microsoft Flow og Power BI med SharePoint Online. Sørg for å lese [serieinnføringen](sharepoint-scenario-intro.md) for å få et inntrykk av det store bildet, i tillegg til relaterte nedlastinger.
+> Denne artikkelen er en del av en opplæringsserie om hvordan du bruker PowerApps, Microsoft Flow og Power BI med SharePoint Online. Sørg for å lese [innføringen for serien](sharepoint-scenario-intro.md) for å få forståelse av det store bildet, i tillegg til relaterte nedlastinger.
 
-I denne oppgaven skal vi opprette en app fra grunnen av. Denne appen lar en bruker tilordne en leder til prosjekter og oppdatere prosjektdetaljer. Du vil se noen av de samme kontrollene og formlene du så i den første appen, men denne gangen skal du utforme appen i større grad selv. Prosessen er mer komplisert, men du vil lære mer – noe vi mener er et rettferdig bytte.
+I denne oppgaven skal vi opprette en lerretsapp fra grunnen av. Denne appen lar en bruker tilordne en leder til prosjekter og oppdatere prosjektdetaljer. Du vil se noen av de samme kontrollene og formlene du så i den første appen, men denne gangen skal du utforme appen i større grad selv. Prosessen er mer komplisert, men du vil lære mer – noe vi mener er et rettferdig bytte.
 
 > [!TIP]
 > [Nedlastingspakken](https://aka.ms/o4ia0f) for dette scenariet inkluderer en fullført versjon av denne appen: project-detaljer-app.msapp.

@@ -1,6 +1,6 @@
 ---
-title: Datakilder som kan delegeres | Microsoft Docs
-description: Liste over alle støttede datakilder som kan delegeres
+title: Datakilder som kan delegeres, i lerretsapper | Microsoft Docs
+description: Liste over alle støttede datakilder som kan delegeres, i lerretsapper
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 08/15/2017
 ms.author: lanced
-ms.openlocfilehash: e8863d8e260ecaafd407e93d710917848ce184ad
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 98931d4692a61839e0530682bd2d40258c07b7df
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018610"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42825767"
 ---
-# <a name="delegable-data-sources"></a>Datakilder som kan delegeres
-Som beskrevet i detalj i artikkelen [Forstå delegering](delegation-overview.md), handler delegering om at PowerApps delegerer behandlingen av data til datakilden i stedet for å flytte data til appen for å behandles lokalt.
+# <a name="delegable-data-sources-in-canvas-apps"></a>Datakilder som kan delegeres, i lerretsapper
+Som beskrevet i detalj i artikkelen [Forstå delegering](delegation-overview.md), handler delegering om at PowerApps delegerer behandlingen av data til datakilden i stedet for å flytte data til lerretsappen for å behandles lokalt.
 
 Delegering støttes for bare tabelldatakilder. Denne listen viser tabelldatakilder og om de støtter delegering, med detaljer i neste del.
 

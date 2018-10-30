@@ -5,14 +5,20 @@ author: jimholtz
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
-ms.date: 03/21/2018
+ms.date: 08/29/2018
 ms.author: jimholtz
-ms.openlocfilehash: eefcd30e4f5e6ec7441147c157cbb46864ebf718
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: 9d7a2093c938658d6717157fc6bd683aa3a55bb6
+ms.sourcegitcommit: b8eee36e680036accb0e7d9fc7a434906af1c4d2
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349252"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43297478"
 ---
 # <a name="create-an-environment"></a>Å opprette et miljø
 Et miljø er et område der du kan lagre, administrere og dele organisasjonens forretningsdata, apper og flyter. De fungerer også som beholdere til å skille apper som kan ha ulike roller, sikkerhetskrav eller målgrupper. Ett enkelt standardmiljø blir automatisk opprettet av PowerApps for hver leietaker og deles av alle brukerne i denne tenanten.
@@ -36,6 +42,8 @@ Logg deg på administrasjonssenteret på [https://admin.powerapps.com](https://a
 2. Skriv inn et navn for miljø i dialogboksen **Nytt miljø**, og deretter velger du en region- og miljøtype fra rullegardinlistene. Standardregionen blir den lokale regionen til Azure Active Directory-tenanten, men du kan velge hvilken som helst region i rullegardinlisten. Du kan ikke endre regionen når miljøet er opprettet. Når du er ferdig, klikker eller trykker du på **Opprett miljø**.
 
     ![Fil og Del](./media/create-environment/new-environment-dialog.png)
+
+    Velg **Forhåndsversjon (USA)** for å få tidlig tilgang til de kommende PowerApps-funksjonene. Lær om [forhåndsversjonsprogrammet for PowerApps](preview-environments.md).
 3. Når miljøet er opprettet, mottar du en bekreftelsesmelding i dialogboksen, og du blir bedt om å opprette en database. Klikk eller trykk på **Opprett database** for å få tilgang til Common Data Service.
 
     **OBS!** Du kan for øyeblikket bare opprette en database i den lokale regionen til Azure Active Directory-tenanten.

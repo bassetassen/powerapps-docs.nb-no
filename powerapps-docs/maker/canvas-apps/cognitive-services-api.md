@@ -1,6 +1,6 @@
 ---
 title: Bruk av Cognitive Services i PowerApps | Microsoft Docs
-description: Utvikle en grunnleggende app som bruker API for tekstanalyse i Microsoft Cognitive Services til å analysere tekst.
+description: Utvikle en grunnleggende lerretsapp som bruker API for tekstanalyse i Microsoft Cognitive Services, til å analysere tekst.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 12/08/2017
 ms.author: anneta
-ms.openlocfilehash: 6175633b2fbec4e9949882c587916adb349290d4
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: daaea74ede5f9818453b1d4ff32f3c46ef87b0fb
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195454"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42859586"
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>Bruk av Cognitive Services i PowerApps
-Denne artikkelen viser hvordan du kan utvikle en grunnleggende app som bruker [API for tekstanalyse i Microsoft Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview) til å analysere tekst. Vi viser deg hvordan du konfigurerer API-en for tekstanalyse og kobler til ved hjelp av [Tekstanalyse-koblingen](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Deretter viser vi hvordan du oppretter en app som utfører et oppkall til API-en.
+Denne artikkelen viser hvordan du kan utvikle en grunnleggende lerretsapp som bruker [API for tekstanalyse i Microsoft Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview), til å analysere tekst. Vi viser deg hvordan du konfigurerer API-en for tekstanalyse og kobler til ved hjelp av [Tekstanalyse-koblingen](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Deretter viser vi hvordan du oppretter en lerretsapp som utfører et kall til API-en.
 
 > [!NOTE]
 > Hvis du er ny på utvikling av apper i PowerApps, anbefaler vi at du leser [Oppretting av en app fra bunnen av](get-started-create-from-blank.md) før du går nærmere inn på denne artikkelen.

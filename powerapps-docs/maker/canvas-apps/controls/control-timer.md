@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9497d257372181323a920bd2c1098601021e4f79
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 934ab9bddfb429ae3ed96706420af002a87697fb
+ms.sourcegitcommit: 87122dba00b4177ef736d87ecdde79581649ba42
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42863671"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44499526"
 ---
 # <a name="timer-control-in-powerapps"></a>Tidtaker-kontrollen i PowerApps
 En kontroll som kan finne ut hvordan appen responderer etter en viss tid har passert.
@@ -36,11 +36,11 @@ Vær oppmerksom på at du må forhåndsvise appen for at tidtakeren kan kjøre i
 **Gjenta** – om en tidtaker automatisk starter på nytt når den har kjørt ferdig.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
-**[Align](properties-text.md)** – plasseringen av teksten i forhold til den vannrette midten av kontrollen.
+**[Juster](properties-text.md)** – plasseringen av teksten i forhold til den vannrette midten av kontrollen.
 
-**Autopause** – om et lyd- eller videoklipp pauser automatisk hvis brukeren navigerer til en annen skjerm.
+**AutoPause** – om timerkontrollen stanses automatisk hvis brukeren navigerer til en annen skjerm.
 
-**AutoStart** – om en lyd- eller videokontroll automatisk begynner å spille av et klipp når brukeren navigerer til skjermen som inneholder denne kontrollen.
+**AutoStart** – om timerkontrollen automatisk begynner å spille av et klipp når brukeren navigerer til skjermen, som inneholder denne kontrollen.
 
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
@@ -90,9 +90,9 @@ Vær oppmerksom på at du må forhåndsvise appen for at tidtakeren kan kjøre i
 
 **[Tilbakestill](properties-core.md)** – om en kontroll tilbakestilles til standardverdien.
 
-**[Size](properties-text.md)** – skriftstørrelsen på teksten som vises på en kontroll.
+**[Størrelse](properties-text.md)** – skriftstørrelsen på teksten som vises på en kontroll.
 
-**Start** – om et lyd- eller videoklipp spilles av.
+**Start** – om timer starter.
 
 **[Strikethrough](properties-text.md)** – om det vises en linje gjennom teksten som vises på en kontroll.
 

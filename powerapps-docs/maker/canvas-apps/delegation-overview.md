@@ -1,6 +1,6 @@
 ---
-title: Delegering i Microsoft Docs
-description: Bruk delegering for prosessering av store datasett på en effektiv måte.
+title: Forstå delegering i en lerretsapp | Microsoft Docs
+description: Bruk delegering for behandling av store datasett på en effektiv måte, i en lerretsapp.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/05/2018
 ms.author: lanced
-ms.openlocfilehash: 484d7b1149f158840238fc3d54713a1e6e33443b
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 0ac78340f344ce42fd68d18940b1aaca41412a96
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023601"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42829755"
 ---
-# <a name="understand-delegation"></a>Å forstå delegering
-PowerApps inneholder et kraftig sett med funksjoner for filtrering, sortering og forming av datatabeller, blant annet funksjonene **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)** og **[AddColumns](functions/function-table-shaping.md)**. Med disse funksjonene kan du gi brukerne fokusert tilgang til informasjonen de trenger. For de med databasebakgrunn vil bruk av disse funksjonene tilsvare skriving av en databasespørring.
+# <a name="understand-delegation-in-a-canvas-app"></a>Forstå delegering i en lerretsapp
+PowerApps inneholder et kraftig sett med funksjoner for filtrering, sortering og forming av datatabeller i en lerretsapp, blant annet funksjonene: **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)** og **[AddColumns](functions/function-table-shaping.md)**. Med disse funksjonene kan du gi brukerne fokusert tilgang til informasjonen de trenger. For de med databasebakgrunn vil bruk av disse funksjonene tilsvare skriving av en databasespørring.
 
 Nøkkelen til utvikling av effektive apper er å minimere datamengden som sendes til enheten din. Det er kanskje nok med noen få poster blant flere millioner, eventuelt kan én enkelt akkumulert verdi representere tusener av poster. Det kan også hende det bare er mulig å hente det første settet med poster, og resten føres inn når brukeren viser at det trengs flere. Fokus kan kraftig redusere prosesskraften, minnet og nettverksbåndbredden som appen trenger, noe som resulterer i raskere svartider for brukerne, selv på telefoner som er tilkoblet via et mobilnettverk. 
 

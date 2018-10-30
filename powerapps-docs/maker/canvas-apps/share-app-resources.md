@@ -9,17 +9,25 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/28/2016
 ms.author: archanan
-ms.openlocfilehash: 881a0eb85d252131d6249c171c95c0711e4887d4
-ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: f6adc46eafda2f5bd9798c13b292a82d567e34a7
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39471401"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42831340"
 ---
 # <a name="share-canvas-app-resources-in-powerapps"></a>Del lerretsappressurser i PowerApps
 
 Før du [deler en lerretsapp](share-app.md), bør du vurdere ressurstypene den er avhengig av, for eksempel en eller flere av følgende:
 
+* enheter i Common Data Service for apper
+
+    Hvis du vil ha informasjon om hvordan gi brukerne tilgang til disse dataene, kan du se [Administrer enhetstillatelser](share-app.md#manage-entity-permissions).
+    
 * en tilkobling til en datakilde
 * en lokal datagateway
 * en egendefinert kobling

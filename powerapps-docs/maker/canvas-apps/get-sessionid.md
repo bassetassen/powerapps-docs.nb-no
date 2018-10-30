@@ -1,6 +1,6 @@
 ---
-title: Få en økt-ID eller en app-ID | Microsoft Docs
-description: Slik får du en økt-ID eller en app-ID for feilsøking i PowerApps
+title: Få en økt-ID eller en lerretsapp-ID | Microsoft Docs
+description: Slik får du en økt-ID eller en lerretsapp-ID for feilsøking i PowerApps
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/18/2018
 ms.author: anneta
-ms.openlocfilehash: 2e9b1a38de104ce1bf5a17969ca2c79792ac6fd4
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 67cfe4ac6c53797e6a18a68d3fbcf29b088f3da8
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39022267"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42848659"
 ---
-# <a name="get-a-session-id-or-an-app-id"></a>Få en økt-ID eller en app-ID
-Hvis det oppstår et problem med en app som ble opprettet i PowerApps, kan du hjelpe Microsoft med å feilsøke problemet mye mer effektivt hvis du gir dem en økt-ID, app-ID eller begge deler for dette problemet.
+# <a name="get-a-session-id-or-a-canvas-app-id"></a>Få en økt-ID eller en lerretsapp-ID
+Hvis det oppstår et problem med en lerretsapp som ble opprettet i PowerApps, kan du hjelpe Microsoft med å feilsøke problemet mye mer effektivt hvis du gir dem en økt-ID, app-ID eller begge deler for dette problemet.
 
 ## <a name="get-the-session-id"></a>Hente økt-ID-en
 

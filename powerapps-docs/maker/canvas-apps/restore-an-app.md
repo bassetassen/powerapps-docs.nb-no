@@ -1,6 +1,6 @@
 ---
-title: Å gjenopprette appen til en tidligere versjon | Microsoft Docs
-description: Å gjenopprette en app
+title: Gjenopprett lerretsappen til en tidligere versjon | Microsoft Docs
+description: Gjenopprett en lerretsapp i PowerApps
 author: jamesol-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: jamesol
-ms.openlocfilehash: 3f59dac57fcdd344645f7af53c75e9fa1cb1a7a3
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 611b13509d92cf550f3391754d389863d538cb08
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195086"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42832485"
 ---
-# <a name="restore-an-app-to-a-previous-version"></a>Å gjenopprette appen til en tidligere versjon
-Denne artikkelen viser deg hvordan du gjenoppretter en app til en tidligere versjon som er lagret i skyen fra PowerApps-kontoen din.
+# <a name="restore-a-canvas-app-to-a-previous-version-in-powerapps"></a>Gjenopprett en lerretsappen til en tidligere versjon i PowerApps
+Denne artikkelen viser deg hvordan du gjenoppretter en lerretsapp til en tidligere versjon som er lagret i skyen fra PowerApps-kontoen din.
 
 ## <a name="restore-an-app-from-your-account"></a>Å gjenopprette en app fra kontoen din
 1. Åpne [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og klikk eller trykk på **Apper** i navigasjonsfeltet til venstre.

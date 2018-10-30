@@ -1,6 +1,6 @@
 ---
-title: Opprett en tilkobling til SharePoint fra PowerApps | Microsoft Docs
-description: På powerapps.com kan du opprette en tilkobling til SharePoint, som du kan bruke for å generere en app automatisk eller utvikle en fra bunnen av.
+title: Opprett en tilkobling fra en lerretsapp til SharePoint | Microsoft Docs
+description: I PowerApps kan du opprette en tilkobling til SharePoint, som du kan bruke for å generere en lerretsapp automatisk eller utvikle en fra grunnen av.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 09/03/2016
 ms.author: anneta
-ms.openlocfilehash: 0e0b98277548d188071bcd29b9e3168de5818321
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 170115f07da57878c553a1776fc26a9cd27a8258
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195868"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42844159"
 ---
 # <a name="create-a-connection-to-sharepoint-from-powerapps"></a>Opprett en tilkobling til SharePoint fra PowerApps
-Opprett en tilkobling enten til SharePoint Online eller SharePoint lokalt, slik at du kan generere en app automatisk eller utvikle en fra bunnen av.
+Opprett en tilkobling enten til SharePoint Online eller SharePoint lokalt, slik at du kan generere en lerretsapp automatisk eller utvikle en fra bunnen av.
 
 Hvis du ikke allerede er kjent med PowerApps, kan du se [Introduksjon til PowerApps](getting-started.md).
 

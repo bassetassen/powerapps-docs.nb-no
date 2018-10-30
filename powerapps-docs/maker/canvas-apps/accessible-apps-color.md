@@ -1,6 +1,6 @@
 ---
-title: Tilgjengelige farger | Microsoft Docs
-description: Retningslinjer for fargekontrast i PowerApps
+title: Tilgjengelige farger i lerretsapper | Microsoft Docs
+description: Retningslinjer for fargekontrast for lerretsapper i PowerApps
 author: tahoon
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/23/2018
 ms.author: tahoon
-ms.openlocfilehash: 289026f18d341381d64423e76effb1abf586557c
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 96a04cdda99f379c799ccd68e2442572ac929d39
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39014815"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42862914"
 ---
-# <a name="accessible-colors-in-powerapps"></a>Tilgjengelige farger i PowerApps
-Fargene som brukes i en app, skal være tilpasset for fargeblinde og svaksynte brukere. Alle PowerApps-temaer er tilpassede som standard. Følg disse retningslinjene for å sikre at fargene forblir tilgjengelige når du endrer dem i et program. Det finnes flere verktøy tilgjengelige på nettet som kan hjelpe deg med å oppdage problemer knyttet til fargekontrast.
+# <a name="accessible-colors-for-canvas-apps-in-powerapps"></a>Tilgjengelige farger for lerretsapper i PowerApps
+Fargene som brukes i en lerretsapp, skal være tilpasset for fargeblinde og svaksynte brukere. Alle PowerApps-temaer er tilpassede som standard. Følg disse retningslinjene for å sikre at fargene forblir tilgjengelige når du endrer dem i et program. Det finnes flere verktøy tilgjengelige på nettet som kan hjelpe deg med å oppdage problemer knyttet til fargekontrast.
 
 ## <a name="minimum-contrast-for-text"></a>Minimum kontrast for tekst
 * Teksten og bakgrunnen må ha en kontrast på minst 4,5:1

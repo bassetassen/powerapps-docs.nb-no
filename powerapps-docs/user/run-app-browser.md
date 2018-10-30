@@ -1,6 +1,6 @@
 ---
-title: Hurtigstart for å kjøre apper i en nettleser | Microsoft Docs
-description: I denne hurtigveiledningen lærer du hvordan du kjører apper i en nettleser
+title: Kjør apper i en nettleser | Microsoft Docs
+description: I dette emnet lærer du hvordan du kjører apper i en nettleser
 author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
@@ -11,15 +11,20 @@ manager: kvivek
 ms.custom: ''
 ms.reviewer: ''
 ms.assetid: ''
-ms.openlocfilehash: b0b0cb39cf0a7d49ca24d31c2803ae463df2f97e
-ms.sourcegitcommit: bcfefb30b12cf94815dd9a0fd8cad29a8272d96e
+search.audienceType:
+- enduser
+search.app:
+- PowerApps
+- D365CE
+ms.openlocfilehash: f72d4b5192bd30da676e65e232bc2a3090cb77bb
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37925643"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42832429"
 ---
-# <a name="quickstart-run-an-app-in-a-web-browser"></a>Hurtigstart: å kjøre en app i en nettleser
-Når du oppretter en app, eller noen deler en app med deg, kan du kjøre appen i Windows, iOS, Android eller i en nettleser. I denne hurtigveiledningen lærer du hvordan du kjører en lerret-app eller en modelldrevet app i en nettleser fra [Dynamics 365-hjemmesiden](https://home.dynamics.com).
+# <a name="run-an-app-in-a-web-browser"></a>Kjør en app i en nettleser
+Når du oppretter en app, eller noen deler en app med deg, kan du kjøre appen i Windows, iOS, Android eller i en nettleser. I dette emnet lærer du hvordan du kjører en lerretsapp eller en modelldrevet app i en nettleser fra [Dynamics 365-hjemmesiden](https://home.dynamics.com).
 
 Hvis du vil følge denne hurtiginnføringen, trenger du:
 - En PowerApps-lisens. Dette er tilgjengelig med et PowerApps-abonnement som for eksempel [prøveversjon på PowerApps-abonnement 2](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps), eller et [Microsoft Office 365](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1)- eller [Dynamics 365](https://dynamics.microsoft.com/pricing/)-abonnement som inkluderer PowerApps. 
@@ -62,7 +67,7 @@ Hvis appen krever en tilkobling til en datakilde eller samtykke for å bruke fun
 Logg ut av hjemmesiden for Dynamics 365 for å lukke appen, eller åpne en annen app.
 
 ## <a name="next-steps"></a>Neste trinn
-I denne hurtiginnføringen finner du ut hvordan du kjører en modelldrevet app i en nettleser. Fortsett til neste hurtigveiledning for å finne ut hvordan du kjører en lerret-app på en mobil enhet.
+I dette emnet lærer du hvordan du kjører en modelldrevet app i en nettleser. Fortsett til neste emne for å lære hvordan du kjører en lerretsapp på en mobil enhet.
 
 > [!div class="nextstepaction"]
-> [Å kjøre en lerret-app på en mobilenhet](run-app-client.md)
+> [Å kjøre en arbeidssonebasert app på en mobil enhet](run-app-client.md)

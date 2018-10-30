@@ -1,6 +1,6 @@
 ---
-title: Endring av skjermstørrelse og -retning
-description: Trinnvise instruksjoner for å endre innstillinger som skjermstørrelse og -retning
+title: Endring av skjermstørrelse og -retning for en lerretsapp | Microsoft Docs
+description: Trinnvise instruksjoner for å endre innstillinger som skjermstørrelsen og -retningen for en lerretsapp i PowerApps
 author: lonu
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: lonu
-ms.openlocfilehash: 0f68fa188dd58b276dce4009cdb37fed33d81d69
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: ab41707c06faa11dd2e1d519b72fb35ff6b9914a
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39015919"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42835587"
 ---
-# <a name="change-screen-size-and-orientation-in-powerapps"></a>Endring av skjermstørrelse og -retning i PowerApps
-Å tilpasse en app ved å endre skjermstørrelsen og -retningen.
+# <a name="change-screen-size-and-orientation-of-a-canvas-app-in-powerapps"></a>Endring av skjermstørrelse og -retning for en lerretsapp i PowerApps
+Tilpass en lerretsapp ved å endre skjermstørrelsen og -retningen.
 
 ## <a name="prerequisites"></a>Forutsetninger
 1. Opprett en app, eller åpne en for redigering.

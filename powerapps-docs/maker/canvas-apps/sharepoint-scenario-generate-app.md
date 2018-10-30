@@ -1,6 +1,6 @@
 ---
-title: Å generere en app for å administrere prosjektforespørsler i Microsoft Docs
-description: I denne oppgaven skal vi generere en grunnleggende *app med tre skjermer* direkte fra en SharePoint-liste.
+title: Generer en lerretsapp for å administrere prosjektforespørsler | Microsoft Docs
+description: I denne oppgaven skal vi generere en grunnleggende lerretsapp med tre skjermer direkte fra en SharePoint-liste.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -9,14 +9,18 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: 7072d78b79adff65aac33c888bf0f980f953ef84
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 4466d8f42a0ba9c9a162353bc214abf6d9d9ef83
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023946"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42834263"
 ---
-# <a name="generate-an-app-to-handle-project-requests"></a>Å generere en app for å administrere prosjektforespørsler
+# <a name="generate-a-canvas-app-to-handle-project-requests"></a>Generer en lerretsapp for å administrere prosjektforespørsler
 > [!NOTE]
 > Denne artikkelen er en del av en opplæringsserie om hvordan du bruker PowerApps, Microsoft Flow og Power BI med SharePoint Online. Sørg for å lese [innføringen for serien](sharepoint-scenario-intro.md) for å få forståelse av det store bildet, i tillegg til relaterte nedlastinger.
 

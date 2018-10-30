@@ -6,14 +6,20 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 07/30/2018
+ms.date: 08/15/2018
 ms.author: manasma
-ms.openlocfilehash: 02b25dd627e85b638a113c1c0aceee16d7df6275
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: 976ecbd9eeaff0ee5a274b943d4d35c21568201d
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349091"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42864272"
 ---
 # <a name="administer-environments-in-powerapps"></a>Administrer miljøer i PowerApps
 I [administrasjonssenteret for PowerApps][1] kan du administrere miljøer du har opprettet, samt miljøer der du har blitt lagt til i rollen som miljøadministrator eller systemansvarlig. Du kan utføre disse administrative handlingene fra administrasjonssenteret:
@@ -178,7 +184,7 @@ Du kan opprette opptil to prøveversjonsmiljøer og to produksjonsmiljøer, avhe
 PowerApps Plan 2.  Se [PowerApps-prissiden][3] for mer informasjon om alle abonnementer som inkluderer denne lisensen.
 
 ### <a name="while-trying-to-create-a-new-environment-i-am-getting-an-error-how-should-i-resolve-it"></a>Jeg får en feil når jeg prøver å opprette et nytt miljø. Hvordan løser jeg det?
-Hvis du får feilmeldingen «Enten så støtter ikke planen din den valgte miljøtypen, eller så har du nådd grensen for denne miljøtypen», kan det bety en av to ting:
+Hvis du får feilmeldingen «Enten så støtter ikke planen din den valgte miljøtypen, eller så har du nådd grensen for denne miljøtypen», kan det bety én av to ting:
 
 1. Du har allerede brukt kvoten for å opprette en bestemt type miljøer. Hvis du for eksempel opprettet et prøveversjonsmiljø og fikk denne feilmeldingen, betyr det at du allerede har opprettet to prøveversjonsmiljøer. Du kan vise alle miljøer i [administrasjonssenteret for PowerApps ][1].
 Hvis du vil, kan du slette det eksisterende miljøet av denne bestemte typen og opprette et nytt. Men pass på at du ikke mister data, apper, flyter og andre ressurser som du vil beholde.
@@ -190,14 +196,8 @@ Hvis du får en annen feilmelding, eller hvis du har flere spørsmål, kan du ta
 ### <a name="while-trying-to-create-a-database-in-an-environment-i-am-getting-an-error-how-should-i-resolve-it"></a>Jeg får en feil når jeg prøver å opprette en database i et miljø. Hvordan løser jeg det?
 Du kan få en feil når du prøver å opprette en database i følgende scenarioer:
 
-1. **Standardmiljø**: For øyeblikket støttes ikke oppretting av en database i et standardmiljø i leieren. 
-
-2. **Miljø for individuell bruk**: Du får et miljø for individuell bruk når du registrerer deg via PowerApps Community Plan. Hvis du ikke har opprettet databasen ennå, kan du for øyeblikket ikke klargjøre en database i miljøet for individuell bruk. 
-
-3. **Miljø i et annet område enn AAD-leierens hjemmeområde**: For øyeblikket kan du bare klargjøre en database i miljøer som er opprettet i hjemmeområdet for Azure Active Directory-leieren din. Muligheten til å klargjøre en database i de andre områdene, kommer snart. Så pass på at området er det samme som leierens standardplassering hvis du vil opprette en database i den.
-
-4. **Opprette databaser som ikke støttes i bestemte områder**: Det finnes visse områder, der oppretting av databaser fremdeles ikke er tilgjengelig. Dette gjelder for eksempel land i Sør-Amerika. Så hvis leierens hjemsted er i Sør-Amerika, kan du for øyeblikket ikke klargjøre en database i noen miljøer. 
-    
+**Standardmiljø**: For øyeblikket støttes ikke oppretting av en database i et standardmiljø i leieren. 
+  
 Vi arbeider med å aktivere alle scenarioene over.
 Hvis du får andre feilmeldinger, eller hvis du har flere spørsmål, kan du ta kontakt med oss [her][5]
 
