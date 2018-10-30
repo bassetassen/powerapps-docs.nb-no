@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: fa2631d065425ab57e47dccbb470f577d6474f23
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: afbb6211ee947abd59e74a0712dd080f6911ec65
+ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42831027"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806183"
 ---
 # <a name="integrate-powerapps-microsoft-flow-and-power-bi-with-sharepoint-online"></a>Å integrere PowerApps, Microsoft Flow og Power BI med SharePoint Online
 Har du SharePoint Online og ønsker å automatisere og strømlinjeforme forretningsprosessene bedre? Har du jobbet med PowerApps, Microsoft Flow eller Power BI, men er ikke sikker på hvordan du bruker dem med SharePoint Online? Du har kommet til rett sted! Denne serien av veiledninger utforsker hvordan du bygger en grunnleggende lerretsapp for prosjektstyring, som er basert på SharePoint-lister og tre viktige teknologier, som kan integreres med SharePoint Online: PowerApps, Microsoft Flow og Power BI. Disse teknologiene arbeider sammen, noe som gjør det enkelt å *måle* bedriften, *reagere* på resultatene, og *automatisere* arbeidsflyten. Når du er ferdig med denne serien, har du et stilig scenario, som følgende:
@@ -31,7 +31,7 @@ I denne serien av opplæringer har firmaet Contoso et SharePoint Online-området
 ## <a name="getting-started-quickly"></a>Å komme raskt i gang
 Scenarioet vi presenterer i denne serien av opplæringer, er enkelt sammenlignet med en komplett prosjektstyring- og analyse-app, men det tar fremdeles litt tid å fullføre alle oppgavene. Hvis du bare ønsker en rask innføring i å bruke PowerApps, Microsoft Flow og Power BI med SharePoint, se følgende artikler:
 
-* **PowerApps**: [Å generere en app fra innsiden av SharePoint ved hjelp av PowerApps](generate-app-from-sharepoint-list-interface.md), og [Å generere en app for å behandle data i en SharePoint-liste](app-from-sharepoint.md)
+* **PowerApps**: [Å generere en app fra innsiden av SharePoint ved hjelp av PowerApps](app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online), og [Å generere en app for å behandle data i en SharePoint-liste](app-from-sharepoint.md)
 * **Microsoft Flow**: [Å vente på godkjenning i Microsoft Flow](https://docs.microsoft.com/flow/wait-for-approvals)
 * **Power BI**: [Å bygge inn med nettdelen for rapporter i SharePoint Online](https://docs.microsoft.com/power-bi/service-embed-report-spo)
 

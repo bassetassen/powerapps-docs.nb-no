@@ -1,5 +1,5 @@
 ---
-title: Integrering av PowerApps på nettsteder og andre tjenester| Microsoft Docs
+title: Integrer lerretsapper på nettsteder og andre tjenester | Microsoft Docs
 description: Bygg inn lerretsapper på nettsteder og i andre tjenester.
 author: mgblythe
 manager: kvivek
@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c9cd4008bcb93e05d696fec082e400ee9661785b
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 254d127237cff58728f208d62c30bf7aeb456a80
+ms.sourcegitcommit: 097ddfb25eb0f09f0229b866668c2b02fa57df55
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42835399"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991842"
 ---
-# <a name="integrate-powerapps-into-websites-and-other-services"></a>Integrering av PowerApps på nettsteder og andre tjenester
+# <a name="integrate-canvas-apps-into-websites-and-other-services"></a>Integrer lerretsapper på nettsteder og andre tjenester
 Appene du utvikler er gjerne mest nyttige når de er tilgjengelige direkte hvor arbeidet utføres. Med PowerApps kan du bygge inn lerretsapper i en iframe, slik at du kan integrere disse appene på nettsteder og i andre tjenester, for eksempel Power BI eller SharePoint.
 
 I dette emnet viser vi deg hvordan du angir parametere for innebygging av apper. Deretter bygger vi inn ressursbestillingsappen på et nettsted.
@@ -32,7 +32,7 @@ Husk på følgende restriksjoner:
 * Bare PowerApps-brukere i samme tenant har tilgang til den innebygde appen.
 * Hvis du vil ha tilgang til PowerApps ved hjelp av Internet Explorer 11, må du deaktivere kompatibilitetsmodus for visning.
 
-Du kan også integrere PowerApps i SharePoint Online (uten å bruke en iframe). Hvis du vil ha mer informasjon, kan du se [Generer en app fra SharePoint ved hjelp av PowerApps](../canvas-apps/generate-app-from-sharepoint-list-interface.md).
+Du kan også integrere PowerApps i SharePoint Online (uten å bruke en iframe). Hvis du vil ha mer informasjon, kan du se [Generer en app fra SharePoint ved hjelp av PowerApps](app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online).
 
 ## <a name="set-uri-parameters-for-your-app"></a>Å angi URI-parametere for appen din
 Hvis du har en app du vil bygge inn, er det første trinnet å angi parametere for Uniform Resource Identifier (URI), slik at iframe finner appen. URI-en finnes i følgende format:

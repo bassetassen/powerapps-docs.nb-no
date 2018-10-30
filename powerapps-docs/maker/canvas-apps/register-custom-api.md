@@ -1,6 +1,6 @@
 ---
-title: Koblinger til innhold om egendefinerte koblinger | Microsoft Docs
-description: Koblinger til innhold for å opprette, bruke, dele og sertifisere egendefinerte koblinger i PowerApps.
+title: Koblinger til innhold om egendefinerte koblinger for lerretsapper | Microsoft Docs
+description: Koblinger til innhold for å opprette, bruke, dele og sertifisere egendefinerte koblinger for lerretsapper i PowerApps.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: dd07dbc90900e4690e677823d2303b96e57472f5
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 6975c19a973b90de0db7dfbc7ecb8e5e504f39a4
+ms.sourcegitcommit: 097ddfb25eb0f09f0229b866668c2b02fa57df55
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42859327"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991796"
 ---
-# <a name="custom-connectors-in-powerapps"></a>Egendefinerte koblinger i PowerApps
+# <a name="custom-connectors-for-canvas-apps"></a>Egendefinerte koblinger for lerretsapper
 
 Du kan utvikle arbeidsflyter og lerretsapper med [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps), [Microsoft Flow](https://flow.microsoft.com) og [PowerApps](https://powerapps.microsoft.com) uten å skrive kode. For å hjelpe deg med å integrere dataene og forretningsprosessene dine har disse tjenestene [mer enn 180 koblinger](https://docs.microsoft.com/connectors/) for Microsoft-tjenester og -produkter, i tillegg til andre tjenester, som for eksempel GitHub, Salesforce og Twitter.
 

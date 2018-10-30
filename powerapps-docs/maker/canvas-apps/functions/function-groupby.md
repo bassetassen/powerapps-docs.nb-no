@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e0bdab9bcd45f456c00f933dfa7f1a8936e3fa85
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 0ac3f0549e89153d9362d6a8a040833608d4e287
+ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865417"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806206"
 ---
 # <a name="groupby-and-ungroup-functions-in-powerapps"></a>Funksjonene GroupBy og Ungroup i PowerApps
 Grupperer og deler opp [poster](../working-with-tables.md#records) av en [tabell](../working-with-tables.md).
@@ -68,7 +68,7 @@ En tabell er en verdi i PowerApps, akkurat som en streng eller et tall. Du kan a
 2. Angi **[OnSelect](../controls/properties-core.md)**-egenskapen for **Original**-knappen til denne formelen:
    
     **ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
-3. Trykk på F5, velg **Opprinnelig**-knappen, og trykk deretter på ESC.
+3. Velg **Opprinnelig**-knappen mens du holder nede ALT-tasten.
    
     Du opprettet en [samling](../working-with-data-sources.md#collections), kalt **CityPopulations**, som inneholder disse dataene:
    
@@ -82,7 +82,7 @@ En tabell er en verdi i PowerApps, akkurat som en streng eller et tall. Du kan a
 2. Sett **[OnSelect](../controls/properties-core.md)**-egenskapen til denne knappen til denne formelen:
    
     **ClearCollect( CitiesByCountry, GroupBy( CityPopulations, "Country", "Cities" ) )**
-3. Trykk på F5, velg **Gruppe**-knappen, og trykk deretter på ESC.
+3. Velg **Gruppe**-knappen mens du holder nede ALT-tasten.
    
     Du opprettet en samling, kalt **CitiesByCountry**, hvor poster for den forrige samlingen er gruppert etter **Country**-kolonnen.
    
@@ -99,7 +99,7 @@ En tabell er en verdi i PowerApps, akkurat som en streng eller et tall. Du kan a
 2. Sett **[OnSelect](../controls/properties-core.md)**-egenskapen til denne knappen til den følgende formelen:
    
     **ClearCollect( CitiesByCountryFiltered, Filter( CitiesByCountry, "e" in Country ) )**
-3. Trykk på F5, velg knappen du har lagt til, og trykk deretter på ESC.
+3. Velg knappen du la til mens du holder nede ALT-tasten.
    
     Du opprettet en tredje samling, kalt **CitiesByCountryFiltered**, som bare inkluderer landene som har en «e» i navnet (det vil si ikke Spania eller Italia).
    
@@ -126,8 +126,12 @@ Noe annet vi kan gjøre med en gruppert tabell, er å samle resultatene.  I dett
     ![](media/function-groupby/cities-sum.png)
    
     **[AddColumns](function-table-shaping.md)** starter med **CitiesByCountry**-samlingen som grunnlag og legger til en ny kolonne kalt **Sum of City Populations**.  Verdier for denne kolonnen er beregnet rad-for-rad basert på formelen **Sum( Cities, Population )**.  Funksjonen **AddColumns** angir verdien for **Cities**-kolonnen (en tabell) for hver rad, og **[Sum](function-aggregates.md)** legger sammen **Befolkning** for hver rad i denne undertabellen.
-3. Nå som vi har summen som vi ønsker, kan vi bruke **[DropColumns](function-table-shaping.md)** til å fjerne undertabeller.  Endre **[OnSelect](../controls/properties-core.md)**-egenskapen til å bruke denne formelen:
-   
+
+    Nå som vi har summen som vi ønsker, kan vi bruke **[DropColumns](function-table-shaping.md)** til å fjerne undertabeller.
+  
+3. Legg til en annen knapp, og endre **[Tekst](../controls/properties-core.md)**-egenskapen, slik at knappen viser **"SumOnly"**.
+4. Angi **[OnSelect](../controls/properties-core.md)**-egenskapen for **"SumOnly"**-knappen til denne formelen:
+
     **ClearCollect( CityPopulationsSumOnly, DropColumns( CityPopulationsSum, "Cities" ) )**
    
     Som resulterer i:

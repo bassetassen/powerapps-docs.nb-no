@@ -1,53 +1,52 @@
 ---
-title: Legg til en liste, en rullegardinliste og alternativknapper i en lerretsapp | Microsoft Docs
+title: Legg til en liste, en rullegardinliste eller alternativknapper i en lerretsapp| Microsoft Docs
 description: Opprett eller konfigurer alternativer for flervalg i en lerretsapp i PowerApps
-author: lonu
+author: fikaradz
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 10/23/2016
-ms.author: lonu
+ms.date: 10/24/2018
+ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 71beefdb0c937d69e621d6b02fa000b96c5a3e73
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 293c850c5af980a480a56cb9fb3b8c7866950580
+ms.sourcegitcommit: 097ddfb25eb0f09f0229b866668c2b02fa57df55
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42861509"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991750"
 ---
-# <a name="add-a-list-box-a-drop-down-list-or-radio-buttons-to-a-canvas-app-in-powerapps"></a>Legg til en liste, en rullegardinliste eller alternativknapper i en lerretsapp i PowerApps
+# <a name="add-a-list-box-a-drop-down-list-or-radio-buttons-to-a-canvas-app"></a>Legg til en liste, en rullegardinliste eller alternativknapper i en lerretsapp
 
-PowerApps inneholder alternativer for enkeltvalg og flervalg, inkludert en liste, en rullegardinliste og alternativknapper. I dette emnet legger vi til disse kontrollene og bruker en **Tabell**-formel for å lage listene. Når et element velges i listen, oppdateres andre kontroller.
+Vis en enkelt kolonne med data (for eksempel fra en flerkolonnetabell) i en lerretsapp, slik at brukere kan velge ett eller flere elementer i en liste.
+
+- Legg til en listeboks for å tillate brukere å velge mer enn ett alternativ.
+- Legg til en rullegardinliste for å ta opp mindre plass på skjermen.
+- Legg til et sett med alternativknapper for å oppnå en bestemt effekt på utformingen.
+
+Dette emnet fokuserer på lister og alternativknapper, men de samme prinsippene gjelder for rullegardinlistene.
 
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
-## <a name="add-a-list-box"></a>Å legge til en listeboks
+## <a name="create-a-simple-list"></a>Opprett en enkel liste
 
-1. Velg **Kontroller** på **Sett inn**-fanen, og velg deretter **Listeboks**:  
+1. Legg til en **Liste**-kontroll, gi den navnet **MyListBox**, og angi **Elementer**-egenskapen som denne formelen:
 
-    ![][2]  
-
-2. Endre navnet på **Liste**-kontrollen til **MyListBox**:  
-
-    ![][3]
-
-3. Angi kontrollens **[Element](controls/properties-core.md)**-egenskaper til følgende uttrykk:  
-   ```["circle","triangle","rectangle"]```  <br/>
+    ```["circle","triangle","rectangle"]```  <br/>
 
     Utformingen ser omtrent slik ut:
 
     ![][4]
 
-4. Velg **Ikoner** på **Sett inn**-fanen, velg sirkelen og flytt den under **Listeboks**-kontrollen:
+4. Velg **Ikoner** på **Sett inn**-fanen, velg sirkelen og flytt den under **MyListBox**:
 
     ![][5]  
 
-5. Legg til en trekant og et rektangel, og deretter arranger du figurene i en rad under **Listeboks**-kontrollen:
+5. Legg til en trekant og et rektangel, og deretter arranger du figurene i en rad under **MyListBox**:
 
     ![][6]  
 
@@ -59,12 +58,14 @@ PowerApps inneholder alternativer for enkeltvalg og flervalg, inkludert en liste
    | trekant |```If("triangle" in MyListBox.SelectedItems.Value, true)``` |
    | rektangel |```If("rectangle" in MyListBox.SelectedItems.Value, true)``` |
 
-7. Forhåndsvis det du har opprettet ![][1]. Velg de forskjellige figurene i **Liste**-kontrollen. Kun figuren eller figurene du har valgt, vil vises. Trykk på ESC eller velg **X** for å gå tilbake til skjermen din.
+7. Velg én eller flere figurer i **MyListBox** mens du holder nede ALT-tasten.
 
-I disse trinnene brukte du et uttrykk for å opprette en liste over elementer i en **Listeboks**-kontroll. Forskjellige figurer vil vises avhengig av hva du velger i **Listeboks**-kontrollen. Du kan bruke dette for andre elementer i virksomheten din. Du kan for eksempel bruke en **Listeboks**-kontroll til å vise produktbilder, produktbeskrivelser og så videre.
+    Kun figuren eller figurene du har valgt, vil vises.
+
+I disse trinnene brukte du et uttrykk for å opprette en liste over elementer. Du kan bruke dette for andre elementer i virksomheten din. Du kan for eksempel bruke en **rullegardin**-kontroll til å vise produktbilder, produktbeskrivelser og så videre.
 
 ## <a name="add-radio-buttons"></a>Å legge til alternativknapper
-1. Velg **Ny skjerm** på **Hjem**-fanen.
+1. Velg **Ny skjerm**, og velg deretter **Tom**, på **Hjem**-fanen.
 
 2. Velg **Kontroller** på **Sett inn**-fanen, og velg deretter **Alternativ**.
 
@@ -80,7 +81,7 @@ I disse trinnene brukte du et uttrykk for å opprette en liste over elementer i 
 4. Velg **Ikoner** på **Sett inn**-fanen, og deretter velger du sirkelen.
 
 5. Angi sirkelens **[Fyll](controls/properties-color-border.md)**-egenskap til følgende funksjon:  
-   ```If(Choices.Selected.Value = "red", RGBA(192, 0, 0, 1), Choices.Selected.Value = "green", RGBA(0, 176, 80, 1), Choices.Selected.Value = "blue", RGBA(0, 32, 96, 1))```  
+   ```If(Choices.Selected.Value = "red", Red, Choices.Selected.Value = "green", Green, Choices.Selected.Value = "blue", Blue)```  
 
     I denne formelen endrer sirkelen farge avhengig av hvilken alternativknapp du velger.
 
@@ -88,20 +89,7 @@ I disse trinnene brukte du et uttrykk for å opprette en liste over elementer i 
 
     ![][14]  
 
-7. Forhåndsvis det du har opprettet: ![][1]. Velg en annen alternativknapp for å endre fargen på sirkelen. Trykk på ESC eller velg **X** for å gå tilbake til skjermen din.
-
-## <a name="add-a-drop-down-list"></a>Å legge til en rullegardinliste
-1. Legg til en skjerm, og deretter legger du til en **Rullegardin**-kontroll.
-
-    ![][15]  
-
-2. Endre navnet på kontrollen til **DDChoices** og angi kontrollens **[Element](controls/properties-core.md)**-egenskap til denne formelen:<br>
-   **["red","green","blue"]**
-
-3. Legg til en sirkel, flytt den under **Rullegardin**-kontrollen, og angi deretter sirkelens **[Fyll](controls/properties-color-border.md)**-egenskap til denne formelen:  
-   ```If(DDChoices.Selected.Value = "red", RGBA(192, 0, 0, 1), DDChoices.Selected.Value = "green", RGBA(0, 176, 80, 1), DDChoices.Selected.Value = "blue", RGBA(0, 32, 96, 1))```
-
-4. Forhåndsvis det du har opprettet: ![][1]. Velg de forskjellige alternativene for å endre farge på sirkelen.
+7. Velg en annen alternativknapp mens du holder nede ALT-tasten for å endre fargen på sirkelen.
 
 [1]: ./media/add-list-box-drop-down-list-radio-button/preview.png
 [2]: ./media/add-list-box-drop-down-list-radio-button/listbox.png
