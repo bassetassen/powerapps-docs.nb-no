@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a255489f243ca8586f349e617e5af2023e88732b
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: f081369d75ec6f8fc29e6177b8173734d2462e03
+ms.sourcegitcommit: 097ddfb25eb0f09f0229b866668c2b02fa57df55
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42864406"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991773"
 ---
-# <a name="develop-offline-capable-canvas-apps-with-powerapps"></a>Utvikle lerretsapper som fungerer i frakoblet tilstand med PowerApps
+# <a name="develop-offline-capable-canvas-apps"></a>Utvikle lerretsapper som fungerer i frakoblet tilstand
 
 Et av de vanligste scenarioene du opplever som utvikler av mobilapper, er å gjøre det mulig for brukerne å være produktive der det er begrensede tilkoblingsmuligheter, eller ingen tilkobling i det hele tatt. PowerApps har et sett med funksjoner og virkemåter som hjelper deg å utvikle lerretsapper som fungerer i frakoblet tilstand. Bruk en av disse måtene:
 

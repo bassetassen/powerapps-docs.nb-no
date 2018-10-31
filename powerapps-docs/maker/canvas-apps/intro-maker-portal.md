@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3ecf468f8c1b15d20b144aa127fe31c13dba484e
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 02aaaf7fd149ca0d9f3e1325b98e5287c90bebec
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42849753"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49317003"
 ---
 # <a name="sign-in-to-powerapps-for-the-first-time"></a>Logg deg på PowerApps for første gang
 
@@ -62,25 +62,17 @@ I PowerApps kan du opprette og kjøre disse apptypene:
 - **Lerretapper** støtter utforming av egendefinert brukergrensesnitt og tilkobling til data fra en rekke kilder.
 - **Modelldrevne apper** har et standard brukergrensesnitt, og kobler bare til data i Common Data Service (CDS) for apper. Du kan imidlertid opprette andre elementer, som visninger, instrumentbord og ulike typer forretningslogikk, på en enklere måte.
 
-**Hjemmesiden** viser som standard alternativer for oppretting og kjøring av lerretapper. Hvis du vil se modelldrevne alternativer i stedet for, velger du et miljø som har en CDS for apper-database, og du åpner deretter menyen nede til venstre.
-
-![Veksle mellom lerret-apper og modelldrevne apper](media/intro-maker-portal/mode-switcher.png)
+Hvis du velger et miljø som har en CDS for Apps-database, kan du bygge lerrets- eller modelldrevne apper fra den samme **Hjem**-siden.
 
 ## <a name="play-or-edit-an-app"></a>Spill av eller rediger en app
 
-Hvis du allerede har opprettet en app (eller noen andre har opprettet og delt den med deg), kan du spille den av eller redigere den fra **Apper**-siden.
+Hvis du allerede har opprettet en app (eller noen andre har opprettet og delt den med deg), kan du spille den av eller redigere den fra **Hjem**-siden eller **Apper**-siden.
 
-- Du finner en lerretsapp ved å filtrere basert på vilkår som om du åpnet den nylig.
+Du kan filtrere listen over apper på **Apper**-siden basert på ulike kriterier, for eksempel om du åpnet appen nylig.
 
-    ![Liste over lerretsapper](media/intro-maker-portal/org-apps.png)
+![liste over apper](./media/intro-maker-portal/find-apps.png)
 
-    Du kan også søke etter en app eller ved å skrive inn en eller flere tegn i søkefeltet, som vises nær hjørnet øverst til høyre. Når du finner appen du ønsker, velger du ellipseikonet for å vise alternativer for avspilling eller redigering av appen.
-
-    ![Ellipse-menyen](media/intro-maker-portal/ellipsis-menu.png)
-
-- Du kan ikke filtrere listen over modelldrevne apper, men du kan søke etter en app ved å skrive inn en eller flere tegn i søkefeltet, som vises nær hjørnet øverst til høyre. Når du finner appen du ønsker, velger du ellipseikonet for å vise alternativer for avspilling eller redigering av appen.
-
-    ![Liste over modelldrevne apper med en åpen ellipse-meny](media/intro-maker-portal/model-driven-list.png)
+Du kan også søke etter en app ved å skrive inn ett eller flere tegn i søkefeltet som vises nær hjørnet øverst til høyre. Når du finner appen du vil ha, kan du velge ikonet på banneret for å spille av eller redigere appen.
 
 ## <a name="create-an-app"></a>Å opprette en app
 
