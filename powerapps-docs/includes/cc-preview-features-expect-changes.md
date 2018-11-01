@@ -1,1 +1,1 @@
-Vi forventer endringer i denne funksjonen, så du bør ikke bruke den i produksjon. Brukes bare i test- og utviklingsmiljøer.
+Det vil sannsynligvis bli gjort endringer i denne funksjonen, så du bør ikke bruke den i produksjonssammenheng. Den bør bare brukes i test- og utviklingsmiljøer.

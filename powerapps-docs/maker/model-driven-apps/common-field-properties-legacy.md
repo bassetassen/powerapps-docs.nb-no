@@ -1,50 +1,49 @@
 ---
-title: Felles feltegenskaper for modelldrevne apper i PowerApps | MicrosoftDocs
-description: Slik fungerer felles feltegenskaper for hovedskjema i Dynamics 365 for Customer Engagement
+title: Vanlige egenskaper for felt i modelldrevne apper i PowerApps | MicrosoftDocs
+description: Forstå de vanlige egenskapene for felt for hovedskjemaer i Dynamics 365 for Customer Engagement
 Keywords: Main form; Common field properties; Dynamics 365
 author: Mattp123
-applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
 ms.author: matp
 manager: kvivek
 ms.date: 06/18/2018
 ms.service: crm-online
 ms.topic: article
+applies_to:
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 ms.assetid: 2b91ee28-7f09-435e-9fae-5225aa698e22
-ms.openlocfilehash: 74e67dd4299d06a54d5ec85765e4e5d03710b432
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39691203"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="model-driven-app-common-field-properties"></a>Felles feltegenskaper for modelldrevne apper
+# <a name="model-driven-app-common-field-properties"></a>Vanlige egenskaper for felt i modelldrevne apper
 
- Feltene i et skjema viser kontrollene som brukes til å vise eller redigere data i en enhetspost. Felt kan formateres til å bruke opptil fire kolonner i en inndeling.  
+ Feltene i et skjema viser kontroller som brukere bruker til å vise eller redigere data i en enhetsoppføring. Feltene kan formateres slik at de bruker opptil fire kolonner i en inndeling.  
 
-Du har tilgang til **Felles feltegenskaper** i løsningsutforsker. Utvid enheten du vil ha under **Komponenter**, utvid **Enheter**, velg enheten du vil ha, og velg deretter **Skjemaer.** Åpne skjemaet av typen **Hoved** i listen over skjemaer. Deretter dobbeltklikker du på et av feltene for å vise Felles feltegenskaper.
+Du kan få tilgang til **vanlige egenskaper for felt** i løsningsutforskeren. Vis **Enheter** under **Komponenter**, utvid deretter ønsket enhet, og klikk deretter **Skjemaer**. I listen over skjemaer åpner du skjemaet av typen **Hoved**. Dobbeltklik deretter ett av feltene for å vise vanlige egenskaper.
 
-![felles feltegenskaper](media/common-field-properties.png)
+![common-field-properties](media/common-field-properties.png)
   
-Tabellen nedenfor beskriver egenskaper alle felt har. Visse typer felt har spesielle egenskaper. Disse beskrives i [Spesielle feltegenskaper](special-field-properties-legacy.md).  
+Tabellen nedenfor beskriver egenskaper som alle felt har. Enkelte felttyper har spesielle egenskaper. Dette er beskrevet i [Spesielle feltegenskaper](special-field-properties-legacy.md).  
   
-|Fane|Egenskap|Beskrivelse|  
+|Tabulator|Egenskap|Beskrivelse|  
 |---------|--------------|-----------------|  
-|**Skjerm**|**Etikett**|**Obligatorisk**: Som standard samsvarer etiketten med visningsnavnet for feltet. Du kan overstyre dette navnet for skjemaet ved å angi en annen etikett her.|  
-||**Vis etikett på skjemaet**|Du kan velge ikke å vise etiketten i det hele tatt.|  
-||**Feltets virkemåte**|Angi feltnivåets virkemåte ved å bruke avmerkingsboksene.|  
-||**Låsing**|Dette hindrer at feltet fjernes fra skjemaet ved et uhell. Dette hindrer at konfigurasjon du har brukt på feltet, for eksempel hendelsesbehandling, fjernes hvis feltet fjernes. Hvis du vil fjerne dette feltet, må en tilpasser fjerne denne innstillingen først.|  
-||**Synlighet**|Det er valgfritt å vise feltet, og det kan kontrolleres ved å bruke skript. Mer informasjon: [Alternativer for synlighet](visibility-options-legacy.md)|  
-||**Tilgjengelighet**|Velg om du vil at fanen skal være tilgjengelig på telefonen.|
-|**Formatering**|**Velg antall kolonner kontrollen bruker**|Når inndelingen som inneholder feltene, har mer enn én kolonne, kan du angi at feltet skal bruke opptil det antallet kolonner inndelingen har.|  
-|**Detaljer**|**Visningsnavn**, **Navn** og **Beskrivelse**|Disse skrivebeskyttede feltene er for referanse. Klikk på **Rediger**-knappen for enkel tilgang til feltdefinisjonen hvis du vil redigere den.<br /><br /> Hver forekomst av et felt i skjemaet har en navneegenskap, slik at den kan refereres til i skjemaskript, men dette navnet administreres av programmet. Den første forekomsten av feltet er navnet på feltet som ble angitt da det ble opprettet. Mer informasjon: [Opprett og rediger felt](../common-data-service/create-edit-fields.md)<br /><br /> For hver ekstra gang et felt inkluderes i et skjema, tilføyer navnet et tall som begynner med 1 på slutten. Så hvis feltnavnet er 'new_cost', er den første forekomsten 'new_cost', den andre er 'new_cost1', og så videre, for hver forekomst av feltet i skjemaet.<br /><br />**Obs!** Feltet **beskrivelse**-verdi viser verktøytipstekst for feltet når markøren flyttes over feltet.|  
-|**Hendelser**|**Skjemabiblioteker**|Angi JavaScript-nettressurser som skal brukes i `OnChange` hendelsesbehandlingen for feltet.<br /><br />|  
-||**Hendelsesbehandling**|Konfigurer funksjonene fra skjemabiblioteker som bør kalles for felt `OnChange`-hendelsen. Mer informasjon: [Konfigurer hendelsesbehandlinger](configure-event-handlers-legacy.md)|  
-|**Forretningsregler**|**Forretningsregler**|Vis og administrer forretningsregler som refererer til dette feltet. Mer informasjon: [Opprett forretningsregler og -anbefalinger](create-business-rules-recommendations-apply-logic-form.md)|  
-|**Kontroller**|**Kontroller**|Legg til kontroller, og angi tilgjengeligheten på nettet, telefon og nettbrett.|  
+|**Vis**|**Etikett**|**Nødvendig**: Etiketten vil samsvare med visningsnavnet for feltet som standard. Du kan overstyre dette navnet for skjemaet ved å skrive inn en annen etikett her.|  
+||**Vis etikett i skjemaet**|Du kan også velge ikke å vise etiketten i det hele tatt.|  
+||**Feltets virkemåte**|Angi feltnivåvirkemåten ved hjelp av avmerkingsboksene.|  
+||**Låser**|Dette hindrer at feltet fjernes fra skjemaet ved et uhell. Dette hindrer at eventuell konfigurasjon som du har brukt for feltet, for eksempel hendelsesbehandlinger, blir fjernet hvis feltet fjernes. Hvis du vil fjerne dette feltet, må en tilpasser første fjerne denne innstillingen.|  
+||**Synlighet**|Visning av feltet er valgfritt og kan styres ved hjelp av skript. Mer informasjon: [Synlighetsalternativer](visibility-options-legacy.md)|  
+||**Tilgjengelighet**|Velg om du vil at kategorien skal være tilgjengelig på telefonen.|
+|**Formatering**|**Velg antall kolonner som kontrollen bruker**|Når inndelingen som inneholder feltene inneholder flere enn én kolonne, kan du angi at feltet skal bruke opptil antallet kolonner som inndelingen har.|  
+|**Detaljer**|**Visningsnavn**, **Navn** og **Beskrivelse**|Disse skrivebeskyttede feltene er for referanse. Klikk **Rediger** for praktisk tilgang til feltdefinisjonen hvis du vil redigere den.<br /><br /> Hver forekomst av et felt i skjemaet har en navneegenskap slik at de kan refereres i skjemaskript, men dette navnet blir styrt av programmet. Den første forekomsten av feltet er navnet på feltet som ble angitt da det ble opprettet. Mer informasjon: [Opprette og redigere felt](../common-data-service/create-edit-fields.md)<br /><br /> Hver gang et felt som legges til i et skjema, tilføyes det et nummer på slutte som starte med 1. Hvis feltnavnet ny_kostnad, er den første forekomsten ny_kostnad, den andre er ny_kostnad1 og så videre, for hver forekomst av feltet i skjemaet.<br /><br />**Merk:** Feltet **Beskrivelse** angir teksten for verktøytipset for feltet når brukere holder markøren over det.|  
+|**Hendelser**|**Skjemabiblioteker**|Angi alle JavaScript-webressurser som skal brukes i hendelsesbehandlingsfeltet `OnChange`.<br /><br />|  
+||**Hendelsesbehandlinger**|Konfigurer funksjoner fra skjemabibliotekene som skal kalles for felthendelsen `OnChange`. Mer informasjon: [Konfigurere hendelsesbehandlinger](configure-event-handlers-legacy.md)|  
+|**Forretningsregler**|**Forretningsregler**|Vis og behandle eventuelle forretningsregler som refererer til dette feltet. Mer informasjon: [Opprette forretningsregler og anbefalinger](create-business-rules-recommendations-apply-logic-form.md)|  
+|**Kontroller**|**Kontroller**|Legg til kontroller og angi tilgjengeligheten for dem på nettet, telefon og nettbrett.|  
 
 ## <a name="next-steps"></a>Neste trinn
 
-[Bruk hovedskjema og tilknyttede komponenter](use-main-form-and-components.md)
+[Bruk hovedskjemaet og komponentene i skjemaet](use-main-form-and-components.md)

@@ -1,6 +1,6 @@
 ---
-title: Tilordning av enhetsfelt i PowerApps | MicrosoftDocs
-description: Lær hvordan du tilordner enhetsfelter
+title: Tilordne enhetsfelt i PowerApps | MicrosoftDocs
+description: Finn ut hvordan du tilordner enhetsfelt
 ms.custom: ''
 ms.date: 05/29/2018
 ms.reviewer: ''
@@ -9,114 +9,113 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 author: Mattp123
 ms.assetid: 7c5aa1c3-bde9-43f1-a369-fdcdbf14dec0
 caps.latest.revision: 33
 ms.author: matp
 manager: kvivek
-tags: ''
-ms.openlocfilehash: 7e84e10a824ea218063cb2dccdc15ed7ae2340da
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39696642"
+tags: null
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="map-entity-fields"></a>Tilordning av enhetsfelter
+# <a name="map-entity-fields"></a>Tilordne enhetsfelt
  
-Du kan tilordne attributter mellom enheter som har en enhetsrelasjon. Dette lar deg angi standardverdier for en post som er opprettet i konteksten til en annen post. 
+Du kan tilordne attributter mellom enheter som har en enhetsrelasjon. Dette lar deg angi standardverdier for en oppføring som er opprettet i forbindelse med en annen oppføring. 
 
-## <a name="easier-way-to-create-new-records-in-model-driven-apps"></a>Enklere måte for å opprette nye poster i modelldrevne apper
+## <a name="easier-way-to-create-new-records-in-model-driven-apps"></a>Enklere måte for å opprette nye oppføringer i modelldrevne apper
 
-La oss si at personer vil legge til en ny kontaktpost for en person som er en ansatt, for en bestemt konto. De kan gjøre dette på to forskjellige måter:  
+Anta at noen vil legge til en ny kontaktoppføring for en person som er en ansatt for en bestemt forretningsforbindelse. De kan gjøre dette på to forskjellige måter:  
   
-### <a name="the-hard-way"></a>Den tungvinte måten
+### <a name="the-hard-way"></a>På den vanskelige måten
 
-Personer kan gå i appen å opprette en ny kontaktpost fra grunnen av. Men deretter må de konfigurere den overordnede kontoen, og angi flere typer informasjon (for eksempel informasjon om adresse og telefonnumre) som sannsynligvis er det samme som for den overordnede kontoen. Dette kan ta lang tid, og gir muligheter for feil.  
+Én mulighet er ganske enkelt å navigere i appen for å opprette en ny kontaktoppføring fra begynnelsen av. Da må de imidlertid angi den overordnede forretningsforbindelsen og angi flere informasjonselementer (for eksempel informasjon om adresse og telefonnummer) som er sannsynligvis er de samme som den overordnede forretningsforbindelsen. Dette kan være tidkrevende og gir muligheter for feil.  
   
-### <a name="the-easier-way"></a>Den enkle måten
+### <a name="the-easier-way"></a>Den enkleste måten
 
-Den enkle måten er å starte med konto-enheten, og ved hjelp av delrutenett for **Kontakter** på skjemaet, kan du velge **+** for å legge til en kontakt. Det hjelper først og fremst personer med å slå opp eksisterende relaterte kontakter, slik at de ikke ved et uhell oppretter en duplikatoppføring. Hvis de ikke finner en eksisterende post, kan de velge **Ny**, og opprett en ny kontakt-post. 
+En enklere metode er å starte med en forretningsforbindelsesenhet og bruke delrutenettet **Kontakter** i skjemaet. Velg **+** for å legge til en kontakt. Dette vil først veilede folk til å slå opp eventuelle eksisterende tilknyttede kontakter, slik at de ikke ved et uhell lager en duplikatoppføring. Hvis de ikke finner en eksisterende oppføring, kan de velge **Ny** og opprette en ny kontaktoppføring. 
 
-Det nye kontaktskjemaet inkluderer alt av de tilordnede attributtverdiene fra kontoen (for eksempel informasjon om adresse og telefonnumre) som standardverdier. Personer kan redigere disse verdiene før de lagrer posten.
+Det nye kontaktoppføringsskjemaet inneholder noen av de tilordnede attributtverdiene fra forretningsforbindelsen (for eksempel informasjon om adresse og telefon) som standardverdier. Brukere kan redigere disse verdiene før de lagrer oppføringen.
 
-## <a name="how-this-works"></a>Hvordan dette fungerer
+## <a name="how-this-works"></a>Hvordan fungerer dette
 
-Når du tilordner enhetsfelter for en én-til-mange-enhetsrelasjon, blir visse dataelementer fra den primære enhetsposten kopiert til det nye relaterte enhetsskjemaet for å angi standardverdier som personer kan redigere før lagring.
+Når du tilordner enhetsfelt for en 1:N-enhetsrelasjon, blir bestemte dataelementer fra oppføringen for hovedenheten kopiert til det nye skjemaet for den relaterte enheten for å angi standardverdiene som brukere kan redigere før lagring.
  
   
 > [!NOTE]
-> Disse tilordningene angir bare standardverdiene for en post før den lagres. Personer kan redigere verdiene før lagring. Dataene som overføres er dataene som finnes på dette tidspunktet. Det blir ikke synkronisert hvis kildedataene endres senere.
+> Disse tilordningene angir bare standardverdier for en oppføring før den lagres. Brukere kan redigere verdiene før lagring. Dataene som overføres, er dataene på det aktuelle tidspunktet. De er ikke synkronisert hvis kildedataene endres senere.
 >   
-> Disse tilordningene brukes ikke for relaterte poster som er opprettet ved hjelp av en arbeidsflyt eller dialogprosess. De blir ikke automatisk tatt i bruk for nye poster som er opprettet ved hjelp av kode, selv om utviklere kan bruke en spesiell melding kalt `InitializeFrom` ([InitializeFrom Function](/dynamics365/customer-engagement/web-api/initializefrom?view=dynamics-ce-odata-9) eller [InitializeFromRequest Class](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest?view=dynamics-general-ce-9)) til å opprette en ny post ved hjelp av tilgjengelige tilordninger.  
+> Disse tilordningene brukes ikke for relaterte oppføringer som er opprettet ved hjelp av en arbeidsflyt eller dialogprosess. De brukes ikke automatisk til nye oppføringer som opprettes ved hjelp av kode, selv om utviklere kan bruke en spesiell melding som kalles `InitializeFrom` ([InitializeFrom Function](/dynamics365/customer-engagement/web-api/initializefrom?view=dynamics-ce-odata-9) eller [InitializeFromRequest Class](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest?view=dynamics-general-ce-9)) til å opprette en ny oppføring ved hjelp av tilgjengelige tilordninger.  
 
-## <a name="open-solution-explorer"></a>Åpne løsningutforsker
+## <a name="open-solution-explorer"></a>Åpne løsningsutforskeren
 
-Den eneste måten å tilordne felter på, er å bruke løsningsutforsker.
+Den eneste måten å tilordne enhetsfelt på, er å bruke løsningsutforskeren.
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
   
-Tilordning av felter gjøres i kontekst med en enhetsrelasjon på én-til-mange eller mange-til-én, så først må du [vise enhetsrelasjoner for én-til-mange eller mange-til-én](create-edit-1n-relationships-solution-explorer.md#view-entity-relationships).
+Tilordning av felt gjøres i sammenheng med en 1:N- eller N:1-enhetsrelasjon, så du må først [vise 1:N- eller N:1-enhetsrelasjoner](create-edit-1n-relationships-solution-explorer.md#view-entity-relationships).
 
-## <a name="view-mappable-fields"></a>Vis felter som kan tilordnes
+## <a name="view-mappable-fields"></a>Vise felt som kan tilordnes
 
-Felttilordninger er faktisk ikke definert i enhetsrelasjonene, men vises i brukergrensesnittet for relasjonen. Ikke alle enhetsrelasjoner for én-til-mange har dem. Når du viser en liste over enhetsrelasjoner for én-til-mange (eller mange-til-én) for en enhet, kan du filtrere relasjonene som vises etter type. Du kan velge enten **Alle**, **Egendefinert**, **Kan tilpasses**, eller **Kan tilordnes**. Enhetsrelasjoner som kan tilordnes gir tilgang til å tillate tilordning av enhetsfelter. 
+Felttilordninger er ikke faktisk definert i enhetsrelasjonene, men de vises i brukergrensesnittet for relasjonen. Ikke alle 1:N-enhetsrelasjon har dem. Når du viser en liste over 1:N-enhetsrelasjoner (eller N:!) for en enhet, kan du filtrere relasjoner til å vises etter type. Du kan velge **Alle**, **Egendefinert**, **Kan tilpasses** eller **Kan tilordnes**. Enhetsrelasjoner som kan tilordnes, gir tilgang til å tillate å tilordne enhetsfelt. 
 
-![Vis enhetsrelasjoner som kan tilordnes](media/mappable-entity-relationships.png) 
+![Vise enhetsrelasjoner som kan tilordnes](media/mappable-entity-relationships.png) 
 
-Velg **Tilordninger** i navigasjonsruten til venstre når du åpner en enhetsrelasjon som kan tilordnes.
+Når du åpner en enhetsrelasjon som kan tilorndes, kan du velge **Tilordninger** i den venstre navigasjonsruten.
 
-![Velg tilordninger for enhetsrelasjonen](media/map-entity-fields-ui-solution-explorer.png)
+![Velge Tilordninger for enhetsrelasjonen](media/map-entity-fields-ui-solution-explorer.png)
 
-## <a name="delete-mappings"></a>Slett tilordninger
+## <a name="delete-mappings"></a>Slette tilordninger
 
-Hvis det finnes noen tilordninger du ikke vil bruke, kan du velge dem og klikke på ![Slett-ikonet](media/delete.gif) Ikon.
+Hvis det finnes tilordninger som du ikke vil bruke, kan du merke dem og klikke ![Slett-ikon](media/delete.gif) .
 
-## <a name="add-new-mappings"></a>Legg til nye tilordninger
+## <a name="add-new-mappings"></a>Legge til nye tilordninger
 
-Klikk på **Ny** på verktøylinjen for å opprette en ny tilordning. Dette åpner dialogboksen **Opprette felttilordning**.
+Du kan opprette en ny tilordning ved å klikke **Ny** på verktøylinjen. Dette åpner dialogboksen **Opprett felttilordning**.
 
-![Opprett dialogboksen for felttilordning](media/create-field-mapping-dialog.png)
+![Dialogboksen Opprett felttilordning](media/create-field-mapping-dialog.png)
 
-Velg et enhetsfelt med én kilde og et enhetsmålfelt med verdiene du vil tilordne. 
+Velg ett kildeenhetsfelt og ett målenhetsfelt med verdier som du vil tilordne. 
 
-![Konfigurer felttilordning](media/configure-field-mapping.png)
+![Konfigurere felttilordning](media/configure-field-mapping.png)
 
-Velg **OK** for å lukke dialogboksen.
+Velg deretter **OK** for å lukke dialogboksen.
 
-Følgende regler viser hvilke typer data som kan tilordnes.  
+Reglene nedenfor viser hvilke typer data som kan tilordnes.  
   
-- Begge feltene må være av samme type, og samme format.  
+- Begge feltene må være av samme type og samme format.  
 - Lengden på målfeltet må være lik eller større enn lengden på kildefeltet.  
-- Målfeltet kan ikke allerede tilordnes til et annet felt.  
+- Målfeltet kan ikke allerede være tilordnet til et annet felt.  
 - Kildefeltet må være synlig i skjemaet.  
-- Målfeltet må være et felt som en bruker kan skrive inn data i.  
-- Kan ikke tilordne verdier for adresse-ID.
-- Hvis du tilordner til eller fra et felt som ikke vises i et skjema, vil ikke tilordningen gjøres før feltet er lagt til i et skjema.
-- Hvis feltene er alternativsett, skal heltallsverdiene for hvert alternativ være identiske.  
+- Målfeltet må være et felt som en bruker kan angi data i.  
+- Adresse-ID-verdier kan ikke tilordnes.
+- Hvis du tilordner til eller fra et felt som ikke vises i et skjema, utføres ikke tilordningen før feltet blir lagt til i et skjema.
+- Hvis feltene er alternativsett, må heltallsverdiene for hvert alternativ være identiske.  
   
 > [!NOTE]
->  Hvis du trenger å tilordne felter for alternativetsett, anbefaler vi at du konfigurerer begge feltene til å bruke det samme globale alternativsettet. Hvis ikke, kan det være vanskelig å beholde to separate sett med alternativer som er synkronisert manuelt. Du kan introdusere problemer i dataene hvis heltallsverdiene for hvert alternativ ikke er tilordnet på riktig måte. Mer informasjon: [Opprett og rediger globale alternativsett for Common Data Service for Apps (nedtrekksmenyer)](create-edit-global-option-sets.md)  
+>  Hvis du vil tilordne alternativsettfelt, anbefaler vi du konfigurerer begge feltene til å bruke samme globale alternativsett. Hvis ikke, kan det være vanskelig å holde to separate sett med alternativer synkroniseres manuelt. Hvis heltallsverdiene for hvert alternativ ikke er riktig tilordnet, kan du introdusere problemer i dataene. Mer informasjon: [Opprette og redigere globale alternativsett for Common Data Service for Apps (valglister)](create-edit-global-option-sets.md)  
   
-## <a name="automatically-generate-field-mappings"></a>Generer felttilordninger automatisk  
+## <a name="automatically-generate-field-mappings"></a>Automatisk genererte felttilordninger  
 
-Du kan også generere tilordninger automatisk ved å velge **Generer tilordninger** fra **Flere handlinger**-menyen.
+Du kan også generere tilordninger automatisk ved å velge **Generer tilordninger** fra menyen **Flere handlinger**.
 
-Vær forsiktig når du gjør dette med systemenheter. Bruk dette når du oppretter egendefinerte enheter og ønsker å dra nytte av tilordning. 
+Du bør være forsiktig når du gjør dette med systemenheter. Bruk dette alternativet når du oppretter egendefinerte enheter og vil dra nytte av tilordning. 
 
 > [!WARNING]
-> Dette fjerner alle eksisterende tilordninger og erstatter dem med foreslåtte tilordninger som bare er basert på feltene som har lignende navn og datatyper. Hvis du bruker dette på en systemenhet, kan du miste noen forventede tilordninger. Dette hjelper med å spare tid for egendefinerte enheter fordi du enklere kan slette tilordninger du ikke vil bruke, og legge til eventuelle andre som handlingen Generer tilordninger ikke har opprettet.  
+> Dette fjerner eventuelle eksisterende tilordninger og erstatter dem med foreslåtte tilordninger som bare er basert på felt med samme navn og datatyper. Hvis du bruker dette på en systemenhet, kan du miste noen forventede tilordninger. Du kan spare tid for egendefinerte enheter fordi du enklere kan slette alle tilordningene som du ikke vil ha og legge til andre som handlingen for å generere tilordninger ikke opprettet.  
 
 
-## <a name="publish-customizations"></a>Publiser tilpassinger 
+## <a name="publish-customizations"></a>Publisere tilpassinger 
 
-Fordi felttilordninger ikke er metadata, må du publisere dem før endringene trer i kraft. 
+Siden felttilordninger ikke er metadata, må du publisere dem før endringene trer i kraft. 
 <!-- TODO Need a general topic about publishing to link to in situations like this -->
 
 ### <a name="see-also"></a>Se også
-[Opprett og rediger enhetsrelasjoner for én-til-mange eller mange-til-én ved hjelp av løsningsutforsker](create-edit-1n-relationships-solution-explorer.md)<br />
-[Utviklerdokumentasjon: Tilpass enhets- og attributt-tilordninger](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)<br />
-[Utviklerdokumentasjon: Nett-API Opprett en ny enhet fra en annen enhet](/dynamics365/customer-engagement/developer/webapi/create-entity-web-api#create-a-new-entity-from-another-entity)
+[Opprette og redigere 1:N- (én-til-mange) eller N:1-enhetsrelasjoner (mange-til-én) med løsningsutforskeren](create-edit-1n-relationships-solution-explorer.md)<br />
+[Dokumentasjon for utviklere: Tilpasse enhets- og attributtilordninger](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)<br />
+[Dokumentasjon for utviklere: Web-API, opprette en ny enhet fra en annen enhet](/dynamics365/customer-engagement/developer/webapi/create-entity-web-api#create-a-new-entity-from-another-entity)

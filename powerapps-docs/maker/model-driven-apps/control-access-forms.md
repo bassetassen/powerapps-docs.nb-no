@@ -1,6 +1,6 @@
 ---
-title: Få kontroll over tilgangen til modelldrevne appskjema i PowerApps | MicrosoftDocs
-description: Lær hvordan du kontrollerer tilgangen til hovedskjemaer
+title: Kontrollere tilgang til modelldrevne appskjemaer i PowerApps | MicrosoftDocs
+description: Lær hvordan du kontrollerer tilgang til hovedskjemaer
 ms.custom: ''
 ms.date: 06/27/2018
 ms.reviewer: ''
@@ -9,73 +9,72 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 author: Mattp123
 ms.assetid: 15d123e0-b604-45dd-ab34-0b37787a04bb
 caps.latest.revision: 33
 ms.author: matp
 manager: kvivek
-tags: ''
-ms.openlocfilehash: a895bd9ea0257585f942840924a7044a4dcc23fb
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39691216"
+tags: null
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="control-access-to-model-driven-app-forms"></a>Få kontroll over tilgangen til modelldrevne appskjema
+# <a name="control-access-to-model-driven-app-forms"></a>Kontrollere tilgang til modelldrevne appskjemaer
 
- Det finnes to måter du kan kontrollere tilgangen til hovedskjemaer på:  
+ Du kan styre tilgang til hovedskjemaer på to ulike måter:  
   
 - **Gjøre et hovedskjema inaktivt**  
   
-     Du kan angi en aktiv eller inaktiv status til hovedskjemaer. Denne funksjonen er inkludert hovedsakelig for å administrere nye skjemaer som er inkludert når Dynamics 365 Customer Engagement-organisasjoner oppgraderes, men ved hjelp av denne kan du hindre brukere fra å kunne bruke hovedskjemaer.   
+     Du kan ikke angi en aktiv eller inaktiv tilstand for hovedskjemaer. Denne funksjonen ble inkludert hovedsakelig for å administrere nye skjemaer som tas med når Dynamics 365 customer engagement-organisasjoner oppgraderer, men du kan bruke den til å forhindre brukere fra å bruke ethvert hovedskjema.   
   
-- **Tilordne sikkerhetsroller til hovedskjema**  
+- **Tilordne sikkerhetsroller til hovedskjemaet**  
   
-     Bruk denne til å gjøre et hovedskjema tilgjengelig for spesifikke grupper.  
+     Bruk denne til å gjøre et hovedskjema tilgjengelig for bestemte grupper.  
   
- Forskjellige personer i organisasjonen kan samhandle med de samme dataene på forskjellige måter. Ledere kan være avhengige av muligheten til raskt å gå gjennom informasjon i en post, og tjenesteytere kan kreve et skjema som strømlinjeformer dataregistrering. Du kan håndtere ulike krav ved å tilordne skjemaer til sikkerhetsroller som tilhører forskjellige grupper.  
+ Ulike brukere i organisasjonen kan arbeide med de samme dataene på ulike måter. Ledere kan være avhengige av å kunne søke raskt etter informasjon i en oppføring, og tjenestepersonell kan ha behov for et skjema som effektiviserer dataregistrering. Du kan ta hensyn til ulike behov ved å tilordne skjemaer til sikkerhetsroller som ulike brukergrupper tilhører.  
   
- Se [Tilordne sikkerhetsroller til skjemaer](https://docs.microsoft.com/dynamics365/customer-engagement/admin/assign-security-roles-form) for trinnvis fremgangsmåte.  
+ Du finner trinnvise fremgangsmåter under [Tilordne sikkerhetsroller til skjema](https://docs.microsoft.com/dynamics365/customer-engagement/admin/assign-security-roles-form).  
   
- Når du har mer enn ett primært eller mobilt skjema som er definert for en enhet, kan du velge hvilke skjemaer brukere skal kunne bruke basert på sikkerhetsrollene deres. Fordi hver enhet må være i stand til å vise et skjema for alle brukere, må minst et skjema være angitt som «tilbakefallsskjema» – et skjema som er synlige for brukere hvis sikkerhetsroller ikke har noen skjemaer eksplisitt tilordnet.  
+ Når flere hovedskjemaer eller mobile skjemaer er definert for en enhet, kan du velge hvilke skjemaer brukere skal kunne bruke, basert på sikkerhetsrollene deres. Siden hver enhet må kunne vise et skjema for enhver bruker, må minst ett skjema brukes som et basisskjema – et skjema som vises for brukere med sikkerhetsroller uten eksplisitt tilordnede skjemaer.  
   
 > [!NOTE]
->  Skjemaer for rask oppretting og rask visning kan ikke tilordnes til sikkerhetsroller.  
+>  Hurtigopprettings- og hurtigvisningsskjemaer kan ikke tilordnes til sikkerhetsroller.  
   
- Du kan tilordne sikkerhetsroller til et skjema i redigeringsprogrammet for skjema eller fra skjemarutenettet. Men hvis det er bare ett skjema for enheten, vil du ikke kunne fjerne **Aktivert for tilbakefall**-alternativet i dialogboksen **Tilordne sikkerhetsroller**. I dette tilfellet kan alle som er forbundet med en sikkerhetsrolle som du ikke inkluderte, fortsatt kunne vise skjemaet, selv om du har tilordnet sikkerhetsroller til skjemaet, fordi det er aktivert for «tilbakefall».  
+ Du kan tilordne sikkerhetsroller til et skjema i skjemaredigeringsprogrammet eller fra skjemarutenettet. Hvis det bare er ett skjema for enheten, kan du imidlertid ikke fjerne merket for alternativet **Aktivert for basis** i dialogboksen **Tilordne sikkerhetsroller**. Selv om du i slike tilfeller har tilordnet sikkerhetsroller til skjemaet, kan alle som er knyttet til en sikkerhetsrolle som du ikke tok med, fortsatt vise skjemaet fordi det er aktivert som basisskjema.  
   
- Når du har opprettet et annen primært eller mobilt skjema for enheten, vil du kunne fjerne **Aktivert for tilbakefall**-alternativet for ett av dem. Systemet vil alltid sikre at minst ett skjema er aktivert for tilbakefall.  
+ Når du har opprettet et andre hovedskjema eller mobilt skjema for enheten, kan du fjerne merket for alternativet **Aktivert for basis** for ett av dem. Systemet sikrer at minst ett skjema alltid er aktivert for basis.  
   
- Hvis du har mer enn ett hovedskjema, kan du angi en skjemarekkefølge som skal styre hvilke av skjemaene som brukere har tillatelse til å se, som vil være det de ser som standard. Hvis det er flere skjema brukerene kan bruke, kan de endre skjema, og det de velger, vil være standardskjemaet frem til de velger et annet. Denne preferansen er lagret i nettleseren. Hvis brukere bruker en annen datamaskin eller nettleser, ser de det opprinnelige standardskjemaet.  
+ Når du har flere hovedskjemaer, kan du angi en skjemarekkefølge som styrer hvilket av skjemaene en bruker kan se, blir det de ser som standard. Hvis det er flere skjemaer de kan bruke, kan de bytte skjema, og skjemaet de velger, blir standardskjemaet til de velger et annet skjema. Denne innstillingen lagres i nettleseren. Hvis de bruker en annen datamaskin eller nettleser, ser de det opprinnelige standardskjemaet.  
   
-## <a name="strategies-to-manage-the-fallback-form"></a>Strategier for å behandle tilbakefallskjemaet  
- Strategier for å behandle tilbakefallskjemaet inkluderer følgende:  
+## <a name="strategies-to-manage-the-fallback-form"></a>Strategier for å behandle basisskjemaet  
+ Strategier for å behandle basisskjemaet omfatter følgende:  
   
 <a name="BKMK_DoNotUseMultipleForms"></a>   
-### <a name="all-users-view-the-same-form"></a>Alle brukere viser det samme skjemaet  
+### <a name="all-users-view-the-same-form"></a>Alle brukere viser samme skjema  
  Hvis du ikke trenger flere skjemaer for en enhet, trenger du ikke et basisskjema.  
   
 <a name="BKMK_Contingecyform"></a>   
-### <a name="create-a-contingency-form"></a>Opprett et alternativt skjema  
- Hvis du bruker rollebaserte skjemaer fordi du ønsker å begrense informasjonen som vises eller redigeres, bør du vurdere å opprette et skjema der minst mulig av informasjonen vises. Deretter, velger du **, vis bare for disse valgte sikkerhetsrollene** i dialogboksen **Tilordne sikkerhetsroller**, men velg ikke noen roller med unntak av systemansvarlig, og velg **aktivert for tilbakefall**. Resultatet blir at dette skjemaet aldri vil bli sett av noen bortsett fra systemansvarlig og alle hvis sikkerhetsroller ikke er knyttet til et bestemt skjema. Du kan legge til en HTML-nettressurs i skjemaet med informasjon om hvorfor så lite informasjon er synlig i skjemaet og en kobling til informasjon om hvordan brukere sender en forespørsel om å få tildelt en sikkerhetsrolle som er tilknyttet et skjema, eller inkluderer en ny sikkerhetsrolle for et skjema.  
+### <a name="create-a-contingency-form"></a>Opprette et alternativt skjema  
+ Hvis du bruker rollebaserte skjemaer fordi du vil begrense informasjonen brukere kan vise eller redigere, bør du vurdere å opprette et skjema der minst mulig informasjon vises. Velg deretter **Vis bare for disse valgte rollene** i dialogboksen **Tilordne sikkerhetsroller**, men ikke velg noen roller bortsett fra Systemansvarlig, og velg **Aktivert for basis**. Resultatet er at dette skjemaet aldri blir sett av noen andre enn systemansvarlig og alle med sikkerhetsroller som ikke er knyttet til et bestemt skjema. Du kan ta med en HTML-webressurs i skjemaet med informasjon om hvorfor så lite informasjon vises i skjemaet, og en kobling til informasjon om hvordan brukerne kan be om å bli lagt til i en sikkerhetsrolle som er knyttet til et skjema, eller for å inkludere en ny sikkerhetsrolle for et skjema.  
   
 > [!NOTE]
->  Du kan ikke inkludere en nettressurs i en topptekst eller bunntekst i et skjema.  
+>  Du kan ikke inkludere en webressurs i en topptekst eller bunntekst.  
   
 <a name="BKMK_CreateGenericForm"></a>   
-## <a name="create-a-generic-form"></a>Opprett et generisk skjema  
- Hvis du bruker rollebaserte skjemaer for å gi en tilpasset opplevelse basert på en brukers rolle, kan du angi det minst spesialiserte skjemaet som «tilbakefall»-skjema og konfigurere at det skal vises for alle. Så oppretter du tilpassede skjemaer for bestemte sikkerhetsroller, og konfigurerer at disse skjemaene skal vises kun for sikkerhetsrollene som krever dem. Ikke aktiver tilbakefall for disse skjemaene. Til slutt bruker du dialogboksen **skjemarekkefølge** i **skjemaer**-listen for å angi hvilke skjemaer som skal vises, ved å rangere dem fra mest eksklusiv til minst eksklusiv. Tilbakefall-skjemaet ditt skal ligge nederst i listen. Denne strategien vil føre til at personer som ser skjemaet som er tilpasset for deres rolle som standardskjema, men de kan fortsatt bruke skjemavelgeren til å velge det vanligste skjemaet hvis de vil. Uansett hvilket skjema de velger, forblir det standardskjemaet til de velger et annet.  
+## <a name="create-a-generic-form"></a>Opprette et generisk skjema  
+ Hvis du bruker rollebaserte skjemaer til å tilby en tilpasset opplevelse basert på brukerens rolle, kan du bruke det minst spesialiserte skjemaet som basisskjema og konfigurere det slik at det vises for alle. Opprett deretter tilpassede skjemaer for bestemte sikkerhetsroller, og konfigurer disse skjemaene slik at de bare vises for sikkerhetsroller som trenger dem. Ikke aktiver disse skjemaene for basis. Bruk til slutt dialogboksen **Skjemarekkefølge** i **Skjemaer**-listen til å angi hvilke skjemaer som skal vises, ved å rangere dem fra mest eksklusive til minst eksklusive. Basisskjemaet er nederst i listen. Denne strategien fører til at brukere ser skjemaet som er tilpasset for deres rolle, som standardskjema, men de kan fortsatt bruke skjemavelgeren til å velge det mest vanlige skjemaet, hvis de vil. Uansett hvilket skjema de velger, blir det standardskjemaet til de velger et annet skjema.  
   
 <a name="BKMK_UseFormScripting"></a>   
-## <a name="use-form-scripting"></a>Bruk skjemaskripting  
+## <a name="use-form-scripting"></a>Bruke skjemaskript  
 
- Til slutt, i nettprogrammet er det mulig, men ikke anbefalt, for utvikler å bruke skript i Onload-hendelsen for skjema for å bruke [Xrm.Page.ui.formSelector.items samling](http://go.microsoft.com/fwlink/p/?LinkID=513300) til å spørre tilgjengelige skjemaer og bruke navigeringsmetoden til å sende brukere til et bestemt skjema. Husk at [navigeringsmetoden](http://go.microsoft.com/fwlink/p/?LinkID=513301) vil føre til at skjemaet lastes inn på nytt, (og Onload-hendelsen skjer på nytt). Logikken i hendelsesbehandlingsprogrammet bør alltid kontrollere noen betingelser før du bruker navigeringsmetoden for å unngå en uendelig løkke eller unødvendig begrense brukernes muligheter til å navigere mellom skjemaer.  
+ I webprogrammet er det mulig, men ikke anbefalt, for en utvikler å bruke skript i Onload-skjemahendelsen for å bruke samlingen [Xrm.Page.ui.formSelector.items](http://go.microsoft.com/fwlink/p/?LinkID=513300) til å spørre tilgjengelige skjemaer og bruke navigate-metoden til å dirigere brukere til et bestemt skjema. Husk at [navigate-metoden](http://go.microsoft.com/fwlink/p/?LinkID=513301) fører til at skjemaet lastes inn på nytt (og at Onload-hendelsen skjer på nytt). Logikken i hendelsesbehandlingen må alltid kontrollere en betingelse før du bruker navigate-metoden, for å unngå en uendelig løkke eller unødig begrense brukeralternativer for navigering mellom skjemaer.  
   
- Denne fremgangsmåten fungerer ikke for Dynamics 365 for nettbrett fordi flere skjemaer ikke kan velges samtidig.  
+ Denne fremgangsmåten fungerer ikke for Dynamics 365 for tablets fordi flere skjemaer ikke er tilgjengelige for valg.  
 
 ### <a name="next-steps"></a>Neste trinn  
 

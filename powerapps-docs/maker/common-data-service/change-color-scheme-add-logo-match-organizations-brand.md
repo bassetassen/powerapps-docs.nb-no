@@ -82,18 +82,21 @@ Du kan opprette et egendefinert utseende og virkemåte (et tema) for appen ved �
 5. Velg **Standardtema for CRM**. 
 
 Følgende skjermbilde viser en del av standardtemaets oppsett.  
-  
-![Standardtema](media/default-theme.png) 
+
+> [!div class="mx-imgBorder"] 
+> ![Standardtema](media/default-theme.png) 
   
  Vi klonet standardtemaet og endret fargene. Følgende skjermbilder viser de nye fargene for navigering og merking. Du kan også velge en ny logo for produktet.  
   
  Følgende skjermbilde viser den nye fargen for navigering.  
-  
- ![Lysegrønne temafarger](media/theme-gentle-green.png "Lysegrønne temafarger")  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Lysegrønne temafarger](media/theme-gentle-green.png "Lysegrønne temafarger")  
   
  Følgende skjermbilde viser rutenettet til enheten for forretningsforbindelsen med den nye markeringsfargen.  
-  
- ![Lysegrønt rutenett for tema for forretningsforbindelse](media/themes-gentle-green-account-grid.png "Lysegrønt rutenett for tema for forretningsforbindelse")  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Lysegrønt rutenett for tema for forretningsforbindelse](media/themes-gentle-green-account-grid.png "Lysegrønt rutenett for tema for forretningsforbindelse")  
   
 <a name="Publish"></a>   
 ## <a name="preview-and-publish-a-theme"></a>Forhåndsvise og publisere et tema  

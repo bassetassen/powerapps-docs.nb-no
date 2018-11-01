@@ -1,108 +1,109 @@
 ---
-title: Visualiser hierarkiske data med modelldrevne apper | MicrosoftDocs
-description: Finn ut hvordan du kan spørre og visualisere hierarkisk relaterte data
+title: Visualisere hierarkiske data med modelldrevne apper | MicrosoftDocs
+description: Lær hvordan du spør etter og visualiserer hierarkisk relaterte data
 ms.custom: ''
-ms.date: 06/02/2018
+ms.date: 09/19/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 author: Mattp123
 ms.author: matp
 manager: kvivek
-ms.openlocfilehash: bed8662d7d9475215df8e92490702b68e36574e2
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39696152"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="visualize-hierarchical-data-with-model-driven-apps"></a>Visualiser hierarkiske data med modelldrevne apper
+# <a name="visualize-hierarchical-data-with-model-driven-apps"></a>Visualisere hierarkiske data med modelldrevne apper
 
-> [!NOTE]
-> Hierarkiske datavisualiseringer er tilgjengelig bare for modelldrevne apper som er konfigurert for **Nett**klienten. Visualiseringer er ikke tilgjengelige for **Enhetlig grensesnitt**-klienten. Mer informasjon: [Opprett en modelldrevet app ved hjelp av apputforming](../model-driven-apps/create-edit-app.md)
+Når en enhet er konfigurert til å ha en hierarkisk selvrefererende relasjon, kan du konfigurere visualiseringer ved hjelp av dette hierarkiet. Mer informasjon: [Definere og spørre etter hierarkisk relaterte data](../common-data-service/define-query-hierarchical-data.md)
 
-Når en enhet er konfigurert til å ha en hierarkisk relasjon med selvreferanse, kan du konfigurere visualiseringer ved hjelp av dette hierarkiet. Mer informasjon: [Definer og spør hierarkisk relaterte data](../common-data-service/define-query-hierarchical-data.md)
-
-Enhetene som har visualiseringer tilgjengelig som standard, omfatter [Konto](/powerapps/developer/common-data-service/reference/entities/account), [Posisjon](/powerapps/developer/common-data-service/reference/entities/position) og [Bruker](/powerapps/developer/common-data-service/reference/entities/systemuser). Du kan se ikonet som viser hierarkidiagrammet, i rutenettet over disse enhetene, til venstre for postnavnet. Hierarkiikonet er ikke tilgjengelig for alle postene som standard. Ikonet vises for postene som er relatert ved hjelp av den hierarkiske relasjonen.  
+Enheter som har tilgjengelige visualiseringer som standard, omfatter [Forretningsforbindelse](/powerapps/developer/common-data-service/reference/entities/account), [Posisjon](/powerapps/developer/common-data-service/reference/entities/position) og [Bruker](/powerapps/developer/common-data-service/reference/entities/systemuser). I rutenettvisningen for disse enhetene kan du se ikonene for hierarkidiagrammet til venstre for navnet på oppføringen. Hierarkiikonet er ikke tilgjengelig for alle oppføringer som standard. Et ikon vises for relaterte oppføringer ved hjelp av den hierarkiske relasjonen.  
+> [!div class="mx-imgBorder"] 
+> ![Vis hierarki-knappen](media/view-hierarchy-button.png)  
   
- ![Kontoer med hierarki](media/account-list-with-hierarchy.png)  
+ Hvis du velger hierarkiikonet, kan du vise hierarkiet, med trevisningen til venstre og rutevisningen til høyre, som vist nedenfor:  
   
- Hvis du velger hierarkiikonet, kan du vise hierarkiet, med trevisning til venstre og rutevisning til høyre, som vist nedenfor:  
+> [!div class="mx-imgBorder"] 
+> ![Tre- og flisvisning i hierarki](media/tree-view-and-tile-view-in-hierarchy.png)  
   
- ![Trevisning og rutevisning for kontoen](media/hierachy-security-accounts-tile-view.png)  
+ Noen få andre enheter kan aktiveres for et hierarki. Disse enhetene omfatter [Kontakt](/powerapps/developer/common-data-service/reference/entities/contact) og [Team](/powerapps/developer/common-data-service/reference/entities/team). Alle egendefinerte enheter kan aktiveres for et hierarki.  
   
- Enkelte andre enheter kan være aktivert for et hierarki. Disse enhetene omfatter [Kontakt](/powerapps/developer/common-data-service/reference/entities/contact) og [Team](/powerapps/developer/common-data-service/reference/entities/team). Alle egendefinerte enheter kan aktiveres for et hierarki.  
+Viktig å huske når du lager visualiseringer:  
   
-Viktige ting å huske når du oppretter visualiseringer:  
-  
-- Bare én (1:N)-relasjon med selvreferanse kan angis som hierarkisk per enhet. Den primære enheten og den relaterte enheten må være av samme type i en relasjon med selvreferanse.  
-- Et hierarki eller en visualisering er basert på bare én enhet. Du kan vise kontohierarkiet med kontoer på flere nivåer, men du kan ikke vise kontoer og kontakter i samme hierarkivisualisering. 
-- Maksimalt antall felt som kan vises i en rute, er fire. Hvis du legger til flere felt i hurtigskjemaet som brukes for rutevisningen, er det bare de første fire feltene som vises. 
+- Bare én selvrefererende relasjon av typen (1:N) per enhet kan angis som hierarkisk. I en selvrefererende relasjon må hovedenheten og den relaterte enheten være av samme type.  
+- Et hierarki eller en visualisering er basert på bare én enhet. Du kan vise hierarkiet for forretningsforbindelser med forretningsforbindelser på flere nivåer, men du kan ikke vise forretningsforbindelser og kontakter i samme hierarkivisualisering. 
+- Maksimalt antall felt som kan vises i en flis, er fire. Hvis du legger til flere felt i hurtigskjemaet som brukes for rutevisningen, vises bare de første fire feltene. 
 
 ## <a name="hierarchy-settings"></a>Hierarkiinnstillinger
 
-Hvis du vil aktivere visualiseringer for et hierarki, må du koble hierarkiet til et hurtigvisningsskjema. Dette kan bare gjøres ved hjelp av løsningsutforskeren.
+Hvis du vil aktivere visualiseringer for et hierarki, må du koble hierarkiet til et hurtigvisningsskjema. Dette kan bare gjøres i løsningsutforskeren.
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
-Hierarkiinnstillingene er knyttet til en enhet i løsningsutforskeren. 
+Innstillingene for hierarkiet er knyttet til en enhet i løsningsutforskeren. 
 
-1. Velg **Hierarkiinnstillinger** mens du [viser enheter](../common-data-service/create-edit-entities-solution-explorer.md#view-entities).
-2. Hvis det finnes en hierarkiinnstilling, kan du redigere den. Hvis ikke, klikker du på **Ny** for å opprette en ny.
+1. Når du [viser enheter](../common-data-service/create-edit-entities-solution-explorer.md#view-entities), velger du **Hierarkiinnstillinger**.
+2. Hvis det allerede finnes en hierarkiinnstilling, kan du redigere den. Hvis ikke kan du klikke **Ny** for å opprette en ny.
     
     > [!NOTE]
-    > Hvis hierarkiinnstillingene ikke finnes, er ikke enheten kvalifisert for konfigurasjon av et hierarki.
-    >Det kan bare være én hierarkiinnstilling 
+    > Hvis det ikke finnes hierarkiinnstillinger, kan ikke enheten ha et hierarki konfigurert.
+    >Det kan bare finnes én hierarkiinnstilling. 
 
-1. Angi dataene i feltene nedenfor:
+1. Angi dataene i følgende felt:
 
 |Felt|Beskrivelse|
 |--|--|
-|**Navn**|*Obligatorisk.* Legg til et unikt navn for hierarkiinnstillingene. Dette er vanligvis bare navnet på enheten. Denne verdien omfatter tilpassingsprefikset for løsningsutgiveren.|
-|**Standard hurtigvisningsskjema**|*Obligatorisk.* Velg fra et eksisterende hurtigvisningsskjema eller velg **Opprett ny** for å åpne redigeringsprogrammet for hurtigvisningsskjema for å opprette et nytt et.|
-|**Hierarkisk relasjon**|*Obligatorisk.* Hvis en hierarkisk relasjon allerede er definert for enheten, angis verdien her. Hvis det ikke finnes en verdi, velger du **Merk en relasjon som aktivert for hierarkier**, for å åpne en dialogboks og velge en av de tilgjengelige relasjonene med selvreferanse.|
-|**Beskrivelse**|Ta med en beskrivelse av formålet til hierarkiet, slik at personer som tilpasser systemet i fremtiden, forstår hvorfor dette ble gjort.|
+|**Navn**|*Obligatorisk.* Legg til et unikt navn for hierarkiinnstillingene. Dette er vanligvis bare navnet på enheten. Denne verdien inkluderer tilpassingsprefikset for løsningsutgiveren.|
+|**Standard hurtigvisningsskjema**|*Obligatorisk.* Velg fra et eksisterende hurtigvisningsskjema, eller velg **Opprett ny** for å åpne redigeringsprogrammet for hurtigvisningsskjemaer for å opprette et nytt.|
+|**Hierarkisk relasjon**|*Obligatorisk.* Hvis en hierarkisk relasjon allerede er definert for enheten, blir verdien angitt her. Hvis det ikke finnes en verdi, velger du **Merk en relasjon som aktivert for hierarkier** for å åpne en dialogboks for å velge en av de tilgjengelige selvrefererende relasjonene.|
+|**Beskrivelse**|Ta med en beskrivelse av formålet for dette hierarkiet, slik at personer som senere tilpasser systemet, kan forstå hvorfor dette ble gjort.|
     
 
-Samme hierarkiske innstillinger for visualisering angis én gang, men gjelder for både nett- og mobilklienter. På nettbrett gjengis visualiseringer i et modifisert format som er tilpasset en mindre formfaktor. Tilpassbare komponenter som er obligatoriske for hierarkiske visualiseringer, er løsningsorienterte og kan derfor transporteres mellom organisasjoner som alle andre tilpassinger. Du kan konfigurere attributtene som vises i visualiseringen, ved å tilpasse et hurtigskjema med skjemaredigeringsprogrammet.
+De samme hierarkiske innstillingene for visualisering angis én gang, men gjelder både for webklienter og mobile klienter. På nettbrett gjengis visuelle effekter i et endret format som passer for den mindre formfaktoren. Komponentene som kan tilpasses, som kreves for hierarkisk visualisering, er løsningsavhengige, og kan derfor transporteres mellom organisasjoner som andre tilpassinger. Du kan konfigurere attributtene som vises i visualiseringen, ved å tilpasse et hurtigskjema ved hjelp av skjemaredigeringsprogrammet.
   
-## <a name="visualization-walk-through"></a>Gjennomgang av visualiseringer
+## <a name="visualization-walk-through"></a>Gjennomgang av visualisering
 
-La oss se på et eksempel på å opprette en visualisering for en egendefinert enhet. Vi opprettet en egendefinert enhet som heter `new_Widget`, opprettet en (1:N)-relasjon med selvreferanse `new_new_widget_new_widget` og merket den som hierarkisk, som vist her.  
+La oss se på et eksempel som viser hvordan en visualisering for en egendefinert enhet lages. Vi har opprettet en egendefinert enhet kalt `new_Widget`, opprettet en selvreferensiell relasjon av typen (1:N) `new_new_widget_new_widget` og merket den som hierarkisk, som vist her:  
   
 ![Relasjonsdefinisjon for kontrollprogram](media/widget-relationship-definition.png)  
   
-Deretter valgte vi hierarkisk relasjon for **i rutenettvisningen av**Hierarkiinnstillinger`new_new_widget_new_widget`. Vi har fylt ut de obligatoriske feltene i skjemaet. Hvis du ennå ikke har merket (1:N)-relasjonen som hierarkisk, tar koblingen på skjemaet deg tilbake til relasjonsdefinisjonskjemaet, der du kan merke relasjonen som hierarkisk.  
+I rutenettvisningen **Hierarkiinnstillinger** valgte vi deretter den hierarkiske relasjonen `new_new_widget_new_widget`. Vi fylte ut de obligatoriske feltene i skjemaet. Hvis du ennå ikke har merket (1:N)-relasjonen som hierarkisk, tar koblingen i skjemaet deg tilbake til skjemaet for relasjonsdefinisjon der du kan merke relasjonen som hierarkisk.  
 
 > [!IMPORTANT]
-> Hver enhet kan ha bare én hierarkisk relasjon om gangen. Hvis du endrer dette til en annen relasjon med selvreferanse, kan dette få følger. Mer informasjon: [Definer hierarkiske data](../common-data-service/define-query-hierarchical-data.md#define-hierarchical-data)
+> Hver enhet kan bare ha én hierarkisk relasjon om gangen. Hvis dette endres til en annen selvrefererende relasjon, kan det få konsekvenser. Mer informasjon: [Definere hierarkiske data](../common-data-service/define-query-hierarchical-data.md#define-hierarchical-data)
+
+> [!div class="mx-imgBorder"] 
+> ![Hierarkiinnstillinger](media/hierarchy-settings.png)  
   
-![Hierarkiinnstillinger](media/hierarchy-settings.png)  
+For **hurtigvisningsskjemaet** opprettet vi et hurtigskjema med navnet **Widget Hierarchy Tile Form**. I dette skjemaet la vi til fire felt som skal vises i hver flis.  
+
+> [!div class="mx-imgBorder"] 
+> ![Opprett hurtigskjema for kontrollprogram](media/create-quickform.png)  
   
-Vi opprettet et hurtigskjema som heter **Ruteskjema for kontrollprogramhierarki** for **Hurtigvisningsskjemaet**. I dette skjemaet har vi lagt til fire felt som skal vises i hver rute.  
-  
-![Opprett hurtigskjema for kontrollprogram](media/create-quickform.png)  
-  
-Etter at vi fullførte konfigurasjonen, opprettet vi to poster: *Standard-kontrollprogram* og *Premium-kontrollprogram*. Etter å ha gjort Premium-kontrollprogrammet til et Standard-kontrollprogram ved hjelp av oppslagsfeltet, viste rutenettvisningen for `new_Widget` hierarkiikonene som vist nedenfor:  
-  
-![Hierarkirutenettet for kontrollprogrammet](media/widget-hierarchy-grid.png)  
+Da vi var ferdig med oppsettet, opprettet vi to poster: *Standard Widget* og *Premium Widget*. Etter at Premium Widget ble angitt som overordnet for Standard Widget ved hjelp av oppslagsfeltet, viste rutenettvisningen for `new_Widget` hierarkiikonene som vist nedenfor:  
+
+> [!div class="mx-imgBorder"] 
+> ![Kontrollprogrammets hierarkirutenett](media/widget-hierarchy-grid.png)  
   
 > [!NOTE]
->  Hierarkiikoner vises ikke rutenettvisningen for poster, før postene er relatert ved hjelp av den hierarkiske relasjonen.  
+>  Hierarkiikonene vises ikke i rutenettvisningen for oppføringer før oppføringene er relatert ved hjelp av den hierarkiske relasjonen.  
   
-Hvis du velger hierarkiikonet, vises `new_Widget`-hierarkiet, med trevisning til venstre og rutevisning til høyre, som viser to poster. Hver rute inneholder fire felt som vi har angitt i **Ruteskjema for kontrollprogramhierarki**.  
-  
-![Trevisning og rutevisning for kontrollprogrammet](media/widget-tree-tiles.png)  
+Hvis du velger hierarkiikonet, vises `new_Widget`-hierarkiet med trevisningen til venstre og rutevisningen til høyre med to oppføringer. Hver flis inneholder fire felt som vi anga i **Widget Hierarchy Tile Form**.  
 
-Basert på behovene dine, kan du velge mellom å bruke trevisning, som viser hele hierarkiet, eller rutevisning, som viser en mindre del av hierarkiet. Begge visningene vises ved siden av hverandre. Du kan utforske et hierarki ved å utvide og redusere et hierarkitre. 
+> [!div class="mx-imgBorder"] 
+> ![Kontrollprogrammets tre- og flisvisninger](media/widget-tree-tiles.png)  
+
+Basert på behovet ditt kan du velge mellom en trevisning, som viser hele hierarkiet, og en rutevisning, som viser en mindre del av hierarkiet. Begge visningene vises side ved side. Du kan utforske hierarkiet ved å vise og skjule hierarkitreet. 
 
 ### <a name="see-also"></a>Se også 
 
-[Definer og spør hierarkisk relaterte data](../common-data-service/define-query-hierarchical-data.md)<br />
+[Definer og spør etter hierarkisk relaterte data](../common-data-service/define-query-hierarchical-data.md)<br />
 [Video: Hierarkivisualisering](http://www.youtube.com/watch?v=_dGBE6icLNw&index=9&list=PLC3591A8FE4ADBE07)

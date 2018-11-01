@@ -1,87 +1,87 @@
 ---
-title: Angi egenskaper for apper med modelldrevet enhetlig grensesnitt i PowerApps | MicrosoftDocs
-description: Lær hvordan du konfigurerer rutenettkontrollen for appen
+title: Angi egenskaper for modelldrevne apper med enhetlig grensesnitt i PowerApps | MicrosoftDocs
+description: Finn ut hvordan du konfigurerer rutenettkontrollen for appen
 keywords: ''
 ms.date: 06/06/2018
 ms.service: crm-online
-ms.custom: ''
+ms.custom: null
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 author: Mattp123
 ms.assetid: 3ecea4a7-0d18-4ccd-9609-3a62179e9e1b
 ms.author: matp
 manager: kvivek
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.reviewer: null
+ms.suite: null
+ms.tgt_pltfrm: null
 caps.latest.revision: 0
 topic-status: Drafting
-ms.openlocfilehash: 007ac566e317ee99bd85ab0675e5a53839800bb4
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39691603"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="specify-properties-for-model-driven-unified-interface-apps"></a>Angi egenskaper for apper med modelldrevet enhetlig grensesnitt
 
-Rammeverket for enhetlig grensesnitt bruker prinsipper for responsiv utforming til å gi en optimal visning og samhandling for enhver skjermstørrelse eller retning. Rutenettkontrollen (visning) gir respons for modelldrevne apper som bruker rammeverket for enhetlig grensesnitt. Når størrelsen på beholderen avtar – for eksempel på telefoner og mindre visningsområder – blir rutenettet transformert til en liste. 
+# <a name="specify-properties-for-model-driven-unified-interface-apps"></a>Angi egenskaper for modelldrevne apper med enhetlig grensesnitt
 
-Den skrivebeskyttede rutenettkontrollen angir hvordan et rutenett skal tilpasses dynamisk til ulike skjermstørrelser. Hvis du arbeider med en enhetlig grensesnitt-app som app-oppretter, kan du konfigurere rutenettkontrollen for skrivebeskyttelse, og egenskapene for egendefinert rutenett og lister.
-- **Kortskjema**-egenskapen: Bruk et kortskjema for lister i stedet for standard listemalen. Kortskjemaer gir mer informasjon for listeelementer enn standard listemal.
-- Egenskapen **Virkemåte for Dynamisk tilpassing**: Bruk denne parameteren til å angi om et rutenett skal ha dynamisk tilpasning i en liste eller ikke.
+Rammeverket for enhetlig grensesnitt bruker responsive utformingsprinsipper til å gi en optimal visnings- og samhandlingsopplevelse enhver skjermstørrelse eller -retning. Rutenettkontrollen (for visning) er responsiv med modelldrevne apper som bruker rammeverket for enhetlig grensesnitt. Når størrelsen på beholderen reduseres, for eksempel på telefoner og mindre visningsområder, endres rutenettet til en liste. 
 
-## <a name="allow-grid-to-reflow-into-list"></a>Tillat en dynamisk tilpassing av rutenett for liste
+Den skrivebeskyttede rutenettkontrollen angir hvordan et rutenett skal tilpasses dynamisk til ulike størrelser. Hvis du er apputvikler og arbeider med en app for enhetlig grensesnitt, kan du konfigurere den skrivebeskyttede rutenettkontrollen og egenskapene for egendefinerte rutenett og lister.
+- **Kortskjema-egenskapen**: Bruk et kortskjemaet for lister i stedet for standard listemal. Kortskjemaer inneholder mer informasjon for listeelementer enn standard listemal.
+- **Egenskapen Virkemåte for dynamisk tilpassing**: Bruk denne parameteren for å angi at et rutenett skal tilpasses dynamisk til en liste.
 
-Ved å legge til den skrivebeskyttede rutenettkontrollen til listen over kontroller kan du konfigurere følgende funksjoner: 
-- Tillat en dynamisk tilpassing av rutenett for en liste på små skjermer, som en mobiltelefon.
-- Angi gjengivelsesmodus som bare et rutenettet eller bare en liste.  
+## <a name="allow-grid-to-reflow-into-list"></a>Tillat at rutenettet tilpasses dynamisk til liste
 
-1. Åpne [løsningsutforsker](advanced-navigation.md#solution-explorer).
-2. Utvid **Enheter** i navigasjonsruten, velg den aktuelle enheten (som **Kontoen** eller **Kontakt**), og velg deretter **Legg til kontroll** på **Kontroller**-fanen.
+Hvis du legger til den skrivebeskyttede rutenettkontroller i kontrollisten, kan du konfigurere følgende funksjoner: 
+- Tillat at et rutenett tilpasses dynamisk til en liste på små skjermer, for eksempel mobiler.
+- Angi gjengivelsesmodus som bare rutenett eller bare liste.  
 
-    ![Åpne legg til kontroll](media/UnifiedInterface_ReadOnlyGrid_AddControl.png "Åpne Legg til kontroll")
+1. Åpne [løsningsutforskeren](advanced-navigation.md#solution-explorer).
+2. I navigasjonsruten utvider du **Enheter** og velger den aktuelle enheten (for eksempel **Forretningsforbindelse** eller **Kontakt**), og deretter velger du **Legg til kontroll** i kategorien **Kontroller**.
+
+    ![Åpne Legg til kontroll](media/UnifiedInterface_ReadOnlyGrid_AddControl.png "Åpne Legg til kontroll")
 
 3. Velg **Skrivebeskyttet rutenett** fra listen over kontroller, og velg deretter **Legg til**.
 
-    Kontrollen er lagt til i listen over tilgjengelige kontroller.
+    Kontrollen legges til i listen over tilgjengelige kontroller.
    
     ![Velg en kontroll](media/UnifiedInterface_ReadOnlyGrid_SelectControl.png "Velg en kontroll")
     
-4. Velg enhetene (**Nett**, **Telefon**, eller **Nettbrett**) hvor du vil skrivebeskytte rutenettet.
+4. Velg enhetene (**Web**, **Telefon** eller **Nettbrett**) som du vil skrivebeskytte rutenettet for.
 
-    ![Velg enhetstypen](media/UnifiedInterface_ReadOnlyGrid_SelectDevice.png "Velg enheter")
+    ![Velg enhetstype](media/UnifiedInterface_ReadOnlyGrid_SelectDevice.png "Velg enhetstype")
 
-5. Konfigurer **Kortskjema**-egenskapen.
+5. Konfigurer egenskapen **Kortskjema**.
 
-    Du kan bruke kortskjema-egenskapen til å vise listeelementer i stedet for standard-listemal. Kortskjemaer gir mer informasjon for listeelementer enn standard listemal.    
+    Du kan bruke egenskapen for kortskjema for å vise listeelementer i stedet for standard listemal. Kortskjemaer inneholder mer informasjon for listeelementer enn standard listemal.    
 
     a. Velg blyantikonet ved siden av **Kortskjema**.
 
     ![Rediger kortskjema](media/UnifiedInterface_ReadOnlyGrid_CardForm.png "Rediger kortskjema")
 
-    b.  Velg **Enheten**- og **Kortskjema**-typer.
+    b.  Velg typene **Enhet** og **Kortskjema**.
 
-    ![Kortskjema-egenskaper](media/UnifiedInterface_ReadOnlyGrid_CardFormProperties.png "Kortskjema-egenskaper")
+    ![Egenskaper for kortskjema](media/UnifiedInterface_ReadOnlyGrid_CardFormProperties.png "Egenskaper for kortskjema")
 
     c. Velg **OK**.
 6. Konfigurer egenskapen **Virkemåte for dynamisk tilpassing**. 
     
     a. Velg blyantikonet ved siden av **Virkemåte for dynamisk tilpassing**.
 
-    ![Rediger virkemåte for dynamisk tilpassing](media/UnifiedInterface_ReadOnlyGrid_EditReflow.png "Rediger virkemåte for dynamisk tilpassing")
+    ![Rediger Virkemåte for dynamisk tilpassing](media/UnifiedInterface_ReadOnlyGrid_EditReflow.png "Rediger Virkemåte for dynamisk tilpassing")
 
-    b. Velg rutenett-type for dynamisk tilpassing fra **Alternativer for bind til statisk**-rullegardin.
+    b. Velg flyttype for rutenettet fra rullegardinlisten **Bind til statiske alternativer**.
     |Flyttype|Beskrivelse|
     |--------------|--------------------|
-    |**Dynamisk tilpassing**|Tillater gjengivelse av rutenett til listemodus avhengig av om det er nok plass på skjermen.|
-    |**Bare rutenett**|Begrenser dynamisk tilpassing av rutenett for en liste, selv når det ikke er nok plass på skjermen.|
-    |**Bare liste**|Vises bare som en liste, selv når det er nok plass til å vise som rutenett.|
+    |**Dynamisk tilpassing**|Lar rutenettet gjengis i listemodus avhengig av når det ikke er nok visningplass.|
+    |**Bare rutenett**|Begrenser rutenettet til å tilpasses dynamisk til liste selv når det ikke er nok visningplass.|
+    |**Bare liste**|Vises bare som en liste, selv om det er nok plass til å vise rutenettet.|
     
-     ![Egenskaper for virkemåte for dynamisk tilpassing](media/UnifiedInterface_ReadOnlyGrid_ReflowProperties.png "Egenskaper for virkemåte for dynamisk tilpassing")
+     ![Egenskaper for Virkemåte for dynamisk tilpassing](media/UnifiedInterface_ReadOnlyGrid_ReflowProperties.png "Egenskaper for Virkemåte for dynamisk tilpassing")
 
     c. Velg **OK**.
 
@@ -90,7 +90,7 @@ Ved å legge til den skrivebeskyttede rutenettkontrollen til listen over kontrol
 
 
 ## <a name="conditional-image"></a>Betinget bilde
-Du kan vise et egendefinert ikon i stedet for en verdi i en liste, og etablere logikken som brukes til å velge dem basert på verdier for en kolonne ved hjelp av JavaScript. Hvis du vil ha mer informasjon om betingede bilder, kan du se [Vis egendefinerte ikoner i stedet for verdier i listevisninger](../common-data-service/display-custom-icons-instead.md).
+Du kan vise et egendefinert ikon i stedet for en verdi i en liste, og opprette logikken som brukes for å velge dem basert på verdiene i en kolonne, ved å bruke JavaScript. Hvis du vil ha mer informasjon om betingede bilder, kan du se [Vise egendefinerte ikoner i stedet for verdier i listevisninger](../common-data-service/display-custom-icons-instead.md).
 
 ## <a name="next-steps"></a>Neste trinn
-[Opprett eller rediger en visning](create-edit-views.md)
+[Opprette eller redigere en visning](create-edit-views.md)

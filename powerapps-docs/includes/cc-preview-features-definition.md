@@ -1,1 +1,1 @@
-Funksjoner for forhåndsvisning er ikke ment for produksjonsformål og kan ha begrenset funksjonalitet. Disse funksjonene er tilgjengelig før en offisiell lansering, slik at kundene får tidlig tilgang og kan gi tilbakemeldinger.
+Forhåndsfunksjonene er ikke ment for produksjonsbruk og kan ha begrenset funksjonalitet. Disse funksjonene er tilgjengelige før en offisielle utgivelsen, slik at kunder kan få tidlig tilgang og gi tilbakemeldinger.

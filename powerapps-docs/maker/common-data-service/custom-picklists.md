@@ -33,7 +33,8 @@ Alternativsett kan opprettes på to måter, enten fra alternativsettlisten i por
 
 4. I panelet for nytt felt angir du **Visningsnavn** for feltet. **Navn** fylles ut automatisk og brukes som det unike navnet på feltet. **Visningsnavn** brukes når du presenterer dette feltet til brukerne. **Navn** brukes når du bygger appen, i uttrykk og formler.
 
-    ![Nytt felt](./media/data-platform-cds-create-entity/newfieldpanel.png "Panelet for nytt felt")
+    > [!div class="mx-imgBorder"] 
+    > ![Nytt felt](./media/data-platform-cds-create-entity/newfieldpanel.png "Panelet for nytt felt")
 
 5. Klikk på **Datatype**-rullegardinlisten og velg **Alternativsett** eller **Alternativsett med flere valg**.
 
@@ -46,34 +47,40 @@ Alternativsett kan opprettes på to måter, enten fra alternativsettlisten i por
 
 7. Et nytt panel åpnes for å opprette alternativsettet. **Visningsnavn** og **Navn** hentes som standard fra navnet på feltet, men du kan endre det om nødvendig. Klikk på **Legg til nytt element** for å begynne oppretting av listen over alternativer. Gjenta dette trinnet til alle elementene er opprettet.
 
-    ![Nytt alternativsett](./media/data-platform-cds-newoptionset/field-optionsetpanel.png "Nytt alternativsett")
+    > [!div class="mx-imgBorder"] 
+    > ![Nytt alternativsett](./media/data-platform-cds-newoptionset/field-optionsetpanel.png "Nytt alternativsett")
 
 8. Når du har angitt elementene, klikker du på **Lagre** for å opprette alternativsettet.
 
-    ![Nytt alternativsett](./media/data-platform-cds-newoptionset/field-optionsetpanel-values.png "Nytt alternativsett")
+    > [!div class="mx-imgBorder"] 
+    > ![Nytt alternativsett](./media/data-platform-cds-newoptionset/field-optionsetpanel-values.png "Nytt alternativsett")
 
 9. Klikk på **Ferdig** for å lukke feltpanelet og deretter **Lagre enhet** for å lagre enheten i Common Data Service.
 
     > [!NOTE]
     > Du kan velge ett av disse elementene som **standard** for dette feltet, og det velges som standard når brukerne oppretter nye oppføringer i enheten.
 
-    ![Nytt felt](./media/data-platform-cds-newoptionset/fieldpanel-2.png "Panelet for nytt felt")
+    > [!div class="mx-imgBorder"] 
+    > ![Nytt felt](./media/data-platform-cds-newoptionset/fieldpanel-2.png "Panelet for nytt felt")
 
 ## <a name="creating-an-option-set-from-the-option-set-list"></a>Opprette et alternativsett fra listen med alternativsett
 
 1. På [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) utvider du **Data**-delen og klikker eller trykker på **Alternativsett** i den venstre navigasjonsruten.
 
-    ![Alternativsett](./media/data-platform-cds-newoptionset/optionsetlist.png "Alternativsett")
+    > [!div class="mx-imgBorder"] 
+    > ![Alternativsett](./media/data-platform-cds-newoptionset/optionsetlist.png "Alternativsett")
 
 2. Klikk på **Nytt alternativsett**
 
 3. En nytt panel åpnes for å opprette alternativsettet. Angi **Visningsnavn** og **Navn**. Klikk på **Legg til nytt element** for å begynne oppretting av listen over alternativer. Gjenta dette trinnet til alle elementene er opprettet.
 
-    ![Oppretting av alternativsett](./media/data-platform-cds-newoptionset/optionset-create.png "Oppretting av alternativsett")
+    > [!div class="mx-imgBorder"] 
+    > ![Oppretting av alternativsett](./media/data-platform-cds-newoptionset/optionset-create.png "Oppretting av alternativsett")
 
 4. Når du har angitt elementene, klikker du på **Lagre** for å opprette alternativsettet.
 
-    ![Nytt alternativsett](./media/data-platform-cds-newoptionset/optionset-create-values.png "Nytt alternativsett")
+    > [!div class="mx-imgBorder"] 
+    > ![Nytt alternativsett](./media/data-platform-cds-newoptionset/optionset-create-values.png "Nytt alternativsett")
 
 5. Du kan nå bruke dette alternativsettet ved å opprette nytt felt på en enhet.
 

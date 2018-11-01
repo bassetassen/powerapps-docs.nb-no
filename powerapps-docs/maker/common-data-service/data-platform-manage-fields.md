@@ -35,13 +35,15 @@ Du kan opprette og oppdatere ett eller flere egendefinerte felt i en enhet. Når
     > [!NOTE]
     > **Visningsnavn**-felt kan bli oppdatert når som helst for å vises annerledes i apper. **Navn**-feltet kan ikke endres etter at enheten er lagret, siden dette kan føre til brudd i en eksisterende app.
 
-    ![Nytt felt](./media/data-platform-cds-create-entity/newfieldpanel.png "Panelet for nytt felt")
+    > [!div class="mx-imgBorder"] 
+    > ![Nytt felt](./media/data-platform-cds-create-entity/newfieldpanel.png "Panelet for nytt felt")
 
 5. Velg **Datatype** for feltet. Dette kontrollerer hvordan informasjonen lagres og hvordan den vises i apper. For eksempel lagres tekst forskjellig for et desimaltall eller en URL-adresse. For mer informasjon om datatypene som er tilgjengelig, kan du se [Attributtmetadata for enhet](../../developer/common-data-service/entity-attribute-metadata.md).
 
     Hvis du blir bedt om det, kan du angi ytterligere informasjon om datatypen du har angitt. Avhengig av datatype vises det andre felt. Hvis du oppretter et felt av typen Alternativsett eller Alternativsett med flere valg, kan du velge **Nytt alternativsett** og opprette et nytt alternativsett når du oppretter feltet. Hvis du vil ha mer informasjon, kan du se [Opprette alternativsett](custom-picklists.md).
 
-    ![Nytt felt](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Panelet for nytt felt")
+    > [!div class="mx-imgBorder"] 
+    > ![Nytt felt](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Panelet for nytt felt")
 
 
 7. Under **Obligatorisk** merker du av hvis du vil anbefale dette feltet som obligatorisk i apper. Dette sørger ikke for hard håndhevelse gjennom alle tilkoblinger til Common Data Service. Hvis du vil sikre at feltet fylles ut, oppretter du en [forretningsregel](data-platform-create-business-rule.md)

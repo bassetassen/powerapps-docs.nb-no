@@ -1,6 +1,6 @@
 ---
-title: Vis eller skjul skjemaelementer for en modelldrevet app med PowerApps | MicrosoftDocs
-description: Lær hvordan du kan vise eller skjuler fra elementer, for eksempel faner, inndelinger eller felter
+title: Vise eller skjule skjemaelementer for modelldrevne apper med PowerApps | MicrosoftDocs
+description: 'Finn ut hvordan du kan vise eller skjule skjemaelementer, for eksempel kategorier, inndelinger eller felt'
 ms.custom: ''
 ms.date: 06/11/2018
 ms.reviewer: ''
@@ -9,30 +9,29 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 author: Mattp123
 ms.assetid: 7b9e8dc2-229c-455f-ae18-49e8d879ff71
 caps.latest.revision: 63
 ms.author: matp
 manager: kvivek
-ms.openlocfilehash: 86fafe70ae3bc04eff5e85a4baf3682c32427149
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39697361"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="show-or-hide-model-driven-app-form-elements"></a>Vis eller skjul skjemaelementer for en modelldrevet app
+# <a name="show-or-hide-model-driven-app-form-elements"></a>Vise eller skjule skjemaelementer for modelldrevne apper
 
- Flere typer skjemaelementer har muligheten for å bli vist eller skjult som standard. Faner, inndelinger, felter, iFrames og nettressurser tilbyr dette alternativet. Synligheten av disse elementene kan bli kontrollert til å opprette et dynamisk skjema for å gi et brukergrensesnitt som tilpasser seg betingelser i skjemaet, ved hjelp av skjemaskript eller forretningsregler.  
+ Flere typer skjemaelementer har muligheten til å vises eller skjules som standard. Kategorier, inndelinger, felt, iFrames og webressurser har denne muligheten. Ved hjelp av skjemaskript eller forretningsregler kan synligheten av disse elementene kontrolleres for å opprette dynamiske skjemaer for å gi et brukergrensesnitt som tilpasser seg til betingelser i skjemaet.  
   
 > [!NOTE]
->  Skjuling av skjemaelementer er ikke en anbefalt måte å fremtvinge sikkerhet på. Det finnes flere måter personer kan vise alle elementer og data i skjemaet på når elementer er skjult. 
+>  Skjuling av skjemaelementer er ikke en anbefalt metode for å håndheve sikkerheten. Det finnes flere metoder for brukere for å vise alle elementene og dataene i skjemaet når elementer er skjult. 
   
- I stedet for å utforme skjemaer som er avhengige av skripter for å kontrollere synligheten av alternativer, bør du vurdere om forretningsprosessflyten, en dialogboks eller å bytte til et annet skjema, kan passe bedre for dine behov. Hvis du bruker skripter, må du kontrollere at et hvilket som helst element som kan være skjult, er skjult som standard. Bare vis den med skript når logikken tilsier det. Den vil ikke vises i presentasjoner som ikke støtter skript på denne måten.  
+ I stedet for å utforme skjemaer som er avhengige av skript for å styre synligheten av alternativer, bør du vurdere om en forretningsprosessflyt, en dialogboks eller å bytte til et annet skjema kan være bedre egnet til å dekke dine behov. Hvis du bruker skript, må du kontrollere at alle elementer som kan være skjult er skjult som standard. Vis det bare med skript når logikken tilsier det. På denne måten vil det ikke vises i presentasjoner som ikke støtter skript.  
 
 ## <a name="next-steps"></a>Neste trinn
 
-[Oversikt over brukergrensesnittet for skjemaredigeringsprogrammet ](form-editor-user-interface-legacy.md)
+[Oversikt over grensesnittet i skjemaredigeringsprogrammet](form-editor-user-interface-legacy.md)

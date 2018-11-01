@@ -1,5 +1,5 @@
 ---
-title: Konfigurer Bing-kart i en modelldrevet app med PowerApps | MicrosoftDocs
+title: Konfigurere Bing-kart i en modelldrevet app med PowerApps | MicrosoftDocs
 ms.custom: ''
 ms.date: 06/18/2018
 ms.reviewer: ''
@@ -8,37 +8,36 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 ms.assetid: f9729664-561c-4758-86ce-7216d68075d9
 caps.latest.revision: 63
 ms.author: matp
 author: Mattp123
 manager: kvivek
-ms.openlocfilehash: 44977925bfa92647ddbc29b7a82028f55b146921
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39693752"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="configure-bing-maps-in-a-model-driven-app"></a>Slik konfigurerer du Bing-kart i en modelldrevet app
+# <a name="configure-bing-maps-in-a-model-driven-app"></a>Konfigurere Bing-kart i en modelldrevet app
 
- Bing-kart kan vises i et skjema for enhetene konto, kontakt, kundeemne, tilbud, ordre, faktura, konkurrent og systembruker. Du kan fjerne Bing-kartområdet i redigeringsprogrammet for skjema, eller legge det til igjen ved å bruke **Bing-kart**-knappen på **Sett inn**-fanen i redigeringsprogrammet for skjema.  
+ Bing-kart kan vises i skjemaer for forretningsforbindelse, kontakt, kundeemne, tilbud, ordre, faktura, konkurrent og systembrukerenheter. Du kan fjerne Bing-kart-området i skjemaredigeringsprogrammet, eller legge det til igjen ved hjelp av **Bing-kart**-knappen i kategorien **Sett inn** i skjemaredigeringsprogrammet.  
   
- Systeminnstillingen **Vis Bing-kart i skjemaer** må være aktivert for å kunne aktivere Bing-kart.  
+ Hvis du vil aktivere Bing-kart, må systeminnstillingen **Vis Bing-kart i skjemaer** være aktivert.  
   
-|Fane|Egenskap|Beskrivelse|  
+|Tabulator|Egenskap|Beskrivelse|  
 |---------|--------------|-----------------|  
-|**Generelt**|**Etikett**|**Obligatorisk**: en etikett som skal vises for Bing-kart.|  
-||**Vis etikett på skjemaet**|Angir om etiketten skal vises.|  
-||**Velg en adresse som skal brukes sammen med Bing-kartkontrollen**|Velg hvilken adresse som skal brukes til å gi data til kartet.|  
-||**Synlig som standard**|Det er valgfritt å vise Bing-kart, og det kan kontrolleres ved å bruke skript. Mer informasjon: [Alternativer for synlighet](visibility-options-legacy.md)|  
-|**Formatering**|**Velg antall kolonner kontrollen bruker**|Når inndelingen som inneholder Bing-kart, har mer enn én kolonne, kan du angi at feltet skal bruke opptil det antallet kolonner inndelingen har.|  
-||**Velg antall rader kontrollen bruker**|Du kan styre høyden på Bing-kart ved å angi et antall rader.|  
-||**Utvid for å bruke tilgjengelig plass automatisk**|Du kan tillate at høyden på Bing-kart utvides til tilgjengelig plass.|  
+|**Generelt**|**Etikett**|**Nødvendig**: En etikett som skal vises for Bing-kart.|  
+||**Vis etikett i skjemaet**|Angir om feltet skal vises.|  
+||**Velg en adresse som skal brukes med kontrollen for Bing-kart**|Velg hvilken adresse som skal brukes til å angi data til kartet.|  
+||**Synlig som standard**|Visning av Bing-kart er valgfritt og kan styres ved hjelp av skript. Mer informasjon: [Synlighetsalternativer](visibility-options-legacy.md)|  
+|**Formatering**|**Velg antall kolonner som kontrollen bruker**|Når inndelingen som inneholder Bing-kart inneholder flere enn én kolonne, kan du angi at feltet skal bruke opptil antallet kolonner som inndelingen har.|  
+||**Velg antallet rader kontrollen fyller**|Du kan styre høyden på Bing-kart ved å angi antall rader.|  
+||**Utvid automatisk for å bruke tilgjengelig plass**|Du kan tillate at høyden for Bing-kart utvides til tilgjengelig plass.|  
 
 ## <a name="next-steps"></a>Neste trinn
 
-[Bruk hovedskjema og tilknyttede komponenter](use-main-form-and-components.md)
+[Bruk hovedskjemaet og komponentene i skjemaet](use-main-form-and-components.md)
