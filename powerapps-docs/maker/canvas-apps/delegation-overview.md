@@ -83,7 +83,7 @@ I **Sort** kan formelen bare inneholde navnet til en enkeltkolonne og kan ikke i
 
 Tellingsfunksjoner som **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)** og **[Count](functions/function-table-counts.md)** kan ikke delegeres.
 
-Andre mengdefunksjoner, for eksempel **[StdevP](functions/function-aggregates.md)** og**[VarP](functions/function-aggregates.md)**, kan ikke delegeres.
+Andre mengdefunksjoner, for eksempel **[StdevP](functions/function-aggregates.md)** og **[VarP](functions/function-aggregates.md)**, kan ikke delegeres.
 
 ## <a name="non-delegable-functions"></a>Funksjoner som ikke kan delegeres
 Ingen andre funksjoner støtter delegering, herunder disse viktige funksjonene:
