@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f8df0b9c4d2dc186a4b583b1f61da33a97ae4010
-ms.sourcegitcommit: 3aeb9381fbeb66cf08355d9a3d0f00ce2737e256
+ms.openlocfilehash: 5ba279e361dfe450de1187cf6aca87bc026178ba
+ms.sourcegitcommit: 60006ce9cb21c59e588c00f2ba5c41ffebbbba09
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43163731"
+ms.lasthandoff: 09/30/2018
+ms.locfileid: "47456302"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>Systemkrav, grenser og konfigurasjonsverdier for lerretsapper
 Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og konfigurasjonsverdier for PowerApps.
@@ -99,3 +99,6 @@ Denne listen identifiserer alle tjenester som PowerApps Studio kommuniserer med,
 | *.azureedge.net |https |WebAuth |
 | *. blob.core.windows.net |https |Blob-lagring |
 | vortex.data.microsoft.com |https |Telemetri |
+
+> [!NOTE]
+> Hvis du bruker et virtuelt privat nettverk, må det være konfigurert for å utelate localhost fra tunnelering for PowerApps Mobile.

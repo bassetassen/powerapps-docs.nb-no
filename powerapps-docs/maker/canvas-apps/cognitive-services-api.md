@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: daaea74ede5f9818453b1d4ff32f3c46ef87b0fb
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: df823f68842ad3c7a7497e6dce9cc3540520527e
+ms.sourcegitcommit: 3dc330d635aaf5bc689efa6bd39826d6e396c832
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42859586"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48875880"
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>Bruk av Cognitive Services i PowerApps
 Denne artikkelen viser hvordan du kan utvikle en grunnleggende lerretsapp som bruker [API for tekstanalyse i Microsoft Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview), til å analysere tekst. Vi viser deg hvordan du konfigurerer API-en for tekstanalyse og kobler til ved hjelp av [Tekstanalyse-koblingen](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Deretter viser vi hvordan du oppretter en lerretsapp som utfører et kall til API-en.
@@ -43,13 +43,13 @@ API-en har en demonstrasjon på nettet. Du kan se hvordan det fungerer, og se hv
 3. Siden viser formaterte resultater på **Analysert tekst**-fanen og JSON-svaret på **JSON**-fanen. [JSON](http://json.org/) er en måte å representere data på, i dette tilfellet data som returneres av API-en for tekstanalyse.
 
 ## <a name="sign-up-for-the-text-analytics-api"></a>Registrer deg for API-en for tekstanalyse
-API-en er tilgjengelig i gratis prøveversjon, og den er tilknyttet et Azure-abonnement. Du administrerer API-en gjennom Azure-portalen.
+API-en er tilgjengelig i gratis prøveversjon, og den er tilknyttet et Azure-abonnement. Du administrerer API-en gjennom Azure Portal.
 
 1. Hvis du ikke har et Azure-abonnement allerede, kan du [registrere deg for et gratis abonnement](https://azure.microsoft.com/free/).
 
 2. Logg deg på Azure-kontoen.
 
-3. Gå til [Opprett Cognitive Services-bladet](https://go.microsoft.com/fwlink/?LinkId=761108) i Azure-portalen.
+3. Gå til [Opprett Cognitive Services-bladet](https://go.microsoft.com/fwlink/?LinkId=761108) i Azure Portal.
 
 4. Angi informasjon for API-en for tekstanalyse, slik som i bildet nedenfor. Velg **F0** (gratis)-prisnivået.
    
@@ -88,7 +88,7 @@ Først må du opprette en tom telefonapp og legge til en tilkobling med **Teksta
     ![Tekstanalyse-kobling](./media/cognitive-services-api/create-connection-ta.png)
 
 ### <a name="add-controls-to-the-app"></a>Legge til kontroller i appen
-Det neste trinnet i oppretting av appen er å legge til alle kontrollene. Når jeg utvikler apper, legger jeg vanligvis til formler i kontrollene etter hvert, men i dette tilfellet skal vi fokusere på kontrollene først og deretter legge til noen formler i neste del. Bildet nedenfor viser appen med alle kontrollene.
+Det neste trinnet i oppretting av appen er å legge til alle kontrollene. Når vi utvikler apper, legger vi vanligvis til formler i kontrollene etter hvert, men i dette tilfellet skal vi fokusere på kontrollene først og deretter legge til noen formler i neste del. Bildet nedenfor viser appen med alle kontrollene.
 
 ![Ferdigstilt app](./media/cognitive-services-api/finished-app-no-data.png)
 
