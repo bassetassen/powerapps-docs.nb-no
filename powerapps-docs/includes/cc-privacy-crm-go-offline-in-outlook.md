@@ -1,0 +1,5 @@
+Hvis du bruker Microsoft Dynamics 365 for Outlook og kobler fra, opprettes en kopi av dataene du arbeider med. Denne kopien lagres på den lokale datamaskinen. Dataene overføres fra Dynamics 365 (Online) til datamaskinen din ved hjelp av en sikker tilkobling, og det opprettholdes en kobling mellom den lokale kopien og Dynamics 365 Online. Neste gang du logger på Dynamics 365 (Online), blir de lokale dataene synkronisert med Dynamics 365 (Online).  
+  
+ En administrator kan avgjøre om brukerne i organisasjonen har tillatelse til å koble fra med Microsoft Dynamics 365 for Outlook ved hjelp av sikkerhetsroller.  
+  
+ Brukere og administratorer kan konfigurere hvilke enheter som lastes ned via frakoblet synkronisering ved hjelp av innstillingen **Synkroniseringsfiltre** i dialogboksen **Alternativer**. Brukere og administratorer kan også konfigurere hvilke felt som lastes ned (og lastes opp) ved hjelp av **Avanserte alternativer** i dialogboksen **Synkroniseringsfiltre**.

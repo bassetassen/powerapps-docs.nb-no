@@ -1,0 +1,1 @@
+Maksimumsstørrelsen på filer som kan lastes opp, fastsettes av egenskapen **Organization.MaxUploadFileSize**. Denne egenskapen angis i kategorien **E-post** i **Systeminnstillinger** i Dynamics 365-programmet. Denne innstillingen begrenser størrelsen på filer som kan legges ved e-postmeldinger, notater og webressurser. Standardinnstillingen er 5 MB.

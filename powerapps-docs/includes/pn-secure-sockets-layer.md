@@ -1,0 +1,1 @@
+TLS (Transport Layer Security) eller SSL (Secure Sockets Layer)

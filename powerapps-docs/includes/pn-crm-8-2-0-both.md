@@ -1,0 +1,1 @@
+Oppdatering av Dynamics 365 (online og lokal) for desember 2016

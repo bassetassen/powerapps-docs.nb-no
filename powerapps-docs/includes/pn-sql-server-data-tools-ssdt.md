@@ -1,0 +1,1 @@
+Verktøy for SQL Server-data (SSDT)

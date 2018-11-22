@@ -1,0 +1,1 @@
+Angir en regel som registrerer hvilken type presentasjon som brukes.

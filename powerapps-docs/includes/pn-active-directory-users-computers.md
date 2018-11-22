@@ -1,0 +1,1 @@
+Active Directory-brukere og -datamaskiner

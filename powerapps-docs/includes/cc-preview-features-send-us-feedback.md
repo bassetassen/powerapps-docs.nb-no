@@ -1,0 +1,1 @@
+Vi gjør denne forhåndsversjonen tilgjengelig slik at du kan prøve den og fortelle oss hva du mener. Tilbakemeldingen din vil hjelpe oss med å prioritere funksjonene du har mest bruk for. Vi ber om at du gir oss tilbakemelding og rapporterer problemer ved å bruke det allment tilgjengelige tilbakemeldingsnettstedet:

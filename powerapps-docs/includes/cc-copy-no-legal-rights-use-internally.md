@@ -1,0 +1,1 @@
+Dette dokumentet gir deg ingen juridiske rettigheter til immaterielle rettigheter i Microsoft-produkter. Du kan kopiere og bruke dette dokumentet for interne referanseformål.

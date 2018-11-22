@@ -1,0 +1,1 @@
+Faktiske krav og produktfunksjonalitet kan variere basert på systemkonfigurasjon og operativsystem.

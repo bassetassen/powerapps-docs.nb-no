@@ -1,0 +1,1 @@
+Denne funksjonen ble innført i Dynamics CRM Online 2015 oppdatering 1 og CRM 2016 (on-premises).

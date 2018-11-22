@@ -1,0 +1,1 @@
+Hvis du vil sikre at brukere får riktig informasjon når de klikker **Hjelp**, må du konfigurere [!INCLUDE[pn_crm_shortest](pn-crm-shortest.md)] til å bruke tilpasset hjelp. Gå til **Innstillinger** > **Administrasjon**, klikk **Systeminnstillinger**, klikk kategorien **Generelt**, og velg **Ja** for **Bruk tilpasset Hjelp for enheter som kan tilpasses**.

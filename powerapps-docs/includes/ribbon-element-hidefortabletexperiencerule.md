@@ -1,0 +1,1 @@
+Angir en regel som returnerer false når webprogrammet vises i en mobil nettleser på en nettbrettenhet.

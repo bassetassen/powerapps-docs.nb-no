@@ -1,0 +1,1 @@
+Lync har endret navn til Skype for Business. Inntil videre vil du fortsatt se referanser til Lync i Microsoft Dynamics 365, men Dynamics 365 fungerer med Skype for Business.

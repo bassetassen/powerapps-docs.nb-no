@@ -1,0 +1,1 @@
+Det kan oppstå alvorlige problemer hvis du endrer registeret på feil måte ved å bruke Registerredigering eller en annen metode. Disse problemene kan kreve at du installerer operativsystemet og Microsoft Dynamics 365 på nytt. Vi kan ikke garantere at disse problemene kan løses. Du endrer registret på egen risiko.

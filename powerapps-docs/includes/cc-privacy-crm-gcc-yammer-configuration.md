@@ -1,0 +1,1 @@
+Ved å aktivere Yammer godtar du at dataene dine deles med et eksternt system. Data som importeres fra eksterne systemer til Microsoft Dynamics 365 (online), er underlagt [Personvern og informasjonskapsler for Microsoft](http://go.microsoft.com/fwlink/p/?LinkID=521839).

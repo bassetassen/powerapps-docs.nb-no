@@ -1,0 +1,1 @@
+For oppdatert informasjon om kompatibilitet for CRM 2015, kan du se [Kompatibilitet med Microsoft Dynamics CRM 2015](https://support.microsoft.com/en-us/kb/3018360).

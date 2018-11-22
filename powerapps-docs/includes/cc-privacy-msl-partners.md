@@ -1,0 +1,1 @@
+Hvis du angir en Microsoft-partner (for eksempel ved å prøve eller kjøpe Microsoft Social Engagement basert på en forespørsel eller et tilbud fra en partner, eller ved å angi en partner som skal gi hjelp vedrørende bruk eller administrasjon av Social Engagement), gjør Microsoft opplysningene dine tilgjengelige for partneren basert på dine instruksjoner.

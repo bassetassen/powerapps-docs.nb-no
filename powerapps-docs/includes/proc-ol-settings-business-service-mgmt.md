@@ -1,0 +1,1 @@
+Velg **Innstillinger** > **Forretning** > **Servicebehandling** i navigasjonsruten.

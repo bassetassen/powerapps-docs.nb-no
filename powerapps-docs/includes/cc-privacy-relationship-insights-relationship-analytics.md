@@ -1,0 +1,19 @@
+Ved å aktivere Relasjonsanalyse, som er en funksjon i Innebygd intelligens, sendes kundedata for [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)], inkludert brukeropplysninger, til og lagres i [!INCLUDE[pn_customerinsight_full](pn-customer-insights-full.md)], som er en tjeneste som kjører i Azure, for å beregne relasjons-KPI-er mellom [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-brukere og -kunder. Dataene blir også lagret midlertidig i [!INCLUDE[pn_azure_service_fabric](pn-azure-service-fabric.md)] og behandlet for flere formål, for eksempel relasjonens tilstand og trender, og deretter returneres denne informasjonen til [!INCLUDE[pn_customerinsight_short](pn-customer-insights-short.md)] og til slutt til [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)].  
+  
+ En administrator kan aktivere funksjonen Relasjonsanalyse ved å installere den som en løsning i [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)]-organisasjonen. I tillegg kan en administrator deretter deaktivere funksjonen ved å avinstallere denne løsningen fra [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)]-organisasjonen.  
+  
+ Ved å aktivere [!INCLUDE[pn_Exchange](pn-exchange.md)]-data som en datakilde, sender du kundedata for [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)], inkludert sluttbrukeropplysninger, fra [!INCLUDE[pn_customerinsight_full](pn-customer-insights-full.md)] til [!INCLUDE[pn_Exchange_Online](pn-exchange-online.md)] for å samle inn flere data, som skal brukes til KPI-beregninger og til å opprette andre analyser.  For å få full tilgang til denne funksjonen, må administratoren for [!INCLUDE[pn_Office_365](pn-office-365.md)] [!INCLUDE[pn_Exchange](pn-exchange.md)] også godta en separat samtykkesetning i den [!INCLUDE[pn_Exchange](pn-exchange.md)]-appen.  Når begge administratorene har samtykket via relevante produkter, oppgir [!INCLUDE[pn_Exchange](pn-exchange.md)] e-post- og møtemetadata. Disse dataene lagres i [!INCLUDE[pn_customerinsight_full](pn-customer-insights-full.md)] og brukes til å forbedre KPI-beregninger og andre mulig analyser, noe som bestemmes av administratoren for [!INCLUDE[pn_customerinsight_full](pn-customer-insights-full.md)]. Hvis du deaktiverer [!INCLUDE[pn_Exchange](pn-exchange.md)]-data som en datakilde i konfigurasjonen av Relasjonsanalyse, fjernes ikke [!INCLUDE[pn_Exchange](pn-exchange.md)]-data fra [!INCLUDE[pn_customerinsight_full](pn-customer-insights-full.md)].  Fjerning av [!INCLUDE[pn_Exchange](pn-exchange.md)]-data i [!INCLUDE[pn_customerinsight_full](pn-customer-insights-full.md)] kan BARE gjøres direkte fra [!INCLUDE[pn_customerinsight_full](pn-customer-insights-full.md)].  
+  
+ [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-komponenter og -tjenester som er involvert i Relasjonsanalyse, er beskrevet i avsnittene nedenfor.  
+  
+ [!INCLUDE[cc_privacy_note_azure_trust_center](cc-privacy-note-azure-trust-center.md)]  
+  
+ **[!INCLUDE[pn_customerinsight_full](pn-customer-insights-full.md)]**  
+  
+ [!INCLUDE[pn_customerinsight_short](pn-customer-insights-short.md)], en tjeneste som kjører i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)], lagrer [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-data, inkludert personlige opplysninger om kunder, for å beregne utdata for funksjonen Relasjonsanalyse. Forhåndsvisningen av [!INCLUDE[pn_customerinsight_short](pn-customer-insights-short.md)] er underlagt disse [tilleggsvilkår for bruk for forhåndsfunksjoner](http://go.microsoft.com/fwlink/p/?LinkId=511446).  
+  
+ [Finne ut mer om forhåndsvisningen av Customer Insights](https://azure.microsoft.com/en-us/services/customer-insights/).  
+  
+ [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)  
+  
+ [!INCLUDE[pn_azure_service_fabric](pn-azure-service-fabric.md)] brukes til å lagre [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-data midlertidig, inkludert personlige opplysninger om kunder, for å beregne utdata for funksjonen Relasjonsanalyse.

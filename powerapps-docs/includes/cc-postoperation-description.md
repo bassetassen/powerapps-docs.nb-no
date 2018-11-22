@@ -1,0 +1,1 @@
+Forekommer etter hovedsystemoperasjonen og i databasetransaksjonen.<br /><br />Bruk denne fasen for å endre egenskaper for meldingen før den er returneres til oppkaller.<br /><br />Unngå å ta i bruk endringer for en enhet som er inkludert i meldingen fordi dette vil utløse en ny Oppdater hendelse.

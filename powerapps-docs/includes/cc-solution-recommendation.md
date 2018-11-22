@@ -1,0 +1,1 @@
+Installasjon av løsninger eller publisering av tilpassinger kan forstyrre den ordinære driften av systemet. Vi anbefaler at du importerer løsninger på tidspunkt der det i minst mulig grad vil forstyrre brukerne.

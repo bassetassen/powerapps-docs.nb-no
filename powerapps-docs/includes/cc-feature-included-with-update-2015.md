@@ -1,0 +1,2 @@
+Denne funksjonen ble innført i CRM Online 2015 Oppdatering og CRM 2015 (on-premises).   
+ Er du interessert i å få denne funksjonen? [Finne Dynamics 365-administratoren eller brukerstøttekontakten din.](../basics/find-administrator-support.md)

@@ -1,0 +1,1 @@
+Active Directory Federation Services (AD FS) i Windows Server 2012 R2

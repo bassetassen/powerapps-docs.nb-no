@@ -1,0 +1,1 @@
+Microsoft Dynamics CRM 2016-listekomponent for Microsoft SharePoint Server 2010

@@ -1,0 +1,1 @@
+Du kan utføre rimelige tilpassinger til nedlastingen av denne dokumentasjonen for intern bruk. Du er eneansvarlig for eventuelle tilpassinger du utfører. Dette inkluderer eventuelle negative virkninger som tilpassingene kan ha på funksjonene i den relaterte lisensierte programvaren, selve programvaredokumentasjonen eller annet i forbindelse med bruk av tilpassingene.

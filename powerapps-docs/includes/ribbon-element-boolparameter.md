@@ -1,0 +1,1 @@
+Angir en verdi med datatypen boolsk som kan sendes som en parameter.

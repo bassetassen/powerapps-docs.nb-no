@@ -1,0 +1,1 @@
+Velg **Microsoft Dynamics CRM** > **Innstillinger** i navigasjonsfeltet.

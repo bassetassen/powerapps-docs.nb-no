@@ -1,0 +1,1 @@
+Hvis du vil vise en Silverlight-webressurs utenfor et enhetsskjema eller -diagram, oppretter du en HTML-webressurs som vertsside for Silverlight-webressursen. Deretter bruker du **$webresource:**-direktivet til å åpne HTML-webressursen.

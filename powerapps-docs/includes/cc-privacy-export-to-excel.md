@@ -1,0 +1,5 @@
+Hvis du bruker Microsoft Dynamics 365 (Online) til å eksporterer data til et *statisk* regneark, opprettes det en lokal kopi av de eksporterte dataene. Denne kopien lagres på datamaskinen. Dataene overføres fra Dynamics 365 (online) til datamaskinen din ved hjelp av en sikker tilkobling, og det opprettholdes ingen kobling mellom denne lokale kopien og Dynamics 365 (online).  
+  
+ Når du eksporterer til et *dynamisk* regneark eller en PivotTable, opprettholdes en kobling mellom Excel-regnearket og Dynamics 365 (online). Hver gang et dynamisk regneark eller en pivottabell blir oppdatert, godkjennes du mot Dynamics 365 (Online) ved hjelp av legitimasjonen din. Du får se dataene du har tillatelse til å vise.  
+  
+ En administrator kan avgjøre om brukerne i organisasjonen har tillatelse til å eksportere data til Excel ved hjelp av sikkerhetsroller.

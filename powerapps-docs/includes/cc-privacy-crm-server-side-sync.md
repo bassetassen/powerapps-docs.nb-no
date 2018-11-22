@@ -1,0 +1,3 @@
+Hvis du bruker Dynamics 365 når du bruker synkronisering på serversiden, vil Dynamics 365-kontakter og aktiviteter (herunder e-postmeldinger, avtaler, kontakter og oppgaver) bli synkronisert til det angitte e-postsystemet (for eksempel Exchange).  
+  
+ En administrator kan konfigurere funksjonalitet for synkronisering på serversiden for å angi hvilke brukere som kan sende e-postmeldinger eller avtaler fra Dynamics 365 eller synkronisere aktiviteter og kontakter mellom Dynamics 365 og brukerens postboks. Administratorer og sluttbrukere kan tilpasse filtervilkår, og administratorer kan også angi hvilke enhetsfelt som skal synkroniseres.

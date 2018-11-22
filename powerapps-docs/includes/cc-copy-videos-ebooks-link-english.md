@@ -1,0 +1,1 @@
+Videoer og e-bøker kan være på engelsk. Hvis du klikker koblingene, kan du bli videresendt til et amerikansk webområde med innhold på engelsk.

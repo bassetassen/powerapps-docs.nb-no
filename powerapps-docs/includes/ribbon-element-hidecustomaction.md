@@ -1,0 +1,1 @@
+Forhindrer at et eksisterende båndelement blir behandlet for båndet.

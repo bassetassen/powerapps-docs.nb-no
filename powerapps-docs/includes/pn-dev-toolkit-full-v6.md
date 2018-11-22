@@ -1,0 +1,1 @@
+Utviklerverktøysett for Microsoft Dynamics CRM 2013 og Microsoft Dynamics CRM Online

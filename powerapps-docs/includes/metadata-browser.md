@@ -1,0 +1,1 @@
+Hvis du vil vise enhetsmetadataene for organisasjonen, installerer du løsningen for metadataleseren som beskrives i [Bla gjennom metadataene for organisasjonen](../developer/browse-your-metadata.md). Du kan også se i referansedokumentasjonen for enheter i [Enhetsreferanse ](../developer/about-entity-reference.md).

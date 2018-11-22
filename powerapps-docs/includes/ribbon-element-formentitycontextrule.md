@@ -1,0 +1,1 @@
+Angir en regel som kan registrere om et skjemabånd vises i sammenheng med en bestemt enhet.

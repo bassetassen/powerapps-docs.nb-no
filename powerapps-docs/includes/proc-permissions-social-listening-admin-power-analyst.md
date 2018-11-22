@@ -1,0 +1,1 @@
+Du må være Social Engagement-administrator eller Power-analytiker for å utføre denne oppgaven.

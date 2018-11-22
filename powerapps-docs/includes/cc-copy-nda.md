@@ -1,0 +1,1 @@
+Dette dokumentet er konfidensielt, og tilhører Microsoft. Dokumentet kan bare brukes som følge av en avtale om hemmeligholdelse.

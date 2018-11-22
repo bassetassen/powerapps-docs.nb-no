@@ -1,0 +1,3 @@
+Hvis du bruker Dynamics 365 (online) og du bruker funksjonen for synkronisering til Outlook, vil Dynamics 365-dataene du synkroniserer, bli "eksportert" til Outlook. Det opprettholdes en kobling mellom informasjonen i Outlook og informasjonen i Dynamics 365 (Online) for å sikre at informasjonen forblir oppdatert mellom de to. Outlook-synkronisering laster bare ned de relevante oppførings-ID-ene for Dynamics 365 som skal brukes når en bruker prøver å spore og angi et Outlook-element. Dataene for firmaet lagres ikke på enheten.  
+  
+ En administrator avgjør om brukerne i organisasjonen har tillatelse til å synkronisere Dynamics 365-data til Outlook, ved hjelp av sikkerhetsroller.

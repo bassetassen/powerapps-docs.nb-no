@@ -1,0 +1,1 @@
+For hver nye eller endrede søkeemnekonfigurasjon kjører vi en innledende beregning tredjepartsleverandører av sosialt innhold for å vurdere antallet innlegg vi kommer til å oppnå med den valgte konfigurasjonen. For dette formålet blir søkeord, inkluderinger, ekskluderinger og brukte språkfiltre sendt inn til tredjepartsleverandører av sosialt innhold.

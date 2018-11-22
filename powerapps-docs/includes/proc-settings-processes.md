@@ -1,0 +1,1 @@
+Gå til **Innstillinger** > **Prosesser**.

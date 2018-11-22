@@ -1,0 +1,1 @@
+Brukere som logger på lokalt på en enhet der Microsoft Dynamics 365 for Outlook er installert, kan potensielt få tilgang til lokalt lagrede Dynamics 365-data. Delt bruk av en enhet som kjører Dynamics 365 for Outlook, støttes ikke.

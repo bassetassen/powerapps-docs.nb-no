@@ -1,0 +1,1 @@
+Sørg for at du har sikkerhetsrollen som systemadministrator eller tilsvarende tillatelser i Microsoft Dynamics 365.

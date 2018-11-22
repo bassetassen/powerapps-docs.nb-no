@@ -1,0 +1,1 @@
+Denne funksjonen krever at du har et abonnement på Office 365 eller en elektronisk tjeneste som SharePoint Online eller Exchange Online. Hvis du vil ha mer informasjon, kan du se [Hva er Office 365, og hvordan er det relatert til Dynamics 365 (Online)?](https://docs.microsoft.com/dynamics365/customer-engagement/admin/what-office-365-how-does-relate)

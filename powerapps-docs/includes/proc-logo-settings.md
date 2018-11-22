@@ -1,0 +1,1 @@
+Velg **Microsoft Dynamics 365** > **Innstillinger** i navigasjonsfeltet.

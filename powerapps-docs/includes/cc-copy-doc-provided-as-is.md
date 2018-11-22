@@ -1,0 +1,1 @@
+Dette dokumentet leveres som det er. Innholdet i dette dokumentet, inkludert URL-adresser og andre referanser til webområder på Internett, kan endres uten varsel.

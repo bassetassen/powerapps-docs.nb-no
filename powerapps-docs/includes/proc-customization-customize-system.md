@@ -1,0 +1,1 @@
+Gå til **Tilpassinger** > **Tilpass systemet**.

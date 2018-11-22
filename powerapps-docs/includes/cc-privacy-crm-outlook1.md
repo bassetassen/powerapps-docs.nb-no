@@ -1,0 +1,7 @@
+Hvis du vil bruke Microsoft Dynamics 365 for Outlook, må du logge på med legitimasjonen din (en e-postadresse og et passord). Du kan velge å lagre informasjonen lokalt slik at du ikke blir spurt om legitimasjon hver gang du åpner Outlook. Hvis du velger å lagre informasjonen lokalt, kobler Dynamics 365 for Outlook automatisk til Microsoft Dynamics 365 (Online) hver gang du åpner Outlook.  
+  
+ Etter den første gangen du logger på og bruker Dynamics 365 for Outlook, vil tilkoblingen mellom datamaskinen og Dynamics 365 (Online) alltid være åpen når du har tilgang til Internett. Du kan velge å deaktivere tilkoblingen mellom datamaskinen og Dynamics 365 ved hjelp av en konfigurasjonsinnstilling, men hvis du deaktiverer tilkoblingen, kan ytelsen reduseres for Dynamics 365 for Outlook.  
+  
+ Hvis du bruker Dynamics 365 for Outlook til å spore e-post, vil e-posttråden være synlig for brukerne i organisasjonen som har tillatelse til å vise den.  
+  
+Dynamics 365 for Outlook vil sende avsenderens e-postadresse, mottakerens e-postadresse og emnelinjen for meldingen til Dynamics 365 (Online) for hver e-postmelding du mottar. Dette lar Dynamics 365 (Online) validere om bestemte e-postmeldinger skal lagres av Dynamics 365 (Online)-tjenesten. Når du sporer et element, beholdes en kopi av elementet automatisk av Dynamics 365-tjenesten, og den vil være synlig for andre brukere i organisasjonen som har de riktige tillatelsene. Når sporingen oppheves for et element, slettes kopien automatisk fra Dynamics 365 (Online)-tjenesten bare hvis du eier elementet.

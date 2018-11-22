@@ -1,0 +1,1 @@
+Gjelder Dynamics 365 (online), versjon 9.0

@@ -1,0 +1,1 @@
+Angir en regel som registrerer typen Microsoft Dynamics 365-skjema.

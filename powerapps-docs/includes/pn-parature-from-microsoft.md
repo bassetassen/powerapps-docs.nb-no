@@ -1,0 +1,1 @@
+Parature fra Microsoft

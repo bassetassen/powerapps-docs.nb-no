@@ -1,0 +1,11 @@
+Når du godtar du vilkårene for hendelsesbehandling, er funksjonen for integrering av webinar aktivert. Funksjonen for integrering av webinar bruker en partnerwebinarservice for å utføre en hendelse eller en økt som et webinar. Du må ha en konto for å bruke alle servicer for webinarservicen. Den eneste partnerwebinarservicen som leveres som standard for øyeblikket, er ON24. Når du bruker funksjonen for integrering av webinar, blir data som er nødvendige for å formidle og kjøre webinaret, behandlet og lagret i [!INCLUDE[pn-azure-service-fabric](../includes/pn-azure-service-fabric.md)] og deretter sendt til ON24. Dataene inkluderer også webinardeltakernes registreringsdata, for eksempel navn, e-postmeldinger og firmanavn. I tillegg sender ON24 webinarmetrikkverdier, for eksempel webinarvisningsvarighet [!INCLUDE[pn-microsoftcrm](../includes/pn-microsoftcrm.md)] via [!INCLUDE[pn-azure-service-fabric](../includes/pn-azure-service-fabric.md)].
+
+Du trenger ikke å aktivere webinarfunksjonen for å bruke resten av løsningen for hendelsesbehandling. En administrator kan deaktivere funksjonen for integrering av webinar ved å fjerne legitimasjonen i webinarkonfigurasjonen.
+
+[!INCLUDE[pn-windows-azure](../includes/pn-windows-azure.md)]-komponenter og -servicer som brukes av funksjonen for integrering av webinar, er:
+
+- [!INCLUDE[pn_azure_key_vault](../includes/pn_azure_key_vault.md)] ([!INCLUDE[proc-more-information](../includes/proc-more-information.md)] [Hva er Azure Key Vault?](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-whatis))
+  - Inneholder krypteringsnøkkel for kryptering/dekryptering av kundens legitimasjon for ON24-konto
+- [!INCLUDE[pn-azure-service-fabric](../includes/pn-azure-service-fabric.md)] ([!INCLUDE[proc-more-information](../includes/proc-more-information.md)] [Oversikt over Azure Service Fabric](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview))
+  - Behandler og sender registreringsdata og legitimasjon for webinarkonto til ON24
+  - Henter webinarmetrikkverdier fra On24 til [!INCLUDE[pn-microsoftcrm](../includes/pn-microsoftcrm.md)] - lagrer kundens legitimasjon for ON24-forretningsforbindelse (egendefinert kryptering)

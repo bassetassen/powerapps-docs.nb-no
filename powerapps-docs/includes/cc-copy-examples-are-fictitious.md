@@ -1,0 +1,1 @@
+Noen av eksemplene som brukes, er oppdiktede. Ingen faktisk tilknytning er tiltenkt.

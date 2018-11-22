@@ -1,0 +1,1 @@
+Optimalisering av ressursplanlegging for Microsoft Dynamics 365

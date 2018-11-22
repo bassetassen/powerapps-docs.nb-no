@@ -1,4 +1,6 @@
 ## <a name="prerequisites"></a>Forhåndskrav
-* [Registrer deg](../maker/signup-for-powerapps.md) for PowerApps og [logg på](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved hjelp av den samme legitimasjonen som du brukte under registreringen.
-* Opprett en app fra en [mal](../maker/canvas-apps/get-started-test-drive.md), fra [data](../maker/canvas-apps/get-started-create-from-data.md) eller fra [bunnen av](../maker/canvas-apps/get-started-create-from-blank.md).
-* Finn ut hvordan du [legger til og konfigurerer kontroller](../maker/canvas-apps/add-configure-controls.md).
+
+1. [Registrere deg](../maker/signup-for-powerapps.md) for PowerApps.
+1. [Logg på](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) med samme legitimasjon som du brukte til å registrere deg.
+1. Under **Lage dine egne apper** holder du markøren over flisen **Tom lettetapp**, velge telefonikonet og velger deretter **Lag denne appen**.
+1. Finn ut hvordan du [legger til og konfigurerer kontroller](../maker/canvas-apps/add-configure-controls.md).

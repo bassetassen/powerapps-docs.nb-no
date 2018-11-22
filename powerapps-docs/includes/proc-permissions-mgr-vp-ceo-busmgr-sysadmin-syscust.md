@@ -1,0 +1,1 @@
+Kontroller at du har sikkerhetsrolle som overordnet, viseadministrerende direktør, administrerende direktør, systemadministrator eller systemtilpasser eller tilsvarende tillatelser.

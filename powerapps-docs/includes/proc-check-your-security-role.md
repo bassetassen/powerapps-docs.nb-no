@@ -1,0 +1,1 @@
+Følg fremgangsmåten under [Vise brukerprofilen](../basics/view-your-user-profile.md).

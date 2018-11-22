@@ -1,0 +1,1 @@
+Internett-rettet distribusjon (IFD)

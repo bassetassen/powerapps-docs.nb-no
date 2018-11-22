@@ -1,0 +1,1 @@
+Konfigurasjonsverktøy for Internett-rettet distribusjon (IFD)

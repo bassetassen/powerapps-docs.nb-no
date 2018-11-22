@@ -1,0 +1,1 @@
+Klareringssenter for Microsoft Azure

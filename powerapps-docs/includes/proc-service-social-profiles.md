@@ -1,0 +1,1 @@
+Gå til **Service** > **Sosiale profiler**.

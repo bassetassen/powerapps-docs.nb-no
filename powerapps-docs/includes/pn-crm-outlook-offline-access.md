@@ -1,0 +1,1 @@
+Dynamics 365 for Microsoft Office Outlook med frakoblet tilgang

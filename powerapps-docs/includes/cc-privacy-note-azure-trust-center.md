@@ -1,0 +1,1 @@
+**Obs!** Hvis du vil ha mer informasjon om flere [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tjenestetilbud, kan du gå til [klareringssenteret for Microsoft Azure](https://azure.microsoft.com/support/trust-center/).

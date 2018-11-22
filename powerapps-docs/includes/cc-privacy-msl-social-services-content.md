@@ -1,0 +1,7 @@
+Microsoft Social Engagement tilbyr driftede elektroniske tjenester som er tilgjengelige for en rekke forskjellige kunder, og består av følgende komponenter for sosiale funksjoner i programvaren:  
+  
+**Overvåking av sosiale medier** – muligheten til å lytte til og overvåke allment tilgjengelig sosial kommunikasjon på tvers av offentlige nettverk og nettverk administrert av tredjeparter.  
+  
+**Sosial analyse** – mulighet til å identifisere, beregne og fremsette spørringer som er relatert til offentlig tilgjengelige dokumenter og poster.  
+  
+ Vær oppmerksom på at Microsoft Social Engagement kan gi tilgang til tredjepartstjenester, for eksempel Twitter, Facebook, Tumblr, YouTube og blogger, som kan ha andre personvernretningslinjer enn Social Engagement. Bruk av disse tjenestene og eventuelle opplysninger du gir til dem, er underlagt personvernerklæringene som gjelder for disse tjenestene. Ved oppretting av en slik tilbkobling kan bestemte data, for eksempel søkespørringen som ble brukt for å hente inn Social Content og IP-adressen din, deles med disse tjenestene. Du oppfordres til å lese gjennom disse andre personvernerklæringene. Du oppfordres også til å lese gjennom vilkårene for Microsoft Online Services.

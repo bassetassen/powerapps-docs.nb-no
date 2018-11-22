@@ -1,0 +1,1 @@
+Følg instruksjonene for appen du bruker.

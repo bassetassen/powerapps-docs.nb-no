@@ -1,0 +1,1 @@
+Gå til [administrasjonssenteret for Office 365](https://portal.office.com), og logg på med legitimasjonen for globale Office 365-administratorer.

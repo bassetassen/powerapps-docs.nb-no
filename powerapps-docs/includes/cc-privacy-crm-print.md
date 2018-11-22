@@ -1,0 +1,3 @@
+Når brukere av Dynamics 365 (online) skriver ut Dynamics 365-data, "eksporterer" de egentlig dataene fra sikkerhetsgrensen for Dynamics 365 (online) til et mindre sikkert miljø, i dette tilfellet et stykke papir.  
+  
+ En administrator har full kontroll (med sikkerhetsrollen eller enhetsnivået for brukeren) over dataene som kan trekkes ut. Når dataene er trukket ut, er de imidlertid ikke lenger beskyttet av sikkerhetsgrensen for Dynamics 365 (Online), og de kontrolleres i stedet direkte av kunden.

@@ -1,0 +1,1 @@
+Registrerer versjonen av Microsoft Dynamics 365 for Microsoft Office Outlook.

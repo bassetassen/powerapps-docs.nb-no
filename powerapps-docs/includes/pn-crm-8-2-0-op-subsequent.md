@@ -1,0 +1,1 @@
+Service Pack desember 2016 for Dynamics 365 (on-premises)

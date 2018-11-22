@@ -1,0 +1,1 @@
+Forekommer før hovedsystemoperasjonen og i databasetransaksjonen.<br /><br />Hvis du vil endre verdier for en enhet som er inkludert i meldingen, må du gjøre det her.<br /><br />Unngå å avbryte en operasjon her. Avbryting vil utløse en tilbakerulling av transaksjonen og ha en betydelige innvirkning på ytelsen.

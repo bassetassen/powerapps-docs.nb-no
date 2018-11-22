@@ -1,0 +1,1 @@
+Konfigurasjonsveiviser for Microsoft Dynamics 365 for Outlook

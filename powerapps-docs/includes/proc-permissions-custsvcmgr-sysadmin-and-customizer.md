@@ -1,0 +1,1 @@
+Sørg for at du har sikkerhetsrollen som kundeservicesjef, systemansvarlig eller systemtilpasser eller tilsvarende tillatelser.

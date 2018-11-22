@@ -1,0 +1,1 @@
+For å kunne bruke denne funksjonen må du slå den på og godta lisensvilkårene. [Hva er forhåndsvisningsfunksjoner, og hvordan aktiverer jeg dem?](../admin/what-are-preview-features-how-do-i-enable-them.md).

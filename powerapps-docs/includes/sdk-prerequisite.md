@@ -1,0 +1,1 @@
+En Internett-tilkobling kreves for å laste ned eksempelprosjektet og gjenopprette NuGet-pakkene som brukes i eksempelprosjektet.

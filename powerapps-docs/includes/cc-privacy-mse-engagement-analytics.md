@@ -1,0 +1,1 @@
+For å kunne aktivere Engagement- og Analytics-scenarier kobler Microsoft Social Engagement noen ganger til tredjepartstjenestene Twitter og Facebook for å hente sosialt innhold. Ved oppretting av en slik tilkobling kan bestemte data som IP-adressen din deles med disse tjenestene.
