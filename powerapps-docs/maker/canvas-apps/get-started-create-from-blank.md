@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3128d284d5b03da9a7c8b5798365b60f7092988b
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
+ms.openlocfilehash: 8c398bb7a916c98aa769e39477fe889a74fce32c
+ms.sourcegitcommit: c1f58a16f8dcd309a1d5fc4658ca16d82c615994
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316911"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "51334000"
 ---
 # <a name="create-an-canvas-app-from-scratch-based-on-excel-data"></a>Opprett en lerretsapp fra grunnen av basert på Excel-data
 
@@ -242,6 +242,8 @@ Du må først opprette en Excel-fil ved hjelp av disse eksempeldataene for å f�
 1. Åpne forhåndsvisningsmodus ved å trykke på ESC (eller ved å velge Lukk-ikonet nær hjørnet øverst til høyre).
 
 ## <a name="next-steps"></a>Neste trinn
-* Trykk på CTRL+S for å lagre appen i skyen, slik at du kan kjøre den fra andre enheter.
-* [Del appen](share-app.md), slik at andre personer kan kjøre den.
-* Finn ut mer om [funksjoner](working-with-formulas.md), for eksempel **Patch**, som du kan bruke til å administrere data uten å opprette et standardskjema.
+
+- Trykk på CTRL+S for å lagre appen i skyen, slik at du kan kjøre den fra andre enheter.
+- [Del appen](share-app.md), slik at andre personer kan kjøre den.
+- Finn ut mer om [funksjoner](working-with-formulas.md), for eksempel **Patch**, som du kan bruke til å administrere data uten å opprette et standardskjema.
+- [Koble denne appen til en løsning](add-app-solution.md), slik at du for eksempel kan distribuere den til et annet miljø eller publisere den på AppSource.

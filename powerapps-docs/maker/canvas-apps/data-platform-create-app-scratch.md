@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 45b5d85998825cdafc2bbea7badaa5d7cde2f092
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
+ms.openlocfilehash: 710df8899fa11e46a83e4ba670c4081b04fa7bde
+ms.sourcegitcommit: c1f58a16f8dcd309a1d5fc4658ca16d82c615994
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49317049"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "51333971"
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service-for-apps"></a>Opprett en lerretsapp fra grunnen av ved hjelp av Common Data Service for apper
 
@@ -160,4 +160,5 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 ## <a name="next-steps"></a>Neste trinn
 
-[Åpne én eller flere eksempelapper](open-and-run-a-sample-app.md), og utforsk forskjellige typer apper du kan opprette.
+- [Koble denne appen til en løsning](add-app-solution.md), slik at du for eksempel kan distribuere den til et annet miljø eller publisere den på AppSource.
+- [Åpne én eller flere eksempelapper](open-and-run-a-sample-app.md), og utforsk forskjellige typer apper du kan opprette.
