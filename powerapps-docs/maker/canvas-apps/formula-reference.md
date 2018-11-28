@@ -40,7 +40,7 @@ Andre elementer omfatter:
 
 **[Acos](functions/function-trig.md)** – returnerer arccosinusen for et tall, i radianer.
 
-**[Acos](functions/function-trig.md)** – returnerer arccotangensen for et tall, i radianer.
+**[Acot](functions/function-trig.md)** – returnerer arccotangensen for et tall, i radianer.
 
 **[AddColumns](functions/function-table-shaping.md)** – returnerer en tabell med [kolonner](working-with-tables.md#columns) lagt til.
 
@@ -208,11 +208,11 @@ Andre elementer omfatter:
 **[Lower](functions/function-lower-upper-proper.md)** – konverterer bokstaver i en tekststreng slik at alle bokstavene blir små.
 
 ## <a name="m"></a>M
-**[Maks](functions/function-aggregates.md)** – maksimumsverdien av et tabelluttrykk eller et sett med argumenter.
+**[Max](functions/function-aggregates.md)** – maksimumsverdien av et tabelluttrykk eller et sett med argumenter.
 
 **[Mid](functions/function-left-mid-right.md)** – returnerer den midterste delen av en streng.
 
-**[Min.](functions/function-aggregates.md)** – minimumsverdien av et tabelluttrykk eller et sett med argumenter.
+**[Min](functions/function-aggregates.md)** – minimumsverdien av et tabelluttrykk eller et sett med argumenter.
 
 **[Minute](functions/function-datetime-parts.md)** – henter minutt-delen av en dato-/klokkeslett-verdi.  
 
@@ -223,7 +223,7 @@ Andre elementer omfatter:
 ## <a name="n"></a>N
 **[Navigate](functions/function-navigate.md)** – endrer hvilken skjem som vises.
 
-**[EditForm](functions/function-form.md)** – tilbakestiller en skjemakontroll for oppretting av et element.
+**[NewForm](functions/function-form.md)** – tilbakestiller en skjemakontroll for oppretting av et element.
 
 **[Not](functions/function-logicals.md)** – boolsk logikk (NOT).  Returnerer **sann** hvis argumentet er **usant**, og returnerer **usann** hvis argumentet er **sant**.  Du kan også bruke [**!**-operatoren](functions/operators.md).
 
