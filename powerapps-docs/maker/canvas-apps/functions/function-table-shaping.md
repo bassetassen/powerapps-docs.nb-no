@@ -26,7 +26,7 @@ Former en [tabell](../working-with-tables.md) ved å legge til, slippe, gi nytt 
 ## <a name="overview"></a>Oversikt
 Disse funksjonene former en tabell ved å justere kolonnene:
 
-* Reduser en tabell som inneholder flere kolonner ned til en enkeltkolonne for bruk med enkeltkolonne-funksjoner, for eksempel **[lavere](function-lower-upper-proper.md)** eller **[Abs](function-numericals.md)**.  
+* Reduser en tabell som inneholder flere kolonner ned til en enkeltkolonne for bruk med enkeltkolonne-funksjoner, for eksempel **[Lower](function-lower-upper-proper.md)** eller **[Abs](function-numericals.md)**.  
 * Legg til en beregnet kolonne i en tabell (for eksempel en **Total Price**-kolonne som viser resultatet av å multiplisere **Quantity** med **Unit Price**).
 * Endre navnet til en kolonne til noe mer meningsfylt. Dette vises til brukere eller brukes i formler.
 

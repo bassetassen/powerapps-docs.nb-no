@@ -24,7 +24,7 @@ ms.locfileid: "42864103"
 Konverterer dato- og klokkeslettkomponenter til en dato/klokkeslett-verdi.
 
 ## <a name="description"></a>Beskrivelse
-**Date** -funksjonen konverterer separate verdier for år, måned og dag til en dato/klokkeslett-verdi.  Klokkeslettdelen er midnatt.
+**Date**-funksjonen konverterer separate verdier for år, måned og dag til en dato/klokkeslett-verdi.  Klokkeslettdelen er midnatt.
 
 * Hvis Year er fra og med 0 til og med 1899, legger funksjonen den verdien sammen med 1900 for å beregne året.  **70** blir **1970**.
 * Hvis Month er mindre enn 1 eller mer enn 12, vil det antallet måneder trekkes fra eller legges til fra begynnelsen av det angitte året.
@@ -32,7 +32,7 @@ Konverterer dato- og klokkeslettkomponenter til en dato/klokkeslett-verdi.
 
 **Time**-funksjonen konverterer separate verdier for timer, minutter og sekunder til en dato/klokkeslett-verdi.  Resultatet har ingen tilknyttet dato.
 
-Se funksjonene **[DateValue](function-datevalue-timevalue.md)**,  **[tidsverdi](function-datevalue-timevalue.md)**, og **[DateTimeValue](function-datevalue-timevalue.md)** for informasjon om hvordan du konverterer en streng til en verdi.  
+Se funksjonene **[DateValue](function-datevalue-timevalue.md)**,  **[TimeValue](function-datevalue-timevalue.md)** og **[DateTimeValue](function-datevalue-timevalue.md)** for informasjon om hvordan du konverterer en streng til en verdi.  
 
 Se også [Slik arbeider du med datoer og klokkeslett](../show-text-dates-times.md) hvis du vil ha mer informasjon.
 

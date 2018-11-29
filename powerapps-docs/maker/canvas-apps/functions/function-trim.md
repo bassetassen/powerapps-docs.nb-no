@@ -24,7 +24,7 @@ ms.locfileid: "42852492"
 Fjerner ekstra mellomrom fra en tekststreng.
 
 ## <a name="description"></a>Beskrivelse
-**Trimfunksjonen** fjerner alle mellomrom fra en tekststreng, bortsett fra enkle mellomrom mellom ord.  
+**Trim**-funksjonen fjerner alle mellomrom fra en tekststreng, bortsett fra enkle mellomrom mellom ord.  
 
 Funksjonen **TrimEnds** fjerner alle mellomrom fra starten og slutten av en tekststreng, men lar mellomrom mellom ord forbli intakt.
 
@@ -52,14 +52,14 @@ Følgende eksempler bruker en enkeltkolonnesamling kalt **Mellomrom**, som inneh
 
 ![](media/function-trim/input-strings.png)
 
-Hvis du vil opprette denne samlingen, angir du **OnSelect**-egenskapen til en **[Knapp](../controls/control-button.md)**-kontroll til denne formelen, åpner Forhåndsvisningsmodus, og deretter klikker eller trykker du på knappen:
+Hvis du vil opprette denne samlingen, angir du **OnSelect**-egenskapen til en **[Button](../controls/control-button.md)**-kontroll til denne formelen, åpner Forhåndsvisningsmodus, og deretter klikker eller trykker du på knappen:
 <br>**ClearCollect( Spaces, [ "&nbsp;&nbsp;&nbsp;Jane&nbsp;&nbsp;&nbsp;Doe&nbsp;&nbsp;&nbsp;", "&nbsp;&nbsp;&nbsp;&nbsp;Jack&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;Jill", "Already&nbsp;trimmed", "&nbsp;&nbsp;&nbsp;Venus,&nbsp;&nbsp;&nbsp;Earth,&nbsp;&nbsp;&nbsp;Mars&nbsp;&nbsp;", "Oil&nbsp;and&nbsp;Water&nbsp;&nbsp;&nbsp;" ] )**
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Trim(&nbsp;Spaces&nbsp;)** |Trimmer alle mellomrom fra starten og slutten av hver streng og ekstra mellomrom inne i hver streng i **Mellomrom**-samlingen. |<style> img { max-width: none } </style> ![](media/function-trim/output-trim.png) |
-| **TrimEnds(&nbsp;Spaces&nbsp;)** |Trimmer alle mellomrom fra starten og slutten av hver streng i **Mellomrom**-samlingen. |<style> img { max-width: none } </style> ![](media/function-trim/output-trimends.png) |
+| **Trim(&nbsp;Spaces&nbsp;)** |Trimmer alle mellomrom fra starten og slutten av hver streng og ekstra mellomrom inne i hver streng i **Spaces**-samlingen. |<style> img { max-width: none } </style> ![](media/function-trim/output-trim.png) |
+| **TrimEnds(&nbsp;Spaces&nbsp;)** |Trimmer alle mellomrom fra starten og slutten av hver streng i **Spaces**-samlingen. |<style> img { max-width: none } </style> ![](media/function-trim/output-trimends.png) |
 
 > [!NOTE]
-> Ekstra mellomrom vises ikke hvis du viser en samling ved å klikke eller trykke på **Samlinger** på **Fil**-menyen. Hvis du vil kontrollere lengden, kan du bruke **[Lengde](function-len.md)**-funksjonen.
+> Ekstra mellomrom vises ikke hvis du viser en samling ved å klikke eller trykke på **Samlinger** på **Fil**-menyen. Hvis du vil kontrollere lengden, kan du bruke **[Len](function-len.md)**-funksjonen.
 

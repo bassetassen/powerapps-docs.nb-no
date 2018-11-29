@@ -41,7 +41,7 @@ Du kan også bruke **[Patch](function-patch.md)**-funksjonen til å opprette pos
 
 **Collect** returnerer den endrede datakilden som en tabell.  **Collect** kan bare brukes i en [formel for virkemåte](../working-with-formulas-in-depth.md).
 
-### <a name="clear"></a>Fjern
+### <a name="clear"></a>Clear
 **Clear**-funksjonen sletter alle postene i en samling.  Kolonnene i samlingen blir værende.
 
 Legg merke til at **Clear** bare fungerer på samlinger og ikke på andre datakilder.  Du kan bruke **[RemoveIf](function-remove-removeif.md)( *DataSource*, true)** til dette.  Vær forsiktig, ettersom dette vil fjerne alle postene som er lagret for datakilden, og kan påvirke andre brukere.

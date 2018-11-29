@@ -37,7 +37,7 @@ Hvis du vil opprette eller oppdatere en kontekstvariabel, kan du sende en enkelt
 * Hvis du angir navnet på en variabel som ikke finnes ennå, oppretter **UpdateContext** en variabel med dette navnet, og setter verdien for denne variabelen til verdien du angir.
 * Hvis du tidligere har definert en variabel men ikke angitt verdien i denne bestemte **UpdateContext**-formelen, forblir verdien den samme.
 
-Kontekstvariabler opprettes implisitt ved hjelp av **UpdateContext**- eller [ **Navigate**-funksjonen](function-navigate.md).  Det kreves ingen eksplisitt deklarasjon.  Hvis du fjerner alle **UpdateContext**- og **Naviger**-referansene til en kontekstvariabel, vil denne kontekstvariabelen opphøre.  Angi variabelens verdi som resultatet av [**Blank**-funksjonen](function-isblank-isempty.md) for å fjerne variabelen.
+Kontekstvariabler opprettes implisitt ved hjelp av **UpdateContext**- eller [ **Navigate**-funksjonen](function-navigate.md).  Det kreves ingen eksplisitt deklarasjon.  Hvis du fjerner alle **UpdateContext**- og **Navigate**-referansene til en kontekstvariabel, vil denne kontekstvariabelen opphøre.  Angi variabelens verdi som resultatet av [**Blank**-funksjonen](function-isblank-isempty.md) for å fjerne variabelen.
 
 Du kan se variablenes verdier, definisjoner og bruk ved hjelp av Variabler-visningen under Fil-menyen i redigeringsmiljøet.
 

@@ -1,6 +1,6 @@
 ---
-title: Signaler fra akselerasjon, app, kompass, tilkobling og plassering | Microsoft Docs
-description: Referanseinformasjon for sensorer for akselerasjon, app, kompass, tilkobling og plassering i PowerApps, inkludert syntaks og eksempler
+title: Signaler fra Acceleration, App, Compass, Connection og Location | Microsoft Docs
+description: Referanseinformasjon for sensorer for Acceleration, App, Compass, Connection og Location i PowerApps, inkludert syntaks og eksempler
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -20,14 +20,14 @@ ms.contentlocale: nb-NO
 ms.lasthandoff: 08/24/2018
 ms.locfileid: "42832149"
 ---
-# <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Signaler fra akselerasjon, app, kompass, tilkobling og plassering i PowerApps
+# <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Signaler fra Acceleration, App, Compass, Connection og Location i PowerApps
 Returnerer informasjon om appmiljøet, som hvor brukeren befinner seg i verden og hvilken skjerm som vises.  
 
 ## <a name="description-and-syntax"></a>Beskrivelse og syntaks
 Alle signaler returnerer en [post](../working-with-tables.md#records) av informasjon. Du kan bruke og lagre denne informasjonen som en post, eller du kan trekke ut enkelte egenskaper ved bruk av **.** [operatoren](operators.md).
 
-### <a name="acceleration"></a>Akselerasjon
-**Akselerasjon**-signalet returnerer enhetens akselerasjon i tre dimensjoner, relativ til enhetsskjermen. Akselerasjon måles i *g* enheter på 9,81 m/sekund<sup>2</sup> eller 32,2 ft/sekund<sup>2</sup> (akselerasjonen som jorden overfører til objekter på overflaten på grunn av tyngdekraft).
+### <a name="acceleration"></a>Acceleration
+**Acceleration**-signalet returnerer enhetens akselerasjon i tre dimensjoner, relativ til enhetsskjermen. Akselerasjon måles i *g* enheter på 9,81 m/sekund<sup>2</sup> eller 32,2 ft/sekund<sup>2</sup> (akselerasjonen som jorden overfører til objekter på overflaten på grunn av tyngdekraft).
 
 | Signal-egenskap | Beskrivelse |
 | --- | --- |

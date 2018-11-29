@@ -1,6 +1,6 @@
 ---
 title: Funksjonene Concat og Concatenate | Microsoft Docs
-description: Referanseinformasjon for funksjonene Kjed.sammen og Kjede.sammen i PowerApps, inkludert syntaks og eksempler
+description: Referanseinformasjon for funksjonene Concat og Concatenate i PowerApps, inkludert syntaks og eksempler
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -28,7 +28,7 @@ Kjeder sammen individuelle tekststrenger og strenger i [tabeller](../working-wit
 
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
-Bruk funksjonen **[Del](function-split.md)** til å dele en streng inn i en tabell med understrenger.
+Bruk funksjonen **[Split](function-split.md)** til å dele en streng inn i en tabell med understrenger.
 
 **Concatenate**-funksjonen kjeder sammen en blanding av individuelle strenger og en enkeltkolonnetabell med strenger. Hvis funksjonen brukes med individuelle strenger, tilsvarer den bruken av **&**-[operatoren](operators.md). Du kan bruke en formel som inkluderer **[ShowColumns](function-table-shaping.md)**-funksjonen for å opprette en enkeltkolonnetabell ut fra en tabell som har flere kolonner.
 

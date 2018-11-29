@@ -36,7 +36,7 @@ Returnerer enkeltkomponenter for en dato/klokkeslett-verdi.
 
 **Second**-funksjonen returnerer sekundkomponenten for en dato/klokkeslett-verdi fra 0 til 59.
 
-**Weekday**-funksjonen returnerer ukedagen for en dato/klokkeslett-verdi.  Som standard returneres resultatet i området 1 (søndag) til 7 (lørdag).  Du kan angi et annet område med en Microsoft Excel-funksjonskode eller en StartOfWeek-opplistingsverdi:
+**Weekday**-funksjonen returnerer ukedagen for en dato/klokkeslett-verdi.  Som standard returneres resultatet i området 1 (søndag) til 7 (lørdag).  Du kan angi et annet område med en Microsoft Excel Weekday-funksjonskode eller en StartOfWeek-opplistingsverdi:
 
 | Excel-kode | StartOfWeek-opplisting | Beskrivelse |
 | --- | --- | --- |

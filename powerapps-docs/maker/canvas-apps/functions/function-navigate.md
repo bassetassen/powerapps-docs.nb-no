@@ -31,7 +31,7 @@ De fleste appene inneholder flere skjermer.  Bruk **Back**- og **Navigate**-funk
 [Kontekstvariabler](../working-with-variables.md#create-a-context-variable) beholdes også når en bruker navigerer mellom skjermer. Du kan bruke **Navigate** for å angi én eller flere kontekstvariabler for skjermen som formelen skal vise. Dette er den eneste måten du kan angi kontekstvariabler utenfor skjermen på. Du kan bruke denne fremgangsmåten for å sende parametre til en skjerm. Hvis du har brukt et annet programmeringsverktøy, er denne fremgangsmåten lik den for å sende parametre til prosedyrer.
 
 ## <a name="description"></a>Beskrivelse
-### <a name="back"></a>Tilbake
+### <a name="back"></a>Back
 **Back**-funksjonen viser skjermen som sist ble vist. Du trenger ikke å angi noen argumenter for denne funksjonen.
 
 ### <a name="navigate"></a>Navigate

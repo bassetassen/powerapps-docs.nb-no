@@ -1,6 +1,6 @@
 ---
-title: Velg-funksjon | Microsoft Docs
-description: Referanseinformasjon, inkludert syntaks, for Velg-funksjonen i PowerApps
+title: Select-funksjon | Microsoft Docs
+description: Referanseinformasjon, inkludert syntaks, for Select-funksjonen i PowerApps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -20,28 +20,28 @@ ms.contentlocale: nb-NO
 ms.lasthandoff: 08/24/2018
 ms.locfileid: "42850729"
 ---
-# <a name="select-function-in-powerapps"></a>Velg-funksjonen i PowerApps
+# <a name="select-function-in-powerapps"></a>Select-funksjonen i PowerApps
 Simulerer en valgt handling på en kontroll som fører til at **OnSelect**-formelen evalueres.
 
 ## <a name="description"></a>Beskrivelse
-**Velg**-funksjonen simulerer en valgt handling på en kontroll som om brukeren skulle ha klikket eller trykket på denne kontrollen. Som et resultat av dette evalueres **OnSelect**-formelen i målkontrollen.
+**Select**-funksjonen simulerer en valgt handling på en kontroll som om brukeren skulle ha klikket eller trykket på denne kontrollen. Som et resultat av dette evalueres **OnSelect**-formelen i målkontrollen.
 
-Bruk **Velg** til å overføre en valgt handling til en overordnet kontroll. Denne typen overføring er standard virkemåte i, for eksempel gallerier. Som standard er **OnSelect**-egenskapen for en kontroll i et **[Galleri](../controls/control-gallery.md)** satt til **Velg( overordnet )**. På den måten kan du angi verdien for **OnSelect**-egenskapen for selve gallerikontrollen, og denne formelen evalueres uavhengig av hvor i galleriet brukeren klikker eller trykker.
+Bruk **Select** til å overføre en valgt handling til en overordnet kontroll. Denne typen overføring er standard virkemåte i, for eksempel gallerier. Som standard er **OnSelect**-egenskapen for en kontroll i et **[Galleri](../controls/control-gallery.md)** satt til **Velg( overordnet )**. På den måten kan du angi verdien for **OnSelect**-egenskapen for selve gallerikontrollen, og denne formelen evalueres uavhengig av hvor i galleriet brukeren klikker eller trykker.
 
 Hvis du vil at en eller flere kontroller i galleriet skal utføre andre handlinger enn de vanlige handlingene i galleriet, kan du angi **OnSelect**-egenskapen for disse kontrollene til noe annet enn standardverdien. Du kan la standardverdiene for **OnSelect**-egenskapene for de fleste kontrollene i galleriet stå uendret hvis du vil at de skal utføre den samme handlingen som selve galleriet.
 
 **Velg** stiller **OnSelect** for målet i kø for senere behandling, som kan skje når gjeldende formel har blitt ferdig evaluert. **Velg** fører ikke til at **OnSelect** for målet evalueres umiddelbart. **Velg** venter heller ikke på at **OnSelect** skal bli ferdig evaluert.
 
-**Velg** kan ikke krysse grensene for beholderkontroller, for eksempel et galleri eller et skjema. Kontroller i en beholderkontroll kan bare være emne for en **Velg**-funksjon i formler som er i samme beholderkontrollen. Du kan ikke bruke **Velg** på tvers av skjermer.
+**Velg** kan ikke krysse grensene for beholderkontroller, for eksempel et galleri eller et skjema. Kontroller i en beholderkontroll kan bare være emne for en **Select**-funksjon i formler som er i samme beholderkontrollen. Du kan ikke bruke **Select** på tvers av skjermer.
 
-Du kan bruke **Velg** bare med kontroller som har en **OnSelect**-egenskap.
+Du kan bruke **Select** bare med kontroller som har en **OnSelect**-egenskap.
 
-Du kan bare bruke **Velg** i [formler for virkemåte](../working-with-formulas-in-depth.md).
+Du kan bare bruke **Select** i [formler for virkemåte](../working-with-formulas-in-depth.md).
 
-En kontroll kan ikke **Velge** seg selv direkte eller indirekte gjennom andre kontroller.
+En kontroll kan ikke **Select** seg selv direkte eller indirekte gjennom andre kontroller.
 
 ## <a name="syntax"></a>Syntaks
-**Velg**( *kontroll* )
+**Select**( *Control* )
 
 * *Control* – obligatorisk.  Kontrollen for å velge på vegne av brukeren.
 

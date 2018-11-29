@@ -38,7 +38,7 @@ Hvis formelresultatet er en *tom* verdi, vil det ikke finnes noen poster i resul
 ### <a name="taking-action"></a>Utfør handling
 Formelen kan inkludere funksjoner som utfører handling, blant annet endring av poster i en datakilde med funksjonene **[Patch](function-patch.md)** og **[Collect](function-clear-collect-clearcollect.md)**.  Formelen kan også kalle opp metoder ved tilkoblinger.  Flere handlinger kan utføres per post ved bruk av [**;**-operatøren](operators.md). Du kan ikke endre tabellen som funksjonen **ForAll** brukes på.
 
-Når du skriver en formel, må du huske på at poster kan behandles i en hvilken som helst rekkefølge og, når det er mulig, parallelt.  Den første posten i tabellen kan behandles etter den siste posten.  Pass på at du ikke bestiller avhengigheter.  Av denne grunn kan du ikke bruke funksjonene **[UpdateContext](function-updatecontext.md)**, **[Tøm](function-clear-collect-clearcollect.md)** og **[ClearCollect](function-clear-collect-clearcollect.md)** i funksjonen **ForAll**, da disse enkelt kan brukes til å inneholde variabler som ville vært mottakelige for denne effekten.  Du kan bruke **[Collect](function-clear-collect-clearcollect.md)**, men rekkefølgen på postene som legges til er ikke definert.
+Når du skriver en formel, må du huske på at poster kan behandles i en hvilken som helst rekkefølge og, når det er mulig, parallelt.  Den første posten i tabellen kan behandles etter den siste posten.  Pass på at du ikke bestiller avhengigheter.  Av denne grunn kan du ikke bruke funksjonene **[UpdateContext](function-updatecontext.md)**, **[Clear](function-clear-collect-clearcollect.md)** og **[ClearCollect](function-clear-collect-clearcollect.md)** i funksjonen **ForAll**, da disse enkelt kan brukes til å inneholde variabler som ville vært mottakelige for denne effekten.  Du kan bruke **[Collect](function-clear-collect-clearcollect.md)**, men rekkefølgen på postene som legges til er ikke definert.
 
 Flere funksjoner som endrer datakilder, inkludert **Collect**, **Remove** og **Update**, returnerer den endrede datakilden som returverdi.  Disse returverdiene kan være store og bruke betydelig med ressurser hvis de returneres for hver post i **ForAll**-tabellen.  Det kan også hende at disse returverdiene ikke er som du forventer, siden **ForAll** kan operere parallelt og kan separere funksjonens bivirkninger slik at de ikke oppnår resultat.  Heldigvis er det slik at hvis returverdien fra **ForAll** ikke brukes, noe som ofte er tilfelle ved funksjoner for dataendring, vil det ikke bli opprettet en returverdi, og det vil ikke være grunn til å bekymre seg over ressurser eller bestilling.  Hvis du imidlertid bruker resultatet fra en **ForAll**, og en av funksjonene returnerer en datakilde, bør du tenke nøye over hvordan du strukturerer resultatet og teste det på mindre datasett først.  
 
@@ -51,7 +51,7 @@ Mange funksjoner i PowerApps kan behandle mer enn en verdi om gangen ved bruk av
 [!INCLUDE [delegation-no-one](../../../includes/delegation-no-one.md)]
 
 ## <a name="syntax"></a>Syntaks
-**ForAll**( *Tabell*, *Formel* )
+**ForAll**( *Table*, *Formula*)
 
 * *Table* – obligatorisk. Tabellen som skal kjøres.
 * *Formula* – obligatorisk.  Formelen som skal evalueres for alle postene i *Table*.
@@ -149,5 +149,5 @@ Til slutt kan vi utføre **Collect**funksjonen direkte i **ForAll**:
 
 Funksjonen **ForAll** kan fortsatt ikke delegeres på dette tidspunktet.  Hvis **Products**-tabellen er stor, vil **ForAll** kun se på det første settet med poster, og det kan hende at vi går glipp av noen produkter som må bestilles.  Denne tilnærmingen er likevel grei for tabeller som vi vet at vil forbli små.
 
-Vær oppmerksom på at vi ikke registrer resultatet fra **ForAll**.  **Samle inn**-funksjonskall utført fra innsiden vil returnere **NewOrder**-datakilden for alle postene, noe som kan føre til store menger data hvis vi registrerer det.  
+Vær oppmerksom på at vi ikke registrer resultatet fra **ForAll**.  **Collect**-funksjonskall utført fra innsiden vil returnere **NewOrder**-datakilden for alle postene, noe som kan føre til store menger data hvis vi registrerer det.  
 

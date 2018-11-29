@@ -1,6 +1,6 @@
 ---
-title: Tekst-funksjonen | Microsoft Docs
-description: Referanseinformasjon, herunder syntaks og eksempler for Tekst-funksjonen i PowerApps
+title: Text-funksjonen | Microsoft Docs
+description: Referanseinformasjon, herunder syntaks og eksempler for Text-funksjonen i PowerApps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

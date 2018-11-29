@@ -1,6 +1,6 @@
 ---
 title: Funksjonene EncodeURL og PlainText | Microsoft Docs
-description: Referanseinformasjon for funksjonene URL.kode og Ren tekst i PowerApps, inkludert syntaks og eksempler
+description: Referanseinformasjon for funksjonene EncodeURL og PlainText i PowerApps, inkludert syntaks og eksempler
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

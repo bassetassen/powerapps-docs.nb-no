@@ -62,7 +62,7 @@ Bruk **[Text](function-text.md)**-funksjonen til å formatere verdiene for dato 
    * **Calendar.MonthsLong()**
 3. Brukere av appen din kan nå velge en måned på sitt eget språk.  **MonthsLong** kan erstattes med hvilken som helst av enkeltkolonnetabellene som returneres av **Calendar** for å opprette velgere for ukedag og klokkeslett.
 
-I USA, der **[Språk](function-language.md)** returnerer «en-US», returnerer **Kalender**-funksjonene følgende:
+I USA, der **[Language](function-language.md)** returnerer «en-US», returnerer **Calendar**-funksjonene følgende:
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |

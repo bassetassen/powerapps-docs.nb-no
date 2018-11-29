@@ -31,10 +31,10 @@ En streng for skilletegn brukes til å bryte teksten opp.  Skilletegnet kan vær
 Bruk **[Concat](function-concatenate.md)**-funksjonen til å sette sammen strengen (uten skilletegn).  
 
 ## <a name="syntax"></a>Syntaks
-**Del**( *Tekst*, *Skilletegn* )
+**Split**( *Text*, *Separator* )
 
-* *Tekst* – obligatorisk.  Tekst som skal brytes opp.
-* *Skilletegn* – obligatorisk.  Skilletegn som skal brukes i oppdeling av strengen.  Kan være null, ett eller flere tegn.
+* *Text* – obligatorisk.  Tekst som skal brytes opp.
+* *Separator* – obligatorisk.  Skilletegn som skal brukes i oppdeling av strengen.  Kan være null, ett eller flere tegn.
 
 ## <a name="examples"></a>Eksempler
 

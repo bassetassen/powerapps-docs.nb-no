@@ -1,6 +1,6 @@
 ---
 title: Download-, Launch- og Param-funksjoner | Microsoft Docs
-description: Referanseinformasjon, inkludert syntaks og eksempler, for funksjonene Last ned, Start og Param i PowerApps
+description: Referanseinformasjon, inkludert syntaks og eksempler, for funksjonene Download, Launch og Param i PowerApps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps

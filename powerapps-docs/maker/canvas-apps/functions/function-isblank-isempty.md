@@ -37,7 +37,7 @@ Alle egenskaper eller beregnede verdier kan være *tom*.  En boolsk verdi har fo
 ## <a name="description"></a>Beskrivelse
 **Blank**-funksjonen returnerer en *tom* verdi. Bruk denne til å lagre en NULL-verdi i en datakilde som støtter disse verdiene. Dette fjerner enhver verdi fra feltet.
 
-**IsBlank**-funksjonen tester for en *tom*-verdi. *Tom*-verdier finnes i situasjoner som for eksempel:
+**IsBlank**-funksjonen tester for en *tom*-verdi. *Blank*-verdier finnes i situasjoner som for eksempel:
 
 * Verdien som returneres fra **Blank**-funksjonen.
 * En kontrollegenskap har ingen formel som er angitt for den.
@@ -70,7 +70,7 @@ Returverdien for både **IsBlank** og **IsEmpty** er en boolsk **sann** eller **
 * *Tabell* – obligatorisk. Tabell som skal testes for poster.
 
 ## <a name="examples"></a>Eksempler
-### <a name="blank"></a>Tom
+### <a name="blank"></a>Blank
 > [!NOTE]
 > På dette tidspunktet fungerer det følgende eksemplet bare for lokale samlinger.  Vi vet at mange datakilder støtter *tom*-verdier (NULL), og vi jobber med å fjerne denne begrensningen.
 
@@ -125,7 +125,7 @@ Andre eksempler:
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **IsBlank( Blank() )** |Tester returverdien fra **tom**-funksjonen, som alltid returnerer en *tom* verdi. |**sann** |
+| **IsBlank( Blank() )** |Tester returverdien fra **Blank**-funksjonen, som alltid returnerer en *tom* verdi. |**sann** |
 | **IsBlank( "" )** |En streng som ikke inneholder noen tegn. |**sann** |
 | **IsBlank( "Hello" )** |En streng som inneholder ett eller flere tegn. |**usann** |
 | **IsBlank( *AnyCollection* )** |Fordi [samlingen](../working-with-data-sources.md#collections) finnes, er den ikke tom, selv om den ikke inneholder noen poster. Hvis du vil se etter en tom samling, kan du bruke **IsEmpty** i stedet. |**usann** |
