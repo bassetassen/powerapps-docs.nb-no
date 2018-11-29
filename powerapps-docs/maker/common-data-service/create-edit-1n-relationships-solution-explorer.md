@@ -2,7 +2,7 @@
 title: 'Opprette og redigere 1:N- (én-til-mange) eller N:1-enhetsrelasjoner (mange-til-én) med løsningsutforskeren | MicrosoftDocs'
 description: Finn ut hvordan du oppretter én-til-mange- eller mange-til-én-enhetsrelasjoner ved hjelp av PowerApps-løsningsutforskeren
 ms.custom: ''
-ms.date: 05/27/2018
+ms.date: 10/28/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''

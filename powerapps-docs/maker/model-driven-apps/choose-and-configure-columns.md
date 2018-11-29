@@ -48,9 +48,7 @@ search.app:
 
 ### <a name="open-the-view-editor"></a>Åpne redigeringsprogrammet for visning
 
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
-
-    ![Modelldrevet utformingsmodus](../model-driven-apps/media/model-driven-switch.png)
+1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Utvid **Data**, velg **Enheter**, velg enheten du vil bruke, og velg deretter **Visninger**-kategorien. 
 

@@ -43,7 +43,7 @@ Det finnes to utforminger som du kan bruke til å opprette og redigere 1:N- (én
 > [!NOTE]
 > Du kan også opprette ny mange-til-mange-enhetsrelasjon (N:N) i miljøet ved hjelp av følgende:
 > - Importer en løsning som inneholder definisjonen av relasjonen. Mer informasjon: [Importere, oppdatere og eksportere løsninger](import-update-export-solutions.md)
-> - En utvikler kan bruke [Metadata-tjenester](../../developer/common-data-service/use-web-services.md#metadata-services) til å skrive et program for å opprette og oppdatere enhetsrelasjoner. Mer informasjon: [Dokumentasjon for utviklere: Tilpasse enhetsrelasjonsmetadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
+> - En utvikler kan bruke [Metadata-tjenester](../../developer/common-data-service/metadata-services.md) til å skrive et program for å opprette og oppdatere enhetsrelasjoner. Mer informasjon: [Dokumentasjon for utviklere: Tilpasse enhetsrelasjonsmetadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
 
 Informasjonen i dette emnet hjelper deg med å velge hvilken utforming du kan bruke. 
 

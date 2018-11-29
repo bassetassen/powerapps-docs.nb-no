@@ -2,7 +2,7 @@
 title: Opplæring for å legge til eller redigere modelldrevne applikasjonskomponenter med PowerApps | MicrosoftDocs
 description: Bruk apputformingen til PowerApps til å legge til eller redigere komponenter
 keywords: ''
-ms.date: 03/30/2018
+ms.date: 10/15/2018
 ms.service: crm-online
 ms.custom: null
 ms.topic: article
@@ -53,7 +53,7 @@ Apputformingen refererer til eksisterende metadata i standardløsningen. Du kan 
 ## <a name="open-an-app"></a>Åpne en app
 1. Logg på [PowerApps](https://web.powerapps.com/). 
 
-2. Velg **Modelldrevet** > **Apper** og velg deretter en eksisterende app eller velg **Opprett en app**. Du finner informasjon om hvordan du oppretter en app i [Opprett eller rediger en modelldreven app ved hjelp av apputforming](create-edit-app.md#create-an-app).
+2. Velg en eksisterende modelldrevet app eller velg **Begynn fra tom**. Du finner informasjon om hvordan du oppretter en app i [Opprett eller rediger en modelldreven app ved hjelp av apputforming](create-edit-app.md#create-an-app).
 
 ## <a name="add-an-artifact-entity-dashboard-or-business-process-flow"></a>Legge til en artefakt (enheten, instrumentbord eller forretningsprosessflyt)  
  Når du legger til et instrumentbord eller en forretningsprosessflyt til en app, legges enhetene som de bruker, automatisk til appen. Når du legger til en enhet, legges det automatisk til fliser for aktiva. Det er to måter du kan legge til artefakter på utformingslerretet: ved hjelp av **Legg til**-knappen ![Legg til-knappen i utformingen](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Legg til-knappen i utformingen") på kommandolinjen, eller ved hjelp av flisene i kategorien **Komponenter**.  

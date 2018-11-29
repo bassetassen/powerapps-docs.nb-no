@@ -38,11 +38,14 @@ For å se på eller redigere modelldrevne eksempelapper må først appene klargj
 
 ## <a name="customize-a-sample-app"></a>Tilpasse en eksempelapp
 
-1. Logg på [powerapps.com](https://powerapps.com), og velg **Modelldrevet** for utformingsmodusen. 
+1. Logge på [powerapps.com](https://powerapps.com)  
 
-    ![Velg utformingsmodus](media/overview-model-driven-samples/choose-design-mode.png)
+    
 
-2. Fra startsiden beveger du musen over eksempelappen og klikker **Tilpass**.
+2. Fra **Opprett**-siden beveger du musen over eksempelappen og klikker på **Lag denne appen**.
+
+![Modelleksempelapp](media/overview-model-driven-samples/model-driven-create-page-sample.png)
+
 3. Apputformingen åpnes og gir deg flere alternativer for å tilpasse appen. 
 4. For flere tilpassingsalternativer klikker du **Avansert** fra den venstre navigasjonsruten i portalen.
 

@@ -1,5 +1,5 @@
 ---
-title: Lage egendefinert forretningslogikk gjennom flyter med Flow | MicrosoftDocs
+title: Bruke egendefinert forretningslogikk med forretningsregler og flyter i modelldrevne apper | MicrosoftDocs
 description: Få informasjon om de ulike typene forretningslogikk du kan bruke appen
 ms.custom: ''
 ms.date: 08/02/2018
@@ -23,9 +23,27 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="create-custom-business-logic-with-flows"></a>Opprette egendefinert forretningslogikk med flyter
+# <a name="apply-custom-business-logic-with-business-rules-and-flows-in-model-driven-apps"></a>Bruke egendefinert forretningslogikk med forretningsregler og flyter i modelldrevne apper
 
-En av hovedårsakene til at personer bruker modelldrevne apper, er at de kan definere og håndheve konsekvente forretningsprosesser. Konsekvente prosessene er med på å sikre at de som bruker en PowerApps-app, kan fokusere på arbeidet sitt og slippe å huske hvordan et sett med manuelle trinn utføres. Flyter kan være enkle eller komplekse og kan endres over tid.  
+En av hovedårsakene til at personer bruker modelldrevne apper, er at de kan definere og håndheve konsekvente forretningsprosesser. Konsekvente prosessene er med på å sikre at de som bruker en modelldrevet app, kan fokusere på arbeidet sitt og slippe å huske hvordan et sett med manuelle trinn utføres. 
+
+## <a name="business-rules"></a>Forretningsregler
+
+Forretningsregler har et enkelt grensesnitt for å implementere og vedlikeholde regler som endres og brukes ofte. *Omfanget* til en forretningsregel definerer hvor forretningsregelen skal kjøres:
+
+|||  
+|-|-|  
+|**Hvis du velger dette elementet...**|**Omfanget angis til...**|  
+|**Enhet**|Alle skjemaer og server|  
+|**Alle skjemaer**|Alle skjemaer|  
+|Bestemt skjema (for eksempel **Konto**-skjema)|Bare dette skjemaet| 
+
+Hvis du vil ha mer informasjon om å definere forretningsregler for et skjema i en modelldrevet app, kan du se [Opprette forretningsregler for å bruke logikk i et modelldrevet appskjema](create-business-rules-recommendations-apply-logic-form.md).
+
+> [!NOTE]
+> Hvis du vil definere en forretningsregel for en enhet slik at den gjelder på servernivået for både *lerretsapper* og *modelldrevne apper*, kan du se [Opprette en forretningsregel for en enhet](/powerapps/maker/common-data-service/data-platform-create-business-rule).
+
+## <a name="flows"></a>Flyter  
   
 Microsoft Flow inneholder flere typer prosesser, og hver enkelt kan være utformet for ulike formål:  
 
@@ -37,7 +55,12 @@ Microsoft Flow inneholder flere typer prosesser, og hver enkelt kan være utform
   
 -   Forretningsprosessflyter.  Du kan sikre at brukere skriver inn data konsekvent og følger de samme trinnene hver gang de arbeider i en app, ved å opprette en forretningsprosessflyt. Mer informasjon: [Oversikt over forretningsprosessflyter](/flow/business-process-flows-overview)
 
--   Common Data Service for Apps. Dynamics 365 Customer Engagement-tilpassere er kanskje kjent med klassiske Common Data Service for App-prosesser, som er arbeidsflyter og handlinger. Mer informasjon: [Bruke arbeidsflytprosesser](/flow/workflow-processes) og [Handlingsoversikt](/flow/actions)
+-   Arbeidsflyter og handlinger. Dynamics 365 Customer Engagement-tilpassere er kanskje kjent med klassiske CDS for App-prosesser, som er arbeidsflyter og handlinger. Mer informasjon: [Bruke arbeidsflytprosesser](/flow/workflow-processes) og [Handlingsoversikt](/flow/actions)
   
-## <a name="see-also"></a>Se også  
-[Opplæring: Opprett forretningsregler og anbefalinger for å bruke logikk i et modelldrevet appskjema](create-business-rules-recommendations-apply-logic-form.md)
+## <a name="next-step"></a>Neste trinn
+
+[Opprette forretningsregler for å bruke logikk i et modelldrevet appskjema](create-business-rules-recommendations-apply-logic-form.md)
+
+### <a name="see-also"></a>Se også
+
+[Bruke forretningslogikk med Common Data Service for Apps](../common-data-service/cds-processes.md)

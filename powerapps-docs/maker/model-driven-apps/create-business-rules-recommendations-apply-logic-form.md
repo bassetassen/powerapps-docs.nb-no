@@ -26,7 +26,10 @@ search.app:
 ---
 # <a name="tutorial-create-business-rules-and-recommendations-to-apply-logic-in-a-model-driven-app-form"></a>Opplæring: Opprett forretningsregler og anbefalinger for å bruke logikk i et modelldrevet appskjema
 
-Opplæringen viser hvordan du kan opprette regler og anbefalinger for å bruke skjemalogikk uten å skrive JavaScript-kode eller lage plugin-moduler. Forretningsregler har et enkelt grensesnitt for å implementere og vedlikeholde regler som endres og brukes ofte. De kan brukes i hoved- og hurtigopprettingsskjemaer, og de fungerer i PowerApps-apper, Dynamics 365 Customer Engagement-webapper, Dynamics 365 for tablets og Dynamics 365 for Outlook (tilkoblet eller frakoblet modus).  
+Opplæringen viser hvordan du kan opprette regler og anbefalinger for å bruke skjemalogikk i en modelldrevet app uten å skrive JavaScript-kode eller lage plugin-moduler. Forretningsregler har et enkelt grensesnitt for å implementere og vedlikeholde regler som endres og brukes ofte. De kan brukes i hoved- og hurtigopprettingsskjemaer, og de fungerer i modelldrevne apper, Dynamics 365 Customer Engagement-webapper, Dynamics 365 for tablets og Dynamics 365 for Outlook (tilkoblet eller frakoblet modus).
+
+> [!NOTE]
+> Hvis du vil definere en forretningsregel for en enhet slik at den gjelder for alle skjemaer og server, kan du se [Opprette en forretningsregel for en enhet](/powerapps/maker/common-data-service/data-platform-create-business-rule).
   
  Ved å kombinere betingelser og handlinger kan du gjøre ett av følgende med forretningsregler:  
   

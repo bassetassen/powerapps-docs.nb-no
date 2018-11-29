@@ -1,8 +1,8 @@
 ---
 title: 'Importere, oppdatere og eksportere løsninger | MicrosoftDocs'
-description: 'Finn ut hvordan du importerer, oppdaterer og eksporterer en løsning'
+description: 'Finn ut hvordan du importerer, oppdaterer og eksporterer en løsning i PowerApps'
 ms.custom: ''
-ms.date: 06/18/2018
+ms.date: 11/06/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -23,44 +23,48 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="import-update-and-export-solutions"></a>Importere, oppdatere og eksportere løsninger 
+# <a name="import-update-and-export-solutions"></a>Importer, oppdater og eksporter løsninger 
 
- Du kan importere løsninger manuelt ved hjelp av fremgangsmåten nedenfor. Importer bare løsninger som kommer fra en klarert kilde. Tilpassinger kan omfatte kode som kan sende data til eksterne kilder. Du kan importere standardløsningen bare til organisasjonen som du eksporterte den fra, men ikke til en annen organisasjon.  
+ Du kan importere løsninger manuelt ved hjelp av fremgangsmåten nedenfor. Importer bare løsninger som kommer fra en klarert kilde. Tilpassinger kan omfatte kode som kan sende data til eksterne kilder. Du kan importere løsningen som kalles **Standardløsning** bare til miljøet som du eksporterte den fra, men ikke til et annet miljø.  
   
-1. Gå til **[Innstillinger](../model-driven-apps/advanced-navigation.md#settings)** > **Løsninger**.  
+1.  Velg **Løsninger** fra navigasjonsruten til venstre.  
   
-2.  I listemenyen for løsninger velger du **Importer**.  
+2.  Velg **Importer** på løsningslistemenyen.  
+
+    > [!div class="mx-imgBorder"]  
+    > ![Importer løsning](media/solution-import.png "Importer løsning") 
   
-3.  I dialogboksen **Importer løsning** i trinnet **Velg løsningspakke** blar du deg frem til den komprimerte filen (ZIP eller CAB) som inneholder løsningen du vil importere. 
+3.  I dialogboksen **Importer løsning** i trinnet **Velg løsningspakke** velger du **Velg fil** og blar frem til den komprimerte filen (ZIP eller CAB) som inneholder løsningen du vil importere. 
   
 4.  Velg **Neste**.  
   
-5.  Du kan vise informasjon om løsningen før du velger **Importer**.  
+5.  Vis informasjon om løsningen. Velg **Importer**.  
   
-6.  Du må kanskje vente litt mens løsningsimporten fullføres. Hvis den er vellykket, kan du vise resultatene og velge **Lukk**.  
+6. Du må kanskje vente litt mens importen fullføres. Vis resultatene, og velg deretter **Lukk**.  
   
- Hvis du har importert eventuelle endringer som krever publisering, må du publisere tilpasninger før de blir tilgjengelige. 
+ Hvis du har importert eventuelle endringer som krever publisering, må du publisere tilpasninger før de er tilgjengelige. 
   
- Hvis importen ikke er vellykket, vil du se en rapport som viser eventuelle feil eller advarsler som ble registrert. Du kan velge **Last ned loggfil** for å registrere detaljer om hva som forårsaket at importen mislyktes. Den vanligste årsaken til en løsningsimport mislykkes er at løsningen ikke inneholder enkelte nødvendige løsningskomponenter.  
+ Hvis importen ikke er vellykket, vil du se en rapport som viser eventuelle feil eller advarsler som ble registrert. Velg **Last ned loggfil** for å registrere detaljer om hva som forårsaket at importen mislyktes. Den vanligste årsaken til en import mislykkes er at løsningen ikke inneholder enkelte nødvendige komponenter.  
   
- Når du laster ned loggfilen, finner du en XML-fil som du kan åpne ved hjelp av Office Excel, og du kan vise innholdet.  
+ Når du laster ned loggfilen, finner du en XML-fil som du kan åpne ved hjelp av Office Excel, for å vise innholdet.  
   
 > [!NOTE]
->  Du kan ikke redigere et aktivt rutingsregelsett. Hvis du importerer en løsning som inneholder en aktiv rutingsregel satt inn i en organisasjon der regelen allerede finnes med samme ID, vil derfor løsningsimporten mislykkes. Mer informasjon: [Opprett regler for å rute saker automatisk](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/create-rules-automatically-route-cases)  
+>  Du kan ikke redigere et aktivt rutingsregelsett. Hvis du importerer en løsning som inneholder en aktiv rutingsregel satt inn i et miljø der regelen allerede finnes med samme ID, vil derfor importen mislykkes. Mer informasjon: [Opprett regler for å rute saker automatisk](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/create-rules-automatically-route-cases)  
   
 <a name="BKMK_UpdateSolutions"></a>   
 
 ## <a name="update-solutions"></a>Oppdatere løsninger  
  Det finnes tre situasjoner hvor du kanskje ønsker å installere en oppdatering for en eksisterende administrert løsning. Fremgangsmåten ligner på installering av en ny administrert løsning, bortsett fra at du vil få noen andre alternativer. Hvis du oppdaterer en løsning som du har fått fra noen andre, bør du få veiledning fra løsningsutgiveren om hvilke alternativer du bør velge.  
   
-1. Gå til **[Innstillinger](../model-driven-apps/advanced-navigation.md#settings)** > **Løsninger**.   
+1.  Velg **Løsninger** fra navigasjonsruten til venstre.
   
-2.  I listemenyen for løsninger velger du **Importer**.  
+2.  Velg **Importer** på løsningslistemenyen.  
   
-3.  I dialogboksen **Importer løsning** i trinnet **Velg løsningspakke** blar du deg frem til den komprimerte filen (ZIP eller CAB) som inneholder løsningen du vil oppdatere.  
+3.  I dialogboksen **Importer løsning** i trinnet **Velg løsningspakke** velger du **Velg fil** og blar frem til den komprimerte filen (ZIP eller CAB) som inneholder løsningen du vil oppdatere.
+
 4.  Velg **Neste**.  
   
-5.  Du kan vise informasjon om løsningen før du velger **Neste**. Denne siden viser en gul linje som med teksten **Denne løsningspakken inneholder en oppdatering for en løsning som allerede er installert**.  
+5.  Vis informasjon om løsningen, og velg deretter **Neste**. Denne siden viser en gul linje som med teksten **Denne løsningspakken inneholder en oppdatering for en løsning som allerede er installert**.  
   
 6.  Du har følgende alternativer:  
   
@@ -74,24 +78,37 @@ search.app:
   
      Velg det aktuelle alternativet, og velg deretter **Neste**.  
   
-7.  Du må kanskje vente litt mens løsningsimporten fullføres. Hvis den er vellykket, kan du vise resultatene og velge **Lukk**.  
+7.  Du må kanskje vente litt mens importen fullføres. Vis resultatene, og velg deretter **Lukk**.  
   
- Hvis du har importert eventuelle endringer som krever publisering, må du publisere tilpasninger før de blir tilgjengelige. 
+ Hvis du har importert eventuelle endringer som krever publisering, må du publisere tilpasninger før de er tilgjengelige. 
   
  Det kan hende at løsningsutgivere ber deg om å eksportere eksisterende ubehandlede tilpasninger, oppdatere deres administrerte løsning ved hjelp av alternativet til å overskrive tilpasninger og deretter importere de ubehandlede tilpasningene på nytt. Dette sikrer at endringene som de forventer, tas i bruk samtidig som tilpasningene dine beholdes.  
   
 <a name="BKMK_ExportSolutions"></a>   
 
 ## <a name="export-solutions"></a>Eksportere løsninger  
- Vi anbefaler at du jevnlig eksporterer dine ubehandlede tilpasninger slik at du har en sikkerhetskopi i tilfelle noe skjer. Du kan ikke eksportere administrerte løsninger.  
+ Vi anbefaler at du jevnlig eksporterer dine ubehandlede tilpasninger slik at du har en sikkerhetskopi i tilfelle noe skjer. Du kan ikke eksportere administrerte løsninger. Du kan eksportere løsninger fra PowerApps, eller du kan eksportere med den klassiske opplevelsen. 
+ 
+### <a name="export-from-powerapps"></a>Eksportere fra PowerApps
   
-1. Gå til **[Innstillinger](../model-driven-apps/advanced-navigation.md#settings)** > **Løsninger**.   
+1.  Velg **Løsninger** fra navigasjonsruten til venstre.   
   
-2.  Velg løsningen du vil eksportere, i listen, og velg **Eksporter**.  
+2.  Velg løsningen du vil eksportere, i listen, og velg deretter **Eksporter**. 
+
+3.  Velg pakketypen **Som uadministrert** eller **Som administrert**. Dette starter eksporten, som kan ta flere minutter å fullføre. Når du er ferdig, finnes ZIP-eksportfilen i nedlastingsmappen angitt i webleseren.
+
+> [!div class="mx-imgBorder"]  
+> ![Eksporter løsning](media/solution-export.PNG "Eksporter løsning") 
+
+### <a name="export-from-the-classic-experience"></a>Eksportere fra den klassiske opplevelsen
+
+1.  Velg **Løsninger** fra venstre navigasjonsrute, og velg deretter **Bytt til klassisk**. 
+  
+2.  Velg løsningen du vil eksportere, i listen, og velg deretter **Eksporter**. 
   
 3.  I trinnet **Publiser tilpassinger** vil du bli minnet om at bare publiserte tilpasninger eksporteres, og du får alternativet **Publiser alle tilpassinger** før du velger **Neste**.  
   
-4.  Hvis løsningen inneholder manglende obligatoriske komponenter, vises trinnet **Mangler obligatoriske komponenter**. Du kan se bort fra advarselen bare hvis du skal importere den som en uadministrert løsning tilbake til den opprinnelige organisasjonen. Hvis ikke følger du instruksjonene i dialogboksen for å avbryte eksporten og legge til de nødvendige komponentene.  
+4.  Hvis løsningen inneholder manglende obligatoriske komponenter, vises trinnet **Mangler obligatoriske komponenter**. Du kan se bort fra advarselen bare hvis du skal importere den som en uadministrert løsning tilbake til det opprinnelige miljøet. Hvis ikke følger du instruksjonene i dialogboksen for å avbryte eksporten og legge til de nødvendige komponentene.  
   
 5.  I trinnet **Eksporter systeminnstillinger (avansert)** kan du velge bestemte systeminnstillinger som skal tas med i løsningen. Hvis løsningen er avhengig av gruppene av systeminnstillingene, merker du dem og velger **Neste**.  
   
@@ -99,7 +116,7 @@ search.app:
   
 6.  I trinnet **Pakketype** må du velge om du vil eksportere løsningen som en **uadministrert** eller **administrert** løsning.  
   
-7.  Det neste trinnet gir deg muligheten til å en målløsning for en bestemt Dynamics 365-versjon. Dette alternativet brukes vanligvis av uavhengige programvareleverandører som kanskje ønsker å eksportere en løsning som er kompatibel med en tidligere versjon. Med mindre du har tenkt å importere denne løsningen i en organisasjon som ikke er oppgradert til samme versjon som organisasjonsversjonen du bruker, kan du godta standardvalget.   
+7.  Det neste trinnet gir deg muligheten til å velge en målløsning for en bestemt Dynamics 365 for Customer Engagement-versjon. Dette alternativet brukes vanligvis av uavhengige programvareleverandører som kanskje ønsker å eksportere en løsning som er kompatibel med en tidligere versjon. Med mindre du har tenkt å importere denne løsningen i et miljø som ikke er oppgradert til samme versjon som miljøversjonen du bruker, kan du godta standardvalget.   
   
 8.  Velg **Eksporter** for å laste ned løsningsfilen.  
   
@@ -108,9 +125,9 @@ search.app:
 <a name="BKMK_SettingsOptionsOnSolutionExport"></a>  
  
 ## <a name="settings-options-for-solution-export"></a>Angi alternativer for løsningseksport  
- Tabellen nedenfor viser alternativene som er tilgjengelige, når du eksporterer en løsning:  
+ Hvis du eksporterer løsningen fra PowerApps, kan du ignorere denne delen. Tabellen nedenfor viser alternativene som er tilgjengelige, når du eksporterer en løsning fra den klassiske opplevelsen.  
   
-|Gruppe|Innstilling|Beskrivelse|  
+|Group|Innstilling|Beskrivelse|  
 |-----------|-------------|-----------------|  
 |Automatisk nummerering|Kampanjeprefiks|Prefiks som brukes ved nummerering av kampanjer.|  
 |Saksprefiks|Prefiks som brukes for alle saker i appen.|  
@@ -120,7 +137,7 @@ search.app:
 |Ordreprefiks|Prefiks som brukes for alle ordrer i appen.|  
 |Unik strenglengde|Antall tegn som er tilføyd i fakturaen, tilbudet og ordrenumrene.|  
 |Kalender|Kalendertype|Kalendertypen for systemet. Angitt som gregoriansk USA-kalender som standard|  
-|Kode for datoformat|Informasjon om hvordan datoen vises i Dynamics 365.|  
+|Kode for datoformat|Informasjon om hvordan datoen vises i Dynamics 365 for Customer Engagement|  
 |Datoskilletegn|Tegn som brukes til å skille måneden, dagen og året i datoer i appen.|  
 |Maksimal avtalevarighet|Maksimalt antall dager en avtale kan vare.|  
 |Vis ukenummer|Informasjon som angir om ukenummer i kalender skal vises i appen.|  

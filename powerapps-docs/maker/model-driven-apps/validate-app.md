@@ -66,7 +66,7 @@ Når du validerer appen, viser apputformingslerretet detaljer om aktivaene som m
 
 Publiser en app for å gjøre den tilgjengelige for brukerne.  
   
- Når du har lagt til komponenter, validert og lagret appen, velger du **Publiser** på kommandolinjen. Du kan også publisere appen fra appflisen på [Mine apper](advanced-navigation.md#my-apps)-siden. I visningen **Apper som redigeres** går du til nedre høyre hjørne av appflisen du vil publisere, velger **Flere alternativer**-knappen (**...**), og velger deretter **Publiser**.  
+ Når du har lagt til komponenter, validert og lagret appen, velger du **Publiser** på kommandolinjen. Du kan også publisere appen fra appflisen på [Mine apper](advanced-navigation.md#apps)-siden. I visningen **Apper som redigeres** går du til nedre høyre hjørne av appflisen du vil publisere, velger **Flere alternativer**-knappen (**...**), og velger deretter **Publiser**.  
   
  Statusen for appen endres til Publisert. Du kan se dette i øvre høyre hjørne av apputformingen. Appen flyttes fra visningen **Apper som redigeres** til visningen **Publiserte apper**, og publiseringsdatoen vises i apptittelen.  
   

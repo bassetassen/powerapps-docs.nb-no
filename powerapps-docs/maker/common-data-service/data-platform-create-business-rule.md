@@ -17,8 +17,12 @@ search.app:
 
 # <a name="create-a-business-rule-for-an-entity"></a>Opprett en forretningsregel for en enhet
 
-Du kan opprette regler og anbefalinger for å bruke logikk og valideringer uten å skrive kode eller lage plugin-moduler. Forretningsregler har et enkelt grensesnitt for å implementere og vedlikeholde regler som endres og brukes ofte. 
-  
+Du kan opprette regler og anbefalinger for å bruke logikk og valideringer uten å skrive kode eller lage plugin-moduler. Forretningsregler har et enkelt grensesnitt for å implementere og vedlikeholde regler som endres og brukes ofte.
+
+> [!IMPORTANT]
+> Forretningsregler som er definert for en enhet, gjelder for både *lerretsapper* og *modelldrevne apper* hvis enheten brukes i appen. Ikke alle forretningsregelhandlinger er tilgjengelige i lerretsapper for øyeblikket. Mer informasjon: [Forskjeller mellom lerretsapper og modellrevne apper](#differences-between-canvas-and-model-driven-apps)<br/><br/>
+> Hvis du vil definere en forretningsregel som gjelder for et skjema i en modelldrevet app, kan du se [Opprette forretningsregler for å bruke logikk i et modelldrevet appskjema](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
+
 Ved å kombinere betingelser og handlinger kan du gjøre ett av følgende med forretningsregler:  
   
 * Angi feltverdier  
@@ -31,7 +35,7 @@ Ved å kombinere betingelser og handlinger kan du gjøre ett av følgende med fo
   
 ## <a name="differences-between-canvas-and-model-driven-apps"></a>Forskjeller mellom lerretsapper og modellrevne apper
 
-Modelldrevne apper kan bruke alle handlinger som er tilgjengelige i forretningsregler, men ikke alle forretningsregelhandlinger er tilgjengelige i lerretsapper for øyeblikket. Følgende handlinger er **ikke** tilgjengelige i lerretsapper:
+Modelldrevne apper kan bruke alle handlinger som er tilgjengelige i forretningsregler, men ikke alle forretningsregelhandlinger er tilgjengelige for lerretsapper for øyeblikket. Følgende handlinger er **ikke** tilgjengelige i lerretsapper:
 
 * Vise eller skjule felt  
 * Aktivere eller deaktivere felt  

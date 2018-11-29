@@ -10,7 +10,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 04/18/2018
+ms.date: 10/15/2018
 ms.author: matp
 search.audienceType:
   - maker
@@ -31,16 +31,14 @@ Logg på [PowerApps](https://web.powerapps.com/). Hvis du ikke allerede har en [
 ## <a name="create-your-model-driven-app"></a>Opprette modelldrevet app
 
 1.  Velg miljøet du vil bruke, eller gå til [PowerApps-administrasjonssenteret](https://admin.powerapps.com/) for å opprette et nytt.
-2.  Velg **Modelldrevet** fra den venstre navigasjonsruten. 
-
-    ![Modelldrevet](media/build-first-model-driven-app/choose-design-mode.png)
 
   > [!IMPORTANT]
   > Hvis utformingsmodusen **Modelldrevet** ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment).   
 
-3. Velg **Apper** fra den venstre ruten, og velg deretter **Opprett en app**.
+2. På **hjemmesiden** velger du **Start fra tom**-alternativet for en modelldrevet app.
+![Start-from-blank_model](media/build-first-model-driven-app/start-from-blank-model-driven.png)
 
-4.  På **Opprett en ny app**-siden angir du følgende detaljer, og velger deretter **Ferdig**: 
+3.  På **Opprett en ny app**-siden angir du følgende detaljer, og velger deretter **Ferdig**: 
   - **Navn**: Angi et navn på appen, for eksempel *MinFørsteApp*. 
   - **Beskrivelse**: Skriv inn en kort beskrivelse av hva appen er eller gjør, for eksempel *Dette er den første appen min*.
 For informasjon om de ekstra appegenskapene, kan du se [Opprette en app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).

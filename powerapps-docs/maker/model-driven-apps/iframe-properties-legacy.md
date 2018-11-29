@@ -25,9 +25,7 @@ Du kan legge til iFrames i et skjema for å integrere innhold fra et annet netts
 
 Følg denne fremgangsmåten for å vise iFrame-egenskaper.
 
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
-
-    ![Modelldrevet utformingsmodus](../model-driven-apps/media/model-driven-switch.png)
+1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2.  Utvid **Data**, velg **Enheter**, velg enheten du vil bruke, og velg deretter **Skjemaer**-kategorien. 
 

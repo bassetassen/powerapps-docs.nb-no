@@ -28,9 +28,7 @@ search.app:
  Topptekster og bunntekster er identiske med inndelinger, men kan ikke fjernes. Hvis de ikke inneholder noe, vises de ikke. 
 
 Du kan få tilgang til **Egenskaper for inndeling** fra PowerApps-nettstedet. 
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
-
-     ![Modelldrevet utformingsmodus](media/model-driven-switch.png)
+1. Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Utvid **Data**, velg **Enheter**, velg enheten du vil bruke, og velg deretter **Skjemaer**-kategorien. 
 

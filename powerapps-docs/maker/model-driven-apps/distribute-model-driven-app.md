@@ -33,9 +33,7 @@ Modelldrevne apper distribueres som løsningskomponenter. Når du har laget en m
 ## <a name="add-an-app-to-a-solution"></a>Legge til en app i en løsning
 For å kunne distibute appen må du opprette en løsning slik at appen kan pakkes for eksport.
 
-1. På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
-
-    ![Modelldrevet utformingsmodus](media/model-driven-switch.png)
+1. Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2. Velg **Løsninger** og deretter **Ny løsning**.
 3. Fyll ut feltene på siden **Ny løsning**, og velg deretter **Lagre**. Mer informasjon: [Opprette en løsning](../common-data-service/create-solution.md)
@@ -63,9 +61,7 @@ For å distribuere appen din, slik at den kan importeres til andre miljøer elle
 ## <a name="import-a-solution"></a>Importere en løsning  
 Når du mottar en løsnings-ZIP-fil som inneholder appen som du vil importere, åpner du siden for løsningskomponenten og importerer løsningen. Når løsningen er importert, er appen tilgjengelig i miljøet.
 
-1. På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
-
-    ![Modelldrevet utformingsmodus](media/model-driven-switch.png)
+1. Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2. Velg **Løsninger** og deretter **Importer** på verktøylinjen.
 3. Bla til filen du vil importere, og velg deretter **Neste**.

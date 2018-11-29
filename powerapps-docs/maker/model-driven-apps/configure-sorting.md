@@ -26,9 +26,8 @@ search.app:
 
  Når du oppretter eller redigerer en visning, kan du konfigurere sorteringsrekkefølgen stigende eller synkende.   
   
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
+1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-    ![Modelldrevet utformingsmodus](media/model-driven-switch.png)
 
 2.  Utvid **Data**, velg **Enheter**, og velg deretter enheten du vil bruke, for eksempel **Forretningsforbindelser**.   
 3.  Velg **Visninger**-kategorien, og hvis den vises, velger du **Fjern filter**, og deretter åpner du visningen du ønsker, for eksempel **Aktive forretningsforbindelser**.

@@ -2,7 +2,7 @@
 title: Bruke standardløsningen til å tilpasse med PowerApps | MicrosoftDocs
 description: Finn ut hvordan du tilpasser standardløsningen
 ms.custom: ''
-ms.date: 06/18/2018
+ms.date: 10/29/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -25,25 +25,22 @@ search.app:
 ---
 
 # <a name="use-the-common-data-services-default-solution"></a>Bruk Common Data Services-standardløsningen  
+  
+ Alle PowerApps-miljøer inkluderer følgende løsninger.
+-   **Common Data Services-standardløsningen** – dette er en grunnleggende løsning som er tilgjengelig for bruk som standard for tilpassinger i et miljø.
+-   **Standardløsning** – dette er en spesiell løsning som inneholder alle tilpassinger fra alle løsninger i et miljø. 
+<!-- **Base Custom Controls Core** - This solution includes a core set of controls. Controls are used in user interface elements, such as fields, lists, and views. -->
 
-Alle PowerApps-miljøer inkluderer følgende løsninger.
--   Common Data Services-standardløsningen. Dette er en grunnleggende løsning som er tilgjengelig for utviklere som standardløsningen for et miljø.
--   Standardløsning. Dette er en eldre løsning som inneholder alle tilgjengelige løsninger i et miljø. 
--   Grunnleggende egendefinerte kjernekontroller. Denne løsningen inkluderer et kjernesett med kontroller. Kontroller brukes i elementer i brukergrensesnittet, for eksempel felt, visninger og lister. 
+Vær oppmerksom på at hvis du har installert eller importert andre programmer eller løsninger, kan flere løsninger være tilgjengelige i løsningslisten. 
 
-Vær oppmerksom på at hvis du har installert eller importert andre programmer eller løsninger, kan flere løsninger være tilgjengelige i løsningslisten.  
-
-Som standard, når du bygger eller tilpasser en modelldrevet app, arbeider du med Common Data Services-standardløsningen. Du kan åpne Common Data Services-standardløsningen for å vise og redigere komponentene i løsningen. Det gjør du ved å følge disse trinnene:
+Som standard, når du bygger eller tilpasser en modelldrevet app, arbeider du med en løsning kalt Common Data Services-standardløsningen. Du kan åpne Common Data Services-standardløsningen for å vise og redigere komponentene i løsningen. Det gjør du ved å følge disse trinnene:
  
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
+1.  I navigasjonsruten til venstre, velger du **Løsninger**.
 
-    ![Modelldrevet utformingsmodus](../model-driven-apps/media/model-driven-switch.png)
-
-2. I navigasjonsruten til venstre, velger du **Løsninger**.
-3. I listen over løsninger velger du **Common Data Services-standardløsningen**.
+2.  I listen over løsninger velger du **Common Data Services-standardløsningen**.
   
 > [!TIP]
->  Hvis du planlegger å distribuere programmene du lager, kan du vurdere å endre tilpassingsprefikset i løsningsutgiveren. Mer informasjon: [Løsningsutgiverprefiks](change-solution-publisher-prefix.md).  
+>  Hvis du planlegger å distribuere programmene du lager, kan du vurdere å endre tilpassingsprefikset i utgiveren. Mer informasjon: [Løsningsutgiverprefiks](change-solution-publisher-prefix.md).  
   
 <a name="BKMK_PrivacyNotice"></a>   
 

@@ -42,9 +42,9 @@ Du kan angi at én type egendefinert kontroll skal vises i nettleserklienten, me
 ## <a name="use-a-custom-control-to-add-visualizations-to-a-field"></a>Bruke en egendefinert kontroll for å legge til visualiseringer et felt  
  Ved å følge fremgangsmåten i denne prosedyren endres standard etikett- og tekstboksfeltet i **Budsjettbeløp**-feltet til den egendefinerte glidekontrollen i Salgsmulighet-enheten. Du kan bruke samme fremgangsmåte for å erstatte et eksisterende felt med en egendefinert kontroll eller konfigurere en egendefinert kontroll for et egendefinert felt.  
   
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
+1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-     ![Modelldrevet utformingsmodus](media/model-driven-switch.png)
+     
 
 2.  Utvid **Data**, velg **Enheter**, velg enheten du vil bruke, og velg deretter **Skjemaer**-kategorien.  
   

@@ -45,9 +45,8 @@ Mer informasjon: [Forstå visninger](create-edit-views.md)
 
 ## <a name="create-a-public-view-in-powerapps"></a>Opprette en fellesvisning i PowerApps
 Som appfremstiller kan du opprette og redigere offentlige visninger ved hjelp av PowerApps.
-1. På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
+1. Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-     ![Modelldrevet utformingsmodus](media/model-driven-switch.png)
 
     > [!IMPORTANT]
     > "Hvis utformingsmodusen **Modelldrevet** ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment).   

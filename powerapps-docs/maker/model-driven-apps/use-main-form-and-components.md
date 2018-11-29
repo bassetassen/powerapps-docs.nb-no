@@ -37,9 +37,7 @@ Følg fremgangsmåtene angitt nedenfor for å få tilgang til skjemaredigeringsp
 
 ### <a name="access-the-form-editor-through-app-designer-in-powerapps"></a>Tilgang til skjemaredigeringsprogrammet via apputforming i PowerApps
 
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
-
-    ![Modelldrevet utformingsmodus](media/model-driven-switch.png)
+1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  I navigasjonsruten til venstre velger du **Apper**, velger appen du vil bruke, og velger deretter **Rediger** på verktøylinjen.  
 
@@ -60,9 +58,7 @@ Følg fremgangsmåtene angitt nedenfor for å få tilgang til skjemaredigeringsp
 
 ### <a name="access-the-form-editor-through-the-default-solution"></a>Åpne skjemaredigeringsprogrammet via standardløsningen
 
-1.  På [PowerApps](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
-
-     ![Modelldrevet utformingsmodus](media/model-driven-switch.png)
+1.  Logg på [PowerApps](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Utvid **Data**, velg **Enheter**, velg enheten du vil bruke, og velg deretter **Skjemaer**-kategorien.  
 

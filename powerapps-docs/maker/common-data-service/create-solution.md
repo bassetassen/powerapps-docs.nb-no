@@ -2,7 +2,7 @@
 title: Opprette en løsning | MicrosoftDocs
 description: Lær hvordan du oppretter en løsning
 ms.custom: ''
-ms.date: 06/18/2018
+ms.date: 10/30/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -29,9 +29,9 @@ Ettersom standardløsningen inneholder alle løsningskomponentene kan det være 
   
  Hvis du vil ha mer informasjon om løsningskonsepter, kan du se [Arbeide med løsninger](solutions-overview.md).  
   
-1.  Gå til **[Innstillinger](../model-driven-apps/advanced-navigation.md#settings)** > **Løsninger**. 
+1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) og velg **Løsninger** fra den venstre navigasjonsruten. 
   
-2.  Velg **Ny**, og fyll ut de nødvendige feltene for løsningen  
+2.  Velg **Ny løsning**, og fyll deretter ut de nødvendige feltene for løsningen.
   
     |Felt|Beskrivelse|  
     |-----------|-----------------|  
@@ -61,3 +61,6 @@ Ettersom standardløsningen inneholder alle løsningskomponentene kan det være 
 
 > [!IMPORTANT]
 >  Hvis du planlegger å inkludere avtaler i løsningen, anbefaler vi på det på det sterkeste at du ikke bare inkluderer avtaler og bare regelmessige avtaler i separate løsninger. Hvis du installerer og avinstallerer separate løsninger med forskjellige avtaletyper, vil det oppstå en SQL Server-feil, og du må opprette avtalene på nytt. 
+
+## <a name="see-also"></a>Se også
+ [Bruke løsninger](use-solution-explorer.md)

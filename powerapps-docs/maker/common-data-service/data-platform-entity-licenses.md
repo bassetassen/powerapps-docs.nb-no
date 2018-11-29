@@ -50,13 +50,13 @@ Barb og Isaac oppretter apper i PowerApps ved hjelp av CDS for Apps for å lagre
 
 Barb oppretter to lerretsapper:
 
-* App 1 &ndash; bruker Kontakt-enheten sammen med en egendefinert enhet som lagrer relatert informasjon
-* App 2 &ndash; bruker Kontakt-enheten sammen med Hendelse-enheten, som er en begrenset enhet
+* App 1 &ndash; bruker Avtale-enheten sammen med en egendefinert enhet som lagrer relatert informasjon
+* App 2 &ndash; bruker Avtale-enheten sammen med Hendelse-enheten, som er en begrenset enhet
 
 Isaac oppretter to modelldrevne apper:
 
-* App 3 &ndash; bruker Kontakt-enheten sammen med en egendefinert enhet som lagrer relatert informasjon
-* App 4 &ndash; bruker Kontakt-enheten sammen med Hendelse-enheten, som er en begrenset enhet
+* App 3 &ndash; bruker Avtale-enheten sammen med en egendefinert enhet som lagrer relatert informasjon
+* App 4 &ndash; bruker Avtale-enheten sammen med Hendelse-enheten, som er en begrenset enhet
 
 Barb og Isaac trenger følgende lisenser:
 * Barb trenger en PowerApps Plan 1-lisens for å opprette lerretsapper ved hjelp av CDS for Apps. Hvis hun må opprette en database eller opprette en egendefinert enhet, må hun ha en PowerApps Plan 2-lisens.

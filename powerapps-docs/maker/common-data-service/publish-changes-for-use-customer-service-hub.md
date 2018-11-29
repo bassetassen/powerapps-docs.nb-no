@@ -2,7 +2,7 @@
 title: Publisere endringer i PowerApps | MicrosoftDocs
 description: Finn ut hvordan du publiserer endringer av en app
 ms.custom: ''
-ms.date: 06/20/2018
+ms.date: 10/29/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -30,7 +30,13 @@ search.app:
  
 ## <a name="publish-your-customizations"></a>Publisere tilpassingene
 
-- I [løsningsutforskeren](../model-driven-apps/advanced-navigation.md#solution-explorer) velger du **Publiser alle tilpassinger**.  
+1.  Velg **Løsninger** fra navigasjonsruten til venstre.
+
+2.  Velg løsningen du ønsker å publisere, for å åpne den.
+
+3.  Fra listen over kommandoer velger du **Publiser alle tilpassinger**.  
+
+![Publiser alle tilpassinger](media/publish-all-customizations.PNG "Publiser alle tilpassinger")  
   
 > [!IMPORTANT]
 >  Det kan ta litt tid å klargjøre tilpassinger. Hvis du ser en melding om at weblesersiden ikke reagerer, venter du til den svarer. Ikke lukk den.  

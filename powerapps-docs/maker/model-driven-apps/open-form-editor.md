@@ -32,7 +32,7 @@ Hvis du oppretter nye løsningskomponenter i når du redigerer skjemaet, for eks
 
 1. Logg på [PowerApps](https://web.powerapps.com/). 
 
-2. Velg **Modelldrevet** > **Data** > **Enheter** > og velg deretter enheten du vil bruke, for eksempel forretningsforbindelsesenheten. 
+2. Velg **Data** > **Enheter**, og velg deretter enheten du vil bruke, for eksempel forretningsforbindelsesenheten. 
 
 3. Velg kategorien **Skjemaer**, og åpne deretter skjemaet som du ønsker, for eksempel hovedskjemaet **Forretningsforbindelse**.
 

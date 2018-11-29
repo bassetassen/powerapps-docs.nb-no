@@ -33,7 +33,7 @@ Virtuelle enheter består av tre hovedkomponenter, en *dataleverandør*, en *dat
   
 CDS for Apps inkluderer en OData-dataleverandør som du kan bruke til å koble til en OData v4-webtjeneste som har tilgang til de eksterne dataene. 
   
-Utviklere kan også bygge sine egne dataleverandører. Dataleverandører er installert i et miljø som en løsning. Mer informasjon: [Dokumentasjon for utviklere: Komme i gang med virtuelle enheter](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)
+Utviklere kan også bygge sine egne dataleverandører. Dataleverandører er installert i et miljø som en løsning. Mer informasjon: [Dokumentasjon for utviklere: Komme i gang med virtuelle enheter](../../developer/common-data-service/virtual-entities/get-started-ve.md)
   
  ![Diagram for virtuell enhet](media/virtual-entity-diagram.png "Diagram for virtuell enhet")  
   

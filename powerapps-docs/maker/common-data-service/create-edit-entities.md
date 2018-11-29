@@ -76,19 +76,19 @@ Removed these:
   |Alternativ   |Beskrivelse  |
   |---------|---------|
   |**Tilgangsteam**|Du kan opprette teammaler for denne enheten. |
-  |**Tillat hurtigoppretting**|Når du har opprettet og publisert et **Hurtigopprettingsskjema** for enheten, har personer muligheten til å opprette en ny post ved å bruke **Opprett**-knappen i navigasjonsruten. Mer informasjon: [Opprette og utforme skjemaer](../model-driven-apps/create-design-forms.md)<br /><br /> Når dette er aktivert for en egendefinert aktivitetsenhet, vil den egendefinerte aktiviteten være synlig i gruppen med aktivitetsentiteter når brukere bruker **Opprett**-knappen i navigasjonsruten. Siden aktiviteter ikke støtter hurtigopprettingsskjemaer, brukes imidlertid hovedskjemaet når du klikker ikonet for den egendefinerte enheten.|
+  |**Tillat hurtigoppretting**|Når du har opprettet og publisert et **Hurtigopprettingsskjema** for enheten, har personer muligheten til å opprette en ny post ved å bruke **Opprett**-knappen i navigasjonsruten. Mer informasjon: [Opprette og utforme skjemaer](../model-driven-apps/create-design-forms.md)<br /><br /> Når dette er aktivert for en egendefinert aktivitetsenhet, vil den egendefinerte aktiviteten være synlig i gruppen med aktivitetsenheter når brukere bruker **Opprett**-knappen i navigasjonsruten. Siden aktiviteter ikke støtter hurtigopprettingsskjemaer, brukes imidlertid hovedskjemaet når du klikker på ikonet for den egendefinerte enheten.|
   |**Områder som viser denne enheten**|I webprogrammet kan du velge ett av de tilgjengelige områdekartområdene for å vise denne enheten. Dette gjelder ikke for modelldrevne apper.|
   |**Sporing av endringer**|Når sporing av endringer er aktivert for organisasjonen, gjør dette at endringer i enhetsoppføringer kan registreres over tid. Når du aktiverer sporing av endringer for en enhet, blir sporing av endringer også aktivert for feltene. Du kan merke av eller fjerne merket for feltene du vil aktivere sporing av endringer for.|
-  |**Endringssporing**|Aktiverer datasynkronisering på en god måte ved å registrere hvilke data som er endret etter at dataene opprinnelig ble hentet ut eller ble synkronisert sist.  |
+  |**Endringssporing**|Aktiverer datasynkronisering på en effektiv måte ved å registrere hvilke data som er endret etter at dataene opprinnelig ble hentet ut eller ble synkronisert sist.  |
   |**Farge**|Angi en farge som skal brukes for enheten i modelldrevne apper.|
   |**Dokumentbehandling**|Etter at andre oppgaver er utført for å aktivere dokumentbehandling for organisasjonen, vil aktivering av denne funksjonen gjøre det mulig for denne enheten å delta i integrasjon med SharePoint. |
-  |**Duplikatregistrering**|Hvis duplikatregistrering er aktivert for organisasjonen, vil aktivering av dette la deg opprette regler for duplikatregistrering for denne enheten.|
-  |**Aktiver for mobil**|Gjør denne enheten tilgjengelig for Dynamics 365 for telefoner og nettbrett-apper. Du har også muligheten til å gjøre denne enheten **skrivebeskyttet i mobil**.<br /><br /> Hvis skjemaene for en enhet krever en filtype som ikke støttes i Dynamics 365 for phones- og tablets-apper, bruker du denne innstillingen til å sikre at mobilappbrukere ikke kan redigere dataene for disse enhetene.|
+  |**Duplikatregistrering**|Hvis duplikatregistrering er aktivert for organisasjonen, vil aktivering av dette la deg opprette regler for duplikatregistrering for enheten.|
+  |**Aktiver for mobil**|Gjør denne enheten tilgjengelig for Dynamics 365 for phones og tablets-apper. Du har også muligheten til å gjøre denne enheten **skrivebeskyttet i mobile**.<br /><br /> Hvis skjemaene for en enhet krever en filtype som ikke støttes i Dynamics 365 for phones- og tablets-apper, bruker du denne innstillingen for å sikre at mobilappbrukere ikke kan redigere dataene for disse enhetene.|
   |**Aktiver for Mobile Express**|Gjør denne enheten tilgjengelig for Dynamics 365 for phones-appen.|
   |**Utskriftsfletting**|Brukere kan bruke denne enheten med utskriftsfletting.|
-  |**Frakoblet funksjon for Dynamics 365 for Outlook**|Om dataene i denne enheten skal være tilgjengelige når Dynamics 365 for Outlook-programmet ikke er koblet til nettverket.|
+  |**Frakoblet modus for Dynamics 365 for Outlook**|Om dataene i denne enheten skal være tilgjengelige når Dynamics 365 for Outlook-programmet ikke er koblet til nettverket.|
   |**Leserute i Dynamics 365 for Outlook**|Om enheten skal vises i leseruten for Dynamics 365 for Outlook-appen.|
-  |**Bruk tilpasset Hjelp**|Når det er aktivert, kan du angi en hjelpe-URL-adresse for å kontrollere hvilken side brukerne ser når de klikker på Hjelp-knappen i programmet. Bruk dette til å gi veiledning spesifikk for dine firmaprosesser for enheten.|
+  |**Bruk tilpasset Hjelp**|Når dette er aktivert, kan du angi en hjelpe-URL-adresse for å kontrollere hvilken side brukerne ser når de klikker på Hjelp-knappen i programmet. Bruk dette til å gi veiledning spesifikk for dine firmaprosesser for enheten.|
 
 
 ### <a name="see-also"></a>Se også

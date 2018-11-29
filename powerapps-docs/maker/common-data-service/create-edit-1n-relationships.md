@@ -43,7 +43,7 @@ Det finnes to utforminger som du kan bruke til å opprette og redigere 1:N- (én
 > - Opprett et nytt oppslagsfelt for den relaterte enheten. <br />Mer informasjon: [Opprette og redigere felt](create-edit-fields.md)
 > - Importer en løsning som inneholder definisjonen av en enhetsrelasjon. <br />Mer informasjon: [Importere, oppdatere og eksportere løsninger](import-update-export-solutions.md)
 > - Bruk Power Query til å opprette nye enheter og fylle dem med data. <br />Mer informasjon: [Legge til data i en enhet i Common Data Service for Apps ved hjelp av Power Query](data-platform-cds-newentity-pq.md).
-> - En utvikler kan bruke [webtjenester](../../developer/common-data-service/use-web-services.md#metadata-services) til å skrive et program for å opprette og oppdatere enhetsrelasjoner. <br />Mer informasjon: [Tilpasse enhetsrelasjonsmetadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
+> - En utvikler kan bruke [Metadata-tjenester](../../developer/common-data-service/metadata-services.md) til å skrive et program for å opprette og oppdatere enhetsrelasjoner. <br />Mer informasjon: [Tilpasse enhetsrelasjonsmetadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
 
 Informasjonen i dette emnet hjelper deg med å velge hvilken utforming du kan bruke. 
 

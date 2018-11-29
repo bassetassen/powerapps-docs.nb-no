@@ -49,7 +49,7 @@ Fordi miljøet som opprettholder oppføringene for kjæledyrstell, også brukes 
 Hvis du vil ha mer informasjon om tilgangs- og omfangsrettigheter, kan du se [Sikkerhetsroller](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges#security-roles).
 
 ## <a name="create-a-custom-security-role"></a>Opprette en egendefinert sikkerhetsrolle
-1. På [!INCLUDE [powerapps](../../includes/powerapps.md)]-nettstedet velger du **Modelldrevet** > **Apper** > **...**> **Del kobling**.
+1. På [!INCLUDE [powerapps](../../includes/powerapps.md)]-nettstedet velger du **Apper** > **…**> **Del kobling**.
 2. Fra dialogboksen **Del denne appen** under **Opprett en sikkerhetsrolle** velger du **Sikkerhetsinnstilling**.
 3. På **Innstillinger**-siden velger du **Ny**.  
 

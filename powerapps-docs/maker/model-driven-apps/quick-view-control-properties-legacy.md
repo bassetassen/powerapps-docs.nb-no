@@ -27,9 +27,8 @@ En hurtigvisningskontroll i et skjema i en modelldrevet app viser data fra en op
 > ![Hurtigvisningsskjema for kontakt i skjemaet for forretningsforbindelse](media/quick-view-form-contact.png "Hurtigvisningsskjema for kontakt i skjemaet for forretningsforbindelse")  
 
 Du kan få tilgang til **Egenskaper for hurtigvisningskontroll** fra PowerApps-nettstedet. 
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
+1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-     ![Modelldrevet utformingsmodus](media/model-driven-switch.png)
 
 2.  Utvid **Data**, velg **Enheter**, velg enheten du vil bruke, og velg deretter **Skjemaer**-kategorien. 
 

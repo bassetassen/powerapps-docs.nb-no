@@ -40,6 +40,9 @@ Logg på PowerApps på [https://web.powerapps.com](https://web.powerapps.com/?ut
 
     * **Flertallsvisningsnavn** – Dette feltet fylles ut automatisk når du angir et visningsnavn, men du kan endre det om nødvendig. Flertallsvisningsnavnet er navnet på enheten i Common Data Service WebAPI og brukes ved samhandling med denne enheten fra PowerApps eller Flow.
     * **Navn** – Dette feltet fylles også ut automatisk når du angir et visningsnavn. Prefikset ble opprettet da miljøet ble opprettet, og sikrer at enhetene du oppretter, kan eksporteres og importeres til andre miljøer uten å være i konflikt med andre enhetsnavn. Du kan endre dette prefikset ved å oppdatere prefikset i utgiveren for Common Data Service-standardløsningen. For å unngå å ødelegge eksisterende apper, kan du ikke endre navnet når du har lagret enheten.
+
+       > [!NOTE]
+       > For at enhetsnavnet skal fungere med [innebygd kunnskapssøk i Dynamics 365 for Customer Service](/dynamics365/customer-engagement/customer-service/set-up-knowledge-management-embedded-knowledge-search), kan ikke maksimal enhetsnavnlengde inkludert utgiverprefikset overskride 24 tegn.
      
     ![Ny enhet](./media/data-platform-cds-create-entity/newentitypanel.png "Ny enhet-panelet")
 

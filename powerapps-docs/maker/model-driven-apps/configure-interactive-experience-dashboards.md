@@ -157,17 +157,15 @@ Følgende fremgangsmåte inneholder trinn for å aktivere sikkerhetsroller for i
   
 ### <a name="configure-a-multi-stream-interactive-dashboard-using-the-4-column-layout"></a>Konfigurere et interaktivt instrumentbord for flere strømmer ved hjelp av 4-kolonneoppsettet  
  
-1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+  
+2.  Velg **Data** > **Enheter** > velg enheten du vil ha. 
 
-2.  Velg **Modelldrevet** (nederst til venstre).  
+3.  Velg **Instrumentbord**-kategorien, og velg deretter **Legg til instrumentbordet** på verktøylinjen.  
   
-3.  Velg **Data** > **Enheter** > velg enheten du vil ha. 
-
-4.  Velg **Instrumentbord**-kategorien, og velg deretter **Legg til instrumentbordet** på verktøylinjen.  
+4.  Velg oppsett, kolonnebredde 2, 3 eller 4.  
   
-5.  Velg oppsett, kolonnebredde 2, 3 eller 4.  
-  
-6.  Når instrumentbordskjemaet åpnes, fyller du ut filtreringsinformasjonen øverst i skjemaet, som vist her.  
+5.  Når instrumentbordskjemaet åpnes, fyller du ut filtreringsinformasjonen øverst i skjemaet, som vist her.  
  
  > [!div class="mx-imgBorder"] 
  > ![Legge til visuelle filtre](../model-driven-apps/media/interactive-dashboards-add-visual-filters.png "Legge til visuelle filtre")  
@@ -220,7 +218,7 @@ Følgende fremgangsmåte inneholder trinn for å aktivere sikkerhetsroller for i
   
 1. Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).   
   
-2. Velg **Modelldrevet** (nederst til venstre), **Data** > **Enheter** > velg ønsket enhet. Velg kategorien **Tnstrumentbord**.  
+2. Velg **Data** > **Enheter** > velg enheten du vil ha. Velg kategorien **Tnstrumentbord**.  
   
      – ELLER –  
    
@@ -241,15 +239,13 @@ Følgende fremgangsmåte inneholder trinn for å aktivere sikkerhetsroller for i
   
 1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  Velg **Modelldrevet** (nederst til venstre).  
-  
-3.  Velg **Data** > **Enheter** > velg enheten du vil ha. 
+2.  Velg **Data** > **Enheter** > velg enheten du vil ha. 
 
-4.  Velg **Instrumentbord**-kategorien, og velg deretter **Legg til instrumentbordet** på verktøylinjen.  
+3.  Velg **Instrumentbord**-kategorien, og velg deretter **Legg til instrumentbordet** på verktøylinjen.  
   
-5.  Velg oppsett, kolonnebredde 2, 3 eller 4.    
+4.  Velg oppsett, kolonnebredde 2, 3 eller 4.    
   
-6.  Når instrumentbordskjemaet åpnes, er feltet **Filtrer enhet** forhåndsinnstilt til enheten som du oppretter instrumentbordet for. Rullegardinlisten **Enhetsvisning** viser de tilgjengelige visningene for enheten. Velg visningen, og fyll ut resten av den nødvendige informasjonen på siden.  
+5.  Når instrumentbordskjemaet åpnes, er feltet **Filtrer enhet** forhåndsinnstilt til enheten som du oppretter instrumentbordet for. Rullegardinlisten **Enhetsvisning** viser de tilgjengelige visningene for enheten. Velg visningen, og fyll ut resten av den nødvendige informasjonen på siden.  
   
  Resten av oppsettet er veldig likt oppsettet for instrumentbord for flere strømmer som startside, som er beskrevet i den forrige delen.  
   

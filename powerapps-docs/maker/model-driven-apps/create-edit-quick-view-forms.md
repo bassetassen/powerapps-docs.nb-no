@@ -38,9 +38,8 @@ Et hurtigvisningsskjema kan legges til i et annet skjema som en hurtigvisningsko
 ## <a name="create-a-quick-view-form"></a>Opprette et hurtigvisningsskjema  
  Du lager hurtigvisningsskjemaer ved å bruke skjemaredigeringsprogrammet omtrent slik som når du lager andre skjemaer. Hurtigvisningsskjemaer er skrivebeskyttet. Du kan bruke dem til å lage skjemaer som bare skal leses.  
   
-1. På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
+1. Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-    ![Modelldrevet utformingsmodus](media/model-driven-switch.png)
 
     > [!IMPORTANT]
     > "Hvis utformingsmodusen **Modelldrevet** ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment).     
@@ -75,7 +74,7 @@ Et hurtigvisningsskjema kan legges til i et annet skjema som en hurtigvisningsko
 ## <a name="add-a-quick-view-control-to-a-main-form"></a>Legge til en hurtigvisningskontroll i et hovedskjema  
  Hurtigvisningsskjemaer kan bare legges til i et hovedskjema der det finnes et oppslagsfelt som er rettet mot enheten for hurtigvisningsskjemaet.  
   
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
+1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
     > [!IMPORTANT]
     > "Hvis utformingsmodusen **Modelldrevet** ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment).     

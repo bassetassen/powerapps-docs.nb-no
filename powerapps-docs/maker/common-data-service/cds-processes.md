@@ -1,5 +1,5 @@
 ---
-title: Bruke forretningslogikk med Common Data Service for Apps | MicrosoftDocs
+title: Bruke forretningslogikk i Common Data Service for Apps | MicrosoftDocs
 description: Få informasjon om de ulike typene forretningslogikk du kan bruke appen
 ms.custom: ''
 ms.date: 08/06/2018
@@ -23,9 +23,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="apply-business-logic-with-common-data-service-for-apps"></a>Bruke forretningslogikk med Common Data Service for Apps
+# <a name="apply-business-logic-in-common-data-service-for-apps"></a>Bruke forretningslogikk i Common Data Service for Apps
 
-Dynamics 365 Customer Engagement-tilpassere er kanskje kjent med klassiske Common Data Service for App-prosesser, som er arbeidsflyter og handlinger. Mer informasjon: [Bruke arbeidsflytprosesser](/flow/workflow-processes) og [Handlingsoversikt](/flow/actions)
-  
-## <a name="see-also"></a>Se også  
-[Opplæring: Opprett forretningsregler og anbefalinger for å bruke logikk i et modelldrevet appskjema](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+Definer *forretningsregler* for en enhet som gjelder for alle enhetsskjemaer og på servernivå. Forretningsregler som er definert for en enhet, gjelder for både *lerretsapper* og *modelldrevne apper* hvis enheten brukes i appen. Mer informasjon: [Opprette en forretningsregel for en enhet](data-platform-create-business-rule.md).
+
+> [!NOTE]
+> Hvis du vil definere en forretningsregel som gjelder for et skjema i en modelldrevet app, kan du se [Opprette forretningsregler for et modelldrevet appskjema](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+
+Du kan også bruke klassiske Common Data Service (CDS) for Apps-prosesser som er arbeidsflyter og handlinger. Mer informasjon: [Microsoft Flow: Bruke arbeidsflytprosesser](/flow/workflow-processes) og [Microsoft Flow: Handlingsoversikt](/flow/actions).
+
+## <a name="see-also"></a>Se også
+
+[Bruke forretningslogikk i modelldrevne apper](../model-driven-apps/guide-staff-through-common-tasks-processes.md)

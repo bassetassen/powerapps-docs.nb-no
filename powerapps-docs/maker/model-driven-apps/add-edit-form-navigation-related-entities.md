@@ -27,10 +27,9 @@ search.app:
 
 I dette emnet bruker du skjemanavigasjonsruten som brukes for å legge til koblinger i relaterte enheter. Når en appbruker klikker en av koblingene i en oppføring, vises den tilknyttede visningen for enheten.   
   
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
+1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-    ![Modelldrevet utformingsmodus](../model-driven-apps/media/model-driven-switch.png)
-
+  
     > [!IMPORTANT]
     > "Hvis utformingsmodusen **Modelldrevet** ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment). 
 

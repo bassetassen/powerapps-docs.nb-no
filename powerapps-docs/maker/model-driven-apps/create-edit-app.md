@@ -2,7 +2,7 @@
 title: Opprett eller rediger en modelldreven app ved hjelp av apputforming i PowerApps | MicrosoftDocs
 description: Finn ut hvordan du oppretter eller redigerer apper ved hjelp av apputforming
 keywords: ''
-ms.date: 05/23/2018
+ms.date: 10/15/2018
 ms.service: crm-online
 ms.custom: null
 ms.topic: article
@@ -38,14 +38,14 @@ Før du begynner å opprette en app, kontrollerer du følgende forhåndskrav:
 <a name="createApp"></a>   
 ## <a name="create-an-app"></a>Opprette en app  
 
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
+1.  På **hjemmesiden** for [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) velger du **Start fra tom**-alternativet for en modelldrevet app.  
 
-    ![Modelldrevet utformingsmodus](media/model-driven-switch.png)
+    ![Start fra tom for modelldrevet](media/start-from-blank-model-driven.png)
 
     > [!IMPORTANT]
     > "Hvis utformingsmodusen **Modelldrevet** ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment). 
 
-2. Velg **Apper**, og velg deretter **Opprett en app**.
+2. Velg **Lag denne appen**.
 
 3. På siden **Opprett en ny app** skriver du inn følgende detaljer: 
 
@@ -94,14 +94,14 @@ Før du begynner å opprette en app, kontrollerer du følgende forhåndskrav:
     En ny app blir opprettet, og viser statusen Utkast. Du vil se lerretet for apputforming for den nye appen. Derfra kan du legge til komponenter, for eksempel enheter, visninger og instrumentbord, for å gjøre appen nyttig. Mer informasjon: [Legge til eller redigere appkomponenter](add-edit-app-components.md)  
    
 <a name="editApp"></a>   
-## <a name="edit-an-app"></a>Redigere en app  
+## <a name="edit-an-app"></a>Rediger en app  
   
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
+1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 > [!IMPORTANT]
 > "Hvis utformingsmodusen **Modelldrevet** ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment). 
 
-2. I navigasjonsruten til venstre velger du **Apper**, velger en app, og velger deretter **Rediger** på verktøylinjen.   
+2. I navigasjonsruten til venstre velger du **Apper**, velger en modelldrevet app, og velger deretter **Rediger** på verktøylinjen.   
 
 3. I apputformingen legger du til eller redigerer komponenter i appen etter behov. Mer informasjon: [Legge til eller redigere appkomponenter](add-edit-app-components.md)  
  

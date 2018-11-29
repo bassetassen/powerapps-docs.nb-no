@@ -27,9 +27,7 @@ search.app:
 
 I dette emnet vil du lære hvordan du oppretter et systemdiagram. Systemdiagrammer er organisasjonseide diagrammer som gjør dem tilgjengelige for alle som har tilgang til å lese dataene som kjører appen. Systemdiagrammer kan ikke tilordnes eller deles med bestemte appbrukere.  
   
-1. På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
-
-     ![Modelldrevet utformingsmodus](media/model-driven-switch.png)
+1. Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
     > [!IMPORTANT]
     > "Hvis utformingsmodusen **Modelldrevet** ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment).     

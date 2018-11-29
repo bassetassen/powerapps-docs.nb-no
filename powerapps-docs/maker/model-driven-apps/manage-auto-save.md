@@ -57,9 +57,7 @@ Automatisk lagring hjelper appbrukere fokusere på arbeidet uten å måtte behan
 > [!NOTE]
 >  Automatisk lagring deaktiveres for skjemaet, men dataene vil fortsatt bli lagret når du velger ![knappen Automatisk lagring](media/auto-save-icon.png "knappen Automatisk lagring") knappen nede til høyre. Hvis du forsøker å navigere bort fra et skjema eller lukke et skjema der dataene er endret, blir de bedt om å lagre endringene før de kan navigere bort fra eller lukke skjemaet.  
   
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
-
-    ![Modelldrevet utformingsmodus](../model-driven-apps/media/model-driven-switch.png)
+1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Utvid **Data**, velg **Enheter**, velg enheten du vil bruke, og velg deretter **Skjemaer**-kategorien.  
   

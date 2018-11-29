@@ -2,7 +2,7 @@
 title: Opprette eller redigere hurtigopprettingsskjemaer for modelldrevne apper i PowerApps | MicrosoftDocs
 description: Lær hvordan du oppretter eller redigerer et hurtigopprettingsskjema
 ms.custom: ''
-ms.date: 05/23/2018
+ms.date: 10/15/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -53,9 +53,8 @@ Du kan aktivere støtte for hurtigopprettingsskjemaer for egendefinerte aktivite
   
 ### <a name="how-to-create-a-quick-create-form"></a>Opprette et hurtigopprettingsskjema  
   
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
+1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-     ![Modelldrevet utformingsmodus](media/model-driven-switch.png)
 
 > [!IMPORTANT]
 > "Hvis utformingsmodusen **Modelldrevet** ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment).     
@@ -92,7 +91,7 @@ Hvis du legger til et sammensatt felt i et hurtigopprettingsskjema, vises det so
   
 ### <a name="to-edit-a-quick-create-form"></a>Slik redigerer du et hurtigopprettingsskjema:  
   
-1.  På [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-området velger du **Modelldrevet** (nederst til venstre i navigasjonsruten).  
+1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 > [!IMPORTANT]
 > "Hvis utformingsmodusen **Modelldrevet** ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment).    
