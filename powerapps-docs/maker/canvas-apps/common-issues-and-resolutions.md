@@ -39,7 +39,7 @@ Denne artikkelen viser noen vanlige problemer som kan oppstå når du bruker Pow
 
 1. <a name="out-of-memory"></a>**Leseren går tom for minne** (23. juli 2018)
 
-    Hvis du går tom for minne mens du bruker PowerApps, bør du laste ned en 64-biters versjon av Chrome, Edge eller Internet Explorer.
+    Hvis du går tom for minne mens du bruker PowerApps, bør du laste ned en 64-biters versjon av Chrome, Microsoft Edge eller Internet Explorer.
 
 1. **Start et nettsted fra en innebygd app** (10. mai 2018)
 

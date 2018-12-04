@@ -46,7 +46,7 @@ Den gjeldende versjonen av kontrollen er eksperimentell på grunn av følgende m
 
 - Kontrollen er hovedsakelig beregnet for bruk i nettlesere på store skjermer.  Å bruke kontrollen på en mobiltelefon kan det være en frustrerende opplevelse.
 
-- Kjente problemer i redigeringsopplevelsen når du bruker Windows Studio- eller Edge-nettleseren.  Gjeldende anbefaling er å bruke web studio i Chrome.
+- Kjente problemer i redigeringsopplevelsen når du bruker Windows Studio- eller Microsoft Edge-nettleseren.  Gjeldende anbefaling er å bruke web studio i Chrome.
 
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
