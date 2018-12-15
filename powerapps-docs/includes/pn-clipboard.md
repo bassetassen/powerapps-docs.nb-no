@@ -1,1 +1,1 @@
-Utklippstavle
+Utsklippstavle

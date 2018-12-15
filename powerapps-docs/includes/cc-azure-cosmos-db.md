@@ -1,1 +1,1 @@
-Cosmos Azure-database
+Azure Cosmos DB

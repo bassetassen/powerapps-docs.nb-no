@@ -1,1 +1,1 @@
-Angir en regel som returnerer false når webprogrammet vises i en mobil nettleser på en nettbrettenhet.
+Angir en regel som returnerer usann når nettprogrammet vises i en mobil nettleser på et nettbrett.

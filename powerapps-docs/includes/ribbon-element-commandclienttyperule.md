@@ -1,1 +1,1 @@
-Angir en regel som registrerer hvilken type presentasjon som brukes.
+Angir en regel som gjenkjenner typen presentasjon som brukes.

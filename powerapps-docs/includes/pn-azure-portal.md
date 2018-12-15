@@ -1,1 +1,1 @@
-Azure-portalen
+Azure-portal

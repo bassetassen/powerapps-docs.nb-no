@@ -1,1 +1,1 @@
-Angir en verdi med datatypen desimal som kan sendes som en parameter.
+Angir en verdi med en desimaldatatype, som kan sendes som en parameter.

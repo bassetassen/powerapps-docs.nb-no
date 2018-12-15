@@ -1,1 +1,1 @@
-Cognitive Services
+Kognitive tjenester
