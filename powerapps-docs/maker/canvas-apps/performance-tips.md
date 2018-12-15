@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0fa6a8f741ed0e771eeefbbee82a23e876363e55
-ms.sourcegitcommit: 469be99b762cd62289a98f058c498ac25ff8801b
+ms.openlocfilehash: 9d86bcaf02050da1b3cd0364e28bc4ec05a6407d
+ms.sourcegitcommit: 6e579014ebb1f801985b8b4b68b7b768a09559c7
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44327788"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53247590"
 ---
 # <a name="optimize-canvas-app-performance-in-powerapps"></a>Optimaliser ytelsen for lerretsapp i PowerApps
 Microsoft jobber hardt for å forbedre ytelsen til alle appene som kjører på Power-plattformen. Me du kan følge de anbefalte fremgangsmåtene i dette emnet for å øke ytelsen til apper du oppretter.
@@ -58,9 +58,9 @@ Du kan bekrefte denne virkemåten i utviklerverktøyene for nettleseren:
 Du kan legge inn den samme formelen i **Samtidigt**-funksjonen for å redusere den totale tiden operasjonen trenger:
 
     Concurrent( 
-        ClearCollect( Product, '[SalesLT].[Product]' );
-        ClearCollect( Customer, '[SalesLT].[Customer]' );
-        ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );
+        ClearCollect( Product, '[SalesLT].[Product]' ),
+        ClearCollect( Customer, '[SalesLT].[Customer]' ),
+        ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),
         ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' ))
         
 Med denne endringen så henter appen henter tabellene parallelt: 

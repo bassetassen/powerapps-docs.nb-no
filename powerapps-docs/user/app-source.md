@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 07/09/2018
+ms.date: 11/16/2018
 ms.author: matp
 ms.custom: ''
 ms.reviewer: ''
@@ -16,12 +16,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 512d45a92bf4fe3a8f5acb9d4bd5617bcdbaa4ca
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: a5b55a2948ad176d9c30a11d8c6b6adf209e07f3
+ms.sourcegitcommit: a9f6bd07f414f43c50e0c05e5c7a4f1500c2d2fb
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42844666"
+ms.lasthandoff: 11/18/2018
+ms.locfileid: "51941758"
 ---
 # <a name="discover-apps-via-appsource"></a>Å oppdage apper via AppSource
 Apper du bygger og publiserer med PowerApps oppdages og brukes i Dynamics 365 på nettet. Den viser alle appene dine – apper som du spesifikt har valgt å bruke (startet fra en e-post som delte den eller åpnet fra AppSource) eller som en administrator har klargjort for deg. Dette omfatter alle appene dine fra PowerApps, i tillegg til Dynamics 365-appene fra Microsoft. Du kan søke etter apper, filtrere etter miljø og feste apper du bruker oftest til toppen av siden.

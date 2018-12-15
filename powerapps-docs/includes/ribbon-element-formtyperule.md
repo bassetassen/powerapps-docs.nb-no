@@ -1,1 +1,1 @@
-Angir en regel som registrerer typen Microsoft Dynamics 365-skjema.
+Angir en regel som gjenkjenner formtypen for Microsoft Dynamics 365.

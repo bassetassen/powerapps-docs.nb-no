@@ -1,1 +1,1 @@
-Power BI
+strøm~~POS=TRUNC BI

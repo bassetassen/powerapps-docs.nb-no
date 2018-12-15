@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 20a725ff417ad1a36b83b6a24ca1aaecc667da14
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: f7a053aff947ffd543381956cf725a7e656d8a65
+ms.sourcegitcommit: ebe0a9c41b693a2134e9198ffc7e7a8eabee4330
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834566"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "51276376"
 ---
 # <a name="overview-of-canvas-app-connectors-for-powerapps"></a>Oversikt over lerretsappkoblinger for PowerApps
 Dataene er i kjernen for de fleste apper, inkludert de du oppretter i PowerApps. Dataene er lagret i en *datakilde*, og du importerer disse dataene inn i appen ved å opprette en *tilkobling*. Tilkoblingen bruker en bestemt *tilkobling* for å kommunisere med datakilden. PowerApps har koblinger for mange populære tjenester og lokale datakilder, inkludert SharePoint, SQL Server, Office 365, Salesforce og Twitter. Hvis du vil komme i gang med å legge til data i en lerretsapp, kan du se [Legg til en datatilkobling i PowerApps](add-data-connection.md).
@@ -59,7 +59,7 @@ Hvis du vil ha mer informasjon om hvordan du tilpasser formlene for egendefinert
 
 ## <a name="popular-connectors"></a>Populære koblinger
 
-Denne tabellen inneholder koblinger til mer informasjon om våre mest populære koblinger. Hvis du vil ha en fullstendig liste over koblinger, kan du se [Alle koblinger](#all-connectors).
+Denne tabellen inneholder koblinger til mer informasjon om våre mest populære koblinger. Hvis du vil ha en fullstendig liste over koblinger, kan du se [Alle koblinger](#all-standard-connectors).
 
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |
