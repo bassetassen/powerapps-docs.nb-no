@@ -1,1 +1,1 @@
-Bare til intern bruk.
+Bare til internt bruk.

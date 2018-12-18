@@ -1,1 +1,1 @@
-Angir en verdi med en boolsk datatype, som kan sendes som en parameter.
+Angir en verdi med datatypen boolsk som kan sendes som en parameter.

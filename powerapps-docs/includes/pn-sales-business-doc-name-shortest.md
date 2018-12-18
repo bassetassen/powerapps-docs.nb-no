@@ -1,1 +1,1 @@
-Salg
+Sales

@@ -1,1 +1,1 @@
-CTI (computer telephony integration, integrering av datatelefoni)
+integrasjon av telefoni for datamaskiner (CTI)

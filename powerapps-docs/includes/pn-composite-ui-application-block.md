@@ -1,1 +1,1 @@
-Programblokkering for sammensatt brukergrensesnitt
+Composite UI Application Block

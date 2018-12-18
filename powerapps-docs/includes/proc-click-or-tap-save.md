@@ -1,1 +1,1 @@
-Klikk på **Lagre**.
+Klikk **Lagre**.

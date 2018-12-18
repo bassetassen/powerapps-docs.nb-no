@@ -1,1 +1,1 @@
-Representerer data som hentes fra Microsoft Dynamics 365-programmet, som kan sendes som en parameter.
+Representerer data som er hentet fra Microsoft Dynamics 365-programmet og kan sendes som en parameter.

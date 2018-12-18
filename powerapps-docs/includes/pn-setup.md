@@ -1,1 +1,1 @@
-Oppsett
+Installasjonsprogram

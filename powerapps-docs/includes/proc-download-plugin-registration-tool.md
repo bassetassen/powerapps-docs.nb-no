@@ -1,1 +1,1 @@
-Hvis du vil skaffe deg registreringsverktøyet for programtillegg, kan du se [Last ned verktøyer fra NuGet](../developer/common-data-service/download-tools-nuget.md).
+Hvis du vil ha verktøyet for registrering av plugin-modul, kan du se [Laste ned verktøy fra NuGet](../developer/common-data-service/download-tools-nuget.md).

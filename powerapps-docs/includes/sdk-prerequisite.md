@@ -1,1 +1,1 @@
-Internett-tilkobling er nødvendig for å laste ned eksempelprosjektet, og for å gjenopprette NuGet-pakkene som brukes i eksempelprosjektet.
+En Internett-tilkobling kreves for å laste ned eksempelprosjektet og gjenopprette NuGet-pakkene som brukes i eksempelprosjektet.

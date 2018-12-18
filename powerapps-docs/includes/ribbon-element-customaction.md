@@ -1,1 +1,1 @@
-Definerer en handling for å legge til eller erstatte elementer på båndet.
+Definerer en handling som skal legge til eller erstatte elementer på båndet.

@@ -1,1 +1,1 @@
-Angir en verdi med en datastrengtype som kan sendes som en parameter.
+Angir en verdi med datatypen streng som kan sendes som en parameter.

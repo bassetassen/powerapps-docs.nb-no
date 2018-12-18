@@ -1,1 +1,1 @@
-Administrasjonssenteret for Dynamics 365
+Administrasjonssenter for Dynamics 365

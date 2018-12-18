@@ -1,1 +1,1 @@
-Opplæringsbane
+Læringsforløp

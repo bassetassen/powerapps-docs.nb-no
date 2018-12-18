@@ -1,1 +1,1 @@
-Hvis du vil ha mer informasjon om kravene for å kjøre eksempelkoden du finner her, kan du se [Bruk eksempel-og hjelpekoden](../developer/org-service/use-sample-helper-code.md).
+Hvis du vil ha mer informasjon om kravene for å kjøre eksempelkoden i som er oppgitt her, kan du se [Bruke eksempel- og hjelpekode](../developer/org-service/use-sample-helper-code.md).
