@@ -120,7 +120,7 @@ search.app:
 ### <a name="enable-or-disable-presence-for-a-column"></a>Aktivere eller deaktivere tilstedeværelse for en kolonne  
  Når følgende betingelser er oppfylt, kan personer se en kontroll for tilstedeværelse for Skype for Business på nettet i lister, som viser om personen er tilgjengelig og gjør at andre kan kommunisere med personen via direktemeldinger:  
   
--   Personer bruker Microsoft Edge eller Internet Explorer.  
+-   Personer bruker Edge eller Internet Explorer.  
   
 -   Personer har Skype for Business installert.  
   

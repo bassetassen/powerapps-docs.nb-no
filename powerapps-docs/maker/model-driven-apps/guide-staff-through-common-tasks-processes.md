@@ -55,7 +55,7 @@ Microsoft Flow inneholder flere typer prosesser, og hver enkelt kan være utform
   
 -   Forretningsprosessflyter.  Du kan sikre at brukere skriver inn data konsekvent og følger de samme trinnene hver gang de arbeider i en app, ved å opprette en forretningsprosessflyt. Mer informasjon: [Oversikt over forretningsprosessflyter](/flow/business-process-flows-overview)
 
--   Arbeidsflyter og handlinger. Dynamics 365 Customer Engagement-tilpassere er kanskje kjent med klassiske CDS for App-prosesser, som er arbeidsflyter og handlinger. Mer informasjon: [Bruke arbeidsflytprosesser](/flow/workflow-processes) og [Handlingsoversikt](/flow/actions)
+-   Arbeidsflyter og handlinger. Dynamics 365 Customer Engagement-tilpassere har kanskje kjennskap til klassiske CDS for App-prosesser, som er arbeidsflyter og handlinger. Mer informasjon: [Bruke arbeidsflytprosesser](/flow/workflow-processes) og [Handlingsoversikt](/flow/actions)
   
 ## <a name="next-step"></a>Neste trinn
 

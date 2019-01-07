@@ -32,7 +32,7 @@ Logg på PowerApps på [https://web.powerapps.com](https://web.powerapps.com/?ut
 
     ![Liste over enheter og deres detaljer](./media/data-platform-cds-create-entity/entitylist.png "Enhetsliste")
 
-2. På kommandolinjen, klikk eller trykk på **Ny enhet**.
+2. På kommandolinjen klikker eller trykker du på **Ny enhet**.
 
     Før du oppretter en enhet, kan du se [enhetsreferansen](../../developer/common-data-service/reference/about-entity-reference.md) for en beskrivelse av tilgjengelige standardenheter. Disse enhetene dekker vanlige scenarioer. Hvis en av disse enhetene oppfyller kravene som den er eller etter mindre endringer, kan du spare tid ved å begynne med denne enheten. 
 

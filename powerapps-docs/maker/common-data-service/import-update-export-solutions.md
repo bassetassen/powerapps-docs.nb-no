@@ -97,8 +97,8 @@ search.app:
 
 3.  Velg pakketypen **Som uadministrert** eller **Som administrert**. Dette starter eksporten, som kan ta flere minutter å fullføre. Når du er ferdig, finnes ZIP-eksportfilen i nedlastingsmappen angitt i webleseren.
 
-> [!div class="mx-imgBorder"]  
-> ![Eksporter løsning](media/solution-export.PNG "Eksporter løsning") 
+    > [!div class="mx-imgBorder"]  
+    > ![Eksporter løsning](media/solution-export.png "Eksporter løsning") 
 
 ### <a name="export-from-the-classic-experience"></a>Eksportere fra den klassiske opplevelsen
 
