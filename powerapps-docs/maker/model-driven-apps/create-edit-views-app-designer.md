@@ -1,8 +1,8 @@
 ---
-title: Opprette og redigere offentlige visninger eller systemvisninger for modelldrevne apper ved hjelp av apputforming med PowerApps | MicrosoftDocs
+title: Opprette og redigere offentlige visninger eller systemvisninger for modelldrevne apper med PowerApps | MicrosoftDocs
 description: Finn ut hvordan du oppretter eller redigerer visninger ved hjelp av apputforming
 keywords: ''
-ms.date: 05/24/2018
+ms.date: 11/27/2018
 ms.service: crm-online
 ms.custom: null
 ms.topic: article
@@ -26,9 +26,9 @@ search.app:
   - D365CE
 ---
 
-# <a name="tutorial-create-and-edit-public-or-system-model-driven-app-views-by-using-the-app-designer"></a>Opplæring: Opprette og redigere offentlige visninger eller systemvisninger for modelldrevne apper ved hjelp av apputforming
+# <a name="create-and-edit-public-or-system-model-driven-app-views"></a>Opprette og redigere offentlige visninger eller systemvisninger for modelldrevne apper
 
-I denne opplæringen skal du kan utføre flere oppgaver som kreves for å arbeide med visninger, for eksempel å opprette en fellsvisning, legge til en eksisterende visning i en app og endre kolonner, filtre og sorteringsrekkefølge for en visning.
+I dette emnet skal du utføre flere oppgaver som kreves for å arbeide med visninger, for eksempel å opprette en fellesvisning, legge til en eksisterende visning i en app og endre kolonner, filtre og sorteringsrekkefølge for en visning.
 
 I PowerApps definerer visninger hvordan oppføringer for en bestemt enhet vises. En visning definerer følgende:
 -  Kolonnene (attributter) som skal vises
@@ -55,40 +55,33 @@ Som appfremstiller kan du opprette og redigere offentlige visninger ved hjelp av
 
 3. Velg **Legg til visning** på verktøylinjen. 
 
-4. Angi et navn og eventuelt en beskrivelse i dialogboksen **Vis egenskaper**, og velg deretter **OK**. 
+4. Angi et navn og eventuelt en beskrivelse i dialogboksen **Opprett en visning**, og velg deretter **Opprett**. 
     
-5. I redigeringsprogrammet for visning velger du **Legg til kolonner** for å legge til flere kolonner som skal vises i visningen. Mer informasjon: [Legge til en kolonne i visningen](#add-a-column-to-your-view)
-6. Velg **Rediger filtervilkår** for å endre filtrering på følgende måter: 
-    -  Bruke filtervilkår for å begrense dataene som vises i visningen. Mer informasjon: [Definere filterkriterier](#define-filter-criteria). 
-    - Gruppere filtrene ved hjelp av alternativene **OG** eller **ELLER** og begrense dataene som vises i visningen, ytterligere. Mer informasjon: [Gruppere flere filtre](#group-multiple-filters)
-7. Velg **Konfigurer sortering** for å endre rekkefølgen på dataene ved å konfigurere primær og sekundær sorteringsrekkefølge for kolonner. Mer informasjon: [Angi primær og sekundær sorteringsrekkefølge for kolonner](#set-primary-and-secondary-sort-order-for-columns)
-8. (Valgfritt) Konfigurere kolonnebredden: 
-  
-    a. Velg en kolonne. Kategorien **Egenskaper** åpnes.
-    
-    b. Konfigurer **Angi bredde** med kolonnebredden du ønsker.
-    
-    > [!NOTE]
-    > Kolonnebreddeverdien er fra 25 til 300 piksler.
-9. (Valgfritt) Endre rekkefølgen på kolonnene ved å dra en kolonne til plasseringen du vil flytte den til. 
+5. I redigeringsprogrammet for visning velger du plussknappen for å legge til flere kolonner som skal vises i visningen. Mer informasjon: [Legge til en kolonne i visningen](#add-a-column-to-your-view)
 
-    Du skal se en visuelle indikator når du holder kolonnen over en posisjon den kan flyttes til.
+   ![Legg til kolonne](../common-data-service/media/add-column-to-view.png)
 
-    ![Endre rekkefølgen på kolonner](media/ViewAppDesigner_ReorderColumn.png "Endre rekkefølgen på kolonner i en visning")
+6. I visningsutforming kan du utføre følgende oppgaver: 
+   - For å endre kolonnefiltrering velger du overskriften i kolonnen du vil filtrere, og deretter velger du **Filtrer etter** i rullegardinlisten.
+   - For å endre kolonnesortering velger du overskriften i kolonnen du vil filtrere, og deretter velger du **Sorter fra A til Å** eller **Sorter fra Å til A**.
+   - Konfigurer kolonnebredden ved å klikke og dra kolonnen til den ønskede posisjonen.
+   - Endre rekkefølgen på kolonnene ved å dra en kolonne til plasseringen du vil flytte den til. 
 
     > [!NOTE]
-    > Du kan også endre kolonnerekkefølgen ved hjelp av hurtigtaster. Klipp ut kolonnen ved å velge Ctrl + X, velg en kolonne, og lim deretter inn ved å velge Ctrl + V. Kolonnen flyttes til høyre for den valgte kolonnen.
-10. (Valgfritt) Legg ved et ikon eller en fil i en kolonne for å skille den fra andre kolonner under kjøretid. Mer informasjon: [Definere en webressurs](#define-a-web-resource)
-11. Visningen **Lagre og lukk**. 
-12. Velg **Publiser** for å gjøre visningen tilgjengelig for andre brukere i organisasjonen. 
+    > Du kan også endre kolonnerekkefølgen ved å klikke kolonneoverskriften og velge **Flytt til høyre** eller **Flytt til venstre**.
+
+10. Velg **Publiser** for å lagre visningen og gjøre den tilgjengelig for andre brukere i organisasjonen. 
    
 
-## <a name="open-and-add-a-view-in-the-app-designer"></a>Åpne og legge til en visning i apputformingen
+## <a name="work-with-views-in-app-designer"></a>Arbeide med visninger i apputforming
+Avsnittene nedenfor beskriver hvordan du oppretter og redigerer visninger i apputforming.
+
+### <a name="open-and-add-a-view-in-the-app-designer"></a>Åpne og legge til en visning i apputformingen
 
 Fremgangsmåten nedenfor forklarer hvordan du åpner og legger til en visning i apputformingen.
-1. I løsningsutforskeren velger du **Apper** og deretter velger du appen du vil åpne i apputformingen. 
+1. I PowerApps velger du **Apper** fra venstre navigasjonsrute, og deretter velger du **...** ved siden av appen du vil bruke, og deretter velger du **Rediger**. 
 
-2. I delen **Enhetsvisning** velger du **Visninger**.
+2. I apputformingen, i inndelingen **Enhetsvisning**, velger du **Visninger**.
 
     I dette eksemplet har vi valgt **Visninger** fra **Forretningsforbindelse**-enheten.
 
@@ -102,20 +95,21 @@ Fremgangsmåten nedenfor forklarer hvordan du åpner og legger til en visning i 
 Mer informasjon om apputformingen: [Utforme egendefinerte forretningsapper ved hjelp av apputformingen](design-custom-business-apps-using-app-designer.md)
 
 
-## <a name="add-a-column-to-your-view"></a>Legge til en kolonne i visningen
+### <a name="add-a-column-to-your-view-in-app-designer"></a>Legge til en kolonne i visningen i apputforming
 Visninger viser oppføringer i en tabell som inneholder kolonner og rader. Hver rad er en oppføring, og feltene som du viser fra oppføringen, fastsattes av kolonnene du legger til i visningen.
 
-1. I apputformingen, i kategorien **Komponenter**, velger du **Kolonneattributter**-listen for **Hovedenhet** eller **Relatert enhet**.
+1. I apputforming velger du enhetsvisningen du vil ha, og deretter velger du Rediger-knappen (blyantsymbol) i høyre rute ved siden av ønsket visning.  
+2. I kategorien **Komponenter** velger du **Kolonneattributter**-listen for **Hovedenhet** eller **Relatert enhet**.
 
     ![Legge til en kolonne](media/ViewAppDesigner_AddColumn.png "Legge til en kolonne i visningen") 
 
-2. Fra listen velger du attributtet du vil ha, og drar det til kolonneoverskriften. Du kan også legge til attributtet ved å dobbeltklikke det.
-3. Gjenta trinn 2 til du har lagt til alle attributtene du ønsker skal vises i visningen.
+3. Fra listen velger du attributtet du vil ha, og drar det til kolonneoverskriften. Du kan også legge til attributtet ved å dobbeltklikke det.
+4. Gjenta trinn 3 til du har lagt til alle attributtene du ønsker skal vises i visningen.
 
 Når du legger til attributter, kan du dra dem til en hvilken som helst posisjon mellom eksisterende kolonneoverskrifter. Du kan også flytte kolonnene rundt når du har lagt dem til i visningen.
 
 
-## <a name="define-filter-criteria"></a>Definere filterkriterier
+### <a name="define-filter-criteria-in-app-designer"></a>Definere filtervilkår i apputforming
 Du kan angi filtervilkår slik at bare et delsett av-oppføringene vises i en visning. Når en bruker åpner visningen, vises bare oppføringene som oppfyller de definerte filtervilkårene. Du kan velge felt fra både hovedenheter og relaterte enheter å filtrere etter.
 1. I apputformingen utvider du delen **Filtervilkår**.
    
@@ -139,7 +133,7 @@ Du kan filtrere dataene etter attributtene for relaterte enheter i tillegg til h
 
 Mer informasjon: [Opprette og redigere relasjoner mellom enheter](../common-data-service/create-edit-entity-relationships.md)
 
-## <a name="group-multiple-filters"></a>Gruppere flere filtre
+#### <a name="group-multiple-filters-in-app-designer"></a>Gruppere flere filtre i apputforming
 Du kan legge til flere filtre i visningen hvis du vil filtrere oppføringer ved hjelp av mer enn ett felt. 
 
 1. Velg filtrene du vil gruppere.
@@ -149,7 +143,7 @@ Du kan legge til flere filtre i visningen hvis du vil filtrere oppføringer ved 
 
 Hvis du vil fjerne filteret fra en gruppe, velger du gruppen og deretter **Del opp gruppe**. 
 
-## <a name="set-primary-and-secondary-sort-order-for-columns"></a>Angi primær og sekundær sorteringsrekkefølge for kolonner
+### <a name="set-primary-and-secondary-sort-order-for-columns-in-app-designer"></a>Angi primær og sekundær sorteringsrekkefølge for kolonner i apputforming
 Når du har åpnet en visning, sorteres oppføringene som vises, i rekkefølgen du definerte da du opprettet visningen.   Oppføringene sorteres som standard etter den første kolonnen i en visning når det ikke er valgt noen sorteringsrekkefølge. Du kan velge å sortere etter én enkelt kolonne, eller du kan velge å sortere etter to kolonner – én primær og én sekundær. Når visningen er åpnet, sorteres oppføringene først etter kolonnen du vil bruke for primær sorteringsrekkefølge og deretter etter kolonnen du vil bruke for sekundær sorteringsrekkefølge. 
 
 > [!NOTE]
@@ -162,7 +156,7 @@ Når du har åpnet en visning, sorteres oppføringene som vises, i rekkefølgen 
 
 Hvis du fjerner kolonnen som du valgte for primær sorteringsrekkefølge, blir kolonnen du valgte for sekundær sorteringsrekkefølge, primær.
 
-## <a name="define-a-web-resource"></a>Definere en webressurs
+### <a name="define-a-web-resource-in-app-designer"></a>Angi en webressurs i apputforming
 Angi en webressurs for skripttypen for tilknytning til en kolonne i visningen. Disse skriptene bidrar til å vise ikoner for kolonner.
 
 1. Velg kolonnen du vil legge til en webressurs i.
@@ -170,7 +164,7 @@ Angi en webressurs for skripttypen for tilknytning til en kolonne i visningen. D
 3. I **Webressurs**-rullegardinlisten velger du webressursen du vil bruke.
 4. Skriv inn et funksjonsnavn i **Funksjonsnavn**-boksen.
 
-## <a name="edit-a-public-or-system-view"></a>Redigere en offentlig visning eller systemvisning
+### <a name="edit-a-public-or-system-view-in-app-designer"></a>Redigere en offentlig visning eller systemvisning i apputforming
 Du kan endre måten en offentlig visning eller systemvisning vises på, ved å legge til, konfigurere eller fjerne kolonner.
 1. I **Visninger**-listen for en enhet velger du pil ned for **Vis referanseliste** ![Rullegardinliste](media/DownArrow.png "Rullegardinlistepil").
     ![Redigere visning](media/ViewAppDesigner_EditView.png "Redigere en offentlig visning eller systemvisning")

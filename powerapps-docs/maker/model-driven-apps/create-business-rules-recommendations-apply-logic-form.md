@@ -1,7 +1,7 @@
 ---
 title: Opprette forretningsregler og anbefalinger for modelldrevne apper| MicrosoftDocs
 ms.custom: ''
-ms.date: 06/27/2018
+ms.date: 12/06/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -128,7 +128,22 @@ Opplæringen viser hvordan du kan opprette regler og anbefalinger for å bruke s
 <a name="BKMK_LocalizingErrorMessages"></a>   
 ## <a name="localize-error-messages-used-in-business-rules"></a>Oversette feilmeldinger som brukes i forretningsregler  
  Hvis du har flere enn ett språk klargjort for organisasjonen, ønsker du kanskje å oversette eventuelle feilmeldinger som du har angitt. Hver gang du angir en melding, genereres en etikett av systemet. Hvis du eksporterer oversettelsene i organisasjonen, kan du legge til lokaliserte versjoner av meldingene og deretter importere disse etikettene tilbake til systemet, slik at personer som bruker et annet språk enn basisspråket, kan vise de oversatte meldingene.  
-  
+
+## <a name="is-your-business-rule-not-firing-for-a-form"></a>Utløses ikke forretningsregelen for et skjema?
+En forretningsregel utføres kanskje ikke, fordi det refererte feltet i forretningsregelen ikke er inkludert i skjemaet. 
+1.  Åpne løsningsutforskeren. Vis enheten du vil bruke, og velg deretter **Skjemaer**. 
+2.  Åpne skjemaet du vil bruke, og velg deretter **Forretningsregler** på skjemautformingsbåndet. 
+3.  Åpne forretningsregelen i skjemautforming. 
+4.  I forretningsregelutforming velg hver betingelse og handling for å bekrefte alle feltene det refereres til i hver betingelse og handling. 
+
+     > [!div class="mx-imgBorder"] 
+     > ![](media/business-rule-field.png "Felt som det refereres til i forretningsregel, finnes i enhet")
+
+ 5. Kontroller at hvert felt som det refereres til i forretningsregelen, også er inkludert i skjemaet. Hvis ikke legg til det manglende feltet i skjemaet.
+
+     > [!div class="mx-imgBorder"] 
+     > ![](media/account-name-on-form.png "Forretningsforbindelsesfelt på skjema")
+
 ## <a name="next-steps"></a>Neste trinn  
  [Opprette egendefinert forretningslogikk via prosesser](guide-staff-through-common-tasks-processes.md)   
  [Opprette en forretningsprosessflyt](/flow/create-business-process-flow)   

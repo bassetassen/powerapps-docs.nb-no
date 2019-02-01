@@ -27,12 +27,11 @@ search.app:
 
  Du kan vise en liste over løsninger i PowerApps ved å velge **Løsninger** i den venstre navigasjonsruten. Deretter kan du velge en løsning for å vise alle komponentene. 
  
-> [!NOTE]
->  Løsningsopplevelsen er bare tilgjengelig på Internett og for miljøversjon 9.1.0.267 og senere. Hvis du vil kontrollere versjonen, kan du gå til ...[administrasjonssenteret for PowerApps](https://admin.powerapps.com/)> Miljøer > velg miljøet > kategorien Detaljer. For forekomster med tidligere versjon åpnes en valgt løsning i en klassisk opplevelse. 
-
 > [!div class="mx-imgBorder"]  
 > ![Demo-løsning med alle komponenter](media/solution-all-items-list.PNG "Demo-løsning med alle komponenter")  
-  
+ 
+> [!NOTE]
+>  Løsningsopplevelsen er bare tilgjengelig på Internett og for miljøversjon 9.1.0.267 og senere. Hvis du vil kontrollere versjonen, kan du gå til [...administrasjonssenteret for PowerApps](https://admin.powerapps.com/)> **Miljøer** > velg miljøet > kategorien **Detaljer**. For miljøer med tidligere versjon åpnes en valgt løsning i den klassiske opplevelsen.  
  
  Du kan bla gjennom alle komponentene i en løsning ved å rulle gjennom elementene. Hvis det finnes flere enn 100 elementer i listen, kan du velge **Last de neste 100 varene** for å se mer. 
  
@@ -44,7 +43,7 @@ search.app:
  Du kan også søke etter en bestemt komponent etter navn. 
  
 > [!div class="mx-imgBorder"]  
-> ![Søk etter komponent](media/solution-search-box.PNG "Søk etter komponent")  
+> ![Søk etter komponent](media/solution-search-box.png "Søk etter komponent")  
  
  Eller du kan filtrere alle elementene i listen etter komponenttypen.
   
@@ -56,7 +55,7 @@ search.app:
  Når du velger hver komponent, vil handlingene som er tilgjengelige i kommandolinjen, endres avhengig av typen komponent du har valgt, og hvorvidt løsningen er standardløsningen eller en administrert løsning. 
  
 > [!div class="mx-imgBorder"]  
-> ![Komponentspesifikke kommandoer](media/component-commands.PNG "Komponentspesifikke kommandoer")  
+> ![Komponentspesifikke kommandoer](media/component-commands.png "Komponentspesifikke kommandoer")  
  
  Når du ikke velger en komponent, viser kommandolinjen handlinger som gjelder selve løsningen. 
  
@@ -87,7 +86,7 @@ search.app:
 >  Når du for øyeblikket legger til en eksisterende enhet i en løsning, legger systemet automatisk til alle komponentene som er en del av enheten i løsningen. Hvis dette ikke er det du ønsker, kan du bruke kommandoen **Bytt til klassisk** for å navigere til den klassiske opplevelsen og legge til bare komponenter som du ønsker. <!-- We will soon improve this experience from PowerApps and allow you to select only the specific component(s) under entity that you want to add into a solution. -->
   
 > [!div class="mx-imgBorder"]  
-> ![Demo-løsning som viser utvidet enhet for forretningsforbindelse](media/solution-entity-account.PNG "Demo-løsning som viser utvidet enhet for forretningsforbindelse")  
+> ![Demo-løsning som viser utvidet enhet for forretningsforbindelse](media/solution-entity-account.png "Demo-løsning som viser utvidet enhet for forretningsforbindelse")  
 
 ## <a name="classic-solution-explorer"></a>Klassisk løsningsutforsker
 
@@ -95,18 +94,18 @@ Du kan vise den klassiske løsningsutforskeren i PowerApps ved å velge **Løsni
 
 ## <a name="known-limitations"></a>Kjente begrensninger
 
-- Sletting eller fjerning av en administrert løsning sletter ikke lerretappen fra PowerApps.
+- Sletting eller fjerning av en administrert løsning sletter ikke lerretappen i PowerApps.
 - Egendefinerte koblinger er ikke tilgjengelig i en løsning.
-- Lerretapper må åpnes etter løsningens import for å oppdatere tilkoblinger.
+- Lerretapper må åpnes etter en løsning er importert for å oppdatere tilkoblinger.
 - Når du legger til en eksisterende SDK-samling, vises den ikke i løsningen. 
-- Hvis lerretapper er pakket i en administrert løsning, kan de fortsatt redigeres av administratorer i det nye miljøet.
-- Avhengigheter er ikke tilgjengelig for lerretapper
-- Når du sletter en administrert løsning, rulles det ikke tilbake til en annen lerretappversjon 
--   Lerretapptilgang (CRUD og sikkerhet) administreres helt i PowerApps og ikke Common Data Service-databasen
--   CDS API-er for å kalle lerretapper blokkeres og returnerer ikke noe 
--   Lerretapper som er opprettet i en løsning, kan ikke deles som medeier til en AAD-sikkerhetsgruppe ennå
--   Lerretapper vil ikke vises i den klassiske løsningsutforskeren 
--   Eksisterende lerretapperr er ikke løsningsavhengige 
+- Hvis en lerretapp er pakket i en administrert løsning, kan den fremdeles redigeres i målmiljøet.
+- Avhengigheter er ikke tilgjengelig for lerretapper.
+- Når du sletter en administrert løsning, rulles det ikke tilbake til en annen lerretappversjon. 
+-   Lerretapptilgang (CRUD og sikkerhet) administreres helt i PowerApps og ikke Common Data Service for Apps (CDS)-databasen.
+-   CDS API-er for å kalle lerretapper blokkeres og returnerer ikke noe. 
+-   Lerretapper som er opprettet i en løsning, kan ikke deles som medeier til en AAD-sikkerhetsgruppe.
+-   Lerretapper vil ikke vises i den klassiske løsningsutforskeren.
+-   Eksisterende lerretapper er ikke løsningsavhengige. 
 
  For mer informasjon om tilpassing av individuelle komponenter i en løsning, kan du se følgende emner:  
   

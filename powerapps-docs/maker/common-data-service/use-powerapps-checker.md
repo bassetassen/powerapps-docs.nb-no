@@ -17,36 +17,41 @@ search.app:
 
 # <a name="use-solution-checker-to-validate-your-model-driven-apps-in-powerapps"></a>Bruk løsningskontroll til å validere de modelldrevne appene i PowerApps
 
-For å overholde komplekse forretningskrav kan produsenter av modelldrevne apper ofte ende opp med svært avanserte løsninger som tilpasser og utvider Common Data Service (CDS) for Apps-plattformen. Med avanserte implementeringer kommer økt risiko der problemer med ytelse, stabilitet og pålitelighet blir introdusert, som kan ha en negativ innvirkning på opplevelsen til sluttbrukeren. Å identifisere og forstå hvordan du løser disse problemene kan være komplisert og tidkrevende. Med løsningskontrollen kan du utføre en omfattende statisk analysekontroll av løsningene mot et sett med regler for beste fremgangsmåte og raskt finne disse problematiske mønstrene. Når kontrollen er fullført, får du en detaljert rapport som viser en liste over problemene som ble funnet, komponentene og koden som er berørt, og koblinger til dokumentasjon som beskriver hvordan du løser hvert enkelt problem.
+For å overholde komplekse forretningskrav kan produsenter av modelldrevne apper ofte ende opp med svært avanserte løsninger som tilpasser og utvider Common Data Service (CDS) for Apps-plattformen. Med avanserte implementeringer kommer økt risiko der problemer med ytelse, stabilitet og pålitelighet blir introdusert, som kan ha en negativ innvirkning på brukeropplevelsen. Å identifisere og forstå hvordan du løser disse problemene kan være komplisert og tidkrevende. Med løsningskontrollen kan du utføre en omfattende statisk analysekontroll av løsningene mot et sett med regler for beste fremgangsmåte og raskt finne disse problematiske mønstrene. Når kontrollen er fullført, får du en detaljert rapport som viser en liste over problemene som ble funnet, komponentene og koden som er berørt, og koblinger til dokumentasjon som beskriver hvordan du løser hvert enkelt problem.
 
-Løsningskontrollen analyserer disse løsningskomponentene. 
+Løsningskontrollen analyserer disse løsningskomponentene: 
 - CDS for Apps-plugin-moduler
 - Egendefinerte arbeidsflytaktiviteter for CDS for Apps 
 - CDS for Apps-webressurser (HTML og JavaScript)
 - CDS for Apps-konfigurasjoner, for eksempel SDK-meldingstrinn 
 
-Løsningskontroll fungerer sammen med uadministrerte løsninger som kan eksporteres fra et miljø. Løsningskontroll fungerer ikke med følgende løsninger. 
+Løsningskontroll fungerer sammen med uadministrerte løsninger som kan eksporteres fra et miljø. Løsningskontroll fungerer *ikke* med følgende løsninger: 
+
+
+<!--from editor: Should it be Common Data Service (singular) below, rather than Services? -->
+
 - Systemstandardløsninger (standardløsning og Common Data Services-standardløsningen).
 - Løsninger som inneholder JavaScript ved hjelp av ECMAScript 6 (2015) eller senere versjoner. Når JavaScript ved hjelp av disse versjonene blir funnet, rapporteres et problem med JS001-syntaksen for webressursen.
 
-> [!NOTE]
-> Funksjonen kan nå forhåndsvises og er bare tilgjengelig i Nord-Amerika-området. 
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-
 
 ## <a name="enable-the-solution-checker"></a>Aktivere løsningskontrollen
-Løsningskontrollen blir tilgjengelig i Løsninger-området i PowerApps når du har installert PowerApps-kontrollerløsningen. Vær oppmerksom på at du ikke finner den ved å bla gjennom eller søke på Microsoft AppSource. Du må installere den ved å følge disse trinnene.  
+Løsningskontrollen blir tilgjengelig i Løsninger-området i PowerApps når du har installert PowerApps-kontrollerløsningen. Vær oppmerksom på at du ikke finner den ved å bla gjennom eller søke på Microsoft AppSource. Installer det ved å følge disse trinnene:  
 
 1. Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) og velg Common Data Service-miljøet der du ønsker å aktivere løsningskontrollen. 
 2. I navigasjonsruten til venstre velger du **Løsninger**.
 3. Velg **Løsningskontroll** på verktøylinjen, og velg deretter **Installer** – dette åpner siden Microsoft AppSource. Hvis webleseren blokkerer siden, må du tillate popup-vinduer. 
 
-   ![Installere løsningskontroll](media/solution-checker-install.png)
+   > [!div class="mx-imgBorder"]
+   > ![Installere løsningskontroll](media/solution-checker-install.png "Installere løsningskontroll")
 
 4. Velg **Gratis prøve** på siden AppSource. 
-5. Hvis du er enig, godtar du vilkårene og velger miljøet du vil installere PowerApps-kontrollerløsningen i. 
-6.  Når installasjonen er fullført, kan du oppdatere **Løsning**-listen på PowerApps-nettstedet for å bekrefte at løsningskontrollen er tilgjengelig.  
-7. Du kan kontrollere en løsning ved å [kjøre løsningskontrollen](#run-the-solution-checker).
+
+
+<!--from editor: Should it be "solution checker" rather than "checker solution" in the following step?
+
+5. If you agree, accept the terms and conditions and select the environment to install the PowerApps checker solution. 
+6. When the installation is complete, refresh the **Solution** list on the PowerApps site to verify that the solution checker is available.  
+7. To check a solution, [Run the solution checker](#run-the-solution-checker).
 
 
 <!-- ### Components created with the PowerApps checker
@@ -66,20 +71,22 @@ Når du har installert den PowerApps-kontrollen i miljøet, er et **Løsningskon
 2. Velg **Løsninger** i venstre rute. 
 3. Ved siden av den uadministrerte løsningen du vil analysere, velger du **...**, peker på **Løsningskontroll**, og velger deretter **Kjør**. 
 
-   ![Kjøre løsningskontroll-kommandoen](media/solution-checker-run.png)
+   > [!div class="mx-imgBorder"]
+   > ![Kjøre løsningskontroll-kommandoen](media/solution-checker-run.png "Kjøre løsningskontroll-kommandoen")
 
 4.  Statusruten øverst til høyre på **Løsninger**-siden viser **Løsningskontroll kjører**. 
 
-    ![Status for løsningskontroll](media/solution-checker-status.png)
+    > [!div class="mx-imgBorder"]
+    > ![Status for løsningskontroll](media/solution-checker-status.png "Status for løsningskontroll")
    
-     Legg merke til følgende:
-       - Løsningskontrollen kan bruke noen minutter på å fullføre analysen. 
+    Legg merke til følgende:
+    - Løsningskontrollen kan bruke noen minutter på å fullføre analysen. 
     
-       - I denne perioden vises tilstanden **Kjører...** i **Løsningskontroll**-kolonnen i **Løsning**-listen. 
+    - I denne perioden vises tilstanden **Kjører...** i **Løsningskontroll**-kolonnen i **Løsning**-listen. 
     
-       - Du mottar en e-postvarsling og en varsling i **Varslinger**-området på PowerApps-nettstedet når kontrollen fullføres.  
+    - Du mottar en e-postvarsling og en varsling i **Varslinger**-området på PowerApps-nettstedet når kontrollen fullføres.  
 
-5.  [Vis rapporten](#reviewing-the-solution-checker-report) når kontrollen er fullført.
+5.  [Vis rapporten](#review-the-solution-checker-report) når kontrollen er fullført.
 
 ## <a name="cancel-a-check"></a>Avbryte en kontroll
 
@@ -96,9 +103,9 @@ Når du installerer løsningskontrollen i miljøet, blir **Løsningskontroll**-k
 |Kjører     | Løsningen blir analysert.       |
 |Kunne ikke fullføres     |  Løsningsanalysen ble forespurt, men analysen ble ikke fullført.       |
 |Resultater for *dato og klokkeslett*   | Løsningsanalysen er fullført og resultater er tilgjengelig for nedlasting.      |
-| Kunne ikke fullføres. Resultat for *dato og klokkeslett*     | Den nyeste analyseforespørselen ble ikke fullført. De siste vellykkede resultatene kan lastes ned.         |
+|Kunne ikke fullføres. Resultat for *dato og klokkeslett*     | Den nyeste analyseforespørselen ble ikke fullført. De siste vellykkede resultatene kan lastes ned.         |
 |Kontrollert av Microsoft     | Dette er en Microsoft-administrert løsning. Løsningsanalyse er ikke tillatt i disse løsningene.         |
-|Kontrollert av utgiver     |  Dette er en tredjepart-administrert løsning. Løsningsanalyse er for øyeblikket ikke tilgjengelig for disse løsningene.        |
+|Kontrollert av utgiver     | Dette er en tredjepart-administrert løsning. Løsningsanalyse er for øyeblikket ikke tilgjengelig for disse løsningene.        |
 
 
 ## <a name="review-the-solution-checker-report"></a>Se gjennom løsningskontrollrapporten
@@ -113,9 +120,9 @@ Her er et sammendrag av hver kolonne i rapporten.
 |Rapportfelt |Beskrivelse  |Gjelder for komponent   |
 |---------|---------|---------|
 |Problem     |   Tittelen på problemet som er identifisert i løsningen.      | Alle        |
-|Kategori     | Kategorisering av problemet som er identifisert, for eksempel **Ytelse**, **Bruk** eller **Støtte**.      |  Alle       |
-|Alvorlighetsgrad     | Representerer den potensielle virkningen av problemet som identifiseres. Tilgjengelige innvirkningstyper er **høy**, **medium**, **lav**, **informasjon**.         |  Alle       |
-|Veiledning     |  Kobling til artikkelen med detaljer om problemet, innvirkning og anbefalt løsning. handlinger.       |  Alle       |
+|Kategori     | Kategorisering av problemet som er identifisert, for eksempel **Ytelse**, **Bruk** eller **Støtte**.      |  Alle     |
+|Alvorlighetsgrad     | Representerer den potensielle virkningen av problemet som identifiseres. Tilgjengelige innvirkningstyper er **høy**, **medium**, **lav** og **informasjon**.         |  Alle       |
+|Veiledning     |  Kobling til artikkelen med detaljer om problemet, innvirkning og anbefalt handling.       |  Alle       |
 |Komponent     |  Løsningskomponenten der problemet ble identifisert.        |   Alle      |
 |Location     |  Plasseringen og/eller kildefilen til komponenten der problemet som ble funnet, oppstod, for eksempel samlingen eller JavaScript-filnavnet.        |  Alle       |
 |Linjenr.     |  Linjenummerreferansen til problemet i den berørte webressurskomponenten.       |  Webressurser       |
@@ -126,9 +133,7 @@ Her er et sammendrag av hver kolonne i rapporten.
 |Kommentarer     | Informasjon om problemet som inkluderer løsningstrinn på høyt nivå.         |  Alle       |
 
 
-
 ## <a name="best-practice-rules-used-by-solution-checker"></a>Regler for anbefalt fremgangsmåte som brukes av løsningskontrollen
-
 
 |Løsningskomponent  |Navn på regel  |Regelbeskrivelse  |
 |---------|---------|---------|
@@ -162,5 +167,4 @@ Her er et sammendrag av hver kolonne i rapporten.
 
 
 ## <a name="see-also"></a>Se også
-[Forstå eksperimentelle funksjoner og forhåndsvisningsfunksjoner i PowerApps](../canvas-apps/working-with-experimental.md) <br/>
 [Retningslinjer og gode fremgangsmåter for å bygge PowerApps-løsninger](https://docs.microsoft.com/dynamics365/customer-engagement/guidance/)

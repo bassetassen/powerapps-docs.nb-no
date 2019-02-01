@@ -23,9 +23,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="tutorial-use-custom-controls-for-model-driven-app-data-visualizations"></a>Opplæring: Bruke egendefinerte kontroller for datavisualiseringer i modelldrevne apper
+# <a name="use-custom-controls-for-model-driven-app-data-visualizations"></a>Bruke egendefinerte kontroller for datavisualiseringer i modelldrevne apper
 
-I denne opplæringen lærer du hvordan du konfigurerer en egendefinert kontroll for et felt. 
+I dette emnet lærer du hvordan du konfigurerer en egendefinert kontroll for et felt. 
 
 Egendefinerte kontroller lar deg transformere komponenter i brukergrensesnittet for appen, for eksempel et felt eller en visning som vanligvis inneholder tekst, til visualiseringer. Egendefinerte kontroller kan konfigureres i felt, skjemaer, instrumentbord, visninger og rutenett. En glidebryterkontroll kan for eksempel konfigureres i et tallfelt.
 
