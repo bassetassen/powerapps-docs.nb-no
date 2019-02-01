@@ -16,12 +16,12 @@ search.audienceType:
 - developer
 search.app:
 - PowerApps
-ms.openlocfilehash: 6cb500e681be7a3be6a1ac0e0dc54caa2981893c
-ms.sourcegitcommit: 5198d7d99f157cd42830f833712175a2228aae5e
+ms.openlocfilehash: 088804f429e23a8824c3c132c3011308935a5b66
+ms.sourcegitcommit: 826bde1eab3dd32d7bf9fa3f43ea069694845597
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069377"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290838"
 ---
 # <a name="whats-new-in-powerapps"></a>Hva som er nytt i PowerApps
 
@@ -38,7 +38,9 @@ Hvis du vil vite mer om hvordan du kan blar gjennom informasjonen i de ukentlige
 
 ## <a name="release-notes"></a>Utgivelsesmerknader
 
-Hvis du vil ha informasjon om nye funksjoner som lanseres i løpet av de neste månedene, som du kan bruke til planlegging, kan du se [Produktmerknader for oktober 2018](https://docs.microsoft.com/business-applications-release-notes/October18/powerapps/planned-features).
+Hvis du vil ha informasjon om nye funksjoner som utgis de neste månedene, og som du kan bruke til planlegging, kan du se:
+- [Produktmerknader for oktober 2018](https://docs.microsoft.com/business-applications-release-notes/October18/powerapps/planned-features)
+- [Produktmerknader for april 2019](https://docs.microsoft.com/business-applications-release-notes/April19/microsoft-powerapps/planned-features)
 
 ## <a name="known-limitations"></a>Kjente begrensninger
 
