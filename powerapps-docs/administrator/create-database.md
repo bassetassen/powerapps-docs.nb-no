@@ -7,7 +7,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 10/03/2018
+ms.date: 02/01/2019
 ms.author: manasma
 search.audienceType:
 - admin
@@ -15,12 +15,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: c7de26bff38ee0425e8bb3f9bc0da72317f0a6cf
-ms.sourcegitcommit: 6e2fa2665ded6ac6fd271e1a12f4e3227ebc8865
+ms.openlocfilehash: f7b5fb27e5b135239e1fe2306f7c431d6d1e6aae
+ms.sourcegitcommit: 676cfa415f67e2e8fcfcf30fab83fc118a6f3210
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48246124"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55558753"
 ---
 # <a name="create-a-common-data-service-for-apps-database"></a>Å opprette en Common Data Service for apper-database
 Du kan opprette en database og utvikle apper ved hjelp av Common Data Service for apper som et datalager. Du kan enten opprette dine egne egendefinerte enheter, eller du kan bruke de forhåndsdefinerte enhetene. Hvis du vil opprette en database, må du først opprette et miljø, eller tilordnes til en eksisterende miljø som **miljøadministrator**. Du må dessuten være tilordnet den riktige lisensen. Hvis du vil ha informasjon om kjøp av et abonnement for å bruke CDS for apper, kan du se [Prisinformasjon](pricing-billing-skus.md).
@@ -45,8 +45,6 @@ Det finnes mange måter å opprette en database på:
     
     ![](./media/create-database/DB-Choose-options.png)
 
-
-
 ## <a name="create-a-database-in-the-entities-pane-of-powerapps"></a>Å opprette en database i Enheter-ruten i PowerApps
 1. Utvid **Data**-delen på [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og trykk eller klikk på **Enheter** i venstre navigasjonsrute.
 
@@ -54,11 +52,8 @@ Det finnes mange måter å opprette en database på:
 
     ![](./media/create-database/Create-DB-From-Entities.png)
 
-> [!NOTE]
-> Det er for øyeblikket ikke mulig å opprette en database utenfor Azure AD-området. Det vil snart være mulig å opprette en database i et annet område enn hjemmeområdet for din Azure AD, men for øyeblikket må du kontrollere at du oppretter en database i et miljø som har samme område som hjemmeområdet som din Azure AD.
-
 ## <a name="security-model-for-the-databases"></a>Sikkerhetsmodell for databasene
-Når databasen er opprettet, fortsetter brukerne som har tilordnet miljøroller å opprettholde disse tillatelsene.  
+Når databasen er opprettet, fortsetter brukerne som har blitt tilordnet miljøroller, å opprettholde disse tillatelsene.  
     Brukere med **Miljøadministrator**-rollen tilordnes nå **Systemadministrator**-rollen. Brukere med **Miljøoppretter** fortsetter med samme rolle.
 
 Du kan tilordne flere brukere til forhåndsangitte roller, eller du kan til og med opprette [egendefinerte roller][1]. Se [Databasesikkerhet](database-security.md) for flere detaljer.

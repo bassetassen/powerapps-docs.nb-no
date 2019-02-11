@@ -5,7 +5,7 @@ author: sabinn-msft
 ms.service: powerapps
 ms.topic: how-to
 ms.component: cds
-ms.date: 10/15/2018
+ms.date: 1/31/2019
 ms.author: sabinn
 search.audienceType:
 - admin
@@ -13,12 +13,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: dfbc420dfb4945cdda635e3cbaadb1acb446753b
-ms.sourcegitcommit: ebd39753e2a0b60c1d8c016e38c00dd1accf5d0c
+ms.openlocfilehash: 8723021a59ca1ecbbdff41ddfa793684fe1ee970
+ms.sourcegitcommit: 47a4218445e5715bc1f7bf7bd8735b2a42c33935
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328698"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55514034"
 ---
 # <a name="integrate-data-into-common-data-service-for-apps"></a>Integrer data i Common Data Service for apper
 
@@ -31,6 +31,9 @@ Vi begynte med førstepartsappene, blant annet Dynamics 365 for Finance and Oper
 > [!div class="mx-imgBorder"]
 > ![Datakilde til mål](media/data-integrator/DataIntegratorP2P-new.PNG "Datakilde til mål")
 
+> [!TIP]
+> Ta en kikk på bloggen: [Oppdateringer for dataintegratoren – nye funksjoner med et intuitivt brukergrensesnitt som gir en smidig opplevelse](https://powerapps.microsoft.com/blog/data-integrator-updates-new-features-with-an-intuitive-user-interface-providing-a-fluent-experience/).
+
 ## <a name="how-can-you-use-the-data-integrator-for-your-business"></a>Hvordan kan du bruke dataintegratoren i bedriften?
 
 Dataintegratoren (for administratorer) støtter også prosessbaserte integreringsscenarioer, for eksempel Kundeemne til kontanter, som gir direkte synkronisering mellom Dynamics 365 for Finance and Operations og Dynamics 365 for Sales. Kundeemne til kontanter-maler som er tilgjengelige med dataintegreringsfunksjonen, muliggjør flyt av data for kontoer, kontakter, produkter, salgstilbud, salgsordrer og salgsfakturaer mellom Finance and Operations og Sales. Når data flyter mellom Finance and Operations og Sales, kan du utføre salgs- og markedsføringsaktiviteter i Sales og håndtere ordrefullføring ved å bruke lagerhåndtering i Finance and Operations. 
@@ -40,7 +43,7 @@ Dataintegratoren (for administratorer) støtter også prosessbaserte integrering
 
 Kundeemne til kontanter-integreringen gir selgere mulighet til å håndtere og overvåke salgsprosesser basert på Dynamics 365 for Sales, mens alle aspekter ved fullføring og fakturering skjer ved hjelp av den omfattende funksjonaliteten i Finance and Operations. Med Kundeemne til kontanter-integrasjonen i Microsoft Dynamics 365 kan du dra nytte av funksjonaliteten i begge systemene. 
 
-Se videoen: [Kundeemne for kontanter-integrasjon](https://www.youtube.com/watch?v=AVV9x5x-XCg)
+Se videoen: [Kundeemne til kontanter-integrering](https://www.youtube.com/watch?v=AVV9x5x-XCg)
 
 Du finner mer informasjon om Kundeemne til kontanter-integrasjonen i dokumentasjonen for [Kundeemne til kontanter-løsningen](https://docs.microsoft.com/en-us/dynamics365/unified-operations/supply-chain/sales-marketing/prospect-to-cash).
 
@@ -73,7 +76,7 @@ Før du kan opprette et dataintegreringsprosjekt, må du klargjøre en tilkoblin
 
 **Slik oppretter du en tilkobling**
 
-1. Gå til [administrasjonssenteret for PowerApps](https://admin.powerapps.com).
+1. Gå til [PowerApps](https://web.powerapps.com).
 
 2. Under Data velger du **Tilkoblinger** og deretter **Ny tilkobling**.
 
@@ -130,6 +133,8 @@ Tilkoblingssettet er klart til bruk i ulike integreringsprosjekter.
 ### <a name="how-to-create-a-data-integration-project"></a>Slik oppretter du et dataintegreringsprosjekt
 
 Prosjekter muliggjør flyt av data mellom systemer. Et prosjekt inneholder tilordninger for en eller flere enheter. Tilordninger angir hvilke felt som er tilordnet hverandre.
+
+<a name="CreateProject">
 
 **Slik oppretter du et dataintegreringsprosjekt**
 
@@ -197,6 +202,10 @@ Kjøringslogg viser loggen over alle prosjektkjøringer med prosjektnavn, tidsst
 
     I begge tilfeller kan du også velge å kjøre på nytt manuelt.
 
+> [!NOTE]
+> Når du utfører et prosjekt, manuelt eller basert på tidsplan, genereres en detaljert logg som viser prosjektnavn, sist oppdatert tidsstempel og status. Du kan vise dette under kjøringsloggen for hvert prosjekt. Kjøringsloggen opprettholdes i 45 dager, og etter dette tømmes den automatisk.
+
+
 ### <a name="how-to-set-up-a-schedule-based-refresh"></a>Slik konfigurerer du en tidsplanbasert oppdatering
 
 Vi støtter for øyeblikket to typer kjørings-og skriveoperasjoner:
@@ -235,6 +244,7 @@ Vær også oppmerksom på at under Varslinger kan du velge å motta varslinger p
 Vi har en ekstra begrensning for prøveversjon-leiere. Et planlagt prosjekt kjører bare de første 50 kjøringene.
 > - Selv om vi støtter at prosjekter skal kjøres hvert minutt, må du huske at dette kan legge mye belastning på appene dine og derfor påvirke den totale ytelsen. Vi oppfordrer brukere til å teste prosjektkjøringer under reelle innlastingsforhold og optimalisere ytelsen ved å bruke færre oppdateringer.
 Vi anbefaler ikke kjøring av mer enn fem prosjekter per minutt, per leier i produksjonsmiljøer.
+> - Når du utfører et prosjekt, manuelt eller basert på en tidsplan, genereres en detaljert logg som viser prosjektnavn, sist oppdatert tidsstempel og status. Du kan vise dette under kjøringsloggen for hvert prosjekt. Kjøringsloggen opprettholdes i 45 dager, og etter dette tømmes den automatisk.
 
 ## <a name="customizing-projects-templates-and-mappings"></a>Tilpasse prosjekter, maler og tilordninger 
 
@@ -266,9 +276,9 @@ Du kan tilpasse prosjekter og maler på følgende måter:
 
 4. Når du har tilpasset felttilordningene, velger du **Lagre**.
 
-### <a name="how-to-customize-or-create-your-own-template"></a>Slik tilpasser eller oppretter du en mal 
+### <a name="how-to-create-your-own-template"></a>Slik oppretter du din egen mal 
 
-**Slik oppretter du din egen mal**
+**Opprett din egen mal ved å endre eksisterende maler**
 
 1. Gå til [administrasjonssenteret for PowerApps](https://admin.powerapps.com).
 
@@ -318,6 +328,51 @@ Du kan tilpasse prosjekter og maler på følgende måter:
 
     > [!div class="mx-imgBorder"] 
     > ![Lagre som mal i maltilpassing](media/data-integrator/CustomizeTemplateSaveAsTemplate175.png "Lagre som mal i maltilpassing")
+
+**Opprett din egen mal fra tomme maler**
+
+1. Gå til [administrasjonssenteret for PowerApps](https://admin.powerapps.com).
+2. Opprett et prosjekt for dataintegrering. Velg fanen **Dataintegrering** i navigasjonsruten til venstre.
+3. Velg **Nytt prosjekt**, og angi et navn for prosjektet. For eksempel Demo_OpprettDinEgenMal.
+4. Velg en generisk tom mal på listesiden **Velg en mal**. 
+   I dette eksemplet kan du velge **Sales to Fin and Ops**-malen, fordi vi ønsker å flytte data fra Dynamics 365 for Finance and Operations til Dynamics 365 for Sales.
+    
+    > [!div class="mx-imgBorder"] 
+    > ![](media/create-data-integration-project.png "Opprett prosjektet for dataintegrering")
+
+4. Følg trinn 6 til 9 <a href="#CreateProject">her</a> for å bli ferdig med å opprette et prosjekt for dataintegrering. Velg **Lagre**.
+
+5. Du får se Oppgaver-siden som er tom fordi det er en tom mal, uten noen aktiviteter. Velg **Legg til oppgave** for å velge en enhet fra rullegardinlisten og legge til en ny oppgave.
+   I dette eksemplet oppretter vi en **Activities Sales to Fin and Ops**-oppgave ved å velge **Aktiviteter**-enheten for Dynamics 365 for Finance and Operations og Dynamics 365 for Sales. Velg **Opprett**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/activities-sales-fin-opps-task.png "ActivitiesSales to Fin and Ops-oppgaven")
+
+6. Du ser at en ny oppgave er lagt til **Activities Sales to Fin and Ops**. Velg **Lagre** for å lagre endringene.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/new-task-added.png "Ny aktivitet er lagt til")
+
+7. Prosjektet er opprettet. Velg **Lagre som mal** fra listesiden **Prosjekter**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/save-as-template.png "Lagre som mal")
+
+8. Angi navn og beskrivelse, og velg deretter **Lagre**. Velg i tillegg **Del med alle i min organisasjon** for å dele denne malen.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/save-describe-share.png "Lagre prosjekt som mal")
+
+Du ser den nylig opprettede malen på listesiden **Maler**.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/newly-created-template.png "Nylig opprettet mal")
+
+I tillegg, når du har opprettet et nytt integreringsprosjekt og du velger **Velg en mal**, ser du den nylig opprettede malen som en del av **Velg en mal**-listen.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/new-data-integration-project.png "Nytt dataintegreringsprosjekt")
+
 
 ## <a name="advanced-data-transformation-and-filtering"></a>Avansert datatransformasjon og filtrering 
 
