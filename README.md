@@ -1,13 +1,13 @@
-# Microsoft PowerApps Documentation
+# <a name="microsoft-powerapps-documentation"></a>Microsoft PowerApps-dokumentasjon
 
-This is the GitHub repository for the technical product documentation for **PowerApps**. This documentation is published to  [https://docs.microsoft.com/powerapps](https://docs.microsoft.com/powerapps).
+Dette er GitHub-repositoriet for teknisk produktdokumentasjon for **PowerApps**. Denne dokumentasjonen er publisert til [https://docs.microsoft.com/powerapps](https://docs.microsoft.com/powerapps).
 
-## How to contribute
+## <a name="how-to-contribute"></a>Hvordan bidrar jeg?
 
-Thanks for your interest in contributing to [Docs.microsoft.com](https://docs.microsoft.com/), home of technical content for Microsoft products and services.
+Takk for din interesse i å bidra til [Docs.microsoft.com](https://docs.microsoft.com/), hjemmesiden for teknisk innhold for Microsoft-produkter og -tjenester.
 
-To learn how to make contributions to the content in this repository, start with our [Docs contributor guide](https://docs.microsoft.com/contribute). If you are a Microsoft employee, please visit the [internal version](https://aka.ms/docsguidescontribute) of this guide.
+Hvis du vil finne ut hvordan du bidrar til innholdet i dette repositoriet, kan du starte med [veiledningen vår for Docs-bidragsytere](https://docs.microsoft.com/contribute). Hvis du er Microsoft-ansatt, kan du gå til den [interne versjonen](https://aka.ms/docsguidescontribute) av denne veiledningen.
 
-## Code of conduct
+## <a name="code-of-conduct"></a>Regler for god oppførsel
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+[Microsofts regler for god oppførsel for åpen kilde](https://opensource.microsoft.com/codeofconduct/) gjelder for dette prosjektet. Hvis du vil ha mer informasjon, kan du se [vanlige spørsmål om regler for god oppførsel](https://opensource.microsoft.com/codeofconduct/faq/) eller kontakte [opencode@microsoft.com](mailto:opencode@microsoft.com) hvis du har flere spørsmål eller kommentarer.
