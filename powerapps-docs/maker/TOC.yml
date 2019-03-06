@@ -996,7 +996,9 @@ items:
       href: ./common-data-service/types-of-fields.md
     - name: Oversikt over globalt alternativsett
       href: ./common-data-service/create-edit-global-option-sets.md
-    - name: Angi forvaltede egenskaper for felt
+    - name: Autonummerering-felter
+      href: ./common-data-service/autonumber-fields.md
+    - name: Angi forvaltede egenskaper for felter
       href: ./common-data-service/set-managed-properties-for-field.md
     - name: Virkemåte og format for feltet Dato og klokkeslett
       href: ./common-data-service/behavior-format-date-time-field.md
@@ -1085,9 +1087,9 @@ items:
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Støtte
     href: https://powerapps.microsoft.com/support/
-ms.openlocfilehash: 2929b204a848be70cb5090b11b7a96810575895a
-ms.sourcegitcommit: 9aa51b88a4fff42a280b31555593d3557ffcc2b9
+ms.openlocfilehash: b5099d5d213d5b365724ae48b862067814c70a41
+ms.sourcegitcommit: 636bf6a8e8ff0e594c77ac04355d6de22baa5e79
 ms.translationtype: HT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 03/04/2019
-ms.locfileid: "57252227"
+ms.locfileid: "57326902"
