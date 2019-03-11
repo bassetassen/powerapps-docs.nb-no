@@ -6,15 +6,15 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: ''
-ms.date: 12/21/2018
+ms.date: 02/28/2019
 ms.author: kvivek
 ms.reviewer: kvivek
-ms.openlocfilehash: 4000a9c60410a8ea2e4f1205d8ca815d67976d23
-ms.sourcegitcommit: 4a27a2fa3d06296c88cd85c638dc075f7ed6f1f9
+ms.openlocfilehash: 3a314ee6fabc5d3891a19610bfc4cf8aebdd6dcf
+ms.sourcegitcommit: edd4b1029b7085bb3849d87b0c94e0d8cb5758aa
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54099651"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251551"
 ---
 # <a name="what-is-powerapps"></a>Hva er PowerApps?
 
@@ -26,7 +26,7 @@ PowerApps tilbyr også en utvidbar plattform hvor profesjonelle utviklere kan pr
 
 ## <a name="powerapps-for-app-makerscreators"></a>PowerApps for appopprettere/-utviklere
 
-Du kan opprette to typer apper i PowerApps: **lerret** og **modelldrevet**. Mer informasjon: [Oversikt over oppretting av apper i PowerApps](maker/index.md).
+Med PowerApps kan du opprette to typer apper: **lerretsapper** og **modelldrevne apper**. Mer informasjon: [Oversikt over oppretting av apper i PowerApps](maker/index.md).
 
 Hvis du vil opprette en app, starter du med [web.powerapps.com](https://web.powerapps.com).
 
@@ -42,9 +42,11 @@ Du kan kjøre apper som du har opprettet, eller som noen andre har opprettet og 
 
 PowerApps-administratorer kan bruke:
 
-- **Administrasjonssenteret for PowerApps** ([admin.powerapps.com](https://admin.powerapps.com)) til å opprette og administrere miljøer, brukere, roller og policyer for hindring av datatap. Mer informasjon: [Administrer PowerApps](administrator/admin-guide.md)
+- **Administrasjonssenteret for PowerApps** ([admin.powerapps.com](https://admin.powerapps.com)) til å opprette og administrere miljøer, brukere, roller og policyer for hindring av datatap. 
 
-- **Administrasjonssenteret for Power-plattform** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) til å administrere miljøer, få anbefalinger for selvhjelp i sanntid og støtte for Dynamics 365 for Customer Engagement-apper, PowerApps og Microsoft Flow, og vise CDS for Apps-analyser. Mer informasjon: [Administrer Power-plattform](https://docs.microsoft.com/power-platform/admin/admin-guide)
+- **Administrasjonssenteret for Power-plattform** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) til å administrere miljøer, få anbefalinger for selvhjelp i sanntid og støtte for Dynamics 365 for Customer Engagement-apper, PowerApps og Microsoft Flow og til å vise CDS for Apps-analyser. 
+
+Mer informasjon: [Administrer PowerApps](/power-platform/admin/admin-guide)
 
 ## <a name="powerapps-for-developers"></a>PowerApps for utviklere
 
