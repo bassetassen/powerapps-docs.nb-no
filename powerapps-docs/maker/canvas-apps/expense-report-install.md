@@ -1,30 +1,30 @@
 ---
 title: Installer og konfigurer utgiftsrapporteksemplet for lerretsapper | Microsoft Docs
 description: Trinnvise instruksjoner for installering og konfigurering av utgiftsrapporteksemplet for lerretsapper i PowerApps.
-author: caburk
+author: mr-dang-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
-ms.author: caburk
+ms.author: brdang
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 43d1dc6ef2d264dd60b6a9f3de0f5c0fed633283
-ms.sourcegitcommit: d3d665500b9c49c14657d044b084bdd64c52c5a3
+ms.openlocfilehash: 2cfad6a3cadbd2154e582163dc4f55ee6d010b96
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44124479"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072748"
 ---
 # <a name="install-and-configure-the-expense-report-sample-for-canvas-apps-in-powerapps"></a>Installer og konfigurer utgiftsrapporteksemplet for lerretsapper i PowerApps
 
 Trinnvise instruksjoner for installering og konfigurering av utgiftsrapporteksemplet. Du kan også forhåndsvise eksempelappen [her](https://aka.ms/previewmyexpenses).
 
-Estimert tid for å fullføre disse trinnene: **10 til 15 minutter**
+Estimert tid det tar å fullføre disse trinnene: **10–15 minutter**
 
 > [!TIP]
 > Se [denne videoen](https://youtu.be/kJXZPILfbwU) for en demonstrasjon av hvordan du bruker eksempelappen for utgiftsrapport. 

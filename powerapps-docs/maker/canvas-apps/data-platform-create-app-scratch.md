@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 710df8899fa11e46a83e4ba670c4081b04fa7bde
-ms.sourcegitcommit: c1f58a16f8dcd309a1d5fc4658ca16d82c615994
+ms.openlocfilehash: dab8caea5679701735685a5c4383c77cd7ed44f6
+ms.sourcegitcommit: 452d4ead948591d16aff144006ad84c957eba837
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "51333971"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091227"
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service-for-apps"></a>Opprett en lerretsapp fra grunnen av ved hjelp av Common Data Service for apper
 
@@ -30,8 +30,9 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 - Før du oppretter appen fra grunnen av, må du gjøre deg selv kjent med det grunnleggende om PowerApps ved å [generere en app](data-platform-create-app.md), og deretter egendefinere appens [galleri](customize-layout-sharepoint.md), [skjemaer](customize-forms-sharepoint.md) og [kort](customize-card.md).
 - [Bytt til et miljø](working-with-environments.md) der databasen ble opprettet med eksempeldata. Hvis du har en gyldig lisense, kan du [opprette et miljø](../../administrator/create-environment.md) for å oppfylle dette behovet.
+- Hvis du vil opprette en app, må du være tilordnet sikkerhetsrollen [Miljøoppretter](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles).
 
-## <a name="open-a-blank-app"></a>Slik åpner man en tom app
+## <a name="open-a-blank-app"></a>Å åpne en tom app
 
 1. Logg deg på [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
@@ -94,7 +95,7 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 1. Klikk eller trykk på **Kontoer** på **Egenskaper**-fanen i den høyre ruten for å åpne **Data**-ruten, og merk deretter av for disse feltene:
 
     - Kontonavn
-    - Adresse 1: Gate 1
+    - Adresse 1: Gateadresse 1
     - Adresse 1: Poststed
     - Adresse 1: Postnummer
     - Antall ansatte
