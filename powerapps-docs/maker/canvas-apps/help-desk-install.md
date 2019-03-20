@@ -1,30 +1,30 @@
 ---
 title: Installer og konfigurer brukerstøtteeksemplet for lerretsapper | Microsoft Docs
 description: Trinnvise instruksjoner for installering og konfigurering av brukerstøtteeksemplet for lerretsapper i PowerApps.
-author: caburk
+author: mr-dang-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
-ms.author: caburk
+ms.author: brdang
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3945bc2e164d9fa88ee122910d3e15371b9e239e
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 1be6055a2b8f42d8d4194653417313b29ab5610d
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834628"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799851"
 ---
 # <a name="install-and-configure-the-help-desk-sample-in-powerapps"></a>Installer og konfigurer brukerstøtteeksemplet i PowerApps
 
 Trinnvise instruksjoner for installering og konfigurering av brukerstøtteeksemplet for lerretsapper i PowerApps.
 
-Estimert tid for å fullføre disse trinnene: **10 til 15 minutter**
+Estimert tid det tar å fullføre disse trinnene: **10–15 minutter**
 
 > [!TIP]
 > Hvis du vil se en demonstrasjon av prosessen, kan du ta en titt på denne [videoen](https://youtu.be/z4cdtD6hB_4).

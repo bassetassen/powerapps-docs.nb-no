@@ -1,32 +1,32 @@
 ---
 title: Å konfigurere lister for SharePoint Online-integrasjon med PowerApps, Microsoft Flow og Power BI | Microsoft Docs
 description: I denne oppgaven vil vi konfigurere SharePoint-lister, som skal brukes som en datakilde for apper, flyter, rapporter og instrumentbord.
-author: mgblythe
+author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 12/19/2017
-ms.author: mblythe
+ms.author: niwaggon
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9e1694a3190740c788eb9cd53de1187ed32d0fbc
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 7be4a0574c1a81684188eaede4b6e80b02e7b7cc
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833324"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799184"
 ---
 # <a name="set-up-lists-for-sharepoint-online-integration-with-powerapps-microsoft-flow-and-power-bi"></a>Å konfigurere lister for SharePoint Online-integrasjon med PowerApps, Microsoft Flow og Power BI
 > [!NOTE]
-> Denne artikkelen er en del av en opplæringsserie om hvordan du bruker PowerApps, Microsoft Flow og Power BI, med SharePoint Online. Kontroller at du leser [Serie-innføringen](sharepoint-scenario-intro.md), for å få en følelse av det store bildet, i tillegg til relaterte nedlastinger.
+> Denne artikkelen er en del av en opplæringsserie om hvordan du bruker PowerApps, Microsoft Flow og Power BI, med SharePoint Online. Sørg for å lese [innføringen for serien](sharepoint-scenario-intro.md) for å få forståelse av det store bildet, i tillegg til relaterte nedlastinger.
 
-SharePoint har massevis av funksjoner for deling og samarbeid, men vi fokuserer på én funksjon for dette scenariet: [SharePoint-lister](https://support.office.com/article/Introduction-to-lists-0A1C3ACE-DEF0-44AF-B225-CFA8D92C52D7). En liste er bare en samling av data som du kan dele med gruppemedlemmer og andre områdebrukere. Vil vi gå gjennom lister som brukes i dette scenarioet, og deretter kan du opprette dem i ditt eget SharePoint Online-område.
+SharePoint har massevis av funksjoner for deling og samarbeid, men vi fokuserer på én funksjon for dette scenarioet: [SharePoint-lister](https://support.office.com/article/Introduction-to-lists-0A1C3ACE-DEF0-44AF-B225-CFA8D92C52D7). En liste er bare en samling av data som du kan dele med gruppemedlemmer og andre områdebrukere. Vil vi gå gjennom lister som brukes i dette scenarioet, og deretter kan du opprette dem i ditt eget SharePoint Online-område.
 
-## <a name="step-1-understand-the-lists"></a>Trinn 1: Forståelse av listene
+## <a name="step-1-understand-the-lists"></a>Trinn 1: Forstå listene
 Den første listen er **Prosjektforespørsler**, der en prosjektanmoder legger til en forespørsel. Prosjektgodkjenneren vurderer forespørselen og godkjenner, eller avviser den.
 
 | **Listekolonne** | **Datatype** | **Notater** |
@@ -34,7 +34,7 @@ Den første listen er **Prosjektforespørsler**, der en prosjektanmoder legger t
 | Tittel |Enkelt linje med tekst |Standardkolonnen, brukt til prosjektnavn |
 | Beskrivelse |Enkeltlinje med tekst | |
 | ProjectType |Enkelt linje med tekst |Verdier: ny maskinvare, oppgradert maskinvare, ny programvare, oppgradert programvare |
-| RequestDate |Dato | |
+| RequestDate |Date | |
 | Anmoder |Enkelt linje med tekst | |
 | EstimatedDays |Tall |Aktiverer sammenligning av anmoderens estimat, med prosjektlederens estimatet til faktisk |
 | Godkjent |Enkelt linje med tekst |Verdier: venter, ja, ingen |
@@ -48,15 +48,15 @@ Den andre listen er **Prosjektdetaljer**, som sporer detaljer for alle godkjente
 | --- | --- | --- |
 | Tittel |Enkelt linje med tekst |Standardkolonnen, brukt til prosjektnavn |
 | RequestID |Tall |Samsvarer med verdien i **ID**-kolonnen i **Prosjektforespørsler**-listen |
-| ApprovedDate |Dato | |
+| ApprovedDate |Date | |
 | Status |Enkeltlinje med tekst |Verdier: ikke startet, pågår, fullført |
-| ProjectedStartDate |Dato |Når prosjektlederen estimerer at prosjektet skal starte |
-| ProjectedEndDate |Dato |Når prosjektlederen estimerer at prosjektet skal avsluttes |
+| ProjectedStartDate |Date |Når prosjektlederen estimerer at prosjektet skal starte |
+| ProjectedEndDate |Date |Når prosjektlederen estimerer at prosjektet skal avsluttes |
 | ProjectedDays |Tall |Arbeidsdager – vil vanligvis bli beregnet, men er ikke det i dette scenarioet |
 | ActualDays |Tall |For fullførte prosjekter |
 | PMAssigned |Enkelt linje med tekst |Prosjektleder |
 
-## <a name="step-2-create-and-review-the-lists"></a>Trinn 2: Å opprette og se gjennom lister
+## <a name="step-2-create-and-review-the-lists"></a>Trinn 2: Opprette og se gjennom lister
 Hvis du vil fortsette med scenarioet, må du opprette de to SharePoint-listene og fylle dem med eksempeldata. Vi viser deg hvordan du gjør dette ved å opprette listen og lime inn eksempeldata i den. Kontroller at du har Excel-filer fra [Nedlastingspakken](https://aka.ms/o4ia0f).
 
 > [!NOTE]
@@ -105,9 +105,9 @@ Hvis du vil fortsette med scenarioet, må du opprette de to SharePoint-listene o
 4. Kopiere dataene og lim det inn i rutenettet i SharePoint, og klikk eller trykk deretter på **Fullført**.
    
     ![Fullført liste med data](./media/sharepoint-scenario-setup/01-01-09-full-grid.png)
-5. Gjenta listeopprettingen og kopier prosessen for listen for «prosjektdetaljer», ved hjelp av project-details.xlsx-arbeidsboken. Referer til tabellen for prosjektdetaljer i [Trinn 1: Å forstå listene](#step-1-understand-the-lists) for kolonnenavnene og datatypene.
+5. Gjenta listeopprettingen og kopier prosessen for listen for «prosjektdetaljer», ved hjelp av project-details.xlsx-arbeidsboken. Referer til tabellen for Prosjektdetaljer i [trinn 1: Forstå listene](#step-1-understand-the-lists) for kolonnenavnene og datatypene.
 
-## <a name="step-3-update-connections-to-samples---optional"></a>Trinn 3: Oppdatering av tilkoblinger til eksempler – valgfritt
+## <a name="step-3-update-connections-to-samples---optional"></a>Trinn 3: Oppdatere tilkoblinger til eksempler – valgfritt
 Som nevnt i innføringen til denne opplæringsserien, inkluderte vi to eksempelapper og en rapport i [Nedlastingspakken](https://aka.ms/o4ia0f). Du kan fullføre dette scenarioet uten å bruke disse eksemplene, men hvis du vil bruke eksemplene, må du oppdatere tilkoblingene til SharePoint-listene. Du oppdatere dem slik at de bruker *dine* lister som en datakilde, i stedet for våre.
 
 ### <a name="update-connections-for-the-sample-apps"></a>Å oppdatere tilkoblinger for eksempelappene

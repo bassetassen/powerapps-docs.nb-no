@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 278560c1ececafd6d4c57945d6058879cf55170f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: ad3b8efc2306540862d0470223cee4f46fb5703c
+ms.sourcegitcommit: 50404720bed371bbc93feb08d296c954ef8038e1
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42858317"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031358"
 ---
 # <a name="combo-box-control-in-powerapps"></a>Kombinasjonsbokskontroll i PowerApps
 En kontroll som gjør det mulig for brukere å foreta valg ut ifra angitte valgmuligheter.  Støtter søk og flervalg.
@@ -36,7 +36,7 @@ For å bruke **Kombinasjonsboks** som personvelger, velger du **Person**-malen i
 ## <a name="key-properties"></a>Nøkkelegenskaper
 **[Elementer](properties-core.md)** – datakilden det kan foretas valg ut ifra.
 
-**DefaultItems** – de opprinnelig valgte elementene før brukeren tar i bruk kontrollen.
+**DefaultSelectedItems** – opprinnelig valgte elementene før brukeren samhandler med kontrollen.
 
 **SelectedItems** – listen over valgte elementer som resultat av brukermedvirkning.
 
@@ -53,9 +53,7 @@ For å bruke **Kombinasjonsboks** som personvelger, velger du **Person**-malen i
 
 **[BorderStyle](properties-color-border.md)** – om kontrollens kantlinje er satt til **Heltrukket**, **Stiplet**, **Prikket** eller **Ingen**.
 
-**[BorderThickness](properties-color-border.md)**  – tykkelsen på kontrollens kantlinje.
-
-**[Standard](properties-core.md)** – det opprinnelige valget før det endres av en bruker i enkeltvalgmodus.
+**[BorderThickness](properties-color-border.md)** – tykkelsen til kontrollens kantlinje.
 
 **DisplayFields** – liste over felt som vises for hvert element som returneres av søket.  Enklest å konfigurere via Data-ruten i Alternativer for Egenskaper-fanen.
 

@@ -1,24 +1,24 @@
 ---
 title: Opprett en lerretsapp for å administrere prosjekter | Microsoft Docs
 description: I denne oppgaven skal vi opprette en lerretsapp fra grunnen av. Denne appen lar en bruker tilordne en leder til prosjekter og oppdatere prosjektdetaljer.
-author: mgblythe
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/12/2017
-ms.author: mblythe
+ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6b55fe94e7d781147e3e3511769c4d72ca3d90de
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 5125299c969db635a9e260ea7bac28f6a6e02bc0
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42842375"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799897"
 ---
 # <a name="create-a-canvas-app-to-manage-projects"></a>Opprett en lerretsapp for å administrere prosjekter
 > [!NOTE]
@@ -41,7 +41,7 @@ PowerApps Studio har tre ruter og ett bånd, noe som gjør at opplevelsen av app
 
 ![PowerApps Studio](./media/sharepoint-scenario-build-app/04-00-00-powerapps-studio.png)
 
-## <a name="step-1-create-screens"></a>Trinn 1: Å opprette skjermer
+## <a name="step-1-create-screens"></a>Trinn 1: Opprette skjermer
 Med denne gjennomgangen ute av veien kan vi nå begynne å utforme en app.
 
 ### <a name="create-and-save-the-app"></a>Å opprette og lagre appen
@@ -86,7 +86,7 @@ Appen skal nå se ut som på følgende bilde.
 
 ![Alle app-skjermer](./media/sharepoint-scenario-build-app/04-01-05-all-screens.png)
 
-## <a name="step-2-connect-to-a-sharepoint-list"></a>Trinn 2: Å koble til en SharePoint-liste
+## <a name="step-2-connect-to-a-sharepoint-list"></a>Trinn 2: Koble til en SharePoint-liste
 I dette trinnet kobler vi til **Produktdetaljer**-listen for SharePoint. Vi bruker bare én liste i denne appen, men du kan enkelt koble til begge hvis du vil utvide appen.
 
 1. Klikk eller trykk på **SelectTask** i venstre navigasjonsfelt.
@@ -113,7 +113,7 @@ I dette trinnet kobler vi til **Produktdetaljer**-listen for SharePoint. Vi bruk
    
     ![Datakilder-fane](./media/sharepoint-scenario-build-app/04-02-06-data-sources.png)
 
-## <a name="step-3-build-the-selecttask-screen"></a>Trinn 3: Å opprette skjermen SelectTask
+## <a name="step-3-build-the-selecttask-screen"></a>Trinn 3: Skjermen SelectTask
 I dette trinnet viser vi en fremgangsmåte for å navigere til de andre skjermene i appen og for å arbeide med noen av kontrollene, formlene og formateringsalternativene som tilbys i PowerApps.
 
 ### <a name="update-the-title-and-insert-introductory-text"></a>Å oppdatere tittelen og sette inn innledende tekst
@@ -291,7 +291,7 @@ I dette trinnet bruker vi et galleri for å vise alle prosjekter som har blitt g
    
    * **Høyde**-egenskapen = **60**
 
-   * **OnSelect**-egenskapen = **Patch('Project Details', LookUp('Project Details', ID = Gallery1.Selected.ID), {PMAssigned: TextInput1.Text})**. Hvis du vil ha mer informasjon, kan du se [Grundig innføring i formler](#formula-deep-dive).
+   * **OnSelect** egenskapen = **Patch ('Project Details', LookUp ('Project Details', ID = Gallery1.Selected.ID), {PMAssigned: TextInput1.Text})**. Hvis du vil ha mer informasjon, kan du se [Grundig innføring i formler](#formula-deep-dive).
 
    * Formelen oppdaterer **Prosjektdetaljer**-listen og angir en verdi for feltet PMAssigned.
 
@@ -307,7 +307,7 @@ Det fullførte skjermbildet skal nå se ut som på følgende bilde.
 
 ![Ferdig med Tilordne leder-skjermen](./media/sharepoint-scenario-build-app/04-04-12-complete.png)
 
-## <a name="step-5-build-the-viewprojects-screen"></a>Trinn 5: Å bygge ViewProjects-skjermen
+## <a name="step-5-build-the-viewprojects-screen"></a>Trinn 5: Bygge ViewProjects-skjermen
 I dette trinnet skal vi endre egenskaper for galleriet på **ViewProjects**-skjermen. Dette galleriet viser elementer fra **Prosjektdetaljer**-listen. Du velger et element på denne skjermen, og deretter redigerer du detaljene på **UpdateDetails**-skjermen.
 
 1. Klikk eller trykk på **ViewProjects** i venstre navigasjonsfelt.
@@ -364,7 +364,7 @@ I dette trinnet skal vi endre egenskaper for galleriet på **ViewProjects**-skje
      
      ![Vis ferdig Prosjekt-skjerm](./media/sharepoint-scenario-build-app/04-05-07-viewprojects-final.png)
 
-## <a name="step-6-build-the-updatedetails-screen"></a>Trinn 6: Å opprette skjermen UpdateDetails
+## <a name="step-6-build-the-updatedetails-screen"></a>Trinn 6: Skjermen UpdateDetails
 I dette trinnet skal vi koble redigeringsskjemaet på **UpdateDetails**-skjermen til datakilden, og vi vil gjøre noen endringer for egenskaper og felt. På denne skjermen kan du redigere detaljer for et prosjekt som du har valgt på **Vis prosjekter**-skjermen.
 
 1. Klikk eller trykk på **UpdateDetails** i det venstre navigasjonsfeltet.
@@ -496,7 +496,7 @@ Nå som vi har appen på SharePoint-området, skal vi finne en rolle for godkjen
 ## <a name="formula-deep-dive"></a>Grundig innføring i formler
 Dette er den andre valgfrie inndelingen i PowerApps-formler. I den første grundige innføringen så vi på én av formlene som PowerApps genererer for Bla gjennom-galleriet i en app med tre skjermer. I denne grundige innføringen skal vi se på en formel vi bruker for **AssignManager**-skjermen for den andre appen. Her er formelen:
 
-**Patch ( 'Project Details', LookUp ( 'Project Details', ID = Gallery1.Selected.ID ), {PMAssigned: TextInput1.Text} )**
+**Patch ('Project Details', LookUp ('Project Details', ID = Gallery1.Selected.ID), {PMAssigned: TextInput1.Text})**
 
 Hva gjør denne formelen? Når du velger et element i galleriet og klikker på **OK**-knappen, oppdaterer formelen **Prosjektdetaljer**-listen og angir **PMAssigned**-kolonnen til verdien som du angir i teksten. Formelen bruker funksjoner:
 

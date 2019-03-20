@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6625df3f822462c86de1f720b7a310f5e516a6ca
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 25cae936ace1dcd3108f11271e3fe38cb41ae2e7
+ms.sourcegitcommit: 55c6af2f767e90c999eea4d29589c1fe19dfc4db
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42849875"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443739"
 ---
 # <a name="calendar-and-clock-functions-in-powerapps"></a>Funksjonene Calendar og Clock i PowerApps
 Henter informasjon om gjeldende nasjonale innstillinger for kalender og klokke.
@@ -66,11 +66,11 @@ I USA, der **[Language](function-language.md)** returnerer «en-US», returnerer
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Calendar.MonthsLong()** |Returverdien inneholder det fullstendige navnet for hver måned, begynner med «januar». |[ «januar», «februar», «mars», «april», «mai», «juni», «juli», «august», «september», «oktober», «november», «desember» ] |
-| **Calendar.MonthsShort()** |Returverdien inneholder det forkortede navnet for hver måned, begynner med «jan». |[ «jan», «feb», «mars», «apr», «mai», «juni», «juli», «aug», «sep», «okt», «nov», «des» ] |
-| **Calendar.WeekdaysLong()** |Returverdien inneholder det fullstendige navnet på hver ukedag, begynner med «søndag». |[ «søndag», «mandag», «tirsdag», «onsdag», «torsdag», «fredag», «lørdag» ] |
-| **Calendar.WeekdaysShort()** |Returverdien inneholder det forkortede navnet for hver ukedag, begynner med «søn». |[ «søn», «man», «tir», «ons», «tor», «fre», «lør» ] |
-| **Clock.AmPm()** |Dette språket bruker en 12-timers klokke.  Den returnerte verdien inneholder den fullstendige angivelsen med store bokstaver, «AM» og «PM». |[ «AM», «PM» ] |
-| **Clock.AmPmShort()** |Dette språket bruker en 12-timers klokke.  Den returnerte verdien inneholder den forkortede angivelsen med store bokstaver, «AM» og «PM». |[ «A», «P» ] |
+| **Calendar.MonthsLong()** |Returverdien inneholder det fullstendige navnet på hver måned, begynner med «Januar». |[ «januar», «februar», «mars», «april», «mai», «juni», «juli», «august», «september», «oktober», «november», «desember» ] |
+| **Calendar.MonthsShort()** |Returverdien inneholder det forkortede navnet for hver måned, begynner med «Januar». |[ «jan», «feb», «mars», «apr», «mai», «juni», «juli», «aug», «sep», «okt», «nov», «des» ] |
+| **Calendar.WeekdaysLong()** |Returverdien inneholder det fullstendige navnet på hver dag, begynner med «Søndag». |[ «søndag», «mandag», «tirsdag», «onsdag», «torsdag», «fredag», «lørdag» ] |
+| **Calendar.WeekdaysShort()** |Returverdien inneholder det forkortede navnet for hver dag, begynner med «Søndag». |[ «søn», «man», «tir», «ons», «tor», «fre», «lør» ] |
+| **Clock.AmPm()** |Dette språket bruker en 12-timers klokke. Den returnerte verdien inneholder den fullstendige angivelsen med store bokstaver, «AM» og «PM». |[ «AM», «PM» ] |
+| **Clock.AmPmShort()** |Dette språket bruker en 12-timers klokke. Den returnerte verdien inneholder den forkortede angivelsen med store bokstaver, «AM» og «PM». |[ «A», «P» ] |
 | **Clock.IsClock24()** |Dette språket bruker en 12-timers klokke. |**usann** |
 

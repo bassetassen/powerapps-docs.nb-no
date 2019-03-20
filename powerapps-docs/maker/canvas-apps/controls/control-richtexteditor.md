@@ -13,15 +13,15 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e469cc3769c8deeb5046dc79f34b9ae42788b2d2
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 99c07c0561b4942e6cbbd49fa5c498d90b502d7e
+ms.sourcegitcommit: 957d67e13bd4153d042b3b3bd650f6d0de20613c
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865178"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58073287"
 ---
-# <a name="rich-text-editor-control-experimental-in-powerapps"></a>Redigeringskontrollen for rik tekst (eksperimentell) i PowerApps
-En eksperimentell kontroll som gjør at sluttbrukere kan formatere teksten i et WYSIWYG-redigeringsområde.  Utdataformatet er HTML.
+# <a name="rich-text-editor-control-in-powerapps"></a>Redigeringskontrollen for rik tekst i PowerApps
+Gjør at sluttbrukere kan formatere tekst i et WYSIWYG-redigeringsområde.  Utdataformatet er HTML.
 
 ## <a name="description"></a>Beskrivelse
 Kontrollen for **redigeringsprogrammet for rik tekst** gir appbrukeren et WYSIWYG-redigeringsområde for formatering av tekst.  Kontrollens inn- og utdataformat er HTML.
@@ -40,20 +40,10 @@ Støttede funksjoner inkluderer for øyeblikket:
 
 Hvis du vil bruke kontrollen i et skjema, velger du kortet «Rediger flerlinjet tekst», og tilpasser den ved å sette inn RTE-kontrollen.
 
-## <a name="limitations"></a>Begrensninger
-Den gjeldende versjonen av kontrollen er eksperimentell på grunn av følgende midlertidige begrensninger:
-- Kontrollen har begrensede funksjoner for formatering av tekst.  
-
-- Kontrollen er hovedsakelig beregnet for bruk i nettlesere på store skjermer.  Å bruke kontrollen på en mobiltelefon kan det være en frustrerende opplevelse.
-
-- Kjente problemer i redigeringsopplevelsen når du bruker Windows Studio- eller Microsoft Edge-nettleseren.  Gjeldende anbefaling er å bruke web studio i Chrome.
-
-
 ## <a name="key-properties"></a>Nøkkelegenskaper
 **[Standard](properties-core.md)** – inndata-egenskapen for den første tekstverdien vises i redigeringsprogrammet.
 
 **HtmlText** – utdata-egenskapen for den resulterende for rike teksten i HTML-format.
-
 
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper

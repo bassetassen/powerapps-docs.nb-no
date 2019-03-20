@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 43d623daecb609fbe3d4e593a7e15f95051871e9
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: b6bff4d0f9586f94e4d0da133197fcb7f78c765d
+ms.sourcegitcommit: 826bde1eab3dd32d7bf9fa3f43ea069694845597
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42836422"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "57800265"
 ---
 # <a name="understand-data-form-layout-for-canvas-apps-in-powerapps"></a>Slik fungerer oppsett for dataskjemaer for lerretsapper i PowerApps
 
@@ -32,20 +32,20 @@ I denne opplæringen går vi gjennom trinnene for å opprette dette skjemaet. Vi
 
 Hvis PowerApps er nytt for deg (eller du bare har generert apper automatisk), må du [bygge en app fra grunnen av](get-started-create-from-blank.md) før du fordyper deg i dette emnet. Ved å bygge en app fra grunnen av blir du kjent med nødvendige konsepter, for eksempel å legge til datakilder og kontroller, som er nevnt, men som ikke er beskrevet i dette emnet.
 
+Dette emnet er skrevet som om du har en kilde som heter **salgsordre** og som inneholder feltene i den forrige grafikken. Hvis du har en PowerApps Plan 2-lisens eller en [lisensen for prøveversjonen](../signup-for-powerapps.md) og systemansvarlig eller Systemtilpasser systemtillatelser, kan du [oppretter en enhet](../common-data-service/data-platform-create-entity.md) i Common Data Service (CDS) for apper og legge til lignende felt. 
+
 ## <a name="add-a-gallery"></a>Å legge til et galleri
 
-1. Opprett en nettbrettapp fra grunnen av.
+1. Opprett en nettbrettapp fra grunnen av, og Legg til datakilden.
 
     Alt som beskrives i dette emnet gjelder også for telefonoppsett, men telefonapper har ofte bare én loddrett kolonne.
-2. Legg til **Salgsordre**-enheten i [Common Data Service-](../common-data-service/data-platform-intro.md) som en datakilde for appen.
-
-    Du kan bruke alle datakilder, inkludert SharePoint-lister og Excel-tabeller utenfor denne opplæringen.
-3. Legg til en loddrett **Galleri**-kontroll, og angi **Element**-egenskapen til **Salgsordre**.
+    
+2. Legg til en loddrett **Galleri**-kontroll, og angi **Element**-egenskapen til **Salgsordre**.
    
     (valgfritt) Endre **Oppsett** i galleriet til å vise bare **Tittel og undertittel** for å samsvare med eksemplene i denne opplæringen.
    
     ![Liste for salgsordre](./media/working-with-form-layout/gallery-layout.png)
-4. Klikk eller trykk på **SO004** i galleriet.
+3. Klikk eller trykk på **SO004** i galleriet.
    
     ![Liste for salgsordre](./media/working-with-form-layout/sales-order-gallery-screen.png)
    
@@ -195,8 +195,8 @@ For å summere: hva er forskjellene når **Fest til kolonner** er på eller av?
 | Virkemåte | Fest til kolonner på | Fest til kolonner av |
 | --- | --- | --- |
 | Endring av størrelse på festing |Antall kolonner som du velger:<br>1, 2, 3, 4, 6, eller 12 |12 kolonner |
-| Endring av størrelse på festing kan ikke overstyres |Nei |Ja, ved bruk av ALT |
-| Kort lager automatisk nye oppsett mellom rader (mer om dette senere) |Ja |Nei |
+| Endring av størrelse på festing kan ikke overstyres |nei |Ja, ved bruk av ALT |
+| Kort lager automatisk nye oppsett mellom rader (mer om dette senere) |ja |nei |
 
 ## <a name="set-width-and-height"></a>Å angi bredde og høyde
 Utformingen styres av egenskaper i kortkontrollene, i likhet med alt annet i PowerApps. Du kan endre verdiene for disse egenskapene som allerede beskrevet ved å dra kontrollene til forskjellige plasseringer, eller å dra i håndtakene for å endre størrelsen på kontroller. Men du vil oppdage situasjoner der du vil forstå og endre disse egenskapene mer nøyaktig, spesielt når du vil gjøre skjemaene dynamiske med formler.
@@ -204,7 +204,7 @@ Utformingen styres av egenskaper i kortkontrollene, i likhet med alt annet i Pow
 ### <a name="basic-layout-x-y-and-width"></a>Grunnleggende oppsett: X, Y og bredde
 **X**- og **Y**-egenskaper kontrollerer plasseringen av kortene. Når vi arbeider med kontroller på arbeidssonen, vil disse egenskapene gi en absolutt plassering. Disse egenskapene har en annen betydning i et skjema:
 
-* **X**: Rekkefølge i en rad.
+* **X**: Bestill i en rad.
 * **Y**: Radnummer.
 
 **Bredde**-egenskapen angir minimumsbredden på kortet (mer om minimumsaspektet om et øyeblikk), i likhet med kontroller på lerretet.

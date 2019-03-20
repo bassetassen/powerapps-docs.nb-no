@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 934ab9bddfb429ae3ed96706420af002a87697fb
-ms.sourcegitcommit: 87122dba00b4177ef736d87ecdde79581649ba42
-ms.translationtype: HT
+ms.openlocfilehash: 32b8ee57869ea733050c3f23f9c9e81f60e3d78d
+ms.sourcegitcommit: 66fd1129ad25b72556f11a08350ba95f2ba060dd
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44499526"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57804382"
 ---
 # <a name="timer-control-in-powerapps"></a>Tidtaker-kontrollen i PowerApps
 En kontroll som kan finne ut hvordan appen responderer etter en viss tid har passert.
@@ -66,7 +66,7 @@ Vær oppmerksom på at du må forhåndsvise appen for at tidtakeren kan kjøre i
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
+**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -169,3 +169,6 @@ Noen scenarioer er fritatt fra disse kravene. Finn ut mer i [WCAG 2.0-retningsli
   > Skjermlesere leser opp hvor lang tid som er brukt hvert 5. sekund. Tidtakeren **[Tekst](properties-core.md)** vil imidlertid ikke bli inkludert i opplesingen.
 
 * Vurder å legge til en **[Etikett](control-text-box.md)** for å vise hvor lang tid som er brukt. Bruk tidtakerens **[Tekst](properties-core.md)** for å instruere brukeren om å starte eller stoppe tidtakeren.
+
+### <a name="support-in-powerapps-studio"></a>Støtte i PowerApps Studio
+Når du bygger en app, er tidtakere deaktivert for å hindre at hendelser fra å utløse. Du kan teste tidtakere i PowerApps Studio Hvis du åpne forhåndsvisning, eller du kan lagre appen og test dem i PowerApps Mobile eller web spilleren.

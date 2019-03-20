@@ -13,25 +13,25 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 30d3378f46e587e45314c30be1fce3c36b2bb120
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 9956332c35b4df2773b2634cb7f66d2ea96469e4
+ms.sourcegitcommit: 1b8578e38a09220ac66c5123644714139fc3c9e5
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833001"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "57800449"
 ---
 # <a name="encodeurl-and-plaintext-functions-in-powerapps"></a>Funksjonene EncodeURL og PlainText i PowerApps
 Strenger for koder og dekoder.
 
 ## <a name="description"></a>Beskrivelse
-**EncodeURL**-funksjonen koder en nettadressestreng, og erstatter ikke-alfanumeriske tegn med % og et heksadesimalt tall.  
+Den **EncodeUrl** funksjonen koder en nettadressestreng, erstatter bestemte ikke-alfanumeriske tegn med % og et heksadesimalt tall.  
 
-**PlainText**-funksjonen fjerner HTML- og XML-koder, og konverterer koder som disse til riktige symboler:
+Den **ren tekst** funksjonen fjerner HTML- og XML-koder, konverterer bestemte koder som disse til riktige symboler:
 
 * **&amp;nbsp;**
 * **&amp;quot;**
 
-Returverdien fra disse funksjonene er den kodede eller dekodede strengen.   
+Returverdien fra disse funksjonene er den kodede eller dekodede strengen. Denne funksjonen fjernes ikke alle HTML- og XML-koder. 
 
 ## <a name="syntax"></a>Syntaks
 **EncodeUrl**( *String* )

@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 06/05/2018
+ms.date: 11/14/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 752bb630c1ecd1e86f37a1a063bcc5ee192431f0
-ms.sourcegitcommit: 3aeb9381fbeb66cf08355d9a3d0f00ce2737e256
-ms.translationtype: HT
+ms.openlocfilehash: 9796cf6c668818110cd6910311ab5b5f61a745df
+ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43163641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57803784"
 ---
 # <a name="formula-reference-for-powerapps"></a>Formelreferanse for PowerApps
 Formler kombinerer mange elementer.  Dette er listet opp under:
@@ -208,6 +208,10 @@ Andre elementer omfatter:
 **[Lower](functions/function-lower-upper-proper.md)** – konverterer bokstaver i en tekststreng slik at alle bokstavene blir små.
 
 ## <a name="m"></a>M
+**[Match](functions/function-ismatch.md)**  – trekker ut en delstreng basert på et mønster.  Vanlige uttrykk kan brukes.
+
+**[MatchAll](functions/function-ismatch.md)**  – trekker ut flere delstrenger basert på et mønster.  Vanlige uttrykk kan brukes.
+
 **[Max](functions/function-aggregates.md)** – maksimumsverdien av et tabelluttrykk eller et sett med argumenter.
 
 **[Mid](functions/function-left-mid-right.md)** – returnerer den midterste delen av en streng.
@@ -255,6 +259,8 @@ Andre elementer omfatter:
 **[Rand](functions/function-rand.md)** – returnerer et pseudo-tilfeldig tall.
 
 **[Refresh](functions/function-refresh.md)** – oppdaterer postene for en datakilde.
+
+**[Relatert](functions/function-relate-unrelate.md)**  – er relatert poster med to enheter via en én-til-mange eller mange-til-mange-relasjon.
 
 **[Remove](functions/function-remove-removeif.md)** – fjerner én eller flere bestemte poster fra en datakilde.
 
@@ -322,7 +328,7 @@ Andre elementer omfatter:
 
 **[Tan](functions/function-trig.md)** – returnerer tangensen for en vinkel angitt i radianer.
 
-**[Text](functions/function-text.md)** – formaterer et tall for en streng for visning.
+**[Tekst](functions/function-text.md)**  – konverterer en verdi og formaterer en tall- eller dato/klokkeslett-verdi til en tekststreng.
 
 **[ThisItem](functions/operators.md#thisitem-operator)** – dataene for gjeldende element for en beholder returneres når man er i et galleri eller skjema.
 
@@ -341,9 +347,11 @@ Andre elementer omfatter:
 ## <a name="u"></a>U
 **[Ungroup](functions/function-groupby.md)** – fjerner en gruppering.
 
+**[Unrelate](functions/function-relate-unrelate.md)**  – Unrelates postene i to enheter fra en én-til-mange eller mange-til-mange-relasjon.
+
 **[Update](functions/function-update-updateif.md)** – erstatter en post i en datakilde.
 
-**[UpdateContext](functions/function-updatecontext.md)** – angir verdien for én eller flere [kontekstvariabler](working-with-variables.md#create-a-context-variable) for den gjeldende skjermen.
+**[UpdateContext](functions/function-updatecontext.md)** – angir verdien for én eller flere [kontekstvariabler](working-with-variables.md#use-a-context-variable) for den gjeldende skjermen.
 
 **[UpdateIf](functions/function-update-updateif.md)** – endrer et sett med poster i en datakilde basert på en betingelse.
 

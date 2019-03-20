@@ -1,24 +1,24 @@
 ---
 title: Oppretting av en flyt for å behandle prosjektgodkjenninger | Microsoft Docs
 description: I denne oppgaven skal vi opprette en flyt som styrer prosessen med å godkjenne prosjekter.
-author: mgblythe
+author: stepsic-microsoft-com
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 01/09/18
-ms.author: mblythe
+ms.author: stepsic
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c17f4cbc4438057e68b1c2ff713a2bfd66228ce9
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: d41807bedf85c151c8e115456b9fb3e23756629d
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834601"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799621"
 ---
 # <a name="create-a-flow-to-manage-project-approvals"></a>Oppretting av en flyt for å behandle prosjektgodkjenninger
 > [!NOTE]
@@ -44,11 +44,11 @@ I denne oppgaven skal vi opprette en flyt som styrer prosessen med å godkjenne 
    
     ![E-postkontakt for godkjenning](./media/sharepoint-scenario-approval-flow/03-01-05-approval-email.png)
    
-    Den neste boksen i flyten svarer på prosjektanmoderens beslutning, og ruter flyten til én av to *grener*: **Hvis ja** eller **Hvis nei**.
+    Den neste boksen i flyten svarer på prosjektanmoderens beslutning, og ruter flyten til én av to *grener*: **Hvis Ja** eller **Hvis ingen**.
    
     ![Godkjenningsbetingelse](./media/sharepoint-scenario-approval-flow/03-01-06-condition.png)
 
-## <a name="step-2-create-actions-for-approve--yes"></a>Trinn 2: Oppretting av handlinger for Godkjenn = ja
+## <a name="step-2-create-actions-for-approve--yes"></a>Trinn 2: Opprette handlinger for Godkjenn = Ja
 Som standard sender denne grenen en e-postmelding til anmoderen og ber om godkjenning. Vi oppdaterer også **Prosjektforespørsler**-listen og legger til et element til **Prosjektdetaljer**-listen fordi prosjektet har blitt godkjent.
 
 1. I **Hvis Ja**-grenen klikker eller trykker du på **Informer elementets oppretter om godkjenning**, deretter på **Rediger** for å se standardalternativene for e-postmeldingen som er sendt til anmoderen.
@@ -96,7 +96,7 @@ Som standard sender denne grenen en e-postmelding til anmoderen og ber om godkje
     
     ![Oppretting av element er fullført](./media/sharepoint-scenario-approval-flow/03-01-11-yes-create-complete.png)
 
-## <a name="step-3-review-action-for-approve--no"></a>Trinn 3: Gå gjennom handling for Godkjenn = nei
+## <a name="step-3-review-action-for-approve--no"></a>Trinn 3: Gå gjennom handling for Godkjenn = Nei
 Som standard sender denne grenen en e-postmelding til anmoderen og ber om avvisning. Vi vil også oppdatere **Prosjektforespørsler**-listen. Prosjektet har ingen fremgang, så vi legger ikke til et element til **Prosjektdetaljer**-listen.
 
 1. Klikk eller trykk på **Informer elementets oppretter om avvisningen** i **Hvis nei**-grenen, og deretter på **Rediger** for å se standardalternativene for e-posten som er sendt til anmoderen.

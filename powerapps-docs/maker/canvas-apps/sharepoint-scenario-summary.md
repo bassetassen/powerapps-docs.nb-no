@@ -1,24 +1,24 @@
 ---
 title: Trinnvis gjennomgang av integreringsscenario for SharePoint Online | Microsoft Docs
 description: Ta en trinnvis gjennomgang av scenarioet vi har utviklet i denne opplæringsserien.
-author: mgblythe
+author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/12/2017
-ms.author: mblythe
+ms.author: niwaggon
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: df3c186bb41621e7ec6087a9da55fc037e286b1a
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 64a26fbd0e36937427bc679869d5bc942f254130
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42850194"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799644"
 ---
 # <a name="walk-end-to-end-through-the-completed-sharepoint-online-integration-scenario"></a>Ta en trinnvis gjennomgang av det komplette integreringsscenarioet for SharePoint Online
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "42850194"
 
 Vi har dekket et stort område i denne opplæringsserien, fra utvikling av lerretsapper og flyter til å opprette rapporter og bygge dem inn i SharePoint. Vi håper du har lært mye og har nok innsyn i hvordan du integrerer disse teknologiene, slik at du kan integrere lerretsapper, flyter og rapporter i SharePoint som er basert på dine egne behov. Før vi fullfører vil vi gå gjennom scenariet fra start til slutt, og se hvordan alle komponentene samvirker.
 
-## <a name="step-1-add-a-project-to-the-project-requests-list"></a>Trinn 1: Å legge til et prosjekt i Prosjektforespørsler-listen
+## <a name="step-1-add-a-project-to-the-project-requests-list"></a>Trinn 1: Legge til et prosjekt i prosjektforespørsler-listen
 1. Klikk eller trykk på **Alle elementer** i **Prosjektforespørsler-listen**, og deretter klikker eller trykker du på **Prosjektforespørsler-appen**.
    
     ![Visning av Prosjektforespørsler-appen](./media/sharepoint-scenario-summary/09-00-01-view-app.png)
@@ -59,7 +59,7 @@ Vi har dekket et stort område i denne opplæringsserien, fra utvikling av lerre
    
     ![SharePoint-liste med ny oppføring](./media/sharepoint-scenario-summary/09-01-02-list-new.png)
 
-## <a name="step-2-approve-the-project"></a>Trinn 2: Å godkjenne prosjektet
+## <a name="step-2-approve-the-project"></a>Trinn 2: Godkjenne prosjektet
 1. Når du legger til elementet i trinn 1, kjører flyten og sender ut en e-post for godkjenning. Kontroller innboksen til godkjennerens e-postkonto.
    
     ![Godkjenningsforespørsel per e-post](./media/sharepoint-scenario-summary/09-02-01-allan-email.png)
@@ -73,7 +73,7 @@ Vi har dekket et stort område i denne opplæringsserien, fra utvikling av lerre
    
     ![SharePoint-liste med oppdatert oppføring](./media/sharepoint-scenario-summary/09-02-03-yes.png)
 
-## <a name="step-3-assign-a-manager-to-the-project"></a>Trinn 3: Å tilordne en leder til et prosjekt
+## <a name="step-3-assign-a-manager-to-the-project"></a>Trinn 3: Tilordne en leder til prosjektet
 1. Først skal vi se på **Prosjektdetaljer**-listen i SharePoint. Det nye prosjektet har verdien **Ikke tilordnet** i **PMAssigned**-kolonnen.
    
     ![Ikke-tilordnet SharePoint-listeelement](./media/sharepoint-scenario-summary/09-03-01-unassigned.png)
@@ -93,7 +93,7 @@ Vi har dekket et stort område i denne opplæringsserien, fra utvikling av lerre
    
     ![Tilordnet SharePoint-listeelement](./media/sharepoint-scenario-summary/09-03-05-assigned.png)
 
-## <a name="step-4-add-time-estimates-for-the-project"></a>Trinn 4: Å legge til tidsestimater for prosjektet
+## <a name="step-4-add-time-estimates-for-the-project"></a>Trinn 4: Legge til tidsestimater for prosjektet
 1. Klikk eller trykk på ![Tilbake-ikonet](./media/sharepoint-scenario-summary/icon-back.png) for å gå tilbake til den første skjermen, og klikk eller trykk deretter på **Oppdater detaljer**.
    
     ![Å oppdatere prosjektdetaljer](./media/sharepoint-scenario-summary/09-04-00-intro-screen.png)

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 688b1e87e5bc1d2ee3429711b9995f3b4ef61e1c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: f538d785b9655b94a44a79c3299e979bbfe88883
+ms.sourcegitcommit: ba5542ff1c815299baa16304c6e0b5fed936e776
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42857112"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54308781"
 ---
 # <a name="forall-function-in-powerapps"></a>Funksjonen ForAll i PowerApps
 Beregner verdier og utfører handlinger for alle [poster](../working-with-tables.md#records) i en [tabell](../working-with-tables.md).
@@ -64,7 +64,7 @@ Følgende eksempler bruker **Squares** som [datakilde](../working-with-data-sour
 
 For å opprette denne datakilden som en samling, angir du **Knappe**-kontrollens **OnSelect**-egenskap til denne formelen, åpner Forhåndsvisningsmodus, og deretter klikker eller trykker du på knappen:
 
-* **ClearCollect( Squares, [ "1", "4", "9" ] )**
+`ClearCollect( Squares, [ "1", "4", "9" ] )`
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
@@ -78,7 +78,7 @@ Følgende eksempler bruker **Expressions** som [datakilde](../working-with-data-
 
 For å opprette denne datakilden som en samling, angir du **Knappe**-kontrollens **OnSelect**-egenskap til denne formelen, åpner Forhåndsvisningsmodus, og deretter klikker eller trykker du på knappen:
 
-* **ClearCollect( Expressions, [ "Hello", "Good morning", "Thank you", "Goodbye" ] )**
+`ClearCollect( Expressions, [ "Hello", "Good morning", "Thank you", "Goodbye" ] )`
 
 Dette eksempelet bruker også en [Microsoft Translator](../connections/connection-microsoft-translator.md)-tilkobling.  Hvis du vil legge til denne tilkoblingen i appen din, kan du se emnet om hvordan du [behandler tilkoblinger](../add-manage-connections.md).
 
@@ -104,7 +104,16 @@ Følgende eksempler bruker **Products** som [datakilde](../working-with-data-sou
 
 For å opprette denne datakilden som en samling, angir du **Knappe**-kontrollens **OnSelect**-egenskap til denne formelen, åpner Forhåndsvisningsmodus, og deretter klikker eller trykker du på knappen:
 
-* **ClearCollect( Products, Table( { Product: "Widget", 'Quantity Requested': 6, 'Quantity Available': 3 }, { Product: "Gadget", 'Quantity Requested': 10, 'Quantity Available': 20 }, { Product: "Gizmo", 'Quantity Requested': 4, 'Quantity Available': 11 }, { Product: "Apparatus", 'Quantity Requested': 7, 'Quantity Available': 6 } ) )**
+```powerapps-dot
+ClearCollect( Products, 
+    Table( 
+        { Product: "Widget",    'Quantity Requested': 6,  'Quantity Available': 3 }, 
+        { Product: "Gadget",    'Quantity Requested': 10, 'Quantity Available': 20 },
+        { Product: "Gizmo",     'Quantity Requested': 4,  'Quantity Available': 11 },
+        { Product: "Apparatus", 'Quantity Requested': 7,  'Quantity Available': 6 } 
+    )
+)
+```
 
 Målet vårt er å arbeide med en avledet tabell som kun inkluderer elementer der det har blitt forspurt flere enn det antallet som er tilgjengelig, og som vi trenger å bestille:
 
@@ -115,7 +124,17 @@ Vi kan utføre denne oppgaven på forskjellige måter, der alle gir det samme re
 #### <a name="table-shaping-on-demand"></a>Tabellbearbeiding ved behov
 Ikke lag den kopien!  Vi kan bruke følgende formel hvor som helst etter behov:
 
-* **ShowColumns( AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' ), "Product", "Quantity To Order" )**
+```powerapps-dot
+// Table shaping on demand, no need for a copy of the result
+ShowColumns( 
+    AddColumns( 
+        Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
+        "Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
+    ), 
+    "Product", 
+    "Quantity To Order"
+)
+```
 
 [Omfanget av en post](../working-with-tables.md#record-scope) opprettes med funksjonene **Filter** og **AddColumns** for å utføre henholdsvis operasjonene sammenligning og subtraksjon, med feltene  **'Quantity Requested'** og **'Quantity Available'** for hver post.
 
@@ -126,7 +145,16 @@ Siden vi ikke lagde en kopi, vil det ikke finnes noen ekstra kopi av informasjon
 #### <a name="forall-on-demand"></a>ForAll ved behov
 En annen fremgangsmåte er å bruke funksjonen **ForAll** til å erstatte funksjonene for tabellbearbeiding :
 
-* **ForAll( Products, If( 'Quantity Requested' > 'Quantity Available', { Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } ) )**
+```powerapps-dot
+ForAll( Products, 
+    If( 'Quantity Requested' > 'Quantity Available', 
+        { 
+            Product: Product, 
+            'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+        } 
+    ) 
+)
+```
 
 Denne formelen kan være lettere å lese og skrive for noen personer.
 
@@ -137,15 +165,50 @@ I noen tilfeller kan en kopi av data være nødvendig.  Det kan hende at du må 
 
 Vi bruker den samme tabellbearbeidingen som i de to forrige eksemplene, men vi registrerer resultatet i en samling:
 
-* **ClearCollect( NewOrder, ShowColumns( AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' ), "Product", "Quantity To Order" ) )**
-* **ClearCollect( NewOrder, ForAll( Products, If( 'Quantity Requested' > 'Quantity Available', { Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } ) ) )**
+```powerapps-dot
+ClearCollect( NewOrder, 
+    ShowColumns( 
+        AddColumns( 
+            Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
+            "Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
+        ), 
+        "Product", 
+        "Quantity To Order"
+    )
+)
+```
+
+```powerapps-dot
+ClearCollect( NewOrder, 
+    ForAll( Products, 
+        If( 'Quantity Requested' > 'Quantity Available', 
+            { 
+                Product: Product, 
+                'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+            } 
+        } 
+    )
+)
+```
 
 **ClearCollect** og **Collect** kan ikke delegeres.  Dette betyr at det er en begrensning på hvor mye data som kan flyttes på denne måten.
 
 #### <a name="collect-within-forall"></a>Samle inn innenfor ForAll
 Til slutt kan vi utføre **Collect**funksjonen direkte i **ForAll**:
 
-* **Clear( ProductsToOrder ); ForAll( Products, If( 'Quantity Requested' > 'Quantity Available', Collect( NewOrder, { Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } ) ) )**
+```powerapps-dot
+Clear( ProductsToOrder ); 
+ForAll( Products, 
+    If( 'Quantity Requested' > 'Quantity Available', 
+        Collect( NewOrder,  
+            { 
+                Product: Product, 
+                'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+            } 
+        )
+    )
+)
+```
 
 Funksjonen **ForAll** kan fortsatt ikke delegeres på dette tidspunktet.  Hvis **Products**-tabellen er stor, vil **ForAll** kun se på det første settet med poster, og det kan hende at vi går glipp av noen produkter som må bestilles.  Denne tilnærmingen er likevel grei for tabeller som vi vet at vil forbli små.
 

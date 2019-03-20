@@ -7,29 +7,31 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 10/25/2016
+ms.date: 11/14/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: dab6004afe7350b2375ade21871efe9144b6325b
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 3a3d272737783abeaf2fe33557457486dae31e45
+ms.sourcegitcommit: a4719a7d719116aeda26baa44159b2271a9a79c8
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42849297"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "57800564"
 ---
 # <a name="text-function-in-powerapps"></a>Text-funksjonen i PowerApps
-Formaterer et tall eller en verdi for dato/klokkeslett, til visning som en tekststreng.
+Konverterer en verdi og formaterer en tall- eller dato/klokkeslett-verdi til en tekststreng.
 
 ## <a name="description"></a>Beskrivelse
 **Text**-funksjonen formaterer et tall eller en verdi for dato/klokkeslett som er basert på én av disse typene argumenter:
 
-* Et forhåndsdefinert dato/klokkeslett-format, som du angir ved hjelp av opplistingen for **DateTimeFormat**.  Denne fremgangsmåten foretrekkes for datoer og klokkeslett, da den automatisk justeres til hver brukers språk og plassering.
-* Et egendefinert format, en tekststreng som består av plassholdere, som beskriver hvordan du formaterer tallet, eller verdien for dato/klokkeslett. Plassholdere definerer hvor mange sifre som skal vises, om skilletegnet for grupperinger skal brukes og hvordan du viser navnet på en måned. PowerApps støtter et delsett av plassholderne, i likhet med Microsoft Excel.
+* Et forhåndsdefinert dato/klokkeslett-format, som du angir ved hjelp av opplistingen for **DateTimeFormat**. Denne tilnærmingen er foretrukket for datoer og klokkeslett, da den automatisk justeres til hver brukers språk og område.
+* Et egendefinert format, som består av en streng med plassholdere, som definerer, for eksempel om tall Vis desimalskilletegn og datoer Vis det fullstendige navnet på måneden, måneden som en forkortelse eller måneden som et tall. PowerApps støtter et delsett av plassholderne, i likhet med Microsoft Excel. Angir språket som å tolke andre plassholderne i denne strengen, plassholderen for språk. Hvis det egendefinerte formatet inneholder et punktum, for eksempel plassholderen for språk-format Angir om perioden er et desimalskilletegn (Japan) eller et skilletegn (es-ES).
 
 Hvis du vil ha mer informasjon, kan du se[Slik arbeider du med datoer og klokkeslett](../show-text-dates-times.md).
+
+Den **tekst** funksjonen kan også konvertere enhver datatype til en tekstrepresentasjon ved hjelp av et standardformat. Bruk denne til å sende verdier uten tekst til tekstbaserte funksjoner som [ **Len**](function-len.md), [ **høyre**](function-left-mid-right.md), og [  **IsMatch**](function-ismatch.md).
 
 ### <a name="predefined-datetime-formats"></a> Forhåndsdefinerte formater for dato/klokkeslett
 
@@ -53,18 +55,18 @@ Hvis du vil ha mer informasjon, kan du se[Slik arbeider du med datoer og klokkes
 | --- | --- |
 | **0** (*null*) |Viser ubetydelige nuller hvis et tall har færre sifre enn det er nuller i formatet. For eksempel kan du bruke formatet **#,00**, hvis du vil vise **8,9** som **8,90**. |
 | **#** |Følger de samme reglene som **0** (null). **Tekst** returnerer imidlertid ikke ekstra nuller når tallet har færre sifre på hver side av desimaltegnet enn det er #-symboler i formatet. For eksempel vises **8,9** hvis det egendefinerte formatet er **#,##** og tallet som skal formateres er **8,9**. |
-| **.** (*punktum*) |Viser desimaltegnet i et tall.  Avhengig av språket til det egendefinerte formatet, kan du se [Globale apper](#global-apps) for mer informasjon. |
-| **,** (*komma*) |Viser skilletegnet for grupperinger i et tall, som ofte brukes for tusener. **Text** skiller grupper med komma, hvis formatet inneholder et komma som er omsluttet av nummertegn, (**#**) eller av nuller.  Avhengig av språket til det egendefinerte formatet, kan du se [Globale apper](#global-apps) for mer informasjon. |
+| **.** (*punktum*) |Viser desimaltegnet i et tall. Avhengig av språket for det egendefinerte formatet; Se [globale apper](#global-apps) for mer informasjon. |
+| **,** (*komma*) |Viser skilletegnet for grupperinger i et tall, som ofte brukes for tusener. **Text** skiller grupper med komma, hvis formatet inneholder et komma som er omsluttet av nummertegn, (**#**) eller av nuller. Avhengig av språket for det egendefinerte formatet; Se [globale apper](#global-apps) for mer informasjon. |
 
 Tallet blir avrundet til så mange desimaler som det er plassholdere hvis et tall har flere sifre til høyre for desimaltegnet enn det er plassholdere i formatet. De ekstra sifrene vises hvis det er flere sifre til venstre for desimaltegnet enn det er plassholdere. Tall som er mindre enn 1 starter med et desimaltegn (for eksempel **,47**), hvis formatet bare inneholder nummertegn (#) til venstre for desimaltegnet.
 
 ### <a name="date-and-time-placeholders"></a>Plassholdere for dato og klokkeslett
 
-|                                                                                                 Plassholder                                                                                                  |                                                                                                     Beskrivelse                                                                                                     |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                                                                                                    **m**                                                                                                     |                                                                               Viser måneden som et tall uten foranstilt null.                                                                                |
-|                                                                                                    **mm**                                                                                                    |                                                                        Viser måneden som et tall med foranstilt null når det passer.                                                                         |
-|                                                                                                   **mmm**                                                                                                    |                                                                             Viser måneden som en forkortelse (**jan.** til **des.**).                                                                             |
+|   Plassholder    |   Beskrivelse                                                  |
+|------------------|----------------------------------------------------------------|
+|  **m**   |   Viser måneden som et tall uten foranstilt null.               |
+|  **mm**  |   Viser måneden som et tall med foranstilt null når det passer. |
+|  **mmm** |   Viser måneden som en forkortelse (**jan.** til **des.**).          |
 |                                                                                                   **mmmm**                                                                                                   |                                                                          Viser måneden med fullt navn (**januar** til **desember**).                                                                           |
 |                                                                                                    **d**                                                                                                     |                                                                                Viser dagen som et tall uten foranstilt null.                                                                                 |
 |                                                                                                    **dd**                                                                                                    |                                                                         Viser dagen som et tall med foranstilt null når det passer.                                                                          |
@@ -73,15 +75,13 @@ Tallet blir avrundet til så mange desimaler som det er plassholdere hvis et tal
 |                                                                                                    **yy**                                                                                                    |                                                                                      Viser året som et tosifret tall.                                                                                       |
 |                                                                                                   **yyyy**                                                                                                   |                                                                                      Viser året som et firesifret tall.                                                                                      |
 |                                                                                                    **h**                                                                                                     |                                                                                Viser timen som et tall uten foranstilt null.                                                                                |
-|                                                                                                    **hh**                                                                                                    | Viser timen som et tall med foranstilt null når det passer. Hvis formatet inneholder **AM** eller **PM**, blir timen vist basert på 12-timers klokken. Ellers vises timen basert på 24-timers klokken. |
-|                                                                                                    **m**                                                                                                     |                                                                         Viser minuttet som et tall uten foranstilt null.  > [!NOTE]                                                                          |
-|            > **m**- eller **mm**-koden må stå umiddelbart etter **h**- eller **hh**-koden, eller rett før **ss**-koden, hvis ikke returnerer **Text** måneden i stedet for minutter.            |                                                                                                                                                                                                                     |
-|                                                                                                    **mm**                                                                                                    |                                                                   Viser minuttet som et tall med foranstilt null når det passer. > [!NOTE]                                                                   |
-| > **m**- eller **mm**-plassholderen må stå umiddelbart etter **h**- eller **hh**-plassholderen, eller umiddelbart foran **ss**-plassholderen. Ellers returnerer **Text** måneden i stedet for minutter. |                                                                                                                                                                                                                     |
-|                                                                                                    **s**                                                                                                     |                                                                               Viser sekundet som et tall uten foranstilt null.                                                                               |
-|                                                                                                    **ss**                                                                                                    |                                                                        Viser sekundet som et tall med foranstilt null når det passer.                                                                        |
+|   **hh** | Viser timen som et tall med foranstilt null når det passer. Hvis formatet inneholder **AM** eller **PM**, blir timen vist basert på 12-timers klokken. Ellers vises timen basert på 24-timers klokken. | 
+|  **m**   |   Viser minuttet som et tall uten foranstilt null.<br><br>Denne plassholderen må stå umiddelbart etter den **h** eller **hh** kode eller rett før den **ss** koden, ellers **tekst** returnerer måneden i stedet for minutter.  |    
+| **mm**   | Viser minuttet som et tall med foranstilt null når det passer.<br><br>Denne plassholderen må stå umiddelbart etter den **h** eller **hh** plassholder eller rett før den **ss** plassholder. Ellers **tekst** Returnerer måneden i stedet for minutter. |                                                                                                                   
+| **s**   |  Viser sekundet som et tall uten foranstilt null.  |
+| **ss**  | Viser sekundet som et tall med foranstilt null når det passer.                                                                        |
 |                                                                                                    **f**                                                                                                     |                                                                                         Viser deler av sekunder.                                                                                          |
-|                                                                                    **AM/PM**, **am/pm**, **A/P**, **a/p**                                                                                    |               Viser timen basert på en 12-timers klokke. **Text** returnerer "AM", "am", "A" eller "a" for klokkeslett fra midnatt til midt på dagen, og "PM", "pm", "P" eller "p" for klokkeslett fra midt på dagen frem til midnatt                |
+|                                                                                    **AM/PM**, **en / p**                                                                                    |               Viser timen basert på en 12-timers klokke. **Tekst** returnerer "AM" eller "a" for klokkeslett fra midnatt til midt på dagen og "PM" eller "p" for klokkeslett fra midt på dagen frem til midnatt                |
 
 ### <a name="literal-placeholders"></a>Litterale plassholdere
 Du kan inkludere hvilke som helst av disse tegnene i formatstrengen.  De vil vises i resultatet av **Text** i nåværende tilstand. Ekstra tegn er reservert for fremtidige plassholdere, så du bør ikke bruke dem.
@@ -107,49 +107,53 @@ Du kan inkludere hvilke som helst av disse tegnene i formatstrengen.  De vil vis
 | &nbsp; |Mellomrom-tegn |
 
 ## <a name="global-apps"></a>Globale apper
-**Text**-funksjonen er globalavhengig.  Den vet hvordan du skal skrive ut datoer, klokkeslett, valuta og tall for en lang rekke språk.  Den er avhengig av to typer informasjon for å fungere:
+**Text**-funksjonen er globalavhengig. Den vet hvordan du skal skrive ut datoer, klokkeslett, valuta og tall for en lang rekke språk. Den er avhengig av to typer informasjon for å fungere:
 
-* **Språket for det egendefinerte formatet:** Hvordan skal et egendefinert format tolkes av forfattere?  Skilletegnene (**.** og **,**) har ulike betydninger på forskjellige språk.  Dette håndteres med en spesiell plassholder som inneholder en språkkode.  [Forhåndsdefinerte formater for dato/klokkeslett](#predefined-datetime-formats) er språkagnostisk, for å gjøre det enda enklere.
-* **Språket for resultatet:** Hvilket språk skal brukes i resultatet av funksjonen for brukere?  Navn for måneder og ukedager må være på det aktuelle språket for brukeren av appen.  Dette håndteres med et valgfritt, tredje argument til **Text**-funksjonen. 
+* **Språket for det egendefinerte formatet:** Produsentene, hvordan skal et egendefinert format tolkes? Skilletegnene (**.** og **,**) har ulike betydninger på forskjellige språk. Hvis du angir et egendefinert format, kan du ta med en plassholder for språk eller ta standardverdien, som gjenspeiler språket som er angitt for enheten. Enklere, kan du bruke ett av de [forhåndsdefinerte formater for dato/klokkeslett](#predefined-datetime-formats), som er språkagnostisk.
+* **Språket for resultatet:** For brukere, hvilket språk skal funksjonen resultatet vises? Navn på måneder og ukedager må være i det aktuelle språket for brukeren av appen, som du kan angi ved å legge til en tredje, valgfritt argument til den **tekst** funksjonen. 
 
-Språket er angitt med en [språkkode](function-language.md#language-tags) for begge.  Hvis du vil se listen over støttede språk, kan du skrive inn **Text( 1234, "", )** i formellinjen eller avansert visning og bla gjennom listen over nasjonale innstillinger for det tredje argumentet.
+For begge, angi språket ved hjelp av en [språkkode](function-language.md#language-tags). Hvis du vil se listen over støttede språk, skriver du inn **tekst (1234, "",)** i formellinjen eller **avansert** fanen i den høyre ruten, og deretter Bla gjennom listen over språk som foreslås for det tredje argumentet.
 
-#### <a name="custom-format-language-placeholder"></a>Egendefinert språkformat for plassholder
+### <a name="language-placeholder"></a>Plassholder for språk
 Hvis du vil angi språket for det egendefinerte formatet, kan du bruke:
 
 | Plassholder | Beskrivelse |
 | --- | --- |
-| **[$-*LanguageTag*]** |*LanguageTag* er en språkkode som returneres fra **Language**-funksjonen.  Det kan være i form av bare språket, som **[$-en]** for engelsk, eller den kan også inkludere området, som eksempelvis **[$-en-GB]** for ytterligere å spesifisere Storbritannia. |
+| **[$-*LanguageTag*]** |*LanguageTag* er en språkkode som returneres fra **Language**-funksjonen. Det kan angi bare språket (som **[$-en]** for engelsk), eller det kan også angi området (som **[$-en-GB]** for ytterligere å spesifisere Storbritannia). |
 
 Plassholderen for språk kan forekomme hvor som helst i det egendefinerte formatet, men bare én gang.
 
-Redigeringsverktøyet setter automatisk inn en språkkode for gjeldende språk hvis du ikke angir en plassholder for språk og formatstrengen er tvetydig fra et global ståsted mens du skriver en formel.  
+Hvis du angir et egendefinert format uten en plassholder for språk og formatet er tvetydig fra et global ståsted, settes inn automatisk språkkoden for gjeldende språk.  
 
-**[$-en-US]**  antas, hvis plassholderen ikke er til stede når appen kjøres. 
+**[$-en-US]**  antas Hvis dette plassholder er ikke finnes når appen kjøres. 
 
 > [!NOTE]
-> Syntaksen for denne plassholderen kan endres for å unngå forvirring med en lignende, men forskjellig, plassholder som støttes av Excel i en fremtidig versjon.
+> Syntaksen for denne plassholderen kan endres for å unngå forvirring med en lignende, men forskjellig, plassholder som støtter Excel i en fremtidig versjon.
 
-#### <a name="result-language-tag"></a>Språkkode for resultatet
-Oversatte strenger for måned, ukedag, og angivelser av AM/PM samt en passende gruppe og desimalskilletegn, vises i resultatet av **Text**.
+### <a name="result-language-tag"></a>Språkkode for resultatet
+Resultatet av **tekst** inkluderer oversatte strenger for måneder, ukedager, og angivelser av AM/PM samt en passende gruppe og desimalskilletegn.
 
-**Text** bruker språket for brukeren som kjører appen som standard.  **Language**-funksjonen returnerer språkkoden for gjeldende bruker.  Du kan overstyre denne standardinnstillingen ved å oppgi en språkkode for det valgfrie tredje argumentet for **Text**.
+**Text** bruker språket for brukeren som kjører appen som standard. **Language**-funksjonen returnerer språkkoden for gjeldende bruker. Du kan overstyre denne standardverdien ved å oppgi en språkkode for det tredje argumentet for **tekst**.
 
 ## <a name="syntax"></a>Syntaks
-**Text**( *Number*, *DateTimeFormatEnum* [, *ResultLanguageTag* ] )
+**Text**( *NumberOrDateTime*, *DateTimeFormatEnum* [, *ResultLanguageTag* ] )
 
-* *Number* – obligatorisk. Tallet eller dato/klokkeslett-verdien som skal formateres.
+* *NumberOrDateTime* – obligatorisk. Tallet eller dato/klokkeslett-verdien som skal formateres.
 * *DateTimeFormat* – obligatorisk.  Et medlem av opplistingen for **DateTimeFormat**.
-* *ResultLanguageTag* – valgfritt.  Språkkoden som skal brukes for resultatteksten.  Språket for gjeldende bruker brukes som standard.
+* *ResultLanguageTag* – valgfritt. Språkkoden som skal brukes for resultatteksten. Språket for gjeldende bruker brukes som standard.
 
-**Text**( *Number*, *CustomFormat* [, *ResultLanguageTag* ] )
+**Tekst**( *NumberOrDateTime*, *CustomFormat* [, *ResultLanguageTag* ])
 
 * *Number* – obligatorisk. Tallet eller dato/klokkeslett-verdien som skal formateres.
 * *CustomFormat* – obligatorisk. Én eller flere plassholdere omsluttet av doble anførselstegn.
-* *ResultLanguageTag* – valgfritt.  Språkkoden som skal brukes for resultatteksten.  Språket for gjeldende bruker brukes som standard.
+* *ResultLanguageTag* – valgfritt. Språkkoden som skal brukes for resultatteksten. Språket for gjeldende bruker brukes som standard.
+
+**Tekst**( *AnyValue* )
+
+* *AnyValue* – obligatorisk. Verdien som skal konverteres til en tekstrepresentasjon. Et standardformat som brukes.
 
 ## <a name="examples"></a>Eksempler
-Brukeren som kjører disse formlene befinner seg i USA og har valgt engelsk som språket sitt.  **Language**-funksjonen returnerer "en-US".
+Med mindre annet er angitt, vil brukeren som kjører disse formlene befinner seg i USA og har valgt engelsk som språket sitt.  **Language**-funksjonen returnerer "en-US".
 
 ### <a name="number"></a>Tall
 
@@ -177,9 +181,17 @@ Brukeren som kjører disse formlene befinner seg i USA og har valgt engelsk som 
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Text( 1234567.89, "[$-en-US]$ #,###" )** |Tolkes **,** som et skilletegn for grupperinger, plassert for hvert tredje tegn og **$** som det gjeldende valutasymbolet. Siden ingen desimaler skal vises, er verdien avrundet oppover til neste heltall. **[$-en-US]** er valgfritt i dette tilfellet, da dette er standard. |"$ 1,234,568" |
-| **Text( 1234567.89, "[$-es-ES]&euro; #,###" )** |Tolker **,** som et desimalskilletegn og **&euro;** som valutasymbolet.  Fordi **[$-fr-FR]** bare avgjør hvordan formatstrengen tolkes, vil resultatet bruke tegn fra standard språkkode for "en-US": **.** (punktum) for desimalskilletegn og **$** for valutasymbol. |"$ 1234567.89" |
-| **Text( 1234567.89, "[$-es-ES]&euro; #,###", "es-ES" )** |Tolker **,** som et desimalskilletegn.  Språkkoden for resultatet er satt til "fr-FR" som vil resultere i at **,** (komma) blir brukt som desimalskilletegn og **&euro;** som valutasymbol. |"&euro; 1234567,89" |
-| **Text( Date(2016,1,31), "dddd mmmm d" )** |Returnerer ukedagen, måneden og dagen i måneden i språket for gjeldende bruker. Fordi ingen av plassholderne er språkavhengige, er det ikke behov for en språkkode for tekstformat. |"Saturday January 31" |
-| **Text( Date(2016,1,31), "dddd mmmm d", "es-ES" )** |Returnerer ukedagen, måneden og dagen i måneden i "es-ES"-språket. |"domingo enero 31" |
+| **Tekst (1234567.89, "[$-fr-FR] # ###, ## &euro;", "fr-FR")** | Viser et mellomrom som et skilletegn for grupperinger, komma som desimalskilletegn, og **&euro;** som valutasymbol. |"1&nbsp;234&nbsp;567,89 &euro;" |
+| **Tekst (1234567,89; «[$-fr-FR] # ###, ## &euro;»)** | Hvis kildedataene følger det franske egendefinert ved å bruke et komma som desimaltegn, må du endre de nasjonale innstillingene til fransk og skiller argumentene med et semikolon i stedet for et komma til får du samme resultat som ovenfor. |"1&nbsp;234&nbsp;567,89 &euro;" |
+| **Text( Date(2016,1,31), "dddd mmmm d" )** |Returnerer ukedagen, måneden og dagen i måneden i språket for gjeldende bruker. Fordi ingen av plassholderne er språkavhengige, er det ikke behov for en språkkode for tekstformat. |«Lørdag&nbsp;januar&nbsp;31» |
+| **Text( Date(2016,1,31), "dddd mmmm d", "es-ES" )** |Returnerer ukedagen, måneden og dagen i måneden i "es-ES"-språket. |"domingo&nbsp;enero&nbsp;31" |
 
+### <a name="converting-values-to-text"></a>Konvertering av verdier til tekst
+
+| Formel | Beskrivelse | Resultat |
+| --- | --- | --- |
+| **Tekst (&nbsp;1234567.89&nbsp;)** | Konverterer et tall til en streng. Det finnes ingen tusenvis skilletegn eller kontroll over hvor mange sifre før eller etter desimaltegnet; for større kontroll, angi plassholdere for tall som det andre argumentet. | "1234567.89" |
+| **Tekst (&nbsp;DateTimeValue (&nbsp;"01/04/2003"&nbsp;)&nbsp;)** | Konverterer en dato/klokkeslett-verdi til en tekststreng. For å styre konverteringen, gir du enten et medlem av opplistingen DateTimeFormat eller en egendefinert formatstreng. | "1/4/2003 12:00 AM" |
+| **Tekst (&nbsp;SANN&nbsp;)** | Konverterer en boolsk verdi til en streng. | "true" |
+| **Text(&nbsp;GUID()&nbsp;)** | Konverterer en generert GUID-verdi til en streng.  | "f8b10550-0f12-4f08-9aa3-bb10958bc3ff" |
+| **Left(&nbsp;Text(&nbsp;GUID()&nbsp;),&nbsp;4&nbsp;)** | Returnerer de første fire tegnene i en generert GUID. | «2d9c» | 

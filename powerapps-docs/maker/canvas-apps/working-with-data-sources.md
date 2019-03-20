@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b51b7cde36a70001ff8545c497da7c4b4d5d1fa3
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 9e31ae7600663daa694b46376008161502c9c428
+ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833915"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57803416"
 ---
 # <a name="understand-data-sources-for-canvas-apps-in-powerapps"></a>Slik fungerer datakilder for lerretsapper i PowerApps
 
@@ -80,13 +80,13 @@ Datakildesamlinger *kan* imidlertid opprettes og endres inne i en app, men de er
 * Informasjonen lagres og deles gjennom en lagringstjeneste (i dette tilfellet en SharePoint-liste på et Office 365-område).
 * En tilkobling gjør denne informasjonen tilgjengelig for appen.  Tilkoblingen tar hånd om godkjenning av brukeren for tilgang til informasjonen.
 * Når appen startes eller **[Refresh](functions/function-refresh.md)**-funksjonen trykkes på, blir informasjonen hentet fra tilkoblingen og til en datakilde i appen for lokal bruk.
-* Formler brukes til å lese informasjonen og vise den i kontroller som brukeren kan se. Du kan vise postene for en datakilde ved hjelp av et galleri på skjermen, og overføre **[Elementer](controls/properties-core.md)**-egenskapen til datakilden: **Gallery.Items = DataSource**.  Du overfører kontrollene i galleriet til galleriet, ved hjelp av kontrollens **[Standard](controls/properties-core.md)**-egenskap.  
+* Formler brukes til å lese informasjonen og vise den i kontroller som brukeren kan se. Du kan vise postene i en datakilde ved hjelp av et galleri på skjermen, og overføre den **[elementer](controls/properties-core.md)** egenskapen til datakilden: **Gallery.Items = DataSource**.  Du overfører kontrollene i galleriet til galleriet, ved hjelp av kontrollens **[Standard](controls/properties-core.md)**-egenskap.  
 * Datakilden er også en tabell.  Du kan bruke funksjonene **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)**, **[AddColumns](functions/function-table-shaping.md)** samt andre funksjoner hvis du ønsker å begrense og utvide datakilden før du bruker den som en helhet.  Du kan også bruke funksjonene **[Lookup](functions/function-filter-lookup.md)**, **[First](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)** samt andre funksjoner hvis du ønsker å arbeide med enkeltposter.
 
 ### <a name="modify-a-record"></a>Å endre en post
-I den foregående delen så du hvordan du leser en datakilde.  Legg merke til at pilene i diagrammet over peker i én retning.  Endringer i en datakilde blir ikke skjøvet tilbake gjennom de samme formlene som dataene ble hentet fra.  I stedet brukes nye formler.  Det bruker ofte en annen skjerm for redigering av en post enn for å bla gjennom poster, spesielt på en mobil enhet.
+I foregående avsnitt så du hvordan du leser en datakilde.  Legg merke til at pilene i diagrammet over peker i én retning.  Endringer i en datakilde blir ikke skjøvet tilbake gjennom de samme formlene som dataene ble hentet fra.  I stedet brukes nye formler.  Det bruker ofte en annen skjerm for redigering av en post enn for å bla gjennom poster, spesielt på en mobil enhet.
 
-Vær oppmerksom på at hvis du vil endre en eksisterende post for en datakilde, må posten opprinnelig ha kommet fra datakilden.  Posten kan ha beveget seg gjennom et galleri, en [kontekstvariabel](working-with-variables.md#create-a-context-variable), og et ubegrenset antall formler, men opprinnelsen skal være sporbar tilbake til datakilden.  Dette er viktig fordi tilleggsinformasjon flyttes sammen med posten som er unik for å identifiserer den, noe som sikrer at du endrer den riktige posten.    
+Vær oppmerksom på at hvis du vil endre en eksisterende post for en datakilde, må posten opprinnelig ha kommet fra datakilden.  Posten kan ha beveget seg gjennom et galleri, en [kontekstvariabel](working-with-variables.md#use-a-context-variable), og et ubegrenset antall formler, men opprinnelsen skal være sporbar tilbake til datakilden.  Dette er viktig fordi tilleggsinformasjon flyttes sammen med posten som er unik for å identifiserer den, noe som sikrer at du endrer den riktige posten.    
 
 ![](media/working-with-data-sources/writing-to-a-datasource.png) Diagrammet ovenfor viser flyten av informasjon for å oppdatere en datakilde:
 

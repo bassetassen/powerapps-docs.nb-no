@@ -1,33 +1,33 @@
 ---
 title: Bruk av Cognitive Services i PowerApps | Microsoft Docs
-description: Utvikle en grunnleggende lerretsapp som bruker API for tekstanalyse i Microsoft Cognitive Services, til å analysere tekst.
-author: AFTOwen
+description: Utvikle en grunnleggende lerretsapp som bruker Azure Cognitive Services Text Analytics API til å analysere tekst.
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 12/08/2017
-ms.author: anneta
+ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: df823f68842ad3c7a7497e6dce9cc3540520527e
-ms.sourcegitcommit: 3dc330d635aaf5bc689efa6bd39826d6e396c832
-ms.translationtype: HT
+ms.openlocfilehash: 07548ff8fb14626543472b72ea52b80c858eeb0e
+ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48875880"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57803669"
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>Bruk av Cognitive Services i PowerApps
-Denne artikkelen viser hvordan du kan utvikle en grunnleggende lerretsapp som bruker [API for tekstanalyse i Microsoft Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview), til å analysere tekst. Vi viser deg hvordan du konfigurerer API-en for tekstanalyse og kobler til ved hjelp av [Tekstanalyse-koblingen](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Deretter viser vi hvordan du oppretter en lerretsapp som utfører et kall til API-en.
+Denne artikkelen viser deg hvordan du bygger en grunnleggende lerretsapp som bruker den [Azure Cognitive Services Text Analytics API](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview) til å analysere tekst. Vi viser deg hvordan du konfigurerer API-en for tekstanalyse og kobler til ved hjelp av [Tekstanalyse-koblingen](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Deretter viser vi hvordan du oppretter en lerretsapp som utfører et kall til API-en.
 
 > [!NOTE]
 > Hvis du er ny på utvikling av apper i PowerApps, anbefaler vi at du leser [Oppretting av en app fra bunnen av](get-started-create-from-blank.md) før du går nærmere inn på denne artikkelen.
 
-## <a name="introduction-to-microsoft-cognitive-services"></a>Innføring i Microsoft Cognitive Services
-Microsoft Cognitive Services er et sett med API-er, SDK-er og tjenester som er tilgjengelige for å gjøre programmene dine mer intelligente, engasjerende og lettere å finne. Disse tjenestene hjelper deg å legge til intelligente funksjoner, for eksempel gjenkjenning av følelser og gjenkjenning for video; ansikt-, tale- og visuell gjenkjenning samt språkforståelse, i programmene.
+## <a name="introduction-to-azure-cognitive-services"></a>Innføring i Azure Cognitive Services
+Azure Cognitive Services er et sett med API-er, SDK-er og tjenester tilgjengelig for å gjøre programmene dine mer intelligente, engasjerende og lettere å finne. Disse tjenestene hjelper deg å legge til intelligente funksjoner, for eksempel gjenkjenning av følelser og gjenkjenning for video; ansikt-, tale- og visuell gjenkjenning samt språkforståelse, i programmene.
 
 Vi fokuserer på språkforståelse i denne artikkelen, og bruker API-en for tekstanalyse. Denne API-en gjør det mulig å gjenkjenne sentiment, nøkkeluttrykk, emner og språk fra teksten. La oss komme i gang ved å prøve ut en demonstrasjon av API-en, og deretter registrere en forhåndsversjon.
 
@@ -43,15 +43,11 @@ API-en har en demonstrasjon på nettet. Du kan se hvordan det fungerer, og se hv
 3. Siden viser formaterte resultater på **Analysert tekst**-fanen og JSON-svaret på **JSON**-fanen. [JSON](http://json.org/) er en måte å representere data på, i dette tilfellet data som returneres av API-en for tekstanalyse.
 
 ## <a name="sign-up-for-the-text-analytics-api"></a>Registrer deg for API-en for tekstanalyse
-API-en er tilgjengelig i gratis prøveversjon, og den er tilknyttet et Azure-abonnement. Du administrerer API-en gjennom Azure Portal.
+API-en er tilgjengelig i gratis prøveversjon, og den er tilknyttet et Azure-abonnement. Du administrerer API-en gjennom Azure-portalen.
 
 1. Hvis du ikke har et Azure-abonnement allerede, kan du [registrere deg for et gratis abonnement](https://azure.microsoft.com/free/).
 
-2. Logg deg på Azure-kontoen.
-
-3. Gå til [Opprett Cognitive Services-bladet](https://go.microsoft.com/fwlink/?LinkId=761108) i Azure Portal.
-
-4. Angi informasjon for API-en for tekstanalyse, slik som i bildet nedenfor. Velg **F0** (gratis)-prisnivået.
+2. I [denne siden](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesTextAnalytics), angi informasjon for Tekstanalyse-API, som dette bildet viser. Velg **F0** (gratis)-prisnivået.
    
     ![Opprett API for tekstanalyse](./media/cognitive-services-api/azure-create.png)
 
@@ -125,29 +121,44 @@ Du har nå en flott app, men den kan ikke gjøre noe ennå. Dette fikser du om l
 
 1. Appen utfører bestemte API-oppkall basert på avmerkingsboksene i appen. Når du klikker eller trykker på **Analysere tekst**, utfører appen 1, 2 eller 3 API-oppkall.
 
-2. Appen lagrer data som API-en returnerer i tre forskjellige [samlinger](working-with-variables.md#create-a-collection): **languageCollect**, **sentimentCollect** og **phrasesCollect**.
+2. Appen lagrer data som API-en returnerer i tre forskjellige [samlinger](working-with-variables.md#use-a-collection): **languageCollect**, **sentimentCollect** og **phrasesCollect**.
 
 3. Appen oppdaterer **Tekst**-egenskapen for to av etikettene og **Elementer**-egenskapen for galleriet, basert på hva som er i de tre samlingene.
 
 Med dette som bakgrunn kan vi legge til formelen for **OnSelect**-egenskapen for knappen. Det er her det spennende skjer.
 
-```
-If(chkLanguage.Value=true,
-
-        ClearCollect(languageCollect, TextAnalytics.DetectLanguage({numberOfLanguagesToDetect:1, text:tiTextToAnalyze.Text}).detectedLanguages.name)
-
+```powerapps-dot
+If( chkLanguage.Value = true,
+    ClearCollect( languageCollect, 
+        TextAnalytics.DetectLanguage(
+            {
+                numberOfLanguagesToDetect: 1, 
+                text: tiTextToAnalyze.Text
+            }
+        ).detectedLanguages.name
+    )
 );
 
-If(chkPhrases.Value=true,
-
-        ClearCollect(phrasesCollect, TextAnalytics.KeyPhrases({language:"en", text:tiTextToAnalyze.Text}).keyPhrases)
-
+If( chkPhrases.Value = true,
+    ClearCollect( phrasesCollect, 
+        TextAnalytics.KeyPhrases(
+            {
+                language: "en", 
+                text: tiTextToAnalyze.Text
+            }
+        ).keyPhrases
+    )
 );
 
-If(chkSentiment.Value=true,
-
-        ClearCollect(sentimentCollect, TextAnalytics.DetectSentiment({language:"en", text:tiTextToAnalyze.Text}).score)
-
+If( chkSentiment.Value = true,
+    ClearCollect( sentimentCollect, 
+        TextAnalytics.DetectSentiment(
+            {
+                language: "en", 
+                text: tiTextToAnalyze.Text
+            }
+        ).score
+    )
 )
 ```
 
@@ -161,7 +172,7 @@ Det foregår mye på en gang her, så la oss dele det opp:
 
   * **numberOfLanguagesToDetect** programmeres som 1 i **DetectLanguage()**, men du kan sende denne parameteren basert på logikk i appen.
 
-  * **Språk** programmeres som «en» i **KeyPhrases()** og **DetectSentiment()**, men du kan sende denne parameteren basert på logikk i appen. Du kan for eksempel identifisere språket først, og deretter angi parameteren basert på hva som returneres av **DetectLanguage()**.
+  * I **språk** og **Keyphrases()**, **språk** programmeres som «en», men du kan sende denne parameteren basert på logikk i appen. Du kan for eksempel identifisere språket først, og deretter angi parameteren basert på hva som returneres av **DetectLanguage()**.
 
 * For hvert oppkall som utføres, legger du til resultatet i riktig samling:
 

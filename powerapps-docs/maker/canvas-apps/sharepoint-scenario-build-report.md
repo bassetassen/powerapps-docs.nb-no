@@ -1,24 +1,24 @@
 ---
 title: Å opprette en Power BI-rapport for å analysere prosjekter i Microsoft Docs
 description: I denne oppgaven skal vi opprette en Power BI-rapport basert på to SharePoint-lister.
-author: mgblythe
+author: fikaradz
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 01/10/2018
-ms.author: mblythe
+ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: adda4a7adae9961b77f01320e92527b53ac61e7f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: c57375906ba900a3112b9d7999d3941f14e9af58
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42828781"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799943"
 ---
 # <a name="create-a-power-bi-report-to-analyze-projects"></a>Å opprette en Power BI-rapport for å analysere prosjekter
 > [!NOTE]
@@ -30,9 +30,9 @@ I denne oppgaven skal vi opprette en Power BI-rapport basert på de to SharePoin
 > [Nedlastingspakken](https://aka.ms/o4ia0f) for dette scenarioet inkluderer en fullført versjon av denne rapporten: project-analysis.pbix.
 
 ## <a name="quick-review-of-power-bi-desktop"></a>Rask gjennomgang av Power BI Desktop
-Før vi tar for oss rapportopprettelsen, skal vi gå gjennom Power BI Desktop. Dette er et kraftfullt verktøy med mange funksjoner, så vi skal fokusere på en oversikt over det du skal bruke for denne oppgaven. Det er tre hovedarbeidsområder eller *visninger* i Power BI Desktop: **Rapportvisning**, **Datavisning** og **Relasjonsvisning**. Power BI Desktop inkluderer også **Redigeringsprogram for spørring**, som åpnes i et eget vindu.
+Før vi tar for oss rapportopprettelsen, skal vi gå gjennom Power BI Desktop. Dette er et kraftfullt verktøy med mange funksjoner, så vi skal fokusere på en oversikt over det du skal bruke for denne oppgaven. Det er tre hovedarbeidsområder eller *visninger* i Power BI Desktop: **Rapporten** visning, **Data** visning, og **relasjoner** visning. Power BI Desktop inkluderer også **Redigeringsprogram for spørring**, som åpnes i et eget vindu.
 
-Den følgende skjermen viser de tre visningsikonene til venstre i Power BI Desktop: **Rapport**, **Data** og **Relasjoner**, fra topp til bunn. Den gule linjen til venstre angir den gjeldende visningen, som i dette tilfellet er **Rapportvisning**. Du endrer visningene ved å velge ett av disse tre ikonene.
+Det følgende skjermbildet viser de tre visningsikonene til venstre i Power BI Desktop: **Rapporten**, **Data**, og **relasjoner**, fra topp til bunn. Den gule linjen til venstre angir den gjeldende visningen, som i dette tilfellet er **Rapportvisning**. Du endrer visningene ved å velge ett av disse tre ikonene.
 
 ![Visninger i Power BI Desktop](./media/sharepoint-scenario-build-report/05-00-00-tabs.png)
 
@@ -65,7 +65,7 @@ I **Redigeringsprogram for spørring** bygger du spørringer og transformerer da
 
 ![Redigeringsprogram for spørring for Power BI Desktop](./media/sharepoint-scenario-build-report/05-00-03-query.png)
 
-## <a name="step-1-get-data-into-power-bi-desktop"></a>Trinn 1: Å hente data inn i Power BI Desktop
+## <a name="step-1-get-data-into-power-bi-desktop"></a>Trinn 1: Hente data i Power BI Desktop
 I dette trinnet skal vi først koble til de to listene. Deretter skal vi ordne dataene ved å fjerne kolonner vi ikke trenger for våre dataanalyser. Vi skal også endre datatypene til noen av de gjenværende kolonnene slik at beregningene fungerer. Hvis du vil ha mer informasjon om hvordan du ordner data i Power BI Desktop, kan du se [Hente data](https://powerbi.microsoft.com/guided-learning/powerbi-learning-1-1-overview-of-power-bi-desktop)-delen i Veiledet opplæring-kurset.
 
 ### <a name="connect-to-sharepoint-lists"></a>Å koble til SharePoint-lister
@@ -94,7 +94,7 @@ I dette trinnet skal vi først koble til de to listene. Deretter skal vi ordne d
 2. Velg kolonnen **FileSystemObjectType** i den midtre ruten, og klikk eller trykk deretter på **Fjern kolonner**.
    
     ![Å fjerne kolonner](./media/sharepoint-scenario-build-report/05-01-07-remove-column.png)
-3. Fjern de to kolonnene etter **Id**-kolonnen: **ServerRedirectedEmbedURL** og **ContentTypeId**. 
+3. Fjern de to kolonnene etter den **Id** kolonne: **ServerRedirectedEmbedURL** og **ContentTypeId**. 
    > [!TIP]
    > Bruk SKIFT til å velge begge kolonnene, og klikk eller trykk deretter på **Fjern kolonner**.
 4. Fjern alle kolonnene til høyre for **PMAssigned**-kolonnen (totalt 22 kolonner). Tabellen skal samsvare med følgende bilde:
@@ -105,11 +105,11 @@ I dette trinnet skal vi først koble til de to listene. Deretter skal vi ordne d
     ![ Prosjektforespørsler-tabellen i redigeringsprogrammet for spørring](./media/sharepoint-scenario-build-report/05-01-09-table-requests.png)
 
 ### <a name="change-the-data-type-on-project-details-columns"></a>Å endre datatypen i Prosjektdetaljer-kolonnene
-1. Velg **ProjectedDays**-kolonnen, klikk eller trykk på **Datatype: hvilken som helst**, og deretter på **Heltall**.
+1. Velg den **ProjectedDays** kolonnen, klikk eller trykk på **datatype: En hvilken som helst**, deretter **heltall**.
    
     ![Å endre datatypen til et heltall](./media/sharepoint-scenario-build-report/05-01-10-datatype-number.png)
 2. Gjenta forrige trinn for **ActualDays**-kolonnen.
-3. Velg **ApprovedDate**-kolonnen, klikk eller trykk på **Datatype: hvilken som helst**, og deretter på **Dato**.
+3. Velg den **ApprovedDate** kolonnen, klikk eller trykk på **datatype: En hvilken som helst**, deretter **dato**.
    
     ![ Å endre datatype til dato](./media/sharepoint-scenario-build-report/05-01-11-datatype-date.png)
 
@@ -117,9 +117,9 @@ I dette trinnet skal vi først koble til de to listene. Deretter skal vi ordne d
 
 ### <a name="change-the-data-type-on-project-requests-columns"></a>Å endre datatypen i Prosjektforespørsler-kolonnene
 
-1. Velg **EstimatedDays**-kolonnen, klikk eller trykk på **Datatype: hvilken som helst**, og deretter på **Heltall**.
+1. Velg den **EstimatedDays** kolonnen, klikk eller trykk på **datatype: En hvilken som helst**, deretter **heltall**.
 
-2. Velg **RequestDate**-kolonnen, klikk eller trykk på **Datatype: hvilken som helst**, og deretter på **Dato**.
+2. Velg den **RequestDate** kolonnen, klikk eller trykk på **datatype: En hvilken som helst**, deretter **dato**.
 
 ### <a name="apply-and-save-changes"></a>Å bruke og lagre endringer
 
@@ -129,7 +129,7 @@ I dette trinnet skal vi først koble til de to listene. Deretter skal vi ordne d
 
 2. Klikk eller trykk på **Fil** og deretter på **Lagre**, og lagre med navnet project-analysis.pbix.
 
-## <a name="step-2-improve-the-data-model"></a>Trinn 2: Å forbedre datamodellen
+## <a name="step-2-improve-the-data-model"></a>Trinn 2: Forbedre datamodellen
 Nå som vi har hentet inn dataene fra våre SharePoint-lister og til Power BI Desktop, skal vi ta for oss datamodellering. Datamodellering kan være en tidkrevende prosess, men vi skal raskt vise deg noen interessante ting du kan gjøre for å få mer ut av listedataene i Power BI Desktop:
 
 * Å endre hvordan to tabeller er relatert til hverandre
@@ -170,7 +170,7 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
 1. Klikk eller trykk på **Ny tabell**.
    
     ![Ny tabell](./media/sharepoint-scenario-build-report/05-02-05-modeling-table.png)
-2. Skriv inn denne formelen i formellinjen: **Dates = CALENDARAUTO()**.
+2. Skriv inn denne formelen i formellinjen: **Datoer = CALENDARAUTO()**.
    
     ![Formellinje med Dates = CALENDARAUTO()](./media/sharepoint-scenario-build-report/05-02-06-formula-bar.png)
    
@@ -284,7 +284,7 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
    
     ![Å legge til målet MaxDaysPending](./media/sharepoint-scenario-build-report/05-02-12-measure-maxdayspending.png)
 
-## <a name="step-3-create-report-visualizations"></a>Trinn 3: Å opprette rapportvisualiseringer
+## <a name="step-3-create-report-visualizations"></a>Trinn 3: Opprette visualiseringer i rapporter
 Nå har vi kommet til det trinnet som mange tenker på når det kommer til dataanalyser: å opprett visualiseringer slik at vi kan finne mønstre i dataene våre. I dette trinnet skal vi opprette fire visualiseringer:
 
 * Et kolonnediagram som viser forventede dager kontra faktiske dager for et prosjekt

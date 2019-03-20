@@ -1,24 +1,24 @@
 ---
 title: Generer en lerretsapp for å administrere prosjektforespørsler | Microsoft Docs
 description: I denne oppgaven skal vi generere en grunnleggende lerretsapp med tre skjermer direkte fra en SharePoint-liste.
-author: mgblythe
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/12/2017
-ms.author: mblythe
+ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4466d8f42a0ba9c9a162353bc214abf6d9d9ef83
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: c9c7e58c8127b1c2784e0b1d79e78a1cb9478054
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834263"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799322"
 ---
 # <a name="generate-a-canvas-app-to-handle-project-requests"></a>Generer en lerretsapp for å administrere prosjektforespørsler
 > [!NOTE]
@@ -29,7 +29,7 @@ Nå som vi har fått på plass SharePoint-listen, kan vi bygge og egendefinere v
 > [!TIP]
 > [Nedlastingspakken](https://aka.ms/o4ia0f) for dette scenarioet inkluderer en fullført versjon av denne appen: project-requests-app.msapp.
 
-## <a name="step-1-generate-an-app-from-a-sharepoint-list"></a>Trinn 1: Å generere en app fra en SharePoint-liste
+## <a name="step-1-generate-an-app-from-a-sharepoint-list"></a>Trinn 1: Generer en app fra en SharePoint-liste
 
 1. Klikk eller trykk på **PowerApps** i **Prosjektforespørsler**-listen du opprettet, og deretter på **Opprett en app**.
    
@@ -39,7 +39,7 @@ Nå som vi har fått på plass SharePoint-listen, kan vi bygge og egendefinere v
    
     ![Å angi et navn for appen](./media/sharepoint-scenario-generate-app/02-01-02-create-app-name.png)
 
-## <a name="step-2-review-the-app-in-powerapps-studio"></a>Trinn 2: Å vise appen i PowerApps Studio
+## <a name="step-2-review-the-app-in-powerapps-studio"></a>Trinn 2: Se gjennom appen i PowerApps Studio
 
 1. Det venstre navigasjonsfeltet i PowerApps Studio viser som standard en hierarkisk visning av skjermene og kontrollene i appen.
    
@@ -59,7 +59,7 @@ Nå som vi har fått på plass SharePoint-listen, kan vi bygge og egendefinere v
       
       ![PowerApps Studio med miniatyrbildevisning](./media/sharepoint-scenario-generate-app/02-02-03-studio-screens-thumbnails.png)
 
-## <a name="step-3-customize-the-apps-browse-screen"></a>Trinn 3: Å egendefinere Bla gjennom-skjermen til appen
+## <a name="step-3-customize-the-apps-browse-screen"></a>Trinn 3: Tilpass appens Bla gjennom-skjermen
 
 1. Klikk eller trykk på Bla gjennom-skjermen.
    
@@ -93,7 +93,7 @@ Nå som vi har fått på plass SharePoint-listen, kan vi bygge og egendefinere v
 
 6. Klikk eller trykk på **Fil**, deretter på **Lagre**. Klikk eller trykk på ![Tilbake til app-ikonet](./media/sharepoint-scenario-generate-app/icon-back-to-app.png) for å gå tilbake til appen.
 
-## <a name="step-4-review-the-apps-details-screen-and-edit-screen"></a>Trinn 4: Å se gjennom Detaljer- og Rediger-skjermen i appen
+## <a name="step-4-review-the-apps-details-screen-and-edit-screen"></a>Trinn 4: Se gjennom detaljer-skjermen til appen og Rediger-skjermen
 1. Klikk eller trykk på Detaljer-skjermen.
    
     Denne skjermen har et annet oppsett som inneholder et *visningsskjema* for å vise detaljer for et element som er valgt i galleriet. Den inneholder kontroller for å redigere og slette elementer, og gå tilbake til Bla gjennom-skjermen.
@@ -106,7 +106,7 @@ Nå som vi har fått på plass SharePoint-listen, kan vi bygge og egendefinere v
 
     ![Redigeringsskjema](./media/sharepoint-scenario-generate-app/02-04-03-edit.png)
 
-## <a name="step-5-run-the-app-from-the-list"></a>Trinn 5: Å kjøre appen fra listen
+## <a name="step-5-run-the-app-from-the-list"></a>Trinn 5: Kjøre appen fra listen
 
 1. Klikk eller trykk på **Alle elementer** i **Prosjektforespørsler-listen**, og deretter klikker eller trykker du på **Prosjektforespørsler-appen**.
    

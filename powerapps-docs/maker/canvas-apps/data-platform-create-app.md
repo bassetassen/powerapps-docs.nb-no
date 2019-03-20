@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c8b24c9064e5012ff1ddb15d13dc338ed9565bef
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
-ms.translationtype: HT
+ms.openlocfilehash: 1393d6dcdd9b88f4bca9e536a776b8601ae4c1c1
+ms.sourcegitcommit: 452d4ead948591d16aff144006ad84c957eba837
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316773"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "57801783"
 ---
 # <a name="generate-a-canvas-app-from-common-data-service-for-apps-in-powerapps"></a>Generer en lerretsapp fra Common Data Service for apper i PowerApps
 
@@ -28,7 +28,7 @@ Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https:/
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-Hvis du ønsker å følge med i denne hurtiginnføringen, må du [bytte til et miljø](working-with-environments.md) der en database i CDS for apper har blitt opprettet, inneholder data og tillater oppdateringer. Hvis det ikke finnes et slikt miljø og du har administratorrettigheter, kan du [opprette et miljø](../../administrator/environments-administration.md#create-an-environment) som oppfyller dette kravet.
+Hvis du vil følge denne hurtiginnføringen, må du være tilordnet til den [Miljøoppretter](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles) sikkerhetsrolle, og du må [bytte til et miljø](working-with-environments.md) der en database i CDS for apper har opprettet, inneholder data, og tillater oppdateringer. Hvis det ikke finnes et slikt miljø og du har administratorrettigheter, kan du [opprette et miljø](https://docs.microsoft.com/power-platform/admin/environments-administration.md#create-an-environment) som oppfyller dette kravet.
 
 ## <a name="generate-an-app"></a>Å generere en app
 

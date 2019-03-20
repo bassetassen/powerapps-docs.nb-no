@@ -1,38 +1,43 @@
 ---
 title: Utvikle lerretsapper som fungerer i frakoblet tilstand | Microsoft Docs
 description: Utvikle lerretsapper som fungerer i frakoblet tilstand, slik at brukerne kan være produktive enten de er tilkoblet eller frakoblet.
-author: mgblythe
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 05/09/2017
-ms.author: mblythe
+ms.date: 01/31/2019
+ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f081369d75ec6f8fc29e6177b8173734d2462e03
-ms.sourcegitcommit: 097ddfb25eb0f09f0229b866668c2b02fa57df55
-ms.translationtype: HT
+ms.openlocfilehash: f9922c64769aeacd9b9b65cc3039b091ac7fe353
+ms.sourcegitcommit: bdee274ce4ae622f7af5f208041902e66e03d1b3
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991773"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "57800380"
 ---
 # <a name="develop-offline-capable-canvas-apps"></a>Utvikle lerretsapper som fungerer i frakoblet tilstand
 
-Et av de vanligste scenarioene du opplever som utvikler av mobilapper, er å gjøre det mulig for brukerne å være produktive der det er begrensede tilkoblingsmuligheter, eller ingen tilkobling i det hele tatt. PowerApps har et sett med funksjoner og virkemåter som hjelper deg å utvikle lerretsapper som fungerer i frakoblet tilstand. Bruk en av disse måtene:
+Et av de vanligste scenarioene du opplever som utvikler av mobilapper, er å gjøre det mulig for brukerne å være produktive der det er begrensede tilkoblingsmuligheter, eller ingen tilkobling i det hele tatt. PowerApps har et sett med funksjoner og virkemåter som hjelper deg å utvikle lerretsapper som fungerer i frakoblet tilstand. du kan:
 
 * Start PowerApps Mobile når du er frakoblet.
 * Kjør apper du utvikler når du er frakoblet.
 * Fastslå når en app er frakoblet, tilkoblet, eller bruker en forbruksmålt tilkobling ved bruk av [Tilkobling](../canvas-apps/functions/signals.md#connection)-signalobjektet.
 * Bruk [samlinger](../canvas-apps/create-update-collection.md) og nyttefunksjoner som [LoadData og SaveData](../canvas-apps/functions/function-savedata-loaddata.md) for grunnleggende datalagring når du er frakoblet.
 
-> [!NOTE]
-> Dette funksjonsområdet er fremdeles under utvikling og er for øyeblikket ikke optimalisert for hvert scenario. Funksjonene til SaveData() til en lokal enhet og LoadData() fra den enheten fungerer best i sin gjeldende implementering over relativt små mengder data (for eksempel, dusinvis av tekstposter i en tabell), som generelt ikke overskrider 2 MB. Dette er nyttig for noen grunnleggende «frakoblede» scenarioer, i tillegg til å øke oppstartsytelsen til lerretsapper ved å bufre data lokalt. Hvis du imidlertid bruker denne funksjonen til å lagre store mengder data (for eksempel, lagre tusenvis av rader i en tabell eller bufre store bilder eller videoer), kan det føre til feil eller uventet virkemåte med den gjeldende implementeringen – dette bør unngås. Funksjonene løser ikke flettekonflikter automatisk når en enhet returnerer tilbake fra frakoblet tilstand – konfigurasjonen for hvilke data som er lagret og hvordan man håndterer tilkoblinger, er opp til oppretteren når du skriver uttrykk.
->
-> Vi arbeider for å utvide funksjonene til frakoblede apper, øke stabiliteten og størrelsesbegrensningene, og (i fremtiden) automatisk håndtere avgjørelser om hva som skal lagres og hvordan man håndterer konflikter. Kom tilbake hit og les [PowerApps-bloggen](https://powerapps.microsoft.com/blog/) for oppdateringer når de blir tilgjengelige.
+## <a name="limitations"></a>Begrensninger
+
+**LoadData** og **SaveData** kombinere for å danne en enkel mekanisme for å lagre små mengder med data på en lokal enhet. Ved å bruke disse funksjonene, kan du legge til enkle frakoblede funksjoner appen din.  
+
+Disse funksjonene er begrenset av mengden minne tilgjengelig app fordi de fungerer på en samling i minnet. Tilgjengelig minne kan variere avhengig av enheten, operativsystemet, minnet som bruker PowerApps Mobile og kompleksiteten til appen når det gjelder skjermer og kontroller. Hvis du lagrer mer enn et par MB med data, kan du teste appen din med forventede scenarier på enheter som du forventer at den skal kjøres. Du bør generelt forvente å ha mellom 30 og 70 MB tilgjengelig minne.  
+
+Funksjonene også løse ikke automatisk flettekonflikter når en enhet returnerer til tilkobling fra frakoblet – konfigurasjonen på hvilke data lagres og hvordan du håndterer ny tilkobling er opptil maker når du skriver inn uttrykk.
+
+Vi jobber for å utvide mulighetene for frakoblede scenarioer. Kom tilbake hit og les [PowerApps-bloggen](https://powerapps.microsoft.com/blog/) for oppdateringer når de blir tilgjengelige.
 
 ## <a name="how-to-build-offline-capable-apps"></a>Å bygge apper som fungerer i frakoblet tilstand
 
@@ -58,8 +63,8 @@ Appen gjør følgende på et høyt nivå:
    * Vi legger inn tweets som finnes i det lokale mellomlageret.
    * Vi oppdaterer det lokale mellomlageret og lagrer det ved bruk av [SaveData](../canvas-apps/functions/function-savedata-loaddata.md).
 
-### <a name="step-1-create-a-new-phone-app"></a>Trinn 1: Å opprette en ny telefonapp
-1. Åpne PowerApps Studio.
+### <a name="step-1-create-a-new-phone-app"></a>Trinn 1: Opprette en ny telefonapp
+1. Å åpne PowerApps Studio.
 2. Klikk eller trykk på **Ny** > **Tom app** > **Telefonoppsett**.
 
     ![Tom app – telefonoppsett](./media/offline-apps/blank-app.png)
@@ -74,27 +79,18 @@ Appen gjør følgende på et høyt nivå:
 
     ![Å legge til en Twitter-tilkobling](./media/offline-apps/twitter-connection.png)
 
-### <a name="step-3-load-tweets-into-a-localtweets-collection-on-app-startup"></a>Trinn 3: Å laste inn tweets i en LocalTweets-samling ved oppstart av appen
+### <a name="step-3-load-tweets-into-a-localtweets-collection-on-app-startup"></a>Trinn 3: Laste inn tweets i en LocalTweets-samling ved oppstart av appen
 Velg **OnVisible**-egenskapen for **Screen1** i appen, og kopier inn følgende formel:
 
-```
-If(Connection.Connected,
-
-    ClearCollect(LocalTweets, Twitter.SearchTweet("PowerApps", {maxResults: 100}));
-
-    UpdateContext({statusText: "Online data"})
-
-    ,
-
+```powerapps-dot
+If( Connection.Connected,
+    ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
+        UpdateContext( {statusText: "Online data"} ),
     LoadData(LocalTweets, "Tweets", true);
-
-    UpdateContext({statusText: "Local data"})
-
+        UpdateContext( {statusText: "Local data"} )
 );
-
-LoadData(LocalTweetsToPost, "LocalTweets", true);
-
-SaveData(LocalTweets, "Tweets")
+LoadData( LocalTweetsToPost, "LocalTweets", true );
+SaveData( LocalTweets, "Tweets" )
 ```
 
 ![Formel for å laste inn tweets](./media/offline-apps/load-tweets.png)
@@ -104,9 +100,9 @@ Denne formelen kontrollerer om enheten er koblet til Internett:
 * Hvis enheten er koblet til Internett, laster den inn en **LocalTweets**-samling med opptil 100 tweets med søkeordet «PowerApps».
 * Hvis enheten er i frakoblet modus, laster den inn det lokale mellomlageret fra en fil som heter «Tweets», hvis den er tilgjengelig.
 
-### <a name="step-4-add-a-gallery-and-bind-it-to-the-localtweets-collection"></a>Trinn 4: Å legge til et galleri og binde det til LocalTweets-samlingen
+### <a name="step-4-add-a-gallery-and-bind-it-to-the-localtweets-collection"></a>Trinn 4: Legge til et galleri og binde det til LocalTweets-samlingen
 
-1. Sett inn et nytt galleri med fleksibel høyde: **Sett inn** > **Galleri** > **Tomt, fleksibel høyde**.
+1. Sett inn et nytt galleri med fleksibel høyde: **Sett inn** > **galleriet** > **tomt, fleksibel høyde**.
 
 2. Angi **Elementer**-egenskapen til **LocalTweets**.
 
@@ -117,39 +113,31 @@ Denne formelen kontrollerer om enheten er koblet til Internett:
    * **Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)**
 4. Legg til en **Bilde**-kontroll, og angi **Bilde**-egenskapen til **ThisItem.UserDetails.ProfileImageUrl**.
 
-### <a name="step-5-add-a-connection-status-label"></a>Trinn 5: Å legge til en statusetikett for tilkoblingen
+### <a name="step-5-add-a-connection-status-label"></a>Trinn 5: Legg til en statusetikett for
 Sett inn en ny **Etikett**-kontroll, og angi **Tekst**-egenskapen til denne formelen:
 
-```
-If (Connection.Connected, "Connected", "Offline")
-```
+```If( Connection.Connected, "Connected", "Offline" )```
 
 Denne formelen kontrollerer om enheten er koblet til Internett. Hvis den er det, er teksten i etiketten «Tilkoblet». Ellers er den «Frakoblet».
 
-### <a name="step-6-add-a-text-input-to-compose-new-tweets"></a>Trinn 6: Å legge til en tekstinndata for å opprette nye tweeets
+### <a name="step-6-add-a-text-input-to-compose-new-tweets"></a>Trinn 6: Legg til en tekstinndata for å opprette nye tweeets
 
 1. Sett inn en ny **Tekstinndata**-kontroll med navn «NewTweetTextInput».
 
 2. Angi **Reset**-egenskapen til tekstinndataen til **resetNewTweet**.
 
-### <a name="step-7-add-a-button-to-post-the-tweet"></a>Trinn 7: Å legge til en knapp for å publisere tweet
+### <a name="step-7-add-a-button-to-post-the-tweet"></a>Trinn 7: Legg til en knapp for å publisere tweet
 1. Legg til en **Knapp**-kontroll, og angi **Tekst**-egenskapen til «Tweet».
 2. Angi knappens **OnSelect**-egenskap til følgende formel:
 
-    ```
-    If (Connection.Connected,
-
-        Twitter.Tweet("", {tweetText: NewTweetTextInput.Text}),
-
-        Collect(LocalTweetsToPost, {tweetText: NewTweetTextInput.Text});
-
-        SaveData(LocalTweetsToPost, "LocalTweetsToPost")
-
+    ```powerapps-dot
+    If( Connection.Connected,
+        Twitter.Tweet( "", {tweetText: NewTweetTextInput.Text} ),
+        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
+            SaveData( LocalTweetsToPost, "LocalTweetsToPost" )
     );
-
-    UpdateContext({resetNewTweet: true});
-
-    UpdateContext({resetNewTweet: false})
+    UpdateContext( {resetNewTweet: true} );
+    UpdateContext( {resetNewTweet: false} )
     ```  
 
 Denne formelen kontrollerer om enheten er koblet til Internett:
@@ -159,7 +147,7 @@ Denne formelen kontrollerer om enheten er koblet til Internett:
 
 Deretter tilbakestiller formelen teksten i tekstboksen.
 
-### <a name="step-8-add-a-timer-to-check-for-tweets-every-five-minutes"></a>Trinn 8: Å legge til en tidtaker som ser etter tweets hvert femte minutt
+### <a name="step-8-add-a-timer-to-check-for-tweets-every-five-minutes"></a>Trinn 8: Legg til en tidtaker som ser etter tweets hvert femte minutt
 Legg til en ny **Tidtaker**-kontroll:
 
 * Angi **Varighet**-egenskapen til 300000.
@@ -168,18 +156,13 @@ Legg til en ny **Tidtaker**-kontroll:
 
 * Angi **OnTimerEnd** til følgende formel:
 
-    ```
-    If(Connection.Connected,
-
-        ForAll(LocalTweetsToPost, Twitter.Tweet("", {tweetText: tweetText}));
-
-        Clear(LocalTweetsToPost);
-
-        Collect(LocalTweetsToPost, {tweetText: NewTweetTextInput.Text});
-
-        SaveData(LocalTweetsToPost, "LocalTweetsToPost");
-
-        UpdateContext({statusText: "Online data"})
+    ```powerapps-dot
+    If( Connection.Connected,
+        ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) );
+        Clear( LocalTweetsToPost);
+        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
+        SaveData( LocalTweetsToPost, "LocalTweetsToPost" );
+        UpdateContext( {statusText: "Online data"} )
     )
     ```
 

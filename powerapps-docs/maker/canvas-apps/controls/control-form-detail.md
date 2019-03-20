@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 91f84ebbec83c5734e910680f4ab3a79077164df
-ms.sourcegitcommit: ce621966a34061dda2f75232403847e21816ffa9
-ms.translationtype: HT
+ms.openlocfilehash: 194da16a1025daa84c658ae8884734a08780c6c1
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/30/2018
-ms.locfileid: "47459459"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57802059"
 ---
 # <a name="edit-form-and-display-form-controls-in-powerapps"></a>Kontroller for Redigeringsskjema og Visningsskjema i PowerApps
 Vis, rediger og opprett en post i en datakilde.
@@ -152,7 +152,7 @@ Skjemaet bytter fra **Ny**-modus til **Redigeringsmodus** når noen av disse end
 
 * Denne egenskapen gjelder bare for **Redigeringsskjema**-kontrollen.
 * Bruk denne egenskapen for å trekke ut feltverdiene fra kortene i kontrollen.  Deretter kan du bruke disse verdiene til å oppdatere datakilden manuelt med et **[Patch](../functions/function-patch.md)**-funksjonskall eller en annen metode som eksponeres av tilkoblingen.  Du trenger ikke å bruke denne egenskapen hvis du bruker **[SubmitForm](../functions/function-form.md)**-funksjonen.
-* Denne egenskapen returnerer en post med verdier.  Hvis for eksempel skjemakontrollen inneholder kortkontroller for feltene **Navn** og **Antall**, og verdiene for **[Oppdateringer](control-card.md)**-egenskapene for disse kortene returnerer henholdsvis "Widget" og 10, returnerer **Oppdateringer**-egenskapen for skjemakontrollen **{ Name: "Widget", Quantity: 10 }**.
+* Denne egenskapen returnerer en post med verdier.  For eksempel, hvis skjemakontrollen inneholder kortkontroller for **navnet** og **antall** felt og verdiene i den **[oppdateringen](control-card.md)** egenskapene for disse kortene returnerer henholdsvis "Widget" og 10 og deretter den **oppdateringer** egenskapen for skjemakontrollen **{navn: "Widget", Quantity: 10 }**.
 
 **Valid** – om kontrollene **[Kort](control-card.md)** eller **Redigeringsskjema** inneholder valide oppføringer, klare til å sendes til datakilden.
 
@@ -181,7 +181,7 @@ Skjemaet bytter fra **Ny**-modus til **Redigeringsmodus** når noen av disse end
 
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
-## <a name="more-information"></a>Mer informasjon
+## <a name="more-information"></a>Vil ha mer informasjon
 Du kan se [Dataskjemaer](../working-with-forms.md) for å få en omfattende oversikt over hvordan skjemaer fungerer.
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet

@@ -7,35 +7,30 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 07/10/2017
+ms.date: 02/03/2019
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c0c4e14b2f4a7db81dcdd51dd75a45d3cac4da68
-ms.sourcegitcommit: 6851486b8a44d76b6d87837952b7a7f38a8752b6
-ms.translationtype: HT
+ms.openlocfilehash: b6f83d21b2964dac7c4925d45efdf11a3a1e6b02
+ms.sourcegitcommit: 7f67cd28c781a48f6a211ed82c2c861ae3acf1a5
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53570355"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "57800725"
 ---
 # <a name="add-a-screen-to-a-canvas-app-and-navigate-between-screens"></a>Legg til en skjerm i en lerretsapp og naviger mellom skjermer
 
 Opprett en lerretsapp med flere skjermer, og legg til måter brukerne kan navigere mellom dem på.
 
-## <a name="prerequisites"></a>Forutsetninger
-
-* Finn ut hvordan du kan [konfigurere en kontroll](add-configure-controls.md).
-* Å opprette eller åpne en app.
-
 ## <a name="add-and-rename-a-screen"></a>Å legge til og gi nytt navn til en skjerm
 
-1. Klikk eller trykk på **Hjem** på **Ny skjerm**-fanen.
+1. På den **Hjem** fanen og velge **ny skjerm**, og velg deretter typen skjermen som du vil legge til.
 
     ![Å legge til Skjerm-alternativet på Hjem-fanen](./media/add-screen-context-variables/add-screen.png)
 
-2. Klikk eller trykk på navnet på skjermen (rett over **Egenskaper**-fanen) i høyre rute, og skriv deretter inn det nye navnet **Kilde**.
+2. I den høyre ruten, velger du navnet på skjermen (rett over den **Egenskaper** fanen), og skriv deretter inn **kilde**.
 
     ![Å gi nytt navn til standardskjermen](./media/add-screen-context-variables/name-source-screen.png)
 
@@ -43,24 +38,37 @@ Opprett en lerretsapp med flere skjermer, og legg til måter brukerne kan navige
 
     ![To skjermer i navigasjonsfeltet til venstre](./media/add-screen-context-variables/two-screens-in-nav.png)
 
+## <a name="reorder-screens"></a>Endre rekkefølgen på skjermer
+
+Hold pekeren over en skjerm som du ønsker å flytte opp eller ned, velg ellipseknappen som vises i navigasjonsfeltet til venstre, og velg deretter **Flytt opp** eller **Flytt ned**.
+
+![Endre rekkefølgen på skjermen](./media/add-screen-context-variables/reorder-screen.png)
+
+> [!NOTE]
+> Når du åpner appen, vises vanligvis skjermen på toppen av den hierarkiske listen over kontroller først. Men du kan angi en annen skjerm ved å angi den **[OnStart](controls/control-screen.md)** egenskapen til en formel som inneholder den **[Navigate](functions/function-navigate.md)** funksjonen.
+
 ## <a name="add-navigation"></a>Å legge til navigasjon
-1. Velg **Kilde**-skjermen, og åpne **Sett inn**-fanen. Klikk eller trykk deretter på **Ikoner**, og klikk eller trykk på **Neste pil**.  
+
+1. Med den **kilde** skjermen, og åpne den **Sett inn** fanen og velge **ikoner**, og velg deretter **neste-pilen**.  
 
     ![Alternativet Figurer på Sett inn-fanen](./media/add-screen-context-variables/add-next-arrow.png)
 
 2. (valgfritt) Flytt pilen slik at den vises nede til høyre på skjermen.
 
-3. Med pilen fremdeles merket klikker eller trykker du på **Handling**-fanen, og deretter klikker eller trykker du på **Navigate**.
+3. Med pilen fortsatt er valgt, velger du **handlingen** fanen, og velg deretter **Navigate**.
 
-    **[OnSelect](controls/properties-core.md)** -egenskapen for pilen settes automatisk til en **Naviger**-funksjon.  
+    **[OnSelect](controls/properties-core.md)** -egenskapen for pilen settes automatisk til en **Naviger**-funksjon.
 
     ![OnSelect-egenskapen satt til Navigate-funksjon](./media/add-screen-context-variables/onselect-default.png)
 
-    Når en bruker klikker på eller trykker på pilen, tones **Mål**-skjermen inn.
+    Når en bruker velger du pilen, den **Target** skjermen tones.
 
 4. På **Target**-skjermen legger du til en **Tilbake-pil** og angir **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:
-   <br>**Navigate(Source, ScreenTransition.Fade)**
 
-5. Åpne forhåndsvisningsmodus (![](./media/add-screen-context-variables/preview.png) eller trykk på F5), og bytt deretter mellom skjermene ved å klikke eller trykke på pilene som du har lagt til.
+    `Navigate(Source, ScreenTransition.Fade)`
 
-6. Trykk på **ESC** for å gå tilbake til standardarbeidsområdet.
+5. Mens du holder nede Alt-tasten, kan du veksle mellom skjermer ved å velge pilen på hver skjerm.
+
+## <a name="more-information"></a>Vil ha mer informasjon
+
+[Skjermkontroll referanse](controls/control-screen.md)

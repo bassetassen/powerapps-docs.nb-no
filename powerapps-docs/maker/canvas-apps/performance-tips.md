@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9d86bcaf02050da1b3cd0364e28bc4ec05a6407d
-ms.sourcegitcommit: 6e579014ebb1f801985b8b4b68b7b768a09559c7
-ms.translationtype: HT
+ms.openlocfilehash: a04320d2d8bb2d8ad3ebf30d3ecbd0dfe7f9b0bd
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247590"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57801967"
 ---
 # <a name="optimize-canvas-app-performance-in-powerapps"></a>Optimaliser ytelsen for lerretsapp i PowerApps
 Microsoft jobber hardt for å forbedre ytelsen til alle appene som kjører på Power-plattformen. Me du kan følge de anbefalte fremgangsmåtene i dette emnet for å øke ytelsen til apper du oppretter.
@@ -101,3 +101,15 @@ Bruk datakilder og formler som kan delegeres slik at appen fungerer bra, samtidi
 
 ## <a name="republish-apps-regularly"></a>Publiser apper på nytt jevnlig
 [Publiser appene](https://powerapps.microsoft.com/blog/republish-your-apps-to-get-performance-improvements-and-additional-features/) (blogginnnlegg) for å få bedre ytelse og tilleggsfunksjoner fra PowerApps-plattformen.
+
+## <a name="avoid-repeating-the-same-formula-in-multiple-places"></a>Ikke gjenta den samme formelen på flere steder
+Hvis flere egenskaper kjører den samme formelen (spesielt hvis det er komplekse), kan du vurdere å sette det én gang, og deretter refererer til resultatet av den første egenskapen i etterfølgende felt. For eksempel ikke angi den **DisplayMode** -egenskapen for Kontroller A, B, C, D og E i samme komplekse formelen. Angi i stedet AS **DisplayMode** til komplekse formelen, sette BS **DisplayMode** egenskapen til resultatet av AS **DisplayMode** -egenskapen, og så videre for C D og E.
+
+## <a name="enable-delayoutput-on-all-text-input-controls"></a>Aktiver DelayOutput på alle inndatakontroller for tekst
+Hvis du har flere formler eller regler som refererer til verdien for en **tekstinndata** kontroll, angi den **DelayedOutput** -egenskapen for kontrollen til true. Den **tekst** -egenskapen for kontrollen, oppdateres bare etter at tastetrykk angitt raskt har sluttet. Formler eller regler vil ikke kjøre så mange ganger, og vil forbedre appytelsen.
+
+## <a name="avoid-using-formupdates-in-rules-and-formulas"></a>Unngå å bruke Form.Updates i regler og formler
+Hvis du refererer til en brukerinndata verdi i en regel eller en formel ved hjelp av en **Form.Updates** variabelen, den gjentas over alle kortene til skjemaet data og oppretter en post hver gang. Hvis du vil gjøre appen mer effektiv, referere til verdien direkte fra datakortet eller kontrollverdien.
+
+## <a name="next-steps"></a>Neste trinn
+Se gjennom den [koding standarder](https://aka.ms/powerappscanvasguidelines) for maksimal appytelse og holde apper enklere å vedlikeholde.

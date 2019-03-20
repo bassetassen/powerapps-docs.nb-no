@@ -1,224 +1,136 @@
 ---
-title: Å opprette og oppdatere en samling | Microsoft Docs
-description: Å opprette samlinger og legge til kolonner i eksisterende samlinger i PowerApps
-author: lonu
+title: Opprett og oppdater en samling i en lerretsapp | Microsoft Docs
+description: Opprette en samling i en lerretsapp, legge til elementer i samlingen, og Fjern ett eller alle elementer fra den
+author: aftowen
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/30/2015
-ms.author: lonu
+ms.date: 01/28/2019
+ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c1043d32fc4ab4213d2ac2e690ef69e13fec8ed3
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: aca1b78262ac359689d66f687f902103740fa3a6
+ms.sourcegitcommit: 826bde1eab3dd32d7bf9fa3f43ea069694845597
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42831653"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "57800311"
 ---
-# <a name="create-and-update-a-collection-in-your-app"></a>Å opprette og oppdatere en samling i appen
-Bruk en samling til å lagre data som kan brukes i en app. En samling er en gruppe lignende elementer. Du har for eksempel opprettet en MyImages-samling som inneholder alle produktbildene som firmaet selger. Du kan legge til MyImages-samlingen i PowerApps og opprette en app som viser alle bildene av disse produktene. I et annet eksempel kan du opprette en PriceList-samling som viser produktene og prisen for hvert produkt.
+# <a name="create-and-update-a-collection-in-a-canvas-app"></a>Opprett og oppdater en samling i en lerretsapp
 
-### <a name="prerequisites"></a>Forutsetninger
-* [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å angi samme legitimasjon som du brukte til å registrere deg.
-* Opprett en app eller åpne en eksisterende app i PowerApps.
-* Finn ut hvordan du [konfigurerer en kontroll](add-configure-controls.md) i PowerApps.
-* Denne fremgangsmåten bruker [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip)-filen som eksempeldata. Zip-filen inneholder en XML-fil som kan konverteres til Excel. PowerApps leser ellers automatisk ZIP-filene og importerer dem. Du kan laste ned og bruke disse eksempeldataene eller importere dine egne.
+Bruk en samling til å lagre data som brukere kan administrere i appen. En samling er en gruppe elementer som ligner, for eksempel produkter i en liste over produkter. Hvis du vil ha mer informasjon om ulike typer variabler som for eksempel samlinger: [Forstå lerretsapp variabler](working-with-variables.md).
 
-## <a name="create-a-single-column-collection"></a>Å opprette en enkeltkolonne-samling
-Du kan bruke **Collect**-funksjonen til å opprette en samling, og legge til elementer i den.
+## <a name="prerequisites"></a>Forutsetninger
 
-1. Velg **Tekst** på **Sett inn**-fanen i en app, og velg **Tekstinndata**:
+- [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å angi samme legitimasjon som du brukte til å registrere deg.
+- Opprett en app eller åpne en eksisterende app i PowerApps.
+- Finn ut hvordan du [konfigurerer en kontroll](add-configure-controls.md) i PowerApps.
 
-   ![][1]
+## <a name="create-a-multicolumn-collection"></a>Opprette en samling med flere kolonner
 
-1. Velg **Text1** i hjørnet øverst til venstre, angi **Mål** som nytt navn for kontrollen:
+1. I PowerApps Studio, legge til en **tekstinndata** kontroll.
 
-   ![][2]
+    ![Sett inn en tekstinndata-kontroll](./media/create-update-collection/add-textbox.png)
 
-1. Velg **Knapp** på **Sett inn**-fanen for å legge til en knappkontroll i utformingen. **[OnSelect](controls/properties-core.md)**-egenskapen vises i rullegardinlisten. Konfigurer den til følgende funksjon:  
-   
-    ```Collect(Destinations, Destination!Text)```
-   
-    Den skal se slik ut:
+1. Gi nytt navn til kontrollen ved å velge ellipsen i den venstre navigasjonsruten, å velge **gi nytt navn til**, og deretter skrive inn **ProductName**.
 
-    ![][3]
+    ![Gi nytt navn til en kontroll](./media/create-update-collection/rename-textbox.png)
 
-5. Velg knappeteksten, og angi **Legg til**:
+1. Legg til en **rullegardin** kontroll.
 
-   ![][5]
+    ![Legg til rullegardinlisten](./media/create-update-collection/add-dropdown.png)
 
-1. Velg **Legg til**-knappen, og flytt den under tekstkontrollen. Du kan flytte den hvor som helst:  
-   ![][6]
+1. Gi nytt navn til den **rullegardin** kontrollen **farger**, og forsikre deg om at den **elementer** egenskap er merket i egenskapslisten.
 
-Du brukte Innsamling-funksjonen til å opprette en samling med navnet **Mål** i disse trinnene. Du har også lagt til en knappkontroll, og når den blir valgt, legger den til nye elementer i samlingen. Nå kan du se hva du har opprettet:
+    ![Elementer-egenskaper](./media/create-update-collection/items-property.png)
 
-1. Velg Forhåndsvisning:  
-   ![][7]  
-2. Skriv inn et bynavn i boksen, og velg deretter **Legg til**-knappen.
-3. Skriv inn noen flere bynavn, og velg **Legg til**-knappen hver gang.
-4. Trykk på **ESC** for å lukke vinduet for forhåndsvisning.
-5. Se Mål-samlingen og de angitte tekstverdiene. Velg **Samlinger** på **Fil**-fanen. Teksten du skrev inn, er oppført:  
-   ![][8]
+1. I formellinjen erstatter **DropDownSample** med dette uttrykket:
 
-#### <a name="extra-credit"></a>Viderekomne
-Nå skal vi binde Mål-samlingen til en liste:
+    `["Red","Green","Blue"]`
 
-1. Gå tilbake til utforming.
-2. Velg **Kontroller** på **Sett inn**-fanen, og velg deretter **ListBox**:  
-   ![][22]  
-3. Flytt listeboksen slik at du enkelt kan se den. Angi kontrollens **[Element](controls/properties-core.md)**-egenskap til følgende uttrykk:  
-   ```Destinations!Value```  <br/>
-   
-    Når du gjør dette, blir listeboksen automatisk fylt ut med elementer som du tidligere har angitt i Mål-samlingen:  
-   ![][4]  
+1. Legg til en **knappen** kontroll, angi dens **tekst** egenskapen til **«Legg til»**, og angi dens **OnSelect** egenskapen til denne formelen:
 
-Forhåndsvis endringene: ![][7]. Du kan se de forskjellige byene du har skrevet inn i listeboksen. Angi en ny by i kontrollen for innskriving av tekst, og velg **Legg til**-knappen. Listeboksen oppdateres automatisk hvis du vil inkludere den nye byen du skrev inn.
+    ```powerapps-dot
+    Collect(
+        ProductList,
+        {
+            Product: ProductName.Text,
+            Color: Colors.Selected.Value
+        }
+    )
+    ```
 
-## <a name="create-a-multi-column-collection"></a>Å opprette en samling med flere kolonner
-Følgende fremgangsmåte viser deg hvordan du oppretter en samling i appen ved hjelp av Innsamling-funksjonen, og hvordan du legger til flere rader i samlingen din.
+1. Trykk på F5, Skriv inn tekst i **ProductName**, velg et alternativ i **farger**, og velg deretter **Legg til**.
 
-1. Åpne en ny skjerm på **Hjem**-fanen.
-2. Velg **Tekst** på **Sett inn**-fanen, og velg **Tekstinndata**.
-3. Angi **By** som nytt navn for tekst-kontrollen:  
-   ![][9]  
-4. Sett inn en annen kontroll for innskriving av tekst, og endre navnet til **Delstater**.
-5. Flytt tekstkontrollene for By og Delstat slik at du kan se begge:  
-   ![][10]  
-   
-    > [!NOTE]
-   > Du kan erstatte «innskriving av tekst» med noe annet, som «By» eller «Delstat», slik det ble gjort i bildet.  
-6. Velg **Knapp** på **Sett inn**-fanen. Angi knappens **[OnSelect](controls/properties-core.md)**-egenskap til følgende funksjon:  
-   ```Collect(Destinations, {Cities:City!Text, States:States!Text})```  
-   
-    Den skal se slik ut:  
-    ![][11]  
-   
-    > [!NOTE]
-   > Du kan bruke den samme funksjonen til å legge til ekstra kolonner i denne samlingen. Du kan for eksempel legge til en annen kontroll for innskriving av tekst for Land for å legge til en Land-kolonne:
-   
-    `Collect(Destinations, {Cities:City!Text, States:States!Text}, {Countries:Country!Text})`
-7. Gi nytt navn til knappekontrollen **AddCityStateButton**, og angi **Legg til by og delstat** for **[Tekst](controls/properties-core.md)**-egenskapen:  
-   ![][12]  
+    ![Forhåndsvisning av appen](./media/create-update-collection/preview-add.png)
 
-I disse trinnene la du til en **Byer**-kolonne og en **Delstater**-kolonne i **Mål**-samlingen. Knappekontrollen legger til disse nye tekstelementene i samlingen. Nå kan du se hva du har opprettet:
+1. Gjenta det forrige trinnet minst to ganger, og trykk deretter på Esc.
 
-1. Velg Forhåndsvisning:  
-   ![][7]  
-2. Skriv inn tekst i By- og Delstat-boksene, og velg deretter knappen **Legg til by og delstat**.
-3. Å legge til flere byer og delstater.
-4. Trykk på **ESC** for å lukke vinduet for forhåndsvisning.
-5. Hvis du vil se alle elementene du har lagt til i Mål-samlingen, kan du velge **Fil**-fanen og deretter velge **Samlinger**:  
-   ![][13]
+1. På den **filen** menyen velger **samlinger** til å vise samlingen som du har opprettet.
 
-## <a name="add-columns-to-a-collection"></a>Å legge til kolonner i en samling
-Det finnes noen inndelinger i denne gjennomgangen. Når operasjonen er fullført, vet du hvordan du importerer data i en samling, oppretter et galleri som viser data i en prisliste og bruker en glidebryter som bestemmer antall for et produkt.
+    ![Vise samling](./media/create-update-collection/show-collection.png)
 
-### <a name="import-the-price-list-and-create-the-collection"></a>Å importere prislisten og opprette samlingen
-1. Last ned ZIP-filen [PriceList](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip).
-2. Legg til en ny skjerm på **Hjem**-fanen.
-3. Velg **Kontroller** på **Sett inn**-fanen, og velg deretter **Importer**:  
-   ![][14]  
-4. Velg **OnSelect** på **Handling**-fanen. Angi følgende funksjon:  
-   
-    ```Collect(PriceList, Import1!Data)```  
-5. Forhåndsvis appen. Velg **Importdata**-knappen, velg PriceList.zip-filen, og velg **Åpne**.
-6. Lukk Forhåndsvisning-vinduet.
-7. Velg **Fil**-fanen, og velg deretter **Samlinger**. Prisliste-elementene du importerte, er oppført:  
-   ![][15]
+## <a name="show-a-collection"></a>Vis en samling
 
-### <a name="add-the-gallery-to-show-the-collection-items"></a>Å legge til galleriet for å vise elementene i samlingen
-1. Gå tilbake til utforming.
-2. Gå til **Sett inn**-fanen, velg **Galleri**, bla ned til **Egendefinerte gallerier**, og velg deretter **Stående**:    
-   ![][16]  
-3. Angi **Prisgalleri** som nytt navn for galleriet, og angi **Prisliste** for **[Elementer](controls/properties-core.md)**-egenskapen:  
-   ![][18]  
-4. Flytt PriceList-galleriet under **Importdata**-kontrollen. Velg kantlinjene for galleriet, og bruk klikk-og-dra for å endre størrelsen på galleriet slik at tre ruter vises.
-5. Velg den første firkanten i galleriet, og legg til tre etiketter (**Sett inn**-fanen > **Etikett**).
-6. Endre størrelsen til etikettene og ordne dem i en rad nær toppen av i den første firkanten. Galleriet ser omtrent slik ut:  
-   ![][19]
-7. Angi følgende uttrykk for **[Tekst](controls/properties-core.md)**-egenskapen for hver etikett:  
-   
-   | Etikett | Angi følgende for Tekst-egenskapen |
-   | --- | --- |
-   | Etikett1 |``ThisItem!Name`` |
-   | Etikett2 |``Text(ThisItem!Price, "$#")`` |
-   | Etikett3 |``ThisItem!Maker`` |
-   
-    Når du gjør dette, oppdateres etikettene automatisk med verdier for navn, pris og produsent i PriceList-samlingen.
-8. Endre størrelsen på etikettene og galleriet for å fjerne ekstra mellomrom. Skjermen ser omtrent slik ut:  
-   ![][17]
+1. Legg til en loddrett **galleriet** kontroll.
 
-### <a name="add-the-quantity-slider-and-update-the-collection"></a>Legge til glidebryteren for antall, og oppdater samlingen
-1. Velg **Kontroller** på **Sett inn**-menyen, og velg **Glidebryter**. Angi det nye navnet **OrderQty** for glidebryteren, og flytt den til under galleriet.
-2. Legg til en knapp, angi **Legg til** for **[Tekst](controls/properties-core.md)**-egenskapen, og flytt den til under glidebryteren **OrderQty**. Appen ser omtrent slik ut:  
-   ![][20]
-3. Angi følgende uttrykk for **[OnSelect](controls/properties-core.md)**-egenskapen for **Legg til**-knappen:  
-   
-    ```Collect(OrderList, {Name:PriceGallery!Selected!Name, Qty:OrderQty!Value, Cost:OrderQty!Value*LookUp(PriceList, PriceGallery!Selected!Name in Name, Price)});SaveData(OrderList, "orderfile")```  
-   
-    > [!NOTE]
-   > Når du velger denne knappen senere i denne prosedyren, må du opprette og lagre en samling med navnet **OrderList**. Samlingen inneholder navnet på et produkt som du angir i galleriet, et antall som du velger med glidebryteren, og de totale kostnadene som beregnes ved å gange antallet med prisen på produktet.
-4. Velg **Skjerm**-fanen og angi **[OnVisible](controls/control-screen.md)**-egenskapen til følgende uttrykk:  
-   
-    ```If(IsEmpty(PriceList), LoadData(PriceList, "pricefile"));If(IsEmpty(OrderList), LoadData(OrderList, "orderfile"))```
+    ![Å legge til et loddrett galleri](./media/create-update-collection/add-gallery.png)
 
-Nå kan du se hva du har opprettet:
+1. Angi galleriets **elementer** egenskapen til **ProductList**.
 
-1. Åpne **Forhåndsvisning**.
-2. Velg et produkt i galleriet, flytt glidebryteren til ønsket antall og velg deretter **Legg til**-knappen.  
-   
-   > [!IMPORTANT]
-   > Når du velger et produkt, blir ikke dette produktet uthevet for å indikere at du valgte den. Da vi opprettet galleriet, la vi ikke til denne funksjonaliteten. Vær oppmerksom på at du ikke velger produktet ved å klikke på det.  
-   > 
-   > 
-3. Gjenta disse trinnene hvis du vil legge til flere produkter. Trykk på **ESC** for å lukke Forhåndsvisning-vinduet.
-4. Velg **Samlinger** på **Fil**-fanen for å vise en forhåndsvisning av **Ordreliste**-samlingen du opprettet:  
-   ![][21]
+1. I den **Data** ruten, setter du undertittel-feltet til **farge**, og angi tittel-feltet til **produktet**.
 
-> [!TIP]
-> Hvis du vil fjerne alle elementer fra listen, kan du legge til en knapp, angi **Fjern** for **[Tekst](controls/properties-core.md)**-egenskapen, og angi følgende uttrykk for **[OnSelect](controls/properties-core.md)**-egenskapen:  
-> ```Clear(OrderList);SaveData(OrderList, "orderfile")```  
-> Hvis du vil fjerne ett element om gangen, kan du vise **OrderList**-samlingen i galleriet, og deretter angi følgende uttrykk for **[OnSelect](controls/properties-core.md)**-egenskapen for en etikett i galleriet:  
-> ```Remove(OrderList, ThisItem);SaveData(OrderList, "orderfile")```
-> 
-> 
+    ![Angi galleriets elementer-egenskapen, og endre feltene som den viser](./media/create-update-collection/configure-gallery.png)
 
-## <a name="tips-and-tricks"></a>Tips og triks
-* Du kan når som helst velge Forhåndsvisning-knappen (![][7]) for å vise diagrammer og for å se hvordan de ser ut med data.
-* Når du utformer appen din, kan du endre størrelse på kontrollene og flytte dem rundt ved hjelp av klikk-og-dra.
+1. Lukk den **Data** ruten, og angir den **oppsett** feltet til **tittel og undertittel**.
 
-## <a name="what-you-learned"></a>Det du lærte
-I dette emnet har du gjort følgende:
+    ![Angi galleriets elementer-egenskapen, og endre feltene som den viser](./media/create-update-collection/change-layout.png)
 
-* Du brukte Collect()-funksjonen til å opprette en samling i appen din.
-* Du har lagt til en knappekontroll, og når den blir valgt, legger den til nye elementer i samlingen.
-* Du brukte en listeboks til å legge til elementer i samlingen.
-* Du la til en glidebryter for å oppdatere elementer i samlingen.
+    Skjermen ligner dette eksemplet:
 
-[1]: ./media/create-update-collection/insertmenu-inputtext.png
-[2]: ./media/create-update-collection/renametext.png
-[3]: ./media/create-update-collection/buttononselect.png
-[4]: ./media/create-update-collection/listboxpreview.png
-[5]: ./media/create-update-collection/buttontext.png
-[6]: ./media/create-update-collection/buttonundertext.png
-[7]: ./media/create-update-collection/preview.png
-[8]: ./media/create-update-collection/existingcollections.png
-[9]: ./media/create-update-collection/renametext-city.png
-[10]: ./media/create-update-collection/citystate.png
-[11]: ./media/create-update-collection/buttononselectcitystate.png
-[12]: ./media/create-update-collection/buttononcitystate.png
-[13]: ./media/create-update-collection/existingcollectionscitystate.png
-[14]: ./media/create-update-collection/import.png
-[15]: ./media/create-update-collection/pricelistcollection.png
-[16]: ./media/create-update-collection/portrait.png
-[17]: ./media/create-update-collection/resizedgallery.png
-[18]: ./media/create-update-collection/galleryitems.png
-[19]: ./media/create-update-collection/gallerylabels.png
-[20]: ./media/create-update-collection/slider.png
-[21]: ./media/create-update-collection/existingcollectionsorderlist.png
-[22]: ./media/create-update-collection/listbox.png
+    ![Skjermen det første eksemplet](./media/create-update-collection/screen-example1.png)
+
+## <a name="remove-one-or-all-items"></a>Fjern ett eller alle elementer
+
+1. Velg gallerimalen ved å klikke eller trykke nær bunnen av galleriet og deretter klikke eller trykke på blyantikonet nær hjørnet øverst til venstre.
+
+    ![Velg gallerimal](./media/create-update-collection/select-template.png)
+
+1. Legg til en **Papirkurv** ikon i malgalleriet.
+
+    ![Legg til Papirkurv-ikon](./media/create-update-collection/trash-icon.png)
+
+1. Angi ikonets **OnSelect** egenskapen til denne formelen:
+
+    `Remove(ProductList, ThisItem)`
+
+1. Utenfor galleriet, Legg til en knapp, angi dens **tekst** egenskapen til **«Tøm»**, og angi dens **OnSelect** egenskapen til denne formelen:
+
+    `Clear(ProductList)`
+
+1. Mens du holder nede Alt-tasten, velg den **Papirkurv** ikonet for et element for å fjerne elementet fra samlingen, eller velg de **tydelig** for å fjerne alle elementer fra samlingen.
+
+## <a name="put-a-sharepoint-list-into-a-collection"></a>Legge til en SharePoint-liste i en samling
+
+1. [Opprett en tilkobling til en SharePoint-liste](connect-to-sharepoint.md).
+
+1. Legg til en knapp, og angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne funksjonen, noe som erstatter *ListName* med navnet på SharePoint-listen:<br>
+
+    `Collect(MySPCollection, ListName)`
+
+    Denne funksjonen oppretter en samling som heter **MySPCollection**, og som inneholder de samme dataene som SharePoint-listen.
+
+1. Velg knappen mens du holder nede ALT.
+
+1. (valgfritt) Hvis du vil forhåndsvise samlingen som du opprettet, kan du velge **samlinger** på den **filen** menyen.
+
+Informasjon om hvordan du viser data fra en SharePoint-liste (for eksempel datoer, valg og personer) i et galleri: [Vis data i et galleri](connections/connection-sharepoint-online.md#show-data-in-a-gallery). Informasjon om hvordan du viser data i et skjema (med rullegardinlister, datovelgere og personer plukkere): [Rediger visning kontroller for redigeringsskjema og](controls/control-form-detail.md).
+
+## <a name="next-steps"></a>Neste trinn
+
+- Se gjennom den [emnet referanse](functions/function-clear-collect-clearcollect.md) for den **samle inn** funksjonen.
+- Finn ut hvordan du former dataene i en samling ved hjelp av den [AddColumns, DropColumns, RenameColumns og ShowColumns](functions/function-table-shaping.md) funksjoner.

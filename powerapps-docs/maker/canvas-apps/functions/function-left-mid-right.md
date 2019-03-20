@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: dea20bf885afa8e687329aff4babff00b4f3263b
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: ca4fbaf18d7fa993a28f5cbb70f317b4ef5d42fd
+ms.sourcegitcommit: a4719a7d719116aeda26baa44159b2271a9a79c8
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42864960"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "57800541"
 ---
 # <a name="left-mid-and-right-functions-in-powerapps"></a>Funksjonene Left, Mid og Right i PowerApps
 Trekker ut den venstre, midterste eller høyre delen av en tekststreng.
@@ -39,13 +39,13 @@ Hvis startposisjonen er negativ eller utenfor slutten av strengen, returnerer **
 
 * *String* – obligatorisk. Strengen som resultatet skal trekkes ut fra.
 * *StartingPosition* – obligatorisk ( bare **Mid**).  Startposisjonen.  Posisjon 1 er det første tegnet i tekststrengen.
-* *NumberOfCharacters* – obligatorisk.  Antallet tegn som skal returneres.
+* *NumberOfCharacters* – obligatorisk (**venstre** og **høyre** bare).  Antallet tegn som skal returneres.  Hvis den utelates den **Mid** -funksjonen, returnerer funksjonen delen fra startposisjonen frem til slutten av strengen.
 
 **Left**( *SingleColumnTable*, *NumberOfCharacters* )<br>**Mid**( *SingleColumnTable*, *StartingPosition*, *NumberOfCharacters* )<br>**Right**( *SingleColumnTable*, *NumberOfCharacters* )
 
 * *SingleColumnTable* – obligatorisk. En tabell med én kolonne med strenger som resultatene skal trekkes ut fra.
 * *StartingPosition* – obligatorisk ( bare **Mid**).  Startposisjonen.  Posisjon 1 er det første tegnet i tekststrengen.
-* *NumberOfCharacters* – obligatorisk.  Antallet tegn som skal returneres.
+* *NumberOfCharacters* – obligatorisk (**venstre** og **høyre** bare).  Antallet tegn som skal returneres.  Hvis den utelates den **Mid** -funksjonen, returnerer funksjonen delen fra startposisjonen frem til slutten av strengen.
 
 ## <a name="examples"></a>Eksempler
 ### <a name="single-string"></a>Enkelt streng
@@ -55,6 +55,7 @@ Eksemplene i denne delen bruker en kontroll for innskriving av tekst som [dataki
 | --- | --- | --- |
 | **Left( Author.Text, 5 )** |Trekker ut opptil fem tegn fra begynnelsen av strengen. |«E. E.» |
 | **Mid( Author.Text, 7, 4 )** |Trekker ut opptil fire tegn, og starter med det sjuende tegnet fra strengen. |«Cumm» |
+| **Mid (Author.Text, 7)** |Trekker ut alle tegn, og starter med det sjuende tegnet fra strengen. |«Carlsen» |
 | **Right( Author.Text, 5 )** |Trekker ut opptil fem tegn fra slutten av strengen. |«mings» |
 
 ### <a name="single-column-table"></a>Tabell med én kolonne

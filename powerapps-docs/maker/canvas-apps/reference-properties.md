@@ -1,36 +1,40 @@
 ---
 title: Finn egenskaper | Microsoft Docs
 description: Finn en egenskap sortert alfabetisk, etter kontroll eller etter kategori.
-author: gregli-msft
+author: fikaradz
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 03/17/2016
-ms.author: gregli
+ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6c69d32f21bb5d1222122c4ec129d765b390d98f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 968722e672c6f169c4a9e2e87be959aa48e23c86
+ms.sourcegitcommit: 957d67e13bd4153d042b3b3bd650f6d0de20613c
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42863129"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58073675"
 ---
 # <a name="controls-and-properties-in-powerapps"></a>Kontroller og egenskaper i PowerApps
+
 Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapene for den. Hver kontrolltype har sitt eget sett med egenskaper. Noen egenskaper, som **Height** og **Width**, er tilgjengelige for nesten alle typer kontroller, mens andre egenskaper, som **CheckboxSize**, er spesifikke for én type kontroll.
 
 ## <a name="controls"></a>Kontroller
+
 **[Legg til bilde](controls/control-add-picture.md)** – Last inn bilder fra den lokale enheten, for opplasting til en datakilde.
 
 **[Vedlegg](controls/control-attachments.md)** – Last ned og opp filer fra den lokale enheten til en datakilde.
 
 **[Lyd](controls/control-audio-video.md)** – Spill av et lydklipp eller lyddelen av et videoklipp.
 
-**[Strekkodeleser (eksperimentell)](controls/control-barcodescanner.md)** – Skann en strekkode ved hjelp av en enhet som har et kamera.
+**[Strekkodeleser (eksperimentell)](controls/control-barcodescanner.md)**  – skanner-koder i en nettleser (eldre/foreldet).
+
+**[Strekkodeleser](controls/control-new-barcode-scanner.md)**  – skanner strekkoder, QR-koder og data-matrisen koder på en Android eller iOS-enhet.
 
 **[Knapp](controls/control-button.md)** – Samhandle med appen ved å klikke eller trykke.
 
@@ -56,7 +60,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 
 **[Rediger skjema](controls/control-form-detail.md)** – rediger og opprett poster i en datakilde ved hjelp av et skjema.
 
-**[Enhetsskjema](entity-form-control.md)** – eksperimentell funksjon: legg til dynamiske skjemaer der brukere kan vise, navigere og redigere relasjonelle data fra Common Data Service.
+**[Enhetsskjemakontrollen](entity-form-control.md)**  -Eksperimentell funksjon: Legg til dynamiske skjemaer der brukere kan vise, navigere og redigere relasjonelle data fra Common Data Service-.
 
 **[Eksporter](controls/control-export-import.md)** – eksporter data til bruk et annet sted i PowerApps.
 
@@ -88,7 +92,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 
 **[Vurdering](controls/control-rating.md)** – angi en verdi mellom 1 og et angitt tall.
 
-**[Redigeringsprogrammet for rik tekst (eksperimentell)](controls/control-richtexteditor.md)** – lar appbrukere benytte rik tekstformatering.
+**[Redigeringsprogram for rik tekst](controls/control-richtexteditor.md)**  – tillater rik tekstformatering ved app-brukere.
 
 **[Skjerm](controls/control-screen.md)** – vis og oppdater data om en bestemt aktivitet.
 
@@ -106,7 +110,10 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 
 **[Video](controls/control-audio-video.md)** – spill av et videoklipp fra en lokal fil, en datakilde eller YouTube.
 
+**[Web strekkodeleser (eksperimentell)](controls/control-barcodescanner.md)**  – eldre strekkodeleseren, som er foreldet, men det kan være nyttig for å skanne-koder i en nettleser.
+
 ## <a name="common-properties-by-category"></a>Vanlige egenskaper etter kategori
+
 **[Farge og kantlinje](controls/properties-color-border.md)** – konfigurer fargen og kantlinjen på en kontroll som kan endres når en bruker samhandler med den.
 
 **[Kjerne](controls/properties-core.md)** – konfigurer hvorvidt brukeren kan se og samhandle med en kontroll.
@@ -118,7 +125,9 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[Text](controls/properties-text.md)** – konfigurer hvordan teksten vises i kontroller, for eksempel skriftegenskaper, justering, linjehøyde.  
 
 ## <a name="all-properties"></a>Alle egenskaper
+
 ### <a name="a"></a>A
+
 **[ActualZoom](controls/control-pdf-viewer.md)** – Den faktiske zoomingen av kontrollen, hvor zoomingen som er forespurt, kan skille seg fra **Zoom**-egenskapen.  Gjelder for kontrollen for **[Visningsprogram for PDF](controls/control-pdf-viewer.md)**.
 
 **[Juster](controls/properties-text.md)** – Plasseringen av teksten i forhold til den vannrette midten av kontrollen.  Gjelder for mange kontroller.
@@ -134,6 +143,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **AutoStart** – om en lyd- eller videokontroll automatisk begynner å spille av et klipp når brukeren går til skjermen som inneholder denne kontrollen.  Gjelder for kontrollene **[Lyd](controls/control-audio-video.md)**, **[Tidtaker](controls/control-timer.md)** og **[Video](controls/control-audio-video.md)**.
 
 ### <a name="b"></a>B
+
 **[BackgroundImage](controls/properties-visual.md)** – Navnet på en bildefil som vises i bakgrunnen på en skjerm.  Gjelder for **[Skjerm](controls/control-screen.md)**-kontrollen.
 
 **[BorderColor](controls/properties-color-border.md)** – Fargen på kontrollens kantlinje.  Gjelder for mange kontroller.
@@ -145,6 +155,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[Brightness](controls/control-camera.md)** – Hvor mye lys brukeren sannsynligvis oppfatter i et bilde.  Gjelder for **[Kamera](controls/control-camera.md)**-kontrollen.
 
 ### <a name="c"></a>C
+
 **[CalculateOriginalDimensions](controls/control-image.md)** – Aktiverer egenskapene **[OriginalHeight](controls/control-image.md)** og **[OriginalWidth](controls/control-image.md)**.  Gjelder for **[Bilde](controls/control-image.md)**-kontrollen.
 
 **[Kamera](controls/control-camera.md)** – ID-nummeret til kameraet som appen bruker på enheter med flere enn ett kamera.  Gjelder for **[Kamera](controls/control-camera.md)**-kontrollen.
@@ -172,6 +183,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[CurrentPage](controls/control-pdf-viewer.md)** – nummeret på siden i en PDF-fil som vises for øyeblikket.  Gjelder for kontrollen for **[Visningsprogram for PDF](controls/control-pdf-viewer.md)**.
 
 ### <a name="d"></a>D
+
 **[Data](controls/control-export-import.md)** – navnet på en samling som du vil eksportere til en lokal fil.  Gjelder for **[Eksporter](controls/control-export-import.md)**-kontrollen.
 
 **[DataField](controls/control-card.md)** – navnet på feltet i en post som dette kortet viser og redigerer.  Gjelder for **[Kort](controls/control-card.md)**-kontrollen.
@@ -203,6 +215,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[Duration](controls/control-timer.md)** – hvor lenge en tidtaker kjører.  Gjelder for **[Tidtaker](controls/control-timer.md)**-kontrollen.
 
 ### <a name="e"></a>E
+
 **[EndYear](controls/control-date-picker.md)** – det siste året som brukeren kan angi verdien for i en datovelger-kontroll.  Gjelder for **[Datovelger](controls/control-date-picker.md)**-kontrollen.
 
 **Error** – betydningen av denne egenskapen er avhengig av kontrollen:
@@ -216,6 +229,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[Explode](controls/control-pie-chart.md)** – avstanden mellom stykker i et sektordiagram.  Gjelder for **[Sektordiagram](controls/control-pie-chart.md)**-kontrollen.
 
 ### <a name="f"></a>F
+
 **[Fyll](controls/properties-color-border.md)** – bakgrunnsfargen på kontrollen.  Gjelder for mange kontroller.
 
 **[FindNext](controls/control-pdf-viewer.md)** – finner neste forekomst av **FindText** i dokumentet.  Gjelder for kontrollen for **[Visningsprogram for PDF](controls/control-pdf-viewer.md)**.
@@ -226,12 +240,14 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 
 **[Font](controls/properties-text.md)**  – navnet på skriftserien som teksten vises i.  Gjelder for mange kontroller.
 
-**[FontWeight](controls/properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.  Gjelder for mange kontroller.
+**[FontWeight](controls/properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.  Gjelder for mange kontroller.
 
 ### <a name="g"></a>G
+
 **[GridStyle](controls/control-column-line-chart.md)** – om et stolpe- eller linjediagram viser x-aksen, y-aksen, begge eller ingen av delene.  Gjelder for kontrollene **[Stolpediagram](controls/control-column-line-chart.md)** og **[Linjediagram](controls/control-column-line-chart.md)**.
 
 ### <a name="h"></a>H
+
 **[HandleActiveFill](controls/control-slider.md)** – fargen på håndtaket for en glidebryter mens brukeren endrer verdien.  Gjelder for **[Glidebryter](controls/control-slider.md)**-kontrollen.
 
 **[HandleFill](controls/control-slider.md)** – fargen på håndtaket (elementet som endrer posisjon) i en veksleknapp eller glidebryter.  Gjelder for **[Glidebryter](controls/control-slider.md)**-kontrollen.
@@ -251,6 +267,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[HTMLText](controls/control-html-text.md)** – teksten som vises i en kontroll for HTML-tekst, og som kan inneholde HTML-koder.  Gjelder for **[HTML-tekst](controls/control-html-text.md)**-kontrollen.
 
 ### <a name="i"></a>I
+
 **[Image](controls/properties-visual.md)** – navnet på bildet som vises i en bilde-, lyd- eller mikrofonkontroll.  Gjelder for kontrollene for **[Lyd](controls/control-audio-video.md)**, **[Bilde](controls/control-image.md)**, **[Mikrofon](controls/control-microphone.md)** og **[Video](controls/control-audio-video.md)**.
 
 **[ImagePosition](controls/properties-visual.md)** – Plasseringen (**Fyll**, **Tilpass**, **Strekk**, **Fyll side ved side** eller **Midtstill**) av et bilde på en skjerm eller en kontroll hvis den ikke er av samme størrelse som bildet.  Gjelder for mange kontroller.
@@ -274,6 +291,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[ItemsGap](controls/control-column-line-chart.md)** – avstanden mellom kolonner i et stolpediagram.  Gjelder for **[Stolpediagram](controls/control-column-line-chart.md)**-kontrollen.
 
 ### <a name="l"></a>L
+
 **[LabelPosition](controls/control-pie-chart.md)** – plasseringen av etikettene i et sektordiagram i forhold til sektorene.  Gjelder for **[Sektordiagram](controls/control-pie-chart.md)**-kontrollen.
 
 **[LastSubmit](controls/control-form-detail.md)** – siste innsendte post, inkludert eventuelle servergenererte felt.  Gjelder for **[Redigeringsskjema](controls/control-form-detail.md)**-kontrollen.
@@ -285,6 +303,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[Loop](controls/control-audio-video.md)** – om et lyd- eller videoklipp automatisk starter på nytt så snart det er ferdig.  Gjelder for kontrollene **[Lyd](controls/control-audio-video.md)** og **[Video](controls/control-audio-video.md)**.
 
 ### <a name="m"></a>M
+
 **[Markers](controls/control-column-line-chart.md)** – om et kolonne- eller stolpediagram viser verdien for hvert datapunkt.  Gjelder for kontrollene **[Stolpediagram](controls/control-column-line-chart.md)** og **[Linjediagram](controls/control-column-line-chart.md)**.
 
 **[MarkerSuffix](controls/control-column-line-chart.md)** – teksten som vises etter hver verdi i et stolpediagram som har **[Markers](controls/control-column-line-chart.md)**-egenskapen angitt som **sann**.  Gjelder for **[Stolpediagram](controls/control-column-line-chart.md)**-kontrollen.
@@ -308,11 +327,13 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 * **[Text input](controls/control-text-input.md)**-kontrollen – kontrollen er i **SingleLine**-, **MultiLine**- eller **Passord**-modus.
 
 ### <a name="n"></a>N
+
 **[NavigationStep](controls/control-gallery.md)** – hvor langt et galleri ruller hvis **[ShowNavigation](controls/control-gallery.md)**-egenskapen er satt til **sann**, og brukeren velger en navigasjonspil i en av endene av galleriet.  Gjelder for **[Galleri](controls/control-gallery.md)**-kontrollen.
 
 **[NumberOfSeries](controls/control-column-line-chart.md)** – hvor mange kolonner med data som gjenspeiles i et stolpediagram eller linjediagram.  Gjelder for kontrollene **[Stolpediagram](controls/control-column-line-chart.md)** og **[Linjediagram](controls/control-column-line-chart.md)**.
 
 ### <a name="o"></a>O
+
 **[OnChange](controls/properties-core.md)** – hvordan appen reagerer når brukeren endrer verdien for en kontroll (for eksempel ved å skyve en glidebryter).  Gjelder for mange kontroller.
 
 **OnCheck** – Hvordan en app reagerer når verdien til en avmerkingsboks eller en veksleknapp endres til **sann**.  Gjelder kontrollene **[Avmerkingsboks](controls/control-check-box.md)** og **[Veksleknapp](controls/control-toggle.md)**.
@@ -354,6 +375,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[Overflow](controls/control-text-box.md)** – om et rullefelt vises i en etikett hvis **[Wrap](controls/control-text-box.md)**-egenskapen er satt til **sann** og verdien av kontrollens **[Text](controls/properties-core.md)**-egenskap inneholder flere tegn enn kontrollen kan vise om gangen.  Gjelder for **[Etikett](controls/control-text-box.md)**-kontrollen.
 
 ### <a name="p"></a>P
+
 **[Padding](controls/properties-size-location.md)**  – avstanden mellom teksten på en import- eller eksportknapp og kantene på denne knappen.  Gjelder kontrollene **[Legg til bilde](controls/control-add-picture.md)**, **[Eksporter](controls/control-export-import.md)** og **[Importer](controls/control-export-import.md)**.
 
 **[PaddingBottom](controls/properties-size-location.md)** – avstanden mellom teksten i en kontroll og den nederste kanten av kontrollen.  Gjelder for mange kontroller.
@@ -381,6 +403,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[PressedFill](controls/properties-color-border.md)** – bakgrunnsfargen i en kontroll når brukeren trykker eller klikker på kontrollen.  Gjelder for mange kontroller.
 
 ### <a name="r"></a>R
+
 **[RadioBackgroundFill](controls/control-radio.md)**  – bakgrunnsfargen i sirklene på en alternativknapp-kontroll.  Gjelder for **[Radio](controls/control-radio.md)**-kontrollen.
 
 **[RadioBorderColor](controls/control-radio.md)**  – fargen på sirkelen for hvert alternativ i en alternativknapp-kontroll.  Gjelder for **[Radio](controls/control-radio.md)**-kontrollen.
@@ -412,6 +435,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[Reset](controls/properties-core.md)** – hvorvidt en kontroll tilbakestilles til standardverdien.  Gjelder for mange kontroller.  Se også **[Reset](functions/function-reset.md)**-funksjonen.
 
 ### <a name="s"></a>S
+
 **Valgt** – det valgte elementet.  Gjelder for kontrollene **[Rullegardin](controls/control-drop-down.md)** og **[Galleri](controls/control-gallery.md)**.
 
 **[SelectedDate](controls/control-date-picker.md)** – datoen som er valgt i en datokontroll.  Gjelder for **[Datovelger](controls/control-date-picker.md)**-kontrollen.
@@ -455,6 +479,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[Strikethrough](controls/properties-text.md)** – om det vises en linje gjennom teksten som vises på en kontroll.  Gjelder for mange kontroller.
 
 ### <a name="t"></a>T
+
 **[TemplateFill](controls/control-gallery.md)** – bakgrunnsfargen i et galleri.  Gjelder for **[Galleri](controls/control-gallery.md)**-kontrollen.
 
 **[TemplatePadding](controls/control-gallery.md)** – avstanden mellom elementene i et galleri.  Gjelder for **[Galleri](controls/control-gallery.md)**-kontrollen.
@@ -472,6 +497,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[Transparency](controls/control-image.md)** – i hvor stor grad kontrollene bak et bilde forblir synlige.  Gjelder for **[Bilde](controls/control-image.md)**-kontrollen.
 
 ### <a name="u"></a>U
+
 **[Underline](controls/properties-text.md)** – om det vises en linje under teksten som vises på en kontroll.  Gjelder for mange kontroller.
 
 **[Unsaved](controls/control-form-detail.md)** – sann hvis **[Redigeringsskjema](controls/control-form-detail.md)**-kontrollen inneholder brukerendringer som ikke er lagret.  Gjelder for **[Redigeringsskjema](controls/control-form-detail.md)**-kontrollen.
@@ -481,6 +507,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[Updates](controls/control-form-detail.md)** – verdiene som skrives tilbake til datakilden for en post som er lastet inn i en skjemakontroll.  Gjelder for **[Redigeringsskjema](controls/control-form-detail.md)**-kontrollen.
 
 ### <a name="v"></a>V
+
 **Valid** – Om kontrollene **[Kort](controls/control-card.md)** eller **[Redigeringsskjema](controls/control-form-detail.md)** inneholder gyldige oppføringer og er klare til å sendes til datakilden.  Gjelder for kontrollene **[Kort](controls/control-card.md)** og **[Redigeringsskjema](controls/control-form-detail.md)**.
 
 **[Value](controls/properties-core.md)** – verdien til en inndatakontroll.  Gjelder kontrollene **[Avmerkingsboks](controls/control-check-box.md)**, **[Alternativknapp](controls/control-radio.md)**, **[Glidebryter](controls/control-slider.md)** og **[Veksleknapp](controls/control-toggle.md)**.
@@ -494,6 +521,7 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[Visible](controls/properties-core.md)** – om en kontroll vises eller er skjult.  Gjelder for mange kontroller.
 
 ### <a name="w"></a>W
+
 **[Bredde](controls/properties-size-location.md)** – avstanden mellom kontrollens venstre og høyre kant.  Gjelder for mange kontroller.
 
 **[WidthFit](controls/properties-size-location.md)**  – om en kontroll automatisk utvides horisontalt for å fylle ut et tomt område i en beholderkontroll, f.eks. en **[Redigeringsskjema](controls/control-form-detail.md)**-kontroll. Hvis flere kort har denne egenskapen satt til **sann**, deles plassen mellom dem. Hvis du vil ha mer informasjon, kan du se [Oppsett for dataskjema](working-with-form-layout.md).
@@ -503,11 +531,13 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[WrapCount](controls/control-gallery.md)** – hvor mange poster som vises i hvert element av et galleri.  Gjelder for **[Galleri](controls/control-gallery.md)**-kontrollen.
 
 ### <a name="x"></a>X
+
 **[X](controls/properties-size-location.md)** – avstanden mellom kontrollens venstre kant og den venstre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder). Gjelder for mange kontroller. For en **[Kort](controls/control-card.md)**-kontroll i en beholder med flere kolonner bestemmer denne egenskapen hvilken kolonne kortet skal vises i.
 
 **[XLabelAngle](controls/control-column-line-chart.md)** – vinkelen på etikettene under x-aksen i et diagram for et stolpe- eller linjediagram.  Gjelder for kontrollene **[Stolpediagram](controls/control-column-line-chart.md)** og **[Linjediagram](controls/control-column-line-chart.md)**.
 
 ### <a name="y"></a>Y
+
 **[Y](controls/properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder). Gjelder for mange kontroller. For en **[Kort](controls/control-card.md)**-kontroll i en beholder med flere rader bestemmer denne egenskapen hvilken rad kortet skal vises i.
 
 **[YAxisMax](controls/control-column-line-chart.md)** – den maksimale verdien for y-aksen til et linjediagram.  Gjelder for **[Linjediagram](controls/control-column-line-chart.md)**-kontrollen.
@@ -517,4 +547,5 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[YLabelAngle](controls/control-column-line-chart.md)** – vinkelen på etikettene ved siden av y-aksen i et stolpe- eller linjediagram.  Gjelder for kontrollene **[Stolpediagram](controls/control-column-line-chart.md)** og **[Linjediagram](controls/control-column-line-chart.md)**.
 
 ### <a name="z"></a>Z
+
 **Zoom** – Hvor mye et bilde fra et kamera prosentvis forstørres eller visningen av en fil i PDF-visningsprogram.  Gjelder for kontrollene for **[Kamera](controls/control-camera.md)** og **[Visningsprogram for PDF](controls/control-pdf-viewer.md)**.

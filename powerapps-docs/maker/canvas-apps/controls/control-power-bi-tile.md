@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ba7d48104d9fdf85573029cc510af2c29d3f6ca0
-ms.sourcegitcommit: 5db6e3ac3a622de313a1102417397e126c3f92f2
-ms.translationtype: HT
+ms.openlocfilehash: 82a7089ec14753a70d52d09024d1df527dbeb866
+ms.sourcegitcommit: a06e3137e3cb36414f0d61825bbc687487ea6f8c
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45640358"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57804267"
 ---
 # <a name="power-bi-tile-control-in-powerapps"></a>Kontrollen for Power BI-flis i PowerApps
 
@@ -37,6 +37,20 @@ Når du deler en app som inneholder Power BI-innhold, må du dele både selve ap
 ## <a name="performance"></a>Ytelse
 
 Det er ikke anbefalt å ha mer enn tre Power BI-fliser lastet inn samtidig i appen. Du kan kontrollere hvordan du laster og fjerner fliser ved å stille inn **LoadPowerBIContent**-egenskapen.
+
+## <a name="pass-a-parameter"></a>Send en parameter
+
+Ved å sende en enkelt parameter fra appen, kan du filtrere resultatene som vises i en Power BI-flis. Imidlertid bare strengverdier og likhetsoperatoren støttes, og filteret vil kanskje ikke fungere hvis tabellnavnet eller navnet på kolonnen som inneholder mellomrom.
+
+Hvis du vil sende en enkelt filter-verdi, kan du endre verdien for den **TileURL** egenskap, som følger denne syntaksen:
+
+```"https://app.powerbi.com/embed?dashboardId=<DashboardID>&tileId=<TileID>&config=<SomeHash>" ```
+
+Tilføy denne syntaksen til denne verdien:
+
+```&$filter=<TableName>/<ColumnName> eq "<Value>" ```
+
+Parameteren filtrerer en verdi i datasettet for rapporten der flisen kommer fra.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 

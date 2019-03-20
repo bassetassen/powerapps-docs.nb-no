@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 96a04cdda99f379c799ccd68e2442572ac929d39
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 586c82804380846ef400f020c4ce55c07262730f
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42862914"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57802036"
 ---
 # <a name="accessible-colors-for-canvas-apps-in-powerapps"></a>Tilgjengelige farger for lerretsapper i PowerApps
 Fargene som brukes i en lerretsapp, skal være tilpasset for fargeblinde og svaksynte brukere. Alle PowerApps-temaer er tilpassede som standard. Følg disse retningslinjene for å sikre at fargene forblir tilgjengelige når du endrer dem i et program. Det finnes flere verktøy tilgjengelige på nettet som kan hjelpe deg med å oppdage problemer knyttet til fargekontrast.
@@ -36,7 +36,7 @@ I praksis betyr dette at alle interaktive kontroller må ha nok fargekontrast me
 ## <a name="minimum-contrast-for-non-text"></a>Minimumkontrast for annet enn tekst
 
 > [!NOTE]
-> I [WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)-standarden gjelder kontrastkrav bare for tekst. Hvis du vil ha bedre tilgjengelighet, kan du vurdere det kommende [WCAG 2.1-retningslinjer for kontrast](https://www.w3.org/TR/WCAG21/#non-text-contrast) for viktige komponenter, som ikonknapper, i brukergrensesnittet. Et forhold på minst 3:1 anbefales for disse komponentene. Retningslinjene beskrevet i denne delen, er **valgfrie** for samsvar med WCAG 2.0.
+> I [WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)-standarden gjelder kontrastkrav bare for tekst. Hvis du vil ha bedre tilgjengelighet, kan du vurdere det kommende [WCAG 2.1-retningslinjer for kontrast](https://www.w3.org/TR/WCAG21/#non-text-contrast) for viktige komponenter, som ikonknapper, i brukergrensesnittet. Et forhold på minst 3:1 anbefales for disse komponentene. Retningslinjene beskrevet i denne delen er **valgfritt** for samsvar med WCAG 2.0.
 
 ### <a name="user-interface-components"></a>Komponenter i brukergrensesnittet
 Alle interaktive kontroller må ha nok fargekontrast mellom:
@@ -55,7 +55,7 @@ Hvis det ikke er en kantlinje, skal det være tilstrekkelig fargekontrast mellom
 * **[Pekefyll](controls/properties-color-border.md)** og farge utenfor kontrollen
 
 ### <a name="graphical-objects"></a>Grafiske objekter
-Hvis et bilde viser viktig informasjon, kan det være en god idé å sjekke det for kontrastproblemer. Dette gjelder for kontroller der et bilde kan vises: **[Lyd](controls/control-audio-video.md)**, **[Bilde](controls/control-image.md)**, **[Mikrofon](controls/control-microphone.md)**, og **[Video](controls/control-audio-video.md)**.
+Hvis et bilde viser viktig informasjon, kan det være en god idé å sjekke det for kontrastproblemer. Dette gjelder for kontroller der et bilde kan vises: **[Lyd](controls/control-audio-video.md)**,  **[bilde](controls/control-image.md)**,  **[mikrofon](controls/control-microphone.md)**, og **[Video](controls/control-audio-video.md)**.
 
 Når det gjelder videoinnhold, bør du vurdere å sjekke det for kontrastproblemer. Du kan alternativt, eller i tillegg, tilby [teksting for hørselshemmede](controls/control-audio-video.md), som beskriver videoen.
 

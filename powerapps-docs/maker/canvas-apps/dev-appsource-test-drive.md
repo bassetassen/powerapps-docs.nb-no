@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5920c40396ab3ff8c1691b5d683615f41f6a7509
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 590dc1707d080c1790c00f236df820559fe8f5a9
+ms.sourcegitcommit: ba5542ff1c815299baa16304c6e0b5fed936e776
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42863741"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54308414"
 ---
 # <a name="let-customers-test-drive-your-canvas-app-on-appsource"></a>Tilby kunder en testversjon av lerretsappen din på AppSource
 
@@ -41,8 +41,8 @@ Det å bygge en app for en testversjon er akkurat som å bygge en app i PowerApp
 
 PowerApps støtter bygging av apper med innebygd data, så du trenger bare eksempeldata for at appen skal fungere. Disse dataene skal registreres i en Excel-fil som én eller flere tabeller. I PowerApps henter du deretter data fra Excel-tabeller inn i appen og bruker de der, i stedet for gjennom en ekstern tilkobling. Prosessen nedenfor har tre trinn og den viser deg hvordan du henter data og bruker den i appen.
 
-### <a name="step-1-import-data-into-the-app"></a>Trinn 1: Å importere data inn i appen
-La oss si at du har en Excel-fil med to tabeller: **SiteInspector** og **SitePhotos**.
+### <a name="step-1-import-data-into-the-app"></a>Trinn 1: Importere data til appen
+Anta at du har en Excel-fil med to tabeller: **SiteInspector** og **SitePhotos**.
 
 ![Excel-tabeller som skal importeres](./media/dev-appsource-test-drive/excel-file.png)
 
@@ -54,13 +54,14 @@ Du har nå tabellene som datakilder i appen.
 
 ![Excel-tabeller som importerte datakilder](./media/dev-appsource-test-drive/data-sources.png)
 
-### <a name="step-2-handling-read-only-and-read-write-scenarios"></a>Trinn 2: Håndtering av scenarioer med skrivebeskyttet tilgang og lese/skrivetilgang
+### <a name="step-2-handling-read-only-and-read-write-scenarios"></a>Trinn 2: Håndtering av scenarioer med skrivebeskyttet tilgang og lese-og skrivetilgang
 Dataene du importerte er *statisk*, noe som betyr skrivebeskyttet. Hvis appen er skrivebeskyttet (det vil si at den bare viser data til brukeren), kan du henvise til tabellene direkte i appen. Hvis du for eksempel ønsker tilgang til **Tittel**-feltet i **SiteInspector**-tabellen, bruker du **SiteInspector.Title** i formelen din.
 
 Hvis appen er skrivebeskyttet, henter du først dataene fra hver tabell inn i en *samling*, som har en tabellstruktur i PowerApps. Deretter arbeider du med samlingen i stedet for tabellen. Hvis du vil hente data fra **SiteInspector**- og **SitePhotos**-tabellene inn i **SiteInspectorCollect**- og **SitePhotosCollect**-samlingene:
 
-```
-ClearCollect(SiteInspectorCollect,SiteInspector); ClearCollect(SitePhotosCollect,SitePhotos)
+```powerapps-dot
+ClearCollect( SiteInspectorCollect, SiteInspector ); 
+ClearCollect( SitePhotosCollect, SitePhotos )
 ```
 
 Formelen fjerner begge samlingene, deretter henter den dataene fra hver tabell inn i riktig samling:
@@ -71,27 +72,39 @@ Formelen fjerner begge samlingene, deretter henter den dataene fra hver tabell i
 
 Hvis du ønsker tilgang til **Tittel**-feltet, bruker du **SiteInspectorCollect.Title** i formelen.
 
-### <a name="step-3-add-update-and-delete-data-in-your-app"></a>Trinn 3: Legg til, oppdater og slett data i appen
+### <a name="step-3-add-update-and-delete-data-in-your-app"></a>Trinn 3: Legge til, oppdatere og slette data i appen
 Du har nå sett hvordan du leser data direkte og fra en samling. Nå skal vi vise deg hvordan du kan legge til, oppdatere og slette data i en samling:
 
 **Hvis du vil legge til en rad i en samling**, bruker du [Collect( DataSource, Item, ... )](../canvas-apps/functions/function-clear-collect-clearcollect.md):
 
-```
-Collect(SiteInspectorCollect,{ID:Value(Max(SiteInspectorCollect, ID)+1),
-    Title:TitleText.Text,SubTitle:SubTitleText.Text,Description:DescriptionText.Text)
+```powerapps-dot
+Collect( SiteInspectorCollect,
+    {
+        ID: Value( Max( SiteInspectorCollect, ID ) + 1 ),
+        Title: TitleText.Text,
+        SubTitle: SubTitleText.Text,
+        Description: DescriptionText.Text
+    }
+)
 ```
 
 **Hvis du vil oppdatere en rad i en samling**, bruker du [UpdateIf( DataSource, Condition1, ChangeRecord1 [, Condition2, ChangeRecord2, ...] )](../canvas-apps/functions/function-update-updateif.md):
 
-```
-UpdateIf(SiteInspectorCollect,ID=record.ID,
-    {Title:TitleEditText.Text,SubTitle:SubTitleEditText.Text,Description:DescriptionEditText.Text)
+```powerapps-dot
+UpdateIf( SiteInspectorCollect,
+    ID = record.ID,
+    {
+        Title: TitleEditText.Text,
+        SubTitle: SubTitleEditText.Text,
+        Description: DescriptionEditText.Text
+    }
+)
 ```
 
 **Hvis du vil slette en rad fra en samling**, bruker du [RemoveIf( DataSource, Condition [, ...] )](../canvas-apps/functions/function-remove-removeif.md):
 
-```
-RemoveIf(SiteInspectorCollect,ID=record.ID)
+```powerapps-dot
+RemoveIf( SiteInspectorCollect, ID = record.ID )
 ```
 
 > [!NOTE]

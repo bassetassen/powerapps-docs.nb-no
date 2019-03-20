@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f5e4e0ad13280783b7b6cd00121b4dc05cca6df8
-ms.sourcegitcommit: e4fe4b27651b62edb67e5995fc5955577d8ac5b8
-ms.translationtype: HT
+ms.openlocfilehash: 09e139353e500ad27650628a844bc01264eab3d0
+ms.sourcegitcommit: ba5542ff1c815299baa16304c6e0b5fed936e776
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075384"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54308390"
 ---
 # <a name="drop-down-control-in-powerapps"></a>Rullegardin-kontrollen i PowerApps
 En liste som viser bare det første elementet, med mindre brukeren åpner det.
@@ -66,7 +66,7 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
+**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -126,7 +126,7 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 
 1. Legg til en **Rullegardin**-kontroll, og sett **[Elementer](properties-core.md)**-egenskapen til dette uttrykket:
 
-    ```["Seattle", "Tokyo", "London", "Johannesburg", "Rio de Janeiro"]```
+    `["Seattle", "Tokyo", "London", "Johannesburg", "Rio de Janeiro"]`
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 
@@ -139,13 +139,13 @@ Prinsippene i denne prosedyren gjelder for alle [datakilder som inneholder tabel
 
 1. Legg til en **Rullegardin**-kontroll, og sett **[Elementer](properties-core.md)**-egenskapen til denne formelen:
 
-    ```Distinct(Accounts, address1_city)```
+    `Distinct(Accounts, address1_city)`
 
     Denne formelen viser alle byene i **Kontoer** enheten. Hvis mer enn én post har samme by, skjuler **[Distinkt](../functions/function-distinct.md)**-funksjonen dupliseringen i rullegardinkontrollen din.
 
 1. (valgfritt) Endre navnet på **Rullegardin**-kontrollen til **Byer**, legg til en loddrett **Galleri**-kontroll, og sett **[Elementer](properties-core.md)**-egenskapen for galleriet til denne formelen:
 
-    ```Filter(Accounts, address1_city = Cities.Selected.Value)```
+    `Filter(Accounts, address1_city = Cities.Selected.Value)`
 
     Denne **[Filter](../functions/function-filter-lookup.md)**-funksjonen viser bare de oppføringene i **Kontoer**-enheten der byen samsvarer med den valgte verdien i **Byer**-kontrollen.
 

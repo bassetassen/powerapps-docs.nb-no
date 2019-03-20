@@ -1,24 +1,24 @@
 ---
 title: Sende et push-varsel i Microsoft Docs
 description: Finn ut hvordan du sender opprinnelige push-varsler til en app i PowerApps.
-author: jamesol-msft
+author: kavishi
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 08/08/2017
-ms.author: jamesol
+ms.author: kaagar
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 031a481cda2a6f51aa5c455bd03c0fe5b79f7c60
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: f5ee975343afc16faaca52194b16cedff57e7e9f
+ms.sourcegitcommit: fe47ad47873a37fbe17b30d39fb2ca6035b7d152
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42830175"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "57800863"
 ---
 # <a name="send-a-push-notification-in-powerapps"></a>Send et push-varsel i PowerApps
 Push-varsler brukes hovedsakelig i mobilapper for forbruker- og forretningsscenarioer for å engasjere brukere og hjelpe dem med å prioritere viktige oppgaver. I PowerApps kan du sende varsler ved å bruke PowerApps Notification-koblingen. Du kan sende opprinnelige push-varsler til alle apper du lager i PowerApps. Vi har planer om å legge til flere typer varsler i fremtiden.
@@ -98,13 +98,13 @@ Du kan for eksempel angi at appen skal åpne siden **Saksdetaljer** når du åpn
 
 ## <a name="syntax"></a>Syntaks
 
-| Navn | Beskrivelse |
+| navn | Beskrivelse |
 | --- | --- |
 | SendPushNotification |Sender et push-varsel til appen som er angitt i tilkoblingsinnstillingene for varselet. |
 
 ### <a name="parameters"></a>Parametere
 
-| Navn | Type | Beskrivelse |
+| navn | Type | Beskrivelse |
 | --- | --- | --- |
 | mottakere |Strengmatrise, obligatorisk |En liste over: <ul> <li>e-postadresser for brukere eller sikkerhetsgrupper</li> <li>objekt-ID-er for brukere eller sikkerhetsgrupper i Azure Active Directory</li></ul> |
 | melding |Streng, obligatorisk |Meldingsteksten i push-varselet. |

@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 07/11/2018
+ms.date: 11/28/2018
 ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 926d2b4b0d24f07a9a4cd42216e7d737db57308c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 57a63ddf829e2a6c1062cad34e0f3c608d69afad
+ms.sourcegitcommit: a06e3137e3cb36414f0d61825bbc687487ea6f8c
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42853846"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57804221"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>Del en lerretsapp i PowerApps
 
@@ -41,51 +41,70 @@ Du må lagre appen i skyen (ikke lokalt) og deretter publisere den før du deler
 
     ![Vise listen over apper](./media/share-app/file-apps.png)
 
-1. Velg ellipsen (...) for appen du vil dele, og velg deretter **Del**.
+1. Velg appen du vil dele ved å velge ikonet.
 
-    ![Åpne delt skjerm](./media/share-app/ellipsis-share.png)
+    ![Velg en app](./media/share-app/select-app.png)
 
-1. Angi hvilke brukere eller sikkerhetsgrupper i Azure Active Directory du vil dele appen med.
+1. Velg i banneret, **del**.
+
+    ![Åpne delt skjerm](./media/share-app/banner-share.png)
+
+1. Angi etter navn eller alias brukere eller sikkerhetsgrupper i Azure Active Directory du vil dele appen.
+
+    - Tillat hele organisasjonen til å kjøre appen (men ikke endre eller dele den), skriver du inn **alle** i deling-panelet.
+    - Du kan dele en app med en liste over aliaser, egendefinerte navn eller en kombinasjon av disse (for eksempel **Kari Nordmann &lt; jane.doe@contoso.com>**) Hvis dataene er atskilt med semikolon. Hvis mer enn én person har samme navn, men forskjellige aliaser, den første personen som er funnet blir lagt til i listen. Et verktøytips vises hvis et navn eller alias som allerede har tillatelse eller ikke kan løses. 
+    
+    ![Angi brukere og Medeiere](./media/share-app/share-everyone.png)
 
     > [!NOTE]
-    > Du kan ikke dele apper med en distribusjonsgruppe i organisasjonen eller med andre brukere eller grupper utenfor organisasjonen.
+    > Du kan ikke dele en app med en distribusjonsgruppe i organisasjonen din eller med en bruker eller gruppe utenfor organisasjonen.
 
-    ![Angi brukere](./media/share-app/share-list.png)
+1. Hvis du vil tillate de du deler appen for å redigere og dele den (i tillegg til å kjøre den), med Velg den **medeier** avmerkingsboks.
 
-    Du kan også dele appen med hele organisasjonen, slik at de kan kjøre appen, men de ikke vil kunne endre eller dele den.
+    Du kan ikke gi **medeier** tillatelse til en security gruppere Hvis du [opprettet appen fra en løsning](add-app-solution.md).
+    
+    > [!NOTE]
+    > Ingen to personer kan redigere en app om gangen, uavhengig av tillatelser. Hvis én person åpner appen for redigering, vil andre personer kan kjøre den, men ikke redigere data.
 
-1. (valgfritt) Du hjelper brukerne med å finne appen ved å merke av for å sende dem en e-postinvitasjon.
+1. Hvis appen din kobles til data som brukere trenger tilgangstillatelser, angir du dem.
 
-    Invitasjonen inneholder en kobling som brukerne kan velge for å kjøre appen.
+    Appen din kan for eksempel koble til en enhet i en CDS for Apps-database. Når du deler en slik app, deling panelet ber deg om å administrere sikkerhet for denne enheten.
 
-    - Hvis en bruker velger koblingen på en stasjonær datamaskin, åpnes appen i [Dynamics 365](http://home.dynamics.com).
-    - Hvis brukeren velger koblingen på en mobilenhet, åpnes appen i PowerApps Mobile.
+    ![Angi tillatelser](./media/share-app/set-permissions.png)
 
-    Hvis du gir brukere tillatelse til å endre appen, inneholder meldingen også en egen kobling for å åpne appen for redigering i PowerApps Studio.
+    Hvis du vil ha mer informasjon om administrasjon av sikkerhet for en enhet, kan du se [behandle tillatelser for enheten](share-app.md#manage-entity-permissions) senere i dette emnet.
 
-    Uavhengig av om du sender en invitasjon, kan brukere kjøre appen fra AppSource på [Dynamics 365](http://home.dynamics.com). Brukere som har **Kan redigere**-tillatelse kan også redigere appen fra [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Hvis du vil finne appen, velg den **Send en e-postinvitasjon til nye brukere** avmerkingsboks.
 
-1. Angi tillatelser for hver bruker eller sikkerhetsgruppe, og velg deretter **Lagre**.
+1. Nederst i del-panelet, velg **dele**.
 
-    - **Kan bruke**: Brukere kan kjøre appen, men ikke dele den.
-    - **Kan redigere**: Brukere kan kjøre appen, endre den og dele den tilpassede versjonen med andre brukere.
+    Alle du har delt appen som kan kjøre den i PowerApps Mobile på en mobil enhet eller i AppSource på [Dynamics 365](https://home.dynamics.com) i en nettleser. Medeiere kan redigere og dele appen i [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-        ![Å angi tillatelser](./media/share-app/edit-use.png)
+    Hvis du har sendt en e-postinvitasjon, kan alle som du har delt appen kjøre den ved å velge en kobling i invitasjonen.
 
-    Hvis du vil endre tillatelser for en bruker eller en sikkerhetsgruppe, velger du pil ned ved siden av tillatelsen brukeren eller gruppen allerede har, og angir deretter en annen tillatelse.
+    - Hvis en bruker velger koblingen på en mobil enhet, åpnes appen i PowerApps Mobile.
+    - Hvis en bruker velger koblingen på en stasjonær datamaskin, åpnes appen i en nettleser.
 
-    Hvis du vil fjerne alle tillatelser for en bruker eller en gruppe, velger du **x**-ikonet for denne brukeren eller gruppen.
+    Medeiere som mottar en invitasjon få en ny kobling som åpner appen for redigering i PowerApps Studio.
+
+Du kan endre tillatelsene for en bruker eller en sikkerhetsgruppe ved å velge navnet sitt, og deretter utfører en av disse trinnene:
+
+- Fjern for å tillate Medeiere til å kjøre den appen, men ikke lenger redigere eller dele den, den **medeier** avmerkingsboks.
+- Hvis du vil stoppe deling appen med denne brukeren eller gruppen, velger du ikonet Fjern (x).
 
 ## <a name="security-group-considerations"></a>Sikkerhetsgruppevurderinger
 
 - Hvis du deler en app med en sikkerhetsgruppe, får eksisterende medlemmer av denne gruppen og alle som blir med i den, tillatelsene du angir for denne gruppen. Alle som forlater gruppen mister denne tillatelsen, med mindre de tilhører en annen gruppe som har tilgang, eller du gir dem tillatelse som enkeltpersoner.
-- Hvert medlem av en sikkerhetsgruppe har de samme tillatelsene for en app, som den overordnede gruppen har. Du kan imidlertid angi større tillatelser for ett eller flere medlemmer av gruppen, for å gi dem større tilgang. Du kan for eksempel gi sikkerhetsgruppen A **Kan bruke**-tillatelse, men du kan også gi bruker B, som tilhører denne gruppen, **Kan redigere**-tillatelsen. Hvert medlem av sikkerhetsgruppen kan kjøre appen, men bare bruker B kan redigere den. Hvis du gir sikkerhetsgruppe A **Kan redigere**-tillatelsen og bruker B **Kan bruke**-tillatelsen, kan vedkommende fremdeles redigere appen.
+- Hvert medlem av en sikkerhetsgruppe har de samme tillatelsene for en app, som den overordnede gruppen har. Du kan imidlertid angi større tillatelser for ett eller flere medlemmer av gruppen, for å gi dem større tilgang. For eksempel kan du gi sikkerhetsgruppen A tillatelse til å kjøre en app, men du kan også gi bruker B, som tilhører denne gruppen, **medeier** tillatelse. Hvert medlem av sikkerhetsgruppen kan kjøre appen, men bare bruker B kan redigere den. Hvis du gir sikkerhetsgruppe A **medeier** tillatelsen og bruker B tillatelse til å kjøre appen, kan vedkommende fremdeles redigere appen.
 
 ## <a name="manage-entity-permissions"></a>Slik administrerer du enhetstillatelser
 
 ### <a name="common-data-service-for-apps"></a>Common Data Service for apper
 
-Hvis du oppretter en app basert på Common Data Service (CDS) for apper, må du også påse at brukerne som kjører den har riktige tillatelser for enheten eller enhetene appen er avhengig av. Disse brukerne må spesifikt tilhøre en sikkerhetsrolle som kan utføre oppgaver, som for eksempel oppretting, lesing, skriving og sletting av relevante poster. I mange tilfeller oppretter du én eller flere egendefinerte sikkerhetsroller, med nøyaktig de samme tillatelsene som brukerne trenger for å bruke appene. Du kan deretter tilordne rollen eller rollene til brukerne, ved behov. 
+Hvis du oppretter en app basert på CDS for Apps, må du også kontrollere at brukerne du deler appen med har de nødvendige tillatelsene for enheten eller enheter som appen er basert på. Disse brukerne må spesielt, tilhøre en sikkerhetsrolle som kan utføre oppgaver som oppretting, lesing, skriving og sletting av relevante poster. I mange tilfeller vil du opprette én eller flere egendefinerte sikkerhetsroller med de nøyaktige tillatelsene som brukerne trenger å kjøre appen. Deretter kan du tilordne en rolle til hver bruker etter behov.
+
+> [!NOTE]
+> I skrivende stund, kan du tilordne sikkerhetsroller til enkeltbrukere, men ikke til sikkerhetsgrupper.
 
 #### <a name="prerequisite"></a>Forutsetning
 
@@ -93,13 +112,7 @@ Hvis du vil utføre de to neste prosedyrene, må du ha **Systemadministrator**-t
 
 #### <a name="create-a-security-role"></a>Slik oppretter du en sikkerhetsrolle
 
-1. [Logg deg på PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og kontroller at du er i samme miljø som appen du vil dele.
-
-1. Velg tannhjulikonet i hjørnet øverst til høyre, og velg deretter **Avanserte tilpassinger**.
-
-    ![Åpne Avanserte tilpassinger-ruten](media/share-app/advanced-customizations.png)
-
-1. Velg **Sikkerhetsroller**-koblingen.
+1. Deling panelet, velg **angi tillatelser** under **Data tillatelser**, og velg deretter den **sikkerhetsroller** kobling.
 
     ![Åpne sikkerhetsroller](media/share-app/security-roles.png)
 
@@ -109,7 +122,7 @@ Hvis du vil utføre de to neste prosedyrene, må du ha **Systemadministrator**-t
 
 1. Velg én eller flere faner for å finne enheten eller enhetene appen bruker, og velg deretter tillatelsene du vil gi sikkerhetsrollen.
 
-    Denne grafikken viser for eksempel at en sikkerhetsrolle kan opprette, lese, skrive og slette poster i kontoenheten, som vises på **Kjernepost**-fanen.
+    Dette bildet viser for eksempel som den **kjerne poster** fanen inneholder den **kontoer** enheten, og brukere som denne sikkerhetsrollen har blitt tilordnet kan opprette, lese, skrive og slette poster i denne enheten .
 
     ![Å angi tillatelser](media/share-app/grant-access.png)
 
@@ -117,7 +130,7 @@ Hvis du vil utføre de to neste prosedyrene, må du ha **Systemadministrator**-t
 
 #### <a name="assign-a-user-to-a-role"></a>Slik tilordner du en bruker til en rolle
 
-1. Åpne **Avanserte tilpassinger**-ruten, som den forrige prosedyren beskriver, og velg deretter **Brukere**-koblingen.
+1. Deling panelet, velg **angi tillatelser** under **Data tillatelser**, og velg deretter den **brukere** kobling.
 
     ![Brukere-koblingen](media/share-app/open-users.png)
 
@@ -129,10 +142,10 @@ Hvis du vil utføre de to neste prosedyrene, må du ha **Systemadministrator**-t
 
 1. Velg **Administrere roller** i det øverste banneret.
 
-1. Merk av for **Common Data Service-bruker** og rollen brukerne trenger for appen, i dialogboksen som vises, og velg deretter **OK.**
+1. I dialogboksen som vises, merker du av for **Common Data Service bruker** og rollen som brukeren må for appen din, og velg deretter **OK.**
 
     ![Slik tilordner du en bruker til en rolle](media/share-app/assign-users.png)
 
 ### <a name="common-data-service-previous-version"></a>Common Data Service (forrige versjon)
 
-Når du deler en app som er basert på en eldre versjon av Common Data Service, må du dele tillatelse for kjøretid til Common Data Service separat. Hvis du ikke har tillatelse til å gjøre dette, kan du kontakte miljøadministratoren.
+Når du deler en app som er basert på en eldre versjon av Common Data Service, må du dele tillatelse for kjøretid til tjenesten separat. Hvis du ikke har tillatelse til å gjøre dette, systemansvarlig miljø.

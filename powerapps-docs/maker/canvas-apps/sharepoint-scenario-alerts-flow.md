@@ -1,24 +1,24 @@
 ---
 title: Å sette opp datavarsler for Power BI-instrumentbordet | Microsoft Docs
 description: I denne oppgaven skal vi legge til et varsel i Power BI, slik at vi får beskjed hvis ventende prosjekter tar for lang tid å godkjenne, og en flyt som svarer når denne varslingen utløses.
-author: mgblythe
+author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/12/2017
-ms.author: mblythe
+ms.author: niwaggon
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6426dedc9ce9d1a4648f9c880a53337767ec53d3
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 89c22bec8972c0d58c559a09d4e9f0a8a8e3b7f5
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42836399"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799092"
 ---
 # <a name="set-up-data-alerts-for-the-power-bi-dashboard"></a>Å sette opp datavarsler for Power BI-instrumentbordet
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "42836399"
 
 I denne oppgaven skal vi legge til et varsel i Power BI, slik at vi får beskjed hvis ventende prosjekter tar for lang tid å godkjenne, og en flyt som svarer når denne varslingen utløses. Hvis du vil ha mer informasjon om varsler, kan du se [Datavarsler i Power BI-tjenesten](https://docs.microsoft.com/power-bi/service-set-data-alerts).
 
-## <a name="step-1-create-an-alert"></a>Trinn 1: Opprette et varsel
+## <a name="step-1-create-an-alert"></a>Trinn 1: Opprett et varsel
 1. Åpne instrumentbordet du opprettet i den siste aktiviteten i Power BI-tjenesten.
 2. Klikk på kortet med det enkle nummeret, eller trykk på ellipsen (**. . .**).
    

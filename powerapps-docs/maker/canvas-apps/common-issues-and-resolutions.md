@@ -7,24 +7,36 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 08/02/2018
+ms.date: 11/09/2018
 ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f5701f85d28d987229aa56756b5c1817892bd5c0
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 3c3b559be5f27c6ead9a4ea2f02027637c8aea8e
+ms.sourcegitcommit: 67f9974ee2fa06773c729876ba7ef95145c63a07
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42855106"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54253081"
 ---
 # <a name="common-issues-and-resolutions-for-powerapps"></a>Vanlige problemer og løsninger for PowerApps
 
 Denne artikkelen viser noen vanlige problemer som kan oppstå når du bruker PowerApps. Der det er aktuelt, er løsninger tilgjengelig.
 
 ## <a name="added-after-february-2018"></a>Lagt til etter februar 2018
+
+1. **Kamera problemet på Android-mobilenheter** (1. januar 2019)
+
+    Hvis kameraet kontrollen slutter å fungere på en Android-enhet, publisere appen på nytt, og åpne den på nytt på enheten. Kamera-kontrollen ble oppdatert som svar på en endring i Android-operativsystemet, og appen vil dra nytte av oppdateringen når du publiserer på nytt.
+
+1. **Rulling i fleksibel høyde gallerier** (27. november 2018)
+
+    Hvis du støter på en begrensning når du ruller med fingeren, løft den, og begynn å rulle på nytt.
+
+1. **Tegning med musen eller inndata via berøring er ikke jevn i PowerApps for Windows** (tekstfiler 24, 2018)
+
+    Pennekontrollen har bare delvis støtte for tegning ved hjelp av musen eller touch inndata i Windows-app. Streker kan være midlertidig. For jevn tegning, kan du bruke en penn eller kjøre appen i en nettleser.
 
 1. **Flere mediekontroller i PowerApps Mobile** (2. august 2018)
 
@@ -39,7 +51,7 @@ Denne artikkelen viser noen vanlige problemer som kan oppstå når du bruker Pow
 
 1. <a name="out-of-memory"></a>**Leseren går tom for minne** (23. juli 2018)
 
-    Hvis du går tom for minne mens du bruker PowerApps, bør du laste ned en 64-biters versjon av Chrome, Microsoft Edge eller Internet Explorer.
+    Hvis du kjører ikke nok minne når du bruker PowerApps, kan du vurdere å laste ned en 64-biters versjon av Chrome, Microsoft Edge eller Internet Explorer.
 
 1. **Start et nettsted fra en innebygd app** (10. mai 2018)
 

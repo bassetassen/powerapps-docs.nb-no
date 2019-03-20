@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 06/09/2018
+ms.date: 11/14/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a45aa397aa65e11ab01e04367d859e11bf552f66
-ms.sourcegitcommit: 3aeb9381fbeb66cf08355d9a3d0f00ce2737e256
-ms.translationtype: HT
+ms.openlocfilehash: 3da9d769ab36df23c6c54510937adea2ce38863f
+ms.sourcegitcommit: b8b2a2c3cf3300fa52bdf71bfef6a2892e36cffc
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43164535"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57802634"
 ---
 # <a name="guid-function-in-powerapps"></a>GUID-funksjonen i PowerApps
 Konverterer en GUID-streng ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) til en GUID-verdi, eller oppretter en ny GUID-verdi.
@@ -35,11 +35,7 @@ Hvis du ikke angir et argument, oppretter denne funksjonen en ny GUID.
 
 Hvis du vil konvertere en GUID-verdi til en streng, bruker du den bare i en strengkontekst. GUID-verdien konverteres til en heksadesimal representasjonsstreng med bindestreker og små bokstaver. 
 
-> [!NOTE]
-> Det finnes for tiden en kjent feil som gjør at GUID-verdier kan sammenlignes direkte med strenger.  Dette vil snart endre seg og produsere en feil, derfor må du ikke blir for vant med det.  Hvis du vil sammenligne en streng med en GUID-verdi, må du først transformere strengen til en GUID-verdi med GUID-funksjonen, og deretter sammenligne GUID-verdiene.  Dette normaliserer begge verdiene for en ren sammenligning.  Hvis du ikke gjør dette, blir GUID-verdien konvertert til en streng automatisk, og sammenligningen vil avhenge av formateringen til strengen og om det finnes noen alfanumeriske tegn.
-
-> [!NOTE]
-> Det er for øyeblikket ingen måte du kan lese eller skrive GUID-verdier til en database på.  Støtte for Common Data Service and SQL Server finnes på veikartet vårt. 
+Når du genererer en ny GUID, denne funksjonen bruker pseudo-tilfeldig tall til å opprette en versjon 4 [IETF RFC 4122](https://www.ietf.org/rfc/rfc4122.txt) GUID. Når du konverterer en streng til en GUID, støtter denne funksjonen en GUID-versjon ved å godta en hvilken som helst streng med 32 heksadesimale tall.
 
 ## <a name="volatile-functions"></a>Flyktige funksjoner
 **GUID** er en flyktig funksjon når den brukes sammen med et argument. Hver gang en av disse funksjonene evalueres returnerer den en annen verdi.  
@@ -57,7 +53,6 @@ Når den brukes i en [virkemåteformel](../working-with-formulas-in-depth.md) bl
 ## <a name="syntax"></a>Syntaks
 **GUID**( [ *GUIDString* ] )
 
-
 * *GUIDString* – valgfritt.  En tekststreng som inneholder den heksadesimale representasjonen av en GUID. Hvis ingen streng angis, opprettes det en ny GUID.
 
 ## <a name="examples"></a>Eksempler
@@ -74,7 +69,7 @@ Du kan også oppgi GUID-verdi uten bindestreker. Denne formelen returnerer den s
 
 Brukes i kontekst til å angi **Status**-feltet i en ny databasepost til en godt etablert verdi:
 
-* **Patch( Products, Default( Products ), { Status: GUID( "F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4" ) } )**
+* **Patch (produkter, standard (produkter), {Status: GUID( "F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4" ) } )**
 
 Du ønsker sikkert ikke å vise GUID-verdiene til brukerne, men GUID-verdiene kan hjelpe deg med å feilsøke appen. Hvis du vil vise verdien til **Status**-feltet i posten du opprettet i forrige eksempel, angir du **Text**-egenskapen for en **etikettkontroll** til denne formelen:
 

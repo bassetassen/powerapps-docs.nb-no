@@ -1,24 +1,24 @@
 ---
 title: Koblinger til innhold om egendefinerte koblinger for lerretsapper | Microsoft Docs
 description: Koblinger til innhold for å opprette, bruke, dele og sertifisere egendefinerte koblinger for lerretsapper i PowerApps.
-author: mgblythe
+author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/05/2017
-ms.author: mblythe
+ms.author: lanced
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6975c19a973b90de0db7dfbc7ecb8e5e504f39a4
-ms.sourcegitcommit: 097ddfb25eb0f09f0229b866668c2b02fa57df55
-ms.translationtype: HT
+ms.openlocfilehash: 206a28c15b4bb23d46acb0a707bda5072a43cced
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991796"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57798977"
 ---
 # <a name="custom-connectors-for-canvas-apps"></a>Egendefinerte koblinger for lerretsapper
 

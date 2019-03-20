@@ -1,24 +1,24 @@
 ---
 title: Systemkrav, grenser og konfigurasjonsverdier for lerretsapper | Microsoft Docs
 description: Systemkrav, grenser og konfigurasjonsverdier for lerretsapper som er bygget i PowerApps
-author: AFTOwen
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/07/2018
-ms.author: anneta
+ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5ba279e361dfe450de1187cf6aca87bc026178ba
-ms.sourcegitcommit: 60006ce9cb21c59e588c00f2ba5c41ffebbbba09
-ms.translationtype: HT
+ms.openlocfilehash: 64b8f1b0871438a4162448ce45e8a578e537eb89
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/30/2018
-ms.locfileid: "47456302"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799230"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>Systemkrav, grenser og konfigurasjonsverdier for lerretsapper
 Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og konfigurasjonsverdier for PowerApps.
@@ -52,7 +52,7 @@ Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og kon
 ## <a name="request-limits"></a>Be om grenser
 Disse begrensningene gjelder for hver enkelt utgående forespørsel:
 
-| Navn | Grense |
+| navn | Grensen |
 | --- | --- |
 | Tidsavbrudd |180 sekunder |
 | Nye tilkoblingsforsøk |4 |
@@ -97,7 +97,7 @@ Denne listen identifiserer alle tjenester som PowerApps Studio kommuniserer med,
 | *.azure-apim.net |https |API-huber – forskjellige underdomener for hver nasjonale innstilling |
 | *.powerapps.com |https |WebAuth + Portal |
 | *.azureedge.net |https |WebAuth |
-| *. blob.core.windows.net |https |Blob-lagring |
+| *. blob.core.windows.net |https |BLOB-lagring |
 | vortex.data.microsoft.com |https |Telemetri |
 
 > [!NOTE]

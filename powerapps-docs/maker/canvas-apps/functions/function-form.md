@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 55df8d30509720478c1594406865986ddc9a95c4
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 930439325b60b60fefed18b66c22d9d4f97f55b7
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865812"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57802105"
 ---
 # <a name="editform-newform-submitform-resetform-and-viewform-functions-in-powerapps"></a>Funksjonene EditForm, NewForm, SubmitForm, ResetForm og ViewForm i PowerApps
 Vis, rediger eller opprett et element, lagre innholdet og tilbakestill kontrollene i en **[Redigeringskjema](../controls/control-form-detail.md)**-kontroll.
@@ -59,10 +59,10 @@ Hvis valideringen blir godkjent, sender **SubmitForm** endringen til datakilden.
 **ResetForm**-funksjonen tilbakestiller innholdet i et skjema til sine opprinnelige verdier, slik de var før brukeren foretok endringer. Hvis skjemaet er i **FormMode.New**-modus, tilbakestilles det til **FormMode.Edit**-modusen. **[OnReset](../controls/control-form-detail.md)**-virkemåten til Skjema-kontrollen kjøres også.  Du kan også tilbakestille individuelle kontroller med **[Reset](function-reset.md)**-funksjonen, men bare fra selve skjemaet.
 
 ### <a name="viewform"></a>ViewForm
-**ViewForm**-funksjonen endrer Skjema-kontrollens modus til **FormMode.View**. I denne modusen brukes innholdet til Skjema-kontrollens **[Element](../controls/control-form-detail.md)**-egenskap til å fylle ut skjemaet.  **SubmitForm**- og **RestForm**-funksjonene har ingen effekt i denne modusen.
+**ViewForm**-funksjonen endrer Skjema-kontrollens modus til **FormMode.View**. I denne modusen brukes innholdet til Skjema-kontrollens **[Element](../controls/control-form-detail.md)**-egenskap til å fylle ut skjemaet.  Den **SubmitForm** og **ResetForm** funksjonene har ingen effekt i denne modusen.
 
-### <a name="displaymode-poperty"></a>DisplayMode-egenskap
-Den gjeldende modusen kan leses gjennom **Modus**-egenskapen.  Modusen bestemmer også verdien til **DisplayMode**-egenskapen, som kan brukes av datakortene og kontrollene i Skjema-kontrollen.  **DisplayMode**-egenskapen til datakortet angis ofte til **Parent.DisplayMode** (med henvisning til skjemaet), og det samme skjer med **DisplayMode**-egenskapen til kontrollen (med henvisning til datakortet): 
+### <a name="displaymode-property"></a>DisplayMode-egenskap
+Den gjeldende modusen kan leses gjennom **Modus**-egenskapen.  Modusen bestemmer også verdien til **DisplayMode**-egenskapen, som kan brukes av datakortene og kontrollene i Skjema-kontrollen.  Ofte data kortets **DisplayMode** egenskapen settes til **Parent.DisplayMode** (refererer til skjemaet) som vil kontrollens **DisplayMode** egenskapen (refererer til datakort): 
 
 | Modus | DisplayMode | Beskrivelse |
 | --- | --- | --- |

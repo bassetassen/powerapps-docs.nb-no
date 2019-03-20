@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 96b8b8276b385a49bd29be150b9a41ba08ba67ba
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 3292d03a55fe6296b8efdf2377efde5f2b4ad36e
+ms.sourcegitcommit: 676cfa415f67e2e8fcfcf30fab83fc118a6f3210
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42862822"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "57800495"
 ---
 # <a name="set-function-in-powerapps"></a>Set-funksjonen i PowerApps
 Angir verdien for en global variabel.
@@ -26,14 +26,14 @@ Angir verdien for en global variabel.
 ## <a name="overview"></a>Oversikt
 Bruk **Set**-funksjonen til å angi verdien for en global variabel, som inneholder midlertidig informasjon, for eksempel hvor mange ganger brukeren har valgt en knapp eller resultatet av en dataoperasjon.  
 
-Globale variablene er tilgjengelig i hele appen din, i alle skjermbildene.  Dette er den enkleste typen variabler og oppfylle behovene i de fleste tilfeller.  Det finnes også kontekstvariabler, som er begrenset til ett enkelt skjermbilde, og samlinger som tillater endringer i tabeller på radnivå.  Hvis du vil ha mer informasjon om disse alternativene, kan du se [Slik arbeider du med variabler](../working-with-variables.md).
+Globale variablene er tilgjengelig i hele appen din, i alle skjermbildene. Dette er den enkleste typen variabler og oppfylle behovene i de fleste tilfeller. Det finnes også kontekstvariabler, som er begrenset til ett enkelt skjermbilde, og samlinger som tillater endringer i tabeller på radnivå. For mer informasjon om disse alternativene, kan du se gjennom [å forstå variabler](../working-with-variables.md).
 
-PowerApps er basert på formler som automatisk beregnes på nytt når brukeren samhandler med en app.  Globale variabler tilbyr ikke denne fordelen og kan gjøre appen vanskeligere å opprette og forstå.  Før du bruker en variabel, se gjennom [Slik arbeider du med variabler](../working-with-variables.md).
+PowerApps er basert på formler som automatisk beregnes på nytt når brukeren samhandler med en app. Formler som avhenger av en variabel oppdateres automatisk når det endres. Imidlertid variabelen ikke oppdateres automatisk hvis verdien for formelen brukes i den **angi** funksjonen endringer. Dette krever skaperen av appen til å oppdatere variabelen, som kan være feil utsatt og vanskeligere for andre å forstå manuelt. Før du bruker en variabel, se gjennom [å forstå variabler](../working-with-variables.md).
 
 ## <a name="description"></a>Beskrivelse
-Globale variablene opprettes implisitt ved hjelp av **Set**-funksjonen.  Det kreves ingen eksplisitt deklarasjon.  Hvis du fjerner alle **Set**-funksjonene for en global variabel, opphører variabelen å eksistere.  Angi variabelens verdi som resultatet av [**Blank**-funksjonen](function-isblank-isempty.md) for å tømme variabelen.
+Globale variablene opprettes implisitt ved hjelp av **Set**-funksjonen. Det kreves ingen eksplisitt deklarasjon. Hvis du fjerner alle de **angi** funksjoner for en global variabel, opphører variabelen å eksistere. Hvis du vil fjerne en variabel, angir du verdien til resultatet av den [ **tom** funksjonen](function-isblank-isempty.md).
 
-Du kan se variablenes verdier, definisjoner og bruk ved hjelp av Variables-visningen under Fil-menyen i redigeringsmiljøet.
+Du kan se variablenes verdier, definisjoner og bruker med Variables-visningen under den **filen** -menyen i PowerApps Studio.
 
 I eksemplene senere i dette emnet ser du at de globale variablene kan inneholde flere typer informasjon, deriblant disse:
 

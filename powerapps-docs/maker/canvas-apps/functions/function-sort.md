@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d3a83f5ae96b8d9146163ed7d5ff4c4529f8d562
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: c405af25d0e3228939b908c081ea8b08ce674ea6
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42830775"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57802335"
 ---
 # <a name="sort-and-sortbycolumns-functions-in-powerapps"></a>Funksjonene Sort og SortByColumns i PowerApps
 Sorterer en [tabell](../working-with-tables.md).
@@ -30,7 +30,7 @@ Formelen evalueres for hver [post](../working-with-tables.md#records) i tabellen
 
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
-Hvis du vil sortere først etter én kolonne og deretter etter en annen, må du bygge inn en **Sort**-formel i en annen. Du kan for eksempel bruke denne formelen til å sortere en **Kontakter**-tabell først etter en **Etternavn**-kolonne og deretter etter en **Fornavn**-kolonne:  **Sort( Sort( Contacts, LastName ), FirstName )**
+Hvis du vil sortere først etter én kolonne og deretter etter en annen, må du bygge inn en **Sort**-formel i en annen. Du kan for eksempel bruke denne formelen til å sortere en **kontakter** tabell først etter en **Etternavn** kolonnen og deretter etter en **Fornavn** kolonne:  **Sort (Sort (Contacts, LastName), FirstName)**
 
 **SortByColumns**-funksjonen kan også brukes til å sortere en tabell basert på én eller flere kolonner.
 
@@ -86,7 +86,7 @@ Vi bruker [datakilden](../working-with-data-sources.md) **IceCream**, som inneho
 ### <a name="step-by-step"></a>Trinn for trinn
 Hvis du vil kjøre disse eksemplene selv, kan du opprette datakilden **IceCream** som en [samling](../working-with-data-sources.md#collections):
 
-1. Legg til en knapp, og angi **[OnSelect](../controls/properties-core.md)**-egenskapen til denne formelen:<br>**ClearCollect( IceCream, { Flavor: "Chocolate", Quantity: 100, OnOrder: 150 }, { Flavor:  "Vanilla", Quantity: 200, OnOrder: 20 }, { Flavor: "Strawberry", Quantity: 300, OnOrder: 0 }, { Flavor: "Mint Chocolate", Quantity: 60, OnOrder: 100 }, { Flavor: "Pistachio", Quantity: 200, OnOrder: 10 } )**
+1. Legg til en knapp, og angi **[OnSelect](../controls/properties-core.md)**-egenskapen til denne formelen:<br>**ClearCollect( IceCream, { Flavor: «Chocolate», Quantity: 100, OnOrder: 150 }, { Flavor:  "Vanilla", Quantity: 200, OnOrder: 20}, {flavor: «Jordbær", Quantity: 300, OnOrder: 0 }, { Flavor: «Peppermyntefyll Chocolate», Quantity: 60, OnOrder: 100}, {flavor: "Pistachio", Quantity: 200, OnOrder: 10 } )**
 2. Forhåndsvis appen, velg knappen og trykk deretter på ESC for å gå tilbake til standard arbeidsområde.
 3. Velg **Samlinger** på **Fil**-menyen for å vise samlingen som du nettopp opprettet, og trykk deretter på ESC for å gå tilbake til standard arbeidsområde.
 
@@ -103,7 +103,7 @@ Hvis du vil kjøre disse eksemplene selv, kan du opprette datakilden **IceCream*
 1. Legg til en ny knapp, og angi **[OnSelect](../controls/properties-core.md)**-egenskapen til denne formelen:<br>
    **ClearCollect( SortByQuantity, SortByColumns( IceCream, "Quantity", Ascending, "Flavor", Descending ) )**
    
-     Formelen over oppretter en tredje samling, kalt **SortByQuantity**, som inneholder de samme dataene som **Ice Cream**. Den nye samlingen inneholder imidlertid dataene sortert numerisk etter **Quanity**-kolonnen i stigende rekkefølge, og deretter etter **Flavor**-kolonnen i synkende rekkefølge.
+     Formelen over oppretter en tredje samling, kalt **SortByQuantity**, som inneholder de samme dataene som **Ice Cream**. Den nye samlingen inneholder imidlertid dataene sortert numerisk etter den **antall** kolonnen i stigende rekkefølge, og deretter etter den **Flavor** kolonnen i synkende rekkefølge.
 2. Trykk på F5, velg den nye knappen, og trykk deretter på ESC.
 3. Velg **Samlinger** på **Fil**-menyen for å vise de tre samlingene, og trykk deretter på ESC for å gå tilbake til standard arbeidsområde.
 4. Gjenta de forrige tre trinnene, men endre navnet på samlingen du vil opprette, og erstatt **SortByColumns**-formelen med en annen formel fra en tabell med eksemplene tidligere i denne delen som bruker **SortByColumns**.

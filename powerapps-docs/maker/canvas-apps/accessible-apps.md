@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 119b7e6ff590f63ad938016c5f0127f5d6521d65
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: b6e2fc48d931ccf702dd2711bdc00a484dc51018
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834386"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57801944"
 ---
 # <a name="create-accessible-canvas-apps-in-powerapps"></a>Opprett tilgjengelige lerretsapper i PowerApps
 En tilgjengelig lerretsapp gjør det enklere for brukere med syns-, hørsel- og andre typer hemminger å bruke appen.  I tillegg til at det er et krav for mange myndigheter og organisasjoner, økes brukervennligheten for brukerne, uavhengig av funksjonsnivå, ved å følge retningslinjene nedenfor.
@@ -38,13 +38,13 @@ Sunn fornuft og ukomplisert utforming gjør det enkelt for alle brukere å forst
 Når du tester appens tilgjengelighet, må du kontrollere at appen kan brukes med tastaturet, tilgjengelighets modiene på iOS og Android, samt at du klarer å navigere selv om skjermleseren er aktivert.
 
 Kontroller at du bruker en logisk rekkefølge for tastaturnavigasjon (med eller uten skjermleser) når du bruker tabulatortasten for å navigere til inndatafeltene, ved å angi **[TabIndex](controls/properties-accessibility.md)**-egenskapen for hver kontroll:
-- Etikett-, bilde-, ikon- og formkontroller – Angi TabIndex til 0 hvis de representerer interaktive elementer (det vil si knapper). Hvis de er dekorative elementer eller tekst, kan du angi TabIndex til -1.
+- Etikett-, bilde, ikon, figur-Kontroller – hvis de representerer interaktive elementer (det vil si knapper) kan du angi TabIndex til 0. Hvis de er dekorative elementer eller tekst, kan du angi TabIndex til -1.
 - Unngå å angi tabulatorindeks som er høyere enn null.
 
 ## <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
 Følgende programvarekombinasjoner er støttede anbefalinger for bruk av PowerApps med en skjermleser:
 
-- **Windows**: Edge / Skjermleser
+- **Windows**: Microsoft Edge / Narrator
 - **macOS**: Safari / VoiceOver
 - **Android**: PowerApps-app / Talkback
 - **iOS**: PowerApps-app / VoiceOver
@@ -58,7 +58,7 @@ For å sikre en tilfredsstillende opplevelse med skjermleseren, anbefales det å
 
 
 ## <a name="multimedia"></a>Multimedia
-Kontroller at alle videoer har undertekster, og at en utskrift av alle lydopptakene er tilgjengelig for brukeren.  **Video**-kontroll støtter teksting for hørselshemmede i formatet WebVTT via **ClosedCaptionsUrl**-egenskapen.
+Kontroller at alle videoer har undertekster, og at en utskrift av alle lydopptakene er tilgjengelig for brukeren.  **Video** kontroll støtter teksting for hørselshemmede i formatet WebVTT via den **ClosedCaptionsUrl** egenskapen.
 
 Vær oppmerksom på at når skjermleseren er aktivert, leser ikke **Tidtaker** knappeteksten, men gir beskjed om hvor mye tid som har gått.  Kunngjøringene kan ikke slås av, selv om tidtakeren er skjult med lav ugjennomsiktighet.
 

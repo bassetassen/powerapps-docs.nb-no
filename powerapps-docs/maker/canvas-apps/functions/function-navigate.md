@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bf656c33bcfdc0114c1ff44936dd38fc7145158e
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: f0bd11881dc0999cada58f65d7ed8d7f9df68c5a
+ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42857089"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57803623"
 ---
 # <a name="back-and-navigate-functions-in-powerapps"></a>Funksjonene Back og Navigate i PowerApps
 Endre hvilken skjerm som vises.
@@ -28,7 +28,7 @@ De fleste appene inneholder flere skjermer.  Bruk **Back**- og **Navigate**-funk
 
 **Back** og **Navigate** endrer bare hvilken skjerm som vises. Skjermer som ikke vises for øyeblikket fortsetter å operere i bakgrunnen. Du kan opprette formler og henvise til egenskaper for kontroller på en annen skjerm. En bruker kan for eksempel endre verdien for en glidebryter på en skjerm, navigere til en annen skjerm som bruker den verdien i en formel, og se hvordan de påvirker det som skjer på den nye skjermen.  Brukeren kan deretter navigere tilbake til den opprinnelige skjermen og se at glidebryteren har beholdt verdien.
 
-[Kontekstvariabler](../working-with-variables.md#create-a-context-variable) beholdes også når en bruker navigerer mellom skjermer. Du kan bruke **Navigate** for å angi én eller flere kontekstvariabler for skjermen som formelen skal vise. Dette er den eneste måten du kan angi kontekstvariabler utenfor skjermen på. Du kan bruke denne fremgangsmåten for å sende parametre til en skjerm. Hvis du har brukt et annet programmeringsverktøy, er denne fremgangsmåten lik den for å sende parametre til prosedyrer.
+[Kontekstvariabler](../working-with-variables.md#use-a-context-variable) beholdes også når en bruker navigerer mellom skjermer. Du kan bruke **Navigate** for å angi én eller flere kontekstvariabler for skjermen som formelen skal vise. Dette er den eneste måten du kan angi kontekstvariabler utenfor skjermen på. Du kan bruke denne fremgangsmåten for å sende parametre til en skjerm. Hvis du har brukt et annet programmeringsverktøy, er denne fremgangsmåten lik den for å sende parametre til prosedyrer.
 
 ## <a name="description"></a>Beskrivelse
 ### <a name="back"></a>Back

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f4654c12c860496cd0e2b44bbd33c956b7385460
-ms.sourcegitcommit: 0269766ee598f75a4d2459824128f031f68ca042
-ms.translationtype: HT
+ms.openlocfilehash: dde096adbd82c04f7a2f17cd2af156b2e334c990
+ms.sourcegitcommit: 66fd1129ad25b72556f11a08350ba95f2ba060dd
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47860614"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57804359"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>Egendefinert visualobjekt i PowerApps for Power BI
 
@@ -77,7 +77,7 @@ PowerApps-visualobjektet er tilgjengelig i forhåndsvisning og har disse begrens
 - Det egendefinerte PowerApps-visualobjektet kan ikke utløse en oppdatering av Power BI-rapporten eller Power BI-datakilden. Hvis du skriver tilbake data fra appen til samme datakilde som rapporten, gjenspeiles ikke endringene umiddelbart. Endringene gjenspeiles i den neste planlagte oppdateringen.
 - Det egendefinerte PowerApps-visualobjektet kan ikke filtrere dataene eller sende data tilbake til rapporten.
 - Du må dele PowerApps-appen adskilt fra rapporten. Finn ut mer om [deling av apper i PowerApps](share-app.md).
-- Rapportserver for Power BI og mobilappen for Power BI støtter ikke egendefinerte PowerApps-visualobjekter.
+- Disse teknologiene støtter ikke egendefinerte PowerApps-visualobjektet: Power BI Report Server, mobil-appen for Power BI, og Internet Explorer.
 
 ## <a name="next-steps"></a>Neste trinn
 

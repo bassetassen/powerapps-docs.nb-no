@@ -1,24 +1,24 @@
 ---
 title: Publisere Power BI-prosjektrapporten og opprette et instrumentbord i Microsoft Docs
 description: I denne oppgaven publiserer vi datasettene og rapportene våre til Power BI-tjenesten, og deretter skal vi opprette et instrumentbord som er basert på rapporten.
-author: mgblythe
+author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 01/30/2018
-ms.author: mblythe
+ms.author: niwaggon
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f5a39ec04015fe360bc550d9ea4f708d887ba34c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 43e95b88cdf305e7c4b768def83a6b41fa0fcae7
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833878"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799368"
 ---
 # <a name="publish-the-power-bi-project-report-and-create-a-dashboard"></a>Publisere Power BI-prosjektrapporten og opprette et instrumentbord
 > [!NOTE]
@@ -67,7 +67,7 @@ I denne oppgaven publiserer vi datasettene og rapportene våre til Power BI-tjen
    
     ![Datakilden er oppdatert](./media/sharepoint-scenario-publish-report/06-01-11-updated.png)
 
-## <a name="step-3-create-a-dashboard"></a>Trinn 3: Opprette et instrumentbord
+## <a name="step-3-create-a-dashboard"></a>Trinn 3: Opprett et instrumentbord
 
 1. Klikk eller trykk på **project analysis** under **RAPPORTER** for å komme tilbake til rapporten din.
 

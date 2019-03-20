@@ -1,24 +1,24 @@
 ---
 title: Å vise, sortere og filtrere data i et galleri | Microsoft Docs
 description: Bruk et galleri for å vise bilder og tekst. Sorter og filtrer bildene i PowerApps.
-author: lonu
+author: adrianorth
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/02/2015
-ms.author: lonu
+ms.author: aorth
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e782b7082e8dbf0d4efee2060131aa620e7a4af1
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: a557c73863dc25acb69627b51613e6e25f229bdb
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42844462"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799782"
 ---
 # <a name="show-sort-and-filter-data-in-a-powerapps-gallery"></a>Å vise, sortere og filtrere data i et PowerApps-galleri
 Opprett et galleri for å vise bilder og tekst om flere produkter, og sorter og filtrer informasjonen.
@@ -43,7 +43,7 @@ I PowerApps kan du bruke et galleri for å vise flere relaterte elementer, akkur
       
       ![][1]  
    2. Angi **[OnSelect](controls/properties-core.md)**-egenskapen for importkontrollen til følgende formel:  
-      **Collect(Inventory, Import1!Data)**
+      **Samle inn (lager, Import1.Data)**
       
       ![][12]  
    3. Velg **Importdata**-knappen for å åpne Windows Utforsker. Velg *CreateFirstApp.zip*, og velg **Åpne**.
@@ -79,14 +79,14 @@ I PowerApps kan du bruke et galleri for å vise flere relaterte elementer, akkur
    > 
    > 
 8. Angi **[Tekst](controls/properties-core.md)**-egenskapen for etiketten til følgende uttrykk:  
-    **ThisItem!UnitsInStock** <br/>
+    **ThisItem.UnitsInStock** <br/>
    
     Etiketten viser enhetene på lager for hvert produkt når du gjør dette:
 
 ![][8]  
 
 > [!NOTE]
-> **[Tekst](controls/properties-core.md)**-egenskapen til den øverste etiketten er satt til ```ThisItem!ProductName``` som standard. Du kan endre den til hvilket som helst element i samlingen. Hvis samlingen for eksempel har *ProductDescription*- eller *Pris*-felt, kan du angi etiketten til ```ThisItem!ProductDescription``` eller ```ThisItem!Price```.
+> **[Tekst](controls/properties-core.md)**-egenskapen til den øverste etiketten er satt til ```ThisItem.ProductName``` som standard. Du kan endre den til hvilket som helst element i samlingen. Hvis samlingen for eksempel har *ProductDescription*- eller *Pris*-felt, kan du angi etiketten til ```ThisItem.ProductDescription``` eller ```ThisItem.Price```.
 > 
 > 
 
@@ -102,7 +102,7 @@ Ved hjelp av disse trinnene importerte du data som inneholder JPG-bilder til en 
    ![][10]  
 6. Velg **Synlig** på **Figur**-fanen, og skriv deretter inn følgende formel i formellinjen:  
    
-    **If(ThisItem!IsSelected, true)**
+    **IF(ThisItem.IsSelected, True)**
    
     Et blått rektangel omslutter det gjeldende utvalget i et galleri. Velg noen gallerielementer for å bekrefte at rektanglet vises rundt hvert element du velger. Husk at du kan også åpne **Forhåndsvisning**![][2] for å se og teste det du oppretter.
 
@@ -137,7 +137,7 @@ I denne fremgangsmåten skal vi sortere elementene i galleriet i stigende og syn
    2. Velg **Maks** på **Innhold**-fanen, og skriv deretter inn følgende uttrykk:  
       ```Max(Inventory, UnitsInStock)```
 3. Velg et hvilket som helst element i galleriet *unntatt* det første. Angi **[Element](controls/properties-core.md)**-egenskapen for galleriet til følgende uttrykk:  
-   ```Filter(Inventory, UnitsInStock<=StockFilter!Value)```
+   ```Filter(Inventory, UnitsInStock<=StockFilter.Value)```
 4. Juster glidebryteren I **Forhåndsvisning** til en verdi som er mellom det høyeste og laveste antallet i galleriet. Galleriet viser bare de produktene som er mindre enn verdien du har valgt i galleriet når du justerer glidebryteren:  
    ![][13]  
 
@@ -146,7 +146,7 @@ La oss nå legge til filteret:
 1. Gå tilbake til utformeren.
 2. Velg **Tekst** på **Sett inn**-fanen, velg **Tekstinndata**, og endre navnet på den nye kontrollen til **NameFilter**. Flytt tekst-kontrollen nedenfor glidebryteren.
 3. Angi **[Element](controls/properties-core.md)**-egenskapen for galleriet til følgende uttrykk:  
-   ```Filter(Inventory, UnitsInStock<=StockFilter!Value && NameFilter!Text in ProductName)```
+   ```Filter(Inventory, UnitsInStock<=StockFilter.Value && NameFilter.Text in ProductName)```
 4. Angi glidebryteren til *30* i **Forhåndsvisning**, og skriv bokstaven *g* i kontrollen for tekstinndata. Galleriet viser det eneste produktet med mindre enn 30 enheter på lager *og* som har et navn med bokstaven «g»:  
    ![][14]  
 

@@ -13,17 +13,17 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7ccd505d53377617bd13cda775cce489c554bc64
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 4aae487a0b2efe50e3ac6bd42c90d26de23fed60
+ms.sourcegitcommit: ead27300a1b7371136edee1842829ed87ca77a72
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42862580"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57892280"
 ---
 # <a name="build-global-support-into-canvas-apps"></a>Bygg global støtte inn i lerretsapper
 PowerApps er et globalt produkt. Du kan bygge og bruke lerretsapper på mange ulike språk og i mange ulike områder.
 
-Teksten som vises i PowerApps har blitt oversatt til en rekke språk, både når du bygger og kjører apper.  Du ser menyelementer, dialogbokser, båndfaner og annen tekst på ditt eget språk.  Innskriving og visning av datoer og tall er også tilpasset for ditt bestemte språk og område.  For eksempel bruker enkelte områder i verden «.» som et desimalskilletegn mens andre bruker «,».  
+Teksten som vises i PowerApps har blitt oversatt til en rekke språk, både når du bygger og kjører apper.  Du ser menyelementer, dialogbokser, båndfaner og annen tekst på ditt eget språk.  Innskriving og visning av datoer og tall er også tilpasset for ditt bestemte språk og område.  For eksempel bruken enkelte områder i den hele verden en **.** (prikk eller punktum) som desimalskilletegn mens andre bruker en **,** (komma).  
 
 Appene du oppretter kan også være globalt følsomme.  Bruk funksjonene **[Language](functions/function-language.md)**, **[Text](functions/function-text.md)**, **[Value](functions/function-value.md)**, **[DateValue](functions/function-datevalue-timevalue.md)** og andre funksjoner til å tilpasse hva som vises og brukes som inndata på forskjellige språk.   
 
@@ -38,11 +38,11 @@ Redigeringsmiljøet tilpasser seg språkinnstillingen til forfatteren.  Selve ap
 ### <a name="names-in-formulas"></a>Navn i formler
 De fleste elementene i formelen er alltid på engelsk:
 
-* Funksjonsnavn: **If**, **Navigate**, **Collect**, ...
-* Navn på kontrollegenskaper: **Screen.Fill**, **Button.OnSelect**, **Textbox.Font**, ...
+* Funksjonsnavn: **Hvis**, **navigere**, **samle inn**,...
+* Kontrollen egenskapsnavn: **Screen.Fill**, **Button.OnSelect**, **Textbox.Font**,...
 * Opplistingsnavn: **Color.Aqua**, **DataSourceInfo.MaxValue**, **FontWeight.Bold**...
-* Signalposter: **Compass.Heading**, **Location. Latitude**, **App.ActiveScreen**, ...
-* Operatorer: **Overordnet**, **i**, **exactIn**, ...
+* Signal poster: **Compass.Heading**, **plassering. Latitude**, **App.ActiveScreen**, ...
+* Operatorer: **Overordnet**, **i**, **exactIn**,...
 
 Fordi redigeringsopplevelsen er lokalisert, vises kontroller og andre objektnavn på forfatterens opprinnelige språk.  På spansk vises noen av kontrollnavnene som:
 
@@ -67,7 +67,7 @@ Noen [skilletegn og operatorer](functions/operators.md) flyttes basert på desim
 
 | Desimalskilletegn på forfatterens språk | Desimalskilletegn i PowerApps | Skilletegn for lister i PowerApps | Sammenkjedingsoperator i PowerApps |
 | --- | --- | --- | --- |
-| **.** (punktum) |**.** (punktum) |**,** (komma) |**;** (semikolon) |
+| **.** (prikk eller punktum) |**.** (prikk eller punktum) |**,** (komma) |**;** (semikolon) |
 | **,** (komma) |**,** (komma) |**;** (semikolon) |**;;** (doble semikolon) |
 
 Endringen av listeskilletegn i PowerApps samsvarer med det som skjer med listeskilletegn i Excel.  Det påvirker:
@@ -76,15 +76,15 @@ Endringen av listeskilletegn i PowerApps samsvarer med det som skjer med listesk
 * Felter i en [post](working-with-tables.md#elements-of-a-table).
 * Poster i en [verditabell](working-with-tables.md#inline-syntax).
 
-Tenk for eksempel på følgende formel i en-US:
+For eksempel vurdere følgende formel uttrykt i et språk og område som bruker prikk eller punktum som desimaltegn, for eksempel Japan eller Storbritannia:
 
-**If( Slider1.Value > 12.59, UpdateContext( { Validation: true, MovingOn: 1 } ); Navigate( "NextScreen", "" ), UpdateContext( { Validation: false } ) )**
+![PowerApps-formel Hvis åpen Statusnavn slider1 prikk verdi større enn 12 prikk 59 komma varsle åpen Statusnavn «Gyldig!» Lukk komma vellykket Statusnavn semikolon Navigate åpen Statusnavn «NextScreen» komma ingen Lukk Statusnavn komma varsle åpen Statusnavn "Ugyldig, prøv på nytt" komma feil Lukk Statusnavn Lukk Statusnavn](media/global-apps/operators-dot.png)
 
-På et annet språk, der «,» brukes som desimaltegn, vises dette i redigeringsvisningen som:
+Nå kan du vise denne samme formelen i et språk og område der et komma brukes som desimaltegn, for eksempel Frankrike eller Spania:
 
-**If( Slider1.Value > 12,59; UpdateContext( { Validation: true; MovingOn: 1 } );; Navigate( "NextScreen", "" ); UpdateContext( { Validation: false } ) )**
+![PowerApps-formel Hvis åpen Statusnavn slider1 prikk verdi større enn 12 komma 59 semikolon varsle åpen Statusnavn «Gyldig!» Lukk semikolon vellykket Statusnavn doble semikolon Navigate åpen Statusnavn «NextScreen» semikolon ingen Lukk Statusnavn semikolon varsle åpen Statusnavn "Ugyldig, prøv på nytt" semikolon feil Lukk Statusnavn Lukk Statusnavn](media/global-apps/operators-comma.png)
 
-Vær oppmerksom på at operatoren for egenskapsvalg **.** i **Slider1.Value** alltid er den samme, uansett hva desimalskilletegnet er.
+Uthevingen viser operatorene som endrer mellom de to versjonene.  Vær oppmerksom på at operatoren for egenskapsvalg **.** (prikk eller punktum) i **Slider1.Value** er alltid det samme, uansett hva desimalskilletegnet er.
 
 Formelen endres ikke internt, det eneste som endres er hvordan den vises og redigeres av forfatteren.  To ulike forfattere som bruker to forskjellige språk, kan vise og redigere den samme formelen, og begge ser riktig skilletegn og operatorer for språket sitt.
 
@@ -125,19 +125,19 @@ Se dokumentasjonen for **[Text](functions/function-text.md)**-funksjonen for mer
 ### <a name="reading-numbers-dates-and-times"></a>Å lese tall, datoer og klokkeslett
 Det finnes fire funksjoner for lesing av tall, datoer og klokkeslett som er angitt av brukeren:
 
-* **[Value](functions/function-value.md)**: konverterer et tall i en tekststreng til en tallverdi.
-* **[DateValue](functions/function-datevalue-timevalue.md)**: konverterer en datoverdi i en tekststreng til en dato/klokkeslett-verdi.  Alle tidspunkt som er angitt i tekststrengen ignoreres.
-* **[TimeValue](functions/function-datevalue-timevalue.md)**: konverterer en klokkeslettverdi i en tekststreng til en dato/klokkeslett-verdi.  Alle datoer som er angitt i tekststrengen ignoreres.
-* **[DateTimeValue](functions/function-datevalue-timevalue.md)**: konverterer en dato- og klokkeslettverdi i en tekststreng til en dato/klokkeslett-verdi.  
+* **[Verdien](functions/function-value.md)**: Konverterer et tall i en tekststreng til en tallverdi.
+* **[DateValue](functions/function-datevalue-timevalue.md)**: Konverterer en datoverdi i en tekststreng til en dato/klokkeslett-verdi.  Alle tidspunkt som er angitt i tekststrengen ignoreres.
+* **[TimeValue](functions/function-datevalue-timevalue.md)**: Konverterer et klokkeslett-verdi i en tekststreng til en dato/klokkeslett-verdi.  Alle datoer som er angitt i tekststrengen ignoreres.
+* **[DateTimeValue](functions/function-datevalue-timevalue.md)**: Konverterer en dato og klokkeslett-verdi i en tekststreng til en dato/klokkeslett-verdi.  
 
 Hvis du har brukt Excel, kan alle disse funksjonene kombineres i **Value**-funksjonen.  De er delt opp her fordi PowerApps har ulike typer for dato/klokkeslett-verdier og tall.
 
 Alle disse funksjonene har de samme argumentene:
 
-* *Streng, obligatorisk*: en streng fra brukeren. En streng skrives for eksempel inn i en **tekstinndata**-kontroll og leser fra kontrollen med **Tekst**-egenskapen.
-* *Språk, valgfritt*: språket som skal brukes til å tolke *strengen*.  Språkinnstillingen til brukeren, som standard.
+* *Streng, obligatorisk*: En streng fra brukeren. En streng skrives for eksempel inn i en **tekstinndata**-kontroll og leser fra kontrollen med **Tekst**-egenskapen.
+* *Språk, valgfritt*: Språket som å tolke den *streng*.  Språkinnstillingen til brukeren, som standard.
 
-Eksempel:
+For eksempel:
 
 * **Value( "12,345.678", "en-US" )** eller **Value( "12,345.678" )** på en plassering der en-US er brukerspråket, returnerer tallet **12345,678**, klar for beregninger.
 * **DateValue( "1/2/01", "es-ES" )** eller **DateValue( "1/2/01" )** på en plassering der es-ES er brukerspråket, returnerer dato/klokkeslett-verdien **01. februar 2001 ved midnatt**.

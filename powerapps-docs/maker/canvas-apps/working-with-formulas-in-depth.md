@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f7aed7812890482bb781e2d5ff7eac8c996b8837
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: d48559ee3a54cbb723621a0e36f09cb4a1d0fe3b
+ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42850421"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57803439"
 ---
 # <a name="understand-behavior-formulas-for-canvas-apps-in-powerapps"></a>Slik fungerer formler for virkemåte i lerretsapper i PowerApps
 
@@ -30,18 +30,18 @@ Hva betyr det når brukeren velger en **[Knapp](controls/control-button.md)**-ko
 
 Ved å velge en **[Knapp](controls/control-button.md)**-kontroll starter brukeren en sekvens med handlinger eller virkemåter, som vil endre tilstanden til appen:
 
-* Endre skjermbildet som vises: Funksjonene **[Back](functions/function-navigate.md)** og **[Navigate](functions/function-navigate.md)**.
-* Kontroller et [signal](functions/signals.md): **[Aktiver](functions/function-enable-disable.md)** og **[Deaktiver](functions/function-enable-disable.md)** funksjoner.
-* Oppdater, oppdater eller fjern elementer i en [datakilde](working-with-data-sources.md): Funksjonene **[Refresh](functions/function-refresh.md)**, **[Update](functions/function-update-updateif.md)**, **[UpdateIf](functions/function-update-updateif.md)**, **[Path](functions/function-patch.md)**, **[Remove](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)**.
-* Oppdater en [kontekstvariabel](working-with-variables.md#create-a-context-variable): Funksjonen **[UpdateContext](functions/function-updatecontext.md)**.
-* Opprett, oppdater eller fjern elementer i en [samling](working-with-data-sources.md#collections): Funksjonene **[Collect](functions/function-clear-collect-clearcollect.md)**, **[Clear](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)**.
+* Endre skjermbildet som vises: **[Tilbake](functions/function-navigate.md)**  og **[Navigate](functions/function-navigate.md)** funksjoner.
+* Kontrollen en [signal](functions/signals.md): **[Aktiver](functions/function-enable-disable.md)**  og **[deaktivere](functions/function-enable-disable.md)** funksjoner.
+* Oppdater, Oppdater eller fjern elementer i en [datakilden](working-with-data-sources.md): **[Oppdater](functions/function-refresh.md)**,  **[oppdateringen](functions/function-update-updateif.md)**,  **[UpdateIf](functions/function-update-updateif.md)**, **[Patch](functions/function-patch.md)**,  **[Fjerne](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)** funksjoner.
+* Oppdater en [kontekstvariabelen](working-with-variables.md#use-a-context-variable):  **[UpdateContext](functions/function-updatecontext.md)**  funksjonen.
+* Opprett, Oppdater eller fjern elementer i en [samling](working-with-data-sources.md#collections):  **[Samle inn](functions/function-clear-collect-clearcollect.md)**,  **[tydelig](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** funksjoner.
 
 Fordi disse funksjonene endrer tilstanden til appen kan de ikke automatisk omberegnes. Du kan bruke dem i formlene for egenskapene **[OnSelect](controls/properties-core.md)**, **[OnVisible](controls/control-screen.md)**, **[OnHidden](controls/control-screen.md)**  og andre **On...**, som kalles virkemåteformler.
 
 ### <a name="more-than-one-action"></a>Mer enn én handling
 Bruk semikolon til å opprette en liste over handlinger som skal utføres. Du kan for eksempel oppdatere en kontekstvariabel, og deretter gå tilbake til forrige skjermbilde:
 
-* **UpdateContext( { x: 1 } ); Back()**
+* **UpdateContext ({x: 1 } ); Back()**
 
 Handlinger utføres i rekkefølgen de vises i formelen.  Den neste funksjonen starter ikke før den gjeldende funksjonen er fullført. Hvis det oppstår en feil, kan kanskje ikke etterfølgende funksjoner starte.
 

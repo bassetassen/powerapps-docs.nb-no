@@ -1,24 +1,24 @@
 ---
 title: Bygg inn en ny lerretsapp i en Power BI-rapport | Microsoft Docs
 description: Bygg inn en lerretsapp som bruker samme datakilde og kan filtreres som andre rapportelementer
-author: mgblythe
+author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/15/2018
-ms.author: mblythe
+ms.author: niwaggon
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 046bd1c56a7c27068c4d52cbc0bd28b1bb800ede
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: d82db4deaa123e460bce043bff10cc30ea409f15
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42853663"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57798954"
 ---
 # <a name="embed-a-new-canvas-app-in-a-power-bi-report"></a>Bygg inn en ny lerretsapp i en Power BI-rapport
 

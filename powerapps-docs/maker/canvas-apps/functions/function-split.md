@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7cc3608d6a973c0ef301c9979b62f5ba898c029c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: b8f8dc0d354dd17fedd16524fed0f358b70839d4
+ms.sourcegitcommit: f5013108140276b3d66a9dce13a061df89609d26
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42848582"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "57798402"
 ---
 # <a name="split-function-in-powerapps"></a>Split-funksjonen i PowerApps
 Deler opp en tekststreng i en tabell med delstrenger.
@@ -28,7 +28,7 @@ Deler opp en tekststreng i en tabell med delstrenger.
 
 En streng for skilletegn brukes til å bryte teksten opp.  Skilletegnet kan være null, ett eller flere tegn som er satt sammen som helhet i tekststrengen.  Å bruke en null-lengde eller en *tom* streng resulterer at i alle tegn brytes opp, atskilt.  De samsvarende skilletegnene returneres ikke i resultatet.  Hvis det ikke blir funnet noen treff for skilletegn, returneres hele tekststrengen som ett enkelt resultat.
 
-Bruk **[Concat](function-concatenate.md)**-funksjonen til å sette sammen strengen (uten skilletegn).  
+Bruk **[Concat](function-concatenate.md)**-funksjonen til å sette sammen strengen (uten skilletegn). Bruk den **[MatchAll](function-ismatch.md)** funksjonen til å trekke ut deler av en tekststreng ved hjelp av et vanlig uttrykk, som du kan bruke til å dele en streng (i enkelte tilfeller). 
 
 ## <a name="syntax"></a>Syntaks
 **Split**( *Text*, *Separator* )

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0ac3f0549e89153d9362d6a8a040833608d4e287
-ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
-ms.translationtype: HT
+ms.openlocfilehash: 5752781cf99a538d76e9dd9197aa4f8b8abce53e
+ms.sourcegitcommit: ba5542ff1c815299baa16304c6e0b5fed936e776
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806206"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54308574"
 ---
 # <a name="groupby-and-ungroup-functions-in-powerapps"></a>Funksjonene GroupBy og Ungroup i PowerApps
 Grupperer og deler opp [poster](../working-with-tables.md#records) av en [tabell](../working-with-tables.md).
@@ -66,8 +66,21 @@ En tabell er en verdi i PowerApps, akkurat som en streng eller et tall. Du kan a
 ### <a name="create-a-collection"></a>Opprett en samling
 1. Legg til en knapp, og angi **[Text](../controls/properties-core.md)**-egenskapen, slik at knappen viser **Original**.
 2. Angi **[OnSelect](../controls/properties-core.md)**-egenskapen for **Original**-knappen til denne formelen:
-   
-    **ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
+
+```powerapps-dot   
+ClearCollect( CityPopulations, 
+    { City: "London",    Country: "United Kingdom", Population: 8615000}, 
+    { City: "Berlin",    Country: "Germany",        Population: 3562000}, 
+    { City: "Madrid",    Country: "Spain",          Population: 3165000}, 
+    { City: "Rome",      Country: "Italy",          Population: 2874000}, 
+    { City: "Paris",     Country: "France",         Population: 2273000}, 
+    { City: "Hamburg",   Country: "Germany",        Population: 1760000}, 
+    { City: "Barcelona", Country: "Spain",          Population: 1602000}, 
+    { City: "Munich",    Country: "Germany",        Population: 1494000}, 
+    { City: "Milan",     Country: "Italy",          Population: 1344000}
+)
+```
+
 3. Velg **Opprinnelig**-knappen mens du holder nede ALT-tasten.
    
     Du opprettet en [samling](../working-with-data-sources.md#collections), kalt **CityPopulations**, som inneholder disse dataene:

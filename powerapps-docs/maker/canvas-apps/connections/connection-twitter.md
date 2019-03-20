@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2ab480b0bb2aa61c65e33f67cca5a3b0974ca2c8
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 23a61dd1300fab71bed4d8c72b861c3c38a1cdea
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834530"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57802082"
 ---
 # <a name="connect-to-twitter-from-powerapps"></a>Å koble til Twitter fra PowerApps
 ![Twitter](./media/connection-twitter/twittericon.png)
@@ -114,7 +114,7 @@ Twitter-tilkobling er opprettet og lagt til i appen din. Den er nå klar til å 
 
        `Twitter.MyFollowing()`  
        `Twitter.MyFollowing({maxResults:3})`
-   * Hvis du vil vise følgerne til den gjeldende brukeren, angir du galleriets **[Element](../controls/properties-core.md)**-egenskap til følgende formel:
+   * For å vise hvilke brukere som følger en annen bruker, kan du angi den **[elementer](../controls/properties-core.md)** egenskapen for galleriet til følgende formel:
 
        `Twitter.Following( *TwitterHandle* )`
 
@@ -192,11 +192,11 @@ Denne tilkoblingen har følgende funksjoner:
 | [OnNewTweet](connection-twitter.md#onnewtweet) |Utløser en arbeidsflyt når en ny tweet legges ut som samsvarer med søket |
 
 ### <a name="usertimeline"></a>UserTimeline
-Denne handlingen henter brukerens tidslinje, og henter en samling av de siste tweetene som ble lagt ut av den angitte brukeren
+Hent tidslinje for bruker: Denne handlingen henter en samling av de siste tweetene som ble lagt ut av den angitte brukeren
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | userName |streng |ja |Twitter-brukernavn |
 | maxResults |heltall |nei |Maksimalt antall tweets som skal hentes, for eksempel {maxResults:5} |
@@ -205,19 +205,19 @@ Denne handlingen henter brukerens tidslinje, og henter en samling av de siste tw
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| TweetText |streng |Ja | |
-| TweetId |streng |Nei | |
-| CreatedAt |streng |Nei | |
-| RetweetCount |heltall |Ja | |
-| TweetedBy |streng |Ja | |
-| MediaUrls |matrise |Nei | |
+| TweetText |streng |ja | |
+| TweetId |streng |nei | |
+| CreatedAt |streng |nei | |
+| RetweetCount |heltall |ja | |
+| TweetedBy |streng |ja | |
+| MediaUrls |matrise |nei | |
 
 ### <a name="hometimeline"></a>HomeTimeline
-Denne handlingen henter tidslinjen for Hjem, og henter de siste tweetene og re-tweets på innlegg fra meg og mine følgere
+Hent tidslinje for hjem: Denne handlingen henter de siste tweetene og re-tweets på innlegg fra meg og mine følgere
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | maxResults |heltall |nei |Maksimalt antall tweets som skal hentes, for eksempel {maxResults:5} |
 
@@ -225,19 +225,19 @@ Denne handlingen henter tidslinjen for Hjem, og henter de siste tweetene og re-t
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| TweetText |streng |Ja | |
-| TweetId |streng |Nei | |
-| CreatedAt |streng |Nei | |
-| RetweetCount |heltall |Ja | |
-| TweetedBy |streng |Ja | |
-| MediaUrls |matrise |Nei | |
+| TweetText |streng |ja | |
+| TweetId |streng |nei | |
+| CreatedAt |streng |nei | |
+| RetweetCount |heltall |ja | |
+| TweetedBy |streng |ja | |
+| MediaUrls |matrise |nei | |
 
 ### <a name="searchtweet"></a>SearchTweet
-Denne handlingen søker i tweets, og henter en samling av relevante tweet som samsvarer med en angitt spørring
+Søk tweet: Denne handlingen henter en samling av relevante tweets som samsvarer med en angitt spørring
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | searchQuery |streng |ja |Spørringstekst (du kan bruke spørringsoperatorer som støttes av Twitter: http://www.twitter.com/search) |
 | maxResults |heltall |nei |Maksimalt antall tweets som skal hentes, for eksempel {maxResults:5} |
@@ -246,19 +246,19 @@ Denne handlingen søker i tweets, og henter en samling av relevante tweet som sa
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| TweetText |streng |Ja | |
-| TweetId |streng |Nei | |
-| CreatedAt |streng |Nei | |
-| RetweetCount |heltall |Ja | |
-| TweetedBy |streng |Ja | |
-| MediaUrls |matrise |Nei | |
+| TweetText |streng |ja | |
+| TweetId |streng |nei | |
+| CreatedAt |streng |nei | |
+| RetweetCount |heltall |ja | |
+| TweetedBy |streng |ja | |
+| MediaUrls |matrise |nei | |
 
 ### <a name="followers"></a>Følgere
-Denne handlingen henter brukere som følger den angitte brukeren
+Hent følgere: Denne handlingen henter brukere som følger den angitte brukeren
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | userName |streng |ja |Brukerens Twitter-brukernavn |
 | maxResults |heltall |nei |Maksimalt antall brukere som skal hentes, for eksempel {maxResults:5} |
@@ -267,21 +267,21 @@ Denne handlingen henter brukere som følger den angitte brukeren
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| FullName |streng |Ja | |
-| Plassering |streng |Ja | |
-| ID |heltall |Nei | |
-| UserName |streng |Ja | |
-| FollowersCount |heltall |Nei | |
-| Beskrivelse |streng |Ja | |
-| StatusesCount |heltall |Nei | |
-| FriendsCount |heltall |Nei | |
+| FullName |streng |ja | |
+| Location |streng |ja | |
+| ID |heltall |nei | |
+| UserName |streng |ja | |
+| FollowersCount |heltall |nei | |
+| Beskrivelse |streng |ja | |
+| StatusesCount |heltall |nei | |
+| FriendsCount |heltall |nei | |
 
 ### <a name="myfollowers"></a>MyFollowers
-Denne handlingen henter brukere som følger meg
+Hent Mine følgere: Denne handlingen henter brukere som følger meg
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | maxResults |heltall |nei |Maksimalt antall brukere som skal hentes, for eksempel {maxResults:5} |
 
@@ -289,21 +289,21 @@ Denne handlingen henter brukere som følger meg
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| FullName |streng |Ja | |
-| Plassering |streng |Ja | |
-| ID |heltall |Nei | |
-| UserName |streng |Ja | |
-| FollowersCount |heltall |Nei | |
-| Beskrivelse |streng |Ja | |
-| StatusesCount |heltall |Nei | |
-| FriendsCount |heltall |Nei | |
+| FullName |streng |ja | |
+| Location |streng |ja | |
+| ID |heltall |nei | |
+| UserName |streng |ja | |
+| FollowersCount |heltall |nei | |
+| Beskrivelse |streng |ja | |
+| StatusesCount |heltall |nei | |
+| FriendsCount |heltall |nei | |
 
 ### <a name="following"></a>Følger
-Denne handlingen henter brukere som den angitte brukeren følger
+Hent følgende: Denne handlingen henter brukere som den angitte brukeren følger
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | userName |streng |ja |Brukerens Twitter-brukernavn |
 | maxResults |heltall |nei |Maksimalt antall brukere som skal hentes, for eksempel {maxResults:5} |
@@ -312,21 +312,21 @@ Denne handlingen henter brukere som den angitte brukeren følger
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| FullName |streng |Ja | |
-| Plassering |streng |Ja | |
-| ID |heltall |Nei | |
-| UserName |streng |Ja | |
-| FollowersCount |heltall |Nei | |
-| Beskrivelse |streng |Ja | |
-| StatusesCount |heltall |Nei | |
-| FriendsCount |heltall |Nei | |
+| FullName |streng |ja | |
+| Location |streng |ja | |
+| ID |heltall |nei | |
+| UserName |streng |ja | |
+| FollowersCount |heltall |nei | |
+| Beskrivelse |streng |ja | |
+| StatusesCount |heltall |nei | |
+| FriendsCount |heltall |nei | |
 
 ### <a name="myfollowing"></a>MyFollowing
-Denne handlingen henter brukere som jeg følger
+Hent Mine følgende: Denne handlingen henter brukere som jeg følger
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | maxResults |heltall |nei |Maksimalt antall brukere som skal hentes, for eksempel {maxResults:5} |
 
@@ -334,21 +334,21 @@ Denne handlingen henter brukere som jeg følger
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| FullName |streng |Ja | |
-| Plassering |streng |Ja | |
-| ID |heltall |Nei | |
-| UserName |streng |Ja | |
-| FollowersCount |heltall |Nei | |
-| Beskrivelse |streng |Ja | |
-| StatusesCount |heltall |Nei | |
-| FriendsCount |heltall |Nei | |
+| FullName |streng |ja | |
+| Location |streng |ja | |
+| ID |heltall |nei | |
+| UserName |streng |ja | |
+| FollowersCount |heltall |nei | |
+| Beskrivelse |streng |ja | |
+| StatusesCount |heltall |nei | |
+| FriendsCount |heltall |nei | |
 
-### <a name="user"></a>Bruker
-Denne handlingen henter detaljer om den angitte brukeren (for eksempel brukernavn, beskrivelse, følgere, telling og så videre)
+### <a name="user"></a>User
+Hent bruker: Denne handlingen henter detaljer om den angitte brukeren (for eksempel brukernavn, beskrivelse, følgere, telling og så videre)
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | userName |streng |ja |Brukerens Twitter-brukernavn |
 
@@ -356,21 +356,21 @@ Denne handlingen henter detaljer om den angitte brukeren (for eksempel brukernav
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| FullName |streng |Ja | |
-| Plassering |streng |Ja | |
-| ID |heltall |Nei | |
-| UserName |streng |Ja | |
-| FollowersCount |heltall |Nei | |
-| Beskrivelse |streng |Ja | |
-| StatusesCount |heltall |Nei | |
-| FriendsCount |heltall |Nei | |
+| FullName |streng |ja | |
+| Location |streng |ja | |
+| ID |heltall |nei | |
+| UserName |streng |ja | |
+| FollowersCount |heltall |nei | |
+| Beskrivelse |streng |ja | |
+| StatusesCount |heltall |nei | |
+| FriendsCount |heltall |nei | |
 
 ### <a name="tweet"></a>Tweet
-Denne handlingen legger ut en ny tweet
+Legg inn en ny tweet: Tweet
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | tweetText |streng |nei |Tekst som skal legges ut, for eksempel {tweetText:"hello"} |
 | body |streng |nei |Medier som skal legges ut |
@@ -379,14 +379,14 @@ Denne handlingen legger ut en ny tweet
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| TweetId |streng |Ja | |
+| TweetId |streng |ja | |
 
 ### <a name="onnewtweet"></a>OnNewTweet
-Når en ny tweet legges ut, utløses det en arbeidsflyt som samsvarer med søket
+Når en ny tweet: Utløser en arbeidsflyt når en ny tweet legges ut som samsvarer med søket
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | searchQuery |streng |ja |Spørringstekst (du kan bruke spørringsoperatorer som støttes av Twitter: http://www.twitter.com/search) |
 
@@ -394,7 +394,7 @@ Når en ny tweet legges ut, utløses det en arbeidsflyt som samsvarer med søket
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| verdi |matrise |Nei | |
+| verdi |matrise |nei | |
 
 ## <a name="helpful-links"></a>Nyttige koblinger
 Se alle [tilgjengelige tilkoblinger](../connections-list.md).  

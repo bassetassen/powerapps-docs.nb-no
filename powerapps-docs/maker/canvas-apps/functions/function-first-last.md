@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b191e41db1b8d49d61b48a8a24dbf22101c18a68
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: a66cf920f37870d13db187fe02a873bac7a44aa6
+ms.sourcegitcommit: eecbafdee9ef3d0a71dfeba934581f00965064cf
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42844188"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "57801875"
 ---
 # <a name="first-firstn-last-and-lastn-functions-in-powerapps"></a>Funksjonene First, FirstN, Last og LastN i PowerApps
 Returnerer den første eller siste gruppen av [poster](../working-with-tables.md#records) i en tabell.
@@ -39,7 +39,7 @@ Returnerer den første eller siste gruppen av [poster](../working-with-tables.md
 ## <a name="syntax"></a>Syntaks
 **First**( *Tabell* )<br>**Last**( *Tabell* )
 
-* *Tabell* – obligatorisk. Tabellen funksjonen skal arbeide med.
+* *Tabell* – obligatorisk. Tabellen som funksjonen skal arbeide med.
 
 **FirstN**( *Table* [, *NumberOfRecords* ] )<br>**LastN**( *Table* [, *NumberOfRecords* ] )
 

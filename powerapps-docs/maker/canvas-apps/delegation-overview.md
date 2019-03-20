@@ -13,15 +13,15 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0ac78340f344ce42fd68d18940b1aaca41412a96
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 813dddc205eb5abb870d333635723fcd5e2f2738
+ms.sourcegitcommit: 6d1ec3d5afa0466d1a5ce4434e588686a195d0fa
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42829755"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "57802542"
 ---
 # <a name="understand-delegation-in-a-canvas-app"></a>Forstå delegering i en lerretsapp
-PowerApps inneholder et kraftig sett med funksjoner for filtrering, sortering og forming av datatabeller i en lerretsapp, blant annet funksjonene: **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)** og **[AddColumns](functions/function-table-shaping.md)**. Med disse funksjonene kan du gi brukerne fokusert tilgang til informasjonen de trenger. For de med databasebakgrunn vil bruk av disse funksjonene tilsvare skriving av en databasespørring.
+PowerApps inneholder et kraftig sett med funksjoner for filtrering, sortering og forming av dataene i en lerretsapp: **[Filter](functions/function-filter-lookup.md)**,  **[Sorter](functions/function-sort.md)**, og **[AddColumns](functions/function-table-shaping.md)** funksjoner for å nevne noen få. Med disse funksjonene kan du gi brukerne fokusert tilgang til informasjonen de trenger. For de med databasebakgrunn vil bruk av disse funksjonene tilsvare skriving av en databasespørring.
 
 Nøkkelen til utvikling av effektive apper er å minimere datamengden som sendes til enheten din. Det er kanskje nok med noen få poster blant flere millioner, eventuelt kan én enkelt akkumulert verdi representere tusener av poster. Det kan også hende det bare er mulig å hente det første settet med poster, og resten føres inn når brukeren viser at det trengs flere. Fokus kan kraftig redusere prosesskraften, minnet og nettverksbåndbredden som appen trenger, noe som resulterer i raskere svartider for brukerne, selv på telefoner som er tilkoblet via et mobilnettverk. 
 
@@ -29,17 +29,19 @@ Nøkkelen til utvikling av effektive apper er å minimere datamengden som sendes
 
 Når dette begynner å bli komplisert, hvilket er grunnen til at denne artikkelen finnes, er det fordi ikke alt som kan uttrykkes i en PowerApps-formel kan delegeres til alle datakilder. PowerApps-språket etterligner Excels formelspråk, utformet med komplett og umiddelbar tilgang til en fullstendig arbeidsbok i minnet, med et bredt utvalg manipuleringsfunksjoner for tall og tekst. Derfor er PowerApps-språket mer omfattende enn det som støttes av de fleste datakilder, inkludert robuste databasemotorer som SQL Server.
 
-**Arbeid med store datasett krever at du bruker datakilder og formler som kan delegeres.**  Dette er den eneste måten å sikre at appen fungerer bra på, og at brukere får tilgang til informasjonen de trenger. Vær oppmerksom på delegeringsadvarsler som identifiserer steder der delegering ikke er mulig. Hvis du arbeider med små datasett (færre enn 500 poster), kan du bruke alle datakilder og formler siden appen kan behandle data lokalt hvis formelen ikke kan delegeres. 
+**Arbeid med store datasett krever at du bruker datakilder og formler som kan delegeres.** Dette er den eneste måten å sikre at appen fungerer bra på, og at brukere får tilgang til informasjonen de trenger. Vær oppmerksom på delegeringsadvarsler som identifiserer steder der delegering ikke er mulig. Hvis du arbeider med små datasett (færre enn 500 poster), kan du bruke alle datakilder og formler siden appen kan behandle data lokalt hvis formelen ikke kan delegeres. 
 
 > [!NOTE]
 > Delegeringsadvarsler ble tidligere flagget i PowerApps som «blå prikk»-forslag, men delegeringsforslag har i ettertid blitt klassifisert på nytt som advarsler. Hvis dataene i datakilden overskrider 500 poster og en funksjon ikke kan delegeres, kan det hende at PowerApps ikke kan hente alle dataene og at appen har feilaktige resultater. Delegeringsadvarsler hjelper deg med å behandle appen slik at den har riktige resultater.
 
 ## <a name="delegable-data-sources"></a>Datakilder som kan delegeres
-Gå til [delegeringslisten](delegation-list.md) for å se den fullstendige listen over hvilke datakilder som støtter delegering, og i hvilken grad.
+Delegering støttes for visse bare tabelldatakilder. Hvis en datakilde som støtter delegering, sin [connector dokumentasjonen](https://docs.microsoft.com/connectors/) gir en oversikt over som støtter. For eksempel disse datakilder i tabellform er de mest populære, og de støtter delegering:
 
-Vi fortsetter å legge til delegeringsstøtte i eksisterende datakilder, i tillegg til å legge til flere datakilder.
+- [Common Data Service (CDS) for apper](https://docs.microsoft.com/connectors/commondataservice/) 
+- [SharePoint](https://docs.microsoft.com/connectors/sharepointonline/) 
+- [SQL Server](https://docs.microsoft.com/connectors/sql/) 
 
-Importerte Excel-arbeidsbøker (som bruker datakilden «Legg til statiske data i appen»), samlinger og tabeller som er lagret i kontekstvariabler, krever ikke delegering. Alle disse dataene ligger allerede i minnet, og det fullstendige PowerApps-språket kan brukes.
+Importert Excel-arbeidsbøker (ved hjelp av den **Legg til statiske data i appen** datakilde), samlinger og tabeller som er lagret i kontekstvariabler, krever ikke delegering. Alle disse dataene ligger allerede i minnet, og det fullstendige PowerApps-språket kan brukes.
 
 ## <a name="delegable-functions"></a>Funksjoner som kan delegeres
 Neste trinn er å bruke bare de formlene som kan delegeres. Formelelementene som kan delegeres er inkludert her. Alle datakilder er imidlertid forskjellige, og det er ikke alle som støtter alle disse elementene. Se etter delegeringsadvarsler i en bestemt formel.
@@ -68,9 +70,9 @@ Den forrige listen inkluderer ikke disse viktige elementene:
 * **[*](functions/operators.md)**, **[/](functions/operators.md)**, **[Mod](functions/function-mod.md)**
 * **[Concatenate](functions/function-concatenate.md)** (inkludert **[&](functions/operators.md)**)
 * **[ExactIn](functions/operators.md)**
-* Funksjoner for strengmanipulering: **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Len](functions/function-left-mid-right.md)**,...
-* Signaler: **[Plassering](functions/signals.md)**, **[Akselerasjon](functions/signals.md)**, **[Kompass](functions/signals.md)**, ...
-* Flyktige: **[Now](functions/function-now-today-istoday.md)**, **[Today](functions/function-now-today-istoday.md)**, **[Rand](functions/function-rand.md)**, ...
+* Streng funksjoner for strengmanipulering: **[Lavere](functions/function-lower-upper-proper.md)**,  **[øvre](functions/function-lower-upper-proper.md)**,  **[venstre](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**,  **[Len](functions/function-left-mid-right.md)**,...
+* Signaler: **[Plassering](functions/signals.md)**,  **[akselerasjon](functions/signals.md)**,  **[kompass](functions/signals.md)**,...
+* Flyktige: **[Nå](functions/function-now-today-istoday.md)**,  **[i dag](functions/function-now-today-istoday.md)**,  **[Rand](functions/function-rand.md)**,...
 * [Samlinger](working-with-variables.md)
 
 ### <a name="sorting-functions"></a>Sorteringsfunksjoner
@@ -88,7 +90,7 @@ Andre mengdefunksjoner, for eksempel **[StdevP](functions/function-aggregates.md
 ## <a name="non-delegable-functions"></a>Funksjoner som ikke kan delegeres
 Ingen andre funksjoner støtter delegering, herunder disse viktige funksjonene:
 
-* Tabellbearbeiding: **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)**, ...
+* Tabellbearbeiding: **[AddColumns](functions/function-table-shaping.md)**,  **[DropColumns](functions/function-table-shaping.md)**,  **[ShowColumns](functions/function-table-shaping.md)**,...
 * **[First](functions/function-first-last.md)**, **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
 * **[Valg](functions/function-choices.md)**
 * **[Concat](functions/function-concatenate.md)**
@@ -96,7 +98,7 @@ Ingen andre funksjoner støtter delegering, herunder disse viktige funksjonene:
 * **[CountIf](functions/function-table-counts.md)**, **[RemoveIf](functions/function-remove-removeif.md)**, **[UpdateIf](functions/function-update-updateif.md)**
 * **[GroupBy](functions/function-groupby.md)**, **[Ungroup](functions/function-groupby.md)**
 
-Et vanlig mønster er å bruke **AddColumns** og **LookUp** for å slå sammen informasjon fra én tabell til en annen. Dette kalles vanligvis Sammenføyning på dataspråket.  Eksempel:
+Et vanlig mønster er å bruke **AddColumns** og **LookUp** for å slå sammen informasjon fra én tabell til en annen. Dette kalles vanligvis Sammenføyning på dataspråket.  For eksempel:
 
 **AddColumns( Products, "Supplier Name", LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name )**
 
@@ -107,7 +109,7 @@ Siden **LookUp**-funksjonen og tilhørende datakilde kan delegeres, finnes det t
 ## <a name="non-delegable-limits"></a>Grenser for ikke-delegering
 Formler som ikke kan delegeres, behandles lokalt. Dette gjør det mulig å bruke hele formelspråket til PowerApps. Dette har likevel sin pris. Alle dataene må sendes til enheten først, noe som innebærer å hente en stor mengde data over nettverket. Dette kan ta tid, noe som kan gi inntrykk av at appen er treg eller har krasjet.
 
-For å unngå dette har PowerApps satt en grense for hvor mye data som kan behandles lokalt, på 500 poster.  Vi har valgt dette antallet slik at du fremdeles har full tilgang til små datasett, og du har mulighet til å finjustere bruken av store datasett, slik at du kan se delvise resultater.
+Hvis du vil unngå dette har satt PowerApps en grense på hvor mye data som kan behandles lokalt: 500 poster som standard.  Vi har valgt dette antallet slik at du fremdeles har full tilgang til små datasett, og du har mulighet til å finjustere bruken av store datasett, slik at du kan se delvise resultater.
 
 Du må naturligvis være forsiktig når du bruker denne funksjonen, ettersom det kan være forvirrende for brukerne. Overvei for eksempel en **Filter**-funksjon med en Selection-formel som ikke kan delegeres, i stedet for en datakilde med over en million poster. Siden filtreringen utføres lokalt, skannes bare de 500 første postene. Hvis ønsket post er post 501 eller 500.001, regnes den ikke med, og det returneres ikke av **Filter**.
 

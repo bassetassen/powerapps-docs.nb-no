@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 07/10/2017
+ms.date: 01/25/2019
 ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 03f768124b2b7260995fe89120091e85e4cdaa0d
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 798a355e1c8728b41f3e92f183d4a4e2831b7cc2
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42826499"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799460"
 ---
 # <a name="add-and-configure-a-canvas-app-control-in-powerapps"></a>Legg og konfigurer en lerretsappkontroll i PowerApps
 
@@ -26,227 +26,126 @@ Legg til forskjellige grensesnittelementer i lerretsappen, og konfigurer aspekte
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-1. [Registrer deg](../signup-for-powerapps.md) for PowerApps, og deretter [logger du deg på](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ved å angi samme legitimasjon som du brukte til å registrere deg.
+1. Hvis du ikke allerede har en PowerApps-lisens, [Registrer](../signup-for-powerapps.md), og deretter [Logg](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Under **gjøre din egen app**, holder du pekeren over **lerretsapp fra tom**, og velg deretter **lag denne appen**.
+1. Hvis du blir bedt om å følge omvisningen, velger du **neste** å bli kjent med nøkkelområder i PowerApps-grensesnittet (eller velg **Hopp over**).
 
-2. Klikk eller trykk på **Ny** i **Fil**-menyen (nær venstre kant) i PowerApps Studio.
+    Du kan alltid se innføringen senere ved å velge spørsmålstegn-ikonet nær hjørnet øverst til høyre på skjermen, og deretter velge **kan du følge omvisningen**.
 
-    ![Ny-alternativet i Fil-menyen](./media/add-configure-controls/file-new.png)
+## <a name="add-and-select-a-control"></a>Legge til og velg en kontroll
 
-3. Klikk eller trykk på **Telefonoppsett** på **Tom app**-flisen.
+På den **Sett inn** fanen, utføre noen av disse trinnene:
 
-    ![Å opprette en app fra grunnen av](./media/add-configure-controls/blank-app.png)
+- Velg **etikett** eller **knappen** legge til en av disse typer kontroller.
+- Velg en kategori av kontrollene, og velg deretter kontrolltypen du vil legge til.
 
-4. Hvis du blir bedt om å følge omvisningen, kan du klikke eller trykke på **Neste** for å bli kjent med nøkkelområder i PowerApps-grensesnittet (eller klikke eller trykke på **Hopp over**).
+Velg for eksempel **ny skjerm**, og velg deretter **tom** å legge til en tom skjerm i appen din. (Skjermer er en type kontroll som kan inneholde andre typer kontroller.)
 
-    ![Åpningsskjermen i omvisningen](./media/add-configure-controls/quick-tour.png)
+![Legge til skjerm](./media/add-configure-controls/add-screen.png)
 
-    Du kan følge omvisningen når som helst ved å klikke eller trykke på spørsmålstegn-ikonet nær hjørnet øverst til høyre og deretter klikke eller trykke på **Følg omvisningen**.
+Den nye skjermen heter **skjerm2** og vises i den venstre navigasjonsruten. Denne ruten viser en hierarkisk listen over kontroller i appen din slik at du kan enkelt finne og velge hver kontroll.
 
-## <a name="add-a-control"></a>Å legge til en kontroll
-Du kan legge til en hvilken som helst kontroll i forskjellige kategorier, ved å klikke eller trykke på **Sett inn**-fanen til verktøylinjen, klikke eller trykke på en kategori og deretter klikke eller trykke på kontrollen du vil bruke. I denne delen kan du se gjennom kontrollene i hver kategori for å bli kjent med de ulike kontrolltypene du kan legge til og finne ut hvor du kan finne dem.
+![Skjerm2 i listen](./media/add-configure-controls/list-screen2.png)
 
-Klikk eller trykk på hvilken som helst av disse kategoriene på **Sett inn**-fanen, og deretter klikker eller trykker du på kontrollen du vil legge til:
+For å demonstrere hvordan denne listen fungerer, kan du velge **etikett** på den **Sett inn** fanen. Den nye kontrollen vises under **skjerm2** i den hierarkiske listen.
 
-**Tekst**: Etikett, Tekstinndata HTML-tekst, Penneinndata<br>
-**Kontroller**: Knapp, Rullegardin, Datovelger, Listeboks, Avmerkingsboks, Alternativknapp, Veksle, Glidebryter, Vurdering, Tidtaker<br>
-**Galleri**: Loddrett, Vannrett, Fleksibel høyde, Tom loddrett, Tom vannrett, Tom fleksibel høyde<br>
-**Datatabell**<br>
-**Skjemaer**: rediger, vis, enhetsskjema<br>
-**Media**: Bilde, Kamera, Strekkode, Video, Lyd, Mikrofon, Legg til bilde<br>
-**Diagrammer**: Stolpediagram, Linjediagram, Sektordiagram<br>
-**Ikoner**
+![Skjerm2 i listen](./media/add-configure-controls/add-label.png)
 
-> [!TIP]
-> Hvis du trenger mer plass til kontroller, kan du [legge til en annen skjerm](add-screen-context-variables.md).
+En boks med seks håndtak omgir i skjermbildet etiketten som standard. Denne typen box omgir uansett hvilken kontroll er valgt. Hvis du velger skjermen ved å klikke på i den (men utenfor etiketten), forsvinner boksen fra etiketten. For å velge etiketten på nytt, kan du klikker eller trykker i den, eller du kan klikke eller trykk på **Label2** i den hierarkiske listen over kontroller.
 
-## <a name="configure-a-control-directly"></a>Å konfigurere en kontroll direkte
-I denne prosedyren legger du til og konfigurerer en **Etikett**-kontroll, men du kan bruke mange av de samme prinsippene på andre kontroller.
+> [!IMPORTANT]
+> Du må alltid velger en kontroll før du kan konfigurere den.
 
-1. Klikk eller trykk på **Sett inn**-fanen, og deretter klikker eller trykker du på **Etikett**.
+## <a name="rename-a-control"></a>Gi nytt navn til en kontroll
 
-    ![Sett inn-fanen](./media/add-configure-controls/insert-text-box.png)
+I den hierarkiske listen over kontroller, Hold pekeren over kontrollen du vil gi nytt navn, velger du ellipseknappen som vises, og velg deretter **gi nytt navn til**. Du kan deretter skrive inn et navn for unike, lett å huske å gjøre bygger appen enklere.
 
-    Når du legger til en kontroll, velges den som standard. Du kan også velge en eksisterende kontroll ved å klikke eller trykke på den. Når en kontroll er valgt, omgis den av en valgboks og andre deler av grensesnittet endres, slik at du kan konfigurere den valgte kontrollen. En valgt **Etikett**-kontroll ligner for eksempel på denne grafikken.
+![Å gi en kontroll et nytt navn](./media/add-configure-controls/rename-control.png)
 
-    ![En valgt etikett](./media/add-configure-controls/selected-text-box.png)
+## <a name="delete-a-control"></a>Slette en kontroll
 
-    > [!IMPORTANT]
-   > Hvis en kontroll er valgt når du velger en ny kontroll eller et tomt område på skjermen, er ikke det første elementet lenger valgt.
-2. Gjør **Etikett**-kontrollen smalere ved å dra i et håndtak på høyre kant av valgboksen til venstre. (Det midterste håndtaket vises bare hvis du zoomer inn.)
+I den hierarkiske listen over kontroller, Hold pekeren over kontrollen som du vil slette, velger du ellipseknappen som vises, og velg deretter **slette**. Hvis du vil slette en kontroll som ikke er en skjerm, kan du også velge kontrollen på lerretet, og trykk deretter på Slett-tasten.
 
-    ![En etikett med endret størrelse](./media/add-configure-controls/shorter-text-box.png)
+![Slett kontroll](./media/add-configure-controls/delete-control.png)
 
-     Du kan også endre størrelsen på en kontroll ved å endre egenskapene **[Høyde](controls/properties-size-location.md)**, **[Bredde](controls/properties-size-location.md)** eller begge, slik dette emnet beskriver senere.
+## <a name="reorder-screens"></a>Endre rekkefølgen på skjermer
 
-3. Flytt **Etikett**-kontrollen ved å dra selve valgboksen (eller ved å endre **[X](controls/properties-size-location.md)**, **[Y](controls/properties-size-location.md)** eller begge egenskapene, slik dette emnet beskriver senere).
+Hold pekeren over en skjerm som du ønsker å flytte opp eller ned, velg ellipseknappen som vises i den hierarkiske listen over kontroller, og velg deretter **Flytt opp** eller **Flytt ned**.
 
-4. Trippelklikk på teksten som vises i **Etikett**-kontrollen, og skriv deretter inn **Hei, verden**.
+![Endre rekkefølgen på skjermen](./media/add-configure-controls/reorder-screen.png)
 
-    ![En etikett med egendefinert tekst](./media/add-configure-controls/change-text-directly.png)
+> [!NOTE]
+> Når du åpner appen, vises vanligvis skjermen på toppen av den hierarkiske listen over kontroller først. Men du kan angi en annen skjerm ved å angi den **[OnStart](controls/control-screen.md)** egenskapen til en formel som inneholder den **[Navigate](functions/function-navigate.md)** funksjonen.
 
-     Du kan også endre denne teksten ved å angi **[Tekst](controls/properties-core.md)**-egenskapen for denne kontrollen, slik dette emnet beskriver senere.
+## <a name="move-and-resize-a-control"></a>Flytt og endre størrelsen på en kontroll
+
+Hvis du vil flytte en kontroll, velg den, Hold pekeren over sentrum slik at den fire hoder pilen vises, og deretter dra kontrollen til en annen plassering.
+
+![Flytt kontrollen](./media/add-configure-controls/move-control.png)
+
+Hvis du vil endre størrelsen på en kontroll, velg den, Hold pekeren over et av håndtakene i valgboksen slik at den to hoder pilen vises, og dra.
+
+![Flytt kontrollen](./media/add-configure-controls/resize-control.png)
+
+> [!NOTE]
+> Som dette emnet beskriver senere, kan du også flytte og endre størrelsen på en kontroll ved å endre en kombinasjon av dens  **[X](controls/properties-size-location.md)**,  **[Y](controls/properties-size-location.md)**,  **[Høyde](controls/properties-size-location.md)**, og **[bredde](controls/properties-size-location.md)** egenskaper i formellinjen.
+
+## <a name="change-the-text-of-a-label-or-a-button"></a>Endre teksten i en etikett eller en knapp
+
+Velg en etikett eller en knapp, Dobbeltklikk teksten som vises i kontrollen, og skriv deretter inn teksten du vil bruke.
+
+![Endre tekst](./media/add-configure-controls/change-text.png)
+
+> [!NOTE]
+> Som dette emnet beskriver senere, kan du også endre denne teksten ved å endre den **[tekst](controls/properties-core.md)** -egenskapen i formellinjen.
 
 ## <a name="configure-a-control-from-the-toolbar"></a>Konfigurering av en kontroll fra verktøylinjen
+
 Når du konfigurerer en kontroll fra verktøylinjen, kan du angi et større utvalg alternativer enn du kan ved å konfigurere en kontroll direkte.
 
-1. Når du har valgt **Etikett**-kontrollen, klikker eller trykker du på **Hjem**-fanen på verktøylinjen.
+Du kan for eksempel velge en etikett, velg den **Hjem** fanen, og deretter endre skrift for teksten i etiketten.
 
-    ![Hjem-fanen](./media/add-configure-controls/home-tab.png)
-
-2. Klikk eller trykk på **Fyll**, og deretter klikker eller trykker du på en farge, for eksempel akvamarin.
-
-    ![Fyll-alternativet](./media/add-configure-controls/fill-option.png)
-
-    **Etikett**-kontrollen reflekterer valget.
-
-    ![En etikett med akvamarin-fyll](./media/add-configure-controls/change-fill.png)
-
-3. Endre skriftserien og størrelsen på teksten (for eksempel til 18 pkt. Georgia).
-
-    ![Skrift-kontroller](./media/add-configure-controls/font-size.png)
-
-    **Etikett**-kontrollen reflekterer valget.
-
-    ![18-punkts Georgia](./media/add-configure-controls/change-font.png)
-
-4. Klikk eller trykk på **Etikett**-fanen, klikk eller trykk på **VerticalAlign**, og klikk eller trykk deretter på **Øverst**.
-
-    ![Tekstboks-fanen](./media/add-configure-controls/text-box-tab.png)
-
-    **Etikett**-kontrollen reflekterer valget.
-
-    ![En etikett med teksten justert i forhold til toppen av boksen](./media/add-configure-controls/change-align.png)
+![Endre skrift](./media/add-configure-controls/change-font.png)
 
 ## <a name="configure-a-control-from-the-properties-tab"></a>Konfigurering av en kontroll fra Egenskaper-fanen
-Når du bruker **Egenskaper**-fanen, kan du konfigurere en kontroll uten å skrive en formel. I denne prosedyren legger du til og konfigurerer en ny **Etikett**-kontroll, men du kan bruke mange av de samme prinsippene på andre kontroller.
 
-1. Legg til en ny **Etikett**-kontroll, som beskrevet tidligere i dette emnet.
+Ved hjelp av den **Egenskaper** fanen, kan du angi et større utvalg alternativer enn du kan ved å konfigurere en kontroll fra verktøylinjen.
 
-2. Når du har valgt den nye kontrollen, klikker eller trykker du på **Egenskaper**-fanen i den høyre ruten.
+Du kan for eksempel velger en kontroll og deretter vise eller skjule den ved å endre den **Visible** egenskapen.
 
-    ![Egenskaper-panelet](./media/add-configure-controls/properties-panel.png)
-
-3. Skriv inn **Egenskaper-fane** i **Tekst**-boksen.
-
-    ![Etikettekst for Egenskaper-panelet](./media/add-configure-controls/properties-panel-text.png)
-
-    **Etikett**-kontrollen viser den angitte teksten.
-
-    ![Lerrettekst for Egenskaper-panelet](./media/add-configure-controls/properties-panel-canvas-text.png)
-
-4. Klikk eller trykk på **Fyll**-ikonet i **Egenskaper**-ruten, og klikk eller trykk deretter på en farge.
-
-    ![Fargetekst for Egenskaper-panelet](./media/add-configure-controls/properties-panel-color.png)
-
-    **Etikett**-kontrollen reflekterer valget.
-
-    ![Lerretfarge for Egenskaper-panelet](./media/add-configure-controls/properties-panel-canvas-color.png)
-
-5. Klikk eller trykk på **Farge**-egenskapen i Egenskaper-panelet.
-
-    ![Egenskap for Egenskaper-panelet](./media/add-configure-controls/properties-panel-property.png)
-
-    Verdien for **Farge**-egenskapen utheves i formellinjen.
-
-    ![Egenskapsuttrykk for Egenskaper-panelet](./media/add-configure-controls/properties-panel-property-expression.png)
-
-6. Slett den andre **Etikett**-kontrollen ved å klikke eller trykke på den og deretter trykke på Slett.
+![Angi synlighet](./media/add-configure-controls/set-visibility.png)
 
 ## <a name="configure-a-control-in-the-formula-bar"></a>Konfigurering av en kontroll i formellinjen
-Når du bruker formellinjen, kan du angi egenskaper du ikke kan angi direkte i **Egenskaper**-fanen eller fra verktøylinjen. Du kan for eksempel angi et verktøytips som vises når en bruker peker på kontrollen uten å klikke eller trykke på den. Du kan også angi kompliserte formler som gjør appen mer kraftfull.
 
-Hver endring du har gjort tidligere i dette emnet, har oppdatert verdien for en [egenskap](reference-properties.md) for kontrollen du har konfigurert.
+I stedet for å konfigurere en kontroll direkte, fra verktøylinjen, eller i den **Egenskaper** fanen, kan du konfigurere en kontroll ved å velge en egenskap i egenskapslisten og deretter angi en verdi i formellinjen. Når du følger denne fremgangsmåten, kan du søke etter en egenskap alfabetisk, og du kan angi flere typer verdier.
 
-* Når du endret størrelsen på kontrollen, endret du også **[Bredde](controls/properties-size-location.md)**-egenskapen.
-* Når du flyttet kontrollen, endret du egenskapene **[X](controls/properties-size-location.md)** og **[Y](controls/properties-size-location.md)**.
-* Når du endret teksten kontrollen viser, endret du **[Tekst](controls/properties-core.md)**-egenskapen.
+Du kan for eksempel velge en etikett, og deretter konfigurere den på følgende måter:
 
-I stedet for å konfigurere en kontroll direkte, i **Egenskaper**-fanen eller fra verktøylinjen, kan du også oppdatere verdien for en egenskap ved å velge den i egenskapslisten og deretter angi en verdi i formellinjen. Når du følger denne fremgangsmåten, kan du søke etter en egenskap alfabetisk, og du kan angi flere typer verdier.
+- Flytt den ved å velge **X** eller **Y** i Egenskaper-listen, og deretter angi et annet nummer i formellinjen.
 
-1. Når den gjenværende **Etikett**-kontrollen er valgt, klikker eller trykker du på **[Tekst](controls/properties-core.md)** i egenskapslisten, og skriver deretter inn **«Mitt firmanavn»** (i anførselstegn) i formellinjen.
+    ![Angi X-egenskap](./media/add-configure-controls/x-property.png)
 
-    ![En litteral streng i en etikett](./media/add-configure-controls/text-literal.png)
+- Endre størrelsen på den ved å velge **høyde** eller **bredde** i Egenskaper-listen, og deretter angi et annet nummer i formellinjen.
 
-    Når du omgir en tekststreng med anførselstegn, angir du at den skal behandles nøyaktig slik du skrev den inn. Et annet alternativ er å angi verdien for en egenskap til en formel.
+    ![Angi høyde egenskapen](./media/add-configure-controls/height-property.png)
 
-2. Når **Etikett**-kontrollen er valgt, klikker eller trykker du på **[Tekst](controls/properties-core.md)** i egenskapslisten, og skriver deretter inn **I dag()** (uten anførselstegn) i formellinjen.
+- Endre teksten ved å velge **tekst** i Egenskaper-listen, og deretter angi en hvilken som helst kombinasjon av en litteral streng, et uttrykk eller en formel i formellinjen.
 
-    Kontrollen viser gjeldende dato.
+    - En litteral streng er omsluttet av anførselstegn og vises nøyaktig slik du skriver den inn. **"Hello, world"** er en litteral streng.
 
-    ![I dag-funksjonen](./media/add-configure-controls/today-function.png)
+        ![Angi tekst-egenskapen til en litteral streng](./media/add-configure-controls/literal-string.png)
 
-    > [!TIP]
-   > Du kan [formatere datoer og klokkeslett](show-text-dates-times.md) på forskjellige måter, i tillegg til å utføre beregninger på dem.
+    - Et uttrykk inneholder ikke en funksjon, og er ofte basert på en egenskap for en annen kontroll. **Screen1.Height** er et uttrykk som viser høyden på **Screen1**.
 
-## <a name="configure-two-controls-to-interact-with-each-other"></a>Konfigurering av to kontroller så de kan samhandle med hverandre
-I denne prosedyren må du legge til en avmerkingsboks og deretter konfigurere etiketten du allerede har, så den vises bare når avmerkingsboksen er merket.
+        ![Angi tekst-egenskapen til et uttrykk](./media/add-configure-controls/expression.png)
 
-1. Klikk eller trykk på **Sett inn**-fanen.
+    - En formel inneholder én eller flere funksjoner. Den **nå** -funksjonen returnerer gjeldende dato og klokkeslett i den lokale tidssonen, og den **tekst** funksjonen formaterer verdier som datoer, klokkeslett og valuta.
 
-    ![Sett inn-fanen](./media/add-configure-controls/insert-tab.png)
+        ![Angitt Text-egenskapen til en formel](./media/add-configure-controls/formula.png)
 
-2. Klikk eller trykk på **Kontroller**, og trykk deretter på **Avmerkingsboks**.
+        Formler er vanligvis mye mer komplisert enn dette eksemplet slik at de kan oppdatere data, sortere, filtrere den og utføre andre operasjoner. Hvis du vil ha mer informasjon, kan du se den [formelreferanse](formula-reference.md).
 
-    ![Å sette inn avmerkingsboks](./media/add-configure-controls/insert-check-box.png)
+## <a name="next-steps"></a>Neste trinn
 
-3. Flytt **Avmerkingsboks**-kontrollen, slik at den vises under **Etikett**-kontrollen, og angi **[Tekst](controls/properties-core.md)**-egenskapen for **Avmerkingsboks**-kontrollen, slik at **Vis tekst** vises.
-
-    ![Å konfigurere avmerkingsboksen](./media/add-configure-controls/configure-check-box.png)
-
-4. Mens **Avmerkingsboks**-kontrollen fremdeles er valgt, klikker eller trykker du på navnet rett over **Egenskaper**-fanen, og skriver deretter inn **MyCheckbox**
-
-    ![Å gi nytt navn til avmerkingsboksen](./media/add-configure-controls/properties-panel-rename.png)
-
-5. Klikk eller trykk på **Etikett**-kontrollen for å velge den.
-
-6. Klikk eller trykk på **Synlig**-egenskapen på **Egenskaper**-fanen.
-
-    ![Synlig-egenskapen](./media/add-configure-controls/properties-panel-visible-property.png)
-
-7. Slett **sann** i formellinjen, og skriv eller lim deretter inn denne formelen:
-
-    **If(MyCheckbox.Value = true, true, false)**
-
-    Denne **[If-funksjonen](functions/function-if.md)** sier at etiketten skal vises bare når avmerkingsboksen er merket. Siden merket er fjernet i avmerkingsboksen, forsvinner **Etikett**-kontrollen (unntatt for valgboksen).
-
-    ![Synlig-formelen](./media/add-configure-controls/visible-formula.png)
-
-8. Klikk eller trykk på **Avmerkingsboks**-kontrollen for å legge til valgboksen, og deretter klikker eller trykker du på den igjen for å legge til et merke.
-
-    **Etikett** vises på nytt:
-
-    ![Etiketten vises når avmerkingsboksen er merket](./media/add-configure-controls/show-text.png)
-
-9. Fjern merket i **Avmerkingsboks**-kontrollen for å skjule **Etikett**-kontrollen.
-
-    ![Etiketten forsvinner når merket i avmerkingsboksen er fjernet](./media/add-configure-controls/hide-text.png)
-
-Dette eksemplet er grunnleggende, men du kan konfigurere virkemåten og visningen for appen ved å utvikle én eller flere [formler](formula-reference.md), fra enkle til avanserte.
-
-## <a name="rename-a-screen-or-a-control"></a>Å gi nytt navn til en skjerm eller kontroll
-Hvis du gir nytt navn til en skjerm eller kontroll, kan du utvikle formler som er enklere å lese og vedlikeholde.
-
-1. Klikk eller trykk på skjermen eller kontrollen du vil gi et nytt navn til.
-
-2. Klikk eller trykk på navnet til kontrollen (rett over **Egenskaper**-fanen) i høyre rute, og skriv deretter inn navnet du vil bruke.
-
-    ![Å gi nytt navn til avmerkingsboksen](./media/add-configure-controls/properties-panel-rename.png)
-
-## <a name="find-and-select-a-screen-or-a-control"></a>Å finne og velge en skjerm eller kontroll
-Du kan finne og velge en skjerm eller kontroll, selv om den er skjult eller overlapper med en annen kontroll, ved å søke etter den i den venstre ruten. Denne ruten viser enten et miniatyrbilde av hver skjerm i appen, eller en hierarkisk visning av hver skjerm og kontrollene den inneholder.
-
-* Klikk eller trykk på et ikon i øvre høyre hjørne av ruten for å **bytte mellom miniatyrbilder og hierarkisk visning**.
-
-    ![Å veksle mellom visninger](./media/add-configure-controls/toggle-view.png)
-
-* Skriv inn ett eller flere tegn for å utheve kontrollnavnene som inneholder teksten du skrev inn for **å finne en kontroll**.
-
-    Hvis du klikker eller trykker på et søkeresultat, kan du velge kontrollen i appen.
-
-    ![Å søke i trevisning](./media/add-configure-controls/search.png)
-
-* Hvis du vil **flytte en skjerm opp eller ned, duplisere den, slette den eller gi den et nytt navn**, høyreklikker du på skjermen (eller klikker eller trykker på ellipsen ved siden av den), og deretter klikker eller trykker du på alternativet du vil ha.
-
-    ![Kontekstmeny for trevisning](./media/add-configure-controls/context.png)
-
-* Hvis du vil **kopiere eller lime inn en kontroll, slette den eller gi den et nytt navn**, høyreklikker du på kontrollen (eller klikker eller trykker på ellipsen ved siden av den), og deretter klikker eller trykker du på alternativet du vil ha.
+- Du finner trinnvise fremgangsmåten for konfigurering av vanlige kontroller som [skjermer](add-screen-context-variables.md), [viser](add-list-box-drop-down-list-radio-button.md), [gallerier](add-gallery.md), [skjemaer](add-form.md), og [diagrammer](use-line-pie-bar-chart.md).
+- Finn informasjon om hver type kontroll på den [kontroll referanse](reference-properties.md).

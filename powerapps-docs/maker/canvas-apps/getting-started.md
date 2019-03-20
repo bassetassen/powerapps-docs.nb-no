@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a9f85907da60e836c1a1115f31c6faf9ea05da9b
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
-ms.translationtype: HT
+ms.openlocfilehash: aa46510cdd46cf8d9fb64694e7b6306b255b1157
+ms.sourcegitcommit: fa0ad3f81efd41671dd8e118ce936acb274cfd7c
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49317072"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54079614"
 ---
 # <a name="what-are-canvas-apps-in-powerapps"></a>Hva er lerret-apper i PowerApps?
 Utform og bygg en business-app fra et lerret i Microsoft PowerApps uten å skrive kode i et tradisjonelt programmeringsspråk, for eksempel C#. Utforme appen ved å dra og slippe elementer til et lerret, på samme måte som du vil utforme et lysbilde i PowerPoint. Opprett Excel-lignende uttrykk for å angi logikk og arbeide med data. Bygg apper som integrerer forretningsdata fra en [rekke Microsoft-kilder og tredjepartskilder](connections-list.md). Del appen din slik at brukere kan kjøre den i en nettleser eller på en mobil enhet, og bygg inn appen din slik at brukere kan kjøre den i SharePoint, Power BI eller Teams.
@@ -46,10 +46,10 @@ Når du er ferdig med appen og har lagret den i skyen, [kan du dele den med andr
 
 Du kan kjøre dine egne apper – og apper som er delt med deg – på Windows, i en [nettleser](../../user/run-app-browser.md) eller på en [iOS- eller Android-enhet](../../user/run-app-client.md).
 
-## <a name="learn-more"></a>Mer informasjon
+## <a name="learn-more"></a>få mer informasjon
 * Utforsk de trinnvise, begrepsmessige referanseemnene i navigasjonsfeltet til venstre.
-* Arbeid i ditt eget tempo gjennom den [veiledede læringen](https://docs.microsoft.com/powerapps/guided-learning/).
 * Ta en titt på [webinarene](webinars-listing.md) du hele tiden har tilgang til, og som kan hjelpe deg med å utnytte funksjonene i PowerApps.
+* Se gjennom [koding standarder](https://aka.ms/powerappscanvasguidelines) for maksimal appytelse og holde apper enklere å vedlikeholde.
 
 ## <a name="share-your-experience"></a>Del opplevelsen din
 * Les og legg inn spørsmål i [PowerApps-fellesskapet](https://aka.ms/powerapps-community), der alle som bruker PowerApps kan stille spørsmål og andre kan svare. Før du stiller et spørsmål, må du søke i fellesskapet for å se om spørsmålet ditt allerede har blitt besvart.

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 886479b4cd2f7e04e9949c99ba05e6219e92b2b3
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 1cc589d1bff73777e0c20ed933a563e42b934f35
+ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42859990"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57803600"
 ---
 # <a name="errors-function-in-powerapps"></a>Errors-funksjonen i PowerApps
 Gir feilinformasjon om tidligere endringer i en [datakilde](../working-with-data-sources.md).
@@ -72,15 +72,15 @@ I dette eksemplet skal vi arbeide med datakilden **IceCream**:
 
 ![](media/function-errors/icecream.png)
 
-En bruker laster inn sjokolade-posten via appen til et skjema for dataregistrering og endrer verdien fpr **Antall** til 90.  Posten som skal arbeides med, er plassert i [kontekstvariabelen](../working-with-variables.md#create-a-context-variable) **EditRecord**:
+En bruker laster inn sjokolade-posten via appen til et skjema for dataregistrering og endrer verdien fpr **Antall** til 90.  Posten som skal arbeides med, er plassert i [kontekstvariabelen](../working-with-variables.md#use-a-context-variable) **EditRecord**:
 
-* **UpdateContext( { EditRecord: First( Filter( IceCream, Flavor = "Chocolate" ) ) } )**
+* **UpdateContext ({EditRecord: Første (Filter (IceCream, Flavor = «Chocolate»))})**
 
 **[Patch](function-patch.md)**-funksjonen blir brukt for å gjøre denne endringen i datakilden:
 
 * **Patch( IceCream, EditRecord, Gallery.Updates )**
 
-der **Gallery.Updates** evalueres til **{ Quantity: 90 }**, fordi bare **Quantity**-egenskapen har blitt endret.
+der **Gallery.Updates** evalueres til **{Quantity: 90}**, fordi bare den **antall** egenskapen har blitt endret.
 
 Uheldigvis ble **Quantity** for Chocolate endret av noen andre til 80 like før **[Patch](function-patch.md)**-funksjonen ble startet.  PowerApps vil oppdage dette og ikke tillate at den motstridende endringen skal oppstå.  Du kan se etter denne situasjonen med formelen:
 
@@ -90,7 +90,7 @@ som returnerer **USANN**, fordi **Errors**-funksjonen returnerte følgende tabel
 
 | Post | Kolonne | Melding | Feil |
 | --- | --- | --- | --- |
-| { Flavor: "Chocolate", Quantity: 100 } |*tom* |«En annen bruker har endret posten som du prøver å endre. Last inn posten på nytt og prøv igjen.» |ErrorKind.Conflict |
+| { Flavor: «Chocolate», Quantity: 100 } |*tom* |«En annen bruker har endret posten som du prøver å endre. Last inn posten på nytt og prøv igjen.» |ErrorKind.Conflict |
 
 Du kan plassere en etikett i skjemaet for å vise denne feilen til brukeren.
 

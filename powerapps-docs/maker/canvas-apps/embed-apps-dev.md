@@ -1,24 +1,24 @@
 ---
 title: Integrer lerretsapper på nettsteder og andre tjenester | Microsoft Docs
 description: Bygg inn lerretsapper på nettsteder og i andre tjenester.
-author: mgblythe
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 10/20/2017
-ms.author: mblythe
+ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 254d127237cff58728f208d62c30bf7aeb456a80
-ms.sourcegitcommit: 097ddfb25eb0f09f0229b866668c2b02fa57df55
-ms.translationtype: HT
+ms.openlocfilehash: a6b23b97195f000e6e17bb6fd6f0e9f3a2da4f09
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991842"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799046"
 ---
 # <a name="integrate-canvas-apps-into-websites-and-other-services"></a>Integrer lerretsapper på nettsteder og andre tjenester
 Appene du utvikler er gjerne mest nyttige når de er tilgjengelige direkte hvor arbeidet utføres. Med PowerApps kan du bygge inn lerretsapper i en iframe, slik at du kan integrere disse appene på nettsteder og i andre tjenester, for eksempel Power BI eller SharePoint.

@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 03/18/2018
+ms.date: 01/14/2019
 ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3d29387c907808f90225f1ff67257d289de2b0a9
-ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
-ms.translationtype: HT
+ms.openlocfilehash: 7ab85f09ebf88c30b35c963242895cd74ca6a966
+ms.sourcegitcommit: b987589e946cacc86b806a0bd49b9b544ea489dd
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806137"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297600"
 ---
 # <a name="generate-a-canvas-app-from-excel-in-powerapps"></a>Generer en lerretsapp fra Excel i PowerApps
 
@@ -67,17 +67,49 @@ Hvis du ønsker å følge dette emnet helt etter boken, kan du laste ned [Floori
 
 1. Du kan også filtrere listen ved å skrive inn ett eller flere tegn i søkefeltet.
 
-1. Klikk eller trykk på plusstegnet for å legge til en post, og legg til dataene du måtte ønske. Deretter klikker eller trykker du på hakeikonet for å lagre endringene.
+    For eksempel skriver eller limer inn **Elskede** å vise bare posten som at strengen vises i produktets navn, kategori eller oversikt.
 
-1. Klikk eller trykk på Neste-pilen for posten som du har lagt til, klikk eller trykk på blyantikonet for å redigere posten, oppdater ett eller flere felt og klikk eller trykk på hakeikonet for å lagre endringene.
+    ![Filter-eksempel](./media/get-started-create-from-data/filter-example.png)
 
-1. Klikk eller trykk på Neste-pilen for posten som du har lagt til, klikk eller trykk på blyantikonet for å redigere posten, oppdater ett eller flere felt og klikk eller trykk på hakeikonet for å lagre endringene.
+1. Legge til en post:
 
-1. Klikk eller trykk på Neste-pilen for posten som du har lagt til, og klikk eller trykk så på papirkurvikonet for å slette posten.
+    1. Velg på pluss-ikonet.
+
+        ![Pluss-ikonet](./media/get-started-create-from-data/plus-icon.png)
+
+    1. Legg til dataene du vil bruke, og velg deretter på hakeikonet for å lagre endringene.
+
+        ![Lagre-ikon](./media/get-started-create-from-data/save-icon.png)
+
+1. Redigere en post:
+
+    1. Velg pilen for posten som du vil redigere.
+
+        ![Neste-pil](./media/get-started-create-from-data/next-arrow.png)
+
+    1. Velg blyantikonet.
+
+        ![Blyantikon](./media/get-started-create-from-data/pencil-icon.png)
+
+    1. Oppdater ett eller flere felt, og velg deretter på hakeikonet for å lagre endringene.
+
+        ![Lagre-ikon](./media/get-started-create-from-data/save-icon.png)
+
+        Velg Avbryt-ikonet for å forkaste endringene som et alternativ.
+
+1. Slette en post:
+
+    1. Velg Neste-pilen for posten som du vil slette.
+
+        ![Neste-pil](./media/get-started-create-from-data/next-arrow.png)
+
+    1. Velg papirkurvikonet.
+
+        ![Papirkurv-ikon](./media/get-started-create-from-data/trash-icon.png)
 
 ## <a name="next-steps"></a>Neste trinn
 
-Tilpass standard Bla gjennom-skjermen slik at den passer dine behov. Du kan for eksempel sortere og filtrere listen etter produktnavn og ikke kategori.
+Tilpass standard Bla gjennom-skjermen slik at den passer dine behov. Du kan for eksempel sortere og filtrere listen etter produktnavn bare, og ikke kategori eller oversikt.
 
 > [!div class="nextstepaction"]
 > [Å tilpasse en standard Bla gjennom-skjerm](customize-layout-sharepoint.md).

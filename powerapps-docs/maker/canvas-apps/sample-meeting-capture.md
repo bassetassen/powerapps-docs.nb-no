@@ -1,24 +1,24 @@
 ---
 title: Eksempelmal for Meeting Capture | Microsoft Docs
 description: Lær om eksempelmalen for Meeting Capture i PowerApps med oppsett, oversikt, og dypdykk i hvordan appen ble bygget.
-author: caburk
+author: mr-dang-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/03/2018
-ms.author: caburk
+ms.author: brdang
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7a83ce913fbc688640eb2da2de6d9d5d66c7cde7
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: dfa2531baa95405d6ceb5adbda2aa5b839d27904
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42848361"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57802427"
 ---
 # <a name="set-up-and-learn-about-the-meeting-capture-sample-template-in-powerapps"></a>Konfigurer og finn ut om eksempelmalen for Meeting Capture i PowerApps
 
@@ -48,15 +48,15 @@ Meeting Capture inkluderer mange funksjoner som ofte brukes i PowerApps. Når du
 
 Meeting Capture kobler til disse tjenestene i Office 365.
 
-- [Office 365-brukere](https://docs.microsoft.com/en-us/connectors/office365users/)
-- [Office 365 Outlook](https://docs.microsoft.com/en-us/connectors/office365/)
-- [Planner](https://docs.microsoft.com/en-us/connectors/planner/)
-- [OneNote (bedrift)](https://docs.microsoft.com/en-us/connectors/onenote/)
-- [Content Conversion](https://docs.microsoft.com/en-us/connectors/conversionservice/)
+- [Office 365-brukere](https://docs.microsoft.com/connectors/office365users/)
+- [Office 365 Outlook](https://docs.microsoft.com/connectors/office365/)
+- [Planner](https://docs.microsoft.com/connectors/planner/)
+- [OneNote (bedrift)](https://docs.microsoft.com/connectors/onenote/)
+- [Content Conversion](https://docs.microsoft.com/connectors/conversionservice/)
 
 Vi håper du setter pris på Meeting Capture, og vi ser frem til å høre hvordan du utvider det for organisasjonen din!
 
 ## <a name="next-steps"></a>Neste trinn
-- [Referanse for formler](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/formula-reference)
-- [Referanse for kontroller](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/reference-properties)
+- [Referanse for formler](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference)
+- [Referanse for kontroller](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties)
  
