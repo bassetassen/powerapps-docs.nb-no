@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: aca1b78262ac359689d66f687f902103740fa3a6
-ms.sourcegitcommit: 826bde1eab3dd32d7bf9fa3f43ea069694845597
-ms.translationtype: HT
+ms.openlocfilehash: 04ef7924ce3f6945a666fe06bdc6091159bc44c4
+ms.sourcegitcommit: c6ad6ba7814c5e7b12c3b7b76bf2e7718bf41b8c
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "57800311"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58198548"
 ---
 # <a name="create-and-update-a-collection-in-a-canvas-app"></a>Opprett og oppdater en samling i en lerretsapp
 
@@ -116,7 +116,7 @@ Bruk en samling til å lagre data som brukere kan administrere i appen. En samli
 
 ## <a name="put-a-sharepoint-list-into-a-collection"></a>Legge til en SharePoint-liste i en samling
 
-1. [Opprett en tilkobling til en SharePoint-liste](connect-to-sharepoint.md).
+1. [Opprett en tilkobling til en SharePoint-liste](connections/connection-sharepoint-online.md#create-a-connection).
 
 1. Legg til en knapp, og angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne funksjonen, noe som erstatter *ListName* med navnet på SharePoint-listen:<br>
 
@@ -128,7 +128,7 @@ Bruk en samling til å lagre data som brukere kan administrere i appen. En samli
 
 1. (valgfritt) Hvis du vil forhåndsvise samlingen som du opprettet, kan du velge **samlinger** på den **filen** menyen.
 
-Informasjon om hvordan du viser data fra en SharePoint-liste (for eksempel datoer, valg og personer) i et galleri: [Vis data i et galleri](connections/connection-sharepoint-online.md#show-data-in-a-gallery). Informasjon om hvordan du viser data i et skjema (med rullegardinlister, datovelgere og personer plukkere): [Rediger visning kontroller for redigeringsskjema og](controls/control-form-detail.md).
+Informasjon om hvordan du viser data fra en SharePoint-liste (for eksempel datoer, valg og personer) i et galleri: [Vis listen over kolonner i et galleri](connections/connection-sharepoint-online.md#show-list-columns-in-a-gallery). Informasjon om hvordan du viser data i et skjema (med rullegardinlister, datovelgere og personer plukkere): [Rediger visning kontroller for redigeringsskjema og](controls/control-form-detail.md).
 
 ## <a name="next-steps"></a>Neste trinn
 

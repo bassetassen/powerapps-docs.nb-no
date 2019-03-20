@@ -13,16 +13,16 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 15aa49787d6b2c3d3981e374aeb43c54a2d7a7ec
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
-ms.translationtype: HT
+ms.openlocfilehash: 042819241a40b9ad01f95085faf23b6393f62559
+ms.sourcegitcommit: c6ad6ba7814c5e7b12c3b7b76bf2e7718bf41b8c
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49317095"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58198594"
 ---
 # <a name="generate-a-canvas-app-in-powerapps-from-a-sharepoint-list"></a>Generer en lerretsapp i PowerApps fra en SharePoint-liste
 
-Dette emnet beskriver hvordan du bruker PowerApps til å generere en lerretsapp automatisk basert på elementer i en SharePoint-liste. Du kan generere appen fra PowerApps eller SharePoint Online. Fra PowerApps kan du også generere en app basert på en liste i et lokalt SharePoint-område, hvis du [kobler deg til området](connect-to-sharepoint.md) gjennom en datagateway.
+Dette emnet beskriver hvordan du bruker PowerApps til å generere en lerretsapp automatisk basert på elementer i en SharePoint-liste. Du kan generere appen fra PowerApps eller SharePoint Online. Fra PowerApps kan du også generere en app basert på en liste i et lokalt SharePoint-område, hvis du [kobler deg til området](connections/connection-sharepoint-online.md#create-a-connection) gjennom en datagateway.
 
 Appen du genererer, inneholder tre skjermbilder:
 

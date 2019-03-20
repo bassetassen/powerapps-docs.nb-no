@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 12d13ecfb8c60a1c1ccb23496dd9dc7f8cf42814
-ms.sourcegitcommit: a1568c9a09d83efe50c032b73eaa18c7db723e86
-ms.translationtype: HT
+ms.openlocfilehash: ca97583948a289240bfb051fa8cac36a39e2ffee
+ms.sourcegitcommit: c6ad6ba7814c5e7b12c3b7b76bf2e7718bf41b8c
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57804451"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58198640"
 ---
 # <a name="customize-a-sharepoint-list-form-by-using-powerapps"></a>Å tilpasse et SharePoint-listeskjema ved bruk av PowerApps
 
@@ -98,7 +98,7 @@ Du kan konfigurere feltene **Pris**, **Tilgjengelighet** og **Farger** slik at d
 1. Tilpasse skjemaet på en rekke måter, blant annet slike som disse emnene beskriver:
 
     - Endre størrelsen, retningen eller begge deler (for eksempel for å [skjemaet bredere](set-aspect-ratio-portrait-landscape.md)).
-    - Legge til en kontroll slik at brukerne kan [laste opp vedlegg](controls/properties-text.md).
+    - [Tilpasse én eller flere kort](working-with-cards.md) (for eksempel endre et kort Vis tekst eller inndata-kontroll).
     - Opprette et [oppslagsfelt](sharepoint-lookup-fields.md).
 
     Mer informasjon: [Forstå integrasjon for SharePoint-skjemaer](sharepoint-form-integration.md)

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9732a4e1d721a47906a71dba6e4a7ea5ac7bc87b
-ms.sourcegitcommit: eecbafdee9ef3d0a71dfeba934581f00965064cf
-ms.translationtype: HT
+ms.openlocfilehash: 147766eb9e9b17698882241e8eb3bd0ae7ba7e78
+ms.sourcegitcommit: 0dbbf53aea319e53edadc1d3a9efa5728856ebd8
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "57801852"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172637"
 ---
 # <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Signaler fra Acceleration, App, Compass, Connection og Location i PowerApps
 Returnerer informasjon om appmiljøet, som hvor brukeren befinner seg i verden og hvilken skjerm som vises.  
@@ -43,7 +43,11 @@ Alle signaler returnerer en [post](../working-with-tables.md#records) av informa
 
 | Egenskap | Beskrivelse |
 | --- | --- |
-| **App.ActiveScreen** |Skjermen som vises. Returnerer et skjermobjekt som du kan bruke til å henvise til egenskaper til skjermen, eller sammenligne med en annen skjerm for å bestemme hvilken skjerm som vises.  Hvis du bruker **[Back](function-navigate.md)**- eller **[Navigate](function-navigate.md)**-funksjonen, kan du endre skjermen som vises. |
+| **App.ActiveScreen** | Skjermen som vises. Returnerer et skjermobjekt som du kan bruke til å henvise til egenskaper til skjermen, eller sammenligne med en annen skjerm for å bestemme hvilken skjerm som vises. Hvis du vil endre skjermen som vises, kan du bruke den **[tilbake](function-navigate.md)** eller **[Navigate](function-navigate.md)** funksjonen. |
+| **App.Width** | Returnerer bredden på vinduet som appen kjører. Du kan bruke denne egenskapen i en formel når du angir den **bredde** -egenskapen for skjermen for å utvikle en responsive app.  |
+| **App.Height** | Returnerer høyden på vinduet som appen kjører. Du kan bruke denne egenskapen i en formel når du angir den **høyde** -egenskapen for skjermen for å utvikle en responsive app. |
+| **App.DesignWidth** | Returnerer bredden på appen i PowerApps Studio. Du kan bruke denne egenskapen i en formel når du angir den **bredde** -egenskapen for skjermbildet til for å sikre en minimumsbredde i en responsive app.  |
+| **App.DesignHeight** | Returnerer høyden på appen i PowerApps Studio. Du kan bruke denne egenskapen i en formel når du angir den **høyde** -egenskapen for skjermbildet til for å sikre en minimumshøyden i en responsive app.  |
 
 Den **App** objekt har også en [formel for virkemåte](../working-with-formulas-in-depth.md) som du kan angi.
 
