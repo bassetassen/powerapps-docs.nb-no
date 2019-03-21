@@ -132,12 +132,32 @@ items:
     - name: Å koble til data
       href: ./canvas-apps/connections-list.md
       items:
+      - name: Populære koblinger
+        items:
+        - name: Common Data Service
+          href: common-data-service/data-platform-intro.md
+        - name: SharePoint
+          href: canvas-apps/connections/connection-sharepoint-online.md
+        - name: SQL Server
+          href: canvas-apps/connections/connection-azure-sqldatabase.md
+        - name: Dynamics 365
+          href: canvas-apps/connections/connection-dynamics-crmonline.md
+        - name: Office 365-brukere
+          href: canvas-apps/connections/connection-office365-users.md
+        - name: Office 365 Outlook
+          href: canvas-apps/connections/connection-office365-outlook.md
+        - name: Excel
+          href: canvas-apps/connections/connection-excel.md
+        - name: OneDrive for Business
+          href: canvas-apps/connections/cloud-storage-blob-connections.md
+        - name: OneDrive
+          href: canvas-apps/connections/cloud-storage-blob-connections.md
+        - name: Dropbox
+          href: canvas-apps/connections/cloud-storage-blob-connections.md
       - name: Å legge til en tilkobling
         href: ./canvas-apps/add-data-connection.md
       - name: Administrere tilkoblinger
         href: ./canvas-apps/add-manage-connections.md
-      - name: Koble til SharePoint
-        href: ./canvas-apps/connect-to-sharepoint.md
       - name: Klargjøre Excel-data
         href: ./canvas-apps/how-to-excel-tips.md
       - name: Delegering
@@ -664,6 +684,9 @@ items:
       href: ./canvas-apps/set-name-tile.md
     - name: Endring av skjermstørrelse og -retning
       href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
+      items:
+      - name: Opprett responsivt oppsett
+        href: ./canvas-apps/create-responsive-layout.md
   - name: Tilpasse et SharePoint-listeskjema
     href: ./canvas-apps/customize-list-form.md
     items:
@@ -1093,9 +1116,9 @@ items:
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Støtte
     href: https://powerapps.microsoft.com/support/
-ms.openlocfilehash: af4a7b775ecbaec902c188325b2474ad3209a85c
-ms.sourcegitcommit: 957d67e13bd4153d042b3b3bd650f6d0de20613c
+ms.openlocfilehash: 6736e0e956e885bbae21099ff351c60e75ae50db
+ms.sourcegitcommit: c1bcd2c4f8254b48296512bb2727ac7685a8ccd1
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58073698"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58308169"
