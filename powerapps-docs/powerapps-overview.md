@@ -1,20 +1,20 @@
 ---
 title: Hva er PowerApps? | Microsoft Docs
-description: Gir en oversikt over PowerApps og snakker om hvordan sluttbrukere, apputviklere, administratorer og profesjonelle utviklere kan bruke PowerApps.
+description: Gir en oversikt over PowerApps og forklarer hvordan sluttbrukere, apputviklere, administratorer og profesjonelle utviklere kan bruke PowerApps.
 author: KumarVivek
 manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/18/2019
 ms.author: kvivek
 ms.reviewer: kvivek
-ms.openlocfilehash: 3a314ee6fabc5d3891a19610bfc4cf8aebdd6dcf
-ms.sourcegitcommit: edd4b1029b7085bb3849d87b0c94e0d8cb5758aa
+ms.openlocfilehash: ec03fdfd4837bb54fb150562ade38db758887f88
+ms.sourcegitcommit: 0dbbf53aea319e53edadc1d3a9efa5728856ebd8
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251551"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162267"
 ---
 # <a name="what-is-powerapps"></a>Hva er PowerApps?
 
@@ -23,6 +23,8 @@ PowerApps er en løsning med apper, tjenester, koblinger og dataplattform som ti
 Med apper som er bygd ved hjelp av PowerApps, får du rikholdige forretningslogikk- og arbeidsflytfunksjoner til å forvandle manuelle forretningsprosesser til digitale, automatiserte prosesser. Dessuten har apper som er bygd ved hjelp av PowerApps, en responsiv utforming og kan kjøre sømløst i nettleser eller på mobile enheter (telefon eller nettbrett). PowerApps «demokratiserer» byggingen av egendefinerte forretningsapper ved å gjøre det mulig for brukere å bygge funksjonsrike, egendefinerte forretningsapper uten å skrive kode.
 
 PowerApps tilbyr også en utvidbar plattform hvor profesjonelle utviklere kan programmatisk samhandle med dataene og metadataene, bruke forretningslogikk, opprette egendefinerte koblinger og integrere med eksterne data.
+
+Hvis du vil ha mer informasjon, kan du se [PowerApps-kanalen](https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg) på YouTube.
 
 ## <a name="powerapps-for-app-makerscreators"></a>PowerApps for appopprettere/-utviklere
 
