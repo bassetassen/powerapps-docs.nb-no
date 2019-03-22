@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1be6055a2b8f42d8d4194653417313b29ab5610d
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.openlocfilehash: 2c367aa57294e52fc22f538f88b361c90c3afb99
+ms.sourcegitcommit: e64344548d607767e495a6b9526900bb5975226a
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57799851"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330244"
 ---
 # <a name="install-and-configure-the-help-desk-sample-in-powerapps"></a>Installer og konfigurer brukerstøtteeksemplet i PowerApps
 
@@ -47,7 +47,7 @@ Teknisk støtte tilbyr en brukervennlig opplevelse for å la brukere etablere ko
 
 Denne listen lagrer forespørsler til teknisk støtte.
 
-1. Åpne en nettleser og gå til https://portal.office.com.
+1. Åpne en nettleser og gå til https://admin.microsoft.com.
 2. Logg på med en konto som har tillatelse til å opprette SharePoint-lister.
 3. Gå til områdesamlingen der du vil lagre listen til kundestøtte.
 4. Klikk på **tannhjulikonet** i øverste høyre del av nettsiden.

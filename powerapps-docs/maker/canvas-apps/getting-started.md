@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: aa46510cdd46cf8d9fb64694e7b6306b255b1157
-ms.sourcegitcommit: fa0ad3f81efd41671dd8e118ce936acb274cfd7c
+ms.openlocfilehash: 9b213484bf1412d808c3fa9599debd5c9e546a4e
+ms.sourcegitcommit: e64344548d607767e495a6b9526900bb5975226a
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54079614"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330129"
 ---
 # <a name="what-are-canvas-apps-in-powerapps"></a>Hva er lerret-apper i PowerApps?
 Utform og bygg en business-app fra et lerret i Microsoft PowerApps uten å skrive kode i et tradisjonelt programmeringsspråk, for eksempel C#. Utforme appen ved å dra og slippe elementer til et lerret, på samme måte som du vil utforme et lysbilde i PowerPoint. Opprett Excel-lignende uttrykk for å angi logikk og arbeide med data. Bygg apper som integrerer forretningsdata fra en [rekke Microsoft-kilder og tredjepartskilder](connections-list.md). Del appen din slik at brukere kan kjøre den i en nettleser eller på en mobil enhet, og bygg inn appen din slik at brukere kan kjøre den i SharePoint, Power BI eller Teams.
@@ -54,7 +54,7 @@ Du kan kjøre dine egne apper – og apper som er delt med deg – på Windows, 
 ## <a name="share-your-experience"></a>Del opplevelsen din
 * Les og legg inn spørsmål i [PowerApps-fellesskapet](https://aka.ms/powerapps-community), der alle som bruker PowerApps kan stille spørsmål og andre kan svare. Før du stiller et spørsmål, må du søke i fellesskapet for å se om spørsmålet ditt allerede har blitt besvart.
 * Send inn forslag om hvordan vi kan forbedre PowerApps i [Ideer for PowerApps](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).
-* Opprett en [kundestøttesak](https://powerapps.microsoft.com/support/pro/) for å få teknisk hjelp. Hvis du er en PowerApps-administrator for organisasjonen, kan du også åpne en kundestøttesak i [administrasjonssenteret for PowerApps](https://portal.office.com/Support/Support.aspx).
+* Opprett en [kundestøttesak](https://powerapps.microsoft.com/support/pro/) for å få teknisk hjelp. Hvis du er en PowerApps-administrator for organisasjonen, kan du også åpne en kundestøttesak i [administrasjonssenteret for PowerApps](https://admin.microsoft.com/Support/Support.aspx).
 
 ## <a name="next-steps"></a>Neste trinn
 - [Registrer deg for en gratis lisens.](../signup-for-powerapps.md)

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/21/2019
+ms.date: 3/13/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,17 +15,20 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 8f9b6b0ea2236027a0f27332115f34c25036f8ec
-ms.sourcegitcommit: 6d1ec3d5afa0466d1a5ce4434e588686a195d0fa
+ms.openlocfilehash: d2f2ccd462627fbcf6ab628217e5d53a57127cae
+ms.sourcegitcommit: 0dbbf53aea319e53edadc1d3a9efa5728856ebd8
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663296"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58073333"
 ---
 # <a name="create-a-new-record"></a>Opprett en ny oppføring
 
 
-Med kommandoen **Opprett en ny oppføring** er det raskt og enkelt å skrive inn nesten alle informasjonstyper i systemet. Kommandoen er i navigasjonsfeltet, slik at den er tilgjengelig når som helst når du skriver inn ny informasjon i systemet. Når du bruker dette alternativet, trenger du bare å fylle ut noen få felter. Når du har mer tid eller informasjon, kan du fylle ut flere detaljer.  
+Med kommandoen **Opprett en ny oppføring** eller **Hurtigoppretting** er det raskt og enkelt å skrive inn nesten alle typer informasjon i systemet. Kommandoen er i navigasjonsfeltet, slik at den er tilgjengelig når som helst når du skriver inn ny informasjon i systemet. Når du bruker dette alternativet, trenger du bare å fylle ut noen få felter. Når du har mer tid eller informasjon, kan du fylle ut flere detaljer.  
+
+> [!NOTE]
+> Alternativet **Hurtigoppretting** er bare tilgjengelig for oppføringene som er aktivert av administratoren.
     
 1. Velg **plusstegnet** ![Opprett oppføring-knapp](media/create-record-button.png "Opprett oppføring-knapp") i navigasjonsfeltet, og velg deretter objektet du vil ha.  
   

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2cfad6a3cadbd2154e582163dc4f55ee6d010b96
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.openlocfilehash: 166fea9e02ebdaa490b400274c971f0c7268ec76
+ms.sourcegitcommit: e64344548d607767e495a6b9526900bb5975226a
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072748"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330290"
 ---
 # <a name="install-and-configure-the-expense-report-sample-for-canvas-apps-in-powerapps"></a>Installer og konfigurer utgiftsrapporteksemplet for lerretsapper i PowerApps
 
@@ -44,7 +44,7 @@ Spor utgiftsrapporter fra sending til godkjennelse. Legg sammen elementer som in
 
 Denne listen inneholder utgiftsrapporten.
 
-1. Åpne en nettleser og gå til https://portal.office.com.
+1. Åpne en nettleser og gå til https://admin.microsoft.com.
 2. Logge på med en konto som har tillatelse til å opprette lister.
 3. Gå til områdesamlingen der du vil lagre Utgifter-listen.
 4. Klikk på **tannhjulikonet** i øverste høyre del av nettsiden.
