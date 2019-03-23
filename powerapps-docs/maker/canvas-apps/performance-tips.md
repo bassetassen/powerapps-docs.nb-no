@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a04320d2d8bb2d8ad3ebf30d3ecbd0dfe7f9b0bd
-ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.openlocfilehash: 6406afad9079895a0da38c7f1f6e3961f2e37fa1
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "57801967"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357855"
 ---
 # <a name="optimize-canvas-app-performance-in-powerapps"></a>Optimaliser ytelsen for lerretsapp i PowerApps
 Microsoft jobber hardt for å forbedre ytelsen til alle appene som kjører på Power-plattformen. Me du kan følge de anbefalte fremgangsmåtene i dette emnet for å øke ytelsen til apper du oppretter.
@@ -32,7 +32,7 @@ Når en bruker åpner en app, går den gjennom disse kjøringsfasene før du ser
 ## <a name="limit-data-connections"></a>Begrense datatilkoblinger 
 **Ikke koble til flere enn 30 datakilder fra samme app**. Apper ber nye brukere om å logge seg på hver kobling. Hver nye kobling øker derfor tiden det tar før appen starter. Når appen kjøres, krever hver kobling prosessorressurser, minne og nettverksbåndbredde når appen ber om data fra den kilden. 
 
-Du kan raskt måle appens ytelse ved å slå på Utviklerverktøy i [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) eller [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) mens appen kjøres. Det tar som regel mer enn 15 sekunder før appen returnerer data, hvis den ofte ber om data fra flere enn 30 datakilder. Det kan være Common Data Service for apper, Azure SQL, SharePoint og Excel på OneDrive.  
+Du kan raskt måle appens ytelse ved å slå på Utviklerverktøy i [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) eller [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) mens appen kjøres. Appen er mer sannsynlig tar lengre tid enn 15 sekunder å returnere data hvis det ofte ber om data fra mer enn 30 datakilder, for eksempel Common Data Service, Azure SQL, SharePoint og Excel i OneDrive.  
 
 ## <a name="limit-the-number-of-controls"></a>Begrens antallet kontroller 
 **Ikke legg til flere enn 500 kontroller i den samme appen**. PowerApps genererer en HTML DOM for å gjengi hver kontroll. Jo flere kontroller du legger til, jo mer genereringstid trenger PowerApps. 

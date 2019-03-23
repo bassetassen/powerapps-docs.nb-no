@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 09d2bc10d465510887b546df8341c8798df136c1
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
-ms.translationtype: HT
+ms.openlocfilehash: 1adf38b59b01bb08bc89c6101a96247b8bce8092
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316822"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357464"
 ---
-# <a name="quickstart-create-a-canvas-app-from-a-sample-in-powerapps"></a>Hurtiginnføring: Lage en lerretsapp fra en eksempelapp i PowerApps
+# <a name="quickstart-create-a-canvas-app-from-a-sample-in-powerapps"></a>Hurtigstart: Lage en lerretsapp fra en eksempelapp i PowerApps
 I denne hurtiginnføringen skal du lage en lerretsapp fra en eksempelapp, slik at du kan studere utformingsmulighetene og oppdage konsepter du kan bruke når du utvikler dine egne lerretsapper.
 
 Hver eksempelapp viser et virkelig scenario, men bruker fiktive data. Hvis du vil lagre disse dataene, må du ha en skylagringskonto, for eksempel Dropbox, Google Drive eller OneDrive.
@@ -64,7 +64,7 @@ Hvis du ikke har en PowerApps-lisens, kan du [registrere deg gratis](../signup-f
 1. Klikk eller trykk på **Lagre** nær venstre kant. 
 
 ## <a name="next-steps"></a>Neste trinn
-I denne hurtiginnføringen laget du din egen app basert på en eksempelapp som bruker fiktive data lagret i skykontoen din. Du kan få mer hjelp til å lære hvordan du lager en app ved automatisk å generere en app basert på data i andre kilder, som Common Data Service for Apps, SharePoint eller Excel.
+I denne hurtiginnføringen laget du din egen app basert på en eksempelapp som bruker fiktive data lagret i skykontoen din. Hvis du vil ha mer hjelp lære hvordan du lager en app, kan du også automatisk generere en app basert på data i andre kilder, som Common Data Service, SharePoint eller Excel.
 
 > [!div class="nextstepaction"]
 > [Generere en app](data-platform-create-app.md)

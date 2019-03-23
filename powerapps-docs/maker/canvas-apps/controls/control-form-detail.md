@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 194da16a1025daa84c658ae8884734a08780c6c1
-ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.openlocfilehash: 4d7b21286f793aefdcc66a3dcbb027ab8f9ac4e7
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "57802059"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356843"
 ---
 # <a name="edit-form-and-display-form-controls-in-powerapps"></a>Kontroller for Redigeringsskjema og Visningsskjema i PowerApps
 Vis, rediger og opprett en post i en datakilde.
@@ -33,7 +33,7 @@ Hvis du legger til en **[Galleri](control-gallery.md)**-kontroll, kan du konfigu
 ### <a name="record-selection"></a>Postutvalg
 Du angir **DataSource**-egenskapen til en tabell med poster, og du angir **Element**-egenskapen for skjemaet til å vise en bestemt post i den aktuelle tabellen, uansett skjematype. Du kan for eksempel angi **Element**-egenskapen for et skjema til **SelectedItem**-egenskapen for en **[Galleri](control-gallery.md)**-kontroll. Når brukeren velger en post i galleriet, vises den samme posten i skjemaet, bortsett fra at skjemaet kan vise flere felt. Hvis brukeren returnerer til galleriet og velger en annen post, endres **SelectedItem**-egenskapen for galleriet. Denne endringen oppdaterer **Element**-egenskapen for skjemaet, som deretter viser den nylig valgte posten.
 
-Du kan også angi **Element**-egenskapen for et skjema ved hjelp av **Rullegardinliste**-kontrollen, som [Vis, rediger eller legg til en post](../add-form.md) beskriver, eller en funksjon som for eksempel **Oppslag** eller **Først**. Du kan for eksempel angi **Element**-egenskapen til en av disse formlene til å vise Fabrikam-oppføringen i **Kontoer**-enheten i Common Data Service for apper:
+Du kan også angi **Element**-egenskapen for et skjema ved hjelp av **Rullegardinliste**-kontrollen, som [Vis, rediger eller legg til en post](../add-form.md) beskriver, eller en funksjon som for eksempel **Oppslag** eller **Først**. Du kan for eksempel angi den **element** egenskapen til en av disse formlene for å vise den Fabrikam-oppføringen i den **kontoer** enhet i Common Data Service:
 
 ```First(Accounts)```
 

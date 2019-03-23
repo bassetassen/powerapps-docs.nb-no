@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: db511edd7e64f4d8ccd27cb59cae9a2c369e1a90
-ms.sourcegitcommit: a06e3137e3cb36414f0d61825bbc687487ea6f8c
+ms.openlocfilehash: e00c81f25de9a764e8f6d963ff94f3c0ffe052a2
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57804244"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357257"
 ---
 # <a name="create-dependent-drop-down-lists-in-a-canvas-app"></a>Opprett avhengige rullegardinlister i en lerretsapp
 
@@ -206,6 +206,6 @@ Denne symptom sannsynligvis på grunn av ved hjelp av en **oppslag** kolonnen i 
 
 ## <a name="known-limitations"></a>Kjente begrensninger
 
-Denne konfigurasjonen er tilgjengelig på **rullegardin** kontroller, i tillegg til **kombinasjonsboks** og **listeboks** kontroller som muliggjør én valg om gangen. Du kan ikke bruke den **avhenger av på** konfigurasjon for noen av disse kontrollene hvis de tillater flere valg. Denne tilnærmingen er ikke anbefalt for å arbeide med alternativsett i Common Data Service for apper.
+Denne konfigurasjonen er tilgjengelig på **rullegardin** kontroller, i tillegg til **kombinasjonsboks** og **listeboks** kontroller som muliggjør én valg om gangen. Du kan ikke bruke den **avhenger av på** konfigurasjon for noen av disse kontrollene hvis de tillater flere valg. Denne tilnærmingen er ikke anbefalt for å arbeide med alternativsett i Common Data Service.
 
 Den **avhenger av på** konfigurasjonen ikke støtter statiske data eller samlinger. Hvis du vil konfigurere avhengige rullegardinlister med disse kildene, kan du redigere uttrykket direkte i formellinjen. I tillegg PowerApps ikke støtter bruk av to valg-felt i SharePoint uten noen samsvarende tabell med data, og du kan ikke definere **Matching feltet** i dette Grensesnittet.

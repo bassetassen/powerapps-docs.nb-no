@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 02aaaf7fd149ca0d9f3e1325b98e5287c90bebec
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
-ms.translationtype: HT
+ms.openlocfilehash: 735894f8e28d25777aa7f66146f5782da2ab2f3e
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49317003"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356797"
 ---
 # <a name="sign-in-to-powerapps-for-the-first-time"></a>Logg deg på PowerApps for første gang
 
@@ -42,7 +42,7 @@ For best resultat begynner du ved å sikre at hjemmesiden er angitt til riktig m
 
 ## <a name="choose-an-environment"></a>Velg et miljø
 
-Enten du oppretter en app, en flyt, en datatilkobling eller en enhet i Common Data Service for apper, er mye av det du gjør i PowerApps forbeholdt et bestemt miljø. Miljøer skaper grenser mellom ulike typer arbeid. En organisasjon kan for eksempel ha separate miljøer for ulike avdelinger. Mange organisasjoner bruker miljøer til å separere apper som fremdeles er under utvikling, fra de som er klar for omfattende bruk. Du har kanskje tilgang til flere miljøer eller bare ett. Hvis du har de riktige tillatelsene, kan det hende du kan opprette dine egne miljøer.
+Enten du oppretter en app, en flyt, en datatilkobling eller en enhet i Common Data Service, mye av det du gjør i PowerApps, ligger i et bestemt miljø. Miljøer skaper grenser mellom ulike typer arbeid. En organisasjon kan for eksempel ha separate miljøer for ulike avdelinger. Mange organisasjoner bruker miljøer til å separere apper som fremdeles er under utvikling, fra de som er klar for omfattende bruk. Du har kanskje tilgang til flere miljøer eller bare ett. Hvis du har de riktige tillatelsene, kan det hende du kan opprette dine egne miljøer.
 
 Hvis du vil bekrefte hvilket miljø du befinner deg i, finner du miljøbryteren til høyre for toppteksten.
 
@@ -60,9 +60,9 @@ Hvis du vil ha mer informasjon, kan du se [Oversikt over miljøer](../../adminis
 I PowerApps kan du opprette og kjøre disse apptypene:
 
 - **Lerretapper** støtter utforming av egendefinert brukergrensesnitt og tilkobling til data fra en rekke kilder.
-- **Modelldrevne apper** har et standard brukergrensesnitt, og kobler bare til data i Common Data Service (CDS) for apper. Du kan imidlertid opprette andre elementer, som visninger, instrumentbord og ulike typer forretningslogikk, på en enklere måte.
+- **Modelldrevne apper** har et standard grensesnitt og koble til data bare i Common Data Service. Du kan imidlertid opprette andre elementer, som visninger, instrumentbord og ulike typer forretningslogikk, på en enklere måte.
 
-Hvis du velger et miljø som har en CDS for Apps-database, kan du bygge lerrets- eller modelldrevne apper fra den samme **Hjem**-siden.
+Hvis du velger et miljø som har en Common Data Service-database, kan du bygge lerret eller modelldrevne apper fra samme **Hjem** siden.
 
 ## <a name="play-or-edit-an-app"></a>Spill av eller rediger en app
 
@@ -84,7 +84,7 @@ Det er flere måter du kan opprette apper på, fra **Hjemmesiden**:
 - [lage dine egne modelldrevne apper](../model-driven-apps/overview-model-driven-samples.md)
 - [egendefinere en forhåndsbygd utvalg for en modelldrevet app](../model-driven-apps/build-first-model-driven-app.md)
 
-## <a name="learn-more"></a>Mer informasjon
+## <a name="learn-more"></a>få mer informasjon
 
 Det er to måter du kan få mer informasjon om enten lerretsapper eller modelldrevne apper på:
 
@@ -120,6 +120,6 @@ Ved å velge alternativer i toppteksten og venstre navigasjonsfelt, kan du gjør
 
 Utvid funksjonene til appene ved å utføre disse oppgavene:
 
-- Administrer enheter, alternativsett og dataintegrering i [Common Data Service for apper](../common-data-service/data-platform-intro.md).
+- Administrer enheter, alternativsett og integrering av data i [Common Data Service-](../common-data-service/data-platform-intro.md).
 - Konfigurer forretningslogikk i [Microsoft Flow](https://docs.microsoft.com/flow/getting-started).
 - Opprett, pakk inn og vedlikeholde [løsninger](../../developer/common-data-service/introduction-solutions.md).

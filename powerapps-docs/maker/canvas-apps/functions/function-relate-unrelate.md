@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c50b2452829f0878c40ccf5f2e47010596bc0b7b
-ms.sourcegitcommit: eef2d6d9a9c7f5c8a44b9734817f59dc0eac3ecf
+ms.openlocfilehash: 4b2c6b9518e987ef17f2ff2b50987568c8a0b69f
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "57801599"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356774"
 ---
 # <a name="relate-and-unrelate-functions-in-powerapps"></a>Relatert og Unrelate i PowerApps
 
@@ -26,7 +26,7 @@ Relatert og unrelate postene i to enheter via en én-til-mange eller mange-til-m
 
 ## <a name="description"></a>Beskrivelse
 
-Den **relatere** funksjonen forbinder to poster via en én-til-mange eller mange-til-mange-relasjon i Common Data Service (CDS) for apper. Den **Unrelate** funksjonen reverserer prosessen og fjerner koblingen.
+Den **relatere** funksjonen forbinder to poster via en én-til-mange eller mange-til-mange-relasjon i Common Data Service. Den **Unrelate** funksjonen reverserer prosessen og fjerner koblingen.
 
 For én-til-mange-relasjoner, har mange enheten har et felt for sekundærnøkkel som peker til en post i én enhet. **Relatert** angir dette feltet til å peke til en bestemt post for én enhet, mens **Unrelate** gir dette feltet *tom*. Hvis feltet allerede er angitt når **relatere** er kalt, den eksisterende koblingen går tapt til fordel for den nye koblingen. Du kan også angi dette feltet ved hjelp av den [ **Patch** ](function-patch.md) funksjon eller en **[redigeringsskjema](../controls/control-form-detail.md)** kontroll; du må ikke bruke den **relatere**  funksjonen.
 

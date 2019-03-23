@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b3f95b5c8ddbca1925f89797e52b1b227c4b10e8
-ms.sourcegitcommit: ead27300a1b7371136edee1842829ed87ca77a72
+ms.openlocfilehash: e9c63d1814b72cae0c675be6b33773799cfb3b8f
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57892257"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357096"
 ---
 # <a name="concurrent-function-in-powerapps"></a>Concurrent-funksjonen i PowerApps
 Evaluerer flere formler samtidig mot hverandre.
@@ -47,7 +47,7 @@ Du kan bare bruke **Concurrent** i [formler for virkemåte](../working-with-form
 
 #### <a name="loading-data-faster"></a>Å laste inn data raskere
 
-1. Opprett en app, legg til fire datakilder fra Common Data Service for Apps, SQL Server, eller SharePoint. 
+1. Opprett en app, og Legg til fire datakilder fra Common Data Service, SQL Server eller SharePoint. 
 
     Dette eksemplet bruker fire tabeller fra [eksemplet Adventure Works-databasen på SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal). Etter at du har opprettet databasen, kobler du til den fra PowerApps ved bruk av det fullstendige servernavnet (for eksempel, srvname.database.windows.net):
 

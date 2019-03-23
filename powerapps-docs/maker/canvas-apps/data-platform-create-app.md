@@ -1,6 +1,6 @@
 ---
-title: Generer en lerretsapp fra Common Data Service for apper | Microsoft Docs
-description: Generer en lerretsapp automatisk i PowerApps for å behandle data i Common Data Service for apper
+title: Generer en lerret-app fra Common Data Service | Microsoft Docs
+description: I PowerApps, må du automatisk generere en lerretsapp for å behandle data i Common Data Service
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -13,22 +13,22 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1393d6dcdd9b88f4bca9e536a776b8601ae4c1c1
-ms.sourcegitcommit: 452d4ead948591d16aff144006ad84c957eba837
+ms.openlocfilehash: 38e2798ae60206ff0584254916e4f750096155e4
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "57801783"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356866"
 ---
-# <a name="generate-a-canvas-app-from-common-data-service-for-apps-in-powerapps"></a>Generer en lerretsapp fra Common Data Service for apper i PowerApps
+# <a name="generate-a-canvas-app-from-common-data-service-in-powerapps"></a>Generer en lerret-app fra Common Data Service i PowerApps
 
-Generer en lerretsapp i automatisk i PowerApps basert på en liste over eksempelkontoer i [Common Data Service (CDS) for apper](../common-data-service/data-platform-intro.md). I denne appen kan du bla gjennom alle kontoene, vise detaljer for en enkelt konto og opprette, oppdatere eller slette en konto.
+I PowerApps, må du automatisk generere en lerretsapp som er basert på en liste over eksempelkontoer i [Common Data Service-](../common-data-service/data-platform-intro.md). I denne appen kan du bla gjennom alle kontoene, vise detaljer for en enkelt konto og opprette, oppdatere eller slette en konto.
 
 Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) før du begynner.
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-Hvis du vil følge denne hurtiginnføringen, må du være tilordnet til den [Miljøoppretter](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles) sikkerhetsrolle, og du må [bytte til et miljø](working-with-environments.md) der en database i CDS for apper har opprettet, inneholder data, og tillater oppdateringer. Hvis det ikke finnes et slikt miljø og du har administratorrettigheter, kan du [opprette et miljø](https://docs.microsoft.com/power-platform/admin/environments-administration.md#create-an-environment) som oppfyller dette kravet.
+Hvis du vil følge denne hurtiginnføringen, må du være tilordnet til den [Miljøoppretter](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles) sikkerhetsrolle, og du må [bytte til et miljø](working-with-environments.md) der en database i Common Data Service har blitt opprettet, inneholder data, og tillater oppdateringer. Hvis det ikke finnes et slikt miljø og du har administratorrettigheter, kan du [opprette et miljø](https://docs.microsoft.com/power-platform/admin/environments-administration.md#create-an-environment) som oppfyller dette kravet.
 
 ## <a name="generate-an-app"></a>Å generere en app
 
@@ -64,7 +64,7 @@ Du vil sannsynligvis gjøre flere endringer før du bruker denne appen eller del
 1. Nær venstre kant velger du **Lagre**, og deretter velger du **Lagre** i nedre venstre hjørne.
 
 ## <a name="next-steps"></a>Neste trinn
-I denne hurtiginnføringen opprettet du en app for å behandle eksempeldata om kontoer i Common Data Service for apper. Som et påfølgende trinn kan du tilpasse galleriet og andre elementer for den standard nettleserskjermen for bedre å imøtegå dine behov.
+I denne hurtiginnføringen opprettet du en app for å behandle eksempeldata om kontoer i Common Data Service. Som et påfølgende trinn kan du tilpasse galleriet og andre elementer for den standard nettleserskjermen for bedre å imøtegå dine behov.
 
 > [!div class="nextstepaction"]
 > [Å tilpasse et galleri](customize-layout-sharepoint.md).

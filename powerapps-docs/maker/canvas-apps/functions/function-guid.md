@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3da9d769ab36df23c6c54510937adea2ce38863f
-ms.sourcegitcommit: b8b2a2c3cf3300fa52bdf71bfef6a2892e36cffc
+ms.openlocfilehash: 9415ab67b93ef64f5caa025af5ac685ca2363305
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57802634"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357073"
 ---
 # <a name="guid-function-in-powerapps"></a>GUID-funksjonen i PowerApps
 Konverterer en GUID-streng ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) til en GUID-verdi, eller oppretter en ny GUID-verdi.
 
 ## <a name="description"></a>Beskrivelse
-Bruk **GUID**-funksjonen til å konvertere en streng som inneholder den heksadesimale representasjonen av en GUID i en GUID-verdi, som kan sendes til en database. GUID-verdier brukes som nøkler av databasesystemer som Common Data Service for apper og SQL Server.
+Bruk **GUID**-funksjonen til å konvertere en streng som inneholder den heksadesimale representasjonen av en GUID i en GUID-verdi, som kan sendes til en database. GUID-verdiene, brukes som nøkler av databasesystemer som Common Data Service-og SQL Server.
 
 Strengen som sendes, kan inneholde små eller store bokstaver, men i disse formatene må den inneholde 32 heksadesimale tegn:
 

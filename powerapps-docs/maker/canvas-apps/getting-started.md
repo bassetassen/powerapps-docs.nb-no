@@ -13,23 +13,23 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9b213484bf1412d808c3fa9599debd5c9e546a4e
-ms.sourcegitcommit: e64344548d607767e495a6b9526900bb5975226a
+ms.openlocfilehash: 6968e15bbfdb16d3f5443c51065765069ae8867b
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330129"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357188"
 ---
 # <a name="what-are-canvas-apps-in-powerapps"></a>Hva er lerret-apper i PowerApps?
 Utform og bygg en business-app fra et lerret i Microsoft PowerApps uten å skrive kode i et tradisjonelt programmeringsspråk, for eksempel C#. Utforme appen ved å dra og slippe elementer til et lerret, på samme måte som du vil utforme et lysbilde i PowerPoint. Opprett Excel-lignende uttrykk for å angi logikk og arbeide med data. Bygg apper som integrerer forretningsdata fra en [rekke Microsoft-kilder og tredjepartskilder](connections-list.md). Del appen din slik at brukere kan kjøre den i en nettleser eller på en mobil enhet, og bygg inn appen din slik at brukere kan kjøre den i SharePoint, Power BI eller Teams.
 
-Hvis du ikke trenger en egendefinert utforming og dataene dine er i Common Data Service (CDS) for apper, kan du automatisk generere en modelldreven app fra forretningsdata og -prosesser. Denne typen app kan utforme skjemaer, visninger og andre komponenter, og standard UI-en justeres automatisk til telefoner, bærbare datamaskiner og andre enheter. Hvis du vil ha mer informasjon om denne typen app, kan du se [Oversikt over hvordan man bygger en modelldreven app](../model-driven-apps/model-driven-app-overview.md).
+Hvis du ikke trenger en egendefinert utforming og dataene dine er i Common Data Service, kan du automatisk generere en modelldreven app fra forretningsdata og -prosesser. Denne typen app kan utforme skjemaer, visninger og andre komponenter, og standard UI-en justeres automatisk til telefoner, bærbare datamaskiner og andre enheter. Hvis du vil ha mer informasjon om denne typen app, kan du se [Oversikt over hvordan man bygger en modelldreven app](../model-driven-apps/model-driven-app-overview.md).
 
 ## <a name="build-an-app"></a>Bygg en app
 Du kan automatisk generere en app fra én av disse kildene for å komme i gang, blant annet:
 - [en eksempelapp](open-and-run-a-sample-app.md)
 - [en mal](get-started-test-drive.md)
-- [CDS for apper](data-platform-create-app.md)
+- [Common Data Service](data-platform-create-app.md)
 - [SharePoint](app-from-sharepoint.md)
 - [Excel](get-started-create-from-data.md)
 
@@ -39,7 +39,7 @@ Du kan automatisk generere en app fra én av disse kildene for å komme i gang, 
 
 Når du genererer en app automatisk, kan du tilpasse standardutseende og funksjonalitet basert på brukernes arbeidsflyter. Det kan for eksempel hende at du ønsker å endre hvilke datatyper som vises, hvordan de sorteres, eller om brukerne angir et tall ved å skrive det inn eller ved å justere en glidebryter. Legg til og tilpass [skjermer](add-screen-context-variables.md), [gallerier](customize-layout-sharepoint.md), [skjemaer](customize-forms-sharepoint.md) og andre kontroller.
 
-Når du har generert en app eller to automatisk, og fått litt erfaring med tilpasning, kan du opprette en app fra grunnen av basert på [CDS for apper](data-platform-create-app-scratch.md), [Excel](get-started-create-from-blank.md) eller en annen datakilde. Ved å arbeide fra grunnen av får du fleksibilitet i apputformingen, flyten og kontrollene, og du kan inkludere en større mengde datakilder.
+Når du har generert en app eller to automatisk og fått litt erfaring med tilpasning, kan du opprette en app fra grunnen av basert på [Common Data Service-](data-platform-create-app-scratch.md), [Excel](get-started-create-from-blank.md), eller en annen datakilde. Ved å arbeide fra grunnen av får du fleksibilitet i apputformingen, flyten og kontrollene, og du kan inkludere en større mengde datakilder.
 
 ## <a name="share-and-run-an-app"></a>Å dele og kjøre en app
 Når du er ferdig med appen og har lagret den i skyen, [kan du dele den med andre](share-app.md) i organisasjonen. Angi hvilke brukere eller grupper som kan kjøre appen, og om de også kan tilpasse den eller dele den med andre utenfor organisasjonen.

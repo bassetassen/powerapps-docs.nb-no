@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 813dddc205eb5abb870d333635723fcd5e2f2738
-ms.sourcegitcommit: 6d1ec3d5afa0466d1a5ce4434e588686a195d0fa
+ms.openlocfilehash: e709c600e02d0acf26883da76ead163c62411802
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "57802542"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357625"
 ---
 # <a name="understand-delegation-in-a-canvas-app"></a>Forstå delegering i en lerretsapp
 PowerApps inneholder et kraftig sett med funksjoner for filtrering, sortering og forming av dataene i en lerretsapp: **[Filter](functions/function-filter-lookup.md)**,  **[Sorter](functions/function-sort.md)**, og **[AddColumns](functions/function-table-shaping.md)** funksjoner for å nevne noen få. Med disse funksjonene kan du gi brukerne fokusert tilgang til informasjonen de trenger. For de med databasebakgrunn vil bruk av disse funksjonene tilsvare skriving av en databasespørring.
@@ -37,7 +37,7 @@ Når dette begynner å bli komplisert, hvilket er grunnen til at denne artikkele
 ## <a name="delegable-data-sources"></a>Datakilder som kan delegeres
 Delegering støttes for visse bare tabelldatakilder. Hvis en datakilde som støtter delegering, sin [connector dokumentasjonen](https://docs.microsoft.com/connectors/) gir en oversikt over som støtter. For eksempel disse datakilder i tabellform er de mest populære, og de støtter delegering:
 
-- [Common Data Service (CDS) for apper](https://docs.microsoft.com/connectors/commondataservice/) 
+- [Common Data Service](https://docs.microsoft.com/connectors/commondataservice/) 
 - [SharePoint](https://docs.microsoft.com/connectors/sharepointonline/) 
 - [SQL Server](https://docs.microsoft.com/connectors/sql/) 
 
@@ -131,7 +131,7 @@ For at det skal bli enklere å vite hva som blir og ikke blir delegert, gir Powe
 Delegeringsadvarsler vises bare på formler som opererer på datakilder som kan delegeres. Hvis ikke du ser en advarsel, og du tror formelen ikke delegeres riktig, kan du sammenligne datakildetypen med listen over [datakilder som kan delegeres](delegation-overview.md#delegable-data-sources) tidligere i dette emnet.
 
 ## <a name="examples"></a>Eksempler
-I dette eksemplet skal du automatisk generere en app med tre skjermer basert på en SQL Server-tabell med navn **[dbo].[Fruit]**. Hvis du vil ha informasjon om hvordan du genererer en app, kan du ta i bruk lignende prinsipper i [emnet om Common Data Service for Apps](data-platform-create-app.md) for SQL Server.
+I dette eksemplet skal du automatisk generere en app med tre skjermer basert på en SQL Server-tabell med navn **[dbo].[Fruit]**. For informasjon om hvordan å generere appen, kan du bruke lignende prinsipper i den [emnet om Common Data Service-](data-platform-create-app.md) til SQL Server.
 
 ![App med tre skjermer](./media/delegation-overview/products-afd.png)
 

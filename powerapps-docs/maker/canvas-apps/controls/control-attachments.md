@@ -13,26 +13,26 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: da9c8f85844e37d6af8e1063b36496c820fbfa07
-ms.sourcegitcommit: e2a9d1a6090cdd8aa78515b49f38ed2365217ea6
-ms.translationtype: HT
+ms.openlocfilehash: 31b166dbe0257127d02f410182aaebb70e641da6
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384252"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357901"
 ---
 # <a name="attachments-control-in-powerapps"></a>Vedlegg-kontrollen i PowerApps
-Dette er en kontroll som lar brukerne laste ned filer på enhetene sine samt laste opp og slette filer fra en SharePoint-liste eller Common Data Service for apper-enhet.
+En kontroll som gjør at brukere kan laste ned filer på enhetene sine, samt laste opp og slette filer fra en SharePoint-liste eller en Common Data Service-enhet.
 
 ## <a name="limitations"></a>Begrensninger
 Vedleggskontrollen har disse begrensningene:
-1. Vedlegg støttes med SharePoint-lister og CDS for apper-enheter.
+1. Vedlegg støttes med SharePoint-lister og Common Data Service-enheter.
 
 1. Opplasting og sletting av funksjonalitet fungerer bare i et skjema.  Vedlegg-kontrollen ser deaktivert ut når den er i redigeringsmodus og ikke i et skjema. Vær oppmerksom på at hvis du vil lagre filtilføyelsene og slettingene i serverdelen, må sluttbrukeren lagre skjemaet.
 
 1. Du kan bare laste opp filer med opptil 10 MB.  
 
 ## <a name="description"></a>Beskrivelse
-Med en **Vedlegg**-kontroll kan du åpne filer som er lagret på en datakilde, samt slette filer fra en SharePoint-liste eller CDS for apper-enhet.
+En **vedlegg** kontrollen kan du åpne, legge til og slette filer fra en SharePoint-liste eller en Common Data Service-enhet.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 **[Elementer](properties-core.md)** – kilden som beskriver filene som kan lastes ned.

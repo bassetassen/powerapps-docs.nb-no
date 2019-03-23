@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 531a614493ef739acd7be71f396dfc2f7e1ada1c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 77268aa63ed49d10f825850909d31ec4feace063
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42832800"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357602"
 ---
 # <a name="choices-function-in-powerapps"></a>Choices-funksjonen i PowerApps
 Returnerer en tabell med de mulige verdiene for en oppslagskolonne.
@@ -38,7 +38,7 @@ Du kan ikke [delegere](../delegation-overview.md) **Choices** for øyeblikket. H
 
 Kolonnereferanser må være direkte til datakilden. Hvis datakilden er for eksempel **Kontoer** og oppslaget er **SLA**, blir kolonnereferansen **Accounts.SLA**. Referansen kan ikke gå gjennom en funksjon, variabel eller kontroll. Hvis **Kontoer** i tillegg mates til en **Galleri**-kontroll, bruker du formelen **Gallery.Selected.SLA** for å henvise til den utvalgte kontoen. Denne referansen har imidlertid gått gjennom en kontroll, så den kan ikke sendes til **Columns**-funksjonen – du må fremdeles bruke **Accounts.SLA**.
 
-Du kan på dette tidspunktet bruke oppslagskolonner bare med SharePoint og Common Data Service for Apps.
+På dette tidspunktet, kan du bruke oppslagskolonner bare med SharePoint og Common Data Service.
 
 ## <a name="syntax"></a>Syntaks
 **Choices**( *column-reference* )
@@ -49,7 +49,7 @@ Du kan på dette tidspunktet bruke oppslagskolonner bare med SharePoint og Commo
 
 #### <a name="choices-for-a-lookup"></a>Valg for et oppslag
 
-1. [Opprett en database](../../../administrator/create-database.md) i Common Data Service for Apps, og velg boksen **Inkluder eksempelapper og -data**.
+1. [Opprette en database](../../../administrator/create-database.md) i Common Data Service, og velg den **Inkluder eksempelapper og -data** box.
 
     Mange enheter, som **Kontoer**, opprettes.
 

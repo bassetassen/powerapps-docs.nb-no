@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6e77ddfcc572a776e80ab90d3907aaa7b67f01ea
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 2864ab5614bb3af415e24e23df3c52f6e668ab24
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42864776"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357142"
 ---
-# <a name="tutorial-customize-a-gallery-in-powerapps"></a>Opplæring: Tilpassing av et galleri i PowerApps
+# <a name="tutorial-customize-a-gallery-in-powerapps"></a>Opplæring: Tilpasse et galleri i PowerApps
 
 I denne opplæringen får du tilpasse en liste over poster, kalt et galleri, og gjøre andre endringer i en app som ble generert automatisk i Microsoft PowerApps. Brukere kan administrere data i appen selv om du ikke gjør disse endringene, men appen vil være enklere å bruke hvis du tilpasser den for organisasjonens behov.
 
@@ -47,7 +47,7 @@ Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https:/
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-[Generer en app](data-platform-create-app.md) fra **Kontoer**-enheten for Common Data Service (CDS) for apper.
+[Generer en app](data-platform-create-app.md) fra den **kontoer** enheten for Common Data Service.
 
 ## <a name="open-the-generated-app"></a>Slik åpner du den genererte appen
 

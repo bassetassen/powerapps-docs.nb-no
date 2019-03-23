@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 09e139353e500ad27650628a844bc01264eab3d0
-ms.sourcegitcommit: ba5542ff1c815299baa16304c6e0b5fed936e776
+ms.openlocfilehash: 2283f77f7e1c09ceade63f96003fefabc5e92539
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54308390"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357648"
 ---
 # <a name="drop-down-control-in-powerapps"></a>Rullegardin-kontrollen i PowerApps
 En liste som viser bare det første elementet, med mindre brukeren åpner det.
@@ -133,7 +133,7 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 1. Vis elementene i listen ved å velge pil ned for kontrollen mens du holder nede Alt-tasten.
 
 ### <a name="list-from-a-data-source"></a>Liste fra en datakilde
-Prinsippene i denne prosedyren gjelder for alle [datakilder som inneholder tabeller](../connections-list.md#tables). For å kunne følge akkurat disse trinnene, må du imidlertid åpne et miljø der det er opprettet en database for Common Data Service for apper og lagt til eksempeldata.
+Prinsippene i denne prosedyren gjelder noen [datakilden som inneholder tabellene](../connections-list.md#tables) , men, for å følge disse trinnene nøyaktig, må du åpne et miljø som en Common Data Service-database er opprettet og eksempeldata dataene som er lagt til.
 
 1. [Åpne en tom app](../data-platform-create-app-scratch.md#open-a-blank-app), og [spesifiser deretter **Kontoer**-enheten](../data-platform-create-app-scratch.md#specify-an-entity).
 

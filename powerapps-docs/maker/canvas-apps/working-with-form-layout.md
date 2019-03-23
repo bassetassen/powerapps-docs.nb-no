@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b6bff4d0f9586f94e4d0da133197fcb7f78c765d
-ms.sourcegitcommit: 826bde1eab3dd32d7bf9fa3f43ea069694845597
+ms.openlocfilehash: a8abc0a641f13cc05e723b96d48dd2d877f0b70f
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "57800265"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356912"
 ---
 # <a name="understand-data-form-layout-for-canvas-apps-in-powerapps"></a>Slik fungerer oppsett for dataskjemaer for lerretsapper i PowerApps
 
@@ -32,7 +32,7 @@ I denne opplæringen går vi gjennom trinnene for å opprette dette skjemaet. Vi
 
 Hvis PowerApps er nytt for deg (eller du bare har generert apper automatisk), må du [bygge en app fra grunnen av](get-started-create-from-blank.md) før du fordyper deg i dette emnet. Ved å bygge en app fra grunnen av blir du kjent med nødvendige konsepter, for eksempel å legge til datakilder og kontroller, som er nevnt, men som ikke er beskrevet i dette emnet.
 
-Dette emnet er skrevet som om du har en kilde som heter **salgsordre** og som inneholder feltene i den forrige grafikken. Hvis du har en PowerApps Plan 2-lisens eller en [lisensen for prøveversjonen](../signup-for-powerapps.md) og systemansvarlig eller Systemtilpasser systemtillatelser, kan du [oppretter en enhet](../common-data-service/data-platform-create-entity.md) i Common Data Service (CDS) for apper og legge til lignende felt. 
+Dette emnet er skrevet som om du har en kilde som heter **salgsordre** og som inneholder feltene i den forrige grafikken. Hvis du har en PowerApps Plan 2-lisens eller en [lisensen for prøveversjonen](../signup-for-powerapps.md) og systemansvarlig eller Systemtilpasser systemtillatelser, kan du [oppretter en enhet](../common-data-service/data-platform-create-entity.md) i Common Data Service-og legge til lignende felt. 
 
 ## <a name="add-a-gallery"></a>Å legge til et galleri
 

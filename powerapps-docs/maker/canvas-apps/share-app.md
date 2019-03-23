@@ -13,19 +13,19 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 57a63ddf829e2a6c1062cad34e0f3c608d69afad
-ms.sourcegitcommit: a06e3137e3cb36414f0d61825bbc687487ea6f8c
+ms.openlocfilehash: 34cf740bb029440480618a180ac45bc094c061d5
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57804221"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357280"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>Del en lerretsapp i PowerApps
 
 Når du har utviklet en lerretsapp som skal ta seg av et forretningsbehov, angir du hvilke brukere i organisasjonen som kan kjøre appen, og hvilke som kan endre den og til og med dele den på nytt. Angi hver bruker etter navn, eller angi en sikkerhetsgruppe i Azure Active Directory. Hvis alle kan dra nytte av appen, angir du at hele organisasjonen kan kjøre den.
 
 > [!IMPORTANT]
-> Du må også administrere tillatelser for datakilden eller -kildene som appen er basert på, slik som [Common Data Service for apper](#common-data-service-for-apps) eller [Excel](share-app-data.md), for at en delt app skal fungere som forventet. Du må kanskje også dele [andre ressurser](share-app-resources.md) som appen avhenger av, for eksempel flyter, gatewayer eller tilkoblinger.
+> For en delt app skal fungere som forventet, må du også administrere tillatelser for datakilden eller kilder som appen er basert på, slik som [Common Data Service-](#common-data-service) eller [Excel](share-app-data.md). Du må kanskje også dele [andre ressurser](share-app-resources.md) som appen avhenger av, for eksempel flyter, gatewayer eller tilkoblinger.
 
 ## <a name="prerequisites"></a>Forutsetninger
 
@@ -68,7 +68,7 @@ Du må lagre appen i skyen (ikke lokalt) og deretter publisere den før du deler
 
 1. Hvis appen din kobles til data som brukere trenger tilgangstillatelser, angir du dem.
 
-    Appen din kan for eksempel koble til en enhet i en CDS for Apps-database. Når du deler en slik app, deling panelet ber deg om å administrere sikkerhet for denne enheten.
+    Appen din kan for eksempel koble til en enhet i Common Data Service-database. Når du deler en slik app, deling panelet ber deg om å administrere sikkerhet for denne enheten.
 
     ![Angi tillatelser](./media/share-app/set-permissions.png)
 
@@ -99,16 +99,16 @@ Du kan endre tillatelsene for en bruker eller en sikkerhetsgruppe ved å velge n
 
 ## <a name="manage-entity-permissions"></a>Slik administrerer du enhetstillatelser
 
-### <a name="common-data-service-for-apps"></a>Common Data Service for apper
+### <a name="common-data-service"></a>Common Data Service
 
-Hvis du oppretter en app basert på CDS for Apps, må du også kontrollere at brukerne du deler appen med har de nødvendige tillatelsene for enheten eller enheter som appen er basert på. Disse brukerne må spesielt, tilhøre en sikkerhetsrolle som kan utføre oppgaver som oppretting, lesing, skriving og sletting av relevante poster. I mange tilfeller vil du opprette én eller flere egendefinerte sikkerhetsroller med de nøyaktige tillatelsene som brukerne trenger å kjøre appen. Deretter kan du tilordne en rolle til hver bruker etter behov.
+Hvis du oppretter en app basert på Common Data Service, må du også kontrollere at brukerne du deler appen med har de nødvendige tillatelsene for enheten eller enheter som appen er basert på. Disse brukerne må spesielt, tilhøre en sikkerhetsrolle som kan utføre oppgaver som oppretting, lesing, skriving og sletting av relevante poster. I mange tilfeller vil du opprette én eller flere egendefinerte sikkerhetsroller med de nøyaktige tillatelsene som brukerne trenger å kjøre appen. Deretter kan du tilordne en rolle til hver bruker etter behov.
 
 > [!NOTE]
 > I skrivende stund, kan du tilordne sikkerhetsroller til enkeltbrukere, men ikke til sikkerhetsgrupper.
 
 #### <a name="prerequisite"></a>Forutsetning
 
-Hvis du vil utføre de to neste prosedyrene, må du ha **Systemadministrator**-tillatelser for en CDS for apper-database.
+For å utføre de neste to fremgangsmåtene, må du ha **systemansvarlig** tillatelser for en Common Data Service-database.
 
 #### <a name="create-a-security-role"></a>Slik oppretter du en sikkerhetsrolle
 

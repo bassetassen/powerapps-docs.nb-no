@@ -8,14 +8,9 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.date: 03/18/2018
 ms.author: anneta
-ms.reviewer: ''
-ms.openlocfilehash: c3e40df2d2ecc13e2c466aa91178ccb5d23548fe
-ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806092"
+ms.reviewer: null
 ---
+
 # <a name="overview-of-creating-apps-in-powerapps"></a>Oversikt over oppretting av apper i PowerApps
 
 PowerApps er en utviklingsplattform for bedriftsapper med høy produktivitet, og har tre hovedkomponenter:
@@ -57,7 +52,7 @@ Det er enkelt å komme i gang med modelldrevne apper, og du kan begynne med diss
 - [Legge til sikkerhet](https://docs.microsoft.com/dynamics365/customer-engagement/customize/manage-access-apps-security-roles)
 - [Legge til forretningslogikk](https://docs.microsoft.com/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 
-## <a name="common-data-service-for-apps"></a>Common Data Service for apper
+## <a name="common-data-service"></a>Common Data Service
 
 Common Data Service gjør det mulig å lagre og behandle data i et sett med standard og egendefinerte enheter på en sikker måte, og du kan legge til felt i disse enhetene når du trenger dem.
 
