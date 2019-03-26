@@ -1,12 +1,12 @@
 ---
-title: Opplæring for å opprette en egendefinert enhet som har komponenter med PowerApps | Microsoft Docs
-description: Opplæring med trinnvise instruksjoner for å opprette og konfigurere en enhet for bruk med en PowerApps-app.
+title: Opprette en egendefinert enhet som har komponenter med PowerApps | Microsoft Docs
+description: Emnet med trinnvise instruksjoner for å opprette og konfigurere en enhet for bruk med en PowerApps-app.
 author: Mattp123
 manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: tutorial
-ms.date: 06/22/2018
+ms.date: 01/23/2019
 ms.author: matp
 search.audienceType:
   - maker
@@ -15,11 +15,11 @@ search.app:
   - D365CE
 ---
 
-# <a name="tutorial-create-a-custom-entity-that-has-components-in-powerapps"></a>Opplæring: Opprette en egendefinert enhet som har komponenter i PowerApps
+# <a name="create-a-custom-entity-that-has-components-in-powerapps"></a>Opprette en egendefinert enhet som har komponenter i PowerApps
 
 Med PowerApps kan du skreddersy appen slik at den passer til organisasjonens bransje, terminologi og unike forretningsprosesser. Utvikling av PowerApps-apper består av å legge til standard medfølgende enheter eller opprette egendefinerte enheter. En enhet definerer informasjonen du vil spore ved hjelp av oppføringer, som vanligvis inneholder egenskaper som firmanavn, sted, produkter, e-post og telefon. 
 
-I denne opplæringen oppretter du en enhet og legger deretter til eller tilpasser viktige komponenter, for eksempel felt, relasjoner, visninger og skjemaer. Du lærer hvordan du gjør følgende.
+I dette emnet oppretter du en enhet og legger deretter til eller tilpasser viktige komponenter, for eksempel felt, relasjoner, visninger og skjemaer. Du lærer hvordan du gjør følgende.
 
 - Opprette en egendefinert enhet
 - Legge til egendefinerte felt i enheten
@@ -27,7 +27,7 @@ I denne opplæringen oppretter du en enhet og legger deretter til eller tilpasse
 - Tilpasse en visning 
 - Tilpasse et skjema
 
-Opplæringen følger selskapet Contoso, som er en virksomhet for kjæledyrstell som pleier hunder og katter. Contoso trenger en app for kunde- og kjæledyrsporing som kan brukes av ansatte på tvers av flere enheter.
+Emnet følger selskapet Contoso, som er en virksomhet for kjæledyrstell som pleier hunder og katter. Contoso trenger en app for kunde- og kjæledyrsporing som kan brukes av ansatte på tvers av flere enheter.
 
 ## <a name="prerequisites"></a>Forhåndskrav
 
@@ -117,17 +117,16 @@ Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=lin
 
 Hopp over dette trinnet hvis du bare vil bruke kjæledyrenheten i en lerretsapp. 
 
-1. Velg **Modelldrevet** i den venstre navigasjonsruten i PowerApps.
-2. Utvid **Data** i den venstre navigasjonsruten, velg **Enheter**, og velg deretter **Kjæledyr**.
-3. Velg kategorien **Skjemaer**, og velg deretter **Informasjon** ved siden av **Hoved**-skjematypen for å åpne skjemaredigeringsprogrammet.
+1. Utvid **Data** i den venstre navigasjonsruten, velg **Enheter**, og velg deretter **Kjæledyr**.
+2. Velg kategorien **Skjemaer**, og velg deretter **Informasjon** ved siden av **Hoved**-skjematypen for å åpne skjemaredigeringsprogrammet.
     > [!div class="mx-imgBorder"] 
     > ![Redigere hovedskjema](media/create-custom-entity/main-form-edit.png)
-4. I skjemaredigeringsprogrammet drar og slipper du feltet **Art**, **Rase**, **Avtaledato** og **Forretningsforbindelse** i ruten Feltutforsker i Generelt-delen på skjemalerretet til skjemaet ser slik ut.
+3. I skjemaredigeringsprogrammet drar og slipper du feltet **Art**, **Rase**, **Avtaledato** og **Forretningsforbindelse** i ruten Feltutforsker i Generelt-delen på skjemalerretet til skjemaet ser slik ut.
     > [!div class="mx-imgBorder"] 
     > ![Velge felt for hovedskjema](media/create-custom-entity/main-form-edit2.png) 
-5. Velg **Lagre**.
-6. Velg **Publiser**.
-7. Velg **Lagre og lukk** for å lukke skjemautformingen.
+4. Velg **Lagre**.
+5. Velg **Publiser**.
+6. Velg **Lagre og lukk** for å lukke skjemautformingen.
 
 ## <a name="add-the-custom-entity-to-an-app"></a>Legge til den egendefinerte enheten i en app
 
@@ -135,6 +134,6 @@ Nå er enheten klar til å brukes for å bygge et lerret eller en modelldrevet a
 
 ## <a name="next-steps"></a>Neste trinn
 
-Du har lært hvordan du oppretter en enhet som kan brukes til å opprette en nyttig app, i denne opplæringen. 
+Du har lært hvordan du oppretter en enhet som kan brukes til å opprette en nyttig app, i dette emnet. 
 - Hvis du vil vite hvordan du oppretter en modelldrevet app, kan du se [Lage din første modelldrevne app](../model-driven-apps/build-first-model-driven-app.md).
 - Hvis du vil vite hvordan du oppretter en lerretsapp, kan du se [Opprette en app fra bunnen](../canvas-apps/get-started-create-from-blank.md).

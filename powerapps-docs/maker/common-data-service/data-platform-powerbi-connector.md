@@ -1,13 +1,13 @@
 ---
 title: Opprette en PowerBI-rapport | Microsoft Docs
 description: Koble til dataene fra PowerBI Desktop ved hjelp av Common Data Service for Apps.
-author: clwesene
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
 ms.date: 05/21/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType:
   - maker
 search.app:

@@ -1,7 +1,7 @@
 ---
 title: Opprette og redigere felt for Common Data Service for Apps | MicrosoftDocs
 ms.custom: ''
-ms.date: 05/18/2018
+ms.date: 02/08/2019
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -14,7 +14,7 @@ applies_to:
 ms.assetid: d88677fa-2caf-47b0-aec6-10a25a7ec9c3
 caps.latest.revision: 55
 ms.author: matp
-manager: brycho
+manager: kvivek
 search.audienceType:
   - maker
 search.app:
@@ -45,16 +45,25 @@ Informasjonen i dette emnet hjelper deg med å velge hvilken utforming du kan br
 
 Du kan bruke PowerApps-portalen til å opprette og redigere felt for Common Data Service for Apps med mindre du må oppfylle noen av disse kravene:
 
-- Opprett et oppslagsfelt for kunde
-- Opprett et felt i en annen løsning enn standard CDS-løsningen
-- Angi overganger for statusårsaker
-- Rediger flere felt samtidig
-- Aktiver sporing av endringer
-- Aktiver feltnivåsikkerhet
-- Velg om feltet vises i globalt filter i interaktiv opplevelse
-- Velg om feltet kan sorteres i instrumentbord for interaktiv opplevelse
-- Angi et feltkravnivå som anbefalt for selskapet
-- Angi forvaltede egenskaper for et felt
+- Opprett et oppslagsfelt for kunde. 
+   - Mer informasjon: [Ulike typer oppslag](types-of-fields.md#different-types-of-lookups)
+- Opprett et felt i en annen løsning enn standard CDS-løsningen. 
+   - Mer informasjon: [Løsningsoversikt](solutions-overview.md)
+- Angi overganger for statusårsaker. 
+   - Mer informasjon: [Definere overganger for statusårsaker for tilfellet eller egendefinerte enheter](define-status-reason-transitions.md)
+- Rediger flere felt samtidig.
+- Aktiver sporing av endringer. 
+   - Mer informasjon: [Oversikt over sporing av endringer](../../developer/common-data-service/auditing-overview.md)
+- Aktiver feltnivåsikkerhet. 
+   - Mer informasjon: [Feltsikkerhetsenheter](../../developer/common-data-service/field-security-entities.md)
+- Velg om feltet vises i globalt filter i interaktiv opplevelse. 
+   - Mer informasjon: [Konfigurere instrumentbord for interaktiv opplevelse for modelldrevet app](../model-driven-apps/configure-interactive-experience-dashboards.md)
+- Velg om feltet kan sorteres i instrumentbord for interaktiv opplevelse. 
+   - Mer informasjon: [Konfigurere instrumentbord for interaktiv opplevelse for modelldrevet app](../model-driven-apps/configure-interactive-experience-dashboards.md)
+- Angi et feltkravnivå som anbefalt for selskapet. 
+   - Mer informasjon: [Opprett forretningsregler og anbefalinger for å bruke logikk i et modelldrevet appskjema](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+- Angi forvaltede egenskaper for et felt. 
+   - Mer informasjon: [Angi administrerte egenskaper for felt](set-managed-properties-for-field.md)
 
 > [!NOTE]
 > Du kan opprette et oppslagsfelt i PowerApps-portalen eller i løsningsutforskeren ved å opprette en én-til-mange-relasjon på enheten. Men bare løsningsutforskeren gir mulighet for å opprette denne relasjonen når du oppretter et felt.

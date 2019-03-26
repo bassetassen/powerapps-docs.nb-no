@@ -1,8 +1,8 @@
 ---
-title: Vise egendefinerte ikoner i stedet for verdier i listevisninger med PowerApps | MicrosoftDocs
+title: Vise egendefinerte ikoner ved siden av verdier i listevisninger med PowerApps | MicrosoftDocs
 description: Finn ut hvordan du kan vise egendefinert ikongrafikk i en visning
 ms.custom: ''
-ms.date: 06/21/2018
+ms.date: 02/14/2019
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -23,11 +23,14 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="display-custom-icons-instead-of-values-in-list-views"></a>Vise egendefinerte ikoner i stedet for verdier i listevisninger
+# <a name="display-custom-icons-alongside-values-in-list-views"></a>Vise egendefinerte ikoner ved siden av verdier i listevisninger
 
 <a name="GridIcons"></a>   
 
- Administratorer og tilpassere i PowerApps-miljøet kan legge til grafikk i en visning og etablere logikken som brukes til å velge grafikken, basert på kolonneverdier med JavaScript. Funksjonaliteten for å vise listevisninger med ikoner i stedet for tekst eller numeriske verdier i noen kolonner, ble innført i Relasjonsinnsikt. 
+ Administratorer og tilpassere i PowerApps-miljøet kan legge til grafikk i en visning og etablere logikken som brukes til å velge grafikken, basert på kolonneverdien med JavaScript. Denne funksjonen lar deg tilpasse listevisninger som viser ikoner ved siden av teksten eller numeriske verdier. 
+
+> [!div class="mx-imgBorder"] 
+> ![](media/icon-in-opportunity-view.png "Alle salgsmuligheter-visningen med Vurdering-kolonnen som viser ikoner og tekstverdi")
   
 > [!NOTE]
 >  Rutenettikoner vises bare i webgrensesnittet. De vises ikke i [!INCLUDE[pn_Outlook_short](../../includes/pn-outlook-short.md)] eller mobilappen.  
@@ -38,7 +41,7 @@ search.app:
   
 2.  Skriv én eller flere JavaScript-funksjoner som definerer hvilke ikoner som skal vises for hvilke verdier (vanligvis trenger du én funksjon for hver kolonne du vil tilpasse). Hver funksjon må godta et raddataobjekt og en språkkode (LCID) som inndata, og returnere en matrise som inneholder et bildenavn og verktøytipstekst. Se [Eksempel på JavaScript-funksjon](#SampleJavascript) for en eksempelfunksjon senere i dette emnet.  
   
-3.  Logg på miljøet som administrator, og åpne [løsningsutforskeren](../model-driven-apps/advanced-navigation.md#solution-explorer).  
+3.  Logg på miljøet som administrator, og åpne løsningsutforskeren.  
   
 4.  Popup-vinduet **Standardløsning** åpnes. Gå til **Komponenter** > **Webressurser**.  
   
@@ -91,12 +94,15 @@ search.app:
 <a name="SampleJavascript"></a>   
 
 ### <a name="sample-javascript-function"></a>Eksempel på JavaScript-funksjon  
- JavaScript-funksjonen for å vise egendefinerte ikoner og verktøytips forventer følgende to argumenter: hele radobjektet angitt i layoutxml og den anropende brukerens ID for nasjonal innstilling (LCID). LCID-parameteren lar deg angi teksten for verktøytipset på flere språk. Hvis du vil ha mer informasjon om språkene som støttes av miljøet, kan du se [Aktivere språk](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages) og [Installere eller oppgradere språkpakker for Dynamics 365](https://technet.microsoft.com/library/hh699674.aspx). Hvis du vil ha en liste over ID-verdier for nasjonal innstilling (LCID) som du kan bruke i koden, kan du se [ID-er for nasjonal innstilling tilordnet av Microsoft](https://go.microsoft.com/fwlink/?linkid=829588).
+ JavaScript-funksjonen for å vise egendefinerte ikoner og verktøytips forventer følgende to argumenter: hele radobjektet angitt i layoutxml og den anropende brukerens ID for nasjonal innstilling (LCID). LCID-parameteren lar deg angi teksten for verktøytipset på flere språk. Hvis du vil ha mer informasjon om språkene som støttes av miljøet, kan du se [Aktivere språk](/dynamics365/customer-engagement/admin/enable-languages) og [Installere eller oppgradere språkpakker for Dynamics 365 for Customer Engagement](/dynamics365/customer-engagement/on-premises/install-or-upgrade-language-packs). Hvis du vil ha en liste over ID-verdier for nasjonal innstilling (LCID) som du kan bruke i koden, kan du se [ID-er for nasjonal innstilling tilordnet av Microsoft](https://go.microsoft.com/fwlink/?linkid=829588).
 
   
  Hvis du skal legge til egendefinerte ikoner for et attributt av typen alternativsett, som har et begrenset sett med forhåndsdefinerte alternativer, må du passe på at du bruker heltallsverdien for alternativene i stedet for etiketten for å unngå lokaliseringsproblemer.  
   
  Følgende eksempelkode viser ikoner og verktøytips basert på én av tre verdier (1: Meget interessert, 2: Interessert, 3: Lite interessert) i attributtet opportunityratingcode (rangering). Eksempelkoden viser også hvordan du viser lokalisert verktøytipstekst. For at dette eksemplet skal fungere, må du opprette tre bildewebressurser med 16 x 16 bilder med følgende navn: ny_Meget interessert, ny_Interessert og ny_Lite interessert.  
+
+> [!IMPORTANT]
+> Dette eksemplet krever salgsmulighet-enheten, som er tilgjengelig med Dynamics 365 for Customer Engagement-apper.
   
 ```  
 function displayIconTooltip(rowData, userLCID) {      
@@ -148,9 +154,9 @@ function displayIconTooltip(rowData, userLCID) {
 }  
 ```  
   
- Dette resulterer i en visning av ikoner med verktøytips i **Vurdering**-kolonnen som avhenger av verdien i hver rad. Resultatet kan se slik ut:  
+ <!-- This results in displaying icons with tooltips in the **Rating** column that depend on the value in each row. The result could look like this:  
   
- ![Eksempel på grafikk for egendefinerte kolonne](media/custom-column-graphics-example.png "Eksempel på grafikk for egendefinerte kolonne")  
+ ![Custom column graphics example](../customize/media/custom-column-graphics-example.png "Custom column graphics example")  -->
  
  ### <a name="see-also"></a>Se også
- [Opprette eller redigere visninger](../model-driven-apps/create-edit-views.md)
+[Forstå modelldrevne appvisninger](../model-driven-apps/create-edit-views.md)

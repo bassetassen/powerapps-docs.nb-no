@@ -2,7 +2,7 @@
 title: Administrere egenskaper for modelldrevne apper i apputformingen til PowerApps | MicrosoftDocs
 description: Finn ut hvordan du administrerer egenskapene for appen
 keywords: ''
-ms.date: 06/27/2018
+ms.date: 02/05/2019
 ms.service: crm-online
 ms.custom: null
 ms.topic: article
@@ -19,6 +19,11 @@ ms.suite: null
 ms.tgt_pltfrm: null
 caps.latest.revision: 14
 topic-status: Drafting
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
 
 # <a name="manage-model-driven-app-properties-in-the-app-designer"></a>Administrere egenskaper for modelldrevne apper i apputformingen
@@ -38,11 +43,12 @@ Appegenskaper definerer viktige detaljer om appen, som tittelen eller URL-adress
     |**Beskrivelse**|Skriv inn en kort beskrivelse av appen.|  
     |**Ikon**|Som standard er **Bruk standardapp** avmerket. Fjern merket hvis du vil velge en annen webressurs som ikon for appen, og velg deretter et ikon fra rullegardinlisten. Dette ikonet vises i forhåndsvisningsflisen for appen.|
     |**Unikt navn**| Du kan ikke endre det unike navnet. Ved hjelp av det unike navnet kan du spørre tabeller for å hente data fra database.| 
-    |**Klient**|Definerer klienttypen som appen skal brukes for.<br/>-  **Web:** Dette er den klassiske Dynamics 365 customer engagement-nettleserklienten.<br/>-  **Enhetlig grensesnitt:** Dette er en ny nettleserklient som har et lignende grensesnitt på PC og mobile enheter.|
-    |**Suffiks for URL-adresse for appen**| Nettadressen du valgte under oppretting av appen, vises her som standard. Du kan endre URL-adressen for appen i dialogboksen **Administrer app**. Legg merke til at du ikke kan eksportere eller importere suffikset for appens URL-adresse via en løsning for øyeblikket.|
+    |**Klient<sup>1</sup>**|Definerer klienttypen som appen skal brukes for.<br/>-  **Web:** Dette er den klassiske Dynamics 365 customer engagement-nettleserklienten.<br/>-  **Enhetlig grensesnitt:** Dette er en ny nettleserklient som har et lignende grensesnitt på PC og mobile enheter.|
+    |**Suffiks for URL-adresse for appen<sup>1</sup>**| Nettadressen du valgte under oppretting av appen, vises her som standard. Du kan endre URL-adressen for appen i dialogboksen **Administrer app**. Legg merke til at du ikke kan eksportere eller importere suffikset for appens URL-adresse via en løsning for øyeblikket.|
     |**Velg en velkomstside for appen**|Dette alternativet lar deg velge fra webressursene som er tilgjengelige i miljøet. Velkomstsidene du lager, kan inneholde nyttig informasjon til brukere, for eksempel koblinger til videoer oppgraderingsinstruksjoner eller informasjon om å komme i gang. Du finner mer informasjon om hvordan du oppretter en webressurs, for eksempel en HTML-fil som du kan bruke som velkomstside, i [Opprette og redigere webressurser for å utvide webprogrammet](create-edit-web-resources.md).|
     |**Aktiver Mobile Offline**|Dett alternativet lar appen være tilgjengelig i frakoblet modus på mobiler for profilene som velges med rullegardinlisten **Mobile Offline-profiler**.|
-  
+
+    <sup>1</sup>**Klient**- og **Suffiks for URL-adresse for appen**-egenskapene er ikke lenger tilgjengelige når du oppretter en ny app.
 3.  Lagre appen.  
   
 ## <a name="next-steps"></a>Neste trinn  

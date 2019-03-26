@@ -2,7 +2,7 @@
 title: 'Forhåndsvisningsfunksjon: Bruke Azure Cosmos DB for SQL-API-dataleverandør med Common Data Service for Apps | MicrosoftDocs'
 description: Lær hvordan du konfigurerer Azure Cosmos DB for SQL-API-dataleverandøren for bruk med virtuelle enheter.
 keywords: SQL-API
-ms.date: 06/27/2018
+ms.date: 02/15/2019
 ms.service: crm-online
 ms.custom: null
 ms.topic: article
@@ -94,7 +94,7 @@ Filtrering av SQL-spørringer støtter følgende operatorer.
     |Felt|Beskrivelse|
     |--|--|
     |**Navn**|Skriv inn et navn som beskriver datakilden.|
-    |**Samlingsnavn**|ID for Azure Cosmos DB-databasesamlingen som inneholder dataene du vil vise i en virtuell enhet.  |
+    |**Samlingsnavn**|Navnet på Azure Cosmos DB-*databasen* som inneholder samlingen du vil vise i en virtuell enhet.  |
     |**Autorisasjonsnøkkel**|Primær- eller sekundærnøkkelen for Azure Cosmos DB-kontoen. Du kan finne nøkkelen i Azure-administrasjonsportalen under **Nøkler**-innstillingen under Azure Cosmos DB-kontoen din.|
     |**URI**|URI for ressursgruppen hvor Azure Cosmos DB-samlingen er plassert. URI-en er utformet på lignende måte som `https://contoso/documents.azure.com:443`. Du kan finne URI-en i Azure-administrasjonsportalen under **Nøkler**-innstillingen for Azure Cosmos DB-kontoen din. |
     |**Tidsavbrudd i sekunder**|Skriv inn ventetiden for et svar fra Azure Cosmos DB-tjenesten før dataforespørselen blir tidsavbrutt, i antall sekunder. Du kan for eksempel angi 30 hvis du vil vente maksimalt 30 sekunder før et tidsavbrudd oppstår. Standard tidsavbrudd er 120 sekunder.|

@@ -1,6 +1,6 @@
 ---
 title: Legge til skjemanavigasjon for modelldrevne apper for relaterte enheter i PowerApps | MicrosoftDocs
-descriptoin: Learn how to add form navigation for related entities
+description: Lær hvordan du legger til skjemanavigasjon for relaterte enheter
 ms.custom: ''
 ms.date: 06/18/2018
 ms.reviewer: ''

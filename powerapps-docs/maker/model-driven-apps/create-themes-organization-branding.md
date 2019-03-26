@@ -1,7 +1,7 @@
 ---
 title: Endre fargevalget eller legge til en logo som samsvarer med organisasjonens merke | MicrosoftDocs
 ms.custom: ''
-ms.date: 06/18/2018
+ms.date: 02/19/2019
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -50,7 +50,7 @@ Du kan opprette et egendefinert utseende og virkemåte (et tema) for appen ved �
   
 -   Effekt for pekerfølsom kobling  
   
--   Prosesskontrollfarge  
+-   Forrige uthevingsfarge (primær bakgrunnsfarge for prosesskontroller)  
   
 -   Standardenhetsfarge  
   

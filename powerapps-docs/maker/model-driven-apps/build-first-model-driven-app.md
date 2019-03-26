@@ -10,7 +10,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 10/15/2018
+ms.date: 02/05/2019
 ms.author: matp
 search.audienceType:
   - maker
@@ -35,15 +35,18 @@ Logg på [PowerApps](https://web.powerapps.com/). Hvis du ikke allerede har en [
   > [!IMPORTANT]
   > Hvis utformingsmodusen **Modelldrevet** ikke er tilgjengelig, må du kanskje [opprette et miljø](https://docs.microsoft.com/powerapps/administrator/create-environment).   
 
-2. På **hjemmesiden** velger du **Start fra tom**-alternativet for en modelldrevet app.
-![Start-from-blank_model](media/build-first-model-driven-app/start-from-blank-model-driven.png)
+2. På **Hjem**-siden velger du **Modelldrevet app fra tom**.
+<!-- ![Start-from-blank_model](media/build-first-model-driven-app/start-from-blank-model-driven.png) -->
 
 3.  På **Opprett en ny app**-siden angir du følgende detaljer, og velger deretter **Ferdig**: 
-  - **Navn**: Angi et navn på appen, for eksempel *MinFørsteApp*. 
+  - **Navn**: Angi et navn på appen, for eksempel *Min første app*. 
+  - **Unikt navn**: Som standard bruker det unike navnet navnet du angir i boksen **Navn**, uten mellomrom og der utgiverens prefiks og understrekingstegn (_) kommer først. For eksempel *crecf_Myførsteapp*. Mer informasjon: [Endre løsningsutgiverprefikset](../common-data-service/change-solution-publisher-prefix.md)
   - **Beskrivelse**: Skriv inn en kort beskrivelse av hva appen er eller gjør, for eksempel *Dette er den første appen min*.
-For informasjon om de ekstra appegenskapene, kan du se [Opprette en app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).
- 
-    ![Opprette ny app](media/build-first-model-driven-app/create-new-app.png)
+For informasjon om de ekstra appegenskapene, kan du se [Opprette en app](create-edit-app.md#create-an-app).
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/create-new-app.png "Opprett en ny app") 
+
 
 ## <a name="add-components-to-your-app"></a>Legge til komponenter i appen
 Fra apputformingen kan du legge til komponenter i appen.

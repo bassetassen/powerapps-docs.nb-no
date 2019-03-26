@@ -1,7 +1,7 @@
 ---
 title: Bygge inn en lerretapp i et modelldrevet skjema | MicrosoftDocs
 ms.custom: ''
-ms.date: 12/10/2018
+ms.date: 12/17/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -30,24 +30,28 @@ Lerretapper gjør det mulig for oppretterne å enkelt utvikle og opprette egende
 
 > [!NOTE]
 > Denne funksjonen er en forhåndsvisningsfunksjon. <br />
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] <br /><br />
 
 Med innebygde lerretapper kan utviklere tilføre styrken fra lerretapper til de modelldrevne skjemaene. Ved hjelp av innebygde lerretapper kan du enkelt opprette omfattende visuelle områder i et skjema og vise data fra en rekke kilder ved siden av dataene fra Common Data Service.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/embed-canvas-app-in-form.png "Innebygd lerretapp i et modelldrevet appskjema")
+   > ![Innebygd lerretapp i et modelldrevet appskjema](media/embed-canvas-app-in-form.png "Innebygd lerretapp i et modelldrevet appskjema")
 
 Lerretapper er innebygd i modelldrevne skjemaer på samme måte som andre egendefinerte kontroller er lagt til. En innebygd lerretapp inneholder omfattende dataintegreringsfunksjoner som tilfører kontekstavhengige data fra den innebygde lerretappen.
 
 Fremgangsmåten for å bygge inn en lerretapp i det modelldrevne skjemaet varierer avhengig av datakonteksten som du vil at det vertsmodelldrevne skjemaet skal tilføre den innebygde lerretappen.
--   Sende gjeldende oppføring som datakontekst. Mer informasjon: [Sende gjeldende oppføring som datakontekst med en innebygd lerretapp](pass-current-embedded-canvas-app.md)
--   Send en liste over oppføringer relatert til den gjeldende oppføringen, som datakontekst. Mer informasjon: [Sende en liste over relaterte oppføringer som datakontekst med en innebygd lerretapp](pass-related-embedded-canvas-app.md) 
+-   Sende gjeldende oppføring som datakontekst. Mer informasjon: [Sende gjeldende oppføring som datakontekst til en innebygd lerretapp](pass-current-embedded-canvas-app.md)
+-   Send en liste over oppføringer relatert til den gjeldende oppføringen, som datakontekst. Mer informasjon: [Sende en liste over relaterte oppføringer som datakontekst til en innebygd lerretapp](pass-related-embedded-canvas-app.md) 
 
-<!-- After you have added an embedded canvas app to your model-driven form, learn how to share your embedded canvas app with other users (LINK TO ARTICLE #4).  -->
+Når du har lagt til en innebygd lerretapp i det modelldrevne skjemaet, kan du lære å dele den innebygde lerretappen med andre brukere. Mer informasjon: [Dele en innebygd lerretapp](share-embedded-canvas-app.md).
 
-<!-- For things to keep in mind when working with embedded canvas apps and to help troubleshoot any issues you might encounter, see (LINK TO ARTICLE #5). -->
+For retningslinjer for arbeid med innebygde lerretapper samt nyttige tips for å feilsøke problemer, kan du se: [Retningslinjer for arbeid med innebygde lerretapper](embedded-canvas-app-guidelines.md).
 
 ## <a name="see-also"></a>Se også
 [Hva er lerretapper i PowerApps?](../canvas-apps/getting-started.md) <br />
 [Legge til og konfigurere en lerretappkontroll i PowerApps](../canvas-apps/add-configure-controls.md) <br />
-[Oversikt over lerretappkoblinger for PowerApps](../canvas-apps/connections-list.md) 
+[Oversikt over lerretappkoblinger for PowerApps](../canvas-apps/connections-list.md) <br />
+[Sende gjeldende oppføring som datakontekst til en innebygd lerretapp](pass-current-embedded-canvas-app.md) <br />
+[Sende en liste over relaterte oppføringer som datakontekst til en innebygd lerretapp](pass-related-embedded-canvas-app.md) <br />
+[Dele en innebygd lerretapp](share-embedded-canvas-app.md) <br />
+[Retningslinjer for arbeid med innebygde lerretapper](embedded-canvas-app-guidelines.md)

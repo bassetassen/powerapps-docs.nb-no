@@ -63,9 +63,9 @@ Tenk deg at du vil legge til en innebygd lerretapp i et hovedskjema for en forre
 19. Velg **Skyen**-kategorien. Angi et unikt navn for appen, og velg deretter **Lagre** nederst til høyre. Legg merke til følgende: 
     -  Lagring av en app for første gang publiserer appen automatisk.
       -  Ved senere lagringer velger du **Publiser** og velger deretter **Publiser denne versjonen** for å gjøre endringene tilgjengelige.
-20. Velg **Tilbake** på menyen og velg deretter leserkategorien som har skjemaredigeringsprogrammet åpent. Se at **App-ID**-egenskapen for lerretappkontrollen nå har en verdi som er fylt ut automatisk. Legg merke til følgende: 
+20. Velg **Tilbake** på menyen, og velg deretter leserkategorien som har skjemaredigeringsprogrammet åpent. Se at **App-ID**-egenskapen for lerretappkontrollen nå har en verdi som er fylt ut automatisk. Legg merke til følgende: 
     -   Skjemaredigeringsprogrammet har en direkte kobling til PowerApps Studio som ble åpnet i en annen leserfane i et tidligere trinn.
-    -   Skjemaredigeringsprogrammet «lytter» etter **App-ID-en** som skal sendes til det.
+    -   Skjemaredigeringsprogrammet "lytter" etter **App-ID-en** som skal sendes til det.
     -   **App-ID-en** sendes til skjemaredigeringsprogrammet når appen lagres.
 21. I **Feltegenskaper**-dialogboksen velger du **Vis**-kategorien.
 22. Fjern avmerkingen for **Vis etikett** i skjemaet, og velg deretter **OK**.
@@ -79,7 +79,7 @@ Når brukere åpner en modelldrevet app (bare Enhetlig grensesnitt) som innehold
 Dette emnet viste hvordan du kommer i gang med å bygge inn en lerretapp i et modelldrevet skjema. Du kan tilpasse den innebygde lerretappen ytterligere slik at den kobler til og henter inn data fra mange forskjellige datakilder. Bruk funksjonene Filtrer, Søk og Oppslag og konteksten som ble sendt inn fra det vertsmodelldrevne skjemaet, til å filtrere eller søke etter bestemte oppføringer i disse datakildene. Bruk lerretappredigeringsprogrammet WYSIWYG til å enkelt utforme grensesnittet i henhold til kravene dine.
 
 ## <a name="see-also"></a>Se også
-[Bygge inne en lerretapp i et modelldrevet skjema](embed-canvas-app-in-form.md) <br />
+[Bygge inn en lerretapp i et modelldrevet skjema](embed-canvas-app-in-form.md) <br />
 [Sende en liste over relaterte oppføringer som datakontekst til en innebygd lerretapp](pass-related-embedded-canvas-app.md) <br />
 [Dele en innebygd lerretapp](share-embedded-canvas-app.md) <br />
 [Retningslinjer for arbeid med innebygde lerretapper](embedded-canvas-app-guidelines.md)

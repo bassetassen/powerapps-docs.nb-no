@@ -167,4 +167,6 @@ Her er et sammendrag av hver kolonne i rapporten.
 
 
 ## <a name="see-also"></a>Se også
-[Retningslinjer og gode fremgangsmåter for å bygge PowerApps-løsninger](https://docs.microsoft.com/dynamics365/customer-engagement/guidance/)
+[Gode fremgangsmåter og veiledning for Common Data Service for Apps](../../developer/common-data-service/best-practices/index.md)<br />
+[Gode fremgangsmåter og veiledning for modelldrevne apper](../../developer/model-driven-apps/best-practices/index.md)<br />
+[Vanlige problemer og løsninger for Løsningskontroll](common-issues-resolutions-solution-checker.md)<br />

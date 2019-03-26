@@ -63,7 +63,7 @@ Det finnes mange ulike typer felt, men du kan bare opprette noen av dem. Hvis du
 
 Når du oppretter et felt, har **Datatype** følgende valg:
 
-### <a name="text"></a>Tekst 
+### <a name="text"></a>Text 
 
 Standardtekstfelt kan inneholde opptil 4 000 tegn. Standardalternativet [Maksimumslengde](#max-length) er satt til en lavere verdi som du kan tilpasse.
 

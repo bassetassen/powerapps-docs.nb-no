@@ -1,13 +1,13 @@
 ---
 title: Opprette en relasjon mellom enheter ved hjelp av et oppslagsfelt | Microsoft Docs
 description: Trinnvise instruksjoner for hvordan du oppretter en relasjon mellom enheter i PowerApps ved hjelp av et oppslagsfelt.
-author: clwesene
-manager: kfile
+author: lancedMicrosoft
+manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
-ms.date: 03/21/2018
-ms.author: clwesene
+ms.date: 02/21/2019
+ms.author: lanced
 search.audienceType:
   - maker
 search.app:
@@ -86,6 +86,9 @@ Dette er for øyeblikket bare tilgjengelig via Avansert-menyen. På hjemmesiden 
 
 ## <a name="use-a-lookup-field-in-an-app"></a>Bruke et oppslagsfelt i en app
 Hvis du [oppretter en app automatisk](../canvas-apps/data-platform-create-app.md) fra en enhet som inneholder et oppslagsfelt, vises det som en **rullegardinliste**-kontroll som inneholder data fra **Hovednavn**-feltet for enheten.
+
+## <a name="add-1n-and-nn-relationships-for-canvas-apps"></a>Legg til 1:N- og N:N-relasjoner for lerrettapper
+Bruk **Relater**-funksjonen til å koble to oppføringer via en én-til-mange- eller mange-til-mange-relasjon i Common Data Service (CDS) for Apps. Hvis du vil ha mer informasjon: [Funksjonene Relater og Fjern relatering i PowerApps](../canvas-apps/functions/function-relate-unrelate.md)
 
 ## <a name="next-steps"></a>Neste trinn
 * [Generere en app ved å bruke en Common Data Service-database](../canvas-apps/data-platform-create-app.md)

@@ -86,7 +86,7 @@ Når en nøkkel opprettes, validerer systemet at nøkkelen kan støttes av platt
 
 ### <a name="unicode-characters-in-key-value"></a>Unicode-tegn i nøkkelverdi
 
-Hvis dataene i et felt som brukes i en alternativ nøkkel inneholder ett av følgende tegn `<`,`>`,`*`,`%`,`&`,`:`,`\\`, vil patch- eller upsert-handlinger ikke fungere. 
+Hvis dataene i et felt som brukes i en alternativ nøkkel, inneholder ett av følgende tegn `<`,`>`,`*`,`%`,`&`,`:`,`/`,`\\`, vil patch- eller upsert-handlinger ikke fungere. 
 
 Hvis du bare trenger unikhet, fungerer denne metoden, men hvis du trenger å bruke disse nøklene som en del av dataintegrering, er det best å opprette nøklene i felt som ikke har data med disse tegnene.
 

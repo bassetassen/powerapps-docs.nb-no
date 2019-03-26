@@ -46,7 +46,7 @@ Tenk deg at du vil legge til en innebygd lerretapp i et hovedskjema for en forre
          -  Selv om denne egenskapen ser ut til å kunne endres, vil ikke en endring av den ha noen innvirkning på den innebygde lerretappen. Den er bare ment å fungere som en referanse for deg.
      -  **Visningsnavn**-egenskapen angir visningen av enheten som skal brukes til å filtrere dataene som sendes til den innebygde lerretappen. Den settes til **standardvisningen** som du valgte tidligere.
          -  Dataene (felt og verdier) som sendes til den innebygde lerretappen under kjøring, avhenger av denne visningen. Bruk bare feltene i lerretappen som er inkludert i visningen, eller legg dem til visningen om nødvendig. Felt som ikke er inkludert i visningen, vises som tomme verdier under kjøring.
-         -  Filtervilkårene for en visning blir ikke brukt ved redigering. Derfor er ikke dataene som vises når du redigerer innebygde lerretapper, filtrert. Det er bare en liste over de få øverste oppføringene som du har tilgang til. Filtervilkårene for visningen brukes under kjøring ettersom forventede brukere bare ser relevante data.
+         -  Filtervilkårene for en visning blir ikke brukt ved redigering. Derfor er ikke dataene som vises når du redigerer innebygde lerretapper, filtrert. Det er bare en liste over de få øverste oppføringene som du har tilgang til. Under kjøring brukes filtervilkårene for visningen som forventet, slik at brukere bare ser relevante data.
      -  **App-ID**-egenskapen angir ID-en for den innebygde lerretappen. Den blir generert automatisk og utfylt for deg når lerretappen blir opprettet.
          -  Vær oppmerksom på at endringer i App-ID-verdien bryter koblingen fra det modelldrevne skjemaet til den innebygde lerretappen.
 10. Velg **Tilpass**-knappen for å opprette eller redigere lerretappen. Dette åpner PowerApps Studio i en ny leserkategori.
@@ -79,7 +79,7 @@ Når brukere åpner en modelldrevet app (bare Enhetlig grensesnitt) som innehold
 Dette emnet viste hvordan du kommer i gang med innebyggingen av en lerretapp i et modelldrevet skjema. Du kan tilpasse den innebygde lerretappen ytterligere slik at den kobler til og henter inn data fra mange forskjellige datakilder. Bruk funksjonene Filtrer, Søk og Oppslag og konteksten som ble sendt inn fra det vertsmodelldrevne skjemaet, til å filtrere eller søke etter bestemte oppføringer i disse datakildene. Bruk lerretappredigeringsprogrammet WYSIWYG til å enkelt utforme grensesnittet i henhold til kravene dine.
 
 ## <a name="see-also"></a>Se også
-[Bygge inne en lerretapp i et modelldrevet skjema](embed-canvas-app-in-form.md) <br />
+[Bygge inn en lerretapp i et modelldrevet skjema](embed-canvas-app-in-form.md) <br />
 [Sende gjeldende oppføring som datakontekst til en innebygd lerretapp](pass-current-embedded-canvas-app.md) <br />
 [Dele en innebygd lerretapp](share-embedded-canvas-app.md) <br />
 [Retningslinjer for arbeid med innebygde lerretapper](embedded-canvas-app-guidelines.md)

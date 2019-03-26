@@ -2,9 +2,9 @@
 title: Arbeide med løsninger i PowerApps | MicrosoftDocs
 description: Finn ut hvordan løsninger distribueres
 ms.custom: ''
-ms.date: 10/29/2018
+ms.date: 01/28/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -23,18 +23,17 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
-<a name="BKMK_Solutions"></a>   
+   
 # <a name="solutions-overview"></a>Løsningsoversikt  
 
   I PowerApps utnyttes løsninger for å transportere apper og komponenter fra ett miljø til et annet, eller for å bruke et sett med tilpassinger til eksisterende apper. En løsning kan inneholde én eller flere apper, i tillegg til andre komponenter, for eksempel enheter, alternativsett, osv. Du finner en løsning fra [AppSource](https://appsource.microsoft.com/) eller fra en uavhengig programvareleverandør (ISV).
   
-Mer informasjon: [Teknisk beskrivelse: Mønstre og prinsipper for systembyggere](http://go.microsoft.com/fwlink/p/?LinkID=533946)  
+Hvis du vil ha mer informasjon: [Teknisk dokument: Solution Lifecycle Management](https://www.microsoft.com/en-us/download/details.aspx?id=57777)  
   
 > [!NOTE]
 >  Hvis du er en ISV som lager en app du vil distribuere, må du bruke løsninger. Hvis du vil ha mer informasjon om hvordan du bruker løsninger, kan du se [Pakke og distribuere utvidelser ved hjelp av løsninger](https://msdn.microsoft.com/library/gg334530.aspx).  
   
- Hvis du vil opprette PowerApps-apper for organisasjonsbruk eller tilpassing av Dynamics 365, trenger du vite følgende om løsninger:  
+ Hvis du vil opprette PowerApps-apper for organisasjonsbruk eller tilpassing av Dynamics 365 for Customer Engagement-apper, trenger du vite følgende om løsninger:  
   
 -   Det er valgfritt å lage løsninger. Du kan bygge eller tilpasse apper i PowerApps-miljøet direkte uten noen gang å opprette en løsning.  
   

@@ -2,7 +2,7 @@
 title: Opprette eller redigere hurtigopprettingsskjemaer for modelldrevne apper i PowerApps | MicrosoftDocs
 description: Lær hvordan du oppretter eller redigerer et hurtigopprettingsskjema
 ms.custom: ''
-ms.date: 10/15/2018
+ms.date: 01/25/2019
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -49,7 +49,8 @@ Du kan aktivere støtte for hurtigopprettingsskjemaer for egendefinerte aktivite
  Selv om du kan definere flere hurtigopprettingsskjemaer, er det bare ett hurtigopprettingsskjema som kan brukes av alle. Skjemarekkefølgen brukes til å angi skjemaet som alle skal bruke. Hurtigopprettingsskjemaer kan ikke tilordnes sikkerhetsroller, og de gjør det ikke mulig for brukeren å bytte skjemaer.  
   
 > [!NOTE]
->  Enheten må ha alternativet **Tillat hurtigoppretting** aktivert for at hurtigopprettingsskjemaet skal vises. 
+>  - Enheten må ha alternativet **Tillat hurtigoppretting** aktivert for at hurtigopprettingsskjemaet skal vises. 
+>  - Noen felt, for eksempel feltet CREATEDON, er ikke tilgjengelige for å legge til et hurtigopprettingsskjema.  
   
 ### <a name="how-to-create-a-quick-create-form"></a>Opprette et hurtigopprettingsskjema  
   

@@ -92,7 +92,7 @@ search.app:
 |CC_Timeline_URL|URL-felt som skal tilordnes for å vise URL-adressen for hvert element på tidslinjen.|  
 |CC_Timeline_URL_Desc|Beskrivelse for URL-feltet|  
 |CC_Timeline_ThumbnailURL|Felt som skal tilordnes for miniatyrbildet av bildet/ikonet skal vises for hvert element.|  
-|CC_Timeline_ThumnailURL_Desc|Beskrivelse for `ThumbnailURL`-feltet.|  
+|CC_Timeline_ThumbnailURL_Desc|Beskrivelse for `ThumbnailURL`-feltet.|  
 |CC_Timeline_Filter|Felt for tilordning for filtrering av tidslinjen.|  
 |CC_Timeline_Filter_Desc|Beskrivelse for filteret.|  
 |CC_Timeline_Footer|Nettressursen som skal vises som bunnteksten til tidslinjen.|  
