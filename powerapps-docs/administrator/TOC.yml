@@ -30,7 +30,7 @@ items:
       href: https://docs.microsoft.com/power-platform/admin/logging-powerapps
   - name: Dataintegrasjon
     items:
-    - name: Integrer data i CDS for apper
+    - name: Integrer data i Common Data Service
       href: data-integrator.md
     - name: Feilbehandling og feilsøking for Data Integrator
       href: data-integrator-error-management.md
@@ -38,7 +38,7 @@ items:
       items:
       - name: Systemgenererte logger
         href: powerapps-gdpr-dsr-guide-systemlogs.md
-      - name: Integreringer av data for CDS for apper
+      - name: Dataintegreringer for Common Data Service
         href: data-integration-gdpr-dsr-guide.md
       - name: Kundedata for PowerApps
         href: powerapps-gdpr-dsr-guide.md
@@ -47,7 +47,7 @@ items:
           href: powerapps-gdpr-export-dsr.md
         - name: Slette data
           href: powerapps-gdpr-delete-dsr.md
-      - name: CDS for kundedata for apper
+      - name: Common Data Service-kundedata
         href: common-data-service-gdpr-dsr-guide.md
   - name: Administrere miljøer
     href: environments-administration.md
@@ -77,9 +77,9 @@ items:
     items:
     - name: Vise aktive brukere i tenanten
       href: admin-view-user-licenses.md
-ms.openlocfilehash: 59af13c7f64d8eaecd06972da17e9d3e17b18743
-ms.sourcegitcommit: a2222547ee563186675c625c7e769f8aa03842c2
+ms.openlocfilehash: 4eb2feacf0c461e70729de529e0e23fd0d6ccb8b
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54342294"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356682"

@@ -1,6 +1,6 @@
 ---
-title: 'Utviklere: Anbefalte fremgangsmåter og veiledning for Common Data Service for apper | Microsoft Docs'
-description: Anbefalte fremgangsmåter og veiledning for utviklere i Common Data Service for apper i PowerApps.
+title: 'Utviklere: Anbefalte fremgangsmåter og veiledning for Common Data Service | Microsoft Docs'
+description: Anbefalte fremgangsmåter og veiledning for utviklere av Common Data Service i PowerApps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -16,20 +16,15 @@ ms.workload: na
 ms.date: 01/07/2019
 ms.author: jowells
 search.audienceType:
-- developer
+  - developer
 search.app:
-- PowerApps
-- D365CE
-ms.openlocfilehash: bf449f801e4e7617e7fe91d0884b3443559e71c6
-ms.sourcegitcommit: 11486fb4c16095e3fef785126003cac3e3e06c0d
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54271435"
+  - PowerApps
+  - D365CE
 ---
-# <a name="best-practices-and-guidance-for-the-common-data-service-for-apps"></a>Anbefalte fremgangsmåter og veiledning for Common Data Service for apper
 
-Common Data Service (CDS) for apper er et omfattende rammeverk som lar utviklere bygge svært tilpassede og skreddersydde opplevelser. Samtidig som man tilpasser, utvider eller integrerer med Common Data Service (CDS) for apper, bør utviklere være oppmerksom på etablerte veiledninger og anbefalte fremgangsmåter. 
+# <a name="best-practices-and-guidance-for-the-common-data-service"></a>Anbefalte fremgangsmåter og veiledning for Common Data Service
+
+Common Data Service er et omfattende rammeverk som lar utviklere bygge svært tilpassede og skreddersydde opplevelser. Når utviklere tilpasser, utvider eller integrerer med Common Data Service, bør de være oppmerksomme på etablerte veiledninger og anbefalte fremgangsmåter. 
 
 I denne inndelingen kan du lese om problemene som vi har identifisert, innvirkningen de har, og forstå veiledningen for å løse dem. Vi forklarer bakgrunnen for hvorfor ting gjøres på en bestemt måte, og for å unngå potensielle problemer i fremtiden. Dette kan øke brukervennligheten, støttemuligheten og ytelsen til miljøet. Veiledningsdokumentasjonen støtter den eksisterende informasjonen som finnes i utvikler- og administrasjonsveiledningene.
 
@@ -37,18 +32,18 @@ I denne inndelingen kan du lese om problemene som vi har identifisert, innvirkni
 Dokumentasjonen retter seg mot følgende tilpassingstyper:
 
 - Egendefinerte arbeidsflytaktiviteter og programtillegg
-- Arbeid med CDS-data
-- Integreringer som utvider Common Data Service for apper
+- Arbeide med data for Common Data Service
+- Integreringer som utvider Common Data Service
 
 # <a name="sections"></a>Inndelinger
 Hver veiledningsartikkel inneholder de fleste eller alle av følgende inndelinger:
 
 - Tittel – beskrivelse av veiledningen
-- Kategori – ett eller flere områder som påvirkes av å ikke følge veiledningen
-- Innvirkningspotensiale – risikonivået (høyt, middels eller lavt) for å påvirke miljøet ved å ikke følge veiledningen
+- Kategori – ett eller flere områder som påvirkes av ikke å følge veiledningen
+- Innvirkningspotensiale – risikonivået (høyt, middels eller lavt) for å påvirke miljøet ved ikke å følge veiledningen
 - Symptomer – mulige indikasjoner på at veiledningen ikke har blitt fulgt
 - Veiledning – anbefalinger som også kan inneholde eksempler
-- Problematiske mønstre – beskrivelse eller eksempler på å ikke følge veiledningen
+- Problematiske mønstre – beskrivelse eller eksempler på ikke å følge veiledningen
 - Tilleggsinformasjon – støttedetaljer for en mer omfattende visning
 - Se også – referanser for å finne ut mer om noe som er nevnt i kategorien
 

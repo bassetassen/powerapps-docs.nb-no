@@ -209,7 +209,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>Appopprettere kan administrere organisasjonens kritiske data ved raskt å opprette tilpassede forretningsapper, uten å måtte skrive kode. Du kan opprette to typer apper i PowerApps: <strong>Lerretsapper</strong> og <strong>modelldrevne apper</strong>. <strong>CDS for apper</strong> er dataplattformen som lar deg lagre og behandle data som brukes av forretningsapper, på en sikker måte. Mer informasjon: <a href="/powerapps/maker">Opprett apper</a>.</p>
+                           <p>Appopprettere kan administrere organisasjonens kritiske data ved raskt å opprette tilpassede forretningsapper, uten å måtte skrive kode. Du kan opprette to typer apper i PowerApps: <strong>Lerretsapper</strong> og <strong>modelldrevne apper</strong>. <strong>Common Data Service</strong> er dataplattformen som lar deg lagre og behandle data som brukes av forretningsapper, på en sikker måte. Mer informasjon: <a href="/powerapps/maker">Opprett apper</a>.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -278,20 +278,20 @@ ms.custom:
                               <div class="card">
                                  <div class="cardImageOuter">
                                     <div class="cardImage">
-                                       <img alt="Common Data Service (CDS) for Apps" src="media/index/i_common-data-service.svg">
+                                       <img alt="Common Data Service" src="media/index/i_common-data-service.svg">
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">CDS for apper</h3>
+                                    <h3 style="font-size: 1.15rem">Common Data Service</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-intro">Hva er CDS for apper?</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-intro">Hva er Common Data Service?</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/entity-overview">Enheter</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/relationships-overview">Enhetsrelasjoner</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/fields-overview">Felt</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/cds-processes">Bruk forretningslogikk</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/solutions-overview">Løsninger</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/en-us/download/details.aspx?id=57777">Hvitbok: Løsninger ved bruk av ALM</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-powerbi-connector">Bygg Power BI-rapporter fra CDS for apper-data</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-powerbi-connector">Bygge Power BI-rapporter fra data i Common Data Service</a></p>
                                  </div>
                               </div>
                            </div>
@@ -343,7 +343,7 @@ ms.custom:
                                  <div class="cardText">
                                     <h3 style="font-size: 1.15rem">Dataintegrasjon og DSR</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/data-integrator">Integrer data i CDS for apper</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/data-integrator">Integrer data i Common Data Service</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/powerapps-gdpr-dsr-guide">Svar på DSR-forespørsler</a></p>
                                  </div>
                               </div>
@@ -398,7 +398,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>Utviklere er <a href="/powerapps/?branch=release-crm-mig-vivek#pivot=home&panel=maker">appopprettere</a> som kan bruke kode til å utvide forretningsapper, og opprette klientprogrammer som kobler til CDS for apper.</p>
+                           <p>Utviklere er <a href="/powerapps/?branch=release-crm-mig-vivek#pivot=home&panel=maker">appopprettere</a> som kan bruke kode til å utvide forretningsapper, og opprette klientprogrammer som kobler til Common Data Service.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -415,7 +415,7 @@ ms.custom:
                                  <div class="cardText">
                                     <h3 style="font-size: 1.15rem">Kom i gang</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/overview">CDS for apper: Oversikt for utviklere</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/overview">Common Data Service: Oversikt for utviklere</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/overview">Modelldrevne apper: Oversikt for utviklere</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/dev-enterprise-intro">Lerretsapper: Oversikt for utviklere</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/common-data-model/overview">Common Data Model</a></p>
@@ -479,7 +479,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">Arbeid med CDS for apper-data</h3>
+                                    <h3 style="font-size: 1.15rem">Arbeid med data for Common Data Service</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/webapi/overview">Bruk nett-API</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/org-service/overview">Bruk organisasjonstjeneste</a></p>
@@ -502,7 +502,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">Arbeid med CDS for apper-metadata</h3>
+                                    <h3 style="font-size: 1.15rem">Arbeid med metadata for Common Data Service</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/metadata-services">Kom i gang med metadata</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/browse-your-metadata">Bla gjennom metadataene i miljøet</a></p>
@@ -527,8 +527,8 @@ ms.custom:
                                  <div class="cardText">
                                     <h3 style="font-size: 1.15rem">Bruk forretningslogikk</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/plug-ins">Programtillegg (CDS for apper)</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Arbeidsflytutvidelser (CDS for apper)</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/plug-ins">Plugin-moduler (Common Data Service)</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Arbeidsflytutvidelser (Common Data Service)</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/client-scripting">Klientskripting (modelldrevne apper)</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/best-practices/business-logic">Anbefalte fremgangsmåter: Programtillegg og arbeidsflytutvidelser</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/best-practices/business-logic">Anbefalte fremgangsmåter: Klientskripting</a></p>
@@ -547,7 +547,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">Integrer data med CDS for apper</h3>
+                                    <h3 style="font-size: 1.15rem">Integrer data med Common Data Service</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/virtual-entities/get-started-ve">Virtuelle enheter</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/azure-integration">Azure-integrasjon</a></p>
@@ -592,7 +592,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">Opprett klientprogrammer for CDS for apper</h3>
+                                    <h3 style="font-size: 1.15rem">Opprett klientprogrammer for Common Data Service</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/authentication">Godkjenning</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/discovery-service">Oppdag brukerorganisasjoner</a></p>
@@ -614,7 +614,7 @@ ms.custom:
                                  <div class="cardText">
                                     <h3 style="font-size: 1.15rem">Beste praksis</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/best-practices">CDS for apper</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/best-practices">Common Data Service</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/best-practices">Modelldrevne apper</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/performance-tips">Lerretsapper</a></p>
                                  </div>

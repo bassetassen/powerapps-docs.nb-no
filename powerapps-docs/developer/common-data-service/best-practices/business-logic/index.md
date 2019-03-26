@@ -1,6 +1,6 @@
 ---
-title: 'Utviklere: Anbefalte fremgangsmåter og veiledning knyttet til programtilleggs- og arbeidsflytutvikling for Common Data Service for apper | Microsoft Docs'
-description: Anbefalte fremgangsmåter og veiledning knyttet til programtilleggs- og arbeidsflytutvikling for utviklere i Common Data Service for apper i PowerApps.
+title: 'Utviklere: Anbefalte fremgangsmåter og veiledning knyttet til programtilleggs- og arbeidsflytutvikling for Common Data Service | Microsoft Docs'
+description: Anbefalte fremgangsmåter og veiledning knyttet til programtilleggs- og arbeidsflytutvikling for utviklere av Common Data Service i PowerApps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -16,20 +16,14 @@ ms.workload: na
 ms.date: 1/15/2019
 ms.author: jowells
 search.audienceType:
-- developer
+  - developer
 search.app:
-- PowerApps
-- D365CE
-ms.openlocfilehash: 87e7337a4bf62a10647edfd9b6c17bce0a0903bf
-ms.sourcegitcommit: 72c97378e96fb54e5d92ec087a59dd0fb1444f99
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334021"
+  - PowerApps
+  - D365CE
 ---
-# <a name="best-practices-and-guidance-regarding-plug-in-and-workflow-development-for-the-common-data-service-for-apps"></a>Anbefalte fremgangsmåter og veiledning knyttet til programtilleggs- og arbeidsflytutvikling for Common Data Service for apper
+# <a name="best-practices-and-guidance-regarding-plug-in-and-workflow-development-for-the-common-data-service"></a>Anbefalte fremgangsmåter og veiledning knyttet til programtilleggs- og arbeidsflytutvikling for Common Data Service
 
-Listen nedenfor inneholder alle de anbefalte fremgangsmåtene og veiledningene knyttet til programtilleggs- og arbeidsflytutvikling i Common Data Service for apper.
+Listen nedenfor inneholder alle de anbefalte fremgangsmåtene og veiledningene knyttet til programtilleggs- og arbeidsflytutvikling i Common Data Service.
 
 |Anbefalt fremgangsmåte  |Beskrivelse  |
 |---------|---------|
