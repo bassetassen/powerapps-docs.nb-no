@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 961f8908014ef9cd85eadacb97a7c1dfc7e52b25
-ms.sourcegitcommit: eef2d6d9a9c7f5c8a44b9734817f59dc0eac3ecf
+ms.openlocfilehash: 1e41ec8d228e62c22354d77777a8390bfd442f8c
+ms.sourcegitcommit: 212d397284c431f5989dc7b39549e2fc170d447e
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "57801001"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491597"
 ---
 # <a name="barcode-scanner-control-for-canvas-apps"></a>Strekkodeleser kontrollen for lerretsapper
 
@@ -72,3 +72,11 @@ Kontrollen støtter QR-koder, data matrise-koder og disse typer strekkoder:
 **[X](properties-size-location.md)** – avstanden mellom kontrollens venstre kant og den venstre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+De samme retningslinjene for den **[knappen](control-button.md)** kontrollen gjelder den **strekkodeleser** kontrollen fordi det er en knapp som starter søket.
+
+### <a name="visual-alternatives"></a>Visuelle alternativer
+* Strekkodeleseren er en knapp som ikke viser resultatet søk. Vurder å som viser resultatet søk med en **[etikett](control-text-box.md)** kontroll. Angi etikettens **[tekst](properties-core.md)** egenskapen til strekkodeleserens **verdien** egenskapen. Angi etikettens **[Live](properties-accessibility.md)** egenskapen til **Polite** slik at skjermleseren brukere blir varslet om endringer. Denne endringen blir skannet verdien som er tilgjengelig for alle, uavhengig av muligheten til visual.
+
+* Brukere som har visual og motor funksjonshemninger foretrekker ikke å peke kameraet på en strekkode. Vurder å legge til en annen form for inndata, som en **[tekstinndata](control-text-input.md)** kontroll, for brukere å angi strekkoder.

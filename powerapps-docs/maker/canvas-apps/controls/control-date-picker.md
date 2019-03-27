@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ddb15340c9532e82d95f1bea70959dc59cdc7283
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 90f18c4b490564bc098046831ea932db13fce05d
+ms.sourcegitcommit: 212d397284c431f5989dc7b39549e2fc170d447e
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42853823"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491646"
 ---
 # <a name="date-picker-control-in-powerapps"></a>Datovelger-kontrollen i PowerApps
 En kontroll som brukeren kan klikke eller trykk på for å angi en dato.
@@ -31,7 +31,7 @@ Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](c
 
 **SelectedDate** – datoen som er nå er valgt i en datokontroll.
 
-**Format** – tekstformatet som kontrollen viser datoen i og brukeren angir datoen i. Du kan angi denne egenskapen som **ShortDate** (standard) eller **LongDate** for å formatere datoer basert på **Språk**-egenskapen til denne kontrollen. Du kan også angi denne egenskapen som et uttrykk, for eksempel **yyyy/mm/dd** hvis du vil bruke samme format, uansett språk. Eksempel:
+**Format** – tekstformatet som kontrollen viser datoen i og brukeren angir datoen i. Du kan angi denne egenskapen som **ShortDate** (standard) eller **LongDate** for å formatere datoer basert på **Språk**-egenskapen til denne kontrollen. Du kan også angi denne egenskapen som et uttrykk, for eksempel **yyyy/mm/dd** hvis du vil bruke samme format, uansett språk. For eksempel:
 
 * Kontrollen viser **12/31/2017** hvis brukeren klikker på den siste dagen i 2017, **Format**-egenskapen er angitt som **ShortDate** og **Språk**-egenskapen er angitt som **en-us**.
 * Kontrollen viser **dimanche 31 decembre 2017** hvis brukeren klikker eller trykker på den siste dagen i 2017, **Format**-egenskapen er angitt som **LongDate** og **Språk**-egenskapen er angitt som **fr-fr**.
@@ -67,7 +67,7 @@ Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](c
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
+**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -128,3 +128,6 @@ Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](c
 ### <a name="keyboard-support"></a>Tastaturstøtte
 * **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
 * Fokusindikatorer må være godt synlige. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
+
+> [!TIP]
+> Når kalenderen er åpen, trykker du **siden opp** og **PgDn** til å navigere mellom måneder og **SKIFT + PGUP** og **SKIFT + PGDN** til navigere mellom år.

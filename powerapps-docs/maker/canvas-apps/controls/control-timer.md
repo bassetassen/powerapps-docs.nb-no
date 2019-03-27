@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 32b8ee57869ea733050c3f23f9c9e81f60e3d78d
-ms.sourcegitcommit: 66fd1129ad25b72556f11a08350ba95f2ba060dd
+ms.openlocfilehash: 5d20e2324f2efb4f866ed4fc183f289733c10a41
+ms.sourcegitcommit: 212d397284c431f5989dc7b39549e2fc170d447e
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57804382"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491669"
 ---
 # <a name="timer-control-in-powerapps"></a>Tidtaker-kontrollen i PowerApps
 En kontroll som kan finne ut hvordan appen responderer etter en viss tid har passert.
@@ -26,7 +26,9 @@ En kontroll som kan finne ut hvordan appen responderer etter en viss tid har pas
 ## <a name="description"></a>Beskrivelse
 Tidtakere kan for eksempel bestemme hvor lenge en kontroll skal vises, eller endre andre egenskaper for en kontroll etter en viss tid har passert.
 
-Vær oppmerksom på at du må forhåndsvise appen for at tidtakeren kan kjøre i utformeren.  Dette gjør at brukeren kan konfigurere tidtakeren i utformeren uten tidsbegrensninger.
+> [!NOTE]
+> I PowerApps Studio Kjør tidtakere bare i forhåndsvisningsmodus.
+
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 **Varighet** – hvor lenge en tidtaker kjører i millisekunder.  Det finnes ingen maksimumsverdi.
@@ -142,33 +144,31 @@ Vær oppmerksom på at du må forhåndsvise appen for at tidtakeren kan kjøre i
 
 5. Velg at knappen for tidtakeren skal starte eller stoppe animasjonen. Teksten i etiketten tones til hvit, returnerer til full intensitet og gjentar prosessen.
 
-
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
-De samme retningslinjene for **[Knapp](control-button.md)** gjelder, fordi **Tidtaker** er bare en spesialknapp.
+De samme retningslinjene for den **[knappen](control-button.md)** kontrollen gjelder den **tidtaker** kontroll hvis brukere kan samhandle med den.
 
-> [!IMPORTANT]
-> Å kontrollere **tidtakeren** uten direkte brukermedvirkning er ikke støttet for tilgjengelighet. En tidtaker kan eksempelvis skjules visuelt ved å plassere andre kontroller ovenfor eller sette **[Synlig](properties-core.md)**-egenskapen til **usann**. Tidtakeren starter automatisk når en skjerm vises, og etter en stund utfører den noen handlinger automatisk. Det er for øyeblikket ingen generell måte å gjøre dette scenarioet tilgjengelig på.
+### <a name="background-timers"></a>Bakgrunn tidtakere
+Bakgrunn tidtakere kjøres automatisk, og er skjult. Bruke dem i en støttende rolle hvor lang tid det er lite interessant for brukeren. Du kan for eksempel oppdatere data hvert minutt, eller Vis en varslingsmelding bare for en viss tid.
 
-Andre retningslinjer for tilgjengelighet er som følger.
+Bakgrunn tidtakere bør ha deres **[Visible](properties-core.md)** egenskapen satt til false, slik at de er skjult fra alle brukere.
 
-### <a name="timing"></a>Tidsberegning
-Hvis en **tidtaker** er startet eller stoppet automatisk, bør du overveie hvorvidt brukerne har tilstrekkelig med tid til å lese og bruke innholdet. Brukere av tastatur og skjermleser kan trenge mer tid til å respondere på en planlagt hendelse.
+### <a name="timing-considerations"></a>Viktige faktorer tidsberegning
+Hvis en **tidtaker** kjøringer automatisk, bør du vurdere å om brukere har nok tid til å lese og bruke innholdet. Brukere av tastatur og Skjermleser kan trenge mer tid til å respondere på en planlagt hendelse.
 
-Alle disse strategiene vil fungere:
-* Tillat brukere å avbryte den planlagte hendelsen
-* Tillat brukere å justere tidsbegrensningen før den begynner
-* Advar 20 sekunder før tidsgrensen utløper, og tilby en fremgangsmåte for å utvide grensen på en enkel måte
+Alle disse strategiene er tilstrekkelig:
+* Tillat brukere å avbryte den planlagte hendelsen.
+* Tillat brukere å justere tidsbegrensningen før den begynner.
+* Advar 20 sekunder før tidsgrensen utløper, og gjør det enkelt å utvide grensen.
 
 Noen scenarioer er fritatt fra disse kravene. Finn ut mer i [WCAG 2.0-retningslinjen for tidsbegrensninger](https://www.w3.org/TR/WCAG20/#time-limits).
 
 ### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
-* **[Tekst](properties-core.md)** må foreligge.
-* Ikke bruk **[Tekst](properties-core.md)** for tidssensitiv og viktig informasjon. Brukere av skjermleseren vil ikke bli varslet om endringer i **[Tekst](properties-core.md)**.
+* Hvis en tidtaker utløser endringer på den gjeldende skjermen, kan du bruke en [dynamiske området](../accessible-apps-live-regions.md) å fortelle-Skjermleser brukerne hva som er endret.
 
     > [!NOTE]
-  > Skjermlesere leser opp hvor lang tid som er brukt hvert 5. sekund. Tidtakeren **[Tekst](properties-core.md)** vil imidlertid ikke bli inkludert i opplesingen.
+    > Hvis tidtakeren er synlig, og kjører, skjermlesere leser opp hvor lang tid hver fem sekunder.
 
-* Vurder å legge til en **[Etikett](control-text-box.md)** for å vise hvor lang tid som er brukt. Bruk tidtakerens **[Tekst](properties-core.md)** for å instruere brukeren om å starte eller stoppe tidtakeren.
-
-### <a name="support-in-powerapps-studio"></a>Støtte i PowerApps Studio
-Når du bygger en app, er tidtakere deaktivert for å hindre at hendelser fra å utløse. Du kan teste tidtakere i PowerApps Studio Hvis du åpne forhåndsvisning, eller du kan lagre appen og test dem i PowerApps Mobile eller web spilleren.
+* Ikke bruk av **[tekst](properties-core.md)** egenskapen for en kontroll for tidssensitiv og viktig informasjon. Skjermlesere lese opp ikke endringer i  **[tekst](properties-core.md)**.
+* For interaktive tidtakere:
+    * **[Tekst](properties-core.md)** må foreligge.
+    * Vurder å legge til en **[etikett](control-text-box.md)** kontrollen til å vise hvor lang tid. Bruk tidtakerens **[tekst](properties-core.md)** til å instruere brukeren om å starte eller stoppe tidtakeren.

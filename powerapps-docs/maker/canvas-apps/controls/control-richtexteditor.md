@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 99c07c0561b4942e6cbbd49fa5c498d90b502d7e
-ms.sourcegitcommit: 957d67e13bd4153d042b3b3bd650f6d0de20613c
+ms.openlocfilehash: 3174d959a2360b36e82cd7070c4401251ca9fe18
+ms.sourcegitcommit: 212d397284c431f5989dc7b39549e2fc170d447e
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58073287"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491623"
 ---
 # <a name="rich-text-editor-control-in-powerapps"></a>Redigeringskontrollen for rik tekst i PowerApps
 Gjør at sluttbrukere kan formatere tekst i et WYSIWYG-redigeringsområde.  Utdataformatet er HTML.
@@ -62,3 +62,14 @@ Hvis du vil bruke kontrollen i et skjema, velger du kortet «Rediger flerlinjet 
 **[X](properties-size-location.md)** – avstanden mellom kontrollens venstre kant og den venstre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
+
+
+## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+* **[AccessibleLabel](properties-accessibility.md)** bør vises.
+
+### <a name="keyboard-support"></a>Tastaturstøtte
+* **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
+
+> [!TIP]
+> Bruk **Alt + 0** mens redigeringsprogrammet er fokusert for å lære om andre hurtigtaster.
