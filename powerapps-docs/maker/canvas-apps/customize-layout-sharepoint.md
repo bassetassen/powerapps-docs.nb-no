@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2864ab5614bb3af415e24e23df3c52f6e668ab24
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.openlocfilehash: 4ca9ed14f96dbad52fe6f7b0318f520dbdd33d10
+ms.sourcegitcommit: fc604f3e7f0399bdabee86ce94f67de49531a444
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357142"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545088"
 ---
 # <a name="tutorial-customize-a-gallery-in-powerapps"></a>Opplæring: Tilpasse et galleri i PowerApps
 
@@ -53,8 +53,6 @@ Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https:/
 
 1. Logg deg på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og klikk eller trykk deretter på **Apper** nær venstre kant.
 
-    [![Hjemmesiden for PowerApps](./media/customize-layout-sharepoint/sign-in.png)](./media/customize-layout-sharepoint/sign-in.png#lightbox)
-
 1. Finn appen du genererte, velg ellipse-ikonet (**...** ), og velg deretter **Rediger**.
 
     ![Å åpne appen for redigering](./media/customize-layout-sharepoint/open-app.png)
@@ -69,25 +67,15 @@ Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https:/
 
     ![Valg av galleri](media/customize-layout-sharepoint/select-gallery-1.png)
 
-1. Nær høyre kant velger du **Kontoer** for å åpne **Data**-ruten.
-
-    ![Åpne ** Data**-ruten](./media/customize-layout-sharepoint/open-data-pane.png)
-
-1. I **Data**-ruten åpner du listen over alternativer under **Oppsett**.
-
-    ![Visning av alternativer for oppsett](./media/customize-layout-sharepoint/show-layouts.png)
-
-1. Velg alternativet som bare viser en tittel i listen over alternativer.
+1. På den **Egenskaper** fanen i den høyre ruten, kan du åpne listen over alternativer under **oppsett**, og deretter velge alternativet som bare viser en tittel.
 
     ![Velg oppsett bare med tittel](./media/customize-layout-sharepoint/choose-layout.png)
 
-1. Åpne listen over alternativer for tittelen i **Data**-ruten.
+1. Siden **felt**, og velg **Rediger**, og deretter velger du pil ned for tittel-boksen.
 
     Navnet på denne kontrollen avsluttes med et tall, for eksempel **Title1**, men tallet kan variere avhengig av andre handlinger du har gjort.
 
-    ![Å åpne listen over alternativer for titteletikett](./media/customize-layout-sharepoint/show-title-options.png)
-
-1. I listen over alternativer velger du **Kontonavn (navn)** og lukker deretter **Data**-ruten.
+1. I listen over alternativer, velger du **kontonavn**, og lukk deretter den **Data** ruten.
 
     Galleriet viser navnet på hver konto.
 
@@ -154,9 +142,7 @@ Hvis brukerne ikke har berøringsskjermer eller musehjul, konfigurerer du galler
 
     ![Valg av galleri](./media/customize-layout-sharepoint/select-gallery-sorted.png)
 
-1. Velg **Vis rullefelt** på **Galleri**-fanen, og bekreft at verdien for egenskapen er endret til **sann**.
-
-    ![Visning av rullefelt](./media/customize-layout-sharepoint/show-scrollbar.png)
+1. Angi galleriets **Vis rullefelt** egenskapen til **SANN**.
 
 ## <a name="next-steps"></a>Neste trinn
 
