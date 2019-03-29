@@ -1,0 +1,37 @@
+items:
+- name: Bygg Windows-klientprogrammer ved hjelp av XRM-verktøy
+  href: build-windows-client-applications-xrm-tools.md
+  items:
+  - name: Bruk CrmServiceClient-konstruktører til å koble til
+    href: use-crmserviceclient-constructors-connect.md
+  - name: Bruk tilkoblingsstrenger i XRM-verktøy til å koble til
+    href: use-connection-strings-xrm-tooling-connect.md
+  - name: Bruk PowerShell-cmdleter for XRM-verktøy til å koble til
+    href: use-powershell-cmdlets-xrm-tooling-connect.md
+  - name: Bruk XRM-verktøy til å utføre handlinger
+    href: use-xrm-tooling-execute-actions.md
+    items:
+    - name: Bruk XRM-verktøy til å opprette data
+      href: use-xrm-tooling-create-data.md
+    - name: Bruk XRM-verktøy til å hente data
+      href: use-xrm-tooling-retrieve-data.md
+    - name: Bruk XRM-verktøy til å oppdatere data
+      href: use-xrm-tooling-update-data.md
+    - name: Bruk XRM-verktøy til å slette data
+      href: use-xrm-tooling-delete-data.md
+    - name: Bruk meldinger med metoden ExecuteCrmOrganizationRequest
+      href: use-messages-executecrmorganizationrequest-method.md
+  - name: Bruk den vanlige påloggingskontrollen for XRM-verktøy i klientprogrammene
+    href: use-xrm-tooling-common-login-control-client-applications.md
+  - name: Konfigurer sporing for XRM-verktøy
+    href: configure-tracing-xrm-tooling.md
+  - name: Forenklet Hurtigstart-tilkobling
+    href: sample-simplified-connection-quick-start.md
+  - name: 'Eksempel: Hurtigstart for API for XRM-verktøy'
+    href: sample-quick-start-xrm-tooling-api.md
+ms.openlocfilehash: 6ffd323731891e38feb1b728f7e6f43120d5cc37
+ms.sourcegitcommit: 499fdc1a7c78d7d10e372a8caf26dfafc3492b6c
+ms.translationtype: HT
+ms.contentlocale: nb-NO
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58542790"

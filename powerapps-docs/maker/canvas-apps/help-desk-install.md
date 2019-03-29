@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2c367aa57294e52fc22f538f88b361c90c3afb99
-ms.sourcegitcommit: e64344548d607767e495a6b9526900bb5975226a
+ms.openlocfilehash: 9981a549aaf0ce88f6e66dd4df2c7897901d219b
+ms.sourcegitcommit: 5c098a62f66a2f33418967fdce9363bd529e0fc1
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330244"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58581097"
 ---
 # <a name="install-and-configure-the-help-desk-sample-in-powerapps"></a>Installer og konfigurer brukerstøtteeksemplet i PowerApps
 
@@ -138,7 +138,7 @@ Denne listen lagrer forespørsler til teknisk støtte.
 2. Velg **Nei** i alternativknapplisten **Krev at denne kolonnen inneholder informasjon**.
 3. Klikk på **OK**.
 
-## <a name="download-the-help-desk-powerapp"></a>Å laste ned Teknisk støtte for PowerApp
+## <a name="download-the-app"></a>Last ned appen
 
 1.  [Last ned](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip) PowerApps-pakken, og lagre den til datamaskinen.
 
@@ -172,7 +172,7 @@ Denne listen lagrer forespørsler til teknisk støtte.
 4.  Klikk på **Opprett**.
 5.  I popup-vinduet velger du kontoen du logget på med.
 
-## <a name="import-the-help-desk-powerapp"></a>Å importere Teknisk støtte for PowerApp
+## <a name="import-the-app"></a>Importere appen
 
 1. Gå til https://web.powerapps.com i en nettleser.
 2. Logg deg på ved å angi samme legitimasjon som du brukte til å registrere deg.
@@ -209,33 +209,27 @@ Denne listen lagrer forespørsler til teknisk støtte.
 
     ![Å importere Innstillinger-skjermen](./media/help-desk-install/import-done.png)
 
-## <a name="configure-the-powerapp-to-use-the-sharepoint-list"></a>Konfigurer PowerApp for å bruke SharePoint-listen
+## <a name="configure-the-app-to-use-the-sharepoint-list"></a>Konfigurer appen for å bruke SharePoint-listen
 
 1. Under neste trinn klikker du på **Åpne app**.
 2. Klikk på **Tillat** når du blir spurt om tillatelse.
 
 ### <a name="delete-connections"></a>Å slette tilkoblinger
 
-1. Klikk på **Vis**.
-2. Klikk på **Datakilder**.
-3. I **Data**-ruten klikker du på **ellipsen** ved siden av SharePoint-tilkoblingen **Kundestøtte**.
-4. Klikk på **Fjern**.
+1. På den **Vis** fanen og velge **datakilder**.
+1. I den **Data** ruten, velg ellipsen (...) ved siden **brukerstøtte**, og velg deretter **fjerne**.
 
 ### <a name="helpdesk-list"></a>Kundestøtte-liste
 
-1. Klikk på **Vis**.
-2. Klikk på **Datakilder**.
-3. I **Data**-ruten klikker du på **+ Legg til datakilde**.
-4. Velg **SharePoint**.
-5. Klikk på **Opprett**.
-6. I **Nylig brukte områder**-listen velger du SharePoint-området der du opprettet kundestøttelisten.
+1. På den **Vis** fanen og velge **datakilder**.
+1. I den **Data** ruten velger **Legg til datakilde** > **ny tilkobling** > **SharePoint**  >  **Opprette**.
+1. I **Nylig brukte områder**-listen velger du SharePoint-området der du opprettet kundestøttelisten.
 
     > [!TIP] 
-    > Hvis området ikke vises i listen, skriver du inn nettadressen til SharePoint-området i tekstboksen, og klikker på **Gå til**.
+    > Hvis området ikke vises i listen, Skriv eller Lim inn URL-adressen til SharePoint-området i tekstboksen, og velg deretter **Gå**.
 
-7. I **Søk**-tekstboksen øverst i listen angir du **Kundestøtte**.
-8. Merk av i avmerkingsboksen ved siden **Kundestøttelisten**.
-9. Klikk på **Koble til**.
+1. I den **Search** boksen øverst i listen, Skriv eller Lim inn **brukerstøtte**.
+1. Velg avmerkingsboksen ved siden **brukerstøtte**, og velg deretter **koble til**.
 
 ### <a name="update-admin-list"></a>Å oppdatere administratorliste
 
@@ -247,20 +241,17 @@ Denne listen lagrer forespørsler til teknisk støtte.
     ![Å oppdatere administratorliste](./media/help-desk-install/Change-admin.png)
     
    > [!TIP]
-   > Hvis du har mer enn én administrator, bruker du semikolon til å avgrense administratorer.  Eksempel: "admin1@microsoft.com","admin2@microsoft.com".
+   > Hvis du har mer enn én administrator, kan du bruke et komma til å avgrense i listen over administratorer. Eksempel: "admin1@microsoft.com","admin2@microsoft.com".
    > For å sikre at adressene i AdminList samsvarer med formatet PowerApps forventer, velger du Vis > Variabler > Global > MyProfile og ser på e-postkolonnen for å vise det forventede e-postformatet.
 
-5. Klikk på **Fil**.
-6. Klikk på **Lagre**.
-7. Klikk på **Publiser**.
-8. Klikk på **Publiser denne versjonen**.
+1. Velg **filen** > **lagre** > **Publiser** > **Publiser denne versjonen**.
 
-## <a name="modify-the-flow"></a>Å endre flyten
+## <a name="modify-the-flow"></a>Endre flyten
 
 1.  På menyen til venstre klikker du på **Flyter**.
 2.  Logg deg på ved å angi samme legitimasjon som du brukte til å registrere deg, dersom du blir bedt om å logge deg på.
 3.  Velg **Mine flyter** i menyen øverst.
-4.  Klikk på **blyantikonet** ved siden av **HelpDeskFlow**-flyten. 
+4.  Siden den **blyantikonet** flyter, klikker du på blyantikonet. 
  
     ![Å redigere Flyt-skjermen](./media/help-desk-install/edit-flow.png)
 
@@ -281,18 +272,16 @@ Denne listen lagrer forespørsler til teknisk støtte.
 
 11. Klikk på **Oppdater flyt**.
 
-## <a name="play-the-powerapp"></a>Å spille av PowerApp
+## <a name="play-the-app"></a>Spill av appen
 
-1. I nettleseren klikker du på **Apper**.
-2. Klikk på **ellipsen** ved siden av Teknisk støtte for PowerApp.
+1. Klikk på **Apper** i nettleseren.
+2. Klikk på ellipsen (...) ved siden av kundestøtte-appen.
 3. Klikk på **Åpne**. 
 
 > [!TIP]
 > Se denne [videoen](https://youtu.be/sl5fXwwnvzI) for å se hvordan du bruker eksemplet for Teknisk støtte for PowerApp.
 
-
 ## <a name="next-steps"></a>Neste trinn
 - [Å tilpasse et SharePoint-listeskjema](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)
 - [Å legge til og konfigurere en kontroll](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-configure-controls)
-- [Å redigere og behandle tillatelser for en SharePoint-liste eller et bibliotek](https://support.office.com/en-us/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
- 
+- [Å redigere og behandle tillatelser for en SharePoint-liste eller et bibliotek](https://support.office.com/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)

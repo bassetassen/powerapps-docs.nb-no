@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e9c63d1814b72cae0c675be6b33773799cfb3b8f
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.openlocfilehash: ce8128f3a5eddf3a67fe2082844bf996c25adc05
+ms.sourcegitcommit: 2180982e57f0d161610be584fdae9424fe7e06b5
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357096"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58616689"
 ---
 # <a name="concurrent-function-in-powerapps"></a>Concurrent-funksjonen i PowerApps
 Evaluerer flere formler samtidig mot hverandre.
@@ -131,7 +131,7 @@ Du kan bare bruke **Concurrent** i [formler for virkemåte](../working-with-form
 
 4. Legg til en [**Datatabell**](../controls/control-data-table.md)-kontroll, og angi **Elementer**-egenskapen til **Resultater**.
 
-1. Velg **Resultater** på **Egenskaper**-fanen i ruten til høyre, for å åpne **Data**-ruten.
+1. På den **Egenskaper** fanen i den høyre ruten, velg **Rediger felt** å åpne den **felt** ruten.
 
 1. Merk av for hvert felt i listen over felter for å vise alle i datatabellen.
 

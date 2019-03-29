@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 77268aa63ed49d10f825850909d31ec4feace063
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.openlocfilehash: 5c6876ac22f50be293781a7a6be58657f856baec
+ms.sourcegitcommit: 9444e6404770788b99cfcdb13b41ca6187d25149
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357602"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623399"
 ---
 # <a name="choices-function-in-powerapps"></a>Choices-funksjonen i PowerApps
 Returnerer en tabell med de mulige verdiene for en oppslagskolonne.
@@ -83,10 +83,10 @@ På dette tidspunktet, kan du bruke oppslagskolonner bare med SharePoint og Comm
 
 8. Velg **Kombinasjonsboks**-kontrollen i kortet for **Hovedkontakt**.
 
-    **Elementer**-egenskapen til den kontrollen er angitt til én av to formler basert på tilstanden til avmerkingsboksen **Bruk kolonnevisningsnavn** i Avanserte innstillinger.
+    Den **elementer** -egenskapen for kontrollen er satt til en formel som identifiserer kolonnen ved enten visningsnavn, som i det første eksemplet, eller det logiske navnet, som i det andre eksemplet:
 
-   - Hvis det merkes av for dette, angis egenskapen til denne formelen:<br>**Choices( Accounts.'Primary Contact' )**
-   - Hvis merket fjernes for dette, angis egenskapen til denne formelen:<br>**Choices( Accounts.primarycontactid )**
+   - **Choices( Accounts.'Primary Contact' )**
+   - **Choices( Accounts.primarycontactid )**
 
      ![En lerretskjerm med en Skjema-kontroll. **Kombinasjonsboks**-kontrollen i **Hovedkontakt**-kortet blir valgt, og Elementer-egenskapen med formelen Choices( Accounts.'Primary Contact' ) vises](media/function-choices/accounts-primary-contact.png)
 
@@ -94,10 +94,9 @@ På dette tidspunktet, kan du bruke oppslagskolonner bare med SharePoint og Comm
 
 10. Velg **Datatabell** på **Sett inn**-fanen.
 
-11. Angi **Elementer**-egenskapen til **Datatabell**-kontrollen til én av disse formlene:
+11. Angi den **elementer** -egenskapen for den **datatabell** kontrollen som denne formelen:
 
-     - Hvis avmerkingsboksen **Bruk kolonnevisningsnavn** i Avanserte innstillinger er valgt, bruker du denne formelen:<br>**Choices( Accounts.'Primary Contact' )**
-     - Ellers kan du bruke denne formelen:<br>**Choices( Accounts.primarycontactid )**
+     **Choices( Accounts.'Primary Contact' )**
 
 12. Åpne **Data**-ruten, og merk deretter av for **fornavn**, **etternavn**, eller hvilket som helst felt du ønsker å vise.
 
