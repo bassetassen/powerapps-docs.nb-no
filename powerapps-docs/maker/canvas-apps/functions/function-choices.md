@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5c6876ac22f50be293781a7a6be58657f856baec
-ms.sourcegitcommit: 9444e6404770788b99cfcdb13b41ca6187d25149
+ms.openlocfilehash: ed555f5de4abc1e29b7d2a637413c440bd882f13
+ms.sourcegitcommit: 6b116a4079eb56ebd598d317a12df8856ff3e52a
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58623399"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58671959"
 ---
 # <a name="choices-function-in-powerapps"></a>Choices-funksjonen i PowerApps
 Returnerer en tabell med de mulige verdiene for en oppslagskolonne.
@@ -63,41 +63,43 @@ På dette tidspunktet, kan du bruke oppslagskolonner bare med SharePoint og Comm
 
     En kontaktperson er angitt som hovedkontakt for hver konto, eller hovedkontakt er *tom*.
 
-2. [Generere en app](../data-platform-create-app.md) fra **Kontoer**-enheten.
+1. [Generere en app](../data-platform-create-app.md) fra **Kontoer**-enheten.
 
-3. I listen over skjermer og kontroller nær venstre kant kan du bla ned til **EditScreen1** vises, og deretter velge **EditForm1** like under.
+1. I listen over skjermer og kontroller nær venstre kant kan du bla ned til **EditScreen1** vises, og deretter velge **EditForm1** like under.
 
     ![Velg EditForm1 på EditScreen1 i navigasjonsfeltet til venstre](media/function-choices/select-editform.png)
 
-4. Velg **Kontoer** på **Egenskaper**-fanen i ruten til høyre.
+1. På den **Egenskaper** fanen i den høyre ruten, velg **Rediger felt**.
 
-    ![Velg Kontoer for å åpne Data-ruten](media/function-choices/open-data-pane.png)
+    ![Åpne dataruten](media/function-choices/open-data-pane.png)
 
-5. Bla ned til listen over felter i **Data**-ruten.
+1. I den **felt** ruten velger **Legg til felt**.
+
+1. Søk etter den **hovedkontakt** feltet, merker du av for, og velg deretter **Legg til**.
 
     ![Velg Kontoer for å åpne Data-ruten](media/function-choices/field-list.png)
 
-6. Finn avmerkingsboksen **Hovedkontakt**, og merk den av hvis merket er fjernet.
+    Den **hovedkontakt** feltet vises nederst i skjemaet. Hvis feltet viser en feil, velger du **datakilder** på den **Vis** fanen, velg ellipsen (...) for den **kontoer** datakilden, og velg deretter **Oppdater** .
 
-7. (valgfritt) Dra **Hovedkontakt**-feltet fra bunnen til toppen av listen over felter.
+1. (valgfritt) Dra **Hovedkontakt**-feltet fra bunnen til toppen av listen over felter.
 
-8. Velg **Kombinasjonsboks**-kontrollen i kortet for **Hovedkontakt**.
+1. Velg **Kombinasjonsboks**-kontrollen i kortet for **Hovedkontakt**.
 
     Den **elementer** -egenskapen for kontrollen er satt til en formel som identifiserer kolonnen ved enten visningsnavn, som i det første eksemplet, eller det logiske navnet, som i det andre eksemplet:
 
    - **Choices( Accounts.'Primary Contact' )**
    - **Choices( Accounts.primarycontactid )**
 
-     ![En lerretskjerm med en Skjema-kontroll. **Kombinasjonsboks**-kontrollen i **Hovedkontakt**-kortet blir valgt, og Elementer-egenskapen med formelen Choices( Accounts.'Primary Contact' ) vises](media/function-choices/accounts-primary-contact.png)
+     ![En lerretskjerm med en Skjema-kontroll. Kombinasjonsboks for kontrollen i kortet hovedkontakt er valgt, og elementer-egenskapen med formelen Choices (Accounts. 'Primary Contact') vises](media/function-choices/accounts-primary-contact.png)
 
-9. Velg **Ny skjerm**, og velg deretter **Tom** på **Hjem**-fanen.
+1. Velg **Ny skjerm**, og velg deretter **Tom** på **Hjem**-fanen.
 
-10. Velg **Datatabell** på **Sett inn**-fanen.
+1. Velg **Datatabell** på **Sett inn**-fanen.
 
-11. Angi den **elementer** -egenskapen for den **datatabell** kontrollen som denne formelen:
+1. Angi den **elementer** -egenskapen for den **datatabell** kontrollen som denne formelen:
 
      **Choices( Accounts.'Primary Contact' )**
 
-12. Åpne **Data**-ruten, og merk deretter av for **fornavn**, **etternavn**, eller hvilket som helst felt du ønsker å vise.
+1. I midten av den **datatabell** kontroll, velger du koblingen starter **Velg feltene...** , og velg deretter merket for feltet eller feltene du vil vise (for eksempel **Fornavn** og **Etternavn**).
 
      ![En lerretskjerm med en Datatabell-kontroll. Elementer-egenskapen er angitt til formelen Choices( Accounts.'Primary Contact' ), og tabellen viser fornavn- og etternavn-kolonnene for det første settet med poster fra Kontakter-enheten](media/function-choices/full-accounts-pc.png)
