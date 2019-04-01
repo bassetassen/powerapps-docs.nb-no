@@ -9,16 +9,16 @@ ms.custom: ''
 ms.date: 03/18/2019
 ms.author: kvivek
 ms.reviewer: kvivek
-ms.openlocfilehash: ec03fdfd4837bb54fb150562ade38db758887f88
-ms.sourcegitcommit: 0dbbf53aea319e53edadc1d3a9efa5728856ebd8
+ms.openlocfilehash: 4e24047d44beb19e55dadb8d653604e47460a5d2
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162267"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357579"
 ---
 # <a name="what-is-powerapps"></a>Hva er PowerApps?
 
-PowerApps er en løsning med apper, tjenester, koblinger og dataplattform som tilbyr et miljø for rask programutvikling for bygging av tilpassede apper for forretningsbehovene dine. Ved hjelp av PowerApps kan du raskt bygge egendefinerte forretningsapper som kobles til forretningsdata lagret *enten* i den underliggende dataplattformen (**Common Data Service for Apps**) *eller* i ulike nettbaserte og lokale datakilder (SharePoint, Excel, Office 365, Dynamics 365, SQL Server og så videre). 
+PowerApps er en løsning med apper, tjenester, koblinger og dataplattform som tilbyr et miljø for rask programutvikling for bygging av tilpassede apper for forretningsbehovene dine. Ved hjelp av PowerApps kan du raskt bygge egendefinerte forretningsapper som kobles til forretningsdata lagret *enten* i den underliggende dataplattformen (**Common Data Service**) *eller* i ulike nettbaserte og lokale datakilder (SharePoint, Excel, Office 365, Dynamics 365, SQL Server og så videre). 
 
 Med apper som er bygd ved hjelp av PowerApps, får du rikholdige forretningslogikk- og arbeidsflytfunksjoner til å forvandle manuelle forretningsprosesser til digitale, automatiserte prosesser. Dessuten har apper som er bygd ved hjelp av PowerApps, en responsiv utforming og kan kjøre sømløst i nettleser eller på mobile enheter (telefon eller nettbrett). PowerApps «demokratiserer» byggingen av egendefinerte forretningsapper ved å gjøre det mulig for brukere å bygge funksjonsrike, egendefinerte forretningsapper uten å skrive kode.
 
@@ -46,7 +46,7 @@ PowerApps-administratorer kan bruke:
 
 - **Administrasjonssenteret for PowerApps** ([admin.powerapps.com](https://admin.powerapps.com)) til å opprette og administrere miljøer, brukere, roller og policyer for hindring av datatap. 
 
-- **Administrasjonssenteret for Power-plattform** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) til å administrere miljøer, få anbefalinger for selvhjelp i sanntid og støtte for Dynamics 365 for Customer Engagement-apper, PowerApps og Microsoft Flow og til å vise CDS for Apps-analyser. 
+- **Administrasjonssenteret for Power-plattform** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) til å administrere miljøer, få anbefalinger for selvhjelp i sanntid og støtte for Dynamics 365 for Customer Engagement-apper, PowerApps og Microsoft Flow og til å vise Common Data Service-analyser. 
 
 Mer informasjon: [Administrer PowerApps](/power-platform/admin/admin-guide)
 
@@ -56,7 +56,7 @@ Utviklere er appopprettere som kan skrive kode for å utvide oppretting og tilpa
 
 ## <a name="powerapps-and-dynamics-365"></a>PowerApps og Dynamics 365
 
-Dynamics 365-programmer, for eksempel Dynamics 365 for Sales, Dynamics 365 for Service, Dynamics 365 for Marketing, bruker også den underliggende dataplattformen (CDS for Apps) som brukes av PowerApps til å lagre og sikre data. Dette gjør det mulig å bygge apper med PowerApps og Common Data Service for apper direkte mot kjernen for forretningsdataene som allerede brukes i Dynamics 365, uten behov for integrering. Mer informasjon: [Dynamics 365 og Common Data Service for Apps](maker/common-data-service/data-platform-intro.md#dynamics-365-and-the-common-data-service-for-apps)
+Dynamics 365-programmer, for eksempel Dynamics 365 for Sales, Dynamics 365 for Service, Dynamics 365 for Marketing, bruker også den underliggende dataplattformen (Common Data Service) som brukes av PowerApps til å lagre og sikre data. Dette gjør det mulig å bygge apper med PowerApps og Common Data Service direkte mot kjernen for forretningsdataene som allerede brukes i Dynamics 365, uten behov for integrering. Mer informasjon: [Dynamics 365 og Common Data Service](maker/common-data-service/data-platform-intro.md#dynamics-365-and-the-common-data-service)
 
 ## <a name="try-powerapps-for-free"></a>Prøv PowerApps gratis
 

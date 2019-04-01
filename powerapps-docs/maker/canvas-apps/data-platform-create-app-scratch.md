@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0528d3324e85984e05b549f8b8ba282fdc1df4af
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.openlocfilehash: 68c54838b613d0aa459833509cad57b49ade759a
+ms.sourcegitcommit: dd7659f9fe5161df6053a735781fdfb62bbea88e
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356889"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58624263"
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service"></a>Opprett en lerretsapp fra grunnen av ved hjelp av Common Data Service
 
 Bygg en lerretsapp for å behandle data som er lagret i Common Data Service, ved hjelp av standardenheter (som er innebygd), egendefinerte enheter (som organisasjonen oppretter) eller begge deler.
 
-Når du bygger en app fra Common Data Service, trenger du ikke å opprette en tilkobling fra PowerApps, slik du gjør med datakilder som SharePoint, Dynamics 365 eller Salesforce. Du trenger bare å angi hvilke enheter du vil vise, administrere eller bruke for begge aktivitetene i appen.
+Når du bygger en app fra Common Data Service, trenger du ikke å opprette en tilkobling fra PowerApps, slik du gjør med datakilder som SharePoint, Dynamics 365 eller Salesforce. Du trenger bare å angi hvilke enheter du vil vise eller administrere i appen.
 
 ## <a name="prerequisites"></a>Forutsetninger
 
@@ -36,37 +36,37 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 1. Logg deg på [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Hold pekeren over flisen **Lag din egen app** under **Start fra tom**, klikk eller trykk på telefonikonet, og klikk eller trykk deretter på **Lag denne appen**.
+1. Under **Lag din egen app** velger du **Lerretsapp fra tom**.
 
-    ![Flisen for tom app](./media/data-platform-create-app-scratch/start-from-blank.png)
+    ![Flisen for tom app](./media/data-platform-create-app-scratch/blank-app.png)
 
-    Du kan utforme en app fra grunnen av for telefoner og andre enheter (som nettbrett), og dette emnet fokuserer på hvordan du utformer apper for telefoner.
+1. Angi et navn for appen, velg **Telefon**, og velg deretter **Opprett**.
+
+    Du kan bygge en app fra grunnen av for nettbrett, men dette emnet viser bygging av en app for telefoner.
 
 ## <a name="specify-an-entity"></a>Å angi en enhet
 
-1. Klikk eller trykk på **koble til data** midt på skjermen, og deretter, i **Data**-ruten, klikker eller trykker du på **Common Data Service**-tilkoblingen.
+1. Midt på skjermen kan du velge **koble til data**.
 
-1. Skriv eller lim inn de første bokstavene til **Kontoer** i søkeboksen for å filtrere listen over enheter, merk av for **Kontoer**, og klikk eller trykk deretter på **Koble til**.
+1. Velg **Common Data Service** i **Data**-ruten, merk av for **Kontoer**, og velg deretter **Koble til**.
 
-    ![Slik angir Kontoer-enheten](./media/data-platform-create-app-scratch/cds-connect.png)
-
-1. Lukk **Data**-ruten ved å klikke eller trykke på Lukk-ikonet øverst til høyre.
+1. Lukk **Data**-ruten ved å velge Lukk-ikonet øverst til høyre.
 
 ## <a name="add-a-list-screen"></a>Slik legger du til en listeskjerm
 
-1. Klikk eller trykk på Pil ned for **Ny skjerm** på **Hjem**-fanen, og klikk eller trykk deretter på **Listeskjerm**.
+1. Velg nedoverpilen ved siden av **Ny skjerm** på **Hjem**-fanen, og velg deretter **Liste**.
 
     ![Slik legger du til en listeskjerm](./media/data-platform-create-app-scratch/list-screen.png)
 
-1. Klikk eller trykk på **TemplateGalleryList1**i venstre navigasjonsrute for å velge den, og angi deretter verdien for **Elementer**-egenskapen til denne formelen:
+1. Velg **BrowseGallery1** i venstre navigasjonsrute, og angi deretter verdien for **Elementer**-egenskapen til denne formelen:
 
     `SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
 
     Denne formelen angir at:
 
    - Galleriet skal vise data fra **Kontoer**-enheten.
-   - Dataene skal sorteres i stigende rekkefølge før en bruker klikker eller trykker på sorteringsknappen for å veksle sorteringsrekkefølgen.
-   - Hvis en bruker skriver eller limer inn ett eller flere tegn i søkefeltet, viser listen bare de kontoene som inneholder tegnene som bruker oppgav.
+   - Dataene skal sorteres i stigende rekkefølge, inntil en bruker velger sorteringsknappen for å veksle sorteringsrekkefølgen.
+   - Hvis en bruker skriver eller limer inn ett eller flere tegn i søkefeltet (**TextSearchBox1**), viser listen bare de kontoene der **Navn**-feltet inneholder tegnene som brukeren oppga.
 
      Du kan bruke [disse og mange andre funksjoner](formula-reference.md) for å angi hvordan appen vises og virker.
 
@@ -74,11 +74,11 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 1. Angi at galleriets oppsett skal vises bare navnet på hver konto, og konfigurer tittellinjen til å vise ordet **Bla gjennom**, som [Tilpassing av galleri](customize-layout-sharepoint.md) beskriver.
 
-    ![Bla gjennom-skjermen](./media/data-platform-create-app-scratch/final-browse.png)
+    ![Bla gjennom-skjerm](./media/data-platform-create-app-scratch/final-browse.png)
 
-1. Hold pekeren over **Screen1** i det venstre navigasjonsfeltet, klikk eller trykk på ellipsen (...), og klikk eller trykk deretter på **Slett**.
+1. Hold pekeren over**Skjerm1** i venstre navigasjonsfelt, velg ellipseikonet (...), og velg deretter **Slett**.
 
-1. Hold pekeren over **Screen2** i det venstre navigasjonsfeltet, klikk eller trykk på ellipsen (...), og klikk eller trykk deretter på **Gi nytt navn**.
+1. Hold pekeren over**Skjerm2** i venstre navigasjonsfelt, velg ellipseikonet (...), og velg deretter **Gi nytt navn**.
 
 1. Skriv eller lim inn **BrowseScreen**, og gi deretter galleriet på den skjermen et nytt navn til **BrowseGallery**.
 
@@ -86,20 +86,24 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 ## <a name="add-a-form-screen"></a>Skjermen Legg til et skjema
 
-1. Gjenta det første trinnet til den forrige prosedyren, men legger også til en **Skjemaskjerm** i stedet for en **Listeskjerm**.
+1. Gjenta første trinn i den forrige prosedyren, men legg til en **Skjema**-skjerm i stedet for en **Liste**-skjerm.
 
-1. Angi skjemaets **DataSource**-egenskap til **Kontoer** og **Elementer**-egenskap til **BrowseGallery.Selected**, som vist i **Avansert-fanen** i ruten til høyre.
+1. Angi skjemaets **DataSource**-egenskap til **Kontoer** og **Elementer**-egenskapen til **BrowseGallery.Selected**, som vist i **Avansert**-fanen i ruten til høyre.
 
     ![Å angi skjemaets Datakilde- og Element-egenskap](./media/data-platform-create-app-scratch/form-datasource.png)
 
-1. Klikk eller trykk på **Kontoer** på **Egenskaper**-fanen i den høyre ruten for å åpne **Data**-ruten, og merk deretter av for disse feltene:
+1. Velg **Rediger felt** på **Egenskaper**-fanen i den høyre ruten for å åpne **Felt**-ruten.
 
-    - Kontonavn
-    - Adresse 1: Gateadresse 1
-    - Adresse 1: Poststed
-    - Adresse 1: Postnummer
-    - Antall ansatte
-    - Årlig omsetning
+1. Velg **Legg til felt**, og merk deretter av for disse feltene:
+
+    - **Kontonavn**
+    - **Adresse 1: Gateadresse 1**
+    - **Adresse 1: Poststed**
+    - **Adresse 1: Postnummer**
+    - **Antall ansatte**
+    - **Årlig omsetning**
+
+1. Velg **Legg til**.
 
 1. Angi tittellinjens **Tekst**-egenskap til å vise **Opprett/rediger**.
 
@@ -111,37 +115,37 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 ## <a name="configure-icons"></a>Konfigurering av porter
 
-1. Klikk eller trykk på sirkelikonet nær toppen av skjermen på **BrowseScreen**, og angi **OnSelect**-egenskapen til denne formelen:
+1. På **BrowseScreen** angir du **OnSelect**-egenskapen for sirkelikonet nær toppen av skjermen til denne formelen:
 
     `Refresh(Accounts)`
 
     ![Oppdater-ikon](./media/data-platform-create-app-scratch/refresh-icon.png)
 
-1. Klikk eller trykk på plussikonet, og angi **OnSelect**-egenskapen til denne formelen:
+1. Angi **OnSelect**-egenskapen for plussikonet til denne formelen:
 
     `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Legg til-ikon](./media/data-platform-create-app-scratch/plus-icon.png)
 
-1. Klikk eller trykk på den første pilen som peker mot høyre, og angi **OnSelect**-egenskapen til denne formelen:
+1. Angi **OnSelect**-egenskapen for den første pilen som peker til høyre, til denne formelen:
 
     `EditForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Neste-ikon](./media/data-platform-create-app-scratch/next-icon.png)
 
-1. Klikk eller trykk på Avbryt-ikonet på **FormScreen**, og angi **OnSelect**-egenskapen til denne formelen:
+1. På **FormScreen** angir du **OnSelect**-egenskapen for det valgte ikonet til denne formelen:
 
     `ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Avbryt-ikon](./media/data-platform-create-app-scratch/cancel-icon.png)
 
-1. Klikk eller trykk på Avmerking-ikonet, og angi **OnSelect**-egenskapen til denne formelen:
+1. Angi **OnSelect**-egenskapen for avmerkingsikonet til denne formelen:
 
     `SubmitForm(EditForm1); Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Avmerking-ikon](./media/data-platform-create-app-scratch/checkmark-icon.png)
 
-1. Klikk eller trykk på **Ikoner** på **Sett inn**-fanen, og klikk eller trykk deretter på **Papirkurv**-ikonet.
+1. Velg **Ikoner** på **Sett inn**-fanen, og deretter velger du **Papirkurv**-ikonet.
 
 1. Angi **Papirkurv**-ikonets **Farge**-egenskap til **Hvit** og **OnSelect**-egenskap til denne formelen:
 
@@ -149,9 +153,9 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
     ![Papirkurv-ikon](./media/data-platform-create-app-scratch/trash-icon.png)
 
-## <a name="test-the-app"></a>Test appen
+## <a name="test-the-app"></a>Testing av appen
 
-1. Velg **BrowseScreen** i den venstre navigeringsruten, og åpne deretter forhåndsvisningsmodus ved å trykke på F5 (eller ved å klikke på avspillingsikonet nær hjørnet øverst til høyre).
+1. Velg **BrowseScreen** i venstre navigasjonsrute, og åpne deretter Forhåndsvisning ved å trykke på F5 (eller ved å velge avspillingsikonet nær øvre høyre hjørne).
 
     ![Å åpne Forhåndsvisning](./media/data-platform-create-app-scratch/open-preview.png)
 
