@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: abf88db2bfb97a6541ee638ba8be5af27c20bc5f
-ms.sourcegitcommit: 5e15a1033a68289781f8092fb65c57432501f911
+ms.openlocfilehash: e3d5f40a604d2cbfa074ed5973d599c40a6c5c05
+ms.sourcegitcommit: 647e183c070c2159b790c7813a7be1d60b2551bd
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459578"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58765587"
 ---
 # <a name="reference-information-about-the-calendar-screen-template-for-canvas-apps"></a>Referanseinformasjon om kalender-skjermen malen for lerretsapper
 
@@ -191,7 +191,7 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
     ```
 
     > [!NOTE]
-    > Definisjoner for  **\_firstDayOfMonth**,  **\_firstDayInView**, og  **\_lastDayOfMonth** er nesten identisk med de i den [kalender rullegardinlisten](#calendar-dropdown) delen i dette emnet.
+    > Definisjoner for  **\_firstDayOfMonth**,  **\_firstDayInView**, og  **\_lastDayOfMonth** er nesten identisk med de i den [kalender rullegardinlisten](#calendar-drop-down) delen i dette emnet.
 
     De tre første linjene av foregående kode som kjøres når brukeren velger vinkeltegnet for neste måned, angi variabler som er nødvendig for å vise riktig Kalender-visningen. Gjenværende koden kjøres bare hvis brukeren ikke har valgt tidligere denne måneden for den valgte kalenderen.
 

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0fbc97e6c2663210bea79cc7236ce784110a4950
-ms.sourcegitcommit: c6ad6ba7814c5e7b12c3b7b76bf2e7718bf41b8c
+ms.openlocfilehash: 86c23a2da0dca20bb6f755a9cb548c092180ef16
+ms.sourcegitcommit: 647e183c070c2159b790c7813a7be1d60b2551bd
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58198617"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58765506"
 ---
 # <a name="connect-to-sharepoint-from-a-canvas-app"></a>Koble til SharePoint fra en lerretsapp
 
@@ -34,7 +34,7 @@ Koble til et SharePoint-område til å generere en app automatisk fra en egendef
 Hvis du vil behandle data i en egendefinert liste, kan PowerApps [generere en app med tre skjermer for deg automatisk](../app-from-sharepoint.md). Brukere kan bla gjennom listen på den første skjermen, vise detaljer for et element i den andre skjermen, og opprette eller oppdatere elementer i det tredje skjermbildet.
 
 > [!NOTE]
-> Hvis SharePoint-listen inneholder en **valg**, **oppslag**, eller **Person eller gruppe** kolonne, kan du se [Vis data i et galleri](connection-sharepoint-online.md#show-data-in-a-gallery) senere i dette emnet.
+> Hvis SharePoint-listen inneholder en **valg**, **oppslag**, eller **Person eller gruppe** kolonne, kan du se [Vis data i et galleri](connection-sharepoint-online.md#show-list-columns-in-a-gallery) senere i dette emnet.
 
 ## <a name="create-a-connection"></a>Å opprette en kobling
 
