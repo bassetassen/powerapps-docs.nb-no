@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bb6f8edb35bd6f19bff06516f6fb9d22de1320a0
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 1a6465a00f135489d594bad75b8a25942e05dd25
+ms.sourcegitcommit: f4b71ea0996603b3358377a0da21b9e4428a287c
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42852673"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870935"
 ---
 # <a name="customize-a-canvas-app-form-in-powerapps"></a>Tilpass et lerretsappskjema i PowerApps
 
@@ -26,7 +26,7 @@ Tilpass en **Visningsskjema**-kontroll og en **Redigeringsskjema**-kontroll i en
 
 Hvert skjema består av ett eller flere kort, som viser data fra en bestemt kolonne i datakilden. Ved å følge trinnene i dette emnet kan du angi hvilke kort som skal vises i et skjema og flytte kortene opp og ned innenfor et skjema.
 
-Hvis du ikke allerede er kjent med PowerApps, kan du se [Introduksjon til PowerApps](getting-started.md).
+Hvis du er kjent med lerret-pps, kan du se [Hva er lerret-apper?](getting-started.md).
 
 ## <a name="prerequisites"></a>Forutsetninger
 
@@ -34,84 +34,94 @@ Hvis du ikke allerede er kjent med PowerApps, kan du se [Introduksjon til PowerA
 
 ## <a name="show-and-hide-cards"></a>Å vise og skjule kort
 
-1. Logg deg på [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Logg deg på [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og åpne deretter appen du genererte og tilpasset.
 
-    ![Hjemmesiden for PowerApps-området](./media/customize-forms-sharepoint/sign-in.png)
+1. I det venstre navigasjonsfeltet skriver eller limer inn **D** i søkefeltet for å filtrere listen over elementer, og velg deretter **DetailForm1**.
 
+    > [!div class="mx-imgBorder"]
+    > ![Slik velger du detaljskjermbilde](./media/customize-forms-sharepoint/select-detailform.png)
 
-1. Åpne appen du har generert og tilpasset.
+1. Velg **Rediger felt** på **Egenskaper**-fanen i den høyre ruten for å åpne **Felt**-ruten.
 
-1. I det venstre navigasjonsfeltet skriver eller limer du inn **D** i søkefeltet for å filtrere listen over elementer, og deretter klikker eller trykker du på **DetailForm1** for å merke den.
+    > [!div class="mx-imgBorder"]
+    > ![Åpne felt-ruten](./media/customize-forms-sharepoint/edit-fields.png)
 
-    ![Slik velger du detaljskjermbilde](./media/customize-forms-sharepoint/select-detailform.png)
+1. Skjule et felt, slik som **beskrivelse**, ved å holde pekeren over den, å velge ellipsen (...) som vises, og deretter velge **fjerne**.
 
-1. I den høyre ruten klikker du på **Kontoer** for å vise **Data**-ruten.
+    > [!div class="mx-imgBorder"]
+    > ![Liste over felt](./media/customize-forms-sharepoint/hide-fields.png)
 
-    ![Å vise datarute](./media/customize-forms-sharepoint/show-data-pane.png)
+1. Vise et felt ved å velge **Legg til felt**, å skrive eller lime inn de første bokstavene i feltnavnet i søkeboksen, hvis du merker for feltet, og deretter velge **Legg til**.
 
-1. Fjern merket for **Primærkontakt**, **Beskrivelse** og **Adresse 1: Gate/vei 2** for å skjule disse feltene i **Data**-ruten.
-
-    ![Liste over felt](./media/customize-forms-sharepoint/hide-fields.png)
-
-1.  Merk av for **Adresse 1: Postnummer** i avmerkingsboksen i **Data**-ruten.
-
-    ![Liste over felt](./media/customize-forms-sharepoint/show-field.png)
+    > [!div class="mx-imgBorder"]
+    > ![Liste over felt](./media/customize-forms-sharepoint/show-field.png)
 
 ## <a name="reorder-the-cards"></a>Å endre rekkefølgen på kortene
-1. Dra **Kontonavn**-feltet til toppen av listen over felt i **Data**-ruten.
 
-    ![Å flytte kort](./media/customize-forms-sharepoint/move-card.png)
+1. I den **felt** dra den **kontonavn** feltet til toppen av listen over felt.
 
-    Kortene i **DetailForm1** gjenspeiler den samme endringen.
+    Kortene i **DetailForm1** gjenspeiler endringen.
 
-    ![Omorganiserte kort](./media/customize-forms-sharepoint/reordered-card.png)
+    > [!div class="mx-imgBorder"]
+    > ![Omorganiserte kort](./media/customize-forms-sharepoint/reordered-card.png)
 
-1. Endre rekkefølgen på de andre kortene i denne sekvensen:
+1. (valgfritt) Endre rekkefølgen på de andre kortene i denne sekvensen:
 
     - Kontonavn
-    - Adresse 1: Gate 1
-    - Adresse 1: Poststed
-    - Adresse 1: Postnummer
     - Antall ansatte
     - Årlig omsetning
+    - Primære telefon
+    - Adresse 1: Gateadresse 1
+    - Adresse 1: Gate/vei 2
+    - Adresse 1: Poststed
+    - Adresse 1: Postnummer
 
-1. I det venstre navigasjonsfeltet skriver eller limer du inn **Ed** i søkefeltet for å filtrere listen over elementer, og deretter klikker eller trykker du på **EditForm1** for å velge den.
+1. I det venstre navigasjonsfeltet skriver eller limer inn **Ed** i søket, og velg deretter **EditForm1** å merke den.
 
 1. Gjenta trinnene i fremgangsmåten ovenfor og i denne, slik at feltene i **EditForm1** samsvarer med dem i **DetailForm1**.
 
 ## <a name="run-the-app"></a>Å kjøre appen
-1. I det venstre navigasjonsfeltet skriver eller limer du inn **Br** for å filtrere listen, og deretter klikker eller trykker du på **BrowseScreen1** for å merke den.
 
-2. Åpne forhåndsvisningsmodus ved å trykke på F5 (eller ved å velge **Forhåndsvisning**-ikonet nær hjørnet øverst til høyre).
+1. I det venstre navigasjonsfeltet skriver eller limer inn **Br** i søket, og velg deretter **BrowseScreen1** å merke den.
 
-    ![Forhåndsvisningsikonet](./media/customize-forms-sharepoint/open-preview.png)
+1. Åpne forhåndsvisningsmodus ved å trykke på F5 (eller ved å velge **Forhåndsvisning**-ikonet nær hjørnet øverst til høyre).
 
-3. Klikk eller trykk på pluss-ikonet i hjørnet øverst til høyre for å legge til en post i **EditScreen1**.
+    > [!div class="mx-imgBorder"]
+    > ![Forhåndsvisningsikonet](./media/customize-forms-sharepoint/open-preview.png)
 
-    ![Å legge til post](./media/customize-forms-sharepoint/add-record.png)
+1. I hjørnet øverst til høyre velger du pluss-ikonet for å legge til en post i **EditScreen1**.
 
-4. Legg til de dataene du vil bruke, og klikk eller trykk på hakeikonet i øvre høyre hjørne for å lagre endringene og gå tilbake til **BrowseScreen1**.
+    > [!div class="mx-imgBorder"]
+    > ![Å legge til post](./media/customize-forms-sharepoint/add-record.png)
 
-    ![Å lagre poster](./media/customize-forms-sharepoint/save-record.png)
+1. Legg til dataene du ønsker, og velg deretter på hakeikonet øverst i høyre hjørne for å lagre endringene og gå tilbake til **BrowseScreen1**.
 
-5. Klikk eller trykk på pilen til elementet du nettopp opprettet, for å vise detaljer om elementet i **DetailScreen1**.  
+    > [!div class="mx-imgBorder"]
+    > ![Å lagre poster](./media/customize-forms-sharepoint/save-record.png)
 
-    ![Høyrepil](./media/customize-forms-sharepoint/right-arrow.png)
+1. Velg pilen til elementet du nettopp opprettet for å vise detaljer om elementet i **DetailScreen1**.
 
-6. Klikk eller trykk på plussikonet i hjørnet øverst til høyre for å oppdatere posten i **EditScreen1**.
+    > [!div class="mx-imgBorder"]
+    > ![Høyrepil](./media/customize-forms-sharepoint/right-arrow.png)
 
-    ![Å redigere poster](./media/customize-forms-sharepoint/edit-record.png)
+1. I hjørnet øverst til høyre velger du redigeringsikonet for å oppdatere posten i **EditScreen1**.
 
-7. Endre informasjonen i ett eller flere felter. Klikk eller trykk deretter på haken i hjørnet øverst til høyre for å lagre endringene i SharePoint-listen og gå tilbake til **DetailScreen1**.  
+    > [!div class="mx-imgBorder"]
+    > ![Å redigere poster](./media/customize-forms-sharepoint/edit-record.png)
 
-    ![Å lagre endringer](./media/customize-forms-sharepoint/save-record.png)
+1. Endre informasjonen i ett eller flere felt, og velg deretter haken øverst i høyre hjørne for å lagre endringene og gå tilbake til **DetailScreen1**.
 
-8. Klikk eller trykk på papirkurv-ikonet nær hjørnet øverst til høyre for å slette posten du nettopp oppdaterte og gå tilbake til **BrowseScreen1**.
+    > [!div class="mx-imgBorder"]
+    > ![Å lagre endringer](./media/customize-forms-sharepoint/save-record.png)
 
-    ![Å slette poster](./media/customize-forms-sharepoint/delete-record.png)
+1. Nær hjørnet øverst til høyre velger du på Papirkurv ikonet til å slette posten som du nettopp har oppdatert, og gå tilbake til **BrowseScreen1**.
 
-9. Lukk Forhåndsvisningsmodus ved å trykke på ESC (eller ved å klikke eller trykke på lukkeikonet nær øvre venstre hjørne).
+    > [!div class="mx-imgBorder"]
+    > ![Å slette poster](./media/customize-forms-sharepoint/delete-record.png)
+
+1. Lukk forhåndsvisningsmodus ved å trykke på Esc (eller ved å velge Lukk-ikonet nær hjørnet øverst til venstre).
 
 ## <a name="next-steps"></a>Neste trinn
+
 - [Å lagre og publisere](save-publish-app.md) appen.
 - [Å tilpasse et kort](customize-card.md) i appen.
