@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 8a46cb15be6a93988b89d8f85658ae7c9d5a900e
-ms.sourcegitcommit: 0dbbf53aea319e53edadc1d3a9efa5728856ebd8
+ms.openlocfilehash: 776a542d8e790cc9ae3591b6cda9f08d0d347ef7
+ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58173397"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042782"
 ---
 # <a name="create-responsive-layouts-in-canvas-apps"></a>Opprette responsive oppsett i lerret-apper
 
@@ -26,11 +26,11 @@ Før du bygger en lerret-app i PowerApps, angir du om å skreddersy appen for en
 
 Når du gjør dette valget, kan du gjøre noen flere valg hvis du velger **filen** > **appinnstillinger** > **skjermstørrelse og retning**. Du kan velge stående eller liggende retning og skjermstørrelse (bare nettbrett). Du kan også låser eller låser opp størrelsesforholdet og støtter enheten rotasjon (eller ikke).
 
-Disse valgene ligger til grunn for alle andre valget du foretar når du utformer skjermoppsett. Hvis appen din kjører på en enhet med en annen størrelse eller på nettet, din helt oppsett Tilpass til skjerm der appen kjøres. Hvis en app som er utformet for en telefon kjører i et stort nettleservindu, for eksempel appen skaleres for å kompenserer og ser forstørret for den tilhørende plassen. Appen kan ikke dra nytte av de ekstra pikslene ved å vise flere kontroller eller mer innhold.
+Disse valgene ligger til grunn for alle andre valget du foretar når du utformer skjermoppsett. Hvis appen din kjører på en enhet med en annen størrelse eller på nettet, skalerer hele oppsettet for å fylle hele skjermen der appen kjøres. Hvis en app som er utformet for en telefon kjører i et stort nettleservindu, for eksempel appen skaleres for å kompenserer og ser forstørret for den tilhørende plassen. Appen kan ikke dra nytte av de ekstra pikslene ved å vise flere kontroller eller mer innhold.
 
-Hvis du oppretter et responsivt oppsett, kan Kontroller svare på forskjellige enheter eller vindusstørrelser, gjøre opplevelsen på ulike formfaktorer føle deg mer hjemme. For å oppnå responsivt oppsett, kan du justere noen innstillinger og skriver inn uttrykk i hele appen. 
+Hvis du oppretter et responsivt oppsett, kan Kontroller svare på forskjellige enheter eller vindusstørrelser, noe som gjør ulike opplevelser virker mer naturlige. For å oppnå responsivt oppsett, kan du justere noen innstillinger og skriver inn uttrykk i hele appen. 
 
-## <a name="disable-scale-to-fit"></a>Deaktiver Tilpass
+## <a name="disable-scale-to-fit"></a>Deaktiver Tilpass til
 
 Du kan konfigurere hver skjerm slik at oppsettet tilpasser seg hvor mye diskplass som appen kjører.
 
@@ -72,39 +72,42 @@ I det enkleste tilfellet fyller én kontroll en hele skjermen. Hvis du vil oppre
 | **Bredde**  | `Parent.Width`  |
 | **Høyde** | `Parent.Height` |
 
-Disse formlene operatoren overordnede. En kontroll som er plassert direkte på en skjerm, refererer overordnet til skjermen. Med disse egenskapsverdiene kontrollen vises i hjørnet øverst til venstre på skjermen (0, 0) og har samme **bredde** og **høyde** som skjermen.
+Disse formlene bruker den **overordnede** operatoren. For en kontroll som er plassert direkte på en skjerm, **overordnede** refererer til skjermen. Med disse egenskapsverdiene kontrollen vises i hjørnet øverst til venstre på skjermen (0, 0) og har samme **bredde** og **høyde** som skjermen.
 
-Senere i dette emnet, skal du bruke disse prinsippene (og overordnet-operator) Hvis du vil plassere kontrollene i andre beholdere, for eksempel gallerier, gruppekontroller og komponenter.
+Senere i dette emnet, skal du bruke disse prinsippene (og **overordnede** operatoren) Hvis du vil plassere kontrollene i andre beholdere, for eksempel gallerier, kan du gruppere kontroller og komponenter.
 
-Som et alternativ fyller kontrollen bare den øverste halvdelen av skjermen. Hvis du vil opprette denne effekten, kan du endre den **høyde** formelen til **Parent.Height** / 2, og la andre formler forblir uendret.
+Som et alternativ fyller kontrollen bare den øverste halvdelen av skjermen. Hvis du vil opprette denne effekten, kan du angi den **høyde** egenskapen til **Parent.Height** / 2, og la andre formler forblir uendret.
 
 Hvis du vil bruke en annen kontroll til å fylle nederst halvdel av den samme skjermen, kan du ta minst to andre fremgangsmåtene til å opprette med formler. For enkelhets skyld, kan du ta med denne fremgangsmåten:
 
 | Kontroll | Egenskap | Formel           |
 |-|----------|-------------------|
-| **Øvre** | **X**        | 0                 |
-| **Øvre** | **Y**        | 0                 |
-| **Øvre** | **Bredde**    | `Parent.Width`      |
-| **Øvre** | **Høyde**   | `Parent.Height / 2` |
-| **Lavere** | **X**        | 0                 |
-| **Lavere** | **Y**        | `Parent.Height / 2` |
-| **Lavere** | **Bredde**    | `Parent.Width`      |
-| **Lavere** | **Høyde**   | `Parent.Height / 2` |
+| **Upper** | **X**        | 0                 |
+| **Upper** | **Y**        | 0                 |
+| **Upper** | **Bredde**    | `Parent.Width`      |
+| **Upper** | **Høyde**   | `Parent.Height / 2` |
+| **Lower** | **X**        | 0                 |
+| **Lower** | **Y**        | `Parent.Height / 2` |
+| **Lower** | **Bredde**    | `Parent.Width`      |
+| **Lower** | **Høyde**   | `Parent.Height / 2` |
 
 ![Øvre og nedre kontroll](media/create-responsive-layout/dynamic-layout.png)
 
-Denne konfigurasjonen vil oppnå effekten som du vil, men du må redigere hver formel Hvis du ombestemmer deg om de relative størrelsen på kontrollene. Du kan for eksempel bestemme som øverste kontrollen skal oppta bare de øverste en tredjedel på skjermen, med den nederste kontrollen fyller den lavere to tredjedeler. Hvis du vil opprette denne effekten, må du oppdatere den **høyde** -egenskapen for den **øvre** kontroll og den **Y** og **høyde** egenskapene for den **Lavere** kontroll. I stedet, vurdere å skrive formlene for den **lavere** kontroll basert på den **øvre** kontrollen (og selve), som i dette eksemplet:
+Denne konfigurasjonen vil oppnå effekten som du vil, men du må redigere hver formel Hvis du ombestemmer deg om de relative størrelsen på kontrollene. Du kan for eksempel bestemme som øverste kontrollen skal oppta bare de øverste en tredjedel på skjermen, med den nederste kontrollen fyller den lavere to tredjedeler. 
+
+Hvis du vil opprette denne effekten, må du oppdatere den **høyde** -egenskapen for den **øvre** kontroll og den **Y** og **høyde** egenskapene for den **Lavere** kontroll. I stedet, vurdere å skrive formlene for den **lavere** kontroll basert på den **øvre** kontrollen (og selve), som i dette eksemplet:
+
 
 | Kontroll | Egenskap | Formel           |
 |-|----------|-------------------|
-| **Øvre** | **X**        | 0                 |
-| **Øvre** | **Y**        | 0                 |
-| **Øvre** | **Bredde**    | `Parent.Width`      |
-| **Øvre** | **Høyde**   | `Parent.Height / 2` |
-| **Lavere** | **X**        | 0                       |
-| **Lavere** | **Y**        | `Upper.Y + Upper.Height`  |
-| **Lavere** | **Bredde**    | `Parent.Width`            |
-| **Lavere** | **Høyde**   | `Parent.Height - Lower.Y` |
+| **Upper** | **X**        | 0                 |
+| **Upper** | **Y**        | 0                 |
+| **Upper** | **Bredde**    | `Parent.Width`      |
+| **Upper** | **Høyde**   | `Parent.Height / 2` |
+| **Lower** | **X**        | 0                       |
+| **Lower** | **Y**        | `Upper.Y + Upper.Height`  |
+| **Lower** | **Bredde**    | `Parent.Width`            |
+| **Lower** | **Høyde**   | `Parent.Height - Lower.Y` |
 
 ![Øvre og nedre kontrollerer relativ størrelse](media/create-responsive-layout/dynamic-layout2.png)
 
@@ -145,7 +148,7 @@ Når du definerer skjermbilder som inneholder flere kontroller, vil det bli enkl
 
 ### <a name="galleries"></a>Gallerier
 
-Hvis du bruker et galleri i appen din, må du til å sette opp kontrollene i malen i galleriet. Du kan plassere disse kontrollene ved å skrive formler som bruker operatoren overordnede, som vil vise i malgalleriet. I formler i kontrollene i et galleri-mal, kan du bruke egenskapene Parent.TemplateHeight og Parent.TemplateWidth. Bruk disse i stedet for Parent.Width og Parent.Height, som refererer til den totale størrelsen på galleriet.
+Hvis du bruker et galleri i appen din, må du til å sette opp kontrollene i malen i galleriet. Du kan plassere disse kontrollene ved skriving av formler som bruker den **overordnede** -operatoren, vil vise i malgalleriet. I formler i kontrollene i et galleri-mal, kan du bruke den **Parent.TemplateHeight** og **Parent.TemplateWidth** egenskaper; ikke bruker **Parent.Width** og  **Parent.Height**, som refererer til den totale størrelsen på galleriet.
 
 ![Loddrett galleri som viser malen bredde og høyde](media/create-responsive-layout/gallery-vertical.png)
 
@@ -172,11 +175,11 @@ For den **topptekst** kontroll, `Parent` refererer til skjermen. For de andre, `
 
 ### <a name="components"></a>Komponenter
 
-Hvis du bruker en annen eksperimentell funksjon, med navnet komponenter, kan du konstruere byggeblokker og bruke dem på nytt i hele appen. Som med den **gruppe** kontroll, kontrollene som du plasserer i en komponent skal basere formler deres plassering og størrelse på `Parent.Width` og `Parent.Height`, som refererer til størrelsen på komponenten. Mer informasjon: [Opprette en komponent](create-component.md)
+Hvis du bruker en annen eksperimentell funksjon, med navnet komponenter, kan du konstruere byggeblokker og bruke dem på nytt i hele appen. Som med den **gruppe** kontroll, kontrollene som du plasserer i en komponent skal basere formler deres plassering og størrelse på `Parent.Width` og `Parent.Height`, som refererer til størrelsen på komponenten. Mer informasjon: [Opprette en komponent](create-component.md).
 
 ## <a name="adapting-layout-for-device-size-and-orientation"></a>Å tilpasse deg oppsett for enheten størrelse og retning
 
-Så langt, har du lært hvordan du bruke formler til å endre størrelsen på hver kontroll som svar på den tilgjengelige plassen, mens å holde kontroller justert i forhold til hverandre. Men du kanskje vil eller trenger å gjøre mer omfattende oppsettendringer som svar på en annen enhet størrelser og retninger. Når en enhet er rotert fra stående til liggende retning, for eksempel kan du bytte fra en loddrett oppsett til en vannrett. Du kan presentere mer innhold på en større enhet eller omorganisere for å gi et mer tiltalende oppsett. På en mindre enhet må du kanskje dele opp innholdet på tvers av flere skjermer.
+Så langt, har du lært hvordan du bruke formler til å endre størrelsen på hver kontroll som svar på den tilgjengelige plassen, mens å holde kontroller justert i forhold til hverandre. Men du kanskje vil eller trenger å gjøre mer omfattende oppsettendringer som svar på en annen enhet størrelser og retninger. Når en enhet er rotert fra stående til liggende retning, kan, du for eksempel å bytte fra en loddrett oppsett til en vannrett. Du kan presentere mer innhold på en større enhet eller omorganisere for å gi et mer tiltalende oppsett. På en mindre enhet må du kanskje dele opp innholdet på tvers av flere skjermer.
 
 ### <a name="device-orientation"></a>Retning for enheten
 
@@ -195,21 +198,21 @@ Tilpasse skjermens **bredde** og **høyde** egenskaper retningen på enheten, ka
 
 Disse formlene Bytt appens **DesignWidth** og **DesignHeight** verdier, basert på om enhetens bredde er mindre enn i høyde (stående retning) eller mer enn i høyde (liggende retning) .
 
-Når du har justert skjermens **bredde** og **høyde** formler, kan du også vil ordne kontrollene i skjermen for å bruke den tilgjengelige plassen bedre. Hvis hver av to kontroller tar opp halve skjermen, kan du for eksempel plassere dem loddrett i stående men ordne dem side ved side i liggende visning.
+Når du har justert skjermens **bredde** og **høyde** formler, du kan også vil ordne kontrollene i skjermen for å bruke bedre den tilgjengelige plassen på nytt. Hvis hver av to kontroller tar opp halve skjermen, kan du for eksempel plassere dem loddrett i stående men ordne dem side ved side i liggende visning.
 
 > [!NOTE]
 > I liggende retning, den **øvre** og **lavere** kontroller vises som venstre og høyre kontroller.
 
 | Kontroll | Egenskap | Formel |
 |--|----------|---|
-| **Øvre** | **X** | 0 |
-| **Øvre** | **Y** | 0 |
-| **Øvre** | **Bredde** | `If(Parent.Width < Parent.Height, Parent.Width, Parent.Width / 2)` |
-| **Øvre** | **Høyde**   | `If(Parent.Width < Parent.Height, Parent.Height / 2, Parent.Height)` |
-| **Lavere** | X | `If(Parent.Width < Parent.Height, 0, Upper.X + Upper.Width)`  |
-| **Lavere** | Y | `If(Parent.Width < Parent.Height, Upper.Y + Upper.Height, 0)` |
-| **Lavere** | **Bredde** | `Parent.Width - Lower.X` |
-| **Lavere** | **Høyde** | `Parent.Height - Lower.Y` |
+| **Upper** | **X** | 0 |
+| **Upper** | **Y** | 0 |
+| **Upper** | **Bredde** | `If(Parent.Width < Parent.Height, Parent.Width, Parent.Width / 2)` |
+| **Upper** | **Høyde**   | `If(Parent.Width < Parent.Height, Parent.Height / 2, Parent.Height)` |
+| **Lower** | X | `If(Parent.Width < Parent.Height, 0, Upper.X + Upper.Width)`  |
+| **Lower** | Y | `If(Parent.Width < Parent.Height, Upper.Y + Upper.Height, 0)` |
+| **Lower** | **Bredde** | `Parent.Width - Lower.X` |
+| **Lower** | **Høyde** | `Parent.Height - Lower.Y` |
 
 ![uttrykk for å tilpasse en stående retning](media/create-responsive-layout/portrait.png)
 
@@ -217,6 +220,6 @@ Når du har justert skjermens **bredde** og **høyde** formler, kan du også vil
 
 ### <a name="known-limitations"></a>Kjente begrensninger
 
-Redigeringsopplevelsen lerretet svarer ikke til skalering formler som er opprettet. Hvis du vil teste responsive virkemåte, lagre og Publiser appen din, og deretter åpne den på enheter eller i nettleservinduer i forskjellige størrelser og retninger.
+Redigeringsopplevelsen lerretet svarer ikke til skalering formler som er opprettet. Hvis du vil teste responsive virkemåte, lagre og Publiser appen din, og åpne den på enheter eller i nettleservinduer i forskjellige størrelser og retninger.
 
 Hvis du skriver uttrykk eller formler i den **X**, **Y**, **bredde**, og **høyde** egenskaper for en kontroll, vil du overskrive de uttrykk eller formler hvis du senere dra kontrollen til en annen plassering eller endre størrelsen på kontrollen ved å dra kantlinjene.

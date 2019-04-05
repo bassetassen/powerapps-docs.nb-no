@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b7d29d883a14e34dd89d766a6aeffb17275bde6b
-ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.openlocfilehash: 1b598cc863ec01bcb2a66a9510cb48ec5203e679
+ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57803462"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042636"
 ---
 # <a name="char-function-in-powerapps"></a>Char-funksjonen i PowerApps
 
@@ -38,9 +38,9 @@ Den **Char** funksjonen oversetter et tall til en streng med det tilsvarende ASC
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Char (65)** |Returnerer tegnet som samsvarer med ASCII-koden 65. |"A" |
-| **Char( 105 )** |Returnerer tegnet som samsvarer med ASCII-koden 105. |"i" |
-| **Char( 35 )** |Returnerer tegnet som samsvarer med ASCII-koden 35. |"#" |
+| **CHAR (65)** |Returnerer tegnet som samsvarer med ASCII-koden 65. |"A" |
+| **CHAR (105)** |Returnerer tegnet som samsvarer med ASCII-koden 105. |"i" |
+| **CHAR (35)** |Returnerer tegnet som samsvarer med ASCII-koden 35. |"#" |
 
 ### <a name="display-a-character-map"></a>Vise et Tegnkart
 
@@ -60,7 +60,7 @@ Den **Char** funksjonen oversetter et tall til en streng med det tilsvarende ASC
     - **TemplateSize**: 30
     - **TemplatePadding**: 0
 
-    Verdien for den **elementer** egenskapen multipliserer 16 ved kolonnenummeret levert av kolonnen verdi den **elementer** egenskapen fra første galleriet (0-7 i ThisItem.Value). Formelen deretter legger til resultatet i en av rad tallene fra det andre galleriet (0-15 i oppføringen omfang som den [ **ForAll** ](function-forall.md) funksjonen gir).
+    Verdien for den **elementer** egenskapen multipliserer 16 ved kolonnenummeret levert av kolonnen verdi den **elementer** egenskapen fra første galleriet (0-7 i `ThisItem.Value`). Formelen deretter legger til resultatet i en av rad tallene fra det andre galleriet (0-15 i oppføringen omfang som den [ **ForAll** ](function-forall.md) funksjonen gir).
 
 1. I det andre (loddrette) galleriet, kan du legge til en **etikett** kontroll, og angi følgende egenskaper:
 

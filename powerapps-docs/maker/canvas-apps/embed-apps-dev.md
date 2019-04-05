@@ -13,15 +13,15 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a6b23b97195f000e6e17bb6fd6f0e9f3a2da4f09
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.openlocfilehash: e4d3d2e769951ed75ddeeb57f7fe4c0b350d02e7
+ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57799046"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042690"
 ---
 # <a name="integrate-canvas-apps-into-websites-and-other-services"></a>Integrer lerretsapper på nettsteder og andre tjenester
-Appene du utvikler er gjerne mest nyttige når de er tilgjengelige direkte hvor arbeidet utføres. Med PowerApps kan du bygge inn lerretsapper i en iframe, slik at du kan integrere disse appene på nettsteder og i andre tjenester, for eksempel Power BI eller SharePoint.
+Appene du utvikler er gjerne mest nyttige når de er tilgjengelige direkte hvor man gjøre arbeidet. Ved å bygge inn lerret-apper i en iframe, kan du integrere disse appene på nettsteder og andre tjenester, for eksempel Power BI eller SharePoint.
 
 I dette emnet viser vi deg hvordan du angir parametere for innebygging av apper. Deretter bygger vi inn ressursbestillingsappen på et nettsted.
 
@@ -29,10 +29,10 @@ I dette emnet viser vi deg hvordan du angir parametere for innebygging av apper.
 
 Husk på følgende restriksjoner:
 
-* Bare PowerApps-brukere i samme tenant har tilgang til den innebygde appen.
-* Hvis du vil ha tilgang til PowerApps ved hjelp av Internet Explorer 11, må du deaktivere kompatibilitetsmodus for visning.
+- Bare PowerApps-brukere i samme tenant har tilgang til den innebygde appen.
+- Hvis du vil ha tilgang til PowerApps ved hjelp av Internet Explorer 11, må du deaktivere kompatibilitetsmodus for visning.
 
-Du kan også integrere PowerApps i SharePoint Online (uten å bruke en iframe). Hvis du vil ha mer informasjon, kan du se [Generer en app fra SharePoint ved hjelp av PowerApps](app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online).
+Du kan også integrere lerret-apper i SharePoint Online uten å bruke en iframe. Mer informasjon: [Bruke PowerApps-webdelen](https://support.office.com/article/use-the-powerapps-web-part-6285f05e-e441-408a-99d7-aa688195cd1c).
 
 ## <a name="set-uri-parameters-for-your-app"></a>Å angi URI-parametere for appen din
 Hvis du har en app du vil bygge inn, er det første trinnet å angi parametere for Uniform Resource Identifier (URI), slik at iframe finner appen. URI-en finnes i følgende format:
@@ -58,10 +58,10 @@ App-ID-en er tilgjengelig på powerapps.com. For appen du vil bygge inn:
 1. På **Apper**-fanen, på [powerapps.com](https://powerapps.microsoft.com), klikker eller trykker du på ellipsen ( **. . .** ), deretter **Detaljer**.
    
     ![Gå til appdetaljer](./media/embed-apps-dev/details.png)
-2. Kopier **App-ID-en**.
+1. Kopier **App-ID-en**.
    
     ![Kopiering av app-ID fra detaljer](./media/embed-apps-dev/app-id.png)
-3. Erstatt `[AppID]`-verdien i URI-en. URI-en ser slik ut for ressursbestillingsappen vår:
+1. Erstatt `[AppID]`-verdien i URI-en. URI-en ser slik ut for ressursbestillingsappen vår:
    
     ```
     https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/76897698-91a8-b2de-756e-fe2774f114f2
@@ -85,8 +85,7 @@ Bildet nedenfor viser ressursbestillingsappen innebygd i et eksempelnettsted for
 
 Husk følgende punkter når du skal godkjenne brukere av appen:
 
-* Hvis nettstedet bruker Azure Active Directory (AAD)-basert godkjenning, kreves det ingen ekstra pålogging.
-* Hvis nettstedet ditt bruker en annen påloggingsmetode, eller ikke er godkjent, vil brukerne se en påloggingsmelding på iframe. Etter de er pålogget, vil de kunne kjøre appen så lenge oppretteren av appen har delt den med dem.
+- Hvis nettstedet bruker Azure Active Directory (AAD)-basert godkjenning, kreves det ingen ekstra pålogging.
+- Hvis nettstedet ditt bruker en annen påloggingsmetode, eller ikke er godkjent, vil brukerne se en påloggingsmelding på iframe. Etter de er pålogget, vil de kunne kjøre appen så lenge oppretteren av appen har delt den med dem.
 
 Som du ser, er det enkelt og kraftfullt å bygge inn apper. Innebygging gjør det mulig å flytte appene direkte til stedene der du og kundene dine arbeider – nettsteder Power BI-instrumentbord, SharePoint-sider og mer.
-

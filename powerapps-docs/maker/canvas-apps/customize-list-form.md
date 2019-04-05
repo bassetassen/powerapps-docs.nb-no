@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 12/17/2018
+ms.date: 04/04/2019
 ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 711d8029f0f8353efcdff5bea8cbb1402884502f
-ms.sourcegitcommit: 647e183c070c2159b790c7813a7be1d60b2551bd
+ms.openlocfilehash: d33f541ea698b02a662edb652f809095f47acc6e
+ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58765483"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042736"
 ---
 # <a name="customize-a-sharepoint-list-form-by-using-powerapps"></a>Å tilpasse et SharePoint-listeskjema ved bruk av PowerApps
 
@@ -73,7 +73,7 @@ Du kan konfigurere feltene **Pris**, **Tilgjengelighet** og **Farger** slik at d
 
 1. Angi den **synlighet** -egenskapen for den **farge**, **tilgjengelighet**, og **pris** kort til denne formelen (erstatter, om nødvendig den tall med det som du noterte ned i forrige trinn):
 
-    **Hvis (DataCardValue2.Value = true, true)**
+    **If(DataCardValue2.Value = true, true)**
 
 1. Velg **Detaljer**-bryteren (ved å klikke eller trykke på den) flere ganger mens du holder nede ALT.
 
@@ -101,7 +101,7 @@ Du kan konfigurere feltene **Pris**, **Tilgjengelighet** og **Farger** slik at d
     - [Tilpasse én eller flere kort](working-with-cards.md) (for eksempel endre et kort Vis tekst eller inndata-kontroll).
     - Opprette et [oppslagsfelt](sharepoint-lookup-fields.md).
 
-    Mer informasjon: [Forstå integrasjon for SharePoint-skjemaer](sharepoint-form-integration.md)
+    Mer informasjon: [Forstå integrasjon for SharePoint-skjemaer](sharepoint-form-integration.md).
 
 ## <a name="use-the-default-form"></a>Å bruke standardskjemaet
 
@@ -157,7 +157,7 @@ Du kan konfigurere feltene **Pris**, **Tilgjengelighet** og **Farger** slik at d
 
 **SPØRSMÅL:** Hvordan kan jeg enkelt dele skjemaet med andre?
 
-**A:** Åpne skjemaet, velg **Kopier kobling**, og send koblingen du vil bruke skjemaet for alle.
+**A:** Åpne skjemaet, velg **Kopier kobling**, og deretter sende koblingen til personer du ønsker å bruke-skjemaet.
 
 **SPØRSMÅL:** Kan jeg oppdatere skjemaet uten å gjøre endringene mine synlige for andre?
 
@@ -179,7 +179,7 @@ Du kan konfigurere feltene **Pris**, **Tilgjengelighet** og **Farger** slik at d
 1. Gå tilbake til **Versjoner**-siden i den andre nettleserfanen, finn versjonen du ønsker å gjenopprette, og velg deretter **Gjenopprett**.
 
     > [!NOTE]
-    > Hvis du får en feilmelding om at gjenopprettingen mislyktes fordi skjemaet er låst av en annen bruker, må du vente til brukeren låser opp skjemaet, og prøve på nytt.
+    > Hvis du får en feilmelding om at gjenopprettingen mislyktes fordi skjemaet er låst av en annen bruker, vente til brukeren låser opp skjemaet, og prøv på nytt.
 
 **SPØRSMÅL:** Kan jeg flytte skjemaet fra én liste til en annen?
 
@@ -211,6 +211,6 @@ Du kan konfigurere feltene **Pris**, **Tilgjengelighet** og **Farger** slik at d
 
 1. Velg **Ressurser** øverst på siden for standardmiljø.
 
-1. Se etter apper med en **SharePoint-skjema**-apptype fra listen over apper – dette er de tilpassede skjemaene.
+1. Fra listen over apper, kan du se etter apper med en **SharePoint-skjema** apptype – dette er de tilpassede skjemaene.
 
     ![Liste over egendefinerte skjemaer](./media/customize-list-form/all-customized-forms.png)

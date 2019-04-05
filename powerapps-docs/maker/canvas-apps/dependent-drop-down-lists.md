@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 02/28/2019
+ms.date: 04/04/2019
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e00c81f25de9a764e8f6d963ff94f3c0ffe052a2
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.openlocfilehash: dc1b3b87e2c1fdcd4ab7eb6634db7f9e7c049ec2
+ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357257"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042759"
 ---
 # <a name="create-dependent-drop-down-lists-in-a-canvas-app"></a>Opprett avhengige rullegardinlister i en lerretsapp
 
@@ -28,7 +28,7 @@ Som en anbefalt fremgangsmåte, kan du opprette en datakilde for verdiene i den 
 
 For scenariet i dette emnet, kan du lagre ansatte Send problemer til en **hendelser** liste gjennom et skjema. Ansatte angi ikke bare plasseringen av butikk som hendelsen oppstod, men også avdeling i denne plasseringen. Ikke alle lokasjoner som har de samme avdelingene, så en **plasseringer** listen sikrer at ansatte ikke kan angi en avdeling for en plassering som ikke har denne avdelingen.
 
-Dette emnet bruker SharePoint-lister som datakilder, men alle datakilder i tabellform fungerer på samme måte.
+Dette emnet bruker Microsoft SharePoint-lister som datakilder, men alle datakilder i tabellform fungerer på samme måte.
 
 ## <a name="create-data-sources"></a>Opprette datakilder
 
@@ -49,7 +49,7 @@ A **plasseringer** listen viser avdelinger for hver plassering.
 | Pembroke       | Produsere          |
 | Pembroke       | Blomstermotiv           |
 
-En **hendelser** listen viser kontaktinformasjon og informasjon om hver hendelse. Opprette dato-kolonnen som en **dato** kolonne, men opprette de andre kolonnene som **enkelt linje med tekst** kolonner for å forenkle konfigurasjon og unngå [delegering](./delegation-overview.md) advarsler i PowerApps.
+En **hendelser** listen viser kontaktinformasjon og informasjon om hver hendelse. Opprette dato-kolonnen som en **dato** kolonne, men opprette de andre kolonnene som **enkelt linje med tekst** kolonner for å forenkle konfigurasjon og unngå [delegering](./delegation-overview.md) advarsler i Microsoft PowerApps.
 
 | Fornavn | Etternavn | Telefonnummer     | Location | Avdeling | Beskrivelse       | Date      |
 |------------|-----------|------------------|----------------|------------|-------------------------|-----------|
@@ -86,7 +86,7 @@ Etter denne endringen, kan du ignorere den **tittel** kolonnen, eller du kan [fj
 
 ## <a name="replace-the-controls"></a>Erstatt kontrollene
 
-1. I den **felt** ruten, velger du pil ned ved siden **plassering**.
+1. I den **felt** ruten, velger du pilen ved siden **plassering**.
 
     Hvis du har lukket den **felt** ruten, kan du åpne den på nytt ved å velge **SharePointForm1** i det venstre navigasjonsfeltet og deretter velge **Rediger felt** på **Egenskaper** fanen i ruten til høyre.
 
@@ -108,7 +108,7 @@ Etter denne endringen, kan du ignorere den **tittel** kolonnen, eller du kan [fj
 1. Merk av for denne listen, og velg deretter **koble til**.
 
     > [!div class="mx-imgBorder"]
-    > ![Data-ruten](./media/dependent-drop-down-lists/select-list.png)
+    > ![Datarute](./media/dependent-drop-down-lists/select-list.png)
 
     Listen over tilkoblinger viser de **hendelser** -listen som skjemaet er basert på, og den **plasseringer** listen, som identifiserer steder og avdelinger i skjemaet.
 
@@ -144,7 +144,7 @@ Hvis du gir nytt navn til kontrollene, du kan identifisere dem enklere og eksemp
 
 ## <a name="configure-the-departments"></a>Konfigurer avdelingene
 
-1. Velg **ddDepartment** og deretter, på den **Egenskaper** fanen i den høyre ruten, velg **avhenger av.**
+1. Velg **ddDepartment**, og deretter, på den **Egenskaper** fanen i den høyre ruten, velg **avhenger av.**
 
 1. Under **overordnet kontroll**, forsikre deg om at **ddLocation** vises i listen øvre og **resultatet** vises i den nederste listen.
 
@@ -202,7 +202,7 @@ Kontroller om du viser riktig felt for kontrollen i én av følgende måter:
     > ![Kombinasjonsboks for endring](./media/dependent-drop-down-lists/combo-box-display-field.png)
 
 **Min rullegardinlisten underordnede inneholder dupliserte elementer.**
-Denne symptom sannsynligvis på grunn av ved hjelp av en **oppslag** kolonnen i SharePoint eller en **valg** -funksjonen i PowerApps. Hvis du vil fjerne dupliseringen, bryte en **Distinct** funksjonen rundt den riktig returneringen av data. Mer informasjon: [DISTINCT-funksjonen](functions/function-distinct.md)
+Denne symptom sannsynligvis på grunn av ved hjelp av en **oppslag** kolonnen i SharePoint eller en **valg** -funksjonen i PowerApps. Hvis du vil fjerne dupliseringen, bryte en **Distinct** funksjonen rundt den riktig returneringen av data. Mer informasjon: [DISTINCT-funksjonen](functions/function-distinct.md).
 
 ## <a name="known-limitations"></a>Kjente begrensninger
 

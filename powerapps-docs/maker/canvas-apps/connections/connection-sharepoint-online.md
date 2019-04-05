@@ -1,30 +1,32 @@
 ---
 title: Oversikt over SharePoint-tilkoblingen | Microsoft Docs
-description: Se de tilgjengelige funksjonene, svarene og eksemplene for SharePoint
+description: Se de tilgjengelige funksjonene, svar og eksempler for SharePoint.
 author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 07/12/2017
+ms.date: 04/03/2019
 ms.author: niwaggon
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 86c23a2da0dca20bb6f755a9cb548c092180ef16
-ms.sourcegitcommit: 647e183c070c2159b790c7813a7be1d60b2551bd
+ms.openlocfilehash: 65ce3b7736b55f3734d6da7d945965ed791a3ce4
+ms.sourcegitcommit: 4fe0a71efd54c1f4d22a279aa74c6bde3d908b9d
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58765506"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59007893"
 ---
 # <a name="connect-to-sharepoint-from-a-canvas-app"></a>Koble til SharePoint fra en lerretsapp
 
 ![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
 
 Koble til et SharePoint-område til å generere en app automatisk fra en egendefinert liste, eller Opprett en tilkobling før du legger til data i en eksisterende app eller bygge en app fra grunnen av.
+
+Avhengig av hvor dataene befinner seg, kan du utføre ett av eller begge av disse metodene:
 
 - Vise data fra en egendefinert liste i en SharePoint Online-området eller et lokalt område.
 - Vis bilder og spill av video- eller filer i et bibliotek (bare SharePoint Online).
@@ -73,7 +75,7 @@ Hvis du vil behandle data i en egendefinert liste, kan PowerApps [generere en ap
         > Hvis du ikke har en lokal datagateway installert, [installere en](../gateway-reference.md), og velg deretter ikonet for å oppdatere listen over gatewayer.
 
         > [!div class="mx-imgBorder"]
-        > ![Velg gateway](./media/connection-sharepoint-online/choose-gateway.png)
+        > ![Velge gateway](./media/connection-sharepoint-online/choose-gateway.png)
 
         Tilkoblingen er opprettet, og du kan legge til en data i en eksisterende app eller bygge en app fra grunnen av.
 
@@ -96,7 +98,7 @@ Hvis du vil behandle data i en egendefinert liste, kan PowerApps [generere en ap
     > [!div class="mx-imgBorder"]
     > ![Under Velg en liste, velg avmerkingsboksen for dokumenter eller én eller flere lister du vil bruke, og velg deretter koble til](./media/connection-sharepoint-online/select-sp-tables.png)
 
-    Ikke alle typer lister vises som standard. PowerApps støtter egendefinerte lister, ikke malbaserte lister.  Hvis navnet på listen du vil bruke ikke vises, kan du bla til bunnen og deretter skrive inn listenavnet i boksen som inneholder **Skriv inn navn på egendefinert liste**.
+    Ikke alle typer lister vises som standard. PowerApps støtter egendefinerte lister, ikke malbaserte lister. Hvis navnet på listen du vil bruke ikke vises, bla til bunnen, og skriv deretter inn navnet på listen i boksen som inneholder **Skriv inn navn på egendefinert tabell**.
 
     > [!div class="mx-imgBorder"]
     > ![Skriv inn navnet på listen i boksen som inneholder Skriv inn et navn på egendefinert liste.](./media/connection-sharepoint-online/custom-list.png)
@@ -111,20 +113,20 @@ Bruke begrepene i [opprette en app fra grunnen av](../get-started-create-from-bl
 
 Hvis listen over egendefinerte inneholder noen av disse typene kolonner, kan du vise dataene i en **galleriet** kontrollen ved hjelp av formellinjen for å angi den **tekst** -egenskapen for én eller flere **etikett** Kontroller i galleriet:
 
-- Angi **ThisItem.[ColumnName].Value** for å vise data for **Valg-** eller **Oppslag-** kolonner.
+- For en **valg** eller **oppslag** kolonnen, angi **ThisItem.** _ColumnName_**. Verdien** å vise data i denne kolonnen.
 
     Angi for eksempel **ThisItem.Location.Value** hvis du har en **Valg**-kolonne ved navn **Lokasjon**, og angi **ThisItem.PostalCode.Value** hvis du har en **Oppslag**-kolonne ved navn **PostalCode**.
 
-- Angi **ThisItem.[ColumnName].DisplayName** for å vise visningsnavnet for brukeren eller gruppen for **Person- eller gruppe**-kolonner.
+- For en **Person eller gruppe** kolonnen, angi **ThisItem.** _ColumnName_**. DisplayName** til å vise visningsnavnet for brukeren eller gruppen.
 
     Angi for eksempel **ThisItem.Manager.DisplayName** for å vise visningsnavn fra en **Person- eller gruppe**-kolonne ved navn **Leder**.
 
-    Du kan også vise forskjellig informasjon om brukere, for eksempel e-postadresser eller jobbtitler. Hvis du vil vise en fullstendig liste over alternativer, kan du angi **ThisItem.[ColumnName].** (med etterfølgende punktum).
+    Du kan også vise forskjellig informasjon om brukere, for eksempel e-postadresser eller jobbtitler. Hvis du vil vise en fullstendig liste over alternativer, kan du angi **ThisItem.** _ColumnName_**.** (inkludert etterfølgende punktum).
 
     > [!NOTE]
     > For en **CreatedBy** kolonnen, angi **ThisItem.Author.DisplayName** til å vise visningsnavnene på brukerne som opprettet elementer i listen. For en **ModifiedBy**-kolonne angir du **ThisItem.Editor.DisplayName** for å vise visningsnavnene på brukerne som endret elementer i listen.
 
-- For en **Administrerte metadata**-kolonne angir du **ThisItem.[ColumnName].Label** for å vise data i denne kolonnen.
+- For en **administrerte Metadata** kolonnen, angi **ThisItem.** _ColumnName_**. Etikett** å vise data i denne kolonnen.
 
     For eksempel angir du **ThisItem.Languages.Label** hvis du har en **Administrerte metadata**-kolonne kalt **Språk**.
 
