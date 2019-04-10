@@ -13,22 +13,29 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 710bc4a11e4de9921e0efa077cb0e18f58f09cb5
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: ba5df28f03ec5e7c9a3d8146aecb0427d8145b13
+ms.sourcegitcommit: dc578df718420c7f19e4583d9e7002e69495e268
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42831508"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59425315"
 ---
-# <a name="gallery-control-in-powerapps"></a>Galleri-kontrollen i PowerApps
+# <a name="gallery-control-in-canvas-apps"></a>Galleri-kontrollen i lerret-apper
+
 En kontroll som inneholder andre kontroller og viser et datasett.
 
 ## <a name="description"></a>Beskrivelse
+
 En **Galleri**-kontroll kan vise flere poster fra en datakilde, og hver post kan inneholde flere typer data. En **Galleri**-kontroll kan vise flere kontakter for hvert element og kontaktinformasjon for hver kontakt, deriblant et navn, en postadresse og et telefonnummer. Hvert felt vises i en separat kontroll i **Galleri**-kontrollen, og du kan konfigurere disse kontrollene i malen. Malen vises som det første elementet i galleriet, i den venstre kanten av en **Galleri**-kontroll i vannrett/liggende retning og øverst i en **Galleri**-kontroll i loddrett/stående retning. Eventuelle endringer du gjør i malen, gjenspeiles i hele **Galleri**-kontrollen.
 
-Forhåndsdefinerte maler er tilgjengelig for å for å vise bilde eller tekst og et galleri for elementer med variabel høyde.
+Forhåndsdefinerte maler for viser bilder og tekst i et galleri som er tilgjengelig, i tillegg et galleri for elementer med variabel høyde.
+
+## <a name="limitations"></a>Begrensninger
+
+Hvis en bruker ruller den **fleksibel høyde** galleri-kontrollen før alle elementer er lastet, elementet som er for øyeblikket i visningen kan overføres ned og ut av visningen når datainnlastingen er fullført. Du unngår dette problemet ved å bruke en standard **galleriet** kontroll i stedet for den **fleksibel høyde** variant.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
+
 **[Standard](properties-core.md)**  – elementet eller posten fra datakilden som skal velges i galleriet når appen startes.
 
 **[Elementer](properties-core.md)** – kilden til dataene som vises i en kontroll, for eksempel et galleri, en liste eller et diagram.
@@ -36,7 +43,8 @@ Forhåndsdefinerte maler er tilgjengelig for å for å vise bilde eller tekst og
 **Valgt** – det valgte elementet.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
-**[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere. Bør beskrive hva listen over elementer er.
+
+**[AccessibleLabel](properties-accessibility.md)**  – etikett for galleriet (ikke elementer den inneholder) for skjermlesere. Bør beskrive hva listen over elementer er.
 
 **AllItems** – alle elementene i et galleri, inkludert ekstra kontroll-verdier som er en del av malen i galleriet.
 
@@ -52,9 +60,11 @@ Forhåndsdefinerte maler er tilgjengelig for å for å vise bilde eller tekst og
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
-**Oppsett** – om brukeren ruller gjennom et galleri eller justerer en glidebryteren fra topp til bunn (**loddrett**) eller fra venstre mot høyre (**vannrett**).
+**ItemAccessibleLabel** – etikett for hvert gallerielement for skjermlesere. Bør beskrive hva hvert element er.
 
 **NavigationStep** – hvor langt et galleri ruller hvis **ShowNavigation**-egenskapen er satt til **sann** og brukeren velger en navigasjonspil i en av endene av galleriet.
+
+**Valgbar** – om elementene i galleriet kan velges. Når satt til **SANN**, skjermlesere identifisere galleriet som en valgbar liste, og du velger et element ved å klikke eller trykke på den. Når satt til **USANN**, skjermlesere identifisere galleriet som en vanlig liste og å klikke eller trykke på et element ikke velge den.
 
 **ShowNavigation** – om det vises en pil i hver ende av et galleri slik at en bruker kan bla gjennom elementene i galleriet ved å klikke eller trykke på en pil.
 
@@ -81,36 +91,52 @@ Forhåndsdefinerte maler er tilgjengelig for å for å vise bilde eller tekst og
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Filter**( *DataSource*, *Formula* )](../functions/function-filter-lookup.md)
+
+[**Filter**( *DataSource*, *formelen* )](../functions/function-filter-lookup.md)
 
 ## <a name="examples"></a>Eksempler
+
 ### <a name="show-and-filter-data"></a>Å vise og filtrere data
-* [Å vise tekst](control-text-box.md#show-data-in-a-gallery)
-* [Å vise bilder](control-image.md#show-a-set-of-images-from-a-data-source)
-* [Å filtrere data ved å velge et listealternativ](control-drop-down.md#example)
-* [Å filtrere data ved å justere en glidebryter](control-slider.md#example)
+
+* [Vis tekst](control-text-box.md#show-data-in-a-gallery)
+* [Vis bilder](control-image.md#show-a-set-of-images-from-a-data-source)
+* [Filtrere data ved å velge et listealternativ](control-drop-down.md#example)
+* [Filtrere data ved å justere en glidebryter](control-slider.md#example)
 
 ### <a name="get-data-from-the-user"></a>Å hente data fra brukeren
-* [Å hente tekst](control-text-input.md#collect-data)
+
+* [Få tekst](control-text-input.md#collect-data)
 * [Å hente bilder](control-add-picture.md#add-images-to-an-image-gallery-control)
 * [Å hente fotografier](control-camera.md#example)
 * [Å hente lyder](control-microphone.md#example)
 * [Å hente tegninger](control-pen-input.md#create-a-set-of-images)
 
-
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
+
 ### <a name="color-contrast"></a>Fargekontrast
+
 Hvis du skal kunne klikke hvor som helst i et gallerielement for å merke det, må det være tilstrekkelig fargekontrast mellom:
+
 * **[BorderColor](properties-color-border.md)** og fargen utenfor galleriet (hvis det foreligger en kantlinje)
 * **[Fyll](properties-color-border.md)** og fargen utenfor galleriet (hvis det ikke foreligger en kantlinje)
 
 ### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
+
 * **[AccessibleLabel](properties-accessibility.md)** bør vises.
 
     > [!NOTE]
-  > Skjermlesere kunngjør når elementer i galleriet endres. **AccessibleLabel** nevnes også. Dette gir kontekst til kunngjøringen, og er enda viktigere når det finnes flere gallerier på samme skjerm.
+    > Skjermlesere leser opp når elementer i galleriet endres. **AccessibleLabel** nevnes også. Dette gir kontekst til kunngjøringen, og er enda viktigere når det finnes flere gallerier på samme skjerm.
+
+* Når et gallerielement inneholder flere kontroller, kan du bruke **ItemAccessibleLabel** til å summere det gallerielementet innholdet.
+
+* Angi verdien for **kan velges** til **SANN** Hvis du vil at brukerne skal velge et gallerielement. Hvis ikke, angir denne verdien til **USANN**.
+
+* Når et gallerielement inneholder flere kontroller, kan du bruke **ItemAccessibleLabel** til å gi et sammendrag av galleriet elementets innholdet.
+
+* **Valgbar** bør angis på riktig måte, avhengig av om brukere er ment å velge et gallerielement.
 
 ### <a name="keyboard-support"></a>Tastaturstøtte
+
 * Vurder å angi **ShowScrollbar** til **sann**. Rullefeltet vises ikke på de fleste skjermenhetene før du begynner å rulle.
 * Hvis du skal kunne klikke hvor som helst i et gallerielement for å merke det, må det også finnes en måte for tastaturbrukere å merke gallerielementet. Legg for eksempel til en **[knapp](control-button.md)** som har egenskapen **OnSelect** angitt til **Select(Parent)**.
 
