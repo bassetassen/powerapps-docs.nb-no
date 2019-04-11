@@ -97,7 +97,7 @@ Se [Forstå dataskjemaer](../working-with-forms.md) utfyllende eksempler.
 1. Legg til en Knapp-kontroll, angi kontrollens **[Text](../controls/properties-core.md)**-egenskap til **Save**, og sett kontrollens **[OnSelect](../controls/properties-core.md)**-egenskap til denne formelen:
    
     **SubmitForm( EditForm )**
-2. Angi **[OnFailure](../controls/control-form-detail.md)**-egenskapen for en Skjema-kontroll til tom og**[OnSuccess](../controls/control-form-detail.md)**-egenskapen til denne formelen:
+2. Angi **[OnFailure](../controls/control-form-detail.md)**-egenskapen for en Skjema-kontroll til tom og **[OnSuccess](../controls/control-form-detail.md)**-egenskapen til denne formelen:
    
     **Back()**
 3. Gi en **[Etikett](../controls/control-text-box.md)**-kontroll navnet **ErrorText**, og angi kontrollens **[Tekst](../controls/properties-core.md)**-egenskapen til denne formelen:
