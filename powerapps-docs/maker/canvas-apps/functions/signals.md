@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 147766eb9e9b17698882241e8eb3bd0ae7ba7e78
-ms.sourcegitcommit: 0dbbf53aea319e53edadc1d3a9efa5728856ebd8
+ms.openlocfilehash: d13f4a0669ae9f0d7ef9a5f4ef7115e006256bd9
+ms.sourcegitcommit: d1d39d6b72516d62514af4ff90f04c35fbdd8638
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58172637"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480243"
 ---
 # <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Signaler fra Acceleration, App, Compass, Connection og Location i PowerApps
 Returnerer informasjon om appmiljøet, som hvor brukeren befinner seg i verden og hvilken skjerm som vises.  
@@ -46,8 +46,8 @@ Alle signaler returnerer en [post](../working-with-tables.md#records) av informa
 | **App.ActiveScreen** | Skjermen som vises. Returnerer et skjermobjekt som du kan bruke til å henvise til egenskaper til skjermen, eller sammenligne med en annen skjerm for å bestemme hvilken skjerm som vises. Hvis du vil endre skjermen som vises, kan du bruke den **[tilbake](function-navigate.md)** eller **[Navigate](function-navigate.md)** funksjonen. |
 | **App.Width** | Returnerer bredden på vinduet som appen kjører. Du kan bruke denne egenskapen i en formel når du angir den **bredde** -egenskapen for skjermen for å utvikle en responsive app.  |
 | **App.Height** | Returnerer høyden på vinduet som appen kjører. Du kan bruke denne egenskapen i en formel når du angir den **høyde** -egenskapen for skjermen for å utvikle en responsive app. |
-| **App.DesignWidth** | Returnerer bredden på appen i PowerApps Studio. Du kan bruke denne egenskapen i en formel når du angir den **bredde** -egenskapen for skjermbildet til for å sikre en minimumsbredde i en responsive app.  |
-| **App.DesignHeight** | Returnerer høyden på appen i PowerApps Studio. Du kan bruke denne egenskapen i en formel når du angir den **høyde** -egenskapen for skjermbildet til for å sikre en minimumshøyden i en responsive app.  |
+| **App.DesignWidth** | Returnerer bredden på appen i PowerApps Studio. Du kan bruke denne egenskapen i en formel når du angir den **bredde** -egenskapen for skjermen for å sikre en minimumsbredde i en responsive app.  |
+| **App.DesignHeight** | Returnerer høyden på appen i PowerApps Studio. Du kan bruke denne egenskapen i en formel når du angir den **høyde** -egenskapen for skjermen for å sikre en minimumshøyden i en responsive app.  |
 
 Den **App** objekt har også en [formel for virkemåte](../working-with-formulas-in-depth.md) som du kan angi.
 
@@ -96,14 +96,14 @@ I et fotball-felt, en pitcheren kaster en telefon fra pitcherens mound til en mo
 | --- | --- | --- |
 | **Location.Latitude** |Returnerer breddegraden til gjeldende plassering. Feltet er plassert på kartkoordinater 47,591 N, 122,333 W. |47,591<br><br>Breddegraden endres automatisk mens ballen beveger seg mellom pitcheren og mottakeren. |
 | **Location.Longitude** |Returnerer lengdegraden til gjeldende plassering. |122,333<br><br>Lengdegraden endres automatisk mens ballen beveger seg mellom pitcheren og mottakeren. |
-| **Plassering** |Returnerer breddegraden og lengdegraden til den gjeldende plasseringen, som en post. |{&nbsp;breddegrad:&nbsp;47,591, lengdegrad:&nbsp;122,333&nbsp;} |
+| **Location** |Returnerer breddegraden og lengdegraden til den gjeldende plasseringen, som en post. |{&nbsp;breddegrad:&nbsp;47,591, lengdegrad:&nbsp;122,333&nbsp;} |
 | **Compass.Heading** |Returnerer kompassretningen øverst på skjermen. I dette feltet er home-platen omtrent Sørvest fra pitcherens mound. |230,25 |
 | **Acceleration.X** |Returnerer akselerasjonen til enheten side til side. Pitcheren kaster telefonen rett frem med tanke på den øverste skjermkanten, slik at enheten ikke akselererer side til side. |0 |
 | **Acceleration.Y** |Returnerer akselerasjonen fra enheten foran og bakover. Pitcheren gir innledningsvis enheten en stor akselerasjon når han kastet enheten, fra 0-145 kilometer i timen (40 meter per sekund) i et halvt sekund. Etter at enheten er i luften og ignorerer friksjonen, akselererer ikke enheten ytterligere. Enheten akselererer når mottakeren tar tak i den, og får den til å stoppe. |8,2, mens pitcheren kaster enheten.<br><br>0, mens enheten er i luften.<br><br>-8.2, idet mottakeren får tak i enheten. |
 | **Acceleration.Z** |Returnerer akselerasjonen til enheten fra øverst til nederst. Mens enheten er i luften, opplever den effekten av tyngdekraften. |0, mens pitcheren kaster enheten.<br><br>1, mens enheten er i luften.<br><br>0, idet mottakeren får tak i enheten. |
-| **Akselerasjon** |Returnerer akselerasjonen som en post. |{ X: 0, Y: 264, Z: 0} som pitcheren kaster enheten. |
-| **Connection.Connected** |Returnerer en boolsk verdi som indikerer om enheten er tilkoblet nettverket |**sann** |
-| **Connection.Metered** |Returnerer en boolsk verdi som indikerer om tilkoblingen er forbruksmålt |**sann** |
-| **App.ActiveScreen = PlayBall** |Returnerer en boolsk verdi som indikerer om **PlayBall** vises. |**sann** |
+| **Acceleration** |Returnerer akselerasjonen som en post. |{ X: 0, Y: 264, Z: 0} som pitcheren kaster enheten. |
+| **Connection.Connected** |Returnerer en boolsk verdi som indikerer om enheten er tilkoblet nettverket |**true** |
+| **Connection.Metered** |Returnerer en boolsk verdi som indikerer om tilkoblingen er forbruksmålt |**true** |
+| **App.ActiveScreen = PlayBall** |Returnerer en boolsk verdi som indikerer om **PlayBall** vises. |**true** |
 | **App.ActiveScreen.Fill** |Returnerer bakgrunnsfargen for skjermbildet som vises. |**Color.Green** |
 
