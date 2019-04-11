@@ -32,7 +32,7 @@ Funksjonene **Left**, **Mid** og **Right** returnerer en del av en streng.
 
 Hvis du angir en enkelt streng som et argument, returnerer funksjonen delen av strengen du har forespurt. Hvis du angir en [enkeltkolonnetabell](../working-with-tables.md) som inneholder strenger, returnerer funksjonen en enkeltkolonnetabell med delene du har forespurt av disse strengene. Hvis du har en flerkolonnetabell, kan du gjøre den om til en enkeltkolonnetabell, som beskrevet i [Å arbeide med tabeller](../working-with-tables.md).
 
-Hvis startposisjonen er negativ eller utenfor slutten av strengen, returnerer **Mid***tom*.  Du kan kontrollere lengden på en streng ved hjelp av  **[Len](function-len.md)**-funksjonen. Hvis du ber om flere tegn enn strengen inneholder, returnerer funksjonen så mange tegn som mulig.
+Hvis startposisjonen er negativ eller utenfor slutten av strengen, returnerer **Mid** *tom*.  Du kan kontrollere lengden på en streng ved hjelp av  **[Len](function-len.md)**-funksjonen. Hvis du ber om flere tegn enn strengen inneholder, returnerer funksjonen så mange tegn som mulig.
 
 ## <a name="syntax"></a>Syntaks
 **Left**( *String*, *NumberOfCharacters* )<br>**Mid**( *String*, *StartingPosition*, *NumberOfCharacters* )<br>**Left**( *String*, *NumberOfCharacters* )
