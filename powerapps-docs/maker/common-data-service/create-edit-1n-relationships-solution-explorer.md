@@ -4,7 +4,7 @@ description: Finn ut hvordan du oppretter én-til-mange- eller mange-til-én-enh
 ms.custom: ''
 ms.date: 10/28/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -24,7 +24,7 @@ search.app:
 
 # <a name="create-and-edit-1n-one-to-many-or-n1-many-to-one-entity-relationships-using-solution-explorer"></a>Opprette og redigere 1:N- (én-til-mange) eller N:1-enhetsrelasjoner (mange-til-én) med løsningsutforskeren 
 
-Løsningsutforskeren gir én måte å opprette og redigere 1:N- (én-til-mange) eller N:1-enhetsrelasjoner (mange-til-én) for Common Data Service for Apps.
+Løsningsutforskeren gir én måte å opprette og redigere 1:N- (én-til-mange) eller N:1-enhetsrelasjoner (mange-til-én) for Common Data Service.
 
 [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gjør det mulig for konfigurasjon av de vanligste alternativene, men enkelte alternativer kan bare angis ved hjelp av løsningsutforskeren. Mer informasjon: 
 - [Opprette 1:N-relasjoner (én-til-mange) eller N:1-relasjoner (mange-til-én)](create-edit-1n-relationships.md)

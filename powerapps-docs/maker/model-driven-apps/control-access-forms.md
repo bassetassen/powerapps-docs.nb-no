@@ -2,9 +2,9 @@
 title: Kontrollere tilgang til modelldrevne appskjemaer i PowerApps | MicrosoftDocs
 description: Lær hvordan du kontrollerer tilgang til hovedskjemaer
 ms.custom: ''
-ms.date: 06/27/2018
+ms.date: 03/07/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -40,14 +40,14 @@ search.app:
   
  Du finner trinnvise fremgangsmåter under [Tilordne sikkerhetsroller til skjema](https://docs.microsoft.com/dynamics365/customer-engagement/admin/assign-security-roles-form).  
   
- Når flere hovedskjemaer eller mobile skjemaer er definert for en enhet, kan du velge hvilke skjemaer brukere skal kunne bruke, basert på sikkerhetsrollene deres. Siden hver enhet må kunne vise et skjema for enhver bruker, må minst ett skjema brukes som et basisskjema – et skjema som vises for brukere med sikkerhetsroller uten eksplisitt tilordnede skjemaer.  
+ Når du har mer enn ett hovedskjema eller en annen skjematype definert for en enhet, kan du velge hvilke skjemaer brukere skal kunne bruke, basert på sikkerhetsrollene deres. Siden hver enhet må kunne vise et skjema for enhver bruker, må minst ett skjema brukes som et basisskjema – et skjema som vises for brukere med sikkerhetsroller uten eksplisitt tilordnede skjemaer.  
   
 > [!NOTE]
->  Hurtigopprettings- og hurtigvisningsskjemaer kan ikke tilordnes til sikkerhetsroller.  
+>  Hurtigopprettingsskjemaer, hurtigvisningsskjemaer og kortskjemaer kan ikke tilordnes til sikkerhetsroller.  
   
- Du kan tilordne sikkerhetsroller til et skjema i skjemaredigeringsprogrammet eller fra skjemarutenettet. Hvis det bare er ett skjema for enheten, kan du imidlertid ikke fjerne merket for alternativet **Aktivert for basis** i dialogboksen **Tilordne sikkerhetsroller**. Selv om du i slike tilfeller har tilordnet sikkerhetsroller til skjemaet, kan alle som er knyttet til en sikkerhetsrolle som du ikke tok med, fortsatt vise skjemaet fordi det er aktivert som basisskjema.  
+ Du kan tilordne sikkerhetsroller til et hovedskjema i skjemaredigeringsprogrammet eller fra skjemarutenettet. Hvis det bare er ett skjema for enheten, kan du imidlertid ikke fjerne merket for alternativet **Aktivert for basis** i dialogboksen **Tilordne sikkerhetsroller**. Selv om du i slike tilfeller har tilordnet sikkerhetsroller til skjemaet, kan alle som er knyttet til en sikkerhetsrolle som du ikke tok med, fortsatt vise skjemaet fordi det er aktivert som basisskjema.  
   
- Når du har opprettet et andre hovedskjema eller mobilt skjema for enheten, kan du fjerne merket for alternativet **Aktivert for basis** for ett av dem. Systemet sikrer at minst ett skjema alltid er aktivert for basis.  
+ Når du har opprettet et andre hovedskjema for enheten, kan du fjerne merket for alternativet **Aktivert for basis** for ett av dem. Systemet sikrer at minst ett skjema alltid er aktivert for basis.  
   
  Når du har flere hovedskjemaer, kan du angi en skjemarekkefølge som styrer hvilket av skjemaene en bruker kan se, blir det de ser som standard. Hvis det er flere skjemaer de kan bruke, kan de bytte skjema, og skjemaet de velger, blir standardskjemaet til de velger et annet skjema. Denne innstillingen lagres i nettleseren. Hvis de bruker en annen datamaskin eller nettleser, ser de det opprinnelige standardskjemaet.  
   

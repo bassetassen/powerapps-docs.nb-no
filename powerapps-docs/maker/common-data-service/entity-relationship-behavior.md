@@ -1,5 +1,5 @@
 ---
-title: Enhetsrelasjonsfunksjonalitet (Common Data Service for Apps) | MicrosoftDocs
+title: Enhetsrelasjonsfunksjonalitet (Common Data Service) | MicrosoftDocs
 description: <Description>
 ms.custom: ''
 ms.date: 08/01/2018

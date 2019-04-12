@@ -1,7 +1,7 @@
 ---
 title: Konfigurere hendelsesbehandling for hovedskjemaer for modelldrevet app i PowerApps | MicrosoftDocs
 description: Forstå hvordan du konfigurerer hendelsesbehandling i Dynamics 365 for Customer Engagement
-Keywords: Main form; Configure event handlers; Dynamics 365
+Keywords: Hovedskjema; Konfigurere hendelsesbehandlinger; Dynamics 365
 author: Mattp123
 applies_to:
   - Dynamics 365 (online)
@@ -10,7 +10,7 @@ applies_to:
 ms.author: matp
 manager: kvivek
 ms.date: 06/27/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.topic: article
 ms.assetid: dc0ebb3f-0c00-413a-968f-9cfd107055c0
 search.audienceType:

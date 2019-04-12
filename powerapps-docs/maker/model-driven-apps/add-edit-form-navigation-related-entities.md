@@ -4,7 +4,7 @@ description: Lær hvordan du legger til skjemanavigasjon for relaterte enheter
 ms.custom: ''
 ms.date: 06/18/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -83,4 +83,4 @@ I dette emnet bruker du skjemanavigasjonsruten som brukes for å legge til kobli
 > Installasjon av løsninger eller publisering av tilpassinger kan forstyrre den ordinære driften av systemet. Vi anbefaler at du importerer løsninger på tidspunkt der det i minst mulig grad vil forstyrre brukerne.
   
 ## <a name="next-steps"></a>Neste trinn  
- [Opprette og redigere enhetsrelasjoner for Common Data Service for Apps](../common-data-service/create-edit-entity-relationships.md)
+ [Opprette og redigere enhetsrelasjoner for Common Data Service](../common-data-service/create-edit-entity-relationships.md)

@@ -3,7 +3,7 @@ title: Vise eller laste ned utviklerressurser | MicrosoftDocs
 description: Finne ressurser for utviklere og URL-adresser til serviceendepunkt
 keywords: ''
 ms.date: 06/06/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: null
 ms.topic: article
 applies_to:
@@ -54,9 +54,9 @@ Denne delen inneholder koblinger der utviklere kan finne ressurser. Følgende re
 <!-- TODO update 512122 to go to https://docs.microsoft.com/dynamics365/customer-engagement/developer/download-tools-nuget -->
 
 
-## <a name="connect-your-apps-to-this-instance-of-common-data-service-for-apps"></a>Koble apper til denne forekomsten av Common Data Service for Apps
+## <a name="connect-your-apps-to-this-instance-of-common-data-service"></a>Koble apper til denne forekomsten av Common Data Service
 
-Denne delen inneholder informasjonen du trenger for å koble til Common Data Service for Apps-forekomsten.
+Denne delen inneholder informasjonen du trenger for å koble til Common Data Service-forekomsten.
 
 ### <a name="instance-web-api"></a>Web-API for forekomst
 
@@ -75,9 +75,9 @@ Denne informasjonen beskriver forekomsten din unikt. Det er en GUID, **ID** og e
 Denne informasjonen er nødvendig når du bruker Azure-utvidelser med forekomsten din.
 Hvis du vil ha mer informasjon: [Dokumentasjon for utviklere: Azure-utvidelser for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/azure-extensions)
 
-## <a name="connect-your-apps-to-the-common-data-service-for-apps-discovery-service"></a>Koble apper til søketjensten for Common Data Service for Apps
+## <a name="connect-your-apps-to-the-common-data-service-discovery-service"></a>Koble apper til søketjenesten for Common Data Service
 
-Siden brukere kan ha tilgang til flere CDS for Apps-miljøer, tillater søketjenestene henting av de tilgjengelige miljøene som en person kan ha tilgang til, basert på brukerlegitimasjonen.
+Siden brukere kan ha tilgang til flere Common Data Service-miljøer, tillater søketjenestene henting av de tilgjengelige miljøene som en person kan ha tilgang til, basert på brukerlegitimasjonen.
 
 ### <a name="discovery-web-api"></a>Søkeweb-API
 

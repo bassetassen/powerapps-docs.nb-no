@@ -1,10 +1,10 @@
 ---
-title: Angi forvaltede egenskaper i Common Data Service for Apps-metadata | MicrosoftDocs
+title: Angi forvaltede egenskaper i Common Data Service | MicrosoftDocs
 description: Lær hvordan du angir forvaltede egenskaper for metadataelementer i en løsning
 ms.custom: ''
 ms.date: 05/30/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -23,7 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="set-managed-properties-in-common-data-service-for-apps-metadata"></a>Angi forvaltede egenskaper i Common Data Service for Apps-metadata 
+# <a name="set-managed-properties-in-common-data-service-metadata"></a>Angi forvaltede egenskaper i Common Data Service-metadata 
 
 Forvaltede egenskaper er bare aktuelt når du inkluderer metadata med en administrert løsning og importerer den til et annet miljø. Disse innstillingene lar løsningsutviklere få litt kontroll over tilpassingsnivået de vil at brukere som installerer forvaltede løsninger, skal ha. 
 
@@ -58,7 +58,7 @@ Enheter har flere forvaltede egenskaper enn alle andre typer løsningskomponente
 
 ## <a name="field-managed-properties"></a>Feltadministrerte egenskaper
 
-Se [Opprette og redigere felt for Common Data Service for Apps ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md) for informasjon om hvordan du redigerer felt.
+Se [Opprette og redigere felt for Common Data Service ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md) for informasjon om hvordan du redigerer felt.
 
 Når du [viser felt](create-edit-field-solution-explorer.md#view-fields), velger du et egendefinert felt fra en uadministrert løsning, og velg deretter **Flere handlinger** >  **Forvaltede egenskaper** på menylinjen.
 
@@ -94,6 +94,6 @@ Med relasjoner er den eneste forvaltede egenskapen **Kan tilpasses**. Denne ene 
 
 [Forvaltede egenskaper](solutions-overview.md#managed-properties)<br />
 [Opprette og redigere enheter ved hjelp av løsningsutforskeren](create-edit-entities-solution-explorer.md)<br />
-[Opprette og redigere felt for Common Data Service for Apps ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md)<br />
+[Opprette og redigere felt for Common Data Service ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md)<br />
 [Opprette og redigere 1:N- (én-til-mange) eller N:1-enhetsrelasjoner (mange-til-én) med løsningsutforskeren](create-edit-1n-relationships-solution-explorer.md)<br />
-[Opprette N:N-enhetsrelasjoner (mange-til-mange) i Common Data Service for Apps ved hjelp av løsningsutforskeren](create-edit-nn-relationships-solution-explorer.md)
+[Opprette N:N-enhetsrelasjoner (mange-til-mange) i Common Data Service ved hjelp av løsningsutforskeren](create-edit-nn-relationships-solution-explorer.md)

@@ -1,9 +1,9 @@
 ---
 title: Opprette forretningsregler og anbefalinger for modelldrevne apper| MicrosoftDocs
 ms.custom: ''
-ms.date: 12/06/2018
+ms.date: 03/15/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
@@ -24,9 +24,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="tutorial-create-business-rules-and-recommendations-to-apply-logic-in-a-model-driven-app-form"></a>Opplæring: Opprett forretningsregler og anbefalinger for å bruke logikk i et modelldrevet appskjema
+# <a name="create-business-rules-and-recommendations-to-apply-logic-in-a-model-driven-app-form"></a>Opprette forretningsregler og anbefalinger for å bruke logikk i et modelldrevet appskjema
 
-Opplæringen viser hvordan du kan opprette regler og anbefalinger for å bruke skjemalogikk i en modelldrevet app uten å skrive JavaScript-kode eller lage plugin-moduler. Forretningsregler har et enkelt grensesnitt for å implementere og vedlikeholde regler som endres og brukes ofte. De kan brukes i hoved- og hurtigopprettingsskjemaer, og de fungerer i modelldrevne apper, Dynamics 365 Customer Engagement-webapper, Dynamics 365 for tablets og Dynamics 365 for Outlook (tilkoblet eller frakoblet modus).
+Dette emnet viser hvordan du kan opprette regler og anbefalinger for å bruke skjemalogikk i en modelldrevet app uten å skrive JavaScript-kode eller lage plugin-moduler. Forretningsregler har et enkelt grensesnitt for å implementere og vedlikeholde regler som endres og brukes ofte. De kan brukes i hoved- og hurtigopprettingsskjemaer, og de fungerer i modelldrevne apper, Dynamics 365 Customer Engagement-webapper, Dynamics 365 for tablets og Dynamics 365 for Outlook (tilkoblet eller frakoblet modus).
 
 > [!NOTE]
 > Hvis du vil definere en forretningsregel for en enhet slik at den gjelder for alle skjemaer og server, kan du se [Opprette en forretningsregel for en enhet](/powerapps/maker/common-data-service/data-platform-create-business-rule).
@@ -129,7 +129,13 @@ Opplæringen viser hvordan du kan opprette regler og anbefalinger for å bruke s
 ## <a name="localize-error-messages-used-in-business-rules"></a>Oversette feilmeldinger som brukes i forretningsregler  
  Hvis du har flere enn ett språk klargjort for organisasjonen, ønsker du kanskje å oversette eventuelle feilmeldinger som du har angitt. Hver gang du angir en melding, genereres en etikett av systemet. Hvis du eksporterer oversettelsene i organisasjonen, kan du legge til lokaliserte versjoner av meldingene og deretter importere disse etikettene tilbake til systemet, slik at personer som bruker et annet språk enn basisspråket, kan vise de oversatte meldingene.  
 
-## <a name="is-your-business-rule-not-firing-for-a-form"></a>Utløses ikke forretningsregelen for et skjema?
+## <a name="common-issues"></a>Vanlige problemer
+Denne delen beskriver vanlige problemer som kan oppstå når du bruker forretningsregler. 
+
+### <a name="full-name-field-not-supported-with-unified-interface-apps"></a>Fullt navn-felt støttes ikke med Enhetlig grensesnitt-apper
+Handlinger eller betingelser som bruker et **Fullt navn**-felt (fullname), støttes ikke i apper som er basert på Enhetlig grensesnitt.  Du kan også bruke handlinger eller betingelser med feltene **Fornavn** (firstname) og **Etternavn** (lastname). 
+
+### <a name="is-your-business-rule-not-firing-for-a-form"></a>Utløses ikke forretningsregelen for et skjema?
 En forretningsregel utføres kanskje ikke, fordi det refererte feltet i forretningsregelen ikke er inkludert i skjemaet. 
 1.  Åpne løsningsutforskeren. Vis enheten du vil bruke, og velg deretter **Skjemaer**. 
 2.  Åpne skjemaet du vil bruke, og velg deretter **Forretningsregler** på skjemautformingsbåndet. 

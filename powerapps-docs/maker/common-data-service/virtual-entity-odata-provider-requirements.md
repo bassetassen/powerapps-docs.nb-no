@@ -1,9 +1,9 @@
 ---
-title: Bruke den virtuelle enheten OData v4-dataleverandøren med Common Data Service for Apps | MicrosoftDocs
+title: Bruke den virtuelle enheten OData v4-dataleverandøren med Common Data Service | MicrosoftDocs
 ms.custom: ''
 ms.date: 06/04/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -28,16 +28,16 @@ Dette emnet beskriver hvordan du konfigurerer OData v4-dataleverandøren samt kr
 
 ## <a name="odata-v4-data-provider-best-practices"></a>Anbefalte fremgangsmåter for OData v4-dataleverandøren
 
-- Common Data Service for Apps krever at alle enheter har et ID-attributt, og denne ID-en kalles en unik identifikator, og verdien må være en guid.  Du kan bare tilordne ID-felt til eksterne felt med datatypen `Edm.Guid`.  Du kan ikke tilordne en `Edm.Int32`-datatype til et felt med datatypen unik ID i CDS for Apps.
--  OData-enheter med egenskaper som kan nullstilles, må angis slik at de samsvarer med det tilordnede feltet i den virtuelle enheten. En egenskap for OData-enhet med Nullable=False må ha det tilordnede feltet i **Feltkrav**-attributtet i CDS for Apps satt til **Nødvendig for selskapet**. 
+- Common Data Service krever at alle enheter har et ID-attributt, og denne ID-en kalles en unik identifikator, og verdien må være en guid.  Du kan bare tilordne ID-felt til eksterne felt med datatypen `Edm.Guid`.  Du kan ikke tilordne en `Edm.Int32`-datatype til et felt med datatypen unik ID i Common Data Service.
+-  OData-enheter med egenskaper som kan nullstilles, må angis slik at de samsvarer med det tilordnede feltet i den virtuelle enheten. En egenskap for OData-enhet med Nullable=False må ha det tilordnede feltet i **Feltkrav**-attributtet i Common Data Service satt til **Nødvendig for selskapet**. 
 - Når du henter flere spørringer, for eksempel når du laster inn data i et rutenett, styrer du størrelsen på datasettet som returneres fra den eksterne datakilden ved å bruke spørringsparameterne for valg og filtrering.
 - Systemansvarlige bør aktivere sporing av plugin-modul, hvis de ikke allerede har gjort det. Når den er aktivert, blir alle feil fra OData-endepunktet registrert i sporingsloggen for plugin-modul. Mer informasjon: [Administratorhåndbok: Dialogboksen Systeminnstillinger – kategorien Tilpassing](/dynamics365/customer-engagement/admin/system-settings-dialog-box-customization-tab) 
 
 ## <a name="data-type-mapping"></a>Tilordning av datatype
 
-Tabellen nedenfor viser tilordningene av datatyper for OData Entity Data Model (EDM) med CDS for Apps-datatyper. 
+Tabellen nedenfor viser tilordningene av datatyper for OData Entity Data Model (EDM) med Common Data Service-datatyper. 
 
-|OData-datatype|CDS for Apps-datatypen  |
+|OData-datatype|Common Data Service-datatype  |
 |---------|---------|
 |`Edm.Boolean`|To alternativer|
 |`Edm.DateTime`|Dato og klokkeslett|
@@ -69,7 +69,7 @@ Denne fremgangsmåten viser hvordan du bruker den medfølgende OData-dataleveran
 1. Klikk **Ny** på handlingsverktøylinjen.  
 1. Velg fra følgende datakilder i dialogboksen **Velg dataleverandør**, og klikk deretter **OK**.  
   
-    - **Dataleverandør for OData v4**. CDS for Apps inneholder en Odata v4-dataleverandør som kan brukes for å koble til datakilder som støtter den åpne standarden for OData v4.  
+    - **Dataleverandør for OData v4**. Common Data Service inneholder en Odata v4-dataleverandør som kan brukes for å koble til datakilder som støtter den åpne standarden for OData v4.  
     - *Egendefinert dataleverandør*. Hvis du har importert en plugin-modul for dataleverandør, vises dataleverandøren her. Mer informasjon: [Dokumentasjon for utviklere: Komme i gang med virtuelle enheter](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)  
     
 1. Fyll ut følgende felt på egenskapssiden **Ny datakilde**, og lagre deretter oppføringen.  

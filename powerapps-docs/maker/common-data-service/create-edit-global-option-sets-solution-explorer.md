@@ -1,9 +1,9 @@
 ---
-title: Opprette og redigere globale alternativsett for Common Data Service for Apps ved hjelp av løsningsutforskeren | MicrosoftDocs
+title: Opprette og redigere globale alternativsett for Common Data Service ved hjelp av løsningsutforskeren | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/26/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -19,12 +19,12 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="create-and-edit-global-option-sets-for-common-data-service-for-apps-using-solution-explorer"></a>Opprette og redigere globale alternativsett for Common Data Service for Apps ved hjelp av løsningsutforskeren
+# <a name="create-and-edit-global-option-sets-for-common-data-service-using-solution-explorer"></a>Opprette og redigere globale alternativsett for Common Data Service ved hjelp av løsningsutforskeren
 
-Løsningsutforsker inneholder én måte å opprette og redigere globale alternativsett på for Common Data Service for Apps ved hjelp av Common Data Service for Apps.
+Løsningsutforskeren har én måte å opprette og redigere globale alternativsett for Common Data Service på.
 
 [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gjør det mulig for konfigurasjon av de vanligste alternativene, men enkelte alternativer kan bare angis ved hjelp av løsningsutforskeren. <br />Mer informasjon: 
-- [Opprette og redigere globale alternativsett for Common Data Service for Apps](create-edit-global-option-sets.md)
+- [Opprette og redigere globale alternativsett for Common Data Service](create-edit-global-option-sets.md)
 - [Opprette et alternativsett](custom-picklists.md)
 
 ## <a name="open-solution-explorer"></a>Åpne løsningsutforskeren
@@ -40,7 +40,7 @@ Med løsningsutforskeren åpen velger du **Alternativsett** under **Komponenter*
 ![Vise globale alternativsett](media/view-global-option-sets-solution-explorer.png)
 
 > [!NOTE]
-> Noen globale systemalternativsett kan ikke tilpasses. Disse alternativene kan endres med oppdateringer eller nye versjoner, så det anbefales at du ikke bruker dem med mindre du er sikker på at dine behov er i tråd med måten CDS for Apps bruker disse verdiene på.
+> Noen globale systemalternativsett kan ikke tilpasses. Disse alternativene kan endres med oppdateringer eller nye versjoner, så det anbefales at du ikke bruker dem med mindre du er sikker på at dine behov er i tråd med måten Common Data Service bruker disse verdiene på.
 
 ## <a name="create-a-global-option-set"></a>Opprette et globalt alternativsett
 
@@ -81,7 +81,7 @@ Hvis du vil slette et globalt alternativsett, velger du mens du viser listen ![S
   
 ### <a name="see-also"></a>Se også
  
-[Opprette og redigere globale alternativsett for Common Data Service for Apps](create-edit-global-option-sets.md)<br />
+[Opprette og redigere globale alternativsett for Common Data Service](create-edit-global-option-sets.md)<br />
 [Opprette et alternativsett](custom-picklists.md)<br />
 [Opprette og rediger felt](create-edit-fields.md)<br />
 [Dokumentasjon for utviklere: Tilpasse globale alternativsett](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)

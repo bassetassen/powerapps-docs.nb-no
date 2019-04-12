@@ -1,13 +1,13 @@
 ---
-title: Opprette en forretningsregel i Common Data Service for Apps | Microsoft Docs
-description: Trinnvise instruksjoner for hvordan du oppretter en forretningsregel i Common Data Service (CDS) for Apps.
-author: clwesene
+title: Opprette en forretningsregel i Common Data Service | Microsoft Docs
+description: Trinnvise instruksjoner for hvordan du oppretter en forretningsregel i Common Data Service.
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType:
   - maker
 search.app:

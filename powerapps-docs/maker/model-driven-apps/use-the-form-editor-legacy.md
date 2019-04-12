@@ -4,7 +4,7 @@ description: Finn ut hvordan du endrer navigasjonen i et skjema
 ms.custom: ''
 ms.date: 06/06/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -29,7 +29,7 @@ search.app:
   
  Enhetsrelasjoner som er konfigurert til vises, kan overstyres i skjemaredigeringsprogrammet. Du kan også inkludere navigasjonskoblinger for å vise webressurser eller andre nettsteder via skjemanavigasjon.  
   
- Hvis du vil ha trinnvise instruksjoner, kan du se [Opprette og redigere enhetsrelasjoner for Common Data Service for Apps](../common-data-service/create-edit-entity-relationships.md)  
+ Hvis du vil ha trinnvise instruksjoner, kan du se [Opprette og redigere enhetsrelasjoner for Common Data Service](../common-data-service/create-edit-entity-relationships.md)  
   
  Hvis du vil aktivere navigasjon, må du først velge **Navigasjon** i **Velg**-gruppen i kategorien **Hjem** i skjemautforming.  
  

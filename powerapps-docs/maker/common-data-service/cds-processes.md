@@ -1,10 +1,10 @@
 ---
-title: Bruke forretningslogikk i Common Data Service for Apps | MicrosoftDocs
+title: Bruke forretningslogikk i Common Data Service | MicrosoftDocs
 description: Få informasjon om de ulike typene forretningslogikk du kan bruke appen
 ms.custom: ''
 ms.date: 08/06/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
@@ -23,14 +23,14 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="apply-business-logic-in-common-data-service-for-apps"></a>Bruke forretningslogikk i Common Data Service for Apps
+# <a name="apply-business-logic-in-common-data-service"></a>Bruke forretningslogikk i Common Data Service
 
 Definer *forretningsregler* for en enhet som gjelder for alle enhetsskjemaer og på servernivå. Forretningsregler som er definert for en enhet, gjelder for både *lerretsapper* og *modelldrevne apper* hvis enheten brukes i appen. Mer informasjon: [Opprette en forretningsregel for en enhet](data-platform-create-business-rule.md).
 
 > [!NOTE]
 > Hvis du vil definere en forretningsregel som gjelder for et skjema i en modelldrevet app, kan du se [Opprette forretningsregler for et modelldrevet appskjema](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 
-Du kan også bruke klassiske Common Data Service (CDS) for Apps-prosesser som er arbeidsflyter og handlinger. Mer informasjon: [Microsoft Flow: Bruke arbeidsflytprosesser](/flow/workflow-processes) og [Microsoft Flow: Handlingsoversikt](/flow/actions).
+Du kan også bruke klassiske Common Data Service-prosesser som er arbeidsflyter og handlinger. Mer informasjon: [Microsoft Flow: Bruke arbeidsflytprosesser](/flow/workflow-processes) og [Microsoft Flow: Handlingsoversikt](/flow/actions).
 
 ## <a name="see-also"></a>Se også
 

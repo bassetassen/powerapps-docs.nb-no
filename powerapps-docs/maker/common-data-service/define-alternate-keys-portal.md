@@ -4,7 +4,7 @@ description: Finn ut hvordan du definerer alternative nøkler ved hjelp av Power
 ms.custom: ''
 ms.date: 05/31/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -23,7 +23,7 @@ search.app:
 ---
 # <a name="define-alternate-keys-using-powerapps-portal"></a>Definere alternative nøkler ved hjelp av PowerApps-portalen
 
-[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gir en enkel måte å vise og opprette alternative nøkler for enheter med Common Data Service for Apps.
+[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gir en enkel måte å vise og opprette alternative nøkler for enheter med Common Data Service.
 
 Portalen gjør det mulig for konfigurasjon av de vanligste alternativene, men enkelte alternativer kan bare angis ved hjelp av løsningsutforskeren. <br />Mer informasjon: 
 - [Definere alternative nøkler for å referere til oppføringer](define-alternate-keys-reference-records.md)

@@ -3,7 +3,7 @@ title: Typer enheter | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/30/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -24,7 +24,7 @@ search.app:
 ---
 # <a name="types-of-entities"></a>Typer enheter
 
-Før du oppretter eller redigerer enheter i Common Data Service for Apps, må du være innforstått med at det finnes ulike typer enheter. Når en egendefinert enhet er opprettet, kan ikke disse typene endres. De to største skillene er basert på enhetseierskap og om enhetene er aktivitetsenheter.  
+Før du oppretter eller redigerer enheter i Common Data Service, må du være innforstått med at det finnes ulike typer enheter. Når en egendefinert enhet er opprettet, kan ikke disse typene endres. De to største skillene er basert på enhetseierskap og om enhetene er aktivitetsenheter.  
   
 <a name="BKMK_EntityOwnership"></a>
 
@@ -51,7 +51,7 @@ Du kan tenke på en aktivitet som en hvilken som helst handling som det kan lage
   
 Aktivitetsenheter kan bare eies av en bruker eller et team, de kan ikke eies av en organisasjon.  
   
-Tabellen nedenfor viser aktivitetsenheter som er tilgjengelige i et standard CDS for Apps-miljø.
+Tabellen nedenfor viser aktivitetsenheter som er tilgjengelige i et standard Common Data Service-miljø.
   
 |Navn|Beskrivelse|Vis på aktivitetsmenyer|Referanse|
 |----------|-----------------|----------------|---------------|  

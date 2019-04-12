@@ -1,9 +1,9 @@
 ---
-title: Feltdatatyper i Common Data Service for Apps | MicrosoftDocs
+title: Feltdatatyper i Common Data Service | MicrosoftDocs
 description: Forstå de ulike feltdatatypene som er tilgjengelige for appen din
 keywords: ''
 ms.date: 06/27/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: null
 ms.topic: article
 applies_to:
@@ -58,8 +58,8 @@ Navnene som brukes for typer, avhenger av designeren som brukes. [PowerApps-port
 |**Heltall**|**Heltall**<br />*Ingen*-format|`IntegerType`|
 
 For flere beskrivelser for hver type du kan legge til eller redigere, se emnet for tilsvarende designer:
- - [Opprette og redigere felt for Common Data Service for Apps ved hjelp av PowerApps-portalen: Feltdatatyper](create-edit-field-portal.md#field-data-types)
- - [Opprette og redigere felt for Common Data Service for Apps ved hjelp av løsningsutforskeren i PowerApps: Feltdatatyper](create-edit-field-solution-explorer.md#field-data-types)
+ - [Opprette og redigere felt for Common Data Service ved hjelp av PowerApps-portalen: Feltdatatyper](create-edit-field-portal.md#field-data-types)
+ - [Opprette og redigere felt for Common Data Service ved hjelp av løsningsutforskeren i PowerApps: Feltdatatyper](create-edit-field-solution-explorer.md#field-data-types)
 
 Du finner mer informasjon om hvordan feltdatatyper er definert i API-et, ved å se [Attributtmetadata](/powerapps/developer/common-data-service/entity-attribute-metadata)
 

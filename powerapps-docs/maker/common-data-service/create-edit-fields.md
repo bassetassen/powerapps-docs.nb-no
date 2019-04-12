@@ -1,9 +1,9 @@
 ---
-title: Opprette og redigere felt for Common Data Service for Apps | MicrosoftDocs
+title: Opprette og redigere felt for Common Data Service | MicrosoftDocs
 ms.custom: ''
 ms.date: 02/08/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -23,7 +23,7 @@ search.app:
 ---
 # <a name="how-to-create-and-edit-fields"></a>Opprette og redigere felt
 
-I Common Data Service for Apps brukes feltene til å definere individuelle dataelementer som kan brukes til å lagre data i en enhet. Feltene kalles *attributter* av utviklere. 
+I Common Data Service brukes feltene til å definere individuelle dataelementer som kan brukes til å lagre data i en enhet. Feltene kalles *attributter* av utviklere. 
   
 Før du oppretter et egendefinert felt, må du vurdere om bruk av et eksisterende felt oppfyller behovene dine. Mer informasjon: [Opprette nye metadata eller bruke eksisterende metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 
@@ -31,8 +31,8 @@ Det finnes to utforminger som du kan bruke til å opprette eller redigere felt:
 
 |Designer| Beskrivelse|
 |--|--|
-|[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Inneholder en enkel strømlinjeformet opplevelse, men noen spesialinnstillinger er ikke tilgjengelige.<br />Mer informasjon: [Opprette og redigere felt for Common Data Service for Apps ved hjelp av PowerApps-portalen](create-edit-field-portal.md)|
-|Løsningsutforsker|Ikke så enkel, men den er mer fleksibel når kravene er mindre vanlige.<br />Mer informasjon: [Opprette og redigere felt for Common Data Service for Apps ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md) |
+|[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Inneholder en enkel strømlinjeformet opplevelse, men noen spesialinnstillinger er ikke tilgjengelige.<br />Mer informasjon: [Opprette og redigere felt for Common Data Service ved hjelp av PowerApps-portalen](create-edit-field-portal.md)|
+|Løsningsutforsker|Ikke så enkel, men den er mer fleksibel når kravene er mindre vanlige.<br />Mer informasjon: [Opprette og redigere felt for Common Data Service ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md) |
 
 > [!NOTE]
 > Du kan også opprette felt i miljøet ved hjelp av følgende:
@@ -43,11 +43,11 @@ Det finnes to utforminger som du kan bruke til å opprette eller redigere felt:
 
 Informasjonen i dette emnet hjelper deg med å velge hvilken utforming du kan bruke. 
 
-Du kan bruke PowerApps-portalen til å opprette og redigere felt for Common Data Service for Apps med mindre du må oppfylle noen av disse kravene:
+Du kan bruke PowerApps-portalen til å opprette og redigere felt for Common Data Service med mindre du må oppfylle noen av disse kravene:
 
 - Opprett et oppslagsfelt for kunde. 
    - Mer informasjon: [Ulike typer oppslag](types-of-fields.md#different-types-of-lookups)
-- Opprett et felt i en annen løsning enn standard CDS-løsningen. 
+- Opprett et felt i en annen løsning enn standard Common Data Service-løsningen. 
    - Mer informasjon: [Løsningsoversikt](solutions-overview.md)
 - Angi overganger for statusårsaker. 
    - Mer informasjon: [Definere overganger for statusårsaker for tilfellet eller egendefinerte enheter](define-status-reason-transitions.md)
@@ -70,14 +70,14 @@ Du kan bruke PowerApps-portalen til å opprette og redigere felt for Common Data
 
 ## <a name="community-tools"></a>Fellesskapsverktøy
 
-**[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** er et verktøy som XrmToolbox-fellesskapet utviklet for CDS for Apps. Se emnet [Utviklerverktøy](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools) for flere verktøy som er utviklet av fellesskapet.
+**[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** er et verktøy som XrmToolbox-fellesskapet utviklet for Common Data Service. Se emnet [Utviklerverktøy](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools) for flere verktøy som er utviklet av fellesskapet.
 
 > [!NOTE]
 > Fellesskapsverktøy er ikke fra Microsoft og det er ikke kundestøtte for disse. Hvis du har spørsmål om verktøyet, kontakter du utgiveren. Mer informasjon: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ### <a name="see-also"></a>Se også  
-[Opprette og redigere felt for Common Data Service for Apps ved hjelp av PowerApps-portalen](create-edit-field-portal.md)<br />
-[Opprette og redigere felt for Common Data Service for Apps ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md)<br />
+[Opprette og redigere felt for Common Data Service ved hjelp av PowerApps-portalen](create-edit-field-portal.md)<br />
+[Opprette og redigere felt for Common Data Service ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md)<br />
 [Typer felt og feltdatatyper](types-of-fields.md)<br />
 [Dokumentasjon for utviklere: Arbeide med attributtmetadata](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata)
  

@@ -1,10 +1,10 @@
 ---
 title: Definere alternative nøkler ved hjelp av løsningsutforskeren | MicrosoftDocs
-description: 'Lær hvordan du definerer alternative nøkler som kan brukes til å referere til oppføringer i Common Data Service for Apps, ved hjelp av løsningsutforskeren'
+description: 'Lær hvordan du definerer alternative nøkler som kan brukes til å referere til oppføringer i Common Data Service, ved hjelp av løsningsutforskeren'
 ms.custom: ''
 ms.date: 05/31/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -21,9 +21,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="define-alternate-keys-using-solution-explorer"></a>Definere alternative nøkler ved hjelp av løsningsutforskeren
+# <a name="define-alternate-keys-using-solution-explorer"></a>Definer alternativ nøkler ved hjelp av løsningsutforskeren
 
-Løsningsutforskeren har en måte for å vise og opprette alternative nøkler for Common Data Service for Apps.
+Løsningsutforskeren har en måte for å vise og opprette alternative nøkler for Common Data Service.
 
 [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gjør det mulig for konfigurasjon av de vanligste alternativene, men enkelte alternativer kan bare angis ved hjelp av løsningsutforskeren. <br />Mer informasjon: 
 - [Definere alternative nøkler for å referere til oppføringer](define-alternate-keys-reference-records.md)<br />

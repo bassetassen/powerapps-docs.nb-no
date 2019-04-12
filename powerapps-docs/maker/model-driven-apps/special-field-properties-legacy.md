@@ -1,7 +1,7 @@
 ---
 title: Egenskaper for spesialfelt for hovedskjemaer for modelldrevne apper i PowerApps | MicrosoftDocs
 description: Forstå egenskapene for spesialfelt for hovedskjemaer
-Keywords: Main forms; Special field properties; Dynamics 365
+Keywords: Hovedskjemaer; Spesielle feltegenskaper; Dynamics 365
 author: Mattp123
 applies_to:
   - Dynamics 365 (online)
@@ -10,7 +10,7 @@ applies_to:
 ms.author: matp
 manager: kvivek
 ms.date: 06/06/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.topic: article
 ms.assetid: 6ad7e43c-b6a1-48c4-9dfb-ed830142a841
 search.audienceType:

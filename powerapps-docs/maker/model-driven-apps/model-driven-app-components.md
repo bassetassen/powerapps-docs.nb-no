@@ -1,7 +1,7 @@
 ---
 title: Forstå komponenter for modelldrevne apper i PowerApps | MicrosoftDocs
 description: 'Forstå ulike komponenter i en modelldrevet app, for eksempel data, brukergrensesnitt, logikk og visualisering.'
-Keywords: 'fields, attributes, model-driven app'
+Keywords: 'felt, attributter, modelldreven app'
 author: Mattp123
 applies_to:
   - Dynamics 365 (online)
@@ -10,7 +10,7 @@ applies_to:
 ms.author: matp
 manager: kvivek
 ms.date: 06/27/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.topic: article
 search.audienceType:
   - maker
@@ -18,7 +18,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="understand-model-driven-app-components"></a>Forstå komponenter for modelldrevne apper
+# <a name="understand-model-driven-app-components"></a>Forstå modelldrevede appkomponenter
 En godt utformet modelldrevet app består av flere komponenter som du velger ved hjelp av designeren for å bygge utseende og funksjonalitet i den ferdige appen. Komponentene og komponentegenskapene som utformere bruker til å lage en app, blir metadataene. 
 
 For å forstå hvordan hver av komponentene er relatert til apputformingen, er de atskilt her i kategoriene *data*, *brukergrensesnitt*, *logikk*, og *visualisering*. 

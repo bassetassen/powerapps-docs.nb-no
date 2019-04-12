@@ -1,9 +1,9 @@
 ---
-title: 'Forhåndsvisningsfunksjon: Bruke Azure Cosmos DB for SQL-API-dataleverandør med Common Data Service for Apps | MicrosoftDocs'
+title: 'Forhåndsvisningsfunksjon: Bruke Azure Cosmos DB for SQL-API-dataleverandør med Common Data Service | MicrosoftDocs'
 description: Lær hvordan du konfigurerer Azure Cosmos DB for SQL-API-dataleverandøren for bruk med virtuelle enheter.
 keywords: SQL-API
 ms.date: 02/15/2019
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: null
 ms.topic: article
 applies_to:
@@ -52,9 +52,9 @@ Anta at du har et Azure Cosmos DB-dokument i en samling kalt *Bestillinger* som 
 
 ![Eksempel-JSON for SQL-API-dokument.](media/documentdbexample.png)
 
-Denne tabellen angir datatypetilordningene for SQL API-dokumentet i *Bestillinger*-samlingen med Common Data Service for Apps.
+Denne tabellen angir datatypetilordningene for SQL API-dokumentet i *Bestillinger*-samlingen med Common Data Service.
 
-|SQL API-data|CDS for Apps|
+|SQL API-data|Common Data Service|
 |--|--|
 |`id`|Primærnøkkel|
 |`name`|En enkelt linje med tekst|
@@ -67,7 +67,7 @@ Denne tabellen angir datatypetilordningene for SQL API-dokumentet i *Bestillinge
 
 > [!NOTE]
 > - Attributter med et understrekingstegn (_) prefikset genereres av SQL API.
-> - Attributter som er konfigurert som valgfrie i SQL API-dokumentet og tilordnes i CDS for Apps som **Nødvendig for selskapet**, fører til feil under kjøring.
+> - Attributter som er konfigurert som valgfrie i SQL API-dokumentet og tilordnes i Common Data Service som **Nødvendig for selskapet**, fører til feil under kjøring.
 > - ID-attributtverdier må være GUID-er.
 > - Hvis du vil ha mer informasjon om hvordan du bruker datoer i SQL API, kan du se [Arbeide med datoer i Azure Cosmos DB](https://azure.microsoft.com/blog/working-with-dates-in-azure-documentdb-4/).
 
@@ -78,7 +78,7 @@ Filtrering av SQL-spørringer støtter følgende operatorer.
 - Sammenligningsoperatorer:`<`,`>`,`<=`, `>=`,`!=`
 - Logiske operatorer: `and`, `or` 
 - Angivelsesoperatorer: `in`, `not in`
-- Strengoperatorer: `like`, `contains`, b`egins with`, `ends with`
+- Strengoperatorer: `like`, `contains`, `begins with`, `ends with`
 
 > [!NOTE]
 > Bruk av like-operatoren er oversatt til de tilsvarende `contains`/`begins with`/`ends with` operatorene. SQL API støtter ikke mønsterargumenter som beskrevet i emnet [Like (Transact-SQL)](/sql/t-sql/language-elements/like-transact-sql). The Azure Cosmos DB for SQL API-dataleverandøren kan oversette det enkelte spesialtilfellet `Like('[aA]%')` til `BeginsWith('a')` ELLER `BeginsWith('A')`. Legg merke til at strengsammenligning i SQL API skiller mellom små og store bokstaver.

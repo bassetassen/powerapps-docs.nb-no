@@ -4,7 +4,7 @@ description: Forstå de ulike skjematypene
 ms.custom: ''
 ms.date: 06/27/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -30,10 +30,10 @@ search.app:
   
 |Skjematype|Beskrivelse|Mer informasjon|  
 |---------------|-----------------|-----------------|  
-|**Hovedskjema**|Brukes i PowerApps-apper, Dynamics 365 customer engagement-webprogrammet, Dynamics 365 for tablets og Dynamics 365 for Outlook.<br /><br /> Disse skjemaene omfatter hovedbrukergrensesnittet for arbeid med enhetsdata.|[Utformingshensyn for hovedskjemaer](design-considerations-main-forms.md)|  
-|**Mobile**|Brukes for Dynamics 365 for phones-sidene. Dette forenklede skjemaet er utformet for å brukes på mobile enheter.|[Tilpasse mobilappen](https://docs.microsoft.com/dynamics365/customer-engagement/customize/customize-phones-tablets)  |  
+|**Hovedskjema**|Brukes i PowerApps-apper, Dynamics 365 customer engagement-webprogrammet, Dynamics 365 for tablets og Dynamics 365 for Outlook.<br /><br /> Disse skjemaene omfatter hovedbrukergrensesnittet for arbeid med enhetsdata.|[Utformingshensyn for hovedskjemaer](design-considerations-main-forms.md)|    
 |**Hurtigoppretting**|Brukes i PowerApps-apper, Dynamics 365 customer engagement-webprogrammet, Dynamics 365 for tablets og Dynamics 365 for Outlook.<br /><br /> Når det gjelder oppdaterte enheter, er disse skjemaene enkle og optimalisert for opprettelse av nye oppføringer.|[Opprette og redigere hurtigopprettingsskjemaer](create-edit-quick-view-forms.md) |  
 |**Hurtigvisning**|Brukes i PowerApps-apper, Dynamics 365 customer engagement-webprogrammet, Dynamics 365 for tablets og Dynamics 365 for Outlook.<br /><br /> Når det gjelder oppdaterte enheter, vises disse skjemaene i hovedskjemaet for å vise tilleggsdata for en oppføring som et oppslagsfelt henviser til i skjemaet.|[Opprette og redigere hurtigvisningsskjemaer](create-edit-quick-view-forms.md)|  
+|**Kort** | Brukt i visninger for PowerApps-apper. Kortskjemaer er utformet for å vise informasjon i et komprimert format som passer for mobile enheter. | [Opprett et kortskjema](create-card-forms.md) |
 
 Siden hvert enkelt skjema har spesifikke behov, bruker du skjemaredigeringsprogrammet når du arbeider med skjemaer. Mer informasjon: [Oversikt over brukergrensesnittet i skjemaredigeringsprogrammet](form-editor-user-interface-legacy.md)
 

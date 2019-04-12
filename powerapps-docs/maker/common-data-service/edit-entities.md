@@ -4,7 +4,7 @@ description: Lær de ulike måtene du kan redigere en enhet på
 ms.custom: ''
 ms.date: 05/15/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -39,7 +39,7 @@ Det er to metoder for å redigere en enhet ved hjelp av en designer:
 
 I både PowerApps-portalen og løsningsutforskeren kan du utføre følgende:
 
-- **Rediger enhetsfeltene**. Mer informasjon: [Opprette og redigere felt for Common Data Service for Apps](create-edit-fields.md)
+- **Rediger enhetsfeltene**. Mer informasjon:  [Opprette og redigere felt for Common Data Service](create-edit-fields.md)
   
 - **Rediger enhetsrelasjonene**. Mer informasjon: [Opprette og redigere relasjoner mellom enheter](create-edit-entity-relationships.md)
 

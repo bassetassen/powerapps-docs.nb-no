@@ -22,12 +22,12 @@ I dette emnet lærer du hvordan du oppretter en egendefinert enhet kalt Produktv
 ## <a name="prerequisites"></a>Forhåndskrav
 Denne prosedyren krever følgende elementer:
 * Enten en PowerApps Plan 2- eller Microsoft Flow Plan 2-lisens. Eventuelt kan du registrere deg for en [gratis PowerApps Plan 2-prøveversjon](https://web.powerapps.com/signup?redirect=marketing&email=).
-* Enten sikkerhetsrollen Systemadministrator eller Systemtilpasser i Common Data Service for Apps.
+* Enten sikkerhetsrollen Systemadministrator eller Systemtilpasser i Common Data Service.
 
 ## <a name="sign-in-to-powerapps"></a>Logg på PowerApps
 Logg på PowerApps på [https://web.powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-## <a name="create-an-entity"></a>Opprette en enhet
+## <a name="create-an-entity"></a>Opprett en enhet
 1. I navigasjonsruten klikker eller trykker du på **Data** for å vise den, og klikker eller trykker deretter på **Enheter**.
 
     ![Liste over enheter og deres detaljer](./media/data-platform-cds-create-entity/entitylist.png "Enhetsliste")

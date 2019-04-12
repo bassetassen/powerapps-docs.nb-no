@@ -1,6 +1,6 @@
 ---
 title: Feilsøke Power Query | Microsoft Docs
-description: Løs problemer ved hjelp av Power Query for å opprette en egendefinert enhet i Common Data Service for Apps.
+description: Løs problemer ved hjelp av Power Query for å opprette en egendefinert enhet i Common Data Service.
 author: mllopis
 manager: kfile
 ms.service: powerapps
@@ -15,12 +15,12 @@ search.app:
   - D365CE
 ---
 
-# <a name="troubleshoot-power-query"></a>Feilsøke Power Query
+# <a name="troubleshoot-power-query"></a>Feilsøk Power Query
 Når du bruker Power Query for Excel til å opprette en egendefinert enhet som inneholder data fra eksterne kilder, kan denne feilmeldingen vises:
 
 >"Azure Active Directory-administratoren har angitt en policy som hindrer deg fra å bruke denne funksjonen. Kontakt administratoren, som kan gi tillatelser for denne funksjonen på dine vegne."
 
-Feilen vises hvis Power Query ikke får tilgang til organisasjonens data i PowerApps eller Common Data Service for Apps. Dette problemet oppstår i to tilfeller:
+Feilen vises hvis Power Query ikke får tilgang til organisasjonens data i PowerApps eller Common Data Service. Dette problemet oppstår i to tilfeller:
 
 * En Azure Active Directory (Azure AD)-leieradministrator har fratatt brukeren muligheten til å gi samtykke til apper som får tilgang til firmadata på deres vegne.
 * Bruker en uadministrert Active Directory-leier. En uadministrert leier er en mappe uten en global administrator som ble opprettet for å fullføre et selvbetjent registreringstilbud. Hvis du vil løse dette scenarioet, må brukerne først konvertere til en administrert leier og deretter følge én av de to løsningene på dette problemet. Løsningene er beskrevet i neste del.

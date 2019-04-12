@@ -3,7 +3,7 @@ title: Distribuere en modelldreven app ved hjelp av en løsning | MicrosoftDocs
 description: Finn ut hvordan du distribuerer en modelldreven app ved hjelp av løsninger
 keywords: ''
 ms.date: 08/06/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: null
 ms.topic: article
 applies_to:

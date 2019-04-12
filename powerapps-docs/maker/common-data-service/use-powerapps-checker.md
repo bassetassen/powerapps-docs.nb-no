@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: article
-ms.date: 12/04/2018
+ms.date: 03/20/2019
 ms.author: matp
 search.audienceType:
   - maker
@@ -17,22 +17,18 @@ search.app:
 
 # <a name="use-solution-checker-to-validate-your-model-driven-apps-in-powerapps"></a>Bruk løsningskontroll til å validere de modelldrevne appene i PowerApps
 
-For å overholde komplekse forretningskrav kan produsenter av modelldrevne apper ofte ende opp med svært avanserte løsninger som tilpasser og utvider Common Data Service (CDS) for Apps-plattformen. Med avanserte implementeringer kommer økt risiko der problemer med ytelse, stabilitet og pålitelighet blir introdusert, som kan ha en negativ innvirkning på brukeropplevelsen. Å identifisere og forstå hvordan du løser disse problemene kan være komplisert og tidkrevende. Med løsningskontrollen kan du utføre en omfattende statisk analysekontroll av løsningene mot et sett med regler for beste fremgangsmåte og raskt finne disse problematiske mønstrene. Når kontrollen er fullført, får du en detaljert rapport som viser en liste over problemene som ble funnet, komponentene og koden som er berørt, og koblinger til dokumentasjon som beskriver hvordan du løser hvert enkelt problem.
+For å overholde komplekse forretningskrav kan produsenter av modelldrevne apper ofte ende opp med svært avanserte løsninger som tilpasser og utvider Common Data Service-plattformen. Med avanserte implementeringer kommer økt risiko der problemer med ytelse, stabilitet og pålitelighet blir introdusert, som kan ha en negativ innvirkning på brukeropplevelsen. Å identifisere og forstå hvordan du løser disse problemene kan være komplisert og tidkrevende. Med løsningskontrollen kan du utføre en omfattende statisk analysekontroll av løsningene mot et sett med regler for beste fremgangsmåte og raskt finne disse problematiske mønstrene. Når kontrollen er fullført, får du en detaljert rapport som viser en liste over problemene som ble funnet, komponentene og koden som er berørt, og koblinger til dokumentasjon som beskriver hvordan du løser hvert enkelt problem.
 
 Løsningskontrollen analyserer disse løsningskomponentene: 
-- CDS for Apps-plugin-moduler
-- Egendefinerte arbeidsflytaktiviteter for CDS for Apps 
-- CDS for Apps-webressurser (HTML og JavaScript)
-- CDS for Apps-konfigurasjoner, for eksempel SDK-meldingstrinn 
+- Common Data Service-plugin-moduler
+- Egendefinerte arbeidsflytaktiviteter for Common Data Service 
+- Common Data Service-webressurser (HTML og JavaScript)
+- Common Data Service-konfigurasjoner, for eksempel SDK-meldingstrinn 
 
-Løsningskontroll fungerer sammen med uadministrerte løsninger som kan eksporteres fra et miljø. Løsningskontroll fungerer *ikke* med følgende løsninger: 
+Løsningskontroll fungerer sammen med uadministrerte løsninger som kan eksporteres fra et miljø. 
 
-
-<!--from editor: Should it be Common Data Service (singular) below, rather than Services? -->
-
-- Systemstandardløsninger (standardløsning og Common Data Services-standardløsningen).
-- Løsninger som inneholder JavaScript ved hjelp av ECMAScript 6 (2015) eller senere versjoner. Når JavaScript ved hjelp av disse versjonene blir funnet, rapporteres et problem med JS001-syntaksen for webressursen.
-
+> [!NOTE]
+> Løsningskontroll fungerer ikke med løsninger som inneholder JavaScript som bruker ECMAScript 6 (2015) eller senere versjoner. Når JavaScript ved hjelp av disse versjonene blir funnet, rapporteres et problem med JS001-syntaksen for webressursen.
 
 ## <a name="enable-the-solution-checker"></a>Aktivere løsningskontrollen
 Løsningskontrollen blir tilgjengelig i Løsninger-området i PowerApps når du har installert PowerApps-kontrollerløsningen. Vær oppmerksom på at du ikke finner den ved å bla gjennom eller søke på Microsoft AppSource. Installer det ved å følge disse trinnene:  
@@ -62,7 +58,7 @@ When you install the PowerApps checker these solution specific components are cr
    - Analysis Result
 - System job: A system job is created so admins can remove solution analysis data from the environment. The job contains a configuration value, currently set to remove the solution analysis data after 60 days, which an administrator can override. 
 - Security Roles: Two security roles, **Export Customizations**, and **Solution Checker** are created. These roles are required to export the solution for analysis, and storing the analysis results to the entities in your environment.
-- User principle: The **PowerApps Advisor** user is created that allows the checker to authenticate with your CDS for Apps environment and assign the two security roles, Export Customizations and Solution Checker. The PowerApps Advisor is an application user and does not consume a license.  -->
+- User principle: The **PowerApps Advisor** user is created that allows the checker to authenticate with your Common Data Service environment and assign the two security roles, Export Customizations and Solution Checker. The PowerApps Advisor is an application user and does not consume a license.  -->
 
 ## <a name="run-the-solution-checker"></a>Kjøre løsningskontrollen
 Når du har installert den PowerApps-kontrollen i miljøet, er et **Løsningskontroll**-menyelement tilgjengelig når du velger en uadministrert løsning i **Løsninger** -området i PowerApps. 
@@ -157,7 +153,7 @@ Her er et sammendrag av hver kolonne i rapporten.
 |Webressurser  | [web-avoid-crm2011-service-soap](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-crm2011-service-soap&client=PAChecker&source=featuredocs)  | Ikke fokuser på SOAP-tjenestene for Microsoft Dynamics CRM 2011.   |
 |Webressurser  | [web-avoid-browser-specific-api](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-browser-specific-api&client=PAChecker&source=featuredocs) | Ikke bruk eldre API-er eller nettleser-plugin-moduler for Internet Explorer.   |
 |Webressurser  | [web-avoid-2011-api](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-2011-api&client=PAChecker&source=featuredocs)  | Ikke bruk avskrevet Microsoft Dynamics CRM 2011-objektmodell.  |
-|Webressurser  | [web-use-relative-uri](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-relative-uri&client=PAChecker&source=featuredocs)   | Ikke bruk absolutte URL-adresser for endepunkt for CDS for Apps.    |
+|Webressurser  | [web-use-relative-uri](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-relative-uri&client=PAChecker&source=featuredocs)   | Ikke bruk absolutte URL-er for endepunkt for Common Data Service.    |
 |Webressurser  | [web-use-client-context](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-client-context&client=PAChecker&source=featuredocs)  | Bruk klientkontekster.   |
 |Webressurser  | [web-use-dialog-api-param](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-dialog-api-param&client=PAChecker&source=featuredocs)   | Bruk API-parametere for dialogboks.   |
 |Webressurser  | [web-use-org-setting](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-org-setting&client=PAChecker&source=featuredocs)   | Bruk organisasjonsinnstillinger.   |
@@ -167,6 +163,6 @@ Her er et sammendrag av hver kolonne i rapporten.
 
 
 ## <a name="see-also"></a>Se også
-[Gode fremgangsmåter og veiledning for Common Data Service for Apps](../../developer/common-data-service/best-practices/index.md)<br />
+[Gode fremgangsmåter og veiledning for Common Data Service](../../developer/common-data-service/best-practices/index.md)<br />
 [Gode fremgangsmåter og veiledning for modelldrevne apper](../../developer/model-driven-apps/best-practices/index.md)<br />
 [Vanlige problemer og løsninger for Løsningskontroll](common-issues-resolutions-solution-checker.md)<br />

@@ -1,10 +1,10 @@
 ---
-title: Definere alternative nøkler for å referere til oppføringer med Common Data Service for Apps | MicrosoftDocs
-description: Lær hvordan du definerer alternative nøkler som kan brukes til å referere til oppføringer i Common Data Service for Apps
+title: Definere alternative nøkler for å referere til oppføringer med Common Data Service | MicrosoftDocs
+description: Lær hvordan du definerer alternative nøkler som kan brukes til å referere til oppføringer i Common Data Service
 ms.custom: ''
 ms.date: 06/06/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -25,7 +25,7 @@ search.app:
 ---
 # <a name="define-alternate-keys-to-reference-records"></a>Definere alternative nøkler for å referere til oppføringer
 
-Med *alternative nøkler* kan du sikre en effektiv og nøyaktig måte å integrere data med eksterne systemer. Dette er viktig når et eksternt system ikke lagrer de globalt unike identifikatorene (GUID) som unikt identifiserer oppføringer i Common Data Service for Apps. 
+Med *alternative nøkler* kan du sikre en effektiv og nøyaktig måte å integrere data med eksterne systemer. Dette er viktig når et eksternt system ikke lagrer de globalt unike identifikatorene (GUID) som unikt identifiserer oppføringer i Common Data Service. 
 
 Et system for integrering av dataene bruker alternative nøkler til å unikt identifisere oppføringer ved hjelp av én eller flere enhetsfeltverdier som representerer en unik kombinasjon . Hver alternative nøkkel har et unikt navn. 
 
@@ -61,7 +61,7 @@ Informasjonen i dette emnet hjelper deg med å velge hvilken utforming du kan br
 
 Du bør bruke [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) til å opprette alternative nøkler, med mindre du må ta hensyn til noen av følgende krav:
 
-- Opprette en alternativ nøkkel i en annen løsning enn standardløsningen Common Data Service for Apps
+- Opprette en alternativ nøkkel i en annen løsning enn standardløsningen Common Data Service
 - Du vil enkelt spore den opprettede systemjobben som sporer fremdriften under oppretting av de tilhørende indeksene
 
 

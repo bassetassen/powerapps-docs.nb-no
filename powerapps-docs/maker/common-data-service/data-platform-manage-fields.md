@@ -1,13 +1,13 @@
 ---
 title: Administrere egendefinerte felt i en enhet | Microsoft Docs
-description: 'Gjennomgang av hvordan du oppretter, leser, oppdaterer og sletter egendefinerte felt i en enhet i Common Data Service (CDS) for Apps.'
-author: clwesene
+description: 'Gjennomgang av hvordan du oppretter, leser, oppdaterer og sletter egendefinerte felt i en enhet i Common Data Service.'
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType:
   - maker
 search.app:

@@ -4,7 +4,7 @@ description: Finn ut hvordan du oppretter og redigerer enheter med PowerApps-por
 ms.custom: ''
 ms.date: 05/30/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -25,10 +25,10 @@ search.app:
 
 # <a name="create-and-edit-entities-using-powerapps-portal"></a>Opprette og redigere enheter ved hjelp av PowerApps-portalen
 
-[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gir en enkel måte å opprette og redigere enheter på for Common Data Service for Apps.
+[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gir en enkel måte å opprette og redigere enheter på for Common Data Service.
 
 Portalen gjør det mulig for konfigurasjon av de vanligste alternativene, men enkelte alternativer kan bare angis ved hjelp av løsningsutforskeren. Mer informasjon: 
-- [Opprette og redigere enheter i Common Data Service for Apps](create-edit-entities.md)
+- [Opprette og redigere enheter i Common Data Service](create-edit-entities.md)
 - [Opprette og redigere enheter ved hjelp av løsningsutforskeren](create-edit-entities-solution-explorer.md)
 
 ## <a name="view-entities"></a>Vise enheter
@@ -62,7 +62,7 @@ Angi data for følgende felt
 |--|--|
 |**Visningsnavn**|Dette er entallsnavnet for enheten som skal vises i appen. Dette kan endres senere.|
 |**Flertallsvisningsnavn**|Dette er flertallsnavnet for enheten som skal vises i appen. Dette kan endres senere.|
-|**Navn**|Dette feltet er forhåndsutfylt basert på **visningsnavnet** du angir. Det inkluderer tilpassingsprefikset for CDS-løsningsutgiveren. Du kan ikke endre dette når enheten er lagret.|
+|**Navn**|Dette feltet er forhåndsutfylt basert på **visningsnavnet** du angir. Det inkluderer tilpassingsprefikset for Common Data Service-løsningsutgiveren. Du kan ikke endre dette når enheten er lagret.|
 |**Beskrivelse**|Angi en relevant beskrivelse av formålet med enheten.|
 
 Velg **Neste** for å fortsette. Dette lukker **Ny enhet**-panelet og viser listen over felt.
@@ -144,7 +144,7 @@ Hvis enheten har avhengigheter som forhindrer at den slettes, vises en feilmeldi
 
 ### <a name="see-also"></a>Se også
 
-[Opprette og redigere enheter i Common Data Service for Apps](create-edit-entities.md)<br />
+[Opprette og redigere enheter i Common Data Service](create-edit-entities.md)<br />
 [Opprette og redigere enheter ved hjelp av løsningsutforskeren](create-edit-entities-solution-explorer.md)
 
 

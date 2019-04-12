@@ -1,9 +1,9 @@
 ---
-title: Opprette og redigere felt for Common Data Service for Apps ved hjelp av løsningsutforskeren i PowerApps | MicrosoftDocs
+title: Opprette og redigere felt for Common Data Service ved hjelp av løsningsutforskeren i PowerApps | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/18/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -19,13 +19,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="create-and-edit-fields-for-common-data-service-for-apps-using-powerapps-solution-explorer"></a>Opprette og redigere felt for Common Data Service for Apps ved hjelp av løsningsutforskeren i PowerApps
+# <a name="create-and-edit-fields-for-common-data-service-using-powerapps-solution-explorer"></a>Opprette og redigere felt for Common Data Service ved hjelp av løsningsutforskeren i PowerApps
 
-Løsningsutforskeren har en måte for å opprette og redigere felt for Common Data Service for Apps.
+Løsningsutforskeren har en måte for å opprette og redigere felt for Common Data Service.
 
 [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gjør det mulig for konfigurasjon av de vanligste alternativene, men enkelte alternativer kan bare angis ved hjelp av løsningsutforskeren. <br />Mer informasjon: 
-- [Opprette og redigere felt for Common Data Service for Apps](create-edit-fields.md)
-- [Opprette og redigere felt for Common Data Service for Apps ved hjelp av PowerApps-portalen](create-edit-field-portal.md)
+- [Opprette og redigere felt for Common Data Service](create-edit-fields.md)
+- [Opprette og redigere felt for Common Data Service ved hjelp av PowerApps-portalen](create-edit-field-portal.md)
   
 ## <a name="open-solution-explorer"></a>Åpne løsningsutforskeren
 
@@ -142,7 +142,7 @@ Hvis du velger **Bruk eksisterende alternativsett**, viser utformingen en liste 
 
 ![Konfigurere et globalt alternativsett](media/global-option-set-solution-explorer.png)
 
-Du kan også konfigurere globale alternativsett separat. Mer informasjon: [Opprette og redigere globale alternativsett for Common Data Service for Apps (valglister)](create-edit-global-option-sets.md)
+Du kan også konfigurere globale alternativsett separat. Mer informasjon: [Opprette og redigere globale alternativsett for Common Data Service (valglister)](create-edit-global-option-sets.md)
 
 > [!NOTE]
 > Hvis du angir hvert alternativsett som et globalt alternativsett, vil listen over globale alternativsett vokse og kan bli vanskelig å administrere. Hvis du vet at settet med alternativer bare skal brukes på ett sted, bruker du et lokalt alternativsett.
@@ -260,8 +260,8 @@ Felt som gir direkte innskriving av tekst har en IME-modus. IME brukes for østa
 
 
 ### <a name="see-also"></a>Se også  
-[Opprette og redigere felt for Common Data Service for Apps](create-edit-fields.md)<br />
-[Opprette og redigere felt for Common Data Service for Apps ved hjelp av PowerApps-portalen](create-edit-field-portal.md)<br />
+[Opprette og redigere felt for Common Data Service](create-edit-fields.md)<br />
+[Opprette og redigere felt for Common Data Service ved hjelp av PowerApps-portalen](create-edit-field-portal.md)<br />
 [Typer felt og feltdatatyper](types-of-fields.md)<br />
 [Definere beregnede felt for å automatisere manuelle beregninger](define-calculated-fields.md)<br />
 [Definere felt for beregnet verdi som samler verdier](define-rollup-fields.md)<br />

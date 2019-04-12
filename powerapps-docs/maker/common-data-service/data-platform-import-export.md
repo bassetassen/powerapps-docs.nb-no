@@ -1,6 +1,6 @@
 ---
-title: Importere eller eksportere data fra Common Data Service for Apps
-description: Masseimportere og -eksportere data fra Excel- eller CSV-filer til enheter i Common Data Service for Apps ved hjelp av Hent data fra Excel- og Eksporter data-funksjonaliteten
+title: Importere eller eksportere data fra Common Data Service
+description: Masseimportere og -eksportere data fra Excel- eller CSV-filer til enheter i Common Data Service ved hjelp av Hent data fra Excel- og Eksporter data-funksjonaliteten
 author: sabinn-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,9 +13,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="import-or-export-data-from-common-data-service-for-apps"></a>Importere eller eksportere data fra Common Data Service for Apps
+# <a name="import-or-export-data-from-common-data-service"></a>Importere eller eksportere data fra Common Data Service
 
-Hvis du vil masseimportere og -eksportere data fra Microsoft Excel- eller CSV-filer, bruker du Hent data fra Excel-fil og Eksporter data-funksjonene for oppdaterte Common Data Service for Apps-miljøer.
+Hvis du vil masseimportere og -eksportere data fra Microsoft Excel- eller CSV-filer, bruker du Hent data fra Excel-fil og Eksporter data-funksjonene for oppdaterte Common Data Service-miljøer.
 
 Det er to måter du kan importere filer til enheter på fra Excel- eller CSV-filer.
 
@@ -66,7 +66,7 @@ Hver enhet har obligatoriske felt som må finnes i inndatafilen din. Vi anbefale
 
 ## <a name="option-2-import-by-bringing-your-own-source-file"></a>Alternativ 2: Importer ved å hente din egen kildefil
 
-Hvis du er en erfaren bruker og kjenner til de obligatoriske feltene for en gitt enhet for Common Data Service for Apps-enheter, kan du definere din egen Excel- eller CSV-kildefil. Følg fremgangsmåten i **Importer filen**.
+Hvis du er en erfaren bruker og kjenner til de obligatoriske feltene for en gitt enhet for Common Data Service-enheter, kan du definere din egen Excel- eller CSV-kildefil. Følg fremgangsmåten i **Importer filen**.
 
 ## <a name="navigate-mapping-errors"></a>Navigere i tilordningsfeil
 
@@ -92,7 +92,7 @@ Hvis du får tilordningsfeil når du har lastet opp filen, velger du **Tilordnin
 
 ## <a name="ensure-uniqueness-when-you-import-data-into-an-entity-from-excel-or-csv"></a>Sikre unikhet når du importerer data til en enhet fra Excel eller CSV
 
-Common Data Service for Apps-enheter bruker en primærnøkkel for å entydig identifisere oppføringer i en Common Data Service-enhetstabell. Primærnøkkelen for en Common Data Service-enhet er en globalt unik identifikator (GUID). Den er standardgrunnlag for identifikasjon av oppføringer. Dataoperasjoner som import av data til Common Data Service-enheter viser standard primærnøkler.
+Common Data Service-enheter bruker en primærnøkkel for å entydig identifisere oppføringer i en Common Data Service-enhetstabell. Primærnøkkelen for en Common Data Service-enhet er en globalt unik identifikator (GUID). Den er standardgrunnlag for identifikasjon av oppføringer. Dataoperasjoner som import av data til Common Data Service-enheter viser standard primærnøkler.
 
 Eksempel:  
 Primærnøkkelen for en **Forretningsforbindelse**-enhet er **accountid**.

@@ -2,9 +2,9 @@
 title: Tilordne modelldrevet appskjemarekkefølge i PowerApps | MicrosoftDocs
 description: Lær hvordan du tilordner standardskjemaet i appen
 ms.custom: ''
-ms.date: 06/22/2018
+ms.date: 03/07/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -26,9 +26,9 @@ search.app:
 ---
 # <a name="assign-model-driven-app-form-order"></a>Tilordne modelldrevet appskjemarekkefølge
 
- Når du har flere hovedskjemaer, hurtigopprettingsskjemaer eller mobile skjemaer for en enhet, kan du tilordne en skjemarekkefølge. Skjemarekkefølgen bestemmer hvilket av de tilgjengelige skjemaene som skal vises som standard. De tilgjengelige hovedskjemaene eller mobile skjemaene kan styres ytterligere ved å tilordne sikkerhetsroller til skjemaer. Se [Styre tilgang til skjemaer](control-access-forms.md) for mer informasjon.  
+ Når du har flere hovedskjemaer, hurtigopprettingsskjemaer, hurtigvisningsskjemaer eller kortskjemaer for en enhet, kan du tilordne en skjemarekkefølge. Skjemarekkefølgen bestemmer hvilket av de tilgjengelige skjemaene som skal vises som standard. De tilgjengelige hovedskjemaene kan styres ytterligere ved å tilordne sikkerhetsroller til skjemaet. Se [Styre tilgang til skjemaer](control-access-forms.md) for mer informasjon.  
   
- Du kan ikke tilordne sikkerhetsroller til hurtigopprettingsskjemaer, så det eneste skjemaet som brukes av alle, er det som er øverst i skjemarekkefølgen.  
+ Du kan ikke tilordne sikkerhetsroller til hurtigopprettingsskjemaer, hurtigvisningsskjemaer eller kortskjemaer, så det eneste skjemaet som brukes av alle, er det som er øverst i skjemarekkefølgen.  
   
 ## <a name="to-assign-a-form-order"></a>Slik tilordner du en skjemarekkefølge  
   
@@ -39,7 +39,7 @@ search.app:
      > [!div class="mx-imgBorder"] 
      > ![Verktøylinjekommando for skjemarekkefølge](media/form-order.png)
   
-3.  Velg **Hovedskjemasett**, **Angi hurtigoppretting av skjema**, **Sett med hurtigvisningsskjemaer** eller **Mobilskjemasett** avhengig av skjematypen du vil arbeide med. Mer informasjon: [Skjematyper](types-forms.md). 
+3.  Velg **Hovedskjemasett**, **Angi hurtigoppretting av skjema**, **Sett med hurtigvisningsskjemaer** eller **Kortskjemasett** avhengig av skjematypen du vil arbeide med. Mer informasjon: [Skjematyper](types-forms.md). 
   
 4.  Dialogboksen **Skjemarekkefølge** er en enkel liste der du kan flytte et merket skjema opp eller ned i skjemarekkefølgen.  
   

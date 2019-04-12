@@ -4,7 +4,7 @@ description: Finn ut hvordan du bruker løsninger til å opprette eller tilpasse
 ms.custom: ''
 ms.date: 10/29/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -101,8 +101,8 @@ Du kan vise den klassiske løsningsutforskeren i PowerApps ved å velge **Løsni
 - Hvis en lerretapp er pakket i en administrert løsning, kan den fremdeles redigeres i målmiljøet.
 - Avhengigheter er ikke tilgjengelig for lerretapper.
 - Når du sletter en administrert løsning, rulles det ikke tilbake til en annen lerretappversjon. 
--   Lerretapptilgang (CRUD og sikkerhet) administreres helt i PowerApps og ikke Common Data Service for Apps (CDS)-databasen.
--   CDS API-er for å kalle lerretapper blokkeres og returnerer ikke noe. 
+-   Lerretapptilgang (CRUD og sikkerhet) administreres helt i PowerApps og ikke Common Data Service (Common Data Service)-databasen.
+-   Common Data Service API-er for å kalle lerretapper blokkeres og returnerer ikke noe. 
 -   Lerretapper som er opprettet i en løsning, kan ikke deles som medeier til en AAD-sikkerhetsgruppe.
 -   Lerretapper vil ikke vises i den klassiske løsningsutforskeren.
 -   Eksisterende lerretapper er ikke løsningsavhengige. 

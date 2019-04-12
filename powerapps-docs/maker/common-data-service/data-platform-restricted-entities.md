@@ -1,13 +1,13 @@
 ---
 title: Begrensede enheter krever Dynamics 365-lisenser | Microsoft Docs
-description: En liste over begrensede enheter i Common Data Service (CDS) for Apps som krever Dynamics 365-lisenser.
-author: clwesene
+description: En liste over begrensede enheter i Common Data Service som krever Dynamics 365-lisenser.
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: reference
 ms.date: 05/01/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType:
   - maker
 search.app:
@@ -16,7 +16,7 @@ search.app:
 ---
 
 # <a name="restricted-entities-requiring-dynamics-365-licenses"></a>Begrensede enheter krever Dynamics 365-lisenser
-Appopprettere kan bruke de fleste enheter som er tilgjengelige i Common Data Service (CDS) for Apps, til å opprette apper og strømmer for brukere som bare har en PowerApps Plan 1-lisens. Noen enheter inneholder imidlertid kompleks forretningslogikk som krever at appbrukerne har en PowerApps Plan 2- eller Microsoft Flow Plan 2-lisens (for mer informasjon, se [Lisenskrav for enhet](data-platform-entity-licenses.md)). Et mindre sett med enheter knyttet til Dynamics 365-produkter krever at brukere av lerrets- og modelldrevne app har en lisens for det tilsvarende Dynamics 365-produktet hvis de trenger å opprette, oppdatere eller slette oppføringer i enhetene. Dette kalles *begrensede* enheter.
+Appopprettere kan bruke de fleste enheter som er tilgjengelige i Common Data Service, til å opprette apper og strømmer for brukere som bare har en PowerApps Plan 1-lisens. Noen enheter inneholder imidlertid kompleks forretningslogikk som krever at appbrukerne har en PowerApps Plan 2- eller Microsoft Flow Plan 2-lisens (for mer informasjon, se [Lisenskrav for enhet](data-platform-entity-licenses.md)). Et mindre sett med enheter knyttet til Dynamics 365-produkter krever at brukere av lerrets- og modelldrevne app har en lisens for det tilsvarende Dynamics 365-produktet hvis de trenger å opprette, oppdatere eller slette oppføringer i enhetene. Dette kalles *begrensede* enheter.
 
 Enheter kan være begrenset til en Dynamics 365-lisens av en av følgende årsaker:
 

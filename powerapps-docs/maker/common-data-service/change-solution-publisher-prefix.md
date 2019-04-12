@@ -3,7 +3,7 @@ title: Endre løsningsutgiverprefikset | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/11/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -24,9 +24,9 @@ search.app:
 
 # <a name="change-the-solution-publisher-prefix"></a>Endre løsningsutgiverprefikset
 
-Alle tilpassinger du gjør, er en del av en løsning. Hver løsning har en utgiver. Som standard vil løsningen du vil arbeide med i PowerApps, være **standardløsningen for Common Data Service** som er knyttet til **standardutgiveren for CDS**.
+Alle tilpassinger du gjør, er en del av en løsning. Hver løsning har en utgiver. Som standard vil løsningen du vil arbeide med i PowerApps, være **standardløsningen for Common Data Service** som er knyttet til **standardutgiveren for Common Data Service**.
 
-Standard tilpassingsprefiks tilordnes vilkårlig for denne utgiveren, det kan for eksempel være `cr8a3`. Dette betyr at navnet på alle nye metadataelementer som er opprettet for din organisasjon, får dette foran navnene som brukes til å unikt identifisere elementene. Hvis du oppretter en ny enhet med navnet **Dyr**, vil det unike navnet som brukes av CDS for Apps, være `cr8a3_animal`. Det samme gjelder for nye felt (attributter), relasjoner eller alternativsettalternativer.
+Standard tilpassingsprefiks tilordnes vilkårlig for denne utgiveren, det kan for eksempel være `cr8a3`. Dette betyr at navnet på alle nye metadataelementer som er opprettet for din organisasjon, får dette foran navnene som brukes til å unikt identifisere elementene. Hvis du oppretter en ny enhet med navnet **Dyr**, vil det unike navnet som brukes av Common Data Service, være `cr8a3_animal`. Det samme gjelder for nye felt (attributter), relasjoner eller alternativsettalternativer.
 
 Med mindre du vil distribuerer løsningen slik at den installeres sammen med metadataelementer som ble opprettet for en annen løsningsutgiver, er det virkelig ikke viktig hva tilpassingsprefikset er. Det er ikke synlig for de fleste brukere som bruker appene. Men det vises for utviklere og andre tekniske personer som utfører oppgaver som å bygge rapporter. Det gjør det enkelt å finne ut hvilken løsning som er lagt elementet.
 
@@ -36,12 +36,12 @@ Derfor liker mange personer å endre prefikset for løsningsutgiver slik at det 
 > Hvis du endrer prefikset for løsningsutgiver, bør du gjøre det før du oppretter nye metadataelementer. Du kan ikke endre navnet på metadataelementer.
 > Når du endrer verdien for tilpassingsprefiks, må du passe på at du flytter til neste felt ved hjelp av tabulatortasten. **Prefiks for alternativverdi** vil automatisk generere et tall basert på tilpassingsprefikset. Dette nummeret brukes når du legger til alternativer i alternativsett og angir en indikator for hvilken løsning som ble brukt til å legge til alternativet. 
 
-## <a name="change-the-solution-publisher-prefix-for-the-cds-default-publisher"></a>Slik endrer du løsningsutgiverprefikset for standardutgiveren for CDS  
+## <a name="change-the-solution-publisher-prefix-for-the-common-data-service-default-publisher"></a>Endre løsningsutgiverprefikset for standardutgiveren for Common Data Service  
 
  1. I PowerApps-portalen velger du **Modelldrevet** nederst til venstre.
  2. Klikk på **Avansert** i den venstre navigasjonen for å åpne **standardløsningen for Common Data Services**.
  3. I løsningsutforskeren velger du **Informasjon**-området i den venstre navigasjonen.
- 4. Klikk på **Utgiver**-koblingen for å åpne **Standardutgiver for CDS**-skjemaet.
+ 4. Klikk på **Utgiver**-koblingen for å åpne **Standardutgiver for Common Data Service**-skjemaet.
  5. Rediger **Prefiks**-feltverdien til tilpassingsprefikset du ønsker.
  6. Klikk **Lagre og lukk**.
   

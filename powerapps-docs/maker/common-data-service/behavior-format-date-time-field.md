@@ -1,9 +1,9 @@
 ---
-title: Virkemåte og format for dato og klokkeslett-feltet i Common Data Service for Apps | MicrosoftDocs
+title: Virkemåte og format for dato og klokkeslett-feltet i Common Data Service | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/25/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -22,9 +22,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="behavior-and-format-of-the-date-and-time-field"></a>Virkemåte og format for Dato og klokkeslett-feltet
+# <a name="behavior-and-format-of-the-date-and-time-field"></a>Virkemåte og format for feltet Dato og klokkeslett
 
-I Common Data Service for Apps brukes dato- og klokkeslettypen i mange standard enhetsfelt. Du kan velge flere forskjellige virkemåter, avhengig av hvilken dato feltet representerer: **Brukerlokal**, **Bare dato** eller **Tidssoneuavhengig**.  
+I Common Data Service brukes dato- og klokkeslettypen i mange standard enhetsfelt. Du kan velge flere forskjellige virkemåter, avhengig av hvilken dato feltet representerer: **Brukerlokal**, **Bare dato** eller **Tidssoneuavhengig**.  
   
 <a name="Behavior"></a>   
 

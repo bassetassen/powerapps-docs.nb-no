@@ -3,7 +3,7 @@ title: Endre fargevalget eller legge til en logo som samsvarer med organisasjone
 ms.custom: ''
 ms.date: 02/19/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -116,7 +116,7 @@ Følgende skjermbilde viser en del av standardtemaets oppsett.
 ### <a name="theme-contrast"></a>Temakontrast  
  Vi anbefaler følgende metode for å angi kontrastfarger:  
   
--   Velg kontrastfargene med omhu. Det medfølgende Common Data Service for Apps-standardtemaet har riktig kontrastforhold for å sikre optimal brukervennlighet. Bruk lignende forhold for dine nye temaer.  
+-   Velg kontrastfargene med omhu. Det medfølgende Common Data Service-standardtemaet har riktig kontrastforhold for å sikre optimal brukervennlighet. Bruk lignende forhold for dine nye temaer.  
   
 -   Bruk standard fargeinnstillinger for høykontrast-modus.  
   

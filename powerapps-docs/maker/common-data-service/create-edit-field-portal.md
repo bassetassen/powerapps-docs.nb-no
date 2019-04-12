@@ -1,9 +1,9 @@
 ---
-title: Opprette og redigere felt for Common Data Service for Apps ved hjelp av PowerApps-portalen | MicrosoftDocs
+title: Opprette og redigere felt for Common Data Service ved hjelp av PowerApps-portalen | MicrosoftDocs
 ms.custom: ''
-ms.date: 05/18/2018
+ms.date: 02/28/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -12,20 +12,20 @@ applies_to:
   - Dynamics 365 Version 9.x
   - PowerApps
 ms.author: matp
-manager: brycho
+manager: kvivek
 search.audienceType:
   - maker
 search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="create-and-edit-fields-for-common-data-service-for-apps-using-powerapps-portal"></a>Opprette og redigere felt for Common Data Service for Apps ved hjelp av PowerApps-portalen
+# <a name="create-and-edit-fields-for-common-data-service-using-powerapps-portal"></a>Opprette og redigere felt for Common Data Service ved hjelp av PowerApps-portalen
 
-[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gir en enkel måte å opprette og redigere enhetsfelt på med Common Data Service for Apps.
+[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gir en enkel måte å opprette og redigere enhetsfelt på med Common Data Service.
 
 Portalen gjør det mulig for konfigurasjon av de vanligste alternativene, men enkelte alternativer kan bare angis ved hjelp av løsningsutforskeren. <br />Mer informasjon: 
-- [Opprette og redigere felt for Common Data Service for Apps](create-edit-fields.md)
-- [Opprette og redigere felt for Common Data Service for Apps ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md)
+- [Opprette og redigere felt for Common Data Service](create-edit-fields.md)
+- [Opprette og redigere felt for Common Data Service ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md)
 
 ## <a name="view-fields"></a>Visningsfelt
 
@@ -52,8 +52,8 @@ Først er bare tre feltegenskaper tilgjengelige:
  |Egenskap|Beskrivelse|
  |--|--|
  |**Visningsnavn**|Teksten som skal vises for feltet i brukergrensesnittet.|
- |**Navn**|Det unike navnet i hele miljøet. Det genereres et navn for deg basert på visningsnavnet som du har angitt, men du kan redigere det før du lagrer. Når et felt er opprettet, kan ikke navnet endres siden den kan bli referert til i programmene eller koden. Navnet vil ha tilpassingsprefikset for **Standardutgiver for CDS** foran.|
- |**Datatype**|Styrer hvordan verdiene lagres, og hvordan de er formatert i noen programmer. Når et felt er lagret, kan du ikke endre datatypen siden det kan påvirke dataene i enheten.|
+ |**Navn**|Det unike navnet i hele miljøet. Det genereres et navn for deg basert på visningsnavnet som du har angitt, men du kan redigere det før du lagrer. Når et felt er opprettet, kan ikke navnet endres siden den kan bli referert til i programmene eller koden. Navnet vil ha tilpassingsprefikset for **Standardutgiver for Common Data Service** foran.|
+ |**Datatype**|Styrer hvordan verdiene lagres, og hvordan de er formatert i noen programmer. Når et felt lagres, kan du ikke endre datatypen med unntak av å konvertere tekstfelt til autonummereringsfelt.|
 
 Du kan angi flere alternativer, avhengig av **datatypen** som er valgt.
 
@@ -75,6 +75,7 @@ Standardtekstfelt kan inneholde opptil 4 000 tegn. Standardalternativet [Maksim
 |**URL-adresse**|En tekstverdi validert som en URL-adresse og gjengitt som en kobling for å åpne URL-adressen.|
 |**Ticker-kode**|En tekstverdi for en ticker-kode som viser en kobling som åpnes for å vise et tilbud for aksje-ticker-koden. |
 |**Telefon**|En tekstverdi validert som et telefonnummer gjengitt som kobling for å opprette en telefonsamtale ved bruk av Skype. |
+|**Autonummer**|En kombinasjon av tall og bokstaver som kan genereres, som automatisk genereres av serveren når oppføringen opprettes. Mer informasjon: [Autonummereringsfelt](autonumber-fields.md) |
 
 #### <a name="max-length"></a>Maksimumslengde
 
@@ -170,7 +171,7 @@ Mer informasjon: [Definere felt for beregnet verdi som samler verdier](define-ro
 
 ## <a name="number-field-options"></a>Alternativer for tallfelt
 
-Hver type tallfelt har absolutte minimums- og maksimumsverdier. Du kan angi riktig **Minimumsverdi** og **Maksimumsverdi** innenfor disse absolutte verdiene. Gjør dette hvis du vil at CDS for Apps skal validere verdiene for dataene du vil lagre i feltet.
+Hver type tallfelt har absolutte minimums- og maksimumsverdier. Du kan angi riktig **Minimumsverdi** og **Maksimumsverdi** innenfor disse absolutte verdiene. Gjør dette hvis du vil at Common Data Service skal validere verdiene for dataene du vil lagre i feltet.
 
 For **Flyttall**- og **Desimaltall**-datatypene kan du angi et tall for **Desimalplasser**.
 
@@ -224,8 +225,8 @@ Felt som gir direkte innskriving av tekst har en IME-modus. IME brukes for østa
 
 
 ### <a name="see-also"></a>Se også  
-[Opprette og redigere felt for Common Data Service for Apps](create-edit-fields.md)<br />
-[Opprette og redigere felt for Common Data Service for Apps ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md)<br />
+[Opprette og redigere felt for Common Data Service](create-edit-fields.md)<br />
+[Opprette og redigere felt for Common Data Service ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md)<br />
 [Typer felt og feltdatatyper](types-of-fields.md)<br />
 [Definere beregnede felt for å automatisere manuelle beregninger](define-calculated-fields.md)<br />
 [Definere felt for beregnet verdi som samler verdier](define-rollup-fields.md)<br />

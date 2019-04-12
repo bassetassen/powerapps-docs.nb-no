@@ -1,13 +1,13 @@
 ---
 title: Åpne enhetsdata i Excel | Microsoft Docs
 description: Åpne enhetsdata i Excel for interaktiv visning og redigering.
-author: clwesene
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
 ms.date: 05/21/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType:
   - maker
 search.app:
@@ -78,6 +78,6 @@ Hvis du opplever et problem som ikke er beskrevet her, kan du kontakte oss via [
 ## <a name="next-steps"></a>Neste trinn
 * [Administrere felt i en enhet](data-platform-manage-fields.md)
 * [Definere relasjoner mellom enheter](data-platform-entity-lookup.md)
-* [Generere en app ved å bruke Common Data Service for Apps](../canvas-apps/data-platform-create-app.md)
-* [Opprette en app fra bunnen ved å bruke Common Data Service for Apps](../canvas-apps/data-platform-create-app-scratch.md)
+* [Generere en app ved å bruke Common Data Service](../canvas-apps/data-platform-create-app.md)
+* [Opprette en app fra bunnen ved å bruke Common Data Service](../canvas-apps/data-platform-create-app-scratch.md)
 

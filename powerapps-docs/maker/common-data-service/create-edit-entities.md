@@ -1,10 +1,10 @@
 ---
-title: Opprette og redigere enheter i Common Data Service for Apps | MicrosoftDocs
+title: Opprette og redigere enheter i Common Data Service | MicrosoftDocs
 description: Finn ut hvordan du oppretter og redigerer enheter
 ms.custom: ''
 ms.date: 05/11/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -22,7 +22,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="create-and-edit-entities-in-common-data-service-for-apps"></a>Opprette og redigere enheter i Common Data Service for Apps
+# <a name="create-and-edit-entities-in-common-data-service"></a>Opprette og redigere enheter i Common Data Service
 
 Før du oppretter en egendefinert enhet, kan du vurdere om bruk av en eksisterende enhet vil oppfylle behovene dine. Mer informasjon: [Opprette nye metadata eller bruke eksisterende metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 

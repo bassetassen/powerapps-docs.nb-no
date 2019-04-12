@@ -1,10 +1,10 @@
 ---
-title: Enheter og metadata i Common Data Service for Apps | MicrosoftDocs
-description: Finn ut mer om enheter og metadata i Common Data Service for Apps
+title: Enheter og metadata i Common Data Service | MicrosoftDocs
+description: Lær om enhter og metadata i Common Data Service
 ms.custom: ''
 ms.date: 05/30/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -24,15 +24,15 @@ search.app:
   - D365CE
 ---
 
-# <a name="entities-and-metadata-in-common-data-service-for-apps"></a>Enheter og metadata i Common Data Service for Apps
+# <a name="entities-and-metadata-in-common-data-service"></a>Enheter og metadata i Common Data Service
 
-Common Data Service for Apps er utformet slik at du kan raskt og enkelt opprette en datamodell for programmet. Du trenger vanligvis ikke bry deg med noen av detaljene om metadata som introduseres i dette emnet. Men hvis du ønsker å få en dypere forståelse av hvordan apper som bruker CDS for Apps, fungerer, eller du evaluerer hva som er mulig, kan en forståelse av metadataene som brukes av CDS for Apps, gi deg innsikt.
+Common Data Service er utformet slik at du kan raskt og enkelt opprette en datamodell for programmet. Du trenger vanligvis ikke bry deg med noen av detaljene om metadata som introduseres i dette emnet. Men hvis du ønsker å få en dypere forståelse av hvordan apper som bruker Common Data Service, fungerer, eller du evaluerer hva som er mulig, kan en forståelse av metadataene som brukes av Common Data Service, gi deg innsikt.
 
-*Metadata* betyr data om data. CDS for Apps er en fleksibel plattform fordi det er relativt enkelt å redigere definisjonene av dataene som brukes i miljøet. I CDS for Apps er metadataene en samling enheter. Enheter beskriver hvilke typer data som er lagret i databasen.  Hver enhet svarer til en databasetabell, og hvert felt (også kalt attributt) i en enhet representerer en kolonne i denne tabellen. Metadata for enhet er det som styrer typene oppføringer du kan opprette og typen handlinger som kan utføres på dem. Når du bruker tilpassingsverktøyene for å opprette eller redigere enheter, felt og enhetsrelasjoner, redigerer du disse metadataene. 
+*Metadata* betyr data om data. Common Data Service er en fleksibel plattform fordi det er relativt enkelt å redigere definisjonene av dataene som brukes i miljøet. I Common Data Service er metadataene en samling av enheter. Enheter beskriver hvilke typer data som er lagret i databasen.  Hver enhet svarer til en databasetabell, og hvert felt (også kalt attributt) i en enhet representerer en kolonne i denne tabellen. Metadata for enhet er det som styrer typene oppføringer du kan opprette og typen handlinger som kan utføres på dem. Når du bruker tilpassingsverktøyene for å opprette eller redigere enheter, felt og enhetsrelasjoner, redigerer du disse metadataene. 
   
 Ulike klienter som brukerne bruker til å arbeide med dataene i miljøet, avhenger av enhetsmetadataene og tilpasses etter hvert som du tilpasser metadataene. Men disse klientene er også avhengige av andre data for å styre hvilke visuelle elementer som skal vises, eventuell tilpasset logikk som skal brukes, og hvordan sikkerhet skal brukes. Disse systemdataene er også lagret i enheter, men selve enhetene er ikke tilgjengelige for tilpassing.
 
-Du kan lære om standard enheter, attributter og enhetsrelasjoner som er inkludert som standard i CDS for Apps, ved å gå gjennom [enhetsreferansen](/powerapps/developer/common-data-service/reference/about-entity-reference).
+Du kan lære om standardenheter, attributter og enhetsrelasjoner som er inkludert som standard i Common Data Service, ved å gå gjennom [enhetsreferansen](/powerapps/developer/common-data-service/reference/about-entity-reference).
 
 > [!TIP]
 > Utformingene som er tilgjengelige for redigering av metadata, kan ikke vise alle detaljene i metadataene. Du kan installere en modelldrevet app som kalles **metadataleseren** som gjør det mulig å vise alle enhetene og metadataegenskapene som blir funnet i systemet. Mer informasjon: [Bla gjennom metadataene for miljøet](https://docs.microsoft.com/dynamics365/customer-engagement/developer/browse-your-metadata).
@@ -41,7 +41,7 @@ Du kan lære om standard enheter, attributter og enhetsrelasjoner som er inklude
 
 ## <a name="create-new-metadata-or-use-existing-metadata"></a>Vil du opprette nye metadata eller bruke eksisterende metadata?
 
-CDS for Apps kommer med en rekke standardenheter som støtter kjernefunksjoner i forretningsprogram. Data om kunder eller potensielle kunder er for eksempel ment å lagres ved hjelp av forretningsforbindelses- eller kontaktenhetene.  
+Common Data Service kommer med en rekke standardenheter som støtter kjernefunksjoner i forretningsprogram. Data om kunder eller potensielle kunder er for eksempel ment å lagres ved hjelp av forretningsforbindelses- eller kontaktenhetene.  
   
 Hver av disse enhetene inneholder også en rekke felt som representerer vanlige data som systemet kanskje må lagre for den aktuelle enheten.  
   

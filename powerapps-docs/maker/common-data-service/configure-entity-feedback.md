@@ -4,7 +4,7 @@ description: Finn ut hvordan du aktiverer tilbakemelding for en enhet
 ms.custom: ''
 ms.date: 05/18/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -42,7 +42,8 @@ Rediger enheten for å aktivere **Tilbakemelding**. Mer informasjon: [Redigere e
 
 Som standard må brukere gå til listen over tilknyttede oppføringer for oppføringen du vil legge til tilbakemelding for. Hvis du vil gjøre det enklere for brukerne å legge til tilbakemelding, kan du legge til et tilbakemeldingsdelrutenett i skjemaet for enheten du aktiverer tilbakemelding for.  
 
-<!-- This is the closest I could find to a topic about adding an subgrid to a form. --> Mer informasjon: [Oversikt over egenskaper for delrutenett](../model-driven-apps/sub-grid-properties-legacy.md)
+<!-- This is the closest I could find to a topic about adding an subgrid to a form. -->
+Mer informasjon:  [Oversikt over egenskaper for delrutenett](../model-driven-apps/sub-grid-properties-legacy.md)
 
 ## <a name="add-a-rollup-field--to-the-entity-form-to-show-the-ratings"></a>Legge til et felt for beregnet verdi i enhetsskjemaet for å vise vurderingene  
 

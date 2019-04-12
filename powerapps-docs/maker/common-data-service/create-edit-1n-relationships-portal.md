@@ -4,7 +4,7 @@ description: Finn ut hvordan du oppretter én-til-mange- eller mange-til-én-rel
 ms.custom: ''
 ms.date: 06/11/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -23,7 +23,7 @@ search.app:
 ---
 # <a name="create-and-edit-one-to-many-or-many-to-one-entity-relationships-using-powerapps-portal"></a>Opprette og redigere én-til-mange- eller mange-til-én-relasjoner ved hjelp av PowerApps-portalen
 
-[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gir en enkel måte å opprette og redigere 1:N- (én-til-mange) eller N:1-relasjoner (mange-til-én) for Common Data Service for Apps.
+[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gir en enkel måte å opprette og redigere 1:N- (én-til-mange) eller N:1-relasjoner (mange-til-én) for Common Data Service.
 
 Portalen gjør det mulig for konfigurasjon av de vanligste alternativene, men enkelte alternativer kan bare angis ved hjelp av løsningsutforskeren. Mer informasjon: 
 - [Opprette og redigere 1:N-relasjoner (én-til-mange) eller N:1-relasjoner (mange-til-én)](create-edit-1n-relationships.md)

@@ -1,10 +1,10 @@
 ---
-title: Oversikt over oppretting av mange-til-mange-enhetsrelasjoner i Common Data Service for Apps | MicrosoftDocs
+title: Oversikt over oppretting av mange-til-mange-enhetsrelasjoner i Common Data Service | MicrosoftDocs
 description: Lær hvordan du oppretter enhetsrelasjoner av typen mange-til-mange
 ms.custom: ''
 ms.date: 05/29/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -37,8 +37,8 @@ Det finnes to utforminger som du kan bruke til å opprette og redigere 1:N- (én
 
 |Designer| Beskrivelse|
 |--|--|
-|[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Inneholder en enkel strømlinjeformet opplevelse, men noen spesialinnstillinger er ikke tilgjengelige.<br />Mer informasjon: [Opprette mange-til-mange-enhetsrelasjoner i Common Data Service for Apps ved hjelp av PowerApps-portalen](create-edit-nn-relationships-portal.md)|
-|Løsningsutforsker|Ikke så enkel, men den er mer fleksibel når kravene er mindre vanlige.<br />Mer informasjon: [Opprette N:N-enhetsrelasjoner (mange-til-mange) i Common Data Service for Apps ved hjelp av løsningsutforskeren](create-edit-nn-relationships-solution-explorer.md) |
+|[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Inneholder en enkel strømlinjeformet opplevelse, men noen spesialinnstillinger er ikke tilgjengelige.<br />Mer informasjon: [Opprette mange-til-mange-enhetsrelasjoner i Common Data Service ved hjelp av PowerApps-portalen](create-edit-nn-relationships-portal.md)|
+|Løsningsutforsker|Ikke så enkel, men den er mer fleksibel når kravene er mindre vanlige.<br />Mer informasjon: [Opprette N:N-enhetsrelasjoner (mange-til-mange) i Common Data Service ved hjelp av løsningsutforskeren](create-edit-nn-relationships-solution-explorer.md) |
 
 > [!NOTE]
 > Du kan også opprette ny mange-til-mange-enhetsrelasjon (N:N) i miljøet ved hjelp av følgende:
@@ -55,7 +55,7 @@ Du bør bruke PowerApps-portalen til å opprette og redigere mange-til-mange-enh
 ## <a name="see-also"></a>Se også
 
 [Opprette og redigere relasjoner mellom enheter](create-edit-entity-relationships.md)<br />
-[Opprette mange-til-mange-enhetsrelasjoner i Common Data Service for Apps ved hjelp av PowerApps-portalen](create-edit-nn-relationships-portal.md)<br />
-[Opprette N:N-enhetsrelasjoner (mange-til-mange) i Common Data Service for Apps ved hjelp av løsningsutforskeren](create-edit-nn-relationships-solution-explorer.md)<br />
+[Opprette mange-til-mange-enhetsrelasjoner i Common Data Service ved hjelp av PowerApps-portalen](create-edit-nn-relationships-portal.md)<br />
+[Opprette N:N-enhetsrelasjoner (mange-til-mange) i Common Data Service ved hjelp av løsningsutforskeren](create-edit-nn-relationships-solution-explorer.md)<br />
 [Dokumentasjon for utviklere: Tilpasse enhetsrelasjonsmetadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)<br />
 [Dokumentasjon for utviklere: Rettigheter for enhetsrelasjon](https://docs.microsoft.com/dynamics365/customer-engagement/developer/entity-relationship-eligibility)

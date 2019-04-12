@@ -1,10 +1,10 @@
 ---
-title: Opprette mange-til-mange-relasjoner i Common Data Service for Apps ved hjelp av PowerApps-portalen | MicrosoftDocs
+title: Opprette mange-til-mange-enhetsrelasjoner i Common Data Service ved hjelp av PowerApps-portalen | MicrosoftDocs
 description: Lær hvordan du oppretter relasjoner av typen mange-til-mange
 ms.custom: ''
 ms.date: 06/11/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -22,13 +22,13 @@ search.app:
   - D365CE
 ---
 
-# <a name="create-many-to-many-entity-relationships-in-common-data-service-for-apps-using-powerapps-portal"></a>Opprette mange-til-mange-enhetsrelasjoner i Common Data Service for Apps ved hjelp av PowerApps-portalen
+# <a name="create-many-to-many-entity-relationships-in-common-data-service-using-powerapps-portal"></a>Opprette mange-til-mange-enhetsrelasjoner i Common Data Service ved hjelp av PowerApps-portalen
 
-[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gir en enkel måte å opprette og redigere mange-til-mange-enhetsrelasjoner for Common Data Service for Apps.
+[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gir en enkel måte å opprette og redigere mange-til-mange-enhetsrelasjoner for Common Data Service.
 
 Portalen gjør det mulig for konfigurasjon av de vanligste alternativene, men enkelte alternativer kan bare angis ved hjelp av løsningsutforskeren. Mer informasjon: 
 - [Opprette N:N-enhetsrelasjoner (mange-til-mange)](create-edit-nn-relationships.md)
-- [Opprette N:N-enhetsrelasjoner (mange-til-mange) i Common Data Service for Apps ved hjelp av løsningsutforskeren](create-edit-nn-relationships-solution-explorer.md)
+- [Opprette N:N-enhetsrelasjoner (mange-til-mange) i Common Data Service ved hjelp av løsningsutforskeren](create-edit-nn-relationships-solution-explorer.md)
 
 ## <a name="view-many-to-many-entity-relationships"></a>Vise mange-til-mange-enhetsrelasjoner
 
@@ -86,4 +86,4 @@ Hvis du sletter mange-til-mange-relasjonen, slettes relasjonsenheten som ble opp
 ### <a name="see-also"></a>Se også
 
 [Opprette N:N-enhetsrelasjoner (mange-til-mange)](create-edit-nn-relationships.md)<br />
-[Opprette N:N-enhetsrelasjoner (mange-til-mange) i Common Data Service for Apps ved hjelp av løsningsutforskeren](create-edit-nn-relationships-solution-explorer.md)
+[Opprette N:N-enhetsrelasjoner (mange-til-mange) i Common Data Service ved hjelp av løsningsutforskeren](create-edit-nn-relationships-solution-explorer.md)

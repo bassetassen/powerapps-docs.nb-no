@@ -1,10 +1,10 @@
 ---
-title: Gjennomgang av den virtuelle enheten med OData v4-dataleverandøren i Common Data Service for Apps | MicrosoftDocs
+title: Gjennomgang av den virtuelle enheten med OData-dataleverandøren i Common Data Service | MicrosoftDocs
 description: Finn ut hvordan du bruker OData v4-dataleverandøren med en virtuell enhet
 ms.custom: ''
 ms.date: 06/04/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article

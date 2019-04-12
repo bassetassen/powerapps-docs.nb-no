@@ -4,7 +4,7 @@ description: Finn ut hvordan du redigerer systemenhetsmeldinger
 ms.custom: ''
 ms.date: 05/15/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -25,7 +25,7 @@ search.app:
 ---
 # <a name="edit-system-entity-messages"></a>Redigere systemenhetsmeldinger
 
-Standard visningsnavn for noen av systemenhetene brukes i tekst og feilmeldinger i brukergrensesnittet i Common Data Service for Apps. Hvis du endrer visningsnavnet, bør du også oppdatere eventuelle meldinger som bruker standard visningsnavn. Hvis du for eksempel endrer visningsnavnet fra *Konto* til *Firma*, kan du fremdeles se en feilmelding med det gamle navnet.  
+Standard visningsnavn for noen av systemenhetene brukes i tekst og feilmeldinger i brukergrensesnittet i Common Data Service. Hvis du endrer visningsnavnet, bør du også oppdatere eventuelle meldinger som bruker standard visningsnavn. Hvis du for eksempel endrer visningsnavnet fra *Konto* til *Firma*, kan du fremdeles se en feilmelding med det gamle navnet.  
 
 Du kan ikke redigere systemmeldinger ved hjelp av PowerApps-portalen. Du må bruke løsningsutforskeren.
 

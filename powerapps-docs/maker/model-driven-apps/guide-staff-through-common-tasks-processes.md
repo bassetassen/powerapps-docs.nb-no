@@ -4,7 +4,7 @@ description: Få informasjon om de ulike typene forretningslogikk du kan bruke a
 ms.custom: ''
 ms.date: 08/02/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
@@ -55,7 +55,7 @@ Microsoft Flow inneholder flere typer prosesser, og hver enkelt kan være utform
   
 -   Forretningsprosessflyter.  Du kan sikre at brukere skriver inn data konsekvent og følger de samme trinnene hver gang de arbeider i en app, ved å opprette en forretningsprosessflyt. Mer informasjon: [Oversikt over forretningsprosessflyter](/flow/business-process-flows-overview)
 
--   Arbeidsflyter og handlinger. Dynamics 365 Customer Engagement-tilpassere har kanskje kjennskap til klassiske CDS for App-prosesser, som er arbeidsflyter og handlinger. Mer informasjon: [Bruke arbeidsflytprosesser](/flow/workflow-processes) og [Handlingsoversikt](/flow/actions)
+-   Arbeidsflyter og handlinger. Dynamics 365 Customer Engagement-tilpassere er kanskje kjent med klassiske Common Data Service-prosesser, som er arbeidsflyter og handlinger. Mer informasjon: [Bruke arbeidsflytprosesser](/flow/workflow-processes) og [Handlingsoversikt](/flow/actions)
   
 ## <a name="next-step"></a>Neste trinn
 
@@ -63,4 +63,4 @@ Microsoft Flow inneholder flere typer prosesser, og hver enkelt kan være utform
 
 ### <a name="see-also"></a>Se også
 
-[Bruke forretningslogikk med Common Data Service for Apps](../common-data-service/cds-processes.md)
+[Bruke forretningslogikk med Common Data Service](../common-data-service/cds-processes.md)

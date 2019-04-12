@@ -3,7 +3,7 @@ title: Konfigurere tilkoblingsroller | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/27/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -19,9 +19,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="configure-connection-roles"></a>Konfigurere tilkoblingsroller
+# <a name="configure-connection-roles"></a>Konfigurer tilkoblingsroller
 
-Du kan definere **tilkoblinger** med Common Data Service for Apps mellom enhetsoppføringer uten å opprette en enhetsrelasjon. I modelldrevne apper kan brukere opprette en navngitt kobling mellom oppføringer for å opprette en mindre formell relasjon som ikke justerer oppretting av en faktisk enhetsrelasjon. Her er noen eksempler: *venn*, *søsken*, *ektefelle*, *deltaker* og *interessent*. Noen tilkoblinger kan også være resiproke, for eksempel *barn* og *forelder*, *mann* og *kone* eller *lege* og *pasient*.
+Du kan definere **tilkoblinger** med Common Data Service mellom enhetsoppføringer uten å opprette en enhetsrelasjon. I modelldrevne apper kan brukere opprette en navngitt kobling mellom oppføringer for å opprette en mindre formell relasjon som ikke justerer oppretting av en faktisk enhetsrelasjon. Her er noen eksempler: *venn*, *søsken*, *ektefelle*, *deltaker* og *interessent*. Noen tilkoblinger kan også være resiproke, for eksempel *barn* og *forelder*, *mann* og *kone* eller *lege* og *pasient*.
 
 Når brukere har angitt en tilkobling mellom to oppføringer, kan de også legge til en beskrivelse og ytterligere informasjon, for eksempel start- og sluttdatoer for relasjonen. Mer informasjon: [Opprette koblinger for å definere og vise relasjoner mellom oppføringer](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records).
 
@@ -29,7 +29,7 @@ Alle som har skrivetilgang til **Tilkoblingsrolle**-enheten, kan finne ut hvilke
 
 ## <a name="view-connection-roles"></a>Vise tilkoblingsroller
 
-Det finnes en rekke standard tilkoblingsroller som allerede er konfigurert i CDS for apper. For å vise dem må du gå til Innstillinger-området. 
+Det finnes en rekke standard tilkoblingsroller som allerede er konfigurert i Common Data Service. For å vise dem må du gå til Innstillinger-området. 
 
 ### <a name="navigate-to-the-settings-area"></a>Navigere til innstillingsområdet
 
@@ -91,7 +91,7 @@ Standardverdiene for **Kategori for tilkoblingsrolle** er:
 - Salgsteam
 - Service
 
-Du kan legge til nye kategorier eller endre eksisterende ved å redigere det globale alternativsettet for **kategori**. Mer informasjon: [Opprette og redigere globale alternativsett for Common Data Service for Apps (valglister)](create-edit-global-option-sets.md)
+Du kan legge til nye kategorier eller endre eksisterende ved å redigere det globale alternativsettet for **kategori**. Mer informasjon: [Opprette og redigere globale alternativsett for Common Data Service (valglister)](create-edit-global-option-sets.md)
 
 ### <a name="select-record-types"></a>Velg oppføringstyper
 
@@ -124,8 +124,8 @@ Hvis mer enn én samsvarende tilkoblingsrolle er konfigurert, representerer diss
 
 ### <a name="see-also"></a>Se også
 <!-- This is in the basics guide. It needs to be migrated -->
-[Opprette koblinger for å definere og vise relasjoner mellom oppføringer](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)<br />
-[Opprette og redigere globale alternativsett for Common Data Service for Apps (valglister)](create-edit-global-option-sets.md)<br />
+[Opprette koblinger for å definere og vise relasjoner mellom poster](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)<br />
+[Opprette og redigere globale alternativsett for Common Data Service (plukklister)](create-edit-global-option-sets.md)<br />
 [Opprette og redigere relasjoner mellom enheter](create-edit-entity-relationships.md)
 
 

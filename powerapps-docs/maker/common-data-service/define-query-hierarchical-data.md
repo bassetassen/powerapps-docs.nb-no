@@ -1,10 +1,10 @@
 ---
-title: Definere og spørre etter hierarkiske data med Common Data Service for Apps | MicrosoftDocs
+title: Definere og spørre etter hierarkiske data med Common Data Service | MicrosoftDocs
 description: Finn ut hvordan du definerer og spør etter hierarkisk relaterte data
 ms.custom: ''
 ms.date: 06/02/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -35,7 +35,7 @@ Enkelte standardenheter har allerede hierarkier definert. Andre enheter, inklude
 
 ## <a name="define-hierarchical-data"></a>Definere hierarkiske data
 
-I Common Data Service for Apps støttes hierarkiske datastrukturer av *selvrefererende relasjoner* av typen én-til-mange (1:N) for de relaterte oppføringene. 
+I Common Data Service støttes hierarkiske datastrukturer av *selvrefererende relasjoner* av typen én-til-mange (1:N) for de relaterte oppføringene. 
 
 > [!NOTE]
 > *Selvrefererende* betyr at enheten er relatert til seg selv. Forretningsforbindelsesenheten har for eksempel et oppslagsfelt for å knytte det til en annen oppføring for forretningsforbindelseenheten.

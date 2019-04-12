@@ -1,9 +1,9 @@
 ---
-title: Oversikt over oppretting og redigering av globale alternativsett (valglister) for Common Data Service for Apps | MicrosoftDocs
+title: Oversikt over oppretting og redigering av globale alternativsett (valglister) for Common Data Service | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/26/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -37,7 +37,7 @@ Det finnes to utforminger som du kan bruke til å opprette eller redigere global
 |Designer| Beskrivelse|
 |--|--|
 |[PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Inneholder en enkel strømlinjeformet opplevelse, men noen spesialinnstillinger er ikke tilgjengelige.<br />Mer informasjon: [Opprette et alternativsett](custom-picklists.md) |
-|Løsningsutforsker|Ikke så enkel, men den er mer fleksibel når kravene er mindre vanlige. <br />Mer informasjon: [Opprette og redigere globale alternativsett for Common Data Service for Apps ved hjelp av løsningsutforskeren](create-edit-global-option-sets-solution-explorer.md) |
+|Løsningsutforsker|Ikke så enkel, men den er mer fleksibel når kravene er mindre vanlige. <br />Mer informasjon: [Opprette og redigere globale alternativsett for Common Data Service ved hjelp av løsningsutforskeren](create-edit-global-option-sets-solution-explorer.md) |
 
 > [!NOTE]
 > Du kan også opprette globale alternativsett i miljøet ved hjelp av følgende:
@@ -50,7 +50,7 @@ Du bør bruke [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&
 
 - Tilordne farger til alternativer
 - Endre rekkefølgen på alternativer
-- Opprett et globalt alternativsett i en annen løsning enn standard CDS-løsningen
+- Opprette et globalt alternativsett i en annen løsning enn standard Common Data Service-løsningen
 - Angi forvaltede egenskaper
 - Angi egenskaper som brukes for virtuelle enheter
 - Vis avhengigheter
@@ -58,7 +58,7 @@ Du bør bruke [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&
 ## <a name="see-also"></a>Se også
 
 [Opprette et alternativsett](custom-picklists.md)<br />
-[Opprette og redigere globale alternativsett for Common Data Service for Apps ved hjelp av løsningsutforskeren](create-edit-global-option-sets-solution-explorer.md)<br />
+[Opprette og redigere globale alternativsett for Common Data Service ved hjelp av løsningsutforskeren](create-edit-global-option-sets-solution-explorer.md)<br />
 [Dokumentasjon for utviklere: Tilpasse globale alternativsett](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
   
 

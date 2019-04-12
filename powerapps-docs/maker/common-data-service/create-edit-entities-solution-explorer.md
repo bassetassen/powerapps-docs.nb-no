@@ -4,7 +4,7 @@ description: Finn ut hvordan du oppretter en enhet ved hjelp av løsningsutforsk
 ms.custom: ''
 ms.date: 05/30/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -23,7 +23,7 @@ search.app:
 
 # <a name="create-and-edit-entities-using-solution-explorer"></a>Opprette og redigere enheter ved hjelp av løsningsutforskeren
 
-Du kan enkelt opprette en enhet ved hjelp av PowerApps-portalen i de vanligste situasjoner, men ikke alle funksjonene er implementert der. Når du må oppfylle kravene beskrevet i [Opprette og redigere enheter i Common Data Service for Apps](create-edit-entities.md), kan du gjøre dette ved å opprette eller redigere enheter ved hjelp av løsningsutforskeren.
+Du kan enkelt opprette en enhet ved hjelp av PowerApps-portalen i de vanligste situasjoner, men ikke alle funksjonene er implementert der. Når du må oppfylle kravene beskrevet i [Opprette og redigere enheter i Common Data Service](create-edit-entities.md), kan du gjøre dette ved å opprette eller redigere enheter ved hjelp av løsningsutforskeren.
 
 ## <a name="open-solution-explorer"></a>Åpne løsningsutforskeren
 
@@ -106,7 +106,7 @@ Both should point to this include
 [!INCLUDE [cc_entity-changeable-options-table](../../includes/cc_entity-changeable-options-table.md)]
 
 Du kan også gjøre følgende endringer:
-- [Opprette og redigere felt for Common Data Service for Apps](create-edit-fields.md)
+- [Opprette og redigere felt for Common Data Service](create-edit-fields.md)
 - [Opprette og redigere relasjoner mellom enheter](create-edit-entity-relationships.md)
 - [Opprette og utforme skjemaer](../model-driven-apps/create-design-forms.md)
 - [Opprette en forretningsprosessflyt for å standardisere prosesser](/flow/create-business-process-flow)
@@ -197,6 +197,6 @@ Noen av alternativene brukes bare når du oppretter en virtuell enhet.
 Mer informasjon: [Opprette og redigere virtuelle enheter som inneholder data fra en ekstern datakilde](create-edit-virtual-entities.md)
 
 ### <a name="see-also"></a>Se også
-[Opprette og redigere enheter i Common Data Service for Apps](create-edit-entities.md)<br />
+[Opprette og redigere enheter i Common Data Service](create-edit-entities.md)<br />
 [Opplæring: Opprette en egendefinert enhet som har komponenter i PowerApps](/powerapps/maker/common-data-service/create-custom-entity)<br />
 [Opprette en løsning](create-solution.md)

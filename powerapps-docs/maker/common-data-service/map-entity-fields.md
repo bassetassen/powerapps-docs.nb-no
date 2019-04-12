@@ -4,7 +4,7 @@ description: Finn ut hvordan du tilordner enhetsfelt
 ms.custom: ''
 ms.date: 05/29/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -98,7 +98,7 @@ Reglene nedenfor viser hvilke typer data som kan tilordnes.
 - Hvis feltene er alternativsett, må heltallsverdiene for hvert alternativ være identiske.  
   
 > [!NOTE]
->  Hvis du vil tilordne alternativsettfelt, anbefaler vi du konfigurerer begge feltene til å bruke samme globale alternativsett. Hvis ikke, kan det være vanskelig å holde to separate sett med alternativer synkroniseres manuelt. Hvis heltallsverdiene for hvert alternativ ikke er riktig tilordnet, kan du introdusere problemer i dataene. Mer informasjon: [Opprette og redigere globale alternativsett for Common Data Service for Apps (valglister)](create-edit-global-option-sets.md)  
+>  Hvis du vil tilordne alternativsettfelt, anbefaler vi du konfigurerer begge feltene til å bruke samme globale alternativsett. Hvis ikke, kan det være vanskelig å holde to separate sett med alternativer synkroniseres manuelt. Hvis heltallsverdiene for hvert alternativ ikke er riktig tilordnet, kan du introdusere problemer i dataene. Mer informasjon: [Opprette og redigere globale alternativsett for Common Data Service (valglister)](create-edit-global-option-sets.md)  
   
 ## <a name="automatically-generate-field-mappings"></a>Automatisk genererte felttilordninger  
 

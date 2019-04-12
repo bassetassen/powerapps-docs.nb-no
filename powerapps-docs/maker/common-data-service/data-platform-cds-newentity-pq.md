@@ -1,14 +1,14 @@
 ---
-title: Legge til data i en enhet i Common Data Service for Apps ved hjelp av Power Query | Microsoft Docs
-description: Trinnvise instruksjoner for hvordan du bruker Power Query til å legge til data i en ny eller eksisterende enhet i Common Data Service (CDS) for Apps fra en annen datakilde.
-author: AFTOwen
+title: Legge til data i en enhet i Common Data Service ved hjelp av Power Query | Microsoft Docs
+description: Trinnvise instruksjoner for hvordan du bruker Power Query til å legge til data i en ny eller eksisterende enhet i Common Data Service fra en annen datakilde.
+author: mllopis
 manager: kfile
 ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: cds
 ms.date: 03/21/2018
-ms.author: anneta
+ms.author: millopis
 search.audienceType:
   - maker
 search.app:
@@ -16,8 +16,8 @@ search.app:
   - D365CE
 ---
 
-# <a name="add-data-to-an-entity-in-common-data-service-for-apps-by-using-power-query"></a>Legge til data i en enhet i Common Data Service for Apps ved hjelp av Power Query
-I denne prosedyren skal du opprette en enhet i [Common Data Service (CDS) for Apps](data-platform-intro.md) og fylle ut enheten med data fra en OData-feed ved hjelp Power Query. Du kan bruke de samme fremgangsmåtene for å integrere data fra disse online og lokale kildene, blant annet:
+# <a name="add-data-to-an-entity-in-common-data-service-by-using-power-query"></a>Legge til data i en enhet i Common Data Service ved hjelp av Power Query
+I denne prosedyren skal du opprette en enhet i [Common Data Service](data-platform-intro.md) og fylle ut enheten med data fra en OData-feed ved hjelp Power Query. Du kan bruke de samme fremgangsmåtene for å integrere data fra disse online og lokale kildene, blant annet:
 
 * SQL Server
 * Salesforce

@@ -4,7 +4,7 @@ description: Lær hvordan du spør etter og visualiserer hierarkisk relaterte da
 ms.custom: ''
 ms.date: 06/20/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -23,7 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="query-and-visualize-hierarchically-related-data"></a>Spørre etter og visualisere hierarkisk relaterte data
+# <a name="query-and-visualize-hierarchically-related-data"></a>Spør etter og visualiser hierarkisk relaterte data
 
 Du kan få verdifull innsikt i bedriftsdata ved å visualisere hierarkisk relaterte data. Den hierarkiske modelleringen og visualiseringsfunksjonene gir deg mange fordeler:  
   
@@ -37,7 +37,7 @@ For enkelte enheter, for eksempel forretningsforbindelse og bruker, følger visu
   
 <a name="BKMK_Querydata"></a>   
 ## <a name="query-hierarchical-data"></a>Spørre hierarkiske data  
- I Common Data Service for Apps støttes hierarkiske datastrukturer av selvrefererende relasjoner av typen én-til-mange (1:N) for de relaterte oppføringene. Tidligere måtte du spørre iterativt etter de relaterte oppføringene for å vise hierarkiske data. Nå kan du spørre de relaterte dataene som et hierarki, i ett trinn. Du kan spørre etter enhetsoppføringene ved hjelp av logikken **Under** og **Ikke under**. De hierarkiske operatorene **Under** og **Ikke under** vises i Avansert søk og redigeringsprogrammet for arbeidsflyt. Hvis du vil ha mer informasjon om hvordan du bruker disse operatorene, kan du se [Konfigurere arbeidsflyttrinn](/flow/configure-workflow-steps). Hvis du vil ha mer informasjon om avansert søk, kan du se [Opprette, redigere eller lagre et søk i Avansert søk](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search).  
+ I Common Data Service støttes hierarkiske datastrukturer av selvrefererende relasjoner av typen én-til-mange (1:N) for de relaterte oppføringene. Tidligere måtte du spørre iterativt etter de relaterte oppføringene for å vise hierarkiske data. Nå kan du spørre de relaterte dataene som et hierarki, i ett trinn. Du kan spørre etter enhetsoppføringene ved hjelp av logikken **Under** og **Ikke under**. De hierarkiske operatorene **Under** og **Ikke under** vises i Avansert søk og redigeringsprogrammet for arbeidsflyt. Hvis du vil ha mer informasjon om hvordan du bruker disse operatorene, kan du se [Konfigurere arbeidsflyttrinn](/flow/configure-workflow-steps). Hvis du vil ha mer informasjon om avansert søk, kan du se [Opprette, redigere eller lagre et søk i Avansert søk](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search).  
   
  Eksemplene nedenfor viser ulike scenarier for hierarkispørring:  
   

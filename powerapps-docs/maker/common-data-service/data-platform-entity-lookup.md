@@ -88,7 +88,7 @@ Dette er for øyeblikket bare tilgjengelig via Avansert-menyen. På hjemmesiden 
 Hvis du [oppretter en app automatisk](../canvas-apps/data-platform-create-app.md) fra en enhet som inneholder et oppslagsfelt, vises det som en **rullegardinliste**-kontroll som inneholder data fra **Hovednavn**-feltet for enheten.
 
 ## <a name="add-1n-and-nn-relationships-for-canvas-apps"></a>Legg til 1:N- og N:N-relasjoner for lerrettapper
-Bruk **Relater**-funksjonen til å koble to oppføringer via en én-til-mange- eller mange-til-mange-relasjon i Common Data Service (CDS) for Apps. Hvis du vil ha mer informasjon: [Funksjonene Relater og Fjern relatering i PowerApps](../canvas-apps/functions/function-relate-unrelate.md)
+Bruk **Relater**-funksjonen til å koble to oppføringer via en én-til-mange- eller mange-til-mange-relasjon i Common Data Service. Hvis du vil ha mer informasjon: [Funksjonene Relater og Fjern relatering i PowerApps](../canvas-apps/functions/function-relate-unrelate.md)
 
 ## <a name="next-steps"></a>Neste trinn
 * [Generere en app ved å bruke en Common Data Service-database](../canvas-apps/data-platform-create-app.md)

@@ -4,7 +4,7 @@ description: Lær hvordan du angir overføringer for statusårsaker
 ms.custom: ''
 ms.date: 05/25/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -29,7 +29,7 @@ search.app:
 Du kan du angi overføringer for statusårsak for enheten Hendelse (**Sak**) eller en egendefinert enhet.
 
 > [!NOTE]
-> Selv om hendelsesenheten (saken) ikke er inkludert i et standard Common Data Service for Apps-miljø, brukes den av [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) og er definert i [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json)
+> Selv om hendelsesenheten (saken) ikke er inkludert i et standard Common Data Service-miljø, brukes den av [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) og er definert i [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json)
   
 Overføringer for statusårsak er et valgfritt tilleggsnivå for filtrering for å angi hva verdien for statusårsaken kan endres til for hver statusårsak. Hvis du angir en begrenset liste med gyldige alternativer, kan dette gjøre det enklere for brukere å velge riktig neste statusårsak for en oppføring når du har et stort antall kombinasjoner av gyldige verdier for statusårsak.  
   
@@ -60,7 +60,7 @@ Metadataene for feltet angir hvilke statusverdier som er gyldige for en bestemt 
 Du kan endre feltalternativene for statusårsaken for Sak-enheten og egendefinerte enheter for å definere hvilke andre alternativer for statusårsak brukere kan velge. Den eneste begrensningen er at hvert alternativ for statusårsak for en aktiv status må ha minst én bane til en inaktiv status. Hvis ikke, kan du skape en situasjon der det ikke vil være mulig å løse eller avbryte saken.  
 
 > [!NOTE]
-> Redigere overganger for statusårsak krever bruk av løsningsutforskeren. Se [Opprette og redigere felt for Common Data Service for Apps ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md) for informasjon om hvordan du redigerer felt.
+> Redigere overganger for statusårsak krever bruk av løsningsutforskeren. Se [Opprette og redigere felt for Common Data Service ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md) for informasjon om hvordan du redigerer felt.
   
  Når du redigerer et statusårsaksfelt, vises knappen **Rediger overføringer av statusårsak** på menyen. 
 
@@ -81,7 +81,7 @@ Skjermbildet nedenfor viser et eksempel som oppfyller følgende krav:
   
 ### <a name="see-also"></a>Se også  
 
-[Opprette og redigere felt for Common Data Service for Apps ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md)<br />
+[Opprette og redigere felt for Common Data Service ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md)<br />
 [Enhetsmetadata > Enhetstilstander](/powerapps/developer/common-data-service/entity-metadata#entity-states)<br />
 [Definere egendefinerte tilstandsmodelloverganger](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
 
