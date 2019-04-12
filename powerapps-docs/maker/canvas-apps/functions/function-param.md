@@ -1,6 +1,6 @@
 ---
 title: Download-, Launch- og Param-funksjoner | Microsoft Docs
-description: Referanseinformasjon, inkludert syntaks og eksempler, for funksjonene Download, Launch og Param i PowerApps
+description: Referanseinformasjon, inkludert syntaks og eksempler for funksjonene Last ned, start og Param i lerret-apper
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -13,22 +13,24 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6c465a8cd23511c0cffbbfab9b70dd436be06d37
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 4a53d8c20bd4b7784cb94daa574682c041f104ea
+ms.sourcegitcommit: b316e0eee9946ef09e0512577ce2d11cd27aa864
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42860021"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59508313"
 ---
-# <a name="download-launch-and-param-functions-in-powerapps"></a>Download-, Launch- og Param-funksjoner i PowerApps
+# <a name="download-launch-and-param-functions-in-canvas-apps"></a>Last ned, start og Param-funksjoner i lerret-apper
 Laster ned eller åpner en nettside eller en app med parametere.  
 
 ## <a name="description"></a>Beskrivelse
-**Download**-funksjonen laster ned en fil fra nettet til den lokale enheten.  Brukeren blir bedt om å angi en plassering til å lagre filen.  **Download** returnerer plasseringen der filen ble lagret lokalt som en streng.  
+**Download**-funksjonen laster ned en fil fra nettet til den lokale enheten. Brukeren blir bedt om å angi en plassering til å lagre filen.  **Download** returnerer plasseringen der filen ble lagret lokalt som en streng.  
 
-**Launch**-funksjonen åpner en nettside eller en app.  Denne funksjonen kan alternativt også sende parametere til appen.  
+**Launch**-funksjonen åpner en nettside eller en app.  Denne funksjonen kan alternativt også sende parametere til appen.
 
-**Param**-funksjonen henter et parameter som ble sendt til appen når den ble startet.  Hvis det navngitte parameteret ikke ble sendt, returnerer **Param** som *tom*.
+I Internet Explorer og Microsoft Edge, den **Start** -funksjonen åpner en nettstedet eller appen bare hvis sikkerhetsinnstillingene er de samme eller høyere enn for appen som inneholder funksjonen. Hvis for eksempel legger du til den **Start** funksjonen til en app som kjører i den **klarerte områder** sikkerhet sone, må du kontrollere at nettstedet eller appen som du vil at funksjonen til å åpne er i den **klarerte områder** eller **lokalt intranett** sone (ikke i **begrensede områder**). Mer informasjon: [Endre innstillinger for sikkerhet og personvern for Internet Explorer 11](https://support.microsoft.com/en-us/help/17479/windows-internet-explorer-11-change-security-privacy-settings).  
+
+**Param**-funksjonen henter et parameter som ble sendt til appen når den ble startet. Hvis det navngitte parameteret ikke ble sendt, returnerer **Param** som *tom*.
 
 ## <a name="syntax"></a>Syntaks
 **Download** ( *adresse* )
