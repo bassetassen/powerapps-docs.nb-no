@@ -13,23 +13,23 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 34e76821a10ef5803028bc7fd31bbd70c2845b36
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: d20c19e44f3fb247314613cdfe23e1d1e5820cba
+ms.sourcegitcommit: 0aa8344e6ff1096b67fbac6b986515ec2540e5fd
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42849206"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59541819"
 ---
 # <a name="shape-controls-and-icon-controls-in-powerapps"></a>Figur-kontroller og ikon-kontroller i PowerApps
 Grafikk som du kan konfigurere egenskaper for utseende og virkemåte for.
 
 ## <a name="description"></a>Beskrivelse
-Disse kontrollene omfatter piler, geometriske former, handlingsikoner og symboler som du kan konfigurere egenskaper som fyll, størrelse og plassering for. Du kan også konfigurere kontrollenes **[OnSelect](properties-core.md)**-egenskaper, slik at appen reagerer hvis brukeren klikker eller trykker på kontrollen.
+Disse kontrollene omfatter piler, geometriske former, handlingsikoner og symboler som du kan konfigurere egenskaper som fyll, størrelse og plassering for. Du kan også konfigurere sine **[OnSelect](properties-core.md)** egenskapen slik at appen reagerer Hvis brukeren velger kontrollen.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
-**[OnSelect](properties-core.md)** – hvordan appen reagerer når brukeren klikker eller trykker på en kontroll.
+**[OnSelect](properties-core.md)**  – hvordan appen reagerer når brukeren velger en kontroll.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
 **[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere.
@@ -42,11 +42,11 @@ Disse kontrollene omfatter piler, geometriske former, handlingsikoner og symbole
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
-**[HoverFill](properties-color-border.md)**  – bakgrunnsfargen for en kontroll når brukeren holder musepekeren på den.
+**[HoverFill](properties-color-border.md)** – bakgrunnsfargen for en kontroll når brukeren holder musepekeren over den.
 
-**[PressedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når brukeren trykker eller klikker på kontrollen.
+**[PressedBorderColor](properties-color-border.md)**  – fargen på kontrollens kantlinje når brukeren velger denne kontrollen.
 
-**[PressedFill](properties-color-border.md)** – bakgrunnsfargen i en kontroll når brukeren trykker eller klikker på kontrollen.
+**[PressedFill](properties-color-border.md)**  – bakgrunnsfargen for en kontroll når brukeren velger denne kontrollen.
 
 **[TabIndex](properties-accessibility.md)** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
 
@@ -68,15 +68,19 @@ Disse kontrollene omfatter piler, geometriske former, handlingsikoner og symbole
 
     Lurer du på hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?
 
-2. Legge til en **[Skjerm](control-screen.md)**-kontroll, og gi den navnet **Source**.
-3. Legg til en **Figur**-kontroll i **Source**, og angi **[OnSelect](properties-core.md)**-egenskapen som denne formelen:<br>**Navigate(Target, ScreenTransition.Fade)**
-4. Trykk på F5, og klikk eller trykk på **Figur**-kontrollen.
+1. Legge til en **[Skjerm](control-screen.md)**-kontroll, og gi den navnet **Source**.
+
+1. Legg til en **Figur**-kontroll i **Source**, og angi **[OnSelect](properties-core.md)**-egenskapen som denne formelen:
+
+  `Navigate(Target, ScreenTransition.Fade)`
+  
+1. Trykk på F5, og velg deretter den **figur** kontroll.
 
     Skjermbildet **Target** vises.
 
-5. (valgfritt) Trykk på Esc for å gå tilbake til standardarbeidsområdet, legge til en **Figur**-kontroll i **Target**, og angi **[OnSelect](properties-core.md)**-egenskapen til **Figur**-kontrollen som denne formelen:
-   <br>**Navigate(Source, ScreenTransition.Fade)**
+1. (valgfritt) Trykk på Esc for å gå tilbake til standardarbeidsområdet, legge til en **Figur**-kontroll i **Target**, og angi **[OnSelect](properties-core.md)**-egenskapen til **Figur**-kontrollen som denne formelen:
 
+  `Navigate(Source, ScreenTransition.Fade)`
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
 
@@ -85,31 +89,32 @@ Disse kontrollene omfatter piler, geometriske former, handlingsikoner og symbole
 Følgende gjelder bare for grafikk som skal brukes som knapper, og ikke bare som dekorasjon.
 
 For ikoner:
-* **[Farge](properties-color-border.md)** og **[Fyll](properties-color-border.md)**
-* Andre [standardkrav for fargekontrast](../accessible-apps-color.md) gjelder (hvis den brukes som en knapp)
+- **[Farge](properties-color-border.md)** og **[Fyll](properties-color-border.md)**
+- Andre [standardkrav for fargekontrast](../accessible-apps-color.md) gjelder (hvis den brukes som en knapp)
 
 For figurer med kantlinjer:
-* **[BorderColor](properties-color-border.md)** og fargen utenfor kontrollen
-* **[FocusedBorderColor](properties-color-border.md)** og fargen utenfor kontrollen (hvis den brukes som en knapp)
+- **[BorderColor](properties-color-border.md)** og fargen utenfor kontrollen
+- **[FocusedBorderColor](properties-color-border.md)** og fargen utenfor kontrollen (hvis den brukes som en knapp)
 
 For figurer uten kantlinjer:
-* **[Fyll](properties-color-border.md)** og fargen utenfor kontrollen
-* **[PressedFill](properties-color-border.md)** og fargen utenfor kontrollen (hvis den brukes som en knapp)
-* **[HoverFill](properties-color-border.md)** og fargen utenfor kontrollen (hvis den brukes som en knapp)
+- **[Fyll](properties-color-border.md)** og fargen utenfor kontrollen
+- **[PressedFill](properties-color-border.md)** og fargen utenfor kontrollen (hvis den brukes som en knapp)
+- **[HoverFill](properties-color-border.md)** og fargen utenfor kontrollen (hvis den brukes som en knapp)
 
-### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
-* **[AccessibleLabel](properties-accessibility.md)** må være til stede hvis grafikken brukes som en knapp eller på andre måter ikke bare er ment som dekorasjon.
-* **[AccessibleLabel](properties-accessibility.md)** må være tom eller den tomme strengen **«»** hvis grafikken utelukkende er ment som dekorasjon. Dette gjør at skjermlesere ignorerer grafikken.
-* **[AccessibleLabel](properties-accessibility.md)** kan være tom eller den tomme strengen **«»** hvis grafikken inneholder overflødig informasjon.
+### <a name="screen-reader-support"></a>Støtte for skjermleser
+- **[AccessibleLabel](properties-accessibility.md)**  må være satt til en ikke-tom streng hvis grafikken brukes som en knapp eller er ikke bare for dekorasjon.
 
-    Dette kan eksempelvis være et **Innstillinger**-ikon med tilhørende **[AccessibleLabel](properties-accessibility.md)** satt til **Innstillinger**. Dette ikonet brukes ikke som en knapp. Det er ved siden av en **[etikett](control-text-box.md)** som også sier **Innstillinger**. Skjermlesere leser ikonet som **Innstillinger**, og etiketten som **Innstillinger** på nytt. Dette er unødvendig detaljert. I dette tilfellet trenger ikke ikonet en **[AccessibleLabel](properties-accessibility.md)**.
+- **[AccessibleLabel](properties-accessibility.md)**  må være tom eller den tomme strengen **""** Hvis grafikken inneholder overflødig informasjon eller er bare for dekorasjon. Denne verdien gjør at skjermlesere ignorerer grafikken.
 
-    > [!IMPORTANT]
-    > Skjermlesere leser alltid ikoner eller figurer som har **[TabIndex](properties-accessibility.md)**-verdier på null eller større, selv om **[AccessibleLabel](properties-accessibility.md)** er tom. Dette er fordi de gjengis som knapper. Hvis ingen **[AccessibleLabel](properties-accessibility.md)** er angitt, leser skjermlesere ganske enkelt grafikken som **knapp**.
+Du kan for eksempel angi den **[AccessibleLabel](properties-accessibility.md)** -egenskapen for en **innstillinger** ikonet for å **innstillinger**. Dette ikonet er ikke brukes som en knapp. Det er ved siden en **[etikett](control-text-box.md)** som også sier **innstillinger**. Skjermlesere leser både ikon- og etiketten som **innstillinger**, som er overflødig. I dette tilfellet trenger ikke ikonet en  **[AccessibleLabel](properties-accessibility.md)**.
+
+> [!IMPORTANT]
+> Skjermlesere leser lese en ikonet eller figuren som **knappen** hvis den **[AccessibleLabel](properties-accessibility.md)** er satt til en tom streng og **[TabIndex ](properties-accessibility.md)** er satt til null eller større. Slike ikoner eller figurer gjengis som knapper. 
 
 ### <a name="keyboard-support"></a>Tastaturstøtte
-* **[TabIndex](properties-accessibility.md)**-verdien må være null eller større hvis grafikken brukes som en knapp. Dette gjør at tastaturbrukere får muligheten til å navigere til den.
-* Fokusindikatorer må være klart synlige hvis grafikken brukes som en knapp. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
+- **[TabIndex](properties-accessibility.md)**  må være null eller større hvis grafikken brukes som en knapp. Hvis du setter denne verdien for et ikon eller en figur, kan tastaturbrukere navigere til den.
+
+- Fokusindikatorer må være klart synlige hvis grafikken brukes som en knapp. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** å oppnå dette resultatet.
 
     > [!NOTE]
-  > Når  **[TabIndex](properties-accessibility.md)**-verdien er null eller større, gjengis figuren eller ikonet som en knapp. Det finnes ingen endring i utseendet, men skjermlesere identifiserer bildet som en knapp. Når **[TabIndex](properties-accessibility.md)**-verdien er mindre enn null, identifiseres ikonet eller figuren som et bilde.
+    > Når  **[TabIndex](properties-accessibility.md)**-verdien er null eller større, gjengis figuren eller ikonet som en knapp. Endre ikke utseendet, men skjermlesere identifiserer bildet som en knapp. Når **[TabIndex](properties-accessibility.md)**-verdien er mindre enn null, identifiseres ikonet eller figuren som et bilde.
