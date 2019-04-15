@@ -20,12 +20,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 8b8ef91cff7d65c7bcd22a2612413aabbeb4e2df
-ms.sourcegitcommit: 11486fb4c16095e3fef785126003cac3e3e06c0d
+ms.openlocfilehash: e2b43178882cb66abba2305f65f78855915591ed
+ms.sourcegitcommit: 44ca0a386fce0c4a18310b515a4880065942dd05
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54271483"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59537831"
 ---
 # <a name="best-practices-and-guidance-of-client-side-scripting-for-model-driven-apps"></a>Anbefalte fremgangsmåter og veiledning for skripting på klientsiden for modelldrevne apper
 
@@ -34,6 +34,7 @@ Listen nedenfor inneholder alle de anbefalte fremgangsmåtene og veiledningene k
 |Anbefalt fremgangsmåte  |Beskrivelse  |
 |---------|---------|
 |[Unngå bruk av window.top](avoid-window-top.md)     |Beskriver hvordan du kan unngå skriptfeil og feilaktig programvirkemåte knyttet til bruken av window.top i JavaScript-tilpassinger.         |
+|[Vurder å deaktivere navigasjonsfeltet når du åpner enhetsskjemaer eller -visninger programmatisk](consider-disabling-navbar-programmatically-opening-entity-forms-views.md)|Hvis du åpner enhetsskjemaer eller -visninger med en nettadresse, kan det føre til lavere ytelse for klienten på nettverk med høy ventetid når navigasjonsfeltet (Navigasjonsfelt) er aktivert.|
 |[Anbefalte fremgangsmåter: Klientskripting i modelldrevne apper](../../clientapi/client-scripting-best-practices.md)     |Noen av de anbefalte fremgangsmåtene du bør vurdere mens du skriver JavaScript-kode for modelldrevne apper.         |
 |[Samhandle med HTTP- og HTTPS-ressurser asynkront](interact-http-https-resources-asynchronously.md)     |Du bør samhandle med HTTP- og HTTPS-ressurser asynkront når du skriver JavaScript-klientutvidelser for modelldrevne apper.         |
 |[Fjern deaktiverte tilpasninger](remove-deactivated-disabled-configurations.md)     |Deaktiverte tilpassinger bør fjernes fra en løsning for å forbedre løsningsbehandlingen, og for å redusere risikoen for bruk eller behandling av en utdatert komponent.         |
