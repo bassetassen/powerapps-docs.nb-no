@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 28357a6187831e05fe27075b8b22514950215ab4
-ms.sourcegitcommit: fc604f3e7f0399bdabee86ce94f67de49531a444
+ms.openlocfilehash: 43832847f447a9af8a05d149b0d6f3b564b770e1
+ms.sourcegitcommit: 0267e58b305f9fb0a4b32130fb149cd6e34b3354
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545065"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59993807"
 ---
 # <a name="add-a-data-connection-to-a-canvas-app-in-powerapps"></a>Legg til en datatilkobling i en lerretsapp i PowerApps
 
@@ -58,7 +58,7 @@ Det [neste trinnet](#next-steps) etter denne artikkelen er å vise og behandle d
 
     ![Legg til en tilkobling](./media/add-data-connection/add-connection.png)
 
-1. I søkefeltet, skriver du inn eller lime inn de første bokstavene i tilkoblingen du ønsker, og velg deretter deretter tilkobling når den vises.
+1. I søkefeltet, skriver du inn eller lime inn de første bokstavene i tilkoblingen du ønsker, og velg deretter tilkoblingen når den vises.
 
     ![Søk etter en tilkobling](./media/add-data-connection/search-connections.png)
 
@@ -67,7 +67,7 @@ Det [neste trinnet](#next-steps) etter denne artikkelen er å vise og behandle d
     Noen koblinger, for eksempel **Office 365 Outlook**, krever ingen flere trinn, og du kan vise data fra dem umiddelbart. Andre koblinger anmoder deg om å angi legitimasjon, et bestemt datasett, eller om å utføre andre trinn. [SharePoint](connections/connection-sharepoint-online.md) og [SQL Server](connections/connection-azure-sqldatabase.md) krever for eksempel tilleggsinformasjon før du kan bruke dem.
 
 ## <a name="identify-or-change-a-data-source"></a>Å identifisere eller endre en datakilde
-Hvis du oppdaterer en app, må du kanskje identifisere eller endre kilden til dataene som vises i et galleri, et skjema eller en annen kontroll. Du må for eksempel kanskje identifisere en datakilde når du oppdaterer en app som noen andre har opprettet, eller som du har opprettet for lenge siden.
+Hvis du oppdaterer en app, må du kanskje identifisere eller endre kilden til dataene som vises i et galleri, et skjema eller en annen kontroll. Du må for eksempel kanskje identifisere en datakilde som du oppdaterer en app som noen andre har opprettet, eller som du opprettet for lenge siden.
 
 1. Velg en kontroll, for eksempel et galleri, som du vil identifisere eller endre datakilden.
 

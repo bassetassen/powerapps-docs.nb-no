@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d20c19e44f3fb247314613cdfe23e1d1e5820cba
-ms.sourcegitcommit: 0aa8344e6ff1096b67fbac6b986515ec2540e5fd
+ms.openlocfilehash: 88e0a74d2c25d1d2f5f571f4d1850417d1aab9ca
+ms.sourcegitcommit: 0267e58b305f9fb0a4b32130fb149cd6e34b3354
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59541819"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59993830"
 ---
 # <a name="shape-controls-and-icon-controls-in-powerapps"></a>Figur-kontroller og ikon-kontroller i PowerApps
 Grafikk som du kan konfigurere egenskaper for utseende og virkemåte for.
@@ -26,10 +26,18 @@ Grafikk som du kan konfigurere egenskaper for utseende og virkemåte for.
 ## <a name="description"></a>Beskrivelse
 Disse kontrollene omfatter piler, geometriske former, handlingsikoner og symboler som du kan konfigurere egenskaper som fyll, størrelse og plassering for. Du kan også konfigurere sine **[OnSelect](properties-core.md)** egenskapen slik at appen reagerer Hvis brukeren velger kontrollen.
 
-## <a name="key-properties"></a>Nøkkelegenskaper
+## <a name="key-properties-icons-and-shapes"></a>Nøkkelegenskapene (ikoner og figurer)
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
 **[OnSelect](properties-core.md)**  – hvordan appen reagerer når brukeren velger en kontroll.
+
+## <a name="key-properties-icons-only"></a>Nøkkelegenskapene (bare ikoner)
+
+**Ikonet** -typen for ikonet for å vise (for eksempel **ArrowDown** eller **ShoppingCart**). 
+
+**Rotasjon** -antallet grader for rotering ikonet. 
+
+**Farge** – fargen på ikonet etter navn eller RGBA verdier.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
 **[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere.
