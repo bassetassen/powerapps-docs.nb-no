@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 428ca1fd96df4ed8a9c3fd7c14a1ad3e07356c70
-ms.sourcegitcommit: d1d39d6b72516d62514af4ff90f04c35fbdd8638
+ms.openlocfilehash: 1fc257bb8ef99353b78e7a87234397b4ced3bc4a
+ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480220"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59686228"
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service"></a>Opprett en lerretsapp fra grunnen av ved hjelp av Common Data Service
 
@@ -30,7 +30,7 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 - Før du oppretter appen fra grunnen av, må du gjøre deg selv kjent med det grunnleggende om PowerApps ved å [generere en app](data-platform-create-app.md), og deretter egendefinere appens [galleri](customize-layout-sharepoint.md), [skjemaer](customize-forms-sharepoint.md) og [kort](customize-card.md).
 - [Bytt til et miljø](working-with-environments.md) der databasen ble opprettet med eksempeldata. Hvis du har en gyldig lisense, kan du [opprette et miljø](../../administrator/create-environment.md) for å oppfylle dette behovet.
-- Hvis du vil opprette en app, må du være tilordnet sikkerhetsrollen [Miljøoppretter](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles).
+- Hvis du vil opprette en app, må du være tilordnet sikkerhetsrollen [Miljøoppretter](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles).
 
 ## <a name="open-a-blank-app"></a>Å åpne en tom app
 

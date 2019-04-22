@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 1a6465a00f135489d594bad75b8a25942e05dd25
-ms.sourcegitcommit: f4b71ea0996603b3358377a0da21b9e4428a287c
+ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870935"
 ---
 # <a name="customize-a-canvas-app-form-in-powerapps"></a>Tilpass et lerretsappskjema i PowerApps
@@ -39,7 +39,7 @@ Hvis du er kjent med lerret-pps, kan du se [Hva er lerret-apper?](getting-starte
 1. I det venstre navigasjonsfeltet skriver eller limer inn **D** i søkefeltet for å filtrere listen over elementer, og velg deretter **DetailForm1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Slik velger du detaljskjermbilde](./media/customize-forms-sharepoint/select-detailform.png)
+    > ![Velg Detaljer-skjermbildet](./media/customize-forms-sharepoint/select-detailform.png)
 
 1. Velg **Rediger felt** på **Egenskaper**-fanen i den høyre ruten for å åpne **Felt**-ruten.
 
@@ -49,12 +49,12 @@ Hvis du er kjent med lerret-pps, kan du se [Hva er lerret-apper?](getting-starte
 1. Skjule et felt, slik som **beskrivelse**, ved å holde pekeren over den, å velge ellipsen (...) som vises, og deretter velge **fjerne**.
 
     > [!div class="mx-imgBorder"]
-    > ![Liste over felt](./media/customize-forms-sharepoint/hide-fields.png)
+    > ![Listen over felt](./media/customize-forms-sharepoint/hide-fields.png)
 
 1. Vise et felt ved å velge **Legg til felt**, å skrive eller lime inn de første bokstavene i feltnavnet i søkeboksen, hvis du merker for feltet, og deretter velge **Legg til**.
 
     > [!div class="mx-imgBorder"]
-    > ![Liste over felt](./media/customize-forms-sharepoint/show-field.png)
+    > ![Listen over felt](./media/customize-forms-sharepoint/show-field.png)
 
 ## <a name="reorder-the-cards"></a>Å endre rekkefølgen på kortene
 
@@ -87,37 +87,37 @@ Hvis du er kjent med lerret-pps, kan du se [Hva er lerret-apper?](getting-starte
 1. Åpne forhåndsvisningsmodus ved å trykke på F5 (eller ved å velge **Forhåndsvisning**-ikonet nær hjørnet øverst til høyre).
 
     > [!div class="mx-imgBorder"]
-    > ![Forhåndsvisningsikonet](./media/customize-forms-sharepoint/open-preview.png)
+    > ![Forhåndsvisning-ikonet](./media/customize-forms-sharepoint/open-preview.png)
 
 1. I hjørnet øverst til høyre velger du pluss-ikonet for å legge til en post i **EditScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Å legge til post](./media/customize-forms-sharepoint/add-record.png)
+    > ![Legge til post](./media/customize-forms-sharepoint/add-record.png)
 
 1. Legg til dataene du ønsker, og velg deretter på hakeikonet øverst i høyre hjørne for å lagre endringene og gå tilbake til **BrowseScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Å lagre poster](./media/customize-forms-sharepoint/save-record.png)
+    > ![Lagre post](./media/customize-forms-sharepoint/save-record.png)
 
 1. Velg pilen til elementet du nettopp opprettet for å vise detaljer om elementet i **DetailScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Høyrepil](./media/customize-forms-sharepoint/right-arrow.png)
+    > ![Pil høyre](./media/customize-forms-sharepoint/right-arrow.png)
 
 1. I hjørnet øverst til høyre velger du redigeringsikonet for å oppdatere posten i **EditScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Å redigere poster](./media/customize-forms-sharepoint/edit-record.png)
+    > ![Rediger post](./media/customize-forms-sharepoint/edit-record.png)
 
 1. Endre informasjonen i ett eller flere felt, og velg deretter haken øverst i høyre hjørne for å lagre endringene og gå tilbake til **DetailScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Å lagre endringer](./media/customize-forms-sharepoint/save-record.png)
+    > ![Lagre endringer](./media/customize-forms-sharepoint/save-record.png)
 
 1. Nær hjørnet øverst til høyre velger du på Papirkurv ikonet til å slette posten som du nettopp har oppdatert, og gå tilbake til **BrowseScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Å slette poster](./media/customize-forms-sharepoint/delete-record.png)
+    > ![Slett post](./media/customize-forms-sharepoint/delete-record.png)
 
 1. Lukk forhåndsvisningsmodus ved å trykke på Esc (eller ved å velge Lukk-ikonet nær hjørnet øverst til venstre).
 

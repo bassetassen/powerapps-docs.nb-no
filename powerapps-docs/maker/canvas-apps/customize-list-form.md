@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: d33f541ea698b02a662edb652f809095f47acc6e
-ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
+ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042736"
 ---
 # <a name="customize-a-sharepoint-list-form-by-using-powerapps"></a>Å tilpasse et SharePoint-listeskjema ved bruk av PowerApps
@@ -73,7 +73,7 @@ Du kan konfigurere feltene **Pris**, **Tilgjengelighet** og **Farger** slik at d
 
 1. Angi den **synlighet** -egenskapen for den **farge**, **tilgjengelighet**, og **pris** kort til denne formelen (erstatter, om nødvendig den tall med det som du noterte ned i forrige trinn):
 
-    **If(DataCardValue2.Value = true, true)**
+    **Hvis (DataCardValue2.Value = true, true)**
 
 1. Velg **Detaljer**-bryteren (ved å klikke eller trykke på den) flere ganger mens du holder nede ALT.
 

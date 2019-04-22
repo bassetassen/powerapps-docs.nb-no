@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4c09bd3dead3ca3ac31f5c052929625b271efac3
-ms.sourcegitcommit: 7f67cd28c781a48f6a211ed82c2c861ae3acf1a5
+ms.openlocfilehash: 6fedff6d6ffc34fe390ec6978672d699480a7cb9
+ms.sourcegitcommit: 39c9b4cbc26617e302d46085d81c6d397e01fbf7
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "57800748"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671588"
 ---
 # <a name="screen-control-in-powerapps"></a>Skjermkontroll i PowerApps
 
@@ -36,11 +36,13 @@ De fleste apper har flere **skjerm**-kontroller som inneholder **[etikett](contr
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
 
-**[ImagePosition](properties-visual.md)** – posisjonen (**Fyll**, **Tilpass**, **Strekk**, **Flis** eller **Midtstill**) til et bilde på en skjerm eller i en kontroll hvis skjermen eller kontrollen ikke har samme størrelse som bildet.
+**Høyde** – høyden på skjermen. Hvis appen er responsiv ([**Tilpass til** ](../set-aspect-ratio-portrait-landscape.md#change-screen-size-and-orientation) er **av**) og enheten som kjører appen er kortere enn denne egenskapen, skjermen kan rulle loddrett.
+
+**[ImagePosition](properties-visual.md)** – plasseringen (**Fyll**, **Tilpass**, **Strekk**, **Fylle side ved side** eller **Midtstill**) til et bilde på en skjerm eller en kontroll hvis det ikke har samme størrelse som bildet.
+
+**Navnet** -navnet på skjermen.
 
 **OnHidden** – virkemåten til en app når brukeren navigerer bort fra en skjerm.
-
-**OnVisible** – virkemåten til en app når brukeren navigerer til en skjerm.
 
 **OnStart** – virkemåten til appen når brukeren åpner appen.
 
@@ -48,6 +50,14 @@ De fleste apper har flere **skjerm**-kontroller som inneholder **[etikett](contr
 - Du kan ikke angi [kontekstvariabler](../working-with-variables.md) med [**UpdateContext**](../functions/function-updatecontext.md)-funksjonen, siden ingen skjerm vises ennå. Du kan imidlertid overføre kontekstvariablene i **Navigate**-funksjonen og opprette og fylle ut en [samling](../working-with-variables.md) ved hjelp av [**Collect**](../functions/function-clear-collect-clearcollect.md)-funksjonen.
 - Når du oppdaterer en app, vil formelen som denne egenskapen er angitt for kjøres når appen er lastet inn i PowerApps Studio. Hvis du vil se virkningen av å endre denne egenskapen, må du lagre, lukke og laste inn appen på nytt.
 - **OnStart**-egenskapen er faktisk en egenskap for appen og ikke for skjermen. I forbindelse med redigering kan du vise og endre det som en egenskap for den første skjermen i appen. Hvis du fjerner den første skjermen eller endrer rekkefølgen på skjermer, kan det bli vanskelig å finne denne egenskapen. I dette tilfellet lagrer, lukker og laster du inn appen, og egenskapen vil vises på nytt som en egenskap for den første skjermen.
+
+**OnVisible** – virkemåten til en app når brukeren navigerer til en skjerm.
+
+**Retning** -retningen på skjermen. Hvis den **bredde** er større enn sin **høyde**, retningen blir **Layout.Horizontal**; Hvis ikke, vil det være **Layout.Vertical** .
+
+**Størrelse** -et positivt heltall som klassifiserer størrelsen på skjermen. Klassifiseringen bestemmes ved å sammenligne skjermens **bredde** egenskapen til verdiene i den [ **App.SizeBreakpoints** ](../functions/signals.md) egenskapen. Den **ScreenSize** typen består av fire verdier (**små**, **middels**, **stor**, og **ExtraLarge** ) som samsvarer med heltallene fra 1 til 4.
+
+**Bredde** -bredden på skjermen. Hvis appen er responsiv ([**Tilpass til** ](../set-aspect-ratio-portrait-landscape.md#change-screen-size-and-orientation) er **av**) og enheten som kjører appen er mer presist enn denne egenskapen, skjermen kan rulle vannrett.
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 

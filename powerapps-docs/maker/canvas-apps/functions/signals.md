@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d13f4a0669ae9f0d7ef9a5f4ef7115e006256bd9
-ms.sourcegitcommit: d1d39d6b72516d62514af4ff90f04c35fbdd8638
+ms.openlocfilehash: 18bd89549aa330b5da333dccfd723887db38a36e
+ms.sourcegitcommit: 39c9b4cbc26617e302d46085d81c6d397e01fbf7
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480243"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671565"
 ---
 # <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Signaler fra Acceleration, App, Compass, Connection og Location i PowerApps
 Returnerer informasjon om appmiljøet, som hvor brukeren befinner seg i verden og hvilken skjerm som vises.  
@@ -48,12 +48,13 @@ Alle signaler returnerer en [post](../working-with-tables.md#records) av informa
 | **App.Height** | Returnerer høyden på vinduet som appen kjører. Du kan bruke denne egenskapen i en formel når du angir den **høyde** -egenskapen for skjermen for å utvikle en responsive app. |
 | **App.DesignWidth** | Returnerer bredden på appen i PowerApps Studio. Du kan bruke denne egenskapen i en formel når du angir den **bredde** -egenskapen for skjermen for å sikre en minimumsbredde i en responsive app.  |
 | **App.DesignHeight** | Returnerer høyden på appen i PowerApps Studio. Du kan bruke denne egenskapen i en formel når du angir den **høyde** -egenskapen for skjermen for å sikre en minimumshøyden i en responsive app.  |
+| **App.SizeBreakpoints** | En tabell med én kolonne med tall som avgrenser skjermstørrelse områder som den [ **Screen.Size** ](../controls/control-screen.md) egenskapen returnerer. Verdiene i denne tabellen kan endres for å tilpasse stoppunkt at alle appens skjermer bruk.
 
 Den **App** objekt har også en [formel for virkemåte](../working-with-formulas-in-depth.md) som du kan angi.
 
 | Egenskap  | Beskrivelse |
 | --- | --- |
-| **OnStart** | Virkemåten til appen når brukeren starter den. Denne egenskapen brukes vanligvis til å hente og hurtigbufring av data til samlinger med den **[samle inn](function-clear-collect-clearcollect.md)** funksjon, definere variabler med det **[angi](function-set.md)**, og navigere til en innledende skjermen med den **[Navigate](function-navigate.md)** funksjonen. Denne formelen evalueres før den første skjermen vises. Ingen skjermen er lastet inn, slik at du ikke kan angi kontekstvariabler med den **[UpdateContext](function-updatecontext.md)** funksjonen. Du kan imidlertid overføre kontekstvariablene med den **Navigate** funksjonen. |
+| **App.OnStart** | Virkemåten til appen når brukeren starter den. Produsentene ofte bruker denne egenskapen til å hente og hurtigbufring av data til samlinger med den **[samle inn](function-clear-collect-clearcollect.md)** funksjon, definere variabler med det **[angi](function-set.md)**, og navigere til en innledende skjermen med den **[Navigate](function-navigate.md)** funksjonen. Denne formelen evalueres før den første skjermen vises. Ingen skjermen er lastet inn, slik at du ikke kan angi kontekstvariabler med den **[UpdateContext](function-updatecontext.md)** funksjonen. Du kan imidlertid overføre kontekstvariablene med den **Navigate** funksjonen. |
 
 Den **App** objektet vises øverst i den hierarkiske listen over kontroller i den venstre navigasjonsruten, og du kan velge dette objektet som en kontroll i en skjerm. Når du merker du objektet, kan du vise og redigere en av egenskapene for Hvis du velger denne egenskapen i rullegardinlisten til venstre for formellinjen.  
 
@@ -96,14 +97,14 @@ I et fotball-felt, en pitcheren kaster en telefon fra pitcherens mound til en mo
 | --- | --- | --- |
 | **Location.Latitude** |Returnerer breddegraden til gjeldende plassering. Feltet er plassert på kartkoordinater 47,591 N, 122,333 W. |47,591<br><br>Breddegraden endres automatisk mens ballen beveger seg mellom pitcheren og mottakeren. |
 | **Location.Longitude** |Returnerer lengdegraden til gjeldende plassering. |122,333<br><br>Lengdegraden endres automatisk mens ballen beveger seg mellom pitcheren og mottakeren. |
-| **Location** |Returnerer breddegraden og lengdegraden til den gjeldende plasseringen, som en post. |{&nbsp;breddegrad:&nbsp;47,591, lengdegrad:&nbsp;122,333&nbsp;} |
+| **Plassering** |Returnerer breddegraden og lengdegraden til den gjeldende plasseringen, som en post. |{&nbsp;breddegrad:&nbsp;47,591, lengdegrad:&nbsp;122,333&nbsp;} |
 | **Compass.Heading** |Returnerer kompassretningen øverst på skjermen. I dette feltet er home-platen omtrent Sørvest fra pitcherens mound. |230,25 |
 | **Acceleration.X** |Returnerer akselerasjonen til enheten side til side. Pitcheren kaster telefonen rett frem med tanke på den øverste skjermkanten, slik at enheten ikke akselererer side til side. |0 |
 | **Acceleration.Y** |Returnerer akselerasjonen fra enheten foran og bakover. Pitcheren gir innledningsvis enheten en stor akselerasjon når han kastet enheten, fra 0-145 kilometer i timen (40 meter per sekund) i et halvt sekund. Etter at enheten er i luften og ignorerer friksjonen, akselererer ikke enheten ytterligere. Enheten akselererer når mottakeren tar tak i den, og får den til å stoppe. |8,2, mens pitcheren kaster enheten.<br><br>0, mens enheten er i luften.<br><br>-8.2, idet mottakeren får tak i enheten. |
 | **Acceleration.Z** |Returnerer akselerasjonen til enheten fra øverst til nederst. Mens enheten er i luften, opplever den effekten av tyngdekraften. |0, mens pitcheren kaster enheten.<br><br>1, mens enheten er i luften.<br><br>0, idet mottakeren får tak i enheten. |
-| **Acceleration** |Returnerer akselerasjonen som en post. |{ X: 0, Y: 264, Z: 0} som pitcheren kaster enheten. |
-| **Connection.Connected** |Returnerer en boolsk verdi som indikerer om enheten er tilkoblet nettverket |**true** |
-| **Connection.Metered** |Returnerer en boolsk verdi som indikerer om tilkoblingen er forbruksmålt |**true** |
-| **App.ActiveScreen = PlayBall** |Returnerer en boolsk verdi som indikerer om **PlayBall** vises. |**true** |
+| **Akselerasjon** |Returnerer akselerasjonen som en post. |{ X: 0, Y: 264, Z: 0} som pitcheren kaster enheten. |
+| **Connection.Connected** |Returnerer en boolsk verdi som indikerer om enheten er tilkoblet nettverket |**sann** |
+| **Connection.Metered** |Returnerer en boolsk verdi som indikerer om tilkoblingen er forbruksmålt |**sann** |
+| **App.ActiveScreen = PlayBall** |Returnerer en boolsk verdi som indikerer om **PlayBall** vises. |**sann** |
 | **App.ActiveScreen.Fill** |Returnerer bakgrunnsfargen for skjermbildet som vises. |**Color.Green** |
 

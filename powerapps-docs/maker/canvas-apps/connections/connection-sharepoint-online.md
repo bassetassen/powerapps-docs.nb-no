@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 65ce3b7736b55f3734d6da7d945965ed791a3ce4
-ms.sourcegitcommit: 4fe0a71efd54c1f4d22a279aa74c6bde3d908b9d
+ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59007893"
 ---
 # <a name="connect-to-sharepoint-from-a-canvas-app"></a>Koble til SharePoint fra en lerretsapp
@@ -75,7 +75,7 @@ Hvis du vil behandle data i en egendefinert liste, kan PowerApps [generere en ap
         > Hvis du ikke har en lokal datagateway installert, [installere en](../gateway-reference.md), og velg deretter ikonet for å oppdatere listen over gatewayer.
 
         > [!div class="mx-imgBorder"]
-        > ![Velge gateway](./media/connection-sharepoint-online/choose-gateway.png)
+        > ![Velg gateway](./media/connection-sharepoint-online/choose-gateway.png)
 
         Tilkoblingen er opprettet, og du kan legge til en data i en eksisterende app eller bygge en app fra grunnen av.
 

@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 1b598cc863ec01bcb2a66a9510cb48ec5203e679
-ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
+ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042636"
 ---
 # <a name="char-function-in-powerapps"></a>Char-funksjonen i PowerApps
@@ -38,9 +38,9 @@ Den **Char** funksjonen oversetter et tall til en streng med det tilsvarende ASC
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **CHAR (65)** |Returnerer tegnet som samsvarer med ASCII-koden 65. |"A" |
-| **CHAR (105)** |Returnerer tegnet som samsvarer med ASCII-koden 105. |"i" |
-| **CHAR (35)** |Returnerer tegnet som samsvarer med ASCII-koden 35. |"#" |
+| **Char (65)** |Returnerer tegnet som samsvarer med ASCII-koden 65. |"A" |
+| **Char( 105 )** |Returnerer tegnet som samsvarer med ASCII-koden 105. |"i" |
+| **Char( 35 )** |Returnerer tegnet som samsvarer med ASCII-koden 35. |"#" |
 
 ### <a name="display-a-character-map"></a>Vise et Tegnkart
 

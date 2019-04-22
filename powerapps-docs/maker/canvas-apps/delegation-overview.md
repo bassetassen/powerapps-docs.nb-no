@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 61a7e67b7914e5f844397389833f830244d5af28
-ms.sourcegitcommit: 2dce3fe99828b0ffa23885bc7e11f1a1f871af07
+ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098050"
 ---
 # <a name="understand-delegation-in-a-canvas-app"></a>Forstå delegering i en lerretsapp
@@ -29,7 +29,7 @@ Nøkkelen til utvikling av effektive apper er å minimere datamengden som sendes
 
 Når dette begynner å bli komplisert, hvilket er grunnen til at denne artikkelen finnes, er det fordi ikke alt som kan uttrykkes i en PowerApps-formel kan delegeres til alle datakilder. PowerApps-språket etterligner Excels formelspråk, utformet med komplett og umiddelbar tilgang til en fullstendig arbeidsbok i minnet, med et bredt utvalg manipuleringsfunksjoner for tall og tekst. Derfor er PowerApps-språket mer omfattende enn det som støttes av de fleste datakilder, inkludert robuste databasemotorer som SQL Server.
 
-**Arbeide med store datasett krever bruk av datakilder og formler som kan delegeres.** Dette er den eneste måten å sikre at appen fungerer bra på, og at brukere får tilgang til informasjonen de trenger. Vær oppmerksom på delegeringsadvarsler som identifiserer steder der delegering ikke er mulig. Hvis du arbeider med små datasett (færre enn 500 poster), kan du bruke alle datakilder og formler siden appen kan behandle data lokalt hvis formelen ikke kan delegeres. 
+**Arbeid med store datasett krever at du bruker datakilder og formler som kan delegeres.** Dette er den eneste måten å sikre at appen fungerer bra på, og at brukere får tilgang til informasjonen de trenger. Vær oppmerksom på delegeringsadvarsler som identifiserer steder der delegering ikke er mulig. Hvis du arbeider med små datasett (færre enn 500 poster), kan du bruke alle datakilder og formler siden appen kan behandle data lokalt hvis formelen ikke kan delegeres. 
 
 > [!NOTE]
 > Delegeringsadvarsler ble tidligere flagget i PowerApps som «blå prikk»-forslag, men delegeringsforslag har i ettertid blitt klassifisert på nytt som advarsler. Hvis dataene i datakilden overskrider 500 poster og en funksjon ikke kan delegeres, kan det hende at PowerApps ikke kan hente alle dataene og at appen har feilaktige resultater. Delegeringsadvarsler hjelper deg med å behandle appen slik at den har riktige resultater.
@@ -54,7 +54,7 @@ Disse listene endres over tid. Vi arbeider mot å støtte flere funksjoner og op
 Du kan bruke disse med kolonner i tabellen for å velge riktige poster i funksjonene **Filter** og **LookUp**:
 
 * **[And](functions/function-logicals.md)** (inkludert **[&&](functions/operators.md)**), **[Or](functions/function-logicals.md)** (inkludert **[||](functions/operators.md)**), **[Not](functions/function-logicals.md)** (inkludert **[!](functions/operators.md)**)
-* **[I](functions/operators.md)**
+* **[In](functions/operators.md)**
 * **[=](functions/operators.md)**, **[<>](functions/operators.md)**, **[>=](functions/operators.md)**, **[<=](functions/operators.md)**, **[>](functions/operators.md)**, **[<](functions/operators.md)**
 * **[+](functions/operators.md)**, **[-](functions/operators.md)**
 * **[TrimEnds](functions/function-trim.md)**
@@ -108,7 +108,7 @@ Hvis du bruker **AddColumns** på denne måten, **oppslag** må oppretter separa
 Ingen andre funksjoner støtter delegering, herunder disse viktige funksjonene:
 
 * **[First](functions/function-first-last.md)**, **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
-* **[Choices](functions/function-choices.md)**
+* **[Valg](functions/function-choices.md)**
 * **[Concat](functions/function-concatenate.md)**
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)**
 * **[CountIf](functions/function-table-counts.md)**, **[RemoveIf](functions/function-remove-removeif.md)**, **[UpdateIf](functions/function-update-updateif.md)**

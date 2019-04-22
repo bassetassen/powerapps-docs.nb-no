@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: dc1b3b87e2c1fdcd4ab7eb6634db7f9e7c049ec2
-ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
+ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042759"
 ---
 # <a name="create-dependent-drop-down-lists-in-a-canvas-app"></a>Opprett avhengige rullegardinlister i en lerretsapp
@@ -108,7 +108,7 @@ Etter denne endringen, kan du ignorere den **tittel** kolonnen, eller du kan [fj
 1. Merk av for denne listen, og velg deretter **koble til**.
 
     > [!div class="mx-imgBorder"]
-    > ![Datarute](./media/dependent-drop-down-lists/select-list.png)
+    > ![Data-ruten](./media/dependent-drop-down-lists/select-list.png)
 
     Listen over tilkoblinger viser de **hendelser** -listen som skjemaet er basert på, og den **plasseringer** listen, som identifiserer steder og avdelinger i skjemaet.
 

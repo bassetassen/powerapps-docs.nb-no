@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 776a542d8e790cc9ae3591b6cda9f08d0d347ef7
-ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
+ms.openlocfilehash: cad1d7f138a8f831631d9a57b55c54b30d537b9c
+ms.sourcegitcommit: 39c9b4cbc26617e302d46085d81c6d397e01fbf7
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042782"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671611"
 ---
 # <a name="create-responsive-layouts-in-canvas-apps"></a>Opprette responsive oppsett i lerret-apper
 
@@ -67,8 +67,8 @@ I det enkleste tilfellet fyller én kontroll en hele skjermen. Hvis du vil oppre
 
 | Egenskap      | Value            |
 |--------|---------------|
-| **X**      | 0             |
-| **Y**      | 0             |
+| **X**      | `0`             |
+| **Y**      | `0`             |
 | **Bredde**  | `Parent.Width`  |
 | **Høyde** | `Parent.Height` |
 
@@ -82,14 +82,14 @@ Hvis du vil bruke en annen kontroll til å fylle nederst halvdel av den samme sk
 
 | Kontroll | Egenskap | Formel           |
 |-|----------|-------------------|
-| **Upper** | **X**        | 0                 |
-| **Upper** | **Y**        | 0                 |
-| **Upper** | **Bredde**    | `Parent.Width`      |
-| **Upper** | **Høyde**   | `Parent.Height / 2` |
-| **Lower** | **X**        | 0                 |
-| **Lower** | **Y**        | `Parent.Height / 2` |
-| **Lower** | **Bredde**    | `Parent.Width`      |
-| **Lower** | **Høyde**   | `Parent.Height / 2` |
+| **Øvre** | **X**        | `0`                 |
+| **Øvre** | **Y**        | `0`                 |
+| **Øvre** | **Bredde**    | `Parent.Width`      |
+| **Øvre** | **Høyde**   | `Parent.Height / 2` |
+| **Lavere** | **X**        | `0`                 |
+| **Lavere** | **Y**        | `Parent.Height / 2` |
+| **Lavere** | **Bredde**    | `Parent.Width`      |
+| **Lavere** | **Høyde**   | `Parent.Height / 2` |
 
 ![Øvre og nedre kontroll](media/create-responsive-layout/dynamic-layout.png)
 
@@ -100,14 +100,14 @@ Hvis du vil opprette denne effekten, må du oppdatere den **høyde** -egenskapen
 
 | Kontroll | Egenskap | Formel           |
 |-|----------|-------------------|
-| **Upper** | **X**        | 0                 |
-| **Upper** | **Y**        | 0                 |
-| **Upper** | **Bredde**    | `Parent.Width`      |
-| **Upper** | **Høyde**   | `Parent.Height / 2` |
-| **Lower** | **X**        | 0                       |
-| **Lower** | **Y**        | `Upper.Y + Upper.Height`  |
-| **Lower** | **Bredde**    | `Parent.Width`            |
-| **Lower** | **Høyde**   | `Parent.Height - Lower.Y` |
+| **Øvre** | **X**        | `0`                 |
+| **Øvre** | **Y**        | `0`                 |
+| **Øvre** | **Bredde**    | `Parent.Width`      |
+| **Øvre** | **Høyde**   | `Parent.Height / 2` |
+| **Lavere** | **X**        | `0`                       |
+| **Lavere** | **Y**        | `Upper.Y + Upper.Height`  |
+| **Lavere** | **Bredde**    | `Parent.Width`            |
+| **Lavere** | **Høyde**   | `Parent.Height - Lower.Y` |
 
 ![Øvre og nedre kontrollerer relativ størrelse](media/create-responsive-layout/dynamic-layout2.png)
 
@@ -117,9 +117,9 @@ Du kan bruke disse formelen mønstre for å uttrykke vanlige oppsett relasjoner 
 
 | Relasjonen mellom C og det overordnede elementet | Egenskap | Formel | Illustrasjon |
 |--|--|--|--|
-| **C** fyller bredden på overordnede, med en marg på *N* | **X**| *N* | ![Eksempel på C fylling bredden på overordnede](media/create-responsive-layout/c1.png) |
+| **C** fyller bredden på overordnede, med en marg på *N* | **X**| `N` | ![Eksempel på C fylling bredden på overordnede](media/create-responsive-layout/c1.png) |
 |  | **Bredde** | `Parent.Width - (N * 2)` |  |
-| **C** fyller høyden på overordnede, med en marg på *N* | **Y** | *N* | ![Eksempel på C fylling høyden på overordnede](media/create-responsive-layout/c2.png) |
+| **C** fyller høyden på overordnede, med en marg på *N* | **Y** | `N` | ![Eksempel på C fylling høyden på overordnede](media/create-responsive-layout/c2.png) |
 |  | **Høyde** | `Parent.Height - (N * 2)` |  |
 | **C** justert med høyre kant av overordnede, etter marg på *N* | **X** | `Parent.Width - (C.Width + N)` | ![Eksempel på C justere med kanten av overordnet](media/create-responsive-layout/c3.png) |
 | **C** justert med nedre kanten av overordnede, etter marg på *N* | **Y** | `Parent.Height - (C.Height + N)` | ![Eksempel på C justere med kanten av overordnet](media/create-responsive-layout/c4.png) |
@@ -164,10 +164,10 @@ Angi egenskaper for disse kontrollene i disse verdiene:
 
 | Egenskap | Topptekst | Menyen | Lukk | Tittel |
 |--|--|--|--|--|
-| **X** | 0  | 0 | `Parent.Width - Close.Width` | `Menu.X + Menu.Width` |
-| **Y** | 0 | 0 | 0 | 0 |
+| **X** | `0`  | `0` | `Parent.Width - Close.Width` | `Menu.X + Menu.Width` |
+| **Y** | `0` | `0` | `0` | `0` |
 | **Bredde**  | `Parent.Width` | `Parent.Height` | `Parent.Height` | `Close.X - Title.X` |
-| **Høyde** | 64 | `Parent.Height` | `Parent.Height` | `Parent.Height` |
+| **Høyde** | `64` | `Parent.Height` | `Parent.Height` | `Parent.Height` |
 
 For den **topptekst** kontroll, `Parent` refererer til skjermen. For de andre, `Parent` refererer til den **topptekst** kontroll.
 
@@ -200,25 +200,67 @@ Disse formlene Bytt appens **DesignWidth** og **DesignHeight** verdier, basert p
 
 Når du har justert skjermens **bredde** og **høyde** formler, du kan også vil ordne kontrollene i skjermen for å bruke bedre den tilgjengelige plassen på nytt. Hvis hver av to kontroller tar opp halve skjermen, kan du for eksempel plassere dem loddrett i stående men ordne dem side ved side i liggende visning.
 
+Du kan bruke skjermens **retning** til å fastslå om skjermen er innrettet vannrett eller loddrett.
+
 > [!NOTE]
 > I liggende retning, den **øvre** og **lavere** kontroller vises som venstre og høyre kontroller.
 
 | Kontroll | Egenskap | Formel |
 |--|----------|---|
-| **Upper** | **X** | 0 |
-| **Upper** | **Y** | 0 |
-| **Upper** | **Bredde** | `If(Parent.Width < Parent.Height, Parent.Width, Parent.Width / 2)` |
-| **Upper** | **Høyde**   | `If(Parent.Width < Parent.Height, Parent.Height / 2, Parent.Height)` |
-| **Lower** | X | `If(Parent.Width < Parent.Height, 0, Upper.X + Upper.Width)`  |
-| **Lower** | Y | `If(Parent.Width < Parent.Height, Upper.Y + Upper.Height, 0)` |
-| **Lower** | **Bredde** | `Parent.Width - Lower.X` |
-| **Lower** | **Høyde** | `Parent.Height - Lower.Y` |
+| **Øvre** | **X** | `0` |
+| **Øvre** | **Y** | `0` |
+| **Øvre** | **Bredde** | `If(Parent.Orientation = Layout.Vertical, Parent.Height, Parent.Width, Parent.Width / 2)` |
+| **Øvre** | **Høyde**   | `If(Parent.Orientation = Layout.Vertical, Parent.Height / 2, Parent.Height)` |
+| **Lavere** | X | `If(Parent.Orientation = Layout.Vertical, 0, Upper.X + Upper.Width)`  |
+| **Lavere** | Y | `If(Parent.Orientation = Layout.Vertical, Upper.Y + Upper.Height, 0)` |
+| **Lavere** | **Bredde** | `Parent.Width - Lower.X` |
+| **Lavere** | **Høyde** | `Parent.Height - Lower.Y` |
 
 ![uttrykk for å tilpasse en stående retning](media/create-responsive-layout/portrait.png)
 
 ![uttrykk for å tilpasse liggende retning](media/create-responsive-layout/landscape.png)
 
-### <a name="known-limitations"></a>Kjente begrensninger
+### <a name="screen-sizes-and-breakpoints"></a>Skjermstørrelser og stoppunkt
+
+Du kan justere oppsettet basert på størrelsen på enheten. Skjermens **størrelse** egenskapen klassifiserer den gjeldende enheten-størrelsen. Størrelsen er et positivt heltall; den ScreenSize typen inneholder navngitte konstanter som hjelper med å lese. Denne tabellen viser konstantene:
+
+| Konstant              | Value | Vanlig enhetstypen (ved hjelp av standard appinnstillinger) |
+|-----------------------|-------|--------------------------------------------------|
+| ScreenSize.Small      | 1     | Telefon                                            |
+| ScreenSize.Medium     | 2     | Tavle, beholdes loddrett                          |
+| ScreenSize.Large      | 3     | Tavle, beholdes vannrett                        |
+| ScreenSize.ExtraLarge | 4     | Stasjonær datamaskin                                 |
+
+Bruk disse størrelsene til å ta avgjørelser om appens oppsett. Hvis du vil at en kontroll til å være skjult på en telefon-størrelse enhet men synlig ellers, kan du for eksempel angi kontrollens **Visible** egenskapen til denne formelen:
+
+`Parent.Size >= ScreenSize.Medium`
+
+Denne formelen returnerer **SANN** når størrelsen er Middels eller større og **USANN** ellers.
+
+Hvis du vil at en kontroll skal ha en annen brøkdel av skjermbredde basert på skjermstørrelse, angi kontrollens **bredde** egenskapen til denne formelen:
+
+```
+Parent.Width *  
+    Switch(Parent.Size,  
+        ScreenSize.Small, 0.5,  
+        ScreenSize.Medium, 0.3,  
+        0.25)
+```
+Denne formelen angir bredden til kontrollen til halvdel av skjermen bredden på en liten skjerm, tre-tideler av skjermen bredden på en middels skjerm, og et kvartal i skjermen bredden på alle andre skjermer.
+
+## <a name="custom-breakpoints"></a>Egendefinert stoppunkt
+
+Skjermens **størrelsen** egenskapen beregnes ved å sammenligne skjermens **bredde** egenskapen til verdiene i appens **SizeBreakpoints** egenskapen. Denne egenskapen er en tabell med én kolonne med tall som angir bredden-stoppunkt som skiller de navngitte skjermstørrelser:
+
+I en app som er opprettet for nettbrett eller web, standard-verdi i appens **SizeBreakpoints** egenskapen er **[600, 900, 1200]**. Verdien er i en app som er opprettet for telefoner, **[1200, 1800, 2400]**. (Verdiene for telefonapper er dobbel fordi slike apper bruker koordinater som er effektivt dobbel koordinatene brukes i andre apper.)
+
+![standardverdier for App.SizeBreakpoints egenskap](media/create-responsive-layout/default-breakpoints.png)
+
+Du kan tilpasse appens stoppunkt ved å endre verdiene i appens **SizeBreakpoints** egenskapen. Velg **App** i trevisningen, velg **SizeBreakpoints** i egenskapen listen, og rediger deretter verdiene i formellinjen. Du kan opprette så mange stoppunkt som appen trenger, men bare størrelser på 1 til 4 tilsvarer navngitte skjermstørrelser. I formler, kan du referere til størrelser utover ExtraLarge etter deres numeriske verdier (5, 6 og så videre).
+
+Du kan også angi færre stoppunkt. Appen din kan for eksempel må bare tre størrelser (to stoppunkt), slik at det blir mulig skjermstørrelser liten, Middels og stor.
+
+## <a name="known-limitations"></a>Kjente begrensninger
 
 Redigeringsopplevelsen lerretet svarer ikke til skalering formler som er opprettet. Hvis du vil teste responsive virkemåte, lagre og Publiser appen din, og åpne den på enheter eller i nettleservinduer i forskjellige størrelser og retninger.
 

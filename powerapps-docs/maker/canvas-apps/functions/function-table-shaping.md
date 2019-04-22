@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: fc682694bb22ecc63ecc762a735df07950ce29d3
-ms.sourcegitcommit: 2dce3fe99828b0ffa23885bc7e11f1a1f871af07
+ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096171"
 ---
 # <a name="addcolumns-dropcolumns-renamecolumns-and-showcolumns-functions-in-powerapps"></a>Funksjonene AddColumns, DropColumns, RenameColumns og ShowColumns i PowerApps
@@ -96,12 +96,12 @@ Ingen av disse eksemplene endrer **IceCreamSales**-datakilden. Hver funksjon tra
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **AddColumns (IceCreamSales, "Omsetning", UnitPrice * QuantitySold)** |Legger til en **Revenue**-kolonne i resultatet.  For hver post evalueres **UnitPrice * QuantitySold**, og resultatet plasseres i den nye kolonnen. |<style> IMG {max bredde: none;} </style> ![](media/function-table-shaping/icecream-add-revenue.png) |
-| **DropColumns (IceCreamSales, "Enhetspris")** |Utelater **UnitPrice**-kolonnen fra resultatet. Bruk denne funksjonen til å utelate kolonner, og bruk **ShowColumns** til å inkludere dem. |![](media/function-table-shaping/icecream-drop-price.png) |
-| **ShowColumns (IceCreamSales, «Flavor»)** |Inkluderer bare **Flavor**-kolonnen i resultatet. Bruk denne funksjonen til å inkludere kolonner, og bruk **DropColumns** til å utelate dem. |![](media/function-table-shaping/icecream-select-flavor.png) |
-| **RenameColumns (IceCreamSales, «UnitPrice», «Pris»)** |Gir nytt navn til den **UnitPrice** kolonnen i resultatet. |![](media/function-table-shaping/icecream-rename-price.png) |
-| **RenameColumns (IceCreamSales, «UnitPrice», «Pris», «QuantitySold», «Number»)** |Gir nytt navn til kolonnene **UnitPrice** og **QuantitySold** i resultatet. |![](media/function-table-shaping/icecream-rename-price-quant.png) |
-| **DropColumns)<br>RenameColumns)<br>AddColumns (IceCreamSales, "Omsetning",<br>UnitPrice * QuantitySold ),<br>«UnitPrice», «Pris»),<br>"Quantity")** |Utfører transformeringene av den følgende tabellen i rekkefølge fra innsiden av formelen: <ol><li>Legger til en **Revenue**-kolonne basert på per post-beregningen av **UnitPrice * Quantity**.<li>Endrer navnet **UnitPrice** til **Price**.<li>Utelater **Quantity**-kolonnen.</ol>  Vær oppmerksom på at rekkefølgen er viktig. For eksempel kan vi ikke beregne med **UnitPrice** når den har fått nytt navn. |![](media/function-table-shaping/icecream-all-transforms.png) |
+| **AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )** |Legger til en **Revenue**-kolonne i resultatet.  For hver post evalueres **UnitPrice * QuantitySold**, og resultatet plasseres i den nye kolonnen. |<style> img { max-width: none; } </style> ![](media/function-table-shaping/icecream-add-revenue.png) |
+| **DropColumns( IceCreamSales, "UnitPrice" )** |Utelater **UnitPrice**-kolonnen fra resultatet. Bruk denne funksjonen til å utelate kolonner, og bruk **ShowColumns** til å inkludere dem. |![](media/function-table-shaping/icecream-drop-price.png) |
+| **ShowColumns( IceCreamSales, "Flavor" )** |Inkluderer bare **Flavor**-kolonnen i resultatet. Bruk denne funksjonen til å inkludere kolonner, og bruk **DropColumns** til å utelate dem. |![](media/function-table-shaping/icecream-select-flavor.png) |
+| **RenameColumns( IceCreamSales, "UnitPrice", "Price")** |Gir nytt navn til den **UnitPrice** kolonnen i resultatet. |![](media/function-table-shaping/icecream-rename-price.png) |
+| **RenameColumns( IceCreamSales, "UnitPrice", "Price", "QuantitySold", "Number")** |Gir nytt navn til kolonnene **UnitPrice** og **QuantitySold** i resultatet. |![](media/function-table-shaping/icecream-rename-price-quant.png) |
+| **DropColumns(<br>RenameColumns(<br>AddColumns( IceCreamSales, "Revenue",<br>UnitPrice * QuantitySold ),<br>"UnitPrice", "Price" ),<br>"Quantity" )** |Utfører transformeringene av den følgende tabellen i rekkefølge fra innsiden av formelen: <ol><li>Legger til en **Revenue**-kolonne basert på per post-beregningen av **UnitPrice * Quantity**.<li>Endrer navnet **UnitPrice** til **Price**.<li>Utelater **Quantity**-kolonnen.</ol>  Vær oppmerksom på at rekkefølgen er viktig. For eksempel kan vi ikke beregne med **UnitPrice** når den har fått nytt navn. |![](media/function-table-shaping/icecream-all-transforms.png) |
 
 ### <a name="step-by-step"></a>Trinn for trinn
 
