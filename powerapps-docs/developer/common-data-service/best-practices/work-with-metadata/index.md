@@ -21,11 +21,11 @@ search.app:
 - PowerApps
 - D365CE
 ms.openlocfilehash: 35e07c87e515759a6e61a0c0a027c190b11bef53
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58358016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61528393"
 ---
 # <a name="best-practices-and-guidance-while-working-with-metadata-for-the-common-data-service"></a>Anbefalte fremgangsmåter og veiledning for å arbeide med metadata for Common Data Service
 

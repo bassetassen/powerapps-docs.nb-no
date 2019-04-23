@@ -1,85 +1,78 @@
-items:
 - name: Administrere PowerApps
   href: admin-guide.md
   items:
-  - name: Komme i gang
-    items:
-    - name: Hva er rollen til en PowerApps-administrator?
-      href: overview-role-powerapps-admin.md
-    - name: Hvitbok om PowerApps-distribusjon for virksomheter
-      href: admin-powerapps-enterprise-deployment.md
-  - name: Lisensiering
-    items:
-    - name: Lisensieringsoversikt
-      href: pricing-billing-skus.md
-    - name: Administrere lisenser i organisasjonen
-      href: signup-question-and-answer.md
-    - name: Kjøp PowerApps
-      href: signup-for-powerapps-admin.md
-  - name: Behandle PowerApps
-    items:
-    - name: Vise apper i miljøene
-      href: admin-view-apps.md
-    - name: Administrere apper i organisasjonen
-      href: admin-manage-apps.md
-    - name: Flytte en app mellom tenanter eller miljøer
-      href: environment-and-tenant-migration.md
-    - name: PowerShell-støtte for PowerApps (forhåndsversjon)
-      href: powerapps-powershell.md
-    - name: Aktivitetslogging for PowerApps
-      href: https://docs.microsoft.com/power-platform/admin/logging-powerapps
-  - name: Dataintegrasjon
-    items:
-    - name: Integrer data i Common Data Service
-      href: data-integrator.md
-    - name: Feilbehandling og feilsøking for Data Integrator
-      href: data-integrator-error-management.md
-    - name: Svare på DSR-forespørsler
+    - name: Komme i gang
       items:
-      - name: Systemgenererte logger
-        href: powerapps-gdpr-dsr-guide-systemlogs.md
-      - name: Dataintegreringer for Common Data Service
-        href: data-integration-gdpr-dsr-guide.md
-      - name: Kundedata for PowerApps
-        href: powerapps-gdpr-dsr-guide.md
-        items:
-        - name: Eksportere data
-          href: powerapps-gdpr-export-dsr.md
-        - name: Slette data
-          href: powerapps-gdpr-delete-dsr.md
-      - name: Common Data Service-kundedata
-        href: common-data-service-gdpr-dsr-guide.md
-  - name: Administrere miljøer
-    href: environments-administration.md
-    items:
-    - name: Oversikt over miljøer
-      href: environments-overview.md
-    - name: Oversikt over områder
-      href: regions-overview.md
-    - name: Å opprette et miljø
-      href: create-environment.md
-    - name: Opprett en database
-      href: create-database.md
-    - name: Forhåndsvisningsmiljøer
-      href: preview-environments.md
-    - name: Prøveversjonsmiljøer
-      href: trial-environments.md
-  - name: Å konfigurere miljøsikkerhet
-    href: database-security.md
-    items:
-    - name: Innføring i datagrupper
-      href: introduction-to-data-groups.md
-    - name: Å opprette en DLP-policy
-      href: create-dlp-policy.md
-    - name: Administrere DLP-policyer
-      href: prevent-data-loss.md
-  - name: Behandle abonnementer og brukerkontoer
-    items:
-    - name: Vise aktive brukere i tenanten
-      href: admin-view-user-licenses.md
-ms.openlocfilehash: 4eb2feacf0c461e70729de529e0e23fd0d6ccb8b
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356682"
+        - name: Hva er rollen til en PowerApps-administrator?
+          href: overview-role-powerapps-admin.md
+        - name: Hvitbok om PowerApps-distribusjon for virksomheter
+          href: admin-powerapps-enterprise-deployment.md
+    - name: Lisensiering
+      items:
+        - name: Lisensieringsoversikt
+          href: pricing-billing-skus.md
+        - name: Administrere lisenser i organisasjonen
+          href: signup-question-and-answer.md
+        - name: Kjøp PowerApps
+          href: signup-for-powerapps-admin.md
+    - name: Behandle PowerApps
+      items:
+        - name: Vise apper i miljøene
+          href: admin-view-apps.md
+        - name: Administrere apper i organisasjonen
+          href: admin-manage-apps.md
+        - name: Flytte en app mellom tenanter eller miljøer
+          href: environment-and-tenant-migration.md
+        - name: PowerShell-støtte for PowerApps (forhåndsversjon)
+          href: powerapps-powershell.md
+        - name: Aktivitetslogging for PowerApps
+          href: 'https://docs.microsoft.com/power-platform/admin/logging-powerapps'
+    - name: Dataintegrasjon
+      items:
+        - name: Integrer data i Common Data Service
+          href: data-integrator.md
+        - name: Feilbehandling og feilsøking for Data Integrator
+          href: data-integrator-error-management.md
+        - name: Svare på DSR-forespørsler
+          items:
+            - name: Systemgenererte logger
+              href: powerapps-gdpr-dsr-guide-systemlogs.md
+            - name: Dataintegreringer for Common Data Service
+              href: data-integration-gdpr-dsr-guide.md
+            - name: Kundedata for PowerApps
+              href: powerapps-gdpr-dsr-guide.md
+              items:
+                - name: Eksportere data
+                  href: powerapps-gdpr-export-dsr.md
+                - name: Slette data
+                  href: powerapps-gdpr-delete-dsr.md
+            - name: Common Data Service-kundedata
+              href: common-data-service-gdpr-dsr-guide.md
+    - name: Administrere miljøer
+      href: environments-administration.md
+      items:
+        - name: Oversikt over miljøer
+          href: environments-overview.md
+        - name: Oversikt over områder
+          href: regions-overview.md
+        - name: Å opprette et miljø
+          href: create-environment.md
+        - name: Opprett en database
+          href: create-database.md
+        - name: Forhåndsvisningsmiljøer
+          href: preview-environments.md
+        - name: Prøveversjonsmiljøer
+          href: trial-environments.md
+    - name: Å konfigurere miljøsikkerhet
+      href: database-security.md
+      items:
+        - name: Innføring i datagrupper
+          href: introduction-to-data-groups.md
+        - name: Å opprette en DLP-policy
+          href: create-dlp-policy.md
+        - name: Administrere DLP-policyer
+          href: prevent-data-loss.md
+    - name: Behandle abonnementer og brukerkontoer
+      items:
+        - name: Vise aktive brukere i tenanten
+          href: admin-view-user-licenses.md
