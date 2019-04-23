@@ -1,4 +1,4 @@
-items:
+# This TOC is a work in progress. The specific location of items is not locked down
 - name: Common Data Service
   href: ../../maker/common-data-service/data-platform-intro.md
 - name: Oversikt for utviklere
@@ -6,418 +6,414 @@ items:
 - name: Kom i gang
   href: get-started-cds-developers.md
   items:
-  - name: Tilpassinger som støttes
-    href: supported-customizations.md
+    - name: Tilpassinger som støttes
+      href: supported-customizations.md
 - name: Arbeid med data ved bruk av kode
   href: work-with-data-cds.md
   items:
-  - name: Bruk Web API
-    href: webapi/index.md
-  - name: Bruk organisasjonstjeneste
-    href: org-service/index.md
-  - name: Legg til og fjern eksempeldata
-    href: sample-data.md
-  - name: Bruk FetchXML til å spørre etter data
-    href: use-fetchxml-construct-query.md
-    items:
-    - name: Bruk FetchXML-aggregasjon
-      href: use-fetchxml-aggregation.md
-    - name: Økonomisk dato og eldre enn datetime-spørringsoperatorer i FetchXML
-      href: use-fetchxml-fiscal-date-older-datetime-query-operators.md
-    - name: Bruk en venstre ytre kobling i FetchXML til spørring etter poster «ikke i»
-      href: use-fetchxml-left-outer-join-query-records-not-in.md
-  - name: Lagrede spørringer
-    href: saved-queries.md
-  - name: Spørring av hierarkiske data
-    href: query-hierarchical-data.md
-  - name: Revisjon av dataendringer
-    href: auditing-overview.md
-    items:
-    - name: Konfigurer enheter og attributter for revisjon
-      href: configure-entities-attributes-auditing.md
-    - name: Hent og slett historikken for revisjon av dataendringer
-      href: retrieve-and-delete-the-history-of-audited-data-changes.md
-    - name: Revisjon av brukertilgang
-      href: audit-user-access.md
-    - name: Opprett attributter for automatisk nummer
-      href: create-auto-number-attributes.md
-  - name: Oppdag duplisert data
-    href: detect-duplicate-data-with-code.md
-    items:
-    - name: Aktiver og deaktiver duplikatregistrering
-      href: enable-disable-duplicate-detection.md
-    - name: Kjør duplikatregistrering
-      href: run-duplicate-detection.md
-    - name: Meldinger for duplikatregistrering
-      href: duplicate-detection-messages.md
-    - name: Dupliserte regelenheter
-      href: duplicaterule-entities.md
-  - name: Massesletting av data
-    href: delete-data-bulk.md
-  - name: Bruk Optimistisk samtidighet for å redusere mulig tap av data
-    href: optimistic-concurrency.md
-  - name: Representer en annen bruker
-    href: impersonate-another-user.md
-  - name: Beste praksiser
-    href: best-practices/work-with-data/index.md
+    - name: Bruk Web API
+      href: webapi/index.md
+    - name: Bruk organisasjonstjeneste
+      href: org-service/index.md
+    - name: Legg til og fjern eksempeldata
+      href: sample-data.md
+    - name: Bruk FetchXML til å spørre etter data
+      href: use-fetchxml-construct-query.md
+      items:
+        - name: Bruk FetchXML-aggregasjon
+          href: use-fetchxml-aggregation.md
+        - name: Økonomisk dato og eldre enn datetime-spørringsoperatorer i FetchXML
+          href: use-fetchxml-fiscal-date-older-datetime-query-operators.md
+        - name: Bruk en venstre ytre kobling i FetchXML til spørring etter poster «ikke i»
+          href: use-fetchxml-left-outer-join-query-records-not-in.md
+    - name: Lagrede spørringer
+      href: saved-queries.md
+    - name: Spørring av hierarkiske data
+      href: query-hierarchical-data.md
+    - name: Revisjon av dataendringer
+      href: auditing-overview.md
+      items:
+        - name: Konfigurer enheter og attributter for revisjon
+          href: configure-entities-attributes-auditing.md
+        - name: Hent og slett historikken for revisjon av dataendringer
+          href: retrieve-and-delete-the-history-of-audited-data-changes.md
+        - name: Revisjon av brukertilgang
+          href: audit-user-access.md
+        - name: Opprett attributter for automatisk nummer
+          href: create-auto-number-attributes.md
+    - name: Oppdag duplisert data
+      href: detect-duplicate-data-with-code.md
+      items:
+        - name: Aktiver og deaktiver duplikatregistrering
+          href: enable-disable-duplicate-detection.md
+        - name: Kjør duplikatregistrering
+          href: run-duplicate-detection.md
+        - name: Meldinger for duplikatregistrering
+          href: duplicate-detection-messages.md
+        - name: Dupliserte regelenheter
+          href: duplicaterule-entities.md
+    - name: Massesletting av data
+      href: delete-data-bulk.md
+    - name: Bruk Optimistisk samtidighet for å redusere mulig tap av data
+      href: optimistic-concurrency.md
+    - name: Representer en annen bruker
+      href: impersonate-another-user.md
+    - name: Beste praksiser
+      href: best-practices/work-with-data/index.md
 - name: Bruk forretningslogikk med kode
   href: apply-business-logic-with-code.md
   items:
-  - name: Hendelsesrammeverk
-    href: event-framework.md
-    items:
-    - name: Slik fungerer kjøringskonteksten
-      href: understand-the-data-context.md
-    - name: Virkemåten til spesialiserte oppdateringsoperasjoner
-      href: special-update-operation-behavior.md
-  - name: Asynkron tjeneste
-    href: asynchronous-service.md
-  - name: Programtillegg
-    href: plug-ins.md
-    items:
-    - name: Skriv et programtillegg
-      href: write-plug-in.md
-    - name: Håndtere unntak
-      href: handle-exceptions.md
-    - name: Representere en bruker
-      href: impersonate-a-user.md
-    - name: Registrer et programtillegg
-      href: register-plug-in.md
-    - name: Feilsøk et programtillegg
-      href: debug-plug-in.md
-    - name: Sporing og logging
-      href: logging-tracing.md
-    - name: Analysere ytelse
-      href: analyze-performance.md
-    - name: Få tilgang til eksterne nettressurser
-      href: access-web-services.md
-    - name: Opplæringer
+    - name: Hendelsesrammeverk
+      href: event-framework.md
       items:
-      - name: Skriv og registrer et programtillegg
-        href: tutorial-write-plug-in.md
-      - name: Feilsøk et programtillegg
-        href: tutorial-debug-plug-in.md
-      - name: Oppdater et programtillegg
-        href: tutorial-update-plug-in.md
-    - name: Eksempelkode
+        - name: Slik fungerer kjøringskonteksten
+          href: understand-the-data-context.md
+        - name: Virkemåten til spesialiserte oppdateringsoperasjoner
+          href: special-update-operation-behavior.md
+    - name: Asynkron tjeneste
+      href: asynchronous-service.md
+    - name: Programtillegg
+      href: plug-ins.md
       items:
-      - name: Opprette et grunnleggende programtillegg
-        href: org-service/samples/basic-followup-plugin.md
-      - name: Nettilgang fra et programtillegg
-        href: org-service/samples/web-access-plugin.md
-  - name: Arbeidsflytutvidelser
-    href: workflow/workflow-extensions.md
-  - name: Skalerbar tilpassingsutforming
-    href: scalable-customization-design/overview.md
-  - name: Beste praksiser
-    href: best-practices/business-logic/index.md
+        - name: Skriv et programtillegg
+          href: write-plug-in.md
+        - name: Håndtere unntak
+          href: handle-exceptions.md
+        - name: Representere en bruker
+          href: impersonate-a-user.md
+        - name: Registrer et programtillegg
+          href: register-plug-in.md
+        - name: Feilsøk et programtillegg
+          href: debug-plug-in.md
+        - name: Sporing og logging
+          href: logging-tracing.md
+        - name: Analysere ytelse
+          href: analyze-performance.md
+        - name: Feilsøk programtillegg
+          href: troubleshoot-plug-in.md
+        - name: Få tilgang til eksterne nettressurser
+          href: access-web-services.md
+        - name: Opplæringer
+          items:
+            - name: Skriv og registrer et programtillegg
+              href: tutorial-write-plug-in.md
+            - name: Feilsøk et programtillegg
+              href: tutorial-debug-plug-in.md
+            - name: Oppdater et programtillegg
+              href: tutorial-update-plug-in.md
+        - name: Eksempelkode
+          items:
+            - name: Opprette et grunnleggende programtillegg
+              href: org-service/samples/basic-followup-plugin.md
+            - name: Nettilgang fra et programtillegg
+              href: org-service/samples/web-access-plugin.md
+    - name: Arbeidsflytutvidelser
+      href: workflow/workflow-extensions.md
+    - name: Skalerbar tilpassingsutforming
+      href: scalable-customization-design/overview.md
+    - name: Beste praksiser
+      href: best-practices/business-logic/index.md
 - name: Integrer data ved bruk av kode
   items:
-  - name: Importer data
-    href: import-data.md
-    items:
-    - name: Klargjør kildefiler for import
-      href: prepare-source-files-import.md
-    - name: Opprett datakart for import
-      href: create-data-maps-for-import.md
-    - name: Legg til transformasjonstilordninger for import
-      href: add-transformation-mappings-import.md
-    - name: Konfigurer dataimport
-      href: configure-data-import.md
-    - name: Kjør dataimport
-      href: run-data-import.md
-    - name: Dataimportenheter
-      href: data-import-entities.md
-  - name: Data Export Service
-    href: data-export-service.md
-  - name: Synkroniser data
-    href: data-synchronization.md
-    items:
-    - name: Bruk en alternativ nøkkel til å opprette en post
-      href: use-alternate-key-create-record.md
-    - name: Bruk endringssporing til å synkronisere data med eksterne systemer
-      href: use-change-tracking-synchronize-data-external-systems.md
-    - name: Bruk Upsert til å sette inn eller oppdatere en post
-      href: use-upsert-insert-update-record.md
-  - name: Synkronisering på serversiden
-    href: server-side-synchronization-entities.md
-    items:
-    - name: Konfigurer sporingsregler for Exchange-mappenivå
-      href: configure-exchange-folder-level-tracking-rules.md
-  - name: Virtuelle enheter
-    href: virtual-entities/
-  - name: Azure-integrasjon
-    href: azure-integration.md
-    items:
-    - name: Arbeid med data i Azure-løsningen
-      href: work-data-azure-solution.md
-    - name: Arbeid med hendelsesdata i Azure Event Hub-løsningen
-      href: work-event-data-azure-event-hub-solution.md
-    - name: Konfigurer Azure-integrering med Common Data Service for apper
-      href: configure-azure-integration.md
-    - name: Skriv et tilpasset programtillegg for Azure
-      href: write-custom-azure-aware-plugin.md
-    - name: Skriv et lytteprogram for en Azure-løsning
-      href: write-listener-application-azure-solution.md
-    - name: 'Opplæring: Konfigurer Azure (SAS) for integrering med kundeengasjement'
-      href: walkthrough-configure-azure-sas-integration.md
-    - name: 'Opplæring: Registrer et programtillegg for Azure ved bruk av registreringsverktøyet for programtillegg'
-      href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
-    - name: 'Opplæring: Oppdater et tjenesteendepunkt importert fra en løsning'
-      href: walkthrough-update-service-endpoint-imported-solution.md
-  - name: Bruk webhooker
-    href: use-webhooks.md
-    items:
-    - name: Bruk webhooker til å opprette eksterne behandlingsprogram for serverhendelser
+    - name: Importer data
+      href: import-data.md
+      items:
+        - name: Klargjør kildefiler for import
+          href: prepare-source-files-import.md
+        - name: Opprett datakart for import
+          href: create-data-maps-for-import.md
+        - name: Legg til transformasjonstilordninger for import
+          href: add-transformation-mappings-import.md
+        - name: Konfigurer dataimport
+          href: configure-data-import.md
+        - name: Kjør dataimport
+          href: run-data-import.md
+        - name: Dataimportenheter
+          href: data-import-entities.md
+    - name: Data Export Service
+      href: data-export-service.md
+    - name: Synkroniser data
+      href: data-synchronization.md
+      items:
+        - name: Bruk en alternativ nøkkel til å opprette en post
+          href: use-alternate-key-create-record.md
+        - name: Bruk endringssporing til å synkronisere data med eksterne systemer
+          href: use-change-tracking-synchronize-data-external-systems.md
+        - name: Bruk Upsert til å sette inn eller oppdatere en post
+          href: use-upsert-insert-update-record.md
+    - name: Synkronisering på serversiden
+      href: server-side-synchronization-entities.md
+      items:
+        - name: Konfigurer sporingsregler for Exchange-mappenivå
+          href: configure-exchange-folder-level-tracking-rules.md
+    - name: Virtuelle enheter
+      href: virtual-entities/
+    - name: Azure-integrasjon
+      href: azure-integration.md
+      items:
+        - name: Arbeid med data i Azure-løsningen
+          href: work-data-azure-solution.md
+        - name: Arbeid med hendelsesdata i Azure Event Hub-løsningen
+          href: work-event-data-azure-event-hub-solution.md
+        - name: Konfigurer Azure-integrering med Common Data Service for apper
+          href: configure-azure-integration.md
+        - name: Skriv et tilpasset programtillegg for Azure
+          href: write-custom-azure-aware-plugin.md
+        - name: Skriv et lytteprogram for en Azure-løsning
+          href: write-listener-application-azure-solution.md
+        - name: 'Opplæring: Konfigurer Azure (SAS) for integrering med kundeengasjement'
+          href: walkthrough-configure-azure-sas-integration.md
+        - name: 'Opplæring: Registrer et programtillegg for Azure ved bruk av registreringsverktøyet for programtillegg'
+          href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
+        - name: 'Opplæring: Oppdater et tjenesteendepunkt importert fra en løsning'
+          href: walkthrough-update-service-endpoint-imported-solution.md
+    - name: Bruk webhooker
       href: use-webhooks.md
-    - name: Registrer en webhook
-      href: register-web-hook.md
-    - name: Test webhook-registrering
-      href: test-webhook-registration.md
+      items:
+        - name: Bruk webhooker til å opprette eksterne behandlingsprogram for serverhendelser
+          href: use-webhooks.md
+        - name: Registrer en webhook
+          href: register-web-hook.md
+        - name: Test webhook-registrering
+          href: test-webhook-registration.md
 - name: Arbeid med Common Data Service-enheter
   href: entities.md
   items:
-  - name: Kundeenheter
-    href: customer-entities-account-contact.md
-  - name: Aktivitetsenheter
-    href: activity-entities.md
-    items:
-    - name: Egendefinerte aktiviteter
-      href: custom-activities.md
-    - name: Aktivitetsenheter for e-post
-      href: email-activity-entities.md
-    - name: Aktivitetsenheter for oppgave, faks, telefonsamtale og brev
-      href: task-fax-phone-call-letter-activity-entities.md
-    - name: ActivityParty-enheten
-      href: activityparty-entity.md
-    - name: ActivityPointer-enhet (aktivitet)
-      href: activitypointer-activity-entity.md
-    - name: Regelmessige avtaler
+    - name: Kundeenheter
+      href: customer-entities-account-contact.md
+    - name: Aktivitetsenheter
+      href: activity-entities.md
       items:
-      - name: Delvis utvidelsesmodell for regelmessig avtale
-        href: recurring-appointment-partial-expansion-model.md
-      - name: Opprett en regelmessig avtaleserie, -forekomst eller -unntak
-        href: create-recurring-appointment-series-instance-exception.md
-      - name: Oppdater en regelmessig avtale
-        href: update-recurring-appointment.md
-      - name: Tilknytt egendefinerte attributter til den regelmessige avtalemalen og avtaleenheter
-        href: link-custom-attributes-recurring-master-appointment-entities.md
-  - name: Merknad-enhet (notat)
-    href: annotation-note-entity.md
-  - name: Kalenderenheter
-    href: calendar-entities.md
-    items:
-    - name: Kalendertyper
-      href: types-calendars.md
-  - name: Sett enheter i kø
-    href: queue-entities.md
-  - name: Emne-enhet
-    href: subject-entity.md
-  - name: Bruk serviceavtaler (SLA-er)
-    href: apply-slas-entities.md
-  - name: Transaksjonsvaluta-enhet (valuta)
-    href: transaction-currency-currency-entity.md
-  - name: Kategori-enhet
-    href: use-category-entity.md
-  - name: Tilbakemelding-enhet
-    href: use-feedback-entity-manage-feedback-ratings-records.md
-  - name: Sikkerhetsenheter
-    href: security-model.md
-    items:
-    - name: Bruker og teamenheter
-      href: user-team-entities.md
+        - name: Egendefinerte aktiviteter
+          href: custom-activities.md
+        - name: Aktivitetsenheter for e-post
+          href: email-activity-entities.md
+        - name: 'Aktivitetsenheter for oppgave, faks, telefonsamtale og brev'
+          href: task-fax-phone-call-letter-activity-entities.md
+        - name: ActivityParty-enheten
+          href: activityparty-entity.md
+        - name: ActivityPointer-enhet (aktivitet)
+          href: activitypointer-activity-entity.md
+        - name: Regelmessige avtaler
+          items:
+            - name: Delvis utvidelsesmodell for regelmessig avtale
+              href: recurring-appointment-partial-expansion-model.md
+            - name: 'Opprett en regelmessig avtaleserie, -forekomst eller -unntak'
+              href: create-recurring-appointment-series-instance-exception.md
+            - name: Oppdater en regelmessig avtale
+              href: update-recurring-appointment.md
+            - name: Tilknytt egendefinerte attributter til den regelmessige avtalemalen og avtaleenheter
+              href: link-custom-attributes-recurring-master-appointment-entities.md
+    - name: Merknad-enhet (notat)
+      href: annotation-note-entity.md
+    - name: Kalenderenheter
+      href: calendar-entities.md
       items:
-      - name: Angi en tidssoneinnstilling for en bruker
-        href: specify-time-zone-settings-user.md
-      - name: Tidssoneenhet
-        href: time-zone-entities.md
-      - name: BusinessUnit-enhet
-        href: businessunit-entity.md
-      - name: Feltsikkerhetsenheter
-        href: field-security-entities.md
-      - name: Bruk tilgangsteam og eierteam til å samarbeide og dele informasjon
-        href: use-access-teams-owner-teams-collaborate-share-information.md
-  - name: Malenheter
-    href: upload-manage-document-templates.md
+        - name: Kalendertyper
+          href: types-calendars.md
+    - name: Sett enheter i kø
+      href: queue-entities.md
+    - name: Emne-enhet
+      href: subject-entity.md
+    - name: Bruk serviceavtaler (SLA-er)
+      href: apply-slas-entities.md
+    - name: Transaksjonsvaluta-enhet (valuta)
+      href: transaction-currency-currency-entity.md
+    - name: Kategori-enhet
+      href: use-category-entity.md
+    - name: Tilbakemelding-enhet
+      href: use-feedback-entity-manage-feedback-ratings-records.md
+    - name: Sikkerhetsenheter
+      href: security-model.md
+      items:
+        - name: Bruker og teamenheter
+          href: user-team-entities.md
+          items:
+            - name: Angi en tidssoneinnstilling for en bruker
+              href: specify-time-zone-settings-user.md
+            - name: Tidssoneenhet
+              href: time-zone-entities.md
+            - name: BusinessUnit-enhet
+              href: businessunit-entity.md
+            - name: Feltsikkerhetsenheter
+              href: field-security-entities.md
+            - name: Bruk tilgangsteam og eierteam til å samarbeide og dele informasjon
+              href: use-access-teams-owner-teams-collaborate-share-information.md
+    - name: Malenheter
+      href: upload-manage-document-templates.md
 - name: Arbeid med metadata ved bruk av kode
   href: metadata-services.md
   items:
-  - name: Bla gjennom metadataene i miljøet
-    href: browse-your-metadata.md
-  - name: Enhetsmetadata
-    href: entity-metadata.md
-    items:
-    - name: Tilpass enhetens metadata
-      href: customize-entity-metadata.md
-    - name: Definer alternative nøkler for en enhet
-      href: define-alternate-keys-entity.md
-  - name: Attributtmetadata
-    href: entity-attribute-metadata.md
-    items:
-    - name: Metadatameldinger for enhetsmeldinger
-      href: entity-attribute-metadata-messages.md
-    - name: Virkemåte og format for attributtet Dato og klokkeslett
-      href: behavior-format-date-time-attribute.md
-    - name: Felt for beregnet verdi og beregnede attributter
-      href: calculated-rollup-attributes.md
-    - name: Attributter for nedtrekksmeny med flere valg
-      href: multi-select-picklist.md
-    - name: Bildeattributter
-      href: image-attributes.md
-    - name: Definer egendefinerte tilstandsmodelloverføringer
-      href: define-custom-state-model-transitions.md
-  - name: Enhetsmetadatarelasjoner
-    href: entity-relationship-metadata.md
-    items:
-    - name: Kvalifikasjon for enhetsrelasjoner
-      href: entity-relationship-eligibility.md
-    - name: Metadatameldinger for enhetsrelasjon
-      href: entity-relationship-metadata-messages.md
-    - name: Gjennomgripende virkemåte for enhetsrelasjon
-      href: configure-entity-relationship-cascading-behavior.md
-  - name: Tilpass enhets- og attributt-tilordninger
-    href: customize-entity-attribute-mappings.md
-  - name: Bruk koblinger til å knytte poster til hverandre
-    href: connection-entities.md
-    items:
-    - name: Beskriv en relasjon mellom enheter med koblingsroller
-      href: describe-relationship-entities-connection-roles.md
-  - name: Tilpass etiketter for å støtte flere språk
-    href: customize-labels-support-multiple-languages.md
-  - name: Beste praksiser
-    href: best-practices/work-with-metadata/index.md
+    - name: Bla gjennom metadataene i miljøet
+      href: browse-your-metadata.md
+    - name: Enhetsmetadata
+      href: entity-metadata.md
+      items:
+        - name: Tilpass enhetens metadata
+          href: customize-entity-metadata.md
+        - name: Definer alternative nøkler for en enhet
+          href: define-alternate-keys-entity.md
+    - name: Attributtmetadata
+      href: entity-attribute-metadata.md
+      items:
+        - name: Metadatameldinger for enhetsmeldinger
+          href: entity-attribute-metadata-messages.md
+        - name: Virkemåte og format for attributtet Dato og klokkeslett
+          href: behavior-format-date-time-attribute.md
+        - name: Felt for beregnet verdi og beregnede attributter
+          href: calculated-rollup-attributes.md
+        - name: Attributter for nedtrekksmeny med flere valg
+          href: multi-select-picklist.md
+        - name: Bildeattributter
+          href: image-attributes.md
+        - name: Definer egendefinerte tilstandsmodelloverføringer
+          href: define-custom-state-model-transitions.md
+    - name: Enhetsmetadatarelasjoner
+      href: entity-relationship-metadata.md
+      items:
+        - name: Kvalifikasjon for enhetsrelasjoner
+          href: entity-relationship-eligibility.md
+        - name: Metadatameldinger for enhetsrelasjon
+          href: entity-relationship-metadata-messages.md
+        - name: Gjennomgripende virkemåte for enhetsrelasjon
+          href: configure-entity-relationship-cascading-behavior.md
+    - name: Tilpass enhets- og attributt-tilordninger
+      href: customize-entity-attribute-mappings.md
+    - name: Bruk koblinger til å knytte poster til hverandre
+      href: connection-entities.md
+      items:
+        - name: Beskriv en relasjon mellom enheter med koblingsroller
+          href: describe-relationship-entities-connection-roles.md
+    - name: Tilpass etiketter for å støtte flere språk
+      href: customize-labels-support-multiple-languages.md
+    - name: Beste praksiser
+      href: best-practices/work-with-metadata/index.md
 - name: Pakk inn og distribuer utvidelser ved bruk av løsninger
   items:
-  - name: Innføring i løsninger
-    href: introduction-solutions.md
-    items:
-    - name: Avhengighetssporing for løsningskomponenter
-      href: dependency-tracking-solution-components.md
-    - name: Oppretthold administrerte løsninger
-      href: maintain-managed-solutions.md
-    - name: Organiser løsninger
-      href: organize-solutions.md
-    - name: Organiser teamet til å utvikle løsninger
-      href: organize-team-develop-solutions.md
-    - name: Bruk forvaltede egenskaper
-      href: use-managed-properties.md
-    - name: Forstå hvordan administrerte løsninger slås sammen
-      href: understand-managed-solutions-merged.md
-    - name: Opprett løsninger som støtter flere språk
-      href: create-solutions-support-multiple-languages.md
-    - name: Slik behandler du løsninger
+    - name: Innføring i løsninger
+      href: introduction-solutions.md
       items:
-      - name: Opprett, eksporter eller importer en ubehandlet løsning
-        href: create-export-import-unmanaged-solution.md
-      - name: Avinstaller eller slett en løsning
-        href: uninstall-delete-solution.md
-      - name: Arbeid med løsninger
-        href: work-solutions.md
-      - name: Opprett, installer og oppdater en behandlet løsning
-        href: create-install-update-managed-solution.md
-      - name: Opprett oppdateringer for å forenkle løsningsoppdateringer
-        href: create-patches-simplify-solution-updates.md
-      - name: Når du skal redigere tilpassingsfilen
-        href: when-edit-customization-file.md
-  - name: SolutionPackager-verktøy
-    href: compress-extract-solution-file-solutionpackager.md
-    items:
-    - name: Kildekontroll med løsningsfiler
-      href: use-source-control-solution-files.md
-  - name: Pakkedistributørverktøy
-    href: package-deployer/create-packages-package-deployer.md
-  - name: Publiser appen på AppSource
-    href: publish-app-appsource.md
-    items:
-    - name: 'Trinn 1: Fyll ut innsendingsskjemaet for appen på AppSource'
-      href: fill-app-submission-form-appsource.md
-    - name: 'Trinn 2: Registrer deg for en konto på Microsoft Partner Network'
-      href: register-microsoft-partner-network.md
-    - name: 'Trinn 3: Opprett en behandlet løsning for appen'
-      href: create-solution-app-appsource.md
-    - name: 'Trinn 4: Opprett en AppSource-pakke for appen'
-      href: create-package-app-appsource.md
-    - name: 'Trinn 5: Lagre AppSource-pakken på Azure Storage og generer en nettadresse med SAS-nøkkel'
-      href: store-appsource-package-azure-storage.md
-    - name: 'Neste trinn: Send inn appen i skypartnerportalen'
-      href: next-steps-submit-app-cloud-partner-portal.md
-    - name: 'Tillegg: Sjekkliste for anbefalte fremgangsmåter for apputforming'
-      href: appendix-app-design-best-practices-checklist.md
-    - name: 'Tillegg: Sjekkliste for sertifisering av apper'
-      href: appendix-app-certification-checklist.md
+        - name: Avhengighetssporing for løsningskomponenter
+          href: dependency-tracking-solution-components.md
+        - name: Oppretthold administrerte løsninger
+          href: maintain-managed-solutions.md
+        - name: Organiser løsninger
+          href: organize-solutions.md
+        - name: Organiser teamet til å utvikle løsninger
+          href: organize-team-develop-solutions.md
+        - name: Bruk forvaltede egenskaper
+          href: use-managed-properties.md
+        - name: Forstå hvordan administrerte løsninger slås sammen
+          href: understand-managed-solutions-merged.md
+        - name: Opprett løsninger som støtter flere språk
+          href: create-solutions-support-multiple-languages.md
+        - name: Slik behandler du løsninger
+          items:
+            - name: 'Opprett, eksporter eller importer en ubehandlet løsning'
+              href: create-export-import-unmanaged-solution.md
+            - name: Avinstaller eller slett en løsning
+              href: uninstall-delete-solution.md
+            - name: Arbeid med løsninger
+              href: work-solutions.md
+            - name: 'Opprett, installer og oppdater en behandlet løsning'
+              href: create-install-update-managed-solution.md
+            - name: Opprett oppdateringer for å forenkle løsningsoppdateringer
+              href: create-patches-simplify-solution-updates.md
+            - name: Når du skal redigere tilpassingsfilen
+              href: when-edit-customization-file.md
+    - name: SolutionPackager-verktøy
+      href: compress-extract-solution-file-solutionpackager.md
+      items:
+        - name: Kildekontroll med løsningsfiler
+          href: use-source-control-solution-files.md
+    - name: Pakkedistributørverktøy
+      href: package-deployer/create-packages-package-deployer.md
+    - name: Publiser appen på AppSource
+      href: publish-app-appsource.md
+      items:
+        - name: 'Trinn 1: Fyll ut innsendingsskjemaet for appen på AppSource'
+          href: fill-app-submission-form-appsource.md
+        - name: 'Trinn 2: Registrer deg for en konto på Microsoft Partner Network'
+          href: register-microsoft-partner-network.md
+        - name: 'Trinn 3: Opprett en behandlet løsning for appen'
+          href: create-solution-app-appsource.md
+        - name: 'Trinn 4: Opprett en AppSource-pakke for appen'
+          href: create-package-app-appsource.md
+        - name: 'Trinn 5: Lagre AppSource-pakken på Azure Storage og generer en nettadresse med SAS-nøkkel'
+          href: store-appsource-package-azure-storage.md
+        - name: 'Neste trinn: Send inn appen i skypartnerportalen'
+          href: next-steps-submit-app-cloud-partner-portal.md
+        - name: 'Tillegg: Sjekkliste for anbefalte fremgangsmåter for apputforming'
+          href: appendix-app-design-best-practices-checklist.md
+        - name: 'Tillegg: Sjekkliste for sertifisering av apper'
+          href: appendix-app-certification-checklist.md
 - name: Opprett klientprogrammer
   href: connect-cds.md
   items:
-  - name: Godkjenn
-    href: authentication.md
-    items:
-    - name: .NET Framework-programmer
-      href: authenticate-dot-net-framework.md
-    - name: Bruk OAuth
-      href: authenticate-oauth.md
-  - name: 'Opplæring: Registrer en app med Azure Active Directory'
-    href: walkthrough-register-app-azure-active-directory.md
-  - name: Bygg webprogrammer ved bruk av server-til-server-godkjenning (S2S)
-    href: build-web-applications-server-server-s2s-authentication.md
-    items:
-    - name: Bruk server-til-server-godkjenning for flere eiere
-      href: use-multi-tenant-server-server-authentication.md
-    - name: Bruk server-til-server-godkjenning for enkelt eier
-      href: use-single-tenant-server-server-authentication.md
-  - name: Bruk Oauth med ressursdeling på tvers av opprinnelse til å koble til et enkeltsideprogram
-    href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
-  - name: 'Opplæring: Registrer og konfigurer et SPA-program med adal.js'
-    href: walkthrough-registering-configuring-simplespa-application-adal-js.md
-  - name: Bygg Windows-klientapper ved bruk av XRM-verktøy
-    href: xrm-tooling/
-  - name: Oppdag brukerorganisasjoner
-    href: discovery-service.md
+    - name: Godkjenn
+      href: authentication.md
+      items:
+        - name: .NET Framework-programmer
+          href: authenticate-dot-net-framework.md
+        - name: Bruk OAuth
+          href: authenticate-oauth.md
+    - name: 'Opplæring: Registrer en app med Azure Active Directory'
+      href: walkthrough-register-app-azure-active-directory.md
+    - name: Bygg webprogrammer ved bruk av server-til-server-godkjenning (S2S)
+      href: build-web-applications-server-server-s2s-authentication.md
+      items:
+        - name: Bruk server-til-server-godkjenning for flere eiere
+          href: use-multi-tenant-server-server-authentication.md
+        - name: Bruk server-til-server-godkjenning for enkelt eier
+          href: use-single-tenant-server-server-authentication.md
+    - name: Bruk Oauth med ressursdeling på tvers av opprinnelse til å koble til et enkeltsideprogram
+      href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
+    - name: 'Opplæring: Registrer og konfigurer et SPA-program med adal.js'
+      href: walkthrough-registering-configuring-simplespa-application-adal-js.md
+    - name: Bygg Windows-klientapper ved bruk av XRM-verktøy
+      href: xrm-tooling/
+    - name: Oppdag brukerorganisasjoner
+      href: discovery-service.md
 - name: Beste praksis
   href: best-practices/index.md
 - name: Eksempler
   items:
-  - name: Web API
-    href: webapi/samples/toc.yml
-  - name: Organisasjonstjeneste
-    href: org-service/samples/toc.yml
+    - name: Web API
+      href: webapi/samples/toc.yml
+    - name: Organisasjonstjeneste
+      href: org-service/samples/toc.yml
 - name: Ressurser
   items:
-  - name: Utviklerressurser-side
-    href: developer-resources-page.md
-  - name: Utviklerverktøy
-    href: developer-tools.md
-    items:
-    - name: Last ned verktøy fra NuGet
-      href: download-tools-nuget.md
-  - name: Fellesskapsverktøy
-    href: community-tools.md
-  - name: Testverktøy
-    href: testing-tools-server.md
+    - name: Utviklerressurser-side
+      href: developer-resources-page.md
+    - name: Utviklerverktøy
+      href: developer-tools.md
+      items:
+        - name: Last ned verktøy fra NuGet
+          href: download-tools-nuget.md
+    - name: Fellesskapsverktøy
+      href: community-tools.md
+    - name: Testverktøy
+      href: testing-tools-server.md
 - name: Referanse
   items:
-  - name: Enhetsreferanse
-    href: reference/entities/toc.yml
-  - name: Nett-API-referanse
-    href: /dynamics365/customer-engagement/web-api/about
-  - name: Organisasjonstjeneste
-    href: /dotnet/api/?view=dynamics-general-ce-9
-  - name: XRM-verktøy
-    href: /dotnet/api/?view=dynamics-xrmtooling-ce-9
-  - name: Virtuell enhet
-    href: /dotnet/api/?view=dynamics-virtualentity-ce-9
-  - name: Arbeidsflyt
-    href: /dotnet/api/?view=dynamics-workflow-ce-9
-  - name: Pakkedistributør
-    href: /dotnet/api/?view=dynamics-deployer-ce-9
-  - name: Filskjema for tilpassingsløsninger
-    href: customization-solutions-file-schema.md
-  - name: Filreferanse for løsningskomponent (SolutionPackager)
-    href: solution-component-file-reference-solutionpackager.md
-  - name: FetchXML-skjema
-    href: fetchxml-schema.md
-ms.openlocfilehash: 3a162e476d0d3c9c4935d185b9e3942c86960edd
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357050"
+    - name: Enhetsreferanse
+      href: reference/entities/toc.yml
+    - name: Nett-API-referanse
+      href: /dynamics365/customer-engagement/web-api/about
+    - name: Organisasjonstjeneste
+      href: /dotnet/api/?view=dynamics-general-ce-9
+    - name: XRM-verktøy
+      href: /dotnet/api/?view=dynamics-xrmtooling-ce-9
+    - name: Virtuell enhet
+      href: /dotnet/api/?view=dynamics-virtualentity-ce-9
+    - name: Arbeidsflyt
+      href: /dotnet/api/?view=dynamics-workflow-ce-9
+    - name: Pakkedistributør
+      href: /dotnet/api/?view=dynamics-deployer-ce-9
+    - name: Filskjema for tilpassingsløsninger
+      href: customization-solutions-file-schema.md
+    - name: Filreferanse for løsningskomponent (SolutionPackager)
+      href: solution-component-file-reference-solutionpackager.md
+    - name: FetchXML-skjema
+      href: fetchxml-schema.md
