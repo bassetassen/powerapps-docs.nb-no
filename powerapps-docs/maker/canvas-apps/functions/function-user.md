@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: f452fedfbb26394bcaf4d490fa608f066469fb53
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42863453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61544571"
 ---
 # <a name="user-function-in-powerapps"></a>User-funksjonen i PowerApps
 Returnerer informasjon om gjeldende bruker.
@@ -41,7 +41,7 @@ Returnerer informasjon om gjeldende bruker.
 ## <a name="examples"></a>Eksempler
 Gjeldende PowerApps-bruker har følgende informasjon:
 
-* Fullt navn: **John Doe**
+* Fullt navn: **«John Doe»**
 * E-postadresse: **john.doe@contoso.com**
 * Bilde: ![](media/function-user/john-doe-picture.png) 
 

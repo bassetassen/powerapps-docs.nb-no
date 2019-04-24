@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 968722e672c6f169c4a9e2e87be959aa48e23c86
-ms.sourcegitcommit: 957d67e13bd4153d042b3b3bd650f6d0de20613c
+ms.openlocfilehash: 97f9324230e1d935cb056eada294e11d8bfb4d73
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58073675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61535832"
 ---
 # <a name="controls-and-properties-in-powerapps"></a>Kontroller og egenskaper i PowerApps
 
@@ -31,8 +31,6 @@ Konfigurer utseendet og virkemåten til en kontroll ved å angi en av egenskapen
 **[Vedlegg](controls/control-attachments.md)** – Last ned og opp filer fra den lokale enheten til en datakilde.
 
 **[Lyd](controls/control-audio-video.md)** – Spill av et lydklipp eller lyddelen av et videoklipp.
-
-**[Strekkodeleser (eksperimentell)](controls/control-barcodescanner.md)**  – skanner-koder i en nettleser (eldre/foreldet).
 
 **[Strekkodeleser](controls/control-new-barcode-scanner.md)**  – skanner strekkoder, QR-koder og data-matrisen koder på en Android eller iOS-enhet.
 

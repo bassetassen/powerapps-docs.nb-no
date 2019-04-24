@@ -14,16 +14,16 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: ee8573cb9ae4df5ac42deefad4ac67aede3a3502
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42836281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61547833"
 ---
 # <a name="use-the-entity-form-control"></a>Bruke enhetsskjemakontrollen
 Opprett apper på en raskere måte ved å bruke **enhetsskjemakontrollen** til å legge til funksjonsrike skjemaer for Common Data Service-enheter.
 
-Hvis du vil ha en innføring i **enhetsskjemakontrollen**, kan du lese dette blogginnlegget: [Ny enhetsskjemakontroll (eksperimentell funksjon) for Common Data Service](https://powerapps.microsoft.com/blog/new-entity-form-control-experimental-feature-for-common-data-service/).
+For en innføring i den **enhetsskjemakontrollen** kontroll, kan du lese dette blogginnlegget: [Ny enhetsskjemakontroll (eksperimentell funksjon) for Common Data Service-](https://powerapps.microsoft.com/blog/new-entity-form-control-experimental-feature-for-common-data-service/).
 
 > [!IMPORTANT]
 > Vær oppmerksom på at **enhetsskjemakontrollen** er en eksperimentell funksjon, som beskrevet i blogginnlegget, og unngå å bruke **enhetsskjemakontrollen** i produksjonsapper for øyeblikket.
@@ -45,15 +45,15 @@ Dette er nøkkelegenskapene i en **enhetsskjemakontroll**.
 **Item** – angir posten i datakilden som **enhetsskjemakontrollen** viser. Denne egenskapen brukes bare når **Pattern** er satt til **FormPattern.Details**.
 
 **Valgte** – henter posten som er valgt.  
-Eksempel: Hvis **enhetsskjemakontrollen** viser en liste over poster for salgsordrer, gir **Valgt**-egenskapen deg posten som er valgt for øyeblikket. Du kan også åpne et felt i en post. (For eksempel kan du angi verdien for **Konto**-feltet i den valgte posten som **Selected.Account**.)
+Eksempel: Hvis den **enhetsskjemakontrollen** kontroll viser en liste over poster for salgsordrer, den **valgt** egenskapen gir deg posten som er valgt for øyeblikket. Du kan også åpne et felt i en post. (For eksempel kan du angi verdien for **Konto**-feltet i den valgte posten som **Selected.Account**.)
 
 **SelectableFields** – angir hvilke felt som skal vises som koblinger. Angi verdien for denne egenskapen ved hjelp av denne syntaksen:  
 **{Field1Name : true, Field2Name : true}**  
-Eksempel: Hvis du vil at **SalesOrderId**- og **Konto**-feltet skal vises som koblinger i et skjema, angir du **SelectableFields**-egenskapen for dette skjemaet til denne verdien:  
+Eksempel: Hvis du vil den **SalesOrderId** og **kontoen** feltet skal vises som koblinger i et skjema, angir du **SelectableFields** -egenskapen for skjemaet til denne verdien:  
 **{SalesOrderId : true, Account : true}**
 
 **SelectedField** – bestemmer hvilket felt som ble trykket eller klikket på. Dette gjelder bare for feltene som er angitt som **SelectableFields**.  
-Eksempel: Hvis du angir **SelectableFields**-egenskapen som **{SalesOrderId : true, Account : true}**, og brukeren klikker eller trykker på **Konto**-feltet, settes **SelectedField.Account** til true.
+Eksempel: Hvis du angir den **SelectableFields** egenskapen til **{SalesOrderId: true, konto: true}** og brukeren klikker eller trykker på den **kontoen** felt,  **SelectedField.Account** er satt til sann.
 
 **OnFieldSelect** – hvordan en app reagerer når brukeren klikker eller trykker på et felt. Dette gjelder bare for feltene som er angitt som **SelectableFields**.
 
@@ -190,7 +190,7 @@ La oss se nærmere på hvordan ruten for skjematilpassing setter opp navigasjon 
 
 Dette ble konfigurert automatisk da vi brukte ruten for skjematilpassing til å angi at **SalesOrderId**-feltet navigerer til **SalesOrderDetailsScreen**. Verdiene i **SalesOrderId**-feltet vises derfor som koblinger.
 
-Egenskapen **OnFieldSelect** for **SalesOrderListForm** er satt til en [**If**](functions/function-if.md)-funksjon, som bestemmer om brukeren klikker eller trykker på **Sales order ID**-feltet: **SalesOrderListForm.SelectedField.SalesOrderId = true**.  
+Den **OnFieldSelect** -egenskapen for den **SalesOrderListForm** er satt til en [ **Hvis** ](functions/function-if.md) -funksjonen, som bestemmer om brukeren klikker eller trykker på den **salgsordre-ID** felt: **SalesOrderListForm.SelectedField.SalesOrderId = true**.  
 
 Hvis funksjonen evalueres som sann, åpnes **SalesOrderDetailsScreen** med kontekstvariabelen med navnet **NavigationContext** som vi brukte tidligere.  
 

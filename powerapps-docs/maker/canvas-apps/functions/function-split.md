@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: b8f8dc0d354dd17fedd16524fed0f358b70839d4
-ms.sourcegitcommit: f5013108140276b3d66a9dce13a061df89609d26
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "57798402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61519428"
 ---
 # <a name="split-function-in-powerapps"></a>Split-funksjonen i PowerApps
 Deler opp en tekststreng i en tabell med delstrenger.

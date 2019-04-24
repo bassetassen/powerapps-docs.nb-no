@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: a46635276f6598cf0591dc21ae5aeb855b6667c1
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42830551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61560483"
 ---
 # <a name="text-input-control-in-powerapps"></a>Tekstinndata-kontroll i PowerApps
 En boks som brukeren kan skrive inn tekst, tall og andre data i.
@@ -64,7 +64,7 @@ Brukeren kan angi data ved å skrive inn i en kontroll for tekstinndata. Avhengi
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)**  – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
+**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
 
 **Format** – om brukerinndataene er begrenset til bare tall eller kan være en hvilken som helst tekst.
 

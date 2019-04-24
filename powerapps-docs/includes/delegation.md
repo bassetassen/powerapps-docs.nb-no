@@ -1,9 +1,17 @@
+---
+ms.openlocfilehash: 7b0f9ce710887c870d22a6362f9cd28245d72519
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
+ms.contentlocale: nb-NO
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62091280"
+---
 ## <a name="delegation"></a>Delegering
-Når det er mulig, vil PowerApps delegere filtrerings- og sorteringoperasjoner til datakilden og siden gjennom resultatene ved behov. Når du for eksempel starter en app som viser en **[Galleri](../maker/canvas-apps/controls/control-gallery.md)**-kontroll fylt med data, blir bare det første settet med oppføringer overført til enheten til å begynne med. Når brukeren ruller, hentes flere data fra datakilden. Resultatet er raskere oppstartstid for appen og tilgang til et svært store datasett.
+Når det er mulig, vil PowerApps delegere filtrerings- og sorteringsoperasjoner til datakilden og bla gjennom resultatene ved behov. Når du eksempelvis starter et program som viser en **[galleri](../maker/canvas-apps/controls/control-gallery.md)** -kontroll som er fylt med data, er det bare det første settet med poster som i utgangspunktet overføres til enheten. Når brukeren ruller, lastes det inn tilleggsdata fra datakilden. Resultatet er en raskere oppstart for appen samt tilgang til svært store datasett.
 
-Det er imidlertid ikke alltid mulig å delegere. Datakilder varierer avhengig av hvilke funksjoner og operatorer de støtter med delegering. Hvis fullstendig delegering av en formel ikke er mulig, vil redigeringsmiljøet vise en advarsel for delen som ikke kan delegeres. Vurder å endre formelen når det er mulig, for å unngå funksjoner og operatorer som ikke kan delegeres.  [Delegeringslisten](../maker/canvas-apps/delegation-list.md) inneholder informasjon om hvilke datakilder og som kan delegeres.
+Delegering er imidlertid kanskje ikke alltid mulig. Datakilder varierer med tanke på hvilke funksjoner og operatorer de støtter med delegering. Hvis komplett delegering av en formel ikke er mulig, vil redigeringsmiljøet flagge den delen som ikke kan delegeres med en advarsel. Når det er mulig, kan du vurdere å endre formelen for å unngå funksjoner og operatorer som ikke kan delegeres.  [Delegeringslisten](../maker/canvas-apps/delegation-list.md) opplyser om hvilke datakilder og operasjoner som kan delegeres.
 
-Hvis det ikke er mulig å delegere, vil PowerApps bare hente et lite sett med oppføringer for å arbeide lokalt. Filtrerings- og sorteringsfunksjoner fungerer på et mindre sett med oppføringer. Det som er tilgjengelig i **[Galleri](../maker/canvas-apps/controls/control-gallery.md)** er kanskje ikke den fullstendige historikken, og dette kan være forvirrende for brukere. 
+Hvis delegering ikke er mulig, vil PowerApps hente bare et lite sett med poster å arbeide med globalt. Funksjoner for filtrering og sortering vil operere på et begrenset sett med poster. Det som er tilgjengelig i **[galleriet](../maker/canvas-apps/controls/control-gallery.md)**, illustrerer kanskje ikke helheten, noe som kan forvirre brukerne. 
 
-Hvis du vil ha mer informasjon, kan du se [delegeringsoversikten](../maker/canvas-apps/delegation-overview.md).
+Se [Oversikten over delegering](../maker/canvas-apps/delegation-overview.md) for mer informasjon.
 

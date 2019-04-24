@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: a2cb87cf68457771605e78970b8d7a923af61fce
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42835176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61544437"
 ---
 # <a name="list-box-control-in-powerapps"></a>Liste-kontrollen i PowerApps
 En liste der brukeren kan velge ett eller flere elementer.
@@ -60,7 +60,7 @@ Når du legger til et galleri, eller en liste, viser egenskapslisten **Elementer
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
+**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -140,9 +140,9 @@ Når du legger til et galleri, eller en liste, viser egenskapslisten **Elementer
      ![Navn på gulvbelegg i rullegardinlister](./media/control-list-box/flooring-names.png)
 4. Angi **[Synlig](properties-core.md)**-egenskapen til hver **[Rullegardin](control-drop-down.md)**-kontroll som en av disse verdiene:
    
-   * CarpetList: **If("Carpet" in CategoryList.SelectedItems.Value, true)**
-   * HardwoodList: **If("Hardwood" in CategoryList.SelectedItems.Value, true)**
-   * TileList: **If("Tile" in CategoryList.SelectedItems.Value, true)**
+   * CarpetList: **Hvis ("Carpet" i CategoryList.SelectedItems.Value, true)**
+   * HardwoodList: **Hvis ("Hardwood" i CategoryList.SelectedItems.Value, true)**
+   * TileList: **Hvis ("Flisen» i CategoryList.SelectedItems.Value, true)**
      
      Vil du ha mer informasjon om **[If](../functions/function-if.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
 5. Trykk på F5, og velg deretter ett eller flere elementer i **CategoryList**.

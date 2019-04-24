@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ad3b8efc2306540862d0470223cee4f46fb5703c
-ms.sourcegitcommit: 50404720bed371bbc93feb08d296c954ef8038e1
+ms.openlocfilehash: e6d1b1083fcc7e865fa7c9cfe3f8966e20ed86a5
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61552047"
 ---
 # <a name="combo-box-control-in-powerapps"></a>Kombinasjonsbokskontroll i PowerApps
 En kontroll som gjør det mulig for brukere å foreta valg ut ifra angitte valgmuligheter.  Støtter søk og flervalg.
@@ -84,15 +84,21 @@ For å bruke **Kombinasjonsboks** som personvelger, velger du **Person**-malen i
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="example"></a>Eksempel
-1. Legg til en **Kombinasjonsboks**-kontroll fra Sett inn-fanen på Kontroller-menyen.  
-2. Klikk på Alternativer for egenskaper-fanen, klikk på Data.  
-3. Velg datakilden, oppsett og tilknyttede egenskaper nedenfor.
-4. Angi egenskapen **SelectMultiple** på Avansert-fanen.
+1. På den **Sett inn** åpne den **Kontroller** -menyen, og velg deretter **kombinasjonsboks**.  
 
-    En funksjonell **kombinasjonsboks** vises i appen din.
+1. På den **Egenskaper** fanen i den høyre ruten, åpne det **Velg en datakilde** listen (siden **elementer**), og deretter legge til eller velg en datakilde.
 
-    Lurer du på hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?.
+1. Velg kategorien samme **Rediger** (siden **felt**).
 
+1. I den **Data** ruten, åpne det **primærtekst** listen, og velg deretter kolonnen du vil vise i den **kombinasjonsboks** kontroll.
+
+1. Mens du holder nede Alt-tasten, velger du pil ned for å åpne den **kombinasjonsboks** kontroll.
+
+    Kontrollen viser data fra kolonnen som du har angitt i datakilden du har angitt.
+    
+1. (valgfritt) Hvis du vil vise den første posten som standard, kan du angi den **DefaultSelectedItems** egenskapen til dette uttrykket, erstatter *DataSource* med navnet på datakilden:
+
+    `First(DataSource)`
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
 ### <a name="color-contrast"></a>Fargekontrast

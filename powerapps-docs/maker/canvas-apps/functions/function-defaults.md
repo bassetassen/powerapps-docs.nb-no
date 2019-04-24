@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 83021ff0d18eb5d7322ef40eaa2bc0839b56f452
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61551173"
 ---
 # <a name="defaults-function-in-powerapps"></a>Defaults-funksjonen i PowerApps
 Returnerer standardverdiene til en [datakilde](../working-with-data-sources.md).  
@@ -41,5 +41,5 @@ Du kan kombinere **Defaults**-funksjonen med **[Patch](function-patch.md)**-funk
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Defaults(&nbsp;Scores&nbsp;)** |Returnerer standardverdiene til en **datakilde**. |**{ Score: 0 }** |
+| **Defaults(&nbsp;Scores&nbsp;)** |Returnerer standardverdiene til en **datakilde**. |**{Poengsum: 0 }** |
 

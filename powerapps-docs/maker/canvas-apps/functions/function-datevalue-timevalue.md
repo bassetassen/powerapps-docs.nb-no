@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: c1f11be30f56859ede0950feebc27dd1be39d011
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61551196"
 ---
 # <a name="datevalue-timevalue-and-datetimevalue-functions-in-powerapps"></a>Funksjonene DateValue, TimeValue og DateTimeValue i PowerApps
 Konverterer en dato, et klokkeslett eller begge deler i en streng til en dato/klokkeslett-verdi.

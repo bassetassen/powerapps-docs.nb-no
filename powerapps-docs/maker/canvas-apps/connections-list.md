@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 29de71e413a83a1c0939796f7b65bd42d4aca3c4
-ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "57801990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61556651"
 ---
 # <a name="overview-of-canvas-app-connectors-for-powerapps"></a>Oversikt over lerretsappkoblinger for PowerApps
 Dataene er i kjernen for de fleste apper, inkludert de du oppretter i PowerApps. Dataene er lagret i en *datakilde*, og du importerer disse dataene inn i appen ved å opprette en *tilkobling*. Tilkoblingen bruker en bestemt *tilkobling* for å kommunisere med datakilden. PowerApps har koblinger for mange populære tjenester og lokale datakilder, inkludert SharePoint, SQL Server, Office 365, Salesforce og Twitter. Hvis du vil komme i gang med å legge til data i en lerretsapp, kan du se [Legg til en datatilkobling i PowerApps](add-data-connection.md).

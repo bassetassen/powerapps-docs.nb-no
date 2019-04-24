@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: ec8f14e06852bac7e09527e49bfc363723c9ea1c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61543468"
 ---
 # <a name="table-function-in-powerapps"></a>Table-funksjonen i PowerApps
 Oppretter en midlertidig [tabell](../working-with-tables.md).

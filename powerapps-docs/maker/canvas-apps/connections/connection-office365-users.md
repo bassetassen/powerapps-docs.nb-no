@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 507bac0b57cdc1e348bd384d5544d7b664a3e0f5
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42851268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61557386"
 ---
 # <a name="connect-to-office-365-users-connection-from-powerapps"></a>Å koble til Office 365-brukere fra PowerApps
 ![Office 365-brukere](./media/connection-office365-users/office365icon.png)
@@ -142,7 +142,7 @@ Denne tilkoblingen har følgende funksjoner:
 | [SearchUser](connection-office365-users.md#searchuser) |Henter søkeresultater for brukerprofilene |
 
 ### <a name="myprofile"></a>MyProfile
-Hent min profil: henter profilen til den gjeldende brukeren.
+Hent Min profil: Henter profilen til den gjeldende brukeren.
 
 #### <a name="input-properties"></a>Inndataegenskaper
 Ingen.
@@ -156,7 +156,7 @@ Ingen.
 | GivenName |streng |Fornavnet til brukeren. |
 | ID |streng |Bruker-ID |
 | JobTitle |streng |Stillingstittelen for brukeren. |
-| Post |streng |E-post-ID-en til brukeren. |
+| E-post |streng |E-post-ID-en til brukeren. |
 | MailNickname |streng |Kallenavnet til brukeren. |
 | Etternavn |streng |Etternavnet til brukeren. |
 | TelephoneNumber |streng |Telefonnummeret til brukeren. |
@@ -164,11 +164,11 @@ Ingen.
 | AccountEnabled |boolsk |Konto aktivert-flagg. |
 
 ### <a name="userprofile"></a>UserProfile
-Hent brukerprofil: henter en bestemt brukerprofil.
+Hent brukerprofil: Henter en bestemt brukerprofil.
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | ID |streng |ja |Brukers hovednavn eller e-post-ID |
 
@@ -181,7 +181,7 @@ Hent brukerprofil: henter en bestemt brukerprofil.
 | GivenName |streng |Fornavnet til brukeren. |
 | ID |streng |Bruker-ID |
 | JobTitle |streng |Stillingstittelen for brukeren. |
-| Post |streng |E-post-ID-en til brukeren. |
+| E-post |streng |E-post-ID-en til brukeren. |
 | MailNickname |streng |Kallenavnet til brukeren. |
 | Etternavn |streng |Etternavnet til brukeren. |
 | TelephoneNumber |streng |Telefonnummeret til brukeren. |
@@ -189,11 +189,11 @@ Hent brukerprofil: henter en bestemt brukerprofil.
 | AccountEnabled |boolsk |Konto aktivert-flagg. |
 
 ### <a name="manager"></a>Leder
-Hent leder: henter brukerprofilen for lederen til den angitte brukeren
+Få manager: Henter brukerprofilen for lederen til den angitte brukeren
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | ID |streng |ja |Brukers hovednavn eller e-post-ID |
 
@@ -206,7 +206,7 @@ Hent leder: henter brukerprofilen for lederen til den angitte brukeren
 | GivenName |streng |Fornavnet til brukeren. |
 | ID |streng |Bruker-ID |
 | JobTitle |streng |Stillingstittelen for brukeren. |
-| Post |streng |E-post-ID-en til brukeren. |
+| E-post |streng |E-post-ID-en til brukeren. |
 | MailNickname |streng |Kallenavnet til brukeren. |
 | Etternavn |streng |Etternavnet til brukeren. |
 | TelephoneNumber |streng |Telefonnummeret til brukeren. |
@@ -214,11 +214,11 @@ Hent leder: henter brukerprofilen for lederen til den angitte brukeren
 | AccountEnabled |boolsk |Konto aktivert-flagg. |
 
 ### <a name="directreports"></a>DirectReports
-Henter direkterapporter
+Hent direkterapporter: Hent direkterapporter
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | ID |streng |ja |Brukers hovednavn eller e-post-ID |
 
@@ -231,7 +231,7 @@ Henter direkterapporter
 | GivenName |streng |Fornavnet til brukeren. |
 | ID |streng |Bruker-ID |
 | JobTitle |streng |Stillingstittelen for brukeren. |
-| Post |streng |E-post-ID-en til brukeren. |
+| E-post |streng |E-post-ID-en til brukeren. |
 | MailNickname |streng |Kallenavnet til brukeren. |
 | Etternavn |streng |Etternavnet til brukeren. |
 | TelephoneNumber |streng |Telefonnummeret til brukeren. |
@@ -239,11 +239,11 @@ Henter direkterapporter
 | AccountEnabled |boolsk |Konto aktivert-flagg. |
 
 ### <a name="searchuser"></a>SearchUser
-Søk etter brukere: henter søkeresultater for brukerprofilene
+Søk etter brukere: Henter søkeresultater for brukerprofilene
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | searchTerm |streng |nei |Søkestreng. Gjelder for: visningsnavn, fornavn, etternavn, e-post, e-post-kallenavn og brukers hovednavn |
 
@@ -256,7 +256,7 @@ Søk etter brukere: henter søkeresultater for brukerprofilene
 | GivenName |streng |Fornavnet til brukeren. |
 | ID |streng |Bruker-ID |
 | JobTitle |streng |Stillingstittelen for brukeren. |
-| Post |streng |E-post-ID-en til brukeren. |
+| E-post |streng |E-post-ID-en til brukeren. |
 | MailNickname |streng |Kallenavnet til brukeren. |
 | Etternavn |streng |Etternavnet til brukeren. |
 | TelephoneNumber |streng |Telefonnummeret til brukeren. |

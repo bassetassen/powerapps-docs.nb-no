@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 4f22f55b3c64d38cc274b0b69d8e7799c1a24f60
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61545399"
 ---
 # <a name="connect-to-office-365-outlook-from-powerapps"></a>Å koble til Office 365 Outlook fra PowerApps
 ![Office 365 Outlook](./media/connection-office365-outlook/office365icon.png)
@@ -82,7 +82,7 @@ Du kan for eksempel opprette en app der brukeren tar bilder ved hjelp av enheten
 
 Hvis du vil legge til et vedlegg i en melding, følger du trinnene i forrige del, men legg til en parameter for å angi et vedlegg (når du angir **OnSelect**-egenskapen for knappen). Denne parameteren er strukturert som en tabell der du kan angi opptil tre egenskaper for hvert vedlegg:
 
-* Navn
+* navn
 * ContentBytes
 * @odata.type
 

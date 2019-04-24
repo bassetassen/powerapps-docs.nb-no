@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f52338d4eed8942259e7ae15a8df3b05c45a703d
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: c255daf93cdb4807572f1a663c7bb87be0bb39e1
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42837016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61536728"
 ---
 # <a name="save-and-publish-a-canvas-app-in-powerapps"></a>Lagre og publiser en lerretsapp i PowerApps
 Når du lagrer endringer i en lerretsapp, publiserer du den automatisk bare for deg selv og andre som har tillatelse til å redigere den. Når du er ferdig med å gjøre endringer, må du eksplisitt publisere appen for å gjøre den tilgjengelig for alle som den er delt med.
@@ -60,5 +60,6 @@ Klikk eller trykk på **Apper** på [powerapps.com](https://web.powerapps.com?ut
 Hvis du vil publisere den nyeste versjonen, klikker eller trykker du på **Publiser denne versjonen**, og klikk eller trykk deretter på **Publiser denne versjonen** i dialogboksen **Publiser**.
 
 ## <a name="next-steps"></a>Neste trinn
+* Finne og kjøre appen en [leseren](../../user/run-app-browser.md) eller på en [telefon](../../user/run-app-client.md).
 * [Gi nytt navn til en app](set-name-tile.md) fra powerapps.com.
 * [Gjenopprett en app](restore-an-app.md) hvis du har flere versjoner av en app.

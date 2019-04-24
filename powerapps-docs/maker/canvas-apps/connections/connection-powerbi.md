@@ -14,14 +14,14 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 73ce15ff171ce72b9364844ed77f6e3aed079a64
-ms.sourcegitcommit: 3dc330d635aaf5bc689efa6bd39826d6e396c832
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48875811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61556853"
 ---
 # <a name="connect-to-power-bi-from-powerapps"></a>Å koble til Power BI fra PowerApps
-![strøm~~POS=TRUNC BI](./media/connection-powerbi/powerbiicon.png)
+![Power BI](./media/connection-powerbi/powerbiicon.png)
 
 Power BI er en verktøyserie for forretningsanalyse som kan brukes til å analysere data og dele innsikter. Overvåk bedriften din og få svar raskt med avanserte instrumentbord tilgjengelig på alle enheter. I appen din kan du kontrollere statusen for datavarsler som du har satt opp i Power BI-tjenesten. Hvis du vil ha mer informasjon om datavarsler i Power BI, kan du gå til [dokumentasjonssiden](https://docs.microsoft.com/power-bi/service-set-data-alerts).
 
@@ -73,7 +73,7 @@ Ingen.
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| verdi |matrise |Nei |En matrise for datavarslene som du har satt opp i Power BI-tjenesten. Hvert element i matrisen inkluderer: <ul><li>alertTitle: tittel på varslingen</li><li>alertTitle: ID-en for varslingen</li><li>groupId: ID-en for gruppen som varselet ble opprettet i</li></ul> |
+| verdi |matrise |nei |En matrise for datavarslene som du har satt opp i Power BI-tjenesten. Hvert element i matrisen inkluderer: <ul><li>alertTitle: tittel på varslingen</li><li>alertTitle: ID-en for varslingen</li><li>groupId: ID-en for gruppen som varselet ble opprettet i</li></ul> |
 
 ## <a name="checkalertstatus"></a>CheckAlertStatus
 Vise statusen for et varsel.
@@ -85,17 +85,17 @@ Vise statusen for et varsel.
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| alertId |heltall |Ja |ID-en for varselet, slik det er returnert av GetAlerts |
+| alertId |heltall |ja |ID-en for varselet, slik det er returnert av GetAlerts |
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| tileValue |tall |Nei |Verdien for flisen når varselet ble utløst |
-| tileUrl |streng |Nei |Nettadressen for flisen som har varselet |
-| alertTitle |streng |Nei |Navn på varselet |
-| isAlertTriggered |boolsk |Nei |Om varselet utløses for øyeblikket |
-| alertThreshold |tall |Nei |Terskelen varselet utløses ved |
+| tileValue |tall |nei |Verdien for flisen når varselet ble utløst |
+| tileUrl |streng |nei |Nettadressen for flisen som har varselet |
+| alertTitle |streng |nei |Navn på varselet |
+| isAlertTriggered |boolsk |nei |Om varselet utløses for øyeblikket |
+| alertThreshold |tall |nei |Terskelen varselet utløses ved |
 
 ## <a name="helpful-links"></a>Nyttige koblinger
 Se alle [tilgjengelige tilkoblinger](../connections-list.md).  

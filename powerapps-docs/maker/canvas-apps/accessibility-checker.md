@@ -11,11 +11,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 11ec805a713743e2524651128b036ccaaade69e3
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42842536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61542527"
 ---
 # <a name="review-a-canvas-app-for-accessibility-in-powerapps"></a>Gjennomgå en lerretsapp for tilgjengelighet i PowerApps
 
@@ -70,7 +70,7 @@ Tilgjengelighetskontrollen klassifiserer hvert problem som en feil, en advarsel 
 | **Slå av autostart**                 | Advarsel  | Når **Lyd**- eller **Video**-kontrollens **Autostart**-egenskap er angitt til **sann**. | Angi kontrollens **Autostart**-egenskap til **usann**. | Video- og lydfiler som spilles av automatisk, kan forstyrre brukerne. La dem velge om de vil spille av et klipp. |
 | **Endre skjermnavn**                 | Tips      | Når en skjerm har et standardnavn som leses opp av skjermlesere når brukere navigerer i appen. | Gi skjermen et navn som beskriver hva som er på skjermen, eller hva den brukes til.| Blinde, svaksynte eller personer med lesevansker er avhengige av skjermnavn for å navigere med skjermleseren. |
 | **Legg til tekst for tilstandsindikasjon**          | Tips      |  Når en kontroll har en tilstand, for eksempel en veksleknapp, men verdietikettene er slått av. | Angi **ShowValue**-egenskapen til kontrollen til **sann** for å vise gjeldende tilstand. | Brukere får ikke bekreftelse på handlingene sine hvis ikke tilstanden for kontrollen vises. |
-| **Kontroller rekkefølgen til skjermelementene**| Tips      | Når **TabIndex**-egenskapen er større enn 1. Apputviklere kan angi egendefinerte kategorirekkefølger ved å angi **TabIndex**-egenskapen til en numerisk verdi, for eksempel 1, 2, 3 og 4. Dette tipset minner deg på å se gjennom den interaktive rekkefølgen for denne skjermen. Som en anbefalt fremgangsmåte følger du en utforming der **TabIndex**-egenskapen er 0.  | Kontroller at skjermelementene samsvarer med rekkefølgen du vil bla gjennom dem i. | Når en skjermleser leser elementene i en app, skal de vises i den rekkefølgen brukeren vil se dem, i stedet for i en rekkefølge som er mindre intuitiv.  |
+| **Kontroller rekkefølgen til skjermelementene**| Tips      | Når **TabIndex**-egenskapen er større enn 1. Apputviklere kan angi egendefinerte kategorirekkefølger ved å angi **TabIndex**-egenskapen til en numerisk verdi, for eksempel 1, 2, 3 og 4. Dette tipset minner deg på å se gjennom den interaktive rekkefølgen for denne skjermen. Som en anbefalt fremgangsmåte følger du en utforming der **TabIndex**-egenskapen er 0.  | Kontroller at skjermelementene samsvarer med rekkefølgen du vil bla gjennom dem i. | Når en skjermleser leser elementene i en app, skal de vises i den rekkefølgen brukeren vil se dem, i stedet for i en rekkefølge som er mindre intuitiv.  |
 | **Legg til en annen inndatametode**           | Tips      | Når en app inneholder en **Penne**-kontroll. Dette tipset minner deg på å inkludere en separat inndatametode. | Legg til en **Tekstinndata**-kontroll i tillegg til **Penne**-kontrollen for en tilgjengelig opplevelse. | Enkelte brukere kan ikke bruke penn og krever en annen måte å gi informasjon på (for eksempel ved å skrive inn en signatur). |
 
 ## <a name="next-steps"></a>Neste trinn

@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: cc4338e37b7ecde2e2e2e9ad5c5ac6e96d116b58
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42849849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61559489"
 ---
 # <a name="card-control-in-powerapps"></a>Kort-kontroll i PowerApps
 Ved bruk av Kort-kontrollen kan du vise og redigere et enkelt felt i **[Visningsskjema](control-form-detail.md)**- eller **[Redigeringsskjema](control-form-detail.md)**-kontrollen.

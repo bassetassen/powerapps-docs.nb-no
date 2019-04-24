@@ -1,6 +1,6 @@
 ---
-title: Egenskaper for tilgjengelighet | Microsoft Docs
-description: Referanseinformasjon om egenskaper som Tabulatorindeks, Verktøytips
+title: Egenskaper for tilgjengelighet for lerretsapper | Microsoft Docs
+description: Referanseinformasjon om egenskaper som Tabulatorindeks og verktøytips
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -13,18 +13,28 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4d75fcd4c0605e295c1e61c5232ba747203d1647
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 5fa8b6fecdf690114cbf6a0945f2dfec66b067c3
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42854151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61560419"
 ---
-# <a name="accessibility-properties-in-powerapps"></a>Egenskaper for tilgjengelighet i PowerApps
+# <a name="accessibility-properties-for-canvas-apps"></a>Egenskaper for tilgjengelighet for lerretsapper
+
 Konfigurasjon av egenskaper som tilbyr alternative måter å arbeide interaktivt med kontroller som er egnet for brukere med funksjonshemninger på.
 
-### <a name="properties"></a>Egenskaper
+## <a name="properties"></a>Egenskaper
+
 **AccessibleLabel** – etikett for skjermlesere. En tom verdi for kontroller av typen Bilde, Ikon og Figur gjør dem usynlige for skjermleseren og fører til at de behandles som dekorasjoner.
+
+**Live** – hvordan bør skjermlesere lese opp endringer i innholdet. Bare tilgjengelig i den **[etikett](control-text-box.md)** kontroll.
+
+* Når satt til **av**, skjermleseren ikke si endringer.
+* Når satt til **Polite**, skjermleseren er ferdig med å snakke før kunngjøring eventuelle endringer som oppstod under skjermleseren ble snakke.
+* Når satt til **Assertive**, skjermleseren avbryter seg selv for å informere om eventuelle endringer som oppstod under skjermleseren ble snakke.
+
+Lær hvordan du [kunngjøre dynamiske endringer med live områder](../accessible-apps-live-regions.md).
 
 **TabIndex** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
 

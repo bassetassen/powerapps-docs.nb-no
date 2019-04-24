@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 4a3682a913dbbdf0c1848378dad9ab06ccc78aaf
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57799276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61557231"
 ---
 # <a name="create-a-rule-in-powerapps"></a>Slik oppretter du en regel i PowerApps
 Opprett regler for å automatisk endre en app som er basert på vilkår du angir. Du kan for eksempel vise listeelementer i rødt, gult eller grønt, basert på status, eller vise en knapp for godkjenning bare for enkelte brukere (for eksempel ledere).

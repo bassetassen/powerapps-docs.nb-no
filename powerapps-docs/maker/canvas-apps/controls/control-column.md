@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: e1c8ba704a01c989da990fd1b2b17f7b5def5541
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42850859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61564720"
 ---
 # <a name="column-control-in-powerapps"></a>Kolonnekontroll i PowerApps
 Leverer skjermopplevelsen for et enkelt felt i en [**Datatabellkontroll**](control-data-table.md).
@@ -27,7 +27,7 @@ Leverer skjermopplevelsen for et enkelt felt i en [**Datatabellkontroll**](contr
 [**Datatabellkontrollen**](control-data-table.md) viser et datasett i et tabellformat, og hver kolonne i et tabellformatet representeres med en **Kolonnekontroll**. **Kolonnekontrollen** inneholder egenskaper som skaperen av appen kan bruke til å tilpasse kolonnens utseende og virkemåte.
 
 ## <a name="capabilities"></a>Funksjoner
-### <a name="now-available"></a>Tilgjengelig nå
+### <a name="now-available"></a>Nå tilgjengelig
 * Endre bredden på en **Kolonnekontroll**.
 * Endre teksten på en **Kolonnekontroll**.
 * Du navigerer ved å klikke eller trykke på verdien i en **Kolonnekontroll**.

@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 40ac3089d3563d220ddac29197b0902f4de88a25
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42836331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61562903"
 ---
 # <a name="if-and-switch-functions-in-powerapps"></a>Funksjonene If og Switch i PowerApps
 Bestemmer om eventuelle betingelser i et sett er sant (**If**) eller om resultatet av en formel samsvarer med en verdi i et sett (**Switch**) og returnerer deretter et resultat eller utfører en handling.

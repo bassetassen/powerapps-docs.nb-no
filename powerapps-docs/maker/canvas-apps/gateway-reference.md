@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5dcc07f3ba9b9b4baca39cf2090a2c57cb7e67b7
-ms.sourcegitcommit: 967812754d8e5b1ff72baa35ffbe548f3b9b0085
-ms.translationtype: HT
+ms.openlocfilehash: 831e63920db07414db7b40fe69be82989add89eb
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61554582"
 ---
 # <a name="understand-on-premises-data-gateways-for-canvas-apps"></a>Lokale datagatewayer for lerretsapper
 ## <a name="installation-and-configuration"></a>Installasjon og konfigurasjon
@@ -55,7 +55,7 @@ Vurderinger angående design:
 
 5. På den neste skjermen i veiviseren klikker eller trykker du på **Logg på** og angir samme legitimasjon som du bruker til å logge deg på PowerApps.
 
-    ![Logg på](./media/gateway-reference/sign-in.png)
+    ![logg inn](./media/gateway-reference/sign-in.png)
 
 6. Klikk eller trykk på alternativet for å registrere en ny gateway eller for å overføre, gjenopprette eller ta over en eksisterende gateway, og klikk eller trykk deretter på **Neste**.
 
@@ -106,7 +106,7 @@ Brannmuren kan også blokkere tilkoblingene som Azure Service Bus foretar til Az
 
 **Konfigurasjon av porter**
 
-Gatewayen oppretter en utgående tilkobling til Azure Service Bus. Den kommuniserer på utgående porter: TCP 443 (standard), 5671, 5672, 9350 til og med 9354. Gatewayen krever ikke innkommende porter.
+Gatewayen oppretter en utgående tilkobling til Azure Service Bus. Den kommuniserer på utgående porter: TCP 443 (standard), 5671, 5672, 9350 til 9354. Gatewayen krever ikke innkommende porter.
 
 Finn ut mer om [hybridløsninger](https://azure.microsoft.com/documentation/articles/service-bus-fundamentals-hybrid-solutions/).
 
@@ -125,7 +125,7 @@ Her er en liste over de fullstendig kvalifiserte domenenavnene som brukes av gat
 | *.servicebus.windows.net |443, 9350-9354 |Lyttere på Service Bus Relay over TCP (krever 443 for innhenting av Access Control-token) |
 | *.frontend.clouddatahub.net |443 |HTTPS |
 | *.core.windows.net |443 |HTTPS |
-| login.microsoftonline.com |443 |HTTPS |
+| *login.microsoftonline.com |443 |HTTPS |
 | *.msftncsi.com |443 |Brukes til å teste Internett-tilkobling hvis gatewayen ikke kan nås av Power BI-tjenesten. |
 
 **Påloggingskonto**
@@ -144,9 +144,9 @@ Hvis det oppstår problemer med proxy-serveren på grunn av godkjenning, kan du 
 
 Det finnes for øyeblikket ikke ett enkelt sted der tenantadministratorer kan behandle alle gatewayene som andre brukere har installert og konfigurert.  Hvis du er en tenantadministrator, anbefaler vi at du ber brukerne i organisasjonen om å legge deg til som en administrator for hver gatewayer de installerer. Dette lar deg administrere alle gatewayer i organisasjonen, gjennom siden for gatewayinnstillinger eller via [PowerShell-kommandoer](https://docs.microsoft.com/power-bi/service-gateway-high-availability-clusters#powershell-support-for-gateway-clusters).
 
-## <a name="frequently-asked-questions"></a>Ofte stilte spørsmål
+## <a name="frequently-asked-questions"></a>Vanlige spørsmål
 #### <a name="general"></a>Generelt
-**Spørsmål:** Hvilke datakilder støttes av gatewayen?  
+**Spørsmål:** Hvilke datakilder støtter gatewayen?  
 **Svar:** I skrivende stund:
 
 * SQL Server
@@ -156,54 +156,54 @@ Det finnes for øyeblikket ikke ett enkelt sted der tenantadministratorer kan be
 * Filsystem
 * DB2
 
-**Spørsmål:** Trenger jeg en gateway for datakilder i skyen, som for eksempel SQL Azure?  
-**Svar:** Nei. En gateway kobles bare til lokale datakilder.
+**Spørsmål:** Trenger jeg en gateway for datakilder i skyen, for eksempel SQL Azure?  
+**Svar:** nei. En gateway kobles bare til lokale datakilder.
 
 **Spørsmål:** Hva heter den faktiske Windows-tjenesten?  
-**Svar:** Under Tjenester heter gatewayen **Power BI Enterprise Gateway Service**.
+**Svar:** I tjenester heter gatewayen **Power BI Enterprise Gateway Service**.
 
-**Spørsmål:** Finnes det innkommende tilkoblinger fra gatewayen til skyen?  
-**Svar:** Nei. Gatewayen bruker utgående tilkoblinger til Azure Service Bus.
+**Spørsmål:** Finnes det noen inngående tilkoblinger til gatewayen fra skyen?  
+**Svar:** nei. Gatewayen bruker utgående tilkoblinger til Azure Service Bus.
 
 **Spørsmål:** Hva skjer hvis jeg blokkerer utgående tilkoblinger? Hva må jeg åpne?  
-**Svar:** Se i listen over porter og verter som gatewayen bruker ovenfor.
+**Svar:** Se listen over porter og verter som gatewayen bruker ovenfor.
 
-**Spørsmål:** Må gatewayen installeres på samme maskin som datakilden?  
-**Svar:** Nei. Gatewayen vil koble til datakilden ved hjelp av tilkoblingsinformasjonen som ble angitt. Tenk på gatewayen som et klientprogram i denne sammenhengen. Den vil bare kunne koble til det servernavnet som ble angitt.
+**Spørsmål:** Har gatewayen er installert på samme maskin som datakilden?  
+**Svar:** nei. Gatewayen vil koble til datakilden ved hjelp av tilkoblingsinformasjonen som ble angitt. Tenk på gatewayen som et klientprogram i denne sammenhengen. Den vil bare kunne koble til det servernavnet som ble angitt.
 
 **Spørsmål:** Hva er ventetiden for å kjøre spørringer til en datakilde fra gatewayen? Hvilken arkitektur er best?  
-**Svar:** For å redusere nettverksventetiden bør gatewayen installeres så nær datakilden som mulig. Hvis du kan installere gatewayen på den faktiske datakilden, vil dette minimere ventetiden. Ta også hensyn til datasentre. For eksempel, hvis tjenesten bruker datasenteret USA, vest og du bruker en Azure VM som vert for SQL Server, bør du også ha Azure VM i USA, vest. Dette minimerer ventetiden, og du unngår kostnader for utgående trafikk på Azure VM.
+**Svar:**  Hvis du vil redusere ventetiden på nettverket, må du installere gatewayen som nær datakilden som mulig. Hvis du kan installere gatewayen på den faktiske datakilden, vil dette minimere ventetiden. Ta også hensyn til datasentre. For eksempel, hvis tjenesten bruker datasenteret USA, vest og du bruker en Azure VM som vert for SQL Server, bør du også ha Azure VM i USA, vest. Dette minimerer ventetiden, og du unngår kostnader for utgående trafikk på Azure VM.
 
-**Spørsmål:** Er det noen krav til nettverkets båndbredde?  
-**Svar:** Det anbefales at nettverkstilkoblingen har god gjennomstrømming. Alle miljøer er forskjellige, og mengden data som sendes vil påvirke resultatene. Bruk av ExpressRoute kan bidra til å garantere et gjennomstrømmingsnivå mellom de lokale datasentrene og Azure-datasentrene.
+**Spørsmål:** Finnes det noen krav for nettverksbåndbredde?  
+**Svar:** Det anbefales å ha god gjennomstrømming for nettverkstilkoblingen. Alle miljøer er forskjellige, og mengden data som sendes vil påvirke resultatene. Bruk av ExpressRoute kan bidra til å garantere et gjennomstrømmingsnivå mellom de lokale datasentrene og Azure-datasentrene.
 
 Du kan bruke tredjepartsverktøyet [Azure Speed Test-appen](http://azurespeedtest.azurewebsites.net/) til å måle gjennomstrømmingen.
 
 **Spørsmål:** Kan Windows-tjenesten i gatewayen kjøre med en Azure Active Directory-konto?  
-**Svar:** Nei. Windows-tjenesten må ha en gyldig Windows-konto. Den kjører med tjeneste-SID, *NT SERVICE\PBIEgwService* som standard.
+**Svar:** nei. Windows-tjenesten må ha en gyldig Windows-konto. Den kjører med tjeneste-SID, *NT SERVICE\PBIEgwService* som standard.
 
 **Spørsmål:** Hvordan sendes resultatene tilbake til skyen?  
 **Svar:** Dette gjøres ved hjelp av Azure Service Bus. Hvis du vil ha mer informasjon, kan du se [Slik fungerer det](gateway-reference.md#how-the-gateway-works).
 
-**Spørsmål:** Hvor lagres legitimasjonen min?  
-**Svar:** Legitimasjonen du legger inn for en datakilde, lagres i kryptert form i gatewayens skytjeneste. Legitimasjonen dekrypteres i den lokale gatewayen.
+**Spørsmål:** Hvor lagres legitimasjonen Min?  
+**Svar:** Legitimasjonen du angir for en datakilde, lagres i kryptert form i gatewayens skytjeneste. Legitimasjonen dekrypteres i den lokale gatewayen.
 
-**Spørsmål:** Kan jeg plassere gatewayen i et perimeternettverk (også kjent som DMZ, demilitarisert sone, og skjermet delnett)?  
+**Spørsmål:** Kan jeg plassere gatewayen i et perimeternettverk (også kjent som DMZ, Demilitarisert sone og kontrollert delnett)?  
 **Svar:** Gatewayen krever tilkobling til datakilden. Hvis datakilden ikke er i perimeternettverket, er det ikke sikkert at gatewayen kan koble til den. For eksempel kan ikke datamaskinen som kjører SQL Server, være i perimeternettverket, og du kan ikke koble til denne datamaskinen fra perimeternettverket. Hvis du plasserer gatewayen i perimeternettverket, kan ikke gatewayen nå datamaskinen som kjører SQL Server.
 
 #### <a name="high-availabilitydisaster-recovery"></a>Høy tilgjengelighet / nødgjenoppretting
-**Spørsmål:** Foreligger det noen planer for å muliggjøre scenarioer med høy tilgjengelighet med gatewayen?  
-**Svar:** Høy tilgjengelighet er mulig ved å føye sammen to eller flere gatewayer i samme klynge.  Gatewayklynger med høy tilgjengelighet krever oppdateringen fra november 2017 eller nyere for lokal datagateway.  Se [kunngjøringen i blogginnlegget](https://powerapps.microsoft.com/en-us/blog/gateway-high-availability-for-powerapps-and-flow) for mer informasjon.
+**Spørsmål:** Finnes det noen planer for å muliggjøre scenarioer med høy tilgjengelighet med gatewayen?  
+**Svar:** Høy tilgjengelighet er aktivert ved å føye sammen 2 eller flere gatewayer i samme klyngen.  Gatewayklynger med høy tilgjengelighet krever oppdateringen fra november 2017 eller nyere for lokal datagateway.  Se [kunngjøringen i blogginnlegget](https://powerapps.microsoft.com/en-us/blog/gateway-high-availability-for-powerapps-and-flow) for mer informasjon.
 
 **Spørsmål:** Hvilke alternativer er tilgjengelige for nødgjenoppretting?  
 **Svar:** Du kan bruke gjenopprettingsnøkkelen til å gjenopprette eller flytte en gateway. Angi gjenopprettingsnøkkelen når du installerer gatewayen.
 
-**Spørsmål:** Hva slags fordel gir gjenopprettingsnøkkelen?  
-**Svar:** Gjenopprettingsnøkkelen kan brukes til å overføre eller gjenopprette gateway-innstillingene etter en katastrofe.
+**Spørsmål:** Hva er fordelen med gjenopprettingsnøkkelen?  
+**Svar:** Det gjør det mulig å overføre eller gjenopprette gateway-innstillingene etter en katastrofe.
 
 #### <a name="troubleshooting"></a>Feilsøking
-**Spørsmål**: Hvor finner jeg gateway-loggene?  
-**Svar:** Se under [Verktøy](gateway-reference.md#tools) lenger nede i dette emnet.
+**Spørsmål:** Hvor er gatewayloggene?  
+**Svar:** Se [verktøy](gateway-reference.md#tools) senere i dette emnet.
 
 **Spørsmål:** Hvordan kan jeg se hvilke spørringer som sendes til den lokale datakilden?  
 **Svar:** Du kan aktivere sporing av spørring, som vil inkludere spørringene som sendes. Husk å endre den tilbake til den opprinnelige verdien når du er ferdig med feilsøkingen. Hvis du lar sporing av spørringer være aktivert, vil loggene bli større.

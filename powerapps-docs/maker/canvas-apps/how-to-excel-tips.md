@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: ea4bda4857c89a9e28359f63811e70744f111499
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42830961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61553291"
 ---
 # <a name="format-a-table-in-excel-and-naming-tips"></a>Å formatere en tabell i Excel og navngi tips
 I PowerApps kan du opprette en lerretsapp basert på Excel-data, men bare hvis den er formatert som en tabell. Ved å følge innholdet i denne innføringen finner du ut hvordan du formaterer en tabell i Excel, og du får noen tips til hvordan du navngir Excel-kolonner.

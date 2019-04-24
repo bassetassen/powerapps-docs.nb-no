@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 03a6f9939f5de5e4eb3f4abd941a725ce24b46fb
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57798839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61550204"
 ---
 # <a name="edit-a-canvas-app-in-powerapps"></a>Rediger en lerretsapp i PowerApps
 Du kan redigere alle lerretsapper du har utviklet, som du eier eller har **Kan redigere**-tillatelse for. Du kan redigere en app i PowerApps Studio. Hvis du prøver å redigere en app som er åpnet for redigering et annet sted, vil du motta en beskjed om at du eller en annen bruker allerede har den åpen.

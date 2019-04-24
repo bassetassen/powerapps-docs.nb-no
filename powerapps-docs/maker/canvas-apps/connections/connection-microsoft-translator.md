@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 405dcf432526206aa3a5f341a38e2ae5547cea1f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42858289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61545704"
 ---
 # <a name="connect-to-microsoft-translator-from-powerapps"></a>Koble til Microsoft Translator fra PowerApps
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)
@@ -101,22 +101,22 @@ Denne tilkoblingen har følgende funksjoner:
 ### <a name="languages"></a>Språk
 Hent språk: Henter alle språkene som Microsoft Translator støtter
 
-#### <a name="input-properties"></a>Egenskaper for inndata
+#### <a name="input-properties"></a>Inndataegenskaper
 Ingen.
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| Kode |streng |Nei | |
-| Navn |streng |Nei | |
+| Kode |streng |nei | |
+| navn |streng |nei | |
 
 ### <a name="translate"></a>Translate
-Oversett tekst: Oversetter tekst til et angitt språk ved hjelp av Microsoft Translator
+Translate text: Oversetter tekst til et angitt språk ved hjelp av Microsoft Translator
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | query |tekststreng |ja |Tekst som skal oversettes |
 | languageTo |tekststreng |ja |Målspråkkoden (eksempel: nb-no) |
@@ -131,7 +131,7 @@ Gjenkjenn språk: Gjenkjenner kildespråket til en gitt tekst
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | query |tekststreng |ja |Teksten som språket skal gjenkjennes for |
 
@@ -139,28 +139,28 @@ Gjenkjenn språk: Gjenkjenner kildespråket til en gitt tekst
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| Kode |streng |Nei | |
-| Navn |streng |Nei | |
+| Kode |streng |nei | |
+| navn |streng |nei | |
 
 ### <a name="speechlanguages"></a>SpeechLanguages
 Hent talespråk: Henter språkene som er tilgjengelige for talesyntese
 
-#### <a name="input-properties"></a>Egenskaper for inndata
+#### <a name="input-properties"></a>Inndataegenskaper
 Ingen.
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
 | Egenskapsnavn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
-| Kode |streng |Nei | |
-| Navn |streng |Nei | |
+| Kode |streng |nei | |
+| navn |streng |nei | |
 
 ### <a name="texttospeech"></a>TextToSpeech
 Tekst til tale: Konverterer en gitt tekst til tale som en lydstrøm i digitallydformat
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Kreves | Beskrivelse |
 | --- | --- | --- | --- |
 | query |tekststreng |ja |Tekst som skal konverteres |
 | language |tekststreng |ja |Språkkode tale skal genereres for (eksempel: nb-no) |

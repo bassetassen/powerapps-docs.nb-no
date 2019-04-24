@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 2b88e765fcc56a2d76ede30a44fcfbaae70aaea3
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42861793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61559890"
 ---
 # <a name="text-properties-in-powerapps"></a>Text-egenskaper i PowerApps
 Konfigurer teksten som vises på en kontroll i et verktøytips som et tips når brukeren skriver inn data og angi andre tekst-relaterte egenskaper.
@@ -28,7 +28,7 @@ Konfigurer teksten som vises på en kontroll i et verktøytips som et tips når 
 
 * Gjelder kontrollene **[Legg til bilde](control-add-picture.md)**, **[Knapp](control-button.md)**, **[Avmerkingsboks](control-check-box.md)**, **[Stolpediagram](control-column-line-chart.md)**, **[Datovelger](control-date-picker.md)**, **[Rullegardin](control-drop-down.md)**, **[Eksporter](control-export-import.md)**, **[HTML-tekst](control-html-text.md)**, **[Import](control-export-import.md)**, **[Etikett](control-text-box.md)**, **[Linjediagram](control-column-line-chart.md)**, **[Liste](control-list-box.md)**, **[Sektordiagram](control-pie-chart.md)**, **[Radio](control-radio.md)**, **[Tekstinndata](control-text-input.md)** og **[Tidtaker](control-timer.md)**.
 
-**FontWeight** – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
+**FontWeight** – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
 
 * Gjelder kontrollene **[Legg til bilde](control-add-picture.md)**, **[Knapp](control-button.md)**, **[Avmerkingsboks](control-check-box.md)**, **[Datovelger](control-date-picker.md)**, **[Rullegardin](control-drop-down.md)**, **[Eksporter](control-export-import.md)**, **[Import](control-export-import.md)**, **[Etikett](control-text-box.md)**, **[Liste](control-list-box.md)**, **[Radio](control-radio.md)**, **[Tekstinndata](control-text-input.md)** og **[Tidtaker](control-timer.md)**.
 

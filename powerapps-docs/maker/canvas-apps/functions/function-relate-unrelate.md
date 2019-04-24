@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 4b2c6b9518e987ef17f2ff2b50987568c8a0b69f
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61527518"
 ---
 # <a name="relate-and-unrelate-functions-in-powerapps"></a>Relatert og Unrelate i PowerApps
 
@@ -100,7 +100,7 @@ Først oppretter du en enkel app for å vise og tilordne reservasjoner som er kn
 
 1. Opprett en [nettbrettapp fra tom](../data-platform-create-app-scratch.md).
 
-1. På den **Vis** fanen og velge **datakilder**.
+1. Velg **Datakilder** på **Vis**-fanen.
 
 1. I den **Data** ruten velger **Legg til datakilde** > **Common Data Service-** > **produkter**  >  **Koble**.  
 
@@ -170,7 +170,7 @@ Med denne appen, kan brukeren flytte en reservasjon fra ett produkt til en annen
 
 Nå kan du flytte relasjonen fra én post til en annen, men du kan ikke fjerne relasjonen helt. Du kan bruke den **Unrelate** funksjonen til å koble en reservering-post fra et produkt.
 
-1. På den **Vis** fanen og velge **datakilder**.
+1. Velg **Datakilder** på **Vis**-fanen.
 
 1. I den **Data** ruten velger **Legg til datakilde** > **Common Data Service-** > **reservasjoner**  >  **Koble**.
 
@@ -271,7 +271,7 @@ Oppretter du en annen app som ligner på det du opprettet tidligere i dette emne
 
     ![Konfigurer Avbryt-ikon](media/function-relate-unrelate/contacts-unrelate.png)
 
-1. På den **Vis** fanen og velge **datakilder**.
+1. Velg **Datakilder** på **Vis**-fanen.
 
 1. I den **Data** ruten velger **Legg til datakilde** > **Common Data Service-** > **kontakter**  >  **Koble**.
 

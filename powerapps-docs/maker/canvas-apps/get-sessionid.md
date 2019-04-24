@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 67cfe4ac6c53797e6a18a68d3fbcf29b088f3da8
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42848659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61554093"
 ---
 # <a name="get-a-session-id-or-a-canvas-app-id"></a>Få en økt-ID eller en lerretsapp-ID
 Hvis det oppstår et problem med en lerretsapp som ble opprettet i PowerApps, kan du hjelpe Microsoft med å feilsøke problemet mye mer effektivt hvis du gir dem en økt-ID, app-ID eller begge deler for dette problemet.

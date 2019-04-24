@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 9981a549aaf0ce88f6e66dd4df2c7897901d219b
-ms.sourcegitcommit: 5c098a62f66a2f33418967fdce9363bd529e0fc1
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58581097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61554305"
 ---
 # <a name="install-and-configure-the-help-desk-sample-in-powerapps"></a>Installer og konfigurer brukerstøtteeksemplet i PowerApps
 
@@ -172,7 +172,7 @@ Denne listen lagrer forespørsler til teknisk støtte.
 4.  Klikk på **Opprett**.
 5.  I popup-vinduet velger du kontoen du logget på med.
 
-## <a name="import-the-app"></a>Importere appen
+## <a name="import-the-app"></a>Import av filen
 
 1. Gå til https://web.powerapps.com i en nettleser.
 2. Logg deg på ved å angi samme legitimasjon som du brukte til å registrere deg.
@@ -216,17 +216,17 @@ Denne listen lagrer forespørsler til teknisk støtte.
 
 ### <a name="delete-connections"></a>Å slette tilkoblinger
 
-1. På den **Vis** fanen og velge **datakilder**.
+1. Velg **Datakilder** på **Vis**-fanen.
 1. I den **Data** ruten, velg ellipsen (...) ved siden **brukerstøtte**, og velg deretter **fjerne**.
 
 ### <a name="helpdesk-list"></a>Kundestøtte-liste
 
-1. På den **Vis** fanen og velge **datakilder**.
-1. I den **Data** ruten velger **Legg til datakilde** > **ny tilkobling** > **SharePoint**  >  **Opprette**.
+1. Velg **Datakilder** på **Vis**-fanen.
+1. Velg **Legg til datakilde** > **Ny tilkobling** > **SharePoint** > **Opprett**, i **Data**-ruten.
 1. I **Nylig brukte områder**-listen velger du SharePoint-området der du opprettet kundestøttelisten.
 
     > [!TIP] 
-    > Hvis området ikke vises i listen, Skriv eller Lim inn URL-adressen til SharePoint-området i tekstboksen, og velg deretter **Gå**.
+    > Hvis området ikke vises i listen, skriv eller lim inn adressen til SharePoint-området i tekstboksen, og velg **Gå til**.
 
 1. I den **Search** boksen øverst i listen, Skriv eller Lim inn **brukerstøtte**.
 1. Velg avmerkingsboksen ved siden **brukerstøtte**, og velg deretter **koble til**.
@@ -244,9 +244,9 @@ Denne listen lagrer forespørsler til teknisk støtte.
    > Hvis du har mer enn én administrator, kan du bruke et komma til å avgrense i listen over administratorer. Eksempel: "admin1@microsoft.com","admin2@microsoft.com".
    > For å sikre at adressene i AdminList samsvarer med formatet PowerApps forventer, velger du Vis > Variabler > Global > MyProfile og ser på e-postkolonnen for å vise det forventede e-postformatet.
 
-1. Velg **filen** > **lagre** > **Publiser** > **Publiser denne versjonen**.
+1. Velg **Fil** > **Lagre** > **Publiser** > **Publiser denne versjonen**.
 
-## <a name="modify-the-flow"></a>Endre flyten
+## <a name="modify-the-flow"></a>Endring av flyten
 
 1.  På menyen til venstre klikker du på **Flyter**.
 2.  Logg deg på ved å angi samme legitimasjon som du brukte til å registrere deg, dersom du blir bedt om å logge deg på.

@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 3ceb6e0bcac83bbd79d78dac859a7ddb7acf42a8
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42864620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61519772"
 ---
 # <a name="notify-function-in-powerapps"></a>Funksjonen Notify i PowerApps
 Viser en bannermelding til brukeren.
@@ -45,7 +45,7 @@ PowerApps kan også sende push-varslinger ved hjelp av en helt annen mekanisme f
 
 **Notify** returnerer alltid *sann*.
 
-Merk: Denne funksjonen ble tidligere kalt **ShowError**, når den bare kunne vise feilmeldinger.
+Merk: Denne funksjonen ble tidligere kalt **ShowError** når den bare kunne vise feilmeldinger.
 
 ## <a name="syntax"></a>Syntaks
 **Notify**( *Message*, [ *NotificationType* ] )

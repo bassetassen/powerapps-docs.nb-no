@@ -15,11 +15,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: e31d3689c7b61c408be90c31f1e212e4fdd9a91c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42848987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61563895"
 ---
 # <a name="blank-coalesce-isblank-and-isempty-functions-in-powerapps"></a>Funksjonene Blank, Coalesce, IsBlank og IsEmpty i PowerApps
 Tester om en verdi er tom eller en [tabell](../working-with-tables.md) inneholder ingen [poster](../working-with-tables.md#records), og gir en måte å opprette *tom*-verdier på.
@@ -77,7 +77,7 @@ Returverdien for både **IsBlank** og **IsEmpty** er en boolsk **sann** eller **
 1. Opprett en app fra grunnen av, og legg til en **Knapp**.
 2. Sett knappens **[OnSelect](../controls/properties-core.md)**-egenskap til denne formelen:
 
-    **ClearCollect( Cities, { Name: "Seattle", Weather: "Rainy" } )**
+    **ClearCollect (byer, {navn: "Seattle", Vær: «Regn»})**
 3. Forhåndsvis appen, klikk eller trykk på knappen som du har lagt til, og lukk deretter Forhåndsvisning.  
 4. Klikk eller trykk på **Samlinger** på **Fil**-menyen.
 
@@ -92,7 +92,7 @@ Returverdien for både **IsBlank** og **IsEmpty** er en boolsk **sann** eller **
     Etiketten viser **usann** fordi **Vær**-feltet inneholder en verdi («Regn»).
 7. Legg til en annen knapp, og angi knappens **OnSelect**-egenskap til denne formelen:
 
-    **Patch( Cities, First( Cities ), { Weather: Blank() } )**
+    **Patch (byer, første (byer), {været: Blank()})**
 8. Forhåndsvis appen, klikk eller trykk på knappen som du har lagt til, og lukk deretter Forhåndsvisning.  
 
     **Vær**-feltet i den første posten i **Byer** erstattes med et *tom*-felt, og fjerner dermed «Regn», som stod der tidligere.
@@ -136,7 +136,7 @@ Andre eksempler:
 1. Opprett en app fra grunnen av, og legg til en **Knapp**.
 2. Sett knappens **[OnSelect](../controls/properties-core.md)**-egenskap til denne formelen:
 
-    **Collect( IceCream, { Flavor: "Strawberry", Quantity: 300 }, { Flavor: "Chocolate", Quantity: 100 } )**
+    **Samle inn (IceCream, {Flavor: «Jordbær", Quantity: 300 }, { Flavor: «Chocolate», Quantity: 100 } )**
 3. Forhåndsvis appen, klikk eller trykk på knappen som du har lagt til, og lukk deretter Forhåndsvisning.  
 
     En samling med navnet **IceCream** opprettes og inneholder disse dataene:

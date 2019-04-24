@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 8c2a48941629e98f58ea6d6ac7894e6a244b5e69
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42859254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61548091"
 ---
 # <a name="pie-chart-control-in-powerapps"></a>Sektordiagram-kontrollen i PowerApps
 En kontroll som viser relative verdier sammenlignet med hverandre.

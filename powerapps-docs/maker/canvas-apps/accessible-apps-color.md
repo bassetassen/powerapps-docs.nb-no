@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 586c82804380846ef400f020c4ce55c07262730f
-ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "57802036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61549977"
 ---
 # <a name="accessible-colors-for-canvas-apps-in-powerapps"></a>Tilgjengelige farger for lerretsapper i PowerApps
 Fargene som brukes i en lerretsapp, skal være tilpasset for fargeblinde og svaksynte brukere. Alle PowerApps-temaer er tilpassede som standard. Følg disse retningslinjene for å sikre at fargene forblir tilgjengelige når du endrer dem i et program. Det finnes flere verktøy tilgjengelige på nettet som kan hjelpe deg med å oppdage problemer knyttet til fargekontrast.

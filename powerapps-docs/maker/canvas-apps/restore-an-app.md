@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 22c60af513df1b91be1d9dffb252337e3197bf98
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57799483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61536521"
 ---
 # <a name="restore-a-canvas-app-to-a-previous-version-in-powerapps"></a>Gjenopprett en lerretsappen til en tidligere versjon i PowerApps
 Denne artikkelen viser deg hvordan du gjenoppretter en lerretsapp til en tidligere versjon som er lagret i skyen fra PowerApps-kontoen din.

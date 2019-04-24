@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: e202ce052bf12f5f67715deb2e86b385c2e515a7
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42835564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61547085"
 ---
 # <a name="endswith-and-startswith-functions-in-powerapps"></a>EndsWith- og StartsWith-funksjonen i PowerApps
 Tester om én tekststreng begynner eller slutter med en annen tekststreng.
@@ -68,7 +68,7 @@ Eksemplene i resten av dette temaet viser resultatene av å søke i en **Kunde**
 
 Hvis du vil opprette denne datakilden som en samling, oppretter du en **[Knapp](../controls/control-button.md)**, og angir egenskapen **OnSelect** til denne formelen:
 
-**ClearCollect( Customers, Table( { Name: "Fred Garcia", Company: "Northwind Traders" }, { Name: "Cole Miller", Company: "Contoso" }, { Name: "Glenda Johnson", Company: "Contoso" }, { Name: "Mike Collins", Company: "Adventure Works" }, { Name: "Colleen Jones", Company: "Adventure Works" } ) )**
+**ClearCollect (kunder, tabellen ({navn: «Fred Garcia», selskapet: «Northwind Traders"}, {navn: "Cole Miller", Company: "Contoso"}, {navn: «Glenda Johnson», selskapet: "Contoso"}, {navn: «Finn Andresen», selskapet: «Adventure Works"}, {navn: «Bjarne Høgdal», selskapet: "Adventure Works" } ) )**
 
 Som du ser av dette eksemplet, kan du vise en liste over poster i en [**Galleri-kontroll**](../controls/control-gallery.md) nederst på skjermen. Nær toppen av skjermen kan du legge til en [**Tekstinndata**](../controls/control-text-input.md)-kontroll, som heter **SearchInput**, slik at brukerne kan angi hvilke poster de har interesse av.
 

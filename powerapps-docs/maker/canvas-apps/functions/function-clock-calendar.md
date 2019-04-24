@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 25cae936ace1dcd3108f11271e3fe38cb41ae2e7
-ms.sourcegitcommit: 55c6af2f767e90c999eea4d29589c1fe19dfc4db
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54443739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61546481"
 ---
 # <a name="calendar-and-clock-functions-in-powerapps"></a>Funksjonene Calendar og Clock i PowerApps
 Henter informasjon om gjeldende nasjonale innstillinger for kalender og klokke.
