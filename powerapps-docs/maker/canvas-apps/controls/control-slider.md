@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 198275ef72129b17cbf73a5f4eb47fd342de3b24
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42830740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61548758"
 ---
 # <a name="slider-control-in-powerapps"></a>Glidebryter-kontrollen i PowerApps
 En kontroll som lar brukeren angi en verdi ved å dra i et håndtak.
@@ -102,7 +102,7 @@ Brukeren kan angi en verdi mellom en minimumsverdi og en maksimumsverdi som du a
 [**Sum**( *Value1*, *Value2* )](../functions/function-aggregates.md)
 
 ## <a name="example"></a>Eksempel
-1. Legg til en knapp, og angi knappens **[OnSelect](properties-core.md)**-egenskapen til denne formelen:
+1. Legg til en knapp, og angi **[OnSelect](properties-core.md)**-egenskapen til denne formelen:
    <br>**ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
