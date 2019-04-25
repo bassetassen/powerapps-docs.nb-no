@@ -1,0 +1,11 @@
+- name: Å utvide Outlook-klienten
+  href: extend-dynamics-365-outlook.md
+  items:
+    - name: Frakoblet og Outlook-filtre og -maler
+      href: offline-outlook-filters-templates.md
+    - name: 'Eksempel: Opprett og hent Outlook-filtre'
+      href: sample-create-retrieve-outlook-filters.md
+    - name: 'Eksempel: Bruk metoder for Dynamics 365 for Outlook'
+      href: sample-outlook-methods.md
+    - name: Frakoblet bruk av nettjenester
+      href: offline-use-services.md

@@ -1,0 +1,26 @@
+- name: '(C#) Eksempler på dataoperasjoner'
+  items:
+    - name: 'Kom i gang med C#-eksempler'
+      href: ../web-api-samples-csharp.md
+    - name: Grunnleggende operasjoner
+      href: basic-operations-csharp.md
+    - name: Spørringsdata
+      href: query-data-csharp.md
+    - name: Betingede operasjoner
+      href: conditional-operations-csharp.md
+    - name: Funksjoner og handlinger
+      href: functions-actions-csharp.md
+- name: JavaScript-eksempler på dataoperasjoner på klientsiden
+  items:
+    - name: Kom i gang med JavaScript-eksempler på klientsiden
+      href: ../web-api-samples-client-side-javascript.md
+    - name: Grunnleggende operasjoner
+      href: basic-operations-client-side-javascript.md
+    - name: Spørringsdata
+      href: query-data-client-side-javascript.md
+    - name: Betingede operasjoner
+      href: conditional-operations-client-side-javascript.md
+    - name: Funksjoner og handlinger
+      href: functions-actions-client-side-javascript.md
+- name: 'Eksempel på global Discovery Service (C#)'
+  href: global-discovery-service-csharp.md

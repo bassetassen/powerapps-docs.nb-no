@@ -1,0 +1,9 @@
+- name: Kom i gang med virtuelle enheter
+  href: get-started-ve.md
+  items:
+    - name: API-hensyn
+      href: api-considerations-ve.md
+    - name: Egendefinerte dataleverandører
+      href: custom-ve-data-providers.md
+    - name: 'Eksempel: Generisk tillegg for dataleverandør for virtuell enhet'
+      href: sample-generic-ve-plugin.md

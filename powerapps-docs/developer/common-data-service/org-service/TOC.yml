@@ -1,0 +1,120 @@
+- name: Arbeid med data ved bruk av kode
+  href: ../work-with-data-cds.md
+- name: Bruk organisasjonstjeneste
+  href: overview.md
+- name: Kom i gang
+  items:
+    - name: 'Hurtigstart: Opprett en konsollapp'
+      href: quick-start-org-service-console-app.md
+    - name: Sen og tidlig bundet programmering
+      href: early-bound-programming.md
+    - name: IOrganizationService-grensesnitt
+      href: iorganizationservice-interface.md
+    - name: OrganizationServiceContext
+      href: organizationservicecontext.md
+    - name: Opprett en klientapp
+      href: create-client-app.md
+      items:
+        - name: Abonner på SDK-samlingsoppdateringer ved hjelp av NuGet
+          href: subscribe-sdk-assembly-updates-using-nuget.md
+        - name: Visual Studio og .NET Framework
+          href: visual-studio-dot-net-framework.md
+        - name: Søketjeneste
+          href: discovery-service.md
+        - name: Bruk XRM-verktøy
+          href: ../xrm-tooling/build-windows-client-applications-xrm-tools.md
+- name: Enhetsoperasjoner
+  href: entity-operations.md
+  items:
+    - name: Spørringsdata
+      href: entity-operations-query-data.md
+      items:
+        - name: Bygg spørringer med QueryExpression
+          href: build-queries-with-queryexpression.md
+          items:
+            - name: Bruk QueryExpression-klassen
+              href: use-queryexpression-class.md
+            - name: Bruk ConditionExpression-klassen
+              href: use-conditionexpression-class.md
+            - name: Bruk FilterExpression-klassen
+              href: use-filterexpression-class.md
+            - name: Bruk ColumnSet-klassen
+              href: use-the-columnset-class.md
+            - name: Plasser store resultatsett med QueryExpression
+              href: page-large-result-sets-with-queryexpression.md
+            - name: Bruk en venstre ytre kobling i QueryExpression til å spørre etter poster «ikke i»
+              href: use-left-outer-join-queryexpression-query-records-not-in.md
+            - name: Bruk QueryByAttribute-klassen
+              href: use-querybyattribute-class.md
+            - name: Plasser store resultatsett med FetchXML
+              href: page-large-result-sets-with-fetchxml.md
+    - name: Opprett enheter
+      href: entity-operations-create.md
+    - name: Hent en enhet
+      href: entity-operations-retrieve.md
+    - name: Oppdater og slett enheter
+      href: entity-operations-update-delete.md
+    - name: Tilknytt og fjern tilknytning av enheter
+      href: entity-operations-associate-disassociate.md
+- name: Bruk meldinger
+  href: use-messages.md
+- name: Spesielle operasjoner
+  items:
+    - name: Bruk ExecuteAsync
+      href: use-executeAsync.md
+    - name: Bruk ExecuteTransaction
+      href: use-executetransaction.md
+    - name: Kjør flere forespørsler
+      href: execute-multiple-requests.md
+- name: Bruk OrganizationServiceContext
+  items:
+    - name: Bygg spørringer med LINQ (.NET Language-Integrated Query)
+      href: build-queries-with-linq-net-language-integrated-query.md
+    - name: Eksempler på LINQ-spørring
+      href: linq-query-examples.md
+    - name: Sorter resultater ved hjelp av enhetsattributter med LINQ
+      href: order-results-entity-attributes-linq.md
+    - name: Plasser store resultatsett med LINQ
+      href: page-large-result-sets-linq.md
+    - name: Bruk sent bundet enhetsklasse med en LINQ-spørring
+      href: use-late-bound-entity-class-linq-query.md
+    - name: Bruk LINQ til å konstruere en spørring
+      href: use-linq-construct-query.md
+- name: Oppdag duplisert data
+  href: detect-duplicate-data.md
+- name: Generer klasser for tidlig bundet programmering
+  href: generate-early-bound-classes.md
+  items:
+    - name: Opprett utvidelser for kodegeneringsverktøyet
+      href: extend-code-generation-tool.md
+- name: Arbeid med metadata
+  href: work-with-metadata.md
+  items:
+    - name: Opprett egendefinert enhet
+      href: create-custom-entity.md
+    - name: Arbeid med attributtmetadata
+      href: metadata-attributemetadata.md
+    - name: 'Sett inn, oppdater, slett og sorter alternativer for globale alternativsett'
+      href: metadata-global-option-set-options.md
+    - name: Tilpass alternativsett
+      href: metadata-option-sets.md
+    - name: Opprett og hent enhetsrelasjoner
+      href: metadata-relationshipmetadata.md
+    - name: Hent og oppdag endringer i metadata
+      href: metadata-retrieve-detect-changes.md
+    - name: 'Hent, oppdater og slett enheter'
+      href: metadata-retrieve-update-delete-entities.md
+    - name: Opprett en enhet til å sende e-postaktiviteter
+      href: create-update-entity-emailed.md
+- name: Importer data
+  href: ../import-data.md
+- name: Eksempeldata
+  href: ../sample-data.md
+- name: Kodingspraksis
+  items:
+    - name: Håndter unntak i koden
+      href: handle-exceptions-code.md
+    - name: Feilkoder for nettjenesten
+      href: web-service-error-codes.md
+- name: Eksempler
+  href: samples/toc.yml

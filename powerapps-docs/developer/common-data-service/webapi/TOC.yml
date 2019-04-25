@@ -1,96 +1,101 @@
-items:
 - name: Arbeid med data ved bruk av kode
   href: ../work-with-data-cds.md
 - name: Bruk Web API
   href: overview.md
 - name: Kom i gang
   items:
-  - name: (C#)
-    href: get-started-dynamics-365-web-api-csharp.md
-    items:
-    - name: 'Hurtigstart: Eksempel på nett-API (C#)'
-      href: quick-start-console-app-csharp.md
-    - name: Forbedret hurtigstart (C#)
-      href: enhanced-quick-start.md
-- name: JavaScript på klientsiden
-  href: get-started-web-api-client-side-javascript.md
+    - name: '(C#)'
+      items:
+        - name: 'Kom i gang med å bruke nett-API (C#)'
+          href: get-started-dynamics-365-web-api-csharp.md
+        - name: 'Hurtigstart: Eksempel på nett-API (C#)'
+          href: quick-start-console-app-csharp.md
+        - name: 'Forbedret hurtigstart (C#)'
+          href: enhanced-quick-start.md
+        - name: Start nett-API-prosjekt i Visual Studio
+          href: start-web-api-project-visual-studio-csharp.md
 - name: Godkjenn
   href: authenticate-web-api.md
 - name: Typer og operasjoner
   href: web-api-types-operations.md
 - name: Utfør operasjoner
-  href: perform-operations-web-api.md
   items:
-  - name: Opprett HTTP-forespørsler, og håndter feil
-    href: compose-http-requests-handle-errors.md
-  - name: Spørringsdata
-    href: query-data-web-api.md
-  - name: Hent relaterte enheter med spørringen
-    href: retrieve-related-entities-query.md
-  - name: Hent og utfør forhåndsdefinerte spørringer
-    href: retrieve-and-execute-predefined-queries.md
-  - name: Å opprette en enhet
-    href: create-entity-web-api.md
-  - name: Hent en enhet
-    href: retrieve-entity-using-web-api.md
-  - name: Oppdater og slett enheter
-    href: update-delete-entities-using-web-api.md
-  - name: Tilknytt og fjern tilknytning av enheter
-    href: associate-disassociate-entities-using-web-api.md
-  - name: Bruk funksjoner
-    href: use-web-api-functions.md
-  - name: Bruk handlinger
-    href: use-web-api-actions.md
-  - name: Kjør partioperasjoner
-    href: execute-batch-operations-using-web-api.md
-  - name: Representer en annen bruker
-    href: impersonate-another-user-web-api.md
-  - name: Utfør betingede operasjoner
-    href: perform-conditional-operations-using-web-api.md
-  - name: Oppdag duplisert data
-    href: manage-duplicate-detection-create-update.md
-- name: Versjonsforskjeller
-  href: web-api-versions.md
+    - name: Kom i gang med å utføre operasjoner
+      href: perform-operations-web-api.md
+    - name: 'Opprett HTTP-forespørsler, og håndter feil'
+      href: compose-http-requests-handle-errors.md
+    - name: Spørringsdata
+      href: query-data-web-api.md
+    - name: Hent relaterte enheter med spørringen
+      href: retrieve-related-entities-query.md
+    - name: Hent og utfør forhåndsdefinerte spørringer
+      href: retrieve-and-execute-predefined-queries.md
+    - name: Å opprette en enhet
+      href: create-entity-web-api.md
+    - name: Hent en enhet
+      href: retrieve-entity-using-web-api.md
+    - name: Oppdater og slett enheter
+      href: update-delete-entities-using-web-api.md
+    - name: Tilknytt og fjern tilknytning av enheter
+      href: associate-disassociate-entities-using-web-api.md
+    - name: Bruk funksjoner
+      href: use-web-api-functions.md
+    - name: Bruk handlinger
+      href: use-web-api-actions.md
+    - name: Kjør partioperasjoner
+      href: execute-batch-operations-using-web-api.md
+    - name: Representer en annen bruker
+      href: impersonate-another-user-web-api.md
+    - name: Utfør betingede operasjoner
+      href: perform-conditional-operations-using-web-api.md
+    - name: Oppdag duplisert data
+      href: manage-duplicate-detection-create-update.md
 - name: Arbeid med metadata
-  href: use-web-api-metadata.md
   items:
-  - name: Spørringsmetadata
-    href: query-metadata-web-api.md
-  - name: Hent metadata etter navn eller metadata-ID
-    href: retrieve-metadata-name-metadataid.md
-  - name: Opprett og oppdater enhetsdefinisjoner
-    href: create-update-entity-definitions-using-web-api.md
-  - name: Opprett og oppdater enhetsrelasjoner
-    href: create-update-entity-relationships-using-web-api.md
-  - name: Arbeid med alternativsett
-    href: create-update-optionsets.md
+    - name: Kom i gang med å bruke metadata
+      href: use-web-api-metadata.md
+    - name: Spørringsmetadata
+      href: query-metadata-web-api.md
+    - name: Hent metadata etter navn eller metadata-ID
+      href: retrieve-metadata-name-metadataid.md
+    - name: Opprett og oppdater enhetsdefinisjoner
+      href: create-update-entity-definitions-using-web-api.md
+    - name: Opprett og oppdater enhetsrelasjoner
+      href: create-update-entity-relationships-using-web-api.md
+    - name: Arbeid med alternativsett
+      href: create-update-optionsets.md
+- name: Bruk Postman med nett-API
+  items:
+    - name: Kom i gang med Postman
+      href: use-postman-web-api.md
+    - name: Konfigurer et Postman-miljø
+      href: setup-postman-environment.md
+    - name: Bruk Postman til å utføre operasjoner
+      href: use-postman-perform-operations.md
+- name: JavaScript på klientsiden som bruker nett-API i modelldrevne apper
+  href: get-started-web-api-client-side-javascript.md
 - name: Oppdag nettadressen for organisasjonen
-  href: discover-url-organization-web-api.md
   items:
-  - name: Eksempel på global Discovery Service (C#)
-    href: samples/global-discovery-service-csharp.md
+    - name: Kom i gang
+      href: discover-url-organization-web-api.md
+    - name: 'Eksempel på global Discovery Service (C#)'
+      href: samples/global-discovery-service-csharp.md
 - name: Importer data
   href: ../import-data.md
 - name: Eksempeldata
   href: ../sample-data.md
 - name: Eksempler
   items:
-  - name: Eksempelmaler for dataoperasjoner
-    href: web-api-samples.md
-    items:
-    - name: Grunnleggende operasjoner
-      href: web-api-basic-operations-sample.md
-    - name: Spørringsdata
-      href: web-api-query-data-sample.md
-    - name: Betingede operasjoner
-      href: web-api-conditional-operations-sample.md
-    - name: Funksjoner og handlinger
-      href: web-api-functions-actions-sample.md
-    - name: Eksempler
-      href: samples/toc.yml
-ms.openlocfilehash: fd5e79a6cb5c5d23a8edb246086be4db95fe102c
-ms.sourcegitcommit: b703a5c9cddda2ff50c88533b3dbd12cba852b50
-ms.translationtype: HT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56222659"
+    - name: Eksempelmaler for dataoperasjoner
+      href: web-api-samples.md
+      items:
+        - name: Grunnleggende operasjoner
+          href: web-api-basic-operations-sample.md
+        - name: Spørringsdata
+          href: web-api-query-data-sample.md
+        - name: Betingede operasjoner
+          href: web-api-conditional-operations-sample.md
+        - name: Funksjoner og handlinger
+          href: web-api-functions-actions-sample.md
+        - name: Eksempler
+          href: samples/toc.yml

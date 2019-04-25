@@ -1,0 +1,14 @@
+- name: Bruk forretningslogikk med kode
+  href: ../apply-business-logic-with-code.md
+- name: Arbeidsflytutvidelser
+  href: workflow-extensions.md
+- name: Feilsøk arbeidsflytaktiviteter
+  href: debug-workflow-activites.md
+- name: 'Opplæring: Opprett arbeidsflytutvidelse'
+  href: tutorial-create-workflow-extension.md
+- name: 'Eksempel: Opprett en egendefinert arbeidsflytaktivitet'
+  href: sample-create-custom-workflow-activity.md
+- name: 'Eksempel: Oppdater neste fødselsdag ved hjelp av en egendefinert arbeidsflytaktivitet'
+  href: sample-update-next-birthday-using-custom-workflow-activity.md
+- name: 'Eksempel: Beregn kredittverdighet med en egendefinert arbeidsflytaktivitet'
+  href: sample-calculate-credit-score-custom-workflow-activity.md
