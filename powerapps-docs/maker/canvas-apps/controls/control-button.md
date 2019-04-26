@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: d4cde32e52240e04a3499444d2c1325d0105a945
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42855431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63320601"
 ---
 # <a name="button-control-in-powerapps"></a>Knappkontroll i PowerApps
 En kontroll som brukeren kan klikke eller trykke på for å samhandle med appen.
@@ -60,7 +60,7 @@ Konfigurer **[OnSelect](properties-core.md)**-egenskapen til en **Knapp**-kontro
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
+**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 

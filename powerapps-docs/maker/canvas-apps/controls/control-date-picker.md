@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 90f18c4b490564bc098046831ea932db13fce05d
-ms.sourcegitcommit: 212d397284c431f5989dc7b39549e2fc170d447e
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63321711"
 ---
 # <a name="date-picker-control-in-powerapps"></a>Datovelger-kontrollen i PowerApps
 En kontroll som brukeren kan klikke eller trykk på for å angi en dato.

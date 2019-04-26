@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: d2e61a312aa3824c24b7058da4b34aa9c5cf462c
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57799207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63321555"
 ---
 # <a name="add-images-to-excel-from-powerapps"></a>Å legge til bilder til Excel fra PowerApps
 Opprette en app automatisk hvor brukere kan vise, legge til eller slette bilder fra filer eller tegninger fra en **Penn**-kontroll. Appen er basert på en Excel-fil som du oppretter og laster opp til en konto for lagring i skyen.

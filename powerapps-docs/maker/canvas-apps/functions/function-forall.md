@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: f538d785b9655b94a44a79c3299e979bbfe88883
-ms.sourcegitcommit: ba5542ff1c815299baa16304c6e0b5fed936e776
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54308781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63320948"
 ---
 # <a name="forall-function-in-powerapps"></a>Funksjonen ForAll i PowerApps
 Beregner verdier og utfører handlinger for alle [poster](../working-with-tables.md#records) i en [tabell](../working-with-tables.md).

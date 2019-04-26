@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: a557c73863dc25acb69627b51613e6e25f229bdb
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57799782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63318356"
 ---
 # <a name="show-sort-and-filter-data-in-a-powerapps-gallery"></a>Å vise, sortere og filtrere data i et PowerApps-galleri
 Opprett et galleri for å vise bilder og tekst om flere produkter, og sorter og filtrer informasjonen.

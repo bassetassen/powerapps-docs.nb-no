@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: db0e42a45af217e9e5703242c2a5a867a52b687b
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42850534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63317832"
 ---
 # <a name="understand-data-cards-in-powerapps"></a>Slik fungerer datakort i PowerApps
 
@@ -145,7 +145,7 @@ Hold nede ALT for å vise navnene på kontrollene som utgjør dette kortet:
 
 Fire kontroller gjør at dette kortet fungerer:
 
-| Navn | Type | Beskrivelse |
+| navn | Type | Beskrivelse |
 | --- | --- | --- |
 | **TextRequiredStar** |**[Etikett](controls/control-text-box.md)**-kontrollen |Viser en stjerne, som ofte brukes i skjemaer for dataregistrering, for å indikere at et felt er nødvendig. |
 | **TextFieldDisplayName** |**[Etikett](controls/control-text-box.md)**-kontrollen |Viser det brukervennlige navnet for dette feltet. Dette navnet kan være forskjellig fra det som er i datakildeskjemaet. |

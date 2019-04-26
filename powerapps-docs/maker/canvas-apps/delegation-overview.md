@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 61a7e67b7914e5f844397389833f830244d5af28
-ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63318116"
 ---
 # <a name="understand-delegation-in-a-canvas-app"></a>Forstå delegering i en lerretsapp
 PowerApps inneholder et kraftig sett med funksjoner for filtrering, sortering og forming av dataene i en lerretsapp: **[Filter](functions/function-filter-lookup.md)**,  **[Sorter](functions/function-sort.md)**, og **[AddColumns](functions/function-table-shaping.md)** funksjoner for å nevne noen få. Med disse funksjonene kan du gi brukerne fokusert tilgang til informasjonen de trenger. For de med databasebakgrunn vil bruk av disse funksjonene tilsvare skriving av en databasespørring.

@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 31b166dbe0257127d02f410182aaebb70e641da6
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63320864"
 ---
 # <a name="attachments-control-in-powerapps"></a>Vedlegg-kontrollen i PowerApps
 En kontroll som gjør at brukere kan laste ned filer på enhetene sine, samt laste opp og slette filer fra en SharePoint-liste eller en Common Data Service-enhet.

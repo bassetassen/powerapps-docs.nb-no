@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: b78f88941fce85b9e63427635cb946f944aa120a
-ms.sourcegitcommit: e2a9d1a6090cdd8aa78515b49f38ed2365217ea6
-ms.translationtype: HT
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63319941"
 ---
 # <a name="export-control-and-import-control-in-powerapps"></a>Kontrollene Eksporter og Import i PowerApps
 Kontroller for å eksportere data til en lokal fil og deretter importere dataene til en annen app i PowerApps.
@@ -66,7 +66,7 @@ Eksportfunksjonen støttes ikke i nettlesere.
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **Halvfet**, **Normal** eller **Lysere**.
+**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 

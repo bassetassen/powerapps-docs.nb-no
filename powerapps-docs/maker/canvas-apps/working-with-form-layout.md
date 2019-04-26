@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: a8abc0a641f13cc05e723b96d48dd2d877f0b70f
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63318294"
 ---
 # <a name="understand-data-form-layout-for-canvas-apps-in-powerapps"></a>Slik fungerer oppsett for dataskjemaer for lerretsapper i PowerApps
 

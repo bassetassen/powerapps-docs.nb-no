@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/08/2015
+ms.date: 04/23/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f0bd11881dc0999cada58f65d7ed8d7f9df68c5a
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.openlocfilehash: 0033d0a2d7473e6aaeac1e8533f62873e0d2f49a
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
-ms.locfileid: "61562788"
+ms.locfileid: "63321867"
 ---
 # <a name="back-and-navigate-functions-in-powerapps"></a>Funksjonene Back og Navigate i PowerApps
 Endre hvilken skjerm som vises.
@@ -39,12 +39,14 @@ Angi navnet på den første skjermen som skal vises i det første argumentet.
 
  I det andre argumentet angir du hvordan den gamle skjermen endres til den nye:
 
-| Overgangsargument | Beskrivelse |
-| --- | --- |
-| **ScreenTransition.Cover** |Den nye skjermen glir inn, og dekker den gjeldende skjermen. |
-| **ScreenTransition.Fade** |Den gamle skjermen tones ned for å vise den nye skjermen. |
-| **ScreenTransition.None** |Den gamle skjermen erstattes raskt med den nye skjermen. |
-| **ScreenTransition.UnCover** |Den gamle skjermen glir ut av visningen, og avdekker den nye skjermen. |
+| Overgangsargument | Beskrivelse | Demonstrasjon |
+| --- | --- | --- |
+| **ScreenTransition.Cover** |Den nye skjermen glir inn, flytte høyre mot venstre, slik at den dekker den gjeldende skjermen. | ![skjermen overgang cover animasjon](media/function-navigate/cover.gif) |
+| **ScreenTransition.CoverRight** |De nye skjermen lysbildene inn, og flytte fra venstre mot høyre, slik at den dekker den gjeldende skjermen. | ![skjermen overgang cover høyre animasjon](media/function-navigate/coverright.gif) |
+| **ScreenTransition.Fade** |De gjeldende skjermen tones ned med en gang til vise den nye skjermen. | ![skjermen overgang fade animasjon](media/function-navigate/fade.gif) |
+| **ScreenTransition.None** (standard) |Den nye skjermen erstattes raskt den gjeldende skjermen. | ![skjermen overgang Ingen animasjon](media/function-navigate/none.gif) |
+| **ScreenTransition.UnCover** | Den gjeldende skjermen glir ut av visningen, flytte høyre mot venstre, å avdekke den nye skjermen. | ![skjermen overgang Avdekk animasjon](media/function-navigate/uncover.gif) |
+| **ScreenTransition.UnCoverRight** | De gjeldende skjermen lysbildene utenfor visningen, flytte fra venstre mot høyre, å avdekke den nye skjermen. | ![skjermen overgang Avdekk høyre animasjon](media/function-navigate/uncoverright.gif) |
 
 Du kan bruke **Navigate** til å opprette eller oppdatere kontekstvariabler på den nye skjermen. Som et valgfritt tredje argument kan du sende en [post](../working-with-tables.md#records) som inneholder kontekstvariabelnavnet som et [kolonnenavn](../working-with-tables.md#columns) og den nye verdien for kontekstvariabelen.  Denne posten er den samme som posten du brukte med **[UpdateContext](function-updatecontext.md)**-funksjonen.
 
@@ -57,17 +59,17 @@ Du kan bruke disse funksjonene bare i en [formel for virkemåte](../working-with
 ## <a name="syntax"></a>Syntaks
 **Back**()
 
-**Navigate**( *Screen*, *Transition* [, *UpdateContextRecord* ] )
+**Navigere**( *skjermen* [, *overgang* [, *UpdateContextRecord* ]])
 
 * *Screen* – obligatorisk. Skjermen som skal vises.
-* *Transition* – obligatorisk.  Den visuelle overgangen som skal brukes mellom gjeldende skjerm og den nye skjermen. Se listen over gyldige verdier for dette argumentet tidligere i dette emnet.
+* *Overgang* – valgfritt.  Den visuelle overgangen som skal brukes mellom gjeldende skjerm og den nye skjermen. Se listen over gyldige verdier for dette argumentet tidligere i dette emnet. Standardverdien er **ingen**.
 * *UpdateContextRecord* – valgfritt.  En post som inneholder navnet på minst én kolonne og en verdi for hver kolonne. Denne posten oppdaterer kontekstvariablene til den nye skjermen som om den ble sendt til **[UpdateContext](function-updatecontext.md)**-funksjonen.
 
 ## <a name="examples"></a>Eksempler
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Navigate( Details, ScreenTransition.None )** |Viser **Details**-skjermen uten overgang eller endring i verdi for en kontekstvariabel. |**Detaljer**-skjermen vises raskt. |
+| **Navigere (detaljer)** |Viser **Details**-skjermen uten overgang eller endring i verdi for en kontekstvariabel. |**Detaljer**-skjermen vises raskt. |
 | **Navigate( Details, ScreenTransition.Fade )** |Viser **Detaljer**-skjermen med en **Tone**-overgang.  Ingen verdier for en kontekstvariabel endres. |Den gjeldede skjermen tones ned for å vise **Details**-skjermen. |
 | **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** |Viser **Details**-skjermen med en **Fade**-overgang, og oppdaterer verdien til kontekstvariabelen **ID** til **12**. |Den gjeldende skjermen tones ned for å vise **Details**-skjermen, og kontekstvariabelen **ID** på den skjermen som angis til **12**. |
 | **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Viser **Detaljer**-skjermen med en **Tone**-overgang. Oppdaterer verdien til kontekstvariabelen **ID** til **12**, og oppdaterer verdien til kontekstvariabelen **Shade** til **Color.Red**. |Den gjeldede skjermen tones ned for å vise **Details**-skjermen. Kontekstvariabelen **ID** på **Detaljer**-skjermen angis til **12**, og kontekstvariabelen **Nyanse** angis til **Color.Red**. Hvis du angir **Fyll**-egenskapen til en kontroll på **Detaljer**-skjermen til **Nyanse**, vises denne kontrollen i rødt. |
@@ -77,7 +79,7 @@ Du kan bruke disse funksjonene bare i en [formel for virkemåte](../working-with
 2. Legg til en skjerm, og kall den **AddlScreen**.
 3. Legg til en etikett for **AddlScreen**, og angi **[Tekst](../controls/properties-core.md)**-egenskapen til etiketten slik at den viser **Addl**.
 4. Legg til en knapp i **AddlScreen**, og angi knappens **[OnSelect](../controls/properties-core.md)**-egenskap til denne funksjonen:<br>**Navigate(DefaultScreen, ScreenTransition.Fade)**
-5. Trykk på F5 fra **AddlScreen**, og velg deretter knappen.<br>**DefaultScreen** vises.
+5. Trykk på F5 fra **AddlScreen**, og velg deretter knappen.<br>**DefaultScreen** vises gjennom en uttonet overgang.
 
 [Et annet eksempel](../add-screen-context-variables.md)
 

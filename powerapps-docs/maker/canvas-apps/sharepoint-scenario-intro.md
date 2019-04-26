@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 812a73163047914a8f0bcc651c831ee4022fcc28
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57799069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63319414"
 ---
 # <a name="integrate-powerapps-microsoft-flow-and-power-bi-with-sharepoint-online"></a>Å integrere PowerApps, Microsoft Flow og Power BI med SharePoint Online
 Har du SharePoint Online og ønsker å automatisere og strømlinjeforme forretningsprosessene bedre? Har du jobbet med PowerApps, Microsoft Flow eller Power BI, men er ikke sikker på hvordan du bruker dem med SharePoint Online? Du har kommet til rett sted! Denne serien av veiledninger Utforsker hvordan du bygger en grunnleggende lerretsapp for prosjektstyring basert på SharePoint-lister og tre viktige teknologier som integreres med SharePoint Online: PowerApps, Microsoft Flow og Power BI. Disse teknologiene arbeider sammen, noe som gjør det enkelt å *måle* bedriften, *reagere* på resultatene, og *automatisere* arbeidsflyten. Når du er ferdig med denne serien, har du et stilig scenario, som følgende:

@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 54712803d0cc119aa385162088df468e339a7298
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42848530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63318340"
 ---
 # <a name="show-text-dates-and-times-in-powerapps"></a>Vis tekst, datoer og klokkeslett i PowerApps
 Legg til datoer og klokkeslett i en lerretsapp i PowerApps, og formater dem slik at de viser det riktige detaljnivået eller gjenspeiler den nasjonale innstillingen. Å beregne tidsrommet mellom to datoer, eller beregne en dato som er en viss tid før eller etter en dato du angir. Konverter datoer til eller fra separate verdier for dager, måneder og år, og konvertere klokkeslett til eller fra separate verdier for timer, minutter og sekunder.

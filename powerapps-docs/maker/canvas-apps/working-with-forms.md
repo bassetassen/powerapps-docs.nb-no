@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 661f6710c8cec55868ccc9d67d0f83dd230f89c1
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42851741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63318237"
 ---
 # <a name="understand-canvas-app-forms-in-microsoft-powerapps"></a>Slik fungerer lerretsappskjemaer i Microsoft PowerApps
 
@@ -181,7 +181,7 @@ Få en informasjon raskt fra en post ved å finne den i et galleri på en Bla gj
    
     ![Galleriet som er koblet til datakilden for Ice Cream](./media/working-with-forms/new-gallery-icecream.png)
 
-## <a name="view-details"></a>Se detaljene
+## <a name="view-details"></a>Visningsdetaljer
 Hvis galleriet ikke viser informasjonen du vil bruke, velger du pilen for en post for å åpne detaljerskjermen. En **[Visningsskjema](controls/control-form-detail.md)**-kontroll på denne skjermen viser flere felt, kanskje alle, for posten som du har valgt.
 
 **[Visningsskjema](controls/control-form-detail.md)**-kontrollen bruker to egenskaper til å vise posten:
@@ -334,18 +334,22 @@ I appen som PowerApps har generert fra data, er det to kontroller øverst på Bl
 
 ![Å kontrollere for sortering og søk på skjermbildet for Bla gjennom](./media/working-with-forms/afd-browse-search-sort.png)
 
-Når brukeren velger Sorter-knappen, reverseres sorteringsrekkefølgen i galleriet. En *kontekstvariabel* brukes til å spore retningen som galleriet er sortert i, hvis du vil opprette denne virkemåten. Når brukeren velger denne knappen, oppdateres variabelen, og retningen reverseres. **[OnSelect](controls/properties-core.md)**-egenskapen for sorter-knappen er angitt til denne formelen: **UpdateContext( {SortDescending1: !SortDescending1} )**
+Når brukeren velger Sorter-knappen, reverseres sorteringsrekkefølgen i galleriet. En *kontekstvariabel* brukes til å spore retningen som galleriet er sortert i, hvis du vil opprette denne virkemåten. Når brukeren velger denne knappen, oppdateres variabelen, og retningen reverseres. Den **[OnSelect](controls/properties-core.md)** -egenskapen for Sorter-knappen er satt til denne formelen: **UpdateContext ({SortDescending1:! SortDescending1})**
 
 **[UpdateContext](functions/function-updatecontext.md)**-funksjonen oppretter kontekstvariabelen for **SortDescending1** hvis den ikke allerede finnes. Funksjonen vil lese verdien for variabelen og angi den til det logiske motsatte ved å bruke **!** operator. Hvis verdien er *sann*, blir den *usann*. Hvis verdien er *usann*, blir den *sann*.
 
 Formelen for **[Items](controls/properties-core.md)**-egenskapen for **[Galleri](controls/control-gallery.md)**-kontrollen bruker denne kontekstvariabelen, sammen med teksten i **TextSearchBox1**-kontrollen:
 
-    Gallery1.Items = Sort( If( IsBlank(TextSearchBox1.Text),
-                               Assets,
-                               Filter( Assets,
-                                       TextSearchBox1.Text in Text(ApproverEmail) ) ),
-                            ApproverEmail,
-                            If(SortDescending1, Descending, Ascending) )
+```powerapps-dot
+Sort( 
+    If( IsBlank(TextSearchBox1.Text),
+        Assets,
+        Filter( Assets, TextSearchBox1.Text in Text(ApproverEmail) ) 
+    ),
+    ApproverEmail,
+    If(SortDescending1, Descending, Ascending) 
+)
+```
 
 La oss gjøre det enklere å forstå:
 

@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: b70026e84eb7dfee67583abe26665bf78a566b76
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63321053"
 ---
 # <a name="dateadd-datediff-and-timezoneoffset-functions-in-powerapps"></a>Funksjonene DateAdd, DateDiff og TimeZoneOffset i PowerApps
 Legger til eller finner differansen i dato/klokkeslett-verdiene og konverterer mellom lokal tid og UTC.
@@ -41,13 +41,13 @@ Se også [Slik arbeider du med datoer og klokkeslett](../show-text-dates-times.m
 
 * *DateTime* – obligatorisk. Dato/klokkeslett-verdier som funksjonen skal arbeide med.
 * *Addition* – obligatorisk. Tall, i *Units*, som skal legges til *DateTime*.
-* *Units* – valgfritt. Typen *Units* (enhet) som skal legges til: **Milliseconds**, **Seconds**, **Minutes**, **Hours**, **Days**, **Months**, **Quarters** eller **Years**.  Hvis enheten ikke er angitt, brukes **Days**.
+* *Units* – valgfritt. Typen *enheter* til å legge til: **Millisekunder**, **sekunder**, **minutter**, **timer**, **dager**, **måneder**,  **Kvartaler**, eller **år**.  Hvis enheten ikke er angitt, brukes **Days**.
 
 **DateDiff**( *StartDateTime*, *EndDateTime* [, *Units* ] )
 
 * *StartDateTime* – obligatorisk. Dato/klokkeslett-verdi for starttid.
 * *EndDateTime* – obligatorisk. Dato/klokkeslett-verdi for sluttid.
-* *Units* – valgfritt. Typen *Units* (enhet) som skal legges til: **Milliseconds**, **Seconds**, **Minutes**, **Hours**, **Days**, **Months**, **Quarters** eller **Years**.  Hvis enheten ikke er angitt, brukes **Days**.
+* *Units* – valgfritt. Typen *enheter* til å legge til: **Millisekunder**, **sekunder**, **minutter**, **timer**, **dager**, **måneder**,  **Kvartaler**, eller **år**.  Hvis enheten ikke er angitt, brukes **Days**.
 
 **TimeZoneOffset**( [ *DateTime* ] )
 

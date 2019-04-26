@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: c57375906ba900a3112b9d7999d3941f14e9af58
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
-ms.translationtype: MT
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57799943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63321275"
 ---
 # <a name="create-a-power-bi-report-to-analyze-projects"></a>Å opprette en Power BI-rapport for å analysere prosjekter
 > [!NOTE]
@@ -198,17 +198,12 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
     ![Ny kolonne](./media/sharepoint-scenario-build-report/05-02-00-modeling-column.png)
 2. Skriv inn denne formelen i formellinjen:
    
-    ```
+    ```dax
     ApprovedStartDiff = CALCULATE(SUM(Dates[IsWeekday]),
-   
        DATESBETWEEN(Dates[Date],
-   
           'Project Details'[ApprovedDate],
-   
           'Project Details'[ProjectedStartDate]
-   
       )
-   
     )
     ```
    
@@ -223,17 +218,12 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
     ![Ny kolonne](./media/sharepoint-scenario-build-report/05-02-00-modeling-column.png)
 2. Skriv inn denne formelen i formellinjen:
    
-    ```
+    ```dax
     RequestDateAge = CALCULATE(SUM(Dates[IsWeekday]),
-   
        DATESBETWEEN(Dates[Date],
-   
           'Project Requests'[RequestDate],
-   
           NOW()
-   
        )
-   
     )
     ```
    
@@ -248,13 +238,10 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
     ![Nytt mål](./media/sharepoint-scenario-build-report/05-02-00-modeling-measure.png)
 2. Skriv inn denne formelen i formellinjen:
    
-    ```
+    ```dax
     VarProjectedActual = DIVIDE(
-   
         SUM('Project Details'[ActualDays]) - SUM('Project Details'[ProjectedDays]),
-   
         SUM('Project Details'[ProjectedDays])
-   
     )
     ```
    
@@ -269,13 +256,10 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
     ![Nytt mål](./media/sharepoint-scenario-build-report/05-02-00-modeling-measure.png)
 2. Skriv inn denne formelen i formellinjen:
    
-    ```
+    ```dax
     MaxDaysPending = MAXX(
-   
         FILTER('Project Requests', 'Project Requests'[Approved]="Pending"),
-   
         'Project Requests'[RequestDateAge]
-   
     )
     ```
    

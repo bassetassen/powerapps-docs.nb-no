@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: c11800767225f66520e1a5c368de5102219505d2
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42845342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63321626"
 ---
 # <a name="powerapps-webinar-listing"></a>Liste over webinarer om PowerApps #
 Disse nettseminarene kan hjelpe deg med å dra nytte av verktøyene og funksjonene i Microsoft PowerApps. Nettseminarer er tilgjengelige på forespørsel etter direktesendingen. Obs! I noen tilfeller må du skrive inn registreringsinformasjonen på nytt, og deretter vil du motta en kobling til opptaket via e-post. 
@@ -70,7 +70,7 @@ Disse nettseminarene kan hjelpe deg med å dra nytte av verktøyene og funksjone
 **Administrasjon av PowerApps | Vanlige spørsmål**
 <br>av Manas Maheshwari [Se nå](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/PowerApps-Administration-FAQ/m-p/127369#M44)
 
-**En nærmere titt på Universal Audit-appen: se hva PowerApps og Flow er i stand til, av Paul Culmsee**
+**I Universal Audit-appen: Se hva PowerApps og Flow er i stand til, av Paul Culmsee**
 <br>av Paul Culmsee [Se nå](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Inside-the-Universal-Audit-App-See-what-PowerApps-and-Flow-are/m-p/127370#M45)
 
 ## <a name="advanced-webinar-series"></a>Nettseminarserie for viderekomne ##
@@ -150,5 +150,5 @@ Disse nettseminarene kan hjelpe deg med å dra nytte av verktøyene og funksjone
 **Bygging av dialogbokser eller popup-meldinger i PowerApps**
 <br>av Veronica Ward [Se nå](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Building-Dialogs-in-PowerApps-by-Veronica-Ward/m-p/117627#M39)
 
-**Se bak kulissene sammen med en PowerApps-utvikler – en nærmere titt på maler: Marie Hoeger**
+**Se bak kulissene sammen med en PowerApps-utviklere – en nærmere titt på maler: Marie Hoeger**
 <br>med Audrie Gordon [Se nå](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Developer-Intro-and-Discussing-Templates/m-p/116848)

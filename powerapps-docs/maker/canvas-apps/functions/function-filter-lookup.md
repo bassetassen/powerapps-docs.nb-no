@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: c37aa315981c51a446254473686c44501e72a96f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42831480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63321019"
 ---
 # <a name="filter-search-and-lookup-functions-in-powerapps"></a>Funksjonene Filter, Search og LookUp i PowerApps
 Finner én eller flere [poster](../working-with-tables.md#records) i en [tabell](../working-with-tables.md).
@@ -87,9 +87,9 @@ Eksemplene i resten av dette temaet viser resultatene av å søke i en listen, s
 
 ![](media/function-filter-lookup/customers.png)
 
-Hvis du vil opprette denne datakilden som en samling, oppretter du en **[Knapp](../controls/control-button.md)**-kontroll og angir egenskapen **OnSelect** til denne formelen:
+Hvis du vil opprette denne datakilden som en samling, oppretter du en **[Knapp](../controls/control-button.md)**, og angir egenskapen **OnSelect** til denne formelen:
 
-**ClearCollect( Customers, Table( { Name: "Fred Garcia", Company: "Northwind Traders" }, { Name: "Cole Miller", Company: "Contoso" }, { Name: "Glenda Johnson", Company: "Contoso" }, { Name: "Mike Collins", Company: "Adventure Works" }, { Name: "Colleen Jones", Company: "Adventure Works" } ) )**
+**ClearCollect (kunder, tabellen ({navn: «Fred Garcia», selskapet: «Northwind Traders"}, {navn: "Cole Miller", Company: "Contoso"}, {navn: «Glenda Johnson», selskapet: "Contoso"}, {navn: «Finn Andresen», selskapet: «Adventure Works"}, {navn: «Bjarne Høgdal», selskapet: "Adventure Works" } ) )**
 
 Som du ser av dette eksemplet, kan du vise en liste over poster i en [**Galleri-kontroll**](../controls/control-gallery.md) nederst på skjermen. Nær toppen av skjermen kan du legge til en [**Tekstinndata**](../controls/control-text-input.md)-kontroll, som heter **SearchInput**, slik at brukerne kan angi hvilke poster de har interesse av.
 
