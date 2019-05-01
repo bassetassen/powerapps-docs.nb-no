@@ -1,33 +1,41 @@
-Ved å installere [!INCLUDE[pn_connected_field_service_msdyn365](pn-connected-field-service-msdyn365.md)], når du oppgir informasjon om [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-abonnementet, blir de obligatoriske [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-ressursene (oppført nedenfor) tatt i bruk, og din forekomst av [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)] sender data (for eksempel kommandoer og registreringer) til [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] for å aktivere IoT-aktiverte scenarier som registrerer enheter og deretter sender kommandoer til og mottar kommandoer fra de registrerte enhetene. En administrator kan avinstallere Connected Field Service for å fjerne funksjonaliteten og deretter gå til [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-portalen for å administrere relaterte [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-servicer som det ikke lenger er behov for.  
+---
+ms.openlocfilehash: ce9db35844f46e9779055ec30dcba0f9459c3a16
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: HT
+ms.contentlocale: nb-NO
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61575526"
+---
+Ved å installere [!INCLUDE[pn_connected_field_service_msdyn365](pn-connected-field-service-msdyn365.md)], distribueres, når du angir [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-abonnementsinformasjonen din, de nødvendige [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-ressursene (oppført nedenfor), og [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)]-forekomsten sender data (for eksempel kommandoer og registreringer) til [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] for å aktivere IoT-aktiverte scenarioer som registrerer enheter, og sender og får deretter kommandoer til de registrerte enhetene. En administrator kan avinstallere tilkoblet felttjeneste for å fjerne funksjonen og deretter navigere til [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-portalen for å administrere eventuelle relaterte [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tjenester som ikke lenger er nødvendige.  
   
- [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-komponenter og -tjenester som er involvert i Connected Field Service-funksjonalitet, beskrives i avsnittene nedenfor.  
+ [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-komponenter og -tjenester som er involvert med tilkoblet felttjeneste-funksjonen, beskrives i de følgende inndelingene.  
   
  [!INCLUDE[cc_privacy_note_azure_trust_center](cc-privacy-note-azure-trust-center.md)]  
   
  [Service Bus-kø](https://azure.microsoft.com/documentation/articles/service-bus-dotnet-get-started-with-queues/)  
   
- Her finner du en kø for både inngående og utgående meldinger (kommandoer) mellom [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] og [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]. Når et IoT-varsel sendes til [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)], eller en kommando sendes fra [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] til IoT Hub-en, blir den lagt i kø her.  
+ Dette er en kø for både innkommende og utgående meldinger (kommandoer) som flyter mellom [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] og [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]. Når et IoT-varsel sendes til [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)], eller en kommando sendes fra [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] til IoT-huben, legges de i kø her.  
   
- [Logiske apper](https://azure.microsoft.com/services/logic-apps/)  
+ [Logic Apps](https://azure.microsoft.com/services/logic-apps/)  
   
- Her finner du en orkestreringsservice som bruker en [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-kobling og en køkobling. [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-koblinger brukes til å konstruere enheter som er spesifikke for [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)], og køkontakter brukes til å avspørre køen.  
+ Dette er en tjeneste for iverksetting, som bruker en [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-kobling og en køkobling. [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-koblinger brukes til å konstruere enheter som er spesifikke for [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)], og køkoblinger brukes for avspørring av køen.  
   
  [Stream Analytics](https://azure.microsoft.com/services/stream-analytics/)  
   
- Her finner du en fullstendig administrert hendelsesbehandlingsmotor i sanntid som du kan bruke til å få mer detaljert innsikt fra data. Stream Analytics gjør det enkelt å konfigurere analytiske beregninger i sanntid for data som strømmes fra enheter, sensorer, nettsteder, sosiale medier, apper, infrastruktursystemer og mer. Den fungerer som en trakt for å sende utvalgte IoT-varsler til [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)].  
+ Dette gir en fullstendig administrert motor for hendelsesbehandling i sanntid, som avdekker dyp innsikt fra data. Stream Analytics gjør det enkelt å konfigurere analyseberegninger i sanntid på datastrømming fra enheter, sensorer, nettsteder, sosiale medier, programmer, infrastruktursystemer med mer. Den fungerer som en trakt som sender selektive IoT-varsler til [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)].  
   
- [IoT-hub](https://azure.microsoft.com/services/iot-hub/)  
+ [IoT Hub](https://azure.microsoft.com/services/iot-hub/)  
   
- Connected Field Services bruker IoT Hub-en til å administrere tilstanden til registrerte enheter og aktiva. I tillegg sender IoT Hub-en kommandoer og varslinger til tilkoblede enheter, og sporer meldingslevering med bekreftelseskvitteringer. Enhetsmeldinger sendes på en varig måte for å legge til rette for periodisk tilkoblede enheter.  
+ Tilkoblede felttjenester bruker IoT Hub til å administrere tilstanden til de registrerte enhetene og ressursene. I tillegg sender IoT Hub kommandoer og varslinger til tilkoblede enheter og sporer levering av meldinger med mottaksbekreftelse. Enhetsmeldinger sendes på en robust måte for å ta høyde for enheter som bare periodevis er tilkoblet.  
   
  **Simulator**  
   
- Dette er en testnettapp for å emulere enheten som sender kommandoer til eller mottar kommandoer fra IoT Hub-en.  
+ Dette er en testnettapp som emulerer enheten som sender eller mottar kommandoer fra IoT-huben.  
   
  [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)  
   
- Connected Field Service bruker SQL [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] til å lagre enhetsmeldinger for senere bruk av PowerBI til å vise statusen for enheter i [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)].  
+ Tilkoblet felttjeneste bruker SQL [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] til å lagre livstegnsmeldinger for enheten, for senere bruk av PowerBI til å vise statusen til enhetene i [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)].  
   
- [Azure Blob-lagring](https://azure.microsoft.com/services/storage/)  
+ [Azure Blob Storage](https://azure.microsoft.com/services/storage/)  
   
- Spørringer som Stream Analytics bruker, lagres i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob-lagring.
+ Spørringer som brukes av Stream Analytics, lagres i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage.

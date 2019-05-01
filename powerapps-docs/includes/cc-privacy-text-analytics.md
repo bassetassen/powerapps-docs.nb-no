@@ -1,43 +1,51 @@
-Ved å aktivere tekstanalysefunksjonen aktiverer du avhengige funksjoner i [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] som bruker API for [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Cognitive Services-tekstanalyse for å tilby avansert innsikt. Disse avhengige funksjonene er:  
+---
+ms.openlocfilehash: 80997689e9d4ebca8eb4809cc3e94dab549482b5
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: HT
+ms.contentlocale: nb-NO
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61577555"
+---
+Ved å aktivere tekstanalysefunksjonen, aktiverer du avhengige funksjoner i [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)], som utnytter API-en for tekstanalyse i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Cognitive Services til å levere avansert innsikt. Disse avhengige funksjonene er:  
   
 -   Kunnskapsforslag  
   
 -   Saksemneanalyse  
   
--   Forslag for lignende saker  
+-   Lignende saksforslag  
   
- En administrator kan aktivere funksjonen for tekstanalyse under kategorien **Innstillinger** > **Administrasjon** > **Systeminnstillinger** > **Forhåndsvisning** i [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)]-organisasjonen.  
+ En administrator kan aktivere tekstanalysefunksjonen under **Innstillinger** > **Administrasjon** > **Systeminnstillinger** > **Forhåndsvisning**-fanen i [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)]-organisasjonen.  
   
- Ved å aktivere tekstanalysefunksjonen når du konfigurerer tekstanalysebaserte kunnskapsforslag i [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)], sendes saken og de relaterte enhetenes data til API-en for [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tekstanalyse for å trekke ut nøkkelord/uttrykk. Ingen data lages med API-en for [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tekstanalyse. Bare konfigurerte felt i kunnskapsartikkelkonfigurasjonen sendes til API-en for [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tekstanalyse for å trekke ut termene. Den systemansvarlige eller tilpasseren har muligheten til å deaktivere kunnskapsartikkelkonfigurasjonen for å stoppe API-kall til API-en for [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tekstanalyse. Tilpasseren kan også stoppe bruk av tekstanalysebaserte forslag ved å bytte tilbake til feltbaserte forslag i konfigurasjonen av saksenhetsskjema.  
+ Ved å aktivere tekstanalysefunksjonen når du konfigurerer kunnskapsforslag som er basert på tekstanalyse i [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)], sendes saken og tilknyttede enhetsdata til API-en for tekstanalyse i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] for å trekke ut nøkkelord eller -uttrykk. Ingen data lagres med API-en for tekstanalyse i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]. Det er bare konfigurerte felt i konfigurasjonen av kunnskapsartikkelen som sendes til API-en for tekstanalyse i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] for å trekke ut vilkårene. Administrator eller tilpasser har mulighet til å deaktivere konfigurasjonen av kunnskapsartikkelen for å slutte å foreta API-kall til API-en for tekstanalyse i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]. Tilpasseren kan også slutte å bruke forslag som er basert på tekstanalyse, ved å bytte tilbake til feltbaserte forslag i konfigurasjonen av saksenhetsskjema.  
   
- Ved å aktivere tekstanalysefunksjonen når du konfigurerer saksemneanalyse i [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)], sendes saken og de relaterte enhetenes data til API-en for [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tekstanalyse for fastsettelse av emne. Ingen data lages med API-en for [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tekstanalyse. Bare konfigurerte felt i konfigurasjonen av emnemodell sendes til API-en for [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tekstanalyse for å trekke ut emnene. Den systemansvarlige eller tilpasseren har muligheten til å deaktivere emnemodellen for å foreta API-kall til [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tekstanalyse.  
+ Ved å aktivere tekstanalysefunksjonen når du konfigurerer saksemneanalyse i [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)], sendes saken og tilknyttede enhetsdata til API-en for tekstanalyse i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] for fastsettelse av emne. Ingen data lagres med API-en for tekstanalyse i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]. Det er bare konfigurerte felt i emnemodellen som sendes til API-en for tekstanalyse i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] for å trekke ut emner. Administrator eller tilpasser har mulighet til å deaktivere emnemodellen for å slutte å foreta API-kall for tekstanalyse i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)].  
   
- Ved å aktivere tekstanalysefunksjonen når du konfigurerer forslag for lignende saker i [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)], hvis alternativet for avansert tekstanalyse er aktivert i likhetsregelen, sendes saken og de relaterte enhetenes data til API-en for [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tekstanalyse for å trekke ut nøkkelord og uttrykk. Bare tekstfelt konfigurert i likhetsregelen sendes til API-en for [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tekstanalyse. Ingen data lages med API-en for [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tekstanalyse. Den systemansvarlige eller tilpasseren har muligheten til å deaktivere likhetsregelen for å stoppe API-kall til [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tekstanalyse.  
+ Ved å aktivere tekstanalysefunksjonen når du konfigurerer forslag for lignende saker i [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)], og det avanserte alternativet for tekstanalyse er aktivert i likhetsregelen, sendes saken og tilknyttede enhetsdata til API-en for tekstanalyse i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] for å trekke ut nøkkelord og -uttrykk. Det er bare tekstfelt som er konfigurert i likhetsregelen, som sendes til API-en for tekstanalyse i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]. Ingen data lagres med API-en for tekstanalyse i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]. Administrator eller tilpasser har mulighet til å deaktivere likhetsregelen for å slutte å foreta API-kall for tekstanalyse i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)].  
   
- [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-komponenter og -tjenester som er involvert i tekstanalysebaserte funksjoner, er beskrevet i avsnittene nedenfor.  
+ [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-komponenter og -tjenester som er involvert i funksjoner som er basert på tekstanalyse, beskrives i de følgende inndelingene.  
   
  [!INCLUDE[cc_privacy_note_azure_trust_center](cc-privacy-note-azure-trust-center.md)]  
   
  [Azure API-app](https://azure.microsoft.com/services/app-service/api/)  
   
- [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] API-appen utløser nettjobbene som leser dataene fra [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-organisasjonen, og sender data til API-en for tekstanalyse for å foreta emneanalyse. [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] API-appen bruker nettjobb til å utføre den faktiske databehandlingen i bakgrunnen og skrive utdataene til[!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage. Dataene lagres midlertidig i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage. Til slutt slettes dataene fra [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Storage når fastsettelse av emne er foretatt.  
+ [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] API-appen utløser nettjobber som leser data fra [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-organisasjonen og sender data til API-en for tekstanalyse for å foreta emneanalyse. [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] API-appen bruker en nettjobb til å gjøre den faktiske databehandlingen i bakgrunnen, og skrive utdata til [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage. Dataene lagres midlertidig i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage. Til slutt slettes data fra [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Storage, når fastsettelse av emne er gjort.  
   
  [Azure Scheduler](https://azure.microsoft.com/services/storage/)  
   
- [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Scheduler brukes til å utløse en nettjobb på planlagt basis for å utføre eneanalyse. Bare byggeplanen for emnemodell deles med planleggeren.  
+ [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Scheduler brukes til å utløse planlagte nettjobber for å utføre emneanalyse. Det er bare byggplanen for emnet som deles med planleggeren.  
   
  [Azure Table](https://azure.microsoft.com/services/storage/)  
   
- [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Table brukes for kommunisering av modellversjon og organisasjonskontekst mellom [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] API-appen og nettjobben.  
+ [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Table brukes til å kommunisere modellversjonen og organisasjonskonteksten mellom [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] API-appen og nettjobben.  
   
- [Azure Blob-lagring](https://azure.microsoft.com/services/storage/)  
+ [Azure Blob Storage](https://azure.microsoft.com/services/storage/)  
   
- Nettjobber lagrer data midlertidig i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage, og sletter dem med en gang Logic App-pipelinen er ferdig utført.  
+ Nettjobber lagrer data midlertidig i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob Storage og sletter dem når datasamlebåndet for logikkappen er ferdig med å kjøre.  
   
- [API for Azure-tekstanalyse](https://www.microsoft.com/cognitive-services/en-us/text-analytics-api)  
+ [API for tekstanalyse i Azure](https://www.microsoft.com/cognitive-services/en-us/text-analytics-api)  
   
- API-en for [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tekstanalyse sendes data basert på felt som er konfigurert i aktive felt for kunnskapssøk eller emnemodellkonfigurasjonen eller likhetsregalkonfigurasjonen. Saksenhetsfeil, for eksempel tittel og beskrivelse, og beskrivelsesfeltet i relaterte notater og aktiviteter, blir konfigurert i konfigurasjonen av feltet for kunnskapsbasesøk.  
+ API-en for tekstanalyse i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] er data som er sendt basert på felt som er konfigurert i aktive kunnskapssøkefelt eller konfigurasjonen av emnemodellen eller likhetsregelen. Saksenhetsfelt, for eksempel tittel og beskrivelse samt beskrivelsesfeltet i relaterte notater og aktiviteter, er for eksempel konfigurert i kunnskapssøkefeltkonfigurasjonen.  
   
- [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] Relevanssøk  
+ Relevanssøk for [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]  
   
- Du kan bruke relevanssøk hvis det er aktivert av en administrator, til å finne like poster for saker. Felt for tekstsamsvar og felt for nøyaktig treff som brukes i likhetsregelen, brukes til å starte API-en for relevanssøk. Se i det tekniske innholdet for [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-relevanssøk for detaljer om datahåndtering.
+ Du kan bruke Relevanssøk til å finne lignende saksposter hvis dette er aktivert av en administrator. Tekstsamsvarsfelt og nøyaktige samsvarsfelt som brukes i likhetsregelen, brukes til å starte Relevanssøk-API-en. Hvis du vil ha informasjon om håndtering av data, kan du se på det tekniske innholdet for Relevanssøk for [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)].

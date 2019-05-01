@@ -1,11 +1,19 @@
-Ved å aktivere funksjonen Relasjonsassistent, hentes begrensede utvekslingsdata, inkludert navnet til og e-postadressen for en avsender samt utdrag av teksten i e-posten, for å vise relevant innsikt for e-posten. (Men dataen lagres ikke i [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)].) I tillegg kan funksjonen Relasjonsassistent konfigureres til å hente informasjon om nyheter, økonomi og flyreiseinformasjon ved å sende forespørsler til eksterne komponenter, for eksempel MSN Økonomi og Bing (som ikke regnes som [!INCLUDE[pn_ms_dyn_365](pn-ms-dyn-365.md)] Core Services). En administrator kan aktivere og deaktivere funksjonen Relasjonsassistent ved å gå til **Innstillinger** > **Konfigurasjon av intelligens**, klikke fanen **Relasjonsassistent** og deretter gjøre det riktige valget.  
+---
+ms.openlocfilehash: 40dcde544894751da2696defc76819892659cb25
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: HT
+ms.contentlocale: nb-NO
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61577526"
+---
+Begrenset datautveksling, som inkluderer navnet på en avsender og e-postadresse, i tillegg til utdrag fra brødteksten i e-posten, hentes ved å aktivere Relationship Assistant-funksjonen (men er ikke lagret i [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]), med hensikten å vise relevante innsikter i e-posten. Relationship Assistant-funksjonen kan videre konfigureres til å hente informasjon når det gjelder nyheter, økonomi og flyreiseinformasjon, ved å sende alle forespørsler til eksterne komponenter, som MSN Money og Bing (som ikke regnes som [!INCLUDE[pn_ms_dyn_365](pn-ms-dyn-365.md)] Core Services). En administrator kan aktivere og deaktivere Relationship Assistant-funksjonen ved å gå til **Innstillinger** > **Konfigurasjon av intelligens**, klikke på **Relationship Assistant**-fanen, og deretter merke av riktig.  
   
- De eksterne komponentene som er involvert i funksjonen Relasjonsassistent, er beskrevet i avsnittene nedenfor.  
+ De eksterne komponentene som er involvert med Relationship Assistant-funksjonen er beskrevet i følgende deler.  
   
  **[!INCLUDE[pn_bing](pn-bing.md)]**  
   
- Relasjonsassistent bruker [!INCLUDE[pn_bing](pn-bing.md)] til å søke etter relevante nyheter for å vise dem til en bruker ved hjelp av kontonavn fra den brukerens [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-data.  
+ Relationship Assistent bruker [!INCLUDE[pn_bing](pn-bing.md)] til å søke etter relevante nyheter som kan vises til en bruker ved hjelp av kontonavnene fra brukerens [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-data.  
   
  **[!INCLUDE[pn_ms_MSN_Money](pn-ms-msn-money.md)]**  
   
- Relasjonsassistent bruker [!INCLUDE[pn_ms_MSN_Money](pn-ms-msn-money.md)] til å vise relevant aksjeinformasjon til en bruker ved hjelp av kontoticker-koden fra den brukerens [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-data.
+ Relationship Assistent bruker [!INCLUDE[pn_ms_MSN_Money](pn-ms-msn-money.md)] til å søke etter relevante nyheter som kan vises til en bruker ved hjelp av kontonavnene fra brukerens [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-data.
