@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61547833"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="use-the-entity-form-control"></a>Bruke enhetsskjemakontrollen
 Opprett apper på en raskere måte ved å bruke **enhetsskjemakontrollen** til å legge til funksjonsrike skjemaer for Common Data Service-enheter.
@@ -48,12 +49,12 @@ Dette er nøkkelegenskapene i en **enhetsskjemakontroll**.
 Eksempel: Hvis den **enhetsskjemakontrollen** kontroll viser en liste over poster for salgsordrer, den **valgt** egenskapen gir deg posten som er valgt for øyeblikket. Du kan også åpne et felt i en post. (For eksempel kan du angi verdien for **Konto**-feltet i den valgte posten som **Selected.Account**.)
 
 **SelectableFields** – angir hvilke felt som skal vises som koblinger. Angi verdien for denne egenskapen ved hjelp av denne syntaksen:  
-**{Field1Name : true, Field2Name : true}**  
+**{Field1Name : true; Field2Name : true}**  
 Eksempel: Hvis du vil den **SalesOrderId** og **kontoen** feltet skal vises som koblinger i et skjema, angir du **SelectableFields** -egenskapen for skjemaet til denne verdien:  
-**{SalesOrderId : true, Account : true}**
+**{SalesOrderId : true; Account : true}**
 
 **SelectedField** – bestemmer hvilket felt som ble trykket eller klikket på. Dette gjelder bare for feltene som er angitt som **SelectableFields**.  
-Eksempel: Hvis du angir den **SelectableFields** egenskapen til **{SalesOrderId: true, konto: true}** og brukeren klikker eller trykker på den **kontoen** felt,  **SelectedField.Account** er satt til sann.
+Eksempel: Hvis du angir den **SelectableFields** egenskapen til **{SalesOrderId: true; konto: true}** og brukeren klikker eller trykker på den **kontoen** felt,  **SelectedField.Account** er satt til sann.
 
 **OnFieldSelect** – hvordan en app reagerer når brukeren klikker eller trykker på et felt. Dette gjelder bare for feltene som er angitt som **SelectableFields**.
 

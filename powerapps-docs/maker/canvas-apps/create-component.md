@@ -16,6 +16,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61562242"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-component-for-canvas-apps"></a>Opprette en komponent for lerretsapper
 
@@ -104,7 +105,7 @@ I dette eksemplet skal du opprette en meny-komponent som ligner på denne grafik
 
 1. Angi komponentens **elementer** egenskapen til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Table({Item:"SampleText"})
     ```
 
@@ -114,7 +115,7 @@ I dette eksemplet skal du opprette en meny-komponent som ligner på denne grafik
 
 1. Kontroller at egenskapslisten viser den **elementer** egenskapen (slik den gjør det som standard), og angi deretter verdien for egenskapen til dette uttrykket:
 
-    ```powerapps-dot
+    ```powerapps-comma
     MenuComponent.Items
     ```
 
@@ -140,8 +141,8 @@ Deretter kan du legge til komponenten til en skjerm og angi en tabell med streng
 
 1. Angi den **elementer** -egenskapen for **MenuComponent_1** til denne formelen:
 
-    ```powerapps-dot
-    Table({Item:"Home"}, {Item:"Admin"}, {Item:"About"}, {Item:"Help"})
+    ```powerapps-comma
+    Table({Item:"Home"}; {Item:"Admin"}; {Item:"About"}; {Item:"Help"})
     ```
 
     Denne forekomsten ligner denne grafikken, men du kan tilpasse teksten og andre egenskaper for hver forekomst.
@@ -160,7 +161,7 @@ Du har så langt har opprettet en komponent og lagt det til en app. Deretter opp
 
 1. På den **avansert** fanen, angi verdien for den **valgt** egenskapen til dette uttrykket, justere tallet i gallerinavnet om nødvendig:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gallery1.Selected.Item
     ```
 
@@ -168,7 +169,7 @@ Du har så langt har opprettet en komponent og lagt det til en app. Deretter opp
 
 1. På det standardskjermbildet i appen, legge til en etikett, og angi dens **tekst** egenskapen til dette uttrykket, justere tallet i komponentnavnet på den om nødvendig:
 
-    ```powerapps-dot
+    ```powerapps-comma
     MenuComponent_1.Selected
     ```
 

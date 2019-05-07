@@ -19,6 +19,7 @@ ms.translationtype: HT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61555503"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-canvas-app-from-scratch-based-on-excel-data"></a>Opprett en lerretsapp fra grunnen av basert på Excel-data
 
@@ -111,17 +112,17 @@ Du må først opprette en Excel-fil ved hjelp av disse eksempeldataene for å f�
 
     Formelen samsvarer med dette eksemplet:
 
-    ```powerapps-dot
+    ```powerapps-comma
     SortByColumns(
         Search(
-            Schedule,
-            TextSearchBox1.Text,
+            Schedule;
+            TextSearchBox1.Text;
             "Volunteer"
-        ),
-        "Volunteer",
+        );
+        "Volunteer";
         If(
-            SortDescending1,
-            SortOrder.Descending,
+            SortDescending1;
+            SortOrder.Descending;
             SortOrder.Ascending
         )
     )
@@ -196,7 +197,7 @@ Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelre
 
 1. Angi **OnSelect**-egenskapen for ikonet til denne formelen:
 
-    `NewForm(EditForm1);Navigate(ChangeScreen,ScreenTransition.None)`
+    `NewForm(EditForm1);;Navigate(ChangeScreen;ScreenTransition.None)`
 
     Når brukeren velger dette ikonet, vises **ChangeScreen** med tomme felt, slik at brukeren enklere kan opprette en post.
 
@@ -206,7 +207,7 @@ Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelre
 
 1. Angi **OnSelect**-egenskapen for pilen til denne formelen:
 
-    `EditForm(EditForm1); Navigate(ChangeScreen, ScreenTransition.None)`
+    `EditForm(EditForm1);; Navigate(ChangeScreen; ScreenTransition.None)`
 
     Når brukeren velger dette ikonet, vises **ChangeScreen** med hvert felt som viser data for den valgte posten, slik at brukeren kan redigere eller slette posten enklere.
 
@@ -218,7 +219,7 @@ Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelre
 
 1. Angi **OnSelect**-egenskapen for ikonet til denne formelen:
 
-    `ResetForm(EditForm1);Navigate(ViewScreen, ScreenTransition.None)`
+    `ResetForm(EditForm1);;Navigate(ViewScreen; ScreenTransition.None)`
 
     Når brukeren velger dette ikonet, forkastes eventuelle endringer brukeren har gjort på denne skjermen, og visningsskjermen åpnes.
 
@@ -228,7 +229,7 @@ Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelre
 
 1. Angi **OnSelect**-egenskapen for hakemerket til denne formelen:
 
-    `SubmitForm(EditForm1); Navigate(ViewScreen, ScreenTransition.None)`
+    `SubmitForm(EditForm1);; Navigate(ViewScreen; ScreenTransition.None)`
 
     Når brukeren velger dette ikonet, lagres eventuelle endringer brukeren har gjort for skjermen, og visningsskjermen åpnes.
 
@@ -246,7 +247,7 @@ Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelre
 
 1. Angi **OnSelect**-egenskapen for papirkurvikonet til denne formelen:
 
-    `Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)`
+    `Remove(Schedule; BrowseGallery1.Selected);; Navigate(ViewScreen; ScreenTransition.None)`
 
     Når brukeren velger dette ikonet, slettes den valgte posten fra datakilden, og Vis-skjermen åpnes.
 

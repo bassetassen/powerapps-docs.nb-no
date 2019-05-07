@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63321221"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="generate-a-canvas-app-to-handle-project-requests"></a>Generer en lerretsapp for å administrere prosjektforespørsler
 > [!NOTE]
@@ -85,7 +86,7 @@ Nå som vi har fått på plass SharePoint-listen, kan vi bygge og egendefinere v
    
     ![Elementer-egenskaper](./media/sharepoint-scenario-generate-app/02-03-03-items.png)
 
-6. Endre formelen til **SortByColumns(Filter('Project Requests', StartsWith(Title, TextSearchBox1.Text)), "Title", If(SortDescending1, Descending, Ascending))**.
+6. Endre formelen til **SortByColumns(Filter('Project Requests'; StartsWith(Title; TextSearchBox1.Text)); "Title"; If(SortDescending1; Descending; Ascending))**.
    
     ![Formellinje](./media/sharepoint-scenario-generate-app/02-03-04-formula.png)
    

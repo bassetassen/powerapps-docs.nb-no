@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63321867"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="back-and-navigate-functions-in-powerapps"></a>Funksjonene Back og Navigate i PowerApps
 Endre hvilken skjerm som vises.
@@ -59,7 +60,7 @@ Du kan bruke disse funksjonene bare i en [formel for virkemåte](../working-with
 ## <a name="syntax"></a>Syntaks
 **Back**()
 
-**Navigere**( *skjermen* [, *overgang* [, *UpdateContextRecord* ]])
+**Navigere**( *skjermen* [; *overgang* [; *UpdateContextRecord* ]])
 
 * *Screen* – obligatorisk. Skjermen som skal vises.
 * *Overgang* – valgfritt.  Den visuelle overgangen som skal brukes mellom gjeldende skjerm og den nye skjermen. Se listen over gyldige verdier for dette argumentet tidligere i dette emnet. Standardverdien er **ingen**.
@@ -70,15 +71,15 @@ Du kan bruke disse funksjonene bare i en [formel for virkemåte](../working-with
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **Navigere (detaljer)** |Viser **Details**-skjermen uten overgang eller endring i verdi for en kontekstvariabel. |**Detaljer**-skjermen vises raskt. |
-| **Navigate( Details, ScreenTransition.Fade )** |Viser **Detaljer**-skjermen med en **Tone**-overgang.  Ingen verdier for en kontekstvariabel endres. |Den gjeldede skjermen tones ned for å vise **Details**-skjermen. |
-| **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** |Viser **Details**-skjermen med en **Fade**-overgang, og oppdaterer verdien til kontekstvariabelen **ID** til **12**. |Den gjeldende skjermen tones ned for å vise **Details**-skjermen, og kontekstvariabelen **ID** på den skjermen som angis til **12**. |
-| **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Viser **Detaljer**-skjermen med en **Tone**-overgang. Oppdaterer verdien til kontekstvariabelen **ID** til **12**, og oppdaterer verdien til kontekstvariabelen **Shade** til **Color.Red**. |Den gjeldede skjermen tones ned for å vise **Details**-skjermen. Kontekstvariabelen **ID** på **Detaljer**-skjermen angis til **12**, og kontekstvariabelen **Nyanse** angis til **Color.Red**. Hvis du angir **Fyll**-egenskapen til en kontroll på **Detaljer**-skjermen til **Nyanse**, vises denne kontrollen i rødt. |
+| **Navigate( Details; ScreenTransition.Fade )** |Viser **Detaljer**-skjermen med en **Tone**-overgang.  Ingen verdier for en kontekstvariabel endres. |Den gjeldede skjermen tones ned for å vise **Details**-skjermen. |
+| **Navigate( Details; ScreenTransition.Fade; {&nbsp;ID:&nbsp;12&nbsp;} )** |Viser **Details**-skjermen med en **Fade**-overgang, og oppdaterer verdien til kontekstvariabelen **ID** til **12**. |Den gjeldende skjermen tones ned for å vise **Details**-skjermen, og kontekstvariabelen **ID** på den skjermen som angis til **12**. |
+| **Navigate( Details; ScreenTransition.Fade; {&nbsp;ID:&nbsp;12&nbsp;;&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Viser **Detaljer**-skjermen med en **Tone**-overgang. Oppdaterer verdien til kontekstvariabelen **ID** til **12**, og oppdaterer verdien til kontekstvariabelen **Shade** til **Color.Red**. |Den gjeldede skjermen tones ned for å vise **Details**-skjermen. Kontekstvariabelen **ID** på **Detaljer**-skjermen angis til **12**, og kontekstvariabelen **Nyanse** angis til **Color.Red**. Hvis du angir **Fyll**-egenskapen til en kontroll på **Detaljer**-skjermen til **Nyanse**, vises denne kontrollen i rødt. |
 
 ### <a name="step-by-step"></a>Trinnvis
 1. Gi standardskjermen navnet **DefaultScreen**, legg til en etikett, og angi **[Tekst](../controls/properties-core.md)**-egenskapen til etiketten slik at den viser **Standard**.
 2. Legg til en skjerm, og kall den **AddlScreen**.
 3. Legg til en etikett for **AddlScreen**, og angi **[Tekst](../controls/properties-core.md)**-egenskapen til etiketten slik at den viser **Addl**.
-4. Legg til en knapp i **AddlScreen**, og angi knappens **[OnSelect](../controls/properties-core.md)**-egenskap til denne funksjonen:<br>**Navigate(DefaultScreen, ScreenTransition.Fade)**
+4. Legg til en knapp i **AddlScreen**, og angi knappens **[OnSelect](../controls/properties-core.md)**-egenskap til denne funksjonen:<br>**Navigate(DefaultScreen; ScreenTransition.Fade)**
 5. Trykk på F5 fra **AddlScreen**, og velg deretter knappen.<br>**DefaultScreen** vises gjennom en uttonet overgang.
 
 [Et annet eksempel](../add-screen-context-variables.md)

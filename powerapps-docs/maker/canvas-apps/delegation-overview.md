@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63318116"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-delegation-in-a-canvas-app"></a>Forstå delegering i en lerretsapp
 PowerApps inneholder et kraftig sett med funksjoner for filtrering, sortering og forming av dataene i en lerretsapp: **[Filter](functions/function-filter-lookup.md)**,  **[Sorter](functions/function-sort.md)**, og **[AddColumns](functions/function-table-shaping.md)** funksjoner for å nevne noen få. Med disse funksjonene kan du gi brukerne fokusert tilgang til informasjonen de trenger. For de med databasebakgrunn vil bruk av disse funksjonene tilsvare skriving av en databasespørring.
@@ -62,7 +63,7 @@ Du kan bruke disse med kolonner i tabellen for å velge riktige poster i funksjo
 * **[StartsWith](functions/function-startswith.md)**,  **[EndsWith](functions/function-startswith.md)**
 * Konstante verdier som er de samme i alle postene, for eksempel kontrollegenskaper og [globale variabler og kontekstvariabler](working-with-variables.md).
 
-Du kan også bruke deler av formelen som evalueres som en konstant verdi for alle poster. For eksempel **Left (Language(), 2)**, **dato (2019, 3, 31)**, og **dag()** ikke avhenger av andre kolonner i posten og, returner derfor samme verdi for alle poster. Disse verdiene kan sendes til datakilden som en konstant og vil ikke blokkere delegering. 
+Du kan også bruke deler av formelen som evalueres som en konstant verdi for alle poster. For eksempel **Left (Language(); 2)**, **dato (2019, 3, 31)**, og **dag()** ikke avhenger av andre kolonner i posten og, returner derfor samme verdi for alle poster. Disse verdiene kan sendes til datakilden som en konstant og vil ikke blokkere delegering. 
 
 Den forrige listen inkluderer ikke disse viktige elementene:
 
@@ -93,10 +94,10 @@ Andre mengdefunksjoner, for eksempel **[StdevP](functions/function-aggregates.md
 
 Som i dette eksemplet bruker ofte produsentene **AddColumns** og **oppslag** å slå sammen informasjon fra én tabell til en annen, vanligvis kalt en sammenføyning på dataspråket:
 
-```powerapps-dot
-AddColumns( Products, 
-    "Supplier Name", 
-    LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name 
+```powerapps-comma
+AddColumns( Products; 
+    "Supplier Name"; 
+    LookUp( Suppliers; Suppliers.ID = Product.SupplierID ).Name 
 )
 ```
 

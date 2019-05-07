@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61520517"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="round-rounddown-and-roundup-functions-in-powerapps"></a>Round-, RoundDown- og RoundUp-funksjoner i PowerApps
 Avrunder et tall.
@@ -33,7 +34,7 @@ Avrunder et tall.
 Hvis du sender ett enkelt tall, er returverdien den avrundede versjonen av dette tallet.  Hvis du angir en [enkeltkolonnetabell](../working-with-tables.md) som inneholder tall, vil returverdien være en enkeltkolonnetabell med avrundede tall. Hvis du har en flerkolonnetabell, kan du gjøre den om til en enkeltkolonnetabell, som beskrevet i [arbeide med tabeller](../working-with-tables.md).
 
 ## <a name="syntax"></a>Syntaks
-**Round**( *Number*, *DecimalPlaces* )<br>**RoundDown**( *Number*, *DecimalPlaces* )<br>**RoundUp**( *Number*, *DecimalPlaces* )
+**Round**( *Number*; *DecimalPlaces* )<br>**RoundDown**( *Number*; *DecimalPlaces* )<br>**RoundUp**( *Number*; *DecimalPlaces* )
 
 * *Number* – obligatorisk. Tallet som skal avrundes.
 * *DecimalPlaces* – obligatorisk.  Antall plasser til høyre for desimaltegnet å runde av til.  Bruk 0 til å runde av til et heltall.  

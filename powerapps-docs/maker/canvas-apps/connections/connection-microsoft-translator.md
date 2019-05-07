@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61545704"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="connect-to-microsoft-translator-from-powerapps"></a>Koble til Microsoft Translator fra PowerApps
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)
@@ -57,7 +58,7 @@ Dette emnet viser deg hvordan du oppretter Microsoft Translator-tilkoblingen og 
     `MicrosoftTranslator.Languages()`
 4. Legg til en etikett, flytt den under **TargetLang**, og angi **[Text](../controls/properties-core.md)**-egenskapen som følgende formel:  
 
-    `MicrosoftTranslator.Translate(Source.Text, TargetLang.Selected.Value)`
+    `MicrosoftTranslator.Translate(Source.Text; TargetLang.Selected.Value)`
 5. Skriv inn en vilkårlig tekst i **Source**, og velg et språk i **TargetLang**. Etiketten viser teksten du skrev inn på språket du valgte:  
 
     ![Slik oversetter du fra engelsk til spansk](./media/connection-microsoft-translator/translate-text.png)
@@ -71,7 +72,7 @@ Hvis du ikke allerede har gjort det, følger du trinnene i forrige del for å ov
 2. Gi den andre etiketten (ikke **Source**-boksen) **Target** som nytt navn.
 3. Legg til en **Lyd**-kontroll (**Sett inn**-menyen > **Media**), og angi kontrollens **Media**-egenskap som følgende formel:  
 
-    `MicrosoftTranslator.TextToSpeech(Target.Text, TargetLang.Selected.Value)`
+    `MicrosoftTranslator.TextToSpeech(Target.Text; TargetLang.Selected.Value)`
 4. Trykk på F5, eller velg forhåndsvisningsknappen (![](./media/connection-microsoft-translator/preview.png)). Skriv inn vilkårlist tekst i **Source**, velg et språk i **TargetLang**, og velg avspillingsknappen i lydkontrollen.
 
     Appen spiller av en lydversjon av teksten som du skrev inn på språket du valgte.

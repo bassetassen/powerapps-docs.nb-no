@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63320493"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="using-multimedia-files-in-powerapps"></a>Bruk av multimediefiler i PowerApps
 
@@ -158,7 +159,7 @@ I dette scenarioet lærer du hvordan du laster opp pennetegninger til datakilden
 
 8. Legg til en **Knapp**-kontroll under fanen **Sett inn**, og angi **OnSelect**-egenskapen til denne formelen:
 
-    **Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})**
+    **Patch(Drawings; Defaults(Drawings); {Image:MyPen.Image})**
 
 9. Legg til en **Bildegalleri**-kontroll (fanen **Sett inn** > **Galleri**), og angi kontrollens **Elementer**-egenskap til `Drawings`. Gallerikontrollens **Bilde**-egenskap angis automatisk til `ThisItem.Image`.
 

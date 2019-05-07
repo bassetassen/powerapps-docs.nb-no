@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544066"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="abs-exp-ln-power-and-sqrt-functions-in-powerapps"></a>Funksjonene Abs, Exp, Ln, Power og Sqrt i PowerApps
 Beregner absolutte verdier, naturlige logaritmer, kvadratrøtter og resultater av å heve *e* eller et annet tall til angitte potenser.
@@ -43,7 +44,7 @@ Hvis et argument resulterte i en underliggende verdi, er resultatet *tom*.  Dett
 
 * *Number* – obligatorisk. Nummeret som funksjonen skal arbeide med.
 
-**Power**( *Base*, *Exponent* )
+**Power**( *Base*; *Exponent* )
 
 * *Base* – obligatorisk. Grunntallet som skal opphøyes.
 * *Exponent* – obligatorisk. Eksponenten som grunntallet blir opphøyd med.
@@ -60,7 +61,7 @@ Hvis et argument resulterte i en underliggende verdi, er resultatet *tom*.  Dett
 | **Abs( -55 )** |Returnerer tallet uten minustegnet. |55 |
 | **Exp( 2 )** |Returnerer *e* opphøyd i potensen av 2, eller *e* \* *e*. |7.389056... |
 | **Ln( 100 )** |Returnerer den naturlige logaritmen (grunntall *e*) for tallet 100. |4.605170... |
-| **Power( 5, 3 )** |Returnerer 5 opphøyd i potensen av 3, eller 5 \* 5 \* 5. |125 |
+| **Power( 5; 3 )** |Returnerer 5 opphøyd i potensen av 3, eller 5 \* 5 \* 5. |125 |
 | **Sqrt( 9 )** |Returnerer tallet som, når det er multiplisert med seg selv, resulterer i 9. |3 |
 
 ### <a name="single-column-table"></a>Tabell med én kolonne

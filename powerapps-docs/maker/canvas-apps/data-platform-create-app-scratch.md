@@ -19,6 +19,7 @@ ms.translationtype: HT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63319631"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service"></a>Opprett en lerretsapp fra grunnen av ved hjelp av Common Data Service
 
@@ -60,7 +61,7 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 1. Velg **BrowseGallery1** i venstre navigasjonsrute, og angi deretter verdien for **Elementer**-egenskapen til denne formelen:
 
-    `SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
+    `SortByColumns(Search(Accounts; TextSearchBox1.Text; "name"); "name"; If(SortDescending1; SortOrder.Descending; SortOrder.Ascending))`
 
     Denne formelen angir at:
 
@@ -123,25 +124,25 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 1. Angi **OnSelect**-egenskapen for plussikonet til denne formelen:
 
-    `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
+    `NewForm(EditForm1);; Navigate(FormScreen; ScreenTransition.None)`
 
     ![Legg til-ikon](./media/data-platform-create-app-scratch/plus-icon.png)
 
 1. Angi **OnSelect**-egenskapen for den første pilen som peker til høyre, til denne formelen:
 
-    `EditForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
+    `EditForm(EditForm1);; Navigate(FormScreen; ScreenTransition.None)`
 
     ![Neste-ikon](./media/data-platform-create-app-scratch/next-icon.png)
 
 1. På **FormScreen** angir du **OnSelect**-egenskapen for det valgte ikonet til denne formelen:
 
-    `ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
+    `ResetForm(EditForm1);;Navigate(BrowseScreen; ScreenTransition.None)`
 
     ![Avbryt-ikon](./media/data-platform-create-app-scratch/cancel-icon.png)
 
 1. Angi **OnSelect**-egenskapen for avmerkingsikonet til denne formelen:
 
-    `SubmitForm(EditForm1); Navigate(BrowseScreen, ScreenTransition.None)`
+    `SubmitForm(EditForm1);; Navigate(BrowseScreen; ScreenTransition.None)`
 
     ![Avmerking-ikon](./media/data-platform-create-app-scratch/checkmark-icon.png)
 
@@ -149,7 +150,7 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 1. Angi **Papirkurv**-ikonets **Farge**-egenskap til **Hvit** og **OnSelect**-egenskap til denne formelen:
 
-    `Remove(Accounts, BrowseGallery.Selected); Navigate(BrowseScreen, ScreenTransition.None)`
+    `Remove(Accounts; BrowseGallery.Selected);; Navigate(BrowseScreen; ScreenTransition.None)`
 
     ![Papirkurv-ikon](./media/data-platform-create-app-scratch/trash-icon.png)
 

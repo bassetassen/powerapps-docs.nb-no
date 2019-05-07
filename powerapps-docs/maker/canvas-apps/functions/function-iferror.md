@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61562817"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="iferror-function-in-powerapps"></a>IfError-funksjonen i PowerApps
 Oppdager feil, og oppgir en alternativ verdi eller utfører en handling.
@@ -36,7 +37,7 @@ Bruk **IfError** i [formler for virkemåte](../working-with-formulas-in-depth.md
 Hvis alle argumentene til **IfError** resulterer i en feil, returneres verdien av det siste argumentet (som er en feilverdi). 
 
 ## <a name="syntax"></a>Syntaks
-**IfError**( *Value*, *Fallback1* [, *Fallback2*, ... ] )
+**IfError**( *Value*; *Fallback1* [; *Fallback2*; ... ] )
 
 * *Value* – obligatorisk. Formlene som skal testes for en feilverdi. 
 * *Fallback* – obligatorisk. Formlene som skal evalueres og verdiene som skal returneres hvis det forrige argumentet returnerte en feil.  *Fallback* argumenter evalueres helt til en ikke-feilverdien blir funnet.
@@ -45,10 +46,10 @@ Hvis alle argumentene til **IfError** resulterer i en feil, returneres verdien a
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **IfError( 1, 2 )** |Det første argumentet er ikke en feil.  Det returneres, og etterfølgende argumenter evalueres ikke.   | 1 |
-| **IfError( 1/0, 2 )** | Det første argumentet returnerer en feilverdi (på grunn av deling med null).  Det andre argumentet evalueres, og en ikke-feilverdi blir ikke funnet eller returnert. | 2 | 
-| **IfError( 1/0, Notify( «Det oppstod et internt problem», NotificationType.Error ) )** | Det første argumentet returnerer en feilverdi (på grunn av deling med null).  Det andre argumentet evalueres og vises en melding til brukeren.  Returverdien til **IfError** er returverdien til **Notify**, påtvunget til den samme typen som det første argumentet til **IfError** (et tall). | 1 |
-| **IfError( 1/0, 1/0, 2, 1/0, 3 )** | Det første argumentet returnerer en feilverdi (på grunn av deling med null).  Det andre argumentet evalueres, noe som også resulterer i en feilverdi (en annen deling på null).  Det tredje argumentet evalueres, og en feilverdi blir ikke funnet eller returnert.  Det fjerde og femte argumentet ignoreres.  | 2 |
+| **IfError( 1; 2 )** |Det første argumentet er ikke en feil.  Det returneres, og etterfølgende argumenter evalueres ikke.   | 1 |
+| **IfError( 1/0; 2 )** | Det første argumentet returnerer en feilverdi (på grunn av deling med null).  Det andre argumentet evalueres, og en ikke-feilverdi blir ikke funnet eller returnert. | 2 | 
+| **IfError( 1/0; Notify( «Det oppstod et internt problem»; NotificationType.Error ) )** | Det første argumentet returnerer en feilverdi (på grunn av deling med null).  Det andre argumentet evalueres og vises en melding til brukeren.  Returverdien til **IfError** er returverdien til **Notify**, påtvunget til den samme typen som det første argumentet til **IfError** (et tall). | 1 |
+| **IfError( 1/0; 1/0; 2; 1/0; 3 )** | Det første argumentet returnerer en feilverdi (på grunn av deling med null).  Det andre argumentet evalueres, noe som også resulterer i en feilverdi (en annen deling på null).  Det tredje argumentet evalueres, og en feilverdi blir ikke funnet eller returnert.  Det fjerde og femte argumentet ignoreres.  | 2 |
 
 ### <a name="step-by-step"></a>Trinn for trinn
 
@@ -58,7 +59,7 @@ Hvis alle argumentene til **IfError** resulterer i en feil, returneres verdien a
 
 3. Angi formelen for **Tekst**-egenskapen til **Label1** til:
 
-    **IfError( Value( TextInput1.Text ), -1 )**
+    **IfError( Value( TextInput1.Text ); -1 )**
 
 4. Skriv inn **1234** i **TextInput1**.  
 

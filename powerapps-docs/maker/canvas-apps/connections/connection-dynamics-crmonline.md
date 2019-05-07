@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61547509"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="connect-to-dynamics-365-from-powerapps"></a>Å koble til Dynamics 365 fra PowerApps
 Med PowerApps kan du raskt generere, tilpasse, dele og kjøre mobilapper med lite eller ingen kode. Ved hjelp av Dynamics 365-koblingen kan du på bare noen minutter opprette nyttige mobilapper til å dele med organisasjonen.
@@ -81,7 +82,7 @@ I denne prosedyren må du konfigurere **BrowseScreen1** til å vise fornavn og e
     ![Slik velger man oppsett](./media/connection-dynamics-crmonline/select-layout.png)
 4. Kopiere denne formelen, og deretter, med galleriet fremdeles merket, limer du inn formelen på formellinjen (til høyre for **fx**-knappen):
    
-    `SortByColumns(Search(Filter(Contacts,statuscode=1), TextSearchBox1.Text, "lastname"), "lastname", If(SortDescending1, Descending, Ascending))`
+    `SortByColumns(Search(Filter(Contacts;statuscode=1); TextSearchBox1.Text; "lastname"); "lastname"; If(SortDescending1; Descending; Ascending))`
 5. I ruten til høyre setter du den øverste rullegardinlisten til **Fornavn** og den midterste rullegardinlisten til **Etternavn**.
    
     ![Å velge Body1](./media/connection-dynamics-crmonline/firstname-lastname.png)

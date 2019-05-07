@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61548781"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="radio-control-in-powerapps"></a>Radio-kontrollen i PowerApps
 
@@ -126,19 +127,19 @@ Kontrollen kan ha et vannrett eller loddrett oppsett.
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 
-[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
+[**Distinct**( *DataSource*; *ColumnName* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Eksempel
 
 1. Legg til en **radio**-kontroll, gi den navnet **Priser**, og angi **[Elementer](properties-core.md)**-egenskapen til denne verdien:
 
-    **["Standard", "Premium"]**
+    **["Standard"; "Premium"]**
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 
 2. Legg til en **[etikett](control-text-box.md)**-kontroll, flytt den under **Radio**-kontrollen, og angi **[Tekst](properties-core.md)**-egenskapen i **[Etikett](control-text-box.md)**-kontrollen til denne formelen:
 
-    **If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
+    **If("Premium" in Pricing.Selected.Value; "$200 per day"; "$150 per day")**
 
     Vil du ha mer informasjon om **[If](../functions/function-if.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
 

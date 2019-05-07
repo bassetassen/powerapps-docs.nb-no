@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61546575"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="collect-clear-and-clearcollect-functions-in-powerapps"></a>Funksjonene Collect, Clear og ClearCollect i PowerApps
 
@@ -48,7 +49,7 @@ Du kan også bruke **[Patch](function-patch.md)**-funksjonen til å opprette pos
 
 **Clear**-funksjonen sletter alle postene i en samling.  Kolonnene i samlingen blir værende.
 
-Legg merke til at **Clear** bare fungerer på samlinger og ikke på andre datakilder.  Du kan bruke **[RemoveIf](function-remove-removeif.md)( *DataSource*, true)** til dette.  Vær forsiktig, ettersom dette vil fjerne alle postene som er lagret for datakilden, og kan påvirke andre brukere.
+Legg merke til at **Clear** bare fungerer på samlinger og ikke på andre datakilder.  Du kan bruke **[RemoveIf](function-remove-removeif.md)( *DataSource*; true)** til dette.  Vær forsiktig, ettersom dette vil fjerne alle postene som er lagret for datakilden, og kan påvirke andre brukere.
 
 Du kan bruke **[Remove](function-remove-removeif.md)**-funksjonen til å fjerne poster selektivt.
 
@@ -62,7 +63,7 @@ Du kan bruke **[Remove](function-remove-removeif.md)**-funksjonen til å fjerne 
 
 ## <a name="syntax"></a>Syntaks
 
-**Collect**( *DataSource*, *Item*, ...)
+**Collect**( *DataSource*; *Item*; ...)
 
 * *DataSource* – obligatorisk. Datakilden som du vil legge til data i.  Hvis den ikke allerede finnes, opprettes en ny samling.
 * *Item* – obligatorisk.  Én eller flere poster eller tabeller som skal legges til i datakilden.  
@@ -71,7 +72,7 @@ Du kan bruke **[Remove](function-remove-removeif.md)**-funksjonen til å fjerne 
 
 * *Collection* – obligatorisk. Samlingen som du vil tømme.
 
-**ClearCollect**( *Collection*, *Item*, ...)
+**ClearCollect**( *Collection*; *Item*; ...)
 
 * *Collection* – obligatorisk. Samlingen som du vil tømme og legge til data i.
 * *Item* – obligatorisk.  Én eller flere poster eller tabeller som skal legges til i datakilden.  
@@ -86,8 +87,8 @@ I disse eksemplene tømmer du en samling som heter **IceCream**, og legger til d
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Strawberry",&nbsp;Quantity:&nbsp;300&nbsp;} )** |Fjerner alle dataene fra samlingen **IceCream** og legger til en post som inneholder et antall jordbæris. |<style> IMG {max bredde: none} </style> ![tabell med én post](media/function-clear-collect-clearcollect/icecream-clearcollect.png)<br><br>Datakilden **IceCream** har også blitt endret. |
-| **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  )** |Legger til to poster i **IceCream**-samlingen med et antall iskrem med pistasj- og appelsinsmak. |![Tabell med to poster](media/function-clear-collect-clearcollect/icecream-collect.png)<br><br>Datakilden **IceCream** har også blitt endret. |
+| **ClearCollect( IceCream; {&nbsp;Flavor:&nbsp;"Strawberry";&nbsp;Quantity:&nbsp;300&nbsp;} )** |Fjerner alle dataene fra samlingen **IceCream** og legger til en post som inneholder et antall jordbæris. |<style> IMG {max bredde: none} </style> ![tabell med én post](media/function-clear-collect-clearcollect/icecream-clearcollect.png)<br><br>Datakilden **IceCream** har også blitt endret. |
+| **Collect( IceCream; {&nbsp;Flavor:&nbsp;"Pistachio";&nbsp;Quantity:&nbsp;40&nbsp;}; {&nbsp;Flavor:&nbsp;"Orange";&nbsp;Quantity:&nbsp;200&nbsp;}  )** |Legger til to poster i **IceCream**-samlingen med et antall iskrem med pistasj- og appelsinsmak. |![Tabell med to poster](media/function-clear-collect-clearcollect/icecream-collect.png)<br><br>Datakilden **IceCream** har også blitt endret. |
 | **Clear( IceCream )** |Fjerner alle postene fra **IceCream**-samlingen. |![Tom tabell](media/function-clear-collect-clearcollect/icecream-clear.png)<br><br>Datakilden **IceCream** har også blitt endret. |
 
 Trinnvise eksempler på hvordan du oppretter en samling, kan du se [opprette og oppdatere en samling](../create-update-collection.md).

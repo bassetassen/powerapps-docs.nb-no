@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61548712"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="label-control-in-canvas-apps"></a>Etikettkontrollen i lerretsapper
 
@@ -130,7 +131,7 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 
-[**Tekst**( *Tall*, «*FormatCodes*» )](../functions/function-text.md)
+[**Tekst**( *Tall*; «*FormatCodes*» )](../functions/function-text.md)
 
 ## <a name="examples"></a>Eksempler
 
@@ -155,7 +156,7 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 I denne prosedyren oppretter du en samling kalt **CityPopulations**, som inneholder data om innbyggertallet for forskjellige byer i Europa. Deretter viser du dataene i et galleri som inneholder tre etiketter, og du angir hvilken type data som skal vises i hver etikett.
 
 1. Legg til en knapp, og angi knappens **[OnSelect](properties-core.md)**-egenskap til denne formelen:<br>
-   **ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
+   **ClearCollect(CityPopulations; {City:"London"; Country:"United Kingdom"; Population:8615000}; {City:"Berlin"; Country:"Germany"; Population:3562000}; {City:"Madrid"; Country:"Spain"; Population:3165000}; {City:"Rome"; Country:"Italy"; Population:2874000}; {City:"Paris"; Country:"France"; Population:2273000}; {City:"Hamburg"; Country:"Germany"; Population:1760000}; {City:"Barcelona"; Country:"Spain"; Population:1602000}; {City:"Munich"; Country:"Germany"; Population:1494000}; {City:"Milan"; Country:"Italy"; Population:1344000})**
 2. Trykk på F5, velg knappen, og trykk deretter på ESC.
 3. Legg til et tekstgalleri, og sett **[Elementer](properties-core.md)**-egenskapen til **CityPopulations**.
 

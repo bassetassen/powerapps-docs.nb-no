@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63320948"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="forall-function-in-powerapps"></a>Funksjonen ForAll i PowerApps
 Beregner verdier og utfører handlinger for alle [poster](../working-with-tables.md#records) i en [tabell](../working-with-tables.md).
@@ -51,7 +52,7 @@ Mange funksjoner i PowerApps kan behandle mer enn en verdi om gangen ved bruk av
 [!INCLUDE [delegation-no-one](../../../includes/delegation-no-one.md)]
 
 ## <a name="syntax"></a>Syntaks
-**ForAll**( *Table*, *Formula*)
+**ForAll**( *Table*; *Formula*)
 
 * *Table* – obligatorisk. Tabellen som skal kjøres.
 * *Formula* – obligatorisk.  Formelen som skal evalueres for alle postene i *Table*.
@@ -64,12 +65,12 @@ Følgende eksempler bruker **Squares** som [datakilde](../working-with-data-sour
 
 For å opprette denne datakilden som en samling, angir du **Knappe**-kontrollens **OnSelect**-egenskap til denne formelen, åpner Forhåndsvisningsmodus, og deretter klikker eller trykker du på knappen:
 
-`ClearCollect( Squares, [ "1", "4", "9" ] )`
+`ClearCollect( Squares; [ "1"; "4"; "9" ] )`
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **ForAll(&nbsp;Squares, Sqrt(&nbsp;Value&nbsp;)&nbsp;)**<br><br>**Sqrt(&nbsp;Squares&nbsp;)** |Beregner kvadratroten av **Value**-kolonnen for alle postene i inndatatabellen.  Funksjonen **Sqrt** kan også brukes med en enkeltkolonnetabell, noe som gjør det mulig å utføre dette eksempelet uten å bruke **ForAll**. |<style> img { max-width: none } </style> ![](media/function-forall/sqrt.png) |
-| **ForAll(&nbsp;Squares, Power(&nbsp;Value,&nbsp;3&nbsp;)&nbsp;)** |Opphøyer **Value**-kolonnen til tredje potens for alle postene i inndatatabellen.  Funksjonen **Power** støtter ikke enkeltkolonnetabeller. Derfor må **ForAll** brukes i dette tilfellet. |<style> img { max-width: none } </style> ![](media/function-forall/power3.png) |
+| **ForAll(&nbsp;Squares; Sqrt(&nbsp;Value&nbsp;)&nbsp;)**<br><br>**Sqrt(&nbsp;Squares&nbsp;)** |Beregner kvadratroten av **Value**-kolonnen for alle postene i inndatatabellen.  Funksjonen **Sqrt** kan også brukes med en enkeltkolonnetabell, noe som gjør det mulig å utføre dette eksempelet uten å bruke **ForAll**. |<style> img { max-width: none } </style> ![](media/function-forall/sqrt.png) |
+| **ForAll(&nbsp;Squares; Power(&nbsp;Value;&nbsp;3&nbsp;)&nbsp;)** |Opphøyer **Value**-kolonnen til tredje potens for alle postene i inndatatabellen.  Funksjonen **Power** støtter ikke enkeltkolonnetabeller. Derfor må **ForAll** brukes i dette tilfellet. |<style> img { max-width: none } </style> ![](media/function-forall/power3.png) |
 
 ### <a name="using-a-connection"></a>Bruke en tilkobling
 Følgende eksempler bruker **Expressions** som [datakilde](../working-with-data-sources.md):
@@ -78,14 +79,14 @@ Følgende eksempler bruker **Expressions** som [datakilde](../working-with-data-
 
 For å opprette denne datakilden som en samling, angir du **Knappe**-kontrollens **OnSelect**-egenskap til denne formelen, åpner Forhåndsvisningsmodus, og deretter klikker eller trykker du på knappen:
 
-`ClearCollect( Expressions, [ "Hello", "Good morning", "Thank you", "Goodbye" ] )`
+`ClearCollect( Expressions; [ "Hello"; "Good morning"; "Thank you"; "Goodbye" ] )`
 
 Dette eksempelet bruker også en [Microsoft Translator](../connections/connection-microsoft-translator.md)-tilkobling.  Hvis du vil legge til denne tilkoblingen i appen din, kan du se emnet om hvordan du [behandler tilkoblinger](../add-manage-connections.md).
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **ForAll( Expressions, MicrosoftTranslator.Translate( Value, "es" ) )** |Oversett innholdet i **Value**-kolonnen til spansk (forkortet «es») for alle postene i Expressions-tabellen. |<style> img { max-width: none } </style> ![](media/function-forall/translate-es.png) |
-| **ForAll( Expressions, MicrosoftTranslator.Translate( Value, "fr" ) )** |Oversett innholdet i **Value**-kolonnen til fransk (forkortet «fr») for alle postene i Expressions-tabellen. |<style> img { max-width: none } </style> ![](media/function-forall/translate-fr.png) |
+| **ForAll( Expressions; MicrosoftTranslator.Translate( Value; "es" ) )** |Oversett innholdet i **Value**-kolonnen til spansk (forkortet «es») for alle postene i Expressions-tabellen. |<style> img { max-width: none } </style> ![](media/function-forall/translate-es.png) |
+| **ForAll( Expressions; MicrosoftTranslator.Translate( Value; "fr" ) )** |Oversett innholdet i **Value**-kolonnen til fransk (forkortet «fr») for alle postene i Expressions-tabellen. |<style> img { max-width: none } </style> ![](media/function-forall/translate-fr.png) |
 
 ### <a name="copying-a-table"></a>Kopiere en tabell
 Noen ganger trenger du å filtrere, bearbeide, sortere og manipulere data.  PowerApps tilbyr en rekke funksjoner for å gjøre dette, blant annet **Filter**, **AddColumns** og **Sort**.  PowerApps behandler hver tabell som en verdi, slik at den kan flyte gjennom formler og være enkel i bruk.      
@@ -104,13 +105,13 @@ Følgende eksempler bruker **Products** som [datakilde](../working-with-data-sou
 
 For å opprette denne datakilden som en samling, angir du **Knappe**-kontrollens **OnSelect**-egenskap til denne formelen, åpner Forhåndsvisningsmodus, og deretter klikker eller trykker du på knappen:
 
-```powerapps-dot
-ClearCollect( Products, 
+```powerapps-comma
+ClearCollect( Products; 
     Table( 
-        { Product: "Widget",    'Quantity Requested': 6,  'Quantity Available': 3 }, 
-        { Product: "Gadget",    'Quantity Requested': 10, 'Quantity Available': 20 },
-        { Product: "Gizmo",     'Quantity Requested': 4,  'Quantity Available': 11 },
-        { Product: "Apparatus", 'Quantity Requested': 7,  'Quantity Available': 6 } 
+        { Product: "Widget";    'Quantity Requested': 6;  'Quantity Available': 3 }; 
+        { Product: "Gadget";    'Quantity Requested': 10; 'Quantity Available': 20 };
+        { Product: "Gizmo";     'Quantity Requested': 4;  'Quantity Available': 11 };
+        { Product: "Apparatus"; 'Quantity Requested': 7;  'Quantity Available': 6 } 
     )
 )
 ```
@@ -124,14 +125,14 @@ Vi kan utføre denne oppgaven på forskjellige måter, der alle gir det samme re
 #### <a name="table-shaping-on-demand"></a>Tabellbearbeiding ved behov
 Ikke lag den kopien!  Vi kan bruke følgende formel hvor som helst etter behov:
 
-```powerapps-dot
-// Table shaping on demand, no need for a copy of the result
+```powerapps-comma
+// Table shaping on demand; no need for a copy of the result
 ShowColumns( 
     AddColumns( 
-        Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
-        "Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
-    ), 
-    "Product", 
+        Filter( Products; 'Quantity Requested' > 'Quantity Available' ); 
+        "Quantity To Order"; 'Quantity Requested' - 'Quantity Available' 
+    ); 
+    "Product"; 
     "Quantity To Order"
 )
 ```
@@ -145,11 +146,11 @@ Siden vi ikke lagde en kopi, vil det ikke finnes noen ekstra kopi av informasjon
 #### <a name="forall-on-demand"></a>ForAll ved behov
 En annen fremgangsmåte er å bruke funksjonen **ForAll** til å erstatte funksjonene for tabellbearbeiding :
 
-```powerapps-dot
-ForAll( Products, 
-    If( 'Quantity Requested' > 'Quantity Available', 
+```powerapps-comma
+ForAll( Products; 
+    If( 'Quantity Requested' > 'Quantity Available'; 
         { 
-            Product: Product, 
+            Product: Product; 
             'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
         } 
     ) 
@@ -165,25 +166,25 @@ I noen tilfeller kan en kopi av data være nødvendig.  Det kan hende at du må 
 
 Vi bruker den samme tabellbearbeidingen som i de to forrige eksemplene, men vi registrerer resultatet i en samling:
 
-```powerapps-dot
-ClearCollect( NewOrder, 
+```powerapps-comma
+ClearCollect( NewOrder; 
     ShowColumns( 
         AddColumns( 
-            Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
-            "Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
-        ), 
-        "Product", 
+            Filter( Products; 'Quantity Requested' > 'Quantity Available' ); 
+            "Quantity To Order"; 'Quantity Requested' - 'Quantity Available' 
+        ); 
+        "Product"; 
         "Quantity To Order"
     )
 )
 ```
 
-```powerapps-dot
-ClearCollect( NewOrder, 
-    ForAll( Products, 
-        If( 'Quantity Requested' > 'Quantity Available', 
+```powerapps-comma
+ClearCollect( NewOrder; 
+    ForAll( Products; 
+        If( 'Quantity Requested' > 'Quantity Available'; 
             { 
-                Product: Product, 
+                Product: Product; 
                 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
             } 
         } 
@@ -196,13 +197,13 @@ ClearCollect( NewOrder,
 #### <a name="collect-within-forall"></a>Samle inn innenfor ForAll
 Til slutt kan vi utføre **Collect**funksjonen direkte i **ForAll**:
 
-```powerapps-dot
-Clear( ProductsToOrder ); 
-ForAll( Products, 
-    If( 'Quantity Requested' > 'Quantity Available', 
-        Collect( NewOrder,  
+```powerapps-comma
+Clear( ProductsToOrder );; 
+ForAll( Products; 
+    If( 'Quantity Requested' > 'Quantity Available'; 
+        Collect( NewOrder;  
             { 
-                Product: Product, 
+                Product: Product; 
                 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
             } 
         )

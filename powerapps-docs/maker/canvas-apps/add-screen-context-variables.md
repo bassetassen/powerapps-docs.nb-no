@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63321375"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="add-a-screen-to-a-canvas-app-and-navigate-between-screens"></a>Legg til en skjerm i en lerretsapp og naviger mellom skjermer
 
@@ -65,7 +66,7 @@ Hold pekeren over en skjerm som du ønsker å flytte opp eller ned, velg ellipse
 
 4. På **Target**-skjermen legger du til en **Tilbake-pil** og angir **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:
 
-    `Navigate(Source, ScreenTransition.Fade)`
+    `Navigate(Source; ScreenTransition.Fade)`
 
 5. Mens du holder nede Alt-tasten, kan du veksle mellom skjermer ved å velge pilen på hver skjerm.
 

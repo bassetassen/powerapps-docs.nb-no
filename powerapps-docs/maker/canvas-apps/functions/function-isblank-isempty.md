@@ -20,6 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61563895"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="blank-coalesce-isblank-and-isempty-functions-in-powerapps"></a>Funksjonene Blank, Coalesce, IsBlank og IsEmpty i PowerApps
 Tester om en verdi er tom eller en [tabell](../working-with-tables.md) inneholder ingen [poster](../working-with-tables.md#records), og gir en måte å opprette *tom*-verdier på.
@@ -48,7 +49,7 @@ Alle egenskaper eller beregnede verdier kan være *tom*.  En boolsk verdi har fo
 * *Annet*-delen av en **[If](function-if.md)**-funksjon var ikke angitt, og alle betingelsene var **usann**.
 * Du brukte **[Update](function-update-updateif.md)**-funksjonen, men spesifiserte ikke en verdi for alle kolonnene. Derfor ble ingen verdier plassert i kolonnene som du ikke anga.
 
-**Coalesce**-funksjonen evaluerer argumentene i rekkefølge og returnerer den første verdien som ikke er *tom*.  Bruk denne funksjonen til å erstatte en *tom* verdi med en annen verdi, men la ikke-*tom*-verdier forbli uendret.  Hvis alle argumentene er *tom*, returnerer funksjonen *tom*.  Alle argumentene til **Coalesce** må være av samme type. Du kan for eksempel ikke blande tall med tekststrenger.  **Coalesce( value1, value2 )** er den mer konsise utgaven som tilsvarer **If( Not( IsBlank( value1 ) ), value1, value2 )** og ikke krever **value1** for å bli evaluert to ganger.  
+**Coalesce**-funksjonen evaluerer argumentene i rekkefølge og returnerer den første verdien som ikke er *tom*.  Bruk denne funksjonen til å erstatte en *tom* verdi med en annen verdi, men la ikke-*tom*-verdier forbli uendret.  Hvis alle argumentene er *tom*, returnerer funksjonen *tom*.  Alle argumentene til **Coalesce** må være av samme type. Du kan for eksempel ikke blande tall med tekststrenger.  **Coalesce( value1; value2 )** er den mer konsise utgaven som tilsvarer **If( Not( IsBlank( value1 ) ); value1; value2 )** og ikke krever **value1** for å bli evaluert to ganger.  
 
 **IsEmpty**-funksjonen tester om tabellen inneholder noen poster. Det tilsvarer å bruke **[CountRows](function-table-counts.md)**-funksjonen og se etter null. Du kan se etter datakildefeil ved å kombinere **IsEmpty**-funksjonen med **[Errors](function-errors.md)**-funksjonen.
 
@@ -57,7 +58,7 @@ Returverdien for både **IsBlank** og **IsEmpty** er en boolsk **sann** eller **
 ## <a name="syntax"></a>Syntaks
 **Blank**()
 
-**Coalesce**( *Value1* [, *Value2*, ... ] )
+**Coalesce**( *Value1* [; *Value2*; ... ] )
 
 * *Value(s)* – obligatorisk. Verdier å teste.  Hver verdi blir evaluert i rekkefølge frem til en ikke-*tom* verdi blir funnet.  Verdier etter den første ikke-*tomme*-verdien blir ikke evaluert.  
 
@@ -77,7 +78,7 @@ Returverdien for både **IsBlank** og **IsEmpty** er en boolsk **sann** eller **
 1. Opprett en app fra grunnen av, og legg til en **Knapp**.
 2. Sett knappens **[OnSelect](../controls/properties-core.md)**-egenskap til denne formelen:
 
-    **ClearCollect (byer, {navn: "Seattle", Vær: «Regn»})**
+    **ClearCollect (byer; {navn: "Seattle"; Vær: «Regn»})**
 3. Forhåndsvis appen, klikk eller trykk på knappen som du har lagt til, og lukk deretter Forhåndsvisning.  
 4. Klikk eller trykk på **Samlinger** på **Fil**-menyen.
 
@@ -92,7 +93,7 @@ Returverdien for både **IsBlank** og **IsEmpty** er en boolsk **sann** eller **
     Etiketten viser **usann** fordi **Vær**-feltet inneholder en verdi («Regn»).
 7. Legg til en annen knapp, og angi knappens **OnSelect**-egenskap til denne formelen:
 
-    **Patch (byer, første (byer), {været: Blank()})**
+    **Patch (byer; første (byer); {været: Blank()})**
 8. Forhåndsvis appen, klikk eller trykk på knappen som du har lagt til, og lukk deretter Forhåndsvisning.  
 
     **Vær**-feltet i den første posten i **Byer** erstattes med et *tom*-felt, og fjerner dermed «Regn», som stod der tidligere.
@@ -105,14 +106,14 @@ Returverdien for både **IsBlank** og **IsEmpty** er en boolsk **sann** eller **
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Coalesce( Blank(), 1 )** |Tester returverdien fra **tom**-funksjonen, som alltid returnerer en *tom* verdi. Fordi det første argumentet er *tom*, fortsetter evalueringen med det neste argumentet til en ikke-*tom* verdi blir funnet. |**1** |
-| **Coalesce( Blank(), Blank(), Blank(), Blank(), 2, 3 )** |**Oppsamling** starter i begynnelsen av argumentlisten og evaluerer hvert argument i tur og orden til en ikke-*tom* verdi blir funnet.  I dette tilfellet returnerer de første fire argumentene alle *tom*, slik at evalueringen fortsetter til det femte argumentet. Det femte argumentet er ikke-*tomt*, slik at evalueringen stopper her. Verdien til det femte argumentet returneres, og det sjette argumentet evalueres ikke. |**2** |
+| **Coalesce( Blank(); 1 )** |Tester returverdien fra **tom**-funksjonen, som alltid returnerer en *tom* verdi. Fordi det første argumentet er *tom*, fortsetter evalueringen med det neste argumentet til en ikke-*tom* verdi blir funnet. |**1** |
+| **Coalesce( Blank(); Blank(); Blank(); Blank(); 2; 3 )** |**Oppsamling** starter i begynnelsen av argumentlisten og evaluerer hvert argument i tur og orden til en ikke-*tom* verdi blir funnet.  I dette tilfellet returnerer de første fire argumentene alle *tom*, slik at evalueringen fortsetter til det femte argumentet. Det femte argumentet er ikke-*tomt*, slik at evalueringen stopper her. Verdien til det femte argumentet returneres, og det sjette argumentet evalueres ikke. |**2** |
 
 ### <a name="isblank"></a>IsBlank
 1. Opprett en app fra grunnen av, legg til en kontroll for innskriving av tekst og gi den navnet **FirstName**.
 2. Legg til en etikett, og angi **[Tekst](../controls/properties-core.md)**-egenskapen til denne formelen:
 
-    **If( IsBlank( FirstName.Text ), "First Name is a required field." )**
+    **If( IsBlank( FirstName.Text ); "First Name is a required field." )**
 
     Som standard er **[Tekst](../controls/properties-core.md)**-egenskapen til en tekstinndatakontroll satt til **«Tekstinndata»**. Fordi egenskapen inneholder en verdi, er den ikke tom, og etiketten viser ikke noen melding.
 3. Fjern alle tegnene fra tekstinndatakontrollen, inkludert mellomrom.
@@ -129,14 +130,14 @@ Andre eksempler:
 | **IsBlank( "" )** |En streng som ikke inneholder noen tegn. |**sann** |
 | **IsBlank( "Hello" )** |En streng som inneholder ett eller flere tegn. |**usann** |
 | **IsBlank( *AnyCollection* )** |Fordi [samlingen](../working-with-data-sources.md#collections) finnes, er den ikke tom, selv om den ikke inneholder noen poster. Hvis du vil se etter en tom samling, kan du bruke **IsEmpty** i stedet. |**usann** |
-| **IsBlank( Mid( "Hello", 17, 2 ) )** |Det første tegnet for **[Mid](function-left-mid-right.md)** er utenfor slutten av strengen.  Resultatet er en tom streng. |**sann** |
-| **IsBlank( If( false, false ) )** |En **[If](function-if.md)**-funksjon uten *ElseResult*.  Fordi betingelsen alltid er **usann**, returnerer denne **[If](function-if.md)**-funksjonen alltid *tom*. |**sann** |
+| **IsBlank( Mid( "Hello"; 17; 2 ) )** |Det første tegnet for **[Mid](function-left-mid-right.md)** er utenfor slutten av strengen.  Resultatet er en tom streng. |**sann** |
+| **IsBlank( If( false; false ) )** |En **[If](function-if.md)**-funksjon uten *ElseResult*.  Fordi betingelsen alltid er **usann**, returnerer denne **[If](function-if.md)**-funksjonen alltid *tom*. |**sann** |
 
 ### <a name="isempty"></a>IsEmpty
 1. Opprett en app fra grunnen av, og legg til en **Knapp**.
 2. Sett knappens **[OnSelect](../controls/properties-core.md)**-egenskap til denne formelen:
 
-    **Samle inn (IceCream, {Flavor: «Jordbær", Quantity: 300 }, { Flavor: «Chocolate», Quantity: 100 } )**
+    **Samle inn (IceCream; {Flavor: «Jordbær"; Quantity: 300 }; { Flavor: «Chocolate»; Quantity: 100 } )**
 3. Forhåndsvis appen, klikk eller trykk på knappen som du har lagt til, og lukk deretter Forhåndsvisning.  
 
     En samling med navnet **IceCream** opprettes og inneholder disse dataene:
@@ -159,7 +160,7 @@ Du kan også bruke **IsEmpty** til å teste om en beregnet tabell er tom, som di
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **IsEmpty( [&nbsp;1,&nbsp;2,&nbsp;3 ] )** |Tabellen med én kolonne inneholder tre poster, og er derfor ikke tom. |**usann** |
+| **IsEmpty( [&nbsp;1;&nbsp;2;&nbsp;3 ] )** |Tabellen med én kolonne inneholder tre poster, og er derfor ikke tom. |**usann** |
 | **IsEmpty( [&nbsp;] )** |Tabellen med én kolonne inneholder ingen poster, og er tom. |**sann** |
-| **IsEmpty( Filter( [&nbsp;1,&nbsp;2,&nbsp;3&nbsp;], Value > 5 ) )** |Tabellen med én kolonne inneholder ingen verdier som er større enn 5.  Resultatet fra filteret inneholder ingen poster, og er tom. |**sann** |
+| **IsEmpty( Filter( [&nbsp;1;&nbsp;2;&nbsp;3&nbsp;]; Value > 5 ) )** |Tabellen med én kolonne inneholder ingen verdier som er større enn 5.  Resultatet fra filteret inneholder ingen poster, og er tom. |**sann** |
 

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61562742"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="mod-function-in-powerapps"></a>Mod-funksjonen i PowerApps
 Returnerer det som gjenstår etter divisjonen.
@@ -29,7 +30,7 @@ Returnerer det som gjenstår etter divisjonen.
 Resultatet har samme fortegn som divisoren.
 
 ## <a name="syntax"></a>Syntaks
-**Mod**( *Number*, *Divisor* )
+**Mod**( *Number*; *Divisor* )
 
 * *Number* – obligatorisk. Tallet det skal divideres med.
 * *Divisor* – obligatorisk.  Tallet det skal divideres med.

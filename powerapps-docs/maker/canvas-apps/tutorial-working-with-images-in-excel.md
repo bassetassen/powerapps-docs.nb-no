@@ -19,6 +19,7 @@ ms.translationtype: HT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63318390"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="how-to-save-images-in-an-excel-file-and-then-add-these-images-to-your-app"></a>Slik lagrer du bilder i en Excel-fil, og deretter legger disse bildene inn i appen
 
@@ -58,7 +59,7 @@ I denne opplæringen skal vi:
    
    ![Gi nytt navn](./media/tutorial-working-with-images-in-excel/rename-mypen.png)
 4. Legg til en **Knapp** (**Sett inn**-menyen), og angi **OnSelect**-egenskapen til denne formelen:  
-   `Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})`
+   `Patch(Drawings; Defaults(Drawings); {Image:MyPen.Image})`
 5. Legg til en **Bildegalleri**-kontroll (**Sett inn**-meny > **Galleri**), og angi kontrollens **Items**-egenskap til `Drawings`. Gallerikontrollens **Image**-egenskap angis automatisk til `ThisItem.Image`.
    
    Skjermen burde se omtrent slik ut:  

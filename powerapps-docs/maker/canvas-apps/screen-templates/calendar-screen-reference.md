@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61539103"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="reference-information-about-the-calendar-screen-template-for-canvas-apps"></a>Referanseinformasjon om kalender-skjermen malen for lerretsapper
 
@@ -55,15 +56,15 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
 
    Denne delen av formelen kjører bare første gang at brukeren velger et alternativ i fra rullegardinlisten når du har åpnet appen:
 
-    ```powerapps-dot
-    If( IsBlank( _userDomain ),
-        UpdateContext( {_showLoading: true} );
-        Set( _userDomain, Right( User().Email, Len( User().Email ) - Find( "@", User().Email ) ) );
-        Set( _dateSelected, Today() );
-        Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days ) );  
-        Set( _firstDayInView, DateAdd( _firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 1), Days ) );
-        Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) )  
-    );
+    ```powerapps-comma
+    If( IsBlank( _userDomain );
+        UpdateContext( {_showLoading: true} );;
+        Set( _userDomain; Right( User().Email; Len( User().Email ) - Find( "@"; User().Email ) ) );;
+        Set( _dateSelected; Today() );;
+        Set( _firstDayOfMonth; DateAdd( Today(); 1 - Day( Today() ); Days ) );;  
+        Set( _firstDayInView; DateAdd( _firstDayOfMonth; -(Weekday(_firstDayOfMonth) - 1); Days ) );;
+        Set( _lastDayOfMonth; DateAdd( DateAdd( _firstDayOfMonth; 1; Months ); -1; Days ) )  
+    );;
     ```
 
     Koden ovenfor definerer følgende variabler:
@@ -76,28 +77,28 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
 
    Funksjonene etter den **Hvis** funksjonen kjøres når brukeren velger et alternativ i rullegardinlisten kalenderlisten (ikke bare første gang brukeren åpner appen):
 
-    ```powerapps-dot
-    Set( _calendarVisible, false );
-    UpdateContext( {_showLoading: true} );
-    Set( _myCalendar, dropdownCalendarSelection2.Selected );
-    Set( _minDate, 
-        DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days )
-    );
-    Set(_maxDate, 
+    ```powerapps-comma
+    Set( _calendarVisible; false );;
+    UpdateContext( {_showLoading: true} );;
+    Set( _myCalendar; dropdownCalendarSelection2.Selected );;
+    Set( _minDate; 
+        DateAdd( _firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days )
+    );;
+    Set(_maxDate; 
         DateAdd(
-            DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ), 
-            40, 
+            DateAdd( _firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days ); 
+            40; 
             Days
         )
-    );
-    ClearCollect( MyCalendarEvents, 
-        'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
-            Text( _minDate, UTC ), 
-            Text( _maxDate, UTC )
+    );;
+    ClearCollect( MyCalendarEvents; 
+        'Office365'.GetEventsCalendarViewV2( _myCalendar.Name; 
+            Text( _minDate; UTC ); 
+            Text( _maxDate; UTC )
         ).value
-    );
-    UpdateContext( {_showLoading: false} );
-    Set( _calendarVisible, true )
+    );;
+    UpdateContext( {_showLoading: false} );;
+    Set( _calendarVisible; true )
     ```
 
     Koden ovenfor definerer disse variablene og én samling:
@@ -117,11 +118,11 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
 - Egenskap: **OnSelect**<br>
     Verdi: Fire **angi** funksjoner som tilbakestille kalender galleriet til dagens dato:
 
-    ```powerapps-dot
-    Set( _dateSelected, Today() );
-    Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days) );
-    Set( _firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days));
-    Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) )
+    ```powerapps-comma
+    Set( _dateSelected; Today() );;
+    Set( _firstDayOfMonth; DateAdd( Today(); 1 - Day( Today() ); Days) );;
+    Set( _firstDayInView; DateAdd(_firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days));;
+    Set( _lastDayOfMonth; DateAdd( DateAdd( _firstDayOfMonth; 1; Months ); -1; Days ) )
     ```
 
     Koden ovenfor tilbakestiller alle Datovariabler som er nødvendige for å vise riktig Kalender-visningen:
@@ -139,20 +140,20 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
 
 - Egenskap: **OnSelect**<br>Verdi: Fire **angi** funksjoner og en **Hvis** funksjonen som viser forrige måned i kalenderen galleriet:
 
-    ```powerapps-dot
-    Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, -1, Months ) );
-    Set( _firstDayInView, 
-        DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days )
-    );
-    Set( _lastDayOfMonth, DateAdd(DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
-    If( _minDate > _firstDayOfMonth,
-        Collect( MyCalendarEvents,
-            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name,
-                Text( _firstDayInView, UTC ), 
-                Text( DateAdd( _minDate, -1, Days ), UTC )
+    ```powerapps-comma
+    Set( _firstDayOfMonth; DateAdd( _firstDayOfMonth; -1; Months ) );;
+    Set( _firstDayInView; 
+        DateAdd( _firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days )
+    );;
+    Set( _lastDayOfMonth; DateAdd(DateAdd( _firstDayOfMonth; 1; Months ); -1; Days ) );;
+    If( _minDate > _firstDayOfMonth;
+        Collect( MyCalendarEvents;
+            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name;
+                Text( _firstDayInView; UTC ); 
+                Text( DateAdd( _minDate; -1; Days ); UTC )
             ).value
-        );
-        Set( _minDate, _firstDayInView )
+        );;
+        Set( _minDate; _firstDayInView )
     )
     ```
 
@@ -174,19 +175,19 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
 - Egenskap: **OnSelect**<br>
     Verdi: Fire **angi** funksjoner og en **Hvis** funksjonen som viser neste måned i kalenderen galleriet:
 
-    ```powerapps-dot
-    Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, 1, Months ) );
-    Set( _firstDayInView, 
-        DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ) );
-    Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
-    If( _maxDate < _lastDayOfMonth,
-        Collect( MyCalendarEvents, 
-            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
-                Text( DateAdd( _maxDate, 1, Days ), UTC ), 
-                DateAdd( _firstDayInView, 40, Days )
+    ```powerapps-comma
+    Set( _firstDayOfMonth; DateAdd( _firstDayOfMonth; 1; Months ) );;
+    Set( _firstDayInView; 
+        DateAdd( _firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days ) );;
+    Set( _lastDayOfMonth; DateAdd( DateAdd( _firstDayOfMonth; 1; Months ); -1; Days ) );;
+    If( _maxDate < _lastDayOfMonth;
+        Collect( MyCalendarEvents; 
+            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name; 
+                Text( DateAdd( _maxDate; 1; Days ); UTC ); 
+                DateAdd( _firstDayInView; 40; Days )
             ).value
-        );
-        Set( _maxDate, DateAdd( _firstDayInView, 40, Days) )    
+        );;
+        Set( _maxDate; DateAdd( _firstDayInView; 40; Days) )    
     )
     ```
 
@@ -206,8 +207,8 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
 ![MonthDayGallery kontroll](media/calendar-screen/calendar-month-gall.png)
 
 - Egenskap: **Elementer**<br>
-    Verdi: `[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,
-    20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]`
+    Verdi: `[0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;
+    20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;38;39;40;41]`
   
   Settet med 0 til 41 brukes for elementene i galleriet kalenderen fordi, i verste scenario, får Kalender-visningen til å vise 42 full dager. Dette skjer når først dagen i måneden forekommer på en lørdag og sist av måneden forekommer på en søndag. I dette tilfellet vises i kalenderen seks dager fra den forrige måneden i raden som inneholder først dagen i måneden og seks dager fra neste måned i raden som inneholder siste i måneden. Dette er 42 unike verdier, som 30 er for den valgte måneden.
 
@@ -221,26 +222,26 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
 ![MonthDayGallery tittel kontroll](media/calendar-screen/calendar-month-text.png)
 
 - Egenskap: **Tekst**<br>
-    Verdi: `Day( DateAdd( _firstDayInView, ThisItem.Value, Days ) )`
+    Verdi: `Day( DateAdd( _firstDayInView; ThisItem.Value; Days ) )`
 
     Tilbakekall som  **\_firstDayInView** er definert som (**\_firstDayOfMonth** -verdien ukedag) + 1. Dette forteller deg at  **\_firstDayInView** er alltid en søndag, og  **\_firstDayOfMonth** er alltid i den første raden i **MonthDayGallery**. På grunn av disse to fakta,  **\_firstDayInView** er alltid i den første cellen i **MonthDayGallery**. **ThisItem.Value** er nummeret for denne cellen i den **MonthDayGallery** elementet egenskapen. I så fall å ta  **\_firstDayInView** som et utgangspunkt, viser hver celle tidsintervall  **\_firstDayInView** + sine respektive celleverdien.
 
 - Egenskap: **Fyll**<br>
     Verdi: Én **Hvis** funksjonen:
 
-    ```powerapps-dot
-    If( DateAdd( _firstDayInView, ThisItem.Value ) = Today() && 
-                DateAdd( _firstDayInView, ThisItem.Value ) = _dateSelected, 
-            RGBA( 0, 0, 0, 0 ),
-        DateAdd( _firstDayInView, ThisItem.Value) = Today(), 
-            ColorFade( Subcircle.Fill, 0.67 ),
-        Abs( Title.Text - ThisItem.Value) > 10,
-            RGBA( 200, 200, 200, 0.3 ),
-        RGBA( 0, 0, 0, 0 )
+    ```powerapps-comma
+    If( DateAdd( _firstDayInView; ThisItem.Value ) = Today() && 
+                DateAdd( _firstDayInView; ThisItem.Value ) = _dateSelected; 
+            RGBA( 0; 0; 0; 0 );
+        DateAdd( _firstDayInView; ThisItem.Value) = Today(); 
+            ColorFade( Subcircle.Fill; 0,67 );
+        Abs( Title.Text - ThisItem.Value) > 10;
+            RGBA( 200; 200; 200; 0,3 );
+        RGBA( 0; 0; 0; 0 )
     )
     ```
 
-  Som beskrevet i beskrivelsen av den **tekst** -egenskapen, `DateAdd(_firstDayInView, ThisItem.Value)` representerer dagen i visible-cellen. Å ta dette i betraktning, utfører foregående kode disse sammenligningene:
+  Som beskrevet i beskrivelsen av den **tekst** -egenskapen, `DateAdd(_firstDayInView; ThisItem.Value)` representerer dagen i visible-cellen. Å ta dette i betraktning, utfører foregående kode disse sammenligningene:
   1. Hvis celleverdien er dagens dato, og denne cellen tilsvarer  **\_dateSelected**, ikke gir en fyll-verdi.
   1. Hvis celleverdien er dagens dato, men tilsvarer ikke  **\_dateSelected**, gi den **ColorFade** fyll.
   1. Siste sammenligningen er ikke så tydelig. Det er en sammenligning mellom faktiske tekstverdien i cellen, og verdien av celle-elementet (hvor på skjermen), og hvor elementet.<br>
@@ -257,10 +258,10 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
 - Egenskap: **Synlig**<br>
     Verdi:
 
-    ```powerapps-dot
+    ```powerapps-comma
     !(
-        DateAdd( _firstDayInView, ThisItem.Value, Days ) - 
-            Weekday( DateAdd( _firstDayInView, ThisItem.Value,Days ) ) + 1 
+        DateAdd( _firstDayInView; ThisItem.Value; Days ) - 
+            Weekday( DateAdd( _firstDayInView; ThisItem.Value;Days ) ) + 1 
         > _lastDayOfMonth
     )
     ```
@@ -270,8 +271,8 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
 - Egenskap: **OnSelect**<br>
     Verdi: A **angi** -funksjonen, som angir den  **\_dateSelected** variabel til datoen i den valgte cellen:
 
-    ```powerapps-dot
-    Set( _dateSelected, DateAdd( _firstDayInView, ThisItem.Value, Days ) )
+    ```powerapps-comma
+    Set( _dateSelected; DateAdd( _firstDayInView; ThisItem.Value; Days ) )
     ```
 
 ### <a name="circle-control-in-the-calendar-gallery"></a>Sirkel-kontroll i galleriet for kalender
@@ -281,10 +282,10 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
 - Egenskap: **Synlig**<br>
     Verdi: En formel som bestemmer om hendelser som er planlagt for den valgte datoen og om den **Subcircle** og **tittel** kontrollene er synlig:
 
-    ```powerapps-dot
+    ```powerapps-comma
     CountRows(
-        Filter( MyCalendarEvents, 
-            DateValue( Text( Start ) ) = DateAdd( _firstDayInView, ThisItem.Value, Days )
+        Filter( MyCalendarEvents; 
+            DateValue( Text( Start ) ) = DateAdd( _firstDayInView; ThisItem.Value; Days )
         )
     ) > 0 && !Subcircle.Visible && Title.Visible
     ```
@@ -298,8 +299,8 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
 - Egenskap: **Synlig**<br>
     Verdi:
 
-    ```powerapps-dot
-    DateAdd( _firstDayInView, ThisItem.Value ) = _dateSelected && Title.Visible
+    ```powerapps-comma
+    DateAdd( _firstDayInView; ThisItem.Value ) = _dateSelected && Title.Visible
     ```
 
   Den **Subcircle** kontrollen er synlig når  **\_dateSelected** tilsvarer datoen for cellen, og den **tittel** kontrollen er synlig. Med andre ord, vises denne kontrollen når cellen er gjeldende valgte dato.
@@ -311,11 +312,11 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
 - Egenskap: **Elementer**<br>
     Verdi: En formel som sorterer og filtrerer galleriet hendelser:
 
-    ```powerapps-dot
+    ```powerapps-comma
     SortByColumns(
-        Filter( MyCalendarEvents,
-            Text( Start, DateTimeFormat.ShortDate ) = Text( _dateSelected, DateTimeFormat.ShortDate )
-        ),
+        Filter( MyCalendarEvents;
+            Text( Start; DateTimeFormat.ShortDate ) = Text( _dateSelected; DateTimeFormat.ShortDate )
+        );
         "Start"
     )
     ```

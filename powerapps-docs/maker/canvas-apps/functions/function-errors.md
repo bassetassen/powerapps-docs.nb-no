@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61551149"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="errors-function-in-powerapps"></a>Errors-funksjonen i PowerApps
 Gir feilinformasjon om tidligere endringer i en [datakilde](../working-with-data-sources.md).
@@ -61,7 +62,7 @@ Feil kan returneres for hele datakilden eller for en valgt rad, ved å gi *Post*
 Tabellen som **Errors** returnerer, er [tom](function-isblank-isempty.md) hvis det ikke er noen feil, og den kan testes med **[IsEmpty](function-isblank-isempty.md)**-funksjonen.
 
 ## <a name="syntax"></a>Syntaks
-**Errors**( *DataSource* [, *Record* ] )
+**Errors**( *DataSource* [; *Record* ] )
 
 * *DataSource* – nødvendig. Datakilden som du ønsker å returnere feil til.
 * *Post* – valgfritt.  En bestemt post som du vil returnere feil til. Funksjonen returnerer feil for hele datakilden hvis du ikke angir dette argumentet.
@@ -74,17 +75,17 @@ I dette eksemplet skal vi arbeide med datakilden **IceCream**:
 
 En bruker laster inn sjokolade-posten via appen til et skjema for dataregistrering og endrer verdien fpr **Antall** til 90.  Posten som skal arbeides med, er plassert i [kontekstvariabelen](../working-with-variables.md#use-a-context-variable) **EditRecord**:
 
-* **UpdateContext ({EditRecord: Første (Filter (IceCream, Flavor = «Chocolate»))})**
+* **UpdateContext ({EditRecord: Første (Filter (IceCream; Flavor = «Chocolate»))})**
 
 **[Patch](function-patch.md)**-funksjonen blir brukt for å gjøre denne endringen i datakilden:
 
-* **Patch( IceCream, EditRecord, Gallery.Updates )**
+* **Patch( IceCream; EditRecord; Gallery.Updates )**
 
 der **Gallery.Updates** evalueres til **{Quantity: 90}**, fordi bare den **antall** egenskapen har blitt endret.
 
 Uheldigvis ble **Quantity** for Chocolate endret av noen andre til 80 like før **[Patch](function-patch.md)**-funksjonen ble startet.  PowerApps vil oppdage dette og ikke tillate at den motstridende endringen skal oppstå.  Du kan se etter denne situasjonen med formelen:
 
-* **IsEmpty( Errors( IceCream, EditRecord ) )**
+* **IsEmpty( Errors( IceCream; EditRecord ) )**
 
 som returnerer **USANN**, fordi **Errors**-funksjonen returnerte følgende tabell:
 
@@ -95,12 +96,12 @@ som returnerer **USANN**, fordi **Errors**-funksjonen returnerte følgende tabel
 Du kan plassere en etikett i skjemaet for å vise denne feilen til brukeren.
 
 * Hvis du vil vise feilen, kan du angi etikettens **[Text](../controls/properties-core.md)**-egenskap til denne formelen:<br>
-  **Label.Text = First(Errors( IceCream, EditRecord )).Message**
+  **Label.Text = First(Errors( IceCream; EditRecord )).Message**
 
 Du kan også legge til en **Last inn på nytt**-knapp på skjemaet, slik at brukeren effektivt kan løse konflikten.
 
 * Hvis du vil vise knappen bare når en konflikt har oppstått, kan du angi knappens **[Visible](../controls/properties-core.md)**-egenskap til denne formelen:<br>
-    **!IsEmpty( Lookup( Errors( IceCream, EditRecord ), Error = ErrorKind.Conflict ) )**
+    **!IsEmpty( Lookup( Errors( IceCream; EditRecord ); Error = ErrorKind.Conflict ) )**
 * For å gå tilbake til endringen der brukeren velger knappen, kan du angi **[OnSelect](../controls/properties-core.md)**-egenskapen til denne formelen:<br>
-    **ReloadButton.OnSelect = Revert( IceCream, EditRecord )**
+    **ReloadButton.OnSelect = Revert( IceCream; EditRecord )**
 

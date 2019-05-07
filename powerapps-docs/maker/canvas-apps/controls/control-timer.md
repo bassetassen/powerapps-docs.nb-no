@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61560471"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="timer-control-in-powerapps"></a>Tidtaker-kontrollen i PowerApps
 En kontroll som kan finne ut hvordan appen responderer etter en viss tid har passert.
@@ -125,7 +126,7 @@ Tidtakere kan for eksempel bestemme hvor lenge en kontroll skal vises, eller end
 2. Angi tidtakerens **Varighet**-egenskap til **10000**, og **Gjenta**- og **Autostart**-egenskapene til **sann**.
 3. (valgfritt) Gjør det enklere å lese av tidtakeren ved å angi **[Høyde](properties-size-location.md)**-egenskapen for tidtakeren til **160**, **[Bredde](properties-size-location.md)**-egenskapen til **600**, og **[Størrelse](properties-text.md)**-egenskapen til **60**.
 4. Legg til en etikett og angi **[Tekst](properties-core.md)**-egenskapen til denne formelen:
-   <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000, 0)**
+   <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000; 0)**
 
     Vil du ha mer informasjon om **[RoundUp](../functions/function-round.md)**-funksjonen, eller [andre funksjoner](../formula-reference.md)?
 
@@ -138,7 +139,7 @@ Tidtakere kan for eksempel bestemme hvor lenge en kontroll skal vises, eller end
 2. Angi tidtakerens **varighet** til **5000**, **Gjenta**-egenskapen til **sann** og **[Tekst](properties-core.md)**-egenskapen til **Veksle animasjon**.
 3. (valgfritt) Gjør det enklere å lese av tidtakeren ved å angi **[Høyde](properties-size-location.md)**-egenskapen for tidtakeren til **160**, **[Bredde](properties-size-location.md)**-egenskapen til **600**, og **[Størrelse](properties-text.md)**-egenskapen til **60**.
 4. Legg til en etikett, og sett **[Tekst](properties-core.md)**-egenskapen til å vise **Velkommen!** og angi **[farge](properties-color-border.md)**-egenskapen til denne formelen:
-   <br>**ColorFade(Color.BlueViolet, FadeIn.Value/5000)**
+   <br>**ColorFade(Color.BlueViolet; FadeIn.Value/5000)**
 
     Vil du ha mer informasjon om **[ColorFade](../functions/function-colors.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
 

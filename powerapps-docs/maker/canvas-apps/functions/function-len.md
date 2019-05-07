@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61563384"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="len-function-in-powerapps"></a>Len-funksjonen i PowerApps
 Returnerer lengden på en tekststreng.
@@ -53,6 +54,6 @@ Datakilden for det første eksemplet i denne delen heter **Personer** og innehol
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |I **Adresse** [-kolonnen](../working-with-tables.md#columns) av **Personer**-tabellen:<br><ul><li>Måler lengden på hver streng.</li><li>Returnerer en tabell med én kolonne som inneholder lengden på hver streng.</li> |<style> img { max-width: none } </style> ![](media/function-len/people-table-len.png) |
-| **Len( [ "Hello", "to the", "World", "" ] )** |I **[Verdi](function-value.md)**-kolonnen i den linjebundne tabellen:<br><ul><li>Måler lengden på hver streng.</li><li>Returnerer en tabell med én kolonne som inneholder lengden på hver streng.</li> |![](media/function-len/people-table-len-inline.png) |
+| **Len( ShowColumns(&nbsp;People;&nbsp;"Address"&nbsp;) )** |I **Adresse** [-kolonnen](../working-with-tables.md#columns) av **Personer**-tabellen:<br><ul><li>Måler lengden på hver streng.</li><li>Returnerer en tabell med én kolonne som inneholder lengden på hver streng.</li> |<style> img { max-width: none } </style> ![](media/function-len/people-table-len.png) |
+| **Len( [ "Hello"; "to the"; "World"; "" ] )** |I **[Verdi](function-value.md)**-kolonnen i den linjebundne tabellen:<br><ul><li>Måler lengden på hver streng.</li><li>Returnerer en tabell med én kolonne som inneholder lengden på hver streng.</li> |![](media/function-len/people-table-len-inline.png) |
 

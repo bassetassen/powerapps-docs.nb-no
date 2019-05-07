@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63321711"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="date-picker-control-in-powerapps"></a>Datovelger-kontrollen i PowerApps
 En kontroll som brukeren kan klikke eller trykk på for å angi en dato.
@@ -109,7 +110,7 @@ Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](c
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 2. Legg til en **[Etikett](control-text-box.md)**-kontroll, og angi **[Tekst](properties-core.md)**-egenskapen som denne formelen:
-   <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
+   <br>**DateDiff(Today(); Deadline.SelectedDate) & " days to go!"**
 
     Vil du ha mer informasjon om **[DateDiff](../functions/function-dateadd-datediff.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
 3. Trykk på F5, velg en dato i **Deadline**, og klikk eller trykk på **OK**.

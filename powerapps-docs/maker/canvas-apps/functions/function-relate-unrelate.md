@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61527518"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="relate-and-unrelate-functions-in-powerapps"></a>Relatert og Unrelate i PowerApps
 
@@ -43,12 +44,12 @@ Du kan bruke disse funksjonene bare i [formler for virkemåte](../working-with-f
 
 ## <a name="syntax"></a>Syntaks
 
-**Relatert**( *Entity1RelatedTable*, *Entity2Record* )
+**Relatert**( *Entity1RelatedTable*; *Entity2Record* )
 
 * *Entity1RelatedTable* – obligatorisk. For en post i *Entity1*, tabellen med *Entity2* poster som er relatert via en én-til-mange eller mange-til-mange-relasjon.
 * *Entity2Record* – obligatorisk. Den *Entity2* post for å legge til i relasjonen.
 
-**Unrelate**( *Entity1RelatedTable*, *Entity2Record* )
+**Unrelate**( *Entity1RelatedTable*; *Entity2Record* )
 
 * *Entity1RelatedTable* – obligatorisk. For en post i *Entity1*, tabellen med *Entity2* poster som er relatert via en én-til-mange eller mange-til-mange-relasjon.
 * *Entity2Record* – obligatorisk. Den *Entity2* post som skal fjernes fra relasjonen.
@@ -64,29 +65,29 @@ Vurder en **produkter** enhet med følgende relasjonene som vist i den [PowerApp
 
 **Produkter** og **reservasjoner** er relatert via en én-til-mange relasjon.  Til å relatere den første posten i den **reservasjoner** enhet med den første posten i den **produkter** enhet:
 
-`Relate( First( Products ).Reservations, First( Reservations ) )`
+`Relate( First( Products ).Reservations; First( Reservations ) )`
 
 Fjerne relasjonen mellom disse oppføringene:
 
-`Unrelate( First( Products ).Reservations, First( Reservations ) )`
+`Unrelate( First( Products ).Reservations; First( Reservations ) )`
 
 Aldri vi opprettet, eller fjern eller en post, bare relasjonen mellom poster ble endret.
 
 **Produkter** og **kontakter** er relatert via en mange-til-mange relasjon.  Til å relatere den første posten i den **kontakter** enhet med den første posten i den **produkter** enhet:
 
-`Relate( First( Products ).Contacts, First( Contacts ) )`
+`Relate( First( Products ).Contacts; First( Contacts ) )`
 
 Som mange-til-mange-relasjoner er symmetrisk, vi kan også har gjort dette i motsatt retning:
 
-`Relate( First( Contacts ).Products, First( Products ) )`
+`Relate( First( Contacts ).Products; First( Products ) )`
 
 Fjerne relasjonen mellom disse oppføringene:
 
-`Unrelate( First( Products ).Contacts, First( Contacts ) )`
+`Unrelate( First( Products ).Contacts; First( Contacts ) )`
 
 eller:
 
-`Unrelate( First( Contacts ).Products, First( Products ) )`
+`Unrelate( First( Contacts ).Products; First( Products ) )`
 
 Gå gjennom de følger samsvarer nøyaktig disse operasjonene på disse enhetene ved hjelp av en app med **galleriet** og **kombinasjonsboks** kontroller for å velge poster som er involvert.
 
@@ -152,8 +153,8 @@ Først oppretter du en enkel app for å vise og tilordne reservasjoner som er kn
 
 1. I **Gallery2**, kan du angi **NextArrow2**'s **OnSelect** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    Relate( ComboBox1.Selected.Reservations, ThisItem )
+    ```powerapps-comma
+    Relate( ComboBox1.Selected.Reservations; ThisItem )
     ```
 
     Når brukeren velger dette ikonet, gjeldende reservasjonen endres til produktet som brukeren har valgt i **ComboBox1**.
@@ -176,11 +177,11 @@ Nå kan du flytte relasjonen fra én post til en annen, men du kan ikke fjerne r
 
 1. I **Gallery2**, kan du angi den **OnSelect** formel for **NextArrow2** til denne formelen:
 
-    ```powerapps-dot
-    If( IsBlank( ComboBox1.Selected ),
-        Unrelate( Gallery1.Selected.Reservations, ThisItem ),
-        Relate( ComboBox1.Selected.Reservations, ThisItem )
-    );
+    ```powerapps-comma
+    If( IsBlank( ComboBox1.Selected );
+        Unrelate( Gallery1.Selected.Reservations; ThisItem );
+        Relate( ComboBox1.Selected.Reservations; ThisItem )
+    );;
     Refresh( Reservations )
     ```
     ![Konfigurer høyre-ikon](media/function-relate-unrelate/reservations-relate-unrelate.png)
@@ -193,8 +194,8 @@ Nå kan du flytte relasjonen fra én post til en annen, men du kan ikke fjerne r
 
 1. Forsikre deg om at duplikat av **Gallery2** heter **Gallery2_1**, og deretter angi dens **elementer** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    Filter( Reservations, IsBlank( 'Product Reservation' ) )
+    ```powerapps-comma
+    Filter( Reservations; IsBlank( 'Product Reservation' ) )
     ```
 
     En delegeringsadvarsel vises, men det vil ikke noe å si med små mengden data i dette eksemplet.
@@ -265,8 +266,8 @@ Oppretter du en annen app som ligner på det du opprettet tidligere i dette emne
 
 1. Angi den **Avbryt** ikonets **OnSelect** egenskapen til denne formelen: 
 
-    ```powerapps-dot
-    Unrelate( Gallery1.Selected.Contacts, ThisItem )
+    ```powerapps-comma
+    Unrelate( Gallery1.Selected.Contacts; ThisItem )
     ```
 
     ![Konfigurer Avbryt-ikon](media/function-relate-unrelate/contacts-unrelate.png)
@@ -285,8 +286,8 @@ Oppretter du en annen app som ligner på det du opprettet tidligere i dette emne
 
 1. Sett inn en **Legg til** -ikonet, og angi dens **OnSelect** egenskapen til denne formelen: 
 
-    ```powerapps-dot
-    Relate( Gallery1.Selected.Contacts, ComboBox1.Selected )
+    ```powerapps-comma
+    Relate( Gallery1.Selected.Contacts; ComboBox1.Selected )
     ```
 
     ![Konfigurer Add-ikon](media/function-relate-unrelate/contacts-relate.png)
@@ -324,9 +325,9 @@ Mange-til-mange-relasjoner er symmetrisk. Du kan utvide eksemplet for å legge t
     - Label1_1.Text = `"Selected Contact Products"`
     - Gallery2_1.items = `Gallery1_1.Selected.Products`
     - Title2_1.Text = `ThisItem.Name`
-    - Icon1_1.OnSelect = `Unrelate( Gallery1_1.Selected.Products, ThisItem )`
+    - Icon1_1.OnSelect = `Unrelate( Gallery1_1.Selected.Products; ThisItem )`
     - ComboBox1_1.Items = `Products`
-    - Icon2_1.OnSelect = `Relate( Gallery1_1.Selected.Products, ComboBox1_1.Selected )`
+    - Icon2_1.OnSelect = `Relate( Gallery1_1.Selected.Products; ComboBox1_1.Selected )`
 
     Resultatet vil se omtrent på forrige skjermbilde, men kommer på relasjonen fra den **kontakter** side.
 

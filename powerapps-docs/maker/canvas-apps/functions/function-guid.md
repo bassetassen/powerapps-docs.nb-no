@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61563246"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="guid-function-in-powerapps"></a>GUID-funksjonen i PowerApps
 Konverterer en GUID-streng ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) til en GUID-verdi, eller oppretter en ny GUID-verdi.
@@ -69,7 +70,7 @@ Du kan også oppgi GUID-verdi uten bindestreker. Denne formelen returnerer den s
 
 Brukes i kontekst til å angi **Status**-feltet i en ny databasepost til en godt etablert verdi:
 
-* **Patch (produkter, standard (produkter), {Status: GUID( "F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4" ) } )**
+* **Patch (produkter; standard (produkter); {Status: GUID( "F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4" ) } )**
 
 Du ønsker sikkert ikke å vise GUID-verdiene til brukerne, men GUID-verdiene kan hjelpe deg med å feilsøke appen. Hvis du vil vise verdien til **Status**-feltet i posten du opprettet i forrige eksempel, angir du **Text**-egenskapen for en **etikettkontroll** til denne formelen:
 
@@ -81,7 +82,7 @@ Du ønsker sikkert ikke å vise GUID-verdiene til brukerne, men GUID-verdiene ka
 
 1. Angi **[OnSelect](../controls/properties-core.md)**-egenskapen til **[Knapp](../controls/control-button.md)**-kontrollen som denne formelen:
 
-    **ClearCollect( NewGUIDs, ForAll( [ 1, 2, 3, 4, 5 ], GUID() ) )**
+    **ClearCollect( NewGUIDs; ForAll( [ 1; 2; 3; 4; 5 ]; GUID() ) )**
 
     Denne formelen oppretter én kolonnetabell som brukes til å oppdatere fem ganger, noe som resulterer i fem GUID-verdier.
 
@@ -99,4 +100,4 @@ Du ønsker sikkert ikke å vise GUID-verdiene til brukerne, men GUID-verdiene ka
 
 Hvis du vil generere en enkelt GUID-verdi i stedet for en tabell, bruker du denne formelen:
 
-**Set( NewGUID, GUID() )**
+**Set( NewGUID; GUID() )**

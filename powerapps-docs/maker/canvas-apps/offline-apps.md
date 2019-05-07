@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61538361"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="develop-offline-capable-canvas-apps"></a>Utvikle lerretsapper som fungerer i frakoblet tilstand
 
@@ -82,15 +83,15 @@ Appen gjør følgende på et høyt nivå:
 ### <a name="step-3-load-tweets-into-a-localtweets-collection-on-app-startup"></a>Trinn 3: Laste inn tweets i en LocalTweets-samling ved oppstart av appen
 Velg **OnVisible**-egenskapen for **Screen1** i appen, og kopier inn følgende formel:
 
-```powerapps-dot
-If( Connection.Connected,
-    ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
-        UpdateContext( {statusText: "Online data"} ),
-    LoadData(LocalTweets, "Tweets", true);
+```powerapps-comma
+If( Connection.Connected;
+    ClearCollect( LocalTweets; Twitter.SearchTweet( "PowerApps"; {maxResults: 100} ) );;
+        UpdateContext( {statusText: "Online data"} );
+    LoadData(LocalTweets; "Tweets"; true);;
         UpdateContext( {statusText: "Local data"} )
-);
-LoadData( LocalTweetsToPost, "LocalTweets", true );
-SaveData( LocalTweets, "Tweets" )
+);;
+LoadData( LocalTweetsToPost; "LocalTweets"; true );;
+SaveData( LocalTweets; "Tweets" )
 ```
 
 ![Formel for å laste inn tweets](./media/offline-apps/load-tweets.png)
@@ -110,13 +111,13 @@ Denne formelen kontrollerer om enheten er koblet til Internett:
    * **ThisItem.TweetText**
    * **ThisItem.UserDetails.FullName & " \@" & ThisItem.UserDetails.UserName**
    * **"RT: " & ThisItem.RetweetCount**
-   * **Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)**
+   * **Text(DateTimeValue(ThisItem.CreatedAtIso); DateTimeFormat.ShortDateTime)**
 4. Legg til en **Bilde**-kontroll, og angi **Bilde**-egenskapen til **ThisItem.UserDetails.ProfileImageUrl**.
 
 ### <a name="step-5-add-a-connection-status-label"></a>Trinn 5: Legg til en statusetikett for
 Sett inn en ny **Etikett**-kontroll, og angi **Tekst**-egenskapen til denne formelen:
 
-```If( Connection.Connected, "Connected", "Offline" )```
+```If( Connection.Connected; "Connected"; "Offline" )```
 
 Denne formelen kontrollerer om enheten er koblet til Internett. Hvis den er det, er teksten i etiketten «Tilkoblet». Ellers er den «Frakoblet».
 
@@ -130,13 +131,13 @@ Denne formelen kontrollerer om enheten er koblet til Internett. Hvis den er det,
 1. Legg til en **Knapp**-kontroll, og angi **Tekst**-egenskapen til «Tweet».
 2. Angi knappens **OnSelect**-egenskap til følgende formel:
 
-    ```powerapps-dot
-    If( Connection.Connected,
-        Twitter.Tweet( "", {tweetText: NewTweetTextInput.Text} ),
-        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
-            SaveData( LocalTweetsToPost, "LocalTweetsToPost" )
-    );
-    UpdateContext( {resetNewTweet: true} );
+    ```powerapps-comma
+    If( Connection.Connected;
+        Twitter.Tweet( ""; {tweetText: NewTweetTextInput.Text} );
+        Collect( LocalTweetsToPost; {tweetText: NewTweetTextInput.Text} );;
+            SaveData( LocalTweetsToPost; "LocalTweetsToPost" )
+    );;
+    UpdateContext( {resetNewTweet: true} );;
     UpdateContext( {resetNewTweet: false} )
     ```  
 
@@ -156,12 +157,12 @@ Legg til en ny **Tidtaker**-kontroll:
 
 * Angi **OnTimerEnd** til følgende formel:
 
-    ```powerapps-dot
-    If( Connection.Connected,
-        ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) );
-        Clear( LocalTweetsToPost);
-        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
-        SaveData( LocalTweetsToPost, "LocalTweetsToPost" );
+    ```powerapps-comma
+    If( Connection.Connected;
+        ForAll( LocalTweetsToPost; Twitter.Tweet( ""; {tweetText: tweetText} ) );;
+        Clear( LocalTweetsToPost);;
+        Collect( LocalTweetsToPost; {tweetText: NewTweetTextInput.Text} );;
+        SaveData( LocalTweetsToPost; "LocalTweetsToPost" );;
         UpdateContext( {statusText: "Online data"} )
     )
     ```

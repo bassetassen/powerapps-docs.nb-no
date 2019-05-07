@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61520494"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="savedata-and-loaddata-functions-in-powerapps"></a>Funksjonene SaveData og LoadData i PowerApps
 Lagrer og laster inn en [samling](../working-with-data-sources.md#collections) på nytt.
@@ -39,7 +40,7 @@ Disse funksjonene er begrenset av mengden minne tilgjengelig app fordi de funger
 Dataene krypteres og lagres på en privat plassering på den lokale enheten, isolert fra andre brukere og andre apper.
 
 ## <a name="syntax"></a>Syntaks
-**SaveData**( *Samling*, *Navn* )<br>**LoadData**( *Samling*, *Navn* [, *IgnoreNonexistentFile* ])
+**SaveData**( *Samling*; *Navn* )<br>**LoadData**( *Samling*; *Navn* [; *IgnoreNonexistentFile* ])
 
 * *Samling* – obligatorisk.  Samlingen som skal lagres eller lastes inn.
 * *Navn* – obligatorisk.  Navnet på lagringen. Du må bruke samme navn for å lagre og laste inn det samme settet med data. Navneområdet er ikke delt med andre apper eller brukere.
@@ -49,6 +50,6 @@ Dataene krypteres og lagres på en privat plassering på den lokale enheten, iso
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Hvis (tilkobling.tilkoblet, ClearCollect (LocalTweets, Twitter.SearchTweet («PowerApps», {maxResults: 100})), LoadData (LocalTweets, «Tweeter», SANN))** |Hvis enheten er koblet til, lastes samlingen LocalTweets inn fra Twitter-tjenesten. Ellers lastes samlingen inn fra den lokale filbufferen. |Innholdet gjengis uansett enheten er tilkoblet eller frakoblet. |
-| **SaveData(LocalTweets, «Tweeter»)** |Lagre samlingen LocalTweets som en lokal filbuffer på enheten. |Dataene lagres lokalt slik at **LoadData** kan laste det inn i en samling. |
+| **Hvis (tilkobling.tilkoblet; ClearCollect (LocalTweets; Twitter.SearchTweet («PowerApps»; {maxResults: 100})); LoadData (LocalTweets; «Tweeter»; SANN))** |Hvis enheten er koblet til, lastes samlingen LocalTweets inn fra Twitter-tjenesten. Ellers lastes samlingen inn fra den lokale filbufferen. |Innholdet gjengis uansett enheten er tilkoblet eller frakoblet. |
+| **SaveData(LocalTweets; «Tweeter»)** |Lagre samlingen LocalTweets som en lokal filbuffer på enheten. |Dataene lagres lokalt slik at **LoadData** kan laste det inn i en samling. |
 

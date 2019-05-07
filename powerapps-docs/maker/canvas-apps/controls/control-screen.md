@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61548735"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="screen-control-in-powerapps"></a>Skjermkontroll i PowerApps
 
@@ -61,13 +62,13 @@ De fleste apper har flere **skjerm**-kontroller som inneholder **[etikett](contr
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 
-[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
+[**Distinct**( *DataSource*; *ColumnName* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Eksempel
 
 1. Legg til en **[Radio](control-radio.md)**-kontroll, gi den navnet **ScreenFills**, og angi **[Elementer](properties-core.md)**-egenskapen dens til denne verdien:
 
-    `["Red", "Green"]`
+    `["Red"; "Green"]`
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 
@@ -75,17 +76,17 @@ De fleste apper har flere **skjerm**-kontroller som inneholder **[etikett](contr
 
 1. I **kilde**, legge til en **[figur](control-shapes-icons.md)** kontroll (for eksempel en pil), og angi dens **[OnSelect](properties-core.md)** egenskapen til Denne formelen:
 
-    `Navigate(Target, ScreenTransition.Fade)`
+    `Navigate(Target; ScreenTransition.Fade)`
 
     Vil du ha mer informasjon om **[Navigate](../functions/function-navigate.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
 
 1. Legg til en **[figur](control-shapes-icons.md)**-kontroll (som for eksempel en pil) i **Mål**, og angi **[OnSelect](properties-core.md)**-egenskapen til denne formelen:
 
-    `Navigate(Source, ScreenTransition.Fade)`
+    `Navigate(Source; ScreenTransition.Fade)`
 
 1. Angi **[Fyll](properties-color-border.md)**-egenskapen for **Mål** til denne formelen:
 
-    `If("Red" in ScreenFills.Selected.Value, RGBA(255, 0, 0, 1), RGBA(54, 176, 75, 1))`
+    `If("Red" in ScreenFills.Selected.Value; RGBA(255; 0; 0; 1); RGBA(54; 176; 75; 1))`
 
 1. Velg den **kilde** skjermbildet, og velg deretter et alternativ i mens du holder nede Alt-tasten, den **[Radio](control-radio.md)** kontroll, og velg deretter den **[Figur](control-shapes-icons.md)** kontroll.
 

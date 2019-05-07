@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61562829"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="and-or-and-not-functions-in-powerapps"></a>Funksjonene And, Or og Not i PowerApps
 Funksjoner for boolsk logikk, som vanligvis brukes til å behandle resultatene av sammenligninger og tester.
@@ -33,8 +34,8 @@ Funksjoner for boolsk logikk, som vanligvis brukes til å behandle resultatene a
 Disse funksjonene fungerer med logiske verdier. Du kan ikke sende et tall eller en streng direkte til funksjonen. En sammenligning eller test må utføres først. En sammenligning som **x > 1** er et eksempel på en logisk formel som returnerer den boolske verdien **sann** hvis **x** er større enn **1**. Hvis **x** er mindre enn **1**, evalueres formelen som **usann.**
 
 ## <a name="syntax"></a>Syntaks
-**And**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
-**Or**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
+**And**( *LogicalFormula1*; *LogicalFormula2* [; *LogicalFormula3*; ... ] )<br>
+**Or**( *LogicalFormula1*; *LogicalFormula2* [; *LogicalFormula3*; ... ] )<br>
 **Not**( *LogicalFormula* )
 
 * *LogicalFormula* – obligatorisk.  Logiske formler som skal evalueres og arbeides med.
@@ -43,11 +44,11 @@ Disse funksjonene fungerer med logiske verdier. Du kan ikke sende et tall eller 
 ### <a name="step-by-step"></a>Trinn for trinn
 Bruk denne funksjonen til å avgjøre om verdien til en glidebryter faller utenfor området fra 50 til 100:
 
-**Or(Slider1.Value < 50, Slider1.Value> 100)**
+**Or(Slider1.Value < 50; Slider1.Value> 100)**
 
 Hvis en [tabell](../working-with-tables.md) inneholder en **Dept**-[kolonne](../working-with-tables.md#columns) og en **Salary**-kolonne, kan du bruke denne funksjonen i en **Result**-kolonne som skal vise **sann** i alle radene der verdien i **Dept**-kolonnen er **HR** eller verdien i **Lønn**-kolonnen er større enn **200000**:
 
-**Or(Dept = HR, Salary >= 200000)**
+**Or(Dept = HR; Salary >= 200000)**
 
 Alternativt kan du bruke ||-operatoren til å få de samme resultatene som de forrige formlene returnerer:
 

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61559709"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="char-function-in-powerapps"></a>Char-funksjonen i PowerApps
 
@@ -46,7 +47,7 @@ Den **Char** funksjonen oversetter et tall til en streng med det tilsvarende ASC
 
 1. På en tom skjerm i en nettbrett-app, kan du legge til en [ **galleriet** ](../controls/control-gallery.md) kontroll med en **tom vannrett** oppsett, og deretter angi følgende egenskaper:
 
-    - **Elementer**: `[0,1,2,3,4,5,6,7]`
+    - **Elementer**: `[0;1;2;3;4;5;6;7]`
     - **Bredde**: 800
     - **Høyde**: 500
     - **TemplateSize**: 100
@@ -54,7 +55,7 @@ Den **Char** funksjonen oversetter et tall til en streng med det tilsvarende ASC
 
 1. I galleriet, kan du legge til en **galleriet** kontroll med en **tom loddrett** oppsett, og deretter angi følgende egenskaper:
 
-    - **Elementer**: `ForAll( [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 )`
+    - **Elementer**: `ForAll( [0;2;3;4;5;6;7;8;9;10;11;12;13;14;15]; Value + ThisItem.Value * 16 )`
     - **Bredde**: 100
     - **Høyde**: 500
     - **TemplateSize**: 30
@@ -79,7 +80,7 @@ Du har opprettet et diagram av de første 128 ASCII-tegnene. Tegnene som vises s
 
 Hvis du vil vise de utvidede ASCII-tegnene, kan du angi den **elementer** -egenskapen for det andre galleriet til denne formelen, som legger til 128 til hver tegnverdien:
 
-`ForAll( [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 + 128)`
+`ForAll( [0;2;3;4;5;6;7;8;9;10;11;12;13;14;15]; Value + ThisItem.Value * 16 + 128)`
 
 ![Utvidede ASCII-tegn](media/function-char/chart-higher.png)
 

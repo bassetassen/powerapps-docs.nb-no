@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63319941"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="export-control-and-import-control-in-powerapps"></a>Kontrollene Eksporter og Import i PowerApps
 Kontroller for å eksportere data til en lokal fil og deretter importere dataene til en annen app i PowerApps.
@@ -116,7 +117,7 @@ Eksportfunksjonen støttes ikke i nettlesere.
 
 ## <a name="example"></a>Eksempel
 1. Legg til en **[Knapp](control-button.md)**, og angi **[OnSelect](properties-core.md)**-egenskapen til denne formelen:
-   <br>**ClearCollect(Products, {Name:"Europa", Price:"10.99"}, {Name:"Ganymede", Price:"12.49"}, {Name:"Callisto", Price:"11.79"})**
+   <br>**ClearCollect(Products; {Name:"Europa"; Price:"10.99"}; {Name:"Ganymede"; Price:"12.49"}; {Name:"Callisto"; Price:"11.79"})**
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
    
@@ -126,7 +127,7 @@ Eksportfunksjonen støttes ikke i nettlesere.
 4. Trykk på F5, klikk eller trykk på **Eksporter**-kontrollen, og angi deretter navnet på filen du vil eksportere dataene til.
 5. Klikk eller trykk på **Lagre**, og trykk på Esc for å gå tilbake til standardarbeidsområdet.
 6. Legge til en **Import**-kontroll i en ny eller eksisterende app, gi den navnet **MyData**, og angi **[OnSelect](properties-core.md)**-egenskapen som denne formelen:<br>
-   **Collect(ImportedProducts, MyData.Data)**
+   **Collect(ImportedProducts; MyData.Data)**
 7. Trykk på F5, klikk eller trykk på **MyData**, klikk eller trykk på filen du eksporterte, og klikk eller trykk deretter på **Åpne**.
 8. Trykk på Esc, klikk eller trykk på **Samlinger** på **Fil**-menyen, og bekreft at den gjeldende appen har dataene som du eksporterte.
 

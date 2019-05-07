@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544595"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="web-barcode-scanner-control-experimental-in-powerapps"></a>Web strekkodeleser kontrollen (eksperimentell) i PowerApps
 
@@ -66,7 +67,7 @@ Kontrollen viser kameraet feed i appen slik at brukere kan skanne strekkoder på
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 
-[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
+[**Patch**( *DataSource*; *BaseRecord*; *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="example"></a>Eksempel
 

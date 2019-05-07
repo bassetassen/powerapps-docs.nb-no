@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61563547"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="groupby-and-ungroup-functions-in-powerapps"></a>Funksjonene GroupBy og Ungroup i PowerApps
 Grupperer og deler opp [poster](../working-with-tables.md#records) av en [tabell](../working-with-tables.md).
@@ -45,7 +46,7 @@ Du kan også samle resultater basert på en gruppering:
 En tabell er en verdi i PowerApps, akkurat som en streng eller et tall. Du kan angi en tabell som et argument for en funksjon, og en funksjon kan returnere en tabell. **GroupBy** og **Ungroup** endrer ikke en tabell, i stedet tar de en tabell som et argument og returnerer en annen tabell. Hvis du vil ha mer informasjon, kan du se [arbeide med tabeller](../working-with-tables.md).
 
 ## <a name="syntax"></a>Syntaks
-**GroupBy**( *Table*, *ColumnName1* [, *ColumnName2*, ... ], *GroupColumnName* )
+**GroupBy**( *Table*; *ColumnName1* [; *ColumnName2*; ... ]; *GroupColumnName* )
 
 * *Tabell* – obligatorisk. Tabell som skal grupperes.
 * *ColumnName(s)* – obligatorisk.  Kolonnenavnene i *Tabell* som du vil gruppere i poster.  Disse kolonnene blir kolonnene i den resulterende tabellen.
@@ -54,7 +55,7 @@ En tabell er en verdi i PowerApps, akkurat som en streng eller et tall. Du kan a
     > [!NOTE]
   > Du må spesifisere hvert mellomrom med **«\_x0020\_»** for SharePoint- og Excel-datakilder som inneholder kolonnenavn med mellomrom. Du kan for eksempel angi **«ColumnName»** som **«Column_x0020_Name»**.
 
-**Ungroup**( *Table*, *GroupColumnName* )
+**Ungroup**( *Table*; *GroupColumnName* )
 
 * *Tabell* – obligatorisk. Tabell som skal deles opp.
 * *GroupColumnName* – obligatorisk. Kolonnen som inneholder postdata-oppsettet med  **GroupBy**-funksjonen.
@@ -67,17 +68,17 @@ En tabell er en verdi i PowerApps, akkurat som en streng eller et tall. Du kan a
 1. Legg til en knapp, og angi **[Text](../controls/properties-core.md)**-egenskapen, slik at knappen viser **Original**.
 2. Angi **[OnSelect](../controls/properties-core.md)**-egenskapen for **Original**-knappen til denne formelen:
 
-```powerapps-dot   
-ClearCollect( CityPopulations, 
-    { City: "London",    Country: "United Kingdom", Population: 8615000}, 
-    { City: "Berlin",    Country: "Germany",        Population: 3562000}, 
-    { City: "Madrid",    Country: "Spain",          Population: 3165000}, 
-    { City: "Rome",      Country: "Italy",          Population: 2874000}, 
-    { City: "Paris",     Country: "France",         Population: 2273000}, 
-    { City: "Hamburg",   Country: "Germany",        Population: 1760000}, 
-    { City: "Barcelona", Country: "Spain",          Population: 1602000}, 
-    { City: "Munich",    Country: "Germany",        Population: 1494000}, 
-    { City: "Milan",     Country: "Italy",          Population: 1344000}
+```powerapps-comma   
+ClearCollect( CityPopulations; 
+    { City: "London";    Country: "United Kingdom"; Population: 8615000}; 
+    { City: "Berlin";    Country: "Germany";        Population: 3562000}; 
+    { City: "Madrid";    Country: "Spain";          Population: 3165000}; 
+    { City: "Rome";      Country: "Italy";          Population: 2874000}; 
+    { City: "Paris";     Country: "France";         Population: 2273000}; 
+    { City: "Hamburg";   Country: "Germany";        Population: 1760000}; 
+    { City: "Barcelona"; Country: "Spain";          Population: 1602000}; 
+    { City: "Munich";    Country: "Germany";        Population: 1494000}; 
+    { City: "Milan";     Country: "Italy";          Population: 1344000}
 )
 ```
 
@@ -94,7 +95,7 @@ ClearCollect( CityPopulations,
 1. Legg til en annen knapp, og angi **[Text](../controls/properties-core.md)**-egenskapen til **Group**.
 2. Sett **[OnSelect](../controls/properties-core.md)**-egenskapen til denne knappen til denne formelen:
    
-    **ClearCollect( CitiesByCountry, GroupBy( CityPopulations, "Country", "Cities" ) )**
+    **ClearCollect( CitiesByCountry; GroupBy( CityPopulations; "Country"; "Cities" ) )**
 3. Velg **Gruppe**-knappen mens du holder nede ALT-tasten.
    
     Du opprettet en samling, kalt **CitiesByCountry**, hvor poster for den forrige samlingen er gruppert etter **Country**-kolonnen.
@@ -111,7 +112,7 @@ ClearCollect( CityPopulations,
 1. Legg til en annen knapp, og angi **[Text](../controls/properties-core.md)**-egenskapen, slik at knappen viser **Filter**.
 2. Sett **[OnSelect](../controls/properties-core.md)**-egenskapen til denne knappen til den følgende formelen:
    
-    **ClearCollect( CitiesByCountryFiltered, Filter( CitiesByCountry, "e" in Country ) )**
+    **ClearCollect( CitiesByCountryFiltered; Filter( CitiesByCountry; "e" in Country ) )**
 3. Velg knappen du la til mens du holder nede ALT-tasten.
    
     Du opprettet en tredje samling, kalt **CitiesByCountryFiltered**, som bare inkluderer landene som har en «e» i navnet (det vil si ikke Spania eller Italia).
@@ -120,7 +121,7 @@ ClearCollect( CityPopulations,
 4. Legg til en knapp til, og angi **[Text](../controls/properties-core.md)**-egenskapen, slik at knappen viser **Ungroup**.
 5. Sett **[OnSelect](../controls/properties-core.md)**-egenskapen til denne knappen til den følgende formelen:
    
-    **ClearCollect( CityPopulationsUngrouped, Ungroup( CitiesByCountryFiltered, "Cities" ) )**
+    **ClearCollect( CityPopulationsUngrouped; Ungroup( CitiesByCountryFiltered; "Cities" ) )**
    
     Som resulterer i:
    
@@ -132,20 +133,20 @@ Noe annet vi kan gjøre med en gruppert tabell, er å samle resultatene.  I dett
 1. Legg til en annen knapp, og endre **[Text](../controls/properties-core.md)**-egenskapen, slik at knappen viser **Sum**.
 2. Angi **[OnSelect](../controls/properties-core.md)**-egenskapen for **Sum**-knappen til denne formelen:
    
-    **ClearCollect( CityPopulationsSum, AddColumns( CitiesByCountry, "Sum of City Populations", Sum( Cities, Population ) ) )**
+    **ClearCollect( CityPopulationsSum; AddColumns( CitiesByCountry; "Sum of City Populations"; Sum( Cities; Population ) ) )**
    
     Som resulterer i:
    
     ![](media/function-groupby/cities-sum.png)
    
-    **[AddColumns](function-table-shaping.md)** starter med **CitiesByCountry**-samlingen som grunnlag og legger til en ny kolonne kalt **Sum of City Populations**.  Verdier for denne kolonnen er beregnet rad-for-rad basert på formelen **Sum( Cities, Population )**.  Funksjonen **AddColumns** angir verdien for **Cities**-kolonnen (en tabell) for hver rad, og **[Sum](function-aggregates.md)** legger sammen **Befolkning** for hver rad i denne undertabellen.
+    **[AddColumns](function-table-shaping.md)** starter med **CitiesByCountry**-samlingen som grunnlag og legger til en ny kolonne kalt **Sum of City Populations**.  Verdier for denne kolonnen er beregnet rad-for-rad basert på formelen **Sum( Cities; Population )**.  Funksjonen **AddColumns** angir verdien for **Cities**-kolonnen (en tabell) for hver rad, og **[Sum](function-aggregates.md)** legger sammen **Befolkning** for hver rad i denne undertabellen.
 
     Nå som vi har summen som vi ønsker, kan vi bruke **[DropColumns](function-table-shaping.md)** til å fjerne undertabeller.
   
 3. Legg til en annen knapp, og endre **[Tekst](../controls/properties-core.md)**-egenskapen, slik at knappen viser **"SumOnly"**.
 4. Angi **[OnSelect](../controls/properties-core.md)**-egenskapen for **"SumOnly"**-knappen til denne formelen:
 
-    **ClearCollect( CityPopulationsSumOnly, DropColumns( CityPopulationsSum, "Cities" ) )**
+    **ClearCollect( CityPopulationsSumOnly; DropColumns( CityPopulationsSum; "Cities" ) )**
    
     Som resulterer i:
    

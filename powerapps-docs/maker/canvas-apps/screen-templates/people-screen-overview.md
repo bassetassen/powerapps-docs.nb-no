@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61536158"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="overview-of-the-people-screen-template-for-canvas-apps"></a>Oversikt over personer-skjermen malen for lerretsapper
 
@@ -94,19 +95,19 @@ Skjermbildet personer bufrer valgene dine personer i den **MyPeople** samling. B
 1. Angi den **OnSelect** -egenskapen for **BackIcon** til `Back()`.
 1. Angi den **OnSelect** -egenskapen for **SendIcon** til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Office365.SendEmail( 
-        Concat( MyPeople, UserPrincipalName & ";" ), 
-        SubjectLine.Text, 
+        Concat( MyPeople; UserPrincipalName & ";" ); 
+        SubjectLine.Text; 
         MessageBody.Text 
     )
     ```
     
-    Her kan bruker du Outlook connector til å sende en e-post. Du sender den `Concat(MyPeople, UserPrincipalName & ";")` som listen over mottakere. Denne formelen Kjeder sammen alle e-postadressene i den **MyPeople** samlingen inn i en enkelt streng med semikolon, for å skille dem. Dette er ikke forskjellig fra å skrive ut en streng med e-postadresser atskilt med semikolon i "Til"-linjen i din foretrukne e-postklient.
+    Her kan bruker du Outlook connector til å sende en e-post. Du sender den `Concat(MyPeople; UserPrincipalName & ";")` som listen over mottakere. Denne formelen Kjeder sammen alle e-postadressene i den **MyPeople** samlingen inn i en enkelt streng med semikolon, for å skille dem. Dette er ikke forskjellig fra å skrive ut en streng med e-postadresser atskilt med semikolon i "Til"-linjen i din foretrukne e-postklient.
     * Du kan overføre `SubjectLine.Text` som emne i meldingen, og `MessageBody.Text` som brødteksten i meldingen.
 1. Sett inn på skjermbildet personer i hjørnet øverst til høyre i **e-post** ikonet.
    Endre ikonfarge til det passer deg.
-1. Angi den **OnSelect** -egenskapen for den **SendIcon** til `Navigate( EmailScreen, None )`.
+1. Angi den **OnSelect** -egenskapen for den **SendIcon** til `Navigate( EmailScreen; None )`.
 
     Du har nå en app med to skjermer der du kan velge brukere, skriver en e-postmelding til dem, og deretter sende den. Du kan teste den ut, men vær forsiktig, da de appen sender e-postmeldinger til alle du legge til den **MyPeople** samling.
 

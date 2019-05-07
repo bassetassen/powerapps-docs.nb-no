@@ -19,12 +19,13 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61556762"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-behavior-formulas-for-canvas-apps-in-powerapps"></a>Slik fungerer formler for virkemåte i lerretsapper i PowerApps
 
 De fleste formler beregner en verdi.  Omberegning skjer automatisk når verdiene endres, akkurat som i et Excel-regneark.  Du kan for eksempel vise en verdi i en **[Etikett](controls/control-text-box.md)**-kontroll i rødt hvis verdien er mindre enn null. Hvis ikke, er den svart. Så du kan angi f.eks. angi **[Color](controls/properties-color-border.md)**-egenskapen for kontrollen til denne formelen:
 
-**If( Value(TextBox1.Text) >= 0, Color.Black, Color.Red )**
+**If( Value(TextBox1.Text) >= 0; Color.Black; Color.Red )**
 
 Hva betyr det når brukeren velger en **[Knapp](controls/control-button.md)**-kontroll i denne sammenhengen?  Ingen verdi er endret, så det er ikke noe nytt å beregne. Excel har ingenting som tilsvarer en **[Knapp](controls/control-button.md)**-kontroll.  
 
@@ -41,7 +42,7 @@ Fordi disse funksjonene endrer tilstanden til appen kan de ikke automatisk omber
 ### <a name="more-than-one-action"></a>Mer enn én handling
 Bruk semikolon til å opprette en liste over handlinger som skal utføres. Du kan for eksempel oppdatere en kontekstvariabel, og deretter gå tilbake til forrige skjermbilde:
 
-* **UpdateContext ({x: 1 } ); Back()**
+* **UpdateContext ({x: 1 } );; Back()**
 
 Handlinger utføres i rekkefølgen de vises i formelen.  Den neste funksjonen starter ikke før den gjeldende funksjonen er fullført. Hvis det oppstår en feil, kan kanskje ikke etterfølgende funksjoner starte.
 

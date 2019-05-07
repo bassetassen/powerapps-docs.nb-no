@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61519772"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="notify-function-in-powerapps"></a>Funksjonen Notify i PowerApps
 Viser en bannermelding til brukeren.
@@ -48,7 +49,7 @@ PowerApps kan også sende push-varslinger ved hjelp av en helt annen mekanisme f
 Merk: Denne funksjonen ble tidligere kalt **ShowError** når den bare kunne vise feilmeldinger.
 
 ## <a name="syntax"></a>Syntaks
-**Notify**( *Message*, [ *NotificationType* ] )
+**Notify**( *Message*; [ *NotificationType* ] )
 
 * *Melding* – obligatorisk.  Meldingen som skal vises til brukeren.
 * *NotificationType* – valgfritt.  Type melding som skal vises fra tabellen ovenfor.  **NotificationType.Information** (standard).  

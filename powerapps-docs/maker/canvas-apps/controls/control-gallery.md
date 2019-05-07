@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544250"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="gallery-control-in-canvas-apps"></a>Galleri-kontrollen i lerret-apper
 
@@ -92,7 +93,7 @@ Hvis en bruker ruller den **fleksibel høyde** galleri-kontrollen før alle elem
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 
-[**Filter**( *DataSource*, *Formula* )](../functions/function-filter-lookup.md)
+[**Filter**( *DataSource*; *Formula* )](../functions/function-filter-lookup.md)
 
 ## <a name="examples"></a>Eksempler
 

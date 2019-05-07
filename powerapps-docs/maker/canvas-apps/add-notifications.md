@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61560079"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="send-a-push-notification-in-powerapps"></a>Send et push-varsel i PowerApps
 Push-varsler brukes hovedsakelig i mobilapper for forbruker- og forretningsscenarioer for å engasjere brukere og hjelpe dem med å prioritere viktige oppgaver. I PowerApps kan du sende varsler ved å bruke PowerApps Notification-koblingen. Du kan sende opprinnelige push-varsler til alle apper du lager i PowerApps. Vi har planer om å legge til flere typer varsler i fremtiden.
@@ -86,7 +87,7 @@ Push-varselet kan sende bestemte parametre til appen. Bruk for eksempel *Param("
 Du kan for eksempel angi at appen skal åpne siden **Saksdetaljer** når du åpner appen:
 
 1. Legg til en **Tidtaker**-kontroll, og angi **OnTimerEnd**-egenskapen for denne kontrollen i denne formelen:
-   <br>**Navigate(EditCase, ScreenTransition.None)**
+   <br>**Navigate(EditCase; ScreenTransition.None)**
 2. (valgfritt) Skjul **Tidtaker**-kontrollen ved å angi kontrollens egenskap for **Synlighet** som **usann**.
 3. Angi**OnVisible**-egenskapen for skjermbildet til **Timer.Start()**.
 

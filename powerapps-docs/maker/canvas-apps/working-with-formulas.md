@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61558523"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="get-started-with-canvas-app-formulas-in-powerapps"></a>Kom i gang med lerretsappformler i PowerApps
 
@@ -70,11 +71,11 @@ I Excel kan du angi en bestemt type data, for eksempel tallet **42** eller uttry
 
     Etiketten gjenspeiler denne nye verdien når du skriver den inn.  Skjermen viser kanskje gule utropstegn-ikoner mens du skriver. Disse ikonene indikerer feil, men de går bort når du er ferdig med å skrive inn en gyldig verdi. En streng uten doble anførselstegn i begge ender er for eksempel ikke gyldig.
 
-    I Excel kan du vise et tall, for eksempel **42**, ved å skrive det inn i en celle eller ved å skrive inn en formel som løses til dette nummeret, for eksempel slik: **=SUM(30,12)**. Du kan oppnå den samme effekten i PowerApps ved å angi **Tekst**-egenskapen for en kontroll, for eksempel en etikett, til **42** eller **Sum(30,12)**. Cellen og etiketten viser alltid dette tallet uavhengig av andre endringer i regnearket eller appen.
+    I Excel kan du vise et tall, for eksempel **42**, ved å skrive det inn i en celle eller ved å skrive inn en formel som løses til dette nummeret, for eksempel slik: **=SUM(30;12)**. Du kan oppnå den samme effekten i PowerApps ved å angi **Tekst**-egenskapen for en kontroll, for eksempel en etikett, til **42** eller **Sum(30;12)**. Cellen og etiketten viser alltid dette tallet uavhengig av andre endringer i regnearket eller appen.
 
     > [!NOTE]
    > I PowerApps skal du ikke sette et likhetstegn eller et plusstegn før en formel, som du gjør i Excel. Formellinjen behandler som standard alt du skriver inn der som en formel. Du skal heller ikke omgi en formel med doble anførselstegn ("), som du gjorde tidligere for å angi en tekststreng.
-5. I **[Tekst](controls/properties-core.md)**-egenskapen for etiketten erstatter du **"Hello World"** med **Sum(1,2,3)**.
+5. I **[Tekst](controls/properties-core.md)**-egenskapen for etiketten erstatter du **"Hello World"** med **Sum(1;2;3)**.
 
     ![Å skrive inn den delvise funksjonen Sum(1,2,3 uten en avsluttende parentes viser feil](./media/working-with-formulas/label-sum-partial.png)
 
@@ -100,7 +101,7 @@ Uavhengig av hvilke tall du skriver inn i kontrollene for innskriving av tekst, 
 
 I Excel, kan du bruke betinget formatering formler til å vise, for eksempel negative verdier i rødt. I PowerApps kan du bruke formler til å bestemme, ikke bare den primære verdien av en kontroll, men også egenskaper som formatering. I eksemplet nedenfor er en formel for den **[farge](controls/properties-color-border.md)** egenskapen for etiketten automatisk viser negative verdier i rødt. **[If](functions/function-if.md)**-funksjonen bør du kunne kjenne igjen fra Excel:
 
-`If( Value(Label1.Text) < 0, Red, Black )`
+`If( Value(Label1.Text) < 0; Red; Black )`
 
 ![Animasjon av betinget formatering](media/working-with-variables/recalc-color.gif)
 
@@ -119,7 +120,7 @@ Du kan konfigurere appen med formler, slik at brukere kan endre utseendet eller 
     Du kan angi **Maks**-egenskapen ved å velge den på **Innhold**-fanen eller i egenskapslisten:
 
     ![Å endre den maksimale verdien for hver glidebryter](./media/working-with-formulas/three-sliders-max.png)
-4. Velg skjermen ved å klikke bort fra en kontroll, og angi deretter skjermens  **[Fyll](controls/properties-color-border.md)**-egenskap til denne formelen:<br>**RGBA( Slider1.Value, Slider2.Value, Slider3.Value, 1 )**
+4. Velg skjermen ved å klikke bort fra en kontroll, og angi deretter skjermens  **[Fyll](controls/properties-color-border.md)**-egenskap til denne formelen:<br>**RGBA( Slider1.Value; Slider2.Value; Slider3.Value; 1 )**
 
     Som allerede beskrevet får du tilgang til kontrollegenskaper ved å bruke **.** -operatoren.  **Slider1.Value** refererer til glidebryterens **[Verdi](controls/properties-core.md)**-egenskap, som gjenspeiler hvor brukeren har plassert glidebryteren mellom **Min.-** og **Maks**-verdiene. Når du skriver inn denne formelen, er hver kontroll den inneholder fargekodet mellom skjermen og formellinjen:
 

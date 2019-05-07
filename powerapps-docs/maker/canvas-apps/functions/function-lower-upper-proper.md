@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61563798"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="lower-upper-and-proper-functions-in-powerapps"></a>Funksjonene Lower, Upper og Proper i PowerApps
 Konverterer bokstaver i en tekststreng slik at alle bokstavene blir små, alle blir store eller det blir en blanding av små og store bokstaver.
@@ -62,9 +63,9 @@ Hver formel returnerer en tabell med én kolonne som inneholder de konverterte s
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Lower( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |Konverterer alle små bokstaver til store bokstaver. |<style> img { max-width:none; } </style> ![](media/function-lower-upper-proper/people-table-lower.png) |
-| **Upper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |Konverterer alle små bokstaver til store bokstaver. |![](media/function-lower-upper-proper/people-table-upper.png) |
-| **Upper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |Konverterer den første bokstaven i hvert ord til store bokstaver hvis de er små, og konverterer alle andre store bokstaver til små bokstaver. |![](media/function-lower-upper-proper/people-table-proper.png) |
+| **Lower( ShowColumns(&nbsp;People;&nbsp;"Address"&nbsp;) )** |Konverterer alle små bokstaver til store bokstaver. |<style> img { max-width:none; } </style> ![](media/function-lower-upper-proper/people-table-lower.png) |
+| **Upper( ShowColumns(&nbsp;People;&nbsp;"Address"&nbsp;) )** |Konverterer alle små bokstaver til store bokstaver. |![](media/function-lower-upper-proper/people-table-upper.png) |
+| **Upper( ShowColumns(&nbsp;People;&nbsp;"Address"&nbsp;) )** |Konverterer den første bokstaven i hvert ord til store bokstaver hvis de er små, og konverterer alle andre store bokstaver til små bokstaver. |![](media/function-lower-upper-proper/people-table-proper.png) |
 
 ### <a name="step-by-step-example"></a>Trinnvis veiledning – eksempel
 1. Legg til en **[Tekstinndata](../controls/control-text-input.md)**-kontroll, og gi den navnet **Source**.

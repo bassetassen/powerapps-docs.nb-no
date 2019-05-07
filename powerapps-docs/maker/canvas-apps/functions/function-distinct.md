@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61551219"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="distinct-function-in-powerapps"></a>Distinct-funksjonen i PowerApps
 Oppsummerer [postene](../working-with-tables.md#records) i en [tabell](../working-with-tables.md) uten duplikater.
@@ -29,7 +30,7 @@ Oppsummerer [postene](../working-with-tables.md#records) i en [tabell](../workin
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
 ## <a name="syntax"></a>Syntaks
-**Distinct**( *Table*, *Formula* )
+**Distinct**( *Table*; *Formula* )
 
 * *Table* – obligatorisk.  Tabellen funksjonen skal evaluere på tvers av.
 * *Formula* – obligatorisk.  Formelen som skal evalueres for hver post.
@@ -37,5 +38,5 @@ Oppsummerer [postene](../working-with-tables.md#records) i en [tabell](../workin
 ## <a name="example"></a>Eksempel
 Hvis du hadde en **Ansatte**-tabell som inneholdt en **Avdeling**-kolonne, ville denne funksjonen gi en liste over hvert unike avdelingsnavn i denne kolonnen, uansett hvor mange ganger hvert navn ble vist i kolonnen:
 
-**Distinct(Employees, Department)**
+**Distinct(Employees; Department)**
 

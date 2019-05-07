@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61561731"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-and-update-a-collection-in-a-canvas-app"></a>Opprett og oppdater en samling i en lerretsapp
 
@@ -50,15 +51,15 @@ Bruk en samling til å lagre data som brukere kan administrere i appen. En samli
 
 1. I formellinjen erstatter **DropDownSample** med dette uttrykket:
 
-    `["Red","Green","Blue"]`
+    `["Red";"Green";"Blue"]`
 
 1. Legg til en **knappen** kontroll, angi dens **tekst** egenskapen til **«Legg til»**, og angi dens **OnSelect** egenskapen til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Collect(
-        ProductList,
+        ProductList;
         {
-            Product: ProductName.Text,
+            Product: ProductName.Text;
             Color: Colors.Selected.Value
         }
     )
@@ -106,7 +107,7 @@ Bruk en samling til å lagre data som brukere kan administrere i appen. En samli
 
 1. Angi ikonets **OnSelect** egenskapen til denne formelen:
 
-    `Remove(ProductList, ThisItem)`
+    `Remove(ProductList; ThisItem)`
 
 1. Utenfor galleriet, Legg til en knapp, angi dens **tekst** egenskapen til **«Tøm»**, og angi dens **OnSelect** egenskapen til denne formelen:
 
@@ -120,7 +121,7 @@ Bruk en samling til å lagre data som brukere kan administrere i appen. En samli
 
 1. Legg til en knapp, og angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne funksjonen, noe som erstatter *ListName* med navnet på SharePoint-listen:<br>
 
-    `Collect(MySPCollection, ListName)`
+    `Collect(MySPCollection; ListName)`
 
     Denne funksjonen oppretter en samling som heter **MySPCollection**, og som inneholder de samme dataene som SharePoint-listen.
 

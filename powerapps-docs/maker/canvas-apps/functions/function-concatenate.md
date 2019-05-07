@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61551334"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="concat-and-concatenate-functions-in-powerapps"></a>Funksjonene Concat og Concatenate i PowerApps
 Kjeder sammen individuelle tekststrenger og strenger i [tabeller](../working-with-tables.md).
@@ -33,12 +34,12 @@ Bruk funksjonen **[Split](function-split.md)** til å dele en streng inn i en ta
 **Concatenate**-funksjonen kjeder sammen en blanding av individuelle strenger og en enkeltkolonnetabell med strenger. Hvis funksjonen brukes med individuelle strenger, tilsvarer den bruken av **&**-[operatoren](operators.md). Du kan bruke en formel som inkluderer **[ShowColumns](function-table-shaping.md)**-funksjonen for å opprette en enkeltkolonnetabell ut fra en tabell som har flere kolonner.
 
 ## <a name="syntax"></a>Syntaks
-**Concat**( *Table*, *Formula* )
+**Concat**( *Table*; *Formula* )
 
 * *Tabell* – obligatorisk.  Tabell som skal arbeides på.
 * *Formel* – obligatorisk.  Formel som angis for alle postene i en tabell.
 
-**Concatenate**( *String1* [, *String2*, ...] )
+**Concatenate**( *String1* [; *String2*; ...] )
 
 * *Streng(er)* – obligatorisk.  Kombinasjon av individuelle strenger eller en enkeltkolonnetabell med strenger.
 
@@ -46,22 +47,22 @@ Bruk funksjonen **[Split](function-split.md)** til å dele en streng inn i en ta
 #### <a name="concat"></a>Concat
 1. Legg til en **[Knappekontroll](../controls/control-button.md)**, og sett **[OnSelect](../controls/properties-core.md)**-egenskapen til denne formelen:
    
-    **Collect(Products, {String:"Violin", Wind:"Trombone", Percussion:"Bongos"}, {String:"Cello", Wind:"Trumpet", Percussion:"Tambourine"})**
+    **Collect(Products; {String:"Violin"; Wind:"Trombone"; Percussion:"Bongos"}; {String:"Cello"; Wind:"Trumpet"; Percussion:"Tambourine"})**
 2. Trykk på F5, klikk på knappen, og trykk deretter på ESC for å gå tilbake til utformingsområdet.
 3. Legg til en **[Etikettkontroll](../controls/control-text-box.md)**, og sett **[Tekst](../controls/properties-core.md)**-egenskapen til denne formelen:
    
-    **Concat(Products, String & " ")**
+    **Concat(Products; String & " ")**
    
     Etiketten viser **Violin Cello**.
 
 #### <a name="concatenate"></a>Concatenate
 1. Legg til en **[Tekstinndata](../controls/control-text-input.md)**-kontroll, og gi den navnet **ForfatterNavn**.
 2. Legg til en **[Etikettkontroll](../controls/control-text-box.md)**, og sett **[Tekst](../controls/properties-core.md)**-egenskapen til denne formelen:<br>
-   **Concatenate("By ", AuthorName.Text)**
+   **Concatenate("By "; AuthorName.Text)**
 3. Skriv inn navnet ditt i **ForfatterNavn**.
    
     Etiketten viser **Av** etterfulgt av navnet ditt.
 
 Hvis du hadde en **Ansatte**-tabell som inneholdt en **Fornavn**-kolonne og en **Etternavn**-kolonne, vil denne formelen kjede sammen dataene i hver rad til disse kolonnene.
-<br>**Concatenate(Employees.FirstName, " ", Employees.LastName)**
+<br>**Concatenate(Employees.FirstName; " "; Employees.LastName)**
 

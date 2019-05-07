@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63321318"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="camera-control-in-powerapps"></a>Kamera-kontrollen i PowerApps
 En kontroll som lar brukeren ta bilder ved hjelp av kameraet på enheten.
@@ -73,12 +74,12 @@ Hvis du legger til denne kontrollen, kan brukeren oppdatere en datakilde med ett
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
+[**Patch**( *DataSource*; *BaseRecord*; *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="example"></a>Eksempel
 ### <a name="add-photos-to-an-image-gallery-control"></a>Å legge til bilder i en Bildegalleri-kontroll
 1. Legg til en **kamera**-kontroll, gi den navnet **MyCamera**, og angi **[OnSelect](properties-core.md)**-egenskapen som denne formelen:<br>
-   **Collect(MyPix, MyCamera.Photo)**
+   **Collect(MyPix; MyCamera.Photo)**
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 
@@ -91,7 +92,7 @@ Hvis du legger til denne kontrollen, kan brukeren oppdatere en datakilde med ett
 
     Bildet som du tok, vises i **Bildegalleri**-kontrollen.
 6. Ta så mange bilder som du ønsker, og gå tilbake til standardarbeidsområdet ved å trykke på ESC.
-7. (valgfritt) Angi **OnSelect**-egenskapen for **Bilde**-kontrollen i **Bildegalleri**-kontrollen til **Remove(MyPix, ThisItem)**, trykk på F5, og klikk eller trykk så på et bilde for å fjerne det.
+7. (valgfritt) Angi **OnSelect**-egenskapen for **Bilde**-kontrollen i **Bildegalleri**-kontrollen til **Remove(MyPix; ThisItem)**, trykk på F5, og klikk eller trykk så på et bilde for å fjerne det.
 
 Bruk **[SaveData](../functions/function-savedata-loaddata.md)**-funksjonen til å lagre bildene lokalt, eller **[Patch](../functions/function-patch.md)**-funksjonen for å oppdatere en datakilde.
 

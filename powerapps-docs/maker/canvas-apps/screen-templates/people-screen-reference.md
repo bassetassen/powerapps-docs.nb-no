@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61540783"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="reference-information-about-the-people-screen-template-for-canvas-apps"></a>Referanseinformasjon om personer-skjermen malen for lerretsapper
 
@@ -50,11 +51,11 @@ Et par andre kontroller samhandle eller har en avhengighet på tekstboksen for s
 * Egenskap: **Elementer**<br>
     Verdi: Logikk for å slå opp brukere når brukeren starter å skrive inn:
     
-    ```powerapps-dot
-    If( !IsBlank( Trim( TextSearchBox.Text ) ), 
+    ```powerapps-comma
+    If( !IsBlank( Trim( TextSearchBox.Text ) ); 
         'Office365Users'.SearchUser(
             {
-                searchTerm: Trim( TextSearchBox.Text ), 
+                searchTerm: Trim( TextSearchBox.Text ); 
                 top: 15
             }
         )
@@ -76,12 +77,12 @@ Den `Office365Users.SearchUser` operasjonen er pakket i en `If(!IsBlank(Trim(Tex
 * Egenskap: **OnSelect**<br>
     Verdi: Kode for å legge til brukeren i en samling med app-nivå, og velg deretter brukeren:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Concurrent(
-        Set( _selectedUser, ThisItem ),
-        Reset( TextSearchBox ),
-        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
-            Collect( MyPeople, ThisItem )
+        Set( _selectedUser; ThisItem );
+        Reset( TextSearchBox );
+        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ); 
+            Collect( MyPeople; ThisItem )
         )
     )
     ```
@@ -98,9 +99,9 @@ Den `Office365Users.SearchUser` operasjonen er pakket i en `If(!IsBlank(Trim(Tex
 * Egenskap: **Bilde**<br>
     Verdi: Logikk for å hente en brukers profilbilde.
 
-    ```powerapps-dot
+    ```powerapps-comma
     If( !IsBlank( ThisItem.Id ) && 
-            'Office365Users'.UserPhotoMetadata( ThisItem.Id ).HasPhoto,
+            'Office365Users'.UserPhotoMetadata( ThisItem.Id ).HasPhoto;
         'Office365Users'.UserPhoto( ThisItem.Id )
     )
     ```
@@ -126,7 +127,7 @@ Dette er samlingen av personer initialisert eller legges til ved å velge den **
 ![PeopleAddedGallery tittel kontroll](media/people-screen/people-people-gall-title.png)
 
 * Egenskap: **OnSelect**<br>
-    Verdi: `Set( _selectedUser, ThisItem )`
+    Verdi: `Set( _selectedUser; ThisItem )`
 
 Sett den **_selectedUser** variabel som skal det valgte elementet i **EmailPeopleGallery**.
 
@@ -135,7 +136,7 @@ Sett den **_selectedUser** variabel som skal det valgte elementet i **EmailPeopl
 ![PeopleAddedGallery iconRemove kontroll](media/people-screen/people-people-gall-delete.png)
 
 * Egenskap: **OnSelect**<br>
-    Verdi: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
+    Verdi: `Remove( MyPeople; LookUp( MyPeople; UserPrincipalName = ThisItem.UserPrincipalName ) )`
 
 Slår opp posten i den **MyPeople** samling, der **UserPrincipalName** samsvarer med den **UserPrincipalName** for det valgte elementet, og deretter fjerner som registrerer fra den samling.
 

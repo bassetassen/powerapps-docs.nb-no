@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61538828"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="reference-information-about-the-email-screen-template-for-canvas-apps"></a>Referanseinformasjon om e-post-skjermen malen for lerretsapper
 
@@ -55,9 +56,9 @@ Den **Legg til ikonet** kontrollen kan brukere av appen å legge til personer so
 * Egenskap: **Synlig**<br>
     Verdi: Logikk for å vise kontrollen bare når en bruker skriver inn en gyldig e-postadresse i søkeboksen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     !IsBlank( TextSearchBox.Text ) &&
-        IsMatch( TextSearchBox.Text, Match.Email ) &&
+        IsMatch( TextSearchBox.Text; Match.Email ) &&
         Not( Trim( TextSearchBox.Text ) in MyPeople.UserPrincipalName )
     ```
   Linje for linje, den foregående kodeblokk sier at den **Legg til ikonet** kontroll, vises bare hvis:
@@ -69,14 +70,14 @@ Den **Legg til ikonet** kontrollen kan brukere av appen å legge til personer so
 * Egenskap: **OnSelect**<br>
     Verdi: Hvis du velger dette legger til gyldige e-postadressen til den **MyPeople** samling. Denne samlingen brukes av skjermen som listen over mottakere:
 
-    ```powerapps-dot
-    Collect( MyPeople,
+    ```powerapps-comma
+    Collect( MyPeople;
         { 
-            DisplayName: TextSearchBox.Text, 
-            UserPrincipalName: TextSearchBox.Text, 
+            DisplayName: TextSearchBox.Text; 
+            UserPrincipalName: TextSearchBox.Text; 
             Mail: TextSearchBox.Text
         }
-    );
+    );;
     Reset( TextSearchBox )
     ```
   
@@ -89,9 +90,9 @@ Den **Legg til ikonet** kontrollen kan brukere av appen å legge til personer so
 * Egenskap: **Elementer**<br>
     Verdi: Topp 15 resultatene av søketeksten ble skrevet inn i den **TextSearchBox** kontroll:
     
-    ```powerapps-dot
-    If( !IsBlank( Trim(TextSearchBox.Text ) ), 
-        'Office365Users'.SearchUser( {searchTerm: Trim( TextSearchBox.Text ), top: 15} )
+    ```powerapps-comma
+    If( !IsBlank( Trim(TextSearchBox.Text ) ); 
+        'Office365Users'.SearchUser( {searchTerm: Trim( TextSearchBox.Text ); top: 15} )
     )
     ```
 
@@ -111,12 +112,12 @@ Den **Legg til ikonet** kontrollen kan brukere av appen å legge til personer so
 * Egenskap: **OnSelect**<br>
     Verdi: Kode for å legge til brukeren i en samling med app-nivå, og velg deretter brukeren:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Concurrent(
-        Set( _selectedUser, ThisItem ),
-        Reset( TextSearchBox ),
-        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
-            Collect( MyPeople, ThisItem )
+        Set( _selectedUser; ThisItem );
+        Reset( TextSearchBox );
+        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ); 
+            Collect( MyPeople; ThisItem )
         )
     )
     ```
@@ -138,17 +139,17 @@ Den **Legg til ikonet** kontrollen kan brukere av appen å legge til personer so
 * Egenskap: **Høyde**<br>
     Verdi: Logikk for å angi høyden, basert på hvor mange elementer for øyeblikket i galleriet:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Min( 
         ( EmailPeopleGallery.TemplateHeight + EmailPeopleGallery.TemplatePadding * 2) *
-            RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0 ),
+            RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2; 0 );
         304
     )
     ```
 
   Høyden på dette galleriet Justerer hvor mange elementer i galleriet, med en maksimal høyde for 304.
   
-  Det tar `TemplateHeight + TemplatePadding * 2` som totalt høyden på en enkelt rad med **EmailPeopleGallery**, deretter multipliserer verdien med antall rader. Siden `WrapCount = 2`, antall rader som SANN er `RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0)`.
+  Det tar `TemplateHeight + TemplatePadding * 2` som totalt høyden på en enkelt rad med **EmailPeopleGallery**, deretter multipliserer verdien med antall rader. Siden `WrapCount = 2`, antall rader som SANN er `RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2; 0)`.
 
 * Egenskap: **ShowScrollbar**<br>
     Verdi: `EmailPeopleGallery.Height >= 304`
@@ -160,7 +161,7 @@ Den **Legg til ikonet** kontrollen kan brukere av appen å legge til personer so
    ![EmailPeopleGallery tittel kontroll](media/email-screen/email-people-gall-text.png)
 
 * Egenskap: **OnSelect**<br>
-    Verdi: `Set(_selectedUser, ThisItem)`
+    Verdi: `Set(_selectedUser; ThisItem)`
 
   Sett den **_selectedUser** variabel som skal det valgte elementet i **EmailPeopleGallery**.
 
@@ -169,7 +170,7 @@ Den **Legg til ikonet** kontrollen kan brukere av appen å legge til personer so
    ![MonthDayGallery tittel kontroll](media/email-screen/email-people-gall-delete.png)
 
 * Egenskap: **OnSelect**<br>
-    Verdi: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
+    Verdi: `Remove( MyPeople; LookUp( MyPeople; UserPrincipalName = ThisItem.UserPrincipalName ) )`
 
   Slår opp posten i den **MyPeople** samling, der **UserPrincipalName** samsvarer med den **UserPrincipalName** av det valgte elementet og fjerner som registrerer fra den samling.
 
@@ -178,15 +179,15 @@ Den **Legg til ikonet** kontrollen kan brukere av appen å legge til personer so
 * Egenskap: **OnSelect**<br>
     Verdi: Logikk for å sende brukerens e-postmeldingen:
 
-    ```powerapps-dot
-    Set( _emailRecipientString, Concat( MyPeople, Mail & ";" ) );
-    'Office365'.SendEmail( _emailRecipientString, 
-        TextEmailSubject.Text,  
-        TextEmailMessage.Text, 
+    ```powerapps-comma
+    Set( _emailRecipientString; Concat( MyPeople; Mail & ";" ) );;
+    'Office365'.SendEmail( _emailRecipientString; 
+        TextEmailSubject.Text;  
+        TextEmailMessage.Text; 
         { Importance:"Normal" }
-    );
-    Reset( TextEmailSubject );
-    Reset( TextEmailMessage );
+    );;
+    Reset( TextEmailSubject );;
+    Reset( TextEmailMessage );;
     Clear( MyPeople )
     ```
 
@@ -198,7 +199,7 @@ Den **Legg til ikonet** kontrollen kan brukere av appen å legge til personer so
   1. Til slutt, tilbakestilles den **TextEmailSubject** og **TextEmailMessage** kontrollerer og fjerner den **MyPeople** samling.
 
 * Egenskap: **DisplayMode**<br>
-    Verdi: `If( Len( Trim( TextEmailSubject.Text ) ) > 0 && !IsEmpty( MyPeople ), DisplayMode.Edit, DisplayMode.Disabled )` Emnelinjen for e-post må ha for en e-post som skal sendes, tekst og mottakeren (**MyPeople**) samlingen kan ikke være tom.
+    Verdi: `If( Len( Trim( TextEmailSubject.Text ) ) > 0 && !IsEmpty( MyPeople ); DisplayMode.Edit; DisplayMode.Disabled )` Emnelinjen for e-post må ha for en e-post som skal sendes, tekst og mottakeren (**MyPeople**) samlingen kan ikke være tom.
 
 ## <a name="next-steps"></a>Neste trinn
 

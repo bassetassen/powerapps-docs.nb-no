@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61559453"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="check-box-control-in-powerapps"></a>Avmerkingsboks-kontrollen i PowerApps
 En kontroll der brukeren kan merke eller fjerne merket for å angi verdien som **sann** eller **usann**.
@@ -121,14 +122,14 @@ Brukeren kan angi en boolsk verdi ved hjelp av denne kjente kontrollen, har vær
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**If**(*Betingelse*, *Resultat*)](../functions/function-if.md)
+[**If**(*Betingelse*; *Resultat*)](../functions/function-if.md)
 
 ## <a name="example"></a>Eksempel
 1. Legg til en **Avmerkingsboks**-kontroll, gi den navnet **chkReserve**, og angi **[Text](properties-core.md)**-egenskapen som **Reserve now**.
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 2. Legg til en **[Date picker](control-date-picker.md)**-kontroll, og angi **[Visible](properties-core.md)**-egenskapen som denne formelen:
-   <br>**If(chkReserve.Value = true, true)**
+   <br>**If(chkReserve.Value = true; true)**
    
     Vil du ha mer informasjon om **[If](../functions/function-if.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
 3. Trykk på F5, og klikk eller trykk på **chkReserve** for å angi dens **[Value](properties-core.md)**-egenskap som **sann**. Klikk eller trykk deretter på **chkReserve** på nytt for å angi dens **[Value](properties-core.md)**-egenskap som **usann**.

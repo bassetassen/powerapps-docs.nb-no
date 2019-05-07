@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61539706"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="reference-information-about-the-meeting-screen-template-for-canvas-apps"></a>Referanseinformasjon om møte-skjermen malen for lerretsapper
 
@@ -48,12 +49,12 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
    ![LblInviteTab control](media/meeting-screen/meeting-invite-text.png)
 
 * Egenskap: **Farge**<br>
-    Verdi: `If( _showDetails, LblRecipientCount.Color, RectQuickActionBar.Fill )`
+    Verdi: `If( _showDetails; LblRecipientCount.Color; RectQuickActionBar.Fill )`
 
     **_showDetails** er en variabel som brukes til å bestemme om den **LblInviteTab** kontroll eller **LblScheduleTab** kontroll er valgt. Hvis verdien for **_showDetails** er **SANN**, **LblScheduleTab** er merket; hvis verdien er **USANN**, **LblInviteTab**  er valgt. Det betyr at hvis verdien for **_showDetails** er **SANN** (denne kategorien *er ikke* valgte), samsvarer med kategorien fargen som **LblRecipientCount**. Hvis ikke, den samsvarer med verdien fyll for **RectQuickActionBar**.
 
 * Egenskap: **OnSelect**<br> 
-    Verdi: `Set( _showDetails, false )`
+    Verdi: `Set( _showDetails; false )`
 
     Sett den **_showDetails** variabel som skal **USANN**, noe som betyr at innholdet i kategorien invitasjon er synlige, og innholdet i den **tidsplan** kategorien er skjult.
 
@@ -62,12 +63,12 @@ Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontro
    ![LblInviteTab control](media/meeting-screen/meeting-schedule-text.png)
 
 * Egenskap: **Farge**<br>
-    Verdi: `If( !_showDetails, LblRecipientCount.Color, RectQuickActionBar.Fill )`
+    Verdi: `If( !_showDetails; LblRecipientCount.Color; RectQuickActionBar.Fill )`
 
     **_showDetails** er en variabel som brukes til å bestemme om den **LblInviteTab** kontroll eller **LblScheduleTab** kontroll er valgt. Hvis den er SANN, **LblScheduleTab** er valgt; Hvis USANN, **LblInviteTab** er. Dette betyr at hvis **_showDetails** er SANN (denne kategorien *er* valgte), fanen fargen samsvarer med verdien fyll for **RectQuickActionBar**. Hvis ikke, den samsvarer med fargeverdien til **LblRecipientCount**.
 
 * Egenskap: **OnSelect**<br>
-    Verdi: `Set( _showDetails, true )`
+    Verdi: `Set( _showDetails; true )`
 
     Sett den **_showDetails** variabel som skal **SANN**, noe som betyr at innholdet i kategorien tidsplan er synlige, og innholdet i kategorien invitasjon er skjult.
 
@@ -92,9 +93,9 @@ Denne kontrollen kan brukere til å legge til personer som ikke finnes i deres o
 * Egenskap: **Synlig**<br>
     Verdi: Tre logiske kontrollerer at alle må evalueres som **SANN** for kontrollen skal vises:
 
-    ```powerapps-dot
+    ```powerapps-comma
     !IsBlank( TextSearchBox.Text ) &&
-        IsMatch( TextSearchBox.Text, Match.Email ) &&
+        IsMatch( TextSearchBox.Text; Match.Email ) &&
         Not( Trim( TextSearchBox.Text ) in MyPeople.UserPrincipalName )
     ```
 
@@ -107,42 +108,42 @@ Denne kontrollen kan brukere til å legge til personer som ikke finnes i deres o
 * Egenskap: **OnSelect**<br> 
     Verdi: A **samle inn** -setningen for å legge til brukeren til deltageren liste, en annen for å oppdatere tilgjengelige møtetidspunkter og flere variable veksler:
 
-    ```powerapps-dot
-    Collect( MyPeople,
+    ```powerapps-comma
+    Collect( MyPeople;
         { 
-            DisplayName: TextSearchBox.Text, 
-            UserPrincipalName: TextSearchBox.Text, 
+            DisplayName: TextSearchBox.Text; 
+            UserPrincipalName: TextSearchBox.Text; 
             Mail: TextSearchBox.Text
         }
-    );
+    );;
     Concurrent(
-        Reset( TextSearchBox ),
-        Set( _showMeetingTimes, false ),
-        UpdateContext( { _loadMeetingTimes: true } ),
-        Set( _selectedMeetingTime, Blank() ),
-        Set( _selectedRoom, Blank() ),
-        Set( _roomListSelected, false ),
-        ClearCollect( MeetingTimes, 
+        Reset( TextSearchBox );
+        Set( _showMeetingTimes; false );
+        UpdateContext( { _loadMeetingTimes: true } );
+        Set( _selectedMeetingTime; Blank() );
+        Set( _selectedRoom; Blank() );
+        Set( _roomListSelected; false );
+        ClearCollect( MeetingTimes; 
             AddColumns(
                 'Office365'.FindMeetingTimes(
                     { 
-                        RequiredAttendees: Concat(MyPeople, UserPrincipalName & ";")
-                        MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-                        Start: Text( DateAdd( MeetingDateSelect.SelectedDate, 8, Hours ), UTC ),
-                        End: Text( DateAdd( MeetingDateSelect.SelectedDate, 17, Hours ), UTC ),
-                        MaxCandidates: 15, 
-                        MinimumAttendeePercentage:1, 
-                        IsOrganizerOptional: false, 
+                        RequiredAttendees: Concat(MyPeople; UserPrincipalName & ";")
+                        MeetingDuration: MeetingDurationSelect.Selected.Minutes;
+                        Start: Text( DateAdd( MeetingDateSelect.SelectedDate; 8; Hours ); UTC );
+                        End: Text( DateAdd( MeetingDateSelect.SelectedDate; 17; Hours ); UTC );
+                        MaxCandidates: 15; 
+                        MinimumAttendeePercentage:1; 
+                        IsOrganizerOptional: false; 
                         ActivityDomain: "Work"
                     }
-                ).MeetingTimeSuggestions,
-                "StartTime", MeetingTimeSlot.Start.DateTime, 
-                "EndTime", MeetingTimeSlot.End.DateTime
+                ).MeetingTimeSuggestions;
+                "StartTime"; MeetingTimeSlot.Start.DateTime; 
+                "EndTime"; MeetingTimeSlot.End.DateTime
             )
         )
-    );
-    UpdateContext( { _loadingMeetingTimes: false } );
-    Set( _showMeetingTimes, true )
+    );;
+    UpdateContext( { _loadingMeetingTimes: false } );;
+    Set( _showMeetingTimes; true )
     ```
 
   Å velge denne kontrollen legger til gyldige e-postadressen (vises bare hvis en gyldig e-postadresse er skrevet inn i **TextSearchBox**) til den **MyPeople** samling (denne samlingen er listen over deltakere) og deretter Oppdaterer de tilgjengelige møtetidspunktene med den nye oppføringen for brukeren.
@@ -174,9 +175,9 @@ Denne kontrollen kan brukere til å legge til personer som ikke finnes i deres o
 
 * Egenskap: **Elementer**<br>
     Verdi: 
-    ```powerapps-dot
-    If( !IsBlank( Trim( TextSearchBox.Text ) ), 
-        'Office365Users'.SearchUser( { searchTerm: Trim(TextSearchBox.Text), top: 15 } )
+    ```powerapps-comma
+    If( !IsBlank( Trim( TextSearchBox.Text ) ); 
+        'Office365Users'.SearchUser( { searchTerm: Trim(TextSearchBox.Text); top: 15 } )
     )
     ```
 
@@ -196,46 +197,46 @@ Elementene i dette galleriet fylles som søkeresultater fra den [Office365.Searc
 * Egenskap: **OnSelect**<br>
     Verdi: A **samle inn** -setningen for å legge til brukeren til deltageren liste, en annen for å oppdatere tilgjengelige møtetidspunkter og flere variable veksler:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Concurrent(
-        Reset( TextSearchBox ),
-        Set( _selectedUser, ThisItem ),
-        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
-            Collect( MyPeople, ThisItem ); 
+        Reset( TextSearchBox );
+        Set( _selectedUser; ThisItem );
+        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ); 
+            Collect( MyPeople; ThisItem );; 
             Concurrent(
-                Set( _showMeetingTimes, false ),
-                UpdateContext( { _loadMeetingTimes: true } ),
-                Set( _selectedMeetingTime, Blank() ),
-                Set( _selectedRoom, Blank() ),
-                Set( _roomListSelected, false ),
-                ClearCollect( MeetingTimes, 
+                Set( _showMeetingTimes; false );
+                UpdateContext( { _loadMeetingTimes: true } );
+                Set( _selectedMeetingTime; Blank() );
+                Set( _selectedRoom; Blank() );
+                Set( _roomListSelected; false );
+                ClearCollect( MeetingTimes; 
                     AddColumns(
                         'Office365'.FindMeetingTimes(
                             {
-                                RequiredAttendees: Concat( MyPeople, UserPrincipalName & ";" ),
-                                MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-                                Start: Text( DateAdd( MeetingDateSelect.SelectedDate, 8, Hours ), UTC ),
-                                End: Text( DateAdd( MeetingDateSelect.SelectedDate, 17, Hours ), UTC ),
-                                MaxCandidates: 15, 
-                                MinimumAttendeePercentage: 1, 
-                                IsOrganizerOptional: false, 
+                                RequiredAttendees: Concat( MyPeople; UserPrincipalName & ";" );
+                                MeetingDuration: MeetingDurationSelect.Selected.Minutes;
+                                Start: Text( DateAdd( MeetingDateSelect.SelectedDate; 8; Hours ); UTC );
+                                End: Text( DateAdd( MeetingDateSelect.SelectedDate; 17; Hours ); UTC );
+                                MaxCandidates: 15; 
+                                MinimumAttendeePercentage: 1; 
+                                IsOrganizerOptional: false; 
                                 ActivityDomain: "Work"
                             }
-                        ).MeetingTimeSuggestions,
-                        "StartTime", MeetingTimeSlot.Start.DateTime, 
-                        "EndTime", MeetingTimeSlot.End.DateTime
+                        ).MeetingTimeSuggestions;
+                        "StartTime"; MeetingTimeSlot.Start.DateTime; 
+                        "EndTime"; MeetingTimeSlot.End.DateTime
                     )
                 )
-            );
-            UpdateContext( { _loadingMeetingTimes: false } );
-            Set( _showMeetingTimes, true )
+            );;
+            UpdateContext( { _loadingMeetingTimes: false } );;
+            Set( _showMeetingTimes; true )
         )
     )
     ```
 
     På et høyt nivå, hvis du velger denne kontrollen legger til personen til den **MyPeople** samling (appens lagring av listen over deltakere), og oppdaterer de tilgjengelige møtetidspunktene basert på det nye bruker-tillegget.
 
-    Å velge denne kontrollen er veldig lik å velge den **AddIcon** kontroll; den eneste forskjellen er at den `Set(_selectedUser, ThisItem)` setningen og kjøring av rekkefølgen av operasjonene. Denne diskusjonen vil følgelig ikke like dype. For en mer utfyllende forklaring, kan du lese gjennom den [AddIcon kontrollen](#add-icon) delen.
+    Å velge denne kontrollen er veldig lik å velge den **AddIcon** kontroll; den eneste forskjellen er at den `Set(_selectedUser; ThisItem)` setningen og kjøring av rekkefølgen av operasjonene. Denne diskusjonen vil følgelig ikke like dype. For en mer utfyllende forklaring, kan du lese gjennom den [AddIcon kontrollen](#add-icon) delen.
 
     Å velge denne kontrollen tilbakestiller **TextSearchBox**. Hvis det merkede området ikke er i den **MyPeople** samling, kontrollen:
     1. Sett den **_loadMeetingTimes** tilstand til **SANN** og **_showMeetingTimes** tilstand til **USANN**, tomme celler i **_ selectedMeetingTime** og **_selectedRoom** variabler og oppdateringer av **MeetingTimes** samling med det nye tillegget til den **MyPeople** samling. 
@@ -253,15 +254,15 @@ Elementene i dette galleriet fylles som søkeresultater fra den [Office365.Searc
 * Egenskap: **Høyde**<br>
     Verdi: Logikk for å tillate galleriet skal vokse til en maksimal høyde på 350:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Min( 
-        76 * RoundUp( CountRows( MeetingPeopleGallery.AllItems ) / 2, 0 ),
+        76 * RoundUp( CountRows( MeetingPeopleGallery.AllItems ) / 2; 0 );
         350
     )
     ```
 
   
-   Høyden på dette galleriet Justerer hvor mange elementer i galleriet, til en maksimal høyde på 350. Formelen tar 76 som høyden på en enkelt rad med **MeetingPeopleGallery**, deretter multipliserer verdien med antall rader. Den **WrapCount** egenskapen er satt til 2, så er antall rader som SANN `RoundUp(CountRows(MeetingPeopleGallery.AllItems) / 2, 0)`.
+   Høyden på dette galleriet Justerer hvor mange elementer i galleriet, til en maksimal høyde på 350. Formelen tar 76 som høyden på en enkelt rad med **MeetingPeopleGallery**, deretter multipliserer verdien med antall rader. Den **WrapCount** egenskapen er satt til 2, så er antall rader som SANN `RoundUp(CountRows(MeetingPeopleGallery.AllItems) / 2; 0)`.
 
 * Egenskap: **ShowScrollbar**<br>
     Verdi: `MeetingPeopleGallery.Height >= 350`
@@ -274,7 +275,7 @@ Elementene i dette galleriet fylles som søkeresultater fra den [Office365.Searc
 
 * Egenskap: **OnSelect**<br>
     
-    Verdi: `Set(_selectedUser, ThisItem)`
+    Verdi: `Set(_selectedUser; ThisItem)`
     
     Sett den **_selectedUser** variabel som skal det valgte elementet i **MeetingPeopleGallery**.
 
@@ -285,36 +286,36 @@ Elementene i dette galleriet fylles som søkeresultater fra den [Office365.Searc
 * Egenskap: **OnSelect**<br>
     Verdi: A **fjerne** -setningen for å fjerne brukeren fra listen over deltakere en **samle inn** -setningen for å oppdatere tilgjengelige møtetidspunkter og flere variable veksler:
 
-    ```powerapps-dot
-    Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) );
+    ```powerapps-comma
+    Remove( MyPeople; LookUp( MyPeople; UserPrincipalName = ThisItem.UserPrincipalName ) );;
     Concurrent(
-        Reset( TextSearchBox ),
-        Set( _showMeetingTimes, false ),
-        UpdateContext( { _loadMeetingTimes: true } ),
-        Set( _selectedMeetingTime, Blank() ),
-        Set( _selectedRoom, Blank() ),
-        Set( _roomListSelected, false ),
-        ClearCollect( MeetingTimes, 
+        Reset( TextSearchBox );
+        Set( _showMeetingTimes; false );
+        UpdateContext( { _loadMeetingTimes: true } );
+        Set( _selectedMeetingTime; Blank() );
+        Set( _selectedRoom; Blank() );
+        Set( _roomListSelected; false );
+        ClearCollect( MeetingTimes; 
             AddColumns(
                 'Office365'.FindMeetingTimes(
                     {
-                        RequiredAttendees: Concat( MyPeople, UserPrincipalName & ";" ), 
-                        MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-                        Start: Text( DateAdd( MeetingDateSelect.SelectedDate, 8, Hours ), UTC ), 
-                        End: Text( DateAdd( MeetingDateSelect.SelectedDate, 17, Hours ), UTC ),
-                        MaxCandidates: 15, 
-                        MinimumAttendeePercentage: 1, 
-                        IsOrganizerOptional: false, 
+                        RequiredAttendees: Concat( MyPeople; UserPrincipalName & ";" ); 
+                        MeetingDuration: MeetingDurationSelect.Selected.Minutes;
+                        Start: Text( DateAdd( MeetingDateSelect.SelectedDate; 8; Hours ); UTC ); 
+                        End: Text( DateAdd( MeetingDateSelect.SelectedDate; 17; Hours ); UTC );
+                        MaxCandidates: 15; 
+                        MinimumAttendeePercentage: 1; 
+                        IsOrganizerOptional: false; 
                         ActivityDomain: "Work"
                     }
-                ).MeetingTimeSuggestions,
-                "StartTime", MeetingTimeSlot.Start.DateTime, 
-                "EndTime", MeetingTimeSlot.End.DateTime
+                ).MeetingTimeSuggestions;
+                "StartTime"; MeetingTimeSlot.Start.DateTime; 
+                "EndTime"; MeetingTimeSlot.End.DateTime
             )
         )
-    );
-    UpdateContext( { _loadingMeetingTimes: false } );
-    Set( _showMeetingTimes, true )
+    );;
+    UpdateContext( { _loadingMeetingTimes: false } );;
+    Set( _showMeetingTimes; true )
     ```
 
   På et høyt nivå, hvis du velger denne kontrollen fjerner personen fra listen over deltakere og oppdaterer de tilgjengelige møtetidspunktene basert på fjerning av denne personen.
@@ -331,7 +332,7 @@ Elementene i dette galleriet fylles som søkeresultater fra den [Office365.Searc
    ![MeetingDateSelect kontroll](media/meeting-screen/meeting-datepicker.png)
 
 * Egenskap: **DisplayMode**<br>
-    Verdi: `If( IsEmpty(MyPeople), DisplayMode.Disabled, DisplayMode.Edit )`
+    Verdi: `If( IsEmpty(MyPeople); DisplayMode.Disabled; DisplayMode.Edit )`
 
     En dato for et møte kan ikke velges til minst én deltaker har blitt lagt til den **MyPeople** samling.
 
@@ -343,35 +344,35 @@ Elementene i dette galleriet fylles som søkeresultater fra den [Office365.Searc
 * Egenskap: **OnSelect**<br>
     Verdi: A **samle inn** -setningen for å oppdatere tilgjengelige møtetidspunkter og flere variable veksler:
   
-    ```powerapps-dot
+    ```powerapps-comma
     Concurrent(
-        Reset( TextSearchBox ),
-        Set( _showMeetingTimes, false ),
-        UpdateContext( { _loadingMeetingTimes: true } ),
-        Set( _selectedMeetingTime, Blank() ),
-        Set( _selectedRoom, Blank() ),
-        Set( _roomListSelected, false ),
-        ClearCollect( MeetingTimes, 
+        Reset( TextSearchBox );
+        Set( _showMeetingTimes; false );
+        UpdateContext( { _loadingMeetingTimes: true } );
+        Set( _selectedMeetingTime; Blank() );
+        Set( _selectedRoom; Blank() );
+        Set( _roomListSelected; false );
+        ClearCollect( MeetingTimes; 
             AddColumns(
                 'Office365'.FindMeetingTimes(
                     {
-                        RequiredAttendees: Concat( MyPeople, UserPrincipalName & ";" ), 
-                        MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-                        Start: Text( DateAdd( MeetingDateSelect.SelectedDate, 8, Hours ), UTC ), 
-                        End: Text( DateAdd( MeetingDateSelect.SelectedDate, 17, Hours ), UTC ),
-                        MaxCandidates: 15, 
-                        MinimumAttendeePercentage: 1, 
-                        IsOrganizerOptional: false, 
+                        RequiredAttendees: Concat( MyPeople; UserPrincipalName & ";" ); 
+                        MeetingDuration: MeetingDurationSelect.Selected.Minutes;
+                        Start: Text( DateAdd( MeetingDateSelect.SelectedDate; 8; Hours ); UTC ); 
+                        End: Text( DateAdd( MeetingDateSelect.SelectedDate; 17; Hours ); UTC );
+                        MaxCandidates: 15; 
+                        MinimumAttendeePercentage: 1; 
+                        IsOrganizerOptional: false; 
                         ActivityDomain: "Work"
                     }
-                ).MeetingTimeSuggestions,
-                "StartTime", MeetingTimeSlot.Start.DateTime, 
-                "EndTime", MeetingTimeSlot.End.DateTime
+                ).MeetingTimeSuggestions;
+                "StartTime"; MeetingTimeSlot.Start.DateTime; 
+                "EndTime"; MeetingTimeSlot.End.DateTime
             )
         )
-    );
-    UpdateContext( { _loadingMeetingTimes: false } );
-    Set( _showMeetingTimes, true )
+    );;
+    UpdateContext( { _loadingMeetingTimes: false } );;
+    Set( _showMeetingTimes; true )
     ```
 
   Oppdaterer de tilgjengelige møtetidspunktene på et høyt nivå, hvis du velger denne kontrollen. Det er viktig fordi Hvis en bruker endrer datoen, de tilgjengelige møtetidspunktene må du oppdatere for å gjenspeile de deltakere-tilgjengelighet for den aktuelle dagen.
@@ -387,7 +388,7 @@ Elementene i dette galleriet fylles som søkeresultater fra den [Office365.Searc
    ![MeetingDateSelect kontroll](media/meeting-screen/meeting-timepicker.png)
 
 * Egenskap: **DisplayMode**<br>
-    Verdi: `If( IsEmpty(MyPeople), DisplayMode.Disabled, DisplayMode.Edit )`
+    Verdi: `If( IsEmpty(MyPeople); DisplayMode.Disabled; DisplayMode.Edit )`
 
     En varighet for et møte kan ikke velges til minst én deltaker har blitt lagt til den **MyPeople** samling.
 
@@ -417,13 +418,13 @@ Elementene i dette galleriet fylles som søkeresultater fra den [Office365.Searc
 * Egenskap: **Tekst**<br>
     Verdi: En konvertering av starttidspunktet som skal vises i brukerens lokaltid:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Text(
         DateAdd(
-            DateTimeValue( ThisItem.StartTime ),
-            - TimeZoneOffset(), 
+            DateTimeValue( ThisItem.StartTime );
+            - TimeZoneOffset(); 
             Minutes
-        ),
+        );
         DateTimeFormat.ShortTime
     )
     ```
@@ -434,48 +435,48 @@ Elementene i dette galleriet fylles som søkeresultater fra den [Office365.Searc
 * Egenskap: **OnSelect**<br>
     Verdi: Flere **samle inn** setninger til å samle møterom og deres foreslåtte-tilgjengelighet, i tillegg til flere variable veksler:
 
-    ```powerapps-dot
-    Set( _selectedMeetingTime, ThisItem );
-    UpdateContext( { _loadingRooms: true } );
-    If( IsEmpty( RoomsLists ),
-        ClearCollect( RoomsLists, 'Office365'.GetRoomLists().value) );
-    If( CountRows( RoomsLists ) <= 1,
-        Set( _noRoomLists, true );
-        ClearCollect( AllRooms, 'Office365'.GetRooms().value );
-        Set( _allRoomsConcat, Concat( FirstN( AllRooms, 20 ), Address & ";" ) );
-        ClearCollect( RoomTimeSuggestions, 
+    ```powerapps-comma
+    Set( _selectedMeetingTime; ThisItem );;
+    UpdateContext( { _loadingRooms: true } );;
+    If( IsEmpty( RoomsLists );
+        ClearCollect( RoomsLists; 'Office365'.GetRoomLists().value) );;
+    If( CountRows( RoomsLists ) <= 1;
+        Set( _noRoomLists; true );;
+        ClearCollect( AllRooms; 'Office365'.GetRooms().value );;
+        Set( _allRoomsConcat; Concat( FirstN( AllRooms; 20 ); Address & ";" ) );;
+        ClearCollect( RoomTimeSuggestions; 
             'Office365'.FindMeetingTimes(
                 {
-                    RequiredAttendees: _allRoomsConcat, 
-                    MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-                    Start: _selectedMeetingTime.StartTime & "Z", 
-                    End: _selectedMeetingTime.EndTime & "Z", 
-                    MinimumAttendeePercentage: "1",
-                    IsOrganizerOptional: "false", 
+                    RequiredAttendees: _allRoomsConcat; 
+                    MeetingDuration: MeetingDurationSelect.Selected.Minutes;
+                    Start: _selectedMeetingTime.StartTime & "Z"; 
+                    End: _selectedMeetingTime.EndTime & "Z"; 
+                    MinimumAttendeePercentage: "1";
+                    IsOrganizerOptional: "false"; 
                     ActivityDomain: "Unrestricted"
                 }
             ).MeetingTimeSuggestions
-        );
-        ClearCollect( AvailableRooms, 
+        );;
+        ClearCollect( AvailableRooms; 
             AddColumns(
                 AddColumns(
                     Filter( 
-                        First( RoomTimeSuggestions ).AttendeeAvailability,
+                        First( RoomTimeSuggestions ).AttendeeAvailability;
                         Availability="Free"
-                    ), 
-                    "Address", Attendee.EmailAddress.Address
-                ), 
-                "Name", LookUp( AllRooms, Address = Attendee.EmailAddress.Address ).Name 
+                    ); 
+                    "Address"; Attendee.EmailAddress.Address
+                ); 
+                "Name"; LookUp( AllRooms; Address = Attendee.EmailAddress.Address ).Name 
             )
-        );
-        ClearCollect( AvailableRoomsOptimal, 
+        );;
+        ClearCollect( AvailableRoomsOptimal; 
             DropColumns(
-                DropColumns( AvailableRooms, "Availability" ), 
+                DropColumns( AvailableRooms; "Availability" ); 
                 "Attendee" 
             )
-        ),
-        Set( _roomListSelected, false) 
-    );
+        );
+        Set( _roomListSelected; false) 
+    );;
     UpdateContext( {_loadingRooms: false} )
     ```
 
@@ -502,11 +503,11 @@ Elementene i dette galleriet fylles som søkeresultater fra den [Office365.Searc
 * Egenskap: **Elementer**<br>
     Verdi: Logisk satt til to intern samlinger med identiske skjema, avhengig av om brukeren har valgt en romliste eller har romlister i leieren:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Search(
-        If( _roomListSelected || _noRoomLists, AvailableRoomsOptimal, RoomsLists ),
-        Trim(TextMeetingLocation1.Text), 
-        "Name", 
+        If( _roomListSelected || _noRoomLists; AvailableRoomsOptimal; RoomsLists );
+        Trim(TextMeetingLocation1.Text); 
+        "Name"; 
         "Address"
     )
     ```
@@ -525,46 +526,46 @@ Elementene i dette galleriet fylles som søkeresultater fra den [Office365.Searc
 * Egenskap: **OnSelect**<br>
     Verdi: Et sett med logisk bundne **samle inn** og **angi** utdrag, som kan eller kan ikke utløses, avhengig av om brukeren er viser romlister eller ROM:
 
-    ```powerapps-dot
-    UpdateContext( { _loadingRooms: true } );
-    If( !_roomListSelected && !noRoomLists,
-        Set( _roomListSelected, true );
-        Set( _selectedRoomList, ThisItem.Name );
-        ClearCollect( AllRooms, 'Office365'.GetRoomsInRoomList( ThisItem.Address ).value );
-        Set( _allRoomsConcat, Concat( FirstN( AllRooms, 20 ), Address & ";" ) );
-        ClearCollect( RoomTimeSuggestions, 
+    ```powerapps-comma
+    UpdateContext( { _loadingRooms: true } );;
+    If( !_roomListSelected && !noRoomLists;
+        Set( _roomListSelected; true );;
+        Set( _selectedRoomList; ThisItem.Name );;
+        ClearCollect( AllRooms; 'Office365'.GetRoomsInRoomList( ThisItem.Address ).value );;
+        Set( _allRoomsConcat; Concat( FirstN( AllRooms; 20 ); Address & ";" ) );;
+        ClearCollect( RoomTimeSuggestions; 
             'Office365'.FindMeetingTimes(
                 {
-                    RequiredAttendees: _allRoomsConcat, 
-                    MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-                        Start: _selectedMeetingTime.StartTime & "Z", 
-                    End: _selectedMeetingTime.EndTime & "Z", 
-                    MinimumAttendeePercentage: "1",
-                    IsOrganizerOptional: "false", 
+                    RequiredAttendees: _allRoomsConcat; 
+                    MeetingDuration: MeetingDurationSelect.Selected.Minutes;
+                        Start: _selectedMeetingTime.StartTime & "Z"; 
+                    End: _selectedMeetingTime.EndTime & "Z"; 
+                    MinimumAttendeePercentage: "1";
+                    IsOrganizerOptional: "false"; 
                     ActivityDomain: "Unrestricted"
                 }
             ).MeetingTimeSuggestions
-        );
-        ClearCollect( AvailableRooms, 
+        );;
+        ClearCollect( AvailableRooms; 
             AddColumns(
                 AddColumns(
                     Filter(
-                        First( RoomTimeSuggestions ).AttendeeAvailability, 
+                        First( RoomTimeSuggestions ).AttendeeAvailability; 
                         Availability = "Free"
-                    ),
-                    "Address", Attendee.EmailAddress.Address 
-                ), 
-                "Name", LookUp( AllRooms, Address = Attendee.EmailAddress.Address ).Name
+                    );
+                    "Address"; Attendee.EmailAddress.Address 
+                ); 
+                "Name"; LookUp( AllRooms; Address = Attendee.EmailAddress.Address ).Name
             )
-        );
-        ClearCollect( AvailableRoomsOptimal, 
+        );;
+        ClearCollect( AvailableRoomsOptimal; 
             DropColumns(
-                DropColumns( AvailableRooms, "Availability" )
-            ), 
+                DropColumns( AvailableRooms; "Availability" )
+            ); 
             "Attendee" )
-        ),
-        Set( _selectedRoom, ThisItem )
-    );
+        );
+        Set( _selectedRoom; ThisItem )
+    );;
     UpdateContext( {_loadingRooms: false} )
     ```
 
@@ -591,7 +592,7 @@ Elementene i dette galleriet fylles som søkeresultater fra den [Office365.Searc
     Denne kontrollen er synlig bare hvis begge en romliste er valgt og **tidsplan** fanen er valgt.
 
 * Egenskap: **OnSelect**<br>
-    Verdi: `Set( _roomListSelected, false )`
+    Verdi: `Set( _roomListSelected; false )`
 
     Når **_roomListSelected** er satt til **USANN**, endres den **RoomBrowseGallery** kontroll til å vise elementer fra den **RoomsLists** samling.
 
@@ -602,10 +603,10 @@ Elementene i dette galleriet fylles som søkeresultater fra den [Office365.Searc
 * Egenskap: **DisplayMode**<br>
     Verdi: Logikk for å tvinge brukeren til å skrive inn noen opplysninger møte før ikonet redigeres.
     
-    ```powerapps-dot
+    ```powerapps-comma
     If( Len( Trim( TextMeetingSubject1.Text ) ) > 0
-        && !IsEmpty( MyPeople ) && !IsBlank( _selectedMeetingTime ),
-        DisplayMode.Edit, DisplayMode.Disabled
+        && !IsEmpty( MyPeople ) && !IsBlank( _selectedMeetingTime );
+        DisplayMode.Edit; DisplayMode.Disabled
     )
     ```
   Ikonet er valgbar bare hvis emnet for møte er fylt, det finnes minst én deltaker for møtet, og et møtetidspunkt er valgt. Hvis ikke, den er deaktivert.
@@ -614,32 +615,32 @@ Elementene i dette galleriet fylles som søkeresultater fra den [Office365.Searc
 
     Verdi: Kode for å sende møteinvitasjonen valgte deltakere og Fjern alle inndatafeltene:
 
-    ```powerapps-dot
-    Set( _myCalendarName, LookUp( 'Office365'.CalendarGetTables().value, DisplayName = "Calendar" ).Name );
-    Set( _myScheduledMeeting, 
-        'Office365'.V2CalendarPostItem( _myCalendarName,
-            TextMeetingSubject1.Text, 
-            Text(DateAdd(DateTimeValue( _selectedMeetingTime.StartTime), -TimeZoneOffset(), Minutes) ),
-            Text(DateAdd(DateTimeValue( _selectedMeetingTime.EndTime), -TimeZoneOffset(), Minutes) ),
+    ```powerapps-comma
+    Set( _myCalendarName; LookUp( 'Office365'.CalendarGetTables().value; DisplayName = "Calendar" ).Name );;
+    Set( _myScheduledMeeting; 
+        'Office365'.V2CalendarPostItem( _myCalendarName;
+            TextMeetingSubject1.Text; 
+            Text(DateAdd(DateTimeValue( _selectedMeetingTime.StartTime); -TimeZoneOffset(); Minutes) );
+            Text(DateAdd(DateTimeValue( _selectedMeetingTime.EndTime); -TimeZoneOffset(); Minutes) );
             {
-                RequiredAttendees: Concat( MyPeople, UserPrincipalName & ";" ) & _selectedRoom.Address, 
-                Body: TextMeetingMessage1.Text, 
-                Location: _selectedRoom.Name, 
-                Importance: "Normal", 
-                ShowAs: "Busy", 
+                RequiredAttendees: Concat( MyPeople; UserPrincipalName & ";" ) & _selectedRoom.Address; 
+                Body: TextMeetingMessage1.Text; 
+                Location: _selectedRoom.Name; 
+                Importance: "Normal"; 
+                ShowAs: "Busy"; 
                 ResponseRequested: true
             }
         )
-    );
+    );;
     Concurrent(
-        Reset( TextMeetingLocation1 ),
-        Reset( TextMeetingSubject1 ),
-        Reset( TextMeetingMessage1 ),
-        Clear( MyPeople ),
-        Set( _selectedMeetingTime, Blank() ),
-        Set( _selectedRoomList, Blank() ),
-        Set( _selectedRoom, Blank() ),
-        Set( _roomListSelected, false )
+        Reset( TextMeetingLocation1 );
+        Reset( TextMeetingSubject1 );
+        Reset( TextMeetingMessage1 );
+        Clear( MyPeople );
+        Set( _selectedMeetingTime; Blank() );
+        Set( _selectedRoomList; Blank() );
+        Set( _selectedRoom; Blank() );
+        Set( _roomListSelected; false )
     )
     ```
   

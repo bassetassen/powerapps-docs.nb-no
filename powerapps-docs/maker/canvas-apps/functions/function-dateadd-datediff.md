@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63321053"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="dateadd-datediff-and-timezoneoffset-functions-in-powerapps"></a>Funksjonene DateAdd, DateDiff og TimeZoneOffset i PowerApps
 Legger til eller finner differansen i dato/klokkeslett-verdiene og konverterer mellom lokal tid og UTC.
@@ -37,13 +38,13 @@ Du kan bruke **DateAdd** sammen med **TimeZoneOffset** til å konvertere mellom 
 Se også [Slik arbeider du med datoer og klokkeslett](../show-text-dates-times.md) hvis du vil ha mer informasjon.
 
 ## <a name="syntax"></a>Syntaks
-**DateAdd**( *DateTime*, *Addition* [, *Units* ] )
+**DateAdd**( *DateTime*; *Addition* [; *Units* ] )
 
 * *DateTime* – obligatorisk. Dato/klokkeslett-verdier som funksjonen skal arbeide med.
 * *Addition* – obligatorisk. Tall, i *Units*, som skal legges til *DateTime*.
 * *Units* – valgfritt. Typen *enheter* til å legge til: **Millisekunder**, **sekunder**, **minutter**, **timer**, **dager**, **måneder**,  **Kvartaler**, eller **år**.  Hvis enheten ikke er angitt, brukes **Days**.
 
-**DateDiff**( *StartDateTime*, *EndDateTime* [, *Units* ] )
+**DateDiff**( *StartDateTime*; *EndDateTime* [; *Units* ] )
 
 * *StartDateTime* – obligatorisk. Dato/klokkeslett-verdi for starttid.
 * *EndDateTime* – obligatorisk. Dato/klokkeslett-verdi for sluttid.
@@ -60,25 +61,25 @@ I alle disse eksemplene antas det at gjeldende dato og klokkeslett er **15. juli
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Text( DateAdd( Now(), 3 ),<br>"dd-mm-yyyy hh:mm" )** |Legger til tre dager (standardenheter) til gjeldende dato og klokkeslett. |"18-07-2013 13:02" |
-| **Text( DateAdd( Now(), 4, Hours ),<br>"dd-mm-yyyy hh:mm" )** |Legg til fire timer til gjeldende dato og klokkeslett. |"15-07-2013 17:02" |
-| **Text( DateAdd( Today(), 1, Months ),<br>"dd-mm-yyyy hh:mm" )** |Legger til én måned til gjeldende dato, uten klokkeslett, ettersom **Today** ikke returnerer noen klokkeslett-komponent. |"15-08-2013 00:00" |
-| **Text( DateAdd( Now(), &#8209;30, Minutes ),<br>"dd-mm-yyyy hh:mm" )** |Trekker fra 30 minutter fra gjeldende dato og klokkeslett. |"15-07-2013 12:32" |
+| **Text( DateAdd( Now(); 3 );<br>"dd-mm-yyyy hh:mm" )** |Legger til tre dager (standardenheter) til gjeldende dato og klokkeslett. |"18-07-2013 13:02" |
+| **Text( DateAdd( Now(); 4; Hours );<br>"dd-mm-yyyy hh:mm" )** |Legg til fire timer til gjeldende dato og klokkeslett. |"15-07-2013 17:02" |
+| **Text( DateAdd( Today(); 1; Months );<br>"dd-mm-yyyy hh:mm" )** |Legger til én måned til gjeldende dato, uten klokkeslett, ettersom **Today** ikke returnerer noen klokkeslett-komponent. |"15-08-2013 00:00" |
+| **Text( DateAdd( Now(); &#8209;;30; Minutes );<br>"dd-mm-yyyy hh:mm" )** |Trekker fra 30 minutter fra gjeldende dato og klokkeslett. |"15-07-2013 12:32" |
 
 ### <a name="simple-datediff"></a>Enkel DateDiff
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **DateDiff( Now(), DateValue("1/1/2014") )** |Returnerer differansen mellom de to enhetene i standardenheten **Days** |170 |
-| **DateDiff( Now(), DateValue("1/1/2014"), Months )** |Returnerer differansen mellom de to verdiene i **Months** |6 |
-| **DateDiff( Now(), Today(), Minutes )** |Returnerer differansen mellom gjeldende dato/klokkeslett og gjeldende dato (uten klokkeslett) i minutter.  Siden **Now** er senere enn **Today**, vil resultatet være negativt. |–782 |
+| **DateDiff( Now(); DateValue("1/1/2014") )** |Returnerer differansen mellom de to enhetene i standardenheten **Days** |170 |
+| **DateDiff( Now(); DateValue("1/1/2014"); Months )** |Returnerer differansen mellom de to verdiene i **Months** |6 |
+| **DateDiff( Now(); Today(); Minutes )** |Returnerer differansen mellom gjeldende dato/klokkeslett og gjeldende dato (uten klokkeslett) i minutter.  Siden **Now** er senere enn **Today**, vil resultatet være negativt. |–782 |
 
 ### <a name="converting-to-utc"></a>Slik konverterer du til UTC
 Hvis du vil konvertere til UTC, (Coordinated Universal Time), kan du legge til **TimeZoneOffset** for det gitte klokkeslettet.  
 
 Anta for eksempel at gjeldende dato og klokkeslett er **15. juli 2013 kl. 13:02** i tidssonen Stillehavskysten (PDT, UTC–7).  For å fastslå gjeldende klokkeslett i UTC, bruker du følgende:
 
-* **DateAdd (Now(), TimeZoneOffset(), Minutes)**
+* **DateAdd (Now(); TimeZoneOffset(); Minutes)**
 
 **TimeZoneOffset** bruker gjeldende klokkeslett som standard, så du ikke trenger å sende det som et argument.
 
@@ -89,7 +90,7 @@ Hvis du vil konvertere fra UTC, trekker du fra **TimeZoneOffset** (ved å legge 
 
 Anta for eksempel at UTC-datoen og klokkeslettet **15. juli 2013 kl. 20:02** er lagret i en variabel med navnet **StartTime**. Hvis du vil justere tidspunktet for brukerens tidssone, bruker du følgende:
 
-* **DateAdd( StartTime, -TimeZoneOffset( StartTime ), Minutes )**
+* **DateAdd( StartTime; -TimeZoneOffset( StartTime ); Minutes )**
 
 Legg merke til minustegnet før **TimeZoneOffset** for å trekke fra forskyvningen i stedet for å legge den til.
 

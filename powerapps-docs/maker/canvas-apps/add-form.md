@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63321435"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="show-edit-or-add-a-record-in-a-canvas-app"></a>Vise, redigere eller legge til en post i en lerretsapp
 
@@ -56,7 +57,7 @@ I en lerretsapp, legge til og konfigurere en **[skjerm](controls/control-form-de
 
 1. Angi skjemaets **[DataSource](controls/control-form-detail.md)** egenskapen til **FlooringEstimates** og **[element](controls/control-form-detail.md)** egenskapen til Denne formelen:
 
-    `First(Filter(FlooringEstimates, Name=ChooseProduct.Selected.Value))`
+    `First(Filter(FlooringEstimates; Name=ChooseProduct.Selected.Value))`
 
    Denne formelen angir at posten brukeren velger i **ChooseProduct**, skal vises når du har konfigurert skjemaet ferdig.
 
