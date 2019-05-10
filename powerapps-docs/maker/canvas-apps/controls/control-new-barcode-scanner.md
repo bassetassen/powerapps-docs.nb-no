@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1e41ec8d228e62c22354d77777a8390bfd442f8c
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 9a4b2c941b5e28c462b85d3c6d54404746e22d04
+ms.sourcegitcommit: 8d0ba2ec0c97be91d1350180dd6881c14dec8f2d
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61543969"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65517352"
 ---
 # <a name="barcode-scanner-control-for-canvas-apps"></a>Strekkodeleser kontrollen for lerretsapper
 
@@ -60,6 +60,8 @@ Kontrollen støtter QR-koder, data matrise-koder og disse typer strekkoder:
 **FlashlightEnabled** - om lommelykt aktiveres automatisk når skanneren er åpnet.
 
 **[Høyde](properties-size-location.md)**  – høyden på knappen som aktiverer skanneren.
+
+**PreferFrontCamera** – om foran mot kameraet, når de blir tilgjengelige som skal brukes til å skanne.
 
 **[Verktøytips](properties-core.md)** – forklarende tekst som vises når brukeren holder pekeren over en kontroll.
 

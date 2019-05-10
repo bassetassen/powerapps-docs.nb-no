@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 447cda7a1d8d4f27c8be2b943abd2b5d6b431d49
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 2b1527f8a7bf157c88b85ae9721626b6fc14f5a9
+ms.sourcegitcommit: 8d0ba2ec0c97be91d1350180dd6881c14dec8f2d
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61548781"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65517360"
 ---
 # <a name="radio-control-in-powerapps"></a>Radio-kontrollen i PowerApps
 
@@ -40,6 +39,8 @@ Kontrollen kan ha et vannrett eller loddrett oppsett.
 **Oppsett** – om alternativene plasseres loddrett eller vannrett.
 
 **[Verdi](properties-core.md)** – verdien til en inndatakontroll.
+
+**Valgte** – dataposten som representerer det valgte elementet.
 
 ## <a name="all-properties"></a>Alle egenskaper
 
@@ -107,6 +108,8 @@ Kontrollen kan ha et vannrett eller loddrett oppsett.
 
 **[Tilbakestill](properties-core.md)** – om en kontroll tilbakestilles til standardverdien.
 
+**SelectedText (avskrevet)** – en strengverdi som representerer det valgte elementet.
+
 **[Størrelse](properties-text.md)** – skriftstørrelsen på teksten som vises på en kontroll.
 
 **[Strikethrough](properties-text.md)** – om det vises en linje gjennom teksten som vises på en kontroll.
@@ -127,19 +130,19 @@ Kontrollen kan ha et vannrett eller loddrett oppsett.
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 
-[**Distinct**( *DataSource*; *ColumnName* )](../functions/function-distinct.md)
+[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Eksempel
 
 1. Legg til en **radio**-kontroll, gi den navnet **Priser**, og angi **[Elementer](properties-core.md)**-egenskapen til denne verdien:
 
-    **["Standard"; "Premium"]**
+    **["Standard", "Premium"]**
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 
 2. Legg til en **[etikett](control-text-box.md)**-kontroll, flytt den under **Radio**-kontrollen, og angi **[Tekst](properties-core.md)**-egenskapen i **[Etikett](control-text-box.md)**-kontrollen til denne formelen:
 
-    **If("Premium" in Pricing.Selected.Value; "$200 per day"; "$150 per day")**
+    **If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
 
     Vil du ha mer informasjon om **[If](../functions/function-if.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
 

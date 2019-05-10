@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2283f77f7e1c09ceade63f96003fefabc5e92539
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 02e8477873adad476c65e513a470e027aee5cd5c
+ms.sourcegitcommit: 8d0ba2ec0c97be91d1350180dd6881c14dec8f2d
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61544273"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65517398"
 ---
 # <a name="drop-down-control-in-powerapps"></a>Rullegardin-kontrollen i PowerApps
 En liste som viser bare det første elementet, med mindre brukeren åpner det.
@@ -34,7 +33,9 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
   
 **Verdi** – kolonnen med data du vil vise i kontrollen (for eksempel hvis en datakilde har flere kolonner).
 
-**Valgt** – det valgte elementet.
+**Valgte** – dataposten som representerer det valgte elementet.
+
+**AllowEmptySelection** – om kontrollen viser et tomt valg hvis ingen elementer er valgt. App-brukere kan også fjerne deres valgene ved å velge det tomme elementet.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
 **[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere.
@@ -99,6 +100,8 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 
 **[Tilbakestill](properties-core.md)** – om en kontroll tilbakestilles til standardverdien.
 
+**SelectedText (avskrevet)** – en strengverdi som representerer det valgte elementet.
+
 **[SelectionColor](properties-color-border.md)** – tekstfargen for et merket element, elementer i en liste eller fargen på markeringsverktøyet i en pennekontroll.
 
 **[SelectionFill](properties-color-border.md)** – bakgrunnsfargen for et merket element eller merkede elementer i en liste eller et merket område for en pennekontroll.
@@ -127,7 +130,7 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 
 1. Legg til en **Rullegardin**-kontroll, og sett **[Elementer](properties-core.md)**-egenskapen til dette uttrykket:
 
-    `["Seattle"; "Tokyo"; "London"; "Johannesburg"; "Rio de Janeiro"]`
+    `["Seattle", "Tokyo", "London", "Johannesburg", "Rio de Janeiro"]`
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 
@@ -140,13 +143,13 @@ Prinsippene i denne prosedyren gjelder noen [datakilden som inneholder tabellene
 
 1. Legg til en **Rullegardin**-kontroll, og sett **[Elementer](properties-core.md)**-egenskapen til denne formelen:
 
-    `Distinct(Accounts; address1_city)`
+    `Distinct(Accounts, address1_city)`
 
     Denne formelen viser alle byene i **Kontoer** enheten. Hvis mer enn én post har samme by, skjuler **[Distinkt](../functions/function-distinct.md)**-funksjonen dupliseringen i rullegardinkontrollen din.
 
 1. (valgfritt) Endre navnet på **Rullegardin**-kontrollen til **Byer**, legg til en loddrett **Galleri**-kontroll, og sett **[Elementer](properties-core.md)**-egenskapen for galleriet til denne formelen:
 
-    `Filter(Accounts; address1_city = Cities.Selected.Value)`
+    `Filter(Accounts, address1_city = Cities.Selected.Value)`
 
     Denne **[Filter](../functions/function-filter-lookup.md)**-funksjonen viser bare de oppføringene i **Kontoer**-enheten der byen samsvarer med den valgte verdien i **Byer**-kontrollen.
 

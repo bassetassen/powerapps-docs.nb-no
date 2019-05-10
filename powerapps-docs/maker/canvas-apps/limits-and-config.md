@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0c972120a70df8471f27a2b6e4e99f7a66182e04
-ms.sourcegitcommit: 065b3b210273e5fe9025d41d27a08a62dfa16d03
-ms.translationtype: HT
+ms.openlocfilehash: 21e1042dc525e666fcab40610c290793abe37395
+ms.sourcegitcommit: 91f084def8d7c2b78eeef20fa3959d1d34b8da66
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64904052"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65516814"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>Systemkrav, grenser og konfigurasjonsverdier for lerretsapper
 Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og konfigurasjonsverdier for PowerApps.
@@ -93,12 +93,13 @@ Denne listen identifiserer alle tjenester som PowerApps Studio kommuniserer med,
 | management.azure.com |https |RP |
 | msmanaged-na.azure-apim.net |https |Kjøretiden for koblinger/API-er |
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
-| graph.microsoft.com<br>graph.windows.net |https |Azure Graph – for å hente brukerinformasjon (f.eks. profilbilde) |
+| graph.microsoft.com<br>graph.windows.net |https |Azure Graph – For å hente brukerinformasjon (f.eks, profilbilde) |
 | gallery.azure.com |https |Eksempel og mal-apper |
 | \*.azure-apim.net |https |API-huber – forskjellige underdomener for hver nasjonale innstilling |
-| \*.powerapps.com |https |WebAuth + Portal |
-| \*.azureedge.net |https |WebAuth |
-| \*.blob.core.windows.net |https |BLOB-lagring |
+| \*.powerapps.com |https | Create.powerapps.com + web.powerapps.com |
+| \*.azureedge.net |https | create.powerapps.com |
+| \*.blob.core.windows.net |https | BLOB-lagring |
+| \*.flow.microsoft.com | https | Create.powerapps.com + web.powerapps.com |
 | vortex.data.microsoft.com |https |Telemetri |
 
 > [!NOTE]
