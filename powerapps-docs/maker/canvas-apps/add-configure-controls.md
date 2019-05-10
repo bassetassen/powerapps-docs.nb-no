@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 798a355e1c8728b41f3e92f183d4a4e2831b7cc2
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 3311433b3950bcf48dc6c7b7969da501e542952c
+ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61530575"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64670877"
 ---
 # <a name="add-and-configure-a-canvas-app-control-in-powerapps"></a>Legg og konfigurer en lerretsappkontroll i PowerApps
 
@@ -51,7 +51,7 @@ For å demonstrere hvordan denne listen fungerer, kan du velge **etikett** på d
 
 ![Skjerm2 i listen](./media/add-configure-controls/add-label.png)
 
-En boks med seks håndtak omgir i skjermbildet etiketten som standard. Denne typen box omgir uansett hvilken kontroll er valgt. Hvis du velger skjermen ved å klikke på i den (men utenfor etiketten), forsvinner boksen fra etiketten. For å velge etiketten på nytt, kan du klikker eller trykker i den, eller du kan klikke eller trykk på **Label2** i den hierarkiske listen over kontroller.
+En boks med seks håndtak omgir i skjermbildet etiketten som standard. Denne typen box omgir uansett hvilken kontroll er valgt. Hvis du velger skjermen ved å klikke på i den (men utenfor etiketten), forsvinner boksen fra etiketten. For å velge etiketten på nytt, kan du klikker eller trykker i den, eller du kan klikke eller trykk på navnet i den hierarkiske listen over kontroller.
 
 > [!IMPORTANT]
 > Du må alltid velger en kontroll før du kan konfigurere den.

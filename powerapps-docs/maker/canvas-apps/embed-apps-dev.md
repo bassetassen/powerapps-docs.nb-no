@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e4d3d2e769951ed75ddeeb57f7fe4c0b350d02e7
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: ed812fb8da85d36ff7c0790fe401b33043786cb8
+ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61550301"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64670405"
 ---
 # <a name="integrate-canvas-apps-into-websites-and-other-services"></a>Integrer lerretsapper på nettsteder og andre tjenester
 Appene du utvikler er gjerne mest nyttige når de er tilgjengelige direkte hvor man gjøre arbeidet. Ved å bygge inn lerret-apper i en iframe, kan du integrere disse appene på nettsteder og andre tjenester, for eksempel Power BI eller SharePoint.
@@ -38,8 +38,7 @@ Du kan også integrere lerret-apper i SharePoint Online uten å bruke en iframe.
 Hvis du har en app du vil bygge inn, er det første trinnet å angi parametere for Uniform Resource Identifier (URI), slik at iframe finner appen. URI-en finnes i følgende format:
 
 ```
-https://web.powerapps.com/webplayer/iframeapp?source=iframe
-&appId=/providers/Microsoft.PowerApps/apps/[AppID]
+https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/[AppID]
 ```
 
 > [!NOTE]
@@ -70,7 +69,7 @@ App-ID-en er tilgjengelig på powerapps.com. For appen du vil bygge inn:
 ## <a name="embed-your-app-in-a-website"></a>Slik bygger du inn appen din på et nettsted
 Å bygge inn appen din er nå like enkelt som å legge til iframe i HTML-koden for nettstedet ditt (eller andre tjenester som støtter iframer, for eksempel Power BI eller SharePoint):
 
-```
+```html
 <iframe width="[W]" height="[H]" src="https://web.powerapps.com/webplayer/iframeapp?source=website&screenColor=rgba(165,34,55,1)&appId=/providers/Microsoft.PowerApps/apps/[AppID]" allow="geolocation; microphone; camera"/>
 ```
 

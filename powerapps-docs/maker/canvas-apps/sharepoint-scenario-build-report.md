@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c57375906ba900a3112b9d7999d3941f14e9af58
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
-ms.translationtype: HT
+ms.openlocfilehash: 7eb5e7385c57e0cabaab1c8457f17dc1feff96fb
+ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63321275"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64671039"
 ---
 # <a name="create-a-power-bi-report-to-analyze-projects"></a>Å opprette en Power BI-rapport for å analysere prosjekter
 > [!NOTE]
@@ -186,7 +185,7 @@ Når Power BI Desktop henter inn listene, oppretter programmet en relasjon mello
 1. Klikk eller trykk på **Ny kolonne** fra denne datotabellen.
    
     ![Ny kolonne](./media/sharepoint-scenario-build-report/05-02-00-modeling-column.png)
-2. Skriv inn denne formelen i formellinjen: **IsWeekDay = SWITCH(WEEKDAY(Dates[Date]); 1;0;7;0;1)**.
+2. Skriv inn denne formelen i formellinjen: **IsWeekDay = SWITCH(WEEKDAY(Dates[Date]), 1,0,7,0,1)**.
    
     Denne formelen bestemmer om en dato i **Dato**-kolonnen er en ukedag. Hvis datoen er en ukedag, får **IsWeekDay**-kolonnen verdien 1 – ellers får den verdien 0.
 3. Trykk på ENTER for å legge til kolonnen **IsWeekDay** i **Datoer**-tabellen.

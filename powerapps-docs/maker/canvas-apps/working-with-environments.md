@@ -13,51 +13,45 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: cc7eefbe2989ed1aa0e893c2d826215aec48003b
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: eeb7a80c106541acd6ca284541fae6112b6d470c
+ms.sourcegitcommit: 065b3b210273e5fe9025d41d27a08a62dfa16d03
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61557017"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64904160"
 ---
 # <a name="working-with-environments-and-microsoft-powerapps"></a>Å arbeide med miljøer og Microsoft PowerApps
 Du kan arbeide i forskjellige miljøer og enkelt å bytte mellom dem med PowerApps. For en oversikt over miljøer, kan du se [Miljøoversikt](../../administrator/environments-overview.md), som forklarer i detalj hvorfor du bruker miljøer, og hvordan du kan opprette og administrere dem. Omfanget av denne artikkelen dekker følgende emner om miljø:
 
-* Slik bytter du miljøet på powerapps.com
-* hvordan du oppretter en app i riktig miljø
-* Slik viser du en app i riktig miljø
+- Slik bytter du miljøet på powerapps.com
+- hvordan du oppretter en app i riktig miljø
+- Slik viser du en app i riktig miljø
 
 ## <a name="switch-the-environment"></a>Slik bytter du miljøet
-Når du registrerer deg og logger på powerapps.com for første gang, vil du sannsynligvis havne i et standardmiljø. Du kan bekrefte dette ved å se øverst til høyre på siden.
+Når du registrerer deg og logger på første PowerApps, åpnes den i et Standardmiljø, som du kan identifisere i hjørnet øverst til høyre på siden.
 
-![Standardmiljø](./media/working-with-environments/env-dropdown.png)
+> [!div class="mx-imgBorder"]
+> ![Standardmiljø](./media/working-with-environments/env-dropdown.png)
 
-*Standardmiljøet* er tilgjengelig for alle. Du kan begynne å opprette apper i dette miljøet og dele appene med andre brukere. Du kan også ha tilgang til andre miljøer, for eksempel de du [oppretter selv](../../administrator/environments-administration.md), eller de som er opprettet av andre, men som du har tilgang til. Du kan bytte miljøer ved å klikke rullegardinlisten for miljø øverst til høyre, og velge et annet miljø. I dette eksemplet byttes det fra *Standardmiljø* til *Miljø 1*.
+Alle i organisasjonen har tilgang til standardmiljøet. Du kan opprette apper i dette miljøet og dele appene dine med andre brukere. Du kan også ha tilgang til andre miljøer, om [du opprette dem](../../administrator/environments-administration.md) eller andre virker. Du kan bytte miljøer ved å åpne listen miljøet i hjørnet øverst til høyre og deretter velge et annet miljø. I dette eksemplet byttes det fra **Microsoft** til **MyOwnEnv**.
 
-![Slik bytter du miljøet](./media/working-with-environments/switch-env.png)
+> [!div class="mx-imgBorder"]
+> ![Slik bytter du miljøet](./media/working-with-environments/switch-environment.png)
 
-Når man bytter til et annet miljø (for eksempel Miljø 1), vil man se alle apper man har opprettet, eller har tilgang til i dette nye miljøet.
+Når du bytter miljøer, vises det nye miljøet alle appene som du har tilgang til i dette miljøet.
 
 ## <a name="create-apps-in-the-right-environment"></a>Slik oppretter du en app i riktig miljø
 Du kan opprette apper i et miljø som du oppretter, eller som du har fått tilgang til. Å opprette et eget miljø krever imidlertid en [bestemt plan](../../administrator/pricing-billing-skus.md). Før du oppretter en app, må du alltid **kontrollere at du velger miljøet du vil at appen skal være i**. Ellers vil du måtte håndtere å flytte apper mellom miljøer.
 
-Hvis du vil opprette en app i det rette miljøet, gjør du ett av følgende:
+Å opprette en app i riktig miljø:
 
-- [Logg deg på](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) PowerApps Studio hvis det ikke er åpent allerede, og velg deretter miljøet du ønsker å opprette appen din i. Velg så **Apper** nær venstre kant, og velg til slutt **Opprett en app**.
+1. [Logg deg på PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-- Hvis PowerApps Studio er åpen, velger du miljøet på nytt øverst til høyre.
+1. Velg miljøet der du ønsker å opprette appen som den forrige delen beskriver.
 
-5. Velg **Endre** på **Konto**-siden, ved siden av navnet på det gjeldende miljøet.
-
-6. Velg miljøet der du ønsker å opprette appen.
-
-    ![Slik bytter du miljø i Studio](./media/working-with-environments/studio-env-dropdown2.PNG)
-
-7. Velg **Ny** for å begynne å opprette en app. Appen vil nå befinne seg i miljøet du valgte i trinn 6.
-
-    ![Slik bytter du miljø i Studio](./media/working-with-environments/new-app.PNG)
+1. Velg **apper** nær venstre kant, og velg deretter **opprette en app**.
 
 ## <a name="view-apps-in-the-right-environment"></a>Slik viser du en app i riktig miljø
-Enten du arbeider i [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) eller PowerApps Studio, er listen over apper, tilkoblinger osv. som du ser alltid filtrert basert på miljøet som er valgt i rullegardinlisten. Hvis du ikke ser appene du leter etter, må du alltid bekrefte om riktig miljø er valgt.
+Enten du arbeider i [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) eller PowerApps Studio, er listen over apper, tilkoblinger osv. som du ser alltid filtrert basert på miljøet som er valgt i rullegardinlisten. Hvis du ikke ser appene du leter etter, kan du alltid bekrefte om riktig miljø er valgt.
 
 Hvis du vil ha mer informasjon om miljøer, kan du se [denne oversikten](../../administrator/environments-overview.md).

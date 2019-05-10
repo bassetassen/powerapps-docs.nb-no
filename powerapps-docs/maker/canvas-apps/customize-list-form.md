@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d33f541ea698b02a662edb652f809095f47acc6e
-ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
+ms.openlocfilehash: 66fe60c0d74c86705615522621d8f277fcc343ae
+ms.sourcegitcommit: dbd922de8f2e97a478df64e7e9ba33b48574af5c
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042736"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088184"
 ---
 # <a name="customize-a-sharepoint-list-form-by-using-powerapps"></a>Å tilpasse et SharePoint-listeskjema ved bruk av PowerApps
 
@@ -71,7 +71,7 @@ Du kan konfigurere feltene **Pris**, **Tilgjengelighet** og **Farger** slik at d
 
 1. I navigasjonsfeltet til venstre, utvider **Details_DataCard1**, og Legg merke til tallet som vises på slutten av **DataCardValue**.
 
-1. Angi den **synlighet** -egenskapen for den **farge**, **tilgjengelighet**, og **pris** kort til denne formelen (erstatter, om nødvendig den tall med det som du noterte ned i forrige trinn):
+1. Angi den **Visible** -egenskapen for den **farge**, **tilgjengelighet**, og **pris** kort til denne formelen (erstatter, om nødvendig tallet med den som du noterte ned i forrige trinn):
 
     **Hvis (DataCardValue2.Value = true, true)**
 
@@ -197,7 +197,7 @@ Du kan konfigurere feltene **Pris**, **Tilgjengelighet** og **Farger** slik at d
 
 **SPØRSMÅL:** Trenger jeg en PowerApps-lisens til å opprette eller bruke egendefinerte listeskjemaer?
 
-**A:** Du trenger en [Office 365-abonnementer som inkluderer PowerApps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus.md#licenses).
+**A:** Du trenger en [Office 365-abonnementer som inkluderer PowerApps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses).
 
 **SPØRSMÅL:** Hva skjer når gjestebrukere har tilgang til en liste som har et egendefinert skjema?
 
