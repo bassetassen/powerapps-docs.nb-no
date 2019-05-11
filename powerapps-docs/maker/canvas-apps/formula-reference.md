@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9796cf6c668818110cd6910311ab5b5f61a745df
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: c801a67cc7944d32a6a0a93e8b8566618b66da98
+ms.sourcegitcommit: f6c9e525130a03b8c76f0a4b4e90419604c5823c
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61559591"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525645"
 ---
 # <a name="formula-reference-for-powerapps"></a>Formelreferanse for PowerApps
 Formler kombinerer mange elementer.  Dette er listet opp under:
@@ -49,6 +49,8 @@ Andre elementer omfatter:
 **[App](functions/signals.md)** – returnerer informasjon om den kjørende appen, for eksempel hvilken skjerm den vises på for øyeblikket.
 
 **[Asin](functions/function-trig.md)** – returnerer arcsinusen for et tall i radianer.
+
+**[AsType](functions/function-astype-istype.md)**  – behandler en postreferanse som en bestemt enhet-type.
 
 **[Atan](functions/function-trig.md)** – returnerer arctangensen for et tall i radianer.
 
@@ -183,6 +185,8 @@ Andre elementer omfatter:
 **[IsNumeric](functions/function-isnumeric.md)** – leter etter en numerisk verdi.
 
 **[IsToday](functions/function-now-today-istoday.md)** – kontrollerer om en dato-/klokkeslett-verdi er i løpet av denne dagen.
+
+**[IsType](functions/function-astype-istype.md)**  – kontrollerer om en postreferanse refererer til en bestemt enhet-type.  
 
 ## <a name="l"></a>L
 **[Language](functions/function-language.md)** – returnerer språkkoden for gjeldende bruker.

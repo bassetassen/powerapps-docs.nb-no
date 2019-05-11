@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a46635276f6598cf0591dc21ae5aeb855b6667c1
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 60340c3833f61be4acf4780a90d18e483c1dc010
+ms.sourcegitcommit: 26704369b17d2358a77cd4841bd70bbcca3384f2
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61560483"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65521030"
 ---
 # <a name="text-input-control-in-powerapps"></a>Tekstinndata-kontroll i PowerApps
 En boks som brukeren kan skrive inn tekst, tall og andre data i.
@@ -125,6 +124,8 @@ Brukeren kan angi data ved å skrive inn i en kontroll for tekstinndata. Avhengi
 
 **[Underline](properties-text.md)** – om det vises en linje under teksten som vises på en kontroll.
 
+**VirtualKeyboardMode** – Type virtuelt tastatur, tekst eller numerisk, som vises på en app brukerens berøringsskjerm. Den **Format** egenskapen bestemmer standardverdien. Støtte for enheter varierer. Enheter som kjører iOS må ha minst versjon 12,2. Den anbefalte versjonen av Android er 9.0, og egenskapene til numeriske tastaturer varierer for Android-enheter. Windows 10 støtter ikke denne egenskapen.  
+
 **[Synlig](properties-core.md)** – om kontrollen vises eller skjules.
 
 **[Bredde](properties-size-location.md)** – avstanden mellom kontrollens venstre og høyre kant.
@@ -142,7 +143,7 @@ Brukeren kan angi data ved å skrive inn i en kontroll for tekstinndata. Avhengi
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 2. Legg til en knapp, angi **[Text](properties-core.md)**-egenskapen til **Legg til**, og angi **[OnSelect](properties-core.md)**-egenskapen til denne formelen:<br>
-   **Collect(Names; {FirstName:inputFirst.Text; LastName:inputLast.Text})**
+   **Collect(Names, {FirstName:inputFirst.Text, LastName:inputLast.Text})**
    
     Vil du ha mer informasjon om **[Collect](../functions/function-clear-collect-clearcollect.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
 3. Legg til et tekstgalleri i stående/loddrett retning, angi **[Items](properties-core.md)** til **Navn**, og angi **[Text](properties-core.md)**-egenskapen til **Subtitle1** til **ThisItem.FirstName**.
@@ -155,7 +156,7 @@ Brukeren kan angi data ved å skrive inn i en kontroll for tekstinndata. Avhengi
 1. Legg til en kontroll for inndatatekst, gi den navnet **inputPassword**, og angi **Modus**-egenskapen til **Passord**.
 
 1. Legg til en etikett, og angi **[Text](properties-core.md)**-egenskapen til denne formelen:<br>
-   **If(inputPassword.Text = "P@ssw0rd"; "Access granted"; "Access denied")**
+   **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
 
     Vil du ha mer informasjon om **[If](../functions/function-if.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
 
