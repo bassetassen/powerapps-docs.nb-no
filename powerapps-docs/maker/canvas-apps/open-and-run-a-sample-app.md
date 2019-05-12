@@ -1,5 +1,5 @@
 ---
-title: Bruk en eksempelapp (hurtiginnføring) | Microsoft Docs
+title: Bruk en eksempelapp | Microsoft Docs
 description: Trinnvise instruksjoner for å lage en lerretsapp som er basert på en eksempelapp i PowerApps
 author: AFTOwen
 manager: kvivek
@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1adf38b59b01bb08bc89c6101a96247b8bce8092
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 1cac73bad25bf1179f88030ee1f02589189610e0
+ms.sourcegitcommit: 4201d95421a74da19c585239b34d7d8620c74113
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61540319"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65546865"
 ---
-# <a name="quickstart-create-a-canvas-app-from-a-sample-in-powerapps"></a>Hurtigstart: Lage en lerretsapp fra en eksempelapp i PowerApps
+# <a name="create-a-canvas-app-from-a-sample-in-powerapps"></a>Lage en lerretsapp fra en eksempelapp i PowerApps
 I denne hurtiginnføringen skal du lage en lerretsapp fra en eksempelapp, slik at du kan studere utformingsmulighetene og oppdage konsepter du kan bruke når du utvikler dine egne lerretsapper.
 
 Hver eksempelapp viser et virkelig scenario, men bruker fiktive data. Hvis du vil lagre disse dataene, må du ha en skylagringskonto, for eksempel Dropbox, Google Drive eller OneDrive.
