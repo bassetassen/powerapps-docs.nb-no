@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/10/2019
 ms.locfileid: "65521078"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="text-function-in-powerapps"></a>Text-funksjonen i PowerApps
 Konverterer en verdi og formaterer en tall- eller dato/klokkeslett-verdi til en tekststreng.
@@ -136,13 +137,13 @@ Resultatet av **tekst** inkluderer oversatte strenger for måneder, ukedager, og
 **Text** bruker språket for brukeren som kjører appen som standard. **Language**-funksjonen returnerer språkkoden for gjeldende bruker. Du kan overstyre denne standardverdien ved å oppgi en språkkode for det tredje argumentet for **tekst**.
 
 ## <a name="syntax"></a>Syntaks
-**Text**( *NumberOrDateTime*, *DateTimeFormatEnum* [, *ResultLanguageTag* ] )
+**Text**( *NumberOrDateTime*; *DateTimeFormatEnum* [; *ResultLanguageTag* ] )
 
 * *NumberOrDateTime* – obligatorisk. Tallet eller dato/klokkeslett-verdien som skal formateres.
 * *DateTimeFormat* – obligatorisk.  Et medlem av opplistingen for **DateTimeFormat**.
 * *ResultLanguageTag* – valgfritt. Språkkoden som skal brukes for resultatteksten. Språket for gjeldende bruker brukes som standard.
 
-**Tekst**( *NumberOrDateTime*, *CustomFormat* [, *ResultLanguageTag* ])
+**Tekst**( *NumberOrDateTime*; *CustomFormat* [; *ResultLanguageTag* ])
 
 * *Number* – obligatorisk. Tallet eller dato/klokkeslett-verdien som skal formateres.
 * *CustomFormat* – obligatorisk. Én eller flere plassholdere omsluttet av doble anførselstegn.
@@ -159,11 +160,11 @@ Med mindre annet er angitt, vil brukeren som kjører disse formlene befinner seg
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Text(&nbsp;1234.59,&nbsp;"####.#"&nbsp;)** |Formaterer tallet med én desimal. |"1234.6" |
-| **Text(&nbsp;8.9,&nbsp;"#.000"&nbsp;)** |Pakker, om nødvendig, inn desimaldelen av tallet med etterfølgende nuller. |"8.900" |
-| **Text(&nbsp;0.631,&nbsp;"0.#"&nbsp;)** |Pakker, om nødvendig, inn hele delen av tallet med foranstilte nuller. |"0.6" |
-| **Text(&nbsp;12,&nbsp;"#.0#"&nbsp;)**<br>**Text(&nbsp;1234.568,&nbsp;"#.0#"&nbsp;)** |Pakker inn desimaldelen av tallet med nuller for en desimalplass, og inneholder en andre desimal, hvis angitt. |"12.0"<br>"1234.57" |
-| **Text(&nbsp;12000,&nbsp;"$ #,###"&nbsp;)**<br>**Text(&nbsp;1200000,&nbsp;"$&nbsp;#,###"&nbsp;)** |Plasserer et skilletegn for tusener for hvert tredje siffer, og inkluderer et valutasymbol. |"$&nbsp;12,000"<br>"$&nbsp;1,200,000" |
+| **Text(&nbsp;1234,59;&nbsp;"####.#"&nbsp;)** |Formaterer tallet med én desimal. |"1234.6" |
+| **Text(&nbsp;8,9;&nbsp;"#.000"&nbsp;)** |Pakker, om nødvendig, inn desimaldelen av tallet med etterfølgende nuller. |"8.900" |
+| **Text(&nbsp;0,631;&nbsp;"0.#"&nbsp;)** |Pakker, om nødvendig, inn hele delen av tallet med foranstilte nuller. |"0.6" |
+| **Text(&nbsp;12;&nbsp;"#.0#"&nbsp;)**<br>**Text(&nbsp;1234,568;&nbsp;"#.0#"&nbsp;)** |Pakker inn desimaldelen av tallet med nuller for en desimalplass, og inneholder en andre desimal, hvis angitt. |"12.0"<br>"1234.57" |
+| **Text(&nbsp;12000;&nbsp;"$ #,###"&nbsp;)**<br>**Text(&nbsp;1200000;&nbsp;"$&nbsp;#,###"&nbsp;)** |Plasserer et skilletegn for tusener for hvert tredje siffer, og inkluderer et valutasymbol. |"$&nbsp;12,000"<br>"$&nbsp;1,200,000" |
 
 ### <a name="datetime"></a>Dato/klokkeslett
 * At **2:37:47 PM** på **Monday, November 23, 2015**
@@ -171,21 +172,21 @@ Med mindre annet er angitt, vil brukeren som kjører disse formlene befinner seg
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Text( Now(), DateTimeFormat.LongDate )** |Formateres som en lang datostreng i språk- og nasjonale innstillinger for gjeldende bruker. |"Monday, November 23, 2015" |
-| **Text( Now(), DateTimeFormat.LongDateTime )** |Formateres som en lang dato- og klokkeslett-streng i språk- og nasjonale innstillinger for gjeldende bruker, ved bruk av en 12-timers klokke. |"Monday, November 23, 2015 2:37:47 PM" |
-| **Text( Now(), DateTimeFormat.LongTime24 )** |Formateres som en streng over lang tid, ved hjelp av en 24-timers klokke. |"14:37:47" |
-| **Text( Now(), DateTimeFormat.ShortDate )** |Formateres som en kort datostreng i språk- og nasjonale innstillinger for gjeldende bruker. |"11/23/2015" |
-| **Text( Now(), "d-mmm-yy" )** |Formateres ved hjelp av plassholdertegn: <ul><li>**d** for en ensifret eller tosifret dag i måneden<li>**-** kopiert til resultatet som et litteralt tegn<li>**mmm** for en forkortelse av måneden på tre bokstaver<li>**-** kopiert til resultatet som et annet litteralt tegn<li>**yy** for en tosifret forkortelse for året</ul> |"23-Nov-15" |
+| **Text( Now(); DateTimeFormat.LongDate )** |Formateres som en lang datostreng i språk- og nasjonale innstillinger for gjeldende bruker. |"Monday, November 23, 2015" |
+| **Text( Now(); DateTimeFormat.LongDateTime )** |Formateres som en lang dato- og klokkeslett-streng i språk- og nasjonale innstillinger for gjeldende bruker, ved bruk av en 12-timers klokke. |"Monday, November 23, 2015 2:37:47 PM" |
+| **Text( Now(); DateTimeFormat.LongTime24 )** |Formateres som en streng over lang tid, ved hjelp av en 24-timers klokke. |"14:37:47" |
+| **Text( Now(); DateTimeFormat.ShortDate )** |Formateres som en kort datostreng i språk- og nasjonale innstillinger for gjeldende bruker. |"11/23/2015" |
+| **Text( Now(); "d-mmm-yy" )** |Formateres ved hjelp av plassholdertegn: <ul><li>**d** for en ensifret eller tosifret dag i måneden<li>**-** kopiert til resultatet som et litteralt tegn<li>**mmm** for en forkortelse av måneden på tre bokstaver<li>**-** kopiert til resultatet som et annet litteralt tegn<li>**yy** for en tosifret forkortelse for året</ul> |"23-Nov-15" |
 | **Tekst (1448318857000, "mmm. dd, åååå (tt: mm: ss AM/PM)»)** | Viser en Unix dato / klokkeslett-verdi i lesbar format hvis du for å multiplisere kildeverdien etter 1000. | «. November 23, 2015 (02:47:37 PM)» |
 
 ### <a name="global-apps"></a>Globale apper
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Tekst (1234567.89, "[$-fr-FR] # ###, ## &euro;", "fr-FR")** | Viser et mellomrom som et skilletegn for grupperinger, komma som desimalskilletegn, og **&euro;** som valutasymbol. |"1&nbsp;234&nbsp;567,89 &euro;" |
-| **Tekst (1234567,89; «[$-fr-FR] # ###, ## &euro;»)** | Hvis kildedataene følger det franske egendefinert ved å bruke et komma som desimaltegn, må du endre de nasjonale innstillingene til fransk og skiller argumentene med et semikolon i stedet for et komma til får du samme resultat som ovenfor. |"1&nbsp;234&nbsp;567,89 &euro;" |
-| **Text( Date(2016,1,31), "dddd mmmm d" )** |Returnerer ukedagen, måneden og dagen i måneden i språket for gjeldende bruker. Fordi ingen av plassholderne er språkavhengige, er det ikke behov for en språkkode for tekstformat. |«Lørdag&nbsp;januar&nbsp;31» |
-| **Text( Date(2016,1,31), "dddd mmmm d", "es-ES" )** |Returnerer ukedagen, måneden og dagen i måneden i "es-ES"-språket. |"domingo&nbsp;enero&nbsp;31" |
+| **Tekst (1234567,89; "[$-fr-FR] # ###, ## &euro;"; "fr-FR")** | Viser et mellomrom som et skilletegn for grupperinger, komma som desimalskilletegn, og **&euro;** som valutasymbol. |"1&nbsp;234&nbsp;567,89 &euro;" |
+| **Tekst (1234567;89;; «[$-fr-FR] # ###; ## &euro;»)** | Hvis kildedataene følger det franske egendefinert ved å bruke et komma som desimaltegn, må du endre de nasjonale innstillingene til fransk og skiller argumentene med et semikolon i stedet for et komma til får du samme resultat som ovenfor. |"1&nbsp;234&nbsp;567,89 &euro;" |
+| **Text( Date(2016;1;31); "dddd mmmm d" )** |Returnerer ukedagen, måneden og dagen i måneden i språket for gjeldende bruker. Fordi ingen av plassholderne er språkavhengige, er det ikke behov for en språkkode for tekstformat. |«Lørdag&nbsp;januar&nbsp;31» |
+| **Text( Date(2016;1;31); "dddd mmmm d"; "es-ES" )** |Returnerer ukedagen, måneden og dagen i måneden i "es-ES"-språket. |"domingo&nbsp;enero&nbsp;31" |
 
 ### <a name="converting-values-to-text"></a>Konvertering av verdier til tekst
 
@@ -195,4 +196,4 @@ Med mindre annet er angitt, vil brukeren som kjører disse formlene befinner seg
 | **Tekst (&nbsp;DateTimeValue (&nbsp;"01/04/2003"&nbsp;)&nbsp;)** | Konverterer en dato/klokkeslett-verdi til en tekststreng. For å styre konverteringen, gir du enten et medlem av opplistingen DateTimeFormat eller en egendefinert formatstreng. | "1/4/2003 12:00 AM" |
 | **Tekst (&nbsp;SANN&nbsp;)** | Konverterer en boolsk verdi til en streng. | "true" |
 | **Text(&nbsp;GUID()&nbsp;)** | Konverterer en generert GUID-verdi til en streng.  | "f8b10550-0f12-4f08-9aa3-bb10958bc3ff" |
-| **Left(&nbsp;Text(&nbsp;GUID()&nbsp;),&nbsp;4&nbsp;)** | Returnerer de første fire tegnene i en generert GUID. | «2d9c» | 
+| **Left(&nbsp;Text(&nbsp;GUID()&nbsp;);&nbsp;4&nbsp;)** | Returnerer de første fire tegnene i en generert GUID. | «2d9c» | 

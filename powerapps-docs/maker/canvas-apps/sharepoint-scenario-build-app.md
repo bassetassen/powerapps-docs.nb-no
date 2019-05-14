@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/06/2019
 ms.locfileid: "65088133"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-canvas-app-to-manage-projects"></a>Opprett en lerretsapp for å administrere prosjekter
 > [!NOTE]
@@ -140,7 +141,7 @@ I dette trinnet viser vi en fremgangsmåte for å navigere til de andre skjermen
     ![Legg til-knappen](./media/sharepoint-scenario-build-app/04-03-05-button-default.png)
 2. Angi følgende egenskaper for knappen i formellinjen:
    
-   * **OnSelect** egenskapen = **Navigate(AssignManager, Fade)**. Når du kjører appen og klikker på denne knappen, kan du gå til den andre skjermen i appen, med en uttonet overgang mellom skjermene.
+   * **OnSelect** egenskapen = **Navigate(AssignManager; Fade)**. Når du kjører appen og klikker på denne knappen, kan du gå til den andre skjermen i appen, med en uttonet overgang mellom skjermene.
 
    * **Tekst**-egenskapen = **«Tilordne leder»**
 
@@ -149,7 +150,7 @@ I dette trinnet viser vi en fremgangsmåte for å navigere til de andre skjermen
     ![Å oppdatere knappeteksten](./media/sharepoint-scenario-build-app/04-03-06-button-updated.png)
 4. Sett inn en annen knapp med følgende egenskaper:
    
-   * **OnSelect**-egenskapen = **Navigate(ViewProjects, Fade)**.
+   * **OnSelect**-egenskapen = **Navigate(ViewProjects; Fade)**.
 
    * **Tekst**-egenskapen = **«Oppdateringsdetaljer»**
      
@@ -207,7 +208,7 @@ I dette trinnet bruker vi et galleri for å vise alle prosjekter som har blitt g
 
    * **Høyde**-egenskapen = **40**
 
-   * **OnSelect**-egenskapen = **Navigate(SelectTask, Fade)**
+   * **OnSelect**-egenskapen = **Navigate(SelectTask; Fade)**
 
    * **Bredde**-egenskapen = **40**
      
@@ -233,7 +234,7 @@ I dette trinnet bruker vi et galleri for å vise alle prosjekter som har blitt g
 
    * **BorderStyle**-egenskapen = **Prikket**
 
-   * **Elementer**-egenskapen = **Filter('Project Details', PMAssigned="Unassigned")**. Bare prosjekter uten overordnede som er tilordnet, er inkludert i galleriet.
+   * **Elementer**-egenskapen = **Filter('Project Details'; PMAssigned="Unassigned")**. Bare prosjekter uten overordnede som er tilordnet, er inkludert i galleriet.
      
      ![Galleri med tekst fra listen](./media/sharepoint-scenario-build-app/04-04-06-gallery-updated.png)
 
@@ -291,7 +292,7 @@ I dette trinnet bruker vi et galleri for å vise alle prosjekter som har blitt g
    
    * **Høyde**-egenskapen = **60**
 
-   * **OnSelect** egenskapen = **Patch ('Project Details', LookUp ('Project Details', ID = Gallery1.Selected.ID), {PMAssigned: TextInput1.Text})**. Hvis du vil ha mer informasjon, kan du se [Grundig innføring i formler](#formula-deep-dive).
+   * **OnSelect** egenskapen = **Patch ('Project Details'; LookUp ('Project Details'; ID = Gallery1.Selected.ID); {PMAssigned: TextInput1.Text})**. Hvis du vil ha mer informasjon, kan du se [Grundig innføring i formler](#formula-deep-dive).
 
    * Formelen oppdaterer **Prosjektdetaljer**-listen og angir en verdi for feltet PMAssigned.
 
@@ -326,7 +327,7 @@ I dette trinnet skal vi endre egenskaper for galleriet på **ViewProjects**-skje
 
 5. Velg oppdateringsknappen ![Oppdater ikon](./media/sharepoint-scenario-build-app/icon-refresh.png), og angi **OnSelect**-egenskapen til **Oppdater («Prosjektdetaljer»)**.
 
-6. Velg knappen for nytt element, ![Legg til nytt ikon](./media/sharepoint-scenario-build-app/icon-add-item.png), og angi **OnSelect**-egenskapen til **NewForm(EditForm1); Navigate(UpdateDetails, ScreenTransition.None)**.
+6. Velg knappen for nytt element, ![Legg til nytt ikon](./media/sharepoint-scenario-build-app/icon-add-item.png), og angi **OnSelect**-egenskapen til **NewForm(EditForm1);; Navigate(UpdateDetails; ScreenTransition.None)**.
 
 ### <a name="add-a-back-arrow-to-return-to-the-selecttask-screen"></a>Legg til en Tilbake-pil for å gå tilbake til SelectTask-skjermen
 
@@ -338,15 +339,15 @@ I dette trinnet skal vi endre egenskaper for galleriet på **ViewProjects**-skje
    
     ![Tilbake-knapp](./media/sharepoint-scenario-build-app/04-05-04-left-arrow-v.png)
    
-    Alle egenskapene kommer sammen med den, inkludert **OnSelect**-egenskapen for **Navigate(SelectTask, Fade)**.
+    Alle egenskapene kommer sammen med den, inkludert **OnSelect**-egenskapen for **Navigate(SelectTask; Fade)**.
 
 ### <a name="change-the-data-source-for-the-browsegallery1-gallery"></a>Å endre datakilden for BrowseGallery1-galleriet
 
-1. Velg **BrowseGallery1**-galleriet, og angi **Elementer**-egenskapen for galleriet til **SortByColumns(Filter('Project Details', StartsWith(Title, TextSearchBox1.Text)), "Title", If(SortDescending1, Descending, Ascending))**.
+1. Velg **BrowseGallery1**-galleriet, og angi **Elementer**-egenskapen for galleriet til **SortByColumns(Filter('Project Details'; StartsWith(Title; TextSearchBox1.Text)); "Title"; If(SortDescending1; Descending; Ascending))**.
    
     Dette angir datakilden for galleriet til **Prosjektdetaljer**-listen, og bruker **Tittel**-feltet til søking og sortering.
 
-2. Velg ![Detaljer-pilikonet](./media/sharepoint-scenario-build-app/icon-details-arrow.png) i det første gallerielementet, og angi **OnSelect**-egenskapen til **Navigate(UpdateDetails, None)**.
+2. Velg ![Detaljer-pilikonet](./media/sharepoint-scenario-build-app/icon-details-arrow.png) i det første gallerielementet, og angi **OnSelect**-egenskapen til **Navigate(UpdateDetails; None)**.
    
     ![ Vis prosjekter-galleri – første element valgt](./media/sharepoint-scenario-build-app/04-05-05b-gallery-arrow-v.png)
 
@@ -396,7 +397,7 @@ I dette trinnet skal vi koble redigeringsskjemaet på **UpdateDetails**-skjermen
    * **ActualDays**
      
      ![Å redigere skjemafelt](./media/sharepoint-scenario-build-app/04-06-03-edit-fields.png)
-6. Velg Avbryt-knappen ![Avbryt-ikon](./media/sharepoint-scenario-build-app/icon-cancel.png), og angi **OnSelect**-egenskapen til **ResetForm(EditForm1); Back()**.
+6. Velg Avbryt-knappen ![Avbryt-ikon](./media/sharepoint-scenario-build-app/icon-cancel.png), og angi **OnSelect**-egenskapen til **ResetForm(EditForm1);; Back()**.
 
 7. Velg Lagre-knappen ![Lagre-ikon](./media/sharepoint-scenario-build-app/icon-check-mark.png), og se på **OnSelect**-formelen – **SubmitForm(EditForm1)**. Fordi vi bruker redigeringskontrollen for skjemaet, kan vi bruke **Submit()** i stedet for å bruke **Patch()**, som vi gjorde tidligere.
 
@@ -496,7 +497,7 @@ Nå som vi har appen på SharePoint-området, skal vi finne en rolle for godkjen
 ## <a name="formula-deep-dive"></a>Grundig innføring i formler
 Dette er den andre valgfrie inndelingen i PowerApps-formler. I den første grundige innføringen så vi på én av formlene som PowerApps genererer for Bla gjennom-galleriet i en app med tre skjermer. I denne grundige innføringen skal vi se på en formel vi bruker for **AssignManager**-skjermen for den andre appen. Her er formelen:
 
-**Patch ('Project Details', LookUp ('Project Details', ID = Gallery1.Selected.ID), {PMAssigned: TextInput1.Text})**
+**Patch ('Project Details'; LookUp ('Project Details'; ID = Gallery1.Selected.ID); {PMAssigned: TextInput1.Text})**
 
 Hva gjør denne formelen? Når du velger et element i galleriet og klikker på **OK**-knappen, oppdaterer formelen **Prosjektdetaljer**-listen og angir **PMAssigned**-kolonnen til verdien som du angir i teksten. Formelen bruker funksjoner:
 

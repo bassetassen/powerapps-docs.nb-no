@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/10/2019
 ms.locfileid: "65517398"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="drop-down-control-in-powerapps"></a>Rullegardin-kontrollen i PowerApps
 En liste som viser bare det første elementet, med mindre brukeren åpner det.
@@ -130,7 +131,7 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 
 1. Legg til en **Rullegardin**-kontroll, og sett **[Elementer](properties-core.md)**-egenskapen til dette uttrykket:
 
-    `["Seattle", "Tokyo", "London", "Johannesburg", "Rio de Janeiro"]`
+    `["Seattle"; "Tokyo"; "London"; "Johannesburg"; "Rio de Janeiro"]`
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 
@@ -143,13 +144,13 @@ Prinsippene i denne prosedyren gjelder noen [datakilden som inneholder tabellene
 
 1. Legg til en **Rullegardin**-kontroll, og sett **[Elementer](properties-core.md)**-egenskapen til denne formelen:
 
-    `Distinct(Accounts, address1_city)`
+    `Distinct(Accounts; address1_city)`
 
     Denne formelen viser alle byene i **Kontoer** enheten. Hvis mer enn én post har samme by, skjuler **[Distinkt](../functions/function-distinct.md)**-funksjonen dupliseringen i rullegardinkontrollen din.
 
 1. (valgfritt) Endre navnet på **Rullegardin**-kontrollen til **Byer**, legg til en loddrett **Galleri**-kontroll, og sett **[Elementer](properties-core.md)**-egenskapen for galleriet til denne formelen:
 
-    `Filter(Accounts, address1_city = Cities.Selected.Value)`
+    `Filter(Accounts; address1_city = Cities.Selected.Value)`
 
     Denne **[Filter](../functions/function-filter-lookup.md)**-funksjonen viser bare de oppføringene i **Kontoer**-enheten der byen samsvarer med den valgte verdien i **Byer**-kontrollen.
 

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64670734"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-canvas-app-forms-in-microsoft-powerapps"></a>Slik fungerer lerretsappskjemaer i Microsoft PowerApps
 
@@ -52,8 +53,8 @@ Denne skjermen har følgende viktige formler:
 | Kontroll | Støttet virkemåte | Formel |
 | --- | --- | --- |
 | **BrowseGallery1** |Vis poster fra **Aktiva**-datakilden. |**[Element](controls/properties-core.md)**-egenskapen i galleriet er angitt til en formel som er basert på **Aktiva**-datakilden. |
-| **ImageNewItem1** |Vis **Rediger og opprett**-skjermen med hvert felt angitt til en standardverdi, slik at brukeren enkelt kan opprette en post. |Angi **[OnSelect](controls/properties-core.md)**-egenskapen til bildet til denne formelen:<br> **NewForm( EditForm1 );<br>Navigate( EditScreen1, None )** |
-| **NextArrow1** (i galleriet) |Vis **Detaljer**-skjermen for å vise mange av, eller alle feltene i den valgte posten. |Angi **[OnSelect](controls/properties-core.md)**-egenskapen for pilen til denne formelen:<br>**Navigate( DetailScreen1, None )** |
+| **ImageNewItem1** |Vis **Rediger og opprett**-skjermen med hvert felt angitt til en standardverdi, slik at brukeren enkelt kan opprette en post. |Angi **[OnSelect](controls/properties-core.md)**-egenskapen til bildet til denne formelen:<br> **NewForm( EditForm1 );;<br>Navigate( EditScreen1; None )** |
+| **NextArrow1** (i galleriet) |Vis **Detaljer**-skjermen for å vise mange av, eller alle feltene i den valgte posten. |Angi **[OnSelect](controls/properties-core.md)**-egenskapen for pilen til denne formelen:<br>**Navigate( DetailScreen1; None )** |
 
 Hovedkontrollen i denne skjermen, **BrowseGallery1**, dekker det meste av skjermområdet. Brukeren kan bla gjennom galleriet for å finne en bestemt post for å vise flere felt eller oppdatere dem.
 
@@ -63,7 +64,7 @@ Angi **[Items](controls/properties-core.md)**-egenskapen for et galleri til å v
 > I en generert app er **[Element](controls/properties-core.md)** angitt til en betydelig mer komplisert formel som standard, slik at brukeren kan sortere og søke etter poster. Senere i dette emnet finner du ut hvordan du utvikler formelen; det er for øyeblikket nok med en enklere versjon.
 
 Brukeren kan opprette en post ved å velge +-tegnet over galleriet, i stedet for å finne enn post som skal vises eller redigeres. Opprett denne effekten ved å legge til en **[Bilde](controls/control-image.md)**-kontroll som viser et +-symbol i den, og angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:
-<br>**NewForm( EditForm1 ); Navigate( EditScreen1, None )**
+<br>**NewForm( EditForm1 );; Navigate( EditScreen1; None )**
 
 Denne formelen åpner **Rediger og opprett**-skjermen, som har en  **kontroll for [Redigeringsskjema](controls/control-form-detail.md)**, med tittelen **EditForm1**. Formelen bytter også skjemaet til **Ny**-modus, der skjemaet viser standardverdiene fra datakilden, slik at brukeren enkelt kan opprette en post fra grunnen av.
 
@@ -74,7 +75,7 @@ For å undersøke en kontroll som vises i **BrowseGallery1**, velger du kontroll
 I dette eksemplet er kontrollens **[Tekst](controls/properties-core.md)**-egenskap angitt til **ThisItem.AssignedTo**, som er et felt i **Aktiva**-datakilden. **[Tekst](controls/properties-core.md)**-egenskapen for de andre tre **[Etikett](controls/control-text-box.md)**-kontrollene i galleriet er angitt til lignende formler, og hver kontroll viser ulike felt i datakilden.  
 
 Velg **[Figur](controls/control-shapes-icons.md)**-kontrollen (pilen), og bekreft at **[OnSelect](controls/properties-core.md)**- egenskapen er angitt til denne formelen:
-<br>**Navigate( DetailScreen1, None )**
+<br>**Navigate( DetailScreen1; None )**
 
 Hvis brukeren finner en post i **BrowseGallery1**, kan han velge pilen for denne posten for å vise mer informasjon om den i **DetailScreen1**. Ved å velge en pil, endrer brukeren verdien for den **Selected**-egenskapen for **BrowseGallery1**. I denne appen bestemmer denne egenskapen hvilken post som vises, ikke bare i **DetailScreen1**, men også i **Rediger og opprett**-skjermen hvis brukeren bestemmer seg for å oppdatere posten.
 
@@ -89,8 +90,8 @@ Denne skjermen har følgende viktige formler:
 | **DetailForm1** |Bestemmer hvilke poster som skal vises. I en generert app vises posten som brukeren har valgt i galleriet. |Angi **[Item](controls/control-form-detail.md)**-egenskapen til kontrollen til denne verdien:<br>**BrowseGallery1.Selected** |
 | **[Kort](controls/control-card.md)**-kontroller |I en **[Visningsskjema](controls/control-form-detail.md)**-kontroll, vises ett enkelt felt i en post. |Angi **[DataField](controls/control-card.md)**-egenskapen til navnet på et felt, omsluttet av doble anførselstegn (for eksempel **"Name"**). |
 | **ImageBackArrow1** |**BrowseScreen1** åpnes, når brukeren velger denne kontrollen. |Angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:<br>**Tilbake()** |
-| **ImageDelete1** |Når brukeren velger denne kontrollen, slettes en post. |Angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:<br>**Remove( Assets, BrowseGallery1.Selected )** |
-| **ImageEdit1** |Når brukeren velger denne kontrollen, åpnes **Rediger og opprett**-skjermen i gjeldende post. |Angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:<br>**Navigate( EditScreen1, None )** |
+| **ImageDelete1** |Når brukeren velger denne kontrollen, slettes en post. |Angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:<br>**Remove( Assets; BrowseGallery1.Selected )** |
+| **ImageEdit1** |Når brukeren velger denne kontrollen, åpnes **Rediger og opprett**-skjermen i gjeldende post. |Angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:<br>**Navigate( EditScreen1; None )** |
 
 Øverst på skjermen er tre bilder plassert utenfor **DetailForm1** og fungerer som knapper. De bytter mellom de tre skjermene i appen.
 
@@ -118,7 +119,7 @@ Denne skjermen har følgende viktige formler:
 | **EditForm1** |Viser en post i **Aktiva**-datakilden. |Angi **[DataSource](controls/control-form-detail.md)**-egenskapen til **Aktiva**. |
 | **EditForm1** |Bestemmer hvilke poster som skal vises. I en generert app vises posten som brukeren har valgt i **BrowseScreen1**. |Angi **[Item](controls/control-form-detail.md)**-egenskapen til denne verdien:<br>**BrowseGallery1.Selected** |
 | **[Kort](controls/control-card.md)**-kontroller |I en **[Redigeringsskjema](controls/control-form-detail.md)**-kontroll blir kontroller gitt slik at brukeren kan redigere ett eller flere felt i en post. |Angi **[DataField](controls/control-card.md)**-egenskapen til navnet på et felt, omsluttet av doble anførselstegn (for eksempel **"Name"**). |
-| **ImageCancel1** |Når brukeren velger denne kontrollen, forkastes endringene som pågår, og **Detaljer**-skjermen åpnes. |Angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:<br>**ResetForm( EditForm1 ); Back()** |
+| **ImageCancel1** |Når brukeren velger denne kontrollen, forkastes endringene som pågår, og **Detaljer**-skjermen åpnes. |Angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:<br>**ResetForm( EditForm1 );; Back()** |
 | **ImageAccept1** |Endringene sendes til datakilden, når brukeren velger denne kontrollen. |Angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:<br>**SubmitForm( EditForm1 )** |
 | **EditForm1** |Hvis endringene blir godtatt, går det tilbake til forrige skjerm. |Angi **[ OnSuccess](controls/control-form-detail.md)**-egenskapen til denne formelen:<br>**Back()** |
 | **EditForm1** |Forbli på den gjeldende skjermen slik at brukeren kan løse eventuelle problemer og prøve å sende på nytt, hvis endringene ikke blir godtatt. |La **[OnFailure](controls/control-form-detail.md)**-egenskapen stå tom. |
@@ -223,7 +224,7 @@ Nå skal vi gå tilbake til **[Galleri](controls/control-gallery.md)**-kontrolle
 1. Bytt til den første skjermen, som er vert for **[Galleri](controls/control-gallery.md)**-kontrollen vår, og velg pilen i det første elementet i galleriet.
 
 2. Angi **[OnSelect](controls/properties-core.md)**-egenskapen til figuren til denne formelen:
-   <br>**Navigate( Screen2, None )**
+   <br>**Navigate( Screen2; None )**
    
     ![Visningsskjema for Ice Cream-datakilden med tilbake-knappen](./media/working-with-forms/gallery-icecream-nav-new.png)
 
@@ -259,7 +260,7 @@ Disse to egenskapene er de samme som egenskapene på **[Visningsskjema](controls
 
 Slik legger du til navigering til og fra denne skjermen:
 
-1. Legg til en ekstra **[Knapp](controls/control-button.md)**-kontroll, angi **[Text](controls/properties-core.md)**-egenskapen til å vise **Avbryt**, og angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen: <br>**ResetForm( Form1 ); Back()**
+1. Legg til en ekstra **[Knapp](controls/control-button.md)**-kontroll, angi **[Text](controls/properties-core.md)**-egenskapen til å vise **Avbryt**, og angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen: <br>**ResetForm( Form1 );; Back()**
    
     Denne formelen forkaster eventuelle ulagrede endringer, og åpner den forrige skjermen.
    
@@ -269,7 +270,7 @@ Slik legger du til navigering til og fra denne skjermen:
     Når oppdateringene er lagret, åpnes forrige skjerm (i dette tilfellet detaljerskjermen) automatisk.
    
     ![Redigeringsskjema med en OnSuccess-regel lagt til](./media/working-with-forms/edit-icecream-onsuccess.png)
-3. Legg til en knapp på **Visning**-skjermen, angi **[Text-](controls/properties-core.md)** egenskapen til å vise**Rediger**, og angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:<br> **Navigate( Screen3, None )**
+3. Legg til en knapp på **Visning**-skjermen, angi **[Text-](controls/properties-core.md)** egenskapen til å vise**Rediger**, og angi **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:<br> **Navigate( Screen3; None )**
    
     ![Visningsskjema med en Rediger-knapp lagt til](./media/working-with-forms/viewform-icecream-edit.png)
 
@@ -288,7 +289,7 @@ Legg til en **Ny**-knapp på den første skjermen:
 
 1. Legg til en **[Knapp](controls/control-button.md)**-kontroll på skjermen med galleriet.
 2. Angi knappens **[Text](controls/properties-core.md)**-egenskap til **New** og **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:<br>
-   **NewForm( Form1 ); Navigate( Screen3, None )**
+   **NewForm( Form1 );; Navigate( Screen3; None )**
    
     Denne formelen bytter **[Redigeringsskjema](controls/control-form-detail.md)**-kontrollen på **Screen3** til **Ny** modus og åpner skjermen slik at brukeren kan fylle ut skjemaet.
 
@@ -299,7 +300,7 @@ Når Rediger og opprett-skjermen åpnes, er skjemaet tomt og klart for at bruker
 ## <a name="delete-a-record"></a>Å slette en post
 1. Legg til en knapp på **Visning** -skjermen, og angi **[Text](controls/properties-core.md)**-egenskapen til å vise **Slett**.
 2. Angi **[OnSelect](controls/properties-core.md)**-egenskapen for knappen til denne formelen:
-   <br>**Remove( 'Ice Cream', Gallery1.Selected ); Back()**
+   <br>**Remove( 'Ice Cream'; Gallery1.Selected );; Back()**
    
     ![Visningsskjema med en Rediger-knapp lagt til](./media/working-with-forms/viewform-icecream-remove.png)
 
@@ -340,14 +341,14 @@ Når brukeren velger Sorter-knappen, reverseres sorteringsrekkefølgen i galleri
 
 Formelen for **[Items](controls/properties-core.md)**-egenskapen for **[Galleri](controls/control-gallery.md)**-kontrollen bruker denne kontekstvariabelen, sammen med teksten i **TextSearchBox1**-kontrollen:
 
-```powerapps-dot
+```powerapps-comma
 Sort( 
-    If( IsBlank(TextSearchBox1.Text),
-        Assets,
-        Filter( Assets, TextSearchBox1.Text in Text(ApproverEmail) ) 
-    ),
-    ApproverEmail,
-    If(SortDescending1, Descending, Ascending) 
+    If( IsBlank(TextSearchBox1.Text);
+        Assets;
+        Filter( Assets; TextSearchBox1.Text in Text(ApproverEmail) ) 
+    );
+    ApproverEmail;
+    If(SortDescending1; Descending; Ascending) 
 )
 ```
 

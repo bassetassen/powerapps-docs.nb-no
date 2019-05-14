@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/10/2019
 ms.locfileid: "65526058"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="astype-and-istype-functions-in-canvas-apps"></a>Funksjonene AsType og IsType i lerretsapper
 
@@ -46,31 +47,31 @@ Den **AsType** funksjonen behandler en post referanse som en bestemt enhetstype,
 
 Bruk disse funksjonene sammen for å teste først enhetstypen for en post og behandle den som en oppføring av denne typen slik at feltene er tilgjengelige:
 
-```powerapps-dot
-If( IsType( First( Accounts ).Owner, Users ),
-    AsType( First( Accounts ).Owner, Users ).'Full Name',
-    AsType( First( Accounts ).Owner, Teams ).'Team Name'
+```powerapps-comma
+If( IsType( First( Accounts ).Owner; Users );
+    AsType( First( Accounts ).Owner; Users ).'Full Name';
+    AsType( First( Accounts ).Owner; Teams ).'Team Name'
 )
 ```
 
 Du trenger disse funksjonene bare hvis du har tilgang til feltene i en postreferanse. Du kan for eksempel bruke posten referanser i den [ **Filter** ](function-filter-lookup.md) fungere uten **IsType** eller **AsType**:
 
-```powerapps-dot
-Filter( Accounts, Owner = First( Users ) )
+```powerapps-comma
+Filter( Accounts; Owner = First( Users ) )
 ```
 
 På samme måte kan du bruke posten referanser med den [ **Patch** ](function-patch.md) funksjonen:
 
-```powerapps-dot
-Patch( Accounts, First( Accounts ), { Owner: First( Teams ) } )
+```powerapps-comma
+Patch( Accounts; First( Accounts ); { Owner: First( Teams ) } )
 ```  
 
 Hvis den brukes i en postkontekst som, slik som i en [ **galleriet** ](../controls/control-gallery.md) eller [ **redigeringsskjema** ](../controls/control-form-detail.md) kontroll, må du kanskje bruke den [global tvetydighetsoperatoren](operators.md#disambiguation-operator) å referere til enhetstypen. For eksempel denne formelen vil gjelde for et galleri som viser en liste med kontakter der **firmanavn** er en **kunden** oppslag.
 
-```powerapps-dot
-If( IsType( ThisItem.'Company Name', [@Accounts] ),
-    AsType( ThisItem.'Company Name', [@Accounts] ).'Account Name',
-    AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name'
+```powerapps-comma
+If( IsType( ThisItem.'Company Name'; [@Accounts] );
+    AsType( ThisItem.'Company Name'; [@Accounts] ).'Account Name';
+    AsType( ThisItem.'Company Name'; [@Contacts] ).'Full Name'
 )
 ```
 
@@ -80,12 +81,12 @@ Hvis posten referansen er *tom*, **IsType** returnerer *USANN*, og **AsType** re
 
 ## <a name="syntax"></a>Syntaks
 
-**AsType**( *RecordReference*, *EntityType* )
+**AsType**( *RecordReference*; *EntityType* )
 
 - *RecordReference* – obligatorisk. En postreferanse, ofte et oppslagsfelt som kan referere til en post i en av flere enheter.
 - *EntityType* – obligatorisk. Den bestemte enheten for som skal testes.
 
-**IsType**( *RecordReference*, *EntityType* )
+**IsType**( *RecordReference*; *EntityType* )
 
 - *RecordReference* – obligatorisk. En postreferanse, ofte et oppslagsfelt som kan referere til en post i en av flere enheter.
 - *EntityType* – obligatorisk. Spesifikke enheten du vil endre.
@@ -130,11 +131,11 @@ Hvis posten referansen er *tom*, **IsType** returnerer *USANN*, og **AsType** re
 
 1. Angi den **tekst** -egenskapen for **Subtitle1** til denne formelen:
 
-    ```powerapps-dot
-    If( IsBlank( ThisItem.'Company Name' ), "--",
-        IsType( ThisItem.'Company Name', [@Accounts] ),
-            "Account: " & AsType( ThisItem.'Company Name', [@Accounts] ).'Account Name',
-        "Contact: " & AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name'
+    ```powerapps-comma
+    If( IsBlank( ThisItem.'Company Name' ); "--";
+        IsType( ThisItem.'Company Name'; [@Accounts] );
+            "Account: " & AsType( ThisItem.'Company Name'; [@Accounts] ).'Account Name';
+        "Contact: " & AsType( ThisItem.'Company Name'; [@Contacts] ).'Full Name'
     )
     ```
 

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65206392"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-responsive-layouts-in-canvas-apps"></a>Opprette responsive oppsett i lerret-apper
 
@@ -44,9 +45,9 @@ Hvis du vil gjøre appen responsiv, må du gjøre mer for, men denne endringen e
 
 Hvis du vil gjøre appens oppsett reagere på endringer i skjermen dimensjonene, vil du skrive formler som bruker den **bredde** og **høyde** egenskaper til skjermen. Hvis du vil vise disse egenskapene, åpne en app i PowerApps Studio, og velg deretter en skjerm. Standard formlene for disse egenskapene vises på den **avansert** fanen i ruten til høyre.
 
-**Bredde** = `Max(App.Width, App.DesignWidth)`
+**Bredde** = `Max(App.Width; App.DesignWidth)`
 
-**Høyde** = `Max(App.Height, App.DesignHeight)`
+**Høyde** = `Max(App.Height; App.DesignHeight)`
 
 Disse formler refererer til den **bredde**, **høyde**, **DesignWidth**, og **DesignHeight** egenskapene til appen. Appens **bredde** og **høyde** samsvarer egenskapene med dimensjonene i vinduet enheten eller nettleseren som appen kjører. Hvis brukeren endrer størrelsen på nettleservinduet (eller roterer enheten hvis du har deaktivert **Lås retning**), verdiene for disse egenskapene endres dynamisk. Formlene i skjermens **bredde** og **høyde** egenskaper er evalueres på nytt når disse verdiene endres.
 
@@ -185,16 +186,16 @@ Så langt, har du lært hvordan du bruke formler til å endre størrelsen på hv
 
 Standard formlene for en skjerm **bredde** og **høyde** egenskaper, slik dette emnet som er beskrevet tidligere, vil ikke nødvendigvis gi en god opplevelse Hvis en bruker roterer en enhet. For eksempel en app som er utformet for en telefon i stående retning har en **DesignWidth** av 640 og en **DesignHeight** av 1136. Samme app på en telefon i liggende retning har disse egenskapsverdiene:
 
-- Skjermens **bredde** egenskapen er satt til `Max(App.Width, App.DesignWidth)`. Appens **bredde** (1136) er større enn den **DesignWidth** (640), slik at formelen evalueres til 1136.
-- Skjermens **høyde** egenskapen er satt til `Max(App.Height, App.DesignHeight)`. Appens **høyde** (640) er mindre enn den **DesignHeight** (1136), slik at formelen evalueres til 1136.
+- Skjermens **bredde** egenskapen er satt til `Max(App.Width; App.DesignWidth)`. Appens **bredde** (1136) er større enn den **DesignWidth** (640), slik at formelen evalueres til 1136.
+- Skjermens **høyde** egenskapen er satt til `Max(App.Height; App.DesignHeight)`. Appens **høyde** (640) er mindre enn den **DesignHeight** (1136), slik at formelen evalueres til 1136.
 
 Med en skjerm **høyde** av 1136 og en enhet høyde (i dette retning) for 640, må brukeren ruller skjermen loddrett for å vise alt innholdet, noe som kanskje ikke opplevelsen du ønsker.
 
 Tilpasse skjermens **bredde** og **høyde** egenskaper retningen på enheten, kan du bruke disse formlene:
 
-**Bredde** = `Max(App.Width, If(App.Width < App.Height, App.DesignWidth, App.DesignHeight))`
+**Bredde** = `Max(App.Width; If(App.Width < App.Height; App.DesignWidth; App.DesignHeight))`
 
-**Høyde** = `Max(App.Height, If(App.Width < App.Height, App.DesignHeight, App.DesignWidth))`
+**Høyde** = `Max(App.Height; If(App.Width < App.Height; App.DesignHeight; App.DesignWidth))`
 
 Disse formlene Bytt appens **DesignWidth** og **DesignHeight** verdier, basert på om enhetens bredde er mindre enn i høyde (stående retning) eller mer enn i høyde (liggende retning) .
 
@@ -209,10 +210,10 @@ Du kan bruke skjermens **retning** til å fastslå om skjermen er innrettet vann
 |--|----------|---|
 | **Øvre** | **X** | `0` |
 | **Øvre** | **Y** | `0` |
-| **Øvre** | **Bredde** | `If(Parent.Orientation = Layout.Vertical, Parent.Width, Parent.Width / 2)` |
-| **Øvre** | **Høyde**   | `If(Parent.Orientation = Layout.Vertical, Parent.Height / 2, Parent.Height)` |
-| **Lavere** | X | `If(Parent.Orientation = Layout.Vertical, 0, Upper.X + Upper.Width)`  |
-| **Lavere** | Y | `If(Parent.Orientation = Layout.Vertical, Upper.Y + Upper.Height, 0)` |
+| **Øvre** | **Bredde** | `If(Parent.Orientation = Layout.Vertical; Parent.Width; Parent.Width / 2)` |
+| **Øvre** | **Høyde**   | `If(Parent.Orientation = Layout.Vertical; Parent.Height / 2; Parent.Height)` |
+| **Lavere** | X | `If(Parent.Orientation = Layout.Vertical; 0; Upper.X + Upper.Width)`  |
+| **Lavere** | Y | `If(Parent.Orientation = Layout.Vertical; Upper.Y + Upper.Height; 0)` |
 | **Lavere** | **Bredde** | `Parent.Width - Lower.X` |
 | **Lavere** | **Høyde** | `Parent.Height - Lower.Y` |
 
@@ -239,12 +240,12 @@ Denne formelen returnerer **SANN** når størrelsen er Middels eller større og 
 
 Hvis du vil at en kontroll skal ha en annen brøkdel av skjermbredde basert på skjermstørrelse, angi kontrollens **bredde** egenskapen til denne formelen:
 
-```powerapps-dot
+```powerapps-comma
 Parent.Width *  
-    Switch(Parent.Size,  
-        ScreenSize.Small, 0.5,  
-        ScreenSize.Medium, 0.3,  
-        0.25)
+    Switch(Parent.Size;  
+        ScreenSize.Small; 0,5;  
+        ScreenSize.Medium; 0,3;  
+        0,25)
 ```
 Denne formelen angir bredden til kontrollen til halvdel av skjermen bredden på en liten skjerm, tre-tideler av skjermen bredden på en middels skjerm, og et kvartal i skjermen bredden på alle andre skjermer.
 
@@ -252,7 +253,7 @@ Denne formelen angir bredden til kontrollen til halvdel av skjermen bredden på 
 
 Skjermens **størrelsen** egenskapen beregnes ved å sammenligne skjermens **bredde** egenskapen til verdiene i appens **SizeBreakpoints** egenskapen. Denne egenskapen er en tabell med én kolonne med tall som angir bredden-stoppunkt som skiller de navngitte skjermstørrelser:
 
-I en app som er opprettet for nettbrett eller web, standard-verdi i appens **SizeBreakpoints** egenskapen er **[600, 900, 1200]**. Verdien er i en app som er opprettet for telefoner, **[1200, 1800, 2400]**. (Verdiene for telefonapper er dobbel fordi slike apper bruker koordinater som er effektivt dobbel koordinatene brukes i andre apper.)
+I en app som er opprettet for nettbrett eller web, standard-verdi i appens **SizeBreakpoints** egenskapen er **[600; 900; 1200]**. Verdien er i en app som er opprettet for telefoner, **[1200; 1800; 2400]**. (Verdiene for telefonapper er dobbel fordi slike apper bruker koordinater som er effektivt dobbel koordinatene brukes i andre apper.)
 
 ![standardverdier for App.SizeBreakpoints egenskap](media/create-responsive-layout/default-breakpoints.png)
 
