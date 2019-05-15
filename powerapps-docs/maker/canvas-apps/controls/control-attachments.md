@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 31b166dbe0257127d02f410182aaebb70e641da6
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: 9d24094bfbc596c232e7455ef3d8b8dcdfc5be5c
+ms.sourcegitcommit: 9b2648a9066fe5d3b27b3d893daacba9b18eb75e
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63320864"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65609373"
 ---
 # <a name="attachments-control-in-powerapps"></a>Vedlegg-kontrollen i PowerApps
 En kontroll som gjør at brukere kan laste ned filer på enhetene sine, samt laste opp og slette filer fra en SharePoint-liste eller en Common Data Service-enhet.
@@ -27,9 +27,9 @@ En kontroll som gjør at brukere kan laste ned filer på enhetene sine, samt las
 Vedleggskontrollen har disse begrensningene:
 1. Vedlegg støttes med SharePoint-lister og Common Data Service-enheter.
 
-1. Opplasting og sletting av funksjonalitet fungerer bare i et skjema.  Vedlegg-kontrollen ser deaktivert ut når den er i redigeringsmodus og ikke i et skjema. Vær oppmerksom på at hvis du vil lagre filtilføyelsene og slettingene i serverdelen, må sluttbrukeren lagre skjemaet.
+1. Last opp og sletting av funksjonalitet fungerer bare i et skjema. Vedlegg-kontrollen vises deaktivert når i redigeringsmodus og ikke i et skjema. Hvis du vil lagre filtilføyelsene og slettingene, må appen brukeren lagre skjemaet. På grunn av denne begrensningen, vedlegg-kontrollen er ikke tilgjengelig fra den **Sett inn** fane vises men i skjemaet når skjemaet vedlegg-feltet er aktivert i en SharePoint- eller Common Data Service-skjemaet.
 
-1. Du kan bare laste opp filer med opptil 10 MB.  
+1. Du kan laste opp filer bare hvis de er 10 MB eller mindre.  
 
 ## <a name="description"></a>Beskrivelse
 En **vedlegg** kontrollen kan du åpne, legge til og slette filer fra en SharePoint-liste eller en Common Data Service-enhet.
