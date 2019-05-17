@@ -7,35 +7,35 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 04/23/2019
+ms.date: 05/16/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0033d0a2d7473e6aaeac1e8533f62873e0d2f49a
-ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
+ms.openlocfilehash: e57cc541c753ff3f24f66a78c6e30d6e5683b41a
+ms.sourcegitcommit: 57dfad065318263e162e949e26b5c2684ba0dccb
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64670932"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65828169"
 ---
 # <a name="back-and-navigate-functions-in-powerapps"></a>Funksjonene Back og Navigate i PowerApps
+
 Endre hvilken skjerm som vises.
 
 ## <a name="overview"></a>Oversikt
+
 De fleste appene inneholder flere skjermer.  Bruk **Back**- og **Navigate**-funksjonene til å endre hvilken skjerm som vises. Du kan for eksempel angi **[OnSelect](../controls/properties-core.md)**-egenskapen til en knapp til en formel som inkluderer en **Navigate**-funksjon, hvis du ønsker å vise en annen skjerm når en bruker velger den knappen. I denne formelen kan du angi en visuell overgang, som **Nedtoning**, for å kontrollere hvordan en skjerm endres til en annen.  
 
-**Back** og **Navigate** endrer bare hvilken skjerm som vises. Skjermer som ikke vises for øyeblikket fortsetter å operere i bakgrunnen. Du kan opprette formler og henvise til egenskaper for kontroller på en annen skjerm. En bruker kan for eksempel endre verdien for en glidebryter på en skjerm, navigere til en annen skjerm som bruker den verdien i en formel, og se hvordan de påvirker det som skjer på den nye skjermen.  Brukeren kan deretter navigere tilbake til den opprinnelige skjermen og se at glidebryteren har beholdt verdien.
+**Back** og **Navigate** endrer bare hvilken skjerm som vises. Skjermer som ikke vises for øyeblikket fortsetter å operere i bakgrunnen. Du kan opprette formler og henvise til egenskaper for kontroller på andre skjermer. En bruker kan for eksempel endre verdien for en glidebryter på en skjerm, navigere til en annen skjerm som bruker den verdien i en formel og få rede hvordan de påvirker hva som skjer i den nye skjermen. Brukeren kan deretter gå tilbake til den opprinnelige skjermen og Bekreft at glidebryteren har beholdt verdien.
 
 [Kontekstvariabler](../working-with-variables.md#use-a-context-variable) beholdes også når en bruker navigerer mellom skjermer. Du kan bruke **Navigate** for å angi én eller flere kontekstvariabler for skjermen som formelen skal vise. Dette er den eneste måten du kan angi kontekstvariabler utenfor skjermen på. Du kan bruke denne fremgangsmåten for å sende parametre til en skjerm. Hvis du har brukt et annet programmeringsverktøy, er denne fremgangsmåten lik den for å sende parametre til prosedyrer.
 
-## <a name="description"></a>Beskrivelse
-### <a name="back"></a>Back
-**Back**-funksjonen viser skjermen som sist ble vist. Du trenger ikke å angi noen argumenter for denne funksjonen.
+Du kan bruke en av funksjonene i en [formel for virkemåte](../working-with-formulas-in-depth.md).
 
-### <a name="navigate"></a>Navigate
+## <a name="navigate"></a>Navigate
+
 Angi navnet på den første skjermen som skal vises i det første argumentet.  
 
  I det andre argumentet angir du hvordan den gamle skjermen endres til den nye:
@@ -53,14 +53,25 @@ Du kan bruke **Navigate** til å opprette eller oppdatere kontekstvariabler på 
 
 Angi **[OnHidden](../controls/control-screen.md)**-egenskapen til den forrige skjermen, **[OnVisible](../controls/control-screen.md)**-egenskapen til den nye skjermen, eller begge, for å foreta flere endringer i løpet av overgangen. **App.ActiveScreen**-egenskapen oppdateres for å gjenspeile endringen.
 
-**Back** returnerer som regel **sann**, men returnerer **usann** hvis brukeren befinner seg på den første skjermen som vises, og det ikke finnes en tidligere skjerm.  **Navigate** returnerer som regel **sann**, men returnerer **usann** hvis det oppstår et problem med ett av argumentene.
+**Navigere** returnerer som regel **SANN** , men returnerer **USANN** Hvis det oppstår en feil.
 
-Du kan bruke disse funksjonene bare i en [formel for virkemåte](../working-with-formulas-in-depth.md).
+## <a name="back"></a>Back
+
+Den **tilbake** -funksjonen returnerer til skjermen som sist ble vist.
+
+For hver **Navigate** kall, appen sporer skjermen som ble vist og overgangen. Du kan bruke etterfølgende **tilbake** kall til å returnere helt til skjermen som vises når brukeren startet appen.
+
+Når den **tilbake** funksjonen kjører, eller INVERS overgangen brukes som standard. For eksempel, hvis en skjerm vises gjennom den **CoverRight** overgang, **tilbake** bruker **UnCover** (som er til venstre) til å returnere.  **Ton** og **ingen** er sine egne inverses. Sende et valgfritt argument til **tilbake** tvinge en bestemt overgang.
+
+**Tilbake** returnerer som regel **SANN** , men returnerer **USANN** Hvis brukeren ikke har navigert til en annen skjerm etter at du startet appen.
 
 ## <a name="syntax"></a>Syntaks
-**Back**()
 
-**Navigere**( *skjermen* [; *overgang* [; *UpdateContextRecord* ]])
+**Tilbake**([ *overgang* ])
+
+* *Overgang* – valgfritt. Den visuelle overgangen som skal brukes mellom gjeldende skjerm og forrige skjermbilde. Se listen over gyldige verdier for dette argumentet tidligere i dette emnet. Som standard er overgangen en skjerm som returnerer inverse av overgangen som det har vært.
+
+**Navigere**( *skjermen* [, *overgang* [, *UpdateContextRecord* ]])
 
 * *Screen* – obligatorisk. Skjermen som skal vises.
 * *Overgang* – valgfritt.  Den visuelle overgangen som skal brukes mellom gjeldende skjerm og den nye skjermen. Se listen over gyldige verdier for dette argumentet tidligere i dette emnet. Standardverdien er **ingen**.
@@ -71,16 +82,42 @@ Du kan bruke disse funksjonene bare i en [formel for virkemåte](../working-with
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **Navigere (detaljer)** |Viser **Details**-skjermen uten overgang eller endring i verdi for en kontekstvariabel. |**Detaljer**-skjermen vises raskt. |
-| **Navigate( Details; ScreenTransition.Fade )** |Viser **Detaljer**-skjermen med en **Tone**-overgang.  Ingen verdier for en kontekstvariabel endres. |Den gjeldede skjermen tones ned for å vise **Details**-skjermen. |
-| **Navigate( Details; ScreenTransition.Fade; {&nbsp;ID:&nbsp;12&nbsp;} )** |Viser **Details**-skjermen med en **Fade**-overgang, og oppdaterer verdien til kontekstvariabelen **ID** til **12**. |Den gjeldende skjermen tones ned for å vise **Details**-skjermen, og kontekstvariabelen **ID** på den skjermen som angis til **12**. |
-| **Navigate( Details; ScreenTransition.Fade; {&nbsp;ID:&nbsp;12&nbsp;;&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Viser **Detaljer**-skjermen med en **Tone**-overgang. Oppdaterer verdien til kontekstvariabelen **ID** til **12**, og oppdaterer verdien til kontekstvariabelen **Shade** til **Color.Red**. |Den gjeldede skjermen tones ned for å vise **Details**-skjermen. Kontekstvariabelen **ID** på **Detaljer**-skjermen angis til **12**, og kontekstvariabelen **Nyanse** angis til **Color.Red**. Hvis du angir **Fyll**-egenskapen til en kontroll på **Detaljer**-skjermen til **Nyanse**, vises denne kontrollen i rødt. |
+| **Navigate( Details, ScreenTransition.Fade )** |Viser **Detaljer**-skjermen med en **Tone**-overgang.  Ingen verdier for en kontekstvariabel endres. |Den gjeldede skjermen tones ned for å vise **Details**-skjermen. |
+| **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** |Viser **Details**-skjermen med en **Fade**-overgang, og oppdaterer verdien til kontekstvariabelen **ID** til **12**. |Den gjeldende skjermen tones ned for å vise **Details**-skjermen, og kontekstvariabelen **ID** på den skjermen som angis til **12**. |
+| **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Viser **Detaljer**-skjermen med en **Tone**-overgang. Oppdaterer verdien til kontekstvariabelen **ID** til **12**, og oppdaterer verdien til kontekstvariabelen **Shade** til **Color.Red**. |Den gjeldede skjermen tones ned for å vise **Details**-skjermen. Kontekstvariabelen **ID** på **Detaljer**-skjermen angis til **12**, og kontekstvariabelen **Nyanse** angis til **Color.Red**. Hvis du angir **Fyll**-egenskapen til en kontroll på **Detaljer**-skjermen til **Nyanse**, vises denne kontrollen i rødt. |
+| **Back()** | Viser forrige skjerm med standard return overgangen. | Viser forrige skjerm gjennom INVERS overgangen for overføringen som den gjeldende skjermen vises. |
+| **Tilbake (ScreenTransition.Cover)** |  Viser forrige skjerm med den **dekker** overgang. | Viser forrige skjerm gjennom den **dekker** overgang, uavhengig av overgangen som den gjeldende skjermen vises. |
 
 ### <a name="step-by-step"></a>Trinnvis
-1. Gi standardskjermen navnet **DefaultScreen**, legg til en etikett, og angi **[Tekst](../controls/properties-core.md)**-egenskapen til etiketten slik at den viser **Standard**.
-2. Legg til en skjerm, og kall den **AddlScreen**.
-3. Legg til en etikett for **AddlScreen**, og angi **[Tekst](../controls/properties-core.md)**-egenskapen til etiketten slik at den viser **Addl**.
-4. Legg til en knapp i **AddlScreen**, og angi knappens **[OnSelect](../controls/properties-core.md)**-egenskap til denne funksjonen:<br>**Navigate(DefaultScreen; ScreenTransition.Fade)**
-5. Trykk på F5 fra **AddlScreen**, og velg deretter knappen.<br>**DefaultScreen** vises gjennom en uttonet overgang.
+
+1. Opprett en tom app.
+
+1. Legg til en skjerm til den.
+
+    Appen inneholder to tomme skjermer: **Screen1** og **skjerm2**.
+
+1. Angi den **Fyll** -egenskapen for **Screen2** til verdien `Gray`.
+
+1. På **Screen2**, Legg til en knapp, og angi dens **[OnSelect](../controls/properties-core.md)** egenskapen til denne formelen:
+
+    ```powerapps-dot
+    Navigate( Screen1, ScreenTransition.Cover )
+    ```
+
+1. Mens du holder nede den **Alt** nøkkel, velg knappen.
+
+    **Screen1** vises med en hvit bakgrunn gjennom en overgang som dekker til venstre.
+
+1. På **Screen1**, Legg til en knapp, og angi dens **OnSelect** egenskapen til denne formelen:
+
+    ```powerapps-dot
+    Back()
+    ```
+
+1. Mens du holder nede den **Alt** nøkkel, velg knappen.
+
+    Det andre skjermbildet vises med en grå bakgrunn gjennom en overgang som avdekker til høyre (inverse av **dekker**).
+
+1. Velg knappen på hver skjerm flere ganger for å bytte.
 
 [Et annet eksempel](../add-screen-context-variables.md)
-
