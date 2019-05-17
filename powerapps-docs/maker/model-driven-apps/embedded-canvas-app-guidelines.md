@@ -3,7 +3,7 @@ title: Retningslinjer for arbeid med innebygde lerretapper | MicrosoftDocs
 ms.custom: ''
 ms.date: 01/07/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
@@ -55,9 +55,10 @@ Dette emnet gir veiledning om hvordan du arbeider med innebygde lerretapper, sam
      - For å referere til oppføringen direkte kan du bruke [First-funksjonen](../canvas-apps/functions/function-first-last.md). Eksempel: First(ModelDrivenFormIntegration.Data).Name
 -   Manuell endring av app-ID-en i egenskapene til lerretappkontrollen må unngås så langt som mulig.
      - App-ID-en til lerretappen genereres automatisk og fylles ut for deg. 
-     - Hvis du av en eller annen grunn må redigere den manuelt, må du kontrollere at alle app-ID-er du bruker, tilsvarer en *innebygd* lerretapp og ikke bare en frittstående lerretapp.
+     - Hvis du av en eller annen grunn må redigere den manuelt, må du kontrollere at alle app-ID-er du bruker, tilsvarer en *innebygd* lerretapp og ikke bare en frittstående lerretapp. 
      - Den innebygde lerretappen må også opprettes med samme datakontekst som det modelldrevne skjemaet sender.
-     - Når du har oppdatert app-IDen, velg **Tilpass** for å koble til den nye appen.
+     - Når du har oppdatert app-IDen, velg **Tilpass** for å åpne det i PowerApps Studio og koble til den nye appen.
+     - Gjør en liten endring i appen for å sette den inn i en ulagret tilstand, og lagre og publiser deretter appen.
 - Når du viser et modelldrevet skjema med en innebygd lerretapp, hvis det vises en feilmelding om "Beklager, vi fant ikke denne appen", må du forsikre deg om at den innebygde lerretappen er i den samme løsningen som det modelldrevne skjemaet.
 - Når du viser et modelldrevet skjema med en innebygd lerretapp, hvis det vises en feilmelding om "Det ser ut til at du ikke har tilgang til denne appen. Be eieren om å dele den med deg", sørg for at forfatteren har delt den innebygde lerretappen med deg. Mer informasjon: [Dele en innebygd lerretapp](share-embedded-canvas-app.md).
 
@@ -78,10 +79,12 @@ Dette emnet gir veiledning om hvordan du arbeider med innebygde lerretapper, sam
 - Når du oppretter en ny oppføring, vises ikke en innebygd lerretapp i et skjema selv etter at oppføringen er lagret. 
 -    ModelDrivenFormIntegration.Data-objektet fungerer for øyeblikket ikke med kontrollene for visningsskjema og redigeringsskjema.
 - Du kan ikke bruke **Lerretapp**-rettigheten i en sikkerhetsrolle for å gi appbrukere tilgang til enten en innebygd eller frittstående lerretapp. For mer informasjon om å dele en innebygd lerretapp, kan du se: [Dele en innebygd lerretapp](share-embedded-canvas-app.md).
-- Hvis du skriver tilbake de samme dataene som vises i det vertsmodelldrevne skjemaet, fortsetter skjemaet å vise gamle data helt til det blir oppdatert. 
+- Hvis du skriver tilbake de samme dataene som vises i det vertsmodelldrevne skjemaet, fortsetter skjemaet å vise gamle data helt til det blir oppdatert. En enkel måte å gjøre det på er å bruke [RefreshForm](embedded-canvas-app-actions.md)-metoden.
+- Hvis du ikke ser IntelliSense for [metodene for å utføre forhåndsdefinerte handlinger](embedded-canvas-app-actions.md) i innebygde lerretapper som er opprettet før funksjonaliteten gjøres tilgjengelig, kan du lagre, lukke og åpne appen på nytt. 
 
 ## <a name="see-also"></a>Se også
 [Bygge inne en lerretapp i et modelldrevet skjema](embed-canvas-app-in-form.md) <br />
 [Sende gjeldende oppføring som datakontekst til en innebygd lerretapp](pass-current-embedded-canvas-app.md) <br />
 [Sende en liste over relaterte oppføringer som datakontekst til en innebygd lerretapp](pass-related-embedded-canvas-app.md) <br />
+[Utføre forhåndsdefinerte handlinger på vertsskjemaet fra en innebygd lerretapp](embedded-canvas-app-actions.md) <br />
 [Dele en innebygd lerretapp](share-embedded-canvas-app.md)

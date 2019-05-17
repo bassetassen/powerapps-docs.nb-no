@@ -4,7 +4,7 @@ description: I dette emnet lærer du hvordan du får tilgang til enhetsvisninger
 ms.custom: ''
 ms.date: 11/27/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -31,7 +31,7 @@ search.app:
 ## <a name="open-a-view-for-editing-in-the-latest-view-designer"></a>Åpne en visning for redigering i den nyeste visningsutformingen
 
 > [!IMPORTANT]
-> Den nyeste versjonen av visningsutforming kan nå forhåndsvises. Noen funksjoner, som avansert filtrering, egendefinerte kontroller og kolonneegenskaper støttes ikke ennå. For å utføre disse oppgavene [åpne visningen i den klassiske visningsutformingen](#open-a-view-in-solution-explorer).
+> Den nyeste versjonen av visningsutforming kan nå forhåndsvises. Noen funksjoner, som avansert filtrering, egendefinerte kontroller og kolonneegenskaper støttes ikke ennå. For å utføre disse oppgavene [åpner du en visning for redigering i løsningsutforskeren](#open-a-view-for-editing-in-solution-explorer).
 
 1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 

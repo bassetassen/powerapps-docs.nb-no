@@ -3,7 +3,7 @@ title: Velge og konfigurere kolonner i modelldrevne appvisninger i PowerApps | M
 description: Lær hvordan du kan velge og konfigurere visninger for appen
 keywords: ''
 ms.date: 11/27/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: null
 ms.topic: article
 applies_to:
@@ -46,7 +46,7 @@ search.app:
   > Den nyeste versjonen av visningsutforming kan nå forhåndsvises. Noen funksjoner, som å aktivere eller deaktivere tilstedeværelse for en kolonne, og legge til søkekolonner, støttes ikke. For å utføre disse oppgavene [åpne visningen i den klassiske visningsutformingen](/dynamics365/customer-engagement/customize/create-and-edit-views#open-the-classic-view-designer).
   >  -   [Aktivere eller deaktivere tilstedeværelse for en kolonne](/dynamics365/customer-engagement/customize/choose-and-configure-columns#BKMK_EnableOrDisablePresence)  
   >
-  >  -   [Legge til søkekolonner](choose-and-configure-columns.md#BKMK_AddFindColumns)  
+  >  -   [Legge til søkekolonner](/dynamics365/customer-engagement/customize/choose-and-configure-columns#BKMK_AddFindColumns) 
 
 
 
@@ -111,6 +111,8 @@ Klikk og dra kolonneoverskriften til riktig posisjon.
   
 > [!TIP]
 >   Du kan også velge overskriften for kolonnen du vil flytte, og velg fra rullegardinlisten **Flytt til høyre** eller **Flytt til venstre**.  
+
+
   
 ## <a name="next-steps"></a>Neste trinn
 [Opprette eller redigere visninger](create-edit-views.md)

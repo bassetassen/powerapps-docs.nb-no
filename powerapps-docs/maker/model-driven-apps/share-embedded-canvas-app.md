@@ -3,7 +3,7 @@ title: Dele en innebygd lerretapp | MicrosoftDocs
 ms.custom: ''
 ms.date: 01/07/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
@@ -42,4 +42,5 @@ Innebygde lerretapper er også løsningsavhengige. Som standard opprettes inneby
 [Bygge inne en lerretapp i et modelldrevet skjema](embed-canvas-app-in-form.md) <br />
 [Sende gjeldende oppføring som datakontekst til en innebygd lerretapp](pass-current-embedded-canvas-app.md) <br />
 [Sende en liste over relaterte oppføringer som datakontekst til en innebygd lerretapp](pass-related-embedded-canvas-app.md) <br />
+[Utføre forhåndsdefinerte handlinger på vertsskjemaet fra en innebygd lerretapp](embedded-canvas-app-actions.md) <br />
 [Retningslinjer for arbeid med innebygde lerretapper](embedded-canvas-app-guidelines.md)

@@ -3,7 +3,7 @@ title: Opprette og redigere offentlige visninger eller systemvisninger for model
 description: Finn ut hvordan du oppretter eller redigerer visninger ved hjelp av apputforming
 keywords: ''
 ms.date: 11/27/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: null
 ms.topic: article
 applies_to:
@@ -57,7 +57,7 @@ Som appfremstiller kan du opprette og redigere offentlige visninger ved hjelp av
 
 4. Angi et navn og eventuelt en beskrivelse i dialogboksen **Opprett en visning**, og velg deretter **Opprett**. 
     
-5. I redigeringsprogrammet for visning velger du plussknappen for å legge til flere kolonner som skal vises i visningen. Mer informasjon: [Legge til en kolonne i visningen](#add-a-column-to-your-view)
+5. I redigeringsprogrammet for visning velger du plussknappen for å legge til flere kolonner som skal vises i visningen. Mer informasjon: [Legge til en kolonne i visningen i apputforming](#add-a-column-to-your-view-in-app-designer) 
 
    ![Legg til kolonne](../common-data-service/media/add-column-to-view.png)
 

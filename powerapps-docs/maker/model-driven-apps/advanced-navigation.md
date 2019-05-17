@@ -6,9 +6,9 @@ author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.custom: ''
-ms.date: 10/30/2018
+ms.date: 04/11/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -39,9 +39,9 @@ Bruk løsningsutforsker til å utføre apputviklings- og tilpasningsoppgaver som
 
 1.  Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2.  I navigasjonsruten til venstre, velger du **Løsninger**.  
-3.  Velg **Bytt til Vanlig** på verktøylinjen for å åpne løsningsutforskeren. 
-
+3.  Velg **Bytt til Vanlig** på verktøylinjen for å åpne visningen **Alle løsninger**. 
     Legg merke til at kommandoen **Bytt til Vanlig** ikke er tilgjengelig når du velger en løsning i listen.
+4.  Velg løsningen du vil bruke, i listen over tilgjengelige løsninger i **Visningsnavn**-kolonnen for å åpne løsningsutforskeren.
 
 ## <a name="apps"></a>Apper
 Apper-området viser alle modelldrevne apper og lerretsapper som du har rettigheter til i miljøet. I tillegg til å starte en app fra Apper-området kan du også tilordne sikkerhetsroller til den. 

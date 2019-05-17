@@ -75,16 +75,13 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Legg til eksisterende komponent i en løsning](media/solution-add-existing-component.PNG "Legg til eksisterende komponent i en løsning")  
   
- Med administrerte løsninger blir ingen kommandoer tilgjengelige, og du vil se meldingen nedenfor. Du må finne komponenten i løsningen kalt **standardløsning**, og prøve å redigere den der eller legge den til i en annen uadministrert løsning som du har opprettet. Komponenten kan kanskje ikke tilpasses. Mer informasjon: [Forvaltede egenskaper](solutions-overview.md#managed-properties)
+ Med administrerte løsninger er bare bestemte kommandoer tilgjengelige, og du vil se meldingen nedenfor. Du må finne komponenten i løsningen kalt **standardløsning**, og prøve å redigere den der eller legge den til i en annen uadministrert løsning som du har opprettet. Komponenten kan kanskje ikke tilpasses. Mer informasjon: [Forvaltede egenskaper](solutions-overview.md#managed-properties)
 
 > [!div class="mx-imgBorder"]  
 > ![Administrert løsning](media/managed-solution.PNG "Administrert løsning")  
 
  Mange av tilpassingene du vil gjøre, omfatter enheter. Du kan bruke **Enhet**-filteret for å vise en liste over alle enheter i gjeldende løsning som kan tilpasses på et eller annet vis. Når du driller ned i en enhet, kan du se komponentene som er en del av enheten, som vist med enheten for forretningsforbindelsen i følgende skjermbilde. 
- 
-> [!NOTE]
->  Når du for øyeblikket legger til en eksisterende enhet i en løsning, legger systemet automatisk til alle komponentene som er en del av enheten i løsningen. Hvis dette ikke er det du ønsker, kan du bruke kommandoen **Bytt til klassisk** for å navigere til den klassiske opplevelsen og legge til bare komponenter som du ønsker. <!-- We will soon improve this experience from PowerApps and allow you to select only the specific component(s) under entity that you want to add into a solution. -->
-  
+   
 > [!div class="mx-imgBorder"]  
 > ![Demo-løsning som viser utvidet enhet for forretningsforbindelse](media/solution-entity-account.png "Demo-løsning som viser utvidet enhet for forretningsforbindelse")  
 
@@ -94,18 +91,18 @@ Du kan vise den klassiske løsningsutforskeren i PowerApps ved å velge **Løsni
 
 ## <a name="known-limitations"></a>Kjente begrensninger
 
-- Sletting eller fjerning av en administrert løsning sletter ikke lerretappen i PowerApps.
 - Egendefinerte koblinger er ikke tilgjengelig i en løsning.
 - Lerretapper må åpnes etter en løsning er importert for å oppdatere tilkoblinger.
-- Når du legger til en eksisterende SDK-samling, vises den ikke i løsningen. 
 - Hvis en lerretapp er pakket i en administrert løsning, kan den fremdeles redigeres i målmiljøet.
 - Avhengigheter er ikke tilgjengelig for lerretapper.
 - Når du sletter en administrert løsning, rulles det ikke tilbake til en annen lerretappversjon. 
 -   Lerretapptilgang (CRUD og sikkerhet) administreres helt i PowerApps og ikke Common Data Service (Common Data Service)-databasen.
 -   Common Data Service API-er for å kalle lerretapper blokkeres og returnerer ikke noe. 
--   Lerretapper som er opprettet i en løsning, kan ikke deles som medeier til en AAD-sikkerhetsgruppe.
+-   Lerretapper og flyter som er opprettet i en løsning, kan ikke deles som medeier til en AAD-sikkerhetsgruppe.
 -   Lerretapper vil ikke vises i den klassiske løsningsutforskeren.
--   Eksisterende lerretapper er ikke løsningsavhengige. 
+- Flyter utløst av knappen, er ikke tilgjengelige i løsninger.
+- Flyter utløst av lerretappen, er ikke tilgjengelige i løsninger.
+- Flyter utløst fra Microsoft 365-programmer, for eksempel SharePoint og Excel, er ikke tilgjengelige i løsninger.
 
  For mer informasjon om tilpassing av individuelle komponenter i en løsning, kan du se følgende emner:  
   

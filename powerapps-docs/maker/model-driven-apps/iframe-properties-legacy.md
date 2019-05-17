@@ -41,7 +41,7 @@ Følg denne fremgangsmåten for å vise iFrame-egenskaper.
 |---------|--------------|-----------------|  
 |**Generelt**|**Navn**|**Nødvendig**: Angi et unikt navn for iFrame. Navnet kan bare inneholde alfanumeriske tegn og understrekingstegn.|  
 ||**URL-adresse**|**Nødvendig**: URL-adressen for siden som skal vises i en iFrame.|  
-||**Send typekode for oppføringsobjekt og unik identifikator som parametere.**|Data om organisasjonen, bruker og oppføringen kan sendes til iFrame. Mer informasjon: [Sende parametere til iFrame](iframe-properties-legacy.md#BKMK_PassParametersToIFRAMEs).|  
+||**Send typekode for oppføringsobjekt og unik identifikator som parametere.**|Data om organisasjonen, bruker og oppføringen kan sendes til iFrame. Mer informasjon: [Sende parametere til iFrame](#pass-parameters-to-iframes). |  
 ||**Etikett**|**Nødvendig**: En etikett som skal vises i iFrame.|  
 ||**Vis etikett i skjemaet**|Angir om feltet skal vises.|  
 ||**Begrens skript på tvers av rammer der det støttes**|Det regnes som en sikkerhetsrisiko å tillate sider fra et annet nettsted å samhandle med Dynamics 365-programmet ved hjelp av skript. Bruk dette alternativet til å begrense skript på tvers av rammer for sider du ikke har kontroll over.<br /><br />|  

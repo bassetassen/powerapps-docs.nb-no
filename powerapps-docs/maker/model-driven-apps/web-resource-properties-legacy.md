@@ -9,7 +9,7 @@ applies_to:
   - powerapps
 ms.author: matp
 manager: kvivek
-ms.date: 06/27/2018
+ms.date: 04/03/2019
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 82cd41ea-95b0-4606-9e7d-43eb5ce9ecd6
@@ -36,8 +36,10 @@ Dette åpner dialogboksen **Legg til webressurs** eller **Egenskaper for webress
 
 ![Dialogboksen Legg til webressurs](media/add-web-resource-dialog.png)
 
+> [!IMPORTANT]
+> Du må velge alternativet **Synlig som standard** for at webressursen skal vises i skjemaet og være tilgjengelig for brukere.
 
-## <a name="web-resource-properties"></a>Egenskaper for webressurs
+## <a name="web-resource-properties"></a>Egenskaper for webressurser
 
  Dialogboksen **Legg til webressurs** eller **Egenskaper for webressurs** har to og av og til tre kategorier, avhengig av typen webressurs.
 

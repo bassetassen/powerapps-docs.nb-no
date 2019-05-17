@@ -67,7 +67,7 @@ Hvis du vil følge dette emnet, må du bytte til et [miljø](../canvas-apps/work
 
 1. I listen **Primært feltnavn** klikker eller trykker du på **Kontaktperson**, og klikker eller trykker deretter på **Neste** i nedre høyre hjørne.
 
-    Du kan angi et annet primært feltnavn, tilordne en annen kolonne i kildetabellen til hvert felt i enheten som du oppretter, eller begge deler. For å følge denne opplæringen nøyaktig, beholder du standardkolonnetilordningen.
+    Du kan angi et annet primært feltnavn, tilordne en annen kolonne i kildetabellen til hvert felt i enheten som du oppretter, eller begge deler. Du kan også angi om tekstkolonner i spørringsutdataene skal opprettes som enten tekst med flere linjer eller en enkelt linje med tekst i Common Data Service. For å følge denne opplæringen nøyaktig, beholder du standardkolonnetilordningen.
 
 1. Når **lastestatusen** er **fullført**, velger du **Ferdig** i nedre høyre hjørne.
 

@@ -37,7 +37,7 @@ For enkelte enheter, for eksempel forretningsforbindelse og bruker, følger visu
   
 <a name="BKMK_Querydata"></a>   
 ## <a name="query-hierarchical-data"></a>Spørre hierarkiske data  
- I Common Data Service støttes hierarkiske datastrukturer av selvrefererende relasjoner av typen én-til-mange (1:N) for de relaterte oppføringene. Tidligere måtte du spørre iterativt etter de relaterte oppføringene for å vise hierarkiske data. Nå kan du spørre de relaterte dataene som et hierarki, i ett trinn. Du kan spørre etter enhetsoppføringene ved hjelp av logikken **Under** og **Ikke under**. De hierarkiske operatorene **Under** og **Ikke under** vises i Avansert søk og redigeringsprogrammet for arbeidsflyt. Hvis du vil ha mer informasjon om hvordan du bruker disse operatorene, kan du se [Konfigurere arbeidsflyttrinn](/flow/configure-workflow-steps). Hvis du vil ha mer informasjon om avansert søk, kan du se [Opprette, redigere eller lagre et søk i Avansert søk](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search).  
+ I Common Data Service støttes hierarkiske datastrukturer av selvrefererende relasjoner for de relaterte oppføringene. Tidligere måtte du spørre iterativt etter de relaterte oppføringene for å vise hierarkiske data. Nå kan du spørre de relaterte dataene som et hierarki, i ett trinn. Du kan spørre etter enhetsoppføringene ved hjelp av logikken **Under** og **Ikke under**. De hierarkiske operatorene **Under** og **Ikke under** vises i Avansert søk og redigeringsprogrammet for arbeidsflyt. Hvis du vil ha mer informasjon om hvordan du bruker disse operatorene, kan du se [Konfigurere arbeidsflyttrinn](/flow/configure-workflow-steps). Hvis du vil ha mer informasjon om avansert søk, kan du se [Opprette, redigere eller lagre et søk i Avansert søk](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search).  
   
  Eksemplene nedenfor viser ulike scenarier for hierarkispørring:  
   
@@ -53,17 +53,22 @@ For enkelte enheter, for eksempel forretningsforbindelse og bruker, følger visu
   
  ![Spørre etter forretningsforbindelsens tilknyttede salgsmuligheter](media/query-account-related-opportunities.png "Spørre etter forretningsforbindelsens tilknyttede salgsmuligheter")  
   
- Hvis du vil spørre dataene som et hierarki, må du sette én av enhetens selvrefererende relasjoner av typen én-til-mange (1:N) til hierarkisk. Slik slår du på hierarkiet:  
+ Hvis du vil spørre dataene som et hierarki, må du sette én av enhetens selvrefererende relasjoner av typen én-til-mange til hierarkisk. Slik slår du på hierarkiet:  
   
-1.  Åpne [løsningsutforskeren](../model-driven-apps/advanced-navigation.md#solution-explorer). 
-  
-2.  Velg ønsket enhet, velg **1:N-relasjoner**, og velg deretter en relasjon (1:N). 
 
-3.  I **Relasjonsdefinisjon** setter du **Hierarkisk** til **Ja**.  
+1. På [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) utvider du **Data**-delen og klikker eller trykker på **Enheter** i den venstre navigasjonsruten.
+
+2. Klikk eller trykk på en eksisterende enhet, eller [opprett en ny enhet](data-platform-create-entity.md)
+
+3. Klikk på **Relasjoner**.
+
+4.  Velg en selvreferensiell relasjon.
+
+5.  I detaljpanelet for relasjonen merker du av for **Hierarkisk**.  
   
 > [!NOTE]
-> - Noen av de medfølgende (1:N)-relasjonene kan ikke tilpasses. Dette vil hindre deg i å angi disse relasjonene som hierarkiske.  
-> - Du kan angi en hierarkisk relasjon for de selvreferensielle relasjonene for systemet. Dette inkluderer de selvrefererende relasjonene (1:N) av systemtype, for eksempel "contact_master_contact"-forholdet.  
+> - Noen av de medfølgende relasjonene kan ikke tilpasses. Dette vil hindre deg i å angi disse relasjonene som hierarkiske.  
+> - Du kan angi en hierarkisk relasjon for de selvreferensielle relasjonene for systemet. Dette inkluderer selvrefererende relasjoner av systemtype, for eksempel "contact_master_contact"-forholdet.  
   
 <a name="BKMK_Visualizedata"></a>   
 ## <a name="visualize-hierarchical-data"></a>Visualisere hierarkiske data  
@@ -85,18 +90,19 @@ For enkelte enheter, for eksempel forretningsforbindelse og bruker, følger visu
   
  Viktig å huske når du lager visualiseringer:  
   
--   Bare én selvrefererende relasjon av typen (1:N) per enhet kan angis som hierarkisk. Hovedenheten og den relaterte enheten må være av samme type i denne relasjonen, for eksempel account_parent_account eller new_new_widget_new_widget.  
+-   Bare én selvrefererende relasjon av typen (1:N) per enhet kan angis som hierarkisk. Hovedenheten og den relaterte enheten må være av samme type i denne relasjonen, for eksempel account_parent_account eller Widget_new_Widget_new_Widget.  
   
 -   For øyeblikket er et hierarki eller en visualisering bare basert på én enhet. Du kan vise hierarkiet for forretningsforbindelser med forretningsforbindelser på flere nivåer, men du kan ikke vise forretningsforbindelser og kontakter i samme hierarkivisualisering.  
   
 -   Maksimalt antall felt som kan vises i en flis, er fire. Hvis du legger til flere felt i hurtigskjemaet som brukes for rutevisningen, vises bare de første fire feltene.  
   
 ### <a name="visualization-example"></a>Eksempel på visualisering  
- La oss se på et eksempel som viser hvordan en visualisering for en egendefinert enhet lages. Vi har opprettet en egendefinert enhet kalt new_Widget, opprettet en selvreferensiell relasjon av typen (1:N) **new_new_widget_new_widget** og merket den som hierarkisk, som vist her.  
-  
- ![Relasjonsdefinisjon for kontrollprogram](media/widget-relationship-definition.png "Relasjonsdefinisjon for kontrollprogram")  
-  
- I rutenettvisningen **Hierarkiinnstillinger** valgte vi deretter den hierarkiske relasjonen **new_new_widget_new_widget**. Vi fylte ut de obligatoriske feltene i skjemaet. Hvis du ennå ikke har merket (1:N)-relasjonen som hierarkisk, tar koblingen i skjemaet deg tilbake til skjemaet for relasjonsdefinisjon der du kan merke relasjonen som hierarkisk.  
+ La oss se på et eksempel som viser hvordan en visualisering for en egendefinert enhet lages. Vi har opprettet en egendefinert enhet kalt new_Widget, opprettet en selvreferensiell relasjon og merket den som hierarkisk, som vist her:  
+ 
+> [!div class="mx-imgBorder"] 
+> ![Relasjonsdefinisjon for kontrollprogram](media/widget-relationship-definition.png "Relasjonsdefinisjon for kontrollprogram")  
+   
+ I rutenettvisningen **Hierarkiinnstillinger** valgte vi deretter den hierarkiske relasjonen **Widget_new_Widget_new_Widget**. Vi fylte ut de obligatoriske feltene i skjemaet. Hvis du ennå ikke har merket relasjonen som hierarkisk, tar koblingen i skjemaet deg tilbake til det klassiske enhetsredigeringsprogrammet, der du også kan merke relasjonen som hierarkisk.  
   
  For **hurtigvisningsskjemaet** opprettet vi et hurtigskjema med navnet **Widget Hierarchy Tile Form**. I dette skjemaet la vi til fire felt som skal vises i hver flis.  
   

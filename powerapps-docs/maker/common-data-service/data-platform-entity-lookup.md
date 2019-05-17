@@ -25,13 +25,13 @@ Du kan opprette flere typer relasjoner fra én enhet til en annen (eller mellom 
 * **Én-til-mange** – I denne relasjonstypen kan hver oppføring i enhet B samsvare med mer enn én oppføring i enhet A, men hver oppføring i enhet A kan bare samsvare med én oppføring i enhet B. En enkelt lærer underviser for eksempel mange klasser.
 * **Mange-til-mange** – I denne relasjonstypen kan hver oppføring i enhet A samsvare med mer enn én oppføring i enhet B, og omvendt. Elever kan for eksempel delta i mange klasser, og hver klasse kan ha flere elever.
 
+I tillegg kan du angi avansert overlappende funksjonalitet i mange-til-én og én-til-mange-relasjoner når en handling utføres på den overordnede enheten.
+
 ## <a name="add-a-lookup-field-many-to-one-relationship"></a>Legge til et oppslagsfelt (mange-til-én-relasjon)
 
 Hvis du vil legge til en oppslagsrelasjon til en enhet, kan du opprette en relasjon under kategorien **Relasjoner** og angi enheten som du vil opprette en relasjon til.
 
 1. På [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) utvider du **Data**-delen og klikker eller trykker på **Enheter** i den venstre navigasjonsruten.
-
-    ![Enhetsdetaljer](./media/data-platform-cds-create-entity/entitylist.png "Enhetsliste")
 
 2. Klikk eller trykk på en eksisterende enhet, eller [opprett en ny enhet](data-platform-create-entity.md)
 
@@ -57,15 +57,13 @@ Hvis du vil legge til en én-til-mange-relasjon, kan du opprette en relasjon und
 
 1. På [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) utvider du **Data**-delen og klikker eller trykker på **Enheter** i den venstre navigasjonsruten.
 
-    ![Enhetsdetaljer](./media/data-platform-cds-create-entity/entitylist.png "Enhetsliste")
-
 2. Klikk eller trykk på en eksisterende enhet, eller [opprett en ny enhet](data-platform-create-entity.md)
 
 3. Klikk på **Relasjoner**.
 
 4. Klikk på pil ned til høyre for **Legg til relasjon**, dermed får du velge begge typer relasjoner. Klikk på **Én-til-mange**. Dette åpner et nytt panel der du kan velge enheten som du vil opprette en relasjon til. Velg enheten fra **Relatert enhet**-rullegardinlisten.
-
-    ![Én-til-mange-relasjon](./media/data-platform-cds-newrelationship/onetomany-1.png "Én-til-mange-relasjon")
+    > [!div class="mx-imgBorder"] 
+    > ![Én-til-mange-relasjon](./media/data-platform-cds-newrelationship/onetomany-1.png "Én-til-mange-relasjon")
 
 5. Når du har valgt en enhet, vises oppslagsfeltene på hovedenheten. De er som standard som enhetsnavnene (i dette eksemplet Klasse), men du kan endre dem etter behov.
 
@@ -81,8 +79,53 @@ Hvis du vil legge til en én-til-mange-relasjon, kan du opprette en relasjon und
     > ![Én-til-mange-relasjon](./media/data-platform-cds-newrelationship/onetomany-3.png "Én-til-mange-relasjon")
 
 ## <a name="add-a-many-to-many-relationship"></a>Legge til en mange-til-mange-relasjon
+Hvis du vil legge til en mange-til-mange-relasjon, kan du opprette en relasjon under kategorien **Relasjoner** og angi enheten som du vil opprette en relasjon til.
 
-Dette er for øyeblikket bare tilgjengelig via Avansert-menyen. På hjemmesiden i PowerApps klikker du på "Avansert" fra den venstre menyen. Hvis du vil ha informasjon om hvordan du oppretter relasjonen, kan du se [Opprette N:N-relasjoner](/dynamics365/customer-engagement/customize/create-and-edit-nn-many-to-many-relationships)
+1. På [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) utvider du **Data**-delen og klikker eller trykker på **Enheter** i den venstre navigasjonsruten.
+
+2. Klikk eller trykk på en eksisterende enhet, eller [opprett en ny enhet](data-platform-create-entity.md)
+
+3. Klikk på **Relasjoner**.
+
+4. Klikk på pil ned til høyre for **Legg til relasjon**, dermed får du velge begge typer relasjoner. Klikk på **Mange-til-mange**. Dette åpner et nytt panel der du kan velge enheten som du vil opprette en relasjon til. Velg enheten fra **Relatert enhet**-rullegardinlisten.
+
+5. Når du har valgt en enhet, vises navnene for relasjonen og relasjonsenheten. Som standard brukes navnene på enhetene kombinert, men du kan endre dem etter behov.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Mange-til-mange-relasjon](./media/data-platform-cds-newrelationship/manytomany-1.png "Mange-til-mange-relasjon")
+
+6. Klikk på **Ferdig** for å legge til relasjonen til enheten, og klikk deretter på **Lagre enhet**.
+
+
+## <a name="add-advanced-relationship-behavior"></a>Legge til avansert relasjonsfunksjonalitet
+
+Når du bygger en én-til-mange eller en mange-til-én-relasjon, kan du også angi avansert funksjonalitet.
+
+![Avansert funksjonalitet](./media/data-platform-cds-newrelationship/advanced-1.png "Avansert funksjonalitet")
+
+Disse alternativene kalles også overlappende funksjonalitet fordi de overlapper med hierarkiet for relaterte enheter. Det kan for eksempel være ønskelig å slette de relaterte testene og hjemmearbeidet til en student hvis en student er fjernet fra systemet. Denne typen funksjonalitet kalles overordnet relasjon.
+
+På den andre siden ønsker du kanskje ikke at handlinger som overlapper ned i hierarkiet. I lærer til klasse-relasjonen kan du f.eks. bestemme at den underordnede enheten (klasse) *ikke* skal slettes når du sletter en overordnet (lærer). Dette kalles en referensiell relasjon.
+
+Når du modellerer forretningsdataene ved å opprette egendefinerte enheter eller ved å bruke en eksisterende Common Data Model-enheter, vurderer du funksjonaliteten du trenger, og implikasjoner for hele hierarkiet for relaterte enheter, og velg mellom en av følgende standard virkemåter:
+
+* **Referensiell, fjern kobling:** I en referanserelasjon mellom to enheter kan du navigere til alle relaterte oppføringer. Handlinger som utføres på den ene enheten, påvirker imidlertid ikke den andre. Hvis du f.eks. har en én-til-mange-relasjon mellom lærere og klasser, får det ingen innvirkning på den relaterte klassen at en lærer slettes.
+
+* **Referensiell, begrens sletting:** I en relasjon av typen referensiell, begrens sletting kan du navigere til relaterte oppføringer. Handlinger som utføres på den overordnede oppføringen, blir ikke brukt på den underordnede, men den overordnede oppføringen kan ikke slettes så lenge den underordnede oppføringen finnes. Dette er nyttig hvis du ikke vil at underordnede oppføringer skal bli isolert. Dette tvinger brukeren til å slette alle underordnede oppføringer før den overordnede slettes.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Referensiell, begrens sletting](./media/data-platform-cds-newrelationship/advanced-3.png "Referensiell, begrens sletting")
+
+* **Overordnet:** I en overordnet relasjon mellom enheter blir alle handlinger som utføres på en oppføring for den overordnede enheten, også utført på alle oppføringer for underordnede enheter som er relatert til oppføringen for den overordnede enheten. Dette fører for eksempel til at alle underordnede oppføringene slettes når overordnet oppføring slettes.
+
+* **Egendefinert:** I en egendefinert relasjon mellom to enheter, velger du virkemåten som er tilknyttet hver av et sett med mulige handlinger. 
+
+    > [!div class="mx-imgBorder"] 
+    > ![Egendefinert virkemåte](./media/data-platform-cds-newrelationship/advanced-2.png "Egendefinert virkemåte")
+
+Mer informasjon om standardinnstillinger og egendefinerte virkemåter: [Konfigurere relasjonsatferd for enhet](entity-relationship-behavior.md).
+
+
 
 ## <a name="use-a-lookup-field-in-an-app"></a>Bruke et oppslagsfelt i en app
 Hvis du [oppretter en app automatisk](../canvas-apps/data-platform-create-app.md) fra en enhet som inneholder et oppslagsfelt, vises det som en **rullegardinliste**-kontroll som inneholder data fra **Hovednavn**-feltet for enheten.

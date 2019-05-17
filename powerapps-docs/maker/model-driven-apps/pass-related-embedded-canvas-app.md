@@ -3,7 +3,7 @@ title: Sende en liste over relaterte oppføringer som datakontekst til en inneby
 ms.custom: ''
 ms.date: 12/17/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
@@ -81,5 +81,6 @@ Dette emnet viste hvordan du kommer i gang med innebyggingen av en lerretapp i e
 ## <a name="see-also"></a>Se også
 [Bygge inn en lerretapp i et modelldrevet skjema](embed-canvas-app-in-form.md) <br />
 [Sende gjeldende oppføring som datakontekst til en innebygd lerretapp](pass-current-embedded-canvas-app.md) <br />
+[Utføre forhåndsdefinerte handlinger på vertsskjemaet fra en innebygd lerretapp](embedded-canvas-app-actions.md) <br />
 [Dele en innebygd lerretapp](share-embedded-canvas-app.md) <br />
 [Retningslinjer for arbeid med innebygde lerretapper](embedded-canvas-app-guidelines.md)

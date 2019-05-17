@@ -100,6 +100,10 @@ Når du skal behandles HTML-webressurser i Løsningskontroll, behandles HTML-web
 
 ECMAScript 6 (2015) eller senere versjoner støttes ikke for Løsningskontroll. Når Løsningskontroll analyserer JavaScript med ECMAScript 6 eller senere, rapporteres et webstøttesyntaksproblem for webressursen .  
 
+## <a name="multiple-violations-reported-for-plug-ins-and-workflow-activities-based-on-call-scope"></a>Flere brudd rapportert for plugin-moduler og arbeidsflytaktiviteter basert på samtaleomfang
+
+For plugin-moduler og regler for arbeidsflytaktivitet der problemet bare er relevant i den kallende konteksten, starter Løsningskontroll-verktøyet analysen på IPlugin-grensesnittimplementeringen og går gjennom et kalldiagram for å finne problemer i omfanget for den implementeringen.  I enkelte tilfeller kan mange samtalebaner ankomme til samme sted der problemet registreres.  Siden problemet er relevant for samtaleomfanget, kan verktøyet rapportere basert på dette omfanget for å gi en bedre oversikt over innvirkningen, i stedet for på forskjellige steder. Flere problemer kan derfor referere til et enkelt sted som må løses.
+
 ## <a name="see-also"></a>Se også
 [Gode fremgangsmåter og veiledning for Common Data Service](../../developer/common-data-service/best-practices/index.md)<br />
 [Gode fremgangsmåter og veiledning for modelldrevne apper](../../developer/model-driven-apps/best-practices/index.md)<br />

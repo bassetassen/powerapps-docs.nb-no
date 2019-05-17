@@ -43,7 +43,7 @@ search.app:
  Når du har mer enn ett hovedskjema eller en annen skjematype definert for en enhet, kan du velge hvilke skjemaer brukere skal kunne bruke, basert på sikkerhetsrollene deres. Siden hver enhet må kunne vise et skjema for enhver bruker, må minst ett skjema brukes som et basisskjema – et skjema som vises for brukere med sikkerhetsroller uten eksplisitt tilordnede skjemaer.  
   
 > [!NOTE]
->  Hurtigopprettingsskjemaer, hurtigvisningsskjemaer og kortskjemaer kan ikke tilordnes til sikkerhetsroller.  
+>  Hurtigopprettingsskjema, hurtigvisningsskjemaer og kortskjemaer kan ikke tilordnes til sikkerhetsroller.  
   
  Du kan tilordne sikkerhetsroller til et hovedskjema i skjemaredigeringsprogrammet eller fra skjemarutenettet. Hvis det bare er ett skjema for enheten, kan du imidlertid ikke fjerne merket for alternativet **Aktivert for basis** i dialogboksen **Tilordne sikkerhetsroller**. Selv om du i slike tilfeller har tilordnet sikkerhetsroller til skjemaet, kan alle som er knyttet til en sikkerhetsrolle som du ikke tok med, fortsatt vise skjemaet fordi det er aktivert som basisskjema.  
   
