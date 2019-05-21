@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/17/2019
 ms.locfileid: "65828169"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="back-and-navigate-functions-in-powerapps"></a>Funksjonene Back og Navigate i PowerApps
 
@@ -71,7 +72,7 @@ Når den **tilbake** funksjonen kjører, eller INVERS overgangen brukes som stan
 
 * *Overgang* – valgfritt. Den visuelle overgangen som skal brukes mellom gjeldende skjerm og forrige skjermbilde. Se listen over gyldige verdier for dette argumentet tidligere i dette emnet. Som standard er overgangen en skjerm som returnerer inverse av overgangen som det har vært.
 
-**Navigere**( *skjermen* [, *overgang* [, *UpdateContextRecord* ]])
+**Navigere**( *skjermen* [; *overgang* [; *UpdateContextRecord* ]])
 
 * *Screen* – obligatorisk. Skjermen som skal vises.
 * *Overgang* – valgfritt.  Den visuelle overgangen som skal brukes mellom gjeldende skjerm og den nye skjermen. Se listen over gyldige verdier for dette argumentet tidligere i dette emnet. Standardverdien er **ingen**.
@@ -82,9 +83,9 @@ Når den **tilbake** funksjonen kjører, eller INVERS overgangen brukes som stan
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **Navigere (detaljer)** |Viser **Details**-skjermen uten overgang eller endring i verdi for en kontekstvariabel. |**Detaljer**-skjermen vises raskt. |
-| **Navigate( Details, ScreenTransition.Fade )** |Viser **Detaljer**-skjermen med en **Tone**-overgang.  Ingen verdier for en kontekstvariabel endres. |Den gjeldede skjermen tones ned for å vise **Details**-skjermen. |
-| **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** |Viser **Details**-skjermen med en **Fade**-overgang, og oppdaterer verdien til kontekstvariabelen **ID** til **12**. |Den gjeldende skjermen tones ned for å vise **Details**-skjermen, og kontekstvariabelen **ID** på den skjermen som angis til **12**. |
-| **Navigate( Details, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Viser **Detaljer**-skjermen med en **Tone**-overgang. Oppdaterer verdien til kontekstvariabelen **ID** til **12**, og oppdaterer verdien til kontekstvariabelen **Shade** til **Color.Red**. |Den gjeldede skjermen tones ned for å vise **Details**-skjermen. Kontekstvariabelen **ID** på **Detaljer**-skjermen angis til **12**, og kontekstvariabelen **Nyanse** angis til **Color.Red**. Hvis du angir **Fyll**-egenskapen til en kontroll på **Detaljer**-skjermen til **Nyanse**, vises denne kontrollen i rødt. |
+| **Navigate( Details; ScreenTransition.Fade )** |Viser **Detaljer**-skjermen med en **Tone**-overgang.  Ingen verdier for en kontekstvariabel endres. |Den gjeldede skjermen tones ned for å vise **Details**-skjermen. |
+| **Navigate( Details; ScreenTransition.Fade; {&nbsp;ID:&nbsp;12&nbsp;} )** |Viser **Details**-skjermen med en **Fade**-overgang, og oppdaterer verdien til kontekstvariabelen **ID** til **12**. |Den gjeldende skjermen tones ned for å vise **Details**-skjermen, og kontekstvariabelen **ID** på den skjermen som angis til **12**. |
+| **Navigate( Details; ScreenTransition.Fade; {&nbsp;ID:&nbsp;12&nbsp;;&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Viser **Detaljer**-skjermen med en **Tone**-overgang. Oppdaterer verdien til kontekstvariabelen **ID** til **12**, og oppdaterer verdien til kontekstvariabelen **Shade** til **Color.Red**. |Den gjeldede skjermen tones ned for å vise **Details**-skjermen. Kontekstvariabelen **ID** på **Detaljer**-skjermen angis til **12**, og kontekstvariabelen **Nyanse** angis til **Color.Red**. Hvis du angir **Fyll**-egenskapen til en kontroll på **Detaljer**-skjermen til **Nyanse**, vises denne kontrollen i rødt. |
 | **Back()** | Viser forrige skjerm med standard return overgangen. | Viser forrige skjerm gjennom INVERS overgangen for overføringen som den gjeldende skjermen vises. |
 | **Tilbake (ScreenTransition.Cover)** |  Viser forrige skjerm med den **dekker** overgang. | Viser forrige skjerm gjennom den **dekker** overgang, uavhengig av overgangen som den gjeldende skjermen vises. |
 
@@ -100,8 +101,8 @@ Når den **tilbake** funksjonen kjører, eller INVERS overgangen brukes som stan
 
 1. På **Screen2**, Legg til en knapp, og angi dens **[OnSelect](../controls/properties-core.md)** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    Navigate( Screen1, ScreenTransition.Cover )
+    ```powerapps-comma
+    Navigate( Screen1; ScreenTransition.Cover )
     ```
 
 1. Mens du holder nede den **Alt** nøkkel, velg knappen.
@@ -110,7 +111,7 @@ Når den **tilbake** funksjonen kjører, eller INVERS overgangen brukes som stan
 
 1. På **Screen1**, Legg til en knapp, og angi dens **OnSelect** egenskapen til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Back()
     ```
 
