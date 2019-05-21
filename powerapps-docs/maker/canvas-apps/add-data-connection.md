@@ -13,21 +13,22 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 43832847f447a9af8a05d149b0d6f3b564b770e1
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 15f3f38dd4812ffcbebeeaab4d301f715c97e1d1
+ms.sourcegitcommit: be110258910aa097b0065da1ee4ea1c40b7e1334
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61530127"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65922543"
 ---
 # <a name="add-a-data-connection-to-a-canvas-app-in-powerapps"></a>Legg til en datatilkobling i en lerretsapp i PowerApps
 
-Legg til en datatilkobling i en eksisterende lerretsapp eller i en app du oppretter fra grunnen av, i PowerApps. Appen kan koble til SharePoint, Salesforce, OneDrive eller [mange andre datakilder](connections-list.md).
+Legg til en datatilkobling i en eksisterende lerretsapp eller i en app du oppretter fra grunnen av, i PowerApps. Appen kan koble til SharePoint, Common Data Service, Salesforce, OneDrive, eller [mange andre datakilder](connections-list.md).
 
 Det [neste trinnet](#next-steps) etter denne artikkelen er å vise og behandle data fra datakilden i appen din, som i disse eksemplene:
 
 * Koble til OneDrive, og behandle data i en Excel-arbeidsbok i appen din.
 * Koble til Twilio, og send en SMS-melding fra appen din.
+* Koble til Common Data Service, og oppdatere en enhet fra appen din.
 * Koble til SQL Server, og oppdater en tabell fra appen din.
 
 ## <a name="prerequisites"></a>Forutsetninger
@@ -64,7 +65,7 @@ Det [neste trinnet](#next-steps) etter denne artikkelen er å vise og behandle d
 
 1. Velg **Opprett** for å både opprette tilkoblingen og legge den til i appen din.
 
-    Noen koblinger, for eksempel **Office 365 Outlook**, krever ingen flere trinn, og du kan vise data fra dem umiddelbart. Andre koblinger anmoder deg om å angi legitimasjon, et bestemt datasett, eller om å utføre andre trinn. [SharePoint](connections/connection-sharepoint-online.md) og [SQL Server](connections/connection-azure-sqldatabase.md) krever for eksempel tilleggsinformasjon før du kan bruke dem.
+    Noen koblinger, for eksempel **Office 365 Outlook**, krever ingen flere trinn, og du kan vise data fra dem umiddelbart. Andre koblinger anmoder deg om å angi legitimasjon, et bestemt datasett, eller om å utføre andre trinn. [SharePoint](connections/connection-sharepoint-online.md) og [SQL Server](connections/connection-azure-sqldatabase.md) krever for eksempel tilleggsinformasjon før du kan bruke dem. Med [Common Data Service-](connections/connection-common-data-service.md), kan du endre miljøet før du velger en enhet.
 
 ## <a name="identify-or-change-a-data-source"></a>Å identifisere eller endre en datakilde
 Hvis du oppdaterer en app, må du kanskje identifisere eller endre kilden til dataene som vises i et galleri, et skjema eller en annen kontroll. Du må for eksempel kanskje identifisere en datakilde som du oppdaterer en app som noen andre har opprettet, eller som du opprettet for lenge siden.
@@ -83,5 +84,5 @@ Hvis du oppdaterer en app, må du kanskje identifisere eller endre kilden til da
 
 ## <a name="next-steps"></a>Neste trinn
 
-* Hvis du vil vise og oppdatere data i en datakilde, for eksempel Excel, SharePoint eller SQL Server, kan du [legge til et galleri](add-gallery.md) og [legge til et skjema](add-form.md).
+* Vise og oppdatere data i en datakilde, for eksempel Excel, SharePoint, Common Data Service-eller SQL Server, [legge til et galleri](add-gallery.md), og [legge til et skjema](add-form.md).
 * Hvis du vil bruke data i andre kilder, kan du bruke spesifikke funksjoner for kobling, for eksempel i [Office 365 Outlook](connections/connection-office365-outlook.md), [Twitter](connections/connection-twitter.md) og [Microsoft Translator](connections/connection-microsoft-translator.md).
