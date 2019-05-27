@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0337c7f79a81d7368128b6ef11d4d108345d3923
-ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
-ms.translationtype: HT
+ms.openlocfilehash: d2b4229cc39a84bcffa624be8352762bcdc7a47b
+ms.sourcegitcommit: 21163a6d77b784f4864fce4695776c9b4652cb29
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66216622"
+ms.lasthandoff: 05/26/2019
+ms.locfileid: "66225159"
 ---
 # <a name="understand-data-cards-in-powerapps"></a>Slik fungerer datakort i PowerApps
 
@@ -157,6 +157,9 @@ Hvis du vil fylle ut disse kontrollene med data, kan egenskapene bli drevet av e
 | **TextFieldDisplayName.Text** |**Parent.DisplayName** |Tekstboks-kontrollen viser det brukervennlige navnet som du eller datakildens metadata gir, og som er angitt i kortets **[DisplayName](controls/control-card.md)**-egenskap. |
 | **InputText.Default** |**Parent.Default** |Tekstinndata-kontrollen viser først verdien i feltet fra datakilden, som ble angitt fra kortet sin standardverdi. |
 | **TextErrorMessage.Text** |**Parent.Error** |**Feil**-egenskapen for kortet angir en aktuell feilmelding, hvis det oppstår et problem med validering. |
+
+> [!NOTE]
+> Den **Parent.Error** -egenskapen er en output-only-egenskap som du ikke kan angi ved hjelp av en formel. Derfor denne egenskapen vil ikke vises i listen over egenskaper nær hjørnet øverst til venstre eller i den **Egenskaper** eller **avansert** fanene nær høyre kant. Formellinjen foreslår denne egenskapen Hvis du skriver en formel som kan referere til egenskapen.
 
 Hvis du vil hente informasjon fra disse kontrollene, og skyve den tilbake i datakilden, har vi følgende viktige formler:
 
