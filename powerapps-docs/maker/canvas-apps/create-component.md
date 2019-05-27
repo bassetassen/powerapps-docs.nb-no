@@ -10,12 +10,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: cc556eaac82f910fa7044def9969c2fb8ca04c4b
-ms.sourcegitcommit: a99f9458a50f6fa64706200bec97273aac20036d
-ms.translationtype: HT
+ms.openlocfilehash: 0a20218d3670775f67b26c907ce5a3a54fa0af7b
+ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66034893"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66216659"
 ---
 # <a name="create-a-component-for-canvas-apps"></a>Opprette en komponent for lerretsapper
 
@@ -184,7 +184,6 @@ Du har så langt har opprettet en komponent og lagt det til en app. Deretter opp
 ## <a name="known-limitations"></a>Kjente begrensninger
 
 - I skrivende stund lagres datakilder ikke med komponenter, slik at skjemaer og datatabeller er deaktivert.
-- Hvis du oppretter en variabel i en komponent, vil denne variabelen er tilknyttet bare i denne komponenten og vises ikke med app-variabler.
 - PowerApps støtter ikke samlinger i komponenter.
 - Du kan ikke sette inn en komponent i et galleri, et skjema eller et datakort.
 - En overordnede forekomst av en komponent er en lokal hoved- og omfang til appen. Hvis du endrer en overordnede forekomst, kan bare kopier av komponenten i appen, gjenspeiler endringen. Kopier i andre apper forblir den samme med mindre du importerer komponentbiblioteket på nytt. Alle master forekomster i disse appene vil automatisk oppdaget og oppdatert.
