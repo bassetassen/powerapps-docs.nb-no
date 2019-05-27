@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ee2e2b854b56dadfd63b35a984e92db2ca515093
-ms.sourcegitcommit: 8bad6bff1b3397b21654df4a9357dd0180fbcfe6
+ms.openlocfilehash: 9ca80511875ff8534e5b07c3a7844485ff70a4a5
+ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65046061"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66216166"
 ---
 # <a name="build-global-support-into-canvas-apps"></a>Bygg global støtte inn i lerretsapper
 PowerApps er et globalt produkt. Du kan bygge og bruke lerretsapper på mange ulike språk og i mange ulike områder.
@@ -75,7 +74,7 @@ Endringen i listeskilletegn i PowerApps er konsekvent med hva skjer med listeski
 
 * Argumenter i funksjonsoppkall.
 * Felter i en [post](working-with-tables.md#elements-of-a-table).
-* Poster i en [verditabell](working-with-tables.md#inline-syntax).
+* Poster i en [tabellen](working-with-tables.md#inline-value-tables).
 
 For eksempel vurdere følgende formel uttrykt i et språk og område som bruker prikk eller punktum som desimaltegn, for eksempel Japan eller Storbritannia:
 
@@ -101,7 +100,7 @@ Du kan bruke **Language**-funksjonen blant annet til å vise oversatt tekst for 
 
 Du kan deretter bruke følgende formel til å hente oversatte strenger fra tabellen:
 
-**LookUp( Table1; TextID = "Hello" && (LanguageTag = Left( Language(); 2 ) || IsBlank( LanguageTag ))).LocalizedText**  
+**LookUp( Table1, TextID = "Hello" && (LanguageTag = Left( Language(), 2 ) || IsBlank( LanguageTag ))).LocalizedText**  
 
 Vær oppmerksom på at oversatte strenger på andre språk kan være betydelig lengre enn de er på ditt språk.  I mange tilfeller må etiketter og andre elementer som viser strengene i brukergrensesnittet, være bredere for å få plass.
 
@@ -114,8 +113,8 @@ Tall, datoer og klokkeslett skrives i forskjellige formater i ulike deler av ver
 
 **Text** krever en formatstreng for å vite hvordan du vil formatere tall eller datoer.  Denne formatstrengen kan ha én av to former:
 
-* **En globalt gjeldende opplisting.**  For eksempel: **Text( Now(); DateTimeFormat.LongDate )**.  Denne formelen vil formatere gjeldende dato i et format som er riktig for det aktuelle språket.  Dette er den beste måten å angi formatstrengen på.
-* **En egendefinert formatstreng.**  For eksempel: **Text( Now(); "[$-en-US]dddd, mmmm dd, yyyy" )** viser den samme teksten som opplistingen når den brukes på språket en-US.  Fordelen med strengen for egendefinert format er at du kan angi nøyaktig hva du ønsker.
+* **En globalt gjeldende opplisting.**  For eksempel: **Text( Now(), DateTimeFormat.LongDate )** .  Denne formelen vil formatere gjeldende dato i et format som er riktig for det aktuelle språket.  Dette er den beste måten å angi formatstrengen på.
+* **En egendefinert formatstreng.**  For eksempel: **Text( Now(), "[$-en-US]dddd, mmmm dd, yyyy" )** viser den samme teksten som opplistingen når den brukes på språket en-US.  Fordelen med strengen for egendefinert format er at du kan angi nøyaktig hva du ønsker.
 
 [$-en-US] fremst i den egendefinerte formatstrengen forteller **Text** hvilket språk som skal brukes for å tolke den egendefinerte formatstrengen.  Dette blir satt inn for deg og blir brukt som ditt redigeringsspråk som standard.  Vanligvis trenger du ikke endre dette.  Dette er nyttig når forfattere med ulike språk redigerer samme app.
 
@@ -140,10 +139,10 @@ Alle disse funksjonene har de samme argumentene:
 
 For eksempel:
 
-* **Value( "12,345.678"; "en-US" )** eller **Value( "12,345.678" )** på en plassering der en-US er brukerspråket, returnerer tallet **12345,678**, klar for beregninger.
-* **DateValue( "1/2/01"; "es-ES" )** eller **DateValue( "1/2/01" )** på en plassering der es-ES er brukerspråket, returnerer dato/klokkeslett-verdien **01. februar 2001 ved midnatt**.
-* **TimeValue( "11:43:02"; "fr-FR" )** eller **DateValue( "11:43:02" )** på en plassering der fr-FR er brukerspråket, returnerer dato/klokkeslett-verdien **01. januar 1970 kl. 11:43:02**.
-* **TimeDateValue( "11:43:02 1/2/01"; "de-DE" )** eller **DateValue( "11:43:02" )** på en plassering der de-DE er brukerspråket, returnerer dato/klokkeslett-verdien **01. februar 2001 kl. 11:43:02**.
+* **Value( "12,345.678", "en-US" )** eller **Value( "12,345.678" )** på en plassering der en-US er brukerspråket, returnerer tallet **12345,678**, klar for beregninger.
+* **DateValue( "1/2/01", "es-ES" )** eller **DateValue( "1/2/01" )** på en plassering der es-ES er brukerspråket, returnerer dato/klokkeslett-verdien **01. februar 2001 ved midnatt**.
+* **TimeValue( "11:43:02", "fr-FR" )** eller **DateValue( "11:43:02" )** på en plassering der fr-FR er brukerspråket, returnerer dato/klokkeslett-verdien **01. januar 1970 kl. 11:43:02**.
+* **TimeDateValue( "11:43:02 1/2/01", "de-DE" )** eller **DateValue( "11:43:02" )** på en plassering der de-DE er brukerspråket, returnerer dato/klokkeslett-verdien **01. februar 2001 kl. 11:43:02**.
 
 Hvis du vil ha mer informasjon, kan du se dokumentasjonen for funksjonene **[Value](functions/function-value.md)** og **[DateValue, TimeValue og DateTimeValue](functions/function-datevalue-timevalue.md)** og [Å arbeide med datoer og klokkeslett](show-text-dates-times.md).
 

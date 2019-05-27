@@ -10,13 +10,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 369304ded3fdc9fcd69459da9875e6080d5d860c
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: MT
+ms.openlocfilehash: cc556eaac82f910fa7044def9969c2fb8ca04c4b
+ms.sourcegitcommit: a99f9458a50f6fa64706200bec97273aac20036d
+ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61562242"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66034893"
 ---
 # <a name="create-a-component-for-canvas-apps"></a>Opprette en komponent for lerretsapper
 
@@ -51,9 +50,12 @@ Komponentene støtter ikke den **UpdateContext** -funksjonen, men du kan opprett
 
 ## <a name="import-and-export"></a>Importer og Eksporter
 
-Hvis du eksporterer en komponent, kan du opprette en lokal fil som du kan importere til en annen app. Hvis appen inneholder en endret versjon av samme komponent, blir du bedt om å bestemme om du vil erstatte den endrede versjonen eller avbryte importen. Du kan ikke lagre komponenter i skyen eller dele dem i et miljø i skrivende stund.
+Hvis du vil importere en eller flere komponenter fra én app til en annen, velg **importere komponenter** i rullegardinlisten listen over komponenter. En dialogboks lister opp alle apper som inneholder komponenter som du har tillatelse til å redigere. Velg en app, og velg deretter **importere** til å importere den nyeste publiserte versjonen av alle komponentene i appen. Når du har importert minst én komponent, kan du redigere eksemplaret og Slett som du ikke trenger.
 
-![Importer og Eksporter](./media/create-component/import.png)
+> [!div class="mx-imgBorder"]
+> ![Dialogboksen for import-komponenter](./media/create-component/import-components.png)
+
+Hvis du eksporterer en komponent, kan du opprette en lokal fil som du kan importere til en annen app. Hvis appen inneholder en endret versjon av samme komponent, blir du bedt om å bestemme om du vil erstatte den endrede versjonen eller avbryte importen. 
 
 ## <a name="custom-properties"></a>Egendefinerte egenskaper
 
@@ -105,7 +107,7 @@ I dette eksemplet skal du opprette en meny-komponent som ligner på denne grafik
 
 1. Angi komponentens **elementer** egenskapen til denne formelen:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Table({Item:"SampleText"})
     ```
 
@@ -115,7 +117,7 @@ I dette eksemplet skal du opprette en meny-komponent som ligner på denne grafik
 
 1. Kontroller at egenskapslisten viser den **elementer** egenskapen (slik den gjør det som standard), og angi deretter verdien for egenskapen til dette uttrykket:
 
-    ```powerapps-comma
+    ```powerapps-dot
     MenuComponent.Items
     ```
 
@@ -141,8 +143,8 @@ Deretter kan du legge til komponenten til en skjerm og angi en tabell med streng
 
 1. Angi den **elementer** -egenskapen for **MenuComponent_1** til denne formelen:
 
-    ```powerapps-comma
-    Table({Item:"Home"}; {Item:"Admin"}; {Item:"About"}; {Item:"Help"})
+    ```powerapps-dot
+    Table({Item:"Home"}, {Item:"Admin"}, {Item:"About"}, {Item:"Help"})
     ```
 
     Denne forekomsten ligner denne grafikken, men du kan tilpasse teksten og andre egenskaper for hver forekomst.
@@ -161,7 +163,7 @@ Du har så langt har opprettet en komponent og lagt det til en app. Deretter opp
 
 1. På den **avansert** fanen, angi verdien for den **valgt** egenskapen til dette uttrykket, justere tallet i gallerinavnet om nødvendig:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Gallery1.Selected.Item
     ```
 
@@ -169,7 +171,7 @@ Du har så langt har opprettet en komponent og lagt det til en app. Deretter opp
 
 1. På det standardskjermbildet i appen, legge til en etikett, og angi dens **tekst** egenskapen til dette uttrykket, justere tallet i komponentnavnet på den om nødvendig:
 
-    ```powerapps-comma
+    ```powerapps-dot
     MenuComponent_1.Selected
     ```
 
@@ -181,7 +183,7 @@ Du har så langt har opprettet en komponent og lagt det til en app. Deretter opp
 
 ## <a name="known-limitations"></a>Kjente begrensninger
 
-- I skrivende stund lagres datakilder ikke med komponenter, slik at skjemaer og datatabeller er deaktivert. 
+- I skrivende stund lagres datakilder ikke med komponenter, slik at skjemaer og datatabeller er deaktivert.
 - Hvis du oppretter en variabel i en komponent, vil denne variabelen er tilknyttet bare i denne komponenten og vises ikke med app-variabler.
 - PowerApps støtter ikke samlinger i komponenter.
 - Du kan ikke sette inn en komponent i et galleri, et skjema eller et datakort.

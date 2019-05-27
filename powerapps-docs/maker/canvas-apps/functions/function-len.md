@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b92008425ade7976259087309de9a540dbceb455
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: d99cf1129ae23eda97b79457cb2b93db6a74a5ea
+ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61563384"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66216012"
 ---
 # <a name="len-function-in-powerapps"></a>Len-funksjonen i PowerApps
 Returnerer lengden på en tekststreng.
@@ -27,7 +26,7 @@ Returnerer lengden på en tekststreng.
 ## <a name="description"></a>Beskrivelse
 Hvis du angir en enkelt streng som argument, er returverdien lengden i et tallformat.  Hvis du angir en [enkeltkolonnetabell](../working-with-tables.md) som inneholder strenger, vil returverdien være en enkeltkolonnetabell som inneholder lengden på hver streng. Hvis du har en flerkolonnetabell, kan du gjøre den om til en enkeltkolonnetabell, som beskrevet i [arbeid med tabeller](../working-with-tables.md).
 
-Hvis du angir en [tom](function-isblank-isempty.md) streng, returnerer **Len** 0.
+Hvis du angir en [tom](function-isblank-isempty.md) streng, **Len** returnerer 0.
 
 ## <a name="syntax"></a>Syntaks
 **Len**( *String* )
@@ -54,6 +53,6 @@ Datakilden for det første eksemplet i denne delen heter **Personer** og innehol
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Len( ShowColumns(&nbsp;People;&nbsp;"Address"&nbsp;) )** |I **Adresse** [-kolonnen](../working-with-tables.md#columns) av **Personer**-tabellen:<br><ul><li>Måler lengden på hver streng.</li><li>Returnerer en tabell med én kolonne som inneholder lengden på hver streng.</li> |<style> img { max-width: none } </style> ![](media/function-len/people-table-len.png) |
-| **Len( [ "Hello"; "to the"; "World"; "" ] )** |I **[Verdi](function-value.md)**-kolonnen i den linjebundne tabellen:<br><ul><li>Måler lengden på hver streng.</li><li>Returnerer en tabell med én kolonne som inneholder lengden på hver streng.</li> |![](media/function-len/people-table-len-inline.png) |
+| **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |I **Adresse** [-kolonnen](../working-with-tables.md#columns) av **Personer**-tabellen:<br><ul><li>Måler lengden på hver streng.</li><li>Returnerer en tabell med én kolonne som inneholder lengden på hver streng.</li> |<style> img { max-width: none } </style> ![](media/function-len/people-table-len.png) |
+| **Len( [ "Hello", "to the", "World", "" ] )** |I **[Verdi](function-value.md)**-kolonnen i den linjebundne tabellen:<br><ul><li>Måler lengden på hver streng.</li><li>Returnerer en tabell med én kolonne som inneholder lengden på hver streng.</li> |![](media/function-len/people-table-len-inline.png) |
 

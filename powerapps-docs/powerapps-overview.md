@@ -9,16 +9,16 @@ ms.custom: ''
 ms.date: 03/18/2019
 ms.author: kvivek
 ms.reviewer: kvivek
-ms.openlocfilehash: 4e24047d44beb19e55dadb8d653604e47460a5d2
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
-ms.translationtype: HT
+ms.openlocfilehash: eb90f35286098f27454e6cad883b0113a211af78
+ms.sourcegitcommit: 9b2648a9066fe5d3b27b3d893daacba9b18eb75e
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357579"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65609386"
 ---
 # <a name="what-is-powerapps"></a>Hva er PowerApps?
 
-PowerApps er en løsning med apper, tjenester, koblinger og dataplattform som tilbyr et miljø for rask programutvikling for bygging av tilpassede apper for forretningsbehovene dine. Ved hjelp av PowerApps kan du raskt bygge egendefinerte forretningsapper som kobles til forretningsdata lagret *enten* i den underliggende dataplattformen (**Common Data Service**) *eller* i ulike nettbaserte og lokale datakilder (SharePoint, Excel, Office 365, Dynamics 365, SQL Server og så videre). 
+PowerApps er en løsning med apper, tjenester, koblinger og dataplattform som tilbyr et miljø for rask programutvikling for bygging av tilpassede apper for forretningsbehovene dine. Ved hjelp av PowerApps kan du raskt bygge egendefinerte forretningsapper som kobles til forretningsdata lagret *enten* i den underliggende dataplattformen ([Common Data Service](/powerapps/maker/common-data-service/data-platform-intro)) *eller* i ulike nettbaserte og lokale datakilder (SharePoint, Excel, Office 365, Dynamics 365, SQL Server og så videre). 
 
 Med apper som er bygd ved hjelp av PowerApps, får du rikholdige forretningslogikk- og arbeidsflytfunksjoner til å forvandle manuelle forretningsprosesser til digitale, automatiserte prosesser. Dessuten har apper som er bygd ved hjelp av PowerApps, en responsiv utforming og kan kjøre sømløst i nettleser eller på mobile enheter (telefon eller nettbrett). PowerApps «demokratiserer» byggingen av egendefinerte forretningsapper ved å gjøre det mulig for brukere å bygge funksjonsrike, egendefinerte forretningsapper uten å skrive kode.
 

@@ -13,14 +13,15 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d8436656150d3abf36c8c4a26efc46e940e35f06
-ms.sourcegitcommit: 6b75019dccc5296a313f9ff0eb397003f13ce737
+ms.openlocfilehash: 284e9dfca0dff9a3bb92c2f5b073cfbe962ce5e9
+ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65940480"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215986"
 ---
 # <a name="operators-in-powerapps"></a>Operatorer i PowerApps
+
 Noen av disse operatorene er avhengig av språket til forfatteren.  Se [Globale apper](../global-apps.md) for mer informasjon.
 
 
@@ -51,7 +52,7 @@ Noen av disse operatorene er avhengig av språket til forfatteren.  Se [Globale 
 |                               **in**                                |                       &nbsp;                        |                                                      **&quot;Den&quot; in &quot;Tastaturet og skjermen...&quot;**                                                      |                                                                                                                Delstreng-test (skiller ikke mellom små og store bokstaver)                                                                                                                 |
 |                                **@**                                | [Tvetydighetsoperator](#disambiguation-operator) |                                                                           **MyTable[@fieldname]**                                                                            |                                                                                                                       Felttvetydighet                                                                                                                       |
 |                                **@**                                |                       &nbsp;                        |                                                                              **[@MyVariable]**                                                                               |                                                                                                                      Global tvetydighet                                                                                                                       |
-| **,**<br>[[språkavhengige](../global-apps.md)]  |                   Listeskilletegn                    | **If( X < 10, "Low", "Good" )**<br>**{ X: 12, Y: 32 }**<br>**[ 1, 2, 3 ]** | Adskiller: <ul><li>argumenter i funksjonsoppkallinger</li><li>felter i en [post](../working-with-tables.md#elements-of-a-table)</li><li>poster i en [verditabell](../working-with-tables.md#inline-syntax)</li></ul>.  Dette tegnet er avhengig av språket. |
+| **,**<br>[[språkavhengige](../global-apps.md)]  |                   Listeskilletegn                    | **If( X < 10, "Low", "Good" )**<br>**{ X: 12, Y: 32 }**<br>**[ 1, 2, 3 ]** | Adskiller: <ul><li>argumenter i funksjonsoppkallinger</li><li>felter i en [post](../working-with-tables.md#elements-of-a-table)</li><li>poster i en [tabell](../working-with-tables.md#inline-value-tables)</li></ul> Dette tegnet er avhengig av språket. |
 | **;**<br>[[språkavhengige](../global-apps.md)] |                  Formelkjeding                   |                                     **Collect(T, A); Navigate(S1, &quot;&quot;)**                                     |                                                                          Separerer starten av funksjoner i egenskaper for virkemåte. Kjedingoperatoren er avhengig av språket.                                                                          |
 |                             **Overordnet**                              |         [Overordnet operator](#parent-operator)         |                                                                               **Parent.Fill**                                                                                |                                                                                                           Tilgang til egenskapene til en kontrollbeholder                                                                                                            |
 |                            **ThisItem**                             |       [ThisItem-operatoren](#thisitem-operator)       |                                                                            **ThisItem.FirstName**                                                                            |                                                                                                          Tilgang til felt i en Galleri- eller Skjema-kontroll                                                                                                           |
@@ -86,8 +87,8 @@ Kontrollene på denne skjermen har et annet alternativ. De kan bruke en relativ 
 ## <a name="disambiguation-operator"></a>Tvetydighetsoperator
 Noen funksjoner oppretter [postområder](../working-with-tables.md#record-scope) for å få tilgang til feltene i tabellen under behandling av hver post, som **Filter**, **AddColumns** og **Sum**.  Feltnavnene som ble lagt til ved bruk av postområdet overstyrer de samme navnene fra appen ellers.  Når dette skjer, får du fremdeles tilgang til verdiene som er utenfor postområdet ved bruk av **@** tvetydighetsoperatoren:
 
-* Hvis du vil ha tilgang til verdiene fra nestede postområder, bruker du **@** operatoren med samme navn som tabellen der operatoren arbeider ved bruk av mønsteret:<br>_Table_**[@**_FieldName_**]**
-* Hvis du vil ha tilgang til globale verdier, som datakilder, samlinger og kontekstvariabler, bruker du mønsteret **[@**_ObjectName_**]** (uten en tabellangivelse).
+* Hvis du vil ha tilgang til verdiene fra nestede postområder, bruker du **@** operatoren med samme navn som tabellen der operatoren arbeider ved bruk av mønsteret:<br>_Table_ **[@** _FieldName_ **]**
+* Hvis du vil ha tilgang til globale verdier, som datakilder, samlinger og kontekstvariabler, bruker du mønsteret **[@** _ObjectName_ **]** (uten en tabellangivelse).
 
 Hvis du vil ha mer informasjon og eksempler, kan du se [postområder](../working-with-tables.md#record-scope).
 

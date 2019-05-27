@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d85c93b74e840d9711da0827de9114b9cef9ceab
-ms.sourcegitcommit: 810e9cf313f4690f8dbdfbe179f9ce7227437176
+ms.openlocfilehash: c304a313032e00af81181ca71b39e7aa7de9fc8f
+ms.sourcegitcommit: c0edddb287b3d3db56f60bdb46fe971e26e85e9d
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65884065"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66224642"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>Systemkrav, grenser og konfigurasjonsverdier for lerretsapper
 Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og konfigurasjonsverdier for PowerApps.
@@ -84,7 +84,6 @@ Du bør bruke disse adressene hvis du for eksempel må hviteliste IP-adresser fo
 | USA | 13.89.171.80 - 13.89.171.95, 52.173.245.164, 40.71.11.80 - 40.71.11.95, 40.71.249.205, 40.70.146.208 - 40.70.146.223, 52.232.188.154, 52.162.107.160 - 52.162.107.175, 52.162.242.161, 40.112.243.160 - 40.112.243.175, 104.42.122.49 |
 | USA (tidlig tilgang)  | 13.71.195.32 - 13.71.195.47, 52.161.102.22, 13.66.140.128 - 13.66.140.143, 52.183.78.157 |
 
-
 ## <a name="required-services"></a>Nødvendige tjenester
 Denne listen identifiserer alle tjenester som PowerApps Studio kommuniserer med, og deres bruksområder. Nettverket må **ikke** blokkere disse tjenestene.
 
@@ -104,3 +103,7 @@ Denne listen identifiserer alle tjenester som PowerApps Studio kommuniserer med,
 
 > [!NOTE]
 > Hvis du bruker et virtuelt privat nettverk, må det være konfigurert for å utelate localhost fra tunnelering for PowerApps Mobile.
+
+## <a name="size-limits"></a>Begrensninger for filstørrelse
+
+Du finner informasjon om begrensninger for filstørrelse på tekst, hyperkoblinger, bilder og medier i [datatyper](functions/data-types.md#text-hyperlink-image-and-media).

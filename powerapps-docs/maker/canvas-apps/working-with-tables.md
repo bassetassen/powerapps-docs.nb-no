@@ -7,19 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 04/26/2016
+ms.date: 05/23/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5883ae65beb698a8c7681d9eac6ba0f7439ca19e
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 264bce9c986544f8294d4a0346be2e7694d606d8
+ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61557889"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66216206"
 ---
 # <a name="understand-canvas-app-tables-and-records-in-powerapps"></a>Slik fungerer lerretsapptabeller og -poster i PowerApps
 
@@ -41,7 +40,7 @@ Du kan bygge et utvalg av formler som tar navnet på en tabell som et argument, 
 ### <a name="records"></a>Poster
 Hver post inneholder minst én kategori med informasjon for en person, et sted eller en ting. Eksemplet ovenfor viser en post for hvert produkt (**sjokolade**, **brød**, og **vann**), og en kolonne for hver kategori med informasjon (**pris**, **antall på lager**, og **antall i ordre**).
 
-I en formel kan du referere til en post som står alene, utenfor konteksten til en tabell ved hjelp av klammeparenteser. For eksempel denne posten **{navn: "Strawberries"; pris: 7,99}** er ikke tilknyttet en tabell. Vær oppmerksom på at feltnavn, for eksempel **Name** og **Price** i eksempelet over, ikke står i doble anførselstegn.
+I en formel kan du referere til en post som står alene, utenfor konteksten til en tabell ved hjelp av klammeparenteser. For eksempel denne posten **{navn: "Strawberries", pris: 7.99}** er ikke tilknyttet en tabell. Vær oppmerksom på at feltnavn, for eksempel **Name** og **Price** i eksempelet over, ikke står i doble anførselstegn.
 
 ### <a name="fields"></a>Felt
 Et felt er et enkeltstående stykke informasjon i en post. Du kan visualisere denne type av felt som en verdi i en kolonne for en bestemt post.
@@ -74,11 +73,11 @@ Alle tabeller som er lagret i en datakilde eller en samling, har et navn, som du
 
 Som i eksemplet nedenfor, kan du uttrykke en tabell i en formel ved hjelp av **[Table](functions/function-table.md)**-funksjonen sammen med et sett med poster, som du uttrykker i klammeparenteser:
 
-`Table( { Value: "Strawberry" }; { Value: "Vanilla" } )`
+`Table( { Value: "Strawberry" }, { Value: "Vanilla" } )`
 
 Du kan også definere en enkeltkolonne-tabell med hakeparenteser.  En tilsvarende måte å skrive det ovenfor:
 
-`[ "Strawberry"; "Vanilla" ]`
+`[ "Strawberry", "Vanilla" ]`
 
 ## <a name="table-formulas"></a>Tabellformler
 I Excel og PowerApps, kan du bruke formler til å endre tall og strenger av tekst på lignende måte:
@@ -88,7 +87,7 @@ I Excel og PowerApps, kan du bruke formler til å endre tall og strenger av teks
 
 I begge tilfeller endres automatisk den beregnede verdien, hvis du endrer verdiene av argumentene (for eksempel tall i celle **A1**, eller verdien av **Slider1**).
 
-På samme måte kan du bruke formler til å få tilgang til og endre data i tabeller og poster. Du kan bruke navnene på tabeller som argumenter i noen formler, som for eksempel **Min(Catalog; Price)**, til å vise den laveste verdien i **Pris**-kolonnen i **Katalog**-tabellen. Andre formler gir hele tabeller som returverdier, for eksempel **RenameColumns(Catalog; "Price"; "Cost")**, som returnerer alle postene fra **Katalog**-tabellen, men endrer navnet på **Pris**-kolonnen til **Kostnader**.
+På samme måte kan du bruke formler til å få tilgang til og endre data i tabeller og poster. Du kan bruke navnene på tabeller som argumenter i noen formler, som for eksempel **Min(Catalog, Price)** , til å vise den laveste verdien i **Pris**-kolonnen i **Katalog**-tabellen. Andre formler gir hele tabeller som returverdier, for eksempel **RenameColumns(Catalog, "Price", "Cost")** , som returnerer alle postene fra **Katalog**-tabellen, men endrer navnet på **Pris**-kolonnen til **Kostnader**.
 
 Akkurat som med tall, beregnes formler som involverer tabeller og poster automatisk samtidig med at den underliggende tabellen eller posten endres. Hvis kostnaden for et produkt i **Katalog**-tabellen senkes under det forrige minimumsnivået, vil returverdien for **[Min](functions/function-aggregates.md)**-formelen endres automatisk, slik at de stemmer overens.
 
@@ -105,7 +104,7 @@ La oss gå gjennom noen enkle eksempler.
 
 2. I stedet for å angi **[Elementer](controls/properties-core.md)**-egenskapen til navnet på en tabell, kan du angi en formel som inneholder navnet på tabellen som et argument, som i dette eksemplet:
 
-    `Sort(CustomGallerySample; SampleHeading; Descending)`
+    `Sort(CustomGallerySample, SampleHeading, Descending)`
 
     Denne formelen inneholder **[Sort](functions/function-sort.md)**-funksjonen, som tar navnet på en tabell som første argument. og navnet på en kolonne i denne tabellen som det andre argumentet. Funksjonen støtter også et valgfritt tredje argument, som stipulerer at du vil sortere dataene i synkende rekkefølge.
 
@@ -113,16 +112,19 @@ La oss gå gjennom noen enkle eksempler.
 
 3. Angi **[Elementer](controls/properties-core.md)**-egenskapen til en formel som tar formelen fra det forrige trinnet som et argument og returnerer en tabell, som i dette eksemplet:
 
-    `FirstN(Sort(CustomGallerySample; SampleHeading; Descending); 2)`
+    `FirstN(Sort(CustomGallerySample, SampleHeading, Descending), 2)`
 
     I denne formelen bruker du **[FirstN](functions/function-first-last.md)**-funksjonen til å vise et bestemt antall poster i en tabell. Bruk **[Sort](functions/function-sort.md)**-funksjonen som det første argumentet til **[FirstN](functions/function-first-last.md)**, og et tall (i dette tilfellet **2**) som det andre argumentet, som angir hvor mange poster for som skal vises.
-   
+
     Hele formelen returnerer en tabell som inneholder de to første postene i **CustomGallerySample**-tabellen, sortert etter **SampleHeading**-kolonnen i synkende rekkefølge.
-   
+
     ![](media/working-with-tables/gallery-items-sort-firstn.png)
 
-### <a name="table-functions-and-control-properties"></a>Tabellfunksjoner og kontrollegenskaper
-Mange funksjoner i PowerApps tar navnet på en tabell som et argument, oppretter en andre tabell som inneholder de samme dataene, endrer den nye tabellen basert på andre argumenter, og returnerer deretter resultatet. Disse funksjonene endre ikke den opprinnelige tabellen, selv om det er en datakilde.
+## <a name="table-functions-and-control-properties"></a>Tabellfunksjoner og kontrollegenskaper
+
+Vurder de **lavere** funksjonen. Hvis variabelen **Velkommen** inneholder tekststrengen **"Hello, World"** , formelen **lavere (Velkommen)** returnerer **"hello, world"** .  Denne funksjonen, på noen måte, endres ikke verdien i denne variabelen. **Lavere** er en ren funksjon ved at den bare behandler inndata og produserer utdata. Det er alt; den har ingen bivirkninger. Alle funksjoner i Excel og de fleste funksjonene i PowerApps er rent funksjoner, som tillater arbeidsboken eller appen beregnes automatisk.
+
+PowerApps tilbyr et sett med funksjoner som opererer på tabeller på samme måte. Disse funksjonene tar tabeller som inndata og filtrere, sortere, transformere, redusere og lage sammendrag av hele tabeller med data. Faktisk **lavere** , og mange andre funksjoner som tar vanligvis en enkelt verdi kan også bruke en enkeltkolonne-tabell som inndata.
 
 * **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)** – sorterer og filtrerer poster.
 * **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** – returnerer den første eller de siste N-postene i tabellen.
@@ -136,26 +138,30 @@ Mange funksjoner i PowerApps tar navnet på en tabell som et argument, oppretter
 * **[HashTags](functions/function-hashtags.md)** – søker etter emneknagger i en streng.
 * **[Errors](functions/function-errors.md)** – gir informasjon om feil når du arbeider med en datakilde.
 
-Du kan kjøre en funksjon i en tabell som inneholder flere kolonner, selv om funksjonen krever en enkeltkolonne som et argument. Hvis du vil trekke ut én enkelt kolonne fra en tabell med flere kolonner, kan du bruke **[ShowColumns](functions/function-table-shaping.md)**-funksjonen som argument for funksjonen du vil bruke, som i dette eksemplet:<br>**Lower( ShowColumns( Products; "Name" ) )**
+Mange av disse funksjonene tar en tabell med én kolonne som deres inndata. Hvis en hel tabell har bare én kolonne, kan du angi den etter navn. Hvis en tabell har flere kolonner, kan du angi én av disse kolonnene ved hjelp av *Table.Column* syntaks. For eksempel **Products.Name** returnerer enkeltkolonne-tabell med bare **navnet** verdier fra den **produkter** tabellen.
 
-Denne formelen oppretter en enkeltkolonne-tabell som inneholder alle dataene fra **Navn**-kolonnen i **Produkt**-tabellen, men konverterer alle store bokstaver til små bokstaver. Hvis du angir en tabell som et argument for **[AddColumns-](functions/function-table-shaping.md)**, **[RenameColumns-](functions/function-table-shaping.md)**, eller **[ DropColumns](functions/function-table-shaping.md)**-funksjonene, kan du endre form på tabellen slik du måtte ønske.
+Du kan helt endre formen på en tabell slik du selv ønsker, ved hjelp av den  **[AddColumns](functions/function-table-shaping.md)**,  **[RenameColumns](functions/function-table-shaping.md)**,  **[ ShowColumns](functions/function-table-shaping.md)**, eller **[DropColumns](functions/function-table-shaping.md)** funksjonen. Disse funksjonene endrer på nytt, bare sine utdata, ikke kilden.
 
-Hvis du angir en datakilde som et argument for én av disse funksjonene, vil det endre postene i datakilden og, generelt sett, returnere datakildens nye verdi som en tabell.
+Egenskaper for kontroller kan også være tabeller:
 
-* **[Collect](functions/function-clear-collect-clearcollect.md)**, **[Clear](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – oppretter, fjerner og legger til en samling.
+* **Elementer** – gjelder gallerier og listebokser med kombinasjonsboksene. Denne egenskapen definerer tabellen som galleriet eller listen viser.
+* **SelectedItems** -gjelder for listebokser og kombinasjonsboksene. Denne egenskapen definerer tabellen med elementer som brukeren har valgt Hvis **SelectMultiple** er aktivert.
+
+## <a name="behavioral-formulas"></a>Virkemåten for formler
+
+Andre funksjoner er spesielt utformet for å endre data og har bivirkninger. Fordi det ikke disse funksjonene er ren, må du opprette dem nøye, og de kan ikke delta i automatisk omberegner verdier i appen. Du kan bruke disse funksjonene bare i [virkemåten formler](working-with-formulas-in-depth.md).
+
+* **[Samle inn](functions/function-clear-collect-clearcollect.md)**,  **[tydelig](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – oppretter samlinger, fjerner dem, og legger til data til dem.
+* **[Patch](functions/function-patch.md)**  -endrer én eller flere felt i en post.
 * **[Update](functions/function-update-updateif.md)**, **[UpdateIf](functions/function-update-updateif.md)** – oppdaterer poster som oppfyller ett eller flere vilkår som du angir.
 * **[Fjern](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)** – sletter poster som oppfyller ett eller flere vilkår du angir.
 
-Disse egenskapene angis til verdier som er tabeller:
-
-* **Elementer** – gjelder gallerier og listebokser. Tabell til å vise i galleriet.
-* **SelectedItems** – gjelder for listebokser. Tabell over elementer som brukeren har valgt.
-
 ## <a name="record-formulas"></a>Postformler
+
 Du kan også bygge en formel som beregner data for en individuell post, tar en individuell post som et argument, og gir en individuell post som en returverdi. La oss gå tilbake til galleri-eksemplet ovenfor, og bruke **Gallery1.Selected** til å vise informasjon fra en post brukeren velger i galleriet.
 
-1. Legg til en knapp, og angi knappens **[OnSelect](controls/properties-core.md)**-egenskapen til denne formelen:<br>
-    **Collect( SelectedRecord; Gallery1.Selected )**
+1. Legg til en [ **knappen**](controls/control-button.md), og angi dens **[OnSelect](controls/properties-core.md)** egenskapen til denne formelen:<br>
+    **Collect( SelectedRecord, Gallery1.Selected )**
 
 2. Velg knappen mens du holder nede ALT.
 
@@ -174,7 +180,7 @@ Nå som du har valgt posten, kan du trekke ut enkeltfelten fra den med **.** -op
 
 1. Angi etikettens **[Tekst](controls/properties-core.md)**-egenskap til dette uttrykket:<br>
     **"Selected: " & Gallery1.Selected.SampleHeading**
-   
+
     ![](media/working-with-tables/gallery-selected.png)
 
 Du har tatt **Merket**-egenskapen, som er en post, og pakket ut **SampleHeading**-egenskapen fra den.
@@ -187,7 +193,7 @@ Du kan også bruke en post som en beholder til generelt bruk for relaterte navng
 
 Posten ble aldri en del av en tabell i disse tilfellene.
 
-### <a name="record-functions-and-control-properties"></a>Postfunksjoner og kontrollegenskaper
+## <a name="record-functions-and-control-properties"></a>Postfunksjoner og kontrollegenskaper
 Funksjoner som returnerer poster:
 
 * **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** – returnerer den første eller siste posten, eller postene, i tabellen.
@@ -202,25 +208,39 @@ Egenskaper som returnerer poster:
 * **[Update](functions/function-update-updateif.md)** – gjelder inndata-kontroller, for eksempel tekstinndata-kontroller og glidebrytere. Angir individuelle egenskaper for galleriet til å trekke sammen.
 
 ## <a name="record-scope"></a>Postomfang
-Noen funksjoner fungerer ved å enkeltvis evaluere en formel på tvers av alle poster i en tabell.  Formelens resultat brukes på forskjellige måter:  
+
+Noen funksjoner fungerer ved å enkeltvis evaluere en formel på tvers av alle poster i en tabell. Formelens resultat brukes på forskjellige måter:
 
 * **Filter**, **Lookup** – formelen bestemmer om posten skal inkluderes i utdataene.
 * **Sort** – formelen angir verdien som postene sorteres etter.
 * **Kjed.sammen** – formelen bestemmer strengene som skal settes sammen.
 * **For.alle** – formelen kan returnere en verdi, potensielt med en bivirkning.
-* **Distinct** – formelen returnerer en verdi som brukes til å identifisere like poster.  
+* **Distinct** – formelen returnerer en verdi som brukes til å identifisere like poster.
 * **AddColumns** – formelen angir verdien for feltet som er lagt til.
 * **Average**, **Max**, **Min**, **Sum**, **StdevP**, **VarP** – formelen angir verdien skal aggregeres.
 
-I disse formlene kan du referere til feltene i posten som behandles.  Hver av disse funksjonene oppretter et «postomfang» der formelen beregnes, og der feltene i posten er tilgjengelige som identifikatorer på øverste nivå.  Du kan også referere til kontrollegenskaper og andre verdier i hele appen.
+I disse formlene kan du referere til feltene i posten som behandles. Hver av disse funksjonene oppretter et «postomfang» der formelen beregnes, og der feltene i posten er tilgjengelige som identifikatorer på øverste nivå. Du kan også referere til kontrollegenskaper og andre verdier i hele appen.
 
 Ta for eksempel en tabell med **Produkter**:
 
 ![](media/working-with-tables/requested.png)
 
-For å finne ut om noen av disse produktene hadde flere forespørsler enn det som er tilgjengelig:
+Hvis du vil opprette denne eksempeltabell i appen, kan du sette inn en knapp, angi dens **OnSelect** egenskapen til denne formelen, og velg deretter knappen (Klikk for den mens du holder nede Alt-tasten i PowerApps Studio):
 
-`Filter( Products; 'Quantity Requested' > 'Quantity Available' )`
+```powerapps-dot
+Set( Products,
+    Table(
+        { Product: "Widget",    'Quantity Requested': 6,  'Quantity Available': 3 },
+        { Product: "Gadget",    'Quantity Requested': 10, 'Quantity Available': 20 },
+        { Product: "Gizmo",     'Quantity Requested': 4,  'Quantity Available': 11 },
+        { Product: "Apparatus", 'Quantity Requested': 7,  'Quantity Available': 6 }
+    )
+)
+```
+
+Er tilgjengelig for å finne ut om noen av disse produktene hadde flere forespørsler enn:
+
+`Filter( Products, 'Quantity Requested' > 'Quantity Available' )`
 
 Det første argumentet i **Filter** er tabellen med poster som det opereres med, og det andre argumentet er en formel.  **Filter** oppretter et postomfang for evaluering av denne formelen, der feltene for hver post er tilgjengelig, i dette tilfellet **Produkt**, **Ønsket antall**, og **Disponibelt antall**.  Resultatet av sammenligningen bestemmer om hver post skal inkluderes i resultatet av funksjonen:
 
@@ -228,66 +248,67 @@ Det første argumentet i **Filter** er tabellen med poster som det opereres med,
 
 For å legge til i dette eksemplet, kan vi beregne hvor mye av hvert produkt som skal bestilles:
 
-```powerapps-comma
+```powerapps-dot
 AddColumns( 
-    Filter( Products; 'Quantity Requested' > 'Quantity Available' ); 
-    "Quantity To Order"; 'Quantity Requested' - 'Quantity Available'
+    Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
+    "Quantity To Order", 'Quantity Requested' - 'Quantity Available'
 )
 ```
 
-Her er legger vi til en beregnet kolonne til resultatet.  **AddColumns** har sitt eget postomfang, som brukes til å beregne forskjellen mellom hva som er forespurt og hva som er tilgjengelig.
+Her er legger vi til en beregnet kolonne til resultatet. **AddColumns** har sitt eget postomfang, som brukes til å beregne forskjellen mellom hva som er forespurt og hva som er tilgjengelig.
 
 ![](media/working-with-tables/toorder.png)
 
-Til slutt kan vi redusere resultattabellen til bare de kolonnene som vi ønsker:
+Til slutt kan vi redusere resultattabellen til bare kolonnene som vi ønsker:
 
-```powerapps-comma
-ShowColumns( 
-    AddColumns( 
-        Filter( Products; 'Quantity Requested' > 'Quantity Available' ); 
-        "Quantity To Order"; 'Quantity Requested' - 'Quantity Available'
-    ); 
-    "Product"; 
+```powerapps-dot
+ShowColumns(
+    AddColumns(
+        Filter( Products, 'Quantity Requested' > 'Quantity Available' ),
+        "Quantity To Order", 'Quantity Requested' - 'Quantity Available'
+    ),
+    "Product",
     "Quantity To Order"
 )
 ```
 
 ![](media/working-with-tables/toorderonly.png)
 
-Vær oppmerksom på at i det ovenstående brukte vi doble anførselstegn (") noen steder og enkle anførselstegn (') andre steder.  Enkle anførselstegn er nødvendig når du refererer til verdien for et objekt, for eksempel et felt eller en tabell, der navnet på objektet inneholder et mellomrom.  Doble anførselstegn brukes når vi ikke refererer til verdien for et objekt, men i stedet snakker om det, spesielt i situasjoner der objektet ikke finnes ennå, som er tilfelle i **AddColumns**.  
+Vær oppmerksom på at i det ovenstående brukte vi doble anførselstegn (") noen steder og enkle anførselstegn (') andre steder.  Enkle anførselstegn er nødvendig når du refererer til verdien for et objekt, for eksempel et felt eller en tabell, der navnet på objektet inneholder et mellomrom.  Doble anførselstegn brukes når vi ikke refererer til verdien for et objekt, men i stedet snakker om det, spesielt i situasjoner der objektet ikke finnes ennå, som er tilfelle i **AddColumns**.
 
-### <a name="disambiguation"></a>Tvetydighet
-Feltnavnene som ble lagt til ved bruk av postområdet overstyrer de samme navnene fra ellers i appen.  Når dette skjer, har du fremdeles tilgang til verdiene som er utenfor postområdet ved bruk av operatoren [**@** Tvetydighet](functions/operators.md):
+## <a name="disambiguation"></a>Tvetydighet
 
-* Hvis du vil ha tilgang til verdiene fra nestede postområder, bruker du **@** operatoren med samme navn som tabellen der operatoren arbeider ved bruk av mønsteret:<br>_Table_**[@**_FieldName_**]**
-* Hvis du vil ha tilgang til globale verdier, som datakilder, samlinger og kontekstvariabler, bruker du mønsteret **[@**_ObjectName_**]** (uten en tabellangivelse).
+Feltnavnene som ble lagt til ved bruk av postområdet overstyrer de samme navnene fra ellers i appen.  Når dette skjer, har du fremdeles tilgang til verdiene som er utenfor postområdet ved bruk av operatoren [ **@** Tvetydighet](functions/operators.md):
 
-Hvis tabellen som styres er et uttrykk, for eksempel **Filter(** _Table_**,** ... **)**, kan ikke tvetydighetsoperatoren brukes.  Bare det innerste postomfanget har tilgang til felt fra dette tabelluttrykket ved å ikke bruke operatoren Tvetydighet.
+* Hvis du vil ha tilgang til verdiene fra nestede postområder, bruker du **@** operatoren med samme navn som tabellen der operatoren arbeider ved bruk av mønsteret:<br>_Table_ **[@** _FieldName_ **]**
+* Hvis du vil ha tilgang til globale verdier, som datakilder, samlinger og kontekstvariabler, bruker du mønsteret **[@** _ObjectName_ **]** (uten en tabellangivelse).
+
+Hvis tabellen som styres er et uttrykk, for eksempel **Filter(** _Table_ **,** ... **)** , kan ikke tvetydighetsoperatoren brukes.  Bare det innerste postomfanget har tilgang til felt fra dette tabelluttrykket ved å ikke bruke operatoren Tvetydighet.
 
 Anta for eksempel at du har en samling **X**:
 
 ![](media/working-with-tables/X.png)
 
-Du kan opprette denne samlingen med **ClearCollect( X; \[1; 2\] )**.
+Du kan opprette denne samlingen med **ClearCollect( X, \[1, 2\] )** .
 
 Og en annen samling **Y**:
 
 ![](media/working-with-tables/Y.png)
 
-Du kan opprette denne samlingen med **ClearCollect( Y; ["A"; "B"] )**.
+Du kan opprette denne samlingen med **ClearCollect( Y, ["A", "B"] )** .
 
 I tillegg definere en kontekstvariabel kalt **verdien** med denne formelen: **UpdateContext ({Value: "!"})**
 
-La oss sette alt sammen.  Følgende formel i denne konteksten:
+La oss sette alt sammen. Følgende formel i denne konteksten:
 
-```powerapps-comma
-Ungroup( 
-    ForAll( X; 
-        ForAll( Y; 
-            Y[@Value] & Text( X[@Value] ) & [@Value] 
-        ) 
-    ); 
-    "Value" 
+```powerapps-dot
+Ungroup(
+    ForAll( X,
+        ForAll( Y,
+            Y[@Value] & Text( X[@Value] ) & [@Value]
+        )
+    ),
+    "Value"
 )
 ```
 
@@ -295,71 +316,89 @@ gir denne tabellen:
 
 ![](media/working-with-tables/XY.png)
 
-Hva skjer her?  Den ytterste **ForAll**-funksjonen definerer et postomfang for **X**, som gir tilgang til **Verdi**-feltet for hver post når det behandles.  Den blir tilgjengelig ved ganske enkelt å bruke ordet **Verdi**, eller ved å bruke **X [@Value]**.
+Hva skjer her?  Den ytterste **ForAll**-funksjonen definerer et postomfang for **X**, som gir tilgang til **Verdi**-feltet for hver post når det behandles.  Den blir tilgjengelig ved ganske enkelt å bruke ordet **Verdi**, eller ved å bruke **X [@Value]** .
 
 Den innerste **ForAll**-funksjonen definerer et annen postomfang for **Y**.  Siden denne tabellen også har definert et **Verdi**-felt, refererer bruken av **Verdi** her til posten i feltet i **Y** og ikke lenger den fra **X**.  Vi må her bruke den lengre versjonen med tvetydighetsoperatoren for å få tilgang til **Verdi**-feltet for **X**.
 
 Tilgang til feltene i denne tabellen krever ikke tvetydighet, siden **Y** er innerste postomfang, slik at vi kan bruke denne formelen med det samme resultatet:
 
-```powerapps-comma
-Ungroup( 
-    ForAll( X; 
-        ForAll( Y; 
-            Value & Text( X[@Value] ) & [@Value] 
-        ) 
-    ); 
-    "Value" 
+```powerapps-dot
+Ungroup(
+    ForAll( X,
+        ForAll( Y,
+            Value & Text( X[@Value] ) & [@Value]
+        )
+    ),
+    "Value"
 )
 ```
 
-Alle **ForAll**-postomfang overstyrer det globale omfanget.  Kontekstvariabelen **Verdi** som vi definerte, er ikke tilgjengelig ved navn uten tvetydighetsoperatoren.   For å få tilgang til denne verdien må vi bruke **[@Value]**.
+Alle **ForAll**-postomfang overstyrer det globale omfanget. Den **verdien** kontekstvariabelen som vi definerte, er ikke tilgjengelig ved navn uten tvetydighetsoperatoren. Hvis du vil ha tilgang til denne verdien, kan du bruke **[@Value]** .
 
-**Løse opp gruppe** flater ut resultatet, fordi nestede **ForAll**-funksjoner vil resultere i en nestet resultattabell.
+**Del opp** flater ut resultatet fordi nestet **ForAll** funksjoner resultere i en nestet resultattabell.
 
-## <a name="inline-syntax"></a>Innebygd syntaks
-### <a name="records"></a>Poster
+## <a name="single-column-tables"></a>Enkeltkolonne-tabeller
+
+Hvis du vil arbeide med en enkelt kolonne fra en tabell, kan du bruke den **ShowColumns** fungere som i dette eksemplet:
+
+```powerapps-dot
+ShowColumns( Products, "Product" )
+```
+
+Denne formelen gir denne tabellen med én kolonne:
+
+![](media/working-with-tables/single-column.png)
+
+For en kortere alternativ, kan du angi *Table.Column*, som trekker ut enkeltkolonne-tabell med bare *kolonnen* fra *tabellen*. Denne formelen gir for eksempel nøyaktig samme resultat som ved hjelp av **ShowColumns**.
+
+```powerapps-dot
+Products.Product
+```
+
+## <a name="inline-records"></a>Innebygde poster
+
 Du kan uttrykke poster ved hjelp av klammeparenteser som inneholder navngitte feltverdier.  Du kan for eksempel uttrykke den første posten i tabellen i begynnelsen av dette emnet ved hjelp av denne formelen:
 
-`{ Name: "Chocolate"; Price: 3,95; 'Quantity on Hand': 12; 'Quantity on Order': 10 }`
+`{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 }`
 
 Du kan også bygge inn formler i andre formler, som dette eksemplet viser:
 
-`{ Name: First(Products).Name; Price: First(Products).Price * 1,095 }`
+`{ Name: First(Products).Name, Price: First(Products).Price * 1.095 }`
 
 Du kan neste poster ved å neste klammeparenteser, som dette eksemplet viser:
 
-`{ 'Quantity': { 'OnHand': ThisItem.QuantOnHand; 'OnOrder': ThisItem.QuantOnOrder } }`
+`{ 'Quantity': { 'OnHand': ThisItem.QuantOnHand, 'OnOrder': ThisItem.QuantOnOrder } }`
 
 Omslutte hvert kolonnenavn som inneholder et spesialtegn, for eksempel et mellomrom eller et kolon, i enkle anførselstegn.  Du kan doble dem, hvis du vil bruke et enkelt sitat i et kolonnenavn.
 
 Vær oppmerksom på at verdien i **Pris**-kolonnen ikke inneholder et valutasymbol, for eksempel et dollartegn. Denne formateringen vil bli brukt når verdien vises.  
 
-### <a name="tables"></a>Tabeller
+## <a name="inline-tables"></a>Innebygde tabeller
 Du kan opprette en tabell ved hjelp av **[Table](functions/function-table.md)**-funksjonen og et sett med poster. Du kan uttrykke tabellen i begynnelsen av dette emnet ved hjelp av denne formelen:
 
-```powerapps-comma
+```powerapps-dot
 Table( 
-    { Name: "Chocolate"; Price: 3,95; 'Quantity on Hand': 12; 'Quantity on Order': 10 };
-    { Name: "Bread"; Price: 4,95; 'Quantity on Hand': 34; 'Quantity on Order': 0 };
-    { Name: "Water"; Price: 4,95; 'Quantity on Hand': 10; 'Quantity on Order': 0 } 
+    { Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 },
+    { Name: "Bread", Price: 4.95, 'Quantity on Hand': 34, 'Quantity on Order': 0 },
+    { Name: "Water", Price: 4.95, 'Quantity on Hand': 10, 'Quantity on Order': 0 } 
 )
 ```
 
 Du kan også neste tabeller:
 
-```powerapps-comma
+```powerapps-dot
 Table( 
-    { Name: "Chocolate"; 
-      'Quantity History': Table( { Quarter: "Q1"; OnHand: 10; OnOrder: 10 };
-                                 { Quarter: "Q2"; OnHand: 18; OnOrder: 0 } ) 
+    { Name: "Chocolate", 
+      'Quantity History': Table( { Quarter: "Q1", OnHand: 10, OnOrder: 10 },
+                                 { Quarter: "Q2", OnHand: 18, OnOrder: 0 } ) 
     }
 )
 ```
 
-### <a name="value-tables"></a>Verditabeller
+## <a name="inline-value-tables"></a>Innebygde verditabeller
 Du kan opprette enkeltkolonne-tabeller ved å angi verdier i hakeparenteser. Den resulterende tabellen har én enkelt kolonne, kalt **Verdi**.
 
-For eksempel `[ 1; 2; 3; 4 ]` tilsvarer `Table( { Value: 1 }; { Value: 2 }; { Value: 3 }; { Value: 4 } )` og returnerer denne tabellen:
+For eksempel `[ 1, 2, 3, 4 ]` tilsvarer `Table( { Value: 1 }, { Value: 2 }, { Value: 3 }, { Value: 4 } )` og returnerer denne tabellen:
 
 ![](media/working-with-tables/inline-table.png)
 

@@ -1,25 +1,24 @@
 ---
 title: Bruk av Cognitive Services i PowerApps | Microsoft Docs
 description: Utvikle en grunnleggende lerretsapp som bruker Azure Cognitive Services Text Analytics API til å analysere tekst.
-author: gregli-msft
+author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 12/08/2017
-ms.author: gregli
+ms.author: lanced
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 07548ff8fb14626543472b72ea52b80c858eeb0e
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: ee3f7684ed1636cf2445945d1d01507733c18625
+ms.sourcegitcommit: dd74c98f48587730466e6669fc94da250d5c631e
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61556417"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/26/2019
+ms.locfileid: "66224923"
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>Bruk av Cognitive Services i PowerApps
 Denne artikkelen viser deg hvordan du bygger en grunnleggende lerretsapp som bruker den [Azure Cognitive Services Text Analytics API](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview) til å analysere tekst. Vi viser deg hvordan du konfigurerer API-en for tekstanalyse og kobler til ved hjelp av [Tekstanalyse-koblingen](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Deretter viser vi hvordan du oppretter en lerretsapp som utfører et kall til API-en.
@@ -113,7 +112,7 @@ Følg fremgangsmåten nedenfor for å opprette denne skjermen. Hvis et kontrolln
    
     ![App med etiketter og galleri](./media/cognitive-services-api/partial-app-step3.png)
 
-9. Velg **Screen1** > ellipse (**. . .**) > **Slett** (du trenger ikke denne skjermen i appen).
+9. Velg **Screen1** > ellipse ( **. . .** ) > **Slett** (du trenger ikke denne skjermen i appen).
 
 Vi lar appen være enkel å bruke, så vi kan fokusere på oppkall til API-en for tekstanalyse, men du kan legge til ting som logikk for å vise og skjule kontroller som er basert på hvilke avmerkingsbokser som er merket, feilhåndtering hvis brukeren ikke velger et alternativ osv.
 
@@ -128,34 +127,34 @@ Du har nå en flott app, men den kan ikke gjøre noe ennå. Dette fikser du om l
 
 Med dette som bakgrunn kan vi legge til formelen for **OnSelect**-egenskapen for knappen. Det er her det spennende skjer.
 
-```powerapps-comma
-If( chkLanguage.Value = true;
-    ClearCollect( languageCollect; 
+```powerapps-dot
+If( chkLanguage.Value = true,
+    ClearCollect( languageCollect, 
         TextAnalytics.DetectLanguage(
             {
-                numberOfLanguagesToDetect: 1; 
+                numberOfLanguagesToDetect: 1, 
                 text: tiTextToAnalyze.Text
             }
         ).detectedLanguages.name
     )
-);;
+);
 
-If( chkPhrases.Value = true;
-    ClearCollect( phrasesCollect; 
+If( chkPhrases.Value = true,
+    ClearCollect( phrasesCollect, 
         TextAnalytics.KeyPhrases(
             {
-                language: "en"; 
+                language: "en", 
                 text: tiTextToAnalyze.Text
             }
         ).keyPhrases
     )
-);;
+);
 
-If( chkSentiment.Value = true;
-    ClearCollect( sentimentCollect; 
+If( chkSentiment.Value = true,
+    ClearCollect( sentimentCollect, 
         TextAnalytics.DetectSentiment(
             {
-                language: "en"; 
+                language: "en", 
                 text: tiTextToAnalyze.Text
             }
         ).score
@@ -171,9 +170,9 @@ Det foregår mye på en gang her, så la oss dele det opp:
 
   * Angi **tiTextToAnalyze.Text** som inndatatekst i alle tre oppkall.
 
-  * **numberOfLanguagesToDetect** programmeres som 1 i **DetectLanguage()**, men du kan sende denne parameteren basert på logikk i appen.
+  * **numberOfLanguagesToDetect** programmeres som 1 i **DetectLanguage()** , men du kan sende denne parameteren basert på logikk i appen.
 
-  * I **språk** og **Keyphrases()**, **språk** programmeres som «en», men du kan sende denne parameteren basert på logikk i appen. Du kan for eksempel identifisere språket først, og deretter angi parameteren basert på hva som returneres av **DetectLanguage()**.
+  * I **språk** og **Keyphrases()** , **språk** programmeres som «en», men du kan sende denne parameteren basert på logikk i appen. Du kan for eksempel identifisere språket først, og deretter angi parameteren basert på hva som returneres av **DetectLanguage()** .
 
 * For hvert oppkall som utføres, legger du til resultatet i riktig samling:
 
@@ -188,15 +187,15 @@ Hvis du vil vise resultatene for API-oppkall, må det refereres til riktig samli
 
 1. Angi **Tekst**-egenskapen for språketiketten til: `"The language detected is " & First(languageCollect).name`.
    
-    **First()**-funksjonen returnerer den første (og i dette tilfelle den eneste) posten i **languageCollect**, og appen viser **navnet** (det eneste feltet) som er tilknyttet denne posten.
+    **First()** -funksjonen returnerer den første (og i dette tilfelle den eneste) posten i **languageCollect**, og appen viser **navnet** (det eneste feltet) som er tilknyttet denne posten.
 
-2. Angi **Tekst**-egenskapen for sentimentetiketten til: `"The sentiment score is " & Round(First(sentimentCollect.Value).Value; 3)\*100 & "% positive."`.
+2. Angi **Tekst**-egenskapen for sentimentetiketten til: `"The sentiment score is " & Round(First(sentimentCollect.Value).Value, 3)\*100 & "% positive."`.
    
-    Denne formelen bruker også **First()**-funksjonen, henter **Verdien** (0-1) fra den første og eneste posten og formaterer den deretter som en prosentdel.
+    Denne formelen bruker også **First()** -funksjonen, henter **Verdien** (0-1) fra den første og eneste posten og formaterer den deretter som en prosentdel.
 
 3. Angi **Elementer**-egenskapen for nøkkeluttrykkgalleriet til: `phrasesCollect`.
    
-    Du arbeider nå med et galleri, slik at du ikke trenger **First()**-funksjonen til å trekke ut en enkeltverdi. Du refererer til samlingen, og galleriet viser nøkkeluttrykkene som en liste.
+    Du arbeider nå med et galleri, slik at du ikke trenger **First()** -funksjonen til å trekke ut en enkeltverdi. Du refererer til samlingen, og galleriet viser nøkkeluttrykkene som en liste.
 
 ## <a name="run-the-app"></a>Kjør appen
 

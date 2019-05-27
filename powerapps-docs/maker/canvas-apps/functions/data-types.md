@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e96bf33b5ca5446c309eeb8a35ff0dd1c7fc5847
-ms.sourcegitcommit: 6b75019dccc5296a313f9ff0eb397003f13ce737
+ms.openlocfilehash: f9acc04a9159349075647ca4e318f15939a230f7
+ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65941628"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66216643"
 ---
 # <a name="data-types-in-canvas-apps"></a>Datatyper i lerret-apper
 
@@ -62,10 +62,6 @@ Fordi alle datatyper støtter *tom*, **boolsk** og **to alternativet** datatyper
 
 Alle de fire disse datatypene er basert på en [Unicode](https://en.wikipedia.org/wiki/Unicode) tekststreng.
 
-### <a name="size-limits"></a>Begrensninger for filstørrelse
-
-Disse datatypene har ingen forhåndsangitte grensen på lengden. Den underliggende implementeringen JavaScript i nettleseren eller på enheten din kan bruke en grense, men det er vanligvis også over 100 MB. Mengden tilgjengelig minne på enheten kan imidlertid bruke en annen grensen som trolig er lavere enn 100 MB. Hvis du vil finne ut om appen din kjører i disse grensene, kan du teste vanlige scenarier på alle enheter som den skal kjøres.
-
 ### <a name="image-and-media-resources"></a>Bilde- og Media ressurser
 
 Gjennom den **filen** -menyen, kan du legge til bilde, video og lyd filer som app-ressurser. Navnet på den importerte filen blir ressursnavnet i appen. I denne grafikken Northwind Traders logoen, som heter **nwindlogo**, har blitt lagt til en app:
@@ -94,11 +90,21 @@ Denne URI-en vises en skaleres opp versjon to lilla ruter:
 
 ![](media/data-types/double-diamonds.png)
 
-Du kan vise de nyeste bildet som i en [ **kamera** ](../controls/control-camera.md) kontroll hvis du angir den **bilde** -egenskapen for en kontroll til den **Photo** egenskapen for kamera-kontrollen. Appen inneholder bildet i minnet, og den **Photo** -egenskapen for kamera-kontrollen returnerer en URI-referanse til bildet. Du kan for eksempel ta et bilde, og i kameraet **Photo** egenskapen kan returnere **"appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1"**.
+Du kan vise de nyeste bildet som i en [ **kamera** ](../controls/control-camera.md) kontroll hvis du angir den **bilde** -egenskapen for en kontroll til den **Photo** egenskapen for kamera-kontrollen. Appen inneholder bildet i minnet, og den **Photo** -egenskapen for kamera-kontrollen returnerer en URI-referanse til bildet. Du kan for eksempel ta et bilde, og i kameraet **Photo** egenskapen kan returnere **"appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1"** .
 
 Du bruker en URI for å referere til et bilde eller en annen mediefil som er lagret i en database. På den måten ikke appen hente de faktiske dataene før det faktisk er nødvendig. For eksempel et vedlegg i en Common Data Service-enhet kan returnere **«appres://datasources/Contacts/table/...»** Du kan vise dette bildet som i eksemplet kamera, ved å angi den **bilde** -egenskapen for en kontroll til denne, som henter de binære dataene.
 
 Når du lagrer en media-datatype, for eksempel et bilde, en database, sender appen til selve bildet eller media data, ikke URI-referanse.
+
+### <a name="size-limits"></a>Begrensninger for filstørrelse
+
+Som tekststrenger og URIer har disse datatypene ingen forhåndsangitte grensen på deres lengde.
+
+De binære dataene som disse datatypene refererer også har ingen forhåndsinnstilte grense på størrelsen. For eksempel et bilde som registreres via kamera-kontrollen som nå er referert til som **"appres: / /..."** kan være som store og høy oppløsning, som kan komme enhetens kamera. Oppløsningen, bildefrekvensen og andre attributter for mediefiler ikke er begrenset av datatypen, men bestemte kontroller for å spille og registrering av media kan ha sin egen begrensninger.
+
+Alle datastørrelser er imidlertid underlagt mengden tilgjengelig minne i appen. Weblesere som kjører på en stasjonær datamaskin vanligvis støtter mer enn 100 MB med data. Mengden tilgjengelig minne på en enhet som for eksempel en telefon kan imidlertid være langt lavere, vanligvis i området 30 – 70 megabyte. Hvis du vil finne ut om appen din kjører i disse grensene, kan du teste vanlige scenarier på alle enheter som den skal kjøres.
+
+Som en anbefalt fremgangsmåte, holder du data i minnet bare så lang etter behov. Laste opp bilder til en database, så snart som mulig; Last ned bilder bare når appens brukeren ber om.
 
 ## <a name="number-and-currency"></a>Tall og valuta
 
@@ -121,7 +127,7 @@ Dato/klokkeslett verdier fall i disse kategoriene:
 
 Denne tabellen viser noen eksempler:
 
-| Dato/klokkeslett-type | Verdien som er lagret i databasen | Verdien som vises, og angitt 7 timer west of UTC | Verdien som vises, og angitt 4 timer east of UTC | 
+| Dato/klokkeslett-type | Verdien som er lagret i databasen | Verdien som vises, og angitt 7 timer west of UTC | Verdien som vises, og angitt 4 timer east of UTC |
 |--------------------------|------------------------------|------------------------------|
 | **Lokal bruker** | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | Lørdag,&nbsp;kan&nbsp;18,&nbsp;2019<br>9:00 PM | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>8.00 |
 | **Uavhengig av tidssone** | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | 
@@ -152,6 +158,12 @@ UNIX ganger gjenspeiler antallet sekunder siden 1. januar 1970 00:00:00 UTC. Ett
 Unix-tid viser for eksempel 9. September 2001 på 01:46:40 UTC som 1 000 000 000. Å vise som dato/klokkeslett-verdi i en lerretsapp, multiplisere dette nummeret med 1000 å konvertere den til millisekunder, og deretter bruke den i en [ **tekst** ](function-text.md) funksjonen. Formelen **tekst (1000000000 * 1000, DateTimeFormat.UTC)** returnerer strengen **2001-09-09T01:46:40.000Z**.
 
 Denne funksjonen returnerer imidlertid **lørdag 8. September 2001 18:46:40** Hvis du bruker den **DateTimeFormat.LongDateTime24** format i en tidssone som skal forskyves-7 timer fra UTC (7 timer west of UTC). Dette resultatet viser den **DateTime** verdi basert på riktig måte på den lokale tidssonen.
+
+Hvis du vil konvertere til en Unix-tid, kan du dele resultatet fra **verdien** ved 1000:
+<br>**RoundDown (verdi (UnixTime) / 1000, 0)**
+
+Hvis du trenger Unix-tid i en **dato** verdien for ytterligere beregninger eller vise i PowerApps, bruker du denne formelen:
+<br>**DateAdd (dato (1970,1,1), UnixTime, sekunder)**
 
 ### <a name="sql-server"></a>SQL Server
 
@@ -194,7 +206,7 @@ Men du kan bruke denne formelen:
 
 `If( ThisItem.OrderStatus = OrderStatus.Active, ...`
 
-For globale alternativsett (hvilke enheter dele), navnet på alternativsett opplistingen tilsvarer navnet på det globale alternativsettet. For lokale alternativsett (som er begrenset til en enhet), navnet kan inneholde navnet på enheten. Denne virkemåten unngår konflikter hvis flere enheter har alternativsett som har samme navn. For eksempel den **kontoer** enheten kan ha en **OrderStatus** alternativsett, og navnet kan være **OrderStatus (kontoer)**. Dette navnet inneholder én eller flere mellomrom og parenteser, slik at du må omslutte den med enkle anførselstegn hvis du henvise til i en formel.
+For globale alternativsett (hvilke enheter dele), navnet på alternativsett opplistingen tilsvarer navnet på det globale alternativsettet. For lokale alternativsett (som er begrenset til en enhet), navnet kan inneholde navnet på enheten. Denne virkemåten unngår konflikter hvis flere enheter har alternativsett som har samme navn. For eksempel den **kontoer** enheten kan ha en **OrderStatus** alternativsett, og navnet kan være **OrderStatus (kontoer)** . Dette navnet inneholder én eller flere mellomrom og parenteser, slik at du må omslutte den med enkle anførselstegn hvis du henvise til i en formel.
 
 I tillegg to-verdiene kan også oppfører seg som boolske verdier. For eksempel en to-alternativ verdi med navnet **TaxStatus** kanskje etikettene **avgiftspliktig** og **ikke-avgiftspliktig**, som tilsvarer *SANN* og *USANN* henholdsvis. For å demonstrere, kan du bruke denne formelen:
 
