@@ -13,14 +13,17 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 19c5382baba643e673edb7e77e0398616e880980
-ms.sourcegitcommit: 2b1ed0db9312152f330bd8a8ea663f01b40e7c23
+ms.openlocfilehash: 8c88417763b4eee125ce511fafcac61da018d2ec
+ms.sourcegitcommit: d87b2068a63e416e2814791328a3a47bbcb5bb48
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66185647"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66249820"
 ---
 # <a name="keyboard-shortcuts-for-canvas-apps"></a>Hurtigtaster for lerretsapper
+
+> [!NOTE]
+> Snarveier kan variere avhengig av språket.
 
 ## <a name="file"></a>Filen
 
@@ -56,6 +59,7 @@ ms.locfileid: "66185647"
 | CTRL += eller Ctrl + Skift += | Zoom inn. |
 | CTRL +- eller Ctrl + Skift +- | Zoom ut. |
 | Ctrl + 0 | Tilpass lerret til siden. |
+| Skift + Enter | Linjeskift i en formel. |
 
 ## <a name="preview"></a>Forhåndsvisning
 
