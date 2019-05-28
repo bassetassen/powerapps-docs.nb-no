@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/26/2019
 ms.locfileid: "66224923"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>Bruk av Cognitive Services i PowerApps
 Denne artikkelen viser deg hvordan du bygger en grunnleggende lerretsapp som bruker den [Azure Cognitive Services Text Analytics API](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview) til å analysere tekst. Vi viser deg hvordan du konfigurerer API-en for tekstanalyse og kobler til ved hjelp av [Tekstanalyse-koblingen](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Deretter viser vi hvordan du oppretter en lerretsapp som utfører et kall til API-en.
@@ -127,34 +128,34 @@ Du har nå en flott app, men den kan ikke gjøre noe ennå. Dette fikser du om l
 
 Med dette som bakgrunn kan vi legge til formelen for **OnSelect**-egenskapen for knappen. Det er her det spennende skjer.
 
-```powerapps-dot
-If( chkLanguage.Value = true,
-    ClearCollect( languageCollect, 
+```powerapps-comma
+If( chkLanguage.Value = true;
+    ClearCollect( languageCollect; 
         TextAnalytics.DetectLanguage(
             {
-                numberOfLanguagesToDetect: 1, 
+                numberOfLanguagesToDetect: 1; 
                 text: tiTextToAnalyze.Text
             }
         ).detectedLanguages.name
     )
-);
+);;
 
-If( chkPhrases.Value = true,
-    ClearCollect( phrasesCollect, 
+If( chkPhrases.Value = true;
+    ClearCollect( phrasesCollect; 
         TextAnalytics.KeyPhrases(
             {
-                language: "en", 
+                language: "en"; 
                 text: tiTextToAnalyze.Text
             }
         ).keyPhrases
     )
-);
+);;
 
-If( chkSentiment.Value = true,
-    ClearCollect( sentimentCollect, 
+If( chkSentiment.Value = true;
+    ClearCollect( sentimentCollect; 
         TextAnalytics.DetectSentiment(
             {
-                language: "en", 
+                language: "en"; 
                 text: tiTextToAnalyze.Text
             }
         ).score
@@ -189,7 +190,7 @@ Hvis du vil vise resultatene for API-oppkall, må det refereres til riktig samli
    
     **First()** -funksjonen returnerer den første (og i dette tilfelle den eneste) posten i **languageCollect**, og appen viser **navnet** (det eneste feltet) som er tilknyttet denne posten.
 
-2. Angi **Tekst**-egenskapen for sentimentetiketten til: `"The sentiment score is " & Round(First(sentimentCollect.Value).Value, 3)\*100 & "% positive."`.
+2. Angi **Tekst**-egenskapen for sentimentetiketten til: `"The sentiment score is " & Round(First(sentimentCollect.Value).Value; 3)\*100 & "% positive."`.
    
     Denne formelen bruker også **First()** -funksjonen, henter **Verdien** (0-1) fra den første og eneste posten og formaterer den deretter som en prosentdel.
 

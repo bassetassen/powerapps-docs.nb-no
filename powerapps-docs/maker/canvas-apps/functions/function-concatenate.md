@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/24/2019
 ms.locfileid: "66216088"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="concat-and-concatenate-functions-in-powerapps"></a>Funksjonene Concat og Concatenate i PowerApps
 
@@ -36,12 +37,12 @@ Bruk den [ **del** ](function-split.md) eller [ **MatchAll** ](function-ismatch.
 
 ## <a name="syntax"></a>Syntaks
 
-**Concat**( *Table*, *Formula* )
+**Concat**( *Table*; *Formula* )
 
 - *Tabell* – obligatorisk.  Tabell som skal arbeides på.
 - *Formel* – obligatorisk.  Formel som angis for alle postene i en tabell.
 
-**Concatenate**( *String1* [, *String2*, ...] )
+**Concatenate**( *String1* [; *String2*; ...] )
 
 - *Streng(er)* – obligatorisk.  Kombinasjon av individuelle strenger eller en enkeltkolonnetabell med strenger.
 
@@ -55,13 +56,13 @@ Eksemplene i denne delen bruker disse globale variablene:
 
 For å opprette disse globale variablene i en app, kan du sette inn en [ **knappen** ](../controls/control-button.md) kontroll, og angi dens **OnSelect** egenskapen til denne formelen:
 
-```powerapps-dot
-Set( FirstName, "Jane" ); Set( LastName, "Doe" );
-Set( Products,
+```powerapps-comma
+Set( FirstName; "Jane" );; Set( LastName; "Doe" );;
+Set( Products;
     Table(
-        { Name: "Violin", Type: "String" },
-        { Name: "Cello", Type: "String" },
-        { Name: "Trumpet", Type: "Wind" }
+        { Name: "Violin"; Type: "String" };
+        { Name: "Cello"; Type: "String" };
+        { Name: "Trumpet"; Type: "Wind" }
     )
 )
 ```
@@ -118,4 +119,4 @@ I disse eksemplene må legge til et tomt, loddrett galleri, angi dens **elemente
 | Formel | Beskrivelse | Resultat |
 |---------|-------------|--------|
 | **Del (Concat (&nbsp;produkter,&nbsp;navnet&nbsp;&&nbsp;»,&nbsp;"&nbsp;),",")** | Deler opp tekststrengen med skilletegn **","** . Strengen slutter med et komma og et mellomrom, slik at den siste raden i resultatet er en tom streng.  | ![Table](media/function-concatenate/split.png) |
-| **MatchAll (Concat (&nbsp;produkter,&nbsp;navnet&nbsp;&&nbsp;»,&nbsp;"&nbsp;)," [^ \s,]+»). FullMatch** | Deler opp tekststrengen basert på tegn som ikke er mellomrom eller komma. Denne formelen fjerner den ekstra komma og et mellomrom på slutten av strengen. | ![Table](media/function-concatenate/matchall.png)
+| **MatchAll (Concat (&nbsp;produkter;&nbsp;navnet&nbsp;&&nbsp;»;&nbsp;"&nbsp;)," [^ \s;]+»). FullMatch** | Deler opp tekststrengen basert på tegn som ikke er mellomrom eller komma. Denne formelen fjerner den ekstra komma og et mellomrom på slutten av strengen. | ![Table](media/function-concatenate/matchall.png)

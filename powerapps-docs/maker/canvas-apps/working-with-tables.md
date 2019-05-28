@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/24/2019
 ms.locfileid: "66216206"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-canvas-app-tables-and-records-in-powerapps"></a>Slik fungerer lerretsapptabeller og -poster i PowerApps
 
@@ -40,7 +41,7 @@ Du kan bygge et utvalg av formler som tar navnet på en tabell som et argument, 
 ### <a name="records"></a>Poster
 Hver post inneholder minst én kategori med informasjon for en person, et sted eller en ting. Eksemplet ovenfor viser en post for hvert produkt (**sjokolade**, **brød**, og **vann**), og en kolonne for hver kategori med informasjon (**pris**, **antall på lager**, og **antall i ordre**).
 
-I en formel kan du referere til en post som står alene, utenfor konteksten til en tabell ved hjelp av klammeparenteser. For eksempel denne posten **{navn: "Strawberries", pris: 7.99}** er ikke tilknyttet en tabell. Vær oppmerksom på at feltnavn, for eksempel **Name** og **Price** i eksempelet over, ikke står i doble anførselstegn.
+I en formel kan du referere til en post som står alene, utenfor konteksten til en tabell ved hjelp av klammeparenteser. For eksempel denne posten **{navn: "Strawberries"; pris: 7,99}** er ikke tilknyttet en tabell. Vær oppmerksom på at feltnavn, for eksempel **Name** og **Price** i eksempelet over, ikke står i doble anførselstegn.
 
 ### <a name="fields"></a>Felt
 Et felt er et enkeltstående stykke informasjon i en post. Du kan visualisere denne type av felt som en verdi i en kolonne for en bestemt post.
@@ -73,11 +74,11 @@ Alle tabeller som er lagret i en datakilde eller en samling, har et navn, som du
 
 Som i eksemplet nedenfor, kan du uttrykke en tabell i en formel ved hjelp av **[Table](functions/function-table.md)**-funksjonen sammen med et sett med poster, som du uttrykker i klammeparenteser:
 
-`Table( { Value: "Strawberry" }, { Value: "Vanilla" } )`
+`Table( { Value: "Strawberry" }; { Value: "Vanilla" } )`
 
 Du kan også definere en enkeltkolonne-tabell med hakeparenteser.  En tilsvarende måte å skrive det ovenfor:
 
-`[ "Strawberry", "Vanilla" ]`
+`[ "Strawberry"; "Vanilla" ]`
 
 ## <a name="table-formulas"></a>Tabellformler
 I Excel og PowerApps, kan du bruke formler til å endre tall og strenger av tekst på lignende måte:
@@ -87,7 +88,7 @@ I Excel og PowerApps, kan du bruke formler til å endre tall og strenger av teks
 
 I begge tilfeller endres automatisk den beregnede verdien, hvis du endrer verdiene av argumentene (for eksempel tall i celle **A1**, eller verdien av **Slider1**).
 
-På samme måte kan du bruke formler til å få tilgang til og endre data i tabeller og poster. Du kan bruke navnene på tabeller som argumenter i noen formler, som for eksempel **Min(Catalog, Price)** , til å vise den laveste verdien i **Pris**-kolonnen i **Katalog**-tabellen. Andre formler gir hele tabeller som returverdier, for eksempel **RenameColumns(Catalog, "Price", "Cost")** , som returnerer alle postene fra **Katalog**-tabellen, men endrer navnet på **Pris**-kolonnen til **Kostnader**.
+På samme måte kan du bruke formler til å få tilgang til og endre data i tabeller og poster. Du kan bruke navnene på tabeller som argumenter i noen formler, som for eksempel **Min(Catalog; Price)** , til å vise den laveste verdien i **Pris**-kolonnen i **Katalog**-tabellen. Andre formler gir hele tabeller som returverdier, for eksempel **RenameColumns(Catalog; "Price"; "Cost")** , som returnerer alle postene fra **Katalog**-tabellen, men endrer navnet på **Pris**-kolonnen til **Kostnader**.
 
 Akkurat som med tall, beregnes formler som involverer tabeller og poster automatisk samtidig med at den underliggende tabellen eller posten endres. Hvis kostnaden for et produkt i **Katalog**-tabellen senkes under det forrige minimumsnivået, vil returverdien for **[Min](functions/function-aggregates.md)**-formelen endres automatisk, slik at de stemmer overens.
 
@@ -104,7 +105,7 @@ La oss gå gjennom noen enkle eksempler.
 
 2. I stedet for å angi **[Elementer](controls/properties-core.md)**-egenskapen til navnet på en tabell, kan du angi en formel som inneholder navnet på tabellen som et argument, som i dette eksemplet:
 
-    `Sort(CustomGallerySample, SampleHeading, Descending)`
+    `Sort(CustomGallerySample; SampleHeading; Descending)`
 
     Denne formelen inneholder **[Sort](functions/function-sort.md)**-funksjonen, som tar navnet på en tabell som første argument. og navnet på en kolonne i denne tabellen som det andre argumentet. Funksjonen støtter også et valgfritt tredje argument, som stipulerer at du vil sortere dataene i synkende rekkefølge.
 
@@ -112,7 +113,7 @@ La oss gå gjennom noen enkle eksempler.
 
 3. Angi **[Elementer](controls/properties-core.md)**-egenskapen til en formel som tar formelen fra det forrige trinnet som et argument og returnerer en tabell, som i dette eksemplet:
 
-    `FirstN(Sort(CustomGallerySample, SampleHeading, Descending), 2)`
+    `FirstN(Sort(CustomGallerySample; SampleHeading; Descending); 2)`
 
     I denne formelen bruker du **[FirstN](functions/function-first-last.md)**-funksjonen til å vise et bestemt antall poster i en tabell. Bruk **[Sort](functions/function-sort.md)**-funksjonen som det første argumentet til **[FirstN](functions/function-first-last.md)**, og et tall (i dette tilfellet **2**) som det andre argumentet, som angir hvor mange poster for som skal vises.
 
@@ -161,7 +162,7 @@ Andre funksjoner er spesielt utformet for å endre data og har bivirkninger. For
 Du kan også bygge en formel som beregner data for en individuell post, tar en individuell post som et argument, og gir en individuell post som en returverdi. La oss gå tilbake til galleri-eksemplet ovenfor, og bruke **Gallery1.Selected** til å vise informasjon fra en post brukeren velger i galleriet.
 
 1. Legg til en [ **knappen**](controls/control-button.md), og angi dens **[OnSelect](controls/properties-core.md)** egenskapen til denne formelen:<br>
-    **Collect( SelectedRecord, Gallery1.Selected )**
+    **Collect( SelectedRecord; Gallery1.Selected )**
 
 2. Velg knappen mens du holder nede ALT.
 
@@ -227,20 +228,20 @@ Ta for eksempel en tabell med **Produkter**:
 
 Hvis du vil opprette denne eksempeltabell i appen, kan du sette inn en knapp, angi dens **OnSelect** egenskapen til denne formelen, og velg deretter knappen (Klikk for den mens du holder nede Alt-tasten i PowerApps Studio):
 
-```powerapps-dot
-Set( Products,
+```powerapps-comma
+Set( Products;
     Table(
-        { Product: "Widget",    'Quantity Requested': 6,  'Quantity Available': 3 },
-        { Product: "Gadget",    'Quantity Requested': 10, 'Quantity Available': 20 },
-        { Product: "Gizmo",     'Quantity Requested': 4,  'Quantity Available': 11 },
-        { Product: "Apparatus", 'Quantity Requested': 7,  'Quantity Available': 6 }
+        { Product: "Widget";    'Quantity Requested': 6;  'Quantity Available': 3 };
+        { Product: "Gadget";    'Quantity Requested': 10; 'Quantity Available': 20 };
+        { Product: "Gizmo";     'Quantity Requested': 4;  'Quantity Available': 11 };
+        { Product: "Apparatus"; 'Quantity Requested': 7;  'Quantity Available': 6 }
     )
 )
 ```
 
 Er tilgjengelig for å finne ut om noen av disse produktene hadde flere forespørsler enn:
 
-`Filter( Products, 'Quantity Requested' > 'Quantity Available' )`
+`Filter( Products; 'Quantity Requested' > 'Quantity Available' )`
 
 Det første argumentet i **Filter** er tabellen med poster som det opereres med, og det andre argumentet er en formel.  **Filter** oppretter et postomfang for evaluering av denne formelen, der feltene for hver post er tilgjengelig, i dette tilfellet **Produkt**, **Ønsket antall**, og **Disponibelt antall**.  Resultatet av sammenligningen bestemmer om hver post skal inkluderes i resultatet av funksjonen:
 
@@ -248,10 +249,10 @@ Det første argumentet i **Filter** er tabellen med poster som det opereres med,
 
 For å legge til i dette eksemplet, kan vi beregne hvor mye av hvert produkt som skal bestilles:
 
-```powerapps-dot
+```powerapps-comma
 AddColumns( 
-    Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
-    "Quantity To Order", 'Quantity Requested' - 'Quantity Available'
+    Filter( Products; 'Quantity Requested' > 'Quantity Available' ); 
+    "Quantity To Order"; 'Quantity Requested' - 'Quantity Available'
 )
 ```
 
@@ -261,13 +262,13 @@ Her er legger vi til en beregnet kolonne til resultatet. **AddColumns** har sitt
 
 Til slutt kan vi redusere resultattabellen til bare kolonnene som vi ønsker:
 
-```powerapps-dot
+```powerapps-comma
 ShowColumns(
     AddColumns(
-        Filter( Products, 'Quantity Requested' > 'Quantity Available' ),
-        "Quantity To Order", 'Quantity Requested' - 'Quantity Available'
-    ),
-    "Product",
+        Filter( Products; 'Quantity Requested' > 'Quantity Available' );
+        "Quantity To Order"; 'Quantity Requested' - 'Quantity Available'
+    );
+    "Product";
     "Quantity To Order"
 )
 ```
@@ -289,25 +290,25 @@ Anta for eksempel at du har en samling **X**:
 
 ![](media/working-with-tables/X.png)
 
-Du kan opprette denne samlingen med **ClearCollect( X, \[1, 2\] )** .
+Du kan opprette denne samlingen med **ClearCollect( X; \[1; 2\] )** .
 
 Og en annen samling **Y**:
 
 ![](media/working-with-tables/Y.png)
 
-Du kan opprette denne samlingen med **ClearCollect( Y, ["A", "B"] )** .
+Du kan opprette denne samlingen med **ClearCollect( Y; ["A"; "B"] )** .
 
 I tillegg definere en kontekstvariabel kalt **verdien** med denne formelen: **UpdateContext ({Value: "!"})**
 
 La oss sette alt sammen. Følgende formel i denne konteksten:
 
-```powerapps-dot
+```powerapps-comma
 Ungroup(
-    ForAll( X,
-        ForAll( Y,
+    ForAll( X;
+        ForAll( Y;
             Y[@Value] & Text( X[@Value] ) & [@Value]
         )
-    ),
+    );
     "Value"
 )
 ```
@@ -322,13 +323,13 @@ Den innerste **ForAll**-funksjonen definerer et annen postomfang for **Y**.  Sid
 
 Tilgang til feltene i denne tabellen krever ikke tvetydighet, siden **Y** er innerste postomfang, slik at vi kan bruke denne formelen med det samme resultatet:
 
-```powerapps-dot
+```powerapps-comma
 Ungroup(
-    ForAll( X,
-        ForAll( Y,
+    ForAll( X;
+        ForAll( Y;
             Value & Text( X[@Value] ) & [@Value]
         )
-    ),
+    );
     "Value"
 )
 ```
@@ -341,8 +342,8 @@ Alle **ForAll**-postomfang overstyrer det globale omfanget. Den **verdien** kont
 
 Hvis du vil arbeide med en enkelt kolonne fra en tabell, kan du bruke den **ShowColumns** fungere som i dette eksemplet:
 
-```powerapps-dot
-ShowColumns( Products, "Product" )
+```powerapps-comma
+ShowColumns( Products; "Product" )
 ```
 
 Denne formelen gir denne tabellen med én kolonne:
@@ -351,7 +352,7 @@ Denne formelen gir denne tabellen med én kolonne:
 
 For en kortere alternativ, kan du angi *Table.Column*, som trekker ut enkeltkolonne-tabell med bare *kolonnen* fra *tabellen*. Denne formelen gir for eksempel nøyaktig samme resultat som ved hjelp av **ShowColumns**.
 
-```powerapps-dot
+```powerapps-comma
 Products.Product
 ```
 
@@ -359,15 +360,15 @@ Products.Product
 
 Du kan uttrykke poster ved hjelp av klammeparenteser som inneholder navngitte feltverdier.  Du kan for eksempel uttrykke den første posten i tabellen i begynnelsen av dette emnet ved hjelp av denne formelen:
 
-`{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 }`
+`{ Name: "Chocolate"; Price: 3,95; 'Quantity on Hand': 12; 'Quantity on Order': 10 }`
 
 Du kan også bygge inn formler i andre formler, som dette eksemplet viser:
 
-`{ Name: First(Products).Name, Price: First(Products).Price * 1.095 }`
+`{ Name: First(Products).Name; Price: First(Products).Price * 1,095 }`
 
 Du kan neste poster ved å neste klammeparenteser, som dette eksemplet viser:
 
-`{ 'Quantity': { 'OnHand': ThisItem.QuantOnHand, 'OnOrder': ThisItem.QuantOnOrder } }`
+`{ 'Quantity': { 'OnHand': ThisItem.QuantOnHand; 'OnOrder': ThisItem.QuantOnOrder } }`
 
 Omslutte hvert kolonnenavn som inneholder et spesialtegn, for eksempel et mellomrom eller et kolon, i enkle anførselstegn.  Du kan doble dem, hvis du vil bruke et enkelt sitat i et kolonnenavn.
 
@@ -376,21 +377,21 @@ Vær oppmerksom på at verdien i **Pris**-kolonnen ikke inneholder et valutasymb
 ## <a name="inline-tables"></a>Innebygde tabeller
 Du kan opprette en tabell ved hjelp av **[Table](functions/function-table.md)**-funksjonen og et sett med poster. Du kan uttrykke tabellen i begynnelsen av dette emnet ved hjelp av denne formelen:
 
-```powerapps-dot
+```powerapps-comma
 Table( 
-    { Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 },
-    { Name: "Bread", Price: 4.95, 'Quantity on Hand': 34, 'Quantity on Order': 0 },
-    { Name: "Water", Price: 4.95, 'Quantity on Hand': 10, 'Quantity on Order': 0 } 
+    { Name: "Chocolate"; Price: 3,95; 'Quantity on Hand': 12; 'Quantity on Order': 10 };
+    { Name: "Bread"; Price: 4,95; 'Quantity on Hand': 34; 'Quantity on Order': 0 };
+    { Name: "Water"; Price: 4,95; 'Quantity on Hand': 10; 'Quantity on Order': 0 } 
 )
 ```
 
 Du kan også neste tabeller:
 
-```powerapps-dot
+```powerapps-comma
 Table( 
-    { Name: "Chocolate", 
-      'Quantity History': Table( { Quarter: "Q1", OnHand: 10, OnOrder: 10 },
-                                 { Quarter: "Q2", OnHand: 18, OnOrder: 0 } ) 
+    { Name: "Chocolate"; 
+      'Quantity History': Table( { Quarter: "Q1"; OnHand: 10; OnOrder: 10 };
+                                 { Quarter: "Q2"; OnHand: 18; OnOrder: 0 } ) 
     }
 )
 ```
@@ -398,7 +399,7 @@ Table(
 ## <a name="inline-value-tables"></a>Innebygde verditabeller
 Du kan opprette enkeltkolonne-tabeller ved å angi verdier i hakeparenteser. Den resulterende tabellen har én enkelt kolonne, kalt **Verdi**.
 
-For eksempel `[ 1, 2, 3, 4 ]` tilsvarer `Table( { Value: 1 }, { Value: 2 }, { Value: 3 }, { Value: 4 } )` og returnerer denne tabellen:
+For eksempel `[ 1; 2; 3; 4 ]` tilsvarer `Table( { Value: 1 }; { Value: 2 }; { Value: 3 }; { Value: 4 } )` og returnerer denne tabellen:
 
 ![](media/working-with-tables/inline-table.png)
 
