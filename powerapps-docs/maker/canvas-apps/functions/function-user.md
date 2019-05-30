@@ -30,7 +30,7 @@ Returnerer informasjon om gjeldende bruker.
 | --- | --- |
 | **User().Email** |E-postadressen til gjeldende bruker. |
 | **User().FullName** |Fullt navn på gjeldende bruker, inkludert fornavn og etternavn. |
-| **User().Image** |Bilde av gjeldende bruker. Dette vil være en nettadresse for bilde på formen "blob:*identifier*". Angi **[Image](../controls/properties-visual.md)** -egenskapen for **[Bilde](../controls/control-image.md)** -kontrollen som denne verdien, for å vise bildet i appen. |
+| **User().Image** |Bilde av gjeldende bruker. Dette vil være en nettadresse for bilde på formen "blob:*identifier*". Angi **[Image](../controls/properties-visual.md)**-egenskapen for **[Bilde](../controls/control-image.md)**-kontrollen som denne verdien, for å vise bildet i appen. |
 
 > [!NOTE]
 > Informasjonen som returneres, er for den gjeldende brukeren av PowerApps.  Det vil samsvare med Kontoinformasjonen som vises i PowerApps-spillerne og studio, som du finner utenfor eventuelle forfattede apper.  Dette kan ikke samsvare med den gjeldende brukerens informasjon i Office 365 eller andre tjenester.
@@ -42,7 +42,7 @@ Returnerer informasjon om gjeldende bruker.
 Gjeldende PowerApps-bruker har følgende informasjon:
 
 * Fullt navn: **«John Doe»**
-* E-postadresse: **“john.doe@contoso.com”**
+* E-postadresse: **\"john.doe@contoso.com\"**
 * Bilde: ![](media/function-user/john-doe-picture.png) 
 
 |       Formel       |                                                                    Beskrivelse                                                                    |                                                 Resultat                                                  |
