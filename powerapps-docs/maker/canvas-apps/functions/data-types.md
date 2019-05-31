@@ -80,7 +80,7 @@ Du kan gå litt dypere inn i det siste eksemplet ved å angi den **tekst** -egen
 
 Lerretsapper referere til hvert bilde eller andre mediefil, enten den er i skyen eller lagt til som en app-ressurs, av en tekststreng for URI.
 
-For eksempel den **bilde** -egenskapen for en bildekontroll godtar ikke bare app-ressurser, men også koblinger til bilder på nettet, som « https://northwindtraders.com/logo.jpg ». Egenskapen godtar også innebygde bilder som bruker den [data-URI-skjemaet](https://en.wikipedia.org/wiki/Data_URI_scheme), som i dette eksemplet:
+For eksempel den **bilde** -egenskapen for en bildekontroll godtar ikke bare app-ressurser, men også koblinger til bilder på nettet, som "https://northwindtraders.com/logo.jpg". Egenskapen godtar også innebygde bilder som bruker den [data-URI-skjemaet](https://en.wikipedia.org/wiki/Data_URI_scheme), som i dette eksemplet:
 
 ```powerapps-dot
 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFAQMAAACtnVQoAAAABlBMVEUAAAB0J3UMNU6VAAAAAXRSTlMAQObYZgAAABRJREFUCNdjUGJgCGVg6GgAkkA2AA8/AffqCEBsAAAAAElFTkSuQmCC"
