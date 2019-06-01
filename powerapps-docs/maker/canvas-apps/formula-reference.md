@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 85ab89641fd29fa91e8c5b5d7b3d36e9cddedaf2
-ms.sourcegitcommit: 6b75019dccc5296a313f9ff0eb397003f13ce737
+ms.openlocfilehash: ec035ca959f29832e2ba0bbb2250a24c11f1692e
+ms.sourcegitcommit: 562c7ed5fbb116be1cbb0f45e3f6e75e3e4cf011
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65940497"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451413"
 ---
 # <a name="formula-reference-for-powerapps"></a>Formelreferanse for PowerApps
 Formler kombinerer mange elementer.  Dette er listet opp under:
@@ -26,7 +26,7 @@ Formler kombinerer mange elementer.  Dette er listet opp under:
 * **Funksjoner** bruker parametere, utfører en operasjon og returnerer en verdi. Eksempel: **Sqrt(25)** returnerer **5**. Funksjonene er modellert etter funksjoner i Microsoft Excel.  Noen funksjoner har begrensninger, for eksempel **SubmitForm**. Denne passer kun i en [formel for virkemåte](working-with-formulas-in-depth.md), som for eksempel **Button.OnSelect**.
 * **Signals** returnerer informasjon om miljøet. **[Location](functions/signals.md)** returnerer for eksempel enhetens gjeldende GPS-koordinater. Signaler bruker ikke parametere og har ikke bivirkninger.
 * **Enumerations** returnerer en forhåndsdefinert konstant verdi. **[Color](functions/function-colors.md)** er for eksempel en opplisting som har forhåndsdefinerte verdier for **Color.Red**, **Color.Blue**og så videre.  Vanlige opplistinger er inkludert her. Funksjonsspesifikke opplistinger beskrives sammen med funksjonen.
-* **Navngitt operator**, for eksempel **[ThisItem](functions/operators.md#thisitem-operator)** og **[Overordnet](functions/operators.md#parent-operator)**, gir tilgang til informasjon fra en beholder.
+* **Navngitt operator**, for eksempel **[ThisItem](functions/operators.md#thisitem-operator)** og **[Overordnet](functions/operators.md#parent-operator)** , gir tilgang til informasjon fra en beholder.
 
 Andre elementer omfatter:
 
@@ -45,9 +45,9 @@ Andre elementer omfatter:
 
 **[AddColumns](functions/function-table-shaping.md)** – returnerer en tabell med [kolonner](working-with-tables.md#columns) lagt til.
 
-**[And](functions/function-logicals.md)** – boolsk logikk (AND).  Returnerer **sann** hvis alle argumentene er **sann**.  Du kan også bruke [**&&**-operatoren](functions/operators.md).
+**[And](functions/function-logicals.md)** – boolsk logikk (AND).  Returnerer **sann** hvis alle argumentene er **sann**.  Du kan også bruke [ **&&** -operatoren](functions/operators.md).
 
-**[App](functions/signals.md)** – returnerer informasjon om den kjørende appen, for eksempel hvilken skjerm den vises på for øyeblikket.
+**[App](functions/object-app.md)**  – gir informasjon om den kjørende appen og kontroll over appens virkemåte.
 
 **[Asin](functions/function-trig.md)** – returnerer arcsinusen for et tall i radianer.
 
@@ -128,7 +128,7 @@ Andre elementer omfatter:
 
 **[Degrees](functions/function-trig.md)** – konverterer radianer til grader.
 
-**[Disable](functions/function-enable-disable.md)** – deaktiverer et signal, for eksempel  **[Plassering](functions/signals.md)**, for å lese GPS-en.
+**[Disable](functions/function-enable-disable.md)** – deaktiverer et signal, for eksempel  **[Plassering](functions/signals.md)** , for å lese GPS-en.
 
 **[Distinct](functions/function-distinct.md)** – oppsummerer poster i en tabell og fjerner duplikater.  
 
@@ -139,7 +139,7 @@ Andre elementer omfatter:
 ## <a name="e"></a>E
 **[EditForm](functions/function-form.md)** – tilbakestiller en skjemakontroll for redigering av et element.
 
-**[Enable](functions/function-enable-disable.md)** – aktiverer et signal, for eksempel  **[Plassering](functions/signals.md)**, for å lese GPS-en.
+**[Enable](functions/function-enable-disable.md)** – aktiverer et signal, for eksempel  **[Plassering](functions/signals.md)** , for å lese GPS-en.
 
 **[EndsWith](functions/function-startswith.md)** – kontrollerer om en tekststreng slutter med en annen tekststreng.
 
@@ -234,14 +234,14 @@ Andre elementer omfatter:
 
 **[NewForm](functions/function-form.md)** – tilbakestiller en skjemakontroll for oppretting av et element.
 
-**[Not](functions/function-logicals.md)** – boolsk logikk (NOT).  Returnerer **sann** hvis argumentet er **usant**, og returnerer **usann** hvis argumentet er **sant**.  Du kan også bruke [**!**-operatoren](functions/operators.md).
+**[Not](functions/function-logicals.md)** – boolsk logikk (NOT).  Returnerer **sann** hvis argumentet er **usant**, og returnerer **usann** hvis argumentet er **sant**.  Du kan også bruke [ **!** -operatoren](functions/operators.md).
 
 **[Notify](functions/function-showerror.md)** – viser en bannermelding til brukeren.
 
 **[Now](functions/function-now-today-istoday.md)** – returnerer gjeldende dato-/klokkeslett-verdi.
 
 ## <a name="o"></a>O
-**[Or](functions/function-logicals.md)** – boolsk logikk (OR).  Returnerer **sann** hvis noen av argumentene dens er **sann**.  Du kan også bruke [**||**-operatoren](functions/operators.md).
+**[Or](functions/function-logicals.md)** – boolsk logikk (OR).  Returnerer **sann** hvis noen av argumentene dens er **sann**.  Du kan også bruke [ **||** -operatoren](functions/operators.md).
 
 ## <a name="p"></a>P
 **[Param](functions/function-param.md)** – gir tilgang til parametere sendt til appen når brukeren åpnet den.
@@ -254,7 +254,7 @@ Andre elementer omfatter:
 
 **[PlainText](functions/function-encode-decode.md)** – fjerner HTML- og XML-koder fra en streng.
 
-**[Power](functions/function-numericals.md)** – returnerer et tall opphøyd i en potens.  Du kan også bruke [**^**-operatoren](functions/operators.md).
+**[Power](functions/function-numericals.md)** – returnerer et tall opphøyd i en potens.  Du kan også bruke [ **^** -operatoren](functions/operators.md).
 
 **[Proper](functions/function-lower-upper-proper.md)** – konverterer den første bokstaven i hvert ord i en streng til store bokstaver, og konverterer resten til små bokstaver.
 
@@ -337,7 +337,7 @@ Andre elementer omfatter:
 
 **[ThisItem](functions/operators.md#thisitem-operator)** – dataene for gjeldende element for en beholder returneres når man er i et galleri eller skjema.
 
-**[Time](functions/function-date-time.md)** – returnerer en dato-/klokkeslett-verdi, basert på **Time-**, **Minutt-** og **Sekund**-verdier.  
+**[Time](functions/function-date-time.md)** – returnerer en dato-/klokkeslett-verdi, basert på **Time-** , **Minutt-** og **Sekund**-verdier.  
 
 **[TimeValue](functions/function-datevalue-timevalue.md)** – konverterer en streng som bare inneholder klokkeslett til en dato-/tid-verdi.
 

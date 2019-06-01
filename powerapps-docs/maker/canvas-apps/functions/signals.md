@@ -7,29 +7,34 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/07/2015
+ms.date: 05/29/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 18bd89549aa330b5da333dccfd723887db38a36e
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: d375adeb8a20dfe2d9629a9c34944a8dcd80a8e7
+ms.sourcegitcommit: 562c7ed5fbb116be1cbb0f45e3f6e75e3e4cf011
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61553932"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451446"
 ---
 # <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Signaler fra Acceleration, App, Compass, Connection og Location i PowerApps
-Returnerer informasjon om appmiljøet, som hvor brukeren befinner seg i verden og hvilken skjerm som vises.  
+
+Returnerer informasjon om appmiljøet, som hvor brukeren befinner seg i verden og hvilken skjerm som vises.
 
 ## <a name="description-and-syntax"></a>Beskrivelse og syntaks
-Alle signaler returnerer en [post](../working-with-tables.md#records) av informasjon. Du kan bruke og lagre denne informasjonen som en post, eller du kan trekke ut enkelte egenskaper ved bruk av **.** [operatoren](operators.md).
+
+Signaler er verdier som kan endre når som helst, uavhengig av hvordan brukeren kan samhandle med appen. Formler som er basert på signaler automatisk beregnes på nytt når disse verdiene endres.
+
+Signaler returnerer vanligvis en [post](../working-with-tables.md#records) av informasjon. Du kan bruke og lagre denne informasjonen som en post, eller du kan trekke ut enkelte egenskaper ved bruk av **.** [operatoren](operators.md).
 
 > [!NOTE]
 > Den **akselerasjon** og **kompass** funksjoner returnerer nøyaktige verdier i en innebygd spiller som på iOS eller Android, men disse funksjonene returnerer nullverdier når du oppretter eller endrer en app i nettleseren.
 
 ### <a name="acceleration"></a>Acceleration
+
 **Acceleration**-signalet returnerer enhetens akselerasjon i tre dimensjoner, relativ til enhetsskjermen. Akselerasjon måles i *g* enheter på 9,81 m/sekund<sup>2</sup> eller 32,2 ft/sekund<sup>2</sup> (akselerasjonen som jorden overfører til objekter på overflaten på grunn av tyngdekraft).
 
 | Egenskap | Beskrivelse |
@@ -39,28 +44,14 @@ Alle signaler returnerer en [post](../working-with-tables.md#records) av informa
 | **Acceleration.Z** |Opp og ned.  Opp er et positivt tall. |
 
 ### <a name="app"></a>App
-**App**-signalet returnerer informasjon om den kjørende appen.
+
+Blant andre egenskaper, den **App** objektet inneholder et signal som angir hvilken skjerm vises.
 
 | Egenskap | Beskrivelse |
 | --- | --- |
-| **App.ActiveScreen** | Skjermen som vises. Returnerer et skjermobjekt som du kan bruke til å henvise til egenskaper til skjermen, eller sammenligne med en annen skjerm for å bestemme hvilken skjerm som vises. Hvis du vil endre skjermen som vises, kan du bruke den **[tilbake](function-navigate.md)** eller **[Navigate](function-navigate.md)** funksjonen. |
-| **App.Width** | Returnerer bredden på vinduet som appen kjører. Du kan bruke denne egenskapen i en formel når du angir den **bredde** -egenskapen for skjermen for å utvikle en responsive app.  |
-| **App.Height** | Returnerer høyden på vinduet som appen kjører. Du kan bruke denne egenskapen i en formel når du angir den **høyde** -egenskapen for skjermen for å utvikle en responsive app. |
-| **App.DesignWidth** | Returnerer bredden på appen i PowerApps Studio. Du kan bruke denne egenskapen i en formel når du angir den **bredde** -egenskapen for skjermen for å sikre en minimumsbredde i en responsive app.  |
-| **App.DesignHeight** | Returnerer høyden på appen i PowerApps Studio. Du kan bruke denne egenskapen i en formel når du angir den **høyde** -egenskapen for skjermen for å sikre en minimumshøyden i en responsive app.  |
-| **App.SizeBreakpoints** | En tabell med én kolonne med tall som avgrenser skjermstørrelse områder som den [ **Screen.Size** ](../controls/control-screen.md) egenskapen returnerer. Verdiene i denne tabellen kan endres for å tilpasse stoppunkt at alle appens skjermer bruk.
+| **App.ActiveScreen** |Skjermen som vises. Returnerer et skjermobjekt som du kan bruke til å referere til egenskaper til skjermen, eller sammenligne en annen skjerm for å bestemme hvilken skjerm vises. Du kan bruke den **[tilbake](function-navigate.md)** eller **[Navigate](function-navigate.md)** funksjonen for å endre skjermen som vises. |
 
-Den **App** objekt har også en [formel for virkemåte](../working-with-formulas-in-depth.md) som du kan angi.
-
-| Egenskap  | Beskrivelse |
-| --- | --- |
-| **App.OnStart** | Virkemåten til appen når brukeren starter den. Produsentene ofte bruker denne egenskapen til å hente og hurtigbufring av data til samlinger med den **[samle inn](function-clear-collect-clearcollect.md)** funksjon, definere variabler med det **[angi](function-set.md)**, og navigere til en innledende skjermen med den **[Navigate](function-navigate.md)** funksjonen. Denne formelen evalueres før den første skjermen vises. Ingen skjermen er lastet inn, slik at du ikke kan angi kontekstvariabler med den **[UpdateContext](function-updatecontext.md)** funksjonen. Du kan imidlertid overføre kontekstvariablene med den **Navigate** funksjonen. |
-
-Den **App** objektet vises øverst i den hierarkiske listen over kontroller i den venstre navigasjonsruten, og du kan velge dette objektet som en kontroll i en skjerm. Når du merker du objektet, kan du vise og redigere en av egenskapene for Hvis du velger denne egenskapen i rullegardinlisten til venstre for formellinjen.  
-
-Når du har endret den **OnStart** -egenskapen, kan du teste den ved å hvile over den **App** objektet i den venstre navigasjonsruten, å velge ellipsen (...) som vises, og deretter velge **kjøre OnStart**. I motsetning til når appen er lastet for første gang, angis eksisterende samlinger og variabler allerede. Bruk den **[ClearCollect](function-clear-collect-clearcollect.md)** funksjonen i stedet for den **samle inn** funksjonen til å begynne med tom samlinger.
-
- ![Hurtigmenyen for App-element med kjøre OnStart](media/appobject-runonstart.png)
+Mer informasjon: [**App** objektet](object-app.md) dokumentasjon.
 
 ### <a name="compass"></a>Compass
 **Kompass**-signalet returnerer kompassretningen øverst på skjermen. Overskriften er basert på magnetisk nord.
@@ -82,7 +73,7 @@ Når du har endret den **OnStart** -egenskapen, kan du teste den ved å hvile ov
 
 Når en bruker får tilgang til plasseringsinformasjonen for første gang, kan det hende at enheten ber brukeren om å få lov til å bruke denne informasjonen.
 
-Når plasseringen endrer seg, vil tjenestene som er avhengig av plasseringen kontinuerlig beregnes på nytt. Dette forbruker enhetsbatteriet. Hvis du ønsker å spare batteriet, kan du bruke **[Enable](function-enable-disable.md)**- og **[Disable](function-enable-disable.md)**-funksjonene for å slå plasseringsoppdateringer på og av. Plasseringen slås automatisk av hvis skjermen som vises ikke er avhengig av plasseringsinformasjon.
+Når plasseringen endrer seg, vil tjenestene som er avhengig av plasseringen kontinuerlig beregnes på nytt. Dette forbruker enhetsbatteriet. Hvis du ønsker å spare batteriet, kan du bruke **[Enable](function-enable-disable.md)** - og **[Disable](function-enable-disable.md)** -funksjonene for å slå plasseringsoppdateringer på og av. Plasseringen slås automatisk av hvis skjermen som vises ikke er avhengig av plasseringsinformasjon.
 
 | Egenskap | Beskrivelse |
 | --- | --- |
