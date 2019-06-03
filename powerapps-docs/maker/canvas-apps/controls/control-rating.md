@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61526060"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="rating-control-in-powerapps"></a>Vurdering-kontrollen i PowerApps
 En kontroll som lar brukere angi en verdi mellom 1 og et maksimalt antall som du angir.
@@ -76,23 +75,23 @@ I denne kontrollen kan brukeren for eksempel angi hvor mye de likte noe ved å v
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Average**( *Value1*; *Value2;* ... )](../functions/function-aggregates.md)
+[**Average**( *Value1*, *Value2,* ... )](../functions/function-aggregates.md)
 
 ## <a name="example"></a>Eksempel
 1. Legge til en **Vurdering**-kontroll, og gi den navnet **Quantitative**.
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
-2. Legg til en **[Tekstinndata](control-text-input.md)**-kontroll, gi den navnet **Qualitative**, og flytte den under **Vurdering**-kontrollen.
-3. Angi **[Default](properties-core.md)**-egenskapen til **[Tekstinndata](control-text-input.md)**-kontrollen som **""**, og angi kontrollens **HintText** som denne formelen:
-   <br>**If(Quantitative.Value > 3; "What did you especially like?"; "How might we do better?")**
+2. Legg til en **[Tekstinndata](control-text-input.md)** -kontroll, gi den navnet **Qualitative**, og flytte den under **Vurdering**-kontrollen.
+3. Angi **[Default](properties-core.md)** -egenskapen til **[Tekstinndata](control-text-input.md)** -kontrollen som **""** , og angi kontrollens **HintText** som denne formelen:
+   <br>**If(Quantitative.Value > 3, "What did you especially like?", "How might we do better?")**
    
-    Vil du ha mer informasjon om **[If](../functions/function-if.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
+    Vil du ha mer informasjon om **[If](../functions/function-if.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 4. Trykk på F5, og klikk eller trykk på fire eller fem stjerner i **Vurdering**-kontrollen.
    
-    Tipsteksten i **[Tekstinndata](control-text-input.md)**-kontrollen endres slik at den gjenspeiler den høye vurderingen.
+    Tipsteksten i **[Tekstinndata](control-text-input.md)** -kontrollen endres slik at den gjenspeiler den høye vurderingen.
 5. Klikk eller trykk på færre enn fire stjerner i **Quantitative**.
    
-    Tipsteksten i **[Tekstinndata](control-text-input.md)**-kontrollen endres slik at den gjenspeiler den lave vurderingen.
+    Tipsteksten i **[Tekstinndata](control-text-input.md)** -kontrollen endres slik at den gjenspeiler den lave vurderingen.
 6. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
 
 

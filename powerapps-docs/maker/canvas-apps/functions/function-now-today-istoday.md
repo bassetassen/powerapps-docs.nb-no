@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544207"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="now-today-and-istoday-functions-in-powerapps"></a>Funksjonene for Now, Today, og IsToday i PowerApps
 Returnerer gjeldende dato og klokkeslett, og tester om en dato/klokkeslett-verdi er i dag.
@@ -42,7 +41,7 @@ En flyktig funksjon returnerer en annen verdi når den brukes i en formel for da
 
 En etikett med **Label1.Text = Now()** vil for eksempel ikke endres mens appen er aktiv.  Å bare lukke og åpne appen vil resultere i en ny verdi.
 
-Funksjonen vil evalueres på nytt hvis det er en del av en formel der noe annet er endret.  Hvis vi for eksempel endrer eksemplet til å omfatte en glidebryter med **Label1.Text = DateAdd(Now(); Slider1.Value; minutter)**, blir gjeldende klokkeslett hentet hver gang verdien for glidebryteren endres og etikettens tekstegenskapen evalueres på nytt.
+Funksjonen vil evalueres på nytt hvis det er en del av en formel der noe annet er endret.  Hvis vi for eksempel endrer eksemplet til å omfatte en glidebryter med **Label1.Text = DateAdd(Now(), Slider1.Value, minutter)** , blir gjeldende klokkeslett hentet hver gang verdien for glidebryteren endres og etikettens tekstegenskapen evalueres på nytt.
 
 Når de brukes i en [virkemåteformel](../working-with-formulas-in-depth.md), blir flyktige funksjoner evaluert hver gang virkemåteformelen evalueres.  Nedenfor finner du et eksempel.
 
@@ -60,34 +59,34 @@ Gjeldende klokkeslett for eksemplene i denne delen er **3:59 AM** den **12. feb.
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Text( Now(); "mm/dd/yyyy hh:mm:ss" )** |Henter gjeldende dato og klokkeslett, og viser dem som en streng. |«02/12/2015 03:59:00» |
-| **Text( Today(); "mm/dd/yyyy hh:mm:ss" )** |Henter bare gjeldende dato, lar klokkeslettdelen stå som midnatt, og viser dette som en streng. |«02/12/2015 00:00:00» |
+| **Text( Now(), "mm/dd/yyyy hh:mm:ss" )** |Henter gjeldende dato og klokkeslett, og viser dem som en streng. |«02/12/2015 03:59:00» |
+| **Text( Today(), "mm/dd/yyyy hh:mm:ss" )** |Henter bare gjeldende dato, lar klokkeslettdelen stå som midnatt, og viser dette som en streng. |«02/12/2015 00:00:00» |
 | **IsToday( Now() )** |Tester om gjeldende dato og klokkeslett er mellom midnatt i dag og midnatt i morgen. |**SANN** |
 | **IsToday( Today() )** |Tester om gjeldende dato er mellom midnatt i dag og midnatt i morgen. |**SANN** |
-| **Text( DateAdd( Now(); 12 ); "mm/dd/yyyy hh:mm:ss" )** |Henter gjeldende dato og klokkeslett, legger 12 dager til resultatet, og viser det som en streng. |«02/24/2015 03:59:00» |
-| **Text( DateAdd( Today(); 12 ); "mm/dd/yyyy hh:mm:ss" )** |Henter gjeldende dato, legger 12 dager til resultatet, og viser det som en streng. |«24/02/2015 00:00:00» |
-| **IsToday( DateAdd( Now(); 12 ) )** |Tester om gjeldende dato og klokkeslett, pluss 12 dager, er mellom midnatt i dag og midnatt i morgen. |**USANN** |
-| **IsToday( DateAdd( Today(); 12 ) )** |Tester om gjeldende dato, pluss 12 dager, er mellom midnatt i dag og midnatt i morgen. |**usann** |
+| **Text( DateAdd( Now(), 12 ), "mm/dd/yyyy hh:mm:ss" )** |Henter gjeldende dato og klokkeslett, legger 12 dager til resultatet, og viser det som en streng. |«02/24/2015 03:59:00» |
+| **Text( DateAdd( Today(), 12 ), "mm/dd/yyyy hh:mm:ss" )** |Henter gjeldende dato, legger 12 dager til resultatet, og viser det som en streng. |«24/02/2015 00:00:00» |
+| **IsToday( DateAdd( Now(), 12 ) )** |Tester om gjeldende dato og klokkeslett, pluss 12 dager, er mellom midnatt i dag og midnatt i morgen. |**USANN** |
+| **IsToday( DateAdd( Today(), 12 ) )** |Tester om gjeldende dato, pluss 12 dager, er mellom midnatt i dag og midnatt i morgen. |**usann** |
 
 #### <a name="display-a-clock-that-updates-in-real-time"></a>Vis en klokke som oppdateres i sanntid
 
-1. Legg til en **[Tidtaker](../controls/control-timer.md)**-kontroll, angi egenskapen for **Varighet** til **1000**, og angi deretter **Gjenta**-egenskapen til **SANN**.
+1. Legg til en **[Tidtaker](../controls/control-timer.md)** -kontroll, angi egenskapen for **Varighet** til **1000**, og angi deretter **Gjenta**-egenskapen til **SANN**.
 
     Tidtakeren kjøres i ett sekund, startes automatisk på nytt og fortsetter dette mønstret. 
 
 1. Angi egenskapen for **OnTimerEnd** til denne formelen:
 
-    **Set( CurrentTime; Now() )**
+    **Set( CurrentTime, Now() )**
 
     Når tidtakeren starter på nytt (etter et sekund), angir formelen den globale variabelen **CurrentTime** til gjeldende verdi for **Now**-funksjonen.
 
     ![En skjerm som inneholder en tidtakerkontroll med formelen OnTimerEnd = (CurrentTime, Now())](media/function-now-today-istoday/now-set-currenttime.png)
 
-1. Legg til en **[Etikett](../controls/control-text-box.md)**, og angi **Tekst**-egenskapen til denne formelen:
+1. Legg til en **[Etikett](../controls/control-text-box.md)** , og angi **Tekst**-egenskapen til denne formelen:
 
-    **Text( CurrentTime; LongTime24 )**
+    **Text( CurrentTime, LongTime24 )**
 
-    Bruk **[Text](function-text.md)**-funksjonen til å formatere datoen og klokkeslettet slik du ønsker, eller angi denne egenskapen til bare **CurrentTime** for å vise timer og minutter, men ikke sekunder.
+    Bruk **[Text](function-text.md)** -funksjonen til å formatere datoen og klokkeslettet slik du ønsker, eller angi denne egenskapen til bare **CurrentTime** for å vise timer og minutter, men ikke sekunder.
 
     ![En skjerm som viser en etikett med Tekst-egenskapen satt til Text( CurrentTime, LongTime24)](media/function-now-today-istoday/now-use-currenttime.png)
 
@@ -101,8 +100,8 @@ Gjeldende klokkeslett for eksemplene i denne delen er **3:59 AM** den **12. feb.
 
     Tidtakeren er usynlig og starter automatisk.
 
-1. Angi skjermens **[OnStart](../controls/control-screen.md)**-egenskap slik at variabelen **CurrentTime** har en gyldig verdi, som i dette eksemplet:
+1. Angi skjermens **[OnStart](../controls/control-screen.md)** -egenskap slik at variabelen **CurrentTime** har en gyldig verdi, som i dette eksemplet:
 
-    **Set(CurrentTime; Now())**
+    **Set(CurrentTime, Now())**
 
     Etiketten vises så snart appen starter (før tidtakeren kjører et fullstendig sekund).

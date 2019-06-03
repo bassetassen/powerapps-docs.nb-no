@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61548758"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="slider-control-in-powerapps"></a>Glidebryter-kontrollen i PowerApps
 En kontroll som lar brukeren angi en verdi ved å dra i et håndtak.
@@ -47,7 +46,7 @@ Brukeren kan angi en verdi mellom en minimumsverdi og en maksimumsverdi som du a
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt til **Deaktivert**.
 
 **[FocusedBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
@@ -100,21 +99,21 @@ Brukeren kan angi en verdi mellom en minimumsverdi og en maksimumsverdi som du a
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Sum**( *Value1*; *Value2* )](../functions/function-aggregates.md)
+[**Sum**( *Value1*, *Value2* )](../functions/function-aggregates.md)
 
 ## <a name="example"></a>Eksempel
-1. Legg til en knapp, og angi **[OnSelect](properties-core.md)**-egenskapen til denne formelen:
-   <br>**ClearCollect(CityPopulations; {City:"London"; Country:"United Kingdom"; Population:8615000}; {City:"Berlin"; Country:"Germany"; Population:3562000}; {City:"Madrid"; Country:"Spain"; Population:3165000}; {City:"Rome"; Country:"Italy"; Population:2874000}; {City:"Paris"; Country:"France"; Population:2273000}; {City:"Hamburg"; Country:"Germany"; Population:1760000}; {City:"Barcelona"; Country:"Spain"; Population:1602000}; {City:"Munich"; Country:"Germany"; Population:1494000}; {City:"Milan"; Country:"Italy"; Population:1344000})**
+1. Legg til en knapp, og angi **[OnSelect](properties-core.md)** -egenskapen til denne formelen:
+   <br>**ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
    
-    Vil du ha mer informasjon om **[ClearCollect](../functions/function-clear-collect-clearcollect.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
+    Vil du ha mer informasjon om **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 2. Trykk på F5, velg knappen, og trykk deretter på ESC.
 3. Legg til en glidebryter, flytt den under knappen og gi glidebryteren navnet **MinPopulation**.
 4. Angi glidebryterens **Max**-egenskap som **5000000** og **Min**-egenskap som **1000000**.
-5. Legg til et tekstgalleri i loddrett/stående retning, flytt det nedenfor glidebryteren, og angi galleriets **[Items](properties-core.md)**-egenskap til denne formelen:<br>
-   **Filter(CityPopulations; Population > MinPopulation)**
-6. Angi **[Text](properties-core.md)**-egenskapen til den øverste etiketten i det første elementet i galleriet som **ThisItem.City**, og angi **[Text](properties-core.md)**-egenskapen til den nederste etiketten til denne formelen:<br> **Text(ThisItem.Population; "##,###")**
+5. Legg til et tekstgalleri i loddrett/stående retning, flytt det nedenfor glidebryteren, og angi galleriets **[Items](properties-core.md)** -egenskap til denne formelen:<br>
+   **Filter(CityPopulations, Population > MinPopulation)**
+6. Angi **[Text](properties-core.md)** -egenskapen til den øverste etiketten i det første elementet i galleriet som **ThisItem.City**, og angi **[Text](properties-core.md)** -egenskapen til den nederste etiketten til denne formelen:<br> **Text(ThisItem.Population, "##,###")**
 7. Trykk på F5, og juster deretter **MinPopulation** til å bare vise byer som har et innbyggertall som er større enn verdien du angir.
 8. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
 
@@ -138,4 +137,4 @@ Det må være tilstrekkelig fargekontrast mellom:
 * Fokusindikatorer må være godt synlige. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
 * Glidebryterens verdi må vises når du samhandler med tastaturet. Dette kan oppnås ved bruk av én av disse metodene:
     * Angi **ShowValue** til **sann**.
-    * Legge til en **[etikett](control-text-box.md)** ved siden av glidebryteren. Angi etikettens **[tekst](properties-core.md)** til glidebryterens **[verdi](properties-core.md)**.
+    * Legge til en **[etikett](control-text-box.md)** ved siden av glidebryteren. Angi etikettens **[tekst](properties-core.md)** til glidebryterens **[verdi](properties-core.md)** .

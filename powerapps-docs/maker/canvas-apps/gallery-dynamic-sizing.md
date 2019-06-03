@@ -57,14 +57,14 @@ Hvis du aldri har lagt til kontroller i et galleri, følger du fremgangsmåten i
     ![Å legge til et galleri](./media/gallery-dynamic-sizing/add-flexible.png)
 2. Endre størrelsen på galleriet for å fylle hele skjermen.
 
-3. Angi galleriets **[Elementer](controls/properties-core.md)**-egenskap til **FlooringEstimates**.
+3. Angi galleriets **[Elementer](controls/properties-core.md)** -egenskap til **FlooringEstimates**.
 
 ## <a name="show-the-product-names"></a>Vis produktnavnene
 1. Klikk eller trykk på blyantikonet for å velge gallerimalen i øvre venstre hjørne i galleriet.
 
     ![Blyantikon](./media/gallery-dynamic-sizing/edit-template.png)
 
-2. Hvis du velger gallerimalen, kan du legge til en **[Etikett](controls/control-text-box.md)**-kontroll til den.
+2. Hvis du velger gallerimalen, kan du legge til en **[Etikett](controls/control-text-box.md)** -kontroll til den.
 
 3. Angi **Text**-egenskapen for **Etikett**-kontrollen til dette uttrykket:<br>
    **ThisItem.Name**
@@ -91,12 +91,12 @@ Hvis du aldri har lagt til kontroller i et galleri, følger du fremgangsmåten i
 
     Du kan legge til kontroller til malen på en enklere måte når du bygger appen, og denne endringen påvirker ikke hvordan appen ser ut når den kjøres.
 
-2. Merk gallerimalen, legg til en **[Bilde](controls/control-image.md)**-kontroll, og flytt den under **OverviewText**-boksen.
+2. Merk gallerimalen, legg til en **[Bilde](controls/control-image.md)** -kontroll, og flytt den under **OverviewText**-boksen.
 
 3. Forsikre deg om at **Image**-egenskapen for **Bilde**-kontrollen er satt til dette uttrykket:<br>
     **ThisItem.Image**
 
-4. Angi **[Y](controls/properties-core.md)**-egenskapen for **Bilde**-kontrollen basert på plasseringen og størrelsen på **OverviewText**-boksen, som i dette uttrykket:
+4. Angi **[Y](controls/properties-core.md)** -egenskapen for **Bilde**-kontrollen basert på plasseringen og størrelsen på **OverviewText**-boksen, som i dette uttrykket:
    <br>**OverviewText.Y + OverviewText.Height + 5**
 
     ![Endelig app](./media/gallery-dynamic-sizing/final-app.png)

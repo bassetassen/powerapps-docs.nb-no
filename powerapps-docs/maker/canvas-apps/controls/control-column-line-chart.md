@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61559384"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="column-chart-and-line-chart-controls-in-powerapps"></a>Stolpediagram- og Linjediagram-kontroller i PowerApps
 Kontroller som viser data som grafer med x- og y-akser.
@@ -41,7 +40,7 @@ Kontroller som viser data som grafer med x- og y-akser.
 
 **[Farge](properties-color-border.md)** – fargen på teksten i kontrollen.
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt til **Deaktivert**.
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
@@ -114,17 +113,17 @@ Kontroller som viser data som grafer med x- og y-akser.
 **YLabelAngle** – vinkelen til etikettene ved siden av y-aksen i et stolpe- eller linjediagram.
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Max**( *DataSource*; *ColumnName* )](../functions/function-aggregates.md)
+[**Max**( *DataSource*, *ColumnName* )](../functions/function-aggregates.md)
 
 ## <a name="example"></a>Eksempel
-1. Legg til en **[Knapp](control-button.md)**, og angi **[OnSelect](properties-core.md)**-egenskapen til denne formelen:<br>
-   **Collect(Revenue; {Year:"2013"; Europa:24000; Ganymede:22300; Callisto:21200}; {Year:"2014"; Europa:26500; Ganymede:25700; Callisto:24700};{Year:"2014"; Europa:27900; Ganymede:28300; Callisto:25600})**
+1. Legg til en **[Knapp](control-button.md)** , og angi **[OnSelect](properties-core.md)** -egenskapen til denne formelen:<br>
+   **Collect(Revenue, {Year:"2013", Europa:24000, Ganymede:22300, Callisto:21200}, {Year:"2014", Europa:26500, Ganymede:25700, Callisto:24700},{Year:"2014", Europa:27900, Ganymede:28300, Callisto:25600})**
    
     Lurer du på hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?
    
-    Vil du ha mer informasjon om **[Collect](../functions/function-clear-collect-clearcollect.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
-2. Trykk på F5, klikk eller trykk på **[Knapp](control-button.md)**, og trykk deretter på ESC for å gå tilbake til standardarbeidsområdet.
-3. Legg til en **Stolpediagram**-kontroll eller en **Linjediagram**-kontroll, angi kontrollens **[Elementer](properties-core.md)**-egenskap til **Omsetning**, og angi **NumberOfSeries**-egenskapen som **3**.
+    Vil du ha mer informasjon om **[Collect](../functions/function-clear-collect-clearcollect.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
+2. Trykk på F5, klikk eller trykk på **[Knapp](control-button.md)** , og trykk deretter på ESC for å gå tilbake til standardarbeidsområdet.
+3. Legg til en **Stolpediagram**-kontroll eller en **Linjediagram**-kontroll, angi kontrollens **[Elementer](properties-core.md)** -egenskap til **Omsetning**, og angi **NumberOfSeries**-egenskapen som **3**.
    
     Kontrollen viser omsetningsdata for hvert produkt over tre år.
 

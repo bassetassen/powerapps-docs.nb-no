@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544664"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="add-picture-control-in-powerapps"></a>Legg til bilde-kontrollen i PowerApps
 Tar et bilde eller laster inn bilder fra den lokale enheten.
@@ -46,11 +45,11 @@ Se [Kontrollreferanse for bilde](control-image.md) for **Bilde**-egenskaper.
 
 **[Farge](properties-color-border.md)** – fargen på teksten i kontrollen.
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt til **Deaktivert**.
 
-**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt som **Deaktivert**.
 
-**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
+**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)** -egenskapen er angitt som **Deaktivert**.
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
@@ -115,7 +114,7 @@ Se [Kontrollreferanse for bilde](control-image.md) for **Bilde**-egenskaper.
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Patch**( *DataSource*; *BaseRecord*; *ChangeRecord* )](../functions/function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="examples"></a>Eksempler
 ### <a name="add-images-to-an-image-gallery-control"></a>Legg til bilder i en Bildegalleri-kontroll
@@ -123,20 +122,20 @@ Se [Kontrollreferanse for bilde](control-image.md) for **Bilde**-egenskaper.
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 2. Klikk eller trykk på en bildefil i **Åpne**-dialogboksen, og klikk eller trykk på **Åpne**.
-3. Legg til en **[Knapp](control-button.md)**-kontroll, flytt den under **Legg til bilde**-kontrollen, og angi **[OnSelect](properties-core.md)**-egenskapen til **[Knapp](control-button.md)**-kontrollen som denne formelen:<br>
-   **Collect(MyPix; AddMediaButton1.Media)**
+3. Legg til en **[Knapp](control-button.md)** -kontroll, flytt den under **Legg til bilde**-kontrollen, og angi **[OnSelect](properties-core.md)** -egenskapen til **[Knapp](control-button.md)** -kontrollen som denne formelen:<br>
+   **Collect(MyPix, AddMediaButton1.Media)**
    
-    Vil du ha mer informasjon om **[Collect](../functions/function-clear-collect-clearcollect.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
-4. Legg til en **Bildegalleri**-kontroll, og angi **[Items](properties-core.md)**-egenskapen som **MyPix**.
-5. Trykk på F5, og klikk eller trykk på **[Knapp](control-button.md)**-kontrollen.
+    Vil du ha mer informasjon om **[Collect](../functions/function-clear-collect-clearcollect.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
+4. Legg til en **Bildegalleri**-kontroll, og angi **[Items](properties-core.md)** -egenskapen som **MyPix**.
+5. Trykk på F5, og klikk eller trykk på **[Knapp](control-button.md)** -kontrollen.
    
-    Bildet fra **Legg til bilde**-kontrollen vises i **Bildegalleri**-kontrollen. Hvis bildet ditt ikke har samme størrelsesforhold som **[Bilde](control-image.md)**-kontrollen i **Bildegalleri**-kontrollen, kan du angi **[ImagePosition](properties-visual.md)**-egenskapen til **[Bilde](control-image.md)**-kontrollen som **Fit**.
-6. Klikk eller trykk på **Legg til bilde**-kontrollen, klikk eller trykk på en annen bildefil, klikk eller trykk på **Åpne**, og klikk eller trykk på **[Knapp](control-button.md)**-kontrollen som du har lagt til.
+    Bildet fra **Legg til bilde**-kontrollen vises i **Bildegalleri**-kontrollen. Hvis bildet ditt ikke har samme størrelsesforhold som **[Bilde](control-image.md)** -kontrollen i **Bildegalleri**-kontrollen, kan du angi **[ImagePosition](properties-visual.md)** -egenskapen til **[Bilde](control-image.md)** -kontrollen som **Fit**.
+6. Klikk eller trykk på **Legg til bilde**-kontrollen, klikk eller trykk på en annen bildefil, klikk eller trykk på **Åpne**, og klikk eller trykk på **[Knapp](control-button.md)** -kontrollen som du har lagt til.
    
     Det andre bildet vises i **Bildegalleri**-kontrollen.
 7. (valgfritt) Gjenta forrige trinn én eller flere ganger, og gå deretter tilbake til standardarbeidsområdet ved å trykke på Esc.
 
-Bruk **[SaveData](../functions/function-savedata-loaddata.md)**-funksjonen til å lagre bildene lokalt eller **[Patch](../functions/function-patch.md)**-funksjonen til å lagre dem til en datakilde.
+Bruk **[SaveData](../functions/function-savedata-loaddata.md)** -funksjonen til å lagre bildene lokalt eller **[Patch](../functions/function-patch.md)** -funksjonen til å lagre dem til en datakilde.
 
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet

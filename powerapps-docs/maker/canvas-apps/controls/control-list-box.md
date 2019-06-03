@@ -19,13 +19,12 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/10/2019
 ms.locfileid: "65517413"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="list-box-control-in-powerapps"></a>Liste-kontrollen i PowerApps
 En liste der brukeren kan velge ett eller flere elementer.
 
 ## <a name="description"></a>Beskrivelse
-**Liste**-kontrollen viser alltid alle de tilgjengelige valgene (i motsetning til en **[Rullegardin](control-drop-down.md)**-kontroll), og brukeren kan velge mer enn ett element om gangen (i motsetning til en **[Radio](control-radio.md)**-kontroll).
+**Liste**-kontrollen viser alltid alle de tilgjengelige valgene (i motsetning til en **[Rullegardin](control-drop-down.md)** -kontroll), og brukeren kan velge mer enn ett element om gangen (i motsetning til en **[Radio](control-radio.md)** -kontroll).
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 **[Standard](properties-core.md)** – startverdien for en kontroll før den er endret av brukeren.
@@ -49,11 +48,11 @@ Når du legger til et galleri, eller en liste, viser egenskapslisten **Elementer
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt til **Deaktivert**.
 
-**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt som **Deaktivert**.
 
-**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
+**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)** -egenskapen er angitt som **Deaktivert**.
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
@@ -126,33 +125,33 @@ Når du legger til et galleri, eller en liste, viser egenskapslisten **Elementer
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Distinct**( *DataSource*; *ColumnName* )](../functions/function-distinct.md)
+[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Eksempel
-1. Legg til en **Liste**-kontroll, gi den navnet **CategoryList**, og angi **[Elementer](properties-core.md)**-egenskapen som denne formelen:<br>
-   **["Carpet";"Hardwood";"Tile"]**
+1. Legg til en **Liste**-kontroll, gi den navnet **CategoryList**, og angi **[Elementer](properties-core.md)** -egenskapen som denne formelen:<br>
+   **["Carpet","Hardwood","Tile"]**
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
    
     ![Gulvbeleggkategorier i en liste](./media/control-list-box/category-listbox.png)
-2. Legg til tre **[Rullegardin](control-drop-down.md)**-kontroller, flytt dem under **CategoryList**, og gi dem navnene **CarpetList**, **HardwoodList** og **TileList**.
-3. Angi **[Elementer](properties-core.md)**-egenskapen til hver av **[Rullegardin](control-drop-down.md)**-kontrollene til en av disse verdiene:
+2. Legg til tre **[Rullegardin](control-drop-down.md)** -kontroller, flytt dem under **CategoryList**, og gi dem navnene **CarpetList**, **HardwoodList** og **TileList**.
+3. Angi **[Elementer](properties-core.md)** -egenskapen til hver av **[Rullegardin](control-drop-down.md)** -kontrollene til en av disse verdiene:
    
-   * CarpetList: **["Caserta Stone Beige";"Ageless Beauty Clay"; "Lush II Tundra"]**
-   * HardwoodList: **["Golden Teak";"Natural Hickory"; "Victoria Mahogany"]**
-   * TileList: **["Honey Onyx Marble";"Indian Autumn Slate"; "Panaria Vitality Ceramic"]**
+   * CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
+   * HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
+   * TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
      
      ![Navn på gulvbelegg i rullegardinlister](./media/control-list-box/flooring-names.png)
-4. Angi **[Synlig](properties-core.md)**-egenskapen til hver **[Rullegardin](control-drop-down.md)**-kontroll som en av disse verdiene:
+4. Angi **[Synlig](properties-core.md)** -egenskapen til hver **[Rullegardin](control-drop-down.md)** -kontroll som en av disse verdiene:
    
    * CarpetList: **Hvis ("Carpet" i CategoryList.SelectedItems.Value, true)**
    * HardwoodList: **Hvis ("Hardwood" i CategoryList.SelectedItems.Value, true)**
    * TileList: **Hvis ("Flisen» i CategoryList.SelectedItems.Value, true)**
      
-     Vil du ha mer informasjon om **[If](../functions/function-if.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
+     Vil du ha mer informasjon om **[If](../functions/function-if.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 5. Trykk på F5, og velg deretter ett eller flere elementer i **CategoryList**.
    
-    Den riktige **[Rullegardin](control-drop-down.md)**-kontrollen eller -kontrollene vises basert på valget eller valgene.
+    Den riktige **[Rullegardin](control-drop-down.md)** -kontrollen eller -kontrollene vises basert på valget eller valgene.
    
     ![Navn på gulvbelegg i rullegardinlister](./media/control-list-box/selected-lists.png)
 6. (valgfritt) Trykk på ESC for å gå tilbake til standardarbeidsområdet.

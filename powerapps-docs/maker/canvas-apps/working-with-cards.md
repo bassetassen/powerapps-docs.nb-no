@@ -22,7 +22,7 @@ ms.locfileid: "66225159"
 ---
 # <a name="understand-data-cards-in-powerapps"></a>Slik fungerer datakort i PowerApps
 
-**[Kort](controls/control-card.md)**-kontrollene er byggesteinene i **[Redigeringsskjema](controls/control-form-detail.md)**- og **[Vis skjema](controls/control-form-detail.md)**-kontrollene i lerretsapper. Skjemaet representerer hele posten, og hvert kort representerer et enkelt felt for den aktuelle posten.
+**[Kort](controls/control-card.md)** -kontrollene er byggesteinene i **[Redigeringsskjema](controls/control-form-detail.md)** - og **[Vis skjema](controls/control-form-detail.md)** -kontrollene i lerretsapper. Skjemaet representerer hele posten, og hvert kort representerer et enkelt felt for den aktuelle posten.
 
 Du kan lettest samhandle med kort i ruten til høyre, når du har valgt en skjemakontroll i utformingsområdet. I denne ruten, kan du velge hvilke felt du vil vise, hvordan du viser hvert felt og i hvilken rekkefølge de skal vises. Dette eksemplet viser en kontroll for **Redigeringsskjema** i en app som er bygd fra en SharePoint-liste, kalt **Aktiva**.
 
@@ -45,14 +45,14 @@ Flere felt på denne datakilden blir ikke vist, men du kan vise eller skjule et 
 ![](./media/working-with-cards/add-security-code.png)
 
 ## <a name="customize-a-card"></a>Å tilpasse et kort
-Kort består av andre kontroller. I en **Redigeringsskjema**-kontroll skriver brukeren inn data i en standard **[Tekstinndata](controls/control-text-input.md)**-kontroll du legger til fra **Sett inn**-fanen.  
+Kort består av andre kontroller. I en **Redigeringsskjema**-kontroll skriver brukeren inn data i en standard **[Tekstinndata](controls/control-text-input.md)** -kontroll du legger til fra **Sett inn**-fanen.  
 
 La oss gå gjennom et eksempel for hvordan du endrer utseendet på et kort ved å manipulere kontrollene i det.
 
 1. La oss først gå tilbake til kortet vi nylig satte inn for **SecurityCode**-feltet. Velg dette kortet ved å klikke eller trykke på det én gang:
    
     ![](./media/working-with-cards/select-security-code.png)
-2. Velg **[Tekstinndata](controls/control-text-input.md)**-kontrollen i kortet ved å klikke eller trykke på selve inndata-kontrollen.
+2. Velg **[Tekstinndata](controls/control-text-input.md)** -kontrollen i kortet ved å klikke eller trykke på selve inndata-kontrollen.
    
     ![](./media/working-with-cards/select-text-input.png)
 3. Flytt denne kontrollen i kortet ved å dra i valgboksen, og endre størrelsen på kontrollen ved å dra i håndtakene langs kanten av valgboksen:
@@ -66,9 +66,9 @@ I tillegg til å inneholde kontroller, er kortene kontroller i seg selv, som har
 
 ![](./media/working-with-cards/advanced-locked.png)
 
-Vi ser umiddelbart en av de viktigste egenskapene for kortet: **[DataField](controls/control-card.md)**-egenskapen. Denne egenskapen indikerer hvilket felt i datakilden som brukeren ser og kan redigere i dette kortet.  
+Vi ser umiddelbart en av de viktigste egenskapene for kortet: **[DataField](controls/control-card.md)** -egenskapen. Denne egenskapen indikerer hvilket felt i datakilden som brukeren ser og kan redigere i dette kortet.  
 
-Banneret over **Avansert**-fanen indikerer at egenskapene for dette kortet er låst. Et låseikon vises også ved siden av **[DataField](controls/control-card.md)**-,  **[DisplayName](controls/control-card.md)**- og  **[Obligatorisk](controls/control-card.md)**-egenskaper. Den høyre ruten opprettet disse formlene, og låsen hindrer tilfeldige endringer i disse egenskapene.
+Banneret over **Avansert**-fanen indikerer at egenskapene for dette kortet er låst. Et låseikon vises også ved siden av **[DataField](controls/control-card.md)** -,  **[DisplayName](controls/control-card.md)** - og  **[Obligatorisk](controls/control-card.md)** -egenskaper. Den høyre ruten opprettet disse formlene, og låsen hindrer tilfeldige endringer i disse egenskapene.
 
 ![](./media/working-with-cards/lock-icons.png)
 
@@ -111,25 +111,25 @@ Når du låser opp et kort, kan du endre hvordan det samhandler med skjemaet som
 Nedenfor finner du noen retningslinjer for hvordan kontroller bør fungere med kortene, og hvordan kortene bør fungere med skjemaet. Dette er bare retningslinjer. I likhet med en hvilken som helst kontroll i PowerApps, kan du opprette formler som refererer til en annen kontroll i PowerApps, og dette er ikke mindre sant for kort og kontroller i kort. Du kan være kreativ og opprette en app på mange måter.  
 
 ### <a name="datafield-property"></a>DataField-egenskapen
-Den viktigste egenskapen på kortet er **[DataField](controls/control-card.md)**-egenskapen.  Denne egenskapen styrer validering, hvilket felt som er oppdatert og andre aspekter av kortet.
+Den viktigste egenskapen på kortet er **[DataField](controls/control-card.md)** -egenskapen.  Denne egenskapen styrer validering, hvilket felt som er oppdatert og andre aspekter av kortet.
 
 ### <a name="information-flowing-in"></a>Informasjon som flyter inn
 Som en beholder gjør skjemaet **ThisItem** tilgjengelig for alle kortene i det. Denne posten inneholder alle feltene for den gjeldende posten av interesse.  
 
-**[standard](controls/properties-core.md)**-egenskapen for hvert kort bør settes til **ThisItem**.*FieldName*.  I noen tilfeller vil du kanskje transformere denne verdien på vei inn. Du ønsker kanskje å formatere en streng, eller oversette verdien fra ett språk til et annet.
+**[standard](controls/properties-core.md)** -egenskapen for hvert kort bør settes til **ThisItem**.*FieldName*.  I noen tilfeller vil du kanskje transformere denne verdien på vei inn. Du ønsker kanskje å formatere en streng, eller oversette verdien fra ett språk til et annet.
 
-Alle kontrollene i kortet skal referere til **Parent.Default** for å komme til verdien til feltet. Denne strategien gir et nivå for innkapsling for kortet, slik at kortets **[Standard](controls/properties-core.md)**-egenskap kan endres uten å endre de interne formlene for kortet.
+Alle kontrollene i kortet skal referere til **Parent.Default** for å komme til verdien til feltet. Denne strategien gir et nivå for innkapsling for kortet, slik at kortets **[Standard](controls/properties-core.md)** -egenskap kan endres uten å endre de interne formlene for kortet.
 
-**DefaultValue**- og **[Obligatorisk](controls/control-card.md)**-egenskapene blir som standard hentet fra datakildens metadata, basert på **[DataField](controls/control-card.md)**-egenskapen. Du kan overstyre disse formlene med din egen logikk ved å integrere datakildens metadata ved hjelp av **[DataSourceInfo](functions/function-datasourceinfo.md)**-funksjonen.
+**DefaultValue**- og **[Obligatorisk](controls/control-card.md)** -egenskapene blir som standard hentet fra datakildens metadata, basert på **[DataField](controls/control-card.md)** -egenskapen. Du kan overstyre disse formlene med din egen logikk ved å integrere datakildens metadata ved hjelp av **[DataSourceInfo](functions/function-datasourceinfo.md)** -funksjonen.
 
 ### <a name="information-flowing-out"></a>Informasjon som flyter ut
-Etter at brukeren endrer en post ved hjelp av kontroller i kortene, lagrer **[SubmitForm](functions/function-form.md)**-funksjonen disse endringene til datakilden. Når denne funksjonen kjører, leser skjemakontrollen verdiene for hvert kort sin **[DataField](controls/control-card.md)**-egenskap for å vite hvilket felt som skal endres.  
+Etter at brukeren endrer en post ved hjelp av kontroller i kortene, lagrer **[SubmitForm](functions/function-form.md)** -funksjonen disse endringene til datakilden. Når denne funksjonen kjører, leser skjemakontrollen verdiene for hvert kort sin **[DataField](controls/control-card.md)** -egenskap for å vite hvilket felt som skal endres.  
 
-Skjemakontrollen leser også verdien for hvert kort sin **[Oppdatering](controls/control-card.md)**-egenskap. Denne verdien vil bli lagret i datakilden for dette feltet. Dette er stedet der du kan bruke en annen transformasjon, kanskje for å reversere transformeringen som ble brukt i **[Standard](controls/properties-core.md)**-formelen for kortet.
+Skjemakontrollen leser også verdien for hvert kort sin **[Oppdatering](controls/control-card.md)** -egenskap. Denne verdien vil bli lagret i datakilden for dette feltet. Dette er stedet der du kan bruke en annen transformasjon, kanskje for å reversere transformeringen som ble brukt i **[Standard](controls/properties-core.md)** -formelen for kortet.
 
-**Gyldig**-egenskapen styres av metadata fra datakilden, basert på **[DataField](controls/control-card.md)**-egenskapen. Det er også basert på **[Obligatorisk](controls/control-card.md)**-egenskapen, og om **[Oppdatering](controls/control-card.md)**-egenskapen inneholder en verdi. Hvis verdien i **[Oppdatering](controls/control-card.md)**-egenskapen ikke er gyldig, angir **Feil**-egenskapen en brukervennlig feilmelding.
+**Gyldig**-egenskapen styres av metadata fra datakilden, basert på **[DataField](controls/control-card.md)** -egenskapen. Det er også basert på **[Obligatorisk](controls/control-card.md)** -egenskapen, og om **[Oppdatering](controls/control-card.md)** -egenskapen inneholder en verdi. Hvis verdien i **[Oppdatering](controls/control-card.md)** -egenskapen ikke er gyldig, angir **Feil**-egenskapen en brukervennlig feilmelding.
 
-Hvis **[DataField](controls/control-card.md)**-egenskapen for et kort er *tom*, er kortet bare en beholder for kontroller. **Gyldig**- og  **[Oppdatering](controls/control-card.md)**-egenskapene til kortet vil ikke delta når skjemaet sendes.
+Hvis **[DataField](controls/control-card.md)** -egenskapen for et kort er *tom*, er kortet bare en beholder for kontroller. **Gyldig**- og  **[Oppdatering](controls/control-card.md)** -egenskapene til kortet vil ikke delta når skjemaet sendes.
 
 ## <a name="dissecting-an-example"></a>Eksaminering av et eksempel
 La oss se på kontrollene som utgjør et grunnleggende dataregistreringskort. Avstanden mellom kontroller ble øket for å vise hver kontroll tydeligere:
@@ -144,17 +144,17 @@ Fire kontroller gjør at dette kortet fungerer:
 
 | navn | Type | Beskrivelse |
 | --- | --- | --- |
-| **TextRequiredStar** |**[Etikett](controls/control-text-box.md)**-kontrollen |Viser en stjerne, som ofte brukes i skjemaer for dataregistrering, for å indikere at et felt er nødvendig. |
-| **TextFieldDisplayName** |**[Etikett](controls/control-text-box.md)**-kontrollen |Viser det brukervennlige navnet for dette feltet. Dette navnet kan være forskjellig fra det som er i datakildeskjemaet. |
+| **TextRequiredStar** |**[Etikett](controls/control-text-box.md)** -kontrollen |Viser en stjerne, som ofte brukes i skjemaer for dataregistrering, for å indikere at et felt er nødvendig. |
+| **TextFieldDisplayName** |**[Etikett](controls/control-text-box.md)** -kontrollen |Viser det brukervennlige navnet for dette feltet. Dette navnet kan være forskjellig fra det som er i datakildeskjemaet. |
 | **InputText** |**Tekstinndata**-kontrollen |Viser startverdien for feltet og lar brukeren endrer denne verdien. |
-| **TextErrorMessage** |**[Etikett](controls/control-text-box.md)**-kontrollen |Viser en brukervennlig feilmelding til brukeren, hvis det oppstår et problem med validering. Sikrer også at feltet har en verdi hvis det kreves en. |
+| **TextErrorMessage** |**[Etikett](controls/control-text-box.md)** -kontrollen |Viser en brukervennlig feilmelding til brukeren, hvis det oppstår et problem med validering. Sikrer også at feltet har en verdi hvis det kreves en. |
 
 Hvis du vil fylle ut disse kontrollene med data, kan egenskapene bli drevet av egenskapene til kortet, gjennom disse viktige formlene. Vær oppmerksom på at ingen av disse formlene refererer til et bestemt felt. All informasjon kommer i stedet fra kortet.
 
 | Egenskapen for kontrollen | Formel | Beskrivelse |
 | --- | --- | --- |
 | **TextRequiredStar.Visible** |**Parent.Required** |Stjernen vises bare hvis feltet er nødvendig. Nødvendig er en formel som styres av deg eller metadataene, for datakilden. |
-| **TextFieldDisplayName.Text** |**Parent.DisplayName** |Tekstboks-kontrollen viser det brukervennlige navnet som du eller datakildens metadata gir, og som er angitt i kortets **[DisplayName](controls/control-card.md)**-egenskap. |
+| **TextFieldDisplayName.Text** |**Parent.DisplayName** |Tekstboks-kontrollen viser det brukervennlige navnet som du eller datakildens metadata gir, og som er angitt i kortets **[DisplayName](controls/control-card.md)** -egenskap. |
 | **InputText.Default** |**Parent.Default** |Tekstinndata-kontrollen viser først verdien i feltet fra datakilden, som ble angitt fra kortet sin standardverdi. |
 | **TextErrorMessage.Text** |**Parent.Error** |**Feil**-egenskapen for kortet angir en aktuell feilmelding, hvis det oppstår et problem med validering. |
 

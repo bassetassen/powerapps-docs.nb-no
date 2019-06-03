@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61564006"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="rand-function-in-powerapps"></a>Rand-funksjonen i PowerApps
 Returnerer et pseudo-tilfeldig tall.
@@ -34,7 +33,7 @@ En flyktig funksjon returnerer en annen verdi når den brukes i en formel for da
 
 En etikett med **Label1.Text = Rand()** vil for eksempel ikke endres mens appen er aktiv.  Å bare lukke og åpne appen vil resultere i en ny verdi.
 
-Funksjonen vil evalueres på nytt hvis den er en del av en formel der noe annet er endret.  Hvis vi for eksempel endrer eksemplet til å omfatte en glidebryter med **Label1.Text = Slider1.Value + Rand()**, blir et tilfeldig tall generert hver gang verdien for glidebryteren endres og tekstegenskapen for etiketten evalueres på nytt.  Nedenfor finner du et eksempel.
+Funksjonen vil evalueres på nytt hvis den er en del av en formel der noe annet er endret.  Hvis vi for eksempel endrer eksemplet til å omfatte en glidebryter med **Label1.Text = Slider1.Value + Rand()** , blir et tilfeldig tall generert hver gang verdien for glidebryteren endres og tekstegenskapen for etiketten evalueres på nytt.  Nedenfor finner du et eksempel.
 
 Når den brukes i en [virkemåteformel](../working-with-formulas-in-depth.md) blir **Rand** evaluert hver gang virkemåteformelen evalueres.  Nedenfor finner du et eksempel.
 
@@ -44,9 +43,9 @@ Når den brukes i en [virkemåteformel](../working-with-formulas-in-depth.md) bl
 ## <a name="examples"></a>Eksempler
 
 #### <a name="display-a-different-random-number-as-user-input-changes"></a>Vis et annet tilfeldig tall når brukerinndata endres
-1. Legg til en kontroll for **[glidebryteren](../controls/control-slider.md)**, og gi den det nye navnet **Slider1** hvis den har et annet navn.
+1. Legg til en kontroll for **[glidebryteren](../controls/control-slider.md)** , og gi den det nye navnet **Slider1** hvis den har et annet navn.
 
-1. Legg til en **[Etikett](../controls/control-text-box.md)**, og angi **Tekst**-egenskapen til denne formelen:
+1. Legg til en **[Etikett](../controls/control-text-box.md)** , og angi **Tekst**-egenskapen til denne formelen:
 
     **Slider1.Value + Rand()**
 
@@ -61,13 +60,13 @@ Når den brukes i en [virkemåteformel](../working-with-formulas-in-depth.md) bl
     ![Fire skjermer som viser en etikett med fire forskjellige, tilfeldige desimalverdier for hver av fire forskjellige innstillinger for glidebryteren 70.899, 84.667, 90.134, 99.690](media/function-rand/rand-slider-results.png)
 
 #### <a name="create-a-table-of-random-numbers"></a>Slik oppretter du en tabell med tilfeldige tall
-1. Legg til en **[Knapp](../controls/control-button.md)**, og angi **[OnSelect](../controls/properties-core.md)**-egenskapen til denne formelen:
+1. Legg til en **[Knapp](../controls/control-button.md)** , og angi **[OnSelect](../controls/properties-core.md)** -egenskapen til denne formelen:
 
-    **ClearCollect( RandomNumbers; ForAll( [ 1; 2; 3; 4; 5 ]; Rand() ))**
+    **ClearCollect( RandomNumbers, ForAll( [ 1, 2, 3, 4, 5 ], Rand() ))**
 
     Denne formelen oppretter én kolonnetabell som brukes til å oppdatere fem ganger, noe som resulterer i fem tilfeldige tall.
 
-1. Legg til en **[Datatabell](../controls/control-data-table.md)**, angi egenskapen for **Elementer** til **RandomNumbers** og vis deretter **Verdi**-feltet.
+1. Legg til en **[Datatabell](../controls/control-data-table.md)** , angi egenskapen for **Elementer** til **RandomNumbers** og vis deretter **Verdi**-feltet.
 
     ![En skjerm som viser en tabell med fem forskjellige desimalverdier 0.857, 0.105, 0.979, 0.167, 0.814](media/function-rand/set-show-data.png)
 
@@ -81,4 +80,4 @@ Når den brukes i en [virkemåteformel](../working-with-formulas-in-depth.md) bl
 
     ![Den samme skjermen som viser en datatabell med et nytt sett med fem forskjellige desimalverdier0.414, 0.128, 0.860, 0.303, 0.568](media/function-rand/rand-collection-2.png)
 
-Hvis du vil generere et enkelt tilfeldig tall i stedet for en tabell, kan du bruke **Set( RandomNumber; Rand() )**.
+Hvis du vil generere et enkelt tilfeldig tall i stedet for en tabell, kan du bruke **Set( RandomNumber, Rand() )** .

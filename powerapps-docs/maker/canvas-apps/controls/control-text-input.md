@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/10/2019
 ms.locfileid: "65521030"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="text-input-control-in-powerapps"></a>Tekstinndata-kontroll i PowerApps
 En boks som brukeren kan skrive inn tekst, tall og andre data i.
@@ -51,11 +50,11 @@ Brukeren kan angi data ved å skrive inn i en kontroll for tekstinndata. Avhengi
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Redigere**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt til **Deaktivert**.
 
-**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt som **Deaktivert**.
 
-**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
+**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)** -egenskapen er angitt som **Deaktivert**.
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
@@ -143,12 +142,12 @@ Brukeren kan angi data ved å skrive inn i en kontroll for tekstinndata. Avhengi
 1. Legg til to kontroller for tekstinndata, og gi dem navnene **inputFirst** og **inputLast**.
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
-2. Legg til en knapp, angi **[Text](properties-core.md)**-egenskapen til **Legg til**, og angi **[OnSelect](properties-core.md)**-egenskapen til denne formelen:<br>
-   **Collect(Names; {FirstName:inputFirst.Text; LastName:inputLast.Text})**
+2. Legg til en knapp, angi **[Text](properties-core.md)** -egenskapen til **Legg til**, og angi **[OnSelect](properties-core.md)** -egenskapen til denne formelen:<br>
+   **Collect(Names, {FirstName:inputFirst.Text, LastName:inputLast.Text})**
    
-    Vil du ha mer informasjon om **[Collect](../functions/function-clear-collect-clearcollect.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
-3. Legg til et tekstgalleri i stående/loddrett retning, angi **[Items](properties-core.md)** til **Navn**, og angi **[Text](properties-core.md)**-egenskapen til **Subtitle1** til **ThisItem.FirstName**.
-4. (valgfritt) I malgalleriet sletter du den nederste etiketten, kalt **Body1**, og angir **[TemplateSize](control-gallery.md)**-egenskapen for galleriet til **80**.
+    Vil du ha mer informasjon om **[Collect](../functions/function-clear-collect-clearcollect.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
+3. Legg til et tekstgalleri i stående/loddrett retning, angi **[Items](properties-core.md)** til **Navn**, og angi **[Text](properties-core.md)** -egenskapen til **Subtitle1** til **ThisItem.FirstName**.
+4. (valgfritt) I malgalleriet sletter du den nederste etiketten, kalt **Body1**, og angir **[TemplateSize](control-gallery.md)** -egenskapen for galleriet til **80**.
 5. Trykk på F5, skriv inn en tekststreng til **inputFirst** og **inputLast**, og klikk eller trykk deretter på **Legg til**-knappen.
 6. (valgfritt) Legg til flere navn i samlingen, og trykk deretter på ESC for å gå tilbake til standardarbeidsområdet.
 
@@ -156,10 +155,10 @@ Brukeren kan angi data ved å skrive inn i en kontroll for tekstinndata. Avhengi
 
 1. Legg til en kontroll for inndatatekst, gi den navnet **inputPassword**, og angi **Modus**-egenskapen til **Passord**.
 
-1. Legg til en etikett, og angi **[Text](properties-core.md)**-egenskapen til denne formelen:<br>
-   **If(inputPassword.Text = "P@ssw0rd"; "Access granted"; "Access denied")**
+1. Legg til en etikett, og angi **[Text](properties-core.md)** -egenskapen til denne formelen:<br>
+   **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
 
-    Vil du ha mer informasjon om **[If](../functions/function-if.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
+    Vil du ha mer informasjon om **[If](../functions/function-if.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 
 1. Trykk på F5, og skriv deretter **P@ssw0rd** i **inputPassword**.
 
@@ -169,7 +168,7 @@ Brukeren kan angi data ved å skrive inn i en kontroll for tekstinndata. Avhengi
 
 1. (valgfritt) Legg til en kontroll, for eksempel en pil, konfigurer den til å navigere til en annen skjerm, og vis den bare etter at brukeren skriver inn passordet.
 
-1. (valgfritt) Legg til en knapp, konfigurer **[Text](properties-core.md)**-egenskapen til å vise **Logg på**, legg til en tidtaker og deaktiver kontrollen for inndatatekst for en gitt tid hvis brukeren skriver inn feil passord og deretter klikker eller trykker på **Logg på**-knappen.
+1. (valgfritt) Legg til en knapp, konfigurer **[Text](properties-core.md)** -egenskapen til å vise **Logg på**, legg til en tidtaker og deaktiver kontrollen for inndatatekst for en gitt tid hvis brukeren skriver inn feil passord og deretter klikker eller trykker på **Logg på**-knappen.
 
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet

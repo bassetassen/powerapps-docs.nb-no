@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/10/2019
 ms.locfileid: "65517360"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="radio-control-in-powerapps"></a>Radio-kontrollen i PowerApps
 
@@ -57,11 +56,11 @@ Kontrollen kan ha et vannrett eller loddrett oppsett.
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt til **Deaktivert**.
 
-**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt som **Deaktivert**.
 
-**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
+**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)** -egenskapen er angitt som **Deaktivert**.
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
@@ -131,25 +130,25 @@ Kontrollen kan ha et vannrett eller loddrett oppsett.
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 
-[**Distinct**( *DataSource*; *ColumnName* )](../functions/function-distinct.md)
+[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Eksempel
 
-1. Legg til en **radio**-kontroll, gi den navnet **Priser**, og angi **[Elementer](properties-core.md)**-egenskapen til denne verdien:
+1. Legg til en **radio**-kontroll, gi den navnet **Priser**, og angi **[Elementer](properties-core.md)** -egenskapen til denne verdien:
 
-    **["Standard"; "Premium"]**
+    **["Standard", "Premium"]**
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 
-2. Legg til en **[etikett](control-text-box.md)**-kontroll, flytt den under **Radio**-kontrollen, og angi **[Tekst](properties-core.md)**-egenskapen i **[Etikett](control-text-box.md)**-kontrollen til denne formelen:
+2. Legg til en **[etikett](control-text-box.md)** -kontroll, flytt den under **Radio**-kontrollen, og angi **[Tekst](properties-core.md)** -egenskapen i **[Etikett](control-text-box.md)** -kontrollen til denne formelen:
 
-    **If("Premium" in Pricing.Selected.Value; "$200 per day"; "$150 per day")**
+    **If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
 
-    Vil du ha mer informasjon om **[If](../functions/function-if.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
+    Vil du ha mer informasjon om **[If](../functions/function-if.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 
 3. Velg et alternativ i **Radio**-kontrollen mens du holder nede ALT.
 
-    **[Etikett](control-text-box.md)**-kontrollen viser den aktuelle teksten for valget.
+    **[Etikett](control-text-box.md)** -kontrollen viser den aktuelle teksten for valget.
 
 4. (valgfritt) Hold nede ALT, og velg det andre alternativet for å bekrefte at den riktige teksten vises.
 
@@ -164,10 +163,10 @@ I tillegg til [kravene om standard fargekontrast](../accessible-apps-color.md) m
 
 ### <a name="screen-reader-support"></a>Støtte for skjermleser
 
-* Sørg for at hver alternativ har en **[verdi](properties-core.md)**.
+* Sørg for at hver alternativ har en **[verdi](properties-core.md)** .
 * Vurder å legge til en **[etikett](control-text-box.md)** rett før **Radio**-kontrollen, som skal fungere som overskrift.
 
 ### <a name="keyboard-support"></a>Tastaturstøtte
 
-* Angi **[TabIndex](properties-accessibility.md)**-egenskapen til null eller større, slik at tastaturbrukere kan navigere til den.
+* Angi **[TabIndex](properties-accessibility.md)** -egenskapen til null eller større, slik at tastaturbrukere kan navigere til den.
 * Angi egenskapene **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** slik at fokusindikatorer vises tydelig.

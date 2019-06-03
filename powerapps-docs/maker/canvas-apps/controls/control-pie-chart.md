@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61548091"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="pie-chart-control-in-powerapps"></a>Sektordiagram-kontrollen i PowerApps
 En kontroll som viser relative verdier sammenlignet med hverandre.
@@ -45,7 +44,7 @@ Denne kontrollen er en gruppert kontroll som inneholder tre kontroller: en **[et
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt som **Deaktivert**.
 
 **Explode** – avstanden mellom stykker i et sektordiagram.
 
@@ -80,17 +79,17 @@ Denne kontrollen er en gruppert kontroll som inneholder tre kontroller: en **[et
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Max**( *DataSource*; *ColumnName* )](../functions/function-aggregates.md)
+[**Max**( *DataSource*, *ColumnName* )](../functions/function-aggregates.md)
 
 ## <a name="example"></a>Eksempel
-1. Legg til en **[Knapp](control-button.md)**, og angi **[OnSelect](properties-core.md)**-egenskapen til denne formelen:<br>
-   **Collect(Revenue2015; {Product:"Europa"; Revenue:27000}; {Product:"Ganymede"; Revenue:26300}; {Product:"Callisto"; Revenue:29200})**
+1. Legg til en **[Knapp](control-button.md)** , og angi **[OnSelect](properties-core.md)** -egenskapen til denne formelen:<br>
+   **Collect(Revenue2015, {Product:"Europa", Revenue:27000}, {Product:"Ganymede", Revenue:26300}, {Product:"Callisto", Revenue:29200})**
    
     Lurer du på hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?
    
-    Vil du ha mer informasjon om **[Collect](../functions/function-clear-collect-clearcollect.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
-2. Trykk på F5, klikk eller trykk på **[Knapp](control-button.md)**, og trykk deretter på ESC for å gå tilbake til standardarbeidsområdet.
-3. Legg til en **sektordiagram**-kontroll, og angi **[Elementer](properties-core.md)**-egenskapen som **Revenue2015**.
+    Vil du ha mer informasjon om **[Collect](../functions/function-clear-collect-clearcollect.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
+2. Trykk på F5, klikk eller trykk på **[Knapp](control-button.md)** , og trykk deretter på ESC for å gå tilbake til standardarbeidsområdet.
+3. Legg til en **sektordiagram**-kontroll, og angi **[Elementer](properties-core.md)** -egenskapen som **Revenue2015**.
    
     **Sektordiagram**-kontrollen viser omsetningsdata for hvert produkt i forhold til de andre produktene.
 

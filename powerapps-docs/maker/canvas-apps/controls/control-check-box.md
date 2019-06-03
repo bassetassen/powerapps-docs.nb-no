@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61559453"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="check-box-control-in-powerapps"></a>Avmerkingsboks-kontrollen i PowerApps
 En kontroll der brukeren kan merke eller fjerne merket for å angi verdien som **sann** eller **usann**.
@@ -53,11 +52,11 @@ Brukeren kan angi en boolsk verdi ved hjelp av denne kjente kontrollen, har vær
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt til **Deaktivert**.
 
-**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt som **Deaktivert**.
 
-**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
+**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)** -egenskapen er angitt som **Deaktivert**.
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
@@ -122,19 +121,19 @@ Brukeren kan angi en boolsk verdi ved hjelp av denne kjente kontrollen, har vær
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**If**(*Betingelse*; *Resultat*)](../functions/function-if.md)
+[**If**(*Betingelse*, *Resultat*)](../functions/function-if.md)
 
 ## <a name="example"></a>Eksempel
-1. Legg til en **Avmerkingsboks**-kontroll, gi den navnet **chkReserve**, og angi **[Text](properties-core.md)**-egenskapen som **Reserve now**.
+1. Legg til en **Avmerkingsboks**-kontroll, gi den navnet **chkReserve**, og angi **[Text](properties-core.md)** -egenskapen som **Reserve now**.
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
-2. Legg til en **[Date picker](control-date-picker.md)**-kontroll, og angi **[Visible](properties-core.md)**-egenskapen som denne formelen:
-   <br>**If(chkReserve.Value = true; true)**
+2. Legg til en **[Date picker](control-date-picker.md)** -kontroll, og angi **[Visible](properties-core.md)** -egenskapen som denne formelen:
+   <br>**If(chkReserve.Value = true, true)**
    
-    Vil du ha mer informasjon om **[If](../functions/function-if.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
-3. Trykk på F5, og klikk eller trykk på **chkReserve** for å angi dens **[Value](properties-core.md)**-egenskap som **sann**. Klikk eller trykk deretter på **chkReserve** på nytt for å angi dens **[Value](properties-core.md)**-egenskap som **usann**.
+    Vil du ha mer informasjon om **[If](../functions/function-if.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
+3. Trykk på F5, og klikk eller trykk på **chkReserve** for å angi dens **[Value](properties-core.md)** -egenskap som **sann**. Klikk eller trykk deretter på **chkReserve** på nytt for å angi dens **[Value](properties-core.md)** -egenskap som **usann**.
    
-    **[Date picker](control-date-picker.md)**-kontrollen vises når **[Value](properties-core.md)**-egenskapen til **chkReserve** er **sann**, men ikke når den er **usann**.
+    **[Date picker](control-date-picker.md)** -kontrollen vises når **[Value](properties-core.md)** -egenskapen til **chkReserve** er **sann**, men ikke når den er **usann**.
 4. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
 
 

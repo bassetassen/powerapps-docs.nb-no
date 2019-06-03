@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61520691"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="select-function-in-powerapps"></a>Select-funksjonen i PowerApps
 Simulerer en valgt handling på en kontroll som fører til at **OnSelect**-formelen evalueres.
@@ -27,7 +26,7 @@ Simulerer en valgt handling på en kontroll som fører til at **OnSelect**-forme
 ## <a name="description"></a>Beskrivelse
 **Select**-funksjonen simulerer en valgt handling på en kontroll som om brukeren skulle ha klikket eller trykket på denne kontrollen. Som et resultat av dette evalueres **OnSelect**-formelen i målkontrollen.
 
-Bruk **Select** til å overføre en valgt handling til en overordnet kontroll. Denne typen overføring er standard virkemåte i, for eksempel gallerier. Som standard er **OnSelect**-egenskapen for en kontroll i et **[Galleri](../controls/control-gallery.md)** satt til **Velg( overordnet )**. På den måten kan du angi verdien for **OnSelect**-egenskapen for selve gallerikontrollen, og denne formelen evalueres uavhengig av hvor i galleriet brukeren klikker eller trykker.
+Bruk **Select** til å overføre en valgt handling til en overordnet kontroll. Denne typen overføring er standard virkemåte i, for eksempel gallerier. Som standard er **OnSelect**-egenskapen for en kontroll i et **[Galleri](../controls/control-gallery.md)** satt til **Velg( overordnet )** . På den måten kan du angi verdien for **OnSelect**-egenskapen for selve gallerikontrollen, og denne formelen evalueres uavhengig av hvor i galleriet brukeren klikker eller trykker.
 
 Hvis du vil at en eller flere kontroller i galleriet skal utføre andre handlinger enn de vanlige handlingene i galleriet, kan du angi **OnSelect**-egenskapen for disse kontrollene til noe annet enn standardverdien. Du kan la standardverdiene for **OnSelect**-egenskapene for de fleste kontrollene i galleriet stå uendret hvis du vil at de skal utføre den samme handlingen som selve galleriet.
 
@@ -50,7 +49,7 @@ En kontroll kan ikke **Select** seg selv direkte eller indirekte gjennom andre k
 
 #### <a name="basic-usage"></a>Grunnleggende bruk
 
-1. Legg til en **[Knapp](../controls/control-button.md)**, og gi den det nye navnet **Knapp1** hvis den har et annet navn.
+1. Legg til en **[Knapp](../controls/control-button.md)** , og gi den det nye navnet **Knapp1** hvis den har et annet navn.
 
 1. Angi **OnSelect**-egenskapen for **Knapp1** i denne formelen:
 
@@ -68,7 +67,7 @@ En kontroll kan ikke **Select** seg selv direkte eller indirekte gjennom andre k
 
 #### <a name="gallery-control"></a>Gallerikontroll
 
-1. Legg til en loddrett **[Galleri](../controls/control-gallery.md)**-kontroll som inneholder andre kontroller.
+1. Legg til en loddrett **[Galleri](../controls/control-gallery.md)** -kontroll som inneholder andre kontroller.
 
     ![Velg et loddrett galleri som inneholder kontroller](media/function-select/select-gallery.png)
 
@@ -84,7 +83,7 @@ En kontroll kan ikke **Select** seg selv direkte eller indirekte gjennom andre k
 
 5. Angi **OnSelect**-egenskapen for bildekontrollen i denne formelen:
 
-    **Varsle( «Bildet er valgt»; vellykket )**
+    **Varsle( «Bildet er valgt», vellykket )**
 
 6. Klikk eller trykk på de ulike elementene i galleriet mens du holder nede ALT-tasten.
 

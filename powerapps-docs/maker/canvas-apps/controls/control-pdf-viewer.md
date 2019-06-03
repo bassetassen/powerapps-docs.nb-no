@@ -57,7 +57,7 @@ Applagere kan omgå disse begrensningene ved å inkludere PDF-dokumenter som med
 
 **[DisplayMode](properties-core.md)** – hvorvidt kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt til **Deaktivert**.
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på en kontroll.
 
