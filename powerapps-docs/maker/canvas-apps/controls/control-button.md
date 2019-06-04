@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63320601"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="button-control-in-powerapps"></a>Knappkontroll i PowerApps
 En kontroll som brukeren kan klikke eller trykke på for å samhandle med appen.
@@ -117,7 +118,7 @@ Konfigurer **[OnSelect](properties-core.md)** -egenskapen til en **Knapp**-kontr
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-**[Navigate( *ScreenName*, *ScreenTransitionValue* )](../functions/function-navigate.md)**
+**[Navigate( *ScreenName*; *ScreenTransitionValue* )](../functions/function-navigate.md)**
 
 ## <a name="examples"></a>Eksempler
 ### <a name="add-a-basic-formula-to-a-button"></a>Slik legger du til en grunnleggende formel i en knapp
@@ -144,7 +145,7 @@ Legg til en formel som sletter **Tekstinndata**-kontrollen mellom oppføringene.
 1. Angi **[HintText](control-text-input.md)** -egenskapen for **Kilde** til «Sett inn et tall».
 2. Angi **[OnSelect](properties-core.md)** -egenskapen for **Add** til denne formelen:
    
-    **UpdateContext({Total:Total + Value(Source.Text)});<br>UpdateContext({ClearInput: ""})**
+    **UpdateContext({Total:Total + Value(Source.Text)});;<br>UpdateContext({ClearInput: ""})**
    
     > [!NOTE]
    > Adskill flere formler med semikolon « **;** ».

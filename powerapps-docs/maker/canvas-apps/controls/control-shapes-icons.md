@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63318423"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="shape-controls-and-icon-controls-in-powerapps"></a>Figur-kontroller og ikon-kontroller i PowerApps
 Grafikk som du kan konfigurere egenskaper for utseende og virkemåte for.
@@ -68,7 +69,7 @@ Disse kontrollene omfatter piler, geometriske former, handlingsikoner og symbole
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 
-[**Navigate**( *ScreenName*, *ScreenTransition* )](../functions/function-navigate.md)
+[**Navigate**( *ScreenName*; *ScreenTransition* )](../functions/function-navigate.md)
 
 ## <a name="example"></a>Eksempel
 
@@ -80,7 +81,7 @@ Disse kontrollene omfatter piler, geometriske former, handlingsikoner og symbole
 
 1. Legg til en **Figur**-kontroll i **Source**, og angi **[OnSelect](properties-core.md)** -egenskapen som denne formelen:
 
-  `Navigate(Target, ScreenTransition.Fade)`
+  `Navigate(Target; ScreenTransition.Fade)`
   
 1. Trykk på F5, og velg deretter den **figur** kontroll.
 
@@ -88,7 +89,7 @@ Disse kontrollene omfatter piler, geometriske former, handlingsikoner og symbole
 
 1. (valgfritt) Trykk på Esc for å gå tilbake til standardarbeidsområdet, legge til en **Figur**-kontroll i **Target**, og angi **[OnSelect](properties-core.md)** -egenskapen til **Figur**-kontrollen som denne formelen:
 
-  `Navigate(Source, ScreenTransition.Fade)`
+  `Navigate(Source; ScreenTransition.Fade)`
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
 

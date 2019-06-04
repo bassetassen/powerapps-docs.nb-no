@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/31/2019
 ms.locfileid: "66451614"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="app-object-in-powerapps"></a>App-objekt i PowerApps
 
@@ -101,7 +102,7 @@ I en nettleser, kanskje bekreftelsesdialogboksen vises med en standardmelding fr
 
 1. Angi den **App** objektets **ConfirmExit** egenskapen til dette uttrykket:
 
-    ```powerapps-dot
+    ```powerapps-comma
     AccountForm.Unsaved Or ContactForm.Unsaved
     ```
 
@@ -112,9 +113,9 @@ I en nettleser, kanskje bekreftelsesdialogboksen vises med en standardmelding fr
 
 1. Angi den **App** objektets **ConfirmExitMessage** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    If( AccountsForm.Unsaved,
-        "Accounts form has unsaved changes.",
+    ```powerapps-comma
+    If( AccountsForm.Unsaved;
+        "Accounts form has unsaved changes.";
         "Contacts form has unsaved changes."
     )
     ```

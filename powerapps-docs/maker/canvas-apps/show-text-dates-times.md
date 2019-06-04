@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63318340"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="show-text-dates-and-times-in-powerapps"></a>Vis tekst, datoer og klokkeslett i PowerApps
 Legg til datoer og klokkeslett i en lerretsapp i PowerApps, og formater dem slik at de viser det riktige detaljnivået eller gjenspeiler den nasjonale innstillingen. Å beregne tidsrommet mellom to datoer, eller beregne en dato som er en viss tid før eller etter en dato du angir. Konverter datoer til eller fra separate verdier for dager, måneder og år, og konvertere klokkeslett til eller fra separate verdier for timer, minutter og sekunder.
@@ -46,7 +47,7 @@ Her er noen eksempler.
    
     Hvis datamaskinen er satt til en nasjonal innstilling som for eksempel «fr-fr», vises gjeldende dato og klokkeslett i dette formatet:  <br>*dd/mm/åååå tt:mm AM/PM*
 2. Angi **[Tekst](controls/properties-core.md)** -egenskapen for **ShowText** til denne formelen:
-   <br>**DateDiff(Today(), DateValue("01/01/2020"))**
+   <br>**DateDiff(Today(); DateValue("01/01/2020"))**
    
     ![Antall dager mellom dagens dato og 01. jan. 2020](./media/show-text-dates-times/date-diff-text.png)
    
@@ -60,7 +61,7 @@ Her er noen eksempler.
 4. I **Fødselsdato** skriver du inn måneden og dagen for fødselsdagen din (for eksempel **18/05**).
 
 5. Angi **[Tekst](controls/properties-core.md)** -egenskapen for **ShowText** til denne formelen:
-   <br>**DateDiff(Today(), DateValue(BirthDate.Text))**
+   <br>**DateDiff(Today(); DateValue(BirthDate.Text))**
    
     ![Antall dager mellom i dag og fødselsdagen din](./media/show-text-dates-times/birth-diff.png)
    
@@ -88,7 +89,7 @@ Konverter datoer og klokkeslett fra tekststrenger til verdier, som du kan format
    
     **ShowDate** viser den samme informasjonen som du skrev inn, men den har blitt konvertert fra tekst til en verdi, og formatert på en annen måte. For eksempel vises året med fire sifre i stedet for bare to.
 3. Endre **[Tekst](controls/properties-core.md)** -egenskapen for **ShowDate** til denne formelen:
-   <br>**DateTimeValue(ArrivalDateTime.Text, "fr")**
+   <br>**DateTimeValue(ArrivalDateTime.Text; "fr")**
    
     ![Å vise en dato/klokkeslett-verdi i fransk format](./media/show-text-dates-times/date-value-fr.png)
    
@@ -101,7 +102,7 @@ Konverter datoer og klokkeslett fra tekststrenger til verdier, som du kan format
    > 
    > 
 4. Hvis du vil bruke ett av flere innebygde formater, kan du endre **[Tekst](controls/properties-core.md)** -egenskapen for **ShowDate** til denne formelen:
-   <br>**Text(DateTimeValue(ArrivalDateTime.Text), DateTimeFormat.LongDateTime)**
+   <br>**Text(DateTimeValue(ArrivalDateTime.Text); DateTimeFormat.LongDateTime)**
    
     ![Å vise en dato/klokkeslett-verdi i fransk format](./media/show-text-dates-times/long-date-time.png)
    
@@ -112,7 +113,7 @@ Konverter datoer og klokkeslett fra tekststrenger til verdier, som du kan format
    > 
    > 
 5. Hvis du vil bruke et egendefinert format, kan du endre **[Tekst](controls/properties-core.md)** -egenskapen for **ShowDate** til denne formelen:
-   <br>**Text(DateTimeValue(ArrivalDateTime.Text), "mm/dd/yyyy hh:mm:ss.fff AM/PM")**
+   <br>**Text(DateTimeValue(ArrivalDateTime.Text); "mm/dd/yyyy hh:mm:ss.fff AM/PM")**
    
     ![Å vise en dato/klokkeslett-verdi i fransk format](./media/show-text-dates-times/format-milliseconds.png)
    
@@ -132,15 +133,15 @@ Konverter datoer og klokkeslett fra tekststrenger til verdier, som du kan format
    
     **FormatDate** viser datoen du skrev inn, bortsett fra at året vises med fire sifre.
 3. Angi **[Tekst](controls/properties-core.md)** -egenskapen for **FormatDate** til denne formelen:
-   <br>**DateValue(ArrivalDate.Text, "fr")**
+   <br>**DateValue(ArrivalDate.Text; "fr")**
    
     **FormatDate** viser dagen før måneden, akkurat som en fransk bruker vil forvente.
 4. Hvis du vil bruke ett av flere innebygde formater, kan du angi **[Tekst](controls/properties-core.md)** -egenskapen for **FormatDate** til denne formelen:
-   <br>**Text(DateValue(ArrivalDate.Text), DateTimeFormat.LongDate)**
+   <br>**Text(DateValue(ArrivalDate.Text); DateTimeFormat.LongDate)**
    
     **FormatDate** viser dagen i uken, måneden, dagen og året.
 5. Hvis du vil bruke et egendefinert format, kan du angi **[Tekst](controls/properties-core.md)** -egenskapen for **FormatDate** til denne formelen:
-   <br>**Text(DateValue(ArrivalDate.Text), "yy/mm/dd")**
+   <br>**Text(DateValue(ArrivalDate.Text); "yy/mm/dd")**
    
     **FormatDate** viser datoen i formatet som du har angitt.
 
@@ -151,11 +152,11 @@ Konverter datoer og klokkeslett fra tekststrenger til verdier, som du kan format
 2. Legg til en **[Etikett](controls/control-text-box.md)** -kontroll kalt **ShowTime**.
 
 3. Hvis du vil bruke ett av flere innebygde formater, kan du angi **[Tekst](controls/properties-core.md)** -egenskapen for **ShowTime** til denne formelen:
-   <br>**Text(DateTimeValue(ArrivalTime.Text), DateTimeFormat.LongTime)**
+   <br>**Text(DateTimeValue(ArrivalTime.Text); DateTimeFormat.LongTime)**
    
     **ShowTime** viser tiden du angav, inkludert sekunder.
 4. Hvis du vil bruke et egendefinert format, kan du angi **[Tekst](controls/properties-core.md)** -egenskapen for **ShowTime** til denne formelen:
-   <br>**Text(DateTimeValue(ArrivalTime.Text), "hh:mm:ss.fff AM/PM")**
+   <br>**Text(DateTimeValue(ArrivalTime.Text); "hh:mm:ss.fff AM/PM")**
    
     **ShowTime** viser tiden du angav, inkludert sekunder og millisekunder.
    
@@ -171,12 +172,12 @@ Konverter datoer og klokkeslett fra tekststrenger til verdier, som du kan format
 2. Skriv inn **1/4/2015** i **Start**, og skriv inn **1/1/2016** i **Slutt**.
 
 3. Legg til en **[Etikett](controls/control-text-box.md)** -kontroll, kalt **DateDiff**, og angi **[Tekst](controls/properties-core.md)** -egenskapen til denne formelen:
-   <br>**DateDiff(DateValue(Start.Text), DateValue(End.Text))**
+   <br>**DateDiff(DateValue(Start.Text); DateValue(End.Text))**
    
     ![Å sammenligne to datoer](./media/show-text-dates-times/date-diff.png)
    
     **DateDiff** viser **275**, som er antall dager mellom 01. apr. 2015 og 01. jan. 2016.
-4. Angi **[Tekst](controls/properties-core.md)** -egenskapen for **DateDiff** til denne formelen:  <br>**DateDiff(DateValue(Start.Text), DateValue(End.Text), måneder)**
+4. Angi **[Tekst](controls/properties-core.md)** -egenskapen for **DateDiff** til denne formelen:  <br>**DateDiff(DateValue(Start.Text); DateValue(End.Text); måneder)**
    
     **DateDiff** viser **9**, som er antall måneder mellom 01. apr. 2015 og 1. jan. 2016. Erstatt **Måneder** med **Kvartaler**, eller **År** for å vise tiden i disse enhetene.
 
@@ -185,19 +186,19 @@ Konverter datoer og klokkeslett fra tekststrenger til verdier, som du kan format
 1. Legg til en **[Tekstinndata](controls/control-text-input.md)** -kontroll, kalt **Start**, og skriv inn **10/05/1985** i den.
 
 2. Legg til en **[Etikett](controls/control-text-box.md)** -kontroll kalt **DateAdd**, og angi **[Tekst](controls/properties-core.md)** -egenskapen til denne formelen:
-   <br>**DateAdd(DateValue(Start.Text), 3)**
+   <br>**DateAdd(DateValue(Start.Text); 3)**
    
     ![Å legge til tre dager](./media/show-text-dates-times/date-add.png)
    
     **DateAdd** viser **13/05/1985**, som er tre dager etter datoen i **Start**.
 3. Angi **[Tekst](controls/properties-core.md)** -egenskapen for **DateAdd** til denne formelen:
-   <br>**DateAdd(DateValue(Start.Text), -3)**
+   <br>**DateAdd(DateValue(Start.Text); -3)**
    
     ![Å trekke fra tre dager](./media/show-text-dates-times/date-subtract.png)
    
     **DateAdd** viser **07/05/1985**, som er tre dager før datoen i **Start**.
 4. Endre **[Tekst](controls/properties-core.md)** -egenskapen for **DateAdd** til denne formelen:
-   <br>**DateAdd(DateValue(Start.Text), 3, Months)**
+   <br>**DateAdd(DateValue(Start.Text); 3; Months)**
    
     ![Å legge til tre måneder](./media/show-text-dates-times/date-add-months.png)
    
@@ -208,16 +209,16 @@ Konverter datoer og klokkeslett fra tekststrenger til verdier, som du kan format
 1. Legg til tre **[Rullegardin](controls/control-drop-down.md)** -kontroller, kalt **År**, **Måned** og **Dag**.
 
 2. Angi **[Element](controls/properties-core.md)** -egenskapen for **År** til denne formelen:
-   <br>**Table({Year:"2014"}, {Year:"2015"}, {Year:"2016"})**
+   <br>**Table({Year:"2014"}; {Year:"2015"}; {Year:"2016"})**
 
 3. Angi **[Element](controls/properties-core.md)** -egenskapen for **Måned** til denne formelen:
-   <br>**Table({Month:"1"}, {Month:"2"}, {Month:"3"}, {Month:"4"}, {Month:"5"}, {Month:"6"}, {Month:"7"}, {Month:"8"}, {Month:"9"}, {Month:"10"}, {Month:"11"}, {Month:"12"})**
+   <br>**Table({Month:"1"}; {Month:"2"}; {Month:"3"}; {Month:"4"}; {Month:"5"}; {Month:"6"}; {Month:"7"}; {Month:"8"}; {Month:"9"}; {Month:"10"}; {Month:"11"}; {Month:"12"})**
 
 4. Angi **[Element](controls/properties-core.md)** -egenskapen for **Dag** til denne formelen:
-   <br>**Table({Day:"1"}, {Day:"2"}, {Day:"3"}, {Day:"4"}, {Day:"5"}, {Day:"6"}, {Day:"7"}, {Day:"8"}, {Day:"9"}, {Day:"10"}, {Day:"11"}, {Day:"12"}, {Day:"13"}, {Day:"14"}, {Day:"15"}, {Day:"16"}, {Day:"17"}, {Day:"18"}, {Day:"19"}, {Day:"20"}, {Day:"21"}, {Day:"22"}, {Day:"23"}, {Day:"24"}, {Day:"25"}, {Day:"26"}, {Day:"27"}, {Day:"28"}, {Day:"29"}, {Day:"30"}, {Day:"31"})**
+   <br>**Table({Day:"1"}; {Day:"2"}; {Day:"3"}; {Day:"4"}; {Day:"5"}; {Day:"6"}; {Day:"7"}; {Day:"8"}; {Day:"9"}; {Day:"10"}; {Day:"11"}; {Day:"12"}; {Day:"13"}; {Day:"14"}; {Day:"15"}; {Day:"16"}; {Day:"17"}; {Day:"18"}; {Day:"19"}; {Day:"20"}; {Day:"21"}; {Day:"22"}; {Day:"23"}; {Day:"24"}; {Day:"25"}; {Day:"26"}; {Day:"27"}; {Day:"28"}; {Day:"29"}; {Day:"30"}; {Day:"31"})**
 
 5. Legg til en **[Etikett](controls/control-text-box.md)** -kontroll, og angi **[Tekst](controls/properties-core.md)** -egenskapen til denne formelen:
-   <br>**Text(Date(Value(Year.Selected.Value), Value(Month.Selected.Value), Value(Day.Selected.Value)), DateTimeFormat.LongDate)**
+   <br>**Text(Date(Value(Year.Selected.Value); Value(Month.Selected.Value); Value(Day.Selected.Value)); DateTimeFormat.LongDate)**
    
     **Onsdag 01. jan. 2014** er oppført som standard. Velg forskjellige verdier i **[Rullegardin](controls/control-drop-down.md)** -kontrollene for å endre datoen i **[Etikett](controls/control-text-box.md)** -kontrollen.
 
@@ -236,17 +237,17 @@ Du må kanskje konvertere data som du ikke forventet. En bruker kan angi feil da
 1. Legg til to **Rullegardin**-lister kalt **Time** og **Minutt**.
 
 2. Angi **[Element](controls/properties-core.md)** -egenskapen for **Time** til denne formelen:
-   <br>**Table({Hour:"9"}, {Hour:"10"}, {Hour:"11"}, {Hour:"12"}, {Hour:"13"}, {Hour:"14"}, {Hour:"15"}, {Hour:"16"}, {Hour:"17"})**
+   <br>**Table({Hour:"9"}; {Hour:"10"}; {Hour:"11"}; {Hour:"12"}; {Hour:"13"}; {Hour:"14"}; {Hour:"15"}; {Hour:"16"}; {Hour:"17"})**
 
 3. Angi **[Element](controls/properties-core.md)** -egenskapen for **Minutt** til denne formelen:
-   <br>**Table({Minute:"0"}, {Minute:"15"}, {Minute:"30"}, {Minute:"45"})**
+   <br>**Table({Minute:"0"}; {Minute:"15"}; {Minute:"30"}; {Minute:"45"})**
 
 4. Legg til en **[Etikett](controls/control-text-box.md)** -kontroll, og angi **[Tekst](controls/properties-core.md)** -egenskapen til denne formelen:  
-   <br>**Text(Time(Value(Hour.Selected.Value), Value(Minute.Selected.Value), 0), DateTimeFormat.ShortTime)**
+   <br>**Text(Time(Value(Hour.Selected.Value); Value(Minute.Selected.Value); 0); DateTimeFormat.ShortTime)**
 
 5. Velg **15** i **Time** og **45** i **Minutt**.
    
     **[Etikett](controls/control-text-box.md)** -kontrollen viser **15:45:00**.
    
-    Du kan legge til oppføringer til **Time** og **Minutt**, slik at brukere kan velge fra et større utvalg av timer, og et mer nøyaktig antall minutter. Du kan også legge til en tredje **[Rullegardin](controls/control-drop-down.md)** -kontroll, slik at brukere kan angi sekunder. Hvis du legger til en tredje liste, kan du angi **[Tekst](controls/properties-core.md)** -egenskapen for **[Etikett](controls/control-text-box.md)** -kontrollen til følgende uttrykk:<br>**Text(Time(Value(Hour.Selected.Value), Value(Minute.Selected.Value), Value(Second.Selected.Value)), DateTimeFormat.LongTime)**
+    Du kan legge til oppføringer til **Time** og **Minutt**, slik at brukere kan velge fra et større utvalg av timer, og et mer nøyaktig antall minutter. Du kan også legge til en tredje **[Rullegardin](controls/control-drop-down.md)** -kontroll, slik at brukere kan angi sekunder. Hvis du legger til en tredje liste, kan du angi **[Tekst](controls/properties-core.md)** -egenskapen for **[Etikett](controls/control-text-box.md)** -kontrollen til følgende uttrykk:<br>**Text(Time(Value(Hour.Selected.Value); Value(Minute.Selected.Value); Value(Second.Selected.Value)); DateTimeFormat.LongTime)**
 

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61546251"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="pen-input-control-in-powerapps"></a>Penneinndata-kontrollen i PowerApps
 En kontroll hvor du kan tegne, viske ut og utheve områder i et bilde.
@@ -71,7 +72,7 @@ Du kan bruke denne kontrollen som en tavle og tegne diagrammer og håndskrive or
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Collect**( *CollectionName*, *DatatoCollect* )](../functions/function-clear-collect-clearcollect.md)
+[**Collect**( *CollectionName*; *DatatoCollect* )](../functions/function-clear-collect-clearcollect.md)
 
 ## <a name="example"></a>Eksempel
 ### <a name="create-a-set-of-images"></a>Opprett et sett med bilder
@@ -80,7 +81,7 @@ Du kan bruke denne kontrollen som en tavle og tegne diagrammer og håndskrive or
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 2. Legg til en **[Knapp](control-button.md)** , flytt den under **MyDoodles**, og angi **[Text](properties-core.md)** -egenskapen for **[Knapp](control-button.md)** -kontrollen til å vise **Legg til**.
 3. Angi **[OnSelect](properties-core.md)** -egenskapen til **[Knapp](control-button.md)** -kontrollen som denne formelen:<br>
-   **Collect(Doodles, {Sketch:MyDoodles.Image})**
+   **Collect(Doodles; {Sketch:MyDoodles.Image})**
 4. Legg til en **Bildegalleri**-kontroll, flytt den under **[Knapp](control-button.md)** -kontrollen, og reduserer bredden på **Bildegalleri**-kontrollen til den viser tre elementer.
 5. Angi **Bildegalleri**-kontrollens **[Elementer](properties-core.md)** -egenskap til **Doodles**, og trykk på F5.
 6. Tegn et bilde i **MyDoodles**, og klikk eller trykk på **[Knapp](control-button.md)** -kontrollen.
@@ -88,7 +89,7 @@ Du kan bruke denne kontrollen som en tavle og tegne diagrammer og håndskrive or
     Bildet du har tegnet, vises i **Bildegalleri**-kontrollen.
 7. (valgfritt) Klikk eller trykk på ikonet i **Penneinndata**-kontrollen for å fjerne bildet du tegnet, tegne et annet bilde, og trykk eller trykk deretter på **[Knapp](control-button.md)** -kontrollen.
 8. I **Bildegalleri**-kontrollen angir du **[OnSelect](properties-core.md)** -egenskapen til **[Bilde](control-image.md)** -kontrollen som denne formelen:<br>
-   **Remove(Doodles, ThisItem)**
+   **Remove(Doodles; ThisItem)**
 9. Du kan fjerne en tegning ved å klikke eller trykke på den i **Bildegalleri**-kontrollen.
 
 Bruk **[SaveData](../functions/function-savedata-loaddata.md)** -funksjonen til å lagre tegningene lokalt eller **[Patch](../functions/function-patch.md)** -funksjonen til å lagre dem til en datakilde.

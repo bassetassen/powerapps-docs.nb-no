@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61564006"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="rand-function-in-powerapps"></a>Rand-funksjonen i PowerApps
 Returnerer et pseudo-tilfeldig tall.
@@ -62,7 +63,7 @@ Når den brukes i en [virkemåteformel](../working-with-formulas-in-depth.md) bl
 #### <a name="create-a-table-of-random-numbers"></a>Slik oppretter du en tabell med tilfeldige tall
 1. Legg til en **[Knapp](../controls/control-button.md)** , og angi **[OnSelect](../controls/properties-core.md)** -egenskapen til denne formelen:
 
-    **ClearCollect( RandomNumbers, ForAll( [ 1, 2, 3, 4, 5 ], Rand() ))**
+    **ClearCollect( RandomNumbers; ForAll( [ 1; 2; 3; 4; 5 ]; Rand() ))**
 
     Denne formelen oppretter én kolonnetabell som brukes til å oppdatere fem ganger, noe som resulterer i fem tilfeldige tall.
 
@@ -80,4 +81,4 @@ Når den brukes i en [virkemåteformel](../working-with-formulas-in-depth.md) bl
 
     ![Den samme skjermen som viser en datatabell med et nytt sett med fem forskjellige desimalverdier0.414, 0.128, 0.860, 0.303, 0.568](media/function-rand/rand-collection-2.png)
 
-Hvis du vil generere et enkelt tilfeldig tall i stedet for en tabell, kan du bruke **Set( RandomNumber, Rand() )** .
+Hvis du vil generere et enkelt tilfeldig tall i stedet for en tabell, kan du bruke **Set( RandomNumber; Rand() )** .

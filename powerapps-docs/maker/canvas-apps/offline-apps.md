@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 05/28/2019
 ms.locfileid: "66265784"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="develop-offline-capable-canvas-apps"></a>Utvikle lerretsapper som fungerer i frakoblet tilstand
 
@@ -78,14 +79,14 @@ På et høyt nivå utfører appen disse oppgavene:
 
 1. I den **trevisning** ruten velger **App**, og deretter angi dens **OnStart** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    If( Connection.Connected,
-        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 10} ) );
-            Set( statusText, "Online data" ),
-        LoadData( LocalTweets, "LocalTweets", true );
-            Set( statusText, "Local data" )
-    );
-    SaveData( LocalTweets, "LocalTweets" );
+    ```powerapps-comma
+    If( Connection.Connected;
+        ClearCollect( LocalTweets; Twitter.SearchTweet( "PowerApps"; {maxResults: 10} ) );;
+            Set( statusText; "Online data" );
+        LoadData( LocalTweets; "LocalTweets"; true );;
+            Set( statusText; "Local data" )
+    );;
+    SaveData( LocalTweets; "LocalTweets" );;
     ```
 
     > [!div class="mx-imgBorder"]
@@ -113,7 +114,7 @@ Denne formelen kontrollerer om enheten er koblet til Internett:
 1. I gallerimalen, Legg til tre [ **etikett** ](controls/control-text-box.md) kontroller, og angi den **tekst** -egenskapen for hver etikett til én av disse verdiene:
 
     - `ThisItem.UserDetails.FullName & " (@" & ThisItem.UserDetails.UserName & ")"`
-    - `Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)`
+    - `Text(DateTimeValue(ThisItem.CreatedAtIso); DateTimeFormat.ShortDateTime)`
     - `ThisItem.TweetText`
 
 1. Utheve teksten i den siste etiketten slik at galleriet ligner dette eksemplet.
@@ -127,7 +128,7 @@ Denne formelen kontrollerer om enheten er koblet til Internett:
 
 1. Angi nyeste etikettens **tekst** egenskapen til denne formelen:
 
-    `If( Connection.Connected, "Connected", "Offline" )`
+    `If( Connection.Connected; "Connected"; "Offline" )`
 
 Denne formelen bestemmer om enheten er tilkoblet. Hvis det er, etiketten viser **tilkoblet**; Hvis ikke, den viser **frakoblet**.
 
@@ -148,26 +149,26 @@ Denne formelen bestemmer om enheten er tilkoblet. Hvis det er, etiketten viser *
 
 1. Angi knappens **OnSelect** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    If( Connection.Connected,
-        Twitter.Tweet( "", {tweetText: NewTweetTextInput.Text} ),
-        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
-            SaveData( LocalTweetsToPost, "LocalTweetsToPost" )
-    );
-    Reset( NewTweetTextInput );
+    ```powerapps-comma
+    If( Connection.Connected;
+        Twitter.Tweet( ""; {tweetText: NewTweetTextInput.Text} );
+        Collect( LocalTweetsToPost; {tweetText: NewTweetTextInput.Text} );;
+            SaveData( LocalTweetsToPost; "LocalTweetsToPost" )
+    );;
+    Reset( NewTweetTextInput );;
     ```  
 
 1. I den **OnStart** -egenskapen for den **App**, legge til en linje på slutten av formelen:
 
-    ```powerapps-dot
-    If( Connection.Connected,
-        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
-            Set( statusText, "Online data" ),
-        LoadData( LocalTweets, "LocalTweets", true );
-            Set( statusText, "Local data" )
-    );
-    SaveData( LocalTweets, "LocalTweets" );
-    LoadData( LocalTweetsToPost, "LocalTweetsToPost", true );  // added line
+    ```powerapps-comma
+    If( Connection.Connected;
+        ClearCollect( LocalTweets; Twitter.SearchTweet( "PowerApps"; {maxResults: 100} ) );;
+            Set( statusText; "Online data" );
+        LoadData( LocalTweets; "LocalTweets"; true );;
+            Set( statusText; "Local data" )
+    );;
+    SaveData( LocalTweets; "LocalTweets" );;
+    LoadData( LocalTweetsToPost; "LocalTweetsToPost"; true );;  // added line
     ```
 
     > [!div class="mx-imgBorder"]
@@ -193,12 +194,12 @@ Deretter tilbakestiller formelen teksten i tekstinndata-boksen.
 
 1. Angi tidtakerens **OnTimerEnd** til denne formelen:
 
-    ```powerapps-dot
-    If( Connection.Connected,
-        ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) );
-        Clear( LocalTweetsToPost );
-        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 10} ) );
-        SaveData( LocalTweets, "LocalTweets" );
+    ```powerapps-comma
+    If( Connection.Connected;
+        ForAll( LocalTweetsToPost; Twitter.Tweet( ""; {tweetText: tweetText} ) );;
+        Clear( LocalTweetsToPost );;
+        ClearCollect( LocalTweets; Twitter.SearchTweet( "PowerApps"; {maxResults: 10} ) );;
+        SaveData( LocalTweets; "LocalTweets" );;
    )
     ```
 

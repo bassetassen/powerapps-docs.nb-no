@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544618"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="image-control-in-powerapps"></a>Bilde-kontroll i PowerApps
 En kontroll som viser et bilde, for eksempel fra en lokal fil eller en datakilde.
@@ -111,7 +112,7 @@ Hvis du legger til én eller flere **Bilde**-kontroller i appen din, kan du vise
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Remove**( *DataSource*, ThisItem )](../functions/function-remove-removeif.md)
+[**Remove**( *DataSource*; ThisItem )](../functions/function-remove-removeif.md)
 
 ## <a name="examples"></a>Eksempler
 ### <a name="show-an-image-from-a-local-file"></a>Vise et bilde fra en lokal fil
