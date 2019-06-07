@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f9acc04a9159349075647ca4e318f15939a230f7
-ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
+ms.openlocfilehash: 13001b3116c0d11224ea8b29a0bea6d1f8efcd4d
+ms.sourcegitcommit: 2084789802fc5134dbeb888e759cced46019a017
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66216643"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66736246"
 ---
 # <a name="data-types-in-canvas-apps"></a>Datatyper i lerret-apper
 
@@ -30,19 +29,19 @@ Denne artikkelen inneholder detaljer om datatypene som lerret apper støtte. Nå
 | Datatype | Beskrivelse | Eksempler |
 |-----------|-------------|---------|
 | **Boolsk** | A *SANN* eller *USANN* verdi.  Kan brukes direkte i **Hvis**, **Filter** og andre funksjoner uten en sammenligning.  | *sann* |
-| **Hyperkobling** | En tekststreng som inneholder en hyperkobling. | **"http://powerapps.microsoft.com"** |
-| **Valuta** | En valutaverdi som er lagret i et flyttall. Valutaverdiene er de samme som antall verdier med Valutaformatering alternativer.  | **123**<br>**4.56** |
-| **Bilde** | A [Universal Resource Identifier (URI)](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) formaterer tekststreng til et bilde i JPEG, PNG, SVG, GIF og andre vanlige web-bilde. | **MyImage** lagt til som en app-ressurs<br>**"https://northwindtraders.com/logo.jpg"**<br>**«appres://blobmanager/7b12ffa2...»** |
 | **Farge** | En fargespesifikasjon, inkludert en alfa-kanal. | **Color.Red**<br>**ColorValue ("#102030»)**<br>**RGBA (255, 128, 0, 0,5)** |
+| **Valuta** | En valutaverdi som er lagret i et flyttall. Valutaverdiene er de samme som antall verdier med Valutaformatering alternativer.  | **123**<br>**4.56** |
 | **Dato** | En dato uten et klokkeslett, i tidssonen til appens brukeren. | **Dato (2019, 5, 16)** |
 | **Dato og klokkeslett** | En dato med et klokkeslett, i tidssonen til appens brukeren. | **DateTimeValue («mai 16 2019 1:23:09 PM")** |
 | **GUID** | A [globalt unik identifikator](https://en.wikipedia.org/wiki/Universally_unique_identifier). | **GUID()**<br>**GUID( "123e4567-e89b-12d3-a456-426655440000" )** |
+| **Hyperkobling** | En tekststreng som inneholder en hyperkobling. | **"http://powerapps.microsoft.com"** |
+| **Bilde** | A [Universal Resource Identifier (URI)](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) tekststreng til et bilde i JPEG, PNG, SVG, GIF eller andre vanlige web-bildeformat. | **MyImage** lagt til som en app-ressurs<br>**"https://northwindtraders.com/logo.jpg"**<br>**«appres://blobmanager/7b12ffa2...»** |
 | **Media** | En URI-tekststreng til en video eller lyd registrering. | **MyVideo** lagt til som en app-ressurs<br>**"https://northwindtraders.com/intro.mp4"**<br>**«appres://blobmanager/3ba411c...»** |
 | **Tall** | Et flyttall. | **123**<br>**-4.567**<br>**8.903e121** |
 | **Alternativsett** | Et valg mellom en rekke alternativer, støttet av et tall. Denne datatypen kombinerer en lokaliserbare tekstetikett med en numerisk verdi. Etiketten vises i appen, og den numeriske verdien som er lagret og brukes til sammenligninger. | **ThisItem.OrderStatus** |
-| **Post** | En oversikt over dataverdier. Denne sammensatte datatypen inneholder forekomster av andre datatyper som er oppført i dette emnet. Mer informasjon: [Å arbeide med tabeller](../working-with-tables.md). | **{Selskapet: «Northwind Traders»;<br>ansatte: 35; <br>NonProfit: false}** |
+| **Post** | En oversikt over dataverdier. Denne sammensatte datatypen inneholder forekomster av andre datatyper som er oppført i dette emnet. Mer informasjon: [Å arbeide med tabeller](../working-with-tables.md). | **{Selskapet: «Northwind Traders»,<br>ansatte: 35, <br>NonProfit: false}** |
 | **Registrer referanse** | En referanse til en post i en enhet. Slike referanser brukes ofte med polymorfisk oppslag. Mer informasjon: [Arbeide med referanser](../working-with-references.md).| **First(accounts). Eier** |
-| **Tabell** | En tabell med poster.  Alle postene må ha samme navn for sine felt med samme datatyper, og utelatt felt som skal behandles som *tom*. Denne sammensatte datatypen inneholder forekomster av andre datatyper som er oppført i dette emnet. Mer informasjon: [Å arbeide med tabeller](../working-with-tables.md). | **Tabellen ({fornavn: «Sidney»;<br>etternavn: "Higa"}; <br>{fornavn: «Nancy»;<br>etternavn: "Anderson" } )**
+| **Tabell** | En tabell med poster.  Alle postene må ha samme navn for sine felt med samme datatyper, og utelatt felt som skal behandles som *tom*. Denne sammensatte datatypen inneholder forekomster av andre datatyper som er oppført i dette emnet. Mer informasjon: [Å arbeide med tabeller](../working-with-tables.md). | **Tabellen ({fornavn: «Sidney»,<br>etternavn: "Higa"}, <br>{fornavn: «Nancy»,<br>etternavn: "Anderson" } )**
 | **Tekst** | En streng til Unicode-tekst. | **"Hello, World"** |
 | **Tid** | En periode uten en dato i tidssonen til appens brukeren. | **Tid (11, 23, 45)** |
 | **To alternativet** | Et valg fra et sett med to alternativer, støttet av en boolsk verdi. Denne datatypen kombinerer en lokaliserbare tekstetikett med en boolsk verdi. Etiketten vises i appen, og den boolske verdien er lagret og brukes til sammenligninger. | **ThisItem.Taxable** |
@@ -53,7 +52,7 @@ Mange av disse datatypene ligner og har samme underliggende representasjon, for 
 
 Alle datatyper kan ha en verdi av *tom* (med andre ord, ingen verdi). Begrepet "null" brukes ofte i databaser for dette konseptet.  
 
-Bruk den **tom** funksjonen med den **angi** eller **Patch** funksjonen til å angi en variabel eller felt som skal *tom*. For eksempel **Set (x; Blank())** fjerner enhver verdi i den globale variabelen **x**.  
+Bruk den **tom** funksjonen med den **angi** eller **Patch** funksjonen til å angi en variabel eller felt som skal *tom*. For eksempel **Set (x, Blank())** fjerner enhver verdi i den globale variabelen **x**.  
 
 Test for en *tom* verdi ved hjelp av den [ **IsBlank** ](function-isblank-isempty.md) funksjonen. Erstatt mulig *tom* verdier med ikke -*tom* verdier ved hjelp av den [ **Coalesce** ](function-isblank-isempty.md) funksjonen.
 
@@ -83,7 +82,7 @@ Lerretsapper referere til hvert bilde eller andre mediefil, enten den er i skyen
 
 For eksempel den **bilde** -egenskapen for en bildekontroll godtar ikke bare app-ressurser, men også koblinger til bilder på nettet, som "https://northwindtraders.com/logo.jpg". Egenskapen godtar også innebygde bilder som bruker den [data-URI-skjemaet](https://en.wikipedia.org/wiki/Data_URI_scheme), som i dette eksemplet:
 
-```powerapps-comma
+```powerapps-dot
 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFAQMAAACtnVQoAAAABlBMVEUAAAB0J3UMNU6VAAAAAXRSTlMAQObYZgAAABRJREFUCNdjUGJgCGVg6GgAkkA2AA8/AffqCEBsAAAAAElFTkSuQmCC"
 ```
 
@@ -174,11 +173,11 @@ Lerret-apper bruker inkludert tidssone informasjonen i **Datetimeoffset** felt u
 
 Lerretsapper lese og skrive til verdiene i den [ **tid** ](https://docs.microsoft.com/en-us/sql/t-sql/data-types/time-transact-sql) datatype i SQL Server som tekststrenger i den [ISO 8601-format for varighet](https://en.wikipedia.org/wiki/ISO_8601#Durations). Du må for eksempel analysere denne strengformat og bruke den [ **tid** ](function-date-time.md) funksjonen til å konvertere tekststrengen **"PT2H1M39S"** til en **tid** verdi:
 
-```powerapps-comma
+```powerapps-dot
 First(
     ForAll(
-        MatchAll( "PT2H1M39S"; "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" );
-        Time( Value( hours ); Value( minutes ); Value( seconds ) )
+        MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
+        Time( Value( hours ), Value( minutes ), Value( seconds ) )
     )
 ).Value
 ```
@@ -201,18 +200,18 @@ Når en appbruker velger et alternativ, og lagrer denne endringen, overfører ap
 
 Etikettene er bare for visning. Du kan ikke utføre direkte sammenligninger med etikettene fordi de er spesifikk for et språk. Hver alternativsett har i stedet en opplisting som fungerer med den underliggende tall eller en boolsk verdi. Du kan for eksempel bruke denne formelen:
 
-`If( ThisItem.OrderStatus = "Active"; ...`
+`If( ThisItem.OrderStatus = "Active", ...`
 
 Men du kan bruke denne formelen:
 
-`If( ThisItem.OrderStatus = OrderStatus.Active; ...`
+`If( ThisItem.OrderStatus = OrderStatus.Active, ...`
 
 For globale alternativsett (hvilke enheter dele), navnet på alternativsett opplistingen tilsvarer navnet på det globale alternativsettet. For lokale alternativsett (som er begrenset til en enhet), navnet kan inneholde navnet på enheten. Denne virkemåten unngår konflikter hvis flere enheter har alternativsett som har samme navn. For eksempel den **kontoer** enheten kan ha en **OrderStatus** alternativsett, og navnet kan være **OrderStatus (kontoer)** . Dette navnet inneholder én eller flere mellomrom og parenteser, slik at du må omslutte den med enkle anførselstegn hvis du henvise til i en formel.
 
 I tillegg to-verdiene kan også oppfører seg som boolske verdier. For eksempel en to-alternativ verdi med navnet **TaxStatus** kanskje etikettene **avgiftspliktig** og **ikke-avgiftspliktig**, som tilsvarer *SANN* og *USANN* henholdsvis. For å demonstrere, kan du bruke denne formelen:
 
-`If( ThisItem.Taxable = TaxStatus.Taxable; ...`
+`If( ThisItem.Taxable = TaxStatus.Taxable, ...`
 
 Du kan også bruke denne tilsvarende formelen:
 
-`If( ThisItem.Taxable; ...`
+`If( ThisItem.Taxable, ...`
