@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 06/07/2019
 ms.locfileid: "66760963"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-detail-gallery-in-a-canvas-app"></a>Opprett et galleri i detalj i en lerretsapp
 
@@ -71,7 +72,7 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi den **elementer** -egenskapen for galleriet detaljer til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gallery1.Selected.'Order Details'
     ```
 
@@ -103,7 +104,7 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi ny etikettens **tekst** egenskapen til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ThisItem.Product.'Product Name'
     ```
 
@@ -141,7 +142,7 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi bildets **bilde** egenskapen til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ThisItem.Product.Picture
     ```
 
@@ -161,7 +162,7 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi ny etikettens **tekst** egenskapen til dette uttrykket:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ThisItem.Quantity
     ```
 
@@ -179,8 +180,8 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi ny etikettens **tekst** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    Text( ThisItem.'Unit Price', "[$-en-US]$ #,###.00" )
+    ```powerapps-comma
+    Text( ThisItem.'Unit Price'; "[$-en-US]$ #,###.00" )
     ```
 
     Hvis du ikke inkluderer språkkoden ( **[$-en-US]** ), legges den for deg basert på ditt språk og område. Hvis du bruker en annen språkkode, vil du vil fjerne den **$** like etter Lukk hakeparentes ( **]** ), og deretter legge til dine egne valutasymbol i plasseringen.
@@ -197,8 +198,8 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi ny etikettens **tekst** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    Text( ThisItem.Quantity * ThisItem.'Unit Price', "[$-en-US]$ #,###.00" )
+    ```powerapps-comma
+    Text( ThisItem.Quantity * ThisItem.'Unit Price'; "[$-en-US]$ #,###.00" )
     ```
 
     På nytt, hvis du ikke inkluderer språkkoden ( **[$-en-US]** ), legges den for deg basert på ditt språk og område. Hvis merket er forskjellig, vil du vil bruke din egen valutasymbol i stedet for den **$** like etter Lukk hakeparentes ( **]** ).
@@ -273,8 +274,8 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi ny etikettens **tekst** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    Sum( Gallery1.Selected.'Order Details', Quantity )
+    ```powerapps-comma
+    Sum( Gallery1.Selected.'Order Details'; Quantity )
     ```
 
     Denne formelen viser en delegeringsadvarsel, men du kan ignorere den fordi ingen enkelt ordre vil inneholde mer enn 500 produkter.
@@ -288,8 +289,8 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi kopien **tekst** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    Text( Sum( Gallery1.Selected.'Order Details', Quantity * 'Unit Price' ), "[$-en-US]$ #,###.00" )
+    ```powerapps-comma
+    Text( Sum( Gallery1.Selected.'Order Details'; Quantity * 'Unit Price' ); "[$-en-US]$ #,###.00" )
     ```
 
     Denne formelen viser en delegeringsadvarsel, men du kan ignorere den fordi ingen enkelt ordre vil inneholde mer enn 500 produkter.
@@ -357,7 +358,7 @@ I en hvilken som helst galleri, du kan vise data, men du kan ikke oppdatere den 
 
 1. Angi kombinasjonsboksen **elementer** egenskapen til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Choices( 'Order Details'.Product )
     ```
 
@@ -418,7 +419,7 @@ I en hvilken som helst galleri, du kan vise data, men du kan ikke oppdatere den 
 
 1. Angi den **bilde** egenskapen til bildet til:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ComboBox1.Selected.Picture
     ```
 
@@ -449,7 +450,7 @@ I en hvilken som helst galleri, du kan vise data, men du kan ikke oppdatere den 
 1. Angi den **standard** for denne kontrollen til **""** :
 
     > [!div class="mx-imgBorder"]
-    > ![Angi den ** standard **-egenskapen for tekstinndata-boksen](media/northwind-orders-canvas-part3/add-details-21.png)
+    > ![Angi den ** standard **-egenskapen for tekstinndata-boksen](media/northwind-orders-canvas-part3/add-details-21,png)
 
 1. På den **Hjem** fanen, angir tekstjusteringen for denne kontrollen til **høyre**:
 
@@ -467,8 +468,8 @@ I en hvilken som helst galleri, du kan vise data, men du kan ikke oppdatere den 
 
 1. Endre størrelse på og flytte etiketten til høyre for kontrollen for innskriving av tekst, og angi etikettens **tekst** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    Text( ComboBox1.Selected.'List Price', "[$-en-US]$ #,###.00" )
+    ```powerapps-comma
+    Text( ComboBox1.Selected.'List Price'; "[$-en-US]$ #,###.00" )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -488,8 +489,8 @@ I en hvilken som helst galleri, du kan vise data, men du kan ikke oppdatere den 
 
 1. Angi ny etikettens **tekst** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    Text( Value(TextInput1.Text) * ComboBox1.Selected.'List Price', "[$-en-US]$ #,###.00" )
+    ```powerapps-comma
+    Text( Value(TextInput1.Text) * ComboBox1.Selected.'List Price'; "[$-en-US]$ #,###.00" )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -518,18 +519,18 @@ I en hvilken som helst galleri, du kan vise data, men du kan ikke oppdatere den 
 
 1. Endre størrelse på og flytte dette ikonet til høyre kant av lyseblå området, og angi deretter ikonets **OnSelect** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    Patch( 'Order Details',
-        Defaults('Order Details'),
+    ```powerapps-comma
+    Patch( 'Order Details';
+        Defaults('Order Details');
         {
-            Order: Gallery1.Selected,
-            Product: ComboBox1.Selected,
-            Quantity: Value(TextInput1.Text),
+            Order: Gallery1.Selected;
+            Product: ComboBox1.Selected;
+            Quantity: Value(TextInput1.Text);
             'Unit Price': ComboBox1.Selected.'List Price'
         }
-    );
-    Refresh( Orders );
-    Reset( ComboBox1 );
+    );;
+    Refresh( Orders );;
+    Reset( ComboBox1 );;
     Reset( TextInput1 )
     ```
 
@@ -582,8 +583,8 @@ I en hvilken som helst galleri, du kan vise data, men du kan ikke oppdatere den 
 
 1. Endre størrelse på og flytte på Papirkurv-ikonet til høyre side av malen i detalj galleriet, og angi ikonets **OnSelect** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    Remove( 'Order Details', ThisItem ); Refresh( Orders )
+    ```powerapps-comma
+    Remove( 'Order Details'; ThisItem );; Refresh( Orders )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -608,7 +609,7 @@ Hvis du vil kort oppsummering, du har lagt til en annen galleriet til å vise de
 - En mange-til-én-relasjon fra den **Ordredetaljer** enheten til den **bestille produkter** enhet: `ThisItem.Product.'Product Name'` og `ThisItem.Product.Picture`
 - Den **valg** funksjonen til å få en liste over produkter: `Choices( 'Order Details'.Product' )`
 - Den **valgt** egenskapen av en kombinasjonsboks som den fullstendige mange-til-én relatert post: `ComboBox1.Selected.Picture` og `ComboBox1.Selected.'List Price'`
-- Den **Patch** funksjonen til å opprette en **Ordredetaljer** post: `Patch( 'Order Details', Defaults( 'Order Details' ), ... )`
-- Den **fjerne** funksjonen til å slette en **Ordredetaljer** post: `Remove( 'Order Details', ThisItem )`
+- Den **Patch** funksjonen til å opprette en **Ordredetaljer** post: `Patch( 'Order Details'; Defaults( 'Order Details' ); ... )`
+- Den **fjerne** funksjonen til å slette en **Ordredetaljer** post: `Remove( 'Order Details'; ThisItem )`
 
 Denne serien av emner er en rask gjennomgang av ved hjelp av Common Data Service-relasjoner, og alternativet angir i en lerretsapp for opplærings-formål. Før du slipper en hvilken som helst app til produksjon, bør du vurdere validering, feilhåndtering og mange andre faktorer.

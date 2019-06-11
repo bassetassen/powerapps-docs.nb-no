@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 06/06/2019
 ms.locfileid: "66736403"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="json-function-in-powerapps"></a>JSON-funksjonen i PowerApps
 
@@ -34,16 +35,16 @@ Lerret apper støtte den [datatyper](data-types.md) som denne tabellen viser det
 |-----------|-------------|---------|
 | **Boolsk** | *SANN* eller *USANN*. | `true` |
 | **Farge** | Streng som inneholder den 8-sifrede heksadesimale representasjonen for fargen. Denne representasjon tar formatet #*rrggbbaa*, der *rr* er den røde komponenten, *gg* er grønn, *bb* er blå og *aa* er alfa kanalen. For den alfa kanalen, **00** er fullstendig gjennomsiktig, og **ff** er helt ugjennomsiktig. Du kan sende strengen som skal den [ **ColorValue** ](function-colors.md) funksjonen.  | `"#102030ff"` |
-| **Valuta** | Nummeret som bruker riktig desimalskilletegnet for brukerens språk. Vitenskapelig notasjon brukes hvis nødvendig. | `1.345` |
+| **Valuta** | Nummeret som bruker riktig desimalskilletegnet for brukerens språk. Vitenskapelig notasjon brukes hvis nødvendig. | `1,345` |
 | **Dato** | Streng som inneholder datoen i ISO 8601 **åååå-mm-dd** format. | `"2019-03-31"` |
 | **Dato og klokkeslett** | Streng som inneholder en ISO 8601 dato/klokkeslett. Dato/klokkeslett verdier er i UTC, som angir sluttdato» Z».  | `"2019-03-31T22:32:06.822Z"`  |
 | **GUID** | Streng som inneholder GUID-verdi. Bokstavene er små bokstaver. | `"751b58ac-380e-4a04-a925-9f375995cc40"`
 | **Media-bilde** | Hvis **IncludeBinaryData** er angitt, mediefiler er kodet i en streng. Web-referanser som bruker http: eller https: URL-skjemaet ikke er endret. Referanser til binære data i minnet er kodet med den ["data:*mimetype*; base64,..."](https://en.wikipedia.org/wiki/Data_URI_scheme) format. Data i minnet, inkluderer bilder som brukere registrere ved hjelp av den [ **kamera** ](../controls/control-camera.md) kontrollen og alle andre referanser med appres: og blob: URL-valgene.| `"data:image/jpeg;base64,/9j/4AA..."` |
-| **Tall** | Nummeret som bruker riktig desimalskilletegnet for brukerens språk. Vitenskapelig notasjon brukes hvis nødvendig. | `1.345` |
+| **Tall** | Nummeret som bruker riktig desimalskilletegnet for brukerens språk. Vitenskapelig notasjon brukes hvis nødvendig. | `1,345` |
 | **Alternativet&nbsp;angitt** | Numeriske verdien for alternativet angitt, ikke etiketten som brukes for visning. Den numeriske verdien brukes fordi det er språk uavhengig.  | `1001` |
 | **Tid** | Streng som inneholder en ISO 8601 *hh:mm:ss.fff* format.  | `"23:12:49.000"` |
-| **Post** | Kommadelt liste over, mellom **{** og **}** , felt og verdiene deres. Notation ligner som for postene i lerret-apper, men navnet er alltid mellom doble anførselstegn. Dette formatet støtter ikke poster som er basert på mange-til-én-relasjoner.  | `{ "First Name": "Fred", "Age": 21 }` |
-| **Tabell** | Kommadelt liste over, mellom **[** og **]** , med poster. Dette formatet støtter ikke tabeller som er basert på én-til-mange-relasjoner.  | `[ { "First Name": "Fred", "Age": 21 }, { "First Name": "Jean", "Age": 20 } ]` |
+| **Post** | Kommadelt liste over, mellom **{** og **}** , felt og verdiene deres. Notation ligner som for postene i lerret-apper, men navnet er alltid mellom doble anførselstegn. Dette formatet støtter ikke poster som er basert på mange-til-én-relasjoner.  | `{ "First Name": "Fred"; "Age": 21 }` |
+| **Tabell** | Kommadelt liste over, mellom **[** og **]** , med poster. Dette formatet støtter ikke tabeller som er basert på én-til-mange-relasjoner.  | `[ { "First Name": "Fred"; "Age": 21 }; { "First Name": "Jean"; "Age": 20 } ]` |
 | **To&nbsp;alternativet** | Boolsk verdi for alternativet to *SANN* eller *USANN*, ikke etiketten som brukes for visning. Den boolske verdien brukes fordi det er språk uavhengig. | `false` |
 | **Hyperkobling, tekst** | Streng mellom doble anførselstegn. Funksjonen escapes innebygde doble anførselstegn med en omvendt skråstrek, erstatter newlines med «\n», og gjør andre standard JavaScript-erstatninger. | `"This is a string."` |
 
@@ -65,7 +66,7 @@ Hvis en kolonne inneholder både et visningsnavn og et logisk navn, vil resultat
 
 ## <a name="syntax"></a>Syntaks
 
-**JSON**( *DataStructure* [, *Format* ])
+**JSON**( *DataStructure* [; *Format* ])
 
 * *DataStructure* – obligatorisk. Datastrukturen til å konvertere til JSON.  Tabeller, poster, og primitive verdier støttes, tilfeldige nestet.
 * *Format* – valgfritt.  **JSONFormat** opplistingsverdi. Standardverdien er **kompakt**, som ikke legger til newlines eller mellomrom og blokkerer binære data og kolonner som ikke støttes.
@@ -76,16 +77,16 @@ Hvis en kolonne inneholder både et visningsnavn og et logisk navn, vil resultat
 
 1. Sett inn en [ **knappen** ](../controls/control-button.md) kontroll, og angi dens **OnSelect** egenskapen til denne formelen.
 
-    ```powerapps-dot
-    ClearCollect( CityPopulations,
-        { City: "London",    Country: "United Kingdom", Population: 8615000 },
-        { City: "Berlin",    Country: "Germany",        Population: 3562000 },
-        { City: "Madrid",    Country: "Spain",          Population: 3165000 },
-        { City: "Hamburg",   Country: "Germany",        Population: 1760000 },
-        { City: "Barcelona", Country: "Spain",          Population: 1602000 },
-        { City: "Munich",    Country: "Germany",        Population: 1494000 }
-    );
-    ClearCollect( CitiesByCountry, GroupBy( CityPopulations, "Country", "Cities" ) )
+    ```powerapps-comma
+    ClearCollect( CityPopulations;
+        { City: "London";    Country: "United Kingdom"; Population: 8615000 };
+        { City: "Berlin";    Country: "Germany";        Population: 3562000 };
+        { City: "Madrid";    Country: "Spain";          Population: 3165000 };
+        { City: "Hamburg";   Country: "Germany";        Population: 1760000 };
+        { City: "Barcelona"; Country: "Spain";          Population: 1602000 };
+        { City: "Munich";    Country: "Germany";        Population: 1494000 }
+    );;
+    ClearCollect( CitiesByCountry; GroupBy( CityPopulations; "Country"; "Cities" ) )
     ```
 
 1. Velg knappen mens du holder nede Alt-tasten.
@@ -102,8 +103,8 @@ Hvis en kolonne inneholder både et visningsnavn og et logisk navn, vil resultat
 
 1. Sett inn en annen knapp, og angi dens **OnSelect** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    Set( CitiesByCountryJSON, JSON( CitiesByCountry ) )
+    ```powerapps-comma
+    Set( CitiesByCountryJSON; JSON( CitiesByCountry ) )
     ```
 
     Denne formelen angir den globale variabelen **CitiesByCountryJSON** til JSON-representasjon for **CitiesByCountry**.
@@ -112,7 +113,7 @@ Hvis en kolonne inneholder både et visningsnavn og et logisk navn, vil resultat
 
 1. Sett inn en [ **etikett** ](../controls/control-text-box.md) kontroll, og angi dens **tekst** egenskapen til denne variabelen.
 
-    ```powerapps-dot
+    ```powerapps-comma
     CitiesByCountryJSON
     ```
 
@@ -124,8 +125,8 @@ Hvis en kolonne inneholder både et visningsnavn og et logisk navn, vil resultat
 
 1. Endre formelen for den andre knappen for å gjøre det lettere å lese utdataene.
 
-    ```powerapps-dot
-    Set( CitiesByCountryJSON, JSON(CitiesByCountry, JSONFormat.IndentFour ))
+    ```powerapps-comma
+    Set( CitiesByCountryJSON; JSON(CitiesByCountry; JSONFormat.IndentFour ))
     ```
 
 1. Velg den andre knappen mens du holder nede Alt-tasten.
@@ -184,15 +185,15 @@ Hvis en kolonne inneholder både et visningsnavn og et logisk navn, vil resultat
 
 1. Legg til en [ **knappen** ](../controls/control-button.md) kontroll, og angi dens **OnSelect** egenskapen til denne formelen.
 
-    ```powerapps-dot
-    Set( ImageJSON, JSON( SampleImage, JSONFormat.IncludeBinaryData ) )
+    ```powerapps-comma
+    Set( ImageJSON; JSON( SampleImage; JSONFormat.IncludeBinaryData ) )
     ```
 
 1. Velg knappen mens du holder nede Alt-tasten.
 
 1. Legg til en etikett, og angi dens **tekst** egenskapen til denne variabelen.
 
-    ```powerapps-dot
+    ```powerapps-comma
     ImageJSON
     ```
 

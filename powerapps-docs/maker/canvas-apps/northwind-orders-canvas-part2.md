@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 06/07/2019
 ms.locfileid: "66805921"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-summary-form-in-a-canvas-app"></a>Opprette et sammendrag av skjema i en lerretsapp
 
@@ -96,7 +97,7 @@ I denne delen, skal du legge til kontroller for å vise et sammendrag av hvilken
 
 1. I formellinjen, kan du angi den **DataSource** egenskapen for skjemaet til denne verdien:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Orders
     ```
 
@@ -215,7 +216,7 @@ I dette eksemplet trenger du ikke tid-deler av datofeltene fordi det nivået av 
 
 1. Angi sammendrag skjemaets **element** egenskapen til dette uttrykket:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gallery1.Selected
     ```
 
@@ -294,7 +295,7 @@ Den **ordrer** enheten har en mange-til-én-relasjon med den **ansatte** enhet: 
 
 1. Angi den **bilde** egenskapen til bildet til denne formelen, erstatter nummeret på slutten av DataCardValue om nødvendig:
 
-    ```powerapps-dot
+    ```powerapps-comma
     DataCardValue7.Selected.Picture
     ```
 
@@ -327,7 +328,7 @@ Den **ordrer** enheten har en mange-til-én-relasjon med den **ansatte** enhet: 
 
 1. I den **trevisning** ruten bekrefte at skjemanavn er **Form1**, og angi deretter ikonets **OnSelect** egenskapen til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     SubmitForm( Form1 )
     ```
 
@@ -338,8 +339,8 @@ Den **ordrer** enheten har en mange-til-én-relasjon med den **ansatte** enhet: 
 
 1. Angi ikonets **DisplayMode** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    If( Form1.Unsaved, DisplayMode.Edit, DisplayMode.Disabled )
+    ```powerapps-comma
+    If( Form1.Unsaved; DisplayMode.Edit; DisplayMode.Disabled )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -349,7 +350,7 @@ Den **ordrer** enheten har en mange-til-én-relasjon med den **ansatte** enhet: 
 
 1. Angi ikonets **DisabledColor** egenskapen til denne verdien:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gray
     ```
 
@@ -380,7 +381,7 @@ Den **ordrer** enheten har en mange-til-én-relasjon med den **ansatte** enhet: 
 
 1. Angi på Avbryt-ikonet **OnSelect** egenskapen til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ResetForm( Form1 )
     ```
 
@@ -391,8 +392,8 @@ Den **ordrer** enheten har en mange-til-én-relasjon med den **ansatte** enhet: 
 
 1. Angi på Avbryt-ikonet **DisplayMode** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    If( Form1.Unsaved Or Form1.Mode = FormMode.New, DisplayMode.Edit, DisplayMode.Disabled )
+    ```powerapps-comma
+    If( Form1.Unsaved Or Form1.Mode = FormMode.New; DisplayMode.Edit; DisplayMode.Disabled )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -402,7 +403,7 @@ Den **ordrer** enheten har en mange-til-én-relasjon med den **ansatte** enhet: 
 
 1. Angi på Avbryt-ikonet **DisabledColor** egenskapen til denne verdien:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gray
     ```
 
@@ -433,7 +434,7 @@ Den **ordrer** enheten har en mange-til-én-relasjon med den **ansatte** enhet: 
 
 1. Angi ikonet Legg til **OnSelect** egenskapen til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     NewForm( Form1 )
     ```
 
@@ -444,8 +445,8 @@ Den **ordrer** enheten har en mange-til-én-relasjon med den **ansatte** enhet: 
 
 1. Angi ikonet Legg til **DisplayMode** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    If( Form1.Unsaved Or Form1.Mode = FormMode.New, DisplayMode.Disabled, DisplayMode.Edit )
+    ```powerapps-comma
+    If( Form1.Unsaved Or Form1.Mode = FormMode.New; DisplayMode.Disabled; DisplayMode.Edit )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -458,7 +459,7 @@ Den **ordrer** enheten har en mange-til-én-relasjon med den **ansatte** enhet: 
 
 1. Angi ikonet Legg til **DisabledColor** egenskapen til denne verdien:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gray
     ```
 
@@ -492,8 +493,8 @@ Den **ordrer** enheten har en mange-til-én-relasjon med den **ansatte** enhet: 
 
 1. Angi på Papirkurv-ikonet **OnSelect** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    Remove( Orders, Gallery1.Selected )
+    ```powerapps-comma
+    Remove( Orders; Gallery1.Selected )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -503,8 +504,8 @@ Den **ordrer** enheten har en mange-til-én-relasjon med den **ansatte** enhet: 
 
 1. Angi på Papirkurv-ikonet **DisplayMode** egenskapen til denne formelen:
 
-    ```powerapps-dot
-    If( Form1.Mode = FormMode.New, DisplayMode.Disabled, DisplayMode.Edit )
+    ```powerapps-comma
+    If( Form1.Mode = FormMode.New; DisplayMode.Disabled; DisplayMode.Edit )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -514,7 +515,7 @@ Den **ordrer** enheten har en mange-til-én-relasjon med den **ansatte** enhet: 
 
 1. Angi på Papirkurv-ikonet **DisabledColor** egenskapen til denne verdien:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gray
     ```
 
@@ -537,7 +538,7 @@ Hvis du vil kort oppsummering, du har lagt til et skjema der brukeren kan vise o
 - Et ikon for å lagre endringer i en ordre: `SubmitForm( Form1 )`
 - Et ikon for å avbryte endringer i en ordre: `ResetForm( Form1 )`
 - Et ikon for å opprette en ordre: `NewForm( Form1 )`
-- Et ikon for å slette en ordre: `Remove( Orders, Gallery1.Selected )`
+- Et ikon for å slette en ordre: `Remove( Orders; Gallery1.Selected )`
 
 ## <a name="next-step"></a>Neste trinn
 
