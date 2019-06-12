@@ -8,12 +8,12 @@ ms.assetid: ''
 author: nkrb
 ms.author: nabuthuk
 manager: Jdaly
-ms.openlocfilehash: 4e84956807b91e535e709aa2e0739fdf121bc2f7
-ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
+ms.openlocfilehash: 5851074cffa68bdfc0ee428e99bba100803f5ba5
+ms.sourcegitcommit: f36b9888f2a638bfe81172841f0da31e90390bb8
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/26/2019
-ms.locfileid: "64524281"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66835522"
 ---
 # <a name="powerapps-component-framework-api-reference"></a>API-referanse for PowerApps-komponenten Framework
 
@@ -45,5 +45,3 @@ Denne delen inneholder referansedokumentasjon for å opprette egendefinerte komp
 |[UserSettings](usersettings.md)|[!INCLUDE [usersettings-description](includes/usersettings-description.md)]|
 |[Hjelpemiddel](utility.md)|[!INCLUDE [utility-description](includes/utility-description.md)]|
 |[WebApi](webapi.md)|[!INCLUDE [webapi-description](includes/webapi-description.md)]|
-
-

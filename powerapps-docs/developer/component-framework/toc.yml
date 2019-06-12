@@ -2,15 +2,29 @@
   items:
     - name: Oversikt
       href: overview.md
-    - name: Hva er egendefinerte komponenter
+    - name: Hva er egendefinerte komponenter?
       href: custom-controls-overview.md
-    - name: 'Opprett, feilsøk og distribuer egendefinerte komponenter med Microsoft PowerApps CLI'
-      href: create-custom-controls-using-pcf.md
-    - name: Implementering av egendefinerte komponenter i TypeScript
-      href: implementing-controls-using-typescript.md
-    - name: Oppdatering av den eksisterende PowerApps-komponenten Framework i det nye verktøy-formatet
-      href: updating-existing-controls.md
-    - name: Begrensninger for PowerApps-komponenten Framework
+    - name: Hent verktøy
+      href: get-powerapps-cli.md
+    - name: Opplæring
+      items:
+        - name: Implementer eksempelkomponent
+          href: implementing-controls-using-typescript.md
+    - name: Slik gjør du det
+      items:
+        - name: Opprett og bygg en egendefinert komponent
+          href: create-custom-controls-using-pcf.md
+        - name: Feilsøk en egendefinert komponent
+          href: debugging-custom-controls.md
+        - name: Pakk inn en egendefinert komponent
+          href: import-custom-controls.md
+        - name: Legg til komponenter i enheter eller felt
+          href: add-custom-controls-to-a-field-or-entity.md
+        - name: Oppdater eksisterende egendefinerte komponenter
+          href: updating-existing-controls.md
+        - name: Publiser egendefinerte komponenter på AppSource
+          href: publish-components-app-source.md
+    - name: Begrensninger
       href: limitations.md
     - name: Vanlige spørsmål
       href: faq.md
