@@ -70,16 +70,16 @@
   items:
     - name: Bygg spørringer med LINQ (.NET Language-Integrated Query)
       href: build-queries-with-linq-net-language-integrated-query.md
-    - name: Eksempler på LINQ-spørring
-      href: linq-query-examples.md
+    - name: Bruk LINQ til å konstruere en spørring
+      href: use-linq-construct-query.md
+    - name: Bruk sent bundet enhetsklasse med en LINQ-spørring
+      href: use-late-bound-entity-class-linq-query.md
     - name: Sorter resultater ved hjelp av enhetsattributter med LINQ
       href: order-results-entity-attributes-linq.md
     - name: Plasser store resultatsett med LINQ
       href: page-large-result-sets-linq.md
-    - name: Bruk sent bundet enhetsklasse med en LINQ-spørring
-      href: use-late-bound-entity-class-linq-query.md
-    - name: Bruk LINQ til å konstruere en spørring
-      href: use-linq-construct-query.md
+    - name: Eksempler på LINQ-spørring
+      href: linq-query-examples.md
 - name: Oppdag duplisert data
   href: detect-duplicate-data.md
 - name: Generer klasser for tidlig bundet programmering
