@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: fa5385d0da6572523300c267a4237b0d24c22bc1
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 3e3b9902b535cc21d6e4b26959e9d5c4a0e56144
+ms.sourcegitcommit: b3fd824cf0d540b964b729686b198c7ccf2c2174
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61526313"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316745"
 ---
 # <a name="power-bi-tile-control-in-powerapps"></a>Kontrollen for Power BI-flis i PowerApps
 
@@ -44,11 +44,15 @@ Ved å sende en enkelt parameter fra appen, kan du filtrere resultatene som vise
 
 Hvis du vil sende en enkelt filter-verdi, kan du endre verdien for den **TileURL** egenskap, som følger denne syntaksen:
 
-```"https://app.powerbi.com/embed?dashboardId=<DashboardID>&tileId=<TileID>&config=<SomeHash>" ```
+```
+"https://app.powerbi.com/embed?dashboardId=<DashboardID>&tileId=<TileID>&config=<SomeHash>"
+```
 
 Tilføy denne syntaksen til denne verdien:
 
-```&$filter=<TableName>/<ColumnName> eq '<Value>' ```
+```
+&$filter=<TableName>/<ColumnName> eq '<Value>'
+```
 
 Parameteren filtrerer en verdi i datasettet for rapporten der flisen kommer fra.
 
@@ -102,4 +106,4 @@ Parameteren filtrerer en verdi i datasettet for rapporten der flisen kommer fra.
 
 **Power BI-flisen** er ganske enkelt en beholder for Power BI innhold. Finn ut hvordan du oppretter tilgjengelig innhold med disse [tilgjengelighetstipsene for Power BI](https://docs.microsoft.com/power-bi/desktop-accessibility).
 
-Vurder å legge til en overskrift ved hjelp av en **[Etikett](control-text-box.md)**-kontroll for å støtte skjermlesere, hvis Power BI-innholdet ikke har en tittel. Du kan plassere etiketten rett før Power BI-flisen.
+Vurder å legge til en overskrift ved hjelp av en **[Etikett](control-text-box.md)** -kontroll for å støtte skjermlesere, hvis Power BI-innholdet ikke har en tittel. Du kan plassere etiketten rett før Power BI-flisen.
