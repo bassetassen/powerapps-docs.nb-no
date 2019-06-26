@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 08/31/2018
+ms.date: 06/17/2019
 ms.author: yingchin
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6406afad9079895a0da38c7f1f6e3961f2e37fa1
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: c0926c2c38adac6b3377de9a87eef4dd7d7a7cf7
+ms.sourcegitcommit: 9c4d95eeace85a3e91a00ef14fefe7cce0af69ec
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61536410"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67349819"
 ---
 # <a name="optimize-canvas-app-performance-in-powerapps"></a>Optimaliser ytelsen for lerretsapp i PowerApps
 Microsoft jobber hardt for å forbedre ytelsen til alle appene som kjører på Power-plattformen. Me du kan følge de anbefalte fremgangsmåtene i dette emnet for å øke ytelsen til apper du oppretter.
@@ -79,10 +79,11 @@ Bruk **Angi**-funksjonen til å bufre dataene fra oppslagstabeller for å unngå
 Kontaktinformasjon endres ikke ofte, det samme gjelder for standardverdier og brukerinformasjon. Du kan også generelt bruke denne teknikken med **Standard** og **Bruker**-funksjonen. 
 
 ## <a name="avoid-controls-dependency-between-screens"></a>Unngå kontrollavhengighet mellom skjermbilder
-Hvis en kontrollverdi avhenger av verdien til en kontroll i et annet skjermbilde, kan du administrere dataene ved bruk av en variabel, samling eller en datakildereferanse.
+For å forbedre ytelsen, skjermer i en app som er lastet inn i minnet bare når de trengs. Denne optimaliseringen kan være hemmes Hvis, for eksempel skjermen 1 er lastet inn, og én av dens formlene bruker en egenskap for en kontroll fra 2-skjermen. Nå vil skjermen 2 må være lastet inn for å oppfylle avhengigheten før skjermen 1 kan vises. Tenk deg at skjermen 2 har en avhengighet på skjermen 3, som har en annen avhengighet på skjermen 4, og så videre. Denne avhengighetskjeden kan føre til at mange skjermer som skal lastes inn.
 
-## <a name="use-global-variables"></a>Bruk globale variabler
-Hvis du vil sende apptilstanden fra ett skjermbilde til et annet, kan du opprette eller endre en global variabelverdi ved bruk av [**Angi**](functions/function-set.md)-funksjonen, i stedet for å bruke **Naviger** og **UpdateContext)**-funksjonene.
+Derfor unngå formelen avhengigheter mellom skjermer. I noen tilfeller kan du bruke en global variabel eller samlingen til å dele informasjon mellom skjermer.
+
+Det er et unntak. Tenk deg at det er den eneste måten å vise skjerm 1 ved å gå fra skjermen 2 i det forrige eksemplet. Deretter skjermen 2 ville ha allerede er lastet inn i minnet når skjermen 1 var som skal lastes inn. Ingen ekstra arbeid er nødvendig for å utføre avhengigheten for skjermen 2, og det er derfor ingen innvirkning på ytelsen.
 
 ## <a name="use-delegation"></a>Bruk delegering
 Bruk funksjoner, hvis mulig, som delegerer databehandling til datakilden, i stedet for å hente data til den lokale enheten for behandling. Hvis en app må behandle data lokalt, krever operasjonen mye mer prosessorkraft, minne og nettverksbåndbredde, spesielt hvis datasettet er stort.
