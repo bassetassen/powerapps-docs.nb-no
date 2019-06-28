@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 13001b3116c0d11224ea8b29a0bea6d1f8efcd4d
-ms.sourcegitcommit: 2084789802fc5134dbeb888e759cced46019a017
+ms.openlocfilehash: 85567e120754d4f82e13bd7d7dac9fa0f7c80cbd
+ms.sourcegitcommit: 982cab99d84663656a8f73d48c6fae03e7517321
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66736246"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67456760"
 ---
 # <a name="data-types-in-canvas-apps"></a>Datatyper i lerret-apper
 
@@ -40,9 +39,9 @@ Denne artikkelen inneholder detaljer om datatypene som lerret apper støtte. Nå
 | **Media** | En URI-tekststreng til en video eller lyd registrering. | **MyVideo** lagt til som en app-ressurs<br>**"https://northwindtraders.com/intro.mp4"**<br>**«appres://blobmanager/3ba411c...»** |
 | **Tall** | Et flyttall. | **123**<br>**-4.567**<br>**8.903e121** |
 | **Alternativsett** | Et valg mellom en rekke alternativer, støttet av et tall. Denne datatypen kombinerer en lokaliserbare tekstetikett med en numerisk verdi. Etiketten vises i appen, og den numeriske verdien som er lagret og brukes til sammenligninger. | **ThisItem.OrderStatus** |
-| **Post** | En oversikt over dataverdier. Denne sammensatte datatypen inneholder forekomster av andre datatyper som er oppført i dette emnet. Mer informasjon: [Å arbeide med tabeller](../working-with-tables.md). | **{Selskapet: «Northwind Traders»;<br>ansatte: 35; <br>NonProfit: false}** |
+| **Post** | En oversikt over dataverdier. Denne sammensatte datatypen inneholder forekomster av andre datatyper som er oppført i dette emnet. Mer informasjon: [Å arbeide med tabeller](../working-with-tables.md). | **{Selskapet: «Northwind Traders»,<br>ansatte: 35, <br>NonProfit: false}** |
 | **Registrer referanse** | En referanse til en post i en enhet. Slike referanser brukes ofte med polymorfisk oppslag. Mer informasjon: [Arbeide med referanser](../working-with-references.md).| **First(accounts). Eier** |
-| **Tabell** | En tabell med poster.  Alle postene må ha samme navn for sine felt med samme datatyper, og utelatt felt som skal behandles som *tom*. Denne sammensatte datatypen inneholder forekomster av andre datatyper som er oppført i dette emnet. Mer informasjon: [Å arbeide med tabeller](../working-with-tables.md). | **Tabellen ({fornavn: «Sidney»;<br>etternavn: "Higa"}; <br>{fornavn: «Nancy»;<br>etternavn: "Anderson" } )**
+| **Tabell** | En tabell med poster.  Alle postene må ha samme navn for sine felt med samme datatyper, og utelatt felt som skal behandles som *tom*. Denne sammensatte datatypen inneholder forekomster av andre datatyper som er oppført i dette emnet. Mer informasjon: [Å arbeide med tabeller](../working-with-tables.md). | **Tabellen ({fornavn: «Sidney»,<br>etternavn: "Higa"}, <br>{fornavn: «Nancy»,<br>etternavn: "Anderson" } )**
 | **Tekst** | En streng til Unicode-tekst. | **"Hello, World"** |
 | **Tid** | En periode uten en dato i tidssonen til appens brukeren. | **Tid (11, 23, 45)** |
 | **To alternativet** | Et valg fra et sett med to alternativer, støttet av en boolsk verdi. Denne datatypen kombinerer en lokaliserbare tekstetikett med en boolsk verdi. Etiketten vises i appen, og den boolske verdien er lagret og brukes til sammenligninger. | **ThisItem.Taxable** |
@@ -53,7 +52,7 @@ Mange av disse datatypene ligner og har samme underliggende representasjon, for 
 
 Alle datatyper kan ha en verdi av *tom* (med andre ord, ingen verdi). Begrepet "null" brukes ofte i databaser for dette konseptet.  
 
-Bruk den **tom** funksjonen med den **angi** eller **Patch** funksjonen til å angi en variabel eller felt som skal *tom*. For eksempel **Set (x; Blank())** fjerner enhver verdi i den globale variabelen **x**.  
+Bruk den **tom** funksjonen med den **angi** eller **Patch** funksjonen til å angi en variabel eller felt som skal *tom*. For eksempel **Set (x, Blank())** fjerner enhver verdi i den globale variabelen **x**.  
 
 Test for en *tom* verdi ved hjelp av den [ **IsBlank** ](function-isblank-isempty.md) funksjonen. Erstatt mulig *tom* verdier med ikke -*tom* verdier ved hjelp av den [ **Coalesce** ](function-isblank-isempty.md) funksjonen.
 
@@ -83,7 +82,7 @@ Lerretsapper referere til hvert bilde eller andre mediefil, enten den er i skyen
 
 For eksempel den **bilde** -egenskapen for en bildekontroll godtar ikke bare app-ressurser, men også koblinger til bilder på nettet, som "https://northwindtraders.com/logo.jpg". Egenskapen godtar også innebygde bilder som bruker den [data-URI-skjemaet](https://en.wikipedia.org/wiki/Data_URI_scheme), som i dette eksemplet:
 
-```powerapps-comma
+```powerapps-dot
 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFAQMAAACtnVQoAAAABlBMVEUAAAB0J3UMNU6VAAAAAXRSTlMAQObYZgAAABRJREFUCNdjUGJgCGVg6GgAkkA2AA8/AffqCEBsAAAAAElFTkSuQmCC"
 ```
 
@@ -130,7 +129,7 @@ Denne tabellen viser noen eksempler:
 
 | Dato/klokkeslett-type | Verdien som er lagret i databasen | Verdien som vises, og angitt 7 timer west of UTC | Verdien som vises, og angitt 4 timer east of UTC |
 |--------------------------|------------------------------|------------------------------|
-| **Lokal bruker** | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | Lørdag,&nbsp;kan&nbsp;18,&nbsp;2019<br>9:00 PM | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>8.00 |
+| **Lokal bruker** | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | Lørdag,&nbsp;kan&nbsp;18,&nbsp;2019<br>9:00 PM | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>8\.00 |
 | **Uavhengig av tidssone** | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | 
 
 For **bruker lokal** dato/klokkeslett, lerret-apper bruker tidssonen for nettleser eller enhet, men modelldrevne apper Bruk brukerens innstillingen i Common Data Service. Disse innstillingene vanligvis samsvare med, men resultatene vil variere Hvis disse innstillingene er forskjellige.
@@ -172,13 +171,13 @@ SQL Server har [ **Datetime**, **Datetime2**, og andre dato/klokkeslett-datatype
 
 Lerret-apper bruker inkludert tidssone informasjonen i **Datetimeoffset** felt under konvertering av en verdi til appens intern UTC-representasjonen. Appene alltid bruke UTC som tidssonen (null Tidssoneforskyvning) når de skriver data.
 
-Lerretsapper lese og skrive til verdiene i den [ **tid** ](https://docs.microsoft.com/en-us/sql/t-sql/data-types/time-transact-sql) datatype i SQL Server som tekststrenger i den [ISO 8601-format for varighet](https://en.wikipedia.org/wiki/ISO_8601#Durations). Du må for eksempel analysere denne strengformat og bruke den [ **tid** ](function-date-time.md) funksjonen til å konvertere tekststrengen **"PT2H1M39S"** til en **tid** verdi:
+Lerretsapper lese og skrive til verdiene i den [ **tid** ](https://docs.microsoft.com/sql/t-sql/data-types/time-transact-sql) datatype i SQL Server som tekststrenger i den [ISO 8601-format for varighet](https://en.wikipedia.org/wiki/ISO_8601#Durations). Du må for eksempel analysere denne strengformat og bruke den [ **tid** ](function-date-time.md) funksjonen til å konvertere tekststrengen **"PT2H1M39S"** til en **tid** verdi:
 
-```powerapps-comma
+```powerapps-dot
 First(
     ForAll(
-        MatchAll( "PT2H1M39S"; "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" );
-        Time( Value( hours ); Value( minutes ); Value( seconds ) )
+        MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
+        Time( Value( hours ), Value( minutes ), Value( seconds ) )
     )
 ).Value
 ```
@@ -201,18 +200,18 @@ Når en appbruker velger et alternativ, og lagrer denne endringen, overfører ap
 
 Etikettene er bare for visning. Du kan ikke utføre direkte sammenligninger med etikettene fordi de er spesifikk for et språk. Hver alternativsett har i stedet en opplisting som fungerer med den underliggende tall eller en boolsk verdi. Du kan for eksempel bruke denne formelen:
 
-`If( ThisItem.OrderStatus = "Active"; ...`
+`If( ThisItem.OrderStatus = "Active", ...`
 
 Men du kan bruke denne formelen:
 
-`If( ThisItem.OrderStatus = OrderStatus.Active; ...`
+`If( ThisItem.OrderStatus = OrderStatus.Active, ...`
 
 For globale alternativsett (hvilke enheter dele), navnet på alternativsett opplistingen tilsvarer navnet på det globale alternativsettet. For lokale alternativsett (som er begrenset til en enhet), navnet kan inneholde navnet på enheten. Denne virkemåten unngår konflikter hvis flere enheter har alternativsett som har samme navn. For eksempel den **kontoer** enheten kan ha en **OrderStatus** alternativsett, og navnet kan være **OrderStatus (kontoer)** . Dette navnet inneholder én eller flere mellomrom og parenteser, slik at du må omslutte den med enkle anførselstegn hvis du henvise til i en formel.
 
 I tillegg to-verdiene kan også oppfører seg som boolske verdier. For eksempel en to-alternativ verdi med navnet **TaxStatus** kanskje etikettene **avgiftspliktig** og **ikke-avgiftspliktig**, som tilsvarer *SANN* og *USANN* henholdsvis. For å demonstrere, kan du bruke denne formelen:
 
-`If( ThisItem.Taxable = TaxStatus.Taxable; ...`
+`If( ThisItem.Taxable = TaxStatus.Taxable, ...`
 
 Du kan også bruke denne tilsvarende formelen:
 
-`If( ThisItem.Taxable; ...`
+`If( ThisItem.Taxable, ...`
