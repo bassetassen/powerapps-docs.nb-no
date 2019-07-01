@@ -79,7 +79,7 @@
           href: write-plug-in.md
         - name: Håndtere unntak
           href: handle-exceptions.md
-        - name: Representere en bruker
+        - name: Representer en bruker
           href: impersonate-a-user.md
         - name: Registrer et programtillegg
           href: register-plug-in.md
@@ -328,6 +328,20 @@
           href: use-source-control-solution-files.md
     - name: Pakkedistributørverktøy
       href: package-deployer/create-packages-package-deployer.md
+    - name: Bekreft kvalitet på løsninger og pakker
+      items:
+        - name: Bruk nett-API-en for PowerApps-kontroll
+          href: checker/webapi/overview.md
+        - name: Aktiver analysen
+          href: checker/webapi/analyze.md
+        - name: Kontroller analysestatus
+          href: checker/webapi/check-status.md
+        - name: Hent regellisten
+          href: checker/webapi/retrieve-rules.md
+        - name: Hent regelsettlisten
+          href: checker/webapi/retrieve-rulesets.md
+        - name: Last opp en fil for analyse
+          href: checker/webapi/upload-file.md
     - name: Publiser appen på AppSource
       href: publish-app-appsource.md
       items:

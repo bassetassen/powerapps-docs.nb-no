@@ -81,6 +81,8 @@
               href: ../user/work-with-business-processes.md
             - name: Bruk flyter
               href: ../user/use-flows.md
+    - name: Bruk Dynamics 365-appen for Outlook
+      href: ../user/use-outlook-app.md
 - name: Å opprette apper
   items:
     - name: Oversikt
@@ -981,6 +983,8 @@
           href: ./model-driven-apps/create-guided-help-learning-path.md
     - name: Tilgjengelighet i PowerApps designer for apper
       href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
+    - name: Tilpass Dynamics 365-appen for Outlook
+      href: ./model-driven-apps/app-for-outlook-customize.md
     - name: For utviklere
       href: ../developer/model-driven-apps/overview.md
 - name: Common Data Service
@@ -1156,6 +1160,8 @@
       href: ./common-data-service/export-customized-entity-field-text-translation.md
     - name: Importer oversatt enhets- og felttekst i en app
       href: ./common-data-service/import-translated-entity-field-text.md
+    - name: Sikkerhet i Common Data Service
+      href: /power-platform/admin/wp-security
     - name: For utviklere
       href: ../developer/common-data-service/overview.md
 - name: AI Builder

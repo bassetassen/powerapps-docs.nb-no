@@ -52,6 +52,8 @@
           href: sample-controls/map-control.md
         - name: Komponent for navigerings-API
           href: sample-controls/navigation-api-control.md
+        - name: Komponent for reaksjon på Facepile
+          href: sample-controls/react-facepile-control.md
         - name: Tabellkomponent
           href: sample-controls/table-control.md
         - name: Tabellkomponent for rutenett
