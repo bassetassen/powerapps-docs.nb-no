@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 06/28/2019
 ms.locfileid: "67457064"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="ismatch-match-and-matchall-functions-in-powerapps"></a>IsMatch, sammenligne og MatchAll funksjoner i PowerApps
 Tester for en match eller trekker ut deler av en tekststreng som er basert på et mønster.
@@ -85,9 +86,9 @@ Forhåndsdefinerte mønstre er det enkelt å samsvare med enten av et sett med t
 | Match-Enumerator | Beskrivelse | Vanlig uttrykk |
 | --- | --- | --- |
 | **Any** |Samsvarer med et hvilket som helst tegn. |`.` |
-| **Comma** |Samsvarer med et komma. |`,` |
+| **Comma** |Samsvarer med et komma. |`;` |
 | **Digit** |Samsvarer med ett enkelt siffer (fra 0 til 9). |`\d` |
-| **Email** |Samsvarer med en e-postadresse som inneholder en krøllalfa (\@) og et domenenavn som inneholder et punktum (.) |`.+\@.+\\.[^\\.]{2,}` |
+| **Email** |Samsvarer med en e-postadresse som inneholder en krøllalfa (\@) og et domenenavn som inneholder et punktum (.) |`.+\@.+\\.[^\\.]{2;}` |
 | **Hyphen** |Samsvarer med en bindestrek. |`\-` |
 | **LeftParen** |Samsvarer med en venstreparentes «(». |`\(` |
 | **Letter** |Samsvarer med en bokstav. |`\p{L}` |
@@ -133,19 +134,19 @@ Du kan endre virkemåten til disse funksjonene ved å angi én eller flere alter
 Ved hjelp av **MatchAll** tilsvarer bruk av standard «g» modifikatoren for vanlige uttrykk.
 
 ## <a name="syntax"></a>Syntaks
-**IsMatch**( *Text*, *Pattern* [, *Options* ] )
+**IsMatch**( *Text*; *Pattern* [; *Options* ] )
 
 * *Text* – obligatorisk. Tekststrengen som skal testes.
 * *Pattern* – obligatorisk. Mønsteret som skal testes som en tekststreng. Kjed sammen forhåndsdefinerte mønstre som den **Match** enumeratoren definerer, eller angi et vanlig uttrykk. *Mønsteret* må være en konstant formel uten variabler, datakilder eller andre dynamisk refererer til denne endringen som app-kjøringer.
 * *Options* – valgfritt. En tekststreng kombinasjon av **MatchOptions** opplistingsverdier. Som standard brukes **MatchOptions.Complete**.
 
-**Match**( *tekst*, *mønsteret* [, *alternativer* ])
+**Match**( *tekst*; *mønsteret* [; *alternativer* ])
 
 * *Text* – obligatorisk. Tekststrengen som samsvarer med.
 * *Pattern* – obligatorisk. Mønsteret som skal samsvare med som en tekststreng. Kjed sammen forhåndsdefinerte mønstre som den **Match** enumeratoren definerer, eller angi et vanlig uttrykk. *Mønsteret* må være en konstant formel uten variabler, datakilder eller andre dynamisk refererer til denne endringen som app-kjøringer.
 * *Options* – valgfritt. En tekststreng kombinasjon av **MatchOptions** opplistingsverdier. Som standard **MatchOptions.Contains** brukes.
 
-**MatchAll**( *tekst*, *mønsteret* [, *alternativer* ])
+**MatchAll**( *tekst*; *mønsteret* [; *alternativer* ])
 
 * *Text* – obligatorisk. Tekststrengen som samsvarer med.
 * *Pattern* – obligatorisk. Mønsteret som skal samsvare med som en tekststreng. Kjed sammen forhåndsdefinerte mønstre som den **Match** enumeratoren definerer, eller angi et vanlig uttrykk. *Mønsteret* må være en konstant formel uten variabler, datakilder eller andre dynamisk refererer til denne endringen som app-kjøringer.
@@ -159,65 +160,65 @@ Brukeren skriver inn **Hei, verden** i **TextInput1**.
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| `IsMatch( TextInput1.Text, "Hello world" )` |Tester om brukerens inndata samsvarer nøyaktig med strengen «Hello world». |**sann** |
-| `IsMatch( TextInput1.Text, "Good bye" )` |Tester om brukerens inndata samsvarer nøyaktig med strengen «Farvel». |**usann** |
-| `IsMatch( TextInput1.Text, "hello", Contains )` |Tester om brukerens inndata inneholder ordet «Hei» (bokstaver). |**usann** |
-| `IsMatch( TextInput1.Text, "hello", Contains & IgnoreCase )` |Tester om brukerens inndata inneholder ordet «hei» (skiller ikke mellom store og små bokstaver). |**sann** |
+| `IsMatch( TextInput1.Text; "Hello world" )` |Tester om brukerens inndata samsvarer nøyaktig med strengen «Hello world». |**sann** |
+| `IsMatch( TextInput1.Text; "Good bye" )` |Tester om brukerens inndata samsvarer nøyaktig med strengen «Farvel». |**usann** |
+| `IsMatch( TextInput1.Text; "hello"; Contains )` |Tester om brukerens inndata inneholder ordet «Hei» (bokstaver). |**usann** |
+| `IsMatch( TextInput1.Text; "hello"; Contains & IgnoreCase )` |Tester om brukerens inndata inneholder ordet «hei» (skiller ikke mellom store og små bokstaver). |**sann** |
 
 ### <a name="predefined-patterns"></a>Forhåndsdefinerte mønstre
 
 |                                                            Formel                                                            |                                                                Beskrivelse                                                                |  Resultat   |
 |-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| `IsMatch( "123-45-7890", Digit & Digit & Digit & Hyphen & Digit & Digit & Hyphen & Digit & Digit & Digit & Digit )` |                                              Samsvarer med et personnummer for USA                                               | **sann**  |
-|                                           `IsMatch( "joan@contoso.com", Email )`                                            |                                                         Samsvarer med en e-postadresse                                                          | **sann**  |
-|                              `IsMatch( "123.456", MultipleDigits & Period & OptionalDigits )`                               |                                   Samsvarer med en rekke sifre, et punktum og deretter ingen eller flere sifre.                                   | **sann**  |
-|                                `IsMatch( "123", MultipleDigits & Period & OptionalDigits )`                                 | Samsvarer med en rekke sifre, et punktum og deretter ingen eller flere sifre. Et punktum vises ikke i teksten som samsvarer med, så dette mønsteret ikke samsvarer. | **usann** |
+| `IsMatch( "123-45-7890"; Digit & Digit & Digit & Hyphen & Digit & Digit & Hyphen & Digit & Digit & Digit & Digit )` |                                              Samsvarer med et personnummer for USA                                               | **sann**  |
+|                                           `IsMatch( "joan@contoso.com"; Email )`                                            |                                                         Samsvarer med en e-postadresse                                                          | **sann**  |
+|                              `IsMatch( "123.456"; MultipleDigits & Period & OptionalDigits )`                               |                                   Samsvarer med en rekke sifre, et punktum og deretter ingen eller flere sifre.                                   | **sann**  |
+|                                `IsMatch( "123"; MultipleDigits & Period & OptionalDigits )`                                 | Samsvarer med en rekke sifre, et punktum og deretter ingen eller flere sifre. Et punktum vises ikke i teksten som samsvarer med, så dette mønsteret ikke samsvarer. | **usann** |
 
 ### <a name="regular-expressions"></a>Vanlige uttrykk
 
 |                                                                              Formel                                                                              |                                                                                                                                  Beskrivelse                                                                                                                                   |  Resultat   |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-|                                                                    `IsMatch( "986", "\d+" )`                                                                   |                                                                                                                    Samsvarer med et heltall større enn null.                                                                                                                     | **sann**  |
-|                                                               `IsMatch( "1.02", "\d+(\.\d\d)?" )`                                                              |                                        Samsvarer med et positivt valutabeløp. Hvis inndataene inneholder et desimaltegn, må inndataene også inneholde to numeriske tegn etter desimaltegnet. For eksempel er 3.00 gyldig, men ikke 3.1.                                         | **sann**  |
-|                                                            `IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )`                                                             |                                                        Samsvarer med et positivt eller negativt valutabeløp. Hvis inndataene inneholder et desimaltegn, må inndataene også inneholde to numeriske tegn etter desimaltegnet.                                                        | **sann**  |
-|                                                         `IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )`                                                        | Samsvarer med et personnummer for USA. Validerer format, type og lengde for det angitte inndatafeltet. Strengen som skal samsvare må bestå av tre numeriske tegn etterfulgt av en bindestrek og deretter to numeriske tegn etterfulgt av en bindestrek, og deretter fire numeriske tegn. | **sann**  |
-|                                                         `IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )`                                                         |                                                                                               Samme som det forrige eksemplet, men en av bindestrekene er på feil sted i inndataene.                                                                                               | **usann** |
-|                                         `IsMatch( "AStrongPasswordNot", "(?!^[0-9]\*$)(?!^[a-zA-Z]\*$)([a-zA-Z0-9]{8,10})" )`                                        |                                        Validerer et sterkt passord, som må inneholde 8, 9 eller 10 tegn, i tillegg til minst ett siffer og minst én bokstav. Strengen kan ikke inneholde spesialtegn.                                        | **usann** |
-| `IsMatch( "<http://microsoft.com>", "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]\*[0-9a-zA-Z])\*(:(0-9)\*)\*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]\*)?" )` |                                                                                                                     Validerer en nettadresse for HTTP, HTTPS eller FTP.                                                                                                                      | **sann**  |
+|                                                                    `IsMatch( "986"; "\d+" )`                                                                   |                                                                                                                    Samsvarer med et heltall større enn null.                                                                                                                     | **sann**  |
+|                                                               `IsMatch( "1.02"; "\d+(\.\d\d)?" )`                                                              |                                        Samsvarer med et positivt valutabeløp. Hvis inndataene inneholder et desimaltegn, må inndataene også inneholde to numeriske tegn etter desimaltegnet. For eksempel er 3.00 gyldig, men ikke 3.1.                                         | **sann**  |
+|                                                            `IsMatch( "-4.95"; "(-)?\d+(\.\d\d)?" )`                                                             |                                                        Samsvarer med et positivt eller negativt valutabeløp. Hvis inndataene inneholder et desimaltegn, må inndataene også inneholde to numeriske tegn etter desimaltegnet.                                                        | **sann**  |
+|                                                         `IsMatch( "111-11-1111"; "\d{3}-\d{2}-\d{4}" )`                                                        | Samsvarer med et personnummer for USA. Validerer format, type og lengde for det angitte inndatafeltet. Strengen som skal samsvare må bestå av tre numeriske tegn etterfulgt av en bindestrek og deretter to numeriske tegn etterfulgt av en bindestrek, og deretter fire numeriske tegn. | **sann**  |
+|                                                         `IsMatch( "111-111-111"; "\d{3}-\d{2}-\d{4}" )`                                                         |                                                                                               Samme som det forrige eksemplet, men en av bindestrekene er på feil sted i inndataene.                                                                                               | **usann** |
+|                                         `IsMatch( "AStrongPasswordNot"; "(?!^[0-9]\*$)(?!^[a-zA-Z]\*$)([a-zA-Z0-9]{8,10})" )`                                        |                                        Validerer et sterkt passord, som må inneholde 8, 9 eller 10 tegn, i tillegg til minst ett siffer og minst én bokstav. Strengen kan ikke inneholde spesialtegn.                                        | **usann** |
+| `IsMatch( "<http://microsoft.com>"; "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]\*[0-9a-zA-Z])\*(:(0-9)\*)\*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]\*)?" )` |                                                                                                                     Validerer en nettadresse for HTTP, HTTPS eller FTP.                                                                                                                      | **sann**  |
 
 ## <a name="match-and-matchall-examples"></a>Match og MatchAll eksempler
 
 | Formel | Beskrivelse | Resultat |
 |--------|------------|-----------|
-| `Match( "Bob Jones <bob.jones@contoso.com>", "<(?<email>" & Match.Email & ")>"` | Trekker ut bare e-delen av kontaktinformasjonen.  | {<br>e-post:&nbsp;"bob.jones@contoso.com",<br>FullMatch:&nbsp;"&lt;bob.jones@contoso.com>",<br>SubMatches:&nbsp;[&nbsp;"bob.jones@contoso.com"&nbsp;],<br>StartMatch: 11<br>}  
-| `Match( "Bob Jones <InvalidEmailAddress>", "<(?<email>" & Match.Email & ")>"` | Trekker ut bare e-delen av kontaktinformasjonen. Finner ingen juridiske adressen (det er ikke @-tegnet), slik at funksjonen returnerer *tom*. | *tom* |  
-| `Match( Language(), "(<language>\w{2})(?:-(?<script>\w{4}))?(?:-(?<region>\w{2}))?" )` | Trekker ut de språk, skriptet og området delene av språket merke som den **[språk](function-language.md)** -funksjonen returnerer. Disse resultatene gjenspeiler USA. Se den [ **språk** funksjonen dokumentasjonen](function-language.md) flere eksempler.  Den **(?:** operatoren grupperer tegn uten å opprette en annen delrapport treff. | {<br>språk: "no",<br>skriptet: *tom*, <br>Område: «OSS»<br>FullMatch: "en-US", <br>SubMatches: ["no", "", "US"], <br>StartMatch: 1<br>} 
-| `Match( "PT2H1M39S", "PT(?:(<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" )` | Trekker ut den timer, minutter og sekunder fra en ISO 8601-varighetsverdi. Uttrukket tallene er fremdeles i en tekststreng; Bruk den [ **verdien** ](function-value.md) funksjonen til å konvertere den til et tall før matematiske operasjoner utføres på den.  | {<br> timer: "2",<br>minutter: "1",<br>sekunder: "39",<br>FullMatch: "PT2H1M39S",<br>SubMatches:&nbsp;[&nbsp;"2",&nbsp;"1",&nbsp;"39"&nbsp;],<br>StartMatch: 1<br>} |
+| `Match( "Bob Jones <bob.jones@contoso.com>"; "<(?<email>" & Match.Email & ")>"` | Trekker ut bare e-delen av kontaktinformasjonen.  | {<br>e-post:&nbsp;"bob.jones@contoso.com",<br>FullMatch:&nbsp;"&lt;bob.jones@contoso.com>",<br>SubMatches:&nbsp;[&nbsp;"bob.jones@contoso.com"&nbsp;],<br>StartMatch: 11<br>}  
+| `Match( "Bob Jones <InvalidEmailAddress>"; "<(?<email>" & Match.Email & ")>"` | Trekker ut bare e-delen av kontaktinformasjonen. Finner ingen juridiske adressen (det er ikke @-tegnet), slik at funksjonen returnerer *tom*. | *tom* |  
+| `Match( Language(); "(<language>\w{2})(?:-(?<script>\w{4}))?(?:-(?<region>\w{2}))?" )` | Trekker ut de språk, skriptet og området delene av språket merke som den **[språk](function-language.md)** -funksjonen returnerer. Disse resultatene gjenspeiler USA. Se den [ **språk** funksjonen dokumentasjonen](function-language.md) flere eksempler.  Den **(?:** operatoren grupperer tegn uten å opprette en annen delrapport treff. | {<br>språk: "no",<br>skriptet: *tom*, <br>Område: «OSS»<br>FullMatch: "en-US", <br>SubMatches: ["no", "", "US"], <br>StartMatch: 1<br>} 
+| `Match( "PT2H1M39S"; "PT(?:(<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" )` | Trekker ut den timer, minutter og sekunder fra en ISO 8601-varighetsverdi. Uttrukket tallene er fremdeles i en tekststreng; Bruk den [ **verdien** ](function-value.md) funksjonen til å konvertere den til et tall før matematiske operasjoner utføres på den.  | {<br> timer: "2",<br>minutter: "1",<br>sekunder: "39",<br>FullMatch: "PT2H1M39S",<br>SubMatches:&nbsp;[&nbsp;"2",&nbsp;"1",&nbsp;"39"&nbsp;],<br>StartMatch: 1<br>} |
 
 La oss drille ned i det siste eksemplet. Hvis du vil konvertere denne strengen til en dato/klokkeslett-verdi ved hjelp av den **[tid](function-date-time.md)** -funksjonen, du må sende i de navngitte deloverensstemmelser enkeltvis. Hvis du vil gjøre dette, kan du bruke den **[ForAll](function-forall.md)** funksjonen er i drift på først registrere at **MatchAll** returnerer:
 
-``` powerapps-dot
+``` powerapps-comma
 First( 
     ForAll( 
-        MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ), 
-        Time( Value( hours ), Value( minutes ), Value( seconds ) )
+        MatchAll( "PT2H1M39S"; "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ); 
+        Time( Value( hours ); Value( minutes ); Value( seconds ) )
     )
 ).Value
 ```
 
 For disse eksemplene, legge til en [knappen](../controls/control-button.md) kontroll, angi dens **OnSelect** egenskapen til denne formelen, og velg deretter knappen:
 
-``` powerapps-dot
-Set( pangram, "The quick brown fox jumps over the lazy dog." )
+``` powerapps-comma
+Set( pangram; "The quick brown fox jumps over the lazy dog." )
 ```
  
 | Formel | Beskrivelse | Resultat |
 |---------|-------------|--------|
-| `Match( pangram, "THE", IgnoreCase )` | Søk etter alle forekomster av "Av" i teksten streng som den **pangram** variabel inneholder. Strengen inneholder to treff, men bare første returneres fordi du bruker **Match** og ikke **MatchAll**. Kolonnen SubMatches er tomt fordi ingen deloverensstemmelser ble definert.  | {<br>FullMatch: "Den"<br>SubMatches: [&nbsp;],<br>StartMatch: 32<br>} |
-| `MatchAll( pangram, "the" )` | Søk etter alle forekomster av "the" i tekststrengen som den **pangram** variabel inneholder. Testen er bokstaver, slik at bare den andre forekomsten av "the" blir funnet. Kolonnen SubMatches er tomt fordi ingen deloverensstemmelser ble definert.  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-the-one.png) |
-| `MatchAll( pangram, "the", IgnoreCase )` | Søk etter alle forekomster av "the" i tekststrengen som den **pangram** variabel inneholder. I dette tilfellet er testen bokstaver, slik at begge forekomstene av ordet blir funnet. Kolonnen SubMatches er tomt fordi ingen deloverensstemmelser ble definert.  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-the-two.png) |
-| `MatchAll( pangram, "\b\wo\w\b" )` | Søker etter alle tre bokstaver ord med en «o» i midten. Vær oppmerksom på at «brune» er utelatt fordi den er ikke et tre bokstaver ord, og derfor ikke kan samsvarer med "\b» (grenselinje for ord).  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-fox-dog.png) |
-| `Match( pangram, "\b\wo\w\b\s\*(?<between>\w.+\w)\s\*\b\wo\w\b" )` | Samsvarer med alle tegn mellom «fox» og "eple". | {<br>mellom:&nbsp;"hopper&nbsp;over&nbsp;den&nbsp;sakte",<br>FullMatch:&nbsp;"fox&nbsp;hopper&nbsp;over&nbsp;den&nbsp;sakte&nbsp;hund",<br>SubMatches: ["hopper over den sakte"],<br>StartMatch: 17<br> } |
+| `Match( pangram; "THE"; IgnoreCase )` | Søk etter alle forekomster av "Av" i teksten streng som den **pangram** variabel inneholder. Strengen inneholder to treff, men bare første returneres fordi du bruker **Match** og ikke **MatchAll**. Kolonnen SubMatches er tomt fordi ingen deloverensstemmelser ble definert.  | {<br>FullMatch: "Den"<br>SubMatches: [&nbsp;],<br>StartMatch: 32<br>} |
+| `MatchAll( pangram; "the" )` | Søk etter alle forekomster av "the" i tekststrengen som den **pangram** variabel inneholder. Testen er bokstaver, slik at bare den andre forekomsten av "the" blir funnet. Kolonnen SubMatches er tomt fordi ingen deloverensstemmelser ble definert.  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-the-one.png) |
+| `MatchAll( pangram; "the"; IgnoreCase )` | Søk etter alle forekomster av "the" i tekststrengen som den **pangram** variabel inneholder. I dette tilfellet er testen bokstaver, slik at begge forekomstene av ordet blir funnet. Kolonnen SubMatches er tomt fordi ingen deloverensstemmelser ble definert.  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-the-two.png) |
+| `MatchAll( pangram; "\b\wo\w\b" )` | Søker etter alle tre bokstaver ord med en «o» i midten. Vær oppmerksom på at «brune» er utelatt fordi den er ikke et tre bokstaver ord, og derfor ikke kan samsvarer med "\b» (grenselinje for ord).  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-fox-dog.png) |
+| `Match( pangram; "\b\wo\w\b\s\*(?<between>\w.+\w)\s\*\b\wo\w\b" )` | Samsvarer med alle tegn mellom «fox» og "eple". | {<br>mellom:&nbsp;"hopper&nbsp;over&nbsp;den&nbsp;sakte",<br>FullMatch:&nbsp;"fox&nbsp;hopper&nbsp;over&nbsp;den&nbsp;sakte&nbsp;hund",<br>SubMatches: ["hopper over den sakte"],<br>StartMatch: 17<br> } |
 
 Å se resultatene av **MatchAll** i et galleri:
 
