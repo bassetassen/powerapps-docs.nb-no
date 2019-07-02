@@ -75,6 +75,18 @@
               href: ../user/export-excel-static-worksheet.md
             - name: Eksporter til en Excel-pivottabell
               href: ../user/export-excel-pivottable.md
+        - name: Rapporter
+          items:
+            - name: Arbeid med rapporter
+              href: ../user/work-with-reports.md
+            - name: Opprett en rapport med rapportveiviseren
+              href: ../user/create-report-with-wizard.md
+            - name: Legg til en eksisterende rapport
+              href: ../user/add-existing-report.md
+            - name: Rediger standardfilteret for en rapport
+              href: ../user/edit-report-filter.md
+            - name: Feilsøk rapporter
+              href: ../user/troubleshoot-reports.md
         - name: Automatiser prosesser
           items:
             - name: Arbeid med forretningsprosesser
@@ -883,19 +895,25 @@
                       href: ./model-driven-apps/configure-event-handlers-legacy.md
                     - name: Slik deaktiverer du automatisk lagring i et skjema
                       href: ./model-driven-apps/manage-auto-save.md
-            - name: Bygg inn en lerretsapp i et skjema
+            - name: Bygg inn en lerretsapp i et modelldrevet skjema
               href: ./model-driven-apps/embed-canvas-app-in-form.md
               items:
-                - name: Send den gjeldende posten til en innebygd lerretsapp
-                  href: ./model-driven-apps/pass-current-embedded-canvas-app.md
-                - name: Send relaterte poster til en innebygd lerretsapp
-                  href: ./model-driven-apps/pass-related-embedded-canvas-app.md
+                - name: Legg til en innebygd lerretsapp
+                  href: ./model-driven-apps/embedded-canvas-app-add-classic-designer.md
+                - name: Rediger en innebygd lerretsapp
+                  href: ./model-driven-apps/embedded-canvas-app-edit-classic-designer.md
+                - name: Tilpass skjermstørrelse og -retning
+                  href: ./model-driven-apps/embedded-canvas-app-customize-screen.md
                 - name: Utfør forhåndsdefinerte handlinger i vertsskjemaet
                   href: ./model-driven-apps/embedded-canvas-app-actions.md
+                - name: Kontrollen ModelDrivenFormIntegration
+                  href: ./model-driven-apps/embedded-canvas-app-properties-actions.md
                 - name: Del en innebygd lerretsapp
                   href: ./model-driven-apps/share-embedded-canvas-app.md
                 - name: Retningslinjer for innebygd lerretsapp
                   href: ./model-driven-apps/embedded-canvas-app-guidelines.md
+                - name: Overføring av innebygd lerret fra offentlig forhåndsversjon
+                  href: ./model-driven-apps/embedded-canvas-app-migrate-from-preview.md
             - name: Bygg inn en Power BI-rapport i et skjema
               href: ./model-driven-apps/embed-powerbi-report-in-system-form.md
             - name: Arbeid med visninger
@@ -954,6 +972,8 @@
           href: ./model-driven-apps/templates-overview.md
         - name: Bruk temaer til å bruke organisasjonens varemerking
           href: ./model-driven-apps/create-themes-organization-branding.md
+        - name: Legg til rapportering i appen din
+          href: ./model-driven-apps/add-reporting-to-app.md
     - name: Valider og publiser en app
       href: ./model-driven-apps/validate-app.md
     - name: Å dele en app
