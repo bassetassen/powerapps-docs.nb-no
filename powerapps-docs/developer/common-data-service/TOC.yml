@@ -321,6 +321,14 @@
               href: create-patches-simplify-solution-updates.md
             - name: Når du skal redigere tilpassingsfilen
               href: when-edit-customization-file.md
+    - name: Byggverktøy for Azure DevOps
+      items:
+        - name: Oversikt
+          href: build-tools-overview.md
+        - name: Oppgaver
+          href: build-tools-tasks.md
+        - name: Opplæring og vanlige spørsmål
+          href: build-tools-tutorial-faq.md
     - name: SolutionPackager-verktøy
       href: compress-extract-solution-file-solutionpackager.md
       items:
@@ -361,6 +369,16 @@
           href: appendix-app-design-best-practices-checklist.md
         - name: 'Tillegg: Sjekkliste for sertifisering av apper'
           href: appendix-app-certification-checklist.md
+    - name: ISV-appadministrasjon og -overvåking
+      items:
+        - name: Innføring i ISV Studio
+          href: isv-app-management.md
+        - name: Hjemmeside
+          href: isv-app-management-homepage.md
+        - name: Appside
+          href: isv-app-management-apppage.md
+        - name: Leierside
+          href: isv-app-management-tenantpage.md
 - name: Opprett klientprogrammer
   href: connect-cds.md
   items:
