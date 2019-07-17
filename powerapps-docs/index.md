@@ -9,12 +9,12 @@ featureFlags:
 ms.service: powerapps
 ms.custom:
 - powerapps-hub
-ms.openlocfilehash: a010515fcb928eb3b971ee6bb5eea918ced1901e
-ms.sourcegitcommit: 2fd158b88f0d88bae5d1c3aca1990bcc7a5b3204
+ms.openlocfilehash: b4832962165c9d275cbee9aa76ad1dc21e3d1d67
+ms.sourcegitcommit: ec05425ad7baf4102da95a071c11b5bb4381ed53
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67866439"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229669"
 ---
 <div id="main"
    class="v2">
@@ -580,10 +580,10 @@ ms.locfileid: "67866439"
                                     <h3 style="font-size: 1.15rem">Pakk inn og distribuer apper/utvidelser</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/introduction-solutions">Bruk av løsninger</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/build-tools-overview">PowerApps-byggverktøy for Azure DevOps</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/compress-extract-solution-file-solutionpackager">SolutionPackager-verktøy</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer">Pakkedistributørverktøy</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/checker/webapi/overview">Bruk PowerApps-kontroll</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/build-tools-overview">PowerApps-byggverktøy for Azure DevOps</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/isv-app-management">ISV-appadministrasjon og -overvåking</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/publish-app-appsource">Publiser appen på AppSource</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/en-us/download/details.aspx?id=57777">Hvitbok: Løsninger ved bruk av ALM</a></p>
