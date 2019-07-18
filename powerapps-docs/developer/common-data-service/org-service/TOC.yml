@@ -46,8 +46,6 @@
               href: use-left-outer-join-queryexpression-query-records-not-in.md
             - name: Bruk QueryByAttribute-klassen
               href: use-querybyattribute-class.md
-            - name: Plasser store resultatsett med FetchXML
-              href: page-large-result-sets-with-fetchxml.md
     - name: Opprett enheter
       href: entity-operations-create.md
     - name: Hent en enhet

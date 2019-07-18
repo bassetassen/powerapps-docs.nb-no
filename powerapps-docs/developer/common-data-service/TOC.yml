@@ -26,6 +26,8 @@
           href: use-fetchxml-fiscal-date-older-datetime-query-operators.md
         - name: Bruk en venstre ytre kobling i FetchXML til spørring etter poster «ikke i»
           href: use-fetchxml-left-outer-join-query-records-not-in.md
+        - name: Plasser store resultatsett med FetchXML
+          href: org-service/page-large-result-sets-with-fetchxml.md
     - name: Lagrede spørringer
       href: saved-queries.md
     - name: Spørring av hierarkiske data
