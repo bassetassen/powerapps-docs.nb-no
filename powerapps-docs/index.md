@@ -9,12 +9,12 @@ featureFlags:
 ms.service: powerapps
 ms.custom:
 - powerapps-hub
-ms.openlocfilehash: b4832962165c9d275cbee9aa76ad1dc21e3d1d67
-ms.sourcegitcommit: ec05425ad7baf4102da95a071c11b5bb4381ed53
+ms.openlocfilehash: 62e6db1361664f8ccce38080e07908237aac5f50
+ms.sourcegitcommit: 9cce0d57113705254c109e6c38fc57a8bd4ef6cf
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68229669"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313310"
 ---
 <div id="main"
    class="v2">
@@ -215,7 +215,7 @@ ms.locfileid: "68229669"
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>Appopprettere kan administrere organisasjonens kritiske data ved raskt å opprette tilpassede forretningsapper, uten å måtte skrive kode. Du kan opprette to typer apper i PowerApps: <strong>Lerretsapper</strong> og <strong>modelldrevne apper</strong>. <strong>Common Data Service</strong> er dataplattformen som lar deg lagre og behandle data som brukes av forretningsapper, på en sikker måte. Mer informasjon: <a href="/powerapps/maker">Opprett apper</a>.</p>
+                           <p>Appopprettere kan administrere organisasjonens kritiske data ved raskt å opprette tilpassede forretningsapper, uten å måtte skrive kode. Du kan opprette tre typer apper i PowerApps: <strong>Lerretsapp</strong>, <strong>modelldreven app</strong> og <strong>portal</strong>. <strong>Common Data Service</strong> er dataplattformen som lar deg lagre og behandle data som brukes av forretningsapper, på en sikker måte. Mer informasjon: <a href="/powerapps/maker">Opprett apper</a>.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -273,6 +273,28 @@ ms.locfileid: "68229669"
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-themes-organization-branding">Bruk temaer for varemerking</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/share-model-driven-app">Deling av en app</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/distribute-model-driven-app">Distribuer en app</a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="cardSize">
+                           <div class="cardPadding">
+                              <div class="card">
+                                 <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                       <img alt="Customize icon" src="media/index/i_portals.svg">
+                                    </div>
+                                 </div>
+                                 <div class="cardText">
+                                    <h3 style="font-size: 1.15rem">Portaler</h3>
+                                    <hr/>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/overview">Hva er PowerApps-portaler?</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/create-portal">Opprett en portal</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/manage-existing-portals">Behandle eksisterende portaler</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/admin/admin-overview">Portaladministrasjon</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/faq">Vanlige spørsmål om PowerApps-portaler</a></p>
                                  </div>
                               </div>
                            </div>

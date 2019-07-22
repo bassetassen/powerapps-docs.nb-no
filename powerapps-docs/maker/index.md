@@ -6,22 +6,23 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.date: 03/18/2018
+ms.date: 07/18/2018
 ms.author: anneta
 ms.reviewer: ''
-ms.openlocfilehash: 6a8432e93f854b1c0794512da42ef25c9aa02adc
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: cfc849574153ea4ab983112528a91974d80dea7f
+ms.sourcegitcommit: 1c0b01ab9c76ac353854f7b61d5a9ef13e8b093f
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61528600"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68308739"
 ---
 # <a name="overview-of-creating-apps-in-powerapps"></a>Oversikt over oppretting av apper i PowerApps
 
-PowerApps er en utviklingsplattform for bedriftsapper med høy produktivitet, og har tre hovedkomponenter:
+PowerApps er en utviklingsplattform for bedriftsapper med høy produktivitet, og har fire hovedkomponenter:
 
 - [Lerretsapper](canvas-apps/getting-started.md) bruk mulighetene i et tomt lerret og start med brukeropplevelsen. Opprett et skreddersydd grensesnitt og koble det til én av 200 datakilder. Du kan opprette lerretsapper for nett-, mobil- og nettbrettprogrammer.
-- [Modelldrevne apper](model-driven-apps/model-driven-app-overview.md) starter med datamodellen. De utvikles basert på bedriftens data og prosesser i Common Data Service og modellerer skjemaer, visninger og andre komponenter. Modelldrevne apper genererer automatisk brukergrensesnitt som virker på flere forskjellige enheter.
+- [Modelldrevne apper](model-driven-apps/model-driven-app-overview.md) starter med datamodellen. De utvikles basert på bedriftens data og prosesser i Common Data Service og modellerer skjemaer, visninger og andre komponenter. Modelldrevne apper genererer automatisk flotte brukergrensesnitt som virker på flere forskjellige enheter.
+- [Portaler](portals/overview.md) begynner å opprette eksterne nettsteder som tillater brukere utenfor organisasjonen å logge på med en rekke ulike identiteter, opprette og vise data i Common Data Service eller bla gjennom innhold anonymt.
 - [Common Data Service](common-data-service/data-platform-intro.md) er dataplattformen som følger med PowerApps, og som gjør det mulig å lagre og modellere bedriftsdata. Det er plattformen Dynamics 365-programmer utvikles på. Hvis du bruker Dynamics 365, er dataene dine allerede i Common Data Service.
 
 Det er enkelt å opprette din første app. Vi har et 30-dagers prøveabonnement og et kostnadsfritt fellesskapsabonnement. Finn ut hva som passer best for deg, og kom i gang.

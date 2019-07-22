@@ -1007,6 +1007,62 @@
       href: ./model-driven-apps/app-for-outlook-customize.md
     - name: For utviklere
       href: ../developer/model-driven-apps/overview.md
+- name: Portaler (forhåndsversjon)
+  items:
+    - name: Hva er PowerApps-portaler?
+      href: ./portals/overview.md
+    - name: Utform og bygg en portal
+      items:
+        - name: Portalmaler
+          href: ./portals/portal-templates.md
+        - name: Opprett en portal
+          href: ./portals/create-portal.md
+        - name: Opprett en Dynamics 365-portal
+          href: ./portals/create-dynamics-portal.md
+        - name: Oppbygning av portalutforming
+          href: ./portals/portal-designer-anatomy.md
+        - name: Nettlesere som støttes for portalutforming
+          href: ./portals/supported-browser.md
+        - name: Opprett og administrer nettsider
+          href: ./portals/create-manage-webpages.md
+        - name: Opprett en side
+          href: ./portals/compose-page.md
+        - name: Arbeid med maler
+          href: ./portals/work-with-templates.md
+    - name: Behandle eksisterende portaler
+      href: ./portals/manage-existing-portals.md
+    - name: Konfigurere områdeinnstillinger
+      href: ./portals/configure-site-settings.md
+    - name: Avansert portaladministrasjon
+      items:
+        - name: Oversikt
+          href: ./portals/admin/admin-overview.md
+        - name: Portaldetaljer
+          href: ./portals/admin/portal-details.md
+        - name: Last ned fellesnøkkelen for portalen
+          href: ./portals/admin/get-public-key.md
+        - name: Vis feillogger for portal
+          href: ./portals/admin/view-portal-error-log.md
+        - name: Tilbakestill en portal
+          href: ./portals/admin/reset-portal.md
+        - name: Endre primær nettadresse for en portal
+          href: ./portals/admin/change-base-url.md
+        - name: Aktiver vedlikeholdsmodus
+          href: ./portals/admin/enable-maintenance-mode.md
+        - name: Konfigurer Power BI-integrering
+          href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Kjør portalkontroll
+          href: ./portals/admin/portal-checker.md
+        - name: Forny godkjenningsnøkkelen for portalen
+          href: ./portals/admin/manage-auth-key.md
+        - name: Konfigurer begrensning for IP-adresse
+          href: ./portals/admin/ip-address-restrict.md
+        - name: Oppdater til domene for PowerApps-portaler
+          href: ./portals/admin/update-portal-domain.md
+    - name: Kjente problemer
+      href: ./portals/known-issues.md
+    - name: Vanlige spørsmål om PowerApps-portaler
+      href: ./portals/faq.md
 - name: Common Data Service
   href: ./common-data-service/data-platform-intro.md
   items:
