@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 52f97ce8360981b060500ce62da44a58002f4afa
-ms.sourcegitcommit: dd74c98f48587730466e6669fc94da250d5c631e
+ms.openlocfilehash: 4e0609ce53f88f5945409e688cfc65df39bd6b96
+ms.sourcegitcommit: 8f27a61ce2ec32b8d911845dd00708e3c87b86bb
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/26/2019
-ms.locfileid: "66224811"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428733"
 ---
 # <a name="transform-your-infopath-form-to-powerapps"></a>Transformer InfoPath-skjemaet ditt til PowerApps
 
@@ -51,7 +50,7 @@ PowerApps er et flott verktøy som gjør SharePoint-opplevelsen bedre på to må
 
 **Å tilpasse et SharePoint-skjema** er flott hvis du ønsker å tilpasse hvordan brukere legge til, viser eller redigerer elementer i en liste som de bruker til sitt daglige arbeid. Hvis du klikker på **Tilpass skjemaer**, opprettes en &quot;skjemaapp&quot; med én skjerm som endrer modus (ny/rediger/vis) basert på kontekst. Disse appene administreres av SharePoint, og tillatelsene for appene er de samme som tillatelsene for redigering/visning av lister.
 
-**Når du oppretter en PowerApps-lerretsapp via SharePoint**, kan du kjøre appen alene på en mobil enhet. Du kan også bygge inn appen i en SharePoint-side. Hvis du klikker på dette, opprettes en app med tre skjermer (bla gjennom listen, vis detaljer og opprett/oppdater et element). Tillatelses-/delingsmodellen for disse appene er ikke bundet til SharePoint, men administreres via PowerApps.
+**Når du oppretter en PowerApps-lerretsapp via SharePoint**, kan du kjøre appen alene på en mobil enhet. Du kan også bygge inn appen på en SharePoint-side. Hvis du klikker på dette, opprettes en app med tre skjermer (bla gjennom listen, vis detaljer og opprett/oppdater et element). Tillatelses-/delingsmodellen for disse appene er ikke bundet til SharePoint, men administreres via PowerApps.
 
 Nå forstår du forskjellen mellom de to alternativene, og det neste avsnittet gir en oversikt over hvordan hvert av dem brukes.
 
@@ -88,35 +87,35 @@ Vellykkede skjemaer fremtvinger ofte streng forretningslogikk ved for eksempel �
 
 ![Skjule/vise/låse datakort](./media/transform-infopath/hide-show-lock.png)
 
-I den høyre ruten går du til **DefaultMode**-egenskapen, slik at du kan redigere den.
+I ruten til høyre ruller du til **Display Mode** -egenskapen, slik at du kan redigere den.
 
 ![If/Else-uttrykk](./media/transform-infopath/if-else-statement.png)
 
 Bruk en **If**-formel i dette eksempelet:
 
-```If(ThisItem.Color = "Blue"; DisplayMode.View; DisplayMode.Edit)```
+```If(ThisItem.Color = "Blue", DisplayMode.View, DisplayMode.Edit)```
 
 Denne formelen angir at hvis det gjeldende elementets **Farge**-felt er **blått**, er **Dyr**-feltet skrivebeskyttet. Ellers kan feltet redigeres.
 
 Hvis du vil skjule kortet i stedet for å gjøre det skrivebeskyttet, setter du inn en lignende funksjon i **Synlig**-egenskapen rett over **DisplayMode**.
 
-Du kan for eksempel også prøve deg på å vise godkjenningsknappen bare hvis brukerens e-postadresse samsvarer med godkjennerens e-postadresse. (Tips: Bruk **User(). E-** å få tilgang til den gjeldende brukerens e-postadresse.) Så du kan lagre godkjennerens e-postadresse i **YourDataCard** og angi knappens **Synlig**-egenskap etter denne formelen:
+Du kan for eksempel også prøve deg på å vise godkjenningsknappen bare hvis brukerens e-postadresse samsvarer med godkjennerens e-postadresse. Referanse Bruk **bruker (). E-post** for å få tilgang til den gjeldende brukerens e-postadresse.) Så du kan lagre godkjennerens e-postadresse i **YourDataCard** og angi knappens **Synlig**-egenskap etter denne formelen:
 
-```If( YourDataCard.Text = User().Email; true; false )```
+```If( YourDataCard.Text = User().Email, true, false )```
 
 **Betinget formatering**  
 På lignende måte som over, der du skjulte feltet, kan du også gi brukeren visuell tilbakemelding. Kanskje vil du gjøre teksten rød hvis den angitte verdien faller utenfor det godkjente området, eller endre teksten og fargen på en Last opp-knapp når brukeren laster opp en fil. Du kan gjøre begge ved hjelp av en funksjon, for eksempel **If**, for egenskaper som **Farge** eller **Synlig**.
 
 Du kan for eksempel bruke **If**-funksjonen sammen med [IsMatch](functions/function-ismatch.md)-funksjonen for å endre tekstfargen på e-postfeltet til rødt hvis brukeren ikke har skrevet inn en gyldig e-postadresse. Du gjør dette ved å angi **Farge**-verdien for **TextInput1** (der brukeren skriver inn en e-postadresse) etter denne formelen:
 
-```If( IsMatch(TextInput1.Text; Email); Black; Red )```
+```If( IsMatch(TextInput1.Text, Email), Black, Red )```
 
 **IsMatch** støtter en rekke forhåndsdefinerte mønstre, for eksempel e-post, eller du kan opprette et selv. Du finner mer informasjon om betinget formatering i denne [fellesskapsvideoen](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Conditional-Formatting-and-Popups/m-p/84962).
 
 **Implementere rollebasert sikkerhet**  
 Den første funksjonen du må vurdere, er [DataSourceInfo](functions/function-datasourceinfo.md). Hvilken informasjon som returneres fra datakilden, varierer, men du kan ofte bruke denne formelen til å bekrefte om brukeren har tilgang til å redigere dataene (erstatt *YourDataSource* med navnet på datakilden):
 
-```DataSourceInfo( YourDataSource; DataSourceInfo.EditPermission )```
+```DataSourceInfo( YourDataSource, DataSourceInfo.EditPermission )```
 
 På denne måten kan du bare vise et skjema eller en knapp hvis brukeren har tilgang til å redigere. Sjekk [DataSourceInfo](functions/function-datasourceinfo.md)-dokumentasjonen for en fullstendig liste over informasjon som du kan bruke funksjonen til å spørre etter.
 
@@ -139,7 +138,7 @@ Hvis du fortsatt trenger en variabel (det er mange tilfeller der du trenger dem)
 
 - Globale variabler er det du vanligvis først tenker på. Bruk [Angi](functions/function-set.md)-funksjonen til å angi en global verdi for variabelen og gjøre den tilgjengelig i hele appen:
 
-    ```Set( YourVariable; YourValue )```
+    ```Set( YourVariable, YourValue )```
 
     Deretter kan du referere til *YourVariable* etter navn i hele appen.
 
@@ -158,13 +157,13 @@ Rullegardinmenyer med undermenyer er svært nyttige fordi du kan for eksempel fi
 
 I dette eksemplet kan du legge til en rullegardinliste med navnet **ddSelectType** og angi **Elementer**-egenskapen etter denne formelen:
 
-```Distinct( Impacts; Title )```
+```Distinct( Impacts, Title )```
 
 Rullegardinlisten viser bare kostnader, programeffekt og tidsplan. Deretter kan du legge til neste rullegardinmeny og angi **Elementer**-egenskapen etter denne formelen:
 
-```Filter( Impacts; ddSelectType.Selected.Value in SCategory )```
+```Filter( Impacts, ddSelectType.Selected.Value in SCategory )```
 
-Og så enkelt lager du rullegardinmenyer med undermenyer. Hvis du vil ha mer informasjon, se dette innlegget fra PowerApps-teamet [SharePoint: Rullegardinmenyer med undermenyer i 4 enkle trinn!](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/SharePoint-Cascading-Dropdowns-in-4-Easy-Steps/ba-p/16248) eller denne [fellesskapsvideoen](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Cascading-Dropdown/m-p/92813). Ikke bekymre deg, du kan gjøre det akkurat like enkelt uten SharePoint.
+Og så enkelt lager du rullegardinmenyer med undermenyer. Hvis du vil ha mer informasjon, kan du ta en titt på [dette innlegget fra powerapps team SharePoint: Gjennom gripende rulle gardin lister i fire enkle trinn!](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/SharePoint-Cascading-Dropdowns-in-4-Easy-Steps/ba-p/16248) eller denne [fellesskapsvideoen](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Cascading-Dropdown/m-p/92813). Ikke bekymre deg, du kan gjøre det akkurat like enkelt uten SharePoint.
 
 **Ikke bygg én superapp**  
 Med PowerApps kan du kalle opp én app fra en annen. Så i stedet for det voldsomme InfoPath-skjemaet som holdes sammen med tyggegummi, kan du bygge en gruppe med apper som kaller opp hverandre. Du kan til og med sende data mellom appene, noe som gjør utviklingen enklere.
