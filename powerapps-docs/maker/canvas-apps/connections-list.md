@@ -13,29 +13,29 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 29de71e413a83a1c0939796f7b65bd42d4aca3c4
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 05d02dca1afe6eba0864e7a1da6281998f62b398
+ms.sourcegitcommit: 39b32abb19ad9fae98ca986ded6974bcbbb3cea7
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61556651"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473996"
 ---
 # <a name="overview-of-canvas-app-connectors-for-powerapps"></a>Oversikt over lerretsappkoblinger for PowerApps
 Dataene er i kjernen for de fleste apper, inkludert de du oppretter i PowerApps. Dataene er lagret i en *datakilde*, og du importerer disse dataene inn i appen ved å opprette en *tilkobling*. Tilkoblingen bruker en bestemt *tilkobling* for å kommunisere med datakilden. PowerApps har koblinger for mange populære tjenester og lokale datakilder, inkludert SharePoint, SQL Server, Office 365, Salesforce og Twitter. Hvis du vil komme i gang med å legge til data i en lerretsapp, kan du se [Legg til en datatilkobling i PowerApps](add-data-connection.md).
 
 En kobling kan inneholde **tabeller** med data eller **handlinger**. Noen koblinger inneholder bare tabeller, noen inneholder bare handlinger, og noen inneholder begge. Koblingen kan også være enten en standardkobling eller egendefinert kobling.
 
-## <a name="tables"></a>Tabeller
+## <a name="tables"></a>Oppsettabeller
 
 Hvis koblingen inneholder tabeller, legger du til datakilden. Deretter velger du tabellen i datakilden som du ønsker å administrere. PowerApps henter både tabelldata fra appen og oppdateringsdata fra datakilden. Du kan for eksempel legge til en datakilde som inneholder en tabell med navn **Leksjoner**. Deretter angir du **Elementer**-egenskapen til en kontroll, som et galleri eller skjema, til denne verdien i formellinjen:
 
  ![Elementer-egenskapen for vanlig datakilde](./media/connections-list/ItemPropertyPlain.png)
 
-Du kan angi dataene som appen henter ved å tilpasse **Elementer**-egenskapen for kontrollen som viser deg dataene. Hvis vi fortsetter fra forrige eksempel, kan du sortere eller filtrere dataene i **Leksjoner**-tabellen ved bruk av navnet som et argument for **Søk**- og **SortByColumn**-funksjonene. I denne grafikken angis formelen som **Elementer**-egenskapen er angitt til, og den spesifiserer at dataene sorteres og filtreres basert på teksten i **TextSearchBox1**. 
+Du kan angi dataene som appen henter inn, ved å tilpasse **elementer** -egenskapen for kontrollen som viser dataene dine. Hvis vi fortsetter fra forrige eksempel, kan du sortere eller filtrere dataene i **Leksjoner**-tabellen ved bruk av navnet som et argument for **Søk**- og **SortByColumn**-funksjonene. I denne grafikken angis formelen som **Elementer**-egenskapen er angitt til, og den spesifiserer at dataene sorteres og filtreres basert på teksten i **TextSearchBox1**. 
 
  ![Elementer-egenskapen for utvidet datakilde](./media/connections-list/ItemPropertyExpanded.png)
 
-Hvis du vil ha mer informasjon om hvordan du tilpasser formelen med tabeller, kan du se disse emnene:
+Hvis du vil ha mer informasjon om hvordan du tilpasser formelen med tabeller, kan du se følgende emner:
 
   [Å forstå datakilder i PowerApps](working-with-data-sources.md)<br> 
   [Å generere en app fra Excel-data](get-started-create-from-data.md)<br> 
@@ -53,12 +53,12 @@ Hvis koblingen inneholder handlinger, må du fremdeles velge datakildene som fø
 
 Hvis du må håndtere egendefinerte dataoppdateringer for handlingskoblinger, bygger du en formel som inkluderer **Patch**-funksjonen. Identifiser handlingen og feltene som du skal binde til handlingen, i formelen.  
 
-Hvis du vil ha mer informasjon om hvordan du tilpasser formelen for tilpassede oppdateringer, kan du se disse emnene:
+Hvis du vil ha mer informasjon om hvordan du tilpasser formelen for egen definerte oppdateringer, kan du se følgende emner:
 
 [Patch](functions/function-patch.md)<br>[Collect](functions/function-clear-collect-clearcollect.md)<br>[Update](functions/function-update-updateif.md)
 
 > [!NOTE]
->  **PowerApps fungerer ikke med dynamisk skjema**. Det dynamiske skjemaet for uttrykket refererer til muligheten for at den samme handlingen kan returnere en annen tabell med forskjellige kolonner. Betingelser som kan føre til kolonnene i tabellene som er forskjellige inkluderer inndataparameterne handling, brukeren eller rollen som utfører handlingen og gruppe der brukeren arbeider, blant annet. For eksempel kan SQL Server-lagrede prosedyrer returnere forskjellige kolonner hvis med forskjellige inndata. Connector-dokumentasjonen for handlinger med dynamisk skjema, viser **utdataene fra denne operasjonen er dynamiske.** som returverdi. I motsetning Microsoft Flow fungerer med dynamisk skjema og kan gi en arbeid-rundt for ditt scenario.
+>  **Powerapps fungerer ikke med dynamisk skjema**. Det dynamiske XML-skjemaet til uttrykket refererer til muligheten for at den samme handlingen kan returnere en annen tabell med forskjellige kolonner. Betingelser som kan føre til at Kol onnene i tabellene er ulike, inkluderer handlings inn data parameterne, brukeren eller rollen som utfører handlingen, og gruppen der brukeren arbeider, blant annet. SQL Server lagrede prosedyrer kan for eksempel returnere forskjellige kolonner hvis de kjøres med forskjellige inn data. For handlinger med dynamisk skjema viser koblings dokumentasjonen utdataene **for denne operasjonen er dynamiske.** som retur verdi. Microsoft Flow fungerer i motsetning med dynamisk skjema og kan gi deg en arbeids flyt for ditt scenario.
 
 ## <a name="popular-connectors"></a>Populære koblinger
 
@@ -67,7 +67,7 @@ Denne tabellen inneholder koblinger til mer informasjon om våre mest populære 
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |
 | ![Common Data Service](./media/connections-list/cdm.png) |[**Common Data Service**](../common-data-service/data-platform-intro.md) |&nbsp; |![Office 365 Outlook](./media/connections-list/office365.png) |[**Office 365 Outlook**](connections/connection-office365-outlook.md) |
-| ![SharePoint](./media/connections-list/sharepoint.png) |[**SharePoint**](connections/connection-sharepoint-online.md) |&nbsp; |![Excel](./media/connections-list/excel.png) |[**Excel**](connections/connection-excel.md) |
+| ![Services](./media/connections-list/sharepoint.png) |[**SharePoint**](connections/connection-sharepoint-online.md) |&nbsp; |![Excel](./media/connections-list/excel.png) |[**Excel**](connections/connection-excel.md) |
 | ![SQL Server](./media/connections-list/sql.png) |[**SQL Server**](connections/connection-azure-sqldatabase.md) |&nbsp; |![OneDrive for Business](./media/connections-list/onedrive.png) |[**OneDrive for Business**](connections/cloud-storage-blob-connections.md) |
 | ![Dynamics 365](./media/connections-list/dynamics-365.png) |[**Dynamics 365**](connections/connection-dynamics-crmonline.md) |&nbsp; |![OneDrive](./media/connections-list/onedrive.png) |[**OneDrive**](connections/cloud-storage-blob-connections.md) |
 | ![Office 365-brukere](./media/connections-list/office365.png) |[**Office 365-brukere**](connections/connection-office365-users.md) |&nbsp; |![Dropbox](./media/connections-list/dropbox.png) |[**Dropbox**](connections/cloud-storage-blob-connections.md) |
