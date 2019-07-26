@@ -501,7 +501,7 @@
                   href: ./canvas-apps/functions/function-astype-istype.md
                 - name: JSON
                   href: ./canvas-apps/functions/function-json.md
-                - name: Language
+                - name: Språk
                   href: ./canvas-apps/functions/function-language.md
                 - name: Last
                   href: ./canvas-apps/functions/function-first-last.md
@@ -569,11 +569,11 @@
                   href: ./canvas-apps/functions/function-trig.md
                 - name: Rand
                   href: ./canvas-apps/functions/function-rand.md
-                - name: Refresh
+                - name: Oppdater
                   href: ./canvas-apps/functions/function-refresh.md
                 - name: Relater
                   href: ./canvas-apps/functions/function-relate-unrelate.md
-                - name: Remove
+                - name: Fjern
                   href: ./canvas-apps/functions/function-remove-removeif.md
                 - name: RemoveIf
                   href: ./canvas-apps/functions/function-remove-removeif.md
@@ -655,7 +655,7 @@
                   href: ./canvas-apps/functions/function-groupby.md
                 - name: Opphev relasjon
                   href: ./canvas-apps/functions/function-relate-unrelate.md
-                - name: Update
+                - name: Oppdater
                   href: ./canvas-apps/functions/function-update-updateif.md
                 - name: UpdateContext
                   href: ./canvas-apps/functions/function-updatecontext.md
@@ -675,7 +675,7 @@
                   href: ./canvas-apps/functions/function-form.md
                 - name: Weekday
                   href: ./canvas-apps/functions/function-datetime-parts.md
-                - name: Year
+                - name: År
                   href: ./canvas-apps/functions/function-datetime-parts.md
         - name: Opprett en app i en løsning
           href: ./canvas-apps/add-app-solution.md
@@ -1001,6 +1001,16 @@
           href: ./model-driven-apps/distribute-model-driven-app.md
         - name: Å opprette veiledende hjelp
           href: ./model-driven-apps/create-guided-help-learning-path.md
+    - name: Nettklientprogrammer for overgang
+      items:
+        - name: Hurtigstart for overgang
+          href: ./model-driven-apps/transition-web-app.md
+        - name: Bruk et eksisterende miljø til å komme raskt i gang med overgangen
+          href: ./model-driven-apps/transition-web-app-existing.md
+        - name: Strategiplan for enhetlig grensesnitt
+          href: ./model-driven-apps/unified-interface-playbook.md
+        - name: Nærmer seg en samlet grensesnittovergang
+          href: ./model-driven-apps/approaching-unified-interface.md
     - name: Tilgjengelighet i PowerApps designer for apper
       href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
     - name: Tilpass Dynamics 365-appen for Outlook
