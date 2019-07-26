@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ce9db35844f46e9779055ec30dcba0f9459c3a16
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61575526"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67225789"
 ---
 Ved å installere [!INCLUDE[pn_connected_field_service_msdyn365](pn-connected-field-service-msdyn365.md)], distribueres, når du angir [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-abonnementsinformasjonen din, de nødvendige [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-ressursene (oppført nedenfor), og [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)]-forekomsten sender data (for eksempel kommandoer og registreringer) til [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] for å aktivere IoT-aktiverte scenarioer som registrerer enheter, og sender og får deretter kommandoer til de registrerte enhetene. En administrator kan avinstallere tilkoblet felttjeneste for å fjerne funksjonen og deretter navigere til [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-portalen for å administrere eventuelle relaterte [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tjenester som ikke lenger er nødvendige.  
   
@@ -26,7 +26,7 @@ Ved å installere [!INCLUDE[pn_connected_field_service_msdyn365](pn-connected-fi
   
  [IoT Hub](https://azure.microsoft.com/services/iot-hub/)  
   
- Tilkoblede felttjenester bruker IoT Hub til å administrere tilstanden til de registrerte enhetene og ressursene. I tillegg sender IoT Hub kommandoer og varslinger til tilkoblede enheter og sporer levering av meldinger med mottaksbekreftelse. Enhetsmeldinger sendes på en robust måte for å ta høyde for enheter som bare periodevis er tilkoblet.  
+ Tilkoblede felttjenester bruker IoT Hub til å administrere tilstanden til de registrerte enhetene og ressursene. I tillegg sender IoT Hub kommandoer og varslinger til tilkoblede enheter og sporer levering av meldinger med mottaksbekreftelse. Enhets meldinger sendes på en slite sterk måte for å behandle periodiske tilkoblede enheter.  
   
  **Simulator**  
   

@@ -16,11 +16,11 @@ search.app:
 - PowerApps
 - D365CE
 ms.openlocfilehash: 7dd418db04f72310210925345611bc1a0b2a6f17
-ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
-ms.translationtype: HT
+ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56444413"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "63318522"
 ---
 # <a name="share-records-using-access-team"></a>Del poster ved bruk av tilgangsteam
 
@@ -35,7 +35,7 @@ Tilgangsteam gir tilgang til oppføringer via deling av oppføringer. Tilgangste
   > [!div class="mx-imgBorder"]
   > ![Mine aktive kontoer](media/AccessTeam1.png "Mine aktive kontoer")
 
-3. Velg **Flere kommandoer** (**...**) > **Legg til bruker** i inndelingen **Tilgangsteammedlemmer**.
+3. Velg **Flere kommandoer** ( **...** ) > **Legg til bruker** i inndelingen **Tilgangsteammedlemmer**.
 
   > [!div class="mx-imgBorder"]
   > ![Legg til bruker i tilgangsteam](media/AccessTeam2.png "Legg til bruker i tilgangsteam")
