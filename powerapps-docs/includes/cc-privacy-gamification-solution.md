@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 747ea34b784b852261debe91f587d64ee3277804
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61574947"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67212504"
 ---
 Ved å installere og aktivere [!INCLUDE[pn_gamification](pn-gamification.md)]-løsningen, lagres identifikatorene for den aktiverte brukerens konto (som for eksempel fornavn, etternavn og e-postadresse) i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] for å tillate godkjenning med [!INCLUDE[pn_gamification_shortest](pn-gamification-shortest.md)]-tjenesten, som er drevet av [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]. Dette gjelder for alle brukere som er aktivert i [!INCLUDE[pn_gamification_shortest](pn-gamification-shortest.md)]-tjenesten av systemansvarlig. [!INCLUDE[pn_gamification_shortest](pn-gamification-shortest.md)]-løsningen sender data fra sentrale ytelsesindikatorer (KPI-er) som er konfigurert av en administrator, til [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tjenesten, og dataene lagres i strukturert lagring og BLOB-lagring i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)].  Hver brukers Avatar, egendefinerte utmerkelser og firmalogo er lagret i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)], men informasjonen returneres ikke til [!INCLUDE[pn_crm_shortest](pn-crm-shortest.md)].  
   

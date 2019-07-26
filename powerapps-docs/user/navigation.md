@@ -15,11 +15,11 @@ search.app:
 - PowerApps
 - D365CE
 ms.openlocfilehash: e563c1b17e7ef7628efcf51be2a312d3083bf187
-ms.sourcegitcommit: 441af42c39d34cd001ed2a8e1f84ac7abedd51c2
-ms.translationtype: HT
+ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56982279"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "61530938"
 ---
 #  <a name="basic-navigation-in-a-model-driven-app"></a>Grunnleggende navigering i en modelldrevet app 
 
@@ -73,7 +73,7 @@ Med referansepanelet kan du enkelt fullføre arbeidet uten å måtte gå bort fr
 
 <div class="embeddedvideo"><iframe src="https://www.microsoft.com/en-us/videoplayer/embed/d8224c3f-6e20-4b8e-9d0d-b0f5602c7708" frameborder="0" allowfullscreen=""></iframe></div>
 
-## <a name="notifications"></a>Varslinger 
+## <a name="notifications"></a>Om 
 
 Det finnes tre typer varsler som vises i et skjema: Informasjon, advarsel og feil. Varsler er alltid tilgjengelige øverst i skjemaet, like over toppteksten.
 
