@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: fe2aa8cc0002bdd2531b1e2014a2fb19cd122e4d
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61574982"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67225316"
 ---
 Ved å installere og bruke [!INCLUDE[pn_fieldservice_mobile_app_long](pn-fieldservice-mobile-app-long.md)]-mobilappen på en mobilenhet, samtykker brukerne til overføring av organisasjonens tilordnede ID og sluttbruker-ID og enhets-ID til Microsoft og Resco.net Inc., med det formål å levere tjenestene og kontrollere at programvaren er riktig lisensiert.  
 &nbsp;<br />

@@ -1,13 +1,21 @@
+---
+ms.openlocfilehash: f1c11fd086a91db6dc0d0629549166bbba547dee
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
+ms.contentlocale: nb-NO
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67226496"
+---
 ## <a name="mapping-functions-for-dynamics-365-customer-engagement-plan"></a>Kartfunksjoner for Dynamics 365 Customer Engagement Plan 
- Field Service og Project Service Automation har nøkkelfunksjoner som er avhengige av posisjonen. Posisjonen til for eksempel forretningsforbindelser for service (som angir hvor service eller oppgaver finner sted) eller start- eller sluttposisjonen for ressurser (dem som utfører service eller oppgaver).  Det er nødvendig å bruke en karttjeneste (i dette tilfellet Bing-kart) hvis systemet skal kunne vise dem på et kart, eller beregne avstanden mellom punkter.  
+ Automatisering av felttjeneste og prosjekttjeneste har nøkkelfunksjoner som avhenger av plassering. For eksempel plasseringen til tjenestekontoer (som definerer hvor tjenester eller oppgaver finner sted), eller start-/sluttplasseringen til ressurser (personer som utfører tjenester eller oppgaver).  For at systemet skal vise disse på et kart, eller beregne avstander mellom punkter, er det nødvendig å bruke en karttjeneste ( i dette tilfellet Bing-kart).  
   
- Nedenfor vises arbeidsflyten til og fra tjenesten Bing-kart:  
+ Dette er arbeidsflyten til og fra Bing-karttjenesten:  
   
 |Fra Dynamics 365|Bing-kart returnerer|Obs!|  
 |-----------------------|-----------------------|----------|  
-|Adresse (forretningsforbindelse eller ressurs)|Breddegrad og lengdegrad for adressen (posisjon)|Dette kalles geokoding for en adresse.|  
-|Sett med posisjoner (breddegrad/lengdegrad)|Avstand mellom posisjoner|Dette kan brukes for å finne optimale ruter for ressurser eller til å beregne reisetid.|  
-|Sett med posisjoner (breddegrad/lengdegrad)|Kartvisning med posisjonene som stifter på kartet|Dette brukes til å vise forretningsforbindelsene og ressursene i en kartvisning.|  
+|Adresse (konto eller ressurs)|Breddegrad og lengdegrad for adressen (plassering)|Dette omtales som «geokoding» av en adresse.|  
+|Sett med plasseringer (breddegrad/lengdegrad)|Avstanden mellom plasseringer|Dette kan brukes til å finne optimale ruter for ressurser, eller til å beregne reisetid.|  
+|Sett med plasseringer (breddegrad/lengdegrad)|Kartvisning med plassering som nåler på kartet|Dette brukes til å vise kontoer og ressurser i en kartvisning.|  
   
 > [!NOTE]
->  Bortsett fra dataene som angis ovenfor, sendes det ikke andre data til tjenesten Bing-kart.
+>  Bortsett fra dataene som er omtalt ovenfor, sendes ingen data til Bing-karttjenesten.

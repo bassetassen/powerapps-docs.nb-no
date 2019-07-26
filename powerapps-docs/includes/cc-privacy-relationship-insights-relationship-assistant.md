@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 40dcde544894751da2696defc76819892659cb25
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61577526"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67224794"
 ---
 Begrenset datautveksling, som inkluderer navnet på en avsender og e-postadresse, i tillegg til utdrag fra brødteksten i e-posten, hentes ved å aktivere Relationship Assistant-funksjonen (men er ikke lagret i [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]), med hensikten å vise relevante innsikter i e-posten. Relationship Assistant-funksjonen kan videre konfigureres til å hente informasjon når det gjelder nyheter, økonomi og flyreiseinformasjon, ved å sende alle forespørsler til eksterne komponenter, som MSN Money og Bing (som ikke regnes som [!INCLUDE[pn_ms_dyn_365](pn-ms-dyn-365.md)] Core Services). En administrator kan aktivere og deaktivere Relationship Assistant-funksjonen ved å gå til **Innstillinger** > **Konfigurasjon av intelligens**, klikke på **Relationship Assistant**-fanen, og deretter merke av riktig.  
   

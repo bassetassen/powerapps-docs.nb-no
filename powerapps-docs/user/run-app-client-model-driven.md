@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 07/09/2018
+ms.date: 11/16/2018
 ms.author: matp
 ms.custom: ''
 ms.reviewer: ''
@@ -16,12 +16,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 316df7e4876a74ee779e85e54291579dcc9f7cb1
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: e48b568bae581f080949d5b9ca913f7c01223ee4
+ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42830717"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "61546458"
 ---
 # <a name="run-a-model-driven-app-on-a-mobile-device"></a>Kjør en modelldreven app på en mobil enhet
 
@@ -34,18 +34,17 @@ Hvis du vil følge denne prosedyren, og ikke er registrert for PowerApps, kan du
 Modelldrevne apper kjører ikke PowerApps-mobilappen. Du kjører i stedet for en modelldrevet ap på en mobil enhet ved bruk av enten Dynamics 365-mobilappen eller på telefonens mobilleser. 
 
 ### <a name="use-the-mobile-app"></a>Å bruke mobilappen
-Installer Dynamics 365-appen for telefoner eller Dynamics 365-appen for nettbrett fra enhetens appbutikk. Hvis du vil ha mer informasjon, kan du se [Installer Dynamics 365 for telefoner og nettbrett](https://docs.microsoft.com/dynamics365/customer-engagement/mobile-app/install-dynamics-365-for-phones-and-tablets)
+Installer Dynamics 365-appen for telefoner eller Dynamics 365-appen for nettbrett fra enhetens appbutikk. Mer informasjon: [Installer Dynamics 365 for telefoner og nett brett](https://docs.microsoft.com/dynamics365/customer-engagement/mobile-app/install-dynamics-365-for-phones-and-tablets)
 
  ![Mobilapper for telefoner](media/run-app-client-model-driven/mobile-app-for-phone.png)
 
 ### <a name="run-in-your-phones-browser"></a>Å kjøre i telefonens mobilleser
-Gå til [hjemmesiden til Dynamics 365](https://home.dynamics.com) eller skriv inn nettadressen direkte inn i telefonens mobilleser, og følg anvisningene på skjermen for å laste inn appen. Mer informasjon: [Kjør en app i en nettleser](run-app-browser.md)
+Gå til [hjemmesiden til Dynamics 365](https://home.dynamics.com) eller skriv inn nettadressen direkte inn i telefonens mobilleser, og følg anvisningene på skjermen for å laste inn appen. Mer informasjon: [Kjøre en app i en nettleser](run-app-browser.md)
 
 ![Å kjøre appen i telefonens mobilleser](media/run-app-client-model-driven/web-browser-on-phone.png)
 
 
 ## <a name="next-steps"></a>Neste trinn
-I denne emnet lærte du hvordan du kjører en modelldrevet app på en mobil enhet. Du kan også kjøre arbeidssonebaserte apper på en mobil enhet.
-
-> [!div class="nextstepaction"]
-> [Å kjøre en arbeidssonebasert app på en mobil enhet](run-app-client.md)
+I denne emnet lærte du hvordan du kjører en modelldrevet app på en mobil enhet. Hvis du vil ha informasjon om:
+- Hvis du bruker en modell drevet app, kan du se [bruke modell drevne apper](use-model-driven-apps.md)
+- Hvis du kjører en lerret-app på en mobil enhet, kan du se [kjøre en lerret-app på en mobilen het](run-app-client.md)

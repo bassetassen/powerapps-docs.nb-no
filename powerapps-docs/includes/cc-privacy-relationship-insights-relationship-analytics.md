@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 864bb7bde775f88cdf43ba5c453bd1ff02f81b85
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.openlocfilehash: 1f6d0eb19a8127e42f1d6a8da8d8c3a452782be0
+ms.sourcegitcommit: 982cab99d84663656a8f73d48c6fae03e7517321
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61577523"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67456933"
 ---
 Når du aktiverer relasjonsanalyse, en innebygd intelligens funksjon, sendes og lagres              [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-kundedata, inkludert identifiserbar informasjon, i              [!INCLUDE[pn_customerinsight_full](pn-customer-insights-full.md)]. Det er en tjeneste som kjører i Azure, og formålet med dette er å beregne relasjons-KPI-er mellom             [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-brukere og -kunder. Dataene lagres også midlertidig i              [!INCLUDE[pn_azure_service_fabric](pn-azure-service-fabric.md)] og behandles for ekstra utdata, som relasjonstilstander og trender. Informasjonen returneres deretter til              [!INCLUDE[pn_customerinsight_short](pn-customer-insights-short.md)] og              [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)].  
   
@@ -20,7 +20,7 @@ Når du aktiverer relasjonsanalyse, en innebygd intelligens funksjon, sendes og 
   
  [!INCLUDE[pn_customerinsight_short](pn-customer-insights-short.md)], en tjeneste som kjører i              [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)], lagrer              [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-data, inkludert identifiserbar informasjon om kunder. Formålet med dette er å beregne utdataene for Relasjonsanalyse-funksjonen. Forhåndsvisningen av [!INCLUDE[pn_customerinsight_short](pn-customer-insights-short.md)] er underlagt disse [tilleggsvilkårene for bruk for evalueringsfunksjonalitet](http://go.microsoft.com/fwlink/p/?LinkId=511446).  
   
- [Lær mer om forhåndsvisningen av Customer Insights](https://azure.microsoft.com/en-us/services/customer-insights/).  
+ [Lær mer om forhåndsvisningen av Customer Insights](https://azure.microsoft.com/services/customer-insights/).  
   
  [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)  
   

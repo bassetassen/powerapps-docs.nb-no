@@ -15,11 +15,11 @@ search.app:
 - PowerApps
 - Powerplatform
 ms.openlocfilehash: 0f376d8e6b86a7abf65e744275fc4e90beabde43
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42850034"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "61526498"
 ---
 # <a name="view-analytics-reports-for-your-app"></a>Å vise analyserapporter for appen din
 Har du utviklet en app og delt den med organisasjonen din?  Er du nysgjerrig på hvor mange av kollegene dine som bruker den daglig?
@@ -53,7 +53,7 @@ Ja, du kan laste ned en CSV-fil med data for hvilket som helst diagram i en rapp
     ![Å laste ned diagramdata](./media/app-analytics/analytics-download.png)
 
 ## <a name="are-there-going-to-be-any-other-reports"></a>Kommer det til å bli flere rapporter?
-Ja! Vi planlegger faktisk å utvikle lignende rapporter som omhandler appytelse og feilrapportering.
+ja! Vi planlegger faktisk å utvikle lignende rapporter som omhandler appytelse og feilrapportering.
 
 Hvis du har tilbakemeldinger, spørsmål eller ønsker, vil vi gjerne høre fra deg på vårt [idéforum for PowerApps](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).
 
