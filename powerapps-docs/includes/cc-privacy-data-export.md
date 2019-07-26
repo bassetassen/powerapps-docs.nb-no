@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: e9b0446c2fb09cad33f5a3ae4bb69103f7d07d70
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61579123"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67212657"
 ---
 Når du bruker dataeksporttjenesten ved aktivering av en dataeksportprofil i [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)], sendes dataene til enhetene som er lagt til i profilen, til [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]. Den innledende synkroniseringen omfatter alle dataene som er tilknyttet enhetene som er lagt til i eksportprofilen, men deretter omfatter synkroniseringen bare nye endringer, som kontinuerlig sendes til dataeksporttjenesten. Data som sendes til dataeksporttjenesten lagres midlertidig i [!INCLUDE[pn_azure_service_bus](pn_azure_service_bus.md)] og [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Storage, behandles i [!INCLUDE[pn_azure_service_fabric](pn_azure_service_fabric.md)] og synkroniseres til slutt (settes inn, oppdateres eller slettes) i måldatabasen som er angitt i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-abonnementet. Når dataene er synkronisert, slettes de fra [!INCLUDE[pn_azure_service_bus](pn_azure_service_bus.md)] og [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Storage. Hvis det oppstår en feil under datasynkroniseringen, lagres et minimalt antall data som tilhører enhetstype, Post-ID og tidsstempel for synkronisering i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Storage, for å tillate nedlasting av en liste med poster som ikke ble oppdatert.  
   

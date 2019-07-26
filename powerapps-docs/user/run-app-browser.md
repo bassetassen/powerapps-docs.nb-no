@@ -5,7 +5,7 @@ author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 07/09/2018
+ms.date: 11/16/2018
 ms.author: matp
 manager: kvivek
 ms.custom: ''
@@ -16,12 +16,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: f72d4b5192bd30da676e65e232bc2a3090cb77bb
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 31bef01ef46fd0fe2ed7bae30e63d53c169812db
+ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42832429"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "63321589"
 ---
 # <a name="run-an-app-in-a-web-browser"></a>Kjør en app i en nettleser
 Når du oppretter en app, eller noen deler en app med deg, kan du kjøre appen i Windows, iOS, Android eller i en nettleser. I dette emnet lærer du hvordan du kjører en lerretsapp eller en modelldrevet app i en nettleser fra [Dynamics 365-hjemmesiden](https://home.dynamics.com).
@@ -30,8 +30,8 @@ Hvis du vil følge denne hurtiginnføringen, trenger du:
 - En PowerApps-lisens. Dette er tilgjengelig med et PowerApps-abonnement som for eksempel [prøveversjon på PowerApps-abonnement 2](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps), eller et [Microsoft Office 365](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1)- eller [Dynamics 365](https://dynamics.microsoft.com/pricing/)-abonnement som inkluderer PowerApps. 
 - Tilgang til en app som du opprettet, eller som noen andre har delt med deg.
 - Tilgang til støttet nettleser og operativsystem.
-   - For lerretsapper kan du se: [Systemkrav, grenser og konfigurasjonsverdier](../maker/canvas-apps/limits-and-config.md)
-   - For modelldrevne apper kan du se: [Støttede nettlesere og mobilenheter](https://docs.microsoft.com/dynamics365/customer-engagement/admin/supported-web-browsers-and-mobile-devices)
+   - For lerrets apper kan du se: [System krav, grenser og konfigurasjons verdier](../maker/canvas-apps/limits-and-config.md)
+   - For modell drevne apper kan du se: [Nett lesere og mobile enheter som støttes](https://docs.microsoft.com/dynamics365/customer-engagement/admin/supported-web-browsers-and-mobile-devices)
 
 
 ## <a name="sign-in-to-dynamics-365"></a>Å logge deg på Dynamics 365
@@ -61,13 +61,14 @@ Du kan lagre en nettadresse for en app som et bokmerke i nettleseren og kjøre d
 ## <a name="connect-to-data"></a>Å koble til data
 Hvis appen krever en tilkobling til en datakilde eller samtykke for å bruke funksjonene til enheten (som kamera eller posisjonstjenester), må du gi samtykke før du kan bruke appen. Vanligvis blir du bedt om dette bare første gang.
 
-![Tilkobling](./media/run-app-browser/app-connection.png)
+![Connection](./media/run-app-browser/app-connection.png)
 
 ## <a name="close-an-app"></a>Å lukke en app
 Logg ut av hjemmesiden for Dynamics 365 for å lukke appen, eller åpne en annen app.
 
 ## <a name="next-steps"></a>Neste trinn
-I dette emnet lærer du hvordan du kjører en modelldrevet app i en nettleser. Fortsett til neste emne for å lære hvordan du kjører en lerretsapp på en mobil enhet.
+I dette emnet lærer du hvordan du kjører en modelldrevet app i en nettleser. Slik finner du ut hvordan du kan gjøre følgende:
+- kjøre en lerret-app på en mobil enhet, kan du se [kjøre en lerret-app på en mobilen het](run-app-client.md)
+- kjøre en modell drevet app på en mobil enhet, kan du se [kjøre en modell drevet app på en mobilen het](run-app-client-model-driven.md)
+- Bruk en modell drevet app, se [bruke modell drevne apper](use-model-driven-apps.md)
 
-> [!div class="nextstepaction"]
-> [Å kjøre en arbeidssonebasert app på en mobil enhet](run-app-client.md)

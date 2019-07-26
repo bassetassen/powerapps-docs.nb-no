@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 252f09737dbf55309a64ef5d02d479fde0e61c0e
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61577510"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67224854"
 ---
 Når du aktiverer e-postengasjement, en innebygd intelligens funksjon, og du sender en e-post med**Follow**-innstillingen fra [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)], blir informasjon om samhandlinger med e-postmeldingen av mottakerne samlet inn og lagret i [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]. Formålet med dette er å beregne mottakernes aktivitets-KPI-er og samhandlinger på «fulgte» e-poster.  
   

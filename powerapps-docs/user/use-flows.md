@@ -15,12 +15,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 3041b6cb230aec72a5c3609ef1ea63443bd4a2cc
-ms.sourcegitcommit: a99f9458a50f6fa64706200bec97273aac20036d
+ms.openlocfilehash: 0ecf255ab6e710bf65bd60e39b6dc9b8023876f6
+ms.sourcegitcommit: 982cab99d84663656a8f73d48c6fae03e7517321
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66034828"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67457200"
 ---
 # <a name="use-microsoft-flow-to-automate-processes"></a>Bruk Microsoft Flow til å automatisere prosesser
 
@@ -34,7 +34,7 @@ Koble til Microsoft Flow fra appen for å administrere flytene dine.
 > [!NOTE]
 > Hvis du vil administrere og kjøre Microsoft Flow fra appen, må Microsoft Flow aktiveres i systeminnstillinger for organisasjonen. Mer informasjon:  [Flyter i organisasjonen din](https://docs.microsoft.com/flow/organization-q-and-a) 
   
-1. Velg på kommandolinjen, **Flow**.  
+1. Velg **flyt**på kommando linjen.  
   
    > [!div class="mx-imgBorder"]
    > ![Microsoft Flow-meny](media/flow.png "Microsoft Flow-meny") 
@@ -47,7 +47,7 @@ Koble til Microsoft Flow fra appen for å administrere flytene dine.
   
    -   Velg **Logg deg på Flow** for å koble på Microsoft Flow og vise tilgjengelige flyter du kan kjøre. Dette vises bare hvis du for øyeblikket ikke er logget på Microsoft Flow.   
 
-    Hvis du vil ha mer informasjon om hvordan du oppretter en flyt, kan du se [Kom i gang med Microsoft Flow](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/using-logic-flows#create-a-flow)  
+    Hvis du vil ha mer informasjon om hvordan du oppretter en flyt, kan du se [Kom i gang med Microsoft Flow](https://docs.microsoft.com/powerapps/maker/canvas-apps/using-logic-flows#create-a-flow)  
     
  
     
