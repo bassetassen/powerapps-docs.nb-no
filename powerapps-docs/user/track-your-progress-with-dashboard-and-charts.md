@@ -67,7 +67,7 @@ Diagrammer gir deg en rask oversikt over hvordan du sporer målene dine. De er o
 
 -   Hold musen over diagrammet for å se et verktøy tips som gir rask informasjon om det området i diagrammet.
 -   Klikk på området i et diagram for å se rute nett visning med flere detaljer om dataene i diagrammet.
--   Hvis du vil utvide et diagram, velger du **Utvid**diagram![Utvid]diagram-knappen Utvid diagram-(media/expandviewbutton.png "visning") .
+-   Hvis du vil utvide et diagram, velger du **Utvid**diagram![Utvid](media/expandviewbutton.png " diagram-knappen Utvid diagram- visning") .
 -   Hvis du vil vise poster i diagrammet eller oppdatere diagrammet, velger du ![flere kommandoer](media/MoreButton.png "flere") kommandoer, og deretter velger du en handling: **Oppdatere** eller **vise poster**.
      
      > [!div class="mx-imgBorder"]

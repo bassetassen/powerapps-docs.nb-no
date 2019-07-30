@@ -48,7 +48,7 @@ Når en rapport er en SQL Server Reporting Services-rapport, er aktivert for for
 
    2.  Velg spørrings relasjonelle operatoren, og velg en operator.  
 
-   3.  Velg **Angi verdi**, og skriv inn en verdi du vil filtrere på. For noen verdier kan du merke av for **Merk eller endre verdiene for dette feltet** . Klikk ![]på ellipse-knappen(media/ellipsis-button.png "for å åpne") dialog boksen **Velg verdier** , og Velg verdien du vil bruke.  
+   3.  Velg **Angi verdi**, og skriv inn en verdi du vil filtrere på. For noen verdier kan du merke av for **Merk eller endre verdiene for dette feltet** . Klikk på ellipse-![knappen](media/ellipsis-button.png " for å åpne") dialog boksen **Velg verdier** , og Velg verdien du vil bruke.  
 
    ### <a name="to-group-criteria"></a>Til gruppe vilkår
    Du må velge to eller flere rader for samme posttype. Rader med felt verdier fra forskjellige oppførings typer, for eksempel oppførings typer for **konto** og **kontakt** , kan imidlertid ikke grupperes.  
