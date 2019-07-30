@@ -29,7 +29,7 @@ Endre skjerm innstillingene i en app slik at de passer dine preferanser. Du kan 
     
 ## <a name="to-set-personal-options"></a>Å angi personlige alternativer  
   
-1.  Velg **Innstillinger** knapp Alternativer-knappen ![for]alternativer for powerapps(media/options-button.png "for powerapps") øverst til høyre på skjermen.  
+1.  Velg **Innstillinger** knapp Alternativer-knappen ![for](media/options-button.png "alternativer for powerappsfor powerapps") øverst til høyre på skjermen.  
   
 2.  Velg **Innstillinger for personlige data**.  
   
