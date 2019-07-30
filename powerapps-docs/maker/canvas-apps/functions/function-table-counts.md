@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68473933"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="count-counta-countif-and-countrows-functions-in-powerapps"></a>Funksjonene Count, CountA, CountIf og CountRows i PowerApps
 Teller alle [poster](../working-with-tables.md#records) i en [tabell](../working-with-tables.md), eller teller alle poster som oppfyller en betingelse.
@@ -42,7 +43,7 @@ Hver av disse funksjonene returnerer et tall.
 
 * *SingleColumnTable* – nødvendig.  Kolonne med poster som skal telles.  
 
-**CountIf**( *Table*, *LogicalFormula* )
+**CountIf**( *Table*; *LogicalFormula* )
 
 * *Tabell* – obligatorisk.  En tabell med poster som skal telles.
 * *LogicalFormula* – obligatorisk.  Formelen som skal evalueres for hver post i tabellen.  Postene som returneres som **sann** for denne formelen, blir talt.  Formelen kan referere til kolonner i tabellen.
@@ -55,7 +56,7 @@ Hver av disse funksjonene returnerer et tall.
 1. Importer eller opprett en [samling](../working-with-data-sources.md#collections) kalt **Beholdning**, som den første underprosedyren i [Vis bilder og tekst i et galleri](../show-images-text-gallery-sort-filter.md) beskriver.
 2. Legg til en etikett, og angi **[Tekst](../controls/properties-core.md)** -egenskapen til denne formelen:
    
-    **CountIf(Inventory, UnitsInStock < 30)**
+    **CountIf(Inventory; UnitsInStock < 30)**
    
     Etiketten viser **2**, fordi to av produktene (Ganymedes og Callisto) har færre enn 30 enheter på lager.
 3. Legg til en annen etikett, og angi **[Tekst](../controls/properties-core.md)** -egenskapen til denne formelen:
