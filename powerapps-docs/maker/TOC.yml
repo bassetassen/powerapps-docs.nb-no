@@ -501,7 +501,7 @@
                   href: ./canvas-apps/functions/function-astype-istype.md
                 - name: JSON
                   href: ./canvas-apps/functions/function-json.md
-                - name: Språk
+                - name: Language
                   href: ./canvas-apps/functions/function-language.md
                 - name: Last
                   href: ./canvas-apps/functions/function-first-last.md
@@ -569,11 +569,11 @@
                   href: ./canvas-apps/functions/function-trig.md
                 - name: Rand
                   href: ./canvas-apps/functions/function-rand.md
-                - name: Oppdater
+                - name: Refresh
                   href: ./canvas-apps/functions/function-refresh.md
                 - name: Relater
                   href: ./canvas-apps/functions/function-relate-unrelate.md
-                - name: Fjern
+                - name: Remove
                   href: ./canvas-apps/functions/function-remove-removeif.md
                 - name: RemoveIf
                   href: ./canvas-apps/functions/function-remove-removeif.md
@@ -655,7 +655,7 @@
                   href: ./canvas-apps/functions/function-groupby.md
                 - name: Opphev relasjon
                   href: ./canvas-apps/functions/function-relate-unrelate.md
-                - name: Oppdater
+                - name: Update
                   href: ./canvas-apps/functions/function-update-updateif.md
                 - name: UpdateContext
                   href: ./canvas-apps/functions/function-updatecontext.md
@@ -675,7 +675,7 @@
                   href: ./canvas-apps/functions/function-form.md
                 - name: Weekday
                   href: ./canvas-apps/functions/function-datetime-parts.md
-                - name: År
+                - name: Year
                   href: ./canvas-apps/functions/function-datetime-parts.md
         - name: Opprett en app i en løsning
           href: ./canvas-apps/add-app-solution.md
@@ -822,6 +822,8 @@
                   href: ./model-driven-apps/create-site-map-app.md
                 - name: Legg til eller rediger appkomponenter
                   href: ./model-driven-apps/add-edit-app-components.md
+                - name: Legg til teamenheten som et oppslagsalternativ
+                  href: ./model-driven-apps/team-entity-lookup.md
             - name: Arbeid med felt
               href: ./model-driven-apps/create-design-forms.md
               items:
