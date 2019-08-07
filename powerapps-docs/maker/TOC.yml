@@ -51,6 +51,8 @@
               href: ../user/assign-or-share-records.md
             - name: Del poster ved bruk av tilgangsteam
               href: ../user/Access-team.md
+            - name: Legg til en tilkoblingsrolle
+              href: ../user/add-connection-role.md
             - name: Deaktiver kontoer eller kontakter
               href: ../user/deactivate-activate-account-contact.md
             - name: Spor fremdriften med instrumentbord og diagrammer
@@ -1242,6 +1244,8 @@
           href: ./common-data-service/data-platform-complex-entities.md
         - name: Begrensede enheter som krever Dynamics 365-lisenser
           href: ./common-data-service/data-platform-restricted-entities.md
+    - name: 'Integrering med SharePoint, OneNote og OneDrive'
+      href: ./common-data-service/sharepoint-onedrive-onenote-intro.md
     - name: Opprette en Power BI-rapport
       href: ./common-data-service/data-platform-powerbi-connector.md
     - name: Oversett den tilpassede enheten og feltteksten

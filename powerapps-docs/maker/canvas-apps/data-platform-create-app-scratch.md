@@ -7,19 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 09/21/2019
+ms.date: 05/21/2019
 ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 23c5ead5e8dde0b781c0c83b366baea0a199a56e
-ms.sourcegitcommit: 0272fc5beac5bace5781b1de986a0e2703dd5ddc
+ms.openlocfilehash: 482a5a91c241aa9fd8c85dfb970cf692cd2ab1a3
+ms.sourcegitcommit: 38270060d2d0b784fe065164e6112c011b26e17c
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974417"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68830468"
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service"></a>Opprett en lerretsapp fra grunnen av ved hjelp av Common Data Service
 
@@ -61,7 +60,7 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 1. Velg **BrowseGallery1** i venstre navigasjonsrute, og angi deretter verdien for **Elementer**-egenskapen til denne formelen:
 
-    `SortByColumns(Search(Accounts; TextSearchBox1.Text; "name"); "name"; If(SortDescending1; SortOrder.Descending; SortOrder.Ascending))`
+    `SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
 
     Denne formelen angir at:
 
@@ -93,7 +92,7 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
     ![Å angi skjemaets Datakilde- og Element-egenskap](./media/data-platform-create-app-scratch/form-datasource.png)
 
-1. På den **Egenskaper** fanen i den høyre ruten, velg **Rediger felt** å åpne den **felt** ruten.
+1. På **Egenskaper** -fanen i ruten til høyre velger du **Rediger felt** for å åpne **felt** -ruten.
 
 1. Velg **Legg til felt**, og merk deretter av for disse feltene:
 
@@ -105,7 +104,7 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
     - **Årlig omsetning**
 
     > [!NOTE]
-    > Utenfor dette scenarioet kan du opprette et egendefinert felt ved å velge **nytt felt**, som gir den nødvendige informasjonen, og deretter velge **ferdig**. Mer informasjon: [Opprette et felt](../common-data-service/create-edit-field-portal.md#create-a-field).<br><br>![](media/data-platform-create-app-scratch/choose-or-add-fields.png "Velg og Legg til et felt")
+    > Utenfor dette scenarioet kan du opprette et egen definert felt ved å velge **nytt felt**, gi den nødvendige informasjonen, og deretter velge **ferdig**. Mer informasjon: [Opprett et felt](../common-data-service/create-edit-field-portal.md#create-a-field).<br><br>![](media/data-platform-create-app-scratch/choose-or-add-fields.png "Velg og Legg til et felt")
 
 1. Velg **Legg til**.
 
@@ -127,25 +126,25 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 1. Angi **OnSelect**-egenskapen for plussikonet til denne formelen:
 
-    `NewForm(EditForm1);; Navigate(FormScreen; ScreenTransition.None)`
+    `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Legg til-ikon](./media/data-platform-create-app-scratch/plus-icon.png)
 
 1. Angi **OnSelect**-egenskapen for den første pilen som peker til høyre, til denne formelen:
 
-    `EditForm(EditForm1);; Navigate(FormScreen; ScreenTransition.None)`
+    `EditForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Neste-ikon](./media/data-platform-create-app-scratch/next-icon.png)
 
 1. På **FormScreen** angir du **OnSelect**-egenskapen for det valgte ikonet til denne formelen:
 
-    `ResetForm(EditForm1);;Navigate(BrowseScreen; ScreenTransition.None)`
+    `ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Avbryt-ikon](./media/data-platform-create-app-scratch/cancel-icon.png)
 
 1. Angi **OnSelect**-egenskapen for avmerkingsikonet til denne formelen:
 
-    `SubmitForm(EditForm1);; Navigate(BrowseScreen; ScreenTransition.None)`
+    `SubmitForm(EditForm1); Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Avmerking-ikon](./media/data-platform-create-app-scratch/checkmark-icon.png)
 
@@ -153,7 +152,7 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 1. Angi **Papirkurv**-ikonets **Farge**-egenskap til **Hvit** og **OnSelect**-egenskap til denne formelen:
 
-    `Remove(Accounts; BrowseGallery.Selected);; Navigate(BrowseScreen; ScreenTransition.None)`
+    `Remove(Accounts, BrowseGallery.Selected); Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Papirkurv-ikon](./media/data-platform-create-app-scratch/trash-icon.png)
 

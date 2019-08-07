@@ -57,11 +57,11 @@ Hvis du vil ha informasjon om hvordan du oppretter en egen definert rapport, kan
   
    2.  Tekst boksen **overordnet rapport** viser overordnet rapport for gjeldende rapport, hvis den finnes.  
   
-   3. **Kategorier**. Merk av for **Velg eller endre verdiene for dette feltet** ![ellipse](media/ellipsis-button.png "") , knapp for uttrykks knapp, og angi deretter kategoriene som skal inkluderes i denne rapporten.  
+   3. **Kategorier**. Merk av for **Velg eller endre verdiene for dette feltet** ![ellipse](media/ellipsis-button.png "ellipse") , knapp for uttrykks knapp, og angi deretter kategoriene som skal inkluderes i denne rapporten.  
   
-   4. **Relaterte oppførings typer**. Hvis du vil at rapporten skal vises i rapporter-listen på en side for bestemte oppførings typer, velger du **Velg eller endre verdiene for feltet for** uttrykks knapp for ![ellipse](media/ellipsis-button.png "") , og deretter velger du oppførings typer.  
+   4. **Relaterte oppførings typer**. Hvis du vil at rapporten skal vises i rapporter-listen på en side for bestemte oppførings typer, velger du **Velg eller endre verdiene for feltet for** uttrykks knapp for ![ellipse](media/ellipsis-button.png "ellipse") , og deretter velger du oppførings typer.  
   
-   5. **Vises i**. Hvis du vil angi hvor rapporter skal vises, velger du **Velg eller endre verdiene for feltet for** ![ellipse](media/ellipsis-button.png "") , knapp for uttrykks knapp, og deretter velger du ett eller flere av alternativene.  
+   5. **Vises i**. Hvis du vil angi hvor rapporter skal vises, velger du **Velg eller endre verdiene for feltet for** ![ellipse](media/ellipsis-button.png "ellipse") , knapp for uttrykks knapp, og deretter velger du ett eller flere av alternativene.  
   
         Hvis ingen verdier er valgt, vil rapporten ikke være synlig for slutt brukerne.  
   
