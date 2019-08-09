@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/26/2018
+ms.date: 8/02/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,14 +15,16 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 308e36938c673a5f6ba83be02591a7199af20432
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: 8f061078b4401ee1ea2db9a2e7e6a4443bd053b6
+ms.sourcegitcommit: 4e4f7945c3f24faf9bb8a856a5f3892cbfd113be
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "61529567"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783757"
 ---
 # <a name="add-an-appointment-email-phone-call-note-or-task-activity-to-the-timeline"></a>Legg til en avtale, e-postmelding, telefonsamtale, notat eller oppgaveaktivitet på tidslinjen 
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Legg til **Aktiviteter** på **Tidslinje**-veggen for å holde oversikten over all kommunikasjon med en kunde eller kontakt. Du kan for eksempel ta notater, legge til innlegg, legge til en oppgave, sende e-postmelding, legge til detaljer om en telefonsamtale eller gjøre avtaler. Systemet tidsstempler hver aktivitet automatisk og viser hvem som opprettet den. Du og andre personer på teamet kan bla gjennom aktivitetene for å se loggen mens du jobber med en kunde. 
 
@@ -30,6 +32,7 @@ Legg til **Aktiviteter** på **Tidslinje**-veggen for å holde oversikten over a
 - Hvis **Angående**-feltet til en aktivitet er angitt, vises aktiviteten i oppføringen den er knyttet til. 
 - Du kan også velge filtreringsruten for å filtrere aktivitetene etter oppføringstype og -dato. 
 - Når en ny aktivitet opprettes, får du et **Dette gikk glipp av**-varsel på **Tidslinje**-veggen.
+- En e-postmelding med et vedlagt bilde vises innebygd i brød teksten i e-postmeldingen.
 
   > [!div class="mx-imgBorder"]
   > ![Tidslinjevisning av aktiviteter i PowerApps](media/TimelineViewOfActivity.png "Tidslinjevisning av aktiviteter i PowerApps")  
@@ -95,6 +98,17 @@ Hvis du vil legge til en e-postaktivitet i en oppføring, må du først lagre op
 5. Hvis du vil bruke en mal på hele brødteksten i e-postmeldingen, klikker du på **Sett inn mal** på kommandolinjen, og velger deretter malen.   
   
 6. Når du er ferdig med å fylle ut skjemaet, velger du **Send**. 
+
+
+    > [!NOTE]
+    > Hvis du vil vise en liste over e-postmeldinger i en samtale visning, kan du gå til **Innstillinger** > for innstillinger for**personlige data** > **e-post** og deretter velge **Vis e-post som** Hvis du vil ha mer informasjon om personlige innstillinger, kan du se [Angi personlige alternativer](set-personal-options.md).
+
+   > [!div class="mx-imgBorder"]
+   > ![Angi personlige alternativer](media/emailsettings1.png "Angi personlige alternativer")
+   
+    > [!div class="mx-imgBorder"]
+    > ![Angi e-post for personlige alternativer](media/emailsettings2.png "Angi personlige alternativer for e-post")
+
   
 ## <a name="add-an-appointment"></a>Legg til en avtale  
 
@@ -118,10 +132,14 @@ Du kan også enkelt legge til notater i aktivitetsområdet.
 
 3. Når du er ferdig med å fylle ut skjemaet, velger du **Legg til notat** for å lagre notatet.
 
+
+> [!NOTE]
+> Du kan også legge til et notat ved å bruke **plusstegnet** i den øvre delen av **Tidslinje**-veggen.
+
    > [!div class="mx-imgBorder"]
    > ![Legg til et notat](media/addnote.png "Legg til et notat")
 
-Når notatet er lagt til, kan du slette eller redigere notatet. Du kan også legge til et notat ved å bruke **plusstegnet** i den øvre delen av **Tidslinje**-veggen.
+Når notatet er lagt til, kan du slette eller redigere notatet.
 
 
 > [!div class="mx-imgBorder"]
@@ -154,17 +172,13 @@ Velg ![Mer-knappen](media/MoreButton.png "Mer-knappen") på **Tidslinje**-veggen
 
 ## <a name="use-the-filter-pane"></a>Bruk filtreringsruten
 
-Bruk filtreringsruten til raskt å filtrere aktiviteter, notater eller innlegg på tidslinjeveggen etter oppføringstype eller aktivitetstype og -dato.
+Bruk filtreringsruten til raskt å filtrere aktiviteter, notater eller innlegg på tidslinjeveggen etter oppføringstype eller aktivitetstype og -dato. Du kan velge flere filtre og filter alternativer samtidig. Du kan filtrere og se forfalls dato for aktivitet, endrings dato eller etter status for aktiviteten.
 
-1. Velg ![Mer-knappen](media/MoreButton.png "Mer-knappen") på **Tidslinje**-veggen, og velg deretter **Åpne filtreringsruten**.
+- Velg **Åpne filter rute** trakt ikon i **tids linje** vegger.
 
 > [!div class="mx-imgBorder"]
 > ![Filtreringsruten på tidslinjen](media/filterpane.png "Filtreringsruten på tidslinjen")
 
-2. Når du er ferdig med å vise den filtrerte informasjonen, velger du traktikonet**Fjern alle filtre** for å fjerne filteret. Dette tilbakestiller filteret og viser all informasjonen på tidslinjeveggen.
-
-> [!div class="mx-imgBorder"]
-> ![Tilbakestill filteret](media/resetfilter.png "Tilbakestill filteret")
 
 ## <a name="manage-activities"></a>Administrer aktiviteter
 Administrer aktiviteter direkte fra tidslinjeveggen. Du kan blant annet tilordne en aktivitet til en annen person, slette eller lukke en aktivitet, legge til en aktivitet i en kø, åpne en tilknyttet oppføring eller redigere notater og innlegg.

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 3/13/2019
+ms.date: 8/01/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,24 +15,26 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: d2f2ccd462627fbcf6ab628217e5d53a57127cae
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: e21c9763e42dd45c7bed4691dfc27899263bef00
+ms.sourcegitcommit: 4e4f7945c3f24faf9bb8a856a5f3892cbfd113be
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "61545104"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783599"
 ---
 # <a name="create-a-new-record"></a>Opprett en ny oppføring
 
 
-Med kommandoen **Opprett en ny oppføring** eller **Hurtigoppretting** er det raskt og enkelt å skrive inn nesten alle typer informasjon i systemet. Kommandoen er i navigasjonsfeltet, slik at den er tilgjengelig når som helst når du skriver inn ny informasjon i systemet. Når du bruker dette alternativet, trenger du bare å fylle ut noen få felter. Når du har mer tid eller informasjon, kan du fylle ut flere detaljer.  
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+
+Med kommandoen **Opprett en ny oppføring** eller **Hurtigoppretting** er det raskt og enkelt å skrive inn nesten alle typer informasjon i systemet. Kommandoen er i navigasjonsfeltet, slik at den er tilgjengelig når som helst når du skriver inn ny informasjon i systemet. Du kan også lagre en post og opprette en ny direkte fra **hurtig oppretting** -skjemaet.
 
 > [!NOTE]
 > Alternativet **Hurtigoppretting** er bare tilgjengelig for oppføringene som er aktivert av administratoren.
     
 1. Velg **plusstegnet** ![Opprett oppføring-knapp](media/create-record-button.png "Opprett oppføring-knapp") i navigasjonsfeltet, og velg deretter objektet du vil ha.  
   
-2.  Fyll ut feltene, og velg **Lagre og lukk**.  
+2.  Fyll ut feltene, og velg **Lagre og lukk**. Hvis du vil lagre og opprette en annen post, velger du pil ned og velger deretter **lagre & Opprett ny**.
 
   ![Lagre en oppføring](media/quick_create.png "Lagre en oppføring")
   

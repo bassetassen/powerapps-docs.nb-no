@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 08/01/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,15 +15,17 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: e3894efdf379c5568ae6f95baa87e9ec77dae5d8
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: 11d9318ac06e264b6b917c81358d060d97864eb8
+ms.sourcegitcommit: 4e4f7945c3f24faf9bb8a856a5f3892cbfd113be
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "61564420"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783550"
 ---
 # <a name="set-personal-options"></a>Angi personlige alternativer
 
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Endre skjerm innstillingene i en app slik at de passer dine preferanser. Du kan for eksempel velge siden du vil se så snart du logger på appen. Du kan også tilpasse mange andre alternativer, for eksempel språk, valuta og tidssone.  
     
@@ -111,6 +113,7 @@ Endre skjerm innstillingene i en app slik at de passer dine preferanser. Du kan 
 |                                                                                           Konfigurer regler for mappe sporing                                                                                           |                                                                                                                                        Konfigurer mapper for automatisk sporing av inn kommende e-post.                                                                                                                                          |
 |                                                           **Opprett poster automatisk i Dynamics 365**                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |                                                                                                       Opprette                                                                                                        |                                                                                                                                                                                 Velg dette alternativet hvis du vil tillate Dynamics 365 å opprette kundeemner eller kontakter automatisk fra informasjonen i sporte e-postmeldinger.                                                                                                                                                                                  |
+|                                                                                                  Vis e-poster som samtale på tids linje                                                                                                 |                                                                                                                                                                                                                                                    Velg dette for å vise e-postmeldinger i en samtale tråd, slik at mange e-postprogrammer fungerer når du viser e-postmeldinger i en samtale.                                                                                                                                                                                                                                                    |
 |                                                                                                  Vis post boksen                                                                                                  |                                                                                                                                                                                                                                                    Velg denne koblingen for å se post boks detaljene.                                                                                                                                                                                                                                                    |
   
 ## <a name="privacy-tab-options"></a>Alternativer for personvern-fanen  
