@@ -82,4 +82,4 @@ Med egenskapsruten, som befinner seg til høyre i den modelldrevne skjemautformi
 
 ## <a name="see-also"></a>Se også
 [Oversikt over den modelldrevne skjemautformingen](form-designer-overview.md) <br />
-[Opprette og redigere skjemaer ved hjelp av skjemautforming](create-and-edit-forms.md)
+[Opprette eller redigere skjemaer ved hjelp av skjemautforming](create-and-edit-forms.md)

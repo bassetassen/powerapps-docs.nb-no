@@ -6,7 +6,7 @@ author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.custom: ''
-ms.date: 04/11/2019
+ms.date: 05/14/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -64,11 +64,11 @@ Bruk innstillingsområdet til å konfigurere miljøinnstillinger, aktivere eller
 Se først om innstillingen du trenger, er i ![Innstillinger-ikon](media/powerapps-gear.png)  > **Avanserte tilpassinger**-menyen.
 
 Slik finner du innstillinger som ikke er tilgjengelige fra **Avansert tilpassinger**:  
-1.  Få tilgang til miljøet fra Dynamics 365 Administration Center. For miljøer i Nord-Amerika går du til [https://port.crm.dynamics.com/G/instances/InstancePicker.aspx](https://port.crm.dynamics.com/G/instances/InstancePicker.aspx). Se Logge direkte på Dynamics 365 Administration Center for andre steder.
-2.  Velg miljøet du vil ha, og velg deretter **Åpne**.
+1.  I en PowerApps-modelldrevet app velger du **Innstillinger** ![Innstillinger](../model-driven-apps/media/powerapps-gear.png) på verktøylinjen for appen og deretter **Avanserte innstillinger**. 
+2.  Velg **Innstillinger** og deretter innstillingsområdet du vil bruke.
 
     > [!div class="mx-imgBorder"] 
-    > ![Åpent miljø](media/open-environment.png)
+    > ![Innstillingsområder](media/settings-areas.png) 
 
 ## <a name="see-also"></a>Se også
 [Opprette eller redigere en modelldrevet app ved hjelp av apputforming](create-edit-app.md)

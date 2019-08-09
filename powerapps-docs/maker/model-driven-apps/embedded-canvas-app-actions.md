@@ -1,7 +1,7 @@
 ---
-title: Utføre forhåndsdefinerte handlinger på vertsskjemaet fra en innebygd lerretapp | MicrosoftDocs
+title: Utføre handlinger på det vertsmodelldrevne skjemaet fra en innebygd lerretapp | MicrosoftDocs
 ms.custom: ''
-ms.date: 03/29/2019
+ms.date: 06/25/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -23,17 +23,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="perform-predefined-actions-on-the-host-form-from-within-an-embedded-canvas-app"></a>Utføre forhåndsdefinerte handlinger på vertsskjemaet fra en innebygd lerretapp
-Innebygde lerretapper gjør det mulig å utføre forhåndsdefinerte handlinger på vertsskjemaet. Med disse handlingene kan utviklere navigere, oppdatere og lagre vertsskjemaet. Ved hjelp av handlingene kan en innebygd lerretapp fungere som en mer integrert del av skjemaet og den modelldrevne appen.  
+# <a name="perform-predefined-actions-on-the-host-model-driven-form-from-within-an-embedded-canvas-app"></a>Utføre forhåndsdefinerte handlinger på det vertsmodelldrevne skjemaet fra en innebygd lerretapp
+Innebygde lerretapper gjør det mulig å utføre forhåndsdefinerte handlinger på det vertsmodelldrevne skjemaet. Med disse handlingene kan utviklere navigere, oppdatere og lagre det vertsmodelldrevne skjemaet. Ved hjelp av handlingene kan en innebygd lerretapp fungere som en mer integrert del av det vertsmodelldrevne skjemaet og den modelldrevne appen.  
 
-> [!NOTE]
-> Denne funksjonen er en forhåndsvisningsfunksjon. <br />
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] 
-
-Objektet **ModelDrivenFormIntegration** inkluderer nå følgende nye metoder for å gjøre det mulig for utviklere å utføre handlinger på vertsskjemaet.  
+Objektet **ModelDrivenFormIntegration** inkluderer nå følgende nye metoder for å gjøre det mulig for utviklere å utføre handlinger på det vertsmodelldrevne skjemaet.  
   
 ### <a name="navigatetomainformentityname-mainformname-recordid"></a>NavigateToMainForm(entityName, mainFormName, recordId)
-Tar vertsskjemaet til et hovedskjema og viser den angitte oppføringen.  
+Tar det vertsmodelldrevne skjemaet til et hovedskjema og viser den angitte oppføringen.  
 * **entityName** – en nødvendig strengparameter som angir den overordnede enheten i hovedskjemaet.  
 * **formName** – en nødvendig strengparameter som angir navnet på hovedskjemaet det skal navigeres til.  
 * **recordId** – en nødvendig strengparameter som angir IDen for oppføringen som skal vises i hovedskjemaet.  
@@ -48,7 +44,7 @@ Kall av NavigateToMainForm-metoden kan vise følgende feilmeldinger.
   
   
 ### <a name="navigatetoviewentityname-viewname"></a>NavigateToView(entityName, viewName)
-Tar vertsskjemaet til en visning.  
+Tar det vertsmodelldrevne skjemaet til en visning.  
 * **entityName** – en nødvendig strengparameter som angir den overordnede enheten for visningen.  
 * **viewName** – en nødvendig strengparameter som angir navnet på hovedskjemaet det skal navigeres til.  
  
@@ -72,8 +68,8 @@ Kall av OpenQuickCreateForm-metoden kan vise følgende feilmeldinger.
   
   
 ### <a name="refreshformshowprompt"></a>RefreshForm(showPrompt)  
-Oppdaterer dataene i vertsskjemaet.  
-* **showPrompt** – en nødvendig boolsk parameter som angir om det skal vises en bekreftelsesmelding for brukeren før lagring av ulagrede data i vertsskjemaet. Verdiene skal være "sann" eller "usann".
+Oppdaterer dataene i det vertsmodelldrevne skjemaet.  
+* **showPrompt** – en nødvendig boolsk parameter som angir om det skal vises en bekreftelsesmelding for brukeren før lagring av ulagrede data i det vertsmodelldrevne skjemaet. Verdiene skal være "sann" eller "usann".
  
 Kall av RefreshForm-metoden kan vise følgende feilmeldinger.
   
@@ -83,7 +79,7 @@ Kall av RefreshForm-metoden kan vise følgende feilmeldinger.
   
   
 ### <a name="saveform"></a>SaveForm()  
-Lagrer dataene i vertsskjemaet.  
+Lagrer dataene i det vertsmodelldrevne skjemaet.  
 
 
 > [!NOTE]
@@ -91,7 +87,10 @@ Lagrer dataene i vertsskjemaet.
 
 ## <a name="see-also"></a>Se også
 [Bygge inn en lerretapp i et modelldrevet skjema](embed-canvas-app-in-form.md) <br />
-[Sende gjeldende oppføring som datakontekst til en innebygd lerretapp](pass-current-embedded-canvas-app.md) <br />
-[Sende en liste over relaterte oppføringer som datakontekst til en innebygd lerretapp](pass-related-embedded-canvas-app.md) <br />
+[Legge til en innebygd lerretapp i et modelldrevet skjema](embedded-canvas-app-add-classic-designer.md) <br />
+[Redigere en innebygd lerretapp i et modelldrevet skjema](embedded-canvas-app-edit-classic-designer.md) <br />
+[Tilpasse skjermstørrelsen og -retningen for en lerretapp som er innebygd i et modelldrevet skjema](embedded-canvas-app-customize-screen.md) <br />
+[Egenskaper og handlinger for ModelDrivenFormIntegration-kontroll](embedded-canvas-app-properties-actions.md) <br />
 [Dele en innebygd lerretapp](share-embedded-canvas-app.md) <br />
-[Retningslinjer for arbeid med innebygde lerretapper](embedded-canvas-app-guidelines.md)
+[Retningslinjer for arbeid med innebygde lerretapper](embedded-canvas-app-guidelines.md) <br />
+[Overføre innebygde lerretapper på modelldrevne skjemaer opprettet ved hjelp av offentlig forhåndsversjon av nyeste](embedded-canvas-app-migrate-from-preview.md) <br />

@@ -2,7 +2,7 @@
 title: Arbeide med løsninger i PowerApps | MicrosoftDocs
 description: Finn ut hvordan løsninger distribueres
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 05/28/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -26,7 +26,7 @@ search.app:
    
 # <a name="solutions-overview"></a>Løsningsoversikt  
 
-  I PowerApps utnyttes løsninger for å transportere apper og komponenter fra ett miljø til et annet, eller for å bruke et sett med tilpassinger til eksisterende apper. En løsning kan inneholde én eller flere apper, i tillegg til andre komponenter, for eksempel enheter, alternativsett, osv. Du finner en løsning fra [AppSource](https://appsource.microsoft.com/) eller fra en uavhengig programvareleverandør (ISV).
+  I PowerApps utnyttes løsninger for å transportere apper og komponenter fra ett miljø til et annet, eller for å bruke et sett med tilpassinger til eksisterende apper. En løsning kan inneholde én eller flere apper i tillegg til andre komponenter, for eksempel enheter, alternativsett, osv. Du finner en løsning hos [AppSource](https://appsource.microsoft.com/) eller fra en uavhengig programvareleverandør (ISV).
   
 Hvis du vil ha mer informasjon: [Teknisk dokument: Solution Lifecycle Management](https://www.microsoft.com/en-us/download/details.aspx?id=57777)  
   
@@ -37,7 +37,7 @@ Hvis du vil ha mer informasjon: [Teknisk dokument: Solution Lifecycle Management
   
 -   Det er valgfritt å lage løsninger. Du kan bygge eller tilpasse apper i PowerApps-miljøet direkte uten noen gang å opprette en løsning.  
   
--   Når du tilpasser et PowerApps-miljø direkte uten å opprette en løsning, arbeider du med en spesiell løsning kalt **Common Data Services-standardløsningen**. Denne løsningen inneholder alle tilpassinger som du gjør i PowerApps-miljøet.  
+-   Når du tilpasser et PowerApps-miljø direkte uten å opprette en løsning, arbeider du med en spesiell løsning kalt **Common Data Service-standardløsningen**. Denne løsningen inneholder alle tilpassinger som du gjør i PowerApps-miljøet.  
   
 -   Det finnes en annen spesiell løsning kalt **standardløsningen**. Denne løsningen inneholder alle komponentene i systemet, enten de er opprettet av deg eller andre. Du kan eksportere **standardløsningen** for å opprette en sikkerhetskopi av tilpasningene du har definert i organisasjonen. Dette er fornuftig for å sikkerhetskopiere endringene i et verste tilfelle-scenario.  
   
@@ -139,7 +139,7 @@ Hvis du vil ha mer informasjon: [Teknisk dokument: Solution Lifecycle Management
  Administrerte løsninger kan endre systemløsningskomponenter og legge til nye komponenter. Hvis flere administrerte løsninger blir installert, er den første som blir installert, under den administrerte løsningen som blir installert senere. Dette betyr at den andre installerte løsningen kan tilpasse den som er installert før den. Når to administrerte løsninger har motstridende definisjoner, er den generelle regelen "Den siste vinner". Hvis du avinstallerer en administrert løsning, trer den administrerte løsningen under den i kraft. Hvis du avinstallerer alle administrerte løsninger, brukes standardvirkemåten som er definert i systemløsningen.  
   
  **Uadministrerte tilpassinger**  
- Uadministrerte tilpassinger er alle endringer du har gjort i miljøet ved hjelp av en uadministrert løsning. Systemløsningen definerer hva du kan og ikke kan tilpasse ved hjelp av forvaltede egenskaper. Utgivere av administrerte løsninger har samme mulighet til å begrense muligheten til å tilpasse løsningskomponenter som de legger til i løsningen. Du kan tilpasse løsningskomponentene som ikke har forvaltede egenskaper som hindrer deg i å tilpasse dem.  
+ Uadministrerte tilpassinger er alle endringer du har gjort i miljøet ved hjelp av en uadministrert løsning. Systemløsningen definerer hva du kan og ikke kan tilpasse ved hjelp av forvaltede egenskaper. Utgivere av administrerte løsninger har samme mulighet til å begrense muligheten til å tilpasse løsningskomponenter som de legger til i løsningen. Du kan tilpasse alle løsningskomponenter som ikke har administrerte egenskaper som hindrer deg i å tilpasse dem.  
   
  **Programmets virkemåte**  
  Dette er hva som faktisk vises i miljøet. Standardsystemløsningen pluss alle administrerte løsninger pluss eventuelle uadministrerte tilpassinger som du har brukt.  
@@ -150,7 +150,7 @@ Hvis du vil ha mer informasjon: [Teknisk dokument: Solution Lifecycle Management
   
 <a name="BKMK_Dependencies"></a>   
 ### <a name="solution-dependencies"></a>Løsningsavhengigheter  
- På grunn av måten administrerte løsninger er i lag på kan noen administrerte løsninger være avhengige av løsningskomponenter i andre administrerte løsninger. Noen løsningsutgivere vil dra nytte av dette for å bygge løsninger som er modulære. Du må kanskje installere en "grunnleggende" administrert løsning først, og deretter kan du installere en annen administrert som vil videre tilpasse komponentene i den grunnleggende administrerte løsningen. Den andre administrerte løsningen er avhengig av løsningskomponenter som er en del av den første løsningen.  
+ På grunn av måten administrerte løsninger er delt inn i lag på, kan noen administrerte løsninger være avhengige av løsningskomponenter i andre administrerte løsninger. Noen løsningsutgivere vil dra nytte av dette for å bygge løsninger som er modulære. Du må kanskje installere en "grunnleggende" administrert løsning først, og deretter kan du installere en annen administrert løsning som vil tilpasse komponentene videre i den grunnleggende administrerte løsningen. Den andre administrerte løsningen er avhengig av løsningskomponenter som er en del av den første løsningen.  
   
  Systemet sporer disse avhengighetene mellom løsninger. Hvis du prøver å installere en løsning som krever en grunnleggende løsning som ikke er installert, kan du ikke installere løsningen. Du får en melding om at løsningen krever at en annen løsning installeres først. På grunn av avhengigheter, kan du på samme måte ikke avinstallere den grunnleggende løsningen mens en løsning som avhenger av den, fremdeles er installert. Du må avinstallere den avhengige løsningen før du kan avinstallere den grunnleggende løsningen.  
   

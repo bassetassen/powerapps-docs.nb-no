@@ -24,7 +24,7 @@ search.app:
 ---
 # <a name="types-of-entities"></a>Typer enheter
 
-Før du oppretter eller redigerer enheter i Common Data Service, må du være innforstått med at det finnes ulike typer enheter. Når en egendefinert enhet er opprettet, kan ikke disse typene endres. De to største skillene er basert på enhetseierskap og om enhetene er aktivitetsenheter.  
+Før du oppretter eller redigerer enheter i Common Data Service, må du være klar over at det finnes ulike typer enheter. Når en egendefinert enhet er opprettet, kan ikke disse typene endres. De to største skillene er basert på enhetseierskap og om enhetene er aktivitetsenheter.  
   
 <a name="BKMK_EntityOwnership"></a>
 
@@ -59,7 +59,7 @@ Tabellen nedenfor viser aktivitetsenheter som er tilgjengelige i et standard Com
 |**E-postadresse**|Aktivitet som leveres ved bruk av e-postprotokoller.|Ja|[E-post](/powerapps/developer/common-data-service/reference/entities/email)|
 |**Telefaks**|Aktivitet som sporer oppringingsresultat og antall sider for en faks, og kan lagre en elektronisk kopi av dokumentet.|Ja|[Telefaks](/powerapps/developer/common-data-service/reference/entities/fax)|
 |**Brev**|Aktivitet som sporer levering av et brev. Aktiviteten kan inneholde den elektroniske kopien av brevet.|Ja|[Brev](/powerapps/developer/common-data-service/reference/entities/letter)|
-|**Telefonsamtale**|Aktivitet for å spore en telefonsamtale.|Ja|[PhoneCall ](/powerapps/developer/common-data-service/reference/entities/phonecall)|
+|**Telefonsamtale**|Aktivitet for å spore en telefonsamtale.|Ja|[PhoneCall](/powerapps/developer/common-data-service/reference/entities/phonecall)|
 |**Regelmessig avtale**|Hovedavtalen for en serie med regelmessighetsavtaler.|Ja|[RecurringAppointmentMaster](/powerapps/developer/common-data-service/reference/entities/recurringappointmentmaster)|
 |**Oppgave**|Generell aktivitet som representerer arbeid som må utføres.|Ja|[Oppgave](/powerapps/developer/common-data-service/reference/entities/task)|
   

@@ -26,7 +26,7 @@ search.app:
 ---
 # <a name="create-business-rules-and-recommendations-to-apply-logic-in-a-model-driven-app-form"></a>Opprette forretningsregler og anbefalinger for å bruke logikk i et modelldrevet appskjema
 
-Dette emnet viser hvordan du kan opprette regler og anbefalinger for å bruke skjemalogikk i en modelldrevet app uten å skrive JavaScript-kode eller lage plugin-moduler. Forretningsregler har et enkelt grensesnitt for å implementere og vedlikeholde regler som endres og brukes ofte. De kan brukes i hoved- og hurtigopprettingsskjemaer, og de fungerer i modelldrevne apper, Dynamics 365 Customer Engagement-webapper, Dynamics 365 for tablets og Dynamics 365 for Outlook (tilkoblet eller frakoblet modus).
+Dette emnet viser hvordan du kan opprette regler og anbefalinger for å bruke skjemalogikk i en modelldrevet app uten å skrive JavaScript-kode eller lage plugin-moduler. Forretningsregler har et enkelt grensesnitt for å implementere og vedlikeholde regler som endres og brukes ofte. De kan brukes for hoved- og hurtigopprettingsskjemaer, og de fungerer i modelldrevne apper, Dynamics 365 Customer Engagement-webapper, Dynamics 365 for tablets og Dynamics 365 for Outlook (tilkoblet eller frakoblet modus).
 
 > [!NOTE]
 > Hvis du vil definere en forretningsregel for en enhet slik at den gjelder for alle skjemaer og server, kan du se [Opprette en forretningsregel for en enhet](/powerapps/maker/common-data-service/data-platform-create-business-rule).
@@ -150,7 +150,14 @@ En forretningsregel utføres kanskje ikke, fordi det refererte feltet i forretni
      > [!div class="mx-imgBorder"] 
      > ![](media/account-name-on-form.png "Forretningsforbindelsesfelt på skjema")
 
-## <a name="next-steps"></a>Neste trinn  
+## <a name="frequently-asked-questions-faq"></a>Vanlige spørsmål
+*Kan forretningsregler låse opp felt i et skrivebeskyttet skjema?*
+- Ja, en forretningsregel kan låse opp felt og redigere handlinger i et skrivebeskyttet skjema.
+
+*Hvordan feilsøker jeg en forretningsregel som ikke fungerer?* 
+- Se [Utløses ikke forretningsregelen for et skjema?](#is-your-business-rule-not-firing-for-a-form) i dette emnet.
+
+## <a name="see-also"></a>Se også  
  [Opprette egendefinert forretningslogikk via prosesser](guide-staff-through-common-tasks-processes.md)   
  [Opprette en forretningsprosessflyt](/flow/create-business-process-flow)   
 

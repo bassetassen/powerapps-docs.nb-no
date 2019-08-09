@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: article
-ms.date: 03/20/2019
+ms.date: 06/25/2019
 ms.author: matp
 search.audienceType:
   - maker
@@ -21,26 +21,27 @@ For å overholde komplekse forretningskrav kan produsenter av modelldrevne apper
 
 Løsningskontrollen analyserer disse løsningskomponentene: 
 - Common Data Service-plugin-moduler
-- Egendefinerte arbeidsflytaktiviteter for Common Data Service 
+- Egendefinerte Common Data Service-arbeidsflytaktiviteter 
 - Common Data Service-webressurser (HTML og JavaScript)
 - Common Data Service-konfigurasjoner, for eksempel SDK-meldingstrinn 
 
 Løsningskontroll fungerer sammen med uadministrerte løsninger som kan eksporteres fra et miljø. 
 
 > [!NOTE]
-> Løsningskontroll fungerer ikke med løsninger som inneholder JavaScript som bruker ECMAScript 6 (2015) eller senere versjoner. Når JavaScript ved hjelp av disse versjonene blir funnet, rapporteres et problem med JS001-syntaksen for webressursen.
+> - Dette emnet forklarer hvordan du kjører løsningskontroll fra PowerApps-utviklerportalen. En PowerShell-modul er også tilgjengelig og kan brukes til å samhandle direkte med tjenesten. Microsoft.PowerApps.Checker.PowerShell-modulen kan brukes til å analysere administrerte og uadministrerte løsninger for støttede versjoner av lokale og nettbaserte miljøer, eller for å automatisere og integrere tjenesten i dine egne køer for utvikling og lansering. Mer informasjon: [Microsoft.Powerapps.Checker.PowerShell-oversikt]( /powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module) 
+> - Løsningskontroll fungerer ikke med løsninger som inneholder JavaScript som bruker ECMAScript 6 (2015) eller senere versjoner. Når JavaScript ved hjelp av disse versjonene blir funnet, rapporteres et problem med JS001-syntaksen for webressursen.
 
 ## <a name="enable-the-solution-checker"></a>Aktivere løsningskontrollen
 Løsningskontrollen blir tilgjengelig i Løsninger-området i PowerApps når du har installert PowerApps-kontrollerløsningen. Vær oppmerksom på at du ikke finner den ved å bla gjennom eller søke på Microsoft AppSource. Installer det ved å følge disse trinnene:  
 
 1. Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) og velg Common Data Service-miljøet der du ønsker å aktivere løsningskontrollen. 
 2. I navigasjonsruten til venstre velger du **Løsninger**.
-3. Velg **Løsningskontroll** på verktøylinjen, og velg deretter **Installer** – dette åpner siden Microsoft AppSource. Hvis webleseren blokkerer siden, må du tillate popup-vinduer. 
+3. Velg **Løsningskontroll** på verktøylinjen, og deretter **Installer** – dette åpner siden Microsoft AppSource. Hvis webleseren blokkerer siden, må du tillate popup-vinduer. 
 
    > [!div class="mx-imgBorder"]
    > ![Installere løsningskontroll](media/solution-checker-install.png "Installere løsningskontroll")
 
-4. Velg **Gratis prøve** på siden AppSource. 
+4. Velg **Gratis prøveversjon** på siden AppSource. 
 
 
 <!--from editor: Should it be "solution checker" rather than "checker solution" in the following step?
@@ -137,14 +138,17 @@ Her er et sammendrag av hver kolonne i rapporten.
 |Plugin-modul eller arbeidsflytaktivitet   | [meta-remove-dup-reg](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-dup-reg&client=PAChecker&source=featuredocs)     | Unngå duplikate plugin-modul-registreringer for Dynamics 365 for Customer Engagement.     |
 |Plugin-modul eller arbeidsflytaktivitet   | [il-turn-off-keepalive](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-turn-off-keepalive&client=PAChecker&source=featuredocs)   | Angi Vedlikehold til usann når du bruker eksterne verter i plugin-modulen Dynamics 365 for Customer Engagement.     |
 |Plugin-modul eller arbeidsflytaktivitet   | [il-avoid-unpub-metadata](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-unpub-metadata&client=PAChecker&source=featuredocs)   | Unngå å hente upubliserte metadata for Dynamics 365 for Customer Engagement.     |
-|Plugin-modul eller arbeidsflytaktivitet   | [il-avoid-batch-plugin](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-batch-plugin&client=PAChecker&source=featuredocs)   | Unngå å bruke satsvise forespørselstyper i plugin-moduler for Dynamics 365 Customer Engagement og arbeidsflytsaktiviteter.    |
+|Plugin-modul eller arbeidsflytaktivitet   | [il-avoid-batch-plugin](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-batch-plugin&client=PAChecker&source=featuredocs)   | Unngå å bruke satsvise forespørselstyper i plugin-moduler og arbeidsflytsaktiviteter for Dynamics 365 Customer Engagement.    |
 |Plugin-modul eller arbeidsflytaktivitet   | [meta-avoid-reg-no-attribute](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-reg-no-attribute&client=PAChecker&source=featuredocs)  | Inkluder filtreringsattributter med registreringer for Dynamics 365 for Customer Engagement-plugin-modulen.    |
 |Plugin-modul eller arbeidsflytaktivitet   | [meta-avoid-reg-retrieve](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-reg-retrieve&client=PAChecker&source=featuredocs)  | Vær forsiktig med Dynamics 365 for Customer Engagement-plugin-moduler som er registrert for Retrieve- og RetrieveMultiple-meldinger.    |
 |Plugin-modul eller arbeidsflytaktivitet   | [meta-remove-inactive](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-inactive&client=PAChecker&source=featuredocs)    | Fjerne inaktive konfigurasjoner i Dynamics 365 for Customer Engagement.    |
-|Plugin-modul eller arbeidsflytaktivitet   | [Unngå å bruke window.top](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-window-top&client=PAChecker&source=featuredocs)   | Unngå å bruke window.top.    |
 |Plugin-modul eller arbeidsflytaktivitet   | [il-meta-avoid-crm2011-depr-message](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-crm2011-depr-message&client=PAChecker&source=featuredocs)  | Ikke bruk Microsoft Dynamics CRM 2011-avskrevede meldinger.     |
-|Plugin-modul eller arbeidsflytaktivitet   | [meta-avoid-crm4-event](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-crm4-event&client=PAChecker&source=featuredocs) | Ikke bruk fase for registrering av plugin-modul for Microsoft Dynamics CRM 4.0    |
-|Plugin-modul eller arbeidsflytaktivitet   | [il-avoid-specialized-update-ops](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-specialized-update-ops&client=PAChecker&source=featuredocs)  | Ikke bruk spesialiserte oppdateringsoperasjonsforespørsler i Dynamics 365 for Customer Engagement.        |
+|Plugin-modul eller arbeidsflytaktivitet   | [meta-avoid-crm4-event](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-crm4-event&client=PAChecker&source=featuredocs) | Ikke bruk fase for registrering av plugin-modul for Microsoft Dynamics CRM 4.0.    |
+|Plugin-modul eller arbeidsflytaktivitet   | [il-avoid-specialized-update-ops](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-specialized-update-ops&client=PAChecker&source=featuredocs)  | Ikke bruk spesialiserte oppdateringsoperasjonsforespørsler i Dynamics 365 for Customer Engagement.    | 
+| Plugin-modul eller arbeidsflytaktivitet |  [il-use-autonumber-feature](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-use-autonumber-feature&client=PAChecker)  |Bruk den automatiske tallfunksjonen i stedet for en tilpasset automatisk nummereringsløsning. | 
+| Plugin-modul eller arbeidsflytaktivitet  | [il-avoid-parallel-plugin](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-parallel-plugin&client=PAChecker)  | Bruken av parallelle mønstre bør unngås i plugin-moduler.  |
+| Plugin-modul eller arbeidsflytaktivitet  | [il-avoid-lock-plugin](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-lock-plugin&client=PAChecker)  | Unngå låsing av statiske medlemmer i plugin-moduler.  |
+| Plugin-modul eller arbeidsflytaktivitet  | [meta-avoid-retrievemultiple-annotation](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-retrievemultiple-annotation&client=PAChecker)  | Unngå å registrere en plugin-modul på RetrieveMultiple av merknader.  |
 |Webressurser  | [web-use-async](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-async&client=PAChecker&source=featuredocs)  |  Samhandle med HTTP- og HTTPS-ressurser asynkront.   |
 |Webressurser  | [meta-remove-invalid-form-handler](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-invalid-form-handler&client=PAChecker&source=featuredocs)  | Korriger eller fjern ugyldig skjema for registrering av hendelser for Dynamics 365 for Customer Engagement.   |
 |Webressurser  | [meta-remove-orphaned-form-element](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-orphaned-form-element&client=PAChecker&source=featuredocs)  | Korriger eller fjern isolert skjema for registrering av hendelser for Dynamics 365 for Customer Engagement.   |
@@ -153,16 +157,24 @@ Her er et sammendrag av hver kolonne i rapporten.
 |Webressurser  | [web-avoid-crm2011-service-soap](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-crm2011-service-soap&client=PAChecker&source=featuredocs)  | Ikke fokuser på SOAP-tjenestene for Microsoft Dynamics CRM 2011.   |
 |Webressurser  | [web-avoid-browser-specific-api](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-browser-specific-api&client=PAChecker&source=featuredocs) | Ikke bruk eldre API-er eller nettleser-plugin-moduler for Internet Explorer.   |
 |Webressurser  | [web-avoid-2011-api](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-2011-api&client=PAChecker&source=featuredocs)  | Ikke bruk avskrevet Microsoft Dynamics CRM 2011-objektmodell.  |
-|Webressurser  | [web-use-relative-uri](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-relative-uri&client=PAChecker&source=featuredocs)   | Ikke bruk absolutte URL-er for endepunkt for Common Data Service.    |
+|Webressurser  | [web-use-relative-uri](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-relative-uri&client=PAChecker&source=featuredocs)   | Ikke bruk absolutte URL-adresser for endepunkt for Common Data Service.    |
 |Webressurser  | [web-use-client-context](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-client-context&client=PAChecker&source=featuredocs)  | Bruk klientkontekster.   |
 |Webressurser  | [web-use-dialog-api-param](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-dialog-api-param&client=PAChecker&source=featuredocs)   | Bruk API-parametere for dialogboks.   |
 |Webressurser  | [web-use-org-setting](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-org-setting&client=PAChecker&source=featuredocs)   | Bruk organisasjonsinnstillinger.   |
 |Webressurser  | [web-use-grid-api](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-grid-api&client=PAChecker&source=featuredocs)   | Bruk API-er for rutenett.    |
 |Webressurser  | [web-avoid-isActivityType](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-isActivityType&client=PAChecker&source=featuredocs)   | Erstatt Xrm.Utility.isActivityType-metoden med ny Xrm.Utility.getEntityMetadata, og ikke bruk i regler på båndet.    |
 |Webressurser  | [meta-avoid-silverlight](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-silverlight&client=PAChecker&source=featuredocs)   | Bruk av webressursen Silverlight blir avskrevet.   |
+| Webressurser  | [web-remove-debug-script](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-debug-script&client=PAChecker)  | Unngå å inkludere feilsøkingsskript i ikke-utviklingsmiljøer.  | 
+| Webressurser  | [web-use-strict-mode](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-mode&client=PAChecker)  | Bruk Strict-modus når det er mulig.  | 
+| Webressurser  | [web-use-strict-equality-operators](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-equality-operators&client=PAChecker)  | Bruk strenge likhetstegn.  | 
+| Webressurser  | [web-avoid-eval](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-eval&client=PAChecker)  | Ikke bruk "eval"-funksjonen eller funksjonsekvivalenter.  | 
+
+## <a name="limitations"></a>Begrensninger
+
+Løsningskontroll kan ikke automatiseres for øyeblikket. Du må kjøre den fra https://web.powerapps.com. Mer informasjon: [Kjøre løsningskontroll](#run-the-solution-checker)
 
 
-## <a name="see-also"></a>Se også
+### <a name="see-also"></a>Se også
 [Gode fremgangsmåter og veiledning for Common Data Service](../../developer/common-data-service/best-practices/index.md)<br />
 [Gode fremgangsmåter og veiledning for modelldrevne apper](../../developer/model-driven-apps/best-practices/index.md)<br />
 [Vanlige problemer og løsninger for Løsningskontroll](common-issues-resolutions-solution-checker.md)<br />

@@ -4,7 +4,7 @@ description: Lær hvordan du oppretter eller redigerer en webressurs.
 ms.custom: ''
 ms.date: 06/02/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -38,7 +38,7 @@ Webressurser er virtuelle filer som er lagret i systemet. Hver webressurs har et
   
 Hvis du for eksempel oppretter en HTML-side som en webressurs med navnet new_myWebResource.htm, kan du åpne denne siden i en webleser ved hjelp av en URL-adresse som dette:  
  
-`<base URL>/WebResources/new_myWebResource.htm   `
+`<base URL>/WebResources/new_myWebResource.htm`
   
 der *\<primær URL-adresse>* er en del av URL-adressen du bruker til å vise appene som slutter på `dynamics.com`. Ettersom webressursen er data i systemet kan bare lisensierte brukere i organisasjonen få tilgang til dem på denne måten. Vanligvis er webressurser inkludert i skjemaer i stedet for å være referert til direkte. Den vanligste bruken er å tilby JavaScript-biblioteker for skjemaskript.  
     

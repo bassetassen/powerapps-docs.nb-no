@@ -1,7 +1,7 @@
 ---
 title: Sende en liste over relaterte oppføringer som datakontekst til en innebygd lerretapp | MicrosoftDocs
 ms.custom: ''
-ms.date: 12/17/2018
+ms.date: 06/25/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -24,12 +24,11 @@ search.app:
 ---
 
 # <a name="pass-a-list-of-related-records-as-data-context-to-an-embedded-canvas-app"></a>Sende en liste over relaterte oppføringer som datakontekst til en innebygd lerretapp
+> [!IMPORTANT]
+> Innebygde lerretapper på modelldrevne skjemaer er ute av forhåndsversjonen og tilgjengelige for alle. Fremgangsmåten nedenfor er foreldet og gjelder bare for den offentlige forhåndsversjonen av lerretapper som er innebygd i modelldrevne skjemaer.
+> Hvis du vil ha oppdatert liste over trinn for den nyeste versjonen, kan du se [Legge til en innebygd lerretapp i et modelldrevet skjema](embedded-canvas-app-add-classic-designer.md)
 
 Dette emnet beskriver hvordan du legger til en innebygd lerretapp og sender en liste over oppføringer relatert til gjeldende oppføring (hovedskjemaet) som en datakontekst til den innebygde lerretappen.
-
-> [!NOTE]
-> Denne funksjonen er en forhåndsvisningsfunksjon. <br />
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 Tenk deg at du vil legge til en innebygd lerretapp i et hovedskjema for en forretningsforbindelse og sende en liste over kontakter relatert til den gjeldende oppføringen for forretningsforbindelsen til den innebygde lerretappen. Slik gjør du det:
 
@@ -49,10 +48,10 @@ Tenk deg at du vil legge til en innebygd lerretapp i et hovedskjema for en forre
          -  Filtervilkårene for en visning blir ikke brukt ved redigering. Derfor er ikke dataene som vises når du redigerer innebygde lerretapper, filtrert. Det er bare en liste over de få øverste oppføringene som du har tilgang til. Under kjøring brukes filtervilkårene for visningen som forventet, slik at brukere bare ser relevante data.
      -  **App-ID**-egenskapen angir ID-en for den innebygde lerretappen. Den blir generert automatisk og utfylt for deg når lerretappen blir opprettet.
          -  Vær oppmerksom på at endringer i App-ID-verdien bryter koblingen fra det modelldrevne skjemaet til den innebygde lerretappen.
-10. Velg **Tilpass**-knappen for å opprette eller redigere lerretappen. Dette åpner PowerApps Studio i en ny leserkategori.
+10. Velg **Tilpass**-knappen for å opprette eller redigere lerretappen. Dette åpner PowerApps Studio i en ny fane.
      > [!IMPORTANT]
      > Hvis åpning av PowerApps Studio blokkeres på grunn av popup-blokkering i nettleseren, må du må aktivere webområdet web.powerapps.com eller midlertidig deaktivere popup-blokkeringen og deretter velge **Tilpass** på nytt. 
-11. Merk at det er en kontroll **ModelDrivenFormIntegration** i den venstre ruten i PowerApps Studio. Denne kontrollen er ansvarlig for å hente kontekstavhengige data fra det vertsmodelldrevne skjemaet til den innebygde lerretappen. 
+11. Merk at det er en **ModelDrivenFormIntegration**-kontroll i den venstre ruten i PowerApps Studio. Denne kontrollen er ansvarlig for å hente kontekstavhengige data fra det vertsmodelldrevne skjemaet til den innebygde lerretappen. 
 12. Velg **Galleri1**-kontrollen og se at **Elementer**-egenskapen er satt til **ModelDrivenFormIntegration.Data**.
 13. I egenskapsruten til høyre ved siden av **Felt**velger du **Rediger**.
 14. I dataruten kan du endre feltet tilordnet til **Tittel1**-kontrollen til **Fullt navn** eller et annet felt som har data.
@@ -65,7 +64,7 @@ Tenk deg at du vil legge til en innebygd lerretapp i et hovedskjema for en forre
       -  Ved senere lagringer må du velge **Publiser** og deretter velge **Publiser denne versjonen** for å gjøre endringene tilgjengelige.
 20. Velg **Tilbake**, og velg deretter leserkategorien som har skjemaredigeringsprogrammet åpent. 
 21. Se at **App-ID**-egenskapen for **Lerretapp**-kontrollen nå har en verdi som er fylt ut automatisk. Legg merke til følgende: 
-     -  Skjemaredigeringsprogrammet har en direkte kobling til PowerApps Studio som ble åpnet i en annen leserfane i et tidligere trinn.
+     -  Skjemaredigeringsprogrammet har en direkte kobling til PowerApps Studio som ble åpnet i en annen fane i et tidligere trinn.
      -  Skjemaredigeringsprogrammet har «lyttet» etter App-ID-en som skal sendes til det.
      -  App-ID-en ble sendt til det da appen ble lagret.
 22. I **Angi egenskaper**-dialogboksen velger du **Vis**-kategorien, fjerner avmerkingen for **Vis etikett i skjemaet**, og velger deretter **OK**.
@@ -80,7 +79,11 @@ Dette emnet viste hvordan du kommer i gang med innebyggingen av en lerretapp i e
 
 ## <a name="see-also"></a>Se også
 [Bygge inn en lerretapp i et modelldrevet skjema](embed-canvas-app-in-form.md) <br />
-[Sende gjeldende oppføring som datakontekst til en innebygd lerretapp](pass-current-embedded-canvas-app.md) <br />
+[Legge til en innebygd lerretapp i et modelldrevet skjema](embedded-canvas-app-add-classic-designer.md) <br />
+[Redigere en innebygd lerretapp i et modelldrevet skjema](embedded-canvas-app-edit-classic-designer.md) <br />
+[Tilpasse skjermstørrelsen og -retningen for en lerretapp som er innebygd i et modelldrevet skjema](embedded-canvas-app-customize-screen.md) <br />
 [Utføre forhåndsdefinerte handlinger på vertsskjemaet fra en innebygd lerretapp](embedded-canvas-app-actions.md) <br />
+[Egenskaper og handlinger for ModelDrivenFormIntegration-kontroll](embedded-canvas-app-properties-actions.md) <br />
 [Dele en innebygd lerretapp](share-embedded-canvas-app.md) <br />
-[Retningslinjer for arbeid med innebygde lerretapper](embedded-canvas-app-guidelines.md)
+[Retningslinjer for arbeid med innebygde lerretapper](embedded-canvas-app-guidelines.md) <br />
+[Overføre innebygde lerretapper på modelldrevne skjemaer opprettet ved hjelp av offentlig forhåndsversjon av nyeste](embedded-canvas-app-migrate-from-preview.md) <br />

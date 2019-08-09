@@ -2,7 +2,7 @@
 title: Definere alternative nøkler for å referere til oppføringer med Common Data Service | MicrosoftDocs
 description: Lær hvordan du definerer alternative nøkler som kan brukes til å referere til oppføringer i Common Data Service
 ms.custom: ''
-ms.date: 06/06/2018
+ms.date: 06/04/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -61,7 +61,7 @@ Informasjonen i dette emnet hjelper deg med å velge hvilken utforming du kan br
 
 Du bør bruke [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) til å opprette alternative nøkler, med mindre du må ta hensyn til noen av følgende krav:
 
-- Opprette en alternativ nøkkel i en annen løsning enn standardløsningen Common Data Service
+- Opprette en alternativ nøkkel i en annen løsning enn Common Data Service-standardløsningen
 - Du vil enkelt spore den opprettede systemjobben som sporer fremdriften under oppretting av de tilhørende indeksene
 
 
@@ -75,6 +75,9 @@ Bare disse felttypene kan brukes til å opprette alternative nøkler:
  - Desimal
  - Heltall
  - En enkelt linje med tekst (streng)
+ - Dato og klokkeslett
+ - Oppslag
+ - Alternativsett
 
 ### <a name="number-of-keys"></a>Antall nøkler
 

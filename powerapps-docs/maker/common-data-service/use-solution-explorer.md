@@ -2,7 +2,7 @@
 title: Bruke løsninger i PowerApps | MicrosoftDocs
 description: Finn ut hvordan du bruker løsninger til å opprette eller tilpasse apper
 ms.custom: ''
-ms.date: 10/29/2018
+ms.date: 06/17/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -12,10 +12,10 @@ applies_to:
   - Dynamics 365 (online)
   - Dynamics 365 Version 9.x
   - powerapps
-author: Mattp123
+author: caburk
 ms.assetid: 72bacfbb-96a3-4daa-88ff-11bdaaac9a3d
 caps.latest.revision: 57
-ms.author: matp
+ms.author: caburk
 manager: kvivek
 search.audienceType:
   - maker
@@ -93,16 +93,17 @@ Du kan vise den klassiske løsningsutforskeren i PowerApps ved å velge **Løsni
 
 - Egendefinerte koblinger er ikke tilgjengelig i en løsning.
 - Lerretapper må åpnes etter en løsning er importert for å oppdatere tilkoblinger.
-- Hvis en lerretapp er pakket i en administrert løsning, kan den fremdeles redigeres i målmiljøet.
+- Hvis en lerretapp er pakket i en administrert løsning, kan den fremdeles redigeres i målmiljøet, men ikke publiseres på nytt.
 - Avhengigheter er ikke tilgjengelig for lerretapper.
 - Når du sletter en administrert løsning, rulles det ikke tilbake til en annen lerretappversjon. 
--   Lerretapptilgang (CRUD og sikkerhet) administreres helt i PowerApps og ikke Common Data Service (Common Data Service)-databasen.
--   Common Data Service API-er for å kalle lerretapper blokkeres og returnerer ikke noe. 
+-   Lerretapptilgang (CRUD og sikkerhet) administreres helt i PowerApps og ikke Common Data Service-databasen (Common Data Service).
+-   Common Data Service-API-er for å kalle lerretapper blokkeres og returnerer ikke noe. 
 -   Lerretapper og flyter som er opprettet i en løsning, kan ikke deles som medeier til en AAD-sikkerhetsgruppe.
 -   Lerretapper vil ikke vises i den klassiske løsningsutforskeren.
 - Flyter utløst av knappen, er ikke tilgjengelige i løsninger.
 - Flyter utløst av lerretappen, er ikke tilgjengelige i løsninger.
 - Flyter utløst fra Microsoft 365-programmer, for eksempel SharePoint og Excel, er ikke tilgjengelige i løsninger.
+- Flyter i løsninger har ikke støtte for delegert godkjenning. Tilgang til en flyt blir for eksempel ikke automatisk innvilget basert på å ha tilgang til SharePoint-listen som flyten ble opprettet fra.
 
  For mer informasjon om tilpassing av individuelle komponenter i en løsning, kan du se følgende emner:  
   

@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# <a name="add-data-to-an-entity-in-common-data-service-by-using-power-query"></a>Legge til data i en enhet i Common Data Service ved hjelp av Power Query
+# <a name="add-data-to-an-entity-in-common-data-service-by-using-power-query"></a>Legg til data i en enhet i Common Data Service ved hjelp av Power Query
 I denne prosedyren skal du opprette en enhet i [Common Data Service](data-platform-intro.md) og fylle ut enheten med data fra en OData-feed ved hjelp Power Query. Du kan bruke de samme fremgangsmåtene for å integrere data fra disse online og lokale kildene, blant annet:
 
 * SQL Server
@@ -87,3 +87,6 @@ Hvis du velger **Last til eksisterende enhet**, kan du angi en enhet som du legg
 Vi er glade over denne funksjonaliteten og ser frem til å få tilbakemelding fra deg. [Send oss forslag og tilbakemeldinger](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) om denne funksjonen.
 
 Hvis en [feilmelding om tillatelser](data-platform-cds-newentity-troubleshooting-mashup.md) vises, kontakter du administratoren.
+
+> [!WARNING]
+> Det er en grense på 500 000 rader per kjøring og per prosjekt som kan lastes inn med denne funksjonen.

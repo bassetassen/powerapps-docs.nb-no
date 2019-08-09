@@ -1,57 +1,49 @@
----
-ms.openlocfilehash: 787ff9592604f9a9bce1929e4d429a39da5ec48a
-ms.sourcegitcommit: 982cab99d84663656a8f73d48c6fae03e7517321
-ms.translationtype: MT
-ms.contentlocale: nb-NO
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67456838"
----
-Når du aktiverer Dynamics 365 mens du er frakoblet, lastes Dynamics 365 (online)-data til SQL Azure-databasen ved hjelp av Azure-skyen, basert på enhetene du aktiverer for tilgjengelighet i frakoblet modus. Når en bruker kobler til Azure Cloud-tjenesten fra en mobilapp med funksjon for frakoblet modus, lastes data ned fra SQL Azure-databasen til en lokal database på mobilenheten. Dataoverføring mellom SQL Azure-databasen på Azure-skyen og Dynamics 365-mobilappen med frakoblet funksjonen, skjer gjennom en sikker SSL-tilkobling. Til slutt lagres data i SQL Azure-databasen på mobilenheten.  
+Når du aktiverer Dynamics 365 Mobile Offline, lastes Dynamics 365 (online)-data bare ned til SQL Azure-databasen via Azure-skyen basert på enhetene du aktiverer for tilgjengelighet i frakoblet modus. Når en bruker kobler til Azure-skytjenesten fra en mobilapp ved hjelp av SQL Mobile-programmet med frakoblet funksjon, lastes det ned data i en lokal database på den mobile enheten. Overføring av data mellom SQL Azure-databasen i Azure-skyen og Dynamics 365-mobilappen med frakoblet funksjon, foregår via en sikker SSL-tilkobling. Til slutt lagres kundedataene i SQL Azure-databasen og på mobilenheten.  
   
- En administrator bestemmer om brukerne i en organisasjon har tillatelse til å koble fra med Mobil Offline-programmet for Microsoft Dynamics 365 ved å bruke sikkerhetsroller og profiltilpassing for Dynamics 365 Mobile. Dynamics 365-administratorer kan konfigurere hvilke enheter som lastes ned via Frakoblet synkronisering, ved å bruke innstillingen synkroniseringsfiltre i dialogboksen for innstillinger for Mobile Offline.  
+ En administrator kan avgjøre om brukerne i organisasjonen har tillatelse til å koble fra med Microsoft Dynamics 365 Mobile Offline-appen ved hjelp av sikkerhetsroller og Dynamics CRM 365 Mobile-profiltilpassing. Dynamics 365-administratorer kan konfigurere hvilke enheter som lastes ned via synkronisering i frakoblet modus ved hjelp av innstillingen Synkroniseringsfiltre i dialogboksen Innstilling – Mobile Offline.  
   
- Vær oppmerksom på at lagrede data på enheten til brukeren kontrolleres av brukeren, ikke av Microsoft. Administratoren har full kontroll over data som kan trekkes ut på brukerens sikkerhetsrolle eller enhetsnivåer. Når dataene er trukket ut, blir sikkerhetsgrensen fra Dynamics 365 Online igjen.  
+ Legg merke til at data som er lagret i brukerens enhet, styres av kunden, ikke Microsoft. Administratoren har full kontroll over dataene som kan trekkes ut med sikkerhetsrollen eller enhetsnivåene for brukeren. Når dataene er trukket ut, etterlates imidlertid sikkerhetsgrensen fra Dynamics 365 Online.  
   
- En liste over Azure-komponenter og -tjenester som er involvert med Mobile Offline-funksjonen, vises nedenfor.  
+ En liste over Azure-komponenter og -tjenester som er involvert i funksjonen for Mobile Offline, vises nedenfor.  
   
- **Merk:** Hvis du vil ha mer informasjon om flere Azure-tjenestetilbud, kan du se [Microsoft Azure Klareringssenter](https://azure.microsoft.com/support/trust-center/).  
+ **Obs!** Hvis du vil ha mer informasjon om flere tjenestetilbud for Azure, kan du gå til [klareringssenteret for Microsoft Azure](https://azure.microsoft.com/support/trust-center/).  
   
- **Cloud Services (nettrolle)**  
+ **Cloud Services (webrolle)**  
   
- Mobile Offline benytter to skytjenester. Den ene er for klargjøring, og den andre er for datasynkronisering.  
+ Mobile Offline benytter to skytjenester, én for klargjøring og den andre for synkronisering av data.  
   
- Klargjøringstjenesten har en enkelt nettrolle som leser meldinger fra Service Bus (SB)-køen for ulike hendelser som kommer fra Dynamics 365, for eksempel klargjøring eller fjerning av klargjøring. Den behandler disse meldingene ved å opprette eller slette organisasjonsdatabaser og sende regelmessige arbeidselementer (meldinger) på SB-køen for datasynkronisering. I løpet av denne prosessen leser eller skriver den konfigurasjonsdata, enten fra CSCFG-filen eller fra Dynamics 365 SW-API-en.  
+ Klargjøringstjenesten har en enkelt webrolle som leser meldinger fra tjenestebusskøen (SB) for ulike hendelser som kommer fra Dynamics 365, som klargjøring eller oppheving av klargjøring. Deretter behandles disse meldingene ved å opprette eller slette organisasjonsdatabaser og sende regelmessige arbeidselementer (meldinger) på SB-køen for datasynkronisering. Under denne prosessen leser og skriver konfigurasjonsdata fra filen CSCFG eller fra Dynamics 365 SW-API.  
   
- Datasynkroniseringstjenesten har to nettroller. Den ene holder skjema og data for den foreløpige databasen synkronisert med metadataene og dataene for Dynamics 365-organisasjonen, mens den andre nettrollen er for kjøring av synkroniseringsserveren og behandling av klientens synkroniseringsforespørsler. Den første nettrollen behandler meldinger fra SB-køen for datasynkronisering for ulike organisasjoner, og kontakter deretter Dynamics 365 for å få metadata- og dataendringene før lagring i den foreløpige databasen. Den konfigurerer også synkroniseringsserveren med organisasjoner som kommer inn og ut av systemet og klientmodellene deres. Den andre nettrollen kjører synkroniseringsserveren (ikke-administrert kode) for å drifte administrator- og synkroniseringsendepunkter. Administratorendepunktet brukes av den andre nettrollen til å sende konfigurasjonsdata. Synkroniseringsendepunktet brukes av eksterne klienter (Mobile-programmet for Dynamics 365) til å foreta datasynkronisering. På samme måte som med klargjøringstjenesten, leser eller skriver begge disse rollene konfigurasjonsdata enten fra CSCFG-filen eller fra Dynamics 365 SW-API-en.  
+ Datasynkroniseringstjenesten har to webroller. En holder skjemaet og dataene for oppsamlingsdatabasen synkronisert med en Dynamics 365-organisasjons metadata og data, mens den andre webrollen er for å kjøring av synkroniseringsserveren og behandling av klientens synkroniseringsforespørsler. Første webrolle behandler meldingene fra SB-køen for datasynkronisering for ulike organisasjoner og kontakter deretter Dynamics 365 for å få metadata og dataendringer før de lagres i oppsamlingsdatabasen. Det gjør også jobben med å konfigurere serveren for synkronisering med organisasjoner som kommer inn og ut av systemet og deres klientmodeller. Den andre webrollen kjører synkroniseringsserveren (uadministrert kode) til vertsadministrasjons- og synkroniseringsendepunkt. Administrasjonsendepunkt brukes av den andre webrollen til å sende konfigurasjonsdata. Endepunktet for synkronisering brukes av eksterne klienter (Dynamics 365 Mobile-appen) til å utføre datasynkronisering. I likhet med klargjøringstjenesten leser/skriver disse rollene konfigurasjonsdata fra CSCFG-filen eller fra API-et for Dynamics 365-programvaren.  
   
  **Kø**  
   
- Mobile Offline bruker Azure Queues for utveksling av meldinger mellom Dynamics 365 og Azure. Den brukes til å opprettholde arbeidselementer som behandles av skytjenester. Hver melding lagrer informasjon, for eksempel organisasjons-ID, enhetsnavn for der dataene skal synkroniseres og tilkoblingsstrengen for OData-endepunktet for organisasjonen.  
+ Mobile Offline bruker Azure-køer for meldingsutveksling mellom Dynamics 365 og Azure. Den brukes til å vedlikeholde arbeidselementer som behandles av skytjenestene. Hver enkelt melding inneholder informasjon som organisasjons-ID-en, enhetsnavn for å synkronisere data og tilkoblingsstrengen for organisasjonens OData-endepunkt.  
   
- **SQL Database**  
+ **SQL-database**  
   
- Mobile Offline bruker Azure SQL Storage til å lagre:  
+ Mobile Offline bruker Azure SQL Storage for å lagre følgende:  
   
--   Data som er kopiert fra Dynamics 365-organisasjoner og for å betjene klientsynkroniseringsforespørsler.  
+-   Data som replikeres fra Dynamics 365-organisasjoner og brukes til å behandle synkroniseringsforespørsler fra klienter.  
   
--   Konfigurasjonsdata, for eksempel tilkoblingsstrenger fra organisasjonsdatabasen.  
+-   Konfigurasjonsdata som f.eks. tilkoblingsstrenger for organisasjonsdatabasen.  
   
- **Lagring**  
+ **Lagringsplass**  
   
- Mobile Offline bruker Azure Blob Storage til å lagre logger og spor som er generert av skytjenesten.  
+ Mobile Offline bruker Azure Blob-lagring til å lagre logger og spor som er generert av skytjeneste.  
   
  **Active Directory-tjeneste**  
   
- Mobile Offline bruker Azure Active Directory-tjenesten til å godkjenne med andre tjenester, for eksempel Dynamics 365 eller SW-API eller Azure Management-API-er.  
+ Mobile Offline bruker Azure Active Directory-tjenesten til å godkjenne med andre tjenester, for eksempel Dynamics 365 eller SW API eller API-er for Azure-administrasjon.  
   
  **Azure DNS**  
   
- Mobile Offline bruker Azure DNS til å omadressere klientforespørsler, basert på organisasjonsnavn, til de korrekte endepunktene for skytjenestene.  
+ Mobile Offline bruker Azure DNS til å omadressere klientforespørsler basert på organisasjonsnavn, til riktige skytjenesteendepunkter.  
   
- **Azure Virtual Network**  
+ **Azure virtual Network**  
   
- Et virtuelt Azure-nettverk (VNet) er en representasjon av ditt eget nettverk i skyen. Dynamics 365-produktteamet kan kontrollere Azure-nettverksinnstillingene og definere DHCP-adresseblokker, DNS-innstillinger, sikkerhetspolicyer og ruting.  
+ Et Azure Virtual Network (VNet)-nettverk er en representasjon av ditt eget nettverk i skyen. Dynamics 365-produktteamet kan kontrollere Azure-nettverksinnstillingene og definere adresseområder for DHCP, DNS-innstillinger, sikkerhetspolicyer og ruting.  
   
  **Azure Load Balancer**  
   
- Azure Load Balancer leverer høy tilgjengelighet og nettverksytelse til programmene dine. Det er en Layer 4 Load Balancer (TP UDP), som distribuerer innkommende trafikk blant sikre tjenesteforekomster i skytjenester eller virtuelle maskiner som er definert i et belastningsfordelingssett. Vi bruker den til å fordele belastningen til endepunktene i en distribusjon.
+ Azure Load Balancer gir høy tilgjengelighet og nettverksytelse i programmene. Det er en Lag-4-belastningsfordeler (TCP, UDP) som distribuerer innkommende trafikk mellom sunne tjenesteforekomster i skytjenester eller virtuelle maskiner som er definert i et belastningsfordelingssett. Vi bruker det til å lastfordele endepunktene i en distribusjon.

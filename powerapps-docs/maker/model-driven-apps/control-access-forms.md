@@ -2,7 +2,7 @@
 title: Kontrollere tilgang til modelldrevne appskjemaer i PowerApps | MicrosoftDocs
 description: Lær hvordan du kontrollerer tilgang til hovedskjemaer
 ms.custom: ''
-ms.date: 03/07/2019
+ms.date: 06/18/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -71,11 +71,15 @@ search.app:
   
 <a name="BKMK_UseFormScripting"></a>   
 ## <a name="use-form-scripting"></a>Bruke skjemaskript  
+Klient-API-skjemamalen (formContext) gir en referanse til skjemaet eller et element i skjemaet, for eksempel en hurtigvisningskontroll eller en rad i et redigerbart rutenett, som den gjeldende koden blir utført i. Mer informasjon: [kontekst for API-klientskjema](/dynamics365/customer-engagement/developer/clientapi/clientapi-form-context)
 
- I webprogrammet er det mulig, men ikke anbefalt, for en utvikler å bruke skript i Onload-skjemahendelsen for å bruke samlingen [Xrm.Page.ui.formSelector.items](http://go.microsoft.com/fwlink/p/?LinkID=513300) til å spørre tilgjengelige skjemaer og bruke navigate-metoden til å dirigere brukere til et bestemt skjema. Husk at [navigate-metoden](http://go.microsoft.com/fwlink/p/?LinkID=513301) fører til at skjemaet lastes inn på nytt (og at Onload-hendelsen skjer på nytt). Logikken i hendelsesbehandlingen må alltid kontrollere en betingelse før du bruker navigate-metoden, for å unngå en uendelig løkke eller unødig begrense brukeralternativer for navigering mellom skjemaer.  
+> [!IMPORTANT]
+> Med Dynamics 365 Customer Engagement-apper versjon 9.0 er Xrm.Page-objektet [avskrevet](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated), og du bør bruke [getFormContext](/dynamics365/customer-engagement/developer/clientapi/reference/executioncontext/getformcontext)-metoden for kontekstobjektet "hoppet over ved kjøring" til å returnere referanse til riktig skjema eller element i skjemaet.
+<!-- 
+ Finally, in the web application it is possible, but not recommended, for a developer to use scripts in the form Onload event to use the [Xrm.Page.ui.formSelector.items collection](http://go.microsoft.com/fwlink/p/?LinkID=513300) to query available forms and use the navigate method to direct users to a specific form. Remember that the [navigate method](http://go.microsoft.com/fwlink/p/?LinkID=513301) will cause the form to load again (and the Onload event to occur again). Your logic in the event handler should always check some condition before you use the navigate method to avoid an endless loop or unnecessarily restrict users options to navigate between forms.  
   
- Denne fremgangsmåten fungerer ikke for Dynamics 365 for tablets fordi flere skjemaer ikke er tilgjengelige for valg.  
+ This approach will not work for Dynamics 365 for tablets because multiple forms are not available for selection.  -->
 
-### <a name="next-steps"></a>Neste trinn  
+### <a name="see-also"></a>Se også  
 
 [Tilordne sikkerhetsroller til skjemaer](https://docs.microsoft.com/dynamics365/customer-engagement/admin/assign-security-roles-form)

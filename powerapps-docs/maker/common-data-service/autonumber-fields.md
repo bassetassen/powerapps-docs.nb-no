@@ -1,5 +1,5 @@
 ---
-title: Nummerere felt automatisk i Common Data Service | MicrosoftDocs
+title: Autonummer-felt i Common Data Service | MicrosoftDocs
 description: 'Forstå hvordan du oppretter, administrerer og bruker autonummereringsfelt'
 keywords: ''
 ms.date: 02/26/2019
@@ -49,7 +49,7 @@ For eksempel vil et tall med datoprefiks generere oppføringer som *2019-26-02-1
 ### <a name="custom"></a>Egendefinert
 
 For mer avanserte opprettere med spesifikke brukstilfeller gir vi mulighet til å tilpasse formatet fullstendig til ønsket format for et autonummereringsfelt. Formatet kan bestå av strengkonstanter, automatisk stigende tall, formaterte datoer eller tilfeldige alfanumeriske sekvenser.
-Hvis du vil ha detaljert informasjon om hvordan du definerer egendefinerte, kan du se [AutoNumberFormat-alternativer](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/create-auto-number-attributes#autonumberformat-options).
+Hvis du vil ha detaljert informasjon om hvordan du definerer egendefinerte, kan du se [AutoNumberFormat-alternativer](https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-auto-number-attributes#autonumberformat-options).
 
 ## <a name="seed-values"></a>Startverdier
 
@@ -57,9 +57,7 @@ Startverdien for et autonummereringsfelt er startnummeret som brukes for nummerd
 
 
 > [!IMPORTANT]
-> Angivelse av en egendefinert startverdi støttes for øyeblikket bare når du oppretter et nytt autonummereringsfelt. 
->
-> Angivelse av startverdien endrer bare den gjeldende nummerverdien for det angitte attributtet i det gjeldende miljøet. Den innebærer ikke en felles startverdi for attributtet. Startverdien er ikke inkludert i en løsning når den importeres i et annet miljø. 
+> Angivelse av startverdien endrer bare den gjeldende nummerverdien for det angitte attributtet i det gjeldende miljøet. Startverdien er ikke inkludert i en løsning når den importeres i et annet miljø. 
 
 ## <a name="create-an-autonumber-field"></a>Opprette et autonummereringsfelt
   

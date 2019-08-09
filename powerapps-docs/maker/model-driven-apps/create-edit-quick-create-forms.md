@@ -2,9 +2,9 @@
 title: Opprette eller redigere hurtigopprettingsskjemaer for modelldrevne apper i PowerApps | MicrosoftDocs
 description: Lær hvordan du oppretter eller redigerer et hurtigopprettingsskjema
 ms.custom: ''
-ms.date: 01/25/2019
+ms.date: 05/14/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -108,6 +108,63 @@ Hvis du legger til et sammensatt felt i et hurtigopprettingsskjema, vises det so
 4.  Velg **Lagre** når du er ferdig.  
   
 5.  Velg **Publiser** for å se det endrede skjemaet i programmet.  
+
+## <a name="allow-quick-create-property-form-behavior-for-activities"></a>Skjemavirkemåten Tillat hurtigoppretting-egenskapen for aktiviteter
+**Tillat hurtigoppretting**-egenskapen ble introdusert i 9.1.0.2007-oppdateringen og kan aktiveres eller deaktiveres for alle standardaktiviteter bortsett gjentakende avtaler. Med denne egenskapen kan du endre skjemaet som vises som standard for de fleste aktiviteter. Som standard aktiveres **Tillat hurtigoppretting**, og hurtigopprettingsskjemaet er skjemaet som vises i appområdene og aktivitetsenhetene som støtter den. 
+
+> [!div class="mx-imgBorder"] 
+> ![](media/allow-quick-create.png "Tillat hurtigoppretting-egenskapen for avtaleenhet")
+
+
+### <a name="unified-interface-client-form-display-behavior"></a>Skjemavisningsvirkemåte for Enhetlig grensesnitt-klient
+Følgende tabell viser hvilket skjema som vises som standard når **Tillat hurtigoppretting**-egenskapen er *aktivert* i Enhetlig grensesnitt-klienten.
+ 
+|Stedet der skjemaet åpnes  |Skjema som vises  |
+|---------|---------|
+|Tilknyttet rutenett for spesifikk aktivitet  | Hurtigoppretting      |
+|Delrutenett for spesifikk aktivitet   |  Hurtigoppretting     |
+|Aktivitetsrutenett (activitypointer)     | Hurtigoppretting     |
+|Tilknyttet rutenett for aktiviteter (activitypointer)   | Hurtigoppretting    |
+|Delrutenett for aktivitet (activitypointer)  | Hurtigoppretting    |
+|Global kommandolinje + knapp<sup>1</sup>    | Hurtigoppretting    |
+|Tidslinjevegg   | Hurtigoppretting    |
+|Aktivitetsrutenett (activitypointer)   | Hovedskjema   |
+|Rutenett for spesifikk aktivitet    | Hovedskjema   |
+
+<sup>1</sup>Aktiviteter vises i de globale **Opprett**- eller **+ Ny**-knappene når **Tillat hurtigoppretting**-egenskapen er aktivert. I dette tilfellet brukes hurtigopprettingsskjemaet hvis det finnes, eller i hovedskjema hvis det ikke finnes. Hvis **Tillat hurtigoppretting** er deaktivert, vil oppføringen for enheten ikke vises.
+
+### <a name="classic-web-client-form-display-behavior"></a>Virkemåte for skjemavisning for klassisk webklientskjema
+
+Følgende tabell viser hvilket skjema som vises som standard når **Tillat hurtigoppretting**-egenskapen er *aktivert* i klassisk webklient.
+
+|Stedet der skjemaet åpnes  |Skjema som vises  |
+|---------|---------|
+|Tilknyttet rutenett for spesifikk aktivitet  | Hurtigoppretting      |
+|Delrutenett for spesifikk aktivitet   |  Hurtigoppretting     |
+|Aktivitetsrutenett (activitypointer)     | Hovedskjema     |
+|Tilknyttet rutenett for aktiviteter (activitypointer)   | Hovedskjema    |
+|Delrutenett for aktivitet (activitypointer)  | Hovedskjema    |
+|Global kommandolinje + knapp    | Hovedskjema    |
+|Rutenett for spesifikk aktivitet   | Hovedskjema    |
+
+ #### <a name="classic-web-client-social-pane-behavior"></a>Virkemåte for sosial-rute for klassisk webklient
+ 
+Sosial-ruten er et spesialtilfelle, fordi den ikke bruker **Tillat hurtigoppretting**-egenskapen, men bruker ulike skjemaer for ulike aktivitetsenheter, som angitt her.
+
+
+|Aktivitet  |Skjema som vises  |
+|---------|---------|
+|Oppgave     | Hurtigoppretting    |
+|Telefonsamtale   | Hurtigoppretting     |
+|E-post   | Hovedskjema     |
+|Avtale  | Hovedskjema     |
+|Egendefinert aktivitet     | Hovedskjema      |
+
+### <a name="solution-import-allow-quick-create-value-behavior"></a>Virkemåte for løsningsimport for Tillat hurtigoppretting-verdi
+
+Når du importerer en løsning fra versjon 8.2 uavhengig av verdien for **Tillat hurtigoppretting**-egenskapen i løsningen, vil følgende enheter tilbakestilles til visningsverdien for standardskjema, og hovedskjemaet vil vise: oppgave, telefonsamtale, e-post og avtale. I slike tilfeller må du først tilbakestille **Tillat hurtigoppretting**-alternativet til *Aktivert* for disse aktivitetsenhetene etter importen.
+ 
+Hvis det er gjort en tilpassing i en versjon 9.0-løsning for enheter der **Tillat hurtigoppretting** er aktivert, vil verdien ikke endres etter importen.  Hvis du imidlertid har satt **Tillat hurtigoppretting** til *deaktivert* for oppgaven, telefonsamtalen, e-posten og avtaleenhetene, vil verdien overskrives til aktivert. I slike tilfeller må du først tilbakestille **Tillat hurtigoppretting**-alternativet til dektivert for disse aktivitetsenhetene etter importen. 
   
-### <a name="next-steps"></a>Neste trinn  
+### <a name="see-also"></a>Se også  
 [Oversikt over brukergrensesnittet i skjemaredigeringsprogrammet](form-editor-user-interface-legacy.md)

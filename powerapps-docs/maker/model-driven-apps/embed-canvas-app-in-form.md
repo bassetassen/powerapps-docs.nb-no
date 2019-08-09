@@ -1,7 +1,7 @@
 ---
 title: Bygge inn en lerretapp i et modelldrevet skjema | MicrosoftDocs
 ms.custom: ''
-ms.date: 12/17/2018
+ms.date: 06/25/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -28,20 +28,12 @@ search.app:
 
 Lerretapper gjør det mulig for oppretterne å enkelt utvikle og opprette egendefinerte oppsett ved hjelp WYSIWYG-lerretapputforming med kort kode. Lerrettapper gjør det også mulig for utviklere koble og vise data fra over 200 datakilder i sine skjemaer.
 
-> [!NOTE]
-> Denne funksjonen er en forhåndsvisningsfunksjon. <br />
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] <br /><br />
-
 Med innebygde lerretapper kan utviklere tilføre styrken fra lerretapper til de modelldrevne skjemaene. Ved hjelp av innebygde lerretapper kan du enkelt opprette omfattende visuelle områder i et skjema og vise data fra en rekke kilder ved siden av dataene fra Common Data Service.
 
    > [!div class="mx-imgBorder"] 
    > ![Innebygd lerretapp i et modelldrevet appskjema](media/embed-canvas-app-in-form.png "Innebygd lerretapp i et modelldrevet appskjema")
 
-Lerretapper er innebygd i modelldrevne skjemaer på samme måte som andre egendefinerte kontroller er lagt til. En innebygd lerretapp inneholder omfattende dataintegreringsfunksjoner som tilfører kontekstavhengige data fra den innebygde lerretappen.
-
-Fremgangsmåten for å bygge inn en lerretapp i det modelldrevne skjemaet varierer avhengig av datakonteksten som du vil at det vertsmodelldrevne skjemaet skal tilføre den innebygde lerretappen.
--   Sende gjeldende oppføring som datakontekst. Mer informasjon: [Sende gjeldende oppføring som datakontekst til en innebygd lerretapp](pass-current-embedded-canvas-app.md)
--   Send en liste over oppføringer relatert til den gjeldende oppføringen, som datakontekst. Mer informasjon: [Sende en liste over relaterte oppføringer som datakontekst til en innebygd lerretapp](pass-related-embedded-canvas-app.md) 
+Lerretapper er innebygd i modelldrevne skjemaer på samme måte som andre egendefinerte kontroller er lagt til. En innebygd lerretapp inneholder omfattende dataintegreringsfunksjoner som tilfører kontekstavhengige data fra den innebygde lerretappen. Mer informasjon: [Legge til en innebygd lerretapp i et modelldrevet skjema](embedded-canvas-app-add-classic-designer.md).
 
 Når du har lagt til en innebygd lerretapp i det modelldrevne skjemaet, kan du lære å dele den innebygde lerretappen med andre brukere. Mer informasjon: [Dele en innebygd lerretapp](share-embedded-canvas-app.md).
 
@@ -51,8 +43,11 @@ For retningslinjer for arbeid med innebygde lerretapper samt nyttige tips for å
 [Hva er lerretapper i PowerApps?](../canvas-apps/getting-started.md) <br />
 [Legge til og konfigurere en lerretappkontroll i PowerApps](../canvas-apps/add-configure-controls.md) <br />
 [Oversikt over lerretappkoblinger for PowerApps](../canvas-apps/connections-list.md) <br />
-[Sende gjeldende oppføring som datakontekst til en innebygd lerretapp](pass-current-embedded-canvas-app.md) <br />
-[Sende en liste over relaterte oppføringer som datakontekst til en innebygd lerretapp](pass-related-embedded-canvas-app.md) <br />
+[Legge til en innebygd lerretapp i et modelldrevet skjema](embedded-canvas-app-add-classic-designer.md) <br />
+[Redigere en innebygd lerretapp i et modelldrevet skjema](embedded-canvas-app-edit-classic-designer.md) <br />
+[Tilpasse skjermstørrelsen og -retningen for en lerretapp som er innebygd i et modelldrevet skjema](embedded-canvas-app-customize-screen.md) <br />
 [Utføre forhåndsdefinerte handlinger på vertsskjemaet fra en innebygd lerretapp](embedded-canvas-app-actions.md) <br />
+[Egenskaper og handlinger for ModelDrivenFormIntegration-kontroll](embedded-canvas-app-properties-actions.md) <br />
 [Dele en innebygd lerretapp](share-embedded-canvas-app.md) <br />
-[Retningslinjer for arbeid med innebygde lerretapper](embedded-canvas-app-guidelines.md)
+[Retningslinjer for arbeid med innebygde lerretapper](embedded-canvas-app-guidelines.md) <br />
+[Overføre innebygde lerretapper på modelldrevne skjemaer opprettet ved hjelp av offentlig forhåndsversjon av nyeste](embedded-canvas-app-migrate-from-preview.md) <br />

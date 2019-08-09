@@ -1,11 +1,11 @@
 ---
 title: 'Forstå tilgjengelighet i apputforming, områdekartutforming og Mine apper-siden i PowerApps | Microsoft Docs'
-description: 'Ting du bør vite om tilgjengelighet i apputforming, områdekartutforming og Mine apper-siden i PowerApps'
+description: 'Ting du bør vite om tilgjengelighet i modelldrevne apper med apputforming, områdekartutforming og Mine apper-siden i PowerApps'
 keywords: Apputforming; områdekartutforming; mine apper; Dynamics 365
 author: Mattp123
 ms.author: matp
 manager: kvivek
-ms.date: 06/18/2018
+ms.date: 05/20/2019
 ms.topic: article
 applies_to:
   - Dynamics 365 (online)
@@ -22,7 +22,8 @@ search.app:
 # <a name="accessibility-in-powerapps-app-designer-site-map-designer-and-my-apps-page"></a>Tilgjengelighet i apputformingen til PowerApps, områdekartutforming og Mine apper-siden
 
 Microsoft går inn for å gjøre sine produkter og tjenester enklere å bruke for alle. Mer informasjon: [Microsoft tilgjengelighet](http://www.microsoft.com/enable/default.aspx)  
-  
+ 
+Dette emnet beskriver tilgjengelighetsfunksjonene som er tilgjengelige med modelldrevne apper.  
   
 ## <a name="keyboard-shortcuts"></a>Tastatursnarveier  
 PowerApps gir assistanse gjennom tastatursnarveier for å løse problemer som personer med begrenset bevegelighet eller bevegelseshemninger kan komme ut for.  
@@ -105,4 +106,4 @@ PowerApps gir assistanse gjennom tastatursnarveier for å løse problemer som pe
 
 ## <a name="see-also"></a>Se også
 
-[Bruke hurtigtaster i Dynamics 365 Customer Engagement-programmer](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/basics/keyboard-shortcuts)
+[Bruke hurtigtaster i Dynamics 365 Customer Engagement-programmer](https://docs.microsoft.com/dynamics365/customer-engagement/basics/keyboard-shortcuts)

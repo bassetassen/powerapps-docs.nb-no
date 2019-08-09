@@ -2,8 +2,8 @@
 title: Angi egenskaper for modelldrevne apper med enhetlig grensesnitt i PowerApps | MicrosoftDocs
 description: Finn ut hvordan du konfigurerer rutenettkontrollen for appen
 keywords: ''
-ms.date: 06/06/2018
-ms.service: crm-online
+ms.date: 06/03/2019
+ms.service: powerapps
 ms.custom: null
 ms.topic: article
 applies_to:
@@ -74,7 +74,8 @@ Hvis du legger til den skrivebeskyttede rutenettkontroller i kontrollisten, kan 
 
     ![Rediger Virkemåte for dynamisk tilpassing](media/UnifiedInterface_ReadOnlyGrid_EditReflow.png "Rediger Virkemåte for dynamisk tilpassing")
 
-    b. Velg flyttype for rutenettet fra rullegardinlisten **Bind til statiske alternativer**.
+    b. Velg flyttype for rutenettet fra rullegardinlisten **Bind til statiske alternativer**. 
+
     |Flyttype|Beskrivelse|
     |--------------|--------------------|
     |**Dynamisk tilpassing**|Lar rutenettet gjengis i listemodus avhengig av når det ikke er nok visningplass.|

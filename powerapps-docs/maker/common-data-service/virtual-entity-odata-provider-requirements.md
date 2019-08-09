@@ -1,5 +1,5 @@
 ---
-title: Bruke den virtuelle enheten OData v4-dataleverandøren med Common Data Service | MicrosoftDocs
+title: Bruke OData v4-dataleverandør for den virtuelle enheten med Common Data Service | MicrosoftDocs
 ms.custom: ''
 ms.date: 06/04/2018
 ms.reviewer: ''
@@ -28,8 +28,8 @@ Dette emnet beskriver hvordan du konfigurerer OData v4-dataleverandøren samt kr
 
 ## <a name="odata-v4-data-provider-best-practices"></a>Anbefalte fremgangsmåter for OData v4-dataleverandøren
 
-- Common Data Service krever at alle enheter har et ID-attributt, og denne ID-en kalles en unik identifikator, og verdien må være en guid.  Du kan bare tilordne ID-felt til eksterne felt med datatypen `Edm.Guid`.  Du kan ikke tilordne en `Edm.Int32`-datatype til et felt med datatypen unik ID i Common Data Service.
--  OData-enheter med egenskaper som kan nullstilles, må angis slik at de samsvarer med det tilordnede feltet i den virtuelle enheten. En egenskap for OData-enhet med Nullable=False må ha det tilordnede feltet i **Feltkrav**-attributtet i Common Data Service satt til **Nødvendig for selskapet**. 
+- Common Data Service krever at alle enheter har et ID-attributt, at denne ID-en er en unik identifikator, og at verdien er en guid.  Du kan bare tilordne ID-felt til eksterne felt med datatypen `Edm.Guid`.  Du kan ikke tilordne en `Edm.Int32`-datatype til et felt med datatypen unik ID i Common Data Service.
+-  OData-enheter med egenskaper som kan nullstilles, må angis slik at de samsvarer med det tilordnede feltet i den virtuelle enheten. En egenskap for OData-enhet med Nullable=False må for eksempel ha det tilordnede feltet **Feltkrav**-attributtet i Common Data Service satt til **Nødvendig for selskapet**. 
 - Når du henter flere spørringer, for eksempel når du laster inn data i et rutenett, styrer du størrelsen på datasettet som returneres fra den eksterne datakilden ved å bruke spørringsparameterne for valg og filtrering.
 - Systemansvarlige bør aktivere sporing av plugin-modul, hvis de ikke allerede har gjort det. Når den er aktivert, blir alle feil fra OData-endepunktet registrert i sporingsloggen for plugin-modul. Mer informasjon: [Administratorhåndbok: Dialogboksen Systeminnstillinger – kategorien Tilpassing](/dynamics365/customer-engagement/admin/system-settings-dialog-box-customization-tab) 
 
@@ -52,9 +52,9 @@ Tabellen nedenfor viser tilordningene av datatyper for OData Entity Data Model (
 
 ### <a name="odata-edm-data-types-that-are-not-supported-for-mapping-with-virtual-entities"></a>OData EDM-datatyper som ikke støttes for tilordning med virtuelle enheter 
 
-- `Edm.Binary `
+- `Edm.Binary`
 - `Edm.Time` 
-- `Edm.Float `
+- `Edm.Float`
 - `Edm.Single` 
 - `Edm.Int16` 
 - `Edm.Byte` 

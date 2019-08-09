@@ -1,9 +1,9 @@
 ---
 title: Oversikt over den modelldrevne skjemautformingen | MicrosoftDocs
 ms.custom: ''
-ms.date: 12/13/2018
+ms.date: 01/07/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
@@ -30,19 +30,18 @@ Det nye modelldrevne skjemautformingen inneholder en moderne WYSIWYG-redigerings
 > [!NOTE]
 > Denne funksjonen er en forhåndsvisningsfunksjon. <br />
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] <br /><br />
-> Denne funksjonen er for tiden tilgjengelig i alle områder, unntatt USA og Europa. Den skal være tilgjengelig i USA og Europa tidlig i januar 2019. Hvis du vil prøve funksjonen umiddelbart, kan du opprette et miljø i områder der det for øyeblikket er tilgjengelig, for eksempel Australia Canada, India eller Japan.
 
-Utformeren viser WYSIWYG-forhåndsvisning i sanntid (bare Enhetlig grensesnitt) når du redigerer. Endringer i skjemaet vises umiddelbart i forhåndsvisningen, slik at apputviklere kan se nøyaktig hvordan skjemaet vil se ut for brukere når det publiseres. 
+Utformeren viser WYSIWYG-forhåndsvisning i sanntid (bare Enhetlig grensesnitt) når du forfatter et skjema. Endringer i skjemaet vises umiddelbart i forhåndsvisningen, slik at du kan se nøyaktig hvordan skjemaet vil se ut for brukere når det publiseres. 
 
-Utførelse av vanlige oppgaver, for eksempel angi egenskaper, er enklere og raskere med en alltid-tilgjengelig-egenskapsrute. Lagring og publisering er dessuten én enkelthandling som øker produktiviteten for utvikleren.
+Utførelse av vanlige oppgaver, for eksempel angi egenskaper, er enklere og raskere med en alltid-tilgjengelig-egenskapsrute. Dessuten er **Lagre** og **Publiser** én enkelt handling, noe som effektiviserer oppgavene.
 
 Skjemautforminggrensesnittet har følgende områder: 
-- Kommandolinje – viser tilgjengelige handlinger som Lagre, Publiser, Angre og Gjør om. 
-- Ruter – viser rutene med bestemte funksjoner, for eksempel en Felt-rute som du bruker til å legge til felt i et skjema. 
-- Forhåndsvisning av skjema – viser en sanntidsforhåndsvisning av skjemaet slik det vil vises for sluttbrukere når det publiseres. 
-- Egenskapsrute – viser egenskapene for det valgte elementet og gjør det mulig for utviklere å gjøre endringer.
+- Kommandolinje – viser tilgjengelige handlinger som **Lagre**, **Publiser**, **Angre** og **Gjør om**. 
+- Ruter – viser rutene med bestemte funksjoner, for eksempel en **Felt**-rute som du bruker til å legge til felt i et skjema. 
+- Forhåndsvisning av skjema – viser en sanntidsforhåndsvisning av skjemaet slik det vil vises for brukere når det publiseres. 
+- Egenskapsrute – viser egenskapene for det valgte elementet og gjør det mulig å gjøre endringer.
 
    ![Oppsett for skjemautforming](media/form-designer.png)
 
 ## <a name="see-also"></a>Se også
-[Opprette og redigere skjemaer ved hjelp av den modelldrevne skjemautformingen](create-and-edit-forms.md)
+[Opprette eller redigere skjemaer ved hjelp av skjemautforming](create-and-edit-forms.md)

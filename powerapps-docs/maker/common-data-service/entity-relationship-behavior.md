@@ -1,5 +1,6 @@
 ---
-title: Enhetsrelasjonsfunksjonalitet (Common Data Service) | MicrosoftDocs
+redirect_url: 'create-edit-entity-relationships#entity-relationship-behavior'
+title: Atferd for enhetsrelasjon (Common Data Service) | Microsoft Docs
 description: <Description>
 ms.custom: ''
 ms.date: 08/01/2018

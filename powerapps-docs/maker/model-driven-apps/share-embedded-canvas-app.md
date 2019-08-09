@@ -1,7 +1,7 @@
 ---
 title: Dele en innebygd lerretapp | MicrosoftDocs
 ms.custom: ''
-ms.date: 01/07/2019
+ms.date: 06/25/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -24,8 +24,6 @@ search.app:
 ---
 
 # <a name="share-an-embedded-canvas-app"></a>Dele en innebygd lerretapp
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Dette emnet forklarer hvordan du deler en innebygd lerretapp som du allerede har opprettet.
 
 Når du har opprettet og lagt til en innebygd lerretapp i et modelldrevet skjema, må du kontrollere at alle brukere som har tilgang til det modelldrevne skjemaet, også har tilgang til lerretappen og dataene den bruker. Se følgende retningslinjer:
@@ -39,8 +37,11 @@ Når du har opprettet og lagt til en innebygd lerretapp i et modelldrevet skjema
 Innebygde lerretapper er også løsningsavhengige. Som standard opprettes innebygde lerretapper i den samme løsningen som det vertsmodelldrevne skjemaet. Hvis du vil flytte den innebygde lerretappen fra ett miljø til et annet, eksporterer og importerer du innebygde lerretapper som en del av en løsning som alle andre komponenter.
 
 ## <a name="see-also"></a>Se også
-[Bygge inne en lerretapp i et modelldrevet skjema](embed-canvas-app-in-form.md) <br />
-[Sende gjeldende oppføring som datakontekst til en innebygd lerretapp](pass-current-embedded-canvas-app.md) <br />
-[Sende en liste over relaterte oppføringer som datakontekst til en innebygd lerretapp](pass-related-embedded-canvas-app.md) <br />
+[Bygge inn en lerretapp i et modelldrevet skjema](embed-canvas-app-in-form.md) <br />
+[Legge til en innebygd lerretapp i et modelldrevet skjema](embedded-canvas-app-add-classic-designer.md) <br />
+[Redigere en innebygd lerretapp i et modelldrevet skjema](embedded-canvas-app-edit-classic-designer.md) <br />
+[Tilpasse skjermstørrelsen og -retningen for en lerretapp som er innebygd i et modelldrevet skjema](embedded-canvas-app-customize-screen.md) <br />
 [Utføre forhåndsdefinerte handlinger på vertsskjemaet fra en innebygd lerretapp](embedded-canvas-app-actions.md) <br />
-[Retningslinjer for arbeid med innebygde lerretapper](embedded-canvas-app-guidelines.md)
+[Egenskaper og handlinger for ModelDrivenFormIntegration-kontroll](embedded-canvas-app-properties-actions.md) <br />
+[Retningslinjer for arbeid med innebygde lerretapper](embedded-canvas-app-guidelines.md) <br />
+[Overføre innebygde lerretapper på modelldrevne skjemaer opprettet ved hjelp av offentlig forhåndsversjon av nyeste](embedded-canvas-app-migrate-from-preview.md) <br />

@@ -4,7 +4,7 @@ description: Finn ut hvordan du kan vise egendefinert ikongrafikk i en visning
 ms.custom: ''
 ms.date: 02/14/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -104,7 +104,7 @@ search.app:
 > [!IMPORTANT]
 > Dette eksemplet krever salgsmulighet-enheten, som er tilgjengelig med Dynamics 365 for Customer Engagement-apper.
   
-```  
+```javascript
 function displayIconTooltip(rowData, userLCID) {      
     var str = JSON.parse(rowData);  
     var coldata = str.opportunityratingcode_Value;  

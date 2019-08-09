@@ -2,7 +2,7 @@
 title: Visualisere hierarkiske data med modelldrevne apper | MicrosoftDocs
 description: Lær hvordan du spør etter og visualiserer hierarkisk relaterte data
 ms.custom: ''
-ms.date: 09/19/2018
+ms.date: 05/28/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -25,7 +25,7 @@ search.app:
 
 Når en enhet er konfigurert til å ha en hierarkisk selvrefererende relasjon, kan du konfigurere visualiseringer ved hjelp av dette hierarkiet. Mer informasjon: [Definere og spørre etter hierarkisk relaterte data](../common-data-service/define-query-hierarchical-data.md)
 
-Enheter som har tilgjengelige visualiseringer som standard, omfatter [Forretningsforbindelse](/powerapps/developer/common-data-service/reference/entities/account), [Posisjon](/powerapps/developer/common-data-service/reference/entities/position) og [Bruker](/powerapps/developer/common-data-service/reference/entities/systemuser). I rutenettvisningen for disse enhetene kan du se ikonene for hierarkidiagrammet til venstre for navnet på oppføringen. Hierarkiikonet er ikke tilgjengelig for alle oppføringer som standard. Et ikon vises for relaterte oppføringer ved hjelp av den hierarkiske relasjonen.  
+Enheter som har tilgjengelige visualiseringer som standard, omfatter [Forretningsforbindelse](/powerapps/developer/common-data-service/reference/entities/account), [Posisjon](/powerapps/developer/common-data-service/reference/entities/position) og [Bruker](/powerapps/developer/common-data-service/reference/entities/systemuser). I rutenettvisningen for disse enhetene kan du se ikonene for hierarkidiagrammet til venstre for navnet på oppføringen. Hierarkiikonet er ikke tilgjengelig for alle oppføringer som standard. Ikonet vises for relaterte oppføringer ved hjelp av den hierarkiske relasjonen.  
 > [!div class="mx-imgBorder"] 
 > ![Vis hierarki-knappen](media/view-hierarchy-button.png)  
   
