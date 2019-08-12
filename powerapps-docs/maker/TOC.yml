@@ -842,6 +842,8 @@
                       href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md
                     - name: Egenskaper i skjemautformingen
                       href: ./model-driven-apps/form-designer-properties.md
+                    - name: Konfigurer egenskaper for topptekst
+                      href: ./model-driven-apps/form-designer-header-properties.md
                     - name: Å bruke trevisningen
                       href: ./model-driven-apps/using-tree-view-on-form.md
                 - name: Skjematyper
