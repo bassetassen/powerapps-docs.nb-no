@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 11/28/2018
+ms.date: 08/09/2019
 ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b070dfad61f3e53e313d4e8891dc44507a910292
-ms.sourcegitcommit: edf79033111b50aa3015b55929ce689474edba2d
+ms.openlocfilehash: ecb3e7aa6db1100f33a3c80a0518166b035d2b32
+ms.sourcegitcommit: 988aa08353864f8177725262468c07abe75549f5
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68917346"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68961492"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>Del en lerretsapp i PowerApps
 
@@ -117,8 +117,8 @@ Hvis du vil tilordne en rolle, må du ha **system administrator** tillatelser fo
 1. Velg **tilordne en sikkerhets rolle** under **data tillatelser**i Delings panelet.
 
 1. Velg rollen eller rollene i Common Data Service som du vil tilordne til brukeren eller sikkerhets gruppen i Azure AD, som du vil dele appen med.
-
-    ![Sikkerhets rolle liste](media/share-app/cds-assign-security-role-list.png)
+     > [!div class="mx-imgBorder"] 
+     > ![Sikkerhets rolle liste](media/share-app/cds-assign-security-role-list.png "Sikkerhets rolle liste")
 
 ### <a name="common-data-service-previous-version"></a>Common Data Service (forrige versjon)
 
@@ -132,36 +132,44 @@ Når du deler en app som er basert på en eldre versjon av Common Data Service, 
 
 Apper for PowerApps-lerret kan deles med gjeste brukere av en Azure Active Directory Tenant. Dette gjør det mulig å invitere eksterne forretnings partnere, oppdragstakere og tredje parter til å kjøre firmaets lerret apper. 
 
-Vær oppmerksom på at gjestene bare kan tilordnes bruker rollen, ikke rollen som medeier, for apper som er delt med dem.
+> [!NOTE]
+> Gjester kan bare tilordnes **bruker** rollen, og ikke medeier -rollen, for apper som er delt med dem.
 
 ### <a name="prerequisites"></a>Forutsetninger
-1. I Azure Active Directory kan du [aktivere B2B eksternt samarbeid](https://docs.microsoft.com/en-us/azure/active-directory/b2b/delegate-invitations) for leieren.  
-- Dette er aktivert som standard, kan innstillingene endres av en leier administrator.  
-- Hvis du vil ha mer informasjon om Azure AD B2B-utsjekking: [Hva er gjeste bruker tilgang i Azure AD B2B?](https://docs.microsoft.com/en-us/azure/active-directory/b2b/what-is-b2b)  
-2. Tilgang til en konto som kan legge til gjeste brukere i en AAD-Tenant. Administratorer og brukere med rollen "gjeste invitasjoner" kan legge til gjester i en Tenant.   
+1. I Azure Active Directory (Azure AD) kan du aktivere B2B eksternt samarbeid for leieren. Mer informasjon: [Aktiver B2B eksternt samarbeid og administrer hvem som kan invitere gjester](/azure/active-directory/b2b/delegate-invitations)
+    - Gjør at B2B eksternt samarbeid er aktivert som standard. Innstillingene kan imidlertid endres av en leier administrator.  Hvis du vil ha mer informasjon om Azure AD B2B, kan du se [Hva er gjeste bruker tilgang i Azure ad B2B?](/azure/active-directory/b2b/what-is-b2b)  
+2. Tilgang til en konto som kan legge til gjeste brukere i en Azure AD-Tenant. Administratorer og brukere med gjeste invitasjons rollen kan legge til gjester i en Tenant.   
 3. En PowerApps-lisens må tilordnes til gjeste brukeren i tenanten appen som deles, er tilknyttet. Før du er generell tilgjengelighet av gjeste tilgang til lerretet, må gjester med en PowerApps-lisens i hjem-leieren ikke være tilordnet en lisens i leieren de er en gjest.
 
-### <a name="steps"></a>Nedenfor
-1. Legg til gjeste brukere i Azure Active Directory.  
-- Dette er skissert i artikkelen: [Hurtigstart: Legg til en ny gjeste bruker i](https://docs.microsoft.com/en-us/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)Azure ad.
-![Legg til gjest i Azure AD](media/share-app/guest_access_doc_1.png)
+### <a name="steps-to-grant-guest-access"></a>Trinn for å gi gjeste tilgang
+1. Velg **ny gjeste bruker** for å legge til gjeste brukere i Azure ad. Mer informasjon: [Hurtigstart: Legg til en ny gjeste bruker i](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)Azure ad.
+    > [!div class="mx-imgBorder"] 
+    > ![Legg til gjest i Azure ad](media/share-app/guest_access_doc_1.png "Legg til gjest i Azure ad")
 2. Tilordne en lisens til gjeste brukeren. 
-- Dette er skissert i artiklene: [Tilordne lisenser til én bruker](https://docs.microsoft.com/en-us/office365/admin/subscriptions-and-billing/assign-licenses-to-users?view=o365-worldwide#assign-licenses-to-one-user) eller [tilordne eller fjern lisenser](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/license-users-groups) fra brukere for https://admin.microsoft.com henholdsvis https://portal.azure.com og.  
-- Obs! du må kanskje slå av forhånds visningen av Microsoft 365 administrasjons senteret for å tilordne en lisens til en gjest. 
+   - Hvis du vil tilordne gjeste brukere fra admin.microsoft.com, kan du se [Tilordne lisenser til én bruker](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
+   - Hvis du vil tilordne gjeste brukere fra portal.azure.com, kan du se [tilordne eller fjerne lisenser](/azure/active-directory/fundamentals/license-users-groups).
+ 
+   > [!IMPORTANT]
+   > Du må kanskje deaktivere forhånds visningen av Microsoft 365 administrasjons senteret for å tilordne en lisens til en gjest. 
+
 3. Del lerret-appen. 
-- Logg deg på https://make.powerapps.com  
-- Velg en app, klikk del. 
-![Del med gjest](media/share-app/guest_access_doc_2.png)
-![gjester kan bare være brukere](media/share-app/guest_access_doc_3.png)
-4. Gjester kan oppdage og få tilgang til apper som er delt med dem fra e-postmeldingen som sendes til dem, som en del av delingen.
-![Gjester mottar e-post med app-deling](media/share-app/guest_access_doc_4.png)
+    1. Logg deg på https://make.powerapps.com  
+    2. Gå til **apper**, Velg en lerrets app, og velg **del**i kommando linjen. 
+    3. Skriv inn en e-postadresse for en gjeste bruker fra en Azure AD-Tenant. Mer informasjon: [Hva er gjeste bruker tilgang i Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b)
+          > [!div class="mx-imgBorder"] 
+          > ![Del med gjest](media/share-app/guest_access_doc_2.png "Del med gjest")
+ 
+Når du har delt en app for gjeste tilgang, kan gjestene oppdage og få tilgang til apper som er delt med dem fra e-postmeldingen som sendes til dem, som en del av delingen.
+
+> [!div class="mx-imgBorder"]  
+> ![Gjester mottar e-post med app-deling](media/share-app/guest_access_doc_4.png "Gjester mottar e-post med app-deling")
 
 ### <a name="frequently-asked-questions"></a>Vanlige spørsmål
 
-#### <a name="whats-the-difference-between-canvas-app-guest-access-and-powerapps-portal"></a>Hva er forskjellen mellom appens gjeste tilgang og PowerApps-portalen? 
-Med C#lerret apper kan du bygge en app, skreddersydd for å digitalisere en forretnings prosess, uten å skrive kode i et tradisjonelt programmerings språk, for eksempel. Gjeste tilgang for lerret apper gjør det mulig for teamene til enkelt personer som består av forskjellige organisasjoner som deltar i en felles forretnings prosess for å få tilgang til de samme program ressursene som kan integreres med en [rekke Microsoft-og tredje parts kilder](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/connections-list).
+#### <a name="whats-the-difference-between-canvas-app-guest-access-and-powerapps-portals"></a>Hva er forskjellen mellom appens gjeste tilgang og PowerApps-portaler? 
+Med C#lerret apper kan du bygge en app, skreddersydd for å digitalisere en forretnings prosess, uten å skrive kode i et tradisjonelt programmerings språk, for eksempel. Gjeste tilgang for lerret apper gjør det mulig for teamene til enkelt personer som består av forskjellige organisasjoner som deltar i en felles forretnings prosess for å få tilgang til de samme program ressursene som kan integreres med en rekke Microsoft-og tredje parts kilder. Mer informasjon: [Oversikt over lerret – app-koblinger for powerapps](/powerapps/maker/canvas-apps/connections-list).
 
-[Powerapps](https://docs.microsoft.com/en-us/powerapps/maker/portals/overview) -portaler gir mulighet til å bygge lav kode, svar nett steder som gir eksterne brukere mulighet til å samhandle med dataene som er lagret i Common data service. Det gjør det mulig for organisasjoner å opprette nett steder som kan deles med brukere eksternt til organisasjonen enten anonymt eller gjennom påloggings leverandøren for deres valg som LinkedIn, Microsoft-konto, andre kommersielle påloggings tjenester. 
+[Powerapps](/powerapps/maker/portals/overview) -portaler gir mulighet til å utvikle lav kode, svar nett steder som gir eksterne brukere mulighet til å samhandle med dataene som er lagret i Common data service. Det gjør det mulig for organisasjoner å opprette nett steder som kan deles med brukere eksternt til organisasjonen enten anonymt eller gjennom påloggings leverandøren for deres valg, som for eksempel LinkedIn, Microsoft-konto eller andre kommersielle påloggings tjenester. 
 
 I tabellen nedenfor finner du en oversikt over noen kjerne funksjoner i PowerApps-portaler og lerrets apper.  
 
@@ -175,13 +183,15 @@ I tabellen nedenfor finner du en oversikt over noen kjerne funksjoner i PowerApp
 ja. Alle brukere som har tilgang til en SharePoint-liste med et tilpasset skjema, kan opprette og redigere elementer i listen ved hjelp av skjemaet, uten PowerApps-lisens.
 
 #### <a name="can-guests-access-apps-embedded-in-sharepoint"></a>Kan gjester få tilgang til apper som er innebygd i SharePoint? 
-ja. Men tilgang til fritt stående arbeidsom råde apper krever en PowerApps-lisens, inkludert apper som er innebygd. Når du bygger inn en lerret-app i SharePoint via Microsoft PowerApps embedded Control Copy, må du kopiere app-ID-en. 
+ja. Men tilgang til fritt stående arbeidsom råde apper krever en PowerApps-lisens, inkludert apper som er innebygd. Skriv inn app-ID-en når du bygger inn en lerret-app i SharePoint via Microsoft PowerApps embed-kontrollen. Hvis du vil gjøre dette, skriver du inn app-ID-en i **nett koblingen for appen eller i ID** -boksen. 
 
-![Bygg inn lerrets app i SharePoint for gjester](media/share-app/guest_access_doc_5.PNG)
+> [!div class="mx-imgBorder"]  
+> ![Bygg inn lerrets app i SharePoint for gjester](media/share-app/guest_access_doc_5.PNG "Bygg inn lerrets app i SharePoint for gjester")
 
-Når du bygger inn en lerret-app i SharePoint via HTML-koden iframe, kan du referere til appen ved hjelp av den fullstendige nett http://make.powerapps.com koblingen som finnes i > Velg en App > detaljer > Web kobling.
+Når du bygger inn en lerret-app i SharePoint via HTML-koden iFrame, kan du referere til appen ved hjelp av den fullstendige Netta DRESSen. Hvis du vil finne Netta dressen, kan du gå til http://make.powerapps.com, velge en app, velge **detaljer** -fanen, og URL-adressen vises under **nett kobling**.
 
-![Detaljer om lerrets app](media/share-app/guest_access_doc_6.PNG)
+> [!div class="mx-imgBorder"]  
+> ![Detaljer om lerrets app](media/share-app/guest_access_doc_6.PNG "Detaljer om lerrets app")
 
 #### <a name="how-come-guests-can-launch-the-app-shared-with-them-but-connections-fail-to-be-created"></a>Hvordan kan gjester starte appen som er delt med dem, men tilkoblinger blir ikke opprettet?
 Som med ikke-gjester, må de underliggende data kildene som brukes av appen også gjøres tilgjengelige for gjesten.
@@ -209,7 +219,7 @@ nei. Hvis en gjest starter en app som er delt med dem før de godtar en gjeste i
 #### <a name="what-azure-ad-tenant-are-connections-for-a-guest-user-created-in"></a>Hvilken Azure AD-Tenant er tilkoblinger for en gjeste bruker opprettet i?
 Tilkoblinger for en app opprettes alltid i konteksten til Azure AD-leieren appen er tilknyttet. Hvis en app for eksempel er opprettet i contoso-leieren, blir tilkoblinger som er opprettet for Contosos interne og gjeste brukere, opprettet i konteksten til contoso-leieren.
 
-#### <a name="can-guests-use-microsoft-graph-via-microsoft-security-graph-connectorhttpsdocsmicrosoftcomen-usconnectorsmicrosoftgraphsecurity-or-a-custom-connector-using-microsoft-graph-apishttpsdevelopermicrosoftcomen-usgraph"></a>Kan gjester bruke Microsoft Graph via [Microsoft Security Graph Connector](https://docs.microsoft.com/en-us/connectors/microsoftgraphsecurity/) eller en egen definert kobling ved hjelp av [Microsoft Graph API](https://developer.microsoft.com/en-us/graph)-er?
+#### <a name="can-guests-use-microsoft-graph-via-microsoft-security-graph-connector-or-a-custom-connector-using-microsoft-graph-apis"></a>Kan gjester bruke Microsoft Graph via Microsoft Security Graph Connector eller en egen definert kobling ved hjelp av Microsoft Graph API-er?
 Nei, Azure AD-gjester kan ikke spørre Microsoft Graph om å hente informasjon for en Tenant der de er gjest.
 
 #### <a name="what-intune-policies-apply-to-guests-using-my-powerapps"></a>Hvilke InTune-policyer gjelder gjester ved hjelp av PowerApps?
