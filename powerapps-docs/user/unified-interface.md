@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 8/14/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,12 +15,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 931efa2fcb2f30dcba7b1eef0118e734399e503e
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: f40a153ef20df0bccbdee915efe9af6aa88cb754
+ms.sourcegitcommit: f2ca557e43ab38c169eb3b754ac02c9321f9285f
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "61563318"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69030549"
 ---
 #  <a name="enhanced-user-experience-with-the-unified-interface-for-model-driven-apps"></a>Forbedret bruker opplevelse med det enhetlige grensesnittet for modell drevne apper 
 
@@ -55,3 +55,7 @@ Forretnings prosess flyten er forbedret av forankrings mekanismen. Du kan forank
 
 ## <a name="accessibility"></a>Personer
 Med den forbedrede tilgjengelighets opplevelsen kan du bruke skjerm lesere til å oversette informasjon på skjermen til hørbar lyd og skrive til en blinde skrift leser, slik at flere personer kan bruke appen. Hvis du vil ha mer informasjon, kan du se [bruke en skjerm leser](screen-reader.md).
+
+##  <a name="unified-interface-community"></a>Felles grensesnitt for fellesskapet
+
+Gå til [området for felles grensesnitt](https://community.dynamics.com/365/unified-interface/) for å få hjelp med planlegging og utførelse av en jevn overgang til det enhetlige grensesnittet og Kommuniser med eksperter og noder på blogger, nett seminarer, videoer, arrangementer med mer.
