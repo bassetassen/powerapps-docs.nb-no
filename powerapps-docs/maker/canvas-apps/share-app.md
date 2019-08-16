@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ecb3e7aa6db1100f33a3c80a0518166b035d2b32
-ms.sourcegitcommit: 988aa08353864f8177725262468c07abe75549f5
+ms.openlocfilehash: bfe5b35ebfddfe17cbf3898cc6f68f1a91d0b5e0
+ms.sourcegitcommit: 94ec67b283b9b03aa24cdc0ab43dd448b11b0547
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68961492"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530252"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>Del en lerretsapp i PowerApps
 
@@ -139,7 +139,7 @@ Apper for PowerApps-lerret kan deles med gjeste brukere av en Azure Active Direc
 1. I Azure Active Directory (Azure AD) kan du aktivere B2B eksternt samarbeid for leieren. Mer informasjon: [Aktiver B2B eksternt samarbeid og administrer hvem som kan invitere gjester](/azure/active-directory/b2b/delegate-invitations)
     - Gjør at B2B eksternt samarbeid er aktivert som standard. Innstillingene kan imidlertid endres av en leier administrator.  Hvis du vil ha mer informasjon om Azure AD B2B, kan du se [Hva er gjeste bruker tilgang i Azure ad B2B?](/azure/active-directory/b2b/what-is-b2b)  
 2. Tilgang til en konto som kan legge til gjeste brukere i en Azure AD-Tenant. Administratorer og brukere med gjeste invitasjons rollen kan legge til gjester i en Tenant.   
-3. En PowerApps-lisens må tilordnes til gjeste brukeren i tenanten appen som deles, er tilknyttet. Før du er generell tilgjengelighet av gjeste tilgang til lerretet, må gjester med en PowerApps-lisens i hjem-leieren ikke være tilordnet en lisens i leieren de er en gjest.
+3. En PowerApps-lisens må tilordnes til gjeste brukeren i tenanten appen som deles, er tilknyttet. Selv om det ikke er mulig ennå, før den generelle tilgjengeligheten av gjeste tilgang til lerretet, må gjester med en PowerApps-lisens i hjem-leieren ikke være tilordnet en lisens i leieren de er en gjest.
 
 ### <a name="steps-to-grant-guest-access"></a>Trinn for å gi gjeste tilgang
 1. Velg **ny gjeste bruker** for å legge til gjeste brukere i Azure ad. Mer informasjon: [Hurtigstart: Legg til en ny gjeste bruker i](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)Azure ad.

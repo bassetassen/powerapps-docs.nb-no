@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c304a313032e00af81181ca71b39e7aa7de9fc8f
-ms.sourcegitcommit: c0edddb287b3d3db56f60bdb46fe971e26e85e9d
+ms.openlocfilehash: 03c520d1cdf8655e93b1f5b74d687cd0abfa533f
+ms.sourcegitcommit: 94ec67b283b9b03aa24cdc0ab43dd448b11b0547
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66224642"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529791"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>Systemkrav, grenser og konfigurasjonsverdier for lerretsapper
 Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og konfigurasjonsverdier for PowerApps.
@@ -52,7 +52,7 @@ Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og kon
 ## <a name="request-limits"></a>Be om grenser
 Disse begrensningene gjelder for hver enkelt utgående forespørsel:
 
-| navn | Grensen |
+| navn | Begrenser |
 | --- | --- |
 | Tidsavbrudd |180 sekunder |
 | Nye tilkoblingsforsøk |4 |
@@ -70,10 +70,10 @@ Du bør bruke disse adressene hvis du for eksempel må hviteliste IP-adresser fo
 > [!IMPORTANT]
 >   Hvis du har eksisterende konfigurasjoner, kan du oppdatere dem så snart som mulig før 30. september 2018, slik at de inkluderer og samsvarer med IP-adresser i denne listen for områdene der PowerApps-apper finnes.
 
-| Område | Utgående IP |
+| /Regionkode | Utgående IP |
 | --- | --- |
 | Asia | 13.75.36.64 - 13.75.36.79, 13.67.8.240 - 13.67.8.255, 52.175.23.169, 52.187.68.19 |
-| Australia  | 13.70.72.192 - 13.70.72.207, 13.72.243.10, 13.77.50.240 - 13.77.50.255, 13.70.136.174 |
+| Norge  | 13.70.72.192 - 13.70.72.207, 13.72.243.10, 13.77.50.240 - 13.77.50.255, 13.70.136.174 |
 | Brasil | 191.233.203.192 - 191.233.203.207, 104.214.19.48 - 104.214.19.63, 13.65.86.57, 104.41.59.51 |
 | Canada | 13.71.170.208 - 13.71.170.223, 13.71.170.224 - 13.71.170.239, 52.237.24.126, 40.69.106.240 - 40.69.106.255, 52.242.35.152|
 | Europa | 13.69.227.208 - 13.69.227.223, 52.178.150.68, 13.69.64.208 - 13.69.64.223, 52.174.88.118, 137.117.161.181|
@@ -87,23 +87,24 @@ Du bør bruke disse adressene hvis du for eksempel må hviteliste IP-adresser fo
 ## <a name="required-services"></a>Nødvendige tjenester
 Denne listen identifiserer alle tjenester som PowerApps Studio kommuniserer med, og deres bruksområder. Nettverket må **ikke** blokkere disse tjenestene.
 
-| Domene(r) | Protokoller | Bruker |
+| Domene(r) | Protokollen | Bruker |
 | --- | --- | --- |
 | management.azure.com |https |RP |
 | msmanaged-na.azure-apim.net |https |Kjøretiden for koblinger/API-er |
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
-| graph.microsoft.com<br>graph.windows.net |https |Azure Graph – For å hente brukerinformasjon (f.eks, profilbilde) |
+| graph.microsoft.com<br>graph.windows.net |https |Azure Graph – for å få bruker informasjon (f.eks. profil bilde) |
 | gallery.azure.com |https |Eksempel og mal-apper |
-| \*.azure-apim.net |https |API-huber – forskjellige underdomener for hver nasjonale innstilling |
-| \*.powerapps.com |https | Create.powerapps.com, make.powerapps.com, content.powerapps.com og web.powerapps.com |
-| \*.azureedge.net |https | Create.powerapps.com, make.powerapps.com, content.powerapps.com og web.powerapps.com |
-| \*.blob.core.windows.net |https | BLOB-lagring |
-| \*.flow.microsoft.com | https | Create.powerapps.com, make.powerapps.com, content.powerapps.com og web.powerapps.com |
+| \*. azure-apim.net |https |API-huber – forskjellige underdomener for hver nasjonale innstilling |
+| \*. powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com og web.powerapps.com |
+| \*. azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com og web.powerapps.com |
+| \*. blob.core.windows.net |https | Blob-lagring |
+| \*. flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com og web.powerapps.com |
 | vortex.data.microsoft.com |https |Telemetri |
+| verten | https | PowerApps Mobile
 
 > [!NOTE]
 > Hvis du bruker et virtuelt privat nettverk, må det være konfigurert for å utelate localhost fra tunnelering for PowerApps Mobile.
 
-## <a name="size-limits"></a>Begrensninger for filstørrelse
+## <a name="size-limits"></a>Størrelses grenser
 
-Du finner informasjon om begrensninger for filstørrelse på tekst, hyperkoblinger, bilder og medier i [datatyper](functions/data-types.md#text-hyperlink-image-and-media).
+Du kan finne informasjon om størrelses grenser for tekst, hyperkoblinger, bilder og medier i [data typer](functions/data-types.md#text-hyperlink-image-and-media).
