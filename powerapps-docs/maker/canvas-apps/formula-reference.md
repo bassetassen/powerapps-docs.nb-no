@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/14/2018
+ms.date: 08/15/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f7cf23c03f68efc5e5b553a05d7f546373b636c9
-ms.sourcegitcommit: 2084789802fc5134dbeb888e759cced46019a017
+ms.openlocfilehash: f934730ec6ca432f1da4106c535cf5967f883070
+ms.sourcegitcommit: 9163abbe9a24298f216f15139f977adfd2c3f2ae
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66736215"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550332"
 ---
 # <a name="formula-reference-for-powerapps"></a>Formelreferanse for PowerApps
 Formler kombinerer mange elementer.  Dette er listet opp under:
@@ -32,7 +32,7 @@ Andre elementer omfatter:
 
 * [Alle operatorer](functions/operators.md)
 * [Kontroller og egenskapene](reference-properties.md)
-* [Datatyper](functions/data-types.md)
+* [Data typer](functions/data-types.md)
 
 ## <a name="a"></a>A
 **[Abs](functions/function-numericals.md)**  – absoluttverdien til et tall.  
@@ -47,11 +47,11 @@ Andre elementer omfatter:
 
 **[And](functions/function-logicals.md)** – boolsk logikk (AND).  Returnerer **sann** hvis alle argumentene er **sann**.  Du kan også bruke [ **&&** -operatoren](functions/operators.md).
 
-**[App](functions/object-app.md)**  – gir informasjon om den kjørende appen og kontroll over appens virkemåte.
+**[App](functions/object-app.md)** – gir informasjon om appen som kjører for øyeblikket, og kontroll over appens virke måte.
 
 **[Asin](functions/function-trig.md)** – returnerer arcsinusen for et tall i radianer.
 
-**[AsType](functions/function-astype-istype.md)**  – behandler en postreferanse som en bestemt enhet-type.
+**[AsType](functions/function-astype-istype.md)** – behandler en post referanse som en bestemt enhets type.
 
 **[Atan](functions/function-trig.md)** – returnerer arctangensen for et tall i radianer.
 
@@ -64,7 +64,7 @@ Andre elementer omfatter:
 
 **[Blank](functions/function-isblank-isempty.md)** – returnerer en *tom* verdi som kan brukes til å sette inn en nullverdi i en datakilde.
 
-## <a name="c"></a>C
+## <a name="c"></a>&
 **[Calendar](functions/function-clock-calendar.md)** – henter informasjon om kalenderen for gjeldende nasjonale innstillinger.
 
 **[Char](functions/function-char.md)** – oversetter en tegnkode til en streng.
@@ -151,7 +151,7 @@ Andre elementer omfatter:
 
 **[Exp](functions/function-numericals.md)** – returnerer *e* opphøyd i en potens.
 
-## <a name="f"></a>F
+## <a name="f"></a>S
 **[Filter](functions/function-filter-lookup.md)** – returnerer en filtrert tabell basert på ett eller flere vilkår.
 
 **[Find](functions/function-find.md)** – kontrollerer om én streng vises sammen med en annen, og returnerer plasseringen.
@@ -162,12 +162,12 @@ Andre elementer omfatter:
 
 **[ForAll](functions/function-forall.md)** – beregner verdier og utfører handlinger for alle poster i en tabell.
 
-## <a name="g"></a>G
+## <a name="g"></a>BUDSJETT
 **[GroupBy](functions/function-groupby.md)**  – returnerer en tabell med poster gruppert sammen.
 
 **[GUID](functions/function-guid.md)** – Konverterer en GUID-streng til en GUID-verdi, eller oppretter en ny GUID-verdi.
 
-## <a name="h"></a>H
+## <a name="h"></a>&
 **[HashTags](functions/function-hashtags.md)** – henter ut emneknagger (#strenger) fra en streng.
 
 **[Hour](functions/function-datetime-parts.md)**  – returnerer time-delen av en dato-/klokkeslett-verdi.
@@ -187,12 +187,12 @@ Andre elementer omfatter:
 
 **[IsToday](functions/function-now-today-istoday.md)** – kontrollerer om en dato-/klokkeslett-verdi er i løpet av denne dagen.
 
-**[IsType](functions/function-astype-istype.md)**  – kontrollerer om en postreferanse refererer til en bestemt enhet-type.
+**[IsType](functions/function-astype-istype.md)** – kontrollerer om en post referanse refererer til en bestemt enhets type.
 
-## <a name="j"></a>J
-**[JSON](functions/function-json.md)**  -genererer en JSON-tekststreng for en tabell, en post eller en verdi.
+## <a name="j"></a>BRUDD
+**[JSON](functions/function-json.md)** -GENERERER en JSON-tekststreng for en tabell, en post eller en verdi.
 
-## <a name="l"></a>L
+## <a name="l"></a>FINANSKONTO
 **[Language](functions/function-language.md)** – returnerer språkkoden for gjeldende bruker.
 
 **[Last](functions/function-first-last.md)** – returnerer den siste posten i en tabell.
@@ -216,9 +216,9 @@ Andre elementer omfatter:
 **[Lower](functions/function-lower-upper-proper.md)** – konverterer bokstaver i en tekststreng slik at alle bokstavene blir små.
 
 ## <a name="m"></a>M
-**[Match](functions/function-ismatch.md)**  – trekker ut en delstreng basert på et mønster.  Vanlige uttrykk kan brukes.
+**[Treff](functions/function-ismatch.md)** – trekker ut en del streng basert på et mønster.  Vanlige uttrykk kan brukes.
 
-**[MatchAll](functions/function-ismatch.md)**  – trekker ut flere delstrenger basert på et mønster.  Vanlige uttrykk kan brukes.
+**[MatchAll](functions/function-ismatch.md)** – trekker ut flere del strenger basert på et mønster.  Vanlige uttrykk kan brukes.
 
 **[Max](functions/function-aggregates.md)** – maksimumsverdien av et tabelluttrykk eller et sett med argumenter.
 
@@ -232,7 +232,7 @@ Andre elementer omfatter:
 
 **[Month](functions/function-datetime-parts.md)** – henter måned-delen av en dato-/klokkeslett-verdi.
 
-## <a name="n"></a>N
+## <a name="n"></a>L
 **[Navigate](functions/function-navigate.md)** – endrer hvilken skjem som vises.
 
 **[NewForm](functions/function-form.md)** – tilbakestiller en skjemakontroll for oppretting av et element.
@@ -268,7 +268,7 @@ Andre elementer omfatter:
 
 **[Refresh](functions/function-refresh.md)** – oppdaterer postene for en datakilde.
 
-**[Relatert](functions/function-relate-unrelate.md)**  – er relatert poster med to enheter via en én-til-mange eller mange-til-mange-relasjon.
+**[Relater](functions/function-relate-unrelate.md)** – knytter postene for to enheter til en én-til-mange-eller mange-til-mange-relasjon.
 
 **[Remove](functions/function-remove-removeif.md)** – fjerner én eller flere bestemte poster fra en datakilde.
 
@@ -294,7 +294,7 @@ Andre elementer omfatter:
 
 **[RoundUp](functions/function-round.md)** – runder opp til det minste etterfølgende tallet.
 
-## <a name="s"></a>S
+## <a name="s"></a>MÅNED
 **[SaveData](functions/function-savedata-loaddata.md)** – lagrer en samling i privat PowerApps-lagring.
 
 **[Search](functions/function-filter-lookup.md)** – finner poster i en tabell som inneholder en streng i én av kolonnene.  
@@ -336,7 +336,7 @@ Andre elementer omfatter:
 
 **[Tan](functions/function-trig.md)** – returnerer tangensen for en vinkel angitt i radianer.
 
-**[Tekst](functions/function-text.md)**  – konverterer en verdi og formaterer en tall- eller dato/klokkeslett-verdi til en tekststreng.
+**[Text](functions/function-text.md)** – konverterer enhver verdi og formaterer et tall eller en dato/klokkeslett-verdi til en tekst streng.
 
 **[ThisItem](functions/operators.md#thisitem-operator)** – dataene for gjeldende element for en beholder returneres når man er i et galleri eller skjema.
 
@@ -355,7 +355,7 @@ Andre elementer omfatter:
 ## <a name="u"></a>U
 **[Ungroup](functions/function-groupby.md)** – fjerner en gruppering.
 
-**[Unrelate](functions/function-relate-unrelate.md)**  – Unrelates postene i to enheter fra en én-til-mange eller mange-til-mange-relasjon.
+**[Unrelater](functions/function-relate-unrelate.md)** – ikke Relater postene for to enheter fra en én-til-mange-eller mange-til-mange-relasjon.
 
 **[Update](functions/function-update-updateif.md)** – erstatter en post i en datakilde.
 
@@ -378,6 +378,8 @@ Andre elementer omfatter:
 
 ## <a name="w"></a>W
 **[Weekday](functions/function-datetime-parts.md)** – henter ukedag-delen av en dato-/klokkeslett-verdi.
+
+**[With](functions/function-with.md)** – beregner verdier og utfører handlinger for en enkelt post, inkludert innebygde poster med navngitte verdier.
 
 ## <a name="y"></a>Y
 **[Year](functions/function-datetime-parts.md)** – henter år-delen av en dato-/klokkeslett-verdi.  
