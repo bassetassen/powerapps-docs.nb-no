@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68475430"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-detail-gallery-in-a-canvas-app"></a>Opprett et detalj galleri i en lerret-app
 
@@ -72,7 +71,7 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi **elementer** -egenskapen for detalj galleriet til denne formelen:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Gallery1.Selected.'Order Details'
     ```
 
@@ -81,7 +80,7 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
     Hvis det oppstår en feil, må du bekrefte at rekkefølge-galleriet heter **Gallery1** (i **tre visnings** ruten nær den venstre kanten). Hvis dette galleriet har et annet navn, kan du gi det **Gallery1**.
 
-    Du har akkurat koblet de to galleriene. Når brukeren velger en ordre i ordre galleriet, identifiserer dette utvalget en post i Orders-  enheten. Hvis denne rekkefølgen inneholder ett eller flere linje elementer, knyttes posten i **Orders** -enheten til én eller flere poster i **ordre detaljer** -enheten, og data fra disse postene vises i detalj galleriet. Denne virke måten gjenspeiler én-til-mange-relasjonen som ble opprettet for deg mellom **ordre** -og **ordre detaljer** enheter. Formelen du har angitt, hjelper som relasjon ved hjelp av punktnotasjon:
+    Du har akkurat koblet de to galleriene. Når brukeren velger en ordre i ordre galleriet, identifiserer dette utvalget en post i Orders- enheten. Hvis denne rekkefølgen inneholder ett eller flere linje elementer, knyttes posten i **Orders** -enheten til én eller flere poster i **ordre detaljer** -enheten, og data fra disse postene vises i detalj galleriet. Denne virke måten gjenspeiler én-til-mange-relasjonen som ble opprettet for deg mellom **ordre** -og **ordre detaljer** enheter. Formelen du har angitt, hjelper som relasjon ved hjelp av punktnotasjon:
 
     > [!div class="mx-imgBorder"]
     > ![Én-til-mange-relasjon mellom Orders-enheten og ordre detaljer enheten](media/northwind-orders-canvas-part3/schema-orders-rel.png)
@@ -104,7 +103,7 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi **tekst** -egenskapen for den nye etiketten til denne formelen:
 
-    ```powerapps-comma
+    ```powerapps-dot
     ThisItem.Product.'Product Name'
     ```
 
@@ -142,7 +141,7 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi bildets **bilde** egenskap til denne formelen:
 
-    ```powerapps-comma
+    ```powerapps-dot
     ThisItem.Product.Picture
     ```
 
@@ -162,7 +161,7 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi **tekst** -egenskapen for den nye etiketten til dette uttrykket:
 
-    ```powerapps-comma
+    ```powerapps-dot
     ThisItem.Quantity
     ```
 
@@ -180,8 +179,8 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi **tekst** -egenskapen for den nye etiketten til denne formelen:
 
-    ```powerapps-comma
-    Text( ThisItem.'Unit Price'; "[$-en-US]$ #,###.00" )
+    ```powerapps-dot
+    Text( ThisItem.'Unit Price', "[$-en-US]$ #,###.00" )
     ```
 
     Hvis du ikke inkluderer språk koden ( **[$-en-us]** ), blir den lagt til basert på ditt språk og område. Hvis du bruker en annen språk kode, bør du fjerne det **$** like etter den avsluttende hake parentesen ( **]** ), og deretter legge til ditt eget valuta symbol i denne posisjonen.
@@ -198,8 +197,8 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi **tekst** -egenskapen for den nye etiketten til denne formelen:
 
-    ```powerapps-comma
-    Text( ThisItem.Quantity * ThisItem.'Unit Price'; "[$-en-US]$ #,###.00" )
+    ```powerapps-dot
+    Text( ThisItem.Quantity * ThisItem.'Unit Price', "[$-en-US]$ #,###.00" )
     ```
 
     Hvis du ikke inkluderer språk koden ( **[$-en-us]** ), vil den bli lagt til basert på ditt språk og område. Hvis koden er forskjellig, bør du bruke ditt eget valuta symbol i stedet for det **$** like etter det avsluttende hake parenteset ( **]** ).
@@ -274,8 +273,8 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi **tekst** -egenskapen for den nye etiketten til denne formelen:
 
-    ```powerapps-comma
-    Sum( Gallery1.Selected.'Order Details'; Quantity )
+    ```powerapps-dot
+    Sum( Gallery1.Selected.'Order Details', Quantity )
     ```
 
     Denne formelen viser en delegerings advarsel, men du kan ignorere den, fordi ingen enkelt rekkefølge vil inneholde mer enn 500 produkter.
@@ -289,8 +288,8 @@ Før du starter dette emnet, må du installere databasen som beskrevet tidligere
 
 1. Angi kopiens **tekst** -egenskap til denne formelen:
 
-    ```powerapps-comma
-    Text( Sum( Gallery1.Selected.'Order Details'; Quantity * 'Unit Price' ); "[$-en-US]$ #,###.00" )
+    ```powerapps-dot
+    Text( Sum( Gallery1.Selected.'Order Details', Quantity * 'Unit Price' ), "[$-en-US]$ #,###.00" )
     ```
 
     Denne formelen viser en delegerings advarsel, men du kan ignorere den, fordi ingen enkelt rekkefølge vil inneholde mer enn 500 produkter.
@@ -358,7 +357,7 @@ Du kan vise data i et hvilket som helst Galleri, men du kan ikke oppdatere dem e
 
 1. Angi **element** -egenskapen for kombinasjons boksen til denne formelen:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Choices( 'Order Details'.Product )
     ```
 
@@ -419,7 +418,7 @@ Du kan vise data i et hvilket som helst Galleri, men du kan ikke oppdatere dem e
 
 1. Angi **bilde** -egenskapen for bildet til:
 
-    ```powerapps-comma
+    ```powerapps-dot
     ComboBox1.Selected.Picture
     ```
 
@@ -468,8 +467,8 @@ Du kan vise data i et hvilket som helst Galleri, men du kan ikke oppdatere dem e
 
 1. Endre størrelse på og Flytt etiketten til høyre for tekst inn data-kontrollen, og angi etikettens **tekst** -egenskap til denne formelen:
 
-    ```powerapps-comma
-    Text( ComboBox1.Selected.'List Price'; "[$-en-US]$ #,###.00" )
+    ```powerapps-dot
+    Text( ComboBox1.Selected.'List Price', "[$-en-US]$ #,###.00" )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -489,8 +488,8 @@ Du kan vise data i et hvilket som helst Galleri, men du kan ikke oppdatere dem e
 
 1. Angi **tekst** -egenskapen for den nye etiketten til denne formelen:
 
-    ```powerapps-comma
-    Text( Value(TextInput1.Text) * ComboBox1.Selected.'List Price'; "[$-en-US]$ #,###.00" )
+    ```powerapps-dot
+    Text( Value(TextInput1.Text) * ComboBox1.Selected.'List Price', "[$-en-US]$ #,###.00" )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -519,18 +518,18 @@ Du kan vise data i et hvilket som helst Galleri, men du kan ikke oppdatere dem e
 
 1. Endre størrelse på og Flytt dette ikonet til høyre kant av det lyse blå området, og angi deretter **OnSelect** -egenskapen for ikonet til denne formelen:
 
-    ```powerapps-comma
-    Patch( 'Order Details';
-        Defaults('Order Details');
+    ```powerapps-dot
+    Patch( 'Order Details',
+        Defaults('Order Details'),
         {
-            Order: Gallery1.Selected;
-            Product: ComboBox1.Selected;
-            Quantity: Value(TextInput1.Text);
+            Order: Gallery1.Selected,
+            Product: ComboBox1.Selected,
+            Quantity: Value(TextInput1.Text),
             'Unit Price': ComboBox1.Selected.'List Price'
         }
-    );;
-    Refresh( Orders );;
-    Reset( ComboBox1 );;
+    );
+    Refresh( Orders );
+    Reset( ComboBox1 );
     Reset( TextInput1 )
     ```
 
@@ -583,14 +582,14 @@ Du kan vise data i et hvilket som helst Galleri, men du kan ikke oppdatere dem e
 
 1. Endre størrelse på og Flytt papir kurv ikonet til høyre side av detalj galleriets mal, og angi **OnSelect** -egenskapen for ikonet til denne formelen:
 
-    ```powerapps-comma
-    Remove( 'Order Details'; ThisItem );; Refresh( Orders )
+    ```powerapps-dot
+    Remove( 'Order Details', ThisItem ); Refresh( Orders )
     ```
 
     > [!div class="mx-imgBorder"]
     > ![Angi OnSelect-egenskapen for ikonet](media/northwind-orders-canvas-part3/remove-details-04.png)
 
-    Ved denne skriving kan du ikke fjerne en post direkte fra en relasjon, så Remove [](functions/function-remove-removeif.md) -funksjonen fjerner en post direkte fra den relaterte enheten. **ThisItem** angir posten som skal fjernes, tatt fra samme post i detalj galleriet der papir kurv ikonet vises.
+    Ved denne skriving kan du ikke fjerne en post direkte fra en relasjon, så [**Remove**](functions/function-remove-removeif.md) -funksjonen fjerner en post direkte fra den relaterte enheten. **ThisItem** angir posten som skal fjernes, tatt fra samme post i detalj galleriet der papir kurv ikonet vises.
 
     Operasjonen bruker hurtigbufrede data på nytt, så **oppdaterings** funksjonen informerer **ordrer** -enheten om at appen har endret én av de relaterte enhetene.
 
@@ -609,7 +608,7 @@ Du har lagt til et annet galleri i oppsummering for å vise bestillings detaljer
 - En mange-til-én-relasjon fra enheten **for ordre detaljer** til **ordrens produkt** enheter `ThisItem.Product.'Product Name'` : og`ThisItem.Product.Picture`
 - **Valg** funksjonen for å få en liste over produkter:`Choices( 'Order Details'.Product' )`
 - Den **valgte** egenskapen for en kombinasjons boks som fullført mange-til-én-relatert post `ComboBox1.Selected.Picture` : og`ComboBox1.Selected.'List Price'`
-- **Patch** -funksjonen for å opprette en post **for ordre detaljer** :`Patch( 'Order Details'; Defaults( 'Order Details' ); ... )`
-- **Remove** -funksjonen for å slette en post **for ordre detaljer** :`Remove( 'Order Details'; ThisItem )`
+- **Patch** -funksjonen for å opprette en post **for ordre detaljer** :`Patch( 'Order Details', Defaults( 'Order Details' ), ... )`
+- **Remove** -funksjonen for å slette en post **for ordre detaljer** :`Remove( 'Order Details', ThisItem )`
 
 Denne serien av emner er en rask gjennomgang av bruk av Common Data Service relasjoner og alternativ sett i en lerret-app for å kunne bruke utdannelse. Før du frigir apper til produksjon, bør du vurdere felt Valide ring, feil håndtering og mange andre faktorer.
