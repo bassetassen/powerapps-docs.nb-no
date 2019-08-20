@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 08/16/2019
 ms.locfileid: "69559271"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="with-function-in-powerapps"></a>Med-funksjonen i PowerApps
 Beregner verdier og utfører handlinger for en enkelt [post](../working-with-tables.md#records), inkludert innebygde poster med navngitte verdier.
@@ -38,19 +39,19 @@ Hvis *post* -argumentet til **with** er en feil, returneres denne feilen av funk
 ## <a name="syntax"></a>Syntaks
 **Med** ( *Post*, *formel* )
 
-* *Post* – obligatorisk. Oppføringen som skal utføres på.  Bruk den innebygde syn tak sen for navne verdier`{ name1: value1, name2: value2, ... }`
+* *Post* – obligatorisk. Oppføringen som skal utføres på.  Bruk den innebygde syn tak sen for navne verdier`{ name1: value1; name2: value2; ... }`
 * *Formel* – obligatorisk.  Formelen som skal evalueres for *post*.  Formelen kan referere til noen av feltene i *posten* direkte som et post område.
 
 ## <a name="examples"></a>Eksempler
 
 ### <a name="simple-named-values"></a>Enkle navngitte verdier
 
-```powerapps-dot
-With( { radius: 10, 
-        height: 15 },
+```powerapps-comma
+With( { radius: 10; 
+        height: 15 };
     Pi() * (radius*radius) * height
 )
-// Result: 4712.38898038 (as shown in a label control)
+// Result: 4712,38898038 (as shown in a label control)
 ```
 
 Dette eksemplet bruker en post med navngitte verdier til å beregne volumet i en sylinder.  **Med** brukes til å hente alle inn data verdiene sammen, noe som gjør det enkelt å skille dem fra selve beregningen.  
@@ -59,14 +60,14 @@ Dette eksemplet bruker en post med navngitte verdier til å beregne volumet i en
 
 ![](media/function-with/interest-calculator.gif)
 
-```powerapps-dot
-With( { AnnualRate: RateSlider/8/100,        // slider moves in 1/8th increments and convert to decimal
-        Amount: AmountSlider*10000,          // slider moves by 10,000 increment
-        Years: YearsSlider,                  // slider moves in single year increments, no adjustment required
-        AnnualPayments: 12 },                // number of payments per year
-      With( { r: AnnualRate/AnnualPayments,  // interest rate
-              P: Amount,                     // loan amount
-              n: Years*AnnualPayments },     // number of payments
+```powerapps-comma
+With( { AnnualRate: RateSlider/8/100;        // slider moves in 1/8th increments and convert to decimal
+        Amount: AmountSlider*10000;          // slider moves by 10;000 increment
+        Years: YearsSlider;                  // slider moves in single year increments; no adjustment required
+        AnnualPayments: 12 };                // number of payments per year
+      With( { r: AnnualRate/AnnualPayments;  // interest rate
+              P: Amount;                     // loan amount
+              n: Years*AnnualPayments };     // number of payments
             r*P / (1 - (1+r)^-n)             // standard interest calculation
       )
 )  
@@ -94,12 +95,12 @@ Her er de detaljerte instruksjonene for oppretting av denne appen:
 
 ### <a name="primary-key-returned-from-patch"></a>Primær nøkkel returnert fra oppdatering
 
-```powerapps-dot
-With( Patch( Orders, Defaults( Orders ), { OrderStatus: "New" } ),
-      ForAll( NewOrderDetails, 
-              Patch( OrderDetails, Defaults( OrderDetails ), 
-                     { Order: OrderID,          // from With's first argument, primary key of Patch result
-                       Quantity: Quantity,      // from ForAll's NewOrderDetails table
+```powerapps-comma
+With( Patch( Orders; Defaults( Orders ); { OrderStatus: "New" } );
+      ForAll( NewOrderDetails; 
+              Patch( OrderDetails; Defaults( OrderDetails ); 
+                     { Order: OrderID;          // from With's first argument; primary key of Patch result
+                       Quantity: Quantity;      // from ForAll's NewOrderDetails table
                        ProductID: ProductID }   // from ForAll's NewOrderDetails table
               )
       )
@@ -110,12 +111,12 @@ Dette eksemplet legger til en post i **Order** -tabellen i SQL Server.  Deretter
 
 ### <a name="extracted-values-with-a-regular-expression"></a>Uttrukne verdier med et regulært uttrykk
 
-```powerapps-dot
+```powerapps-comma
 With( 
-    Match( "PT2H1M39S", "PT(?:<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
-    Time( Value( hours ), Value( minutes ), Value( seconds ) )
+    Match( "PT2H1M39S"; "PT(?:<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" );
+    Time( Value( hours ); Value( minutes ); Value( seconds ) )
 )
-// Result: 2:01 AM (as shown in a label control, use the Text function to see the seconds)
+// Result: 2:01 AM (as shown in a label control; use the Text function to see the seconds)
 ```
 
 Dette eksemplet trekker ut timer, minutter og sekunder fra en ISO 8601 Duration-verdi, og bruker deretter disse del treffene til å opprette en dato/klokkeslett-verdi. 
