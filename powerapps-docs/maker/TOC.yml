@@ -1009,7 +1009,7 @@
           href: ./model-driven-apps/distribute-model-driven-app.md
         - name: Å opprette veiledende hjelp
           href: ./model-driven-apps/create-guided-help-learning-path.md
-    - name: Nettklientprogrammer for overgang
+    - name: Overgang til enhetlig grensesnitt
       items:
         - name: Hurtigstart for overgang
           href: ./model-driven-apps/transition-web-app.md
