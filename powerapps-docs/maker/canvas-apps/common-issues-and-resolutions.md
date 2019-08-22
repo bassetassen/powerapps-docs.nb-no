@@ -1,42 +1,44 @@
 ---
 title: Vanlige problemer og løsninger for PowerApps | Microsoft Docs
 description: En liste over vanlige problemer og løsninger i PowerApps.
-author: AFTOwen
+author: KumarVivek
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 11/09/2018
-ms.author: anneta
+ms.date: 08/21/2019
+ms.author: kvivek
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3c3b559be5f27c6ead9a4ea2f02027637c8aea8e
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: ef5da72c39d06d021765500fb5d1e55299dfb1cc
+ms.sourcegitcommit: d6b7f98b4ae011a753c1e72d7708f0f8dfbfb1fb
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61551633"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896242"
 ---
 # <a name="common-issues-and-resolutions-for-powerapps"></a>Vanlige problemer og løsninger for PowerApps
 
 Denne artikkelen viser noen vanlige problemer som kan oppstå når du bruker PowerApps. Der det er aktuelt, er løsninger tilgjengelig.
 
-## <a name="added-after-february-2018"></a>Lagt til etter februar 2018
+1. **Påloggings problem på enkelte Android mobile-enheter ved bruk av godkjenner** (21. august 2019)
 
-1. **Kamera problemet på Android-mobilenheter** (1. januar 2019)
+    I enkelte enheter og scenarioer kan du oppleve påloggings feil ved bruk av en godkjenner. Dette er på grunn av at OEMEN begrenser denne funksjonen. Se [her](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING)hvis du vil ha mer informasjon om feilen og mulige begrensninger.    
 
-    Hvis kameraet kontrollen slutter å fungere på en Android-enhet, publisere appen på nytt, og åpne den på nytt på enheten. Kamera-kontrollen ble oppdatert som svar på en endring i Android-operativsystemet, og appen vil dra nytte av oppdateringen når du publiserer på nytt.
+1. **Kamera problem på Android mobile-enheter** (Jan. 1 2019)
 
-1. **Rulling i fleksibel høyde gallerier** (27. november 2018)
+    Hvis kamera kontrollen slutter å fungere på en Android-enhet, kan du publisere appen på nytt, og åpne den på nytt på enheten. Kamera kontrollen ble oppdatert som svar på en endring i Android-operativsystemet, og appen din vil dra nytte av oppdateringen når du publiserer på nytt.
 
-    Hvis du støter på en begrensning når du ruller med fingeren, løft den, og begynn å rulle på nytt.
+1. **Rulle i gallerier med fleksibel høyde** (Nov. 27 2018)
 
-1. **Tegning med musen eller inndata via berøring er ikke jevn i PowerApps for Windows** (tekstfiler 24, 2018)
+    Hvis du kjører i en begrensning når du ruller med fingeren, løfter du den og begynner å rulle på nytt.
 
-    Pennekontrollen har bare delvis støtte for tegning ved hjelp av musen eller touch inndata i Windows-app. Streker kan være midlertidig. For jevn tegning, kan du bruke en penn eller kjøre appen i en nettleser.
+1. **Tegning med mus eller berørings inn data er ikke glatt i powerapps for Windows** Sep. 24, 2018)
+
+    Penne kontrollen har bare en del støtte for tegning ved bruk av mus eller berørings inn data i Windows-appen. Strøk kan være periodiske. Bruk en penn eller Kjør appen i en nett leser for å glatte ut tegningen.
 
 1. **Flere mediekontroller i PowerApps Mobile** (2. august 2018)
 
@@ -51,7 +53,7 @@ Denne artikkelen viser noen vanlige problemer som kan oppstå når du bruker Pow
 
 1. <a name="out-of-memory"></a>**Leseren går tom for minne** (23. juli 2018)
 
-    Hvis du kjører ikke nok minne når du bruker PowerApps, kan du vurdere å laste ned en 64-biters versjon av Chrome, Microsoft Edge eller Internet Explorer.
+    Hvis du går tom for minne mens du bruker PowerApps, bør du vurdere å laste ned en 64-biters versjon av Chrome, Microsoft Edge eller Internet Explorer.
 
 1. **Start et nettsted fra en innebygd app** (10. mai 2018)
 
@@ -72,8 +74,6 @@ Denne artikkelen viser noen vanlige problemer som kan oppstå når du bruker Pow
 1. **Endre oppsettet til SharePoint-skjemaer** (7. mars 2018)
 
     Når du prøver å endre oppsettet fra stående (standard) til liggende mens du tilpasser et SharePoint-listeskjema på bestemte språk, kan det hende appen viser flere feil (gule trekanter i kontroller). Du løser disse feilene og beholder liggende retning ved å klikke på **Angre**.
-
-## <a name="added-in-or-before-february-2018"></a>Lagt til i eller før februar 2018
 
 1. **Datatabell-kontroll**
 
@@ -143,7 +143,7 @@ Denne artikkelen viser noen vanlige problemer som kan oppstå når du bruker Pow
 
 1. **Når PowerApps genererer en app fra data, konfigureres ikke feltet som brukes til sortering og søk automatisk**.
 
-   Du konfigurerer dette feltet ved å redigere **[Elementer](controls/properties-core.md)**-formelen for galleriet, slik delene for filtrering og sortering i [Legg til et galleri](add-gallery.md) beskriver.
+   Du konfigurerer dette feltet ved å redigere **[Elementer](controls/properties-core.md)** -formelen for galleriet, slik delene for filtrering og sortering i [Legg til et galleri](add-gallery.md) beskriver.
 
 1. **Bare de 500 første postene i en datakilde kan åpnes i apper som er opprettet fra data**.
 
@@ -167,7 +167,7 @@ Denne artikkelen viser noen vanlige problemer som kan oppstå når du bruker Pow
 
 1. Du kan ikke endre data  **i [Skjema-kontrollen](controls/control-form-detail.md) ved å bruke et egendefinert kort**.
 
-     Det egendefinerte kortet for lager mangler **[Oppdatering](controls/control-card.md)**-egenskapen, noe som kreves for å skrive tilbake endringer. Du kan omgå dette slik:
+     Det egendefinerte kortet for lager mangler **[Oppdatering](controls/control-card.md)** -egenskapen, noe som kreves for å skrive tilbake endringer. Du kan omgå dette slik:
 
     * Velg skjema-kontrollen, og sett inn et kort ved å bruke den høyre ruten som er basert på feltet du vil at kortet skal vise.  
     * Lås opp kortet, som beskrevet i [Forstå datakort](working-with-cards.md#unlock-a-card).
@@ -185,4 +185,4 @@ Denne artikkelen viser noen vanlige problemer som kan oppstå når du bruker Pow
 
 1. **Kortgalleriet er avskrevet**.
 
-     Eksisterende apper som bruker denne funksjonen, vil for øyeblikket fortsette å kjøre, men du kan ikke legge til et kortgalleri. Erstatt kortgallerier med de nye kontrollene **[Redigeringsskjema](controls/control-form-detail.md)** og **[Visningsskjema](controls/control-form-detail.md)**.
+     Eksisterende apper som bruker denne funksjonen, vil for øyeblikket fortsette å kjøre, men du kan ikke legge til et kortgalleri. Erstatt kortgallerier med de nye kontrollene **[Redigeringsskjema](controls/control-form-detail.md)** og **[Visningsskjema](controls/control-form-detail.md)** .
