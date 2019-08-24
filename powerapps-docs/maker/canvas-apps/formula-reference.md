@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f934730ec6ca432f1da4106c535cf5967f883070
-ms.sourcegitcommit: 9163abbe9a24298f216f15139f977adfd2c3f2ae
+ms.openlocfilehash: e0f40e6c04b776d2e8efb41353e0da8ced6fc7c5
+ms.sourcegitcommit: 07a0fcda31557ddbafba0ca0362765229ee2fdad
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550332"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70008986"
 ---
 # <a name="formula-reference-for-powerapps"></a>Formelreferanse for PowerApps
 Formler kombinerer mange elementer.  Dette er listet opp under:
@@ -304,6 +304,8 @@ Andre elementer omfatter:
 **[Select](functions/function-select.md)** – simulerer en valgt handling på en kontroll som fører til at **OnSelect**-formelen evalueres.
 
 **[Set](functions/function-set.md)** – angir verdien til en global variabel.
+
+**[SetFocus](functions/function-setfocus.md)** – flytter inn data fokus til en bestemt kontroll.
 
 **[ShowColumns](functions/function-table-shaping.md)** – returnerer en tabell med bare valgte kolonner.
 

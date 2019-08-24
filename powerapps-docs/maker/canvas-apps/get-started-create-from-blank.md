@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ee9ea62280b06b75bf71885c532659f0381e6d9a
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.openlocfilehash: c66277cbd0d0ded3bfe0bee942e9160a650d2a98
+ms.sourcegitcommit: 6dea3559e012e56fde09b95ea8a2af2a81b89a91
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61555503"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000089"
 ---
 # <a name="create-a-canvas-app-from-scratch-based-on-excel-data"></a>Opprett en lerretsapp fra grunnen av basert på Excel-data
 
@@ -44,7 +43,7 @@ Du må først opprette en Excel-fil ved hjelp av disse eksempeldataene for å f�
 
     Hvis du vil ha mer informasjon, kan du se [Formater en tabell i Excel](how-to-excel-tips.md).
 
-3. Lagre filen under navnet **eventisgnup.xls**, lukk den, og deretter laster du den opp til en [skylagringskonto](connections/cloud-storage-blob-connections.md), for eksempel OneDrive.
+3. Lagre filen under navnet **eventsignup. xlsx**, Lukk den, og Last den deretter opp til en [Sky lag](connections/cloud-storage-blob-connections.md)Rings konto, for eksempel OneDrive.
 
 > [!IMPORTANT]
 > Du kan bruke din egen Excel-fil og se gjennom denne opplæringen for bare generelle begreper. Dataene i Excel-filen må imidlertid være formatert som en tabell. Hvis du vil ha mer informasjon, kan du se [Formater en tabell i Excel](how-to-excel-tips.md).
@@ -88,9 +87,9 @@ Du må først opprette en Excel-fil ved hjelp av disse eksempeldataene for å f�
 
 1. Velg nedoverpilen ved siden av **Ny skjerm** på **Hjem**-fanen for å åpne en liste over skjermtyper, og velg deretter **Liste**.
 
-    En skjerm er lagt til med flere standardkontroller, for eksempel en søkeboks og en **[Galleri](controls/control-gallery.md)**-kontroll. Galleriet dekker hele skjermen under søkeboksen.
+    En skjerm er lagt til med flere standardkontroller, for eksempel en søkeboks og en **[Galleri](controls/control-gallery.md)** -kontroll. Galleriet dekker hele skjermen under søkeboksen.
 
-1. Øverst på den nye skjermen velger du **[Etikett](controls/control-text-box.md)**-kontrollen, og deretter erstatter du **[Tittel]** med **Vis poster**.
+1. Øverst på den nye skjermen velger du **[Etikett](controls/control-text-box.md)** -kontrollen, og deretter erstatter du **[Tittel]** med **Vis poster**.
 
      ![Å endre tittellinjen](./media/get-started-create-from-blank/change-title-bar.png)
 
@@ -112,17 +111,17 @@ Du må først opprette en Excel-fil ved hjelp av disse eksempeldataene for å f�
 
     Formelen samsvarer med dette eksemplet:
 
-    ```powerapps-comma
+    ```powerapps-dot
     SortByColumns(
         Search(
-            Schedule;
-            TextSearchBox1.Text;
+            Schedule,
+            TextSearchBox1.Text,
             "Volunteer"
-        );
-        "Volunteer";
+        ),
+        "Volunteer",
         If(
-            SortDescending1;
-            SortOrder.Descending;
+            SortDescending1,
+            SortOrder.Descending,
             SortOrder.Ascending
         )
     )
@@ -130,7 +129,7 @@ Du må først opprette en Excel-fil ved hjelp av disse eksempeldataene for å f�
 
 1. På **Egenskaper**-fanen i den høyre ruten velger du **Rediger** ved siden av **Felter**-etiketten.
 
-1. I **Title2**-boksen velger du **Frivillig**.
+1. I **Title2** -boksen velger du **frivillig**, i **Subtitle2** -boksen, velger **StartDay**, og deretter velger du **Start Time**i **Body1** -boksen.
 
 1. Lukk **Data**-ruten ved å velge Lukk-ikonet (X) øverst til høyre.
 
@@ -163,7 +162,7 @@ Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelre
 
     `BrowseGallery1.Selected`
 
-1. Øverst på skjermen velger du **[Etikett](controls/control-text-box.md)**-kontrollen, og deretter erstatter du **[Tittel]** med **Endre poster**.
+1. Øverst på skjermen velger du **[Etikett](controls/control-text-box.md)** -kontrollen, og deretter erstatter du **[Tittel]** med **Endre poster**.
 
     ![Å endre tittellinjen](./media/get-started-create-from-blank/change-title-bar2.png)
 
@@ -197,7 +196,7 @@ Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelre
 
 1. Angi **OnSelect**-egenskapen for ikonet til denne formelen:
 
-    `NewForm(EditForm1);;Navigate(ChangeScreen;ScreenTransition.None)`
+    `NewForm(EditForm1);Navigate(ChangeScreen,ScreenTransition.None)`
 
     Når brukeren velger dette ikonet, vises **ChangeScreen** med tomme felt, slik at brukeren enklere kan opprette en post.
 
@@ -207,7 +206,7 @@ Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelre
 
 1. Angi **OnSelect**-egenskapen for pilen til denne formelen:
 
-    `EditForm(EditForm1);; Navigate(ChangeScreen; ScreenTransition.None)`
+    `EditForm(EditForm1); Navigate(ChangeScreen, ScreenTransition.None)`
 
     Når brukeren velger dette ikonet, vises **ChangeScreen** med hvert felt som viser data for den valgte posten, slik at brukeren kan redigere eller slette posten enklere.
 
@@ -219,7 +218,7 @@ Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelre
 
 1. Angi **OnSelect**-egenskapen for ikonet til denne formelen:
 
-    `ResetForm(EditForm1);;Navigate(ViewScreen; ScreenTransition.None)`
+    `ResetForm(EditForm1);Navigate(ViewScreen, ScreenTransition.None)`
 
     Når brukeren velger dette ikonet, forkastes eventuelle endringer brukeren har gjort på denne skjermen, og visningsskjermen åpnes.
 
@@ -229,7 +228,7 @@ Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelre
 
 1. Angi **OnSelect**-egenskapen for hakemerket til denne formelen:
 
-    `SubmitForm(EditForm1);; Navigate(ViewScreen; ScreenTransition.None)`
+    `SubmitForm(EditForm1); Navigate(ViewScreen, ScreenTransition.None)`
 
     Når brukeren velger dette ikonet, lagres eventuelle endringer brukeren har gjort for skjermen, og visningsskjermen åpnes.
 
@@ -247,7 +246,7 @@ Hvis du vil ha mer informasjon om disse og andre funksjoner, kan du se [formelre
 
 1. Angi **OnSelect**-egenskapen for papirkurvikonet til denne formelen:
 
-    `Remove(Schedule; BrowseGallery1.Selected);; Navigate(ViewScreen; ScreenTransition.None)`
+    `Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)`
 
     Når brukeren velger dette ikonet, slettes den valgte posten fra datakilden, og Vis-skjermen åpnes.
 
