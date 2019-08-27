@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 08/27/2019
 ms.locfileid: "70037046"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="setfocus-function-in-powerapps"></a>SetFocus-funksjonen i PowerApps
 Flytter inn data fokus til en bestemt kontroll. 
@@ -82,12 +83,12 @@ Slik oppretter du dette eksemplet:
 1. Angi **tekst** -egenskapen for denne kontrollen til formelen `"Use Shipping address as Billing address"`.
 1. Legg til en [ **tekst inn data** -kontroll](../controls/control-text-input.md) , og gi den det nye navnet **BillingName**.
 1. Angi **Default** -egenskapen for denne kontrollen til formelen `ShippingName`.
-1. Angi **Display Mode** -egenskapen for denne kontrollen til formelen `If( SyncAddresses.Value, DisplayMode.View, DisplayMode.Edit )`.  Dette vil automatisk aktivere eller deaktivere denne kontrollen basert på tilstanden til avmerkings boks kontrollen.
+1. Angi **Display Mode** -egenskapen for denne kontrollen til formelen `If( SyncAddresses.Value; DisplayMode.View; DisplayMode.Edit )`.  Dette vil automatisk aktivere eller deaktivere denne kontrollen basert på tilstanden til avmerkings boks kontrollen.
 1. Legg til en [ **tekst inn data** -kontroll](../controls/control-text-input.md) , og gi den det nye navnet **BillingAddress**.
 1. Angi **Default** -egenskapen for denne kontrollen til formelen `ShippingAddress`.
-1. Angi **Display Mode** -egenskapen for denne kontrollen til formelen `If( SyncAddresses.Value, DisplayMode.View, DisplayMode.Edit )`.  Dette vil automatisk aktivere eller deaktivere denne kontrollen basert på tilstanden til avmerkings boks kontrollen.
+1. Angi **Display Mode** -egenskapen for denne kontrollen til formelen `If( SyncAddresses.Value; DisplayMode.View; DisplayMode.Edit )`.  Dette vil automatisk aktivere eller deaktivere denne kontrollen basert på tilstanden til avmerkings boks kontrollen.
 1. Angi **standard** -egenskapen for avmerkings boksen til formelen `true`.  Dette er standard fakturerings adressen som bruker samme verdi som leverings adressen.
-1. Angi **OnCheck** -egenskapen for avmerkings boksen til formelen `Reset( BillingName ); Reset( BillingAddress )`.  Hvis brukeren velger å synkronisere leverings-og fakturerings adresser, fjerner dette bruker inn data i fakturerings adresse feltene som tillater **standard** egenskapene i hver av dem for å hente verdiene fra de tilsvarende leverings adresse feltene.
+1. Angi **OnCheck** -egenskapen for avmerkings boksen til formelen `Reset( BillingName );; Reset( BillingAddress )`.  Hvis brukeren velger å synkronisere leverings-og fakturerings adresser, fjerner dette bruker inn data i fakturerings adresse feltene som tillater **standard** egenskapene i hver av dem for å hente verdiene fra de tilsvarende leverings adresse feltene.
 1. Angi **OnUncheck** -egenskapen for avmerkings boksen til formelen `SetFocus( BillingName )`.  Hvis brukeren velger å ha en annen fakturerings adresse, flytter dette fokuset til den første kontrollen i fakturerings adressen.  Kontrollene er allerede aktivert på grunn av **Display Mode** -egenskapene.
 
 ### <a name="focus-on-validation-issues"></a>Fokuser på Valide Rings problemer
@@ -101,24 +102,24 @@ Når du validerer et skjema, kan det være nyttig å ikke bare vise en melding h
 
 I denne animasjonen trykkes Valide Rings knappen gjentatte ganger til alle feltene er fylt ut på riktig måte.  Vær oppmerksom på at muse pekeren ikke flyttes ned øverst på skjermen.   I stedet har **SetFocus** -funksjonen flyttet inn data fokuset til kontrollen som krever oppmerksomhet, med denne formelen:
 
-```powerapps-dot
-If( IsBlank( Name ), 
-        Notify( "Name requires a value", Error ); SetFocus( Name ),
-    IsBlank( Street1 ), 
-        Notify( "Street Address 1 requires a value", Error ); SetFocus( Street1 ),
-    IsBlank( Street2 ), 
-        Notify( "Street Address 2 requires a value", Error ); SetFocus( Street2 ),
-    IsBlank( City ), 
-        Notify( "City requires a value", Error ); SetFocus( City ),
-    IsBlank( County ), 
-        Notify( "County requires a value", Error ); SetFocus( County ),
-    IsBlank( StateProvince ), 
-        Notify( "State or Province requires a value", Error ); SetFocus( StateProvince ),
-    IsBlank( PostalCode ), 
-        Notify( "Postal Code requires a value", Error ); SetFocus( PostalCode ),
-    IsBlank( Phone ), 
-        Notify( "Contact Phone requires a value", Error ); SetFocus( Phone ),
-    Notify( "Form is Complete", Success )
+```powerapps-comma
+If( IsBlank( Name ); 
+        Notify( "Name requires a value"; Error );; SetFocus( Name );
+    IsBlank( Street1 ); 
+        Notify( "Street Address 1 requires a value"; Error );; SetFocus( Street1 );
+    IsBlank( Street2 ); 
+        Notify( "Street Address 2 requires a value"; Error );; SetFocus( Street2 );
+    IsBlank( City ); 
+        Notify( "City requires a value"; Error );; SetFocus( City );
+    IsBlank( County ); 
+        Notify( "County requires a value"; Error );; SetFocus( County );
+    IsBlank( StateProvince ); 
+        Notify( "State or Province requires a value"; Error );; SetFocus( StateProvince );
+    IsBlank( PostalCode ); 
+        Notify( "Postal Code requires a value"; Error );; SetFocus( PostalCode );
+    IsBlank( Phone ); 
+        Notify( "Contact Phone requires a value"; Error );; SetFocus( Phone );
+    Notify( "Form is Complete"; Success )
 )
 ```
 
@@ -142,7 +143,7 @@ I denne animasjonen bruker ikke data registrerings skjermen til venstre til å b
 
 Til høyre har vi nøyaktig samme app med **OnVisible** -egenskapen for data registrerings skjermen angitt som denne formelen:
 
-```powerapps-dot
+```powerapps-comma
 SetFocus( Name )
 ```
 
