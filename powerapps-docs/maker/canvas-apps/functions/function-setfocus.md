@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 471fa26b8eb36a26bd90eeab8df018ba6ca9349c
-ms.sourcegitcommit: 07a0fcda31557ddbafba0ca0362765229ee2fdad
+ms.openlocfilehash: fce0148e77432aa136a6279eb7fb69c0ca3b0846
+ms.sourcegitcommit: de77b6d5f77e84961fff9a399622ba8eeb48d4c3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70010059"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037046"
 ---
 # <a name="setfocus-function-in-powerapps"></a>SetFocus-funksjonen i PowerApps
 Flytter inn data fokus til en bestemt kontroll. 
 
 ## <a name="description"></a>Beskrivelse
-**SetFocus** -funksjonen gir en kontroll til inn data fokuset.  Brukerens taste trykk mottas deretter av denne kontrollen, slik at de kan skrive inn i en tekst inn data-kontroll eller bruke *Enter* -tasten til å velge en knapp.  Brukeren kan også bruke tabulatortasten , berøring, mus eller andre bevegelser til å flytte inn data fokus. 
+**SetFocus** -funksjonen gir en kontroll til inn data fokuset.  Brukerens taste trykk mottas deretter av denne kontrollen, slik at de kan skrive inn i en tekst inn data-kontroll eller bruke *Enter* -tasten til å velge en knapp.  Brukeren kan også bruke tabulatortasten , berøring, mus eller andre bevegelser til å flytte inn data fokus. Virke måten til *tab* -nøkkelen styres av [egenskapen **TabIndex** ](../controls/properties-accessibility.md).
 
 Bruk **SetFocus** -funksjonen til å angi fokus når (hver med et eksempel nedenfor):
 - en nylig eksponert eller aktivert inn data kontroll, for å veilede brukeren i det som kommer så videre og for raskere data registrering.
@@ -112,10 +112,10 @@ If( IsBlank( Name ),
         Notify( "City requires a value", Error ); SetFocus( City ),
     IsBlank( County ), 
         Notify( "County requires a value", Error ); SetFocus( County ),
-    IsBlank( AddressState ), 
-        Notify( "State requires a value", Error ); SetFocus( AddressState ),
-    IsBlank( Zip ), 
-        Notify( "Zip requires a value", Error ); SetFocus( Zip ),
+    IsBlank( StateProvince ), 
+        Notify( "State or Province requires a value", Error ); SetFocus( StateProvince ),
+    IsBlank( PostalCode ), 
+        Notify( "Postal Code requires a value", Error ); SetFocus( PostalCode ),
     IsBlank( Phone ), 
         Notify( "Contact Phone requires a value", Error ); SetFocus( Phone ),
     Notify( "Form is Complete", Success )
@@ -125,9 +125,9 @@ If( IsBlank( Name ),
 Slik oppretter du dette eksemplet:
 1. Opprett en ny, tom telefon app.
 1. Velg **ny skjerm**på **Sett inn** -menyen, og velg deretter **Rullbar**.
-1. I den midterste delen av skjermen kan du legge til **tekst inn data** -kontroller og gi navn til **navn**, **Street1**, **Street2**, **by**, **fylke**, **AddressState** (siden navne **tilstanden** allerede er brukt), **post**, og **telefon**. Legg til **etikett** -kontrollene over hver av dem for å identifisere feltene.  Du må kanskje endre størrelsen på inndelingen hvis den ikke er lang nok til å få plass til alle kontrollene.
+1. I den midterste delen av skjermen kan du legge til **tekst inn data** -kontroller og gi navn til **navn**, **Street1**, **Street2**, **by**, **fylke**, **del stat område**, **post nummer**og **telefon**. Legg til **etikett** -kontrollene over hver av dem for å identifisere feltene.  Du må kanskje endre størrelsen på inndelingen hvis den ikke er lang nok til å få plass til alle kontrollene.
 1. Legg til en merke [ **ikon** kontroll](../controls/control-shapes-icons.md) øverst på skjermen, over den rullbare inndelingen.  
-1. Angi **OnSelect** -egenskapen for ikon-kontrollen til formelen ovenfor.
+1. Angi **OnSelect** -egenskapen for ikon-kontrollen til formelen `If( IsBlank( ...` som er angitt ovenfor.
 
 ### <a name="focus-when-displaying-a-screen"></a>Fokuser når du viser en skjerm
 
