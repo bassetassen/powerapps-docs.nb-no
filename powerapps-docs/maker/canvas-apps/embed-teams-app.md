@@ -1,6 +1,6 @@
 ---
 title: Bygge inn en PowerApps-app i Teams | Microsoft Docs
-description: Du kan bygge inn en app som er opprettet i PowerApps i Microsoft Teams til å dele den.
+description: Du kan bygge inn en app som er opprettet i PowerApps i Microsoft Teams, for å dele den.
 author: jimholtz
 manager: kvivek
 ms.service: powerapps
@@ -13,163 +13,163 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d17b02cc87bb219474aade955a2910f12fcf7f27
-ms.sourcegitcommit: 2376c1f1f3431bca52a8deb9b966ce1fe9f88da0
+ms.openlocfilehash: ca3430d6b639b7a4c3980f5bbb0ba202220f6d9e
+ms.sourcegitcommit: 935470edc7441b76533cc937e6f32229bfd6f11f
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66381390"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70117797"
 ---
 # <a name="embed-a-powerapps-app-in-teams"></a>Bygge inn en PowerApps-app i Teams 
 
-Du kan dele en PowerApps du har opprettet ved å bygge inn den direkte inn i Microsoft Teams. Når du er ferdig, kan brukere velge **+** til å legge til appen din i **din** team kanaler eller samtaler i gruppen du er i. Appen vises som en flis under **fanene for teamet ditt**. 
+Du kan dele en PowerApps som du har opprettet ved å bygge det inn direkte i Microsoft Teams. Når du er ferdig, kan **+** brukerne velge å legge til appen din i en gruppe kanaler eller samtaler i teamet du er i. Appen vises som en flis under **kategorier for teamet ditt**. 
 
-En administrator kan laste opp appen slik at den viser deg for **alle** grupper i tenanten under den **alle kategorier delen**. Se [dele en app i Microsoft Teams](https://review.docs.microsoft.com/en-us/power-platform/admin/embed-app-teams?branch=JimHoltzWorkBranch).
+En administrator kan laste opp appen slik at den vises for **alle** teamene i leieren under **alle faner-delen**. Se [dele en app i Microsoft Teams](https://docs.microsoft.com/en-us/power-platform/admin/embed-app-teams).
 
 > [!NOTE]
-> Egendefinert app-policyer for Team må angis til å tillate laster opp egendefinerte apper. Hvis kan ikke bygge inn appen din i Teams, må du kontrollere med systemansvarlig for å se hvis de har etablert [egendefinerte appinnstillinger](https://docs.microsoft.com/MicrosoftTeams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings). 
+> Egen definerte app-policyer for Team må være angitt til å tillate opplasting av egen definerte apper. Hvis du ikke kan bygge inn appen i Teams, må du kontakte administratoren for å finne ut om de har konfigurert [egen definerte App-innstillinger](https://docs.microsoft.com/MicrosoftTeams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings). 
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-- [Har en PowerApps-lisens](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
-- Opprettet en lerretsapp
+- [Få en PowerApps-lisens](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+- Opprettet en lerrets app
 
-## <a name="locate-your-powerapps-guid"></a>Finn din PowerApp GUID
+## <a name="locate-your-powerapps-guid"></a>Finn din PowerApps GUID
 
-Finn og noter din PowerApp GUID for bruk i et senere trinn.
+Finn og noter deg PowerApp-GUID-en som skal brukes i et senere trinn.
 
-1. Logg deg på [ https://web.powerapps.com ](https://web.powerapps.com), og velg deretter **apper** i menyen.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Vis liste over apper](./media/embed-teams-app/file-apps2.png "visningslisten over apper")
-
-2. Velg **flere kommandoer** (...) for appen du vil dele i grupper, og velg deretter **detaljer**.
+1. Logg deg på [,ogvelgderetterapperi https://web.powerapps.com](https://web.powerapps.com)menyen.
 
    > [!div class="mx-imgBorder"] 
-   > ![Appdetaljer](./media/embed-teams-app/app-details.png "appdetaljer")
+   > ![Vis liste over apper](./media/embed-teams-app/file-apps2.png "Vis liste over apper")
 
-3. Post den **App-ID** for senere bruk.
+2. Velg **flere kommandoer** (...) for appen du vil dele i Teams, og velg deretter **detaljer**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Appdetaljer](./media/embed-teams-app/app-details2.png "appdetaljer")
+   > ![Detaljer om app](./media/embed-teams-app/app-details.png "Detaljer om app")
 
-## <a name="install-app-studio"></a>Installer App Studio
 
-Du kan hoppe over denne fremgangsmåten hvis App Studio er allerede installert. 
+3. Registrer **app-ID-** en for senere bruk.
 
-1. Velg i Teams **apper** i nedre venstre hjørne av Team-menyen (![apper-ikonet](./media/embed-teams-app/apps-icon.png "apper-ikonet")).
+   > [!div class="mx-imgBorder"] 
+   > ![Detaljer om app](./media/embed-teams-app/app-details2.png "Detaljer om app")
 
-2. Søk etter «App Studio» i søkeboksen, og velg den.
+## <a name="install-app-studio"></a>Installer app Studio
+
+Du kan hoppe over disse trinnene hvis app Studio allerede er installert. 
+
+1. I Teams velger du **apper** nederst til venstre på team-menyen (![apper-ikonet](./media/embed-teams-app/apps-icon.png "apps-ikonet")).
+
+2. Søk etter «app Studio» i søke boksen, og velg det.
 
    > [!div class="mx-imgBorder"] 
    > ![App Studio](./media/embed-teams-app/store-app-studio.png "App Studio")
 
-3. Velg **installere**. 
+3. Velg **Installer**. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Installer App Studio](./media/embed-teams-app/install-app-studio.png "Installer App Studio")
+   > ![Installer app Studio](./media/embed-teams-app/install-app-studio.png "Installer app Studio")
 
-4. Velg **åpne** for App-funksjonen.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Åpne App Studio](./media/embed-teams-app/open-app-studio.png "åpne App Studio")
-
-## <a name="create-a-teams-app-for-your-powerapp"></a>Opprett en Teams-app for din PowerApp
-
-1. Åpne App Studio i Teams.
+4. Velg **Åpne** for app-funksjonen.
 
    > [!div class="mx-imgBorder"] 
-   > ![Åpne App Studio](./media/embed-teams-app/open-app-studio2.png "åpne App Studio")
+   > ![Åpne app Studio](./media/embed-teams-app/open-app-studio.png "Åpne app Studio")
 
-2. Velg den **Manifest editor** fanen, og velg deretter **opprette en ny app** under Velkommen.
+## <a name="create-a-teams-app-for-your-powerapp"></a>Opprett en team-app for PowerApp
+
+1. Åpne app Studio i Teams.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Åpne app Studio](./media/embed-teams-app/open-app-studio2.png "Åpne app Studio")
+
+2. Velg kategorien **redigerings program for manifest** , og velg deretter **Opprett en ny app** under velkommen.
 
    > [!div class="mx-imgBorder"] 
    > ![Opprett ny app](./media/embed-teams-app/create-new-app.png "Opprett ny app")
 
-3. Fyll ut informasjonen om appen din i den **Appdetaljer** siden.  For App-ID-GUID, bør du bruke din PowerApp App-ID GUID du registrerte ovenfor.  Dette vil unngå duplisering av teamene apper for en bestemt PowerApp.
+3. Fyll ut informasjon om appen på siden for **app-detaljer** .  Du må bruke ID-en GUID for app-IDen du har registrert ovenfor, for GUID for app-ID.  Dette vil unngå duplisering av team apps for en bestemt PowerApp.
  
    > [!div class="mx-imgBorder"] 
-   > ![Fyll ut informasjonen](./media/embed-teams-app/fill-in-info-about-app.png "fylle ut informasjon")
+   > ![Fyll ut informasjon](./media/embed-teams-app/fill-in-info-about-app.png "Fyll ut informasjon")
 
    |Felt  |Beskrivelse  |
    |---------|---------|
-   |**Appnavn** |    |
-   |Kortnavn     | Nødvendig. Kort visningsnavnet for appen. grensen for 30 tegn.        |
-   |Det lange navnet     | Det fullstendige navnet på appen, brukes hvis fullstendig app overstiger 30 tegn.       | 
-   |**Identifikasjon**     |         |
-   |App-ID     | Nødvendig. Den unike Microsoft-genererte identifikatoren for denne appen.        |
-   |Pakkenavn     | Nødvendig. En unik identifikator for denne appen. Vi anbefaler at du bruker omvendt domene notasjon; for eksempel com.example. <AppName>.       |
-   |Versjon     | Nødvendig. Versjonen av bestemte appen. Hvis du oppdaterer noe i din manifestet, må versjonen økes også.     |
-   |**Beskrivelser**    |     |
-   | Kort beskrivelse    | Nødvendig. En kort beskrivelse av appen din, brukes når du har begrenset med plass. grensen for 80 tegn.   |
-   | Lang beskrivelse    | Nødvendig. Fullstendig beskrivelse av appen din.     |
-   | **Informasjon for utviklere**    |     |
-   | navn    | Nødvendig. Visningsnavnet for firmaet eller utvikler.     |
-   | Nettstedet    | Nødvendig. Https:// URL-adressen til webområdet for appen din via powerapps.com. Når noen installerer appen, en «om appen din» vises siden. Det bør koble til web-versjonen av appen din på powerapps.com.   |
-   | **URL-adresser til App**    | Disse koblingene vises i den **om** siden sammen med nettstedet URL-adressen.     |
-   | Personvernerklæring    | Nødvendig. Https:// URL-adressen til utviklerens personvernpolicy. [Eksempel](https://go.microsoft.com/fwlink/p/?LinkID=698505).   |
-   | Vilkår for bruk    | Nødvendig. Https:// URL-adressen utviklerens vilkårene for bruk.  [Eksempel](https://go.microsoft.com/fwlink/p/?LinkID=698507).  |
-   | **For varemerking**    |     |
-   | Full farge    | En relativ filbane til en full farge 192 x 192 PNG-ikonet.    |
-   | Gjennomsiktig disposisjon    |En relativ filbane til en gjennomsiktig 32 x 32 PNG disposisjon-ikonet.     |
-   | Uthevingsfarge    | En farge som brukes i forbindelse med, og som bakgrunn for disposisjonen ikonene.     |
+   |**Navn på apper** |    |
+   |Kort navn     | Krevde. Navnet på den korte visningen for appen. 30 tegn grense.        |
+   |Langt navn     | Det fullstendige navnet på appen, brukes hvis det fullstendige app-navnet overskrider 30 tegn.       | 
+   |**Opplysninger**     |         |
+   |App-ID     | Krevde. Den unike Microsoft-genererte identifikatoren for denne appen.        |
+   |Pakke navn     | Krevde. En unik identifikator for denne appen. Vi anbefaler at du bruker omvendt domene-notasjon. for eksempel, com. eksempel. <AppName>.       |
+   |Etterkalkuleringsversjonen     | Krevde. Versjonen av den bestemte appen. Hvis du oppdaterer noe i manifestet, må versjonen også økes.     |
+   |**Skildring**    |     |
+   | Kort beskrivelse    | Krevde. En kort beskrivelse av app-opplevelsen, brukes når plass er begrenset. grensen på 80 tegn.   |
+   | Lang beskrivelse    | Krevde. Den fullstendige beskrivelsen av appen.     |
+   | **Informasjon om utviklere**    |     |
+   | navn    | Krevde. Visnings navnet for firmaet eller utvikle ren.     |
+   | Web    | Krevde. Https://Netta dressen til nettstedet for appen din via powerapps.com. Når noen installerer appen din, vises siden om appen din. Den skal koble til Web versjonen av appen din på powerapps.com.   |
+   | **Netta dresser for App**    | Disse koblingene vises i **om** -siden sammen med NETTa dressen for nettstedet.     |
+   | Person vern erklæring    | Krevde. Https://Netta dressen til utvikle rens person vern policy. [Eksempel](https://go.microsoft.com/fwlink/p/?LinkID=698505).   |
+   | vilkår for bruk    | Krevde. Https://Netta dressen til utviklers vilkår for bruk.  [Eksempel](https://go.microsoft.com/fwlink/p/?LinkID=698507).  |
+   | **Merke**    |     |
+   | Full farge    | En relativ filbane til et Full Color 192x192 PNG-ikon.    |
+   | Gjennomsiktig kontur    |En relativ filbane til et gjennomsiktig 32 x 32 PNG-omriss.     |
+   | Uthevings farge    | En farge som brukes i forbindelse med og som bakgrunn for disposisjons ikonene.     |
 
-Hvis du vil ha mer informasjon, se [Manifest Editor](https://docs.microsoft.com/microsoftteams/platform/get-started/get-started-app-studio#manifest-editor) og [Manifest skjemaet](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema).
+Hvis du vil ha mer informasjon, kan du se [manifest redigerings program](https://docs.microsoft.com/microsoftteams/platform/get-started/get-started-app-studio#manifest-editor) og [manifest skjema](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema).
 
-4. Rull ned til avsnittet varemerking og legge til dine logoer og uthevingsfarge ønsket for appen din.  Disse er logoene som skal vises for appen i Teams. 
-
-   > [!div class="mx-imgBorder"] 
-   > ![Varemerking og oversikten](./media/embed-teams-app/branding-tabs.png "varemerking og oversikten")
-
-5. Under **funksjoner**, og velg **fanene**.
-
-6. Under **Team fanen** Velg **Legg til**.
+4. Rull ned til merkings delen, og Legg til logoene og uthevings fargen du ønsker for appen.  Dette er logoene som vil vises for appen i Teams. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Team-fanen Legg til](./media/embed-teams-app/team-tab-add.png "Team fanen Legg til")
+   > ![Merking og tabu lat Orer](./media/embed-teams-app/branding-tabs.png "Merking og tabu lat Orer")
 
-7. Legg til URL-adresse for appens i inndata «URL-adresse for»-feltet i følgende format: `https://web.powerapps.com/webplayer/teamsapptabsettings?appid=<PowerApp ID>`
+5. Under **funksjoner**velger du **Kategorier**.
 
-   Erstatt `<PowerApp ID>` med App-ID-GUID som du registrerte ovenfor.
-
-   Velg den [omfanget](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-overview#tab-scope) for appen skal vises i. Sikre **kan oppdatere konfigurasjonen** er merket, og velg deretter **lagre**.
+6. Velg **Legg til**under **gruppe-fanen** .
 
    > [!div class="mx-imgBorder"] 
-   > ![URL-adresse for](./media/embed-teams-app/configuration-url.png "URL-adresse")
+   > ![Legg til gruppe-fane](./media/embed-teams-app/team-tab-add.png "Legg til gruppe-fane")
 
-8. Under **Fullfør**, og velg **gyldige domener**. Legg til **apps.powerapps.com** og **apps.preview.powerapps.com** som gyldige domener for Team-programmet.
+7. Legg til appens konfigurasjons-URL-adresse i inn data feltet for Konfigurasjons-URL-adresse ved hjelp av følgende format:`https://web.powerapps.com/webplayer/teamsapptabsettings?appid=<PowerApp ID>`
+
+   Erstatt `<PowerApp ID>` med GUID-en for app-ID-en du har registrert ovenfor.
+
+   Velg [omfanget](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-overview#tab-scope) som appen skal vises i. Sørg for at det er merket av for **å oppdatere konfigurasjonen** , og velg deretter **Lagre**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Legg til gyldige domener](./media/embed-teams-app/add-valid-domains.png "legge til gyldige domener")
+   > ![Konfigurasjons-URL](./media/embed-teams-app/configuration-url.png "Konfigurasjons-URL")
 
-9. Under **Fullfør**, og velg **Test og Distribuer**. Under **installere**, og velg **installere**.
+8. Velg **gyldige domener**under **Fullfør**. Legg til **apps.powerapps.com** og **apps.preview.powerapps.com** som gyldige domener for Teams-programmet.
 
    > [!div class="mx-imgBorder"] 
-   > ![Velg Installer](./media/embed-teams-app/test-distribute-app.png "Velg installasjon")
+   > ![Legg til gyldige domener](./media/embed-teams-app/add-valid-domains.png "Legg til gyldige domener")
 
-10. Velg gruppen du vil appen installert i, og velg deretter **installere**.
+9. Under **Fullfør**velger du **test og Distribuer**. Velg **Installer**under **Installer**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Velg Installer](./media/embed-teams-app/test-distribute-app.png "Velg Installer")
+
+10. Velg teamet du vil appen skal installeres i, og velg deretter **Installer**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Legg til i team Installer](./media/embed-teams-app/new-app-add-to-team.png "Legg til i team installasjon")
-
-11. Hvis du vil legge til en forekomst av appen til en kanal med en gang, velger du kanalen du ønsker å bruke appen i og velg **konfigurere**.
+    > ![Legg til i team installasjon](./media/embed-teams-app/new-app-add-to-team.png "Legg til i team installasjon")
+11. Hvis du vil legge til en forekomst av appen i en kanal umiddelbart, velger du kanalen du vil bruke appen i, og velger **Konfigurer**.
 
     > [!div class="mx-imgBorder"] 
     > ![Velg Konfigurer](./media/embed-teams-app/app-now-available.png "Velg Konfigurer")
 
 12. Velg **Lagre**.
 
-## <a name="add-the-app-as-a-tab"></a>Legge til appen som en kategori
+## <a name="add-the-app-as-a-tab"></a>Legg til appen som en fane
 
-Hvis du vil legge til appen som en kategori på en kanal eller samtalen, kan du velge **+** , og deretter under **fanene for teamet ditt** Velg appen din. 
-
-> [!div class="mx-imgBorder"] 
-> ![Legg til app som kategori](./media/embed-teams-app/add-app-as-tab.png "Legg til app som kategori")
-
-Appen vises nå som en kategori.
+Hvis du vil legge til appen som en fane i en hvilken som helst **+** kanal eller samtale, velger du, og deretter velger du appen i **kategoriene for teamet** . 
 
 > [!div class="mx-imgBorder"] 
-> ![App som kategori](./media/embed-teams-app/app-as-tab.png "App som kategori")
+> ![Legg til app som fane](./media/embed-teams-app/add-app-as-tab.png "Legg til app som fane")
+
+Appen vises nå som en fane.
+
+> [!div class="mx-imgBorder"] 
+> ![App som-fane](./media/embed-teams-app/app-as-tab.png "App som-fane")
 
 ### <a name="see-also"></a>Se også
 [Velkommen til Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-overview)<br />
