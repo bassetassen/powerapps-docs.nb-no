@@ -1,6 +1,6 @@
 ---
-title: Egenskaper for tilgjengelighet for lerretsapper | Microsoft Docs
-description: Referanseinformasjon om egenskaper som Tabulatorindeks og verktøytips
+title: Tilgjengelighets egenskaper for lerret apper | Microsoft Docs
+description: Referanse informasjon om egenskaper som TabIndex og ToolTip
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5fa8b6fecdf690114cbf6a0945f2dfec66b067c3
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: e1baf96ab96dc6fe783fccdf243c0ae4ba6d0c1d
+ms.sourcegitcommit: b4df7d781cda50dfe2f6609f1cc4d2b531428b3c
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61560419"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70161274"
 ---
-# <a name="accessibility-properties-for-canvas-apps"></a>Egenskaper for tilgjengelighet for lerretsapper
+# <a name="accessibility-properties-for-canvas-apps"></a>Tilgjengelighets egenskaper for lerret apper
 
 Konfigurasjon av egenskaper som tilbyr alternative måter å arbeide interaktivt med kontroller som er egnet for brukere med funksjonshemninger på.
 
@@ -28,18 +28,48 @@ Konfigurasjon av egenskaper som tilbyr alternative måter å arbeide interaktivt
 
 **AccessibleLabel** – etikett for skjermlesere. En tom verdi for kontroller av typen Bilde, Ikon og Figur gjør dem usynlige for skjermleseren og fører til at de behandles som dekorasjoner.
 
-**Live** – hvordan bør skjermlesere lese opp endringer i innholdet. Bare tilgjengelig i den **[etikett](control-text-box.md)** kontroll.
+**Live** – hvordan skjerm lesere bør annonsere endringer til innhold. Bare tilgjengelig i **[etikett](control-text-box.md)** -kontrollen.
 
-* Når satt til **av**, skjermleseren ikke si endringer.
-* Når satt til **Polite**, skjermleseren er ferdig med å snakke før kunngjøring eventuelle endringer som oppstod under skjermleseren ble snakke.
-* Når satt til **Assertive**, skjermleseren avbryter seg selv for å informere om eventuelle endringer som oppstod under skjermleseren ble snakke.
+* Når det er **merket av**for dette, vil ikke skjerm leseren annonsere endringer.
+* Når det er satt til **Polite**, full føres skjerm leseren å snakke før eventuelle endringer som ble funnet mens skjerm leseren ble snakke.
+* Når det er satt til **assertive**, avbryter skjerm leseren seg selv for å annonsere eventuelle endringer som oppstod mens skjerm leseren ble snakke.
 
-Lær hvordan du [kunngjøre dynamiske endringer med live områder](../accessible-apps-live-regions.md).
+Lær hvordan du kan [annonsere dynamiske endringer med direktesendte områder](../accessible-apps-live-regions.md).
 
-**TabIndex** – navigasjonsrekkefølge for tastatur i forhold til andre kontroller.
+**TabIndex** – bestemmer om kontrollen deltar i hurtig navigasjon.
 
-Standardverdien er null og angir standard tabulatorrekkefølge basert på kontrollens XY-koordinater.  Hvis du angir en verdi som er høyere enn null, flyttes kontrollens plass i tabulatorrekkefølgen foran alle kontroller med standardverdiene.  En kontroll med tabulatorindeks-verdien 2 vil stå foran en med tabulatorindeks-verdier på 3 eller høyere ved bruk av tabulator.
+Tastatur navigasjon er et viktig aspekt i alle apper.  For mange av tastatur beholdes mer effektivt enn å bruke berøring eller mus, og det gjør det mulig for skjerm lesere for synshemmede.  Navigasjons rekkefølgen bør:
+- Speil det som vises visuelt.
+- Bare få tabu lat ORS topp på kontroller som er interaktive.
+- Følg enten en intuitiv bortover og deretter ned "Z"-rekkefølge, og deretter på tvers av "omvendt"-rekkefølgen.
 
-Merk at beholdere som Figur- og Galleri-kontroller alltid vil tabulere gjennom alle elementene i beholderen før de fortsetter til kontroller utenfor beholderen.  Beholderens plass i tabulatorrekkefølgen er plassen angitt av den laveste tabulatorindeks-verdien til en underordnet kontroll.
+Kravene ovenfor vil bli oppfylt med standard **TabIndex** -verdier, og vi anbefaler at du ikke endrer dem.  Standard er det meste brukerne forventer visuelt, og den fungerer bra med en skjerm leser.  Men det kan være tilfeller der du vil overstyre standard innstillingen.  Bruk **TabIndex** -egenskapen og den [ **utvidede gruppe** kontrollen](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (eksperimentell) til å foreta justeringer i navigasjons rekkefølgen.  
 
-Hvis du angir Tabulatorindeks som -1, deaktiveres tabulatortilgang til kontrollen. Dette gjør Bilder, Ikoner og Figurer til ikke-interaktive elementer.
+Egenskapen **TabIndex** har to anbefalte verdier:
+
+| TabIndex-verdi | Virkemåte | Standard for |
+|----------------|----------|-------------|
+| 0 | Kontrollen deltar i hurtig navigasjon. | [**Knapp**](control-button.md), [**tekst inn data**](control-text-input.md), [**kombinasjons boks**](control-combo-box.md)og andre vanlige interaktive kontroller. |
+| &minus;Nr. | Kontrollen deltar ikke i hurtig navigasjon. | [**Etikett**](control-text-box.md), [**bilde**](control-image.md), [**ikon**](control-shapes-icons.md)og andre vanligvis ikke-interaktive kontroller. |
+
+Navigasjons rekkefølge kommer vanligvis fra venstre mot høyre, deretter fra topp til bunn, i et «Z»-mønster. Rekkefølgen er basert på verdiene for **X** -og **Y** -egenskapen til kontrollene. Hvis kontroller dynamisk flyttes på skjermen, for eksempel ved å ha en formel for **X** eller **Y** basert på en tidtaker eller en annen kontroll, endres navigasjons rekkefølgen dynamisk også.
+
+Bruk den [ **forbedrede gruppe** kontrollen](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (eksperimentell) til å bunte kontroller som skal navigeres sammen, eller for å opprette kolonner i et "reverst"-mønster.  Øverst i eksemplet nedenfor er navne feltene plassert i en utvidet gruppe kontroll som fører til at navigasjonen går ned før det går over.  Nederst i eksemplet brukes ingen gruppe kontroller, og navigasjonen fortsetter på tvers, og deretter ned som vanlig som ikke er intuitivt, gitt kontroll grupperinger. 
+
+![Animasjon som viser utvidet gruppe kontroll som fører til at navigasjonen går ned i en gruppe før den går over](media/properties-accessibility/enhanced-group.gif)
+
+På samme måte vil kategorier gjennom beholdere som [**skjema**](control-form-detail.md) -og [**Galleri**](control-gallery.md) -kontroller, navigere gjennom alle elementene i beholderen før den neste kontrollen går utenfor beholderen.  
+
+Kontroller som har en **synlig** egenskaps verdi som *Usann* , eller som har en **Display Mode** -egenskaps verdi **deaktivert** , er ikke inkludert i navigasjonen.  
+
+Når du bruker en nett leser, flyttes den siste kontrollen av skjermen til nett leserens innebygde kontroller, for eksempel URL-adressen.  
+
+> [!WARNING]
+> Unngå **TabIndex** -verdier som er større enn 0. Kontrollene for kontrollen gjengis i HTML, men selv om [W3C har advart](https://www.w3.org/TR/wai-aria-practices/#kbd_general_between) «forfattere er sterkt forbrukt for å ikke bruke disse verdiene.» Mange HTML-verktøy advarer seg etter verdier som er større enn 0, som gjør at [appen](../accessibility-checker.md) ser når den rapporterer rekkefølgen av elementene på skjermen.»  Alt for gode grunner: ved å bruke **TabIndex** på denne måten kan det være veldig vanskelig å få tilgang til dem, slik at skjerm lesere ikke kan brukes.
+> 
+> Når det finnes kontroller med **TabIndex** som er større enn 0, vil brukerne navigere til kontroller med økende **TabIndex** -verdier (1, 2 og så videre). Når brukere har navigert alle kontroller med positive **TabIndex** -verdier, vil de til slutt navigere til kontrollene med **TabIndex** -verdien 0, inkludert nett leserens innebygde kontroller. Når det er flere kontroller med samme **TabIndex**, bestemmer **X** -og **Y** -posisjonen sin relative rekkefølge.
+
+
+
+
+
