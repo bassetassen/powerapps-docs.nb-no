@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: dde096adbd82c04f7a2f17cd2af156b2e334c990
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: bd4219a42b0674927370dfca1aa4ba681dd741bd
+ms.sourcegitcommit: e58a6d9c23445e6d00317ec990a8aa0c2650bf7f
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61538644"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70201070"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>Egendefinert visualobjekt i PowerApps for Power BI
 
@@ -53,7 +52,7 @@ La oss se på fremgangsmåten for å bruke det egendefinerte visualobjektet fra 
 
     ![Egendefinert formel](./media/powerapps-custom-visual/custom-formula.png)
 
-    Denne formelen kobler Power BI-data med kundedatakilden: `LookUp(Customer;Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
+    Denne formelen kobler Power BI-data med kundedatakilden: `LookUp(Customer,Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
 
    Power BI-rapporten og forekomsten av PowerApps Studio som ble startet, deler en direkte datatilkobling. Når begge er åpne, kan du filtrere eller endre dataene i rapporten og se de oppdaterte dataene øyeblikkelig gjenspeilet i appen i PowerApps Studio.
 
@@ -65,7 +64,7 @@ La oss se på fremgangsmåten for å bruke det egendefinerte visualobjektet fra 
 
     ![Arbeid i rapporten](./media/powerapps-custom-visual/working-report.gif)
 
-    Hvis du må gjøre endringer i en app, åpner du rapporten i redigeringsmodus, klikker eller trykker på **Flere alternativer** (**. . .**) på PowerApps-visualobjektet og velger **Rediger**.
+    Hvis du må gjøre endringer i en app, åpner du rapporten i redigeringsmodus, klikker eller trykker på **Flere alternativer** ( **. . .** ) på PowerApps-visualobjektet og velger **Rediger**.
 
     ![Rediger appen](./media/powerapps-custom-visual/edit-app.png)
 
@@ -73,14 +72,15 @@ La oss se på fremgangsmåten for å bruke det egendefinerte visualobjektet fra 
 
 PowerApps-visualobjektet er tilgjengelig i forhåndsvisning og har disse begrensningene:
 
-- Du kan ikke opprette eller endre apper når du bruker PowerApps-visualobjektet i Power BI Desktop, Internet Explorer eller Mozilla Firefox. Vi anbefaler at du først publiserer rapporten til Power BI-tjenesten. Deretter kan du bruke Microsoft Edge eller Google Chrome til å opprette og oppdatere apper.
+- Oppretting, endring og visning av apper ved bruk av egen definerte PowerApps-effekter støttes bare i Microsoft Edge og Google Chrome-nett lesere. Vi anbefaler at du først publiserer rapporten til Power BI-tjenesten. Deretter kan du bruke Microsoft Edge eller Google Chrome til å opprette og oppdatere apper.
 - Hvis du endrer datafeltene som er tilknyttet visualobjektet, må du redigere appen fra Power BI-tjenesten ved å velge ellipsen (…) og deretter **Redigere**. Ellers blir ikke endringene overført til PowerApps, og appen vil fungere på uventede måter.
-- Det egendefinerte PowerApps-visualobjektet kan ikke utløse en oppdatering av Power BI-rapporten eller Power BI-datakilden. Hvis du skriver tilbake data fra appen til samme datakilde som rapporten, gjenspeiles ikke endringene umiddelbart. Endringene gjenspeiles i den neste planlagte oppdateringen.
+- Den egen definerte PowerApps-effekten kan ikke utløse en oppdatering av Power BI rapporter og Power BI data kilder i Power BI Desktop. Hvis du skriver tilbake data fra appen til den samme data kilden som rapporten, gjenspeiles ikke endringene umiddelbart i Power BI Desktop. Endringene gjenspeiles i den neste planlagte oppdateringen.
 - Det egendefinerte PowerApps-visualobjektet kan ikke filtrere dataene eller sende data tilbake til rapporten.
 - Du må dele PowerApps-appen adskilt fra rapporten. Finn ut mer om [deling av apper i PowerApps](share-app.md).
-- Disse teknologiene støtter ikke egendefinerte PowerApps-visualobjektet: Power BI Report Server, mobil-appen for Power BI, og Internet Explorer.
+- Disse teknologiene støtter ikke egen definert visuell effekt for PowerApps: Rapportserver for Power BI, mobilappen for Power BI og Internet Explorer.
+- Hvis du bruker funksjonen PowerBIIntegration. refresh (), må du bruke en kilde som støtter [directquery](https://docs.microsoft.com/en-us/power-bi/desktop-directquery-data-sources) , og data tilkoblingen må opprettes med DirectQuery-metode. 
 
 ## <a name="next-steps"></a>Neste trinn
 
 * Følg en enkel [trinnvis opplæring](embed-powerapps-powerbi.md).
-* Sjekk ut vår [video](https://aka.ms/powerappscustomvisualvideo).
+* Ta en titt på [videoen](https://aka.ms/powerappscustomvisualvideo)vår.
