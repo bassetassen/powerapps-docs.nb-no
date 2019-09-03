@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 09/03/2019
 ms.locfileid: "70213659"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="connect-to-office-365-outlook-from-powerapps"></a>Å koble til Office 365 Outlook fra PowerApps
 ![Office 365 Outlook](./media/connection-office365-outlook/office365icon.png)
@@ -58,10 +59,10 @@ Office 365 Outlook-tilkoblingen er opprettet og lagt til i appen din. Den er nå
 4. Denne funksjonen har flere valgfrie parametere tilgjengelig. Angi **Items**-egenskapen for galleriet til en av følgende formler:
    
     `Office365.GetEmails({fetchOnlyUnread:false})`  
-    `Office365.GetEmails({fetchOnlyUnread:false, top:2})`  
-    `Office365.GetEmails({folderPath:"Sent Items", fetchOnlyUnread:false, top:2})`  
-    `Office365.GetEmails({folderPath:"Sent Items", fetchOnlyUnread:false, top:2, searchQuery:"powerapps"})`  
-    `Office365.GetEmails({folderPath:"Deleted Items", fetchOnlyUnread:false, top:2, skip:3})`
+    `Office365.GetEmails({fetchOnlyUnread:false; top:2})`  
+    `Office365.GetEmails({folderPath:"Sent Items"; fetchOnlyUnread:false; top:2})`  
+    `Office365.GetEmails({folderPath:"Sent Items"; fetchOnlyUnread:false; top:2; searchQuery:"powerapps"})`  
+    `Office365.GetEmails({folderPath:"Deleted Items"; fetchOnlyUnread:false; top:2; skip:3})`
 
 ## <a name="send-a-message"></a>Sending av en melding
 1. Velg **Tekst** på **Sett inn**-menyen, og velg deretter **Tekstinndata**.
@@ -75,7 +76,7 @@ Office 365 Outlook-tilkoblingen er opprettet og lagt til i appen din. Den er nå
    * **inputBody**
 4. Velg **Kontroller** på **Sett inn**-menyen, og velg **Knapp**. Angi **[OnSelect](../controls/properties-core.md)** -egenskapen til følgende formel:  
    
-    `Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text)`
+    `Office365.SendEmail(inputTo.Text; inputSubject.Text; inputBody.Text)`
 5. Flytt knappen slik at den vises under alle de andre kontrollene, og angi **[Text](../controls/properties-core.md)** -egenskapen til **Send e-postmelding**.
 6. Trykk på F5, eller velg forhåndsvisningsknappen (![Forhåndsvisningsknapp](./media/connection-office365-outlook/preview.png)). Skriv inn gyldig e-postadresse i **inputTo**, og skriv inn det du ønsker i de to andre **Tekstinndata**-kontrollene.
 7. Velg **Send e-postmelding** for å sende meldingen. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
@@ -94,11 +95,11 @@ Hvis du vil legge til et vedlegg i en melding, følger du trinnene i forrige del
 
 I dette eksemplet blir et bilde sendt som **file1.jpg**:
 
-`Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text, {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""})})`
+`Office365.SendEmail(inputTo.Text; inputSubject.Text; inputBody.Text; {Attachments:Table({Name:"file1.jpg"; ContentBytes:Camera1.Photo; '@odata.type':""})})`
 
 I dette eksemplet blir en lydfil sendt i tillegg til bildet:
 
-`Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text, {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""}, {Name:"AudioFile", ContentBytes:microphone1.audio })})`
+`Office365.SendEmail(inputTo.Text; inputSubject.Text; inputBody.Text; {Attachments:Table({Name:"file1.jpg"; ContentBytes:Camera1.Photo; '@odata.type':""}; {Name:"AudioFile"; ContentBytes:microphone1.audio })})`
 
 ## <a name="delete-a-message"></a>Sletting av en melding
 1. Velg **Galleri** på **Sett inn**-menyen, og velg deretter en **Tekstgalleri**-kontroll.
