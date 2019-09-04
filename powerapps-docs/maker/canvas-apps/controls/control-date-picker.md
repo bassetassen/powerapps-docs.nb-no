@@ -13,31 +13,30 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: eb8835a2e5c66bb975bc384d9ca782cd3a0f7d85
-ms.sourcegitcommit: 8d0ba2ec0c97be91d1350180dd6881c14dec8f2d
+ms.openlocfilehash: ea41924c213adc6a2e0e72b906076a2d8e6783ff
+ms.sourcegitcommit: 488609d517816f296f8090a1cb643297fe3e8e85
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65517428"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70237967"
 ---
 # <a name="date-picker-control-in-powerapps"></a>Datovelger-kontrollen i PowerApps
 En kontroll som brukeren kan klikke eller trykk på for å angi en dato.
 
 ## <a name="description"></a>Beskrivelse
-Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](control-text-input.md)**-kontroll, kan du forsikre deg om at brukeren angir en dato i riktig format.
+Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](control-text-input.md)** -kontroll, kan du forsikre deg om at brukeren angir en dato i riktig format.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 **DefaultDate** – startverdien for en datokontroll, med mindre brukeren endrer den.
 
-**SelectedDate** – datoen som er nå er valgt i en datokontroll.
+**SelectedDate** – datoen som er nå er valgt i en datokontroll.  Denne datoen er representert i lokal tid.
 
 **Format** – tekstformatet som kontrollen viser datoen i og brukeren angir datoen i. Du kan angi denne egenskapen som **ShortDate** (standard) eller **LongDate** for å formatere datoer basert på **Språk**-egenskapen til denne kontrollen. Du kan også angi denne egenskapen som et uttrykk, for eksempel **yyyy/mm/dd** hvis du vil bruke samme format, uansett språk. For eksempel:
 
 * Kontrollen viser **12/31/2017** hvis brukeren klikker på den siste dagen i 2017, **Format**-egenskapen er angitt som **ShortDate** og **Språk**-egenskapen er angitt som **en-us**.
 * Kontrollen viser **dimanche 31 decembre 2017** hvis brukeren klikker eller trykker på den siste dagen i 2017, **Format**-egenskapen er angitt som **LongDate** og **Språk**-egenskapen er angitt som **fr-fr**.
 
-**Språk** – angir språket som brukes til å formatere datoer, inklusive navnet på månedene. Hvis denne egenskapen ikke er angitt, bestemmes språket av brukerens enhetsinnstillinger. Støttede verdier inkluderer "EN-us» og «FR».
+**Language** – bestemmer språket som brukes til å formatere datoer, inkludert navn på måneder. Hvis denne egenskapen ikke er angitt, bestemmes språket av brukerens enhetsinnstillinger. Støttede verdier inkluderer "EN-US" og "FR".
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
 **[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere.
@@ -52,11 +51,11 @@ Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](c
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (Rediger), viser kun data (Vis) eller er deaktivert (Deaktivert).
 
-**[DisabledBorderColor](properties-color-border.md)**  – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)**  – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskapen er angitt som **Deaktivert**.
 
-**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt som **Deaktivert**.
 
-**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
+**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)** -egenskapen er angitt som **Deaktivert**.
 
 **EndYear** – det siste året som brukeren kan angi verdien for i en datovelger-kontroll.
 
@@ -68,7 +67,7 @@ Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](c
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
+**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **halvfet**, **Normal**eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -76,7 +75,7 @@ Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](c
 
 **IconBackground** – bakgrunnsfargen til datovelgerikonet.
 
-**InputTextPlaceholder** – Veiledningsteksten som vises hvis ingen datoer angis.
+**InputTextPlaceholder** – instruksjons tekst som vises hvis ingen datoer skrives inn.
 
 **[Kursiv](properties-text.md)** – om teksten i en kontroll er i kursiv.
 
@@ -105,19 +104,19 @@ Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](c
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-**[Year](../functions/function-datetime-parts.md)**( *DateTimeValue* )
+**[Year](../functions/function-datetime-parts.md)** ( *DateTimeValue* )
 
 ## <a name="example"></a>Eksempel
 1. Legg til en **Datovelger**-kontroll, og gi den navnet **Deadline**.
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
-2. Legg til en **[Etikett](control-text-box.md)**-kontroll, og angi **[Tekst](properties-core.md)**-egenskapen som denne formelen:
-   <br>**DateDiff(Today(); Deadline.SelectedDate) & " days to go!"**
+2. Legg til en **[Etikett](control-text-box.md)** -kontroll, og angi **[Tekst](properties-core.md)** -egenskapen som denne formelen:
+   <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
 
-    Vil du ha mer informasjon om **[DateDiff](../functions/function-dateadd-datediff.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
+    Vil du ha mer informasjon om **[DateDiff](../functions/function-dateadd-datediff.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 3. Trykk på F5, velg en dato i **Deadline**, og klikk eller trykk på **OK**.
 
-    **[Etikett](control-text-box.md)**-kontrollen viser antall dager mellom dagens dato og datoen du valgte.
+    **[Etikett](control-text-box.md)** -kontrollen viser antall dager mellom dagens dato og datoen du valgte.
 4. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
 
 
@@ -133,4 +132,4 @@ Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](c
 * Fokusindikatorer må være godt synlige. Bruk **[FocusedBorderColor](properties-color-border.md)** og **[FocusedBorderThickness](properties-color-border.md)** for å oppnå dette.
 
 > [!TIP]
-> Når kalenderen er åpen, trykker du **siden opp** og **PgDn** til å navigere mellom måneder og **SKIFT + PGUP** og **SKIFT + PGDN** til navigere mellom år.
+> Når kalenderen er åpen, trykker du på **PgUp** og **PGDN for** å navigere mellom måneder og **SKIFT + PgUp** og **SKIFT +** PGDN for å navigere mellom årene.
