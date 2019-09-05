@@ -1,6 +1,6 @@
 ---
-title: Formler for virkemåte for komponenter | Microsoft Docs
-description: Utløs en app for å utføre en eller flere oppgaver når det oppstår en komponentbaserte handling.
+title: Virke måte formler for komponenter | Microsoft Docs
+description: Utløs en app for å utføre én eller flere oppgaver når en komponent BAS ert handling utføres.
 author: yifwang
 ms.service: powerapps
 ms.topic: article
@@ -10,28 +10,28 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7275395a4c21afaebc60e9635461afc08f5e84a0
-ms.sourcegitcommit: afe958805d8e1cfa4fdf02c7bceea947185f71f2
+ms.openlocfilehash: c8ec4edd835f12fb6fccf04ba0fb27f1e755cac0
+ms.sourcegitcommit: ea3ab5926541c60a9e7c17f52f937c9812d48c71
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66420318"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70310072"
 ---
-# <a name="behavior-formulas-for-components"></a>Formler for virkemåte for komponenter
+# <a name="behavior-formulas-for-components"></a>Virke måte formler for komponenter
 
 > [!IMPORTANT]
-> Denne funksjonen er fremdeles eksperimentell og deaktivert som standard. Hvis du vil ha mer informasjon, se [Experimental og forhåndsvisning av funksjoner](working-with-experimental.md).
+> Denne funksjonen er fremdeles eksperimentell og deaktivert som standard. Se [funksjonene eksperimentell og forhånds visning](working-with-experimental.md)hvis du vil ha mer informasjon.
 
-Angi én eller flere [formler for virkemåte](working-with-formulas-in-depth.md) som kjøres når en hendelse utløser en endring i komponentforekomster. Angi for eksempel en komponent **OnReset** egenskapen til én eller flere formler som utfører initialisering, fjerner du inndata og tilbakestille verdiene når den **tilbakestille** funksjonen kjører på komponentforekomster.
+Angi én eller flere [virke måte formler](working-with-formulas-in-depth.md) som kjøres når en hendelse utløser en endring i komponent forekomster. Du kan for eksempel angi **OnReset** -egenskapen for en komponent til én eller flere formler som utfører initialisering, slette inn data og tilbakestille verdier når funksjonen **reset** kjøres på komponent forekomstene.
 
-## <a name="onreset"></a>OnReset ##
+## <a name="onreset"></a>OnReset
 
-Med en komponent som er valgt, velger **OnReset** i rullegardinlisten for egenskaper (på høyre side av formellinjen), og skriv deretter inn én eller flere formler.
-
-> [!div class="mx-imgBorder"]
-> ![OnReset eksempel](./media/component-behavior/example-onreset.png)
-
-Å teste **OnReset**, konfigurere en kontroll for å tilbakestille komponenten. For eksempel angi den **OnSelect** egenskapen for en knapp til denne formelen: **Tilbakestill**(*ComponentName*)
+Når en komponent er valgt, velger du **OnReset** i rulle gardin listen over egenskaper (på høyre side av formel linjen), og deretter skriver du inn én eller flere formler.
 
 > [!div class="mx-imgBorder"]
-> ![Tilbakestill-knappen](./media/component-behavior/reset-button.png)
+> ![OnReset, eksempel](./media/component-behavior/example-onreset.png)
+
+Hvis du vil teste **OnReset**, må du konfigurere en kontroll for å tilbakestille komponenten. Du kan for eksempel angi **OnSelect** -egenskapen for en knapp til denne formelen: **Tilbakestill** (*ComponentName*)
+
+> [!div class="mx-imgBorder"]
+> ![Tilbakestill-knapp](./media/component-behavior/reset-button.png)
