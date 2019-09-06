@@ -123,7 +123,7 @@
           href: ./canvas-apps/sample-meeting-capture.md
     - name: Å opprette din første app
       items:
-        - name: 1. Generer en app fra dataene.
+        - name: 1 – Generer en app fra dataene.
           items:
             - name: Fra Common Data Service
               href: ./canvas-apps/data-platform-create-app.md
@@ -131,7 +131,7 @@
               href: ./canvas-apps/app-from-sharepoint.md
             - name: Fra Excel
               href: ./canvas-apps/get-started-create-from-data.md
-        - name: 2. Gjør grunnleggende tilpasninger.
+        - name: 2 – Gjør grunnleggende tilpasninger.
           items:
             - name: 1 – Gallerier
               href: ./canvas-apps/customize-layout-sharepoint.md
@@ -139,7 +139,7 @@
               href: ./canvas-apps/customize-forms-sharepoint.md
             - name: 3 – Kort
               href: ./canvas-apps/customize-card.md
-        - name: 3. Lag en app på egenhånd.
+        - name: 3 – Lag en app på egenhånd.
           items:
             - name: Fra Common Data Service
               href: ./canvas-apps/data-platform-create-app-scratch.md
@@ -411,7 +411,7 @@
                   href: ./canvas-apps/functions/function-concatenate.md
                 - name: Concurrent
                   href: ./canvas-apps/functions/function-concurrent.md
-                - name: Connection
+                - name: Tilkobling
                   href: ./canvas-apps/functions/signals.md
                 - name: Count
                   href: ./canvas-apps/functions/function-table-counts.md
@@ -469,7 +469,7 @@
                   href: ./canvas-apps/functions/function-numericals.md
                 - name: Filter
                   href: ./canvas-apps/functions/function-filter-lookup.md
-                - name: Find
+                - name: Søk
                   href: ./canvas-apps/functions/function-find.md
                 - name: First
                   href: ./canvas-apps/functions/function-first-last.md
@@ -575,7 +575,7 @@
                   href: ./canvas-apps/functions/function-refresh.md
                 - name: Relater
                   href: ./canvas-apps/functions/function-relate-unrelate.md
-                - name: Remove
+                - name: Fjern
                   href: ./canvas-apps/functions/function-remove-removeif.md
                 - name: RemoveIf
                   href: ./canvas-apps/functions/function-remove-removeif.md
@@ -840,14 +840,20 @@
                       href: ./model-driven-apps/create-and-edit-forms.md
                     - name: 'Å legge til, flytte eller slette felt'
                       href: ./model-driven-apps/add-move-or-delete-fields-on-form.md
+                    - name: 'Å legge til, flytte eller slette komponenter'
+                      href: ./model-driven-apps/add-move-configure-or-delete-components-on-form.md
                     - name: 'Å legge til, flytte eller slette inndelinger'
                       href: ./model-driven-apps/add-move-or-delete-sections-on-form.md
                     - name: 'Å legge til, flytte eller slette faner'
                       href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md
-                    - name: Egenskaper i skjemautformingen
-                      href: ./model-driven-apps/form-designer-properties.md
                     - name: Konfigurer egenskaper for topptekst
                       href: ./model-driven-apps/form-designer-header-properties.md
+                    - name: Legg til og konfigurer delrutenettkomponent
+                      href: ./model-driven-apps/form-designer-add-configure-subgrid.md
+                    - name: Legg til og konfigurer hurtigvisningskomponent
+                      href: ./model-driven-apps/form-designer-add-configure-quickview.md
+                    - name: Konfigurer oppslagskomponent
+                      href: ./model-driven-apps/form-designer-add-configure-lookup.md
                     - name: Å bruke trevisningen
                       href: ./model-driven-apps/using-tree-view-on-form.md
                 - name: Skjematyper
@@ -1069,8 +1075,12 @@
           href: ./portals/admin/change-base-url.md
         - name: Aktiver vedlikeholdsmodus
           href: ./portals/admin/enable-maintenance-mode.md
-        - name: Konfigurer Power BI-integrering
-          href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Power BI-integrering
+          items:
+            - name: Konfigurer Power BI-integrering
+              href: ./portals/admin/set-up-power-bi-integration.md
+            - name: Legg til en Power BI-rapport eller et instrumentbord på en nettside i Portal
+              href: ./portals/admin/add-powerbi-report.md
         - name: Kjør portalkontroll
           href: ./portals/admin/portal-checker.md
         - name: Forny godkjenningsnøkkelen for portalen
@@ -1079,6 +1089,56 @@
           href: ./portals/admin/ip-address-restrict.md
         - name: Oppdater til domene for PowerApps-portaler
           href: ./portals/admin/update-portal-domain.md
+        - name: Tøm bufferen på serversiden
+          href: ./portals/admin/clear-server-side-cache.md
+        - name: Overfør konfigurasjon av Dynamics 365-portal
+          href: ./portals/admin/migrate-portal-configuration.md
+    - name: Avanserte portaltilpasninger
+      items:
+        - name: Arbeide med Liquid-maler
+          items:
+            - name: Oversikt
+              href: ./portals/liquid/liquid-overview.md
+            - name: Lagre innhold ved bruk av nettmaler
+              href: ./portals/liquid/store-content-web-templates.md
+            - name: Forstå Liquid-operatorer
+              href: ./portals/liquid/liquid-operators.md
+            - name: Tilgjengelige Liquid-typer
+              href: ./portals/liquid/liquid-types.md
+            - name: Tilgjengelige Liquid-betingede operatorer
+              href: ./portals/liquid/liquid-conditional-operators.md
+            - name: Tilgjengelige Liquid-objekter
+              href: ./portals/liquid/liquid-objects.md
+            - name: Tilgjengelige Liquid-merker
+              items:
+                - name: Tilgjengelige Liquid-merker
+                  href: ./portals/liquid/liquid-tags.md
+                - name: Kontroller flytmerker
+                  href: ./portals/liquid/control-flow-tags.md
+                - name: Gjentakelsesmerker
+                  href: ./portals/liquid/iteration-tags.md
+                - name: Variabelmerker
+                  href: ./portals/liquid/variable-tags.md
+                - name: Malmerker
+                  href: ./portals/liquid/template-tags.md
+                - name: Enhetsmerker for PowerApps Common Data Service
+                  href: ./portals/liquid/portals-entity-tags.md
+            - name: Tilgjengelige Liquid-filtre
+              href: ./portals/liquid/liquid-filters.md
+            - name: Opprett avanserte maler
+              items:
+                - name: Opprett en egendefinert sidemal
+                  href: ./portals/liquid/create-custom-template.md
+                - name: Bruk hybridnavigering for å gjengi sidehierarki
+                  href: ./portals/liquid/hybrid-navigation-render-page-hierachy.md
+                - name: Gjengi enhetslisten for en side
+                  href: ./portals/liquid/render-entity-list-current-page.md
+                - name: Gjengi en RSS-feed ved bruk av en egendefinert sidemal
+                  href: ./portals/liquid/render-rss-custom-page-template.md
+                - name: Gjengi et områdetopptekst og primært navigasjonsfelt
+                  href: ./portals/liquid/render-site-header-primary-navigation.md
+        - name: OAuth 2.0 underforstått tillatelsesflyt
+          href: ./portals/oauth-implicit-grant-flow.md
     - name: Kjente problemer
       href: ./portals/known-issues.md
     - name: Vanlige spørsmål om PowerApps-portaler
