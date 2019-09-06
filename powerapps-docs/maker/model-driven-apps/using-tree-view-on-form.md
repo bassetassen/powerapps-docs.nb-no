@@ -46,4 +46,5 @@ Du kan vise eller skjule nodene i trevisningen for å vise eller skjule elemente
 [Legge til, flytte eller slette inndelinger i et skjema ved hjelp av skjemautformingen](add-move-or-delete-sections-on-form.md)  
 [Legge til, flytte eller slette kategorier i et skjema ved hjelp av skjemautformingen](add-move-or-delete-tabs-on-form.md)  
 [Egenskaper som er tilgjengelige i skjemautformingen](form-designer-properties.md)  
+[Konfigurere overskriftegenskaper i skjemautformingen](form-designer-header-properties.md)   
 [Opprette og rediger felt](../common-data-service/create-edit-field-portal.md)

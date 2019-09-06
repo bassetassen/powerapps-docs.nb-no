@@ -1,7 +1,7 @@
 ---
 title: Retningslinjer for arbeid med innebygde lerretapper | MicrosoftDocs
 ms.custom: ''
-ms.date: 06/25/2019
+ms.date: 07/24/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -45,14 +45,14 @@ Dette emnet gir veiledning om hvordan du arbeider med innebygde lerretapper, sam
 - Når du viser et modelldrevet skjema med en innebygd lerretapp, hvis det vises en feilmelding om "Det ser ut til at du ikke har tilgang til denne appen. Be eieren om å dele den med deg", sørg for at forfatteren har delt den innebygde lerretappen med deg. Mer informasjon: [Dele en innebygd lerretapp](share-embedded-canvas-app.md).
 
 ## <a name="enable-an-embedded-canvas-app"></a>Aktivere en innebygd lerretapp
-1. Velg feltet eller delrutenettkontrollen som er tilpasset til å vises som en innebygd lerretapp.
-2. I dialogboksen **Feltegenskaper** (eller **Angi egenskaper** for delrutenettet) velger du **Kontroller**-kategorien.
+1. Velg feltet som er tilpasset til å vises som en innebygd lerretapp.
+2. I **Feltegenskaper**-dialogboksen velger du **Kontroller**-kategorien.
 3. I listen over kontroller velger du **Lerretapp**, og deretter velger du **Web**-alternativet.
 4. Velg **OK**.
 
 ## <a name="disable-an-embedded-canvas-app"></a>Deaktivere en innebygd lerretapp
-1. Velg feltet eller delrutenettkontrollen som er tilpasset til å vises som en innebygd lerretapp.
-2. I dialogboksen **Feltegenskaper** (eller **Angi egenskaper** for delrutenettet) velger du **Kontroller**-kategorien.
+1. Velg feltet som er tilpasset til å vises som en innebygd lerretapp.
+2. I **Feltegenskaper**-dialogboksen velger du **Kontroller**-kategorien.
 3. I listen over kontroller velger du standardkontrollen, og deretter velger du **Web**-alternativet.
 4. Velg **OK**.
 

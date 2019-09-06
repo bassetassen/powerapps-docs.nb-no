@@ -59,7 +59,7 @@ Navnene som brukes for typer, avhenger av designeren som brukes. [PowerApps-port
 
 For flere beskrivelser for hver type du kan legge til eller redigere, se emnet for tilsvarende designer:
  - [Opprette og redigere felt for Common Data Service ved hjelp av PowerApps-portalen: Feltdatatyper](create-edit-field-portal.md#field-data-types)
- - [Opprette og redigere felt for Common Data Service ved hjelp av løsningsutforskeren i PowerApps: Feltdatatyper](create-edit-field-solution-explorer.md#field-data-types)
+ - [Opprette og redigere felt for Common Data Service ved hjelp av PowerApps-løsningsutforskeren: Feltdatatyper](create-edit-field-solution-explorer.md#field-data-types)
 
 Du finner mer informasjon om hvordan feltdatatyper er definert i API-et, ved å se [Attributtmetadata](/powerapps/developer/common-data-service/entity-attribute-metadata)
 
@@ -145,7 +145,7 @@ Du bør imidlertid være oppmerksom på at ikke alle oppslag fungerer på denne 
 |-----------------|-----------------|  
 |**Enkel**|Tillater én enkelt referanse til en bestemt enhet. Alle egendefinerte oppslag er av denne typen.|  
 |**Kunde**|Tillater én enkelt referanse til en forretningsforbindelses- eller kontaktoppføring.|  
-|**Eier**|Tillater én enkelt referanse til en team- eller brukerkoppføring. Alle team- eller brukereide enheter har en av disse.|  
+|**Eier**|Tillater én enkelt referanse til en team- eller brukerkoppføring. Alle team- eller brukereide enheter har en av disse. Mer informasjon: [Legge til teamenheten som et oppslagsalternativ i appen](../model-driven-apps/team-entity-lookup.md)|  
 |**PartyList**|Tillater flere referanser til flere enheter. Disse oppslagene finner du for **Til**- og **Kopi**-feltene for E-post-enheten. De brukes også i telefon- og avtaleenhetene.|  
 |**Angående**|Tillater én enkelt referanse til flere enheter. Disse oppslagene finnes i feltet som brukes i aktiviteter.|  
 
@@ -177,4 +177,4 @@ Når et bilde lastes opp, vil det endres til maksimumsstørrelsen 144 x 144 piks
 
 Mer informasjon for utviklere som arbeider med bildedata:
 - [Enhetsmetadata > Enhetsbilder](/powerapps/developer/common-data-service/entity-metadata#entity-images)
-- [Utviklerveiledning for Dynamics 365 Customer Engagement: Bildeattributter](/dynamics365/customer-engagement/developer/image-attributes)
+- [Dynamics 365 Customer Engagement Utviklerveiledning: Bildeattributter](/dynamics365/customer-engagement/developer/image-attributes)

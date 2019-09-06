@@ -44,4 +44,11 @@ Skjemautforminggrensesnittet har følgende områder:
    ![Oppsett for skjemautforming](media/form-designer.png)
 
 ## <a name="see-also"></a>Se også
-[Opprette eller redigere skjemaer ved hjelp av skjemautforming](create-and-edit-forms.md)
+[Opprette eller redigere skjemaer ved hjelp av skjemautforming](create-and-edit-forms.md)  
+[Legge til, flytte eller slette felt i et skjema ved hjelp av skjemautformingen.](add-move-or-delete-fields-on-form.md)  
+[Legge til, flytte eller slette inndelinger i et skjema ved hjelp av skjemautformingen](add-move-or-delete-sections-on-form.md)  
+[Legge til, flytte eller slette kategorier i et skjema ved hjelp av skjemautformingen](add-move-or-delete-tabs-on-form.md)  
+[Egenskaper som er tilgjengelige i skjemautformingen](form-designer-properties.md)  
+[Konfigurere overskriftegenskaper i skjemautformingen](form-designer-header-properties.md)    
+[Bruke trevisningen i skjemautformingen](using-tree-view-on-form.md)  
+[Opprette og rediger felt](../common-data-service/create-edit-field-portal.md)

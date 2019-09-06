@@ -28,7 +28,7 @@ Løsningsutforskeren har en måte for å opprette og redigere N:N (mange-til-man
 
 [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gjør det mulig for konfigurasjon av de vanligste alternativene, men enkelte alternativer kan bare angis ved hjelp av løsningsutforskeren. Mer informasjon:
 - [Opprette mange-til-mange-enhetsrelasjoner (N:N)](create-edit-nn-relationships.md)
-- [Opprette mange-til-mange-enhetsrelasjoner i Common Data Service ved hjelp av PowerApps-portalen](create-edit-nn-relationships-portal.md)
+- [Opprett mange-til-en-enhetsrelasjoner i Common Data Service ved hjelp av PowerApps-portalen](create-edit-nn-relationships-portal.md)
 
   
 ## <a name="open-solution-explorer"></a>Åpne løsningsutforskeren
@@ -107,5 +107,5 @@ Hvis du sletter relasjonen, slettes relasjonsenheten som ble opprettet. Alle dat
 ### <a name="see-also"></a>Se også
 
 [Opprette mange-til-mange-enhetsrelasjoner (N:N)](create-edit-nn-relationships.md)<br />
-[Opprette mange-til-mange-enhetsrelasjoner i Common Data Service ved hjelp av PowerApps-portalen](create-edit-nn-relationships-portal.md)<br />
+[Opprett mange-til-en-enhetsrelasjoner i Common Data Service ved hjelp av PowerApps-portalen](create-edit-nn-relationships-portal.md)<br />
 [Opprette og redigere 1:N-enhetsrelasjoner (én-til-mange) eller N:1-enhetsrelasjoner (mange-til-én)](create-edit-1n-relationships.md)

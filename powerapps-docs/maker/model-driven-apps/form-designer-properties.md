@@ -81,5 +81,11 @@ Med egenskapsruten, som befinner seg til høyre i den modelldrevne skjemautformi
 
 
 ## <a name="see-also"></a>Se også
-[Oversikt over den modelldrevne skjemautformingen](form-designer-overview.md) <br />
-[Opprette eller redigere skjemaer ved hjelp av skjemautforming](create-and-edit-forms.md)
+[Oversikt over den modelldrevne skjemautformingen](form-designer-overview.md)  
+[Opprette eller redigere skjemaer ved hjelp av skjemautforming](create-and-edit-forms.md)  
+[Legge til, flytte eller slette felt i et skjema ved hjelp av skjemautformingen.](add-move-or-delete-fields-on-form.md)  
+[Legge til, flytte eller slette inndelinger i et skjema ved hjelp av skjemautformingen](add-move-or-delete-sections-on-form.md)  
+[Legge til, flytte eller slette kategorier i et skjema ved hjelp av skjemautformingen](add-move-or-delete-tabs-on-form.md)  
+[Konfigurere overskriftegenskaper i skjemautformingen](form-designer-header-properties.md)  
+[Bruke trevisningen i skjemautformingen](using-tree-view-on-form.md)  
+[Opprette og rediger felt](../common-data-service/create-edit-field-portal.md)

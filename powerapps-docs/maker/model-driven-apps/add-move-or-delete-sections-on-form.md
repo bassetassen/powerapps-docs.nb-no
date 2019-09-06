@@ -109,5 +109,6 @@ Hvis du vil legge til eller fjerne inndelinger i et skjema, kan du bruke **Oppse
 [Legge til, flytte eller slette felt i et skjema ved hjelp av skjemautformingen.](add-move-or-delete-fields-on-form.md)  
 [Legge til, flytte eller slette kategorier i et skjema ved hjelp av skjemautformingen](add-move-or-delete-tabs-on-form.md)  
 [Egenskaper som er tilgjengelige i skjemautformingen](form-designer-properties.md)  
+[Konfigurere overskriftegenskaper i skjemautformingen](form-designer-header-properties.md)  
 [Bruke trevisningen i skjemautformingen](using-tree-view-on-form.md)  
-[Opprette og rediger felt](../common-data-service/create-edit-field-portal.md) 
+[Opprette og rediger felt](../common-data-service/create-edit-field-portal.md)

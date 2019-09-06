@@ -76,7 +76,7 @@ Instrumentbord for interaktiv opplevelse kan være en arbeidsplass på ett sted 
  > ![Oppsett for instrumentbord for enkeltstrøm](media/interactive-dashboards-single-stream-layout.png "Oppsett for instrumentbord for enkeltstrøm")  
   
 <a name="BKMK_Enable"></a>   
-## <a name="configure-fiter-fields-and-security-roles-for-the-interactive-dashboards"></a>Konfigurere filterfelt og sikkerhetsroller for de interaktive instrumentbordene  
+## <a name="configure-filter-fields-and-security-roles-for-the-interactive-dashboards"></a>Konfigurere filterfelt og sikkerhetsroller for de interaktive instrumentbordene  
  Når du konfigurerer interaktive instrumentbord, er første oppgave å aktivere filterfelt og sikkerhetsroller slik at interaktive instrumentbord kan konfigureres for dem. Vær oppmerksom på at interaktive instrumentbord nå er aktivert for alle enheter og egendefinerte enheter som standard. 
   
 ### <a name="configure-filter-fields"></a>Konfigurere felt for filtre  

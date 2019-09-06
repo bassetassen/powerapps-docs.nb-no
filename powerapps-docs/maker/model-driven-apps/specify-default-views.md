@@ -1,10 +1,10 @@
 ---
 title: Angi en standardvisning for modelldrevne apper i PowerApps | MicrosoftDocs
-description: Finn ut hvordan du angir en standardvisning
+description: Lær hvordan du angir en standardvisning
 ms.custom: ''
 ms.date: 06/12/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article

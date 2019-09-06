@@ -33,14 +33,7 @@ Hvis du vil ha mer informasjon: [Teknisk dokument: Solution Lifecycle Management
 > [!NOTE]
 >  Hvis du er en ISV som lager en app du vil distribuere, må du bruke løsninger. Hvis du vil ha mer informasjon om hvordan du bruker løsninger, kan du se [Utviklerveiledning: Innføring i løsninger](/powerapps/developer/common-data-service/introduction-solutions).  
   
- Hvis du vil opprette PowerApps-apper for organisasjonsbruk eller tilpassing av Dynamics 365 for Customer Engagement-apper, trenger du vite følgende om løsninger:  
-  
--   Det er valgfritt å lage løsninger. Du kan bygge eller tilpasse apper i PowerApps-miljøet direkte uten noen gang å opprette en løsning.  
-  
--   Når du tilpasser et PowerApps-miljø direkte uten å opprette en løsning, arbeider du med en spesiell løsning kalt **Common Data Service-standardløsningen**. Denne løsningen inneholder alle tilpassinger som du gjør i PowerApps-miljøet.  
-  
--   Det finnes en annen spesiell løsning kalt **standardløsningen**. Denne løsningen inneholder alle komponentene i systemet, enten de er opprettet av deg eller andre. Du kan eksportere **standardløsningen** for å opprette en sikkerhetskopi av tilpasningene du har definert i organisasjonen. Dette er fornuftig for å sikkerhetskopiere endringene i et verste tilfelle-scenario.  
-  
+
 <a name="BKMK_SolutionComponents"></a>   
 ### <a name="components"></a>Komponenter  
  En komponent representerer noe som du potensielt kan tilpasse. Alt som kan inkluderes i en løsning, er en komponent. Følgende er en liste over komponenter som du kan vise i en løsning:  

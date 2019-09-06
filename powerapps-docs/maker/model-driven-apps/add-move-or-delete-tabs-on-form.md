@@ -104,5 +104,6 @@ Hvis du vil legge til eller fjerne kategorier i et skjema, kan du bruke **Oppset
 [Legge til, flytte eller slette felt i et skjema ved hjelp av skjemautformingen.](add-move-or-delete-fields-on-form.md)  
 [Legge til, flytte eller slette inndelinger i et skjema ved hjelp av skjemautformingen](add-move-or-delete-sections-on-form.md)  
 [Egenskaper som er tilgjengelige i skjemautformingen](form-designer-properties.md)  
+[Konfigurere overskriftegenskaper i skjemautformingen](form-designer-header-properties.md)  
 [Bruke trevisningen i skjemautformingen](using-tree-view-on-form.md)  
-[Opprette og rediger felt](../common-data-service/create-edit-field-portal.md) 
+[Opprette og rediger felt](../common-data-service/create-edit-field-portal.md)

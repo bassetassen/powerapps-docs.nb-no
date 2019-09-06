@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: article
-ms.date: 06/25/2019
+ms.date: 07/09/2019
 ms.author: matp
 search.audienceType:
   - maker
@@ -32,7 +32,7 @@ Løsningskontroll fungerer sammen med uadministrerte løsninger som kan eksporte
 > - Løsningskontroll fungerer ikke med løsninger som inneholder JavaScript som bruker ECMAScript 6 (2015) eller senere versjoner. Når JavaScript ved hjelp av disse versjonene blir funnet, rapporteres et problem med JS001-syntaksen for webressursen.
 
 ## <a name="enable-the-solution-checker"></a>Aktivere løsningskontrollen
-Løsningskontrollen blir tilgjengelig i Løsninger-området i PowerApps når du har installert PowerApps-kontrollerløsningen. Vær oppmerksom på at du ikke finner den ved å bla gjennom eller søke på Microsoft AppSource. Installer det ved å følge disse trinnene:  
+Løsningskontrollen er aktivert som standard i alle Common Data Service-miljøer. En **Løsningskontroll**-meny er tilgjengelig når du velger en uadministrert løsning i **Løsninger**-området i PowerApps. Hvis alternativet **Kjør** ikke er tilgjengelig på **Løsningskontroll**-menyen, kan du aktivere det ved å installere løsningen for PowerApps-sjekk. Installer det ved å følge disse trinnene:   
 
 1. Logg på [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) og velg Common Data Service-miljøet der du ønsker å aktivere løsningskontrollen. 
 2. I navigasjonsruten til venstre velger du **Løsninger**.
@@ -43,12 +43,9 @@ Løsningskontrollen blir tilgjengelig i Løsninger-området i PowerApps når du 
 
 4. Velg **Gratis prøveversjon** på siden AppSource. 
 
-
-<!--from editor: Should it be "solution checker" rather than "checker solution" in the following step?
-
-5. If you agree, accept the terms and conditions and select the environment to install the PowerApps checker solution. 
-6. When the installation is complete, refresh the **Solution** list on the PowerApps site to verify that the solution checker is available.  
-7. To check a solution, [Run the solution checker](#run-the-solution-checker).
+5. Hvis du er enig, godtar du vilkårene og velger miljøet du vil installere PowerApps-kontrollerløsningen i. 
+6. Når installasjonen er fullført, kan du oppdatere **Løsning**-listen på PowerApps-nettstedet for å bekrefte at løsningskontrollen er tilgjengelig.  
+7. Du kan kontrollere en løsning ved å [kjøre løsningskontrollen](#run-the-solution-checker).
 
 
 <!-- ### Components created with the PowerApps checker
@@ -106,10 +103,19 @@ Når du installerer løsningskontrollen i miljøet, blir **Løsningskontroll**-k
 
 
 ## <a name="review-the-solution-checker-report"></a>Se gjennom løsningskontrollrapporten
-Når en løsningskontroll er fullført, blir analyserapporten tilgjengelig for nedlasting fra webleseren. Rapporten er i [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)]-format og inneholder flere visualiseringer og kolonner som kan hjelpe deg med å identifisere innvirkningen, typen og plasseringen av hvert problem som er registrert i løsningen. En kobling til detaljert informasjon om hvordan du løser problemet, er også oppgitt. 
+Når en løsningskontroll er fullført, kan du vise analyserapporten i portalen, eller du kan laste ned rapporten fra webleseren. I portalen har du alternativer for å filtrere, gruppere resultater etter **Problem**, **Sted** eller **Alvorlighetsgrad** og vise detaljert informasjon om problemer som er oppdaget i løsningen. 
 
 1. Velg **Løsninger** i venstre rute.
-2. Ved siden av den uadministrerte løsningen der du vil laste ned løsningskontrollrapporten, velger du **...**, peker på **Løsningskontroll**, og velger deretter **Last ned siste resultater**.  
+2. Ved siden av den uadministrerte løsningen der du vil vise løsningskontrollrapporten, velger du **...**, peker på **Løsningskontroll** og velger deretter **Vis resultater**.  
+3. Velg et problem for å vise detaljer og veiledning for hvordan du løser problemet.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/solution-checker-viewresults.png "Visningsresultater for løsningskontroll")
+
+Løsningskontrollresultatene er også tilgjengelige for nedlasting. Zip-filen for løsningskontrollen lastes ned i mappen som er angitt av webleseren. Nedlastingsrapporten er i [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)]-format og inneholder flere visualiseringer og kolonner som hjelper deg med å identifisere innvirkningen på, typen og plasseringen av hvert problem som registreres i løsningen. En kobling til detaljert informasjon om hvordan du løser problemet, er også oppgitt. 
+
+1. Velg **Løsninger** i venstre rute.
+2. Ved siden av den uadministrerte løsningen der du vil laste ned løsningskontrollrapporten, velger du **...**, peker på **Løsningskontroll** og velger deretter **Last ned resultater**.  
 3. Zip-filen for løsningskontroll lastes ned til mappen som er angitt i webleseren.
 
 Her er et sammendrag av hver kolonne i rapporten.
@@ -168,10 +174,6 @@ Her er et sammendrag av hver kolonne i rapporten.
 | Webressurser  | [web-use-strict-mode](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-mode&client=PAChecker)  | Bruk Strict-modus når det er mulig.  | 
 | Webressurser  | [web-use-strict-equality-operators](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-equality-operators&client=PAChecker)  | Bruk strenge likhetstegn.  | 
 | Webressurser  | [web-avoid-eval](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-eval&client=PAChecker)  | Ikke bruk "eval"-funksjonen eller funksjonsekvivalenter.  | 
-
-## <a name="limitations"></a>Begrensninger
-
-Løsningskontroll kan ikke automatiseres for øyeblikket. Du må kjøre den fra https://web.powerapps.com. Mer informasjon: [Kjøre løsningskontroll](#run-the-solution-checker)
 
 
 ### <a name="see-also"></a>Se også

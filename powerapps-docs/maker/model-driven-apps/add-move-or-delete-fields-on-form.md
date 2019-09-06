@@ -108,5 +108,6 @@ Hvis du vil legge til eller fjerne felt fra et skjema, kan du bruke **Felt**-rut
 [Legge til, flytte eller slette inndelinger i et skjema ved hjelp av skjemautformingen](add-move-or-delete-sections-on-form.md)  
 [Legge til, flytte eller slette kategorier i et skjema ved hjelp av skjemautformingen](add-move-or-delete-tabs-on-form.md)  
 [Egenskaper som er tilgjengelige i skjemautformingen](form-designer-properties.md)  
+[Konfigurere overskriftegenskaper i skjemautformingen](form-designer-header-properties.md)  
 [Bruke trevisningen i skjemautformingen](using-tree-view-on-form.md)  
 [Opprette og rediger felt](../common-data-service/create-edit-field-portal.md)

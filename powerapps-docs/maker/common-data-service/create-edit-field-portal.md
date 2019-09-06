@@ -1,7 +1,7 @@
 ---
 title: Opprette og redigere felt for Common Data Service ved hjelp av PowerApps-portalen | MicrosoftDocs
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 08/13/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -13,6 +13,7 @@ applies_to:
   - PowerApps
 ms.author: matp
 manager: kvivek
+author: Mattp123
 search.audienceType:
   - maker
 search.app:
@@ -24,7 +25,7 @@ search.app:
 [PowerApps-portalen](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) gir en enkel måte å opprette og redigere enhetsfelt på med Common Data Service.
 
 Portalen gjør det mulig for konfigurasjon av de vanligste alternativene, men enkelte alternativer kan bare angis ved hjelp av løsningsutforskeren. <br />Mer informasjon: 
-- [Opprette og redigere felt for Common Data Service](create-edit-fields.md)
+- [Opprette og rediger felt for Common Data Service](create-edit-fields.md)
 - [Opprette og redigere felt for Common Data Service ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md)
 
 ## <a name="view-fields"></a>Visningsfelt
@@ -52,7 +53,7 @@ Først er bare tre feltegenskaper tilgjengelige:
  |Egenskap|Beskrivelse|
  |--|--|
  |**Visningsnavn**|Teksten som skal vises for feltet i brukergrensesnittet.|
- |**Navn**|Det unike navnet i hele miljøet. Det genereres et navn for deg basert på visningsnavnet som du har angitt, men du kan redigere det før du lagrer. Når et felt er opprettet, kan ikke navnet endres siden den kan bli referert til i programmene eller koden. Navnet vil ha tilpassingsprefikset for **Standardutgiver for Common Data Service** foran.|
+ |**Navn**|Det unike navnet i hele miljøet. Det genereres et navn for deg basert på visningsnavnet som du har angitt, men du kan redigere det før du lagrer. Når et felt er opprettet, kan ikke navnet endres siden den kan bli referert til i programmene eller koden. Navnet vil ha tilpassingsprefikset for **Standardutgiver for Common Data Service** lagt til foran.|
  |**Datatype**|Styrer hvordan verdiene lagres, og hvordan de er formatert i noen programmer. Når et felt lagres, kan du ikke endre datatypen med unntak av å konvertere tekstfelt til autonummereringsfelt.|
 
 Du kan angi flere alternativer, avhengig av **datatypen** som er valgt.
@@ -88,7 +89,7 @@ Disse feltene lagrer data som tall, men inkluderer andre presentasjons- og valid
 |Datatype|Beskrivelse|
 |--|--|
 |**Heltall**|En tallverdi som vises i en tekstboks.|
-|**Varighet**|En tallverdi som vises som en rullegardinliste som inneholder tidsintervaller. En bruker kan velge en verdi fra listen eller skrive inn en heltallsverdi som angir antallet minutter.|
+|**Varighet**|En tallverdi som vises som en rullegardinliste som inneholder tidsintervaller. En bruker kan velge en verdi fra listen eller skrive inn en heltallsverdi som angir antallet minutter. Varigheten må angis i formatet: "x minutter", "x timer" eller "x dager". Timer og dager kan også angis ved hjelp av desimaler, for eksempel "x,x timer" eller "x,x dager". De angitte verdiene må kunne uttrykkes i minutter, verdier under minutt vil bli avrundet til nærmeste minutt.|
 |**Tidssone**|En tallverdi som vises som en rullegardinliste som inneholder en liste med tidssoner.|
 |**Språk**|Et tallverdi som vises som en rullegardinliste som inneholder en liste over språk som er aktivert for miljøet. Hvis ingen andre språk er aktivert, blir det eneste alternativet originalspråket. Verdien som er lagret, er ID for nasjonale innstillinger (LCID) for språket.|
 
@@ -225,7 +226,7 @@ Felt som gir direkte innskriving av tekst har en IME-modus. IME brukes for østa
 
 
 ### <a name="see-also"></a>Se også  
-[Opprette og redigere felt for Common Data Service](create-edit-fields.md)<br />
+[Opprette og rediger felt for Common Data Service](create-edit-fields.md)<br />
 [Opprette og redigere felt for Common Data Service ved hjelp av løsningsutforskeren i PowerApps](create-edit-field-solution-explorer.md)<br />
 [Typer felt og feltdatatyper](types-of-fields.md)<br />
 [Definere beregnede felt for å automatisere manuelle beregninger](define-calculated-fields.md)<br />
