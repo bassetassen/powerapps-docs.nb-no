@@ -123,7 +123,7 @@
           href: ./canvas-apps/sample-meeting-capture.md
     - name: Å opprette din første app
       items:
-        - name: 1 – Generer en app fra dataene.
+        - name: 1. Generer en app fra dataene.
           items:
             - name: Fra Common Data Service
               href: ./canvas-apps/data-platform-create-app.md
@@ -131,7 +131,7 @@
               href: ./canvas-apps/app-from-sharepoint.md
             - name: Fra Excel
               href: ./canvas-apps/get-started-create-from-data.md
-        - name: 2 – Gjør grunnleggende tilpasninger.
+        - name: 2. Gjør grunnleggende tilpasninger.
           items:
             - name: 1 – Gallerier
               href: ./canvas-apps/customize-layout-sharepoint.md
@@ -139,7 +139,7 @@
               href: ./canvas-apps/customize-forms-sharepoint.md
             - name: 3 – Kort
               href: ./canvas-apps/customize-card.md
-        - name: 3 – Lag en app på egenhånd.
+        - name: 3. Lag en app på egenhånd.
           items:
             - name: Fra Common Data Service
               href: ./canvas-apps/data-platform-create-app-scratch.md
@@ -411,7 +411,7 @@
                   href: ./canvas-apps/functions/function-concatenate.md
                 - name: Concurrent
                   href: ./canvas-apps/functions/function-concurrent.md
-                - name: Tilkobling
+                - name: Connection
                   href: ./canvas-apps/functions/signals.md
                 - name: Count
                   href: ./canvas-apps/functions/function-table-counts.md
@@ -469,7 +469,7 @@
                   href: ./canvas-apps/functions/function-numericals.md
                 - name: Filter
                   href: ./canvas-apps/functions/function-filter-lookup.md
-                - name: Søk
+                - name: Find
                   href: ./canvas-apps/functions/function-find.md
                 - name: First
                   href: ./canvas-apps/functions/function-first-last.md
@@ -575,7 +575,7 @@
                   href: ./canvas-apps/functions/function-refresh.md
                 - name: Relater
                   href: ./canvas-apps/functions/function-relate-unrelate.md
-                - name: Fjern
+                - name: Remove
                   href: ./canvas-apps/functions/function-remove-removeif.md
                 - name: RemoveIf
                   href: ./canvas-apps/functions/function-remove-removeif.md
@@ -911,6 +911,8 @@
                       href: ./model-driven-apps/configure-event-handlers-legacy.md
                     - name: Slik deaktiverer du automatisk lagring i et skjema
                       href: ./model-driven-apps/manage-auto-save.md
+                    - name: Slik legger du til en fane for SharePoint-dokumenter
+                      href: ./model-driven-apps/add-documents-tab-entity-main-form.md
             - name: Bygg inn en lerretsapp i et modelldrevet skjema
               href: ./model-driven-apps/embed-canvas-app-in-form.md
               items:
