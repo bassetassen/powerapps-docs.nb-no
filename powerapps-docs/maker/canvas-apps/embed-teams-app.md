@@ -7,22 +7,22 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 05/29/2019
+ms.date: 09/09/2019
 ms.author: jimholtz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ca3430d6b639b7a4c3980f5bbb0ba202220f6d9e
-ms.sourcegitcommit: 935470edc7441b76533cc937e6f32229bfd6f11f
+ms.openlocfilehash: ba08437dc144fc81aa9748163b1005222735cb69
+ms.sourcegitcommit: 86ed3ad487f31721155758aa9d87134bb10f8437
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70117797"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70842250"
 ---
 # <a name="embed-a-powerapps-app-in-teams"></a>Bygge inn en PowerApps-app i Teams 
 
-Du kan dele en PowerApps som du har opprettet ved å bygge det inn direkte i Microsoft Teams. Når du er ferdig, kan **+** brukerne velge å legge til appen din i en gruppe kanaler eller samtaler i teamet du er i. Appen vises som en flis under **kategorier for teamet ditt**. 
+Du kan dele en PowerApps som du har opprettet ved å bygge det inn direkte i Microsoft Teams. Når du er ferdig, kan **+** brukerne velge å legge til **appen din i en gruppe kanaler** eller samtaler i teamet du er i. Appen vises som en flis under **kategorier for teamet ditt**. 
 
 En administrator kan laste opp appen slik at den vises for **alle** teamene i leieren under **alle faner-delen**. Se [dele en app i Microsoft Teams](https://docs.microsoft.com/en-us/power-platform/admin/embed-app-teams).
 
@@ -129,7 +129,7 @@ Hvis du vil ha mer informasjon, kan du se [manifest redigerings program](https:/
    > [!div class="mx-imgBorder"] 
    > ![Legg til gruppe-fane](./media/embed-teams-app/team-tab-add.png "Legg til gruppe-fane")
 
-7. Legg til appens konfigurasjons-URL-adresse i inn data feltet for Konfigurasjons-URL-adresse ved hjelp av følgende format:`https://web.powerapps.com/webplayer/teamsapptabsettings?appid=<PowerApp ID>`
+7. Legg til appens konfigurasjons-URL-adresse i inn data feltet for Konfigurasjons-URL-adresse ved hjelp av følgende format:`https://apps.powerapps.com/teams/settings/<PowerApp ID>`
 
    Erstatt `<PowerApp ID>` med GUID-en for app-ID-en du har registrert ovenfor.
 
