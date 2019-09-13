@@ -1155,8 +1155,6 @@
           href: ./common-data-service/data-platform-create-entity.md
         - name: Opprette en egendefinert enhet som inneholder komponenter
           href: ./common-data-service/create-custom-entity.md
-        - name: Legg til data i en enhet ved hjelp av Power Query
-          href: ./common-data-service/data-platform-cds-newentity-pq.md
         - name: Enheter og metadata
           href: ./common-data-service/create-edit-metadata.md
         - name: Enhetstyper
@@ -1305,6 +1303,17 @@
           href: ./common-data-service/set-managed-properties-metadata.md
         - name: Publiser endringer
           href: ./common-data-service/publish-changes-for-use-customer-service-hub.md
+    - name: Arbeid med dataflyter
+      href: ./common-data-service/self-service-data-prep-with-dataflows.md
+      items:
+        - name: Opprett og bruk dataflyter
+          href: ./common-data-service/create-and-use-dataflows.md
+        - name: Legg til data i en enhet ved hjelp av Power Query
+          href: ./common-data-service/data-platform-cds-newentity-pq.md
+        - name: Koble til Azure Data Lake for dataflytlagring
+          href: ./common-data-service/connect-azure-data-lake-storage-for-dataflow.md
+        - name: Bruk en lokal datagateway
+          href: ./common-data-service/using-dataflows-with-on-premises-data.md
     - name: Lisenskrav for enheter
       href: ./common-data-service/data-platform-entity-licenses.md
       items:
