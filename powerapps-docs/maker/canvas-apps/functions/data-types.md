@@ -1,6 +1,6 @@
 ---
-title: Datatypene | Microsoft Docs
-description: Datatyper i lerret-apper
+title: Data typer | Microsoft Docs
+description: Data typer i lerret apper
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -13,206 +13,207 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 85567e120754d4f82e13bd7d7dac9fa0f7c80cbd
-ms.sourcegitcommit: 982cab99d84663656a8f73d48c6fae03e7517321
+ms.openlocfilehash: 10c5ff9eaa709ab950fa3c3f0efce4f859a71dbc
+ms.sourcegitcommit: 5899d37e38ed7111d5a9d9f3561449782702a5e9
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67456760"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038000"
 ---
-# <a name="data-types-in-canvas-apps"></a>Datatyper i lerret-apper
+# <a name="data-types-in-canvas-apps"></a>Data typer i lerret apper
 
-Informasjon flyter gjennom en app i små, diskret verdier, som svært mye cellene i et regneark. For eksempel data i en **fødselsdag** felt og en **jubileum** feltet vil begge flyte gjennom som et **dato** verdi som inneholder året, måneden og dagen. Appen vet hvordan du formaterer disse verdiene, begrense inndata til det som er aktuelle for hver og dele verdiene med en database. Fødselsdager skiller seg fra jubileer til personer, men systemet håndterer dem på nøyaktig samme måte. I dette tilfellet **dato** er et eksempel på en [datatypen](https://en.wikipedia.org/wiki/Data_type).
+Informasjons flyter gjennom en app i små, diskrete verdier, svært mye som cellene i et regne ark. For eksempel vil data i et **fødsels dag** -felt og et **jubileums** felt begge flyte gjennom som en **dato** verdi som inkluderer året, måneden og dagen. Appen vet hvordan du formaterer disse verdiene, begrenser inn data til det som passer for hver, og deler verdiene med en database. Fødsels dager er forskjellig fra jubileer til personer, men systemet håndterer dem på nøyaktig samme måte. I dette tilfellet er **dato** et eksempel på en [datatype](https://en.wikipedia.org/wiki/Data_type).
 
-Denne artikkelen inneholder detaljer om datatypene som lerret apper støtte. Når en app kobler til en ekstern datakilde, vil hver datatype i denne kilden er tilordnet til en datatype for lerret-apper.
+Denne artikkelen inneholder detaljer om data typene som lerret apps støtter. Når en app kobler til en ekstern data kilde, tilordnes hver datatype i denne kilden til en datatype for lerrets apper.
 
 | Datatype | Beskrivelse | Eksempler |
 |-----------|-------------|---------|
-| **Boolsk** | A *SANN* eller *USANN* verdi.  Kan brukes direkte i **Hvis**, **Filter** og andre funksjoner uten en sammenligning.  | *sann* |
-| **Farge** | En fargespesifikasjon, inkludert en alfa-kanal. | **Color.Red**<br>**ColorValue ("#102030»)**<br>**RGBA (255, 128, 0, 0,5)** |
-| **Valuta** | En valutaverdi som er lagret i et flyttall. Valutaverdiene er de samme som antall verdier med Valutaformatering alternativer.  | **123**<br>**4.56** |
-| **Dato** | En dato uten et klokkeslett, i tidssonen til appens brukeren. | **Dato (2019, 5, 16)** |
-| **Dato og klokkeslett** | En dato med et klokkeslett, i tidssonen til appens brukeren. | **DateTimeValue («mai 16 2019 1:23:09 PM")** |
-| **GUID** | A [globalt unik identifikator](https://en.wikipedia.org/wiki/Universally_unique_identifier). | **GUID()**<br>**GUID( "123e4567-e89b-12d3-a456-426655440000" )** |
-| **Hyperkobling** | En tekststreng som inneholder en hyperkobling. | **"http://powerapps.microsoft.com"** |
-| **Bilde** | A [Universal Resource Identifier (URI)](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) tekststreng til et bilde i JPEG, PNG, SVG, GIF eller andre vanlige web-bildeformat. | **MyImage** lagt til som en app-ressurs<br>**"https://northwindtraders.com/logo.jpg"**<br>**«appres://blobmanager/7b12ffa2...»** |
-| **Media** | En URI-tekststreng til en video eller lyd registrering. | **MyVideo** lagt til som en app-ressurs<br>**"https://northwindtraders.com/intro.mp4"**<br>**«appres://blobmanager/3ba411c...»** |
-| **Tall** | Et flyttall. | **123**<br>**-4.567**<br>**8.903e121** |
-| **Alternativsett** | Et valg mellom en rekke alternativer, støttet av et tall. Denne datatypen kombinerer en lokaliserbare tekstetikett med en numerisk verdi. Etiketten vises i appen, og den numeriske verdien som er lagret og brukes til sammenligninger. | **ThisItem.OrderStatus** |
-| **Post** | En oversikt over dataverdier. Denne sammensatte datatypen inneholder forekomster av andre datatyper som er oppført i dette emnet. Mer informasjon: [Å arbeide med tabeller](../working-with-tables.md). | **{Selskapet: «Northwind Traders»;<br>ansatte: 35; <br>NonProfit: false}** |
-| **Registrer referanse** | En referanse til en post i en enhet. Slike referanser brukes ofte med polymorfisk oppslag. Mer informasjon: [Arbeide med referanser](../working-with-references.md).| **First(accounts). Eier** |
-| **Tabell** | En tabell med poster.  Alle postene må ha samme navn for sine felt med samme datatyper, og utelatt felt som skal behandles som *tom*. Denne sammensatte datatypen inneholder forekomster av andre datatyper som er oppført i dette emnet. Mer informasjon: [Å arbeide med tabeller](../working-with-tables.md). | **Tabellen ({fornavn: «Sidney»;<br>etternavn: "Higa"}; <br>{fornavn: «Nancy»;<br>etternavn: "Anderson" } )**
-| **Tekst** | En streng til Unicode-tekst. | **"Hello, World"** |
-| **Tid** | En periode uten en dato i tidssonen til appens brukeren. | **Tid (11, 23, 45)** |
-| **To alternativet** | Et valg fra et sett med to alternativer, støttet av en boolsk verdi. Denne datatypen kombinerer en lokaliserbare tekstetikett med en boolsk verdi. Etiketten vises i appen, og den boolske verdien er lagret og brukes til sammenligninger. | **ThisItem.Taxable** |
+| **Verdien** | En *sann* -eller *Usann* -verdi.  Kan brukes direkte i **IF**, **filter** og andre funksjoner uten sammenligning.  | *sann* |
+| **Farge** | En farge spesifikasjon, inkludert en alfa kanal. | **Color.Red**<br>**ColorValue ("#102030")**<br>**RGBA (255, 128, 0, 0,5)** |
+| **Valuta** | En valuta verdi som lagres i et flyt tall. Valuta verdier er de samme som tall verdier med valuta formaterings alternativer.  | **123**<br>**4,56** |
+| **Aktivabokføringsdato** | En dato uten et klokkeslett, i tids sonen til appens bruker. | **Date (2019, 5, 16)** |
+| **DateTime** | En dato med et klokkeslett i tids sonen til appens bruker. | **DateTimeValue (» 16. mai 2019 1:23:09 PM)** |
+| **OBJEKT** | En [globalt unik identifikator](https://en.wikipedia.org/wiki/Universally_unique_identifier). | **GUID ()**<br>**GUID ("123e4567-e89b-12d3-A456-426655440000")** |
+| **Hyperkobling** | En tekst streng som inneholder en hyperkobling. | **"http://powerapps.microsoft.com"** |
+| **Bilde** | En [URI (Universal Resource Identifier)-](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) tekst streng til et bilde i JPEG, PNG, SVG, GIF eller andre vanlige web bilde formater. | **MyImage** lagt til som en app-ressurs<br>**"https://northwindtraders.com/logo.jpg"**<br>**"appres://blobmanager/7b12ffa2..."** |
+| **Mediefil** | En URI-tekst streng til en video-eller lyd innspilling. | **MyVideo** lagt til som en app-ressurs<br>**"https://northwindtraders.com/intro.mp4"**<br>**"appres://blobmanager/3ba411c..."** |
+| **Rekke** | Et flyt tall. | **123**<br>**-4,567**<br>**8.903e121** |
+| **Alternativ sett** | Et valg fra et sett med alternativer, som støttes av et tall. Denne data typen kombinerer en tekst etikett som lokaliseres, med en numerisk verdi. Etiketten vises i appen, og den numeriske verdien lagres og brukes for sammenligninger. | **ThisItem. OrderStatus** |
+| **Registrerer** | En post med data verdier. Denne sammensatte data typen inneholder forekomster av andre data typer som er oppført i dette emnet. Mer informasjon: Å [arbeide med tabeller](../working-with-tables.md). | **Transportør «Gas tro nor delikat<br>Esser»: 35, <br>ideell: USANN}** |
+| **Post referanse** | En referanse til en post i en enhet. Slike referanser brukes ofte med polymorfiske oppslag. Mer informasjon: [Arbeid med referanser](../working-with-references.md).| **Først (kontoer). Ren** |
+| **Tegn** | En tabell med poster.  Alle postene må ha samme navn for feltene med de samme data typene, og utelatte felt behandles som *tomme*. Denne sammensatte data typen inneholder forekomster av andre data typer som er oppført i dette emnet. Mer informasjon: Å [arbeide med tabeller](../working-with-tables.md). | **Table ({for navn: "Sidney",<br>etter navn: "Higa"}, <br>{for navn: "Nina",<br>etter navn: «Anderson»})**
+| **Tekst** | En Unicode-tekst streng. | **"Hello, World"** |
+| **Tid** | Et tidspunkt uten dato, i tids sonen til appens bruker. | **Klokkeslett (11, 23, 45)** |
+| **To alternativer** | Et valg fra et sett med to alternativer, som støttes av en boolsk verdi. Denne data typen kombinerer en tekst etikett som lokaliseres, med en boolsk verdi. Etiketten vises i appen, og den boolske verdien lagres og brukes til sammenligninger. | **ThisItem. avgiftspliktig** |
 
-Mange av disse datatypene ligner og har samme underliggende representasjon, for eksempel en **hyperkobling** feltet som blir behandlet som **tekst**.  Ekstra datatypene gir bedre standard opplevelser i skjemaer og andre kontroller.
+Mange av disse data typene er like og har samme underliggende representasjon, for eksempel et **hyperkoblingsfelt** som behandles som **tekst**.  Tilleggs data typene gir bedre standard opplevelser i skjemaer og andre kontroller.
 
 ## <a name="blank"></a>Blank
 
-Alle datatyper kan ha en verdi av *tom* (med andre ord, ingen verdi). Begrepet "null" brukes ofte i databaser for dette konseptet.  
+Alle data typer kan ha en *tom* verdi (med andre ord, ingen verdi). Ordet "null" brukes ofte i databaser for dette konseptet.  
 
-Bruk den **tom** funksjonen med den **angi** eller **Patch** funksjonen til å angi en variabel eller felt som skal *tom*. For eksempel **Set (x; Blank())** fjerner enhver verdi i den globale variabelen **x**.  
+Bruk **tom** -funksjonen med **Set** eller **patch** -funksjonen til å angi en variabel eller et felt som *tom*. For eksempel: **Set (x, blank ())** fjerner alle verdier i den globale variabelen **x**.  
 
-Test for en *tom* verdi ved hjelp av den [ **IsBlank** ](function-isblank-isempty.md) funksjonen. Erstatt mulig *tom* verdier med ikke -*tom* verdier ved hjelp av den [ **Coalesce** ](function-isblank-isempty.md) funksjonen.
+Test for en *tom* verdi ved hjelp av [**IsBlank**](function-isblank-isempty.md) -funksjonen. Erstatt mulige *tomme* verdier med ikke-*tomme* verdier ved hjelp av [**oppsamlings**](function-isblank-isempty.md) funksjonen.
 
-Fordi alle datatyper støtter *tom*, **boolsk** og **to alternativet** datatyper effektivt har tre verdier.
+Fordi alle data typer støtter *tom*, har de **boolske** og to data typene for **alternativ** effektiv tre mulige verdier.
 
 ## <a name="text-hyperlink-image-and-media"></a>Tekst, hyperkobling, bilde og Media
 
-Alle de fire disse datatypene er basert på en [Unicode](https://en.wikipedia.org/wiki/Unicode) tekststreng.
+Alle fire disse data typene er basert på en [Unicode](https://en.wikipedia.org/wiki/Unicode) -tekst streng.
 
-### <a name="image-and-media-resources"></a>Bilde- og Media ressurser
+### <a name="image-and-media-resources"></a>Bilde-og medie ressurser
 
-Gjennom den **filen** -menyen, kan du legge til bilde, video og lyd filer som app-ressurser. Navnet på den importerte filen blir ressursnavnet i appen. I denne grafikken Northwind Traders logoen, som heter **nwindlogo**, har blitt lagt til en app:
+Gjennom **fil** -menyen kan du legge til bilde-, video-og lyd filer som program ressurser. Navnet på den importerte filen blir ressurs navnet i appen. I denne grafikken er logoen for Gas tro nor delikat Esser, som heter **nwindlogo**, lagt til i en app:
 
 ![](media/data-types/nwind-resource.png)
 
-Hvis du vil bruke denne ressursen i en app, angir du den i den **bilde** -egenskapen for en [ **bilde** ](../controls/control-image.md) kontroll:
+Hvis du vil bruke denne ressursen i en app, angir du den i **bilde** -egenskapen til en [**bilde**](../controls/control-image.md) -kontroll:
 
 ![](media/data-types/nwind-image.png)
 
-### <a name="uris-for-images-and-other-media"></a>URI-er for bilder og andre medier
+### <a name="uris-for-images-and-other-media"></a>URIer for bilder og andre medier
 
-Du kan gå litt dypere inn i det siste eksemplet ved å angi den **tekst** -egenskapen for en [ **etikett** ](../controls/control-text-box.md) kontrollen til **nwindlogo**. Etiketten viser en tekststreng:
+Du kan se litt dypere inn i det siste eksemplet ved å angi **tekst** -egenskapen for en [**etikett**](../controls/control-text-box.md) -kontroll til **nwindlogo**. Etiketten viser en tekst streng:
 
 ![](media/data-types/nwind-text.png)
 
-Lerretsapper referere til hvert bilde eller andre mediefil, enten den er i skyen eller lagt til som en app-ressurs, av en tekststreng for URI.
+Lerret apper refererer til hvert bilde eller en annen mediefil, enten det er i skyen eller lagt til som en app-ressurs, av en URI-tekst streng.
 
-For eksempel den **bilde** -egenskapen for en bildekontroll godtar ikke bare app-ressurser, men også koblinger til bilder på nettet, som "https://northwindtraders.com/logo.jpg". Egenskapen godtar også innebygde bilder som bruker den [data-URI-skjemaet](https://en.wikipedia.org/wiki/Data_URI_scheme), som i dette eksemplet:
+For eksempel den **bilde** -egenskapen for en bildekontroll godtar ikke bare app-ressurser, men også koblinger til bilder på nettet, som "https://northwindtraders.com/logo.jpg". Egenskapen godtar også innebygde bilder som bruker data- [URI-skjemaet](https://en.wikipedia.org/wiki/Data_URI_scheme), som i dette eksemplet:
 
-```powerapps-comma
+```powerapps-dot
 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFAQMAAACtnVQoAAAABlBMVEUAAAB0J3UMNU6VAAAAAXRSTlMAQObYZgAAABRJREFUCNdjUGJgCGVg6GgAkkA2AA8/AffqCEBsAAAAAElFTkSuQmCC"
 ```
 
-Denne URI-en vises en skaleres opp versjon to lilla ruter:
+Denne URIEN viser en skalert versjon av to lilla romber:
 
 ![](media/data-types/double-diamonds.png)
 
-Du kan vise de nyeste bildet som i en [ **kamera** ](../controls/control-camera.md) kontroll hvis du angir den **bilde** -egenskapen for en kontroll til den **Photo** egenskapen for kamera-kontrollen. Appen inneholder bildet i minnet, og den **Photo** -egenskapen for kamera-kontrollen returnerer en URI-referanse til bildet. Du kan for eksempel ta et bilde, og i kameraet **Photo** egenskapen kan returnere **"appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1"** .
+Du kan vise det nyeste bildet som er fanget opp i en [**kamera**](../controls/control-camera.md) kontroll, hvis du angir **bilde** -egenskapen for en bilde-kontroll til **Foto** -egenskapen til kamera-kontrollen. Appen inneholder bildet i minnet, og **Foto** -egenskapen for kamera kontrollen returnerer en URI-referanse til bildet. Du kan for eksempel ta et bilde, og kameraets **Foto** egenskap kan returnere **«appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1»** .
 
-Du bruker en URI for å referere til et bilde eller en annen mediefil som er lagret i en database. På den måten ikke appen hente de faktiske dataene før det faktisk er nødvendig. For eksempel et vedlegg i en Common Data Service-enhet kan returnere **«appres://datasources/Contacts/table/...»** Du kan vise dette bildet som i eksemplet kamera, ved å angi den **bilde** -egenskapen for en kontroll til denne, som henter de binære dataene.
+Du bruker en URI til å referere til et bilde eller en annen medie fil som er lagret i en database. På den måten henter ikke appen de faktiske dataene før den faktisk er nødvendig. Et vedlegg i en Common Data Service enhet kan for eksempel returnere **«appres://DataSources/Contacts/Table/...»** Som i kamera eksempelet kan du vise dette bildet ved å angi **bilde** -egenskapen for en bilde-kontroll til denne referansen, som henter binær dataene.
 
-Når du lagrer en media-datatype, for eksempel et bilde, en database, sender appen til selve bildet eller media data, ikke URI-referanse.
+Når du lagrer en medie data type, for eksempel et bilde, i en database, sender appen de faktiske bilde-eller medie dataene, ikke URI-referansen.
 
-### <a name="size-limits"></a>Begrensninger for filstørrelse
+### <a name="size-limits"></a>Størrelses grenser
 
-Som tekststrenger og URIer har disse datatypene ingen forhåndsangitte grensen på deres lengde.
+Som tekst strenger og URIer har disse data typene ingen forhåndsinnstilt grense på lengden.
 
-De binære dataene som disse datatypene refererer også har ingen forhåndsinnstilte grense på størrelsen. For eksempel et bilde som registreres via kamera-kontrollen som nå er referert til som **"appres: / /..."** kan være som store og høy oppløsning, som kan komme enhetens kamera. Oppløsningen, bildefrekvensen og andre attributter for mediefiler ikke er begrenset av datatypen, men bestemte kontroller for å spille og registrering av media kan ha sin egen begrensninger.
+De binære dataene som disse data typene refererer til, har ingen forhånds definert grense for størrelse. Et bilde som for eksempel er spilt inn gjennom kamera-kontrollen som nå er referert som **«appres://...»** , kan være så stor og høy oppløsning som om enhetens kamera kan ha det. Oppløsningen, bilde frekvensen og andre attributter for medie filer begrenses ikke av data typen, men spesifikke kontroller for avspilling og registrering av medier kan ha sine egne begrensninger.
 
-Alle datastørrelser er imidlertid underlagt mengden tilgjengelig minne i appen. Weblesere som kjører på en stasjonær datamaskin vanligvis støtter mer enn 100 MB med data. Mengden tilgjengelig minne på en enhet som for eksempel en telefon kan imidlertid være langt lavere, vanligvis i området 30 – 70 megabyte. Hvis du vil finne ut om appen din kjører i disse grensene, kan du teste vanlige scenarier på alle enheter som den skal kjøres.
+Alle data størrelser er imidlertid underlagt mengden tilgjengelig minne i appen. Nett lesere som kjører på en stasjonær data maskin, støtter vanligvis mer enn 100 MB data. Mengden tilgjengelig minne på en enhet, for eksempel en telefon, kan imidlertid være langt lavere, vanligvis i området 30-70 megabyte. Hvis du vil finne ut om appen kjører innenfor disse grensene, kan du teste vanlige scenarier på alle enheter den skal kjøre.
 
-Som en anbefalt fremgangsmåte, holder du data i minnet bare så lang etter behov. Laste opp bilder til en database, så snart som mulig; Last ned bilder bare når appens brukeren ber om.
+Som en anbefalt Fremgangs måte kan du bare oppbevare data i minnet så lenge som nødvendig. Last opp bilder til en database så snart du kan; Last bare ned avbildninger når appens bruker ber om dem.
 
 ## <a name="number-and-currency"></a>Tall og valuta
 
-**Tall** og **valuta** datatypene Bruk den [IEEE 754 flyttallet med dobbel presisjon-standard](https://en.wikipedia.org/wiki/IEEE_754). Denne standarden tilbyr et stort utvalg av tallene som skal fungere, fra –1.79769 x 10<sup>308</sup> til 1.79769 x 10<sup>308</sup>. Den minste verdien som kan vises er 5 x 10<sup>–324</sup>.
+Data typene **tall** og **valuta** bruker [IEEE 754 Double-Precision-standarden for flyt tall](https://en.wikipedia.org/wiki/IEEE_754). Denne standarden gir et svært stort utvalg av tall der du kan jobbe, fra – 1,79769 x 10<sup>308</sup> til 1,79769 x 10<sup>308</sup>. Den minste verdien som kan representeres, er 5 x 10<sup>– 324</sup>.
 
-Lerretsapper kan nøyaktig representere hele tall (eller heltall) mellom –9,007,199,254,740,991 (– (2<sup>53</sup> – 1)) og 9,007,199,254,740,991 (2<sup>53</sup> – 1), inklusiv. Dette området er større enn 32-biters (eller 4-byte) heltallsdatatypene som vanligvis bruker databaser. Imidlertid kan ikke lerretsapper representere datatyper for 64-biters (eller 8-byte) heltall. Du ønsker kanskje å lagre nummeret i et tekstfelt eller bruke en beregnet kolonne til å lage en kopi av tallet i et tekstfelt, slik at den er tilordnet til en **tekst** datatype i lerret-app. På denne måten, kan du holde, vise, og angi disse verdiene, i tillegg til sammenligning dem for å finne ut om de er like. men kan ikke du utføre numeriske beregninger på dem i dette skjemaet.
+Lerret apps kan nøyaktig representere hele tall (eller hel tall) mellom – 9 007 199 254 740 991 (– (2<sup>53</sup> -1)) og 9 007 199 254 740 991 (2<sup>53</sup> – 1), inkludert. Dette området er større enn 32-biters hel talls data typene (eller 4-bytes) som databaser brukes ofte. Lerret-apper kan imidlertid ikke representere data typene 64-biters (eller 8-byte). Du vil kanskje lagre nummeret i et tekst felt eller bruke en beregnet kolonne for å lage en kopi av tallet i et tekst felt, slik at det er tilordnet en **tekst** data type i lerret-appen. På denne måten kan du holde, vise og angi disse verdiene, i tillegg til å sammenligne dem for å avgjøre om de er like. Du kan imidlertid ikke utføre numeriske beregninger i dette skjemaet.
 
-Flyttall aritmetisk er tilnærmet, slik at det noen ganger kan gi uventede resultater med mange dokumenterte eksempler. Du kan forvente formelen **55 / 100 * 100** til å returnere nøyaktig 55 og **(55 / 100 * 100) – 55** til å returnere nøyaktig null. Sistnevnte formelen returnerer imidlertid 7.1054 x 10<sup>–15</sup>, som er svært liten, men ikke er null. Den svært liten forskjellen vanligvis føre til ikke et problem, og appen Runder av den unna når viser resultatet. Små forskjeller kan imidlertid sammensatte i etterfølgende beregninger og ser ut til å gi feil svar.
+Flyt talls aritmetikk er omtrentlig, så den kan noen ganger gi uventede resultater med mange dokumenterte eksempler. Du forventer kanskje at formelen **55/100 * 100** for å returnere nøyaktig 55 og **(55/100 * 100)-55** til å returnere nøyaktig null. Den sistnevnte formelen returnerer imidlertid 7,1054 x 10<sup>– 15</sup>, som er svært liten, men ikke null. Denne små forskjellen fører vanligvis ikke til et problem, og appen runder den av når resultatet vises. Små forskjeller kan imidlertid sammensatte i etterfølgende beregninger og vises for å gi feil svar.
 
-Databasesystemer ofte lagre valutaer og utfører beregninger ved hjelp av desimal matematiske, som tilbyr et mindre område, men større kontroll over presisjonen. Som standard lerret apper kartet valutaer inn og ut flyttallet med verdier. Resultatet kan derfor være forskjellig fra beregninger som utføres i en opprinnelig decimal-datatype. Hvis denne typen avvik vil føre til problemer, kan du arbeide med disse verdiene som **tekst**, på samme måte som du kanskje med store heltall som er beskrevet tidligere i denne delen.
+Database systemer lagrer ofte valutaer og utfører beregninger ved hjelp av en desimal matematikk, som gir et mindre område, men større kontroll over presisjonen. Som standard tilordner lerrets programmer valutaer i og utenfor flyt talls verdier. resultatet kan derfor avvike fra beregninger som utføres i en opprinnelig desimal data type. Hvis denne typen avviker vil føre til problemer, kan det hende du vil arbeide med disse verdiene som **tekst**, akkurat som du kan med store hel tall som er beskrevet tidligere i denne delen.
 
-## <a name="date-time-and-datetime"></a>Dato, klokkeslett og dato/klokkeslett
+## <a name="date-time-and-datetime"></a>Dato, klokkeslett og DateTime
 
-### <a name="time-zones"></a>Tidssoner
+### <a name="time-zones"></a>Tids soner
 
-Dato/klokkeslett verdier fall i disse kategoriene:
+Dato/klokkeslett-verdier er i følgende kategorier:
 
-- **Brukeren lokal**: Disse verdiene er lagret i [UTC (universaltid)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), men appen brukerens tidssone påvirker hvordan appen viser disse verdiene, og hvordan appen brukeren angir dem. For eksempel vises for samme øyeblikket på en annen måte til en bruker i Canada enn det gjør til en bruker i Japan.
-- **Uavhengig av tidssone**: Appen viser disse verdiene på samme måte, og appen brukeren angir dem på samme måte, uavhengig av tidssone. Det samme øyeblikket vises på samme måte for en bruker i Canada som den gjør til en bruker i Japan. App-forfattere som forventer ikke at deres apper som kjører i ulike tidssoner bruke disse verdiene fordi de er samlet enklere.
+- **Bruker lokal**: Disse verdiene lagres i [UTC (Coordinated Universal Time)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), men brukerens tidssone påvirker hvordan appen viser disse verdiene og hvordan appen bruker angi dem. Som et eksempel vises samme øyeblikk for en bruker i Canada enn det som er en bruker i Japan.
+- Tidssone **uavhengig**: Appen viser disse verdiene på samme måte, og appen angir dem på samme måte, uavhengig av tidssone. Det samme ser ut på samme måte som en bruker i Canada som den gjør for en bruker i Japan. App-forfattere som ikke forventer at appene deres kan kjøres i forskjellige tids soner, bruker disse verdiene fordi de er enklere.
 
 Denne tabellen viser noen eksempler:
 
-| Dato/klokkeslett-type | Verdien som er lagret i databasen | Verdien som vises, og angitt 7 timer west of UTC | Verdien som vises, og angitt 4 timer east of UTC |
+| Dato/klokkeslett-type | Verdi lagret i databasen | Verdi som vises og angis 7 timer, vest for UTC | Verdi vist og angitt 4 timer øst-UTC |
 |--------------------------|------------------------------|------------------------------|
-| **Lokal bruker** | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | Lørdag,&nbsp;kan&nbsp;18,&nbsp;2019<br>9:00 PM | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>8\.00 |
-| **Uavhengig av tidssone** | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | 
+| **Bruker lokal** | Søndag,&nbsp;19&nbsp;.&nbsp;mai 2019<br>4:00 AM | Lørdag,&nbsp;18&nbsp;.&nbsp;mai 2019<br>9:00 PM | Søndag,&nbsp;19&nbsp;.&nbsp;mai 2019<br>8:00 AM |
+| **Tidssone uavhengig** | Søndag,&nbsp;19&nbsp;.&nbsp;mai 2019<br>4:00 AM | Søndag,&nbsp;19&nbsp;.&nbsp;mai 2019<br>4:00 AM | Søndag,&nbsp;19&nbsp;.&nbsp;mai 2019<br>4:00 AM | 
 
-For **bruker lokal** dato/klokkeslett, lerret-apper bruker tidssonen for nettleser eller enhet, men modelldrevne apper Bruk brukerens innstillingen i Common Data Service. Disse innstillingene vanligvis samsvare med, men resultatene vil variere Hvis disse innstillingene er forskjellige.
+For **lokal bruker** dato/klokkeslett bruker lerret apper tids sonen for nett leseren eller enheten, men modell drevne apper bruker brukerens innstilling i Common data service. Disse innstillingene Sams varer vanligvis, men resultatene vil være forskjellige hvis disse innstillingene er forskjellige.
 
-### <a name="numeric-equivalents"></a>Numeriske tilsvarende
+Bruk funksjonene [**DateAdd**](function-dateadd-datediff.md) og [**TimeZoneInformation**](function-dateadd-datediff.md) til å konvertere lokal tid til UTC og tilbake igjen.  Se eksemplene på slutten av dokumentasjonen for disse funksjonene.
 
-Lerretsapper holder og beregne alle dato/klokkeslett verdier, om **bruker lokal** eller **uavhengig av tidssone** i UTC. Appen oversetter verdiene basert på app brukerens tidssone ved visning av dem og når appen brukeren angir dem.
+### <a name="numeric-equivalents"></a>Tall tilsvarende
 
-Når en lerretsapp leser en **uavhengig av tidssone** verdi fra en datakilde eller skrivinger slike en verdi til en datakilde, appen automatisk justerer verdien som skal kompenserer for tidssonen for appens brukeren. Appen behandler deretter verdien som en UTC-verdi, som med alle andre dato/klokkeslett-verdier i appen. På grunn av denne kompensasjon, opprinnelige **uavhengig av tidssone** verdien som vises når appen justerer UTC-verdien for appen brukerens tidssone.
+Lerret apper inneholder og beregner alle dato/klokkeslett-verdier, enten en **bruker lokal** eller **TIDSSONE uavhengig** i UTC. Appen oversetter verdiene basert på tids sonen til appen, når de viser dem og når appen bruker angi dem.
 
-Du kan se denne virkemåte nærmere ved hjelp av den [ **verdien** ](function-value.md) funksjonen til å få tilgang til den underliggende numeriske verdien for en dato/klokkeslett-verdi. Denne funksjonen returnerer dato/klokkeslett-verdi som antall millisekunder siden 1. januar 1970 00:00:00.000 UTC.
+Når en lerret-app leser en **tids sone uavhengig** verdi fra en data kilde eller skriver en slik verdi til en data kilde, justerer appen automatisk verdien for å kompensere for tids sonen til appens bruker. Deretter behandler appen verdien som en UTC-verdi, konsekvent med alle andre dato/klokkeslett-verdier i appen. På grunn av denne kompensasjonen, vises den opprinnelige **tids sonens uavhengige** verdi når APPEN justerer UTC-verdien for brukerens tidssone.
 
-Fordi hver dato/klokkeslett-verdi er i bruk i UTC, formelen **verdi (dato (1970, 1, 1))** ikke returnere null i de fleste deler av verden fordi den **dato** -funksjonen returnerer en dato i UTC. For eksempel vil formelen returnere 28,800,000 i en tidssone som skal forskyves fra UTC åtte timer. Dette nummeret gjenspeiler antall millisekunder i åtte timer.
+Du kan observere dette ved å bruke [**Value**](function-value.md) -funksjonen til å få tilgang til den underliggende numeriske verdien for en dato/klokkeslett-verdi. Denne funksjonen returnerer dato/klokkeslett-verdien som antall millisekunder, siden 1. januar 1970 00:00:00.000 UTC.
 
-Gå tilbake til vårt eksempel fra ovenfor:
+Fordi hver dato/klokkeslett-verdi holdes i UTC, returnerer ikke formel **verdien (Date (1970, 1, 1))** null i de fleste delene av verden fordi **Date** -funksjonen returnerer en dato i UTC. Formelen vil for eksempel returnere 28 800 000 i en tidssone som forskyves fra UTC med åtte timer. Dette tallet gjenspeiler antallet millisekunder i åtte timer.
 
-| Dato/klokkeslett-type | Verdien som er lagret i databasen | Verdien som vises, og angitt 7 timer west of UTC | **Verdien** -funksjonen returnerer |
+Går tilbake til eksemplet våre fra ovenfor:
+
+| Dato/klokkeslett-type | Verdi lagret i databasen | Verdi som vises og angis 7 timer, vest for UTC | **Value** -funksjonen returnerer |
 |--------------------------|------------------------------|------------------------------|
-| **Lokal bruker** | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | Lørdag,&nbsp;kan&nbsp;18,&nbsp;2019<br>9:00 PM | 1,558,238,400,000<br> (Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 UTC) |
-| **Uavhengig av tidssone** | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 | Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>04:00:00 |1,558,263,600,000<br> (Søndag,&nbsp;kan&nbsp;19,&nbsp;2019<br>11:00 AM UTC) |
+| **Bruker lokal** | Søndag,&nbsp;19&nbsp;.&nbsp;mai 2019<br>4:00 AM | Lørdag,&nbsp;18&nbsp;.&nbsp;mai 2019<br>9:00 PM | 1 558 238 400 000<br> (Søndag,&nbsp;19&nbsp;.&nbsp;mai 2019<br>4:00 AM. UTC) |
+| **Tidssone uavhengig** | Søndag,&nbsp;19&nbsp;.&nbsp;mai 2019<br>4:00 AM | Søndag,&nbsp;19&nbsp;.&nbsp;mai 2019<br>4:00 AM |1 558 263 600 000<br> (Søndag,&nbsp;19&nbsp;.&nbsp;mai 2019<br>11:00 AM. UTC) |
 
-### <a name="converting-unix-times"></a>Konvertering av Unix ganger
+### <a name="converting-unix-times"></a>Konverterer UNIX-tider
 
-UNIX ganger gjenspeiler antallet sekunder siden 1. januar 1970 00:00:00 UTC. Ettersom lerret-apper bruker millisekunder i stedet for sekunder, kan du konvertere mellom to ved å multiplisere eller å dele på 1000.
+UNIX-tider gjenspeiler antall sekunder siden 1. januar 1970 00:00:00 UTC. Fordi lerret apps bruker millisekunder i stedet for sekunder, kan du konvertere mellom de to ved å multiplisere eller dele på 1 000.
 
-Unix-tid viser for eksempel 9. September 2001 på 01:46:40 UTC som 1 000 000 000. Å vise som dato/klokkeslett-verdi i en lerretsapp, multiplisere dette nummeret med 1000 å konvertere den til millisekunder, og deretter bruke den i en [ **tekst** ](function-text.md) funksjonen. Formelen **tekst (1000000000 * 1000, DateTimeFormat.UTC)** returnerer strengen **2001-09-09T01:46:40.000Z**.
+Unix Time viser for eksempel 9. september 2001, med 01:46:40 UTC AS 1 000 000 000. Hvis du vil vise denne dato/klokkeslett-verdien i en lerret-app, multipliserer du dette tallet med 1 000 for å konvertere den til millisekunder, og deretter bruker du den i en [**tekst**](function-text.md) funksjon. Formel **teksten (1000000000 * 1000, DateTimeFormat. UTC)** Returnerer strengen **2001-09-09T01:46:40.000 z**.
 
-Denne funksjonen returnerer imidlertid **lørdag 8. September 2001 18:46:40** Hvis du bruker den **DateTimeFormat.LongDateTime24** format i en tidssone som skal forskyves-7 timer fra UTC (7 timer west of UTC). Dette resultatet viser den **DateTime** verdi basert på riktig måte på den lokale tidssonen.
+Denne funksjonen returnerer imidlertid **lørdag, 8. September 2001 18:46:40** hvis du bruker **DateTimeFormat. LongDateTime24** -formatet i en tidssone som er-7 timer forskyvning fra UTC (7 timer, Vest UTC). Dette resultatet viser **datetime** -verdien riktig, basert på den lokale tids sonen.
 
-Hvis du vil konvertere til en Unix-tid, kan du dele resultatet fra **verdien** ved 1000:
-<br>**RoundDown (verdi (UnixTime) / 1000, 0)**
+Hvis du vil konvertere til en UNIX-tid, deler du resultatet fra **verdien** av 1 000:
+<br>**RoundDown (verdi (UnixTime)/1000, 0)**
 
-Hvis du trenger Unix-tid i en **dato** verdien for ytterligere beregninger eller vise i PowerApps, bruker du denne formelen:
-<br>**DateAdd (dato (1970,1,1), UnixTime, sekunder)**
+Hvis du trenger UNIX-tid i en **dato** verdi for videre beregning eller visning i powerapps, kan du bruke denne formelen:
+<br>**DateAdd (Date (1970, 1, 1), UnixTime, Seconds)**
 
 ### <a name="sql-server"></a>SQL Server
 
-SQL Server har [ **Datetime**, **Datetime2**, og andre dato/klokkeslett-datatyper](https://docs.microsoft.com/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-2017) som inkluderer ikke en Tidssoneforskyvning og ikke indikerer hvilken tidssone de er i. Lerretsapper antar disse verdiene er lagret i UTC og behandle dem som **bruker lokal**. Hvis verdiene er ment å være tidssone uavhengig, korrigere for UTC-oversettelser ved hjelp av den [ **TimeZoneOffset** ](function-dateadd-datediff.md#converting-to-utc) funksjonen.
+SQL Server har [ **datetime**, **Datetime2**og andre data typer for dato/klokkeslett](https://docs.microsoft.com/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-2017) som ikke inkluderer en tids sone forskyvning, og som ikke angir hvilken tidssone de er i. Lerret apper forutsetter at disse verdiene er lagret i UTC og behandler dem som en **lokal bruker**. Hvis verdiene er ment som tids soner uavhengig, må du korrigere for UTC-oversettelsene ved hjelp av [**TimeZoneOffset**](function-dateadd-datediff.md#converting-to-utc) -funksjonen.
 
-Lerret-apper bruker inkludert tidssone informasjonen i **Datetimeoffset** felt under konvertering av en verdi til appens intern UTC-representasjonen. Appene alltid bruke UTC som tidssonen (null Tidssoneforskyvning) når de skriver data.
+Lerret apper bruker tids sone informasjonen i **Datetimeoffset** -felt ved konvertering av en verdi til appens interne UTC-representasjon. Appene bruker alltid UTC som tids sone (null tids sone forskyvning) når de skriver data.
 
-Lerretsapper lese og skrive til verdiene i den [ **tid** ](https://docs.microsoft.com/sql/t-sql/data-types/time-transact-sql) datatype i SQL Server som tekststrenger i den [ISO 8601-format for varighet](https://en.wikipedia.org/wiki/ISO_8601#Durations). Du må for eksempel analysere denne strengformat og bruke den [ **tid** ](function-date-time.md) funksjonen til å konvertere tekststrengen **"PT2H1M39S"** til en **tid** verdi:
+Lerrets programmer leser og skriver verdier av [**time**](https://docs.microsoft.com/sql/t-sql/data-types/time-transact-sql) -data typen i SQL Server som tekst strenger i [formatet ISO 8601 Duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). Du må for eksempel analysere dette streng formatet og bruke [**klokkeslett**](function-date-time.md) -funksjonen til å konvertere tekst strengen **"PT2H1M39S"** til en **klokkeslett** verdi:
 
-```powerapps-comma
+```powerapps-dot
 First(
     ForAll(
-        MatchAll( "PT2H1M39S"; "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" );
-        Time( Value( hours ); Value( minutes ); Value( seconds ) )
+        MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
+        Time( Value( hours ), Value( minutes ), Value( seconds ) )
     )
 ).Value
 ```
 
-### <a name="mixing-date-and-time-information"></a>Blanding av informasjon om dato og klokkeslett
+### <a name="mixing-date-and-time-information"></a>Blande informasjon om dato og klokkeslett
 
-**Dato**, **tid**, og **DateTime** har forskjellige navn, men alle inneholder samme informasjon om datoer og klokkeslett. 
+**Dato**, **klokkeslett**og **datetime** har ulike navn, men de inneholder bare den samme informasjonen om datoer og klokkeslett. 
 
-A **dato** verdi kan inkludere informasjon om klokkeslett med den, som vanligvis er midnatt. A **tid** verdi kan overføre datoinformasjon som, som vanligvis er 1. januar 1970. Common Data Service-lagrer også informasjon om klokkeslett med en **bare dato** feltet viser men bare datoinformasjonen som standard. På samme måte vil lerretsapper noen ganger skille mellom disse datatypene til å bestemme standardformater og kontroller.
+En **dato** verdi kan inneholde tids informasjon med den, som vanligvis er midnatt. En **tids** verdi kan inneholde dato informasjon, som vanligvis er 1. januar 1970. Common Data Service lagrer også klokkeslett informasjon med et **dato** -felt, men viser bare dato informasjonen som standard. På samme måte kan det hende at lerret apper skiller mellom disse data typene for å bestemme standard formater og kontroller.
 
-Å legge til og trekke dato- og klokkeslettverdier direkte er ikke anbefalt fordi tidssone og andre konverteringer kan føre til at forvirrende resultater. Enten å bruke den **verdien** funksjonen til å konvertere dato/klokkeslett-verdiene til millisekunder først og tar hensyn til app brukerens tidssone, eller bruk den [ **DateAdd** ](function-dateadd-datediff.md) og [ **DateDiff** ](function-dateadd-datediff.md) funksjoner for å legge til eller trekke fra en av disse verdiene.
+Det anbefales ikke å legge til og trekke fra verdier for dato og klokkeslett direkte, fordi tids soner og andre konverteringer kan føre til forvirrende resultater. Bruk **Value** -funksjonen til å konvertere dato/klokkeslett-verdier til millisekunder først, og ta i bruk appens brukerens tidssone, eller Bruk funksjonene [**DateAdd**](function-dateadd-datediff.md) og [**DateDiff**](function-dateadd-datediff.md) til å legge til eller trekke fra én av disse verdiene.
 
-## <a name="option-sets-and-two-options"></a>Alternativsett og to alternativer
+## <a name="option-sets-and-two-options"></a>Alternativ sett og to alternativer
 
-Alternativsett og datatyper for to-alternativet gir deg en to eller flere alternativer for en appbruker til å velge. For eksempel en **ordrestatus** alternativsett kan tilby valgene **ny**, **levert**, **fakturert**, og **lukket** . Datatypen for to-alternativet gir bare to valg.
+Alternativ sett og data typer med to alternativer gir deg to eller flere alternativer som en app-bruker kan velge. Et alternativ sett for **ordre status** kan for eksempel tilby alternativene **nytt**, **sendt**, **fakturert**og **lukket**. Data typen med to alternativer tilbyr bare to valg.
 
-Begge disse datatypene Vis etikettene i en tekststreng kontekst. For eksempel en etikettkontrollen viser ett av alternativene ordrestatus Hvis kontrollens **tekst** egenskapen er satt til en formel som refererer til denne alternativsett. Alternativet etiketter lokaliseres for app-brukere på forskjellige steder.
+Begge disse data typene viser etikettene i en tekst streng kontekst. En etikett-kontroll viser for eksempel ett av alternativene for ordre status hvis kontrollens **tekst** -egenskap er angitt til en formel som refererer til dette alternativ settet. Alternativ etiketter kan være lokalisert for App-brukere på forskjellige plasseringer.
 
-Når en appbruker velger et alternativ, og lagrer denne endringen, overfører appen data til databasen, som lagrer dataene i en representasjon som er uavhengig av språk. Et alternativ i et alternativsett er overført og lagret som et tall, og et alternativ i en datatype for to-alternativet er overført og lagret som en boolsk verdi.
+Når en app-bruker velger et alternativ og lagrer denne endringen, overfører appen dataene til databasen, som lagrer dataene i en representasjon som er uavhengig av språk. Et alternativ i et alternativ sett overføres og lagres som et tall, og et alternativ i en data type med to alternativer overføres og lagres som en boolsk verdi.
 
-Etikettene er bare for visning. Du kan ikke utføre direkte sammenligninger med etikettene fordi de er spesifikk for et språk. Hver alternativsett har i stedet en opplisting som fungerer med den underliggende tall eller en boolsk verdi. Du kan for eksempel bruke denne formelen:
+Etikettene er bare til visnings formål. Du kan ikke utføre direkte sammenligninger med etikettene fordi de er spesifikke for et språk. I stedet har hvert alternativ sett en opplisting som fungerer med det underliggende antallet eller den boolske verdien. Du kan for eksempel ikke bruke denne formelen:
 
-`If( ThisItem.OrderStatus = "Active"; ...`
+`If( ThisItem.OrderStatus = "Active", ...`
 
 Men du kan bruke denne formelen:
 
-`If( ThisItem.OrderStatus = OrderStatus.Active; ...`
+`If( ThisItem.OrderStatus = OrderStatus.Active, ...`
 
-For globale alternativsett (hvilke enheter dele), navnet på alternativsett opplistingen tilsvarer navnet på det globale alternativsettet. For lokale alternativsett (som er begrenset til en enhet), navnet kan inneholde navnet på enheten. Denne virkemåten unngår konflikter hvis flere enheter har alternativsett som har samme navn. For eksempel den **kontoer** enheten kan ha en **OrderStatus** alternativsett, og navnet kan være **OrderStatus (kontoer)** . Dette navnet inneholder én eller flere mellomrom og parenteser, slik at du må omslutte den med enkle anførselstegn hvis du henvise til i en formel.
+For globale alternativ sett (hvilke enheter som deler), er navnet på tilgangs angivelses opplistingen lik navnet på det globale alternativ settet. For lokale alternativ sett (som er tilknyttet en enhet), kan navnet inneholde navnet på enheten. Denne virke måten unngår konflikter hvis flere enheter har et alternativ sett som har samme navn. **Kontoer** -enheten kan for eksempel ha et **OrderStatus** alternativ sett, og navnet kan være **OrderStatus (kontoer)** . Dette navnet inneholder ett eller flere mellomrom og parenteser, så du må omslutte det med enkle anførsels tegn hvis du refererer til det i en formel.
 
-I tillegg to-verdiene kan også oppfører seg som boolske verdier. For eksempel en to-alternativ verdi med navnet **TaxStatus** kanskje etikettene **avgiftspliktig** og **ikke-avgiftspliktig**, som tilsvarer *SANN* og *USANN* henholdsvis. For å demonstrere, kan du bruke denne formelen:
+I tillegg kan verdiene for to alternativer også oppføre seg som boolske verdier. En verdi med to alternativer kalt **TaxStatus** kan for eksempel ha etikettene **avgiftspliktig** og **ikke-avgiftspliktig**, som Sams varer med henholdsvis *sann* og *Usann* . Hvis du vil demonstrere, kan du bruke denne formelen:
 
-`If( ThisItem.Taxable = TaxStatus.Taxable; ...`
+`If( ThisItem.Taxable = TaxStatus.Taxable, ...`
 
-Du kan også bruke denne tilsvarende formelen:
+Du kan også bruke den tilsvarende formelen:
 
-`If( ThisItem.Taxable; ...`
+`If( ThisItem.Taxable, ...`

@@ -7,19 +7,18 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 10/25/2016
+ms.date: 09/14/2019
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6fedff6d6ffc34fe390ec6978672d699480a7cb9
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: dceb9eee8eb5a0ed11a4b44fb2df6d63ba5e9cae
+ms.sourcegitcommit: 5899d37e38ed7111d5a9d9f3561449782702a5e9
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61548735"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038246"
 ---
 # <a name="screen-control-in-powerapps"></a>Skjermkontroll i PowerApps
 
@@ -27,7 +26,7 @@ Et brukergrensesnitt-element som inneholder én eller flere andre kontroller i e
 
 ## <a name="description"></a>Beskrivelse
 
-De fleste apper har flere **skjerm**-kontroller som inneholder **[etikett](control-text-box.md)**-kontroller, **[knapper](control-button.md)** og andre kontroller som viser data og støtter navigering. For informasjon om hvordan du kan legge til en skjerm, endre rekkefølgen på skjermer og konfigurere navigasjon, kan du se gjennom [legge til en skjerm](../add-screen-context-variables.md).
+De fleste apper har flere **skjerm**-kontroller som inneholder **[etikett](control-text-box.md)** -kontroller, **[knapper](control-button.md)** og andre kontroller som viser data og støtter navigering. Hvis du vil ha informasjon om hvordan du legger til en skjerm, Omorganiser skjermer og konfigurerer navigasjon, kan du gå gjennom [legge til en skjerm](../add-screen-context-variables.md).
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 
@@ -37,68 +36,61 @@ De fleste apper har flere **skjerm**-kontroller som inneholder **[etikett](contr
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
 
-**Høyde** – høyden på skjermen. Hvis appen er responsiv ([**Tilpass til** ](../set-aspect-ratio-portrait-landscape.md#change-screen-size-and-orientation) er **av**) og enheten som kjører appen er kortere enn denne egenskapen, skjermen kan rulle loddrett.
+**Høyde** -skjerm høyden. Hvis appen svarer ([**Tilpass til siden**](../set-aspect-ratio-portrait-landscape.md#change-screen-size-and-orientation) er **slått av**) og enheten som appen kjører på, er kortere enn denne egenskapen, kan skjermen rulle loddrett.
 
 **[ImagePosition](properties-visual.md)** – plasseringen (**Fyll**, **Tilpass**, **Strekk**, **Fylle side ved side** eller **Midtstill**) til et bilde på en skjerm eller en kontroll hvis det ikke har samme størrelse som bildet.
 
-**Navnet** -navnet på skjermen.
+**Navn** -navnet på skjermen.
 
 **OnHidden** – virkemåten til en app når brukeren navigerer bort fra en skjerm.
 
-**OnStart** – virkemåten til appen når brukeren åpner appen.
+**OnVisible** – virkemåten til en app når brukeren navigerer til en skjerm.  Bruk denne egenskapen til å konfigurere variabler og forhånds lastings data som brukes av skjermen.  Bruk egenskapen [**app. OnStart**](../functions/object-app.md#onstart-property) for konfigurasjon én gang når appen startes.
 
-- Formelen som er angitt for denne egenskapen kjøres før den første skjermen i appen vises. Ta i bruk [**Navigate** ](../functions/function-navigate.md)-funksjonen for å endre hvilken skjerm som vises først når appen starter.
-- Du kan ikke angi [kontekstvariabler](../working-with-variables.md) med [**UpdateContext**](../functions/function-updatecontext.md)-funksjonen, siden ingen skjerm vises ennå. Du kan imidlertid overføre kontekstvariablene i **Navigate**-funksjonen og opprette og fylle ut en [samling](../working-with-variables.md) ved hjelp av [**Collect**](../functions/function-clear-collect-clearcollect.md)-funksjonen.
-- Når du oppdaterer en app, vil formelen som denne egenskapen er angitt for kjøres når appen er lastet inn i PowerApps Studio. Hvis du vil se virkningen av å endre denne egenskapen, må du lagre, lukke og laste inn appen på nytt.
-- **OnStart**-egenskapen er faktisk en egenskap for appen og ikke for skjermen. I forbindelse med redigering kan du vise og endre det som en egenskap for den første skjermen i appen. Hvis du fjerner den første skjermen eller endrer rekkefølgen på skjermer, kan det bli vanskelig å finne denne egenskapen. I dette tilfellet lagrer, lukker og laster du inn appen, og egenskapen vil vises på nytt som en egenskap for den første skjermen.
+**Orientering** – retningen på skjermen. Hvis **bredden** er større enn **høyden**, blir retningen **oppsett. vannrett**, ellers blir det **oppsett. loddrett**.
 
-**OnVisible** – virkemåten til en app når brukeren navigerer til en skjerm.
+**Størrelse** – et positivt hel tall som klassifiserer størrelsen på skjermen. Klassifiseringen bestemmes ved å sammenligne skjermens **bredde** -egenskap med verdiene i [**app. SizeBreakpoints**](../functions/signals.md) -egenskapen. **ScreenSize** -typen består av fire verdier (**liten**, **Middels**, **stor**og **ExtraLarge**) som Sams varer med hel tallene 1 til 4.
 
-**Retning** -retningen på skjermen. Hvis den **bredde** er større enn sin **høyde**, retningen blir **Layout.Horizontal**; Hvis ikke, vil det være **Layout.Vertical** .
-
-**Størrelse** -et positivt heltall som klassifiserer størrelsen på skjermen. Klassifiseringen bestemmes ved å sammenligne skjermens **bredde** egenskapen til verdiene i den [ **App.SizeBreakpoints** ](../functions/signals.md) egenskapen. Den **ScreenSize** typen består av fire verdier (**små**, **middels**, **stor**, og **ExtraLarge** ) som samsvarer med heltallene fra 1 til 4.
-
-**Bredde** -bredden på skjermen. Hvis appen er responsiv ([**Tilpass til** ](../set-aspect-ratio-portrait-landscape.md#change-screen-size-and-orientation) er **av**) og enheten som kjører appen er mer presist enn denne egenskapen, skjermen kan rulle vannrett.
+**Bredde** -bredden på skjermen. Hvis appen reagerer ([**skaleres til å passe**](../set-aspect-ratio-portrait-landscape.md#change-screen-size-and-orientation) **opp) og**enheten som appen kjører på, er smalere enn denne egenskapen, kan skjermen rulle vannrett.
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 
-[**Distinct**( *DataSource*; *ColumnName* )](../functions/function-distinct.md)
+[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Eksempel
 
-1. Legg til en **[Radio](control-radio.md)**-kontroll, gi den navnet **ScreenFills**, og angi **[Elementer](properties-core.md)**-egenskapen dens til denne verdien:
+1. Legg til en **[Radio](control-radio.md)** -kontroll, gi den navnet **ScreenFills**, og angi **[Elementer](properties-core.md)** -egenskapen dens til denne verdien:
 
-    `["Red"; "Green"]`
+    `["Red", "Green"]`
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 
 1. Gi standard-**skjerm**-kontrollen navnet **Kilde**, legg til en annen **skjerm**-kontroll, og gi den navnet **Mål**.
 
-1. I **kilde**, legge til en **[figur](control-shapes-icons.md)** kontroll (for eksempel en pil), og angi dens **[OnSelect](properties-core.md)** egenskapen til Denne formelen:
+1. Legg til en **[figur](control-shapes-icons.md)** -kontroll (for eksempel en pil) i **kilde**, og angi **[OnSelect](properties-core.md)** -egenskapen til denne formelen:
 
-    `Navigate(Target; ScreenTransition.Fade)`
+    `Navigate(Target, ScreenTransition.Fade)`
 
-    Vil du ha mer informasjon om **[Navigate](../functions/function-navigate.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
+    Vil du ha mer informasjon om **[Navigate](../functions/function-navigate.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 
-1. Legg til en **[figur](control-shapes-icons.md)**-kontroll (som for eksempel en pil) i **Mål**, og angi **[OnSelect](properties-core.md)**-egenskapen til denne formelen:
+1. Legg til en **[figur](control-shapes-icons.md)** -kontroll (som for eksempel en pil) i **Mål**, og angi **[OnSelect](properties-core.md)** -egenskapen til denne formelen:
 
-    `Navigate(Source; ScreenTransition.Fade)`
+    `Navigate(Source, ScreenTransition.Fade)`
 
-1. Angi **[Fyll](properties-color-border.md)**-egenskapen for **Mål** til denne formelen:
+1. Angi **[Fyll](properties-color-border.md)** -egenskapen for **Mål** til denne formelen:
 
-    `If("Red" in ScreenFills.Selected.Value; RGBA(255; 0; 0; 1); RGBA(54; 176; 75; 1))`
+    `If("Red" in ScreenFills.Selected.Value, RGBA(255, 0, 0, 1), RGBA(54, 176, 75, 1))`
 
-1. Velg den **kilde** skjermbildet, og velg deretter et alternativ i mens du holder nede Alt-tasten, den **[Radio](control-radio.md)** kontroll, og velg deretter den **[Figur](control-shapes-icons.md)** kontroll.
+1. Velg **kilde** -skjermen, og velg deretter et alternativ i **[radio](control-radio.md)** -kontrollen mens du holder nede Alt-tasten, og velg deretter **[figur](control-shapes-icons.md)** -kontrollen.
 
-    **Target** vises i fargen du valgte.
+    **Mål** vises i fargen du valgte.
 
-1. I **Target**, og velg den **[figur](control-shapes-icons.md)** kontrollen for å gå tilbake til **kilde**.
+1. Velg **[figur](control-shapes-icons.md)** -kontrollen i **mål**for å gå tilbake til **kilde**.
 
-1. (valgfritt) Velg det andre alternativet i den **[Radio](control-radio.md)** kontroll, og velg deretter den **[figur](control-shapes-icons.md)** kontroll for å bekrefte at **mål**  vises i den andre fargen.
+1. valg fritt Velg det andre alternativet i **[radio](control-radio.md)** -kontrollen, og velg deretter **[Shape](control-shapes-icons.md)** -kontrollen for å bekrefte at **målet** vises i den andre fargen.
 
-1. (valgfritt) Endre rekkefølgen på skjermene ved å hvile over **Target** i navigasjonsfeltet til venstre, å velge ellipsen som vises, og deretter velge **Flytt opp**.
+1. valg fritt Endre rekkefølgen på skjermene ved å holde pekeren over **målet** i det venstre navigasjons feltet, velge ellipsen som vises, og deretter velge **Flytt opp**.
 
-    **Target** vises først når brukeren åpner appen.
+    **Mål** vises først når brukeren åpner appen.
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
 
@@ -111,7 +103,7 @@ Når **skjermen** er den fungerende bakgrunnen for tekst, må det være tilstrek
 
 Hvis for eksempel en **skjerm** inneholder en **[etikett](control-text-box.md)**  og etiketten har gjennomsiktig fyll, blir skjermens **[fyll](properties-color-border.md)** den fungerende bakgrunnsfargen for etiketten.
 
-I tillegg til tekst, bør du vurdere å kontrollere fargekontrast med viktige grafiske objekter, for eksempel stjerneikonene i en **[vurdering](control-rating.md)**-kontroll.
+I tillegg til tekst, bør du vurdere å kontrollere fargekontrast med viktige grafiske objekter, for eksempel stjerneikonene i en **[vurdering](control-rating.md)** -kontroll.
 
 ### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
 
