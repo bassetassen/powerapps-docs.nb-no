@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bfe5b35ebfddfe17cbf3898cc6f68f1a91d0b5e0
-ms.sourcegitcommit: 94ec67b283b9b03aa24cdc0ab43dd448b11b0547
+ms.openlocfilehash: 4a86f508950ad890ecaa4d3d5678e3e6f6e415dc
+ms.sourcegitcommit: 544af91dd596f2f6b6c4b9e1d08c16f43e2a7711
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69530252"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71119038"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>Del en lerretsapp i PowerApps
 
@@ -59,7 +59,7 @@ Du må lagre appen i skyen (ikke lokalt) og deretter publisere den før du deler
     > [!NOTE]
     > Du kan ikke dele en app med en distribusjons gruppe i organisasjonen eller med en bruker eller gruppe utenfor organisasjonen.
 
-1. Hvis du vil tillate de du deler appen med, til å redigere og dele den (i tillegg til å kjøre den), merker du av for medeier.
+1. Hvis du vil tillate de du deler appen med, til å redigere og dele den (i tillegg til å kjøre den), merker du av for **medeier** .
 
     Du kan ikke gi **eier** tillatelse til en sikkerhets gruppe hvis du [opprettet appen fra i en løsning](add-app-solution.md).
 
@@ -90,14 +90,14 @@ Du må lagre appen i skyen (ikke lokalt) og deretter publisere den før du deler
 
 Du kan endre tillatelser for en bruker eller en sikkerhets gruppe ved å velge navnet og deretter utføre ett av disse trinnene:
 
-- Hvis du vil tillate at medeiere kjører appen, men ikke lenger redigerer eller deler den, fjerner du merket i avmerkings boksen for medeier.
+- Hvis du vil tillate at medeiere kjører appen, men ikke lenger redigerer eller deler den, fjerner du merket i avmerkings boksen for **medeier** .
 - Hvis du vil stoppe delingen av appen med denne brukeren eller gruppen, velger du Fjern (x)-ikonet.
 
 ## <a name="security-group-considerations"></a>Sikkerhetsgruppevurderinger
 
 - Hvis du deler en app med en sikkerhetsgruppe, får eksisterende medlemmer av denne gruppen og alle som blir med i den, tillatelsene du angir for denne gruppen. Alle som forlater gruppen mister denne tillatelsen, med mindre de tilhører en annen gruppe som har tilgang, eller du gir dem tillatelse som enkeltpersoner.
 
-- Hvert medlem av en sikkerhetsgruppe har de samme tillatelsene for en app, som den overordnede gruppen har. Du kan imidlertid angi større tillatelser for ett eller flere medlemmer av gruppen, for å gi dem større tilgang. Du kan for eksempel gi sikkerhets gruppe tillatelse til å kjøre en app, men du kan også gi bruker B som tilhører denne gruppen, tillatelse til å **eie** . Hvert medlem av sikkerhetsgruppen kan kjøre appen, men bare bruker B kan redigere den. Hvis du gir sikkerhets gruppen en tillatelse med medeier og bruker B tillatelse til å kjøre appen, kan denne brukeren fremdeles redigere appen.
+- Hvert medlem av en sikkerhetsgruppe har de samme tillatelsene for en app, som den overordnede gruppen har. Du kan imidlertid angi større tillatelser for ett eller flere medlemmer av gruppen, for å gi dem større tilgang. Du kan for eksempel gi sikkerhets gruppe tillatelse til å kjøre en app, men du kan også gi bruker B som tilhører denne gruppen, tillatelse til å **eie** . Hvert medlem av sikkerhetsgruppen kan kjøre appen, men bare bruker B kan redigere den. Hvis du gir sikkerhets gruppen en tillatelse med **medeier** og bruker B tillatelse til å kjøre appen, kan denne brukeren fremdeles redigere appen.
 
 ## <a name="manage-entity-permissions"></a>Slik administrerer du enhetstillatelser
 
@@ -133,19 +133,21 @@ Når du deler en app som er basert på en eldre versjon av Common Data Service, 
 Apper for PowerApps-lerret kan deles med gjeste brukere av en Azure Active Directory Tenant. Dette gjør det mulig å invitere eksterne forretnings partnere, oppdragstakere og tredje parter til å kjøre firmaets lerret apper. 
 
 > [!NOTE]
-> Gjester kan bare tilordnes **bruker** rollen, og ikke medeier -rollen, for apper som er delt med dem.
+> Gjester kan bare tilordnes **bruker** rollen, og ikke **medeier** -rollen, for apper som er delt med dem.
 
 ### <a name="prerequisites"></a>Forutsetninger
-1. I Azure Active Directory (Azure AD) kan du aktivere B2B eksternt samarbeid for leieren. Mer informasjon: [Aktiver B2B eksternt samarbeid og administrer hvem som kan invitere gjester](/azure/active-directory/b2b/delegate-invitations)
+- I Azure Active Directory (Azure AD) kan du aktivere B2B eksternt samarbeid for leieren. Mer informasjon: [Aktiver B2B eksternt samarbeid og administrer hvem som kan invitere gjester](/azure/active-directory/b2b/delegate-invitations)
     - Gjør at B2B eksternt samarbeid er aktivert som standard. Innstillingene kan imidlertid endres av en leier administrator.  Hvis du vil ha mer informasjon om Azure AD B2B, kan du se [Hva er gjeste bruker tilgang i Azure ad B2B?](/azure/active-directory/b2b/what-is-b2b)  
-2. Tilgang til en konto som kan legge til gjeste brukere i en Azure AD-Tenant. Administratorer og brukere med gjeste invitasjons rollen kan legge til gjester i en Tenant.   
-3. En PowerApps-lisens må tilordnes til gjeste brukeren i tenanten appen som deles, er tilknyttet. Selv om det ikke er mulig ennå, før den generelle tilgjengeligheten av gjeste tilgang til lerretet, må gjester med en PowerApps-lisens i hjem-leieren ikke være tilordnet en lisens i leieren de er en gjest.
+- Tilgang til en konto som kan legge til gjeste brukere i en Azure AD-Tenant. Administratorer og brukere med gjeste invitasjons rollen kan legge til gjester i en Tenant.   
+- Gjeste brukeren må ha en PowerApps-lisens tilordnet via én av følgende tenanter:
+    - Leieren som er vert for appen som deles.
+    - Hjem-leieren til gjeste brukeren.
 
 ### <a name="steps-to-grant-guest-access"></a>Trinn for å gi gjeste tilgang
 1. Velg **ny gjeste bruker** for å legge til gjeste brukere i Azure ad. Mer informasjon: [Hurtigstart: Legg til en ny gjeste bruker i](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)Azure ad.
     > [!div class="mx-imgBorder"] 
     > ![Legg til gjest i Azure ad](media/share-app/guest_access_doc_1.png "Legg til gjest i Azure ad")
-2. Tilordne en lisens til gjeste brukeren. 
+2. Hvis gjeste brukeren ikke allerede har en lisens i hjem leieren, kan du tilordne en lisens til gjeste brukeren.
    - Hvis du vil tilordne gjeste brukere fra admin.microsoft.com, kan du se [Tilordne lisenser til én bruker](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
    - Hvis du vil tilordne gjeste brukere fra portal.azure.com, kan du se [tilordne eller fjerne lisenser](/azure/active-directory/fundamentals/license-users-groups).
  
@@ -169,7 +171,7 @@ Når du har delt en app for gjeste tilgang, kan gjestene oppdage og få tilgang 
 #### <a name="whats-the-difference-between-canvas-app-guest-access-and-powerapps-portals"></a>Hva er forskjellen mellom appens gjeste tilgang og PowerApps-portaler? 
 Med C#lerret apper kan du bygge en app, skreddersydd for å digitalisere en forretnings prosess, uten å skrive kode i et tradisjonelt programmerings språk, for eksempel. Gjeste tilgang for lerret apper gjør det mulig for teamene til enkelt personer som består av forskjellige organisasjoner som deltar i en felles forretnings prosess for å få tilgang til de samme program ressursene som kan integreres med en rekke Microsoft-og tredje parts kilder. Mer informasjon: [Oversikt over lerret – app-koblinger for powerapps](/powerapps/maker/canvas-apps/connections-list).
 
-[Powerapps](/powerapps/maker/portals/overview) -portaler gir mulighet til å utvikle lav kode, svar nett steder som gir eksterne brukere mulighet til å samhandle med dataene som er lagret i Common data service. Det gjør det mulig for organisasjoner å opprette nett steder som kan deles med brukere eksternt til organisasjonen enten anonymt eller gjennom påloggings leverandøren for deres valg, som for eksempel LinkedIn, Microsoft-konto eller andre kommersielle påloggings tjenester. 
+[Powerapps-portaler](/powerapps/maker/portals/overview) gir mulighet til å utvikle lav kode, svar nett steder som gir eksterne brukere mulighet til å samhandle med dataene som er lagret i Common data service. Det gjør det mulig for organisasjoner å opprette nett steder som kan deles med brukere eksternt til organisasjonen enten anonymt eller gjennom påloggings leverandøren for deres valg, som for eksempel LinkedIn, Microsoft-konto eller andre kommersielle påloggings tjenester. 
 
 I tabellen nedenfor finner du en oversikt over noen kjerne funksjoner i PowerApps-portaler og lerrets apper.  
 
@@ -199,7 +201,6 @@ Som med ikke-gjester, må de underliggende data kildene som brukes av appen ogs�
 #### <a name="what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them"></a>Hvilken lisens må tilordnes til gjesten, slik at de kan kjøre en app som er delt med dem?
 Den samme lisensen som er nødvendig for at ikke-gjester skal kunne kjøre en app. Hvis for eksempel appen ikke bruker Premium-tilkoblingene, er en PowerApps P1-lisens nok til å tilordne til gjesten.  
 
-Før gjeste tilgang til arbeidsom råde er generell tilgjengelighet, trenger ikke gjester med en PowerApps-lisens i hjem-leieren tilordnes en lisens i leieren de er en gjest.
 
 |                                 | Egen definert SharePoint-skjema | Fritt stående lerret ved bruk av ikke-Premium-koblinger | Fritt stående lerret-app med Premium-koblinger | Modell drevet app |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
@@ -210,8 +211,6 @@ Før gjeste tilgang til arbeidsom råde er generell tilgjengelighet, trenger ikk
 
 #### <a name="in-powerapps-mobile-how-does-a-guest-see-apps-for-their-home-tenant"></a>I PowerApps Mobile kan en gjest se apper for deres hjem leier?
 Alle brukere som har fått tilgang til en lerret app, på mobilen heten, som er publisert i en Azure AD-leier som ikke er hjem-leieren, må ikke logge seg av PowerApps og logge på PowerApps Mobile.  
-
-Før gjeste tilgang til arbeidsom råde er generell tilgjengelighet, vil en organisasjons velger gi brukeren mulighet til å endre Azure AD-leieren de er logget på uten å eksplisitt logge seg av appen.  
 
 #### <a name="must-a-guest-accept-the-azure-ad-guest-invitation-prior-to-sharing-an-app-with-the-guest"></a>Må en gjest godta gjeste invitasjonen for Azure AD før du deler en app med gjesten?
 nei. Hvis en gjest starter en app som er delt med dem før de godtar en gjeste invitasjon, blir gjesten bedt om å godta invitasjonen som en del av påloggings opplevelsen mens du starter appen.  
