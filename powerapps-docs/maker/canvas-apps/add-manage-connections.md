@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d2a7da93835e5fbe588a8683bbdb0393d5b76ee5
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: d230d38c8393540bc78fd003ecb167f1f3978b97
+ms.sourcegitcommit: fe18d82dbbd3972c472fd69f7feb3a35c3a31153
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61564305"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71150274"
 ---
 # <a name="manage-canvas-app-connections-in-powerapps"></a>Administrer tilkoblinger til lerretsapper i PowerApps
 På [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) kan du opprette tilkobling til en eller flere datakilder, slette en tilkobling eller oppdatere legitimasjon.
@@ -43,9 +43,9 @@ De fleste PowerApps-apper bruker ekstern informasjon kalt **datakilder**, som op
 
 Den vanligste datakilden er tabellen, som du kan bruke til å hente og lagre informasjon. Du kan bruke tilkoblinger til datakilder for å lese og skrive data i Microsoft Excel-arbeidsbøker, SharePoint-lister, SQL-tabeller og mange andre formater, som kan lagres i skytjenester som OneDrive for Business, DropBox, SQL Server, osv.
 
-Det finnes andre typer datakilder som ikke er tabeller, blant annet e-post, kalendere, tweets og (kommer snart) varsler.
+Det finnes andre typer data kilder som ikke er tabeller, for eksempel e-post, kalendere, Twitter og varslinger.
 
-Ved bruk av kontrollene **[Galleri](controls/control-gallery.md)**, **[Visningsskjema](controls/control-form-detail.md)** og **[Redigeringsskjema](controls/control-form-detail.md)**, er det enkelt å oppdatere en app som leser og skriver data fra en datakilde. Les artikkelen [Forstå dataskjemaer](working-with-forms.md) for å komme i gang.
+Ved bruk av kontrollene **[Galleri](controls/control-gallery.md)** , **[Visningsskjema](controls/control-form-detail.md)** og **[Redigeringsskjema](controls/control-form-detail.md)** , er det enkelt å oppdatere en app som leser og skriver data fra en datakilde. Les artikkelen [Forstå dataskjemaer](working-with-forms.md) for å komme i gang.
 
 I tillegg til å opprette og administrere tilkoblinger på [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), oppretter du også tilkoblinger når du utfører disse oppgavene:
 
@@ -86,4 +86,5 @@ Finn tilkoblingen du vil oppdatere eller slette i listen over tilkoblinger, og k
 
 * Hvis du vil oppdatere legitimasjonen for en tilkobling, kan du klikke eller trykk på nøkkelikonet, og deretter angi legitimasjonen for den tilkoblingen.
 * Hvis du vil slette tilkoblingen, klikker eller trykker du på papirkurv-ikonet.
+* Klikk eller trykk på informasjon-ikonet for å se tilkoblings detaljene.
 

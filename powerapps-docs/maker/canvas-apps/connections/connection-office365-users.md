@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 507bac0b57cdc1e348bd384d5544d7b664a3e0f5
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: c9f7f0184f70643417154f229c1e957ea6218b34
+ms.sourcegitcommit: fe18d82dbbd3972c472fd69f7feb3a35c3a31153
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61557386"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71150253"
 ---
 # <a name="connect-to-office-365-users-connection-from-powerapps"></a>Å koble til Office 365-brukere fra PowerApps
 ![Office 365-brukere](./media/connection-office365-users/office365icon.png)
@@ -42,19 +42,26 @@ Tilkoblingen til Office 365-brukere er opprettet og lagt til i appen din. Den er
 ## <a name="use-the-connection-in-your-app"></a>Slik bruker man tilkoblingen i appen
 ### <a name="show-information-about-the-current-user"></a>Å vise informasjon om gjeldende bruker
 1. Velg **Etikett** på menyen **Sett inn**
-2. Du angir **[Tekst](../controls/properties-core.md)**-egenskapen i funksjonsfeltet til én av følgende formler:
+2. Du angir **[Tekst](../controls/properties-core.md)** -egenskapen i funksjonsfeltet til én av følgende formler:
 
-    `Office365Users.MyProfile().Department`  
-    `Office365Users.MyProfile().DisplayName`  
-    `Office365Users.MyProfile().GivenName`  
-    `Office365Users.MyProfile().Id`  
-    `Office365Users.MyProfile().JobTitle`  
-    `Office365Users.MyProfile().Mail`  
-    `Office365Users.MyProfile().MailNickname`  
-    `Office365Users.MyProfile().Surname`  
-    `Office365Users.MyProfile().TelephoneNumber`  
-    `Office365Users.MyProfile().UserPrincipalName`  
-    `Office365Users.MyProfile().AccountEnabled`  
+   `Office365Users.MyProfile().City`  
+   `Office365Users.MyProfile().CompanyName`  
+   `Office365Users.MyProfile().Country`  
+   `Office365Users.MyProfile().Department`  
+   `Office365Users.MyProfile().DisplayName`  
+   `Office365Users.MyProfile().GivenName`  
+   `Office365Users.MyProfile().Id`  
+   `Office365Users.MyProfile().JobTitle`  
+   `Office365Users.MyProfile().Mail`  
+   `Office365Users.MyProfile().MailNickname`  
+   `Office365Users.MyProfile().mobilePhone`  
+   `Office365Users.MyProfile().OfficeLocation`  
+   `Office365Users.MyProfile().PostalCode`  
+   `Office365Users.MyProfile().Surname`  
+   `Office365Users.MyProfile().TelephoneNumber`  
+   `Office365Users.MyProfile().UserPrincipalName`  
+   `Office365Users.MyProfile().AccountEnabled`  
+   `Office365Users.MyProfile().BusinessPhones`
 
 Etiketten viser informasjonen du oppgav om den gjeldende brukeren.
 
@@ -63,34 +70,49 @@ Etiketten viser informasjonen du oppgav om den gjeldende brukeren.
 
     ![Å gi en kontroll et nytt navn](./media/connection-office365-users/renameinfoabout.png)
 2. Skriv eller lim inn en e-postadresse til en bruker i organisasjonen i **InfoAbout**. Skriv for eksempel inn *yourName*@*yourCompany.com*.
-3. Legg til en **Etikett** (**Sett inn**-meny), og angi **[Tekst](../controls/properties-core.md)**-egenskapen til én av følgende formler:
+3. Legg til en **Etikett** (**Sett inn**-meny), og angi **[Tekst](../controls/properties-core.md)** -egenskapen til én av følgende formler:
 
    * Slik viser du informasjon om en annen bruker:  
 
-       `Office365Users.UserProfile(InfoAbout.Text).Department`  
-       `Office365Users.UserProfile(InfoAbout.Text).DisplayName`  
-       `Office365Users.UserProfile(InfoAbout.Text).GivenName`  
-       `Office365Users.UserProfile(InfoAbout.Text).Id`  
-       `Office365Users.UserProfile(InfoAbout.Text).JobTitle`  
-       `Office365Users.UserProfile(InfoAbout.Text).Mail`  
-       `Office365Users.UserProfile(InfoAbout.Text).MailNickname`  
-       `Office365Users.UserProfile(InfoAbout.Text).Surname`  
-       `Office365Users.UserProfile(InfoAbout.Text).TelephoneNumber`  
-       `Office365Users.UserProfile(InfoAbout.Text).UserPrincipalName`  
-       `Office365Users.UserProfile(InfoAbout.Text).AccountEnabled`  
+     `Office365Users.UserProfile(InfoAbout.Text).City`  
+     `Office365Users.UserProfile(InfoAbout.Text).CompanyName`  
+     `Office365Users.UserProfile(InfoAbout.Text).Country`  
+     `Office365Users.UserProfile(InfoAbout.Text).Department`  
+     `Office365Users.UserProfile(InfoAbout.Text).DisplayName`  
+     `Office365Users.UserProfile(InfoAbout.Text).GivenName`  
+     `Office365Users.UserProfile(InfoAbout.Text).Id`  
+     `Office365Users.UserProfile(InfoAbout.Text).JobTitle`  
+     `Office365Users.UserProfile(InfoAbout.Text).Mail`  
+     `Office365Users.UserProfile(InfoAbout.Text).MailNickname`  
+     `Office365Users.UserProfile(InfoAbout.Text).mobilePhone`  
+     `Office365Users.UserProfile(InfoAbout.Text).OfficeLocation`  
+     `Office365Users.UserProfile(InfoAbout.Text).PostalCode`  
+     `Office365Users.UserProfile(InfoAbout.Text).Surname`  
+     `Office365Users.UserProfile(InfoAbout.Text).TelephoneNumber`  
+     `Office365Users.UserProfile(InfoAbout.Text).UserPrincipalName`  
+     `Office365Users.UserProfile(InfoAbout.Text).AccountEnabled`  
+     `Office365Users.UserProfile(InfoAbout.Text).BusinessPhones`
+
    * Slik viser du informasjon om en leder til en annen bruker:  
 
-       `Office365Users.Manager(InfoAbout.Text).Department`  
-       `Office365Users.Manager(InfoAbout.Text).DisplayName`  
-       `Office365Users.Manager(InfoAbout.Text).GivenName`  
-       `Office365Users.Manager(InfoAbout.Text).Id`  
-       `Office365Users.Manager(InfoAbout.Text).JobTitle`  
-       `Office365Users.Manager(InfoAbout.Text).Mail`  
-       `Office365Users.Manager(InfoAbout.Text).MailNickname`  
-       `Office365Users.Manager(InfoAbout.Text).Surname`  
-       `Office365Users.Manager(InfoAbout.Text).TelephoneNumber`  
-       `Office365Users.Manager(InfoAbout.Text).UserPrincipalName`  
-       `Office365Users.Manager(InfoAbout.Text).AccountEnabled`  
+     `Office365Users.Manager(InfoAbout.Text).City`  
+     `Office365Users.Manager(InfoAbout.Text).CompanyName`  
+     `Office365Users.Manager(InfoAbout.Text).Country`  
+     `Office365Users.Manager(InfoAbout.Text).Department`  
+     `Office365Users.Manager(InfoAbout.Text).DisplayName`  
+     `Office365Users.Manager(InfoAbout.Text).GivenName`  
+     `Office365Users.Manager(InfoAbout.Text).Id`  
+     `Office365Users.Manager(InfoAbout.Text).JobTitle`  
+     `Office365Users.Manager(InfoAbout.Text).Mail`  
+     `Office365Users.Manager(InfoAbout.Text).MailNickname`  
+     `Office365Users.Manager(InfoAbout.Text).mobilePhone`  
+     `Office365Users.Manager(InfoAbout.Text).OfficeLocation`  
+     `Office365Users.Manager(InfoAbout.Text).PostalCode`  
+     `Office365Users.Manager(InfoAbout.Text).Surname`  
+     `Office365Users.Manager(InfoAbout.Text).TelephoneNumber`  
+     `Office365Users.Manager(InfoAbout.Text).UserPrincipalName`  
+     `Office365Users.Manager(InfoAbout.Text).AccountEnabled`  
+     `Office365Users.Manager(InfoAbout.Text).BusinessPhones`
 
 Etiketten viser informasjonen du oppgav om brukeren som ble angitt, eller lederen til den brukeren.
 
@@ -105,7 +127,7 @@ Hvis du oppretter en kontakt og velger kontakten i bla gjennom-skjermen i appen,
 ### <a name="show-the-direct-reports-of-another-user"></a>Å vise direkterapporter for en annen bruker
 1. Legg til en **Tekstinndata**-kontroll (**Sett inn**-meny > **Tekst**), og endre navnet til **InfoAbout**.
 2. Oppgi e-postadresse til en bruker i organisasjonen i **InfoAbout**. Du kan for eksempel oppgi *yourManagersName*@*yourCompany.com*
-3. Legg til et **Med tekst**-galleri (**Sett inn**-meny > **Galleri**), og angi **[Elementer](../controls/properties-core.md)**-egenskapen til følgende formel:
+3. Legg til et **Med tekst**-galleri (**Sett inn**-meny > **Galleri**), og angi **[Elementer](../controls/properties-core.md)** -egenskapen til følgende formel:
 
     `Office365Users.DirectReports(InfoAbout.Text)`
 
@@ -119,7 +141,7 @@ Hvis du oppretter en kontakt og velger kontakten i bla gjennom-skjermen i appen,
 
 ### <a name="search-for-users"></a>Å søke etter brukere
 1. Legg til en **Tekstinndata**-kontroll (**Sett inn**-meny > **Tekst**), og endre navnet til **SearchTerm**. Oppgi et navn du vil søke etter. Angi for eksempel fornavnet ditt.
-2. Legg til et **Med tekst**-galleri (**Sett inn**-meny > **Galleri**), og angi **[Elementer](../controls/properties-core.md)**-egenskapen til følgende formel:
+2. Legg til et **Med tekst**-galleri (**Sett inn**-meny > **Galleri**), og angi **[Elementer](../controls/properties-core.md)** -egenskapen til følgende formel:
 
     `Office365Users.SearchUser({searchTerm: SearchTerm.Text})`
 
@@ -135,14 +157,14 @@ Denne tilkoblingen har følgende funksjoner:
 
 | Funksjonsnavn | Beskrivelse |
 | --- | --- |
-| [MyProfile](connection-office365-users.md#myprofile) |Henter profilen til den gjeldende brukeren |
-| [UserProfile](connection-office365-users.md#userprofile) |Henter en bestemt brukerprofil |
-| [Leder](connection-office365-users.md#manager) |Henter brukerprofilen for lederen til den angitte brukeren |
-| [DirectReports](connection-office365-users.md#directreports) |Returnerer direkterapportene for den angitte brukeren |
-| [SearchUser](connection-office365-users.md#searchuser) |Henter søkeresultater for brukerprofilene |
+| [DirectReports](connection-office365-users.md#directreports) |Returnerer direkte rapportene for den angitte brukeren. |
+| [Leder](connection-office365-users.md#manager) |Henter bruker profilen for lederen av den angitte brukeren. |
+| [MyProfile](connection-office365-users.md#myprofile) |Henter profilen for gjeldende bruker. |
+| [SearchUser](connection-office365-users.md#searchuser) |Henter søke resultater for bruker profiler. |
+| [UserProfile](connection-office365-users.md#userprofile) |Henter en bestemt bruker profil. |
 
 ### <a name="myprofile"></a>MyProfile
-Hent Min profil: Henter profilen til den gjeldende brukeren.
+Hent min profil: Henter profilen for gjeldende bruker.
 
 #### <a name="input-properties"></a>Inndataegenskaper
 Ingen.
@@ -151,117 +173,149 @@ Ingen.
 
 | Egenskapsnavn | Type | Beskrivelse |
 | --- | --- | --- |
-| Avdeling |streng |Avdelingen til brukeren. |
+| Nummer | streng |Brukerens post sted. |
+| CompanyName | streng |Brukerens firma. |
+| Land | streng |Brukerens land. |
+| Avdeling |streng |Brukerens avdeling. |
 | DisplayName |streng |Visningsnavnet til brukeren. |
 | GivenName |streng |Fornavnet til brukeren. |
-| ID |streng |Bruker-ID |
-| JobTitle |streng |Stillingstittelen for brukeren. |
-| E-post |streng |E-post-ID-en til brukeren. |
+| ID |streng |Bruker-ID. |
+| JobTitle |streng |Brukerens stilling. |
+| Utsendelse |streng |E-post-ID-en til brukeren. |
 | MailNickname |streng |Kallenavnet til brukeren. |
+| mobilePhone | streng |Brukerens mobil telefon. |
+| OfficeLocation | streng |Office-plassering for bruker.|
+| Kontrollen | streng |Post nummeret til brukeren.|
 | Etternavn |streng |Etternavnet til brukeren. |
 | TelephoneNumber |streng |Telefonnummeret til brukeren. |
 | UserPrincipalName |streng |Brukers hovednavn. |
-| AccountEnabled |boolsk |Konto aktivert-flagg. |
+| AccountEnabled |boolsk |Kontoaktivert flagg. |
+| BusinessPhones | streng |Telefon numre til brukerens firma.|
 
 ### <a name="userprofile"></a>UserProfile
-Hent brukerprofil: Henter en bestemt brukerprofil.
+Hent bruker profil: Henter en bestemt bruker profil.
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | krevde | Beskrivelse |
 | --- | --- | --- | --- |
-| ID |streng |ja |Brukers hovednavn eller e-post-ID |
+| ID |streng |ja |Brukerhovednavn eller e-post-ID. |
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
 | Egenskapsnavn | Type | Beskrivelse |
 | --- | --- | --- |
-| Avdeling |streng |Avdelingen til brukeren. |
+| Nummer | streng |Brukerens post sted. |
+| CompanyName | streng |Brukerens firma. |
+| Land | streng |Brukerens land. |
+| Avdeling |streng |Brukerens avdeling. |
 | DisplayName |streng |Visningsnavnet til brukeren. |
 | GivenName |streng |Fornavnet til brukeren. |
-| ID |streng |Bruker-ID |
-| JobTitle |streng |Stillingstittelen for brukeren. |
-| E-post |streng |E-post-ID-en til brukeren. |
-| MailNickname |streng |Kallenavnet til brukeren. |
-| Etternavn |streng |Etternavnet til brukeren. |
-| TelephoneNumber |streng |Telefonnummeret til brukeren. |
-| UserPrincipalName |streng |Brukers hovednavn. |
-| AccountEnabled |boolsk |Konto aktivert-flagg. |
-
-### <a name="manager"></a>Leder
-Få manager: Henter brukerprofilen for lederen til den angitte brukeren
-
-#### <a name="input-properties"></a>Inndataegenskaper
-
-| navn | Datatype | Kreves | Beskrivelse |
-| --- | --- | --- | --- |
-| ID |streng |ja |Brukers hovednavn eller e-post-ID |
-
-#### <a name="output-properties"></a>Utdataegenskaper
-
-| Egenskapsnavn | Type | Beskrivelse |
-| --- | --- | --- |
-| Avdeling |streng |Avdelingen til brukeren. |
-| DisplayName |streng |Visningsnavnet til brukeren. |
-| GivenName |streng |Fornavnet til brukeren. |
-| ID |streng |Bruker-ID |
-| JobTitle |streng |Stillingstittelen for brukeren. |
-| E-post |streng |E-post-ID-en til brukeren. |
-| MailNickname |streng |Kallenavnet til brukeren. |
-| Etternavn |streng |Etternavnet til brukeren. |
-| TelephoneNumber |streng |Telefonnummeret til brukeren. |
-| UserPrincipalName |streng |Brukers hovednavn. |
-| AccountEnabled |boolsk |Konto aktivert-flagg. |
-
-### <a name="directreports"></a>DirectReports
-Hent direkterapporter: Hent direkterapporter
-
-#### <a name="input-properties"></a>Inndataegenskaper
-
-| navn | Datatype | Kreves | Beskrivelse |
-| --- | --- | --- | --- |
-| ID |streng |ja |Brukers hovednavn eller e-post-ID |
-
-#### <a name="output-properties"></a>Utdataegenskaper
-
-| Egenskapsnavn | Type | Beskrivelse |
-| --- | --- | --- |
-| Avdeling |streng |Avdelingen til brukeren. |
-| DisplayName |streng |Visningsnavnet til brukeren. |
-| GivenName |streng |Fornavnet til brukeren. |
-| ID |streng |Bruker-ID |
-| JobTitle |streng |Stillingstittelen for brukeren. |
-| E-post |streng |E-post-ID-en til brukeren. |
-| MailNickname |streng |Kallenavnet til brukeren. |
-| Etternavn |streng |Etternavnet til brukeren. |
-| TelephoneNumber |streng |Telefonnummeret til brukeren. |
-| UserPrincipalName |streng |Brukers hovednavn. |
-| AccountEnabled |boolsk |Konto aktivert-flagg. |
-
-### <a name="searchuser"></a>SearchUser
-Søk etter brukere: Henter søkeresultater for brukerprofilene
-
-#### <a name="input-properties"></a>Inndataegenskaper
-
-| navn | Datatype | Kreves | Beskrivelse |
-| --- | --- | --- | --- |
-| searchTerm |streng |nei |Søkestreng. Gjelder for: visningsnavn, fornavn, etternavn, e-post, e-post-kallenavn og brukers hovednavn |
-
-#### <a name="output-properties"></a>Utdataegenskaper
-
-| Egenskapsnavn | Type | Beskrivelse |
-| --- | --- | --- |
-| Avdeling |streng |Avdelingen til brukeren. |
-| DisplayName |streng |Visningsnavnet til brukeren. |
-| GivenName |streng |Fornavnet til brukeren. |
-| ID |streng |Bruker-ID |
-| JobTitle |streng |Stillingstittelen for brukeren. |
-| E-post |streng |E-post-ID-en til brukeren. |
+| ID |streng |Bruker-ID. |
+| JobTitle |streng |Brukerens stilling. |
+| Utsendelse |streng |E-post-ID-en til brukeren. |
 | MailNickname |streng |Kallenavnet til brukeren. |
 | Etternavn |streng |Etternavnet til brukeren. |
 | TelephoneNumber |streng |Telefonnummeret til brukeren. |
 | UserPrincipalName |streng |Brukers hovednavn. |
 | AccountEnabled |boolsk |Kontoaktivert flagg. |
+| BusinessPhones | streng |Telefon numre til brukerens firma.|
+
+### <a name="manager"></a>Leder
+Hent overordnet: Henter bruker profilen for lederen av den angitte brukeren.
+
+#### <a name="input-properties"></a>Inndataegenskaper
+
+| navn | Datatype | krevde | Beskrivelse |
+| --- | --- | --- | --- |
+| ID |streng |ja |Brukerhovednavn eller e-post-ID. |
+
+#### <a name="output-properties"></a>Utdataegenskaper
+
+| Egenskapsnavn | Type | Beskrivelse |
+| --- | --- | --- |
+| Nummer | streng |Brukerens post sted. |
+| CompanyName | streng |Brukerens firma. |
+| Land | streng |Brukerens land. |
+| Avdeling |streng |Brukerens avdeling. |
+| DisplayName |streng |Visningsnavnet til brukeren. |
+| GivenName |streng |Fornavnet til brukeren. |
+| ID |streng |Bruker-ID. |
+| JobTitle |streng |Brukerens stilling. |
+| Utsendelse |streng |E-post-ID-en til brukeren. |
+| MailNickname |streng |Kallenavnet til brukeren. |
+| mobilePhone | streng |Brukerens mobil telefon. |
+| OfficeLocation | streng |Office-plassering for bruker.|
+| Kontrollen | streng |Post nummeret til brukeren.|
+| Etternavn |streng |Etternavnet til brukeren. |
+| TelephoneNumber |streng |Telefonnummeret til brukeren. |
+| UserPrincipalName |streng |Brukers hovednavn. |
+| AccountEnabled |boolsk |Kontoaktivert flagg. |
+| BusinessPhones | streng |Telefon numre til brukerens firma.|
+
+### <a name="directreports"></a>DirectReports
+Hent direkte rapporter: Hent direkte rapporter.
+
+#### <a name="input-properties"></a>Inndataegenskaper
+
+| navn | Datatype | krevde | Beskrivelse |
+| --- | --- | --- | --- |
+| ID |streng |ja |Brukerhovednavn eller e-post-ID. |
+
+#### <a name="output-properties"></a>Utdataegenskaper
+
+| Egenskapsnavn | Type | Beskrivelse |
+| --- | --- | --- |
+| Nummer | streng |Brukerens post sted. |
+| CompanyName | streng |Brukerens firma. |
+| Land | streng |Brukerens land. |
+| Avdeling |streng |Brukerens avdeling. |
+| DisplayName |streng |Visningsnavnet til brukeren. |
+| GivenName |streng |Fornavnet til brukeren. |
+| ID |streng |Bruker-ID. |
+| JobTitle |streng |Brukerens stilling. |
+| Utsendelse |streng |E-post-ID-en til brukeren. |
+| MailNickname |streng |Kallenavnet til brukeren. |
+| mobilePhone | streng |Brukerens mobil telefon. |
+| OfficeLocation | streng |Office-plassering for bruker.|
+| Kontrollen | streng |Post nummeret til brukeren.|
+| Etternavn |streng |Etternavnet til brukeren. |
+| TelephoneNumber |streng |Telefonnummeret til brukeren. |
+| UserPrincipalName |streng |Brukers hovednavn. |
+| AccountEnabled |boolsk |Kontoaktivert flagg. |
+| BusinessPhones | streng |Telefon numre til brukerens firma.|
+
+### <a name="searchuser"></a>SearchUser
+Søk etter brukere: Henter søke resultater for bruker profiler.
+
+#### <a name="input-properties"></a>Inndataegenskaper
+
+| navn | Datatype | krevde | Beskrivelse |
+| --- | --- | --- | --- |
+| searchTerm |streng |nei |Søkestreng. Gjelder for: visnings navn, for navn, etter navnet, e-post, e-postkallenavn og brukerhovednavn. |
+
+#### <a name="output-properties"></a>Utdataegenskaper
+
+| Egenskapsnavn | Type | Beskrivelse |
+| --- | --- | --- |
+| Nummer | streng |Brukerens post sted. |
+| CompanyName | streng |Brukerens firma. |
+| Land | streng |Brukerens land. |
+| Avdeling |streng |Brukerens avdeling. |
+| DisplayName |streng |Visningsnavnet til brukeren. |
+| GivenName |streng |Fornavnet til brukeren. |
+| ID |streng |Bruker-ID. |
+| JobTitle |streng |Brukerens stilling. |
+| Utsendelse |streng |E-post-ID-en til brukeren. |
+| MailNickname |streng |Kallenavnet til brukeren. |
+| mobilePhone | streng |Brukerens mobil telefon. |
+| OfficeLocation | streng |Office-plassering for bruker.|
+| Kontrollen | streng |Post nummeret til brukeren.|
+| Etternavn |streng |Etternavnet til brukeren. |
+| TelephoneNumber |streng |Telefonnummeret til brukeren. |
+| UserPrincipalName |streng |Brukers hovednavn. |
+| AccountEnabled |boolsk |Kontoaktivert flagg. |
+| BusinessPhones | streng |Telefon numre til brukerens firma.|
 
 ## <a name="helpful-links"></a>Nyttige koblinger
 * Se alle [tilgjengelige tilkoblinger](../connections-list.md).
