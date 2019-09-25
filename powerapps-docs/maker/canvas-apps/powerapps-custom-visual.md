@@ -7,19 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/30/2019
+ms.date: 09/23/2019
 ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 562811ebce59660d6033585868afd42da46442d5
-ms.sourcegitcommit: 25a85b462515cb64f3f2b114864a682abf803f4a
+ms.openlocfilehash: ea94b076126aca3bc3dd687a853393e20901eeb8
+ms.sourcegitcommit: f296922b8039b573e5adb81423a544f70c56c1ee
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70213936"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71256120"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>Egendefinert visualobjekt i PowerApps for Power BI
 
@@ -53,7 +52,7 @@ La oss se på fremgangsmåten for å bruke det egendefinerte visualobjektet fra 
 
     ![Egendefinert formel](./media/powerapps-custom-visual/custom-formula.png)
 
-    Denne formelen kobler Power BI-data med kundedatakilden: `LookUp(Customer;Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
+    Denne formelen kobler Power BI-data med kundedatakilden: `LookUp(Customer,Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
 
    Power BI-rapporten og forekomsten av PowerApps Studio som ble startet, deler en direkte datatilkobling. Når begge er åpne, kan du filtrere eller endre dataene i rapporten og se de oppdaterte dataene øyeblikkelig gjenspeilet i appen i PowerApps Studio.
 
@@ -79,6 +78,7 @@ Følgende begrensninger gjelder for de egen definerte PowerApps-effektene:
 - Du må dele PowerApps-appen adskilt fra rapporten. Finn ut mer om [deling av apper i PowerApps](share-app.md).
 - Rapportserver for Power BI og mobilappen for Power BI støtter ikke den egen definerte visuelle effekten i PowerApps.
 - Hvis du bruker funksjonen PowerBIIntegration. refresh (), må du bruke en kilde som støtter [directquery](https://docs.microsoft.com/en-us/power-bi/desktop-directquery-data-sources) , og data tilkoblingen må opprettes med DirectQuery-metode.
+- PowerApps i Power BI Desktop leverer data til PowerApps Studio ved oppretting av apper, men ikke under redigering. Bruk Power BI Web området til å forhånds vise dataene mens du redigerer apper.
 
 > [!NOTE]
 > Vi anbefaler at du først publiserer rapporten til Power Bi-tjeneste og deretter oppretter eller endrer apper.
@@ -95,6 +95,18 @@ Tabellen nedenfor viser støtte for nett lesere for visning, oppretting og endri
 |Safari|&check;
 |Mozilla Firefox
 |Alle andre lesere
+
+## <a name="accessibility-support"></a>Tilgjengelighets støtte
+
+Bruk følgende Fremgangs måte for å navigere i PowerApps-visuelle effekter ved hjelp av tastaturet:
+
+1. Fokuser valg i Power BI rapporten for den ønskede PowerApps-effekten.
+2. Bruk **tabulatortasten** på tastaturet til den visuelle effekten er uthevet.
+3. Bruk **CTRL + høyre** -tasten på tastaturet for å angi den visuelle effekten.
+3. Bruk **tab** -tasten på tastaturet til den ønskede komponenten i den visuelle effekten er valgt.
+
+Hvis du vil ha mer informasjon, se: [Dokumentasjon for Power BI tilgjengelighet]( https://docs.microsoft.com/en-us/power-bi/desktop-accessibility)
+
 
 ## <a name="next-steps"></a>Neste trinn
 

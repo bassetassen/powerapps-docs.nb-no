@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3ff359b80dd7129ec91f987a367c1635143d8e5e
-ms.sourcegitcommit: 25a85b462515cb64f3f2b114864a682abf803f4a
+ms.openlocfilehash: ac4699818c7f5b3a136db122fad9621d865bf5f1
+ms.sourcegitcommit: f296922b8039b573e5adb81423a544f70c56c1ee
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70213835"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71256097"
 ---
 # <a name="integrate-canvas-apps-into-websites-and-other-services"></a>Integrer lerretsapper på nettsteder og andre tjenester
 Appene du bygger, er ofte nyttig når de er tilgjengelige akkurat der brukerne gjør det. Ved å bygge inn lerret programmer i en iframe, kan du integrere disse appene på nett steder og andre tjenester, for eksempel Power BI eller SharePoint.
@@ -46,7 +46,7 @@ https://apps.powerapps.com/play/[AppID]?source=iframe
 >
 > Forrige format:
 > 
-> https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/ AppID
+> https\://Web.powerapps.com/WebPlayer/iframeapp? kilde = iframe & AppID =/Providers/Microsoft.PowerApps/Apps/[AppID]
 
 Det eneste du trenger å gjøre er å erstatte ID-en til appen din med [AppID] i URI-en (inkludert ' [' & ']'). Vi skal straks vise deg hvordan du får denne verdien, men først kan du se hvilke parametere som er tilgjengelige i URI-en:
 
