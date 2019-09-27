@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 8/14/2019
+ms.date: 9/23/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,12 +15,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: f40a153ef20df0bccbdee915efe9af6aa88cb754
-ms.sourcegitcommit: f2ca557e43ab38c169eb3b754ac02c9321f9285f
+ms.openlocfilehash: be255d4208b2926867ef0e4dec291d3435f64443
+ms.sourcegitcommit: 770906d6a559316b93873ee9b1dbceabcc54fc4e
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69030549"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71208176"
 ---
 #  <a name="enhanced-user-experience-with-the-unified-interface-for-model-driven-apps"></a>Forbedret bruker opplevelse med det enhetlige grensesnittet for modell drevne apper 
 
@@ -28,6 +28,11 @@ Det enhetlige grensesnittet for modell drevne apper gir en konsistent og tilgjen
 
 > [!div class="mx-imgBorder"]
 > ![Enhetlig grensesnitt tilpasser seg til skjerm](media/Reflow.png "Enhetlig grensesnitt tilpasser seg til skjerm")
+
+
+
+> [!NOTE]
+> Den eldre Web klienten avvikles, og kunder må gå over til enhetlig grensesnitt før 1. oktober 2020. Hvis du vil ha mer informasjon, kan du se [kunngjøring av tids linjen for å flytte til enhetlig grensesnitt](https://cloudblogs.microsoft.com/dynamics365/it/2019/09/10/announcing-the-timeline-to-move-to-unified-interface/). Hvis du vil ha mer informasjon om hvordan du går i gang, kan du se [hurtigst Art for overgang](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/transition-web-app).
 
 ## <a name="navigation"></a>Navigering
 
