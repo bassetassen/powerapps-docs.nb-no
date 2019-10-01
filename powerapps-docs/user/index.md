@@ -16,12 +16,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 79b6088a9b75a7ac4b41263a73d8ead58520f4dd
-ms.sourcegitcommit: d6b7f98b4ae011a753c1e72d7708f0f8dfbfb1fb
+ms.openlocfilehash: ab91653f26bc9ca177cc5841e7dbc158b13d7696
+ms.sourcegitcommit: 60fd1792430b9f3da08ec161cb2277506d795e3a
 ms.translationtype: HT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896176"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71705298"
 ---
 # <a name="how-do-i-find-and-run-apps"></a>Hvordan finner og kjører jeg apper?
 
@@ -31,7 +31,7 @@ Med [Lerretsapper](/powerapps/maker/canvas-apps/getting-started) får du mye kon
 
 Ettersom lerretsapper mer eller mindre kan være hva som helst, finnes det ikke mye hjelpedokumentasjon for hvordan appen skal brukes når den er opprettet. Hvis du trenger hjelp til å bruke en lerretsapp, kan du kontakte appoppretteren eller PowerApps-administratoren.
 
-[Modelldrevne apper](/powerapps/maker/model-driven-apps/model-driven-app-overview) bruker et [Enhetlig grensesnitt](unified-interface.md) som har en responsiv og tilgjengelig utforming. Du kan kjøre appen i en nettleser eller på populære mobile enheter. Appen har flere komponenter, blant annet instrumentbord, skjemaer, visninger, diagrammer og bedriftsprosesser som sammen gjør appen enkel å bruke. Modelldrevne apper bygger på Customer Engagement-rammeverket for Microsoft Dynamics 365, så brukeropplevelsen ligner på Customer Engagement-[apper](/dynamics365/customer-engagement/basics/business-apps-dynamics-365) for Dynamics 365.
+[Modelldrevne apper](/powerapps/maker/model-driven-apps/model-driven-app-overview) bruker et [Enhetlig grensesnitt](unified-interface.md) som har en responsiv og tilgjengelig utforming. Du kan kjøre appen i en nettleser eller på populære mobile enheter. Appen har flere komponenter, blant annet instrumentbord, skjemaer, visninger, diagrammer og bedriftsprosesser som sammen gjør appen enkel å bruke.
 
 Denne delen inneholder informasjon om hvordan du finner og kjører lerrets- og modelldrevne apper fra forskjellige steder. Den gir også informasjon om hvordan du navigerer og arbeider i en modelldrevet app: [Bruk modelldrevne apper](use-model-driven-apps.md).
 
