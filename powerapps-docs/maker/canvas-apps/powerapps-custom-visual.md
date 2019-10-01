@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 09/25/2019
 ms.locfileid: "71256120"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>Egendefinert visualobjekt i PowerApps for Power BI
 
@@ -52,7 +53,7 @@ La oss se på fremgangsmåten for å bruke det egendefinerte visualobjektet fra 
 
     ![Egendefinert formel](./media/powerapps-custom-visual/custom-formula.png)
 
-    Denne formelen kobler Power BI-data med kundedatakilden: `LookUp(Customer,Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
+    Denne formelen kobler Power BI-data med kundedatakilden: `LookUp(Customer;Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
 
    Power BI-rapporten og forekomsten av PowerApps Studio som ble startet, deler en direkte datatilkobling. Når begge er åpne, kan du filtrere eller endre dataene i rapporten og se de oppdaterte dataene øyeblikkelig gjenspeilet i appen i PowerApps Studio.
 
