@@ -1,7 +1,7 @@
 ---
 title: Slett en lerretsapp | Microsoft Docs
 description: Slik sletter du en eksisterende lerretsapp i PowerApps
-author: linhtranms
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: fb10fd0a59395223530e5934d827581640928f57
-ms.sourcegitcommit: 2084789802fc5134dbeb888e759cced46019a017
+ms.openlocfilehash: c683ed3f67e05d08038815b518de8e6ccf85bc71
+ms.sourcegitcommit: 60fd1792430b9f3da08ec161cb2277506d795e3a
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66736254"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71705373"
 ---
 # <a name="delete-a-canvas-app-from-powerapps"></a>Slett en lerretsapp fra PowerApps
 Denne artikkelen viser deg hvordan du sletter en lerretsapp fra PowerApps-kontoen din og kontoene til alle brukerne appen har blitt delt med.
 
 ## <a name="delete-an-app-from-your-account"></a>Å slette en app fra kontoen din
-1. Åpne [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og velg deretter **apper** venstre **trevisning** ruten.
+1. Åpne [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og velg deretter **apper** i den venstre **tre visnings** ruten.
    
     ![](./media/delete-app/file-apps.png)
 2. (valgfritt) Nær hjørnet øverst til venstre kan du filtrere listen over apper til å bare vise appene som du eier, eller som du ønsker å bidra til.
@@ -33,16 +33,16 @@ Denne artikkelen viser deg hvordan du sletter en lerretsapp fra PowerApps-kontoe
    
     > [!NOTE]
    > Hvis appen som du vil slette, ikke vises, kontrollerer du at du er i det rette miljøet.
-3. Velg på info-ikonet for appen du vil slette nær høyre kant.
+3. Velg informasjons ikonet for appen du vil slette, nær høyre kant.
    
     ![](./media/delete-app/app-options.png)
-4. Nær hjørnet øverst til høyre velger du på Papirkurv ikonet for å slette appen.
+4. Velg papir kurv-ikonet nær hjørnet øverst til høyre for å slette appen.
    
     ![](./media/delete-app/delete-icon.png)
    
     > [!NOTE]
    > Du må ha **Bidragsyter**-tillatelse for en app før du kan slette den.
-5. I dialogboksen som vises, velger du **Slett fra sky**.  
+5. I dialog boksen som vises, velger du **Slett fra Sky**.  
    
     > [!IMPORTANT]
    > Denne handlingen sletter appen permanent, ikke bare fra kontoen din, men også fra kontoene til alle brukerne som appen har blitt delt med.
