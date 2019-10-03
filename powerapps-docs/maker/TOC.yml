@@ -992,6 +992,15 @@
           href: ./model-driven-apps/create-themes-organization-branding.md
         - name: Legg til rapportering i appen din
           href: ./model-driven-apps/add-reporting-to-app.md
+          items:
+            - name: Rapportvurderinger
+              href: ./model-driven-apps/reporting-considerations.md
+            - name: RDL-sandkasse
+              href: ./model-driven-apps/rdl-sandboxing.md
+            - name: Bruk Power BI
+              href: ./model-driven-apps/use-power-bi.md
+            - name: Tilpass Power BI-innholdspakker
+              href: ./model-driven-apps/customize-power-bi-content-packs.md
     - name: Valider og publiser en app
       href: ./model-driven-apps/validate-app.md
     - name: Å dele en app
