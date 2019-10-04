@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 9/23/2019
+ms.date: 10/03/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,12 +15,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: a45b19ef45c729d02d1fff418ca4a9103fe5725a
-ms.sourcegitcommit: 770906d6a559316b93873ee9b1dbceabcc54fc4e
+ms.openlocfilehash: a4d81b9adff165267fe3e3d4d08384133aeae032
+ms.sourcegitcommit: 9a16bb75c856f7c84cd385811b7135ab2804ae69
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71208190"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71924428"
 ---
 # <a name="create-a-new-record"></a>Opprett en ny oppføring
 
@@ -60,4 +60,5 @@ Med kommandoen **Opprett en ny oppføring** eller **Hurtigoppretting** er det ra
     > [!div class="mx-imgBorder"] 
     > ![Opprett ny-knapp](media/newrecord3.png "Opprett ny-knapp")
 
-    
+    > [!NOTE]
+    > Hvis du har ulagrede endringer og prøver å gå til en annen post eller skjema, blir en dialog boks med **Ulagrede endringer** popup-vinduer. Hvis du velger **Lagre og Fortsett**, vil programmet prøve å lagre informasjonen og åpne siden du ville gå til. Hvis du velger å lagre og fortsette, og det er en feil i et felt, lukkes dialog boksen, og du blir værende på siden for å løse feilen før du kan navigere bort.

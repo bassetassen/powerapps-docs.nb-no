@@ -12,12 +12,12 @@ ms.reviewer: kvivek
 searchScope:
 - GetStarted
 - PowerApps
-ms.openlocfilehash: 86a92e1e1723eba0f4d8f1b747a30df93314ca65
-ms.sourcegitcommit: 25a85b462515cb64f3f2b114864a682abf803f4a
+ms.openlocfilehash: 34b2d24771feb246d234c0ce3bd1fc655e571296
+ms.sourcegitcommit: 60fd1792430b9f3da08ec161cb2277506d795e3a
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70213818"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71705267"
 ---
 # <a name="what-is-powerapps"></a>Hva er PowerApps?
 
@@ -49,7 +49,7 @@ PowerApps-administratorer kan bruke:
 
 - **Administrasjonssenteret for PowerApps** ([admin.powerapps.com](https://admin.powerapps.com)) til å opprette og administrere miljøer, brukere, roller og policyer for hindring av datatap. 
 
-- **Administrasjonssenteret for Power-plattform** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) til å administrere miljøer, få anbefalinger for selvhjelp i sanntid og støtte for Dynamics 365 for Customer Engagement-apper, PowerApps og Microsoft Flow og til å vise Common Data Service-analyser. 
+- **Administrasjons senteret for Power Platform** ([admin.powerplatform.Microsoft.com](https://admin.powerplatform.microsoft.com)) for å administrere miljøer, få sann tids anbefalinger, selv hjelp og støtte for powerapps og Microsoft Flow, og vise Common data service analyse. 
 
 Mer informasjon: [Administrer PowerApps](/power-platform/admin/admin-guide)
 

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 8/02/2019
+ms.date: 10/03/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,16 +15,15 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 8f061078b4401ee1ea2db9a2e7e6a4443bd053b6
-ms.sourcegitcommit: 4e4f7945c3f24faf9bb8a856a5f3892cbfd113be
+ms.openlocfilehash: 9ba051395e99dc6f2079d033c10a727a2e95da67
+ms.sourcegitcommit: 9a16bb75c856f7c84cd385811b7135ab2804ae69
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783757"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71924583"
 ---
 # <a name="add-an-appointment-email-phone-call-note-or-task-activity-to-the-timeline"></a>Legg til en avtale, e-postmelding, telefonsamtale, notat eller oppgaveaktivitet på tidslinjen 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Legg til **Aktiviteter** på **Tidslinje**-veggen for å holde oversikten over all kommunikasjon med en kunde eller kontakt. Du kan for eksempel ta notater, legge til innlegg, legge til en oppgave, sende e-postmelding, legge til detaljer om en telefonsamtale eller gjøre avtaler. Systemet tidsstempler hver aktivitet automatisk og viser hvem som opprettet den. Du og andre personer på teamet kan bla gjennom aktivitetene for å se loggen mens du jobber med en kunde. 
 
@@ -101,13 +100,13 @@ Hvis du vil legge til en e-postaktivitet i en oppføring, må du først lagre op
 
 
     > [!NOTE]
-    > Hvis du vil vise en liste over e-postmeldinger i en samtale visning, kan du gå til **Innstillinger** > for innstillinger for**personlige data** > **e-post** og deretter velge **Vis e-post som** Hvis du vil ha mer informasjon om personlige innstillinger, kan du se [Angi personlige alternativer](set-personal-options.md).
+    > Hvis du vil se en liste over e-postmeldinger i en samtale visning, går du til **innstillinger**@no__t- **@no__t 1** **e-post** -fanen, og deretter velger du **Vis e-post som en samtale på tids linjen**. Hvis du vil ha mer informasjon om personlige innstillinger, kan du se [Angi personlige alternativer](https://docs.microsoft.com/en-us/powerapps/user/set-personal-options#email-tab-options). Når aktivert, kan du åpne et hvilket som helst skjema som har en tids linje, og e-postmeldingene dine blir gruppert i samtale tråder med den nyeste e-postmeldingen øverst.
 
    > [!div class="mx-imgBorder"]
-   > ![Angi personlige alternativer](media/emailsettings1.png "Angi personlige alternativer")
+   > ![Angi]personlige alternativer(media/emailsettings1.png "Angi person opplysninger")
    
     > [!div class="mx-imgBorder"]
-    > ![Angi e-post for personlige alternativer](media/emailsettings2.png "Angi personlige alternativer for e-post")
+    > ![Angi personlige alternativer e-](media/emailsettings2.png "postangi personlige alternativer for e-post")
 
   
 ## <a name="add-an-appointment"></a>Legg til en avtale  

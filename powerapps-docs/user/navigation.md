@@ -5,7 +5,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 10/03/2019
 ms.author: mkaur
 ms.reviewer: ''
 ms.assetid: ''
@@ -14,12 +14,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: e563c1b17e7ef7628efcf51be2a312d3083bf187
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: a46698ddf454c9d0f563575a3553e874f3a7b109
+ms.sourcegitcommit: 9a16bb75c856f7c84cd385811b7135ab2804ae69
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "61530938"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71924538"
 ---
 #  <a name="basic-navigation-in-a-model-driven-app"></a>Grunnleggende navigering i en modelldrevet app 
 
@@ -77,7 +77,7 @@ Med referansepanelet kan du enkelt fullføre arbeidet uten å måtte gå bort fr
 
 Det finnes tre typer varsler som vises i et skjema: Informasjon, advarsel og feil. Varsler er alltid tilgjengelige øverst i skjemaet, like over toppteksten.
 
-Varslene som er beskrevet nedenfor, er tilgjengelige med versjon 9.1.9.3010.
+Når du velger feil meldingen, tar du deg til feltet i skjemaet der feilen oppstod.
 
 ![Eksempel på varsler](media/notifications.png "Eksempel på varsler")
 
@@ -88,6 +88,10 @@ Hvis det bare finnes ett varsel, vises én linje.
 Hvis det finnes flere enn ett varsel, vises antall varsler. Velg vinkeltegnet for å vise hver melding.
 
 ![Eksempel på flere varsler](media/multiple_notification.png "Eksempel på flere varsler")
+
+## <a name="grids"></a>Rute nett
+
+Rute nett i enhetlig grensesnitt er forbedret for å øke mengden data som kan ses på skjermen. Rute nett har også forbedrede filtrerings alternativer, som inkluderer å huske ditt siste filter og sorterings rekkefølge. Hvis du vil ha en detaljert liste over forbedringer, kan du se dette blogg innlegget, [forbedret funksjonalitet i rute nett i ensartet grensesnitt](https://powerapps.microsoft.com/en-us/blog/enhanced-functionality-in-unified-interface-grids).
 
 
 

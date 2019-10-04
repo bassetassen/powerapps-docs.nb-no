@@ -15,24 +15,22 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: be255d4208b2926867ef0e4dec291d3435f64443
-ms.sourcegitcommit: 770906d6a559316b93873ee9b1dbceabcc54fc4e
+ms.openlocfilehash: 76241ae2e26752a98e32e7ad72c54780da3934ae
+ms.sourcegitcommit: 60fd1792430b9f3da08ec161cb2277506d795e3a
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71208176"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71705325"
 ---
-#  <a name="enhanced-user-experience-with-the-unified-interface-for-model-driven-apps"></a>Forbedret bruker opplevelse med det enhetlige grensesnittet for modell drevne apper 
+# <a name="enhanced-user-experience-with-the-unified-interface-for-model-driven-apps"></a>Forbedret bruker opplevelse med det enhetlige grensesnittet for modell drevne apper 
 
 Det enhetlige grensesnittet for modell drevne apper gir en konsistent og tilgjengelig bruker opplevelse på tvers av enheter – enten på en stasjonær eller bærbar maskin, nett brett eller telefon. Apper skaleringen ved å endre flyten til komponentene på skjermen. Den svar utformingen tilpasses miljøet ditt basert på skjerm størrelse, så jo mer tilgjengelig plass du har, kan du vise mer informasjon.
 
 > [!div class="mx-imgBorder"]
 > ![Enhetlig grensesnitt tilpasser seg til skjerm](media/Reflow.png "Enhetlig grensesnitt tilpasser seg til skjerm")
 
-
-
 > [!NOTE]
-> Den eldre Web klienten avvikles, og kunder må gå over til enhetlig grensesnitt før 1. oktober 2020. Hvis du vil ha mer informasjon, kan du se [kunngjøring av tids linjen for å flytte til enhetlig grensesnitt](https://cloudblogs.microsoft.com/dynamics365/it/2019/09/10/announcing-the-timeline-to-move-to-unified-interface/). Hvis du vil ha mer informasjon om hvordan du går i gang, kan du se [hurtigst Art for overgang](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/transition-web-app).
+> Den eldre Web klienten avvikles, og kunder må gå over til enhetlig grensesnitt før 1. oktober 2020. Hvis du vil ha mer informasjon, kan du se [Blog: Vi presenterer tids linjen for å flytte til samlet grensesnitt @ no__t-0. Hvis du vil ha mer informasjon om hvordan du går i gang, kan du se [hurtigst Art for overgang](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/transition-web-app).
 
 ## <a name="navigation"></a>Navigering
 
@@ -61,6 +59,11 @@ Forretnings prosess flyten er forbedret av forankrings mekanismen. Du kan forank
 ## <a name="accessibility"></a>Personer
 Med den forbedrede tilgjengelighets opplevelsen kan du bruke skjerm lesere til å oversette informasjon på skjermen til hørbar lyd og skrive til en blinde skrift leser, slik at flere personer kan bruke appen. Hvis du vil ha mer informasjon, kan du se [bruke en skjerm leser](screen-reader.md).
 
-##  <a name="unified-interface-community"></a>Felles grensesnitt for fellesskapet
+## <a name="create-a-unified-interface-app"></a>Opprett en app for Unified Interface
+Hvis du har krav til å opprette din egen opplevelse på et ensartet grensesnitt, kan du opprette en modell drevet App ved hjelp av app designer. Se [Oversikt over bygging av modell drevne apper](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview).
+
+![Opprett ny app for enhetlig grensesnitt](media/uci-model-driven-app.png "Opprett ny app for Unified Interface")
+
+## <a name="unified-interface-community"></a>Felles grensesnitt for fellesskapet
 
 Gå til [området for felles grensesnitt](https://community.dynamics.com/365/unified-interface/) for å få hjelp med planlegging og utførelse av en jevn overgang til det enhetlige grensesnittet og Kommuniser med eksperter og noder på blogger, nett seminarer, videoer, arrangementer med mer.
