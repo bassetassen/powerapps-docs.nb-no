@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: ''
-ms.date: 03/07/2018
+ms.reviewer: tapanm
+ms.date: 10/04/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 03c520d1cdf8655e93b1f5b74d687cd0abfa533f
-ms.sourcegitcommit: 94ec67b283b9b03aa24cdc0ab43dd448b11b0547
+ms.openlocfilehash: 45790b7a3e6166366a751c812a5d470d5615c3a2
+ms.sourcegitcommit: 4c35aedde46380d5438687ae6f61a3b0cc7e7e2f
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529791"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71969310"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>Systemkrav, grenser og konfigurasjonsverdier for lerretsapper
 Dette emnet inneholder krav til enhetsplattform og nettleser samt grenser og konfigurasjonsverdier for PowerApps.
@@ -94,11 +94,11 @@ Denne listen identifiserer alle tjenester som PowerApps Studio kommuniserer med,
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph – for å få bruker informasjon (f.eks. profil bilde) |
 | gallery.azure.com |https |Eksempel og mal-apper |
-| \*. azure-apim.net |https |API-huber – forskjellige underdomener for hver nasjonale innstilling |
-| \*. powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com og web.powerapps.com |
-| \*. azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com og web.powerapps.com |
-| \*. blob.core.windows.net |https | Blob-lagring |
-| \*. flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com og web.powerapps.com |
+| @no__t – 0.azure-apim.net |https |API-huber – forskjellige underdomener for hver nasjonale innstilling |
+| @no__t – 0.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com og web.powerapps.com |
+| @no__t – 0.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com og web.powerapps.com |
+| @no__t – 0.blob.core.windows.net |https | Blob-lagring |
+| @no__t – 0.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com og web.powerapps.com |
 | vortex.data.microsoft.com |https |Telemetri |
 | verten | https | PowerApps Mobile
 
@@ -108,3 +108,28 @@ Denne listen identifiserer alle tjenester som PowerApps Studio kommuniserer med,
 ## <a name="size-limits"></a>Størrelses grenser
 
 Du kan finne informasjon om størrelses grenser for tekst, hyperkoblinger, bilder og medier i [data typer](functions/data-types.md#text-hyperlink-image-and-media).
+
+## <a name="powerapps-per-app-plan"></a>PowerApps per app-abonnement
+
+PowerApps per app-plan gir individuelle brukere mulighet til å kjøre 2 programmer på én Portal for et bestemt forretnings scenario basert på alle funksjonene i PowerApps. Denne planen gir brukerne en enkel måte for å komme i gang med plattformen før det blir større skalering.
+
+Når en administrator tildeler PowerApps per app-abonnement til et miljø, blir de tilordnet brukere som standard når appen er delt med dem.
+
+Følg disse trinnene for å deaktivere tildeling per app-abonnementer for brukere når en app deles med dem:
+
+- Velg **appen**.
+- Velg **Innstillinger**.
+- Endre Aktiver/deaktiver **tilordning**av **automatisk tilordning per app** .
+
+Veksletaster for **automatisk tilordning per app** vises i alle app-innstillingene.
+
+> [!NOTE]
+> Deaktivering av per app-abonnement er for øyeblikket bare tilgjengelig for Netta pene apper.  Modell drevne apper og portaler vil ha denne muligheten i fremtiden.
+
+### <a name="app-settings"></a>App-innstillinger
+
+Innstillinger for lerret app(./media/limits-and-config/app_settings.png "Innstillinger") for ![arbeidsom råde]
+
+### <a name="pass-assignment"></a>Send tilordning
+
+![Innstillinger for lerrets]arbeids sonen pass på tilordning av(./media/limits-and-config/app_settings_pass_assignment.png "program innstillinger")
