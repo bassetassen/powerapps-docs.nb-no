@@ -47,6 +47,10 @@
               items:
                 - name: Vanlige spørsmål om aktiviteter
                   href: ../user/faq-for-timeline-and-activity.md
+            - name: Bruk oppslagsfeltet på en post
+              href: ../user/lookup-field.md
+            - name: Vis et profilkort
+              href: ../user/profile-cards.md
             - name: Tilordne eller del poster
               href: ../user/assign-or-share-records.md
             - name: Del poster ved bruk av tilgangsteam
@@ -59,6 +63,8 @@
               href: ../user/track-your-progress-with-dashboard-and-charts.md
         - name: Søk i poster
           items:
+            - name: Sammenlign Søk og finn-alternativer
+              href: ../user/search-and-find.md
             - name: Søk etter poster
               href: ../user/search-records.md
             - name: Bruk avansert søk
