@@ -1102,7 +1102,7 @@
           href: ./portals/admin/update-portal-domain.md
         - name: Tøm bufferen på serversiden
           href: ./portals/admin/clear-server-side-cache.md
-        - name: Overfør konfigurasjon av Dynamics 365-portal
+        - name: Overfør konfigurasjon av Dynamics 365 Portals
           href: ./portals/admin/migrate-portal-configuration.md
     - name: Avanserte portaltilpasninger
       items:
