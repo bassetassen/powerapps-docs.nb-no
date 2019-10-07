@@ -1,6 +1,6 @@
 ---
-title: 'Web-strekkodeleser kontrollen: referanse | Microsoft Docs'
-description: Informasjon, inkludert egenskaper og eksempler, om strekkodeleser kontrollen
+title: 'Nett strek kode – skanner kontroll: referanse | Microsoft Docs'
+description: Informasjon, deriblant egenskaper og eksempler, om strek kode-skanner kontrollen
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -8,26 +8,25 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 787fa34bdfcabf6103fefd82f66e976b680544e2
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: d1162c0c9954e67196eb4d3e42b2c91bdc3bf804
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61544595"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986988"
 ---
-# <a name="web-barcode-scanner-control-experimental-in-powerapps"></a>Web strekkodeleser kontrollen (eksperimentell) i PowerApps
+# <a name="web-barcode-scanner-control-experimental-in-powerapps"></a>Nett strek kode – skanner kontroll (eksperimentell) i PowerApps
 
-Den eldre strekkodeskanning kontrollen, som er foreldet, men det kan være nyttig for å skanne-koder i en nettleser.
+Den gamle kontrollen for strek kode-skanning, som er foreldet, men som kanskje er nyttig for skanne koder i en nett leser.
 
 ## <a name="description"></a>Beskrivelse
 
-Kontrollen viser kameraet feed i appen slik at brukere kan skanne strekkoder på alle enheter. Kontrollen er foreldet på grunn av dårlig ytelse, og mobile **[strekkodeleser](control-new-barcode-scanner.md)** kontrollen erstatter denne kontrollen.
+Kontrollen viser kamera feeden i appen, slik at brukere kan skanne strek koder på alle enheter. Kontrollen er foreldet på grunn av dårlig ytelse, og kontrollen for mobile **[Barcode-skanneren](control-new-barcode-scanner.md)** erstatter denne kontrollen.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 
@@ -67,7 +66,7 @@ Kontrollen viser kameraet feed i appen slik at brukere kan skanne strekkoder på
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 
-[**Patch**( *DataSource*; *BaseRecord*; *ChangeRecord* )](../functions/function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="example"></a>Eksempel
 
@@ -77,21 +76,21 @@ Kontrollen viser kameraet feed i appen slik at brukere kan skanne strekkoder på
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 
-1. Legg til en **etikett** kontroll, og angi utmatingen til strekkodeleserens **tekst** egenskapen.
+1. Legg til en **etikett** -kontroll, og angi utdataene til **tekst** egenskapen for strek kode skanneren.
 
-1. Skanne en strekkode av typen er angitt **BarcodeType** egenskapen.
+1. Skann en strek kode av typen som er angitt under **BarcodeType** -egenskapen.
 
-    Etiketten viser de skannede strekkodene.
+    Etiketten viser den skannede strek koden.
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
 
 ### <a name="video-alternatives"></a>Alternativer for video
 
-* Vurder å legg til en **[etikett](control-text-box.md)** der **[Tekst](properties-core.md)**-egenskapen er angitt til strekkodeleserens **Tekst**-egenskap. Hvis du gjør det ovennevnte, blir strekkodeleseren tilgjengelig for alle og ikke bare for de med nedsatt syn, siden strekkodeleseren ikke viser den identifiserte strekkodeverdien.
+* Vurder å legg til en **[etikett](control-text-box.md)** der **[Tekst](properties-core.md)** -egenskapen er angitt til strekkodeleserens **Tekst**-egenskap. Hvis du gjør det ovennevnte, blir strekkodeleseren tilgjengelig for alle og ikke bare for de med nedsatt syn, siden strekkodeleseren ikke viser den identifiserte strekkodeverdien.
 
 ### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
 
 * **[AccessibleLabel](properties-accessibility.md)** bør vises.
 
     > [!NOTE]
-  > Skjermlesere leser opp når en ny strekkode har blitt funnet. Verdien vil ikke kunngjøres. Så lenge strekkoden er synlig, minne skjermlesere brukeren hver fem sekunder som den samme strekkoden fremdeles identifiseres.
+  > Skjerm lesere vil annonsere når en ny strek kode er funnet. Verdien vil ikke bli kunngjort. Så lenge strek koden er i visning, vil skjerm lesere minne brukeren hvert femte sekund som den samme strek koden fremdeles identifiseres.

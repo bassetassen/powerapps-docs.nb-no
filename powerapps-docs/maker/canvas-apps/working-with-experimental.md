@@ -7,19 +7,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 03/20/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c5abda1f3c208567ad9e1e2888647d20b07949be
-ms.sourcegitcommit: 8bad6bff1b3397b21654df4a9357dd0180fbcfe6
+ms.openlocfilehash: b56fcf1b0ee14bf9a39b4c0ad54d4e707d635f37
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65046024"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71994760"
 ---
 # <a name="understand-experimental-and-preview-features-in-powerapps"></a>Forhåndsvisnings- og eksperimentelle funksjoner i PowerApps
 
@@ -33,9 +33,9 @@ For å hjelpe med å balansere forbedringer mot påvirkning på eksisterende app
 
 Funksjonene går gjennom tre faser på vei mot å bli offisielle deler av produktet:
 
-1. **Eksperimentell**:  Denne funksjonen er en arbeid som pågår. Ikke stol på den ennå, ettersom den kan komme til å gjennomgå betydelige endringer.
-1. **Forhåndsvisning av**:  Denne funksjonen er nesten ferdig og stabile. Begynn å overføre eksisterende apper til den nå.
-1. **Levert**:  Denne funksjonen er fullført. Alle appene har aktivert denne funksjonen, og du kan ikke slå den av.
+1. **Eksperimentell**:  Denne funksjonen er pågående. Ikke stol på den ennå, ettersom den kan komme til å gjennomgå betydelige endringer.
+1. **Forhånds visning**:  Denne funksjonen er nesten ferdig og er stabil. Begynn å overføre eksisterende apper til den nå.
+1. **Sendt**:  Denne funksjonen er ferdig. Alle appene har aktivert denne funksjonen, og du kan ikke slå den av.
 
 I hver fase stiger antallet personer som bruker funksjonen, noe som hjelper oss med å validere at funksjonen er det du trenger, og at vi ikke introduserer utilsiktede bivirkninger.
 
@@ -45,7 +45,7 @@ Hvor lenge forblir en funksjon i hver fase? Dette varierer fra funksjon til funk
 
 Denne tabellen kan hjelpe deg med å avgjøre hvor du skal begynne: 
 
-| Fase | Når bør jeg bruke den? | Kan jeg trygt bruke den? | Er den aktivert som standard for nye apper? | 
+| Fase | Når skal jeg bruke den? | Kan jeg trygt bruke den? | Er den aktivert som standard for nye apper? | 
 |----|----|----|-----|------|
 | **Eksperimentell** | Hvis du er blant de første til å ta den i bruk, ser noe nyttig, og vil hjelpe med å teste funksjonen. | nei.  Eksperimentelle funksjoner kan endres radikalt eller forsvinne fullstendig når som helst. | nei. Du må eksplisitt registrere deg for å få funksjonen.  |  
 | **Forhåndsvisning** | Nye apper inkluderer denne funksjonen automatisk.  Begynn å aktivere og teste i eksisterende apper, for denne funksjonen slås snart på for disse også. | ja. Denne funksjonen er på god vei til å bli en permanent del av produktet.  | ja. Du bør slå den av hvis det oppstår et problem.  Rapporter problemer. Dette er hovedårsaken til at funksjonen er i Forhåndsvisning. | 
@@ -53,9 +53,9 @@ Denne tabellen kan hjelpe deg med å avgjøre hvor du skal begynne:
 
 Mot slutten av forhåndsvisningen kan det hende vi aktiverer funksjonen for alle appene én gang, og vi merker den til å være i **endelig validering**.  Denne endringen gir flest mulig en siste sjanse til å prøve ut funksjonen mens de kan fremdeles kan slå den av. Hyppig tilbakemelding er viktig i denne perioden fordi funksjonen blir fullstendig lansert i neste fase, og du kan ikke slå den av.
 
-I den endelige overgangen til **levert**, vi kan fjerne bryteren Forhåndsvisning i apper som funksjonen er aktivert, effektivt aktivere funksjonen permanent. Denne endringen gjelder for de fleste apper fordi denne funksjonen vil har vært på som standard før som peker. Bryteren testversjon, vil fremdeles være tilgjengelig for deg å slå på test med funksjonen og slå av i samme økt i PowerApps Studio for apper der funksjonen er slått av. Men hvis du lagrer appen når bryteren er slått på, vil ikke det være tilgjengelig når appen lastes inn på nytt, slik at du ikke kan deaktivere funksjonen på nytt. På dette tidspunktet, kan du [gjenopprette appen til en tidligere versjon](restore-an-app.md) til å returnere appen til en tilstand før funksjonen ble aktivert.
+I den siste overgangen til **sendt**kan vi fjerne test versjons bryteren i apper som funksjonen allerede er aktivert på, og dermed aktivere funksjonen permanent. Denne endringen gjelder for de fleste apper, fordi funksjonen er aktivert som standard før dette punktet. For apper der funksjonen er deaktivert, vil test versjons bryteren fremdeles være tilgjengelig for deg for å slå på, teste med funksjonen og slå av innenfor samme økt av PowerApps Studio. Men hvis du lagrer appen når bryteren er slått på, vil den ikke være tilgjengelig når appen lastes inn på nytt, slik at du ikke kan deaktivere funksjonen på nytt. På dette tidspunktet kan du [gjenopprette appen til en tidligere versjon](restore-an-app.md) for å returnere appen til en tilstand før funksjonen ble aktivert.
 
-## <a name="documentation"></a>Dokumentasjon
+## <a name="documentation"></a>Dokumentasjonen
 
 Hvor finner jeg informasjon om disse funksjonene?  Vi behandler forhåndsvisningsfunksjoner som ferdige funksjoner, og du kan finne ut mer om dem på samme måte som du gjør med andre produktfunksjoner: 
 - [PowerApps-dokumentasjon](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started). Vi gir grunnleggende informasjon om den nye funksjonen: fordelene, hvordan du kommer i gang og referanseinformasjon.

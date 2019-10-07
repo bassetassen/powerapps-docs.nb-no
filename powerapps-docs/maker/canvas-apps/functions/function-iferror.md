@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 03/21/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 63a837eff2944569f5f66223690b11ddcfd399f6
-ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
+ms.openlocfilehash: 992ff4ccfae533908acac96efaa117a726198334
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215914"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71984729"
 ---
 # <a name="iferror-function-in-powerapps"></a>IfError-funksjonen i PowerApps
 
@@ -28,57 +27,57 @@ Oppdager feil, og oppgir en alternativ verdi eller utfører en handling.
 ## <a name="description"></a>Beskrivelse
 
 > [!NOTE]
-> Denne funksjonen er en del av en eksperimentell funksjon, og kan endres underveis. Virkemåten som beskrives i dette emnet er bare tilgjengelig når den *Feiladministrasjon på formelnivå* funksjonen er aktivert. Denne appen nivå-innstillingen er deaktivert som standard. Hvis du vil aktivere denne funksjonen, kan du åpne den *filen* fanen og velge *appinnstillinger* i den venstre menyen, og velg deretter *eksperimentelle funksjoner*. Vi setter stor pris på dine tilbakemeldinger – fortell oss hva du synes i [forumet for PowerApps-fellesskapet](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
+> Denne funksjonen er en del av en eksperimentell funksjon, og kan endres underveis. Virke måten som dette emnet beskriver, er bare tilgjengelig når funksjonen *feil behandling på formel nivå* er aktivert. Denne program nivå innstillingen er deaktivert som standard. Hvis du vil aktivere denne funksjonen, åpner du *fil* -fanen, velger *App-innstillinger* på menyen til venstre, og deretter velger du *eksperimentelle funksjoner*. Vi setter stor pris på dine tilbakemeldinger – fortell oss hva du synes i [forumet for PowerApps-fellesskapet](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 
-Den **IfError** funksjonen tester én eller flere verdier til det finner en feil. Hvis funksjonen finner en feil, returnerer funksjonen en tilsvarende verdi. Hvis ikke, returnerer funksjonen en standardverdi. I begge tilfeller dermed funksjonen returnerer en streng for å vise en formel for å evaluere, eller en annen form for resultat. Den **IfError** funksjonen ligner på den **Hvis** funksjonen: **IfError** tester for feil, mens **Hvis** tester **SANN**.
+**IfError** -funksjonen tester én eller flere verdier til den finner et feil resultat. Hvis funksjonen finner en feil, returnerer funksjonen en tilsvarende verdi. Ellers returnerer funksjonen en standard verdi. I begge tilfeller kan det hende at funksjonen returnerer en streng som skal vises, en formel for å evaluere, eller en annen form for resultat. **IfError** -funksjonen ligner på **Hvis** -funksjonen: **IfError** tester for feil, selv **om** tester for **sann**.
 
-Bruk **IfError** erstatte feilverdier med gyldige verdier. For eksempel bruke denne funksjonen hvis brukerinndata kan resultere i en deling med null. Bygge en formel for å erstatte resultatet med en 0 eller en annen verdi som passer for appen din slik at nedstrømsberegninger kan fortsette. Formelen kan være så enkelt som i dette eksemplet:
+Bruk **IfError** til å erstatte feil verdier med gyldige verdier. Bruk for eksempel denne funksjonen hvis bruker inn data kan resultere i en divisjon med null. Bygg en formel for å erstatte resultatet med 0 eller en annen verdi som passer for appen din, slik at data under beregningen kan fortsette. Formelen kan være så enkelt som dette eksemplet:
 
-```powerapps-comma
-IfError( 1/x; 0 )
+```powerapps-dot
+IfError( 1/x, 0 )
 ```
 
-Hvis verdien for **x** ikke er null, returnerer formelen **1 / x**. Ellers **1 / x** fører det til en feil, og formelen returnerer 0 i stedet.
+Hvis verdien for **x** ikke er null, returnerer formelen **1/x**. Ellers gir **1/x** en feil, og formelen returnerer i stedet 0.
 
-Bruk **IfError** i [formler for virkemåte](../working-with-formulas-in-depth.md) til å utføre en handling og kontroller for en feil før du kan utføre flere handlinger, som i dette mønsteret:
+Bruk formler for **IfError** i [virke måte](../working-with-formulas-in-depth.md) for å utføre en handling og se etter en feil før du utfører flere handlinger, som i dette mønsteret:
 
-```powerapps-comma
+```powerapps-dot
 IfError(
-    Patch( DS1; ... ); Notify( "problem in the first action" );
-    Patch( DS2; ... ); Notify( "problem in the second action" )
+    Patch( DS1, ... ), Notify( "problem in the first action" ),
+    Patch( DS2, ... ), Notify( "problem in the second action" )
 )
 ```
 
-Hvis den første oppdateringen støter på et problem, først **Notify** kjører, at videre behandling oppstår, og ikke kjører som det andre oppdateringen. Hvis den første oppdateringen lykkes, andre oppdateringen kjører og, hvis det oppstår et problem, andre **Notify** kjører.
+Hvis det oppstår et problem med den første oppdateringen, vil det første **varselet** kjøres uten videre behandling, og den andre oppdateringen kan ikke kjøres. Hvis den første oppdateringen lykkes, kjøres den andre oppdateringen, og hvis det oppstår et problem, kjøres den andre **varslingen** .
 
-Hvis formelen ikke finner noen feil, og du har angitt den valgfrie *DefaultResult* argument, formelen returnerer verdien som du har angitt for argumentet. Hvis formelen ikke finner noen feil, og du ikke har angitt som argument, formelen returnerer siste *verdien* argumentet evalueres.
+Hvis formelen ikke finner noen feil, og du har angitt det valg frie *DefaultResult* -argumentet, returnerer formelen verdien som du angav for dette argumentet. Hvis formelen ikke finner noen feil, og du ikke har angitt argumentet, returnerer formelen det siste *verdi* argumentet som ble evaluert.
 
 ## <a name="syntax"></a>Syntaks
 
-**IfError**( *Value1*; *Fallback1* [; *Value2*; *Fallback2*;... [; *DefaultResult* ]])
+**IfError**( *verdi1*, *Fallback1* [, *verdi2*, *Fallback2*,... [, *DefaultResult* ]] )
 
-* *Verdi(er)* – obligatorisk. Formlene som skal testes for en feilverdi.
-* *Fallback* – obligatorisk. Formlene som skal evalueres og verdier som skal returneres hvis samsvarende *verdien* argumentet returnerte en feil.
-* *DefaultResult* – valgfritt.  Formler til å evaluere Hvis formelen ikke finner noen feil.
+* *Verdi (er)* – obligatorisk. Formlene som skal testes for en feilverdi.
+* *Fallback* – obligatorisk. Formlene som evalueres og verdiene som skal returneres hvis samsvarende *verdi* argumenter returnerte en feil.
+* *DefaultResult* – valgfritt.  Formlene som skal evalueres Hvis formelen ikke finner noen feil.
 
 ## <a name="examples"></a>Eksempler
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **IfError( 1; 2 )** |Det første argumentet er ikke en feil. Funksjonen har ingen andre feil for å kontrollere og ingen standard returverdi. Funksjonen returnerer sist *verdien* argumentet evalueres.   | 1 |
-| **IfError( 1/0; 2 )** | Det første argumentet returnerer en feilverdi (på grunn av deling med null). Funksjonen evaluerer det andre argumentet, og returnerer det som et resultat. | 2 |
-| **IfError( 1/0; Notify( «Det oppstod et internt problem»; NotificationType.Error ) )** | Det første argumentet returnerer en feilverdi (på grunn av deling med null). Funksjonen evaluerer det andre argumentet, og viser en melding til brukeren. Returverdien til **IfError** er returverdien til **Notify**, påtvunget til den samme typen som det første argumentet til **IfError** (et tall). | 1 |
-| **IfError (1, 2, 3, 4, 5)** | Det første argumentet er ikke en feil, slik at funksjonen ikke evalueres at argumentet tilhørende fallback. Det tredje argumentet er ikke en feil, slik at funksjonen ikke evalueres at argumentet tilhørende fallback. Det femte argumentet har ingen tilsvarende fallback og er standard resultatet. Funksjonen returnerer som oppstår fordi den inneholder ingen feil. | 5 |
+| **IfError( 1, 2 )** |Det første argumentet er ikke en feil. Funksjonen har ingen andre feil som skal kontrolleres, og ingen standard retur verdi. Funksjonen returnerer det siste *verdi* argumentet som ble evaluert.   | 1 |
+| **IfError( 1/0, 2 )** | Det første argumentet returnerer en feil verdi (på grunn av en deling med null). Funksjonen evaluerer det andre argumentet og returnerer det som resultatet. | 2 |
+| **IfError( 1/0, Notify( «Det oppstod et internt problem», NotificationType.Error ) )** | Det første argumentet returnerer en feil verdi (på grunn av en deling med null). Funksjonen evaluerer det andre argumentet og viser en melding til brukeren. Returverdien til **IfError** er returverdien til **Notify**, påtvunget til den samme typen som det første argumentet til **IfError** (et tall). | 1 |
+| **IfError (1, 2, 3, 4, 5)** | Det første argumentet er ikke en feil. funksjonen evaluerer ikke den tilsvarende Reserve verdien for argumentet. Det tredje argumentet er ikke en feil, så funksjonen evaluerer ikke den tilsvarende Reserve verdien for argumentet. Det femte argumentet har ingen tilsvarende Reserve, og er standard resultatet. Funksjonen returnerer resultatet fordi formelen ikke inneholder feil. | 5 |
 
 ### <a name="step-by-step"></a>Trinn for trinn
 
-1. Legg til en **[Tekstinndata](../controls/control-text-input.md)**-kontroll, og gi den navnet **TextInput1** hvis den ikke har det navn som standard.
+1. Legg til en **[Tekstinndata](../controls/control-text-input.md)** -kontroll, og gi den navnet **TextInput1** hvis den ikke har det navn som standard.
 
-2. Legg til en **[Etikett](../controls/control-text-box.md)**-kontroll, og gi den navnet **Label1** hvis den ikke har det navn som standard.
+2. Legg til en **[Etikett](../controls/control-text-box.md)** -kontroll, og gi den navnet **Label1** hvis den ikke har det navn som standard.
 
 3. Angi formelen for **Tekst**-egenskapen til **Label1** til:
 
-    **IfError( Value( TextInput1.Text ); -1 )**
+    **IfError( Value( TextInput1.Text ), -1 )**
 
 4. Skriv inn **1234** i **TextInput1**.  
 

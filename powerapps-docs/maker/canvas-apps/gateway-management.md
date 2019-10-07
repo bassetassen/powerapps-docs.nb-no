@@ -6,31 +6,31 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/30/2016
 ms.author: archanan
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 85806799a5f5ea91a4671a27e71cf95daabcd01a
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 0f9b9c3104d407baa3cece76159d65c5be61ab79
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61553588"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71983398"
 ---
 # <a name="manage-an-on-premises-data-gateway-in-powerapps"></a>Administrer en lokal datagateway i PowerApps
 Installer en lokal datagateway for å overføre data på en rask og sikker måte mellom en lerretsapp som er bygget i PowerApps og en datakilde som ikke er i skyen, for eksempel en lokal SQL Server-database eller et lokalt SharePoint-område. Vis alle gatewayer som du har administratortillatelser til, og behandle tillatelser og tilkoblinger for disse gatewayene.
 
 Med en gateway kan du koble til lokale data over disse tilkoblingene:
 
-* SharePoint
+* Services
 * SQL Server
-* Oracle
+* Oracles
 * Informix
 * Filsystem
-* DB2
+* ORACLE
 
 ## <a name="prerequisites"></a>Forutsetninger
 * Brukernavnet og passordet du brukte til å [registrere](../signup-for-powerapps.md) deg for PowerApps.
@@ -54,9 +54,9 @@ Med en gateway kan du koble til lokale data over disse tilkoblingene:
 
 2. Legg til en bruker i en gateway ved å klikke eller trykke på **Brukere**, angi en bruker eller gruppe, og deretter angi et tilgangsnivå:
 
-   * **Kan bruke**: Brukere som kan opprette tilkoblinger på gatewayen for å bruke på apper og flyter, men kan ikke dele gatewayen. Bruk denne tillatelsen for brukere som vil kjøre apper, men ikke dele dem.
-   * **Kan bruke og dele**: Brukere som kan opprette en tilkobling på gatewayen for å bruke på apper og flyter, og dele gatewayen automatisk når du deler en app. Bruk denne tillatelsen for brukere som trenger å dele apper med andre brukere eller med organisasjonen.
-   * **Admin**: Administratorer som har full kontroll over gatewayen, inkludert å legge til brukere, angi tillatelser, opprette tilkoblinger til alle tilgjengelige datakilder og slette gatewayen.
+   * **Kan bruke**: Brukere som kan opprette tilkoblinger på gatewayen som skal brukes til apper og flyter, men som ikke kan dele gatewayen. Bruk denne tillatelsen for brukere som vil kjøre apper, men ikke dele dem.
+   * **Kan bruke + dele**: Brukere som kan opprette en tilkobling på gatewayen som skal brukes til apper og flyter, og som automatisk deler gatewayen når de deler en app. Bruk denne tillatelsen for brukere som trenger å dele apper med andre brukere eller med organisasjonen.
+   * **Administrator**: Administratorer som har full kontroll over gatewayen, inkludert å legge til brukere, angi tillatelser, opprette tilkoblinger til alle tilgjengelige data kilder og slette gatewayen.
 
 For tillatelsesnivåene **Kan bruke** og **Kan bruke og dele** må du velge datakildene som brukeren kan koble til, over gatewayen.
 

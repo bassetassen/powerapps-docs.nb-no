@@ -8,18 +8,17 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3504c80cbf2414959cadc218339d959d168d15ba
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: d943eacabaab8d9542352ee0b1c092244c171d86
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61559453"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986802"
 ---
 # <a name="check-box-control-in-powerapps"></a>Avmerkingsboks-kontrollen i PowerApps
 En kontroll der brukeren kan merke eller fjerne merket for å angi verdien som **sann** eller **usann**.
@@ -67,7 +66,7 @@ Brukeren kan angi en boolsk verdi ved hjelp av denne kjente kontrollen, har vær
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
+**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **halvfet**, **Normal**eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -122,14 +121,14 @@ Brukeren kan angi en boolsk verdi ved hjelp av denne kjente kontrollen, har vær
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**If**(*Betingelse*; *Resultat*)](../functions/function-if.md)
+[**If**(*Betingelse*, *Resultat*)](../functions/function-if.md)
 
 ## <a name="example"></a>Eksempel
 1. Legg til en **Avmerkingsboks**-kontroll, gi den navnet **chkReserve**, og angi **[Text](properties-core.md)** -egenskapen som **Reserve now**.
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 2. Legg til en **[Date picker](control-date-picker.md)** -kontroll, og angi **[Visible](properties-core.md)** -egenskapen som denne formelen:
-   <br>**If(chkReserve.Value = true; true)**
+   <br>**If(chkReserve.Value = true, true)**
    
     Vil du ha mer informasjon om **[If](../functions/function-if.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 3. Trykk på F5, og klikk eller trykk på **chkReserve** for å angi dens **[Value](properties-core.md)** -egenskap som **sann**. Klikk eller trykk deretter på **chkReserve** på nytt for å angi dens **[Value](properties-core.md)** -egenskap som **usann**.

@@ -1,27 +1,26 @@
 ---
 title: Download-, Launch- og Param-funksjoner | Microsoft Docs
-description: Referanseinformasjon, inkludert syntaks og eksempler for funksjonene Last ned, start og Param i lerret-apper
+description: Referanse informasjon, inkludert syntaks og eksempler, for funksjonene Last ned, start og param i lerret apper
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4a53d8c20bd4b7784cb94daa574682c041f104ea
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: c6fb3c5ef002ed0355cc8061603e4f4b1f438e6e
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61544342"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992483"
 ---
-# <a name="download-launch-and-param-functions-in-canvas-apps"></a>Last ned, start og Param-funksjoner i lerret-apper
+# <a name="download-launch-and-param-functions-in-canvas-apps"></a>Funksjonene Last ned, start og param i lerret-apper
 Laster ned eller åpner en nettside eller en app med parametere.  
 
 ## <a name="description"></a>Beskrivelse
@@ -29,7 +28,7 @@ Laster ned eller åpner en nettside eller en app med parametere.
 
 **Launch**-funksjonen åpner en nettside eller en app.  Denne funksjonen kan alternativt også sende parametere til appen.
 
-I Internet Explorer og Microsoft Edge, den **Start** -funksjonen åpner en nettstedet eller appen bare hvis sikkerhetsinnstillingene er de samme eller høyere enn for appen som inneholder funksjonen. Hvis for eksempel legger du til den **Start** funksjonen til en app som kjører i den **klarerte områder** sikkerhet sone, må du kontrollere at nettstedet eller appen som du vil at funksjonen til å åpne er i den **klarerte områder** eller **lokalt intranett** sone (ikke i **begrensede områder**). Mer informasjon: [Endre innstillinger for sikkerhet og personvern for Internet Explorer 11](https://support.microsoft.com/en-us/help/17479/windows-internet-explorer-11-change-security-privacy-settings).  
+I Internet Explorer og Microsoft Edge åpner **Start** funksjonen et nettsted eller en app bare hvis sikkerhets innstillingene er de samme eller høyere enn dem i appen som inneholder funksjonen. Hvis du for eksempel legger til **Start** -funksjonen i en app som kjører i sikkerhets sonen **Klarerte områder** , må du forsikre deg om at Netts IDen eller appen du vil at funksjonen skal åpne, befinner seg i sonen **klarerte nett steder** eller **lokalt intranett** (ikke i  **Begrensede områder**). Mer informasjon: [Endre innstillinger for sikkerhet og person vern for Internet Explorer 11](https://support.microsoft.com/en-us/help/17479/windows-internet-explorer-11-change-security-privacy-settings).  
 
 **Param**-funksjonen henter et parameter som ble sendt til appen når den ble startet. Hvis det navngitte parameteret ikke ble sendt, returnerer **Param** som *tom*.
 
@@ -38,7 +37,7 @@ I Internet Explorer og Microsoft Edge, den **Start** -funksjonen åpner en netts
 
 * *Adresse* – obligatorisk.  Adressen til en nettressurs som skal lastes ned.
 
-**Launch**( *Adresse* [; *ParameterName1*; *ParameterValue1*;...])
+**Launch**( *Adresse* [, *ParameterName1*, *ParameterValue1*,...])
 
 * *Adresse* – obligatorisk.  Adressen til en nettside eller ID-en til en app som skal startes.
 * *Parameternavn* – valgfritt.  Parameternavn.

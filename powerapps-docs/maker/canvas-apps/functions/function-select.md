@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/11/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 74584e5855c6c72c619b4baefc2652f9ccc68997
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: ed31bd165eb2289819800b6f2e01121c2681ae9e
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61520691"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71984072"
 ---
 # <a name="select-function-in-powerapps"></a>Select-funksjonen i PowerApps
 Simulerer en valgt handling på en kontroll som fører til at **OnSelect**-formelen evalueres.
@@ -84,7 +83,7 @@ En kontroll kan ikke **Select** seg selv direkte eller indirekte gjennom andre k
 
 5. Angi **OnSelect**-egenskapen for bildekontrollen i denne formelen:
 
-    **Varsle( «Bildet er valgt»; vellykket )**
+    **Varsle( «Bildet er valgt», vellykket )**
 
 6. Klikk eller trykk på de ulike elementene i galleriet mens du holder nede ALT-tasten.
 

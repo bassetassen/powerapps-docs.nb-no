@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/07/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3e3b9902b535cc21d6e4b26959e9d5c4a0e56144
-ms.sourcegitcommit: b3fd824cf0d540b964b729686b198c7ccf2c2174
+ms.openlocfilehash: f258beee317fcdad46d71b504f9c8a3046bb3641
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316745"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993377"
 ---
 # <a name="power-bi-tile-control-in-powerapps"></a>Kontrollen for Power BI-flis i PowerApps
 
@@ -34,27 +34,27 @@ Dra nytte av eksisterende dataanalyser og rapportering ved å vise **[Power BI-f
 
 Når du deler en app som inneholder Power BI-innhold, må du dele både selve appen og [instrumentbordet](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports) hvor flisen kommer fra. Ellers vises ikke Power BI-innholdet, selv ikke for brukere som åpner appen. Apper som inneholder Power BI-innhold respekterer tillatelsene for det innholdet.
 
-## <a name="performance"></a>Ytelse
+## <a name="performance"></a>Ytelsen
 
 Det er ikke anbefalt å ha mer enn tre Power BI-fliser lastet inn samtidig i appen. Du kan kontrollere hvordan du laster og fjerner fliser ved å stille inn **LoadPowerBIContent**-egenskapen.
 
 ## <a name="pass-a-parameter"></a>Send en parameter
 
-Ved å sende en enkelt parameter fra appen, kan du filtrere resultatene som vises i en Power BI-flis. Imidlertid bare strengverdier og likhetsoperatoren støttes, og filteret vil kanskje ikke fungere hvis tabellnavnet eller navnet på kolonnen som inneholder mellomrom.
+Ved å sende en enkelt parameter fra appen, kan du filtrere resultatene som vises i en Power BI flis. Men bare string-verdier og operatoren Equals støttes, og filteret fungerer kanskje ikke hvis tabell navnet eller Kol onne navnet inneholder mellomrom.
 
-Hvis du vil sende en enkelt filter-verdi, kan du endre verdien for den **TileURL** egenskap, som følger denne syntaksen:
+Hvis du vil sende en enkelt filter verdi, kan du endre verdien for **TileURL** -egenskapen, som følger denne syn tak sen:
 
 ```
 "https://app.powerbi.com/embed?dashboardId=<DashboardID>&tileId=<TileID>&config=<SomeHash>"
 ```
 
-Tilføy denne syntaksen til denne verdien:
+Til denne verdien, kan du tilføye denne syn tak sen:
 
 ```
 &$filter=<TableName>/<ColumnName> eq '<Value>'
 ```
 
-Parameteren filtrerer en verdi i datasettet for rapporten der flisen kommer fra.
+Parameteren vil filtrere en verdi i data settet i rapporten der flisen stammer.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 

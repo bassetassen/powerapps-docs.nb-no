@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 02e8477873adad476c65e513a470e027aee5cd5c
-ms.sourcegitcommit: 8d0ba2ec0c97be91d1350180dd6881c14dec8f2d
+ms.openlocfilehash: 4a838100398196c63ef948f8f2e94d098c03a373
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65517398"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993433"
 ---
 # <a name="drop-down-control-in-powerapps"></a>Rullegardin-kontrollen i PowerApps
 En liste som viser bare det første elementet, med mindre brukeren åpner det.
@@ -34,9 +33,9 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
   
 **Verdi** – kolonnen med data du vil vise i kontrollen (for eksempel hvis en datakilde har flere kolonner).
 
-**Valgte** – dataposten som representerer det valgte elementet.
+**Valgt** – data posten som representerer det valgte elementet.
 
-**AllowEmptySelection** – om kontrollen viser et tomt valg hvis ingen elementer er valgt. App-brukere kan også fjerne deres valgene ved å velge det tomme elementet.
+**AllowEmptySelection** – om kontrollen viser et tomt valg hvis ingen elementer er valgt. App-brukere kan også fjerne valgene sine ved å velge det tomme elementet.
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
 **[AccessibleLabel](properties-accessibility.md)** – etikett for skjermlesere.
@@ -55,11 +54,11 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt til **Deaktivert**.
 
-**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt som **Deaktivert**.
 
-**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
+**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)** -egenskapen er angitt som **Deaktivert**.
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
@@ -69,7 +68,7 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
+**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **halvfet**, **Normal**eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -101,7 +100,7 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 
 **[Tilbakestill](properties-core.md)** – om en kontroll tilbakestilles til standardverdien.
 
-**SelectedText (avskrevet)** – en strengverdi som representerer det valgte elementet.
+**SelectedText (avskrevet)** – en streng verdi som representerer det valgte elementet.
 
 **[SelectionColor](properties-color-border.md)** – tekstfargen for et merket element, elementer i en liste eller fargen på markeringsverktøyet i en pennekontroll.
 
@@ -129,30 +128,30 @@ En **rullegardin**-kontroll sparer skjermplass, spesielt når listen inneholder 
 
 ### <a name="simple-list"></a>Enkel liste
 
-1. Legg til en **Rullegardin**-kontroll, og sett **[Elementer](properties-core.md)**-egenskapen til dette uttrykket:
+1. Legg til en **Rullegardin**-kontroll, og sett **[Elementer](properties-core.md)** -egenskapen til dette uttrykket:
 
-    `["Seattle"; "Tokyo"; "London"; "Johannesburg"; "Rio de Janeiro"]`
+    `["Seattle", "Tokyo", "London", "Johannesburg", "Rio de Janeiro"]`
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 
 1. Vis elementene i listen ved å velge pil ned for kontrollen mens du holder nede Alt-tasten.
 
 ### <a name="list-from-a-data-source"></a>Liste fra en datakilde
-Prinsippene i denne prosedyren gjelder noen [datakilden som inneholder tabellene](../connections-list.md#tables) , men, for å følge disse trinnene nøyaktig, må du åpne et miljø som en Common Data Service-database er opprettet og eksempeldata dataene som er lagt til.
+Prinsippene i denne prosedyren gjelder for alle [data kilder som inneholder tabeller](../connections-list.md#tables) , men for å følge disse trinnene, må du åpne et miljø der det er opprettet en Common data service-database, og eksempel data lagt til.
 
 1. [Åpne en tom app](../data-platform-create-app-scratch.md#open-a-blank-app), og [spesifiser deretter **Kontoer**-enheten](../data-platform-create-app-scratch.md#specify-an-entity).
 
-1. Legg til en **Rullegardin**-kontroll, og sett **[Elementer](properties-core.md)**-egenskapen til denne formelen:
+1. Legg til en **Rullegardin**-kontroll, og sett **[Elementer](properties-core.md)** -egenskapen til denne formelen:
 
-    `Distinct(Accounts; address1_city)`
+    `Distinct(Accounts, address1_city)`
 
-    Denne formelen viser alle byene i **Kontoer** enheten. Hvis mer enn én post har samme by, skjuler **[Distinkt](../functions/function-distinct.md)**-funksjonen dupliseringen i rullegardinkontrollen din.
+    Denne formelen viser alle byene i **Kontoer** enheten. Hvis mer enn én post har samme by, skjuler **[Distinkt](../functions/function-distinct.md)** -funksjonen dupliseringen i rullegardinkontrollen din.
 
-1. (valgfritt) Endre navnet på **Rullegardin**-kontrollen til **Byer**, legg til en loddrett **Galleri**-kontroll, og sett **[Elementer](properties-core.md)**-egenskapen for galleriet til denne formelen:
+1. (valgfritt) Endre navnet på **Rullegardin**-kontrollen til **Byer**, legg til en loddrett **Galleri**-kontroll, og sett **[Elementer](properties-core.md)** -egenskapen for galleriet til denne formelen:
 
-    `Filter(Accounts; address1_city = Cities.Selected.Value)`
+    `Filter(Accounts, address1_city = Cities.Selected.Value)`
 
-    Denne **[Filter](../functions/function-filter-lookup.md)**-funksjonen viser bare de oppføringene i **Kontoer**-enheten der byen samsvarer med den valgte verdien i **Byer**-kontrollen.
+    Denne **[Filter](../functions/function-filter-lookup.md)** -funksjonen viser bare de oppføringene i **Kontoer**-enheten der byen samsvarer med den valgte verdien i **Byer**-kontrollen.
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
 ### <a name="color-contrast"></a>Fargekontrast

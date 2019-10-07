@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/06/2017
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 930439325b60b60fefed18b66c22d9d4f97f55b7
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 20515a65a66dc3fea1236924d9c29574f63e16a8
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61550989"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992697"
 ---
 # <a name="editform-newform-submitform-resetform-and-viewform-functions-in-powerapps"></a>Funksjonene EditForm, NewForm, SubmitForm, ResetForm og ViewForm i PowerApps
 Vis, rediger eller opprett et element, lagre innholdet og tilbakestill kontrollene i en **[Redigeringskjema](../controls/control-form-detail.md)** -kontroll.
@@ -60,10 +59,10 @@ Hvis valideringen blir godkjent, sender **SubmitForm** endringen til datakilden.
 **ResetForm**-funksjonen tilbakestiller innholdet i et skjema til sine opprinnelige verdier, slik de var før brukeren foretok endringer. Hvis skjemaet er i **FormMode.New**-modus, tilbakestilles det til **FormMode.Edit**-modusen. **[OnReset](../controls/control-form-detail.md)** -virkemåten til Skjema-kontrollen kjøres også.  Du kan også tilbakestille individuelle kontroller med **[Reset](function-reset.md)** -funksjonen, men bare fra selve skjemaet.
 
 ### <a name="viewform"></a>ViewForm
-**ViewForm**-funksjonen endrer Skjema-kontrollens modus til **FormMode.View**. I denne modusen brukes innholdet til Skjema-kontrollens **[Element](../controls/control-form-detail.md)** -egenskap til å fylle ut skjemaet.  Den **SubmitForm** og **ResetForm** funksjonene har ingen effekt i denne modusen.
+**ViewForm**-funksjonen endrer Skjema-kontrollens modus til **FormMode.View**. I denne modusen brukes innholdet til Skjema-kontrollens **[Element](../controls/control-form-detail.md)** -egenskap til å fylle ut skjemaet.  **SubmitForm** -og **reset form** -funksjonene har ingen effekt i denne modusen.
 
-### <a name="displaymode-property"></a>DisplayMode-egenskap
-Den gjeldende modusen kan leses gjennom **Modus**-egenskapen.  Modusen bestemmer også verdien til **DisplayMode**-egenskapen, som kan brukes av datakortene og kontrollene i Skjema-kontrollen.  Ofte data kortets **DisplayMode** egenskapen settes til **Parent.DisplayMode** (refererer til skjemaet) som vil kontrollens **DisplayMode** egenskapen (refererer til datakort): 
+### <a name="displaymode-property"></a>Display Mode-egenskapen
+Den gjeldende modusen kan leses gjennom **Modus**-egenskapen.  Modusen bestemmer også verdien til **DisplayMode**-egenskapen, som kan brukes av datakortene og kontrollene i Skjema-kontrollen.  Data kortets **Display Mode** -egenskap blir ofte angitt til **Parent. Display Mode** (som refererer til skjemaet) som er kontrollens **Display Mode** -egenskap (som refererer til data kortet): 
 
 | Modus | DisplayMode | Beskrivelse |
 | --- | --- | --- |
@@ -111,12 +110,12 @@ Se [Forstå dataskjemaer](../working-with-forms.md) utfyllende eksempler.
    * Hvis innsendingen mislyktes, viser**ErrorText** en brukervennlig feilmelding, og det gjeldende skjermbildet forblir synlig slik at brukeren kan rette opp problemet og prøve på nytt.
 4. Legg til en Knapp-kontroll, angi kontrollens **[Text](../controls/properties-core.md)** -egenskap til å vise **Avbryt**, og angi kontrollens **[OnSelect](../controls/properties-core.md)** -egenskap til denne formelen:
    
-    **ResetForm( EditForm );; Back()**
+    **ResetForm( EditForm ); Back()**
    
     Når en bruker velger **Avbryt**-knappen, tilbakestilles verdiene i Skjema-kontrollen til de opprinnelige verdiene, slik de var før brukeren begynte å redigere. Det forrige skjermbildet vises på nytt, og Skjema-kontrollen returneres til **Rediger**-modus hvis den var i **Ny**-modus.
 5. Legg til en Knapp-kontroll, angi kontrollens **[Tekst](../controls/properties-core.md)** -egenskap til å vise **Ny**, og angi kontrollens **[OnSelect](../controls/properties-core.md)** -egenskap til denne formelen:
    
-    **NewForm( EditForm );; Navigate( EditScreen; None )**
+    **NewForm( EditForm ); Navigate( EditScreen, None )**
    
     Når brukeren velger **Ny**-knappen, veksler Skjema-kontrollen til **Ny**-modusen, standardverdiene for Skjema-kontrollens datakilde fyller ut kontrollen, og skjermbildet som inneholder Skjema-kontrollen vises på nytt. Når **SubmitForm**-funksjonen kjører, opprettes en post i stedet for å oppdateres.
 

@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 60340c3833f61be4acf4780a90d18e483c1dc010
-ms.sourcegitcommit: 26704369b17d2358a77cd4841bd70bbcca3384f2
+ms.openlocfilehash: b5b8e0b9bae3a7733a8499fb096c04e19c878045
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65521030"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993270"
 ---
 # <a name="text-input-control-in-powerapps"></a>Tekstinndata-kontroll i PowerApps
 En boks som brukeren kan skrive inn tekst, tall og andre data i.
@@ -65,7 +64,7 @@ Brukeren kan angi data ved å skrive inn i en kontroll for tekstinndata. Avhengi
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
+**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **halvfet**, **Normal**eller **lysere**.
 
 **Format** – om brukerinndataene er begrenset til bare tall eller kan være en hvilken som helst tekst.
 
@@ -125,7 +124,7 @@ Brukeren kan angi data ved å skrive inn i en kontroll for tekstinndata. Avhengi
 
 **[Underline](properties-text.md)** – om det vises en linje under teksten som vises på en kontroll.
 
-**VirtualKeyboardMode** – Type virtuelt tastatur, tekst eller numerisk, som vises på en app brukerens berøringsskjerm. Den **Format** egenskapen bestemmer standardverdien. Støtte for enheter varierer. Enheter som kjører iOS må ha minst versjon 12,2. Den anbefalte versjonen av Android er 9.0, og egenskapene til numeriske tastaturer varierer for Android-enheter. Windows 10 støtter ikke denne egenskapen.  
+**VirtualKeyboardMode** – typen virtuelt tastatur, tekst eller numerisk, som vises på en brukers berørings skjerm i en app. **Format** -egenskapen bestemmer standard verdien. Enhets støtte varierer. Enheter som kjører iOS må ha minst versjon 12,2. Den anbefalte versjonen av Android er 9,0, og funksjonaliteten til numeriske tastaturer varierer for Android-enheter. Windows 10 støtter ikke denne egenskapen.  
 
 **[Synlig](properties-core.md)** – om kontrollen vises eller skjules.
 
@@ -144,7 +143,7 @@ Brukeren kan angi data ved å skrive inn i en kontroll for tekstinndata. Avhengi
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 2. Legg til en knapp, angi **[Text](properties-core.md)** -egenskapen til **Legg til**, og angi **[OnSelect](properties-core.md)** -egenskapen til denne formelen:<br>
-   **Collect(Names; {FirstName:inputFirst.Text; LastName:inputLast.Text})**
+   **Collect(Names, {FirstName:inputFirst.Text, LastName:inputLast.Text})**
    
     Vil du ha mer informasjon om **[Collect](../functions/function-clear-collect-clearcollect.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 3. Legg til et tekstgalleri i stående/loddrett retning, angi **[Items](properties-core.md)** til **Navn**, og angi **[Text](properties-core.md)** -egenskapen til **Subtitle1** til **ThisItem.FirstName**.
@@ -157,7 +156,7 @@ Brukeren kan angi data ved å skrive inn i en kontroll for tekstinndata. Avhengi
 1. Legg til en kontroll for inndatatekst, gi den navnet **inputPassword**, og angi **Modus**-egenskapen til **Passord**.
 
 1. Legg til en etikett, og angi **[Text](properties-core.md)** -egenskapen til denne formelen:<br>
-   **If(inputPassword.Text = "P@ssw0rd"; "Access granted"; "Access denied")**
+   **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
 
     Vil du ha mer informasjon om **[If](../functions/function-if.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 

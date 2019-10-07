@@ -6,22 +6,22 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/24/2018
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3174d959a2360b36e82cd7070c4401251ca9fe18
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: c6b94f636ebf6d373c3fc2117b589116b5a4a2fd
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61526267"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986354"
 ---
-# <a name="rich-text-editor-control-in-powerapps"></a>Redigeringskontrollen for rik tekst i PowerApps
-Gjør at sluttbrukere kan formatere tekst i et WYSIWYG-redigeringsområde.  Utdataformatet er HTML.
+# <a name="rich-text-editor-control-in-powerapps"></a>Redigerings kontroll for rik tekst i PowerApps
+Gjør at slutt brukere kan formatere tekst i et redigerings område for WYSIWYG.  Utdataformatet er HTML.
 
 ## <a name="description"></a>Beskrivelse
 Kontrollen for **redigeringsprogrammet for rik tekst** gir appbrukeren et WYSIWYG-redigeringsområde for formatering av tekst.  Kontrollens inn- og utdataformat er HTML.
@@ -72,4 +72,4 @@ Hvis du vil bruke kontrollen i et skjema, velger du kortet «Rediger flerlinjet 
 * **[TabIndex](properties-accessibility.md)** må være null eller større, slik at tastaturbrukere kan navigere til den.
 
 > [!TIP]
-> Bruk **Alt + 0** mens redigeringsprogrammet er fokusert for å lære om andre hurtigtaster.
+> Bruk **alt + 0** mens redigerings programmet fokuserer på å finne ut mer om andre hurtig taster.

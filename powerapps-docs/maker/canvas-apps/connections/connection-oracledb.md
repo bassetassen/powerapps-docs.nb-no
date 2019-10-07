@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/14/2017
 ms.author: lanced
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f431373b2c36a84b54a3241ad2d49af019c37419
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 1ca519e4b082f45c03184510182fb8dce07b9eec
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61558082"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993908"
 ---
 # <a name="connect-to-an-oracle-database-from-powerapps"></a>Koble til en Oracle Database fra PowerApps
 Vis tabeller, og opprett, les, oppdater og slett tabellrader i en Oracle Database etter at du oppretter en tilkobling og utvikler en app i PowerApps. Tilkobling til Oracle Database støtter full delegering av filtrering, sortering og andre funksjoner, men ikke utløsere eller lagrede prosedyrer.
@@ -63,16 +63,16 @@ Installer [64-biters ODAC 12c Release 4 (12.1.0.2.4) for Windows x64](http://www
    ![Ny gateway](./media/connection-oracledb/choose-gateway.png)
 7. Klikk eller trykk på **Opprett** for å opprette tilkoblingen.
    
-   ![Ny](./media/connection-oracledb/create-button.png)
+   ![New](./media/connection-oracledb/create-button.png)
 8. Klikk eller trykk på **standard**datasettet.
    
-   ![Ny](./media/connection-oracledb/choose-dataset.png)
+   ![New](./media/connection-oracledb/choose-dataset.png)
 9. Klikk eller trykk på tabellen du vil bruke, i listen over tabeller.
    
-   ![Ny](./media/connection-oracledb/choose-table.png)
+   ![New](./media/connection-oracledb/choose-table.png)
 10. Klikk på **Koble til** for å opprette appen.
     
-    ![Ny](./media/connection-oracledb/connect-button.png)
+    ![New](./media/connection-oracledb/connect-button.png)
 
 PowerApps oppretter en app som inneholder tre skjermbilder og viser data fra tabellen du har valgt:
 
@@ -80,7 +80,7 @@ PowerApps oppretter en app som inneholder tre skjermbilder og viser data fra tab
 * **DetailScreen1**, som gir mer informasjon om én enkelt post.
 * **EditScreen1**, hvor brukere kan oppdatere en post eller opprette en ny post.
 
-![Ny](./media/connection-oracledb/afd-app.png)
+![New](./media/connection-oracledb/afd-app.png)
 
 ## <a name="next-steps"></a>Neste trinn
 * Hvis du vil lagre appen som du nettopp har generert, trykker du på Ctrl-S.

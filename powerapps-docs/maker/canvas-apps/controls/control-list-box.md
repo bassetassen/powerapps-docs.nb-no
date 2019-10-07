@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a7128ace53cc1e0754eb7247282b2ecae7642672
-ms.sourcegitcommit: 8d0ba2ec0c97be91d1350180dd6881c14dec8f2d
+ms.openlocfilehash: 4b12bb62011e24e2dfdb12d9d355432aa2bcadb6
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65517413"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986585"
 ---
 # <a name="list-box-control-in-powerapps"></a>Liste-kontrollen i PowerApps
 En liste der brukeren kan velge ett eller flere elementer.
@@ -32,7 +31,7 @@ En liste der brukeren kan velge ett eller flere elementer.
 
 **[Elementer](properties-core.md)** – kilden til dataene som vises i en kontroll, for eksempel et galleri, en liste eller et diagram.
 
-**Valgte** – dataposten som representerer det valgte elementet.
+**Valgt** – data posten som representerer det valgte elementet.
 
 Når du legger til et galleri, eller en liste, viser egenskapslisten **Elementer** som standard. På denne måten kan du enkelt angi dataene som den nye kontrollen skal vise. Du kan for eksempel angi **Elementer**-egenskapen for et galleri til **Konto**-tabellen i Salesforce, en tabell med navn **Beholdning** som du opprettet i Excel og lastet opp i skyen, eller en SharePoint-liste med navn **ConferenceSpeakers**.
 
@@ -63,7 +62,7 @@ Når du legger til et galleri, eller en liste, viser egenskapslisten **Elementer
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
+**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **halvfet**, **Normal**eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -99,7 +98,7 @@ Når du legger til et galleri, eller en liste, viser egenskapslisten **Elementer
 
 **[Tilbakestill](properties-core.md)** – om en kontroll tilbakestilles til standardverdien.
 
-**SelectedText (avskrevet)** – en strengverdi som representerer det valgte elementet.
+**SelectedText (avskrevet)** – en streng verdi som representerer det valgte elementet.
 
 **[SelectionColor](properties-color-border.md)** – tekstfargen for et merket element, elementer i en liste eller fargen på markeringsverktøyet i en pennekontroll.
 
@@ -126,11 +125,11 @@ Når du legger til et galleri, eller en liste, viser egenskapslisten **Elementer
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Distinct**( *DataSource*; *ColumnName* )](../functions/function-distinct.md)
+[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Eksempel
 1. Legg til en **Liste**-kontroll, gi den navnet **CategoryList**, og angi **[Elementer](properties-core.md)** -egenskapen som denne formelen:<br>
-   **["Carpet";"Hardwood";"Tile"]**
+   **["Carpet","Hardwood","Tile"]**
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
    
@@ -138,16 +137,16 @@ Når du legger til et galleri, eller en liste, viser egenskapslisten **Elementer
 2. Legg til tre **[Rullegardin](control-drop-down.md)** -kontroller, flytt dem under **CategoryList**, og gi dem navnene **CarpetList**, **HardwoodList** og **TileList**.
 3. Angi **[Elementer](properties-core.md)** -egenskapen til hver av **[Rullegardin](control-drop-down.md)** -kontrollene til en av disse verdiene:
    
-   * CarpetList: **["Caserta Stone Beige";"Ageless Beauty Clay"; "Lush II Tundra"]**
-   * HardwoodList: **["Golden Teak";"Natural Hickory"; "Victoria Mahogany"]**
-   * TileList: **["Honey Onyx Marble";"Indian Autumn Slate"; "Panaria Vitality Ceramic"]**
+   * CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
+   * HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
+   * TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
      
      ![Navn på gulvbelegg i rullegardinlister](./media/control-list-box/flooring-names.png)
 4. Angi **[Synlig](properties-core.md)** -egenskapen til hver **[Rullegardin](control-drop-down.md)** -kontroll som en av disse verdiene:
    
-   * CarpetList: **Hvis ("Carpet" i CategoryList.SelectedItems.Value, true)**
-   * HardwoodList: **Hvis ("Hardwood" i CategoryList.SelectedItems.Value, true)**
-   * TileList: **Hvis ("Flisen» i CategoryList.SelectedItems.Value, true)**
+   * CarpetList: **If («teppe» i CategoryList. SelectedItems. Value, True)**
+   * HardwoodList: **If («parkett» i CategoryList. SelectedItems. Value, True)**
+   * TileList: **If («flis» i CategoryList. SelectedItems. Value, True)**
      
      Vil du ha mer informasjon om **[If](../functions/function-if.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 5. Trykk på F5, og velg deretter ett eller flere elementer i **CategoryList**.

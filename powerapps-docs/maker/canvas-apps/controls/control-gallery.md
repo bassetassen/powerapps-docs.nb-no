@@ -6,22 +6,21 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/25/2017
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ba5df28f03ec5e7c9a3d8146aecb0427d8145b13
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 964f57c427b8e9e2e2f7a50e3d6e149ddea8e8b0
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61544250"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986678"
 ---
-# <a name="gallery-control-in-canvas-apps"></a>Galleri-kontrollen i lerret-apper
+# <a name="gallery-control-in-canvas-apps"></a>Galleri-kontrollen i lerret apper
 
 En kontroll som inneholder andre kontroller og viser et datasett.
 
@@ -29,11 +28,11 @@ En kontroll som inneholder andre kontroller og viser et datasett.
 
 En **Galleri**-kontroll kan vise flere poster fra en datakilde, og hver post kan inneholde flere typer data. En **Galleri**-kontroll kan vise flere kontakter for hvert element og kontaktinformasjon for hver kontakt, deriblant et navn, en postadresse og et telefonnummer. Hvert felt vises i en separat kontroll i **Galleri**-kontrollen, og du kan konfigurere disse kontrollene i malen. Malen vises som det første elementet i galleriet, i den venstre kanten av en **Galleri**-kontroll i vannrett/liggende retning og øverst i en **Galleri**-kontroll i loddrett/stående retning. Eventuelle endringer du gjør i malen, gjenspeiles i hele **Galleri**-kontrollen.
 
-Forhåndsdefinerte maler for viser bilder og tekst i et galleri som er tilgjengelig, i tillegg et galleri for elementer med variabel høyde.
+Forhånds definerte maler for å vise bilder og tekst i et galleri er tilgjengelig, i tillegg til et galleri for elementer med variabel høyde.
 
 ## <a name="limitations"></a>Begrensninger
 
-Hvis en bruker ruller den **fleksibel høyde** galleri-kontrollen før alle elementer er lastet, elementet som er for øyeblikket i visningen kan overføres ned og ut av visningen når datainnlastingen er fullført. Du unngår dette problemet ved å bruke en standard **galleriet** kontroll i stedet for den **fleksibel høyde** variant.
+Hvis en bruker ruller gjennom den **fleksible høyden** på Galleri-kontrollen før alle elementene lastes inn, kan elementet som for øyeblikket er i visning, skyve seg ned og ut av visningen når data innlastingen er fullført. Du unngår dette problemet ved å bruke en standard **Galleri** kontroll i stedet for varianten av den **fleksible høyden** .
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 
@@ -45,7 +44,7 @@ Hvis en bruker ruller den **fleksibel høyde** galleri-kontrollen før alle elem
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
 
-**[AccessibleLabel](properties-accessibility.md)**  – etikett for galleriet (ikke elementer den inneholder) for skjermlesere. Bør beskrive hva listen over elementer er.
+**[AccessibleLabel](properties-accessibility.md)** – etiketten til galleriet (ikke elementene i den inneholder) for skjerm lesere. Bør beskrive hva listen over elementer er.
 
 **AllItems** – alle elementene i et galleri, inkludert ekstra kontroll-verdier som er en del av malen i galleriet.
 
@@ -61,11 +60,11 @@ Hvis en bruker ruller den **fleksibel høyde** galleri-kontrollen før alle elem
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
-**ItemAccessibleLabel** – etikett for hvert gallerielement for skjermlesere. Bør beskrive hva hvert element er.
+**ItemAccessibleLabel** – etikett for hvert Galleri element for skjerm lesere. Bør beskrive hva hvert element er.
 
 **NavigationStep** – hvor langt et galleri ruller hvis **ShowNavigation**-egenskapen er satt til **sann** og brukeren velger en navigasjonspil i en av endene av galleriet.
 
-**Valgbar** – om elementene i galleriet kan velges. Når satt til **SANN**, skjermlesere identifisere galleriet som en valgbar liste, og du velger et element ved å klikke eller trykke på den. Når satt til **USANN**, skjermlesere identifisere galleriet som en vanlig liste og å klikke eller trykke på et element ikke velge den.
+**Velges** – om Galleri elementer kan velges. Når satt til **sann**, identifiserer skjerm lesere galleriet som en valgbar liste, og du velger et element ved å klikke eller trykke på det. Når det er satt til **False**, identifiserer skjerm lesere galleriet som en vanlig liste, og når du klikker eller trykker på et element, merkes det ikke.
 
 **ShowNavigation** – om det vises en pil i hver ende av et galleri slik at en bruker kan bla gjennom elementene i galleriet ved å klikke eller trykke på en pil.
 
@@ -93,7 +92,7 @@ Hvis en bruker ruller den **fleksibel høyde** galleri-kontrollen før alle elem
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 
-[**Filter**( *DataSource*; *Formula* )](../functions/function-filter-lookup.md)
+[**Filter**( *DataSource*, *Formula* )](../functions/function-filter-lookup.md)
 
 ## <a name="examples"></a>Eksempler
 
@@ -126,20 +125,20 @@ Hvis du skal kunne klikke hvor som helst i et gallerielement for å merke det, m
 * **[AccessibleLabel](properties-accessibility.md)** bør vises.
 
     > [!NOTE]
-    > Skjermlesere leser opp når elementer i galleriet endres. **AccessibleLabel** nevnes også. Dette gir kontekst til kunngjøringen, og er enda viktigere når det finnes flere gallerier på samme skjerm.
+    > Skjerm lesere vil annonsere når elementer i galleriet endres. **AccessibleLabel** nevnes også. Dette gir kontekst til kunngjøringen, og er enda viktigere når det finnes flere gallerier på samme skjerm.
 
-* Når et gallerielement inneholder flere kontroller, kan du bruke **ItemAccessibleLabel** til å summere det gallerielementet innholdet.
+* Bruk **ItemAccessibleLabel** til å sammenfatte innholdet i Galleri elementene når et galleri element inneholder flere kontroller.
 
-* Angi verdien for **kan velges** til **SANN** Hvis du vil at brukerne skal velge et gallerielement. Hvis ikke, angir denne verdien til **USANN**.
+* Angi verdien for **valgbar** til **sann** hvis du vil at brukere skal velge et galleri element. Ellers setter du denne verdien til **Usann**.
 
-* Når et gallerielement inneholder flere kontroller, kan du bruke **ItemAccessibleLabel** til å gi et sammendrag av galleriet elementets innholdet.
+* Når et galleri element inneholder flere kontroller, kan du bruke **ItemAccessibleLabel** til å gi et sammendrag av innholdet i Galleri elementet.
 
-* **Valgbar** bør angis på riktig måte, avhengig av om brukere er ment å velge et gallerielement.
+* Du kan **velge** å angi riktig, avhengig av om brukerne er ment å velge et galleri element.
 
 ### <a name="keyboard-support"></a>Tastaturstøtte
 
 * Vurder å angi **ShowScrollbar** til **sann**. Rullefeltet vises ikke på de fleste skjermenhetene før du begynner å rulle.
-* Hvis du skal kunne klikke hvor som helst i et gallerielement for å merke det, må det også finnes en måte for tastaturbrukere å merke gallerielementet. Legg for eksempel til en **[knapp](control-button.md)** som har egenskapen **OnSelect** angitt til **Select(Parent)**.
+* Hvis du skal kunne klikke hvor som helst i et gallerielement for å merke det, må det også finnes en måte for tastaturbrukere å merke gallerielementet. Legg for eksempel til en **[knapp](control-button.md)** som har egenskapen **OnSelect** angitt til **Select(Parent)** .
 
     > [!NOTE]
   > Kontroller utenfor galleriet behandles ikke i tastaturnavigasjonsrekkefølgen i galleriet. **[TabIndex](properties-accessibility.md)** for kontroller i et galleri omfattes. Hvis du vil ha mer informasjon, kan du se [egenskaper for tilgjengelighet](properties-accessibility.md).

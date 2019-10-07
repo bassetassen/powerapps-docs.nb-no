@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/26/2016
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d2b4229cc39a84bcffa624be8352762bcdc7a47b
-ms.sourcegitcommit: 21163a6d77b784f4864fce4695776c9b4652cb29
+ms.openlocfilehash: 113d76a3b80c2ef68f5e267714e4f792c988d237
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/26/2019
-ms.locfileid: "66225159"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71988888"
 ---
 # <a name="understand-data-cards-in-powerapps"></a>Slik fungerer datakort i PowerApps
 
@@ -136,7 +136,7 @@ La oss se på kontrollene som utgjør et grunnleggende dataregistreringskort. Av
 
 ![](./media/working-with-cards/dissect-card1.png)
 
-Kontrollene i datakortet har blitt markert i denne grafikken:
+I denne grafikken er kontrollene i data kortet merket:
 
 ![](./media/working-with-cards/dissect-card2.png)
 
@@ -159,7 +159,7 @@ Hvis du vil fylle ut disse kontrollene med data, kan egenskapene bli drevet av e
 | **TextErrorMessage.Text** |**Parent.Error** |**Feil**-egenskapen for kortet angir en aktuell feilmelding, hvis det oppstår et problem med validering. |
 
 > [!NOTE]
-> Den **Parent.Error** -egenskapen er en output-only-egenskap som du ikke kan angi ved hjelp av en formel. Derfor denne egenskapen vil ikke vises i listen over egenskaper nær hjørnet øverst til venstre eller i den **Egenskaper** eller **avansert** fanene nær høyre kant. Formellinjen foreslår denne egenskapen Hvis du skriver en formel som kan referere til egenskapen.
+> Egenskapen **Parent. Error** er en egenskap som bare kan angis for utdata, ved hjelp av en formel. Denne egenskapen vises derfor ikke i listen over egenskaper nær hjørnet øverst til venstre eller i **egenskapene** eller **Avansert** -fanene nær høyre kant. Formel linjen foreslår denne egenskapen hvis du skriver en formel som kan referere til egenskapen.
 
 Hvis du vil hente informasjon fra disse kontrollene, og skyve den tilbake i datakilden, har vi følgende viktige formler:
 

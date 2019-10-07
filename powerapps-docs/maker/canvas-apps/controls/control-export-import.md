@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b78f88941fce85b9e63427635cb946f944aa120a
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: 271d37c5cbd68b41a2818441161572bd9386e107
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63319941"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986749"
 ---
 # <a name="export-control-and-import-control-in-powerapps"></a>Kontrollene Eksporter og Import i PowerApps
 Kontroller for å eksportere data til en lokal fil og deretter importere dataene til en annen app i PowerApps.
@@ -27,7 +26,7 @@ Kontroller for å eksportere data til en lokal fil og deretter importere dataene
 ## <a name="description"></a>Beskrivelse
 Hvis du vil opprette mer enn én app som bruker de samme dataene, men ikke dele disse dataene utenfor disse appene, kan du eksportere den og importere dem ved hjelp av en **Eksporter**-kontroll og en **Import**-kontroll. Når du eksporterer data, oppretter du en komprimert fil som du kan kopiere til en annen maskin, men du kan ikke lese den i et annet program enn PowerApps.
 
-## <a name="warning"></a>Advarsel
+## <a name="warning"></a>Åtvaringa
 Aktivering av denne funksjonaliteten i appen din kan føre til sikkerhetsproblemer og datalekkasje.  Det anbefales å opplyse brukerne om å bare importere kjente og pålitelige filer og eksportere bare data som ikke er konfidensiell eller sensitiv.
 
 ## <a name="limitations"></a>Begrensninger
@@ -53,11 +52,11 @@ Eksportfunksjonen støttes ikke i nettlesere.
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt til **Deaktivert**.
 
-**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt som **Deaktivert**.
 
-**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
+**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)** -egenskapen er angitt som **Deaktivert**.
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
@@ -67,7 +66,7 @@ Eksportfunksjonen støttes ikke i nettlesere.
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
+**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **halvfet**, **Normal**eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -116,18 +115,18 @@ Eksportfunksjonen støttes ikke i nettlesere.
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="example"></a>Eksempel
-1. Legg til en **[Knapp](control-button.md)**, og angi **[OnSelect](properties-core.md)**-egenskapen til denne formelen:
-   <br>**ClearCollect(Products; {Name:"Europa"; Price:"10.99"}; {Name:"Ganymede"; Price:"12.49"}; {Name:"Callisto"; Price:"11.79"})**
+1. Legg til en **[Knapp](control-button.md)** , og angi **[OnSelect](properties-core.md)** -egenskapen til denne formelen:
+   <br>**ClearCollect(Products, {Name:"Europa", Price:"10.99"}, {Name:"Ganymede", Price:"12.49"}, {Name:"Callisto", Price:"11.79"})**
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
    
-    Vil du ha mer informasjon om **[ClearCollect](../functions/function-clear-collect-clearcollect.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
-2. Trykk på F5, klikk eller trykk på **[Knapp](control-button.md)**-kontrollen, og trykk deretter på Esc for å gå tilbake til arbeidsområdet.
+    Vil du ha mer informasjon om **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
+2. Trykk på F5, klikk eller trykk på **[Knapp](control-button.md)** -kontrollen, og trykk deretter på Esc for å gå tilbake til arbeidsområdet.
 3. Legg til en **Eksporter**-kontroll, og angi **Data**-egenskapen som **Products**.
 4. Trykk på F5, klikk eller trykk på **Eksporter**-kontrollen, og angi deretter navnet på filen du vil eksportere dataene til.
 5. Klikk eller trykk på **Lagre**, og trykk på Esc for å gå tilbake til standardarbeidsområdet.
-6. Legge til en **Import**-kontroll i en ny eller eksisterende app, gi den navnet **MyData**, og angi **[OnSelect](properties-core.md)**-egenskapen som denne formelen:<br>
-   **Collect(ImportedProducts; MyData.Data)**
+6. Legge til en **Import**-kontroll i en ny eller eksisterende app, gi den navnet **MyData**, og angi **[OnSelect](properties-core.md)** -egenskapen som denne formelen:<br>
+   **Collect(ImportedProducts, MyData.Data)**
 7. Trykk på F5, klikk eller trykk på **MyData**, klikk eller trykk på filen du eksporterte, og klikk eller trykk deretter på **Åpne**.
 8. Trykk på Esc, klikk eller trykk på **Samlinger** på **Fil**-menyen, og bekreft at den gjeldende appen har dataene som du eksporterte.
 

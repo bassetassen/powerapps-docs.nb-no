@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/06/2018
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2b1527f8a7bf157c88b85ae9721626b6fc14f5a9
-ms.sourcegitcommit: 8d0ba2ec0c97be91d1350180dd6881c14dec8f2d
+ms.openlocfilehash: e3a1e1c5a62552f9ef034b6f4985213b65247627
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65517360"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986370"
 ---
 # <a name="radio-control-in-powerapps"></a>Radio-kontrollen i PowerApps
 
@@ -41,7 +40,7 @@ Kontrollen kan ha et vannrett eller loddrett oppsett.
 
 **[Verdi](properties-core.md)** – verdien til en inndatakontroll.
 
-**Valgte** – dataposten som representerer det valgte elementet.
+**Valgt** – data posten som representerer det valgte elementet.
 
 ## <a name="all-properties"></a>Alle egenskaper
 
@@ -71,7 +70,7 @@ Kontrollen kan ha et vannrett eller loddrett oppsett.
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
+**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **halvfet**, **Normal**eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -109,7 +108,7 @@ Kontrollen kan ha et vannrett eller loddrett oppsett.
 
 **[Tilbakestill](properties-core.md)** – om en kontroll tilbakestilles til standardverdien.
 
-**SelectedText (avskrevet)** – en strengverdi som representerer det valgte elementet.
+**SelectedText (avskrevet)** – en streng verdi som representerer det valgte elementet.
 
 **[Størrelse](properties-text.md)** – skriftstørrelsen på teksten som vises på en kontroll.
 
@@ -131,19 +130,19 @@ Kontrollen kan ha et vannrett eller loddrett oppsett.
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 
-[**Distinct**( *DataSource*; *ColumnName* )](../functions/function-distinct.md)
+[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Eksempel
 
 1. Legg til en **radio**-kontroll, gi den navnet **Priser**, og angi **[Elementer](properties-core.md)** -egenskapen til denne verdien:
 
-    **["Standard"; "Premium"]**
+    **["Standard", "Premium"]**
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 
 2. Legg til en **[etikett](control-text-box.md)** -kontroll, flytt den under **Radio**-kontrollen, og angi **[Tekst](properties-core.md)** -egenskapen i **[Etikett](control-text-box.md)** -kontrollen til denne formelen:
 
-    **If("Premium" in Pricing.Selected.Value; "$200 per day"; "$150 per day")**
+    **If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
 
     Vil du ha mer informasjon om **[If](../functions/function-if.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 

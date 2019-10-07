@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 72e1bd234a9cbccc24cf35723ee10bacd175b278
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 413f07bcca9d238ab1a6f6b020f1d1436f2ca737
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61563798"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71984551"
 ---
 # <a name="lower-upper-and-proper-functions-in-powerapps"></a>Funksjonene Lower, Upper og Proper i PowerApps
 Konverterer bokstaver i en tekststreng slik at alle bokstavene blir små, alle blir store eller det blir en blanding av små og store bokstaver.
@@ -63,12 +62,12 @@ Hver formel returnerer en tabell med én kolonne som inneholder de konverterte s
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Lower( ShowColumns(&nbsp;People;&nbsp;"Address"&nbsp;) )** |Konverterer alle små bokstaver til store bokstaver. |<style> img { max-width:none; } </style> ![](media/function-lower-upper-proper/people-table-lower.png) |
-| **Upper( ShowColumns(&nbsp;People;&nbsp;"Address"&nbsp;) )** |Konverterer alle små bokstaver til store bokstaver. |![](media/function-lower-upper-proper/people-table-upper.png) |
-| **Upper( ShowColumns(&nbsp;People;&nbsp;"Address"&nbsp;) )** |Konverterer den første bokstaven i hvert ord til store bokstaver hvis de er små, og konverterer alle andre store bokstaver til små bokstaver. |![](media/function-lower-upper-proper/people-table-proper.png) |
+| **Lower( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |Konverterer alle små bokstaver til store bokstaver. |<style> img { max-width:none; } </style> ![](media/function-lower-upper-proper/people-table-lower.png) |
+| **Upper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |Konverterer alle små bokstaver til store bokstaver. |![](media/function-lower-upper-proper/people-table-upper.png) |
+| **Upper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |Konverterer den første bokstaven i hvert ord til store bokstaver hvis de er små, og konverterer alle andre store bokstaver til små bokstaver. |![](media/function-lower-upper-proper/people-table-proper.png) |
 
 ### <a name="step-by-step-example"></a>Trinnvis veiledning – eksempel
-1. Legg til en **[Tekstinndata](../controls/control-text-input.md)**-kontroll, og gi den navnet **Source**.
-2. Legg til en etikett og angi **[Tekst](../controls/properties-core.md)**-egenskapen til denne formelen:<br>**Proper(Source.Text)**
+1. Legg til en **[Tekstinndata](../controls/control-text-input.md)** -kontroll, og gi den navnet **Source**.
+2. Legg til en etikett og angi **[Tekst](../controls/properties-core.md)** -egenskapen til denne formelen:<br>**Proper(Source.Text)**
 3. Trykk på F5, og skriv deretter **VI ER BEST!** i **kilde**-boksen.<br>Etiketten viser **Vi er best!**
 

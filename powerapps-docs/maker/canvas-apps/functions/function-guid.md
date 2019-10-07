@@ -6,26 +6,25 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/14/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9415ab67b93ef64f5caa025af5ac685ca2363305
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: ea2668ca295d807bbc19f71c9aa9f477c3b96041
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61563246"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992671"
 ---
 # <a name="guid-function-in-powerapps"></a>GUID-funksjonen i PowerApps
 Konverterer en GUID-streng ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) til en GUID-verdi, eller oppretter en ny GUID-verdi.
 
 ## <a name="description"></a>Beskrivelse
-Bruk **GUID**-funksjonen til å konvertere en streng som inneholder den heksadesimale representasjonen av en GUID i en GUID-verdi, som kan sendes til en database. GUID-verdiene, brukes som nøkler av databasesystemer som Common Data Service-og SQL Server.
+Bruk **GUID**-funksjonen til å konvertere en streng som inneholder den heksadesimale representasjonen av en GUID i en GUID-verdi, som kan sendes til en database. GUID-verdier brukes som nøkler av database systemer, for eksempel Common Data Service og SQL Server.
 
 Strengen som sendes, kan inneholde små eller store bokstaver, men i disse formatene må den inneholde 32 heksadesimale tegn:
 
@@ -36,14 +35,14 @@ Hvis du ikke angir et argument, oppretter denne funksjonen en ny GUID.
 
 Hvis du vil konvertere en GUID-verdi til en streng, bruker du den bare i en strengkontekst. GUID-verdien konverteres til en heksadesimal representasjonsstreng med bindestreker og små bokstaver. 
 
-Når du genererer en ny GUID, denne funksjonen bruker pseudo-tilfeldig tall til å opprette en versjon 4 [IETF RFC 4122](https://www.ietf.org/rfc/rfc4122.txt) GUID. Når du konverterer en streng til en GUID, støtter denne funksjonen en GUID-versjon ved å godta en hvilken som helst streng med 32 heksadesimale tall.
+Når du genererer en ny GUID, bruker denne funksjonen pseudo-tilfeldige tall til å opprette en versjon 4 [IETF RFC 4122](https://www.ietf.org/rfc/rfc4122.txt) GUID. Når du konverterer en streng til en GUID, støtter denne funksjonen enhver GUID-versjon ved å godta en streng på 32 heksadesimale sifre.
 
 ## <a name="volatile-functions"></a>Flyktige funksjoner
 **GUID** er en flyktig funksjon når den brukes sammen med et argument. Hver gang en av disse funksjonene evalueres returnerer den en annen verdi.  
 
 En flyktig funksjon returnerer en annen verdi når den brukes i en formel for dataflyt, hvis formelen den viser, ser ut til å være evaluert på nytt. Hvis ingenting annet endres i formelen, vil den ha samme verdi i hele kjøringen av appen.
 
-En etikettkontroll der **Tekst**-egenskapen er angitt til for eksempel **GUID()**, endrer ikke mens appen din er aktiv. Å bare lukke og åpne appen vil resultere i en forskjellig verdi.
+En etikettkontroll der **Tekst**-egenskapen er angitt til for eksempel **GUID()** , endrer ikke mens appen din er aktiv. Å bare lukke og åpne appen vil resultere i en forskjellig verdi.
 
 Funksjonen vil evalueres på nytt hvis den er en del av en formel der noe annet er endret. Hvis vi angir **Tekst**-egenskapen for en **etikettkontroll** til denne formelen, genereres for eksempel en GUID hver gang brukeren endrer verdien til **tekstinndatakontrollen**:
 
@@ -70,7 +69,7 @@ Du kan også oppgi GUID-verdi uten bindestreker. Denne formelen returnerer den s
 
 Brukes i kontekst til å angi **Status**-feltet i en ny databasepost til en godt etablert verdi:
 
-* **Patch (produkter; standard (produkter); {Status: GUID( "F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4" ) } )**
+* **Patch (produkter, standard (produkter), {status: GUID ("F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4")})**
 
 Du ønsker sikkert ikke å vise GUID-verdiene til brukerne, men GUID-verdiene kan hjelpe deg med å feilsøke appen. Hvis du vil vise verdien til **Status**-feltet i posten du opprettet i forrige eksempel, angir du **Text**-egenskapen for en **etikettkontroll** til denne formelen:
 
@@ -80,13 +79,13 @@ Du ønsker sikkert ikke å vise GUID-verdiene til brukerne, men GUID-verdiene ka
 
 #### <a name="create-a-table-of-guids"></a>Opprett en tabell med GUID-verdier
 
-1. Angi **[OnSelect](../controls/properties-core.md)**-egenskapen til **[Knapp](../controls/control-button.md)**-kontrollen som denne formelen:
+1. Angi **[OnSelect](../controls/properties-core.md)** -egenskapen til **[Knapp](../controls/control-button.md)** -kontrollen som denne formelen:
 
-    **ClearCollect( NewGUIDs; ForAll( [ 1; 2; 3; 4; 5 ]; GUID() ) )**
+    **ClearCollect( NewGUIDs, ForAll( [ 1, 2, 3, 4, 5 ], GUID() ) )**
 
     Denne formelen oppretter én kolonnetabell som brukes til å oppdatere fem ganger, noe som resulterer i fem GUID-verdier.
 
-1. Legg til en **[Datatabellkontroll](../controls/control-data-table.md)**, angi **Elementer**-egenskapen til **NewGUIDs**, og vis deretter **Verdi**-feltet.
+1. Legg til en **[Datatabellkontroll](../controls/control-data-table.md)** , angi **Elementer**-egenskapen til **NewGUIDs**, og vis deretter **Verdi**-feltet.
 
 1. Velg knappen ved å klikke eller trykke på den mens du holder nede ALT.
 
@@ -100,4 +99,4 @@ Du ønsker sikkert ikke å vise GUID-verdiene til brukerne, men GUID-verdiene ka
 
 Hvis du vil generere en enkelt GUID-verdi i stedet for en tabell, bruker du denne formelen:
 
-**Set( NewGUID; GUID() )**
+**Set( NewGUID, GUID() )**

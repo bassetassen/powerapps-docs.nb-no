@@ -1,124 +1,124 @@
 ---
-title: Hurtigtaster for lerretsapper | Microsoft Docs
-description: Hurtigtaster for lerretsapper
-author: AFTOwen
+title: Hurtig taster for lerreter | Microsoft Docs
+description: Hurtig taster for lerret apper
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 04/23/2019
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c528ff033515a1e124330c0880c78e14f1014cec
-ms.sourcegitcommit: 963d32bf17f1b596fbd3053567fd2d3a3a34b199
+ms.openlocfilehash: 103eb63e8b56de0ddc6a359fcc8924f5276eee52
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251478"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71989882"
 ---
-# <a name="keyboard-shortcuts-for-canvas-apps"></a>Hurtigtaster for lerretsapper
+# <a name="keyboard-shortcuts-for-canvas-apps"></a>Hurtig taster for lerret apper
 
 > [!NOTE]
-> Snarveier kan variere avhengig av oppsettet.
+> Snarveier kan variere basert på tastatur oppsett.
 
-## <a name="file"></a>Filen
+## <a name="file"></a>Filserver
 
-| Snarvei | Handling |
+| Vegen | Handling |
 |--|--|
-| CTRL + O (eller Alt + F) | Åpne en fil. |
-| CTRL + SKIFT + S (eller Alt + P) | Lagre appen med et annet navn. |
+| CTRL + O (eller alt + F) | Åpne en fil. |
+| CTRL + SKIFT + S (eller alt + P) | Lagre appen med et annet navn. |
 | CTRL + S | Lagre appen med samme navn eller for første gang. |
-| F12 | Last ned app-filen (.msapp). |
-| ALT + F | Åpne den **filen** menyen. |
+| F12 | Last ned App-filen (. msapp). |
+| Alt + F | Åpne **fil** -menyen. |
 
 ## <a name="ribbon"></a>Båndet
 
-| Snarvei | Handling |
+| Vegen | Handling |
 |--|--|
-| ENTER | Kjør valgte kommandoen. |
-| Fane | Flytte mellom kommandoer på den valgte kategorien og deretter til neste kategori. |
-| CTRL + F6 | Gå til den neste landemerke. |
-| CTRL + SKIFT + F6 | Gå til den forrige landemerke. |
-| Alt + jeg | Velg den **Sett inn** fanen. |
+| ENTER | Kjør den valgte kommandoen. |
+| Fane | Flytt mellom kommandoer i den valgte fanen og til neste-fanen. |
+| CTRL + F6 | Gå til neste lande merke. |
+| CTRL + SKIFT + F6 | Gå til forrige lande merke. |
+| Alt + I | Velg **Sett inn** -fanen. |
 
-## <a name="editing"></a>Redigering
+## <a name="editing"></a>Endre
 
-| Snarvei | Handling |
+| Vegen | Handling |
 |--|--|
-| CTRL + A | Merk alt. |
-| CTRL + X | Klipp ut. |
-| CTRL + C | Kopier. |
-| CTRL + V | Lim inn. |
-| CTRL + Z | Angre kommandoen. |
-| CTRL + Y | Gjør om kommandoen. |
+| Ctrl + A | Velg alle. |
+| CTRL + X | Klippe. |
+| CTRL + C | Serverkopien. |
+| CTRL + V | Dem. |
+| CTRL + Z | Angre kommando. |
+| CTRL + Y | Gjør om-kommando. |
 | CTRL + M | Legg til en skjerm. |
-| CTRL += eller Ctrl + Skift += | Zoom inn. |
-| CTRL +- eller Ctrl + Skift +- | Zoom ut. |
-| Ctrl + 0 | Tilpass lerret til siden. |
-| Skift + Enter | Linjeskift i en formel. |
+| CTRL + = eller CTRL + SKIFT + = | Zoom inn. |
+| CTRL +-eller CTRL + SKIFT +- | Zoom ut. |
+| CTRL + 0 | Tilpass lerret til side. |
+| SKIFT + ENTER | Dele opp en linje i en formel. |
 
-## <a name="preview"></a>Forhåndsvisning
+## <a name="preview"></a>Visningen
 
-| Snarvei | Handling |
+| Vegen | Handling |
 |--|--|
-| F5 | Åpne forhåndsvisningsmodus. |
-| ESC | Lukk forhåndsvisning-modus, en dialogboks eller et undermenyruten.|
+| F5 | Åpne forhånds visnings modus. |
+| ESC | Lukk forhånds visnings modus, en dialog boks eller en under meny rute.|
 
 ## <a name="canvas"></a>Lerret
 
-| Snarvei | Handling |
+| Vegen | Handling |
 |--|--|
 | Fane | Velg den neste kontrollen. |
-| Ctrl + klikk eller Shift + Klikk | Velg flere objekter med én gang. |
-| Høyrepil | Skyve den valgte kontrollen til høyre. |
-| Pil venstre | Skyve den valgte kontrollen til venstre. |
-| Pil opp | Skyv den merkede kontrollen opp. |
-| Pil ned | Skyv den merkede kontrollen ned. |
+| CTRL + klikk eller Skift + klikk på | Velg flere objekter samtidig. |
+| Høyrepil | Skyv den valgte kontrollen til høyre. |
+| Pil venstre | Skyv den valgte kontrollen mot venstre. |
+| Pil opp | Skyv den valgte kontrollen oppover. |
+| Pil ned | Skyv den valgte kontrollen ned. |
 
-## <a name="tree-view"></a>Trevisning
+## <a name="tree-view"></a>Tre visning
 
 > [!NOTE]
-> Disse snarveiene krever den **trevisning** ruten for å ha fokus.
+> Disse snarveiene krever at **tre visnings** ruten har fokus.
 
-| Snarvei | Handling |
+| Vegen | Handling |
 |--|--|
 | F2 | Gi nytt navn til en kontroll. |
-| ESC | Avbryt gi nytt navn til en kontroll. |
-| CTRL + G | Gruppe/dele opp grupper med kontroller. |
-| CTRL +] | Flytt en kontroll fremover. |
+| ESC | Avbryt endring av navn på kontroll. |
+| CTRL + G | Gruppe/del opp kontroller. |
+| Ctrl +] | Flytt en kontroll fremover. |
 | CTRL + [ | Send en kontroll bakover. |
 | CTRL + SKIFT +] | Plasser lengst frem. |
 | CTRL + SKIFT + [ | Plasser lengst bak. |
 
-## <a name="resize"></a>Endre størrelse på
+## <a name="resize"></a>Endrer
 
-| Snarvei | Handling |
+| Vegen | Handling |
 |--|--|
-| Skift + Pil venstre | Reduser bredde. |
-| Ctrl + Skift + Pil venstre | Redusert bredde. |
+| Skift + Pil venstre | Reduser bredden. |
+| CTRL + SKIFT + Pil venstre | Reduser bredden litt. |
 | Skift + Pil ned | Reduser høyden. |
-| Ctrl + Skift + Pil ned | Reduser høyden litt. |
+| CTRL + SKIFT + Pil ned | Reduser høyden litt. |
 | Skift + Pil høyre | Øk bredden. |
-| Ctrl + Skift + Pil høyre | Øk bredden litt. |
+| CTRL + SKIFT + Pil høyre | Øk bredden litt. |
 | Skift + Pil opp | Øk høyden. |
-| Ctrl + Skift + Pil opp | Øk høyden litt. |
+| CTRL + SKIFT + Pil opp | Øk høyden litt. |
 
-## <a name="text-format"></a>Tekst-format
+## <a name="text-format"></a>Tekst format
 
-| Snarvei | Handling |
+| Vegen | Handling |
 |--|--|
-| CTRL + B  | Bla gjennom nivåer av fet. |
-| CTRL + I | Slå kursiv på eller av. |
-| CTRL + U | Legge til eller fjerne understreking. |
+| Ctrl + B  | Bla gjennom nivåer med fete typer. |
+| Ctrl + I | Aktiver eller deaktiver kursiv. |
+| Ctrl + U | Legg til eller fjern understreking. |
 
-## <a name="other"></a>Andre
+## <a name="other"></a>Helst
 
-| Snarvei | Handling |
+| Vegen | Handling |
 |--|--|
-| F1 | Åpner dokumentasjon. |
-| SKIFT + F10 | Åpne en hurtigmeny i, for eksempel **trevisning**. |
-| Alt eller Ctrl + Skift | Skjul utformingselementer slik at du kan samhandle med kontroller som om appen kjører. |
+| TRYKKE | Åpne dokumentasjon. |
+| SKIFT + F10 | Åpne en hurtig meny i for eksempel **tre visning**. |
+| Alt eller CTRL + SKIFT | Skjul utformings elementer slik at du kan samhandle med kontroller som om appen ble kjørt. |

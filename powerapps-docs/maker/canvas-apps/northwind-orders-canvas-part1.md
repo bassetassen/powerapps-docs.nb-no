@@ -1,294 +1,293 @@
 ---
-title: Opprett en ordre-galleriet i en lerretsapp | Microsoft Docs
-description: Opprett en ordre-galleriet i en lerretsapp til å behandle data for Northwind Traders
+title: Opprett et bestillings galleri i en lerret-app | Microsoft Docs
+description: Opprett et ordre galleri i en lerret-app for å administrere data for Gas tro nor delikat Esser
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/25/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 94d6c104cb888bb13f3724231d7891d622f5377b
-ms.sourcegitcommit: e85072f7a80da308c4caabe20adbf2509588ca57
+ms.openlocfilehash: ac6586067105d5f6cd1ce2aab5568450804fe4c6
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761009"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71990953"
 ---
-# <a name="create-an-order-gallery-in-a-canvas-app"></a>Opprett en ordre-galleriet i en lerretsapp
+# <a name="create-an-order-gallery-in-a-canvas-app"></a>Opprett et ordre galleri i en lerret-app
 
-Følg trinnvise instruksjoner for å opprette en ordre-galleriet i en lerretsapp for administrasjon av fiktive data i databasen Northwind Traders. Dette emnet er en del av en serie som forklarer hvordan du bygger en business-app på relasjonelle data i Common Data Service. Utforsk disse emnene i denne sekvensen for best resultat:
+Følg trinn vise instruksjoner for å opprette et ordre galleri i en lerret-app for å administrere fiktive data i databasen Gas tro nor delikat Esser. Dette emnet er en del av en serie som forklarer hvordan du bygger et forretnings program på relasjonelle data i Common Data Service. Du får best resultat ved å utforske disse emnene i denne rekkefølgen:
 
-1. Opprett en ordre-galleri (**dette emnet**).
-1. [Opprette et sammendrag av skjema](northwind-orders-canvas-part2.md).
-1. [Opprett et galleri i detalj](northwind-orders-canvas-part3.md).
+1. Opprett et ordre galleri (**dette emnet**).
+1. [Opprett et sammendrags skjema](northwind-orders-canvas-part2.md).
+1. [Opprett et detalj Galleri](northwind-orders-canvas-part3.md).
 
 > [!div class="mx-imgBorder"]
-> ![Definisjonen av skjermen områder](media/northwind-orders-canvas-part1/orders-parts.png)
+> @no__t – 0Definition av skjerm områder @ no__t-1
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-- [Installere Northwind Traders database og apper](northwind-install.md).
-- Les gjennom den [oversikt over lerretsapp](northwind-orders-canvas-overview.md) for Northwind Traders.
+- [Installer databasen Gas tro nor delikat Esser](northwind-install.md).
+- Les gjennom [oversikten over lerretet](northwind-orders-canvas-overview.md) for Gas tro nor delikat Esser.
 
 ## <a name="create-a-blank-app"></a>Å opprette en tom app
 
-1. [Logg deg på PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og deretter opprette en tom app for nettbrett.
+1. [Logg deg på powerapps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og opprett deretter en tom tavle-app.
 
     > [!div class="mx-imgBorder"]
-    > ![Lerretsapp fra tom flis](media/northwind-orders-canvas-part1/start-01.png)
+    > ![Canvas app fra en tom flis @ no__t-1
 
-1. Gi appen uansett hvilke et navn du, og velg deretter **Opprett**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Lerretsapp fra tom dialogboksen](media/northwind-orders-canvas-part1/start-02.png)
-
-    PowerApps Studio åpner slik at du kan legge til datakilder og kontroller i appen din:
+1. Gi appen et navn som du liker, og velg deretter **Opprett**.
 
     > [!div class="mx-imgBorder"]
-    > ![PowerApps Studio](media/northwind-orders-canvas-part1/start-03.png)
+    > ![Canvas app fra Tom dialog boks @ no__t-1
 
-1. Aktiver en [eksperimentell funksjon](working-with-experimental.md) for å vise resultatet av en formel direkte fra formellinjen.
+    PowerApps Studio åpnes, slik at du kan legge til data kilder og kontroller i appen:
 
-    1. På den **filen** menyen velger **appinnstillinger**, og velg deretter **avanserte innstillinger**.
-    1. Bla til bunnen av listen over funksjoner, og deretter aktivere **aktiverer formellinjen resultatvisningen**:
+    > [!div class="mx-imgBorder"]
+    > ![PowerApps Studio @ no__t-1
+
+1. Aktiver en [eksperimentell funksjon](working-with-experimental.md) for å vise resultatet av en formel direkte fra formel linjen.
+
+    1. Velg **App-innstillinger**på **fil** -menyen, og velg deretter **Avanserte innstillinger**.
+    1. Rull til bunnen av listen over funksjoner, og Aktiver deretter **resultat visningen Aktiver formel linjen**:
 
         > [!div class="mx-imgBorder"]
-        > ![Liste over eksperimentelle funksjoner](media/northwind-orders-canvas-part1/start-04.png)
+        > @no__t – 0List av eksperimentelle funksjoner @ no__t-1
 
-1. Velg tilbake-pilen for å gå tilbake til tomt lerret i hjørnet øverst til venstre.
+1. Velg tilbake-pilen i hjørnet øverst til venstre for å gå tilbake til det tomme lerretet.
 
-## <a name="add-the-data"></a>Legge til data
+## <a name="add-the-data"></a>Legg til dataene
 
-1. På den **Vis** fanen og velge **datakilder**, og velg deretter **Legg til datakilde** i den **Data** ruten:
-
-    > [!div class="mx-imgBorder"]
-    > ![Velg visning, datakilder, Legg til datakilde](media/northwind-orders-canvas-part1/datasource-01.png)
-
-1. Velg **Common Data Service-** .
-
-    Hvis **Common Data Service-** vises ikke i listen over tilkoblinger, velg **ny tilkobling**, og legg deretter til den.
+1. Velg **data kilder**på **Vis** -fanen, og velg deretter **Legg til data kilde** i **data** -ruten:
 
     > [!div class="mx-imgBorder"]
-    > ![Listen over tilkoblinger](media/northwind-orders-canvas-part1/datasource-02.png)
+    > ![Select visning, data kilder, Legg til data kilde @ no__t-1
 
-1. Under **Velg en enhet**, typen **ordrer**, og velg den **ordrer** avmerkingsboks, og velg deretter **koble til**:
+1. Velg **Common data service**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Listen over enheter](media/northwind-orders-canvas-part1/datasource-03.png)
-
-    Du har lagt til den **ordrer** datakilde i appen din:
+    Hvis **Common data service** ikke vises i listen over tilkoblinger, velger du **ny tilkobling**, og deretter legger du den til.
 
     > [!div class="mx-imgBorder"]
-    > ![Data-ruten](media/northwind-orders-canvas-part1/datasource-04.png)
+    > @no__t – 0List av tilkoblinger @ no__t-1
 
-    Den **ordrer** enhet inneholder mange ulike typer felter:
-
-    > [!div class="mx-imgBorder"]
-    > ![Liste over felt i ordrer-enhet](media/northwind-orders-canvas-part1/datasource-05.png)
-
-    Hvert felt har en **visningsnavn** og en **navnet**, som kalles noen ganger det logiske navnet. Både navn referere til samme ting. Generelt du bruker visningsnavnet når du bygger en app, men noen tilfeller kreve mer kryptisk **navnet**, som er nevnt i en prosedyre.
-
-1. I PowerApps Studio, kan du lukke den **Data** ruten ved å velge Lukk-ikonet (x) i det øvre høyre hjørnet.
-
-## <a name="create-the-order-gallery"></a>Opprett ordre-galleri
-
-1. På den **Sett inn** fanen og velge **galleriet** > **tomt, loddrett** til å legge til en [ **galleriet** ](controls/control-gallery.md)kontrollen, som viser ordrene.
+1. Under **Velg en enhet**, Skriv inn **bestillinger**, Merk av for **ordrer** -boksen, og velg deretter **Koble til**:
 
     > [!div class="mx-imgBorder"]
-    > ![INSERT-, galleriet, tom loddrett](media/northwind-orders-canvas-part1/orders-01.png)
+    > @no__t – 0List av enheter @ no__t-1
 
-1. Angi galleriets i formellinjen, **elementer** egenskapen til denne formelen:
+    Du har lagt til **ordre** data kilden i appen:
 
-    ```powerapps-comma
-    Sort( Orders; 'Order Number'; Descending )
+    > [!div class="mx-imgBorder"]
+    > @no__t 0Data-rute @ no__t-1
+
+    **Ordrer** -enheten inneholder mange felt av ulike typer:
+
+    > [!div class="mx-imgBorder"]
+    > ![List for felt i Orders-enheten @ no__t-1
+
+    Hvert felt har et **visnings navn** og et **navn**, som noen ganger kalles det logiske navnet. Begge navnene refererer til samme element. Generelt sett bruker du visnings navnet når du bygger en app, men noen tilfeller krever det mer Cryptic **navn**, som angitt i en prosedyre.
+
+1. Lukk **data** -ruten i PowerApps Studio ved å velge Lukk-ikonet (x) i hjørnet øverst til høyre.
+
+## <a name="create-the-order-gallery"></a>Opprette ordre galleriet
+
+1. Velg **galleri** > **tomme loddrett** i **Sett inn** -fanen for å legge til en [**Galleri**](controls/control-gallery.md) -kontroll, som vil vise ordrene.
+
+    > [!div class="mx-imgBorder"]
+    > ![Insert, Galleri, tom loddrett @ no__t-1
+
+1. Angi **element** -egenskapen for galleriet til denne formelen i formel linjen:
+
+    ```powerapps-dot
+    Sort( Orders, 'Order Number', Descending )
     ```
 
-    Den [ **Sorter** ](functions/function-sort.md) funksjonen bestillinger listen slik at den nyeste rekkefølgen (som har det høyeste bestillingsnummeret) vises først.
+    [**Sorterings**](functions/function-sort.md) funksjonen bestiller listen slik at den nyeste ordren (som har det høyeste ordre nummeret) vises først.
 
     > [!div class="mx-imgBorder"]
-    > ![Angi elementer-egenskapen for galleriet](media/northwind-orders-canvas-part1/orders-02.png)
+    > 0Set Items-egenskapen for galleriet @ no__t-1 @no__t
 
-1. I den **Egenskaper** fanen nær høyre kant, åpne det **oppsett** listen:
-
-    > [!div class="mx-imgBorder"]
-    > ![Listen over alternativer for oppsett](media/northwind-orders-canvas-part1/orders-03.png)
-
-1. I listen over alternativer, velger du **tittel og undertittel**:
+1. Åpne **Oppsett** -listen i **Egenskaper** -fanen nær høyre kant:
 
     > [!div class="mx-imgBorder"]
-    > ![Velg et oppsett](media/northwind-orders-canvas-part1/orders-04.png)
+    > @no__t – 0List av alternativer for oppsett @ no__t-1
 
-    To [ **etikett** ](controls/control-text-box.md) kontrollene er lagt til i malen i galleriet. Disse kontrollene viser som standard, to kolonner med den **ordrer** enhet, som du vil endre neste. Malen i galleriet replikeres loddrett for hver post i enheten.
+1. Velg **Tittel og under tittel**i listen over alternativer:
 
-1. Hvis du har lukket den **Data** ruten velger **Rediger** (siden **felt**) i den **Egenskaper** fanen nær høyre kant.
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Select et oppsett @ no__t-1
 
-1. I den **Data** ruten velger **Title1** (eller velg den øvre etiketten i malen i galleriet).
+    To [**etikett**](controls/control-text-box.md) kontroller legges til i malen for galleriet. Som standard viser disse kontrollene to kolonner i **Orders** -enheten, som du vil endre neste. Malen til galleriet er rep lik ert loddrett for hver post i enheten.
 
-1. I formellinjen, kan du angi etikettens **tekst** egenskapen til dette uttrykket:
+1. Hvis du har lukket **data** -ruten, velger du **Rediger** (ved siden av **felt**) i **Egenskaper** -fanen nær høyre kant.
 
-    ```powerapps-comma
+1. I **data** -ruten velger du **Title1** (eller velger den øvre etiketten i malen for galleriet).
+
+1. Angi etikettens **tekst** -egenskap i formel linjen til dette uttrykket:
+
+    ```powerapps-dot
     "Order " & ThisItem.'Order Number'
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi tittel etikettens tekstegenskapen](media/northwind-orders-canvas-part1/orders-06.png)
+    > tittel etikett for ![Set, tekst egenskap @ no__t-1
 
-    Nummeret for vises øverst på hvert gallerielement. I gallerimalen **ThisItem** gir tilgang til alle feltene i den **rekkefølge** enhet.
+    Ordre nummeret vises øverst i hvert Galleri element. I Galleri malen gir **ThisItem** tilgang til alle feltene i **Order** -enheten.
 
-1. I den **Data** ruten velger **Subtitle1** (eller velg den nederste etiketten i malen i galleriet):
+1. I **data** -ruten velger du **Subtitle1** (eller velger den nedre etiketten i Galleri malen):
 
     > [!div class="mx-imgBorder"]
-    > ![Velg undertittelen etikett](media/northwind-orders-canvas-part1/orders-07.png)
+    > etikett for ![Select under tittel @ no__t-1
 
-1. I formellinjen, kan du angi etikettens **tekst** egenskapen til dette uttrykket:
+1. Angi etikettens **tekst** -egenskap i formel linjen til dette uttrykket:
 
-    ```powerapps-comma
+    ```powerapps-dot
     ThisItem.Customer.Company
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi undertittel etikettens tekstegenskapen](media/northwind-orders-canvas-part1/orders-08.png)
+    > ![Set under tittel etikett tekst egenskap @ no__t-1
 
-    Når du skriver inn denne formelen, kan en rød bølgete feil vise et øyeblikk. Feilen bør fjerne Hvis du velger noe utenfor formellinjen, og gå deretter tilbake markøren til formellinjen. Hvis feilen vedvarer, eller du ikke ser en verdi, velger du den **Vis** fanen og velge **datakilder**, og oppdater deretter den **ordrer** enheten ved å velge ellipsen (...) til den til høyre på datakilde-navnet.
+    Når du har angitt denne formelen, kan det vise en rød bølge feil i et øyeblikk. Feilen bør tømmes hvis du velger hva som helst utenfor formel linjen, og deretter returnerer markøren til formel linjen. Hvis feilen vedvarer, eller hvis du ikke ser en verdi, velger du **Vis** -fanen, velger **data kilder**, og deretter oppdaterer du **Orders** -enheten ved å velge ellipsen (...) til høyre for data kilde navnet.
 
-    Når du angir **ThisItem.Customer**, du er å dra nytte av en mange-til-én-relasjon mellom den **ordrer** og **kunder** enheter og henting av kundeposten som er tilknyttet hver ordre. Fra kundeposten, er du trekker ut data i den **firmaet** kolonne for visning.
+    Når du angir **ThisItem. Customer**, vil du bruke en mange-til-én-relasjon mellom **ordrene** og **kunde enhetene og** hente kunde posten som er knyttet til hver ordre. Fra kunde oppføringen trekker du ut data i **firma** -kolonnen for visning.
 
-    Du kan vise alle relasjoner fra den **ordrer** enhet til andre enheter, inkludert den **kunden** enhet:
+    Du kan vise alle relasjonene fra **ordrer** -enheten til andre enheter, inkludert **kunde** enheten:
 
     > [!div class="mx-imgBorder"]
-    > ![Liste over relasjoner](media/northwind-orders-canvas-part1/orders-09.png)
+    > @no__t – 0List av relasjoner @ no__t-1
 
-1. Lukk den **Data** ruten ved å velge Lukk-ikonet (x) i det øvre høyre hjørnet.
+1. Lukk **data** -ruten ved å velge Lukk-ikonet (x) i øvre høyre hjørne.
 
 ## <a name="show-each-orders-status"></a>Vis status for hver ordre
 
-I denne prosedyren må du legge til plass i galleriet for en etikett og konfigurerer den for å vise hver ordrestatus i en annen farge basert på dataene.
+I denne prosedyren vil du legge til plass i galleriet for en etikett og konfigurere den til å vise hver ordre status i en annen farge basert på dataene.
 
-1. Reduser bredden på den første etiketten, i malen i galleriet, **Title1**:
+1. Reduser bredden på den første etiketten i galleriets mal, **Title1**:
 
     > [!div class="mx-imgBorder"]
-    > ![Title1 i malen i galleriet](media/northwind-orders-canvas-part1/status-01.png)
+    > ![Title1 i galleriets mal @ no__t-1
 
 1. Gjenta det forrige trinnet med den andre etiketten, **Subtitle1**:
 
     > [!div class="mx-imgBorder"]
-    > ![Subtitle1 i malen i galleriet](media/northwind-orders-canvas-part1/status-02.png)
+    > ![Subtitle1 i galleriets mal @ no__t-1
 
-1. Med galleriet malen (eller en kontroll i malen) valgt, velger du **etikett** på den **Sett inn** fanen:
-
-    > [!div class="mx-imgBorder"]
-    > ![Legg til en etikett](media/northwind-orders-canvas-part1/status-03.png)
-
-1. Flytt den nye etiketten til høyre for den **Title1** etikett:
+1. Hvis du har valgt Galleri malen (eller en kontroll i malen), velger du **etikett** på **Sett inn** -fanen:
 
     > [!div class="mx-imgBorder"]
-    > ![Flytte og endre størrelse på en etikett](media/northwind-orders-canvas-part1/status-04.png)
+    > @no__t – 0Add en etikett @ no__t-1
 
-1. Angi den **tekst** -egenskapen for den nye etiketten til dette uttrykket:
+1. Flytt den nye etiketten til høyre for **Title1** -etiketten:
 
-    ```powerapps-comma
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Move og endre størrelsen på en etikett @ no__t-1
+
+1. Angi **tekst** -egenskapen for den nye etiketten til dette uttrykket:
+
+    ```powerapps-dot
     ThisItem.'Order Status'
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi Text-egenskapen](media/northwind-orders-canvas-part1/status-05.png)
+    > @no__t – 0Set tekst-egenskapen @ no__t-1
 
-    I den **ordrer** enhet, den **ordrestatus** feltet inneholder en verdi fra den **ordrestatus** alternativsett. Et alternativsett ligner på en opplisting i andre programmeringsverktøy. Hvert sett med alternativer er definert i databasen, slik at brukere kan angi bare disse alternativene som er i settet. Den **ordrestatus** alternativsett er også globale, ikke lokalt, slik at du kan bruke den i andre enheter:
-
-    > [!div class="mx-imgBorder"]
-    > ![Bestillinger Status alternativsett](media/northwind-orders-canvas-part1/status-06.png)
-
-    Hvert alternativ i et sett har et navn som vises hvis du vise den i en etikett. Disse navnene kan lokaliseres, og appen gjenkjenner det samme alternativet om en engelske brukeren velger **Apple**, en fransk bruker velger **Pomme**, eller en spansk brukeren velger **Manzana**. Du kan ikke opprette en formel som er avhenger av en streng som hardkodede for et alternativ, derfor som dette emnet beskriver senere.
-
-    I formler, må du omslutte **ordrestatus** med enkle anførselstegn fordi den inneholder et mellomrom. Men dette navnet fungerer på samme måte som alle andre navn i PowerApps, som **kunden** eller **firmaet**, samsvarer.
-
-1. På den **Hjem** fanen, Øk skriftstørrelsen for status etiketten til 20 punkt og Høyrejuster teksten:
+    I **Orders** -enheten inneholder **ordre status** -feltet en verdi fra alternativ settet **ordre status** . Et alternativ sett ligner på en opplisting i andre programmerings verktøy. Hvert sett med alternativer er definert i databasen, slik at brukere bare kan angi de alternativene som er i settet. Alternativ settet **ordre status** er også globalt, ikke lokal, slik at du kan bruke det i andre enheter:
 
     > [!div class="mx-imgBorder"]
-    > ![Endre skriftstørrelse og justering](media/northwind-orders-canvas-part1/status-07.png)
+    > ![Orders status alternativ sett @ no__t-1
 
-1. I formellinjen, kan du angi den **farge** egenskapen for etiketten statusen til denne formelen:
+    Hvert alternativ i et sett har et navn som vises hvis du viser det i en etikett. Disse navnene kan lokaliseres, og appen gjenkjenner det samme alternativet, enten en engelsk bruker velger **Apple**, en fransk bruker velger **Pomme**, eller en spansk bruker velger **Manzana**. På grunn av dette kan du ikke opprette en formel som er avhengig av en hardkodet streng for et alternativ, da dette emnet demonstrerer senere.
 
-    ```powerapps-comma
-    Switch( ThisItem.'Order Status';
-        'Orders Status'.Closed; Green;
-        'Orders Status'.New; Black;
-        'Orders Status'.Invoiced; Blue;
-        'Orders Status'.Shipped; Purple
+    I formler må du omgi **bestillings status** med enkle anførsels tegn fordi den inneholder et mellomrom. Dette navnet fungerer imidlertid på samme måte som andre navn i PowerApps, for eksempel **kunde** eller **firma**.
+
+1. På **hjem** -fanen øker du skrift størrelsen på status etiketten til 20 punkter, og høyre justerer teksten:
+
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Change skrift størrelse og-justering @ no__t-1
+
+1. Angi **farge** -egenskapen for status etiketten til denne formelen i formel linjen:
+
+    ```powerapps-dot
+    Switch( ThisItem.'Order Status',
+        'Orders Status'.Closed, Green,
+        'Orders Status'.New, Black,
+        'Orders Status'.Invoiced, Blue,
+        'Orders Status'.Shipped, Purple
     )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi farge-egenskapen for etiketten status](media/northwind-orders-canvas-part1/status-08.png)
+    > @no__t – 0Set farge-egenskapen for status etiketten @ no__t-1
 
-    PowerApps forhindrer deg fra å opprette en formel som baserer seg på en streng som hardkodede for hvert alternativ i et sett fordi slike formler kan gi upassende resultater hvis alternativnavnene er lokalisert. I stedet den **Switch** funksjonen bestemmer fargen basert på uansett hvilke strengen vises i etiketten basert på brukerens innstillinger.
+    PowerApps hindrer deg i å opprette en formel som er avhengig av en hardkodet streng for hvert alternativ i et sett fordi slike formler kan gi upassende resultater hvis alternativ navnene er lokalisert. I stedet bestemmer **Switch** -funksjonen fargen basert på en streng som vises i etiketten basert på brukerens innstillinger.
 
-    Med denne formelen på sted vises forskjellige statusverdier i forskjellige farger, som vist i forrige grafisk.
+    Med denne formelen på plass vises forskjellige status verdier i forskjellige farger, som den forrige grafikken viser.
 
-## <a name="display-each-orders-total"></a>Vise hver ordre totalt
+## <a name="display-each-orders-total"></a>Vis totalen for hver ordre
 
-1. Velg det første elementet i galleriet, som er malen i galleriet:
-
-    > [!div class="mx-imgBorder"]
-    > ![Velge gallerimalen](media/northwind-orders-canvas-part1/aggregate-01.png)
-
-1. På den **Sett inn** fanen og velge **etikett** å legge til en annen etikett:
+1. Velg det første elementet i galleriet, som er malen for galleriet:
 
     > [!div class="mx-imgBorder"]
-    > ![Legg til en etikett](media/northwind-orders-canvas-part1/aggregate-02.png)
+    > @no__t – 0Select Galleri malen @ no__t-1
 
-1. Flytt den nye etiketten slik at den vises under etiketten status:
+1. Velg **etikett** på **Sett inn** -fanen for å legge til en ny etikett:
 
     > [!div class="mx-imgBorder"]
-    > ![Endre størrelsen på og flytte den nye etiketten](media/northwind-orders-canvas-part1/aggregate-03.png)
+    > @no__t – 0Add en etikett @ no__t-1
 
-1. Angi den nye etiketten i formellinjen, **tekst** egenskapen til denne formelen:
+1. Flytt den nye etiketten slik at den vises under status etiketten:
 
-    ```powerapps-comma
-    Text( Sum( ThisItem.'Order Details'; Quantity * 'Unit Price' ); "[$-en-US]$ #,###.00" )
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Resize og Flytt den nye etiketten @ no__t-1
+
+1. Angi **tekst** -egenskapen for ny etikett i formel linjen:
+
+    ```powerapps-dot
+    Text( Sum( ThisItem.'Order Details', Quantity * 'Unit Price' ), "[$-en-US]$ #,###.00" )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Formelen for å beregne en ordre totalkostnad](media/northwind-orders-canvas-part1/aggregate-04.png)
+    > @no__t – 0Formula for beregning av en ordres totale kostnader @ no__t-1
 
-    I denne formelen den [ **Sum** ](functions/function-aggregates.md) funksjonen legger sammen postene i den **Ordredetaljer** enhet som er knyttet til hver post i den **rekkefølge**enheten via en én-til-mange-relasjon. Disse linjeelementer utgjør hver ordre, og du vil bruke den samme én-til-mange-relasjonen til å vise og redigere linjeelementene i området nederst til høyre på skjermen.
+    I denne formelen legger [**Sum**](functions/function-aggregates.md) -funksjonen inn postene i **ordre detaljer** -enheten som er knyttet til hver post i **Order** -enheten gjennom en én-til-mange-relasjon. Disse linje elementene utgjør hver ordre, og du bruker den samme én-til-mange-relasjonen til å vise og redigere linje elementene nederst til høyre på skjermen.
 
-    Denne formelen viser en blå understreking og en [delegeringsadvarsel](delegation-overview.md) fordi Common Data Service ikke støtter delegering av komplekse mengdefunksjoner (for eksempel summen av en multiplikasjon). Fordi ingen rekkefølge i dette eksemplet vil inneholde mer enn 500 linjeelementer, kan du ignorere denne informasjonen. Hvis nødvendig for en annen app, kan du øke denne grensen i **appinnstillinger**.
+    Denne formelen viser en blå understreking og en [delegerings advarsel](delegation-overview.md) fordi Common data service ikke støtter delegering av komplekse aggregat funksjoner (for eksempel summen av en multiplikasjon). Du kan ignorere denne informasjonen, fordi ingen rekkefølge i dette eksemplet vil inneholde mer enn 500 linje elementer. Hvis det er nødvendig for en annen app, kan du øke grensen i **App-innstillinger**.
 
-    Den [ **tekst** ](functions/function-text.md) funksjon i denne formelen legger til et valutasymbol, og formater resultatet med tusenvis og desimalskilletegn. Slik den er skrevet, inkluderer formelen språkkoden for USA Engelsk ( **[$-en-US]** ) og et symbol dollar ( **$** ). Hvis du fjerner språkkoden, den vil bli erstattet med en basert på språkinnstillingene, og etiketten viser de riktige formatene koden. Hvis du lar dollarsymbolet, viser etiketten rett valutasymbol basert på brukerens innstillinger. Du kan imidlertid tvinge et annet symbol vises ved å erstatte dollarsymbolet med det som du foretrekker.
+    [**Tekst**](functions/function-text.md) -funksjonen i denne formelen legger til et valuta symbol og formaterer resultatet med tusener og desimal skille tegn. Som skrevet, inneholder formelen språk koden for USA Engelsk ( **[$-en-us]** ) og et dollar symbol ( **$** ). Hvis du fjerner språk koden, erstattes den med en basert på språk innstillingene dine, og etiketten vil vise de riktige formatene for den koden. Hvis du lar dollar-symbolet være, viser etiketten riktig valuta symbol basert på brukerens innstillinger. Du kan imidlertid tvinge et annet symbol til å vises ved å erstatte dollar symbolet med det du foretrekker.
 
-1. På den **Hjem** fanen, endre størrelsen på den nyeste etiketten til 20 punkt og Høyrejuster teksten:
-
-    > [!div class="mx-imgBorder"]
-    > ![Endre skriftstørrelse og justering for en etikett](media/northwind-orders-canvas-part1/aggregate-05.png)
-
-1. Flytt galleriet til venstre kant av skjermen, og Reduser galleriets bredden å lukke Frigjør plass.
-
-1. Øk galleriets høyden slik at den er nesten like høye som skjermen, men la det være litt plass øverst en tittellinje, som du legger ved starten av neste emne:
+1. Endre skrift størrelsen på den nyeste etiketten til 20 punkt på **hjem** -fanen, og høyre justert teksten:
 
     > [!div class="mx-imgBorder"]
-    > ![Flytt og endre størrelsen på galleriet](media/northwind-orders-canvas-part1/aggregate-06.png)
+    > @no__t – 0Change skrift størrelsen og justeringen av etiketten @ no__t-1
 
-## <a name="summary"></a>Sammendrag
+1. Flytt galleriet til venstre kant av skjermen, og Reduser bredden på galleriet for å lukke litt plass.
 
-Hvis du vil kort oppsummering, begynte du å bygge en lerretsapp på én skjerm ved å legge til galleriet rekkefølge, som inkluderer disse elementene:
+1. Øk høyden på galleriet slik at det er nesten like høyt som skjermen, men la det stå litt plass øverst i en tittel linje, som du legger til ved begynnelsen av neste emne:
 
-- Et uttrykk til å vise bestillingsnummeret: `"Orders " & ThisItem.OrderNumber`
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Move og endre størrelsen på galleriet @ no__t-1
+
+## <a name="summary"></a>Oversikt
+
+For å oppsummering, begynte du å bygge en nett BAS ert nett BAS ert lerrets App ved å legge til ordre galleriet, som inkluderer disse elementene:
+
+- Et uttrykk for å vise ordre nummeret: `"Orders " & ThisItem.OrderNumber`
 - Et felt i en mange-til-én-relasjon: `ThisItem.Customer.Company`
 - En etikett som viser navnet på et alternativ i et sett: `ThisItem.'Order Status'`
-- En etikett som endrer format basert på hvilket alternativ i et sett etiketten viser: `Switch( ThisItem.'Order Status'; 'Orders Status'.Closed; Green; ...`
-- En kompleks mengdefunksjon over en én-til-mange-relasjon: `Sum( ThisItem.'Order Details'; Quantity * 'Unit Price' )`
+- En etikett som endrer format basert på hvilket alternativ i et sett etiketten viser: `Switch( ThisItem.'Order Status', 'Orders Status'.Closed, Green, ...`
+- En kompleks aggregat funksjon over en én-til-mange-relasjon: `Sum( ThisItem.'Order Details', Quantity * 'Unit Price' )`
 
 ## <a name="next-topic"></a>Neste emne
 
-I neste emne, skal du legge til en [ **redigeringsskjema** ](controls/control-form-detail.md) kontrollen til visnings- og et sammendrag av rekkefølgen brukeren velger i galleriet som du nettopp opprettet.
+I neste emne kan du legge til en [**redigerings skjema**](controls/control-form-detail.md) -kontroll for å vise og redigere et sammendrag av hvilken rekkefølge brukeren velger i galleriet du nettopp opprettet.
 
 > [!div class="nextstepaction"]
-> [Opprett sammendrag skjemaet](northwind-orders-canvas-part2.md)
+> [Opprett sammendrags skjemaet](northwind-orders-canvas-part2.md)

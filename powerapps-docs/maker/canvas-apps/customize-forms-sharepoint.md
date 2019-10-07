@@ -1,24 +1,24 @@
 ---
 title: Tilpass et skjema i en lerretsapp | Microsoft Docs
 description: Angi hvilke data som skal vises i et lerretsappskjema i PowerApps, hvilken rekkefølge de skal vises i, og i hvilke kontroller.
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/17/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1a6465a00f135489d594bad75b8a25942e05dd25
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 67e7e0074259731bb1d3c50474e8020e3f4fcf1b
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61560676"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993179"
 ---
 # <a name="customize-a-canvas-app-form-in-powerapps"></a>Tilpass et lerretsappskjema i PowerApps
 
@@ -26,7 +26,7 @@ Tilpass en **Visningsskjema**-kontroll og en **Redigeringsskjema**-kontroll i en
 
 Hvert skjema består av ett eller flere kort, som viser data fra en bestemt kolonne i datakilden. Ved å følge trinnene i dette emnet kan du angi hvilke kort som skal vises i et skjema og flytte kortene opp og ned innenfor et skjema.
 
-Hvis du er kjent med lerret-pps, kan du se [Hva er lerret-apper?](getting-started.md).
+Hvis du ikke er kjent med lerretet, kan du se [Hva er lerret-apper?](getting-started.md).
 
 ## <a name="prerequisites"></a>Forutsetninger
 
@@ -34,92 +34,92 @@ Hvis du er kjent med lerret-pps, kan du se [Hva er lerret-apper?](getting-starte
 
 ## <a name="show-and-hide-cards"></a>Å vise og skjule kort
 
-1. Logg deg på [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og åpne deretter appen du genererte og tilpasset.
+1. Logg deg på [powerapps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og åpne deretter appen du genererte og tilpasset.
 
-1. I det venstre navigasjonsfeltet skriver eller limer inn **D** i søkefeltet for å filtrere listen over elementer, og velg deretter **DetailForm1**.
+1. Skriv eller lim inn **D** i søke feltet i navigasjons feltet til venstre for å filtrere listen over elementer, og velg deretter **DetailForm1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Velg Detaljer-skjermbildet](./media/customize-forms-sharepoint/select-detailform.png)
+    > skjerm bilde for @no__t detaljer om 0Select @ no__t-1
 
 1. Velg **Rediger felt** på **Egenskaper**-fanen i den høyre ruten for å åpne **Felt**-ruten.
 
     > [!div class="mx-imgBorder"]
-    > ![Åpne felt-ruten](./media/customize-forms-sharepoint/edit-fields.png)
+    > @no__t – 0Open felt rute @ no__t-1
 
-1. Skjule et felt, slik som **beskrivelse**, ved å holde pekeren over den, å velge ellipsen (...) som vises, og deretter velge **fjerne**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Listen over felt](./media/customize-forms-sharepoint/hide-fields.png)
-
-1. Vise et felt ved å velge **Legg til felt**, å skrive eller lime inn de første bokstavene i feltnavnet i søkeboksen, hvis du merker for feltet, og deretter velge **Legg til**.
+1. Skjul et felt, for eksempel **Beskrivelse**, ved å holde pekeren over det, velge ellipsen (...) som vises, og velg deretter **Fjern**.
 
     > [!div class="mx-imgBorder"]
-    > ![Listen over felt](./media/customize-forms-sharepoint/show-field.png)
+    > @no__t – 0List av felt @ no__t-1
+
+1. Vis et felt ved å velge **Legg til felt**, skrive inn eller lime inn de første bokstavene i feltets navn i søke boksen, merke av for feltet, og deretter velge **Legg til**.
+
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0List av felt @ no__t-1
 
 ## <a name="reorder-the-cards"></a>Å endre rekkefølgen på kortene
 
-1. I den **felt** dra den **kontonavn** feltet til toppen av listen over felt.
+1. I **felt** -ruten drar du **konto navn** -feltet til toppen av listen over felt.
 
-    Kortene i **DetailForm1** gjenspeiler endringen.
+    Kortene i **DetailForm1** reflekterer endringen.
 
     > [!div class="mx-imgBorder"]
-    > ![Omorganiserte kort](./media/customize-forms-sharepoint/reordered-card.png)
+    > @no__t – 0Reordered Cards @ no__t-1
 
-1. (valgfritt) Endre rekkefølgen på de andre kortene i denne sekvensen:
+1. valg fritt Endre rekkefølgen på de andre kortene til denne sekvensen:
 
     - Kontonavn
     - Antall ansatte
     - Årlig omsetning
-    - Primære telefon
+    - Hovedtelefon
     - Adresse 1: Gateadresse 1
     - Adresse 1: Gate/vei 2
-    - Adresse 1: Poststed
-    - Adresse 1: Postnummer
+    - Adresse 1: Nummer
+    - Adresse 1: Post nummer
 
-1. I det venstre navigasjonsfeltet skriver eller limer inn **Ed** i søket, og velg deretter **EditForm1** å merke den.
+1. Skriv eller lim inn **Ed** i søke feltet i det venstre navigasjons feltet, og velg deretter **EditForm1** for å velge den.
 
 1. Gjenta trinnene i fremgangsmåten ovenfor og i denne, slik at feltene i **EditForm1** samsvarer med dem i **DetailForm1**.
 
 ## <a name="run-the-app"></a>Å kjøre appen
 
-1. I det venstre navigasjonsfeltet skriver eller limer inn **Br** i søket, og velg deretter **BrowseScreen1** å merke den.
+1. I det venstre navigasjons feltet skriver eller limer du inn **br** i søke feltet, og deretter velger du **BrowseScreen1** for å velge den.
 
 1. Åpne forhåndsvisningsmodus ved å trykke på F5 (eller ved å velge **Forhåndsvisning**-ikonet nær hjørnet øverst til høyre).
 
     > [!div class="mx-imgBorder"]
-    > ![Forhåndsvisning-ikonet](./media/customize-forms-sharepoint/open-preview.png)
+    > ![Preview-ikon @ no__t-1
 
-1. I hjørnet øverst til høyre velger du pluss-ikonet for å legge til en post i **EditScreen1**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Legge til post](./media/customize-forms-sharepoint/add-record.png)
-
-1. Legg til dataene du ønsker, og velg deretter på hakeikonet øverst i høyre hjørne for å lagre endringene og gå tilbake til **BrowseScreen1**.
+1. Velg pluss-ikonet i hjørnet øverst til høyre for å legge til en post i **EditScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Lagre post](./media/customize-forms-sharepoint/save-record.png)
+    > ![Add post @ no__t-1
 
-1. Velg pilen til elementet du nettopp opprettet for å vise detaljer om elementet i **DetailScreen1**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Pil høyre](./media/customize-forms-sharepoint/right-arrow.png)
-
-1. I hjørnet øverst til høyre velger du redigeringsikonet for å oppdatere posten i **EditScreen1**.
+1. Legg til de dataene du ønsker, og velg deretter merke ikonet i øvre høyre hjørne for å lagre endringene og gå tilbake til **BrowseScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Rediger post](./media/customize-forms-sharepoint/edit-record.png)
+    > ![Save post @ no__t-1
 
-1. Endre informasjonen i ett eller flere felt, og velg deretter haken øverst i høyre hjørne for å lagre endringene og gå tilbake til **DetailScreen1**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Lagre endringer](./media/customize-forms-sharepoint/save-record.png)
-
-1. Nær hjørnet øverst til høyre velger du på Papirkurv ikonet til å slette posten som du nettopp har oppdatert, og gå tilbake til **BrowseScreen1**.
+1. Velg pilen for elementet du nettopp opprettet, for å vise detaljer om elementet i **DetailScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Slett post](./media/customize-forms-sharepoint/delete-record.png)
+    > @no__t – 0Right pil @ no__t-1
 
-1. Lukk forhåndsvisningsmodus ved å trykke på Esc (eller ved å velge Lukk-ikonet nær hjørnet øverst til venstre).
+1. Velg Rediger-ikonet i hjørnet øverst til høyre for å oppdatere posten i **EditScreen1**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Edit post @ no__t-1
+
+1. Endre informasjonen i ett eller flere felt, og merk deretter av for Merk i øvre høyre hjørne for å lagre endringene og gå tilbake til **DetailScreen1**.
+
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Save endringer @ no__t-1
+
+1. Velg papir kurv-ikonet nær hjørnet øverst til høyre for å slette posten du nettopp oppdaterte, og gå tilbake til **BrowseScreen1**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Delete post @ no__t-1
+
+1. Lukk forhånds visnings modus ved å trykke på ESC (eller ved å velge Lukk-ikonet nær hjørnet øverst til venstre).
 
 ## <a name="next-steps"></a>Neste trinn
 

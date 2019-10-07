@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/05/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3ceb6e0bcac83bbd79d78dac859a7ddb7acf42a8
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 5e18b64910bbc7efca8c460100163e1a0716a089
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61519772"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992143"
 ---
 # <a name="notify-function-in-powerapps"></a>Funksjonen Notify i PowerApps
 Viser en bannermelding til brukeren.
@@ -46,10 +45,10 @@ PowerApps kan også sende push-varslinger ved hjelp av en helt annen mekanisme f
 
 **Notify** returnerer alltid *sann*.
 
-Merk: Denne funksjonen ble tidligere kalt **ShowError** når den bare kunne vise feilmeldinger.
+Debetnotaforslag Denne funksjonen har tidligere fått navnet **ShowError** når den bare kunne vise feil meldinger.
 
 ## <a name="syntax"></a>Syntaks
-**Notify**( *Message*; [ *NotificationType* ] )
+**Notify**( *Message*, [ *NotificationType* ] )
 
 * *Melding* – obligatorisk.  Meldingen som skal vises til brukeren.
 * *NotificationType* – valgfritt.  Type melding som skal vises fra tabellen ovenfor.  **NotificationType.Information** (standard).  

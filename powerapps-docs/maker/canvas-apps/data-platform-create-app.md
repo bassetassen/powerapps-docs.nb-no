@@ -1,34 +1,34 @@
 ---
 title: Generer en lerret-app fra Common Data Service | Microsoft Docs
-description: I PowerApps, må du automatisk generere en lerretsapp for å behandle data i Common Data Service
-author: AFTOwen
+description: Generer en lerret-app automatisk i PowerApps for å behandle data i Common Data Service
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: quickstart
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/06/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7e06c24d4d83b0e176782b705d6a77e956b6043b
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: f9dedc515ee130a950c1dc12793751d43aa3804f
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61549680"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993093"
 ---
 # <a name="generate-a-canvas-app-from-common-data-service-in-powerapps"></a>Generer en lerret-app fra Common Data Service i PowerApps
 
-I PowerApps, må du automatisk generere en lerretsapp som er basert på en liste over eksempelkontoer i [Common Data Service-](../common-data-service/data-platform-intro.md). I denne appen kan du bla gjennom alle kontoene, vise detaljer for en enkelt konto og opprette, oppdatere eller slette en konto.
+I PowerApps kan du automatisk generere en lerret-app basert på en liste over eksempel kontoer i [Common data service](../common-data-service/data-platform-intro.md). I denne appen kan du bla gjennom alle kontoene, vise detaljer for en enkelt konto og opprette, oppdatere eller slette en konto.
 
 Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) før du begynner.
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-Hvis du vil følge denne hurtiginnføringen, må du være tilordnet til den [Miljøoppretter](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles) sikkerhetsrolle, og du må [bytte til et miljø](working-with-environments.md) der en database i Common Data Service har blitt opprettet, inneholder data, og tillater oppdateringer. Hvis det ikke finnes et slikt miljø og du har administratorrettigheter, kan du [opprette et miljø](https://docs.microsoft.com/power-platform/admin/environments-administration#create-an-environment) som oppfyller dette kravet.
+Hvis du vil følge denne hurtig innføringen, må du være tilordnet sikkerhets rollen [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles) , og du må [bytte til et miljø](working-with-environments.md) der en database i Common data service er opprettet, inneholde data og tillate oppdateringer. Hvis det ikke finnes et slikt miljø og du har administratorrettigheter, kan du [opprette et miljø](https://docs.microsoft.com/power-platform/admin/environments-administration#create-an-environment) som oppfyller dette kravet.
 
 ## <a name="generate-an-app"></a>Å generere en app
 
@@ -64,7 +64,7 @@ Du vil sannsynligvis gjøre flere endringer før du bruker denne appen eller del
 1. Nær venstre kant velger du **Lagre**, og deretter velger du **Lagre** i nedre venstre hjørne.
 
 ## <a name="next-steps"></a>Neste trinn
-I denne hurtiginnføringen opprettet du en app for å behandle eksempeldata om kontoer i Common Data Service. Som et påfølgende trinn kan du tilpasse galleriet og andre elementer for den standard nettleserskjermen for bedre å imøtegå dine behov.
+I denne hurtig innføringen opprettet du en app for å behandle eksempel data om kontoer i Common Data Service. Som et påfølgende trinn kan du tilpasse galleriet og andre elementer for den standard nettleserskjermen for bedre å imøtegå dine behov.
 
 > [!div class="nextstepaction"]
 > [Å tilpasse et galleri](customize-layout-sharepoint.md).

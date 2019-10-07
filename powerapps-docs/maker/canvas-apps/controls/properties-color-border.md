@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2f17dd975a5b8320f4b67688ab986c4e8cc98514
-ms.sourcegitcommit: 21163a6d77b784f4864fce4695776c9b4652cb29
+ms.openlocfilehash: 528dc54fe18971ff8971b4d0d7e87c3bf3c5367a
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/26/2019
-ms.locfileid: "66225150"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986037"
 ---
 # <a name="color-and-border-properties-in-powerapps"></a>Egenskaper for farge og kantlinje i PowerApps
 
@@ -28,25 +28,25 @@ Konfigurere stilen for en kontroll basert på hvordan brukeren samhandler med de
 
 Du kan angi farger på mange måter:
 
-- [**Farge** ](../functions/function-colors.md) opplistingen: Angi fargenavn fra gjennomgripende stilark, som i disse eksemplene:
+- [**Farge**](../functions/function-colors.md) opplisting: Angi farge navn fra gjennom gripende stilark, som i disse eksemplene:
 
   - **Color.Red**
   - **Color.Indigo**
 
-- [**ColorValue** ](../functions/function-colors.md) funksjonen: Angi tekststrenger som for eksempel fargenavn fra gjennomgripende stilark og hex-kode notasjon ( **#** ), som i disse eksemplene:
+- [**ColorValue**](../functions/function-colors.md) -funksjon: Angi tekst strenger som farge navn fra gjennom gripende stilark og heksadesimal kode-notasjon ( **#** ), som i disse eksemplene:
 
-  - **ColorValue («skifergrå»)**
+  - **ColorValue ("AliceBlue")**
   - **ColorValue( "#ff00ff" )**
 
-- [**ColorFade** ](../functions/function-colors.md) funksjonen: Angi hvordan med. en farge er, fra fullstendig svart (-100%) til fullstendig hvit (100%), som i dette eksemplet:
+- [**ColorFade**](../functions/function-colors.md) -funksjon: Angi hvor nedtonet en farge er, fra helt svart (-100%) til full hvit (100%), som i dette eksemplet:
 
-  - **ColorFade (Color.Red, 50%)**
+  - **ColorFade (farge. rød, 50%)**
 
-- [**RGBA** ](../functions/function-colors.md) funksjonen: Angi røde, grønne og blå komponentene i en farge fra 0 til 255, og angi en alfa kanal fra 0% (helt gjennomsiktig) til 100% (helt ugjennomsiktig), som i dette eksemplet:
+- [**RGBA**](../functions/function-colors.md) -funksjon: Angi de røde, grønne og blå komponentene i en farge fra 0 til 255, og angi en alfa kanal fra 0% (helt gjennomsiktig) til 100% (fullstendig ugjennomsiktig), som i dette eksemplet:
 
   - **RGBA (255, 0, 255, 25%)**
 
-Fargeegenskaper for kan også referere til andre fargeegenskaper. For eksempel **Label.PressedColor** kan være satt til formelen **Label1.Color**, automatisk gjennomgripende en endring fra én egenskap til en annen.
+Farge egenskaper kan også referere til andre farge egenskaper. **Etikett. PressedColor** kan for eksempel være angitt til formelen **Label1. Color**, som automatisk overlapper en endring fra én egenskap til en annen.
 
 ## <a name="normal"></a>Normal
 

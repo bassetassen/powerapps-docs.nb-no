@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c1f11be30f56859ede0950feebc27dd1be39d011
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 3914c55bf3be5d172bc80832e437c3e3775a1859
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61551196"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71985097"
 ---
 # <a name="datevalue-timevalue-and-datetimevalue-functions-in-powerapps"></a>Funksjonene DateValue, TimeValue og DateTimeValue i PowerApps
 Konverterer en dato, et klokkeslett eller begge deler i en streng til en dato/klokkeslett-verdi.
@@ -49,7 +48,7 @@ Se også [Slik arbeider du med datoer og klokkeslett](../show-text-dates-times.m
 Hvis du vil konvertere tall, kan du se **[Value](function-value.md)** -funksjonen.
 
 ## <a name="syntax"></a>Syntaks
-**DateValue**( *String* [; *Language* ])<br>**DateTimeValue**( *String* [; *Language* ])<br>**TimeValue**( *String* [; *Language* ])
+**DateValue**( *String* [, *Language* ])<br>**DateTimeValue**( *String* [, *Language* ])<br>**TimeValue**( *String* [, *Language* ])
 
 * *String* – obligatorisk.  En tekststreng som inneholder en dato, et klokkeslett eller en kombinasjon av dato og klokkeslett.
 * *Language* – valgfritt.  En språklinje, av den typen som returneres av de to første tegnene i **[Language](function-language.md)** -funksjonen.  Hvis språk ikke er angitt, brukes språket for den nåværende brukeren.  
@@ -58,35 +57,35 @@ Hvis du vil konvertere tall, kan du se **[Value](function-value.md)** -funksjone
 ### <a name="datevalue"></a>DateValue
 Hvis du for eksempel skriver inn **10/11/2014** i en kontroll for tekstinndata med navnet **Startdato**, og deretter angir **[Tekst](../controls/properties-core.md)** -egenskapen for en etikett til denne funksjonen:
 
-* **Text(DateValue(Startdate.Text); DateTimeFormat.LongDate)**
+* **Text(DateValue(Startdate.Text), DateTimeFormat.LongDate)**
   
     Etiketten viser **Lørdag 11. oktober, 2014** hvis datamaskinen er konfigurert med **engelsk** som nasjonal innstilling.
   
     > [!NOTE]
   > Du kan bruke flere alternativer i tillegg til **LongDateTime**, med **DateTimeFormat**-parameteren. Hvis du vil vise en liste over disse alternativene, skriver du inn parameteren i funksjonsboksen, etterfulgt av et utropstegn.
-* **Text(DateValue(Startdate.Text; "fr"); DateTimeFormat.LongDate)**
+* **Text(DateValue(Startdate.Text, "fr"), DateTimeFormat.LongDate)**
   
     Etiketten viser **Mandag 10. november 2014**.
 
 Hvis du gjorde det samme for **20. oktober 2014**:
 
-* **DateDiff(DateValue(Startdate.Text); Today())**
+* **DateDiff(DateValue(Startdate.Text), Today())**
   
     Hvis datamaskinen er konfigurert med **engelsk** som språk, viser etiketten **9**, som angir antall dager mellom 11. oktober og 20. oktober. **[DateDiff](function-dateadd-datediff.md)** -funksjonen kan også vise differansen i måneder, kvartaler eller år.
 
 ### <a name="datetimevalue"></a>DateTimeValue
 Hvis du skriver inn **10/11/2014 1:50:24.765 PM** i en kontroll for tekstinndata med navnet **Start**, og deretter angir **[Tekst](../controls/properties-core.md)** -egenskapen for en etikett til denne funksjonen:
 
-* **Text(DateTimeValue(Start.Text); DateTimeFormat.LongDateTime)**
+* **Text(DateTimeValue(Start.Text), DateTimeFormat.LongDateTime)**
   
     Etiketten viser **Lørdag 11 oktober 2014 1:50:24 PM** hvis datamaskinen er konfigurert med «engelsk» som nasjonal innstilling.
   
     > [!NOTE]
   > Du kan bruke flere alternativer i tillegg til **LongDateTime**, med **DateTimeFormat**-parameteren. Hvis du vil vise en liste over disse alternativene, skriver du inn parameteren i funksjonsboksen, etterfulgt av et utropstegn.
-* **Text(DateTimeValue(Start.Text; "fr"); DateTimeFormat.LongDateTime)**
+* **Text(DateTimeValue(Start.Text, "fr"), DateTimeFormat.LongDateTime)**
   
     Etiketten viser **Mandag 10. november 2014 1:50:24 PM**.
-* **Text(DateTimeValue(Start.Text); "dddd, mmmm dd, yyyy hh:mm:ss.fff AM/PM")**
+* **Text(DateTimeValue(Start.Text), "dddd, mmmm dd, yyyy hh:mm:ss.fff AM/PM")**
   
     Etiketten viser **Lørdag 11.oktober 2014 01:50:24:765 PM** hvis datamaskinen er konfigurert med **engelsk** som nasjonal innstilling.
   
@@ -95,7 +94,7 @@ Hvis du skriver inn **10/11/2014 1:50:24.765 PM** i en kontroll for tekstinndata
 ### <a name="timevalue"></a>TimeValue
 Navngi en kontroll for tekstinndata som **FinishedAt**, og angi **[Tekst](../controls/properties-core.md)** -egenskapen for en etikett til denne funksjonen:
 
-**If(TimeValue(FinishedAt.Text)<TimeValue("5:00:00.000 PM"); «You made it!»; «Too late!»)**
+**If(TimeValue(FinishedAt.Text)<TimeValue("5:00:00.000 PM"), «You made it!», «Too late!»)**
 
 * Hvis du skriver inn **4:59:59.999 PM** i **FinishedAt**-kontrollen, viser etiketten «You made it!»
 * Hvis du skriver inn **5:00:00.000 PM** i **FinishedAt**-kontrollen, viser etiketten «Too late!»

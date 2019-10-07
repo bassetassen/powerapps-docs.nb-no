@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/12/2017
 ms.author: lanced
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 23a61dd1300fab71bed4d8c72b861c3c38a1cdea
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 476285021e6a65a32c2e16e4ff95c74be9da933a
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61557543"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71987233"
 ---
 # <a name="connect-to-twitter-from-powerapps"></a>Å koble til Twitter fra PowerApps
 ![Twitter](./media/connection-twitter/twittericon.png)
@@ -53,11 +52,11 @@ Twitter-tilkobling er opprettet og lagt til i appen din. Den er nå klar til å 
 1. Velg **Galleri** på menyen **Sett inn**, og legg til noen av **Med tekst**-galleriene.
 2. La oss ta en titt på noen tidslinjer:  
 
-   * Hvis du vil vise tidslinjen til den gjeldende brukeren, angir du galleriets **[Element](../controls/properties-core.md)**-egenskap til følgende formler:
+   * Hvis du vil vise tidslinjen til den gjeldende brukeren, angir du galleriets **[Element](../controls/properties-core.md)** -egenskap til følgende formler:
 
        `Twitter.HomeTimeline().TweetText`  
        `Twitter.HomeTimeline({maxResults:3}).TweetText`  
-   * Hvis du vil vise tidslinjen til en annen bruker, angir du galleriets **[Element](../controls/properties-core.md)**-egenskap til følgende formel:  
+   * Hvis du vil vise tidslinjen til en annen bruker, angir du galleriets **[Element](../controls/properties-core.md)** -egenskap til følgende formel:  
 
        `Twitter.UserTimeline( *TwitterHandle* ).TweetText`
 
@@ -66,7 +65,7 @@ Twitter-tilkobling er opprettet og lagt til i appen din. Den er nå klar til å 
 
        Angi Elementer-egenskapen i Galleri-kontrollen til følgende formel:  
 
-       `Twitter.UserTimeline(Tweep.Text; {maxResults:5}).TweetText`
+       `Twitter.UserTimeline(Tweep.Text, {maxResults:5}).TweetText`
 
        Galleri-kontrollen viser automatisk tweetene til Twitter-brukernavnet du skrev inn.
 
@@ -82,11 +81,11 @@ Twitter-tilkobling er opprettet og lagt til i appen din. Den er nå klar til å 
 ### <a name="show-followers"></a>Å vise følgere
 1. La oss vise noen følgere ved bruk av et **Med tekst**-galleri:  
 
-   * Hvis du vil vise følgerne til den gjeldende brukeren, angir du galleriets **[Element](../controls/properties-core.md)**-egenskap til følgende formel:  
+   * Hvis du vil vise følgerne til den gjeldende brukeren, angir du galleriets **[Element](../controls/properties-core.md)** -egenskap til følgende formel:  
 
        `Twitter.MyFollowers()`  
        `Twitter.MyFollowers({maxResults:3})`
-   * Hvis du vil vise følgerne til andre brukere, angir du galleriets **[Element](../controls/properties-core.md)**-egenskap til følgende formel:  
+   * Hvis du vil vise følgerne til andre brukere, angir du galleriets **[Element](../controls/properties-core.md)** -egenskap til følgende formel:  
 
        `Twitter.Followers( *TwitterHandle* )`
 
@@ -95,7 +94,7 @@ Twitter-tilkobling er opprettet og lagt til i appen din. Den er nå klar til å 
 
        Angi Elementer-egenskapen i Galleri-kontrollen til følgende formel:  
 
-       `Twitter.Followers(Tweep.Text; {maxResults:5})`
+       `Twitter.Followers(Tweep.Text, {maxResults:5})`
 
        Galleri-kontrollen viser automatisk hvem som følger Twitter-brukernavnet du skrev inn.
 
@@ -111,11 +110,11 @@ Twitter-tilkobling er opprettet og lagt til i appen din. Den er nå klar til å 
 ### <a name="show-followed-users"></a>Å vise brukere med følgere
 1. La oss vise noen brukere med følgere ved bruk av et **Med tekst**-galleri:  
 
-   * Hvis du vil vise følgerne til den gjeldende brukeren, angir du galleriets **[Element](../controls/properties-core.md)**-egenskap til følgende formel:  
+   * Hvis du vil vise følgerne til den gjeldende brukeren, angir du galleriets **[Element](../controls/properties-core.md)** -egenskap til følgende formel:  
 
        `Twitter.MyFollowing()`  
        `Twitter.MyFollowing({maxResults:3})`
-   * For å vise hvilke brukere som følger en annen bruker, kan du angi den **[elementer](../controls/properties-core.md)** egenskapen for galleriet til følgende formel:
+   * Hvis du vil vise hvilke brukere en annen bruker følger, kan du angi **[element](../controls/properties-core.md)** -egenskapen for galleriet til følgende formel:
 
        `Twitter.Following( *TwitterHandle* )`
 
@@ -124,7 +123,7 @@ Twitter-tilkobling er opprettet og lagt til i appen din. Den er nå klar til å 
 
        Angi Elementer-egenskapen i Galleri-kontrollen til følgende formel:  
 
-       `Twitter.Following(Tweep.Text; {maxResults:5})`
+       `Twitter.Following(Tweep.Text, {maxResults:5})`
 
        Galleri-kontrollen viser automatisk de andre brukernavnene du følger.
 
@@ -134,7 +133,7 @@ Twitter-tilkobling er opprettet og lagt til i appen din. Den er nå klar til å 
     Galleriet viser nå verdiene til egenskapene du velger.
 
 ### <a name="show-information-about-a-user"></a>Å vise informasjon om en bruker
-Legg til en etikett, og angi **[Tekst](../controls/properties-core.md)**-egenskapen til én av disse formlene:  
+Legg til en etikett, og angi **[Tekst](../controls/properties-core.md)** -egenskapen til én av disse formlene:  
 
 * `twitter.User( *TwitterHandle* ).Description`
 * `twitter.User( *TwitterHandle* ).FullName`
@@ -150,7 +149,7 @@ Angi et Twitter-brukernavn i doble anførselstegn eller tilsvarende verdi. Skriv
 Du kan alternativt bruke en Tekstinndata-kontroll for å skrive inn et Twitter-brukernavn, akkurat som vi har gjort i dette emnet.
 
 ### <a name="search-tweets"></a>Å søke i tweets
-1. Angi **[Element](../controls/properties-core.md)**-egenskapen ved bruk av et **Med tekst**-galleri, til den følgende formelen:  
+1. Angi **[Element](../controls/properties-core.md)** -egenskapen ved bruk av et **Med tekst**-galleri, til den følgende formelen:  
 
     `Twitter.SearchTweet( *SearchTerm* ).TweetText`
 
@@ -161,8 +160,8 @@ Du kan alternativt bruke en Tekstinndata-kontroll for å skrive inn et Twitter-b
     > [!TIP]
    > Vis de fem første resultatene ved bruk av maxResults:  
 
-    `Twitter.SearchTweet(SearchTerm.Text; {maxResults:5}).TweetText`
-2. Angi galleriets **Element**-egenskap til `Twitter.SearchTweet(SearchTerm.Text; {maxResults:5})`.
+    `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5}).TweetText`
+2. Angi galleriets **Element**-egenskap til `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5})`.
 
     Når galleriet er valgt, viser den høyre ruten alternativene for galleriet.
 3. Velg **TweetText** fra den første listen, velg **TweetedBy** fra den andre listen, og velg **CreatedAt** fra den tredje listen.
@@ -171,7 +170,7 @@ Du kan alternativt bruke en Tekstinndata-kontroll for å skrive inn et Twitter-b
 
 ### <a name="send-a-tweet"></a>Slik sender man en tweet
 1. Legg til en Tekstinndata-kontroll, og endre deretter navnet til **MyTweet**.
-2. Legg til en knapp, og angi deretter **[OnSelect](../controls/properties-core.md)**-egenskapen til følgende formel:  
+2. Legg til en knapp, og angi deretter **[OnSelect](../controls/properties-core.md)** -egenskapen til følgende formel:  
     `Twitter.Tweet({tweetText: MyTweet.Text})`
 3. Trykk på F5, eller velg forhåndsvisningsknappen (![](./media/connection-twitter/preview.png)). Skriv inn tekst i **MyTweet**, og velg deretter knappen for å tweete ut teksten du skrev inn.
 4. Trykk på ESC for å gå tilbake til standardarbeidsområdet.
@@ -193,18 +192,18 @@ Denne tilkoblingen har følgende funksjoner:
 | [OnNewTweet](connection-twitter.md#onnewtweet) |Utløser en arbeidsflyt når en ny tweet legges ut som samsvarer med søket |
 
 ### <a name="usertimeline"></a>UserTimeline
-Hent tidslinje for bruker: Denne handlingen henter en samling av de siste tweetene som ble lagt ut av den angitte brukeren
+Hent bruker tids linje: Denne handlingen henter en samling av de siste tweetene som ble lagt ut av den angitte brukeren
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | userName |streng |ja |Twitter-brukernavn |
 | maxResults |heltall |nei |Maksimalt antall tweets som skal hentes, for eksempel {maxResults:5} |
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | TweetText |streng |ja | |
 | TweetId |streng |nei | |
@@ -214,17 +213,17 @@ Hent tidslinje for bruker: Denne handlingen henter en samling av de siste tweete
 | MediaUrls |matrise |nei | |
 
 ### <a name="hometimeline"></a>HomeTimeline
-Hent tidslinje for hjem: Denne handlingen henter de siste tweetene og re-tweets på innlegg fra meg og mine følgere
+Få hjem-tidslinje: Denne handlingen henter de siste tweetene og re-tweets på innlegg fra meg og mine følgere
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | maxResults |heltall |nei |Maksimalt antall tweets som skal hentes, for eksempel {maxResults:5} |
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | TweetText |streng |ja | |
 | TweetId |streng |nei | |
@@ -234,18 +233,18 @@ Hent tidslinje for hjem: Denne handlingen henter de siste tweetene og re-tweets 
 | MediaUrls |matrise |nei | |
 
 ### <a name="searchtweet"></a>SearchTweet
-Søk tweet: Denne handlingen henter en samling av relevante tweets som samsvarer med en angitt spørring
+Søk i-hovedskala: Denne handlingen henter en samling av relevante tweets som samsvarer med en angitt spørring
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | searchQuery |streng |ja |Spørringstekst (du kan bruke spørringsoperatorer som støttes av Twitter: http://www.twitter.com/search) |
 | maxResults |heltall |nei |Maksimalt antall tweets som skal hentes, for eksempel {maxResults:5} |
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | TweetText |streng |ja | |
 | TweetId |streng |nei | |
@@ -259,14 +258,14 @@ Hent følgere: Denne handlingen henter brukere som følger den angitte brukeren
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | userName |streng |ja |Brukerens Twitter-brukernavn |
 | maxResults |heltall |nei |Maksimalt antall brukere som skal hentes, for eksempel {maxResults:5} |
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | FullName |streng |ja | |
 | Location |streng |ja | |
@@ -282,13 +281,13 @@ Hent Mine følgere: Denne handlingen henter brukere som følger meg
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | maxResults |heltall |nei |Maksimalt antall brukere som skal hentes, for eksempel {maxResults:5} |
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | FullName |streng |ja | |
 | Location |streng |ja | |
@@ -304,14 +303,14 @@ Hent følgende: Denne handlingen henter brukere som den angitte brukeren følger
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | userName |streng |ja |Brukerens Twitter-brukernavn |
 | maxResults |heltall |nei |Maksimalt antall brukere som skal hentes, for eksempel {maxResults:5} |
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | FullName |streng |ja | |
 | Location |streng |ja | |
@@ -323,17 +322,17 @@ Hent følgende: Denne handlingen henter brukere som den angitte brukeren følger
 | FriendsCount |heltall |nei | |
 
 ### <a name="myfollowing"></a>MyFollowing
-Hent Mine følgende: Denne handlingen henter brukere som jeg følger
+Hent følgende: Denne handlingen henter brukere som jeg følger
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | maxResults |heltall |nei |Maksimalt antall brukere som skal hentes, for eksempel {maxResults:5} |
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | FullName |streng |ja | |
 | Location |streng |ja | |
@@ -349,13 +348,13 @@ Hent bruker: Denne handlingen henter detaljer om den angitte brukeren (for eksem
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | userName |streng |ja |Brukerens Twitter-brukernavn |
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | FullName |streng |ja | |
 | Location |streng |ja | |
@@ -367,33 +366,33 @@ Hent bruker: Denne handlingen henter detaljer om den angitte brukeren (for eksem
 | FriendsCount |heltall |nei | |
 
 ### <a name="tweet"></a>Tweet
-Legg inn en ny tweet: Tweet
+Legg inn en ny-datapålogging: Tweet
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | tweetText |streng |nei |Tekst som skal legges ut, for eksempel {tweetText:"hello"} |
 | body |streng |nei |Medier som skal legges ut |
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | TweetId |streng |ja | |
 
 ### <a name="onnewtweet"></a>OnNewTweet
-Når en ny tweet: Utløser en arbeidsflyt når en ny tweet legges ut som samsvarer med søket
+Når en ny-dataskala vises: Utløser en arbeidsflyt når en ny tweet legges ut som samsvarer med søket
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | searchQuery |streng |ja |Spørringstekst (du kan bruke spørringsoperatorer som støttes av Twitter: http://www.twitter.com/search) |
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | verdi |matrise |nei | |
 

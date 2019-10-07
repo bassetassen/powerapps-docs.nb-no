@@ -1,27 +1,26 @@
 ---
 title: Opplæring – slik tilpasser du et galleri i en generert app | Microsoft Docs
 description: I denne opplæringen kan du tilpasse dataene som vises i galleriet og andre elementer for en app som har blitt generert automatisk i PowerApps.
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: tutorial
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/06/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4ca9ed14f96dbad52fe6f7b0318f520dbdd33d10
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: d12f667c1ff1fbf8424840b887e0f9394197ee2c
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61561437"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986045"
 ---
-# <a name="tutorial-customize-a-gallery-in-powerapps"></a>Opplæring: Tilpasse et galleri i PowerApps
+# <a name="tutorial-customize-a-gallery-in-powerapps"></a>Delen Tilpasse et galleri i PowerApps
 
 I denne opplæringen får du tilpasse en liste over poster, kalt et galleri, og gjøre andre endringer i en app som ble generert automatisk i Microsoft PowerApps. Brukere kan administrere data i appen selv om du ikke gjør disse endringene, men appen vil være enklere å bruke hvis du tilpasser den for organisasjonens behov.
 
@@ -48,13 +47,13 @@ Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https:/
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-[Generer en app](data-platform-create-app.md) fra den **kontoer** enheten for Common Data Service.
+[Generer en app](data-platform-create-app.md) fra **kontoer** -enheten for Common data service.
 
 ## <a name="open-the-generated-app"></a>Slik åpner du den genererte appen
 
 1. Logg deg på [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), og klikk eller trykk deretter på **Apper** nær venstre kant.
 
-1. Finn appen du genererte, velg ellipse-ikonet (**...** ), og velg deretter **Rediger**.
+1. Finn appen du genererte, velg ellipse-ikonet ( **...** ), og velg deretter **Rediger**.
 
     ![Å åpne appen for redigering](./media/customize-layout-sharepoint/open-app.png)
 
@@ -68,15 +67,15 @@ Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https:/
 
     ![Valg av galleri](media/customize-layout-sharepoint/select-gallery-1.png)
 
-1. På den **Egenskaper** fanen i den høyre ruten, kan du åpne listen over alternativer under **oppsett**, og deretter velge alternativet som bare viser en tittel.
+1. Åpne listen over alternativer under **Oppsett**på **Egenskaper** -fanen i ruten til høyre, og velg deretter alternativet som bare viser en tittel.
 
     ![Velg oppsett bare med tittel](./media/customize-layout-sharepoint/choose-layout.png)
 
-1. Siden **felt**, og velg **Rediger**, og deretter velger du pil ned for tittel-boksen.
+1. Velg **Rediger**under ved siden av **felt**, og velg deretter pil ned for Tittel-boksen.
 
     Navnet på denne kontrollen avsluttes med et tall, for eksempel **Title1**, men tallet kan variere avhengig av andre handlinger du har gjort.
 
-1. I listen over alternativer, velger du **kontonavn**, og lukk deretter den **Data** ruten.
+1. Velg **konto navn**i listen over alternativer, og lukk deretter **data** -ruten.
 
     Galleriet viser navnet på hver konto.
 
@@ -96,7 +95,7 @@ Hvis du ikke er registrert for PowerApps, kan du [registrere deg gratis](https:/
 
 1. Kopier denne formelen, og lim den deretter inn i formellinjen.
 
-    ```SortByColumns(Search(Accounts; TextSearchBox1.Text; "name"); "name"; If(SortDescending1; Descending; Ascending))```
+    ```SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, Descending, Ascending))```
 
     Ved hjelp av denne formelen kan du kontrollere at:
 
@@ -143,7 +142,7 @@ Hvis brukerne ikke har berøringsskjermer eller musehjul, konfigurerer du galler
 
     ![Valg av galleri](./media/customize-layout-sharepoint/select-gallery-sorted.png)
 
-1. Angi galleriets **Vis rullefelt** egenskapen til **SANN**.
+1. Angi egenskapen **Vis rulle felt** for galleriet til **sann**.
 
 ## <a name="next-steps"></a>Neste trinn
 

@@ -1,25 +1,24 @@
 ---
 title: Opprett en lerretsapp fra grunnen av ved hjelp av Common Data Service | Microsoft Docs
 description: Opprett en lerretsapp i PowerApps for å legge til, oppdatere og slette poster i Common Data Service.
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/21/2019
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 482a5a91c241aa9fd8c85dfb970cf692cd2ab1a3
-ms.sourcegitcommit: 38270060d2d0b784fe065164e6112c011b26e17c
+ms.openlocfilehash: c058e5f5710c090c39c2971974d57aacd40923a8
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68830468"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986011"
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service"></a>Opprett en lerretsapp fra grunnen av ved hjelp av Common Data Service
 
@@ -61,7 +60,7 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 1. Velg **BrowseGallery1** i venstre navigasjonsrute, og angi deretter verdien for **Elementer**-egenskapen til denne formelen:
 
-    `SortByColumns(Search(Accounts; TextSearchBox1.Text; "name"); "name"; If(SortDescending1; SortOrder.Descending; SortOrder.Ascending))`
+    `SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
 
     Denne formelen angir at:
 
@@ -127,25 +126,25 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 1. Angi **OnSelect**-egenskapen for plussikonet til denne formelen:
 
-    `NewForm(EditForm1);; Navigate(FormScreen; ScreenTransition.None)`
+    `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Legg til-ikon](./media/data-platform-create-app-scratch/plus-icon.png)
 
 1. Angi **OnSelect**-egenskapen for den første pilen som peker til høyre, til denne formelen:
 
-    `EditForm(EditForm1);; Navigate(FormScreen; ScreenTransition.None)`
+    `EditForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Neste-ikon](./media/data-platform-create-app-scratch/next-icon.png)
 
 1. På **FormScreen** angir du **OnSelect**-egenskapen for det valgte ikonet til denne formelen:
 
-    `ResetForm(EditForm1);;Navigate(BrowseScreen; ScreenTransition.None)`
+    `ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Avbryt-ikon](./media/data-platform-create-app-scratch/cancel-icon.png)
 
 1. Angi **OnSelect**-egenskapen for avmerkingsikonet til denne formelen:
 
-    `SubmitForm(EditForm1);; Navigate(BrowseScreen; ScreenTransition.None)`
+    `SubmitForm(EditForm1); Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Avmerking-ikon](./media/data-platform-create-app-scratch/checkmark-icon.png)
 
@@ -153,7 +152,7 @@ Når du bygger en app fra Common Data Service, trenger du ikke å opprette en ti
 
 1. Angi **Papirkurv**-ikonets **Farge**-egenskap til **Hvit** og **OnSelect**-egenskap til denne formelen:
 
-    `Remove(Accounts; BrowseGallery.Selected);; Navigate(BrowseScreen; ScreenTransition.None)`
+    `Remove(Accounts, BrowseGallery.Selected); Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Papirkurv-ikon](./media/data-platform-create-app-scratch/trash-icon.png)
 

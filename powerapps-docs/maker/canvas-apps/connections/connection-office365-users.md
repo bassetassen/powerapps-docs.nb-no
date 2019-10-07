@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/07/2016
 ms.author: lanced
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c9f7f0184f70643417154f229c1e957ea6218b34
-ms.sourcegitcommit: fe18d82dbbd3972c472fd69f7feb3a35c3a31153
+ms.openlocfilehash: da6c30cc824f5bb6cf1f661d332831223c37d5b8
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150253"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993893"
 ---
 # <a name="connect-to-office-365-users-connection-from-powerapps"></a>Å koble til Office 365-brukere fra PowerApps
 ![Office 365-brukere](./media/connection-office365-users/office365icon.png)
@@ -197,7 +197,7 @@ Hent bruker profil: Henter en bestemt bruker profil.
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | krevde | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | ID |streng |ja |Brukerhovednavn eller e-post-ID. |
 
@@ -226,7 +226,7 @@ Hent overordnet: Henter bruker profilen for lederen av den angitte brukeren.
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | krevde | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | ID |streng |ja |Brukerhovednavn eller e-post-ID. |
 
@@ -258,7 +258,7 @@ Hent direkte rapporter: Hent direkte rapporter.
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | krevde | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | ID |streng |ja |Brukerhovednavn eller e-post-ID. |
 
@@ -290,7 +290,7 @@ Søk etter brukere: Henter søke resultater for bruker profiler.
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | krevde | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | searchTerm |streng |nei |Søkestreng. Gjelder for: visnings navn, for navn, etter navnet, e-post, e-postkallenavn og brukerhovednavn. |
 

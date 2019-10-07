@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ea41924c213adc6a2e0e72b906076a2d8e6783ff
-ms.sourcegitcommit: 488609d517816f296f8090a1cb643297fe3e8e85
+ms.openlocfilehash: eae69ba2337c6b220b4c83a4900846bad6589615
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70237967"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986763"
 ---
 # <a name="date-picker-control-in-powerapps"></a>Datovelger-kontrollen i PowerApps
 En kontroll som brukeren kan klikke eller trykk på for å angi en dato.
@@ -112,7 +111,7 @@ Hvis du legger til en **Datovelger**-kontroll i stedet for en **[Tekstinndata](c
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 2. Legg til en **[Etikett](control-text-box.md)** -kontroll, og angi **[Tekst](properties-core.md)** -egenskapen som denne formelen:
-   <br>**DateDiff(Today(); Deadline.SelectedDate) & " days to go!"**
+   <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
 
     Vil du ha mer informasjon om **[DateDiff](../functions/function-dateadd-datediff.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 3. Trykk på F5, velg en dato i **Deadline**, og klikk eller trykk på **OK**.

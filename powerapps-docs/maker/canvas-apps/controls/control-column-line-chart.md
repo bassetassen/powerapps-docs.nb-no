@@ -8,18 +8,17 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9c290d28db7ae35d33f4ceb2cd56c3a3ad79b01c
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: d9595a466477f9fc8ac535b08f43fe352ea0fd8b
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61559384"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993502"
 ---
 # <a name="column-chart-and-line-chart-controls-in-powerapps"></a>Stolpediagram- og Linjediagram-kontroller i PowerApps
 Kontroller som viser data som grafer med x- og y-akser.
@@ -114,11 +113,11 @@ Kontroller som viser data som grafer med x- og y-akser.
 **YLabelAngle** – vinkelen til etikettene ved siden av y-aksen i et stolpe- eller linjediagram.
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Max**( *DataSource*; *ColumnName* )](../functions/function-aggregates.md)
+[**Max**( *DataSource*, *ColumnName* )](../functions/function-aggregates.md)
 
 ## <a name="example"></a>Eksempel
 1. Legg til en **[Knapp](control-button.md)** , og angi **[OnSelect](properties-core.md)** -egenskapen til denne formelen:<br>
-   **Collect(Revenue; {Year:"2013"; Europa:24000; Ganymede:22300; Callisto:21200}; {Year:"2014"; Europa:26500; Ganymede:25700; Callisto:24700};{Year:"2014"; Europa:27900; Ganymede:28300; Callisto:25600})**
+   **Collect(Revenue, {Year:"2013", Europa:24000, Ganymede:22300, Callisto:21200}, {Year:"2014", Europa:26500, Ganymede:25700, Callisto:24700},{Year:"2014", Europa:27900, Ganymede:28300, Callisto:25600})**
    
     Lurer du på hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?
    

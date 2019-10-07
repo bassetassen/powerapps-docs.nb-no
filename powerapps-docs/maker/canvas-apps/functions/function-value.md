@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1e54072771bf92dc6237620cfbd260cd4af55e22
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: de9cf7aa2c01b25f17aa6be7ce1f95871c3ab118
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63321825"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71983380"
 ---
 # <a name="value-function-in-powerapps"></a>Value-funksjonen i PowerApps
 Konverterer en tekststreng til et tall.
@@ -40,7 +39,7 @@ Hvis tallet ikke er i riktig format, returneres **Value** som *tom*.
 Hvis du vil konvertere verdier for dato og klokkeslett, kan du bruke funksjonene [**DateValue**](function-datevalue-timevalue.md), [**TimeValue**](function-datevalue-timevalue.md) eller [**DateTimeValue**](function-datevalue-timevalue.md).
 
 ## <a name="syntax"></a>Syntaks
-**Value**( *String* [; *LanguageTag* ] )
+**Value**( *String* [, *LanguageTag* ] )
 
 * *String* – obligatorisk. Strengen som skal konverteres til en numerisk verdi.
 * *LanguageTag* – valgfritt.  Språkkoden der du vil dele opp strengen.  Hvis det ikke er angitt, brukes språket for den gjeldende brukeren.
@@ -51,9 +50,9 @@ Brukeren som kjører disse formlene befinner seg i USA og har valgt engelsk som 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
 | **Value( "123.456" )** |Standardspråket for «en-US» brukes og bruker et punktum som desimaltegn. |123.456 |
-| **Value( "123.456"; "es-ES" )** |«es-ES» er språkkoden for spansk i Spania.  Et punktum er tusenskilletegnet i Spania. |123456 |
+| **Value( "123.456", "es-ES" )** |«es-ES» er språkkoden for spansk i Spania.  Et punktum er tusenskilletegnet i Spania. |123456 |
 | **Value( "123,456" )** |Standardspråket for «en-US» brukes og bruker et komma som tusenskilletegn. |123456 |
-| **Value( "123,456"; "es-ES" )** |«es-ES» er språkkoden for spansk i Spania.  Et komma er desimalskilletegnet i Spania. |123.456 |
+| **Value( "123,456", "es-ES" )** |«es-ES» er språkkoden for spansk i Spania.  Et komma er desimalskilletegnet i Spania. |123.456 |
 | **Value( "12.34%" )** |Prosenttegnet på slutten av strengen angir at dette er en prosent. |0.1234 |
 | **Value( "$ 12.34" )** |Valutasymbolet for gjeldende språk blir ignorert. |12.34 |
 | **Value( "24e3" )** |Vitenskapelig notasjon for 12 x 10<sup>3</sup>. |24000 |

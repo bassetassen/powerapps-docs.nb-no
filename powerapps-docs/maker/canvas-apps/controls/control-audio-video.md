@@ -8,23 +8,23 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7ac87e794341fe79a6e4f949893b64462c384f83
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: aab2b0bb7b236fe8cc6d7f18beb7a5c8ea8246ae
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61544641"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993860"
 ---
 # <a name="audio-and-video-controls-in-powerapps"></a>Lyd- og videokontroller i PowerApps
 En kontroll som spiller av en lydfil, en videofil eller en video på YouTube.
 
 ## <a name="description"></a>Beskrivelse
-En **lyd**kontroll spiller av et lydklipp fra en fil, et opptak fra en  **[mikrofon](control-microphone.md)**-kontroll eller lydsporet fra en videofil.
+En **lyd**kontroll spiller av et lydklipp fra en fil, et opptak fra en  **[mikrofon](control-microphone.md)** -kontroll eller lydsporet fra en videofil.
 
 En **video**-kontroll spiller av et videoklipp fra en fil eller fra YouTube eller Azure Media Services.  Teksting for hørselshemmede kan eventuelt vises når dette angis.
 
@@ -127,9 +127,9 @@ En **video**-kontroll spiller av et videoklipp fra en fil eller fra YouTube elle
   *  Bruk redigeringsverktøy som leveres av YouTube til å legge til bildetekster for YouTube-videoer.
   *  Opprett bildetekster i WebVTT-format for andre videoer, last dem opp og angi **ClosedCaptionsUrl** til området for nettadressen. Det finnes flere begrensninger. En server/servere som er vert for videoer og bildetekster må være CORS-aktivert og betjene dem ved hjelp av en HTTPS-protokoll. Underteksting fungerer ikke i Internet Explorer.
 * Vurder å ta med en lyd- eller videoutskrift ved hjelp av én av disse metodene:
-  1. Plasser teksten i en **[etikett](control-text-box.md)**, og plasser den deretter ved siden av multimediaspilleren. Du kan også opprette en **[knapp](control-button.md)** for å veksle visningen av teksten.
+  1. Plasser teksten i en **[etikett](control-text-box.md)** , og plasser den deretter ved siden av multimediaspilleren. Du kan også opprette en **[knapp](control-button.md)** for å veksle visningen av teksten.
   2. Plasser teksten i en annen skjerm. Opprett en **[knapp](control-button.md)** som navigerer til skjermen, og plasser knappen ved siden av multimediaspilleren.
-  3. Hvis beskrivelsen er kort, kan den plasseres i **[AccessibleLabel](properties-accessibility.md)**.
+  3. Hvis beskrivelsen er kort, kan den plasseres i **[AccessibleLabel](properties-accessibility.md)** .
 
 ### <a name="color-contrast"></a>Fargekontrast
 Det må være tilstrekkelig fargekontrast mellom:

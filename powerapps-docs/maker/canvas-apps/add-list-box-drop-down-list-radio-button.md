@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/24/2018
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 293c850c5af980a480a56cb9fb3b8c7866950580
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.openlocfilehash: 211a5be4a97780a440bf151157576a5ab56933a5
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61555933"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71987510"
 ---
 # <a name="add-a-list-box-a-drop-down-list-or-radio-buttons-to-a-canvas-app"></a>Legg til en liste, en rullegardinliste eller alternativknapper i en lerretsapp
 
@@ -37,7 +36,7 @@ Dette emnet fokuserer på lister og alternativknapper, men de samme prinsippene 
 
 1. Legg til en **Liste**-kontroll, gi den navnet **MyListBox**, og angi **Elementer**-egenskapen som denne formelen:
 
-    ```["circle";"triangle";"rectangle"]```  <br/>
+    ```["circle","triangle","rectangle"]```  <br/>
 
     Utformingen ser omtrent slik ut:
 
@@ -51,13 +50,13 @@ Dette emnet fokuserer på lister og alternativknapper, men de samme prinsippene 
 
     ![][6]  
 
-6. Angi **[Synlig](controls/properties-core.md)**-egenskapen hos de følgende figurene til følgende funksjoner:  
+6. Angi **[Synlig](controls/properties-core.md)** -egenskapen hos de følgende figurene til følgende funksjoner:  
 
    | Figur | Angi Synlig-funksjonen til |
    | --- | --- |
-   | sirkel |```If("circle" in MyListBox.SelectedItems.Value; true)``` |
-   | trekant |```If("triangle" in MyListBox.SelectedItems.Value; true)``` |
-   | rektangel |```If("rectangle" in MyListBox.SelectedItems.Value; true)``` |
+   | sirkel |```If("circle" in MyListBox.SelectedItems.Value, true)``` |
+   | trekant |```If("triangle" in MyListBox.SelectedItems.Value, true)``` |
+   | rektangel |```If("rectangle" in MyListBox.SelectedItems.Value, true)``` |
 
 7. Velg én eller flere figurer i **MyListBox** mens du holder nede ALT-tasten.
 
@@ -72,8 +71,8 @@ I disse trinnene brukte du et uttrykk for å opprette en liste over elementer. D
 
     ![][10]  
 
-3. Endre navnet på **Alternativ**-kontrollen til **Valg**, og deretter angir du kontrollens **[Element](controls/properties-core.md)**-egenskap til denne formelen:  
-   ```["red";"green";"blue"]```  <br/>
+3. Endre navnet på **Alternativ**-kontrollen til **Valg**, og deretter angir du kontrollens **[Element](controls/properties-core.md)** -egenskap til denne formelen:  
+   ```["red","green","blue"]```  <br/>
 
     ![][12]  
 
@@ -81,8 +80,8 @@ I disse trinnene brukte du et uttrykk for å opprette en liste over elementer. D
 
 4. Velg **Ikoner** på **Sett inn**-fanen, og deretter velger du sirkelen.
 
-5. Angi sirkelens **[Fyll](controls/properties-color-border.md)**-egenskap til følgende funksjon:  
-   ```If(Choices.Selected.Value = "red"; Red; Choices.Selected.Value = "green"; Green; Choices.Selected.Value = "blue"; Blue)```  
+5. Angi sirkelens **[Fyll](controls/properties-color-border.md)** -egenskap til følgende funksjon:  
+   ```If(Choices.Selected.Value = "red", Red, Choices.Selected.Value = "green", Green, Choices.Selected.Value = "blue", Blue)```  
 
     I denne formelen endrer sirkelen farge avhengig av hvilken alternativknapp du velger.
 

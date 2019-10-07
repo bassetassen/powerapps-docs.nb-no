@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/17/2017
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a8abc0a641f13cc05e723b96d48dd2d877f0b70f
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: 2ef11e767fcf92259839c4bebe282757b0004f21
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63318294"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71989128"
 ---
 # <a name="understand-data-form-layout-for-canvas-apps-in-powerapps"></a>Slik fungerer oppsett for dataskjemaer for lerretsapper i PowerApps
 
@@ -32,11 +32,11 @@ I denne opplæringen går vi gjennom trinnene for å opprette dette skjemaet. Vi
 
 Hvis PowerApps er nytt for deg (eller du bare har generert apper automatisk), må du [bygge en app fra grunnen av](get-started-create-from-blank.md) før du fordyper deg i dette emnet. Ved å bygge en app fra grunnen av blir du kjent med nødvendige konsepter, for eksempel å legge til datakilder og kontroller, som er nevnt, men som ikke er beskrevet i dette emnet.
 
-Dette emnet er skrevet som om du har en kilde som heter **salgsordre** og som inneholder feltene i den forrige grafikken. Hvis du har en PowerApps Plan 2-lisens eller en [lisensen for prøveversjonen](../signup-for-powerapps.md) og systemansvarlig eller Systemtilpasser systemtillatelser, kan du [oppretter en enhet](../common-data-service/data-platform-create-entity.md) i Common Data Service-og legge til lignende felt. 
+Dette emnet er skrevet som om du har en data kilde som heter **salgs ordre** , og som inneholder feltene i den forrige grafikken. Hvis du har en PowerApps plan 2-lisens eller en [prøve lisens](../signup-for-powerapps.md) og system administrator eller Systemtilpasser-tillatelser, kan du [opprette en enhet](../common-data-service/data-platform-create-entity.md) i Common data service og legge til lignende felt. 
 
 ## <a name="add-a-gallery"></a>Å legge til et galleri
 
-1. Opprett en nettbrettapp fra grunnen av, og Legg til datakilden.
+1. Opprett en tavle-app fra grunnen av, og Legg til data kilden.
 
     Alt som beskrives i dette emnet gjelder også for telefonoppsett, men telefonapper har ofte bare én loddrett kolonne.
     
@@ -54,8 +54,8 @@ Dette emnet er skrevet som om du har en kilde som heter **salgsordre** og som in
 ## <a name="add-a-title-bar"></a>Å legge til en tittellinje
 1. Legg til en tom skjerm der du vil legge til skjemaet.
    
-    Utenfor denne opplæringen, kan du plassere **Galleri**- og **[Redigeringsskjema](controls/control-form-detail.md)**-kontrollene i den samme skjermen, men du får mer plass å arbeide med hvis du legger dem til på separate skjermer.
-2. Øverst på den nye skjermen, kan du legge til en **[Etikett](controls/control-text-box.md)**-kontroll, og angi **Tekst**-egenskapen til dette uttrykket:
+    Utenfor denne opplæringen, kan du plassere **Galleri**- og **[Redigeringsskjema](controls/control-form-detail.md)** -kontrollene i den samme skjermen, men du får mer plass å arbeide med hvis du legger dem til på separate skjermer.
+2. Øverst på den nye skjermen, kan du legge til en **[Etikett](controls/control-text-box.md)** -kontroll, og angi **Tekst**-egenskapen til dette uttrykket:
    <br>**"Sales Order " & Gallery1.Selected.SalesOrderId**
    
     Etiketten viser salgsordre-nummer for posten som du har valgt i galleriet.
@@ -160,7 +160,7 @@ Leveringsadressen består av flere deler med informasjon som vi ønsker å grupp
 
 La oss nå rette oppmerksomheten mot tredje linje i adressen. I likhet med det vi nettopp gjorde, kan vi forkorte teksten i hver etikett for disse kortene og ordne Tekstinndata-boksen til å stå til høyre for hver etikett. Her er fremgangsmåten for **Tilstand**-kortet:
 
-| Trinn | Beskrivelse | Resultat |
+| Step | Beskrivelse | Resultat |
 | --- | --- | --- |
 | 1 |Velg **Tilstand**-kortet slik at håndtak vises rundt det. |![Slik velger man et kort](./media/working-with-form-layout/state-morph-2.png) |
 | 2 |Velg etiketten i dette kortet, slik at håndtak vises rundt den. |![Slik velger du en kontroll i et kort](./media/working-with-form-layout/state-morph-3.png) |
@@ -204,8 +204,8 @@ Utformingen styres av egenskaper i kortkontrollene, i likhet med alt annet i Pow
 ### <a name="basic-layout-x-y-and-width"></a>Grunnleggende oppsett: X, Y og bredde
 **X**- og **Y**-egenskaper kontrollerer plasseringen av kortene. Når vi arbeider med kontroller på arbeidssonen, vil disse egenskapene gi en absolutt plassering. Disse egenskapene har en annen betydning i et skjema:
 
-* **X**: Bestill i en rad.
-* **Y**: Radnummer.
+* **X**: Rekkefølge i en rad.
+* **Y**: Rad nummer.
 
 **Bredde**-egenskapen angir minimumsbredden på kortet (mer om minimumsaspektet om et øyeblikk), i likhet med kontroller på lerretet.
 
@@ -224,7 +224,7 @@ De tre kortene på den øverste raden passer ikke lenger vannrett, og en annen r
 
 Du kan bruke denne virkemåten til å opprette et fullstendig dynamisk oppsett der kort plasseres basert på en Z-rekkefølge, som fyller på tvers av så mye som mulig før den flyttes til neste rad. Gi alle kortene den samme **Y**-verdien for å oppnå denne effekten, og bruk **X** for rekkefølgen på kortene.
 
-### <a name="filling-spaces-widthfit"></a>Å fylle mellomrom: WidthFit
+### <a name="filling-spaces-widthfit"></a>Fyller mellomrom: WidthFit
 Overflyten i det siste eksemplet opprettet et mellomrom etter **Ordrestatus**-kortet, som var det andre kortet i den første raden. Vi kan manuelt justere på **Bredde**-egenskapene for de to gjenstående kortene til å fylle ut området, men denne tilnærmingen er langtekkelig.
 
 Som et alternativ kan du bruke **WidthFit**-egenskapen. Hvis denne egenskapen er satt til **sann** for én eller flere kort i en rad, vil resten av området på raden bli jevnt fordelt mellom dem. Denne virkemåten er grunnen til at vi tidligere nevnte at **Bredde**-egenskapen for et kort er et *minimum*, og at det som faktisk vises kan være bredere. Denne egenskapen vil aldri føre til at et kort reduseres, bare utvides.

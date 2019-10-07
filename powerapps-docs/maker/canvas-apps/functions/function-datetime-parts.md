@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ab824432833614ba5b2002375a79e7899a8d7277
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: bc5d17903ea5cfe834fd4e0987b4fc4613a1ad65
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61551265"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992808"
 ---
 # <a name="day-month-year-hour-minute-second-and-weekday-functions-in-powerapps"></a>Funksjonene Day, Month, Year, Hour, Minute, Second og Weekday i PowerApps
 Returnerer enkeltkomponenter for en dato/klokkeslett-verdi.
@@ -59,7 +58,7 @@ Hvis du vil ha mer informasjon, kan du se [Slik arbeider du med datoer og klokke
 
 * *DateTime* – obligatorisk.  Dato/klokkeslett-verdi til å arbeide på.  
 
-**Weekday**( *DateTime* [; *WeekdayFirst* ] )<br>
+**Weekday**( *DateTime* [, *WeekdayFirst* ] )<br>
 
 * *DateTime* – obligatorisk.  Dato/klokkeslett-verdi til å arbeide på. 
 * *WeekdayFirst* – valgfritt.  Excel-kode som angir hvilken dag som starter uken.  Hvis ikke angitt, brukes 1 (søndag først).
@@ -76,6 +75,6 @@ I følgende eksempel er gjeldende klokkeslett **15:59:37** **torsdag 09. april 2
 | **Minute(&nbsp;Now()&nbsp;)** |Returnerer minuttkomponenten for gjeldende dato og klokkeslett. |59 |
 | **Second(&nbsp;Now()&nbsp;)** |Returnerer minuttkomponenten for gjeldende dato og klokkeslett. |37 |
 | **Weekday(&nbsp;Now()&nbsp;)** |Returnerer ukedagkomponenten for gjeldende dato og klokkeslett, ved å bruke søndag som standard start på uken. |5 |
-| **Weekday(&nbsp;Now();&nbsp;14&nbsp;)** |Returnerer ukedagkomponenten for gjeldende dato og klokkeslett, ved å bruke en Excel-kode til å angi torsdag som start på uken. |1 |
-| **Weekday(&nbsp;Now();&nbsp;StartOfWeek.Wednesday&nbsp;)** |Returnerer ukedagkomponenten for gjeldende dato og klokkeslett, ved å bruke en **StartOfWeek**-opplisting til å angi onsdag som start på uken. |2 |
+| **Weekday(&nbsp;Now(),&nbsp;14&nbsp;)** |Returnerer ukedagkomponenten for gjeldende dato og klokkeslett, ved å bruke en Excel-kode til å angi torsdag som start på uken. |1 |
+| **Weekday(&nbsp;Now(),&nbsp;StartOfWeek.Wednesday&nbsp;)** |Returnerer ukedagkomponenten for gjeldende dato og klokkeslett, ved å bruke en **StartOfWeek**-opplisting til å angi onsdag som start på uken. |2 |
 

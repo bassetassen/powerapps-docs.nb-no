@@ -8,18 +8,17 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2017
 ms.author: lanced
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 405dcf432526206aa3a5f341a38e2ae5547cea1f
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 4eab4585a2abd8633704c76b57cde52702982e97
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61545704"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71994037"
 ---
 # <a name="connect-to-microsoft-translator-from-powerapps"></a>Koble til Microsoft Translator fra PowerApps
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)
@@ -51,14 +50,14 @@ Dette emnet viser deg hvordan du oppretter Microsoft Translator-tilkoblingen og 
 ### <a name="translate-text"></a>Oversett tekst
 1. Velg **Tekst** på **Sett inn**-menyen, og velg **Tekstinndata**. Gi kontrollen for tekstinndata **Source** som nytt navn:  
 
-    ![Gi nytt navn](./media/connection-microsoft-translator/renametosource.png)
+    ![GiNyttNavn](./media/connection-microsoft-translator/renametosource.png)
 2. Legg til en **Rullegardinliste** (**Sett inn**-menyen > **Kontroller**), gi den **TargetLang** som nytt navn, og flytt den til under **Source**.
-3. Angi **[Items](../controls/properties-core.md)**-egenskapen for **TargetLang** som følgende formel:  
+3. Angi **[Items](../controls/properties-core.md)** -egenskapen for **TargetLang** som følgende formel:  
 
     `MicrosoftTranslator.Languages()`
-4. Legg til en etikett, flytt den under **TargetLang**, og angi **[Text](../controls/properties-core.md)**-egenskapen som følgende formel:  
+4. Legg til en etikett, flytt den under **TargetLang**, og angi **[Text](../controls/properties-core.md)** -egenskapen som følgende formel:  
 
-    `MicrosoftTranslator.Translate(Source.Text; TargetLang.Selected.Value)`
+    `MicrosoftTranslator.Translate(Source.Text, TargetLang.Selected.Value)`
 5. Skriv inn en vilkårlig tekst i **Source**, og velg et språk i **TargetLang**. Etiketten viser teksten du skrev inn på språket du valgte:  
 
     ![Slik oversetter du fra engelsk til spansk](./media/connection-microsoft-translator/translate-text.png)
@@ -66,13 +65,13 @@ Dette emnet viser deg hvordan du oppretter Microsoft Translator-tilkoblingen og 
 ### <a name="speak-translated-text"></a>Les opp oversatt tekst
 Hvis du ikke allerede har gjort det, følger du trinnene i forrige del for å oversette en vilkårlig tekst. Disse neste trinnene bruker de samme kontrollene.
 
-1. Angi **[Items](../controls/properties-core.md)**-egenskapen for rullegardinlisten **TargetLang** som følgende formel:  
+1. Angi **[Items](../controls/properties-core.md)** -egenskapen for rullegardinlisten **TargetLang** som følgende formel:  
 
     `MicrosoftTranslator.SpeechLanguages()`
 2. Gi den andre etiketten (ikke **Source**-boksen) **Target** som nytt navn.
 3. Legg til en **Lyd**-kontroll (**Sett inn**-menyen > **Media**), og angi kontrollens **Media**-egenskap som følgende formel:  
 
-    `MicrosoftTranslator.TextToSpeech(Target.Text; TargetLang.Selected.Value)`
+    `MicrosoftTranslator.TextToSpeech(Target.Text, TargetLang.Selected.Value)`
 4. Trykk på F5, eller velg forhåndsvisningsknappen (![](./media/connection-microsoft-translator/preview.png)). Skriv inn vilkårlist tekst i **Source**, velg et språk i **TargetLang**, og velg avspillingsknappen i lydkontrollen.
 
     Appen spiller av en lydversjon av teksten som du skrev inn på språket du valgte.
@@ -81,7 +80,7 @@ Hvis du ikke allerede har gjort det, følger du trinnene i forrige del for å ov
 ### <a name="detect-the-source-language"></a>Gjenkjenne kildespråket
 Disse neste trinnene bruker samme **Source**-tekstinndata- og **Target**-tekstkontroller. Hvis du ønsker det, kan du opprette nye kontroller. Bare oppdater navnene i formelen.
 
-1. Velg **Target**-tekstkontrollen og angi **[Text](../controls/properties-core.md)**-egenskapen som følgende formel:  
+1. Velg **Target**-tekstkontrollen og angi **[Text](../controls/properties-core.md)** -egenskapen som følgende formel:  
 
     `MicrosoftTranslator.Detect(Source.Text).Name`
 2. Skriv inn en vilkårlig tekst i **Source**.
@@ -99,7 +98,7 @@ Denne tilkoblingen har følgende funksjoner:
 | [SpeechLanguages](connection-microsoft-translator.md#speechlanguages) |Henter språkene som er tilgjengelige for talesyntese |
 | [TextToSpeech](connection-microsoft-translator.md#texttospeech) |Konverterer en gitt tekst til tale som en lydstrøm i digitallydformat |
 
-### <a name="languages"></a>Språk
+### <a name="languages"></a>Malspråk
 Hent språk: Henter alle språkene som Microsoft Translator støtter
 
 #### <a name="input-properties"></a>Inndataegenskaper
@@ -107,17 +106,17 @@ Ingen.
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
-| Kode |streng |nei | |
+| Kildekoden |streng |nei | |
 | navn |streng |nei | |
 
 ### <a name="translate"></a>Translate
-Translate text: Oversetter tekst til et angitt språk ved hjelp av Microsoft Translator
+Oversett tekst: Oversetter tekst til et angitt språk ved hjelp av Microsoft Translator
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | query |tekststreng |ja |Tekst som skal oversettes |
 | languageTo |tekststreng |ja |Målspråkkoden (eksempel: nb-no) |
@@ -128,32 +127,32 @@ Translate text: Oversetter tekst til et angitt språk ved hjelp av Microsoft Tra
 Ingen.
 
 ### <a name="detect"></a>Detect
-Gjenkjenn språk: Gjenkjenner kildespråket til en gitt tekst
+Identifiser språk: Gjenkjenner kildespråket til en gitt tekst
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | query |tekststreng |ja |Teksten som språket skal gjenkjennes for |
 
 #### <a name="output-properties"></a>Egenskaper for utdata
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
-| Kode |streng |nei | |
+| Kildekoden |streng |nei | |
 | navn |streng |nei | |
 
 ### <a name="speechlanguages"></a>SpeechLanguages
-Hent talespråk: Henter språkene som er tilgjengelige for talesyntese
+Hent tale språk: Henter språkene som er tilgjengelige for talesyntese
 
 #### <a name="input-properties"></a>Inndataegenskaper
 Ingen.
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
-| Kode |streng |nei | |
+| Kildekoden |streng |nei | |
 | navn |streng |nei | |
 
 ### <a name="texttospeech"></a>TextToSpeech
@@ -161,7 +160,7 @@ Tekst til tale: Konverterer en gitt tekst til tale som en lydstrøm i digitallyd
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| navn | Datatype | Kreves | Beskrivelse |
+| navn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | query |tekststreng |ja |Tekst som skal konverteres |
 | language |tekststreng |ja |Språkkode tale skal genereres for (eksempel: nb-no) |

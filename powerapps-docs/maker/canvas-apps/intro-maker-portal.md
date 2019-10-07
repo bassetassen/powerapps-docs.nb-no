@@ -1,24 +1,24 @@
 ---
 title: Logg deg på for første gang | Microsoft Docs
 description: Et nytt hjem for alle som utvikler apper.
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 08/06/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 735894f8e28d25777aa7f66146f5782da2ab2f3e
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: dd50652f0021079b4b9d4d23568ba148a8ce6a5b
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61553518"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71989989"
 ---
 # <a name="sign-in-to-powerapps-for-the-first-time"></a>Logg deg på PowerApps for første gang
 
@@ -42,7 +42,7 @@ For best resultat begynner du ved å sikre at hjemmesiden er angitt til riktig m
 
 ## <a name="choose-an-environment"></a>Velg et miljø
 
-Enten du oppretter en app, en flyt, en datatilkobling eller en enhet i Common Data Service, mye av det du gjør i PowerApps, ligger i et bestemt miljø. Miljøer skaper grenser mellom ulike typer arbeid. En organisasjon kan for eksempel ha separate miljøer for ulike avdelinger. Mange organisasjoner bruker miljøer til å separere apper som fremdeles er under utvikling, fra de som er klar for omfattende bruk. Du har kanskje tilgang til flere miljøer eller bare ett. Hvis du har de riktige tillatelsene, kan det hende du kan opprette dine egne miljøer.
+Enten du oppretter en app, en flyt, en data tilkobling eller en enhet i Common Data Service, finnes det mye av det du gjør i PowerApps, i et bestemt miljø. Miljøer skaper grenser mellom ulike typer arbeid. En organisasjon kan for eksempel ha separate miljøer for ulike avdelinger. Mange organisasjoner bruker miljøer til å separere apper som fremdeles er under utvikling, fra de som er klar for omfattende bruk. Du har kanskje tilgang til flere miljøer eller bare ett. Hvis du har de riktige tillatelsene, kan det hende du kan opprette dine egne miljøer.
 
 Hvis du vil bekrefte hvilket miljø du befinner deg i, finner du miljøbryteren til høyre for toppteksten.
 
@@ -60,9 +60,9 @@ Hvis du vil ha mer informasjon, kan du se [Oversikt over miljøer](../../adminis
 I PowerApps kan du opprette og kjøre disse apptypene:
 
 - **Lerretapper** støtter utforming av egendefinert brukergrensesnitt og tilkobling til data fra en rekke kilder.
-- **Modelldrevne apper** har et standard grensesnitt og koble til data bare i Common Data Service. Du kan imidlertid opprette andre elementer, som visninger, instrumentbord og ulike typer forretningslogikk, på en enklere måte.
+- **Modell drevne apper** har et standard bruker grensesnitt og kobler til data bare i Common data service. Du kan imidlertid opprette andre elementer, som visninger, instrumentbord og ulike typer forretningslogikk, på en enklere måte.
 
-Hvis du velger et miljø som har en Common Data Service-database, kan du bygge lerret eller modelldrevne apper fra samme **Hjem** siden.
+Hvis du velger et miljø som har en Common Data Service-database, kan du bygge lerret eller modell drevne apper fra samme **hjemme** side.
 
 ## <a name="play-or-edit-an-app"></a>Spill av eller rediger en app
 
@@ -120,6 +120,6 @@ Ved å velge alternativer i toppteksten og venstre navigasjonsfelt, kan du gjør
 
 Utvid funksjonene til appene ved å utføre disse oppgavene:
 
-- Administrer enheter, alternativsett og integrering av data i [Common Data Service-](../common-data-service/data-platform-intro.md).
+- Behandle enheter, alternativ sett og data integrering i [Common data service](../common-data-service/data-platform-intro.md).
 - Konfigurer forretningslogikk i [Microsoft Flow](https://docs.microsoft.com/flow/getting-started).
 - Opprett, pakk inn og vedlikeholde [løsninger](../../developer/common-data-service/introduction-solutions.md).

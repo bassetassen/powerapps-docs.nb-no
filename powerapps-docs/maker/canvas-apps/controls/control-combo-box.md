@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 09/13/2017
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e6d1b1083fcc7e865fa7c9cfe3f8966e20ed86a5
-ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
+ms.openlocfilehash: dbbff1f85ccc104a1a0f88c6b9670c45c0528592
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64670910"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993488"
 ---
 # <a name="combo-box-control-in-powerapps"></a>Kombinasjonsbokskontroll i PowerApps
 En kontroll som gjør det mulig for brukere å foreta valg ut ifra angitte valgmuligheter.  Støtter søk og flervalg.
@@ -36,7 +36,7 @@ For å bruke **Kombinasjonsboks** som personvelger, velger du **Person**-malen i
 ## <a name="key-properties"></a>Nøkkelegenskaper
 **[Elementer](properties-core.md)** – datakilden det kan foretas valg ut ifra.
 
-**DefaultSelectedItems** – opprinnelig valgte elementene før brukeren samhandler med kontrollen.
+**DefaultSelectedItems** – de første valgte elementene før brukeren samhandler med kontrollen.
 
 **SelectedItems** – listen over valgte elementer som resultat av brukermedvirkning.
 
@@ -84,19 +84,19 @@ For å bruke **Kombinasjonsboks** som personvelger, velger du **Person**-malen i
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="example"></a>Eksempel
-1. På den **Sett inn** åpne den **Kontroller** -menyen, og velg deretter **kombinasjonsboks**.  
+1. På **Sett inn** -fanen åpner du **Kontroller** -menyen, og deretter velger du **kombinasjons boks**.  
 
-1. På den **Egenskaper** fanen i den høyre ruten, åpne det **Velg en datakilde** listen (siden **elementer**), og deretter legge til eller velg en datakilde.
+1. Åpne **Velg en data kilde** -listen (ved siden av **elementer**) i **Egenskaper** -fanen i ruten til høyre, og Legg til eller velg en data kilde.
 
-1. Velg kategorien samme **Rediger** (siden **felt**).
+1. Velg **Rediger** (ved siden av **felt**) på den samme fanen.
 
-1. I den **Data** ruten, åpne det **primærtekst** listen, og velg deretter kolonnen du vil vise i den **kombinasjonsboks** kontroll.
+1. Åpne den **primære tekst** listen i **data** -ruten, og velg deretter kolonnen som du vil vise i **kombinasjons boks** kontrollen.
 
-1. Mens du holder nede Alt-tasten, velger du pil ned for å åpne den **kombinasjonsboks** kontroll.
+1. Velg pil ned for å åpne **kombinasjons boks** -kontrollen mens du holder nede Alt-tasten.
 
-    Kontrollen viser data fra kolonnen som du har angitt i datakilden du har angitt.
+    Kontrollen viser dataene fra kolonnen som du angav i data kilden du angav.
     
-1. (valgfritt) Hvis du vil vise den første posten som standard, kan du angi den **DefaultSelectedItems** egenskapen til dette uttrykket, erstatter *DataSource* med navnet på datakilden:
+1. valg fritt Hvis du vil vise den første posten som standard, kan du angi **DefaultSelectedItems** -egenskapen til dette uttrykket ved *å erstatte data kilden med* navnet på data kilden:
 
     `First(DataSource)`
 

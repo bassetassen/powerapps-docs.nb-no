@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 03/08/2017
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9e31ae7600663daa694b46376008161502c9c428
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: b4dde9c7b24352c1fefc62ff9ec73ba5ec82ee25
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61556923"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71988115"
 ---
 # <a name="understand-data-sources-for-canvas-apps-in-powerapps"></a>Slik fungerer datakilder for lerretsapper i PowerApps
 
@@ -26,7 +26,7 @@ De fleste lerretsapper i PowerApps bruker ekstern informasjon som er lagret i sk
 
 Denne artikkelen beskriver de ulike typene datakilder, og hvordan du arbeider med datakilder for tabeller.
 
-Det er enkelt å opprette en app som utfører grunnleggende lesing fra og skriving til en datakilde. Men noen ganger vil du ha mer kontroll over hvordan data flyter inn og ut av appen.  Denne artikkelen beskriver hvordan funksjonene **[Patch](functions/function-patch.md)**, **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Validate](functions/function-validate.md)** og **[Errors](functions/function-errors.md)** gir mer kontroll.
+Det er enkelt å opprette en app som utfører grunnleggende lesing fra og skriving til en datakilde. Men noen ganger vil du ha mer kontroll over hvordan data flyter inn og ut av appen.  Denne artikkelen beskriver hvordan funksjonene **[Patch](functions/function-patch.md)** , **[DataSourceInfo](functions/function-datasourceinfo.md)** , **[Validate](functions/function-validate.md)** og **[Errors](functions/function-errors.md)** gir mer kontroll.
 
 ## <a name="kinds-of-data-sources"></a>Datakildetyper
 
@@ -40,7 +40,7 @@ Andre datakilder enn tabeller inkluderer e-post, kalendere, Twitter og varslinge
 
 ### <a name="local-data-sources"></a>Lokale datakilder
 
-Ved hjelp av kontrollene **[Galleri](controls/control-gallery.md)**, **[Visningsskjema](controls/control-form-detail.md)**, og **[Redigeringsskjema](controls/control-form-detail.md)**, er det enkelt å opprette en app som leser og skriver data fra en datakilde.  For å komme i gang kan du lese artikkelen [Forstå dataskjemaer](working-with-forms.md).  
+Ved hjelp av kontrollene **[Galleri](controls/control-gallery.md)** , **[Visningsskjema](controls/control-form-detail.md)** , og **[Redigeringsskjema](controls/control-form-detail.md)** , er det enkelt å opprette en app som leser og skriver data fra en datakilde.  For å komme i gang kan du lese artikkelen [Forstå dataskjemaer](working-with-forms.md).  
 
 Disse kontrollene brukes når du ber PowerApps om å opprette en app fra data. Bak kulissene bruker appen en intern tabell til å lagre og manipulere dataene som kommer fra datakilden.
 
@@ -61,13 +61,13 @@ Du kan bruke tabelldatakilder på samme måte som du bruker en intern PowerApps-
   
     > [!NOTE]
   > PowerApps erstatter mellomrommene med **"\_x0020\_"** for SharePoint- og Excel-datakilder som inneholder kolonnenavn med mellomrom. **Kolonnenavn** i SharePoint eller Excel vil for eksempel vises som **"Column_x0020_Name"** i PowerApps når de vises i dataoppsettet, eller når de brukes i en formel.
-* Datakilden lastes automatisk inn fra tjenesten når appen lastes inn.  Du kan fremtvinge oppdatering av dataene ved hjelp av **[Refresh](functions/function-refresh.md)**-funksjonen.
+* Datakilden lastes automatisk inn fra tjenesten når appen lastes inn.  Du kan fremtvinge oppdatering av dataene ved hjelp av **[Refresh](functions/function-refresh.md)** -funksjonen.
 * Når brukere kjører en app, kan de opprette, endre og slette poster, og skyve disse endringene tilbake til den underliggende tabellen i tjenesten.
-  * Poster kan opprettes med funksjonene **[Patch](functions/function-patch.md)** og **[Collect](functions/function-clear-collect-clearcollect.md)**.  
-  * Poster kan endres med funksjonene **[Patch](functions/function-patch.md)**, **[Update](functions/function-update-updateif.md)** og **[UpdateIf](functions/function-update-updateif.md)**.
-  * Poster kan fjernes med funksjonene **[Remove](functions/function-remove-removeif.md)** og **[RemoveIf](functions/function-remove-removeif.md)**.
-  * Feil når du arbeider med en datakilde er tilgjengelig via **[Errors](functions/function-errors.md)**-funksjonen.
-* Funksjonene **[DataSourceInfo](functions/function-datasourceinfo.md)**, **[Defaults](functions/function-defaults.md)** og **[Validate](functions/function-validate.md)** gir informasjon om datakilden som du kan bruke til å optimalisere brukeropplevelsen.
+  * Poster kan opprettes med funksjonene **[Patch](functions/function-patch.md)** og **[Collect](functions/function-clear-collect-clearcollect.md)** .  
+  * Poster kan endres med funksjonene **[Patch](functions/function-patch.md)** , **[Update](functions/function-update-updateif.md)** og **[UpdateIf](functions/function-update-updateif.md)** .
+  * Poster kan fjernes med funksjonene **[Remove](functions/function-remove-removeif.md)** og **[RemoveIf](functions/function-remove-removeif.md)** .
+  * Feil når du arbeider med en datakilde er tilgjengelig via **[Errors](functions/function-errors.md)** -funksjonen.
+* Funksjonene **[DataSourceInfo](functions/function-datasourceinfo.md)** , **[Defaults](functions/function-defaults.md)** og **[Validate](functions/function-validate.md)** gir informasjon om datakilden som du kan bruke til å optimalisere brukeropplevelsen.
 
 ### <a name="creating-data-sources"></a>Å opprette datakilder
 PowerApps kan ikke brukes til å opprette en koblet datakilde eller til å endre strukturen på den. Datakilden må allerede finnes et sted i en tjeneste. Du bruker for eksempel først Excel Online på OneDrive til å opprette en arbeidsbok for å opprette en tabell i en Excel-arbeidsbok lagret på OneDrive. Deretter oppretter du en tilkobling til den fra appen.  
@@ -79,24 +79,24 @@ Datakildesamlinger *kan* imidlertid opprettes og endres inne i en app, men de er
 
 * Informasjonen lagres og deles gjennom en lagringstjeneste (i dette tilfellet en SharePoint-liste på et Office 365-område).
 * En tilkobling gjør denne informasjonen tilgjengelig for appen.  Tilkoblingen tar hånd om godkjenning av brukeren for tilgang til informasjonen.
-* Når appen startes eller **[Refresh](functions/function-refresh.md)**-funksjonen trykkes på, blir informasjonen hentet fra tilkoblingen og til en datakilde i appen for lokal bruk.
-* Formler brukes til å lese informasjonen og vise den i kontroller som brukeren kan se. Du kan vise postene i en datakilde ved hjelp av et galleri på skjermen, og overføre den **[elementer](controls/properties-core.md)** egenskapen til datakilden: **Gallery.Items = DataSource**.  Du overfører kontrollene i galleriet til galleriet, ved hjelp av kontrollens **[Standard](controls/properties-core.md)**-egenskap.  
-* Datakilden er også en tabell.  Du kan bruke funksjonene **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)**, **[AddColumns](functions/function-table-shaping.md)** samt andre funksjoner hvis du ønsker å begrense og utvide datakilden før du bruker den som en helhet.  Du kan også bruke funksjonene **[Lookup](functions/function-filter-lookup.md)**, **[First](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)** samt andre funksjoner hvis du ønsker å arbeide med enkeltposter.
+* Når appen startes eller **[Refresh](functions/function-refresh.md)** -funksjonen trykkes på, blir informasjonen hentet fra tilkoblingen og til en datakilde i appen for lokal bruk.
+* Formler brukes til å lese informasjonen og vise den i kontroller som brukeren kan se. Du kan vise postene i en data kilde ved hjelp av et galleri på en skjerm, og kabl **[elementene](controls/properties-core.md)** -egenskapen til data kilden: **Galleri. elementer = data kilde**.  Du overfører kontrollene i galleriet til galleriet, ved hjelp av kontrollens **[Standard](controls/properties-core.md)** -egenskap.  
+* Datakilden er også en tabell.  Du kan bruke funksjonene **[Filter](functions/function-filter-lookup.md)** , **[Sort](functions/function-sort.md)** , **[AddColumns](functions/function-table-shaping.md)** samt andre funksjoner hvis du ønsker å begrense og utvide datakilden før du bruker den som en helhet.  Du kan også bruke funksjonene **[Lookup](functions/function-filter-lookup.md)** , **[First](functions/function-first-last.md)** , **[Last](functions/function-first-last.md)** samt andre funksjoner hvis du ønsker å arbeide med enkeltposter.
 
 ### <a name="modify-a-record"></a>Å endre en post
-I foregående avsnitt så du hvordan du leser en datakilde.  Legg merke til at pilene i diagrammet over peker i én retning.  Endringer i en datakilde blir ikke skjøvet tilbake gjennom de samme formlene som dataene ble hentet fra.  I stedet brukes nye formler.  Det bruker ofte en annen skjerm for redigering av en post enn for å bla gjennom poster, spesielt på en mobil enhet.
+I foregående del, så du hvordan du leser en data kilde.  Legg merke til at pilene i diagrammet over peker i én retning.  Endringer i en datakilde blir ikke skjøvet tilbake gjennom de samme formlene som dataene ble hentet fra.  I stedet brukes nye formler.  Det bruker ofte en annen skjerm for redigering av en post enn for å bla gjennom poster, spesielt på en mobil enhet.
 
 Vær oppmerksom på at hvis du vil endre en eksisterende post for en datakilde, må posten opprinnelig ha kommet fra datakilden.  Posten kan ha beveget seg gjennom et galleri, en [kontekstvariabel](working-with-variables.md#use-a-context-variable), og et ubegrenset antall formler, men opprinnelsen skal være sporbar tilbake til datakilden.  Dette er viktig fordi tilleggsinformasjon flyttes sammen med posten som er unik for å identifiserer den, noe som sikrer at du endrer den riktige posten.    
 
 ![](media/working-with-data-sources/writing-to-a-datasource.png) Diagrammet ovenfor viser flyten av informasjon for å oppdatere en datakilde:
 
-* En **[Redigeringsskjema](controls/control-form-detail.md)**-kontroll angir en beholder for inndatakort, som består av brukerinndata-kontroller, som for eksempel en tekstinndata-kontroll eller en glidebryter.  **[Datakilde](controls/control-form-detail.md)**- og **[Element](controls/control-form-detail.md)**-egenskaper brukes til å identifisere posten som skal redigeres.
-* Hvert inndatakort har en **[Standard](controls/properties-core.md)**-egenskap, som vanligvis er satt til feltet for skjemaets **ThisItem**-post.  Kontrollene i inndatakortet vil deretter hente inndataverdiene sine fra **[Standard](controls/properties-core.md)**.  Vanligvis trenger du ikke endre dette.
-* Hvert inndatakort viser en egenskap for **[oppdatering](controls/control-card.md)**.  Denne egenskapen kartlegger brukerens inndata for et bestemt felt i posten for å skrive tilbake til datakilden.  Vanligvis trenger du ikke endre dette.
-* En knapp eller en bildekontroll på skjermen lar brukeren lagre endringer i posten.  **[OnSelect](controls/properties-core.md)**-formelen for kontrollen påkaller **[SubmitForm](functions/function-form.md)**-funksjonen til å gjøre dette arbeidet.  **[SubmitForm](functions/function-form.md)** leser alle egenskapene for **[oppdatering](controls/control-card.md)** av kortene, og bruker dette til å skrive tilbake til datakilden.
-* Noen ganger vil det dukke opp problemer.  En nettverkstilkobling kan være nede, eller en valideringskontroll er utviklet av tjenesten som appen ikke kjente til.  **Feil-** og  **[ErrorKind](controls/control-form-detail.md)**-egenskapene for skjemakontrollen gjør denne informasjonen tilgjengelig, slik at du kan vise den til brukeren.  
+* En **[Redigeringsskjema](controls/control-form-detail.md)** -kontroll angir en beholder for inndatakort, som består av brukerinndata-kontroller, som for eksempel en tekstinndata-kontroll eller en glidebryter.  **[Datakilde](controls/control-form-detail.md)** - og **[Element](controls/control-form-detail.md)** -egenskaper brukes til å identifisere posten som skal redigeres.
+* Hvert inndatakort har en **[Standard](controls/properties-core.md)** -egenskap, som vanligvis er satt til feltet for skjemaets **ThisItem**-post.  Kontrollene i inndatakortet vil deretter hente inndataverdiene sine fra **[Standard](controls/properties-core.md)** .  Vanligvis trenger du ikke endre dette.
+* Hvert inndatakort viser en egenskap for **[oppdatering](controls/control-card.md)** .  Denne egenskapen kartlegger brukerens inndata for et bestemt felt i posten for å skrive tilbake til datakilden.  Vanligvis trenger du ikke endre dette.
+* En knapp eller en bildekontroll på skjermen lar brukeren lagre endringer i posten.  **[OnSelect](controls/properties-core.md)** -formelen for kontrollen påkaller **[SubmitForm](functions/function-form.md)** -funksjonen til å gjøre dette arbeidet.  **[SubmitForm](functions/function-form.md)** leser alle egenskapene for **[oppdatering](controls/control-card.md)** av kortene, og bruker dette til å skrive tilbake til datakilden.
+* Noen ganger vil det dukke opp problemer.  En nettverkstilkobling kan være nede, eller en valideringskontroll er utviklet av tjenesten som appen ikke kjente til.  **Feil-** og  **[ErrorKind](controls/control-form-detail.md)** -egenskapene for skjemakontrollen gjør denne informasjonen tilgjengelig, slik at du kan vise den til brukeren.  
 
-For en mer finjustert kontroll over prosessen kan du også bruke funksjonene **[Patch](functions/function-patch.md)** og **[Errors](functions/function-errors.md)**.  **[Redigeringsskjema](controls/control-form-detail.md)**-kontrollen viser en **[Oppdatering](controls/control-form-detail.md)**-egenskap, slik at du kan lese feltverdiene i skjemaet.  Du kan også bruke denne egenskapen til å oppkalle en egendefinert kobling på en tilkobling, noe som fullstendig hopper over funksjonene **Patch** og **SubmitForm**.
+For en mer finjustert kontroll over prosessen kan du også bruke funksjonene **[Patch](functions/function-patch.md)** og **[Errors](functions/function-errors.md)** .  **[Redigeringsskjema](controls/control-form-detail.md)** -kontrollen viser en **[Oppdatering](controls/control-form-detail.md)** -egenskap, slik at du kan lese feltverdiene i skjemaet.  Du kan også bruke denne egenskapen til å oppkalle en egendefinert kobling på en tilkobling, noe som fullstendig hopper over funksjonene **Patch** og **SubmitForm**.
 
 ### <a name="validation"></a>Validering
 Før du gjør en endring i en post, bør appen gjøre det den kan for å sikre at endringen vil godtas.  Det er to grunner til dette:
@@ -106,22 +106,22 @@ Før du gjør en endring i en post, bør appen gjøre det den kan for å sikre a
 
 PowerApps tilbyr to verktøy for validering:
 
-* Datakilden kan gi informasjon om hva som er gyldig, og hva som ikke er gyldig.  For eksempel kan tall ha minimums- og maksimumsverdier, og en eller flere poster kan være nødvendig.  Du kan få tilgang til denne informasjonen med **[DataSourceInfo](functions/function-datasourceinfo.md)**-funksjonen.  
-* **[Validate](functions/function-validate.md)**-funksjonen bruker den samme informasjonen til å kontrollere verdien av en enkelt kolonne eller en hel post.
+* Datakilden kan gi informasjon om hva som er gyldig, og hva som ikke er gyldig.  For eksempel kan tall ha minimums- og maksimumsverdier, og en eller flere poster kan være nødvendig.  Du kan få tilgang til denne informasjonen med **[DataSourceInfo](functions/function-datasourceinfo.md)** -funksjonen.  
+* **[Validate](functions/function-validate.md)** -funksjonen bruker den samme informasjonen til å kontrollere verdien av en enkelt kolonne eller en hel post.
 
 ### <a name="error-handling"></a>Feilbehandling
-Flott, du har godkjent posten.  Det er på tide å oppdatere posten med **[Patch](functions/function-patch.md)**!
+Flott, du har godkjent posten.  Det er på tide å oppdatere posten med **[Patch](functions/function-patch.md)** !
 
 Men det kan dessverre fremdeles være problemer.  Nettverket kan være nede, validering hos tjenesten kan mislykkes, eller brukeren har ikke de riktige tillatelsene, bare for å nevne noen av de mulige feilene appen din kan støte på.  Den må respondere riktig på feilsituasjoner, gi tilbakemelding til brukeren og tilby en fremgangsmåte slik at brukeren får løst problemet.  
 
-Når det oppstår feil med en datakilde, vil appen automatisk registrere feilinformasjonen og gjøre den tilgjengelig gjennom **[Errors](functions/function-errors.md)**-funksjonen.  Feil er tilknyttet postene som hadde problemene.  Hvis problemet er noe brukeren kan reparere, som for eksempel et problem med validering, kan de sende inn posten på nytt, og feilene vil bli fjernet.
+Når det oppstår feil med en datakilde, vil appen automatisk registrere feilinformasjonen og gjøre den tilgjengelig gjennom **[Errors](functions/function-errors.md)** -funksjonen.  Feil er tilknyttet postene som hadde problemene.  Hvis problemet er noe brukeren kan reparere, som for eksempel et problem med validering, kan de sende inn posten på nytt, og feilene vil bli fjernet.
 
-Hvis det oppstår en feil når en post opprettes med **[ Patch ](functions/function-patch.md)** eller **[ Collect](functions/function-clear-collect-clearcollect.md)**, er det ingen post å knytte eventuelle feil til.  I dette tilfellet vil *tom* bli returnert av **[Patch](functions/function-patch.md)** og kan brukes som argument for Poster til **[Errors](functions/function-errors.md)**.  Opprettingsfeil blir fjernet med neste operasjon.
+Hvis det oppstår en feil når en post opprettes med **[ Patch ](functions/function-patch.md)** eller **[ Collect](functions/function-clear-collect-clearcollect.md)** , er det ingen post å knytte eventuelle feil til.  I dette tilfellet vil *tom* bli returnert av **[Patch](functions/function-patch.md)** og kan brukes som argument for Poster til **[Errors](functions/function-errors.md)** .  Opprettingsfeil blir fjernet med neste operasjon.
 
-**[Errors](functions/function-errors.md)**-funksjonen returnerer en tabell med feilinformasjon.  Denne informasjonen kan inkludere kolonneinformasjonen, hvis feilen kan tilskrives til en bestemt kolonne.  Bruk feilmeldinger for kolonnenivå i etikettkontroller som er nær der kolonnen er plassert på Rediger-skjermen.  Bruk feilmeldinger på postnivå hvis **kolonnen** i feiltabellen er *tom*, på en plassering nær **Lagre**-knappen for hele posten.  
+**[Errors](functions/function-errors.md)** -funksjonen returnerer en tabell med feilinformasjon.  Denne informasjonen kan inkludere kolonneinformasjonen, hvis feilen kan tilskrives til en bestemt kolonne.  Bruk feilmeldinger for kolonnenivå i etikettkontroller som er nær der kolonnen er plassert på Rediger-skjermen.  Bruk feilmeldinger på postnivå hvis **kolonnen** i feiltabellen er *tom*, på en plassering nær **Lagre**-knappen for hele posten.  
 
 ### <a name="working-with-large-data-sources"></a>Å arbeide med store datakilder
-Når du oppretter rapporter fra store datakilder (kanskje millioner av poster), ønsker du at nettverkstrafikken skal reduseres. La oss si at du vil rapportere om alle kunder som har en StatusCode kalt "Platinum" i New York.  Og at kundetabellen inneholder millioner av poster.
+Når du oppretter rapporter fra store datakilder (kanskje millioner av poster), ønsker du at nettverkstrafikken skal reduseres. La oss si at du vil rapportere om alle kunder som har en StatusCode kalt "Platinum" i New York. Og at kundetabellen inneholder millioner av poster.
 
 Du ønsker **ikke** å hente alle disse kundene til appen din, for deretter å velge dem du ønsker. Det du ønsker er at disse valgene skal skje i skytjenesten der tabellen er lagret, og sende de valgte postene over nettverket.
 
@@ -130,11 +130,11 @@ Mange, men ikke alle, funksjoner som du kan bruke til å velge poster kan *deleg
 ## <a name="collections"></a>Samlinger
 Samlinger er en spesiell datakildetype.  De er lokale for appen og støttes ikke av en tilkobling til en tjeneste i skyen, slik at informasjonen ikke kan deles på tvers av enheter for samme bruker, eller mellom brukere.  De fungerer som en hvilken som helst annen datakilde, med noen unntak:
 
-* Samlinger kan opprettes dynamisk med **[Collect](functions/function-clear-collect-clearcollect.md)**-funksjonen.  De trenger ikke å etableres på forhånd, slik som tilkoblingsbaserte datakilder gjør.
-* Kolonnene i en samling kan endres når som helst ved bruk av **[Collect](functions/function-clear-collect-clearcollect.md)**-funksjonen.
-* Samlinger tillater dupliserte poster.  Mer enn én kopi av samme post kan finnes i en samling.  Funksjoner, som for eksempel **[Remove](functions/function-remove-removeif.md)**, skal fungere på det første treffet den finner, med mindre **Alle**-argumentet er angitt.
+* Samlinger kan opprettes dynamisk med **[Collect](functions/function-clear-collect-clearcollect.md)** -funksjonen.  De trenger ikke å etableres på forhånd, slik som tilkoblingsbaserte datakilder gjør.
+* Kolonnene i en samling kan endres når som helst ved bruk av **[Collect](functions/function-clear-collect-clearcollect.md)** -funksjonen.
+* Samlinger tillater dupliserte poster.  Mer enn én kopi av samme post kan finnes i en samling.  Funksjoner, som for eksempel **[Remove](functions/function-remove-removeif.md)** , skal fungere på det første treffet den finner, med mindre **Alle**-argumentet er angitt.
 * Du kan bruke funksjonene **[SaveData](functions/function-savedata-loaddata.md)** og **[LoadData](functions/function-savedata-loaddata.md)** for å lagre og laste inn en kopi av samlingen på nytt.  Informasjonen blir lagret på en privat plassering som andre brukere, apper eller enheter ikke har tilgang til.
-* Du kan bruke **[Eksport](controls/control-export-import.md)**- og **[Import](controls/control-export-import.md)**-kontrollene for å lagre og laste inn en kopi av samlingen på nytt til en fil som brukeren kan samhandle med.  
+* Du kan bruke **[Eksport](controls/control-export-import.md)** - og **[Import](controls/control-export-import.md)** -kontrollene for å lagre og laste inn en kopi av samlingen på nytt til en fil som brukeren kan samhandle med.  
 
 Hvis du vil ha mer informasjon om hvordan du arbeider med en samling som datakilde, kan du se [Opprett og oppdater en samling](create-update-collection.md).
 

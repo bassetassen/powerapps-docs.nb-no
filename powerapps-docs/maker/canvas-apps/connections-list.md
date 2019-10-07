@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 08/28/2017
 ms.author: lanced
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 05d02dca1afe6eba0864e7a1da6281998f62b398
-ms.sourcegitcommit: 39b32abb19ad9fae98ca986ded6974bcbbb3cea7
+ms.openlocfilehash: 099d59b222cf40f95214056eca8e96cfce9cc053
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68473996"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71987394"
 ---
 # <a name="overview-of-canvas-app-connectors-for-powerapps"></a>Oversikt over lerretsappkoblinger for PowerApps
 Dataene er i kjernen for de fleste apper, inkludert de du oppretter i PowerApps. Dataene er lagret i en *datakilde*, og du importerer disse dataene inn i appen ved å opprette en *tilkobling*. Tilkoblingen bruker en bestemt *tilkobling* for å kommunisere med datakilden. PowerApps har koblinger for mange populære tjenester og lokale datakilder, inkludert SharePoint, SQL Server, Office 365, Salesforce og Twitter. Hvis du vil komme i gang med å legge til data i en lerretsapp, kan du se [Legg til en datatilkobling i PowerApps](add-data-connection.md).
@@ -58,7 +58,7 @@ Hvis du vil ha mer informasjon om hvordan du tilpasser formelen for egen definer
 [Patch](functions/function-patch.md)<br>[Collect](functions/function-clear-collect-clearcollect.md)<br>[Update](functions/function-update-updateif.md)
 
 > [!NOTE]
->  **Powerapps fungerer ikke med dynamisk skjema**. Det dynamiske XML-skjemaet til uttrykket refererer til muligheten for at den samme handlingen kan returnere en annen tabell med forskjellige kolonner. Betingelser som kan føre til at Kol onnene i tabellene er ulike, inkluderer handlings inn data parameterne, brukeren eller rollen som utfører handlingen, og gruppen der brukeren arbeider, blant annet. SQL Server lagrede prosedyrer kan for eksempel returnere forskjellige kolonner hvis de kjøres med forskjellige inn data. For handlinger med dynamisk skjema viser koblings dokumentasjonen utdataene **for denne operasjonen er dynamiske.** som retur verdi. Microsoft Flow fungerer i motsetning med dynamisk skjema og kan gi deg en arbeids flyt for ditt scenario.
+>  **Powerapps fungerer ikke med dynamisk skjema**. Det dynamiske XML-skjemaet til uttrykket refererer til muligheten for at den samme handlingen kan returnere en annen tabell med forskjellige kolonner. Betingelser som kan føre til at Kol onnene i tabellene er ulike, inkluderer handlings inn data parameterne, brukeren eller rollen som utfører handlingen, og gruppen der brukeren arbeider, blant annet. SQL Server lagrede prosedyrer kan for eksempel returnere forskjellige kolonner hvis de kjøres med forskjellige inn data. For handlinger med dynamisk skjema viser koblings dokumentasjonen **utdataene for denne operasjonen er dynamiske.** som retur verdi. Microsoft Flow fungerer i motsetning med dynamisk skjema og kan gi deg en arbeids flyt for ditt scenario.
 
 ## <a name="popular-connectors"></a>Populære koblinger
 

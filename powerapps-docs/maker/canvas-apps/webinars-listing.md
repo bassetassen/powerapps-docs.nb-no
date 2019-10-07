@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 08/16/2018
 ms.author: audrie
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c11800767225f66520e1a5c368de5102219505d2
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: 040ba26d486cb16830bfd895f1c09a4e273cfa07
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63321626"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71994766"
 ---
 # <a name="powerapps-webinar-listing"></a>Liste over webinarer om PowerApps #
 Disse nettseminarene kan hjelpe deg med å dra nytte av verktøyene og funksjonene i Microsoft PowerApps. Nettseminarer er tilgjengelige på forespørsel etter direktesendingen. Obs! I noen tilfeller må du skrive inn registreringsinformasjonen på nytt, og deretter vil du motta en kobling til opptaket via e-post. 
@@ -70,7 +70,7 @@ Disse nettseminarene kan hjelpe deg med å dra nytte av verktøyene og funksjone
 **Administrasjon av PowerApps | Vanlige spørsmål**
 <br>av Manas Maheshwari [Se nå](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/PowerApps-Administration-FAQ/m-p/127369#M44)
 
-**I Universal Audit-appen: Se hva PowerApps og Flow er i stand til, av Paul Culmsee**
+@no__t – 0Inside av den universelle revisjons appen: Se hvilke PowerApps og Flow som er i stand til av Paul Culmsee @ no__t-0
 <br>av Paul Culmsee [Se nå](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Inside-the-Universal-Audit-App-See-what-PowerApps-and-Flow-are/m-p/127370#M45)
 
 ## <a name="advanced-webinar-series"></a>Nettseminarserie for viderekomne ##
@@ -102,13 +102,13 @@ Disse nettseminarene kan hjelpe deg med å dra nytte av verktøyene og funksjone
 **Koble deg til lokale data fra PowerApps**
 <br>med Archana Nair og Dimah Zaidalkilani [Se nå](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Connecting-to-On-Premises-Data-from-PowerApps/m-p/116885)
 
-**Å arbeide med koblinger: Bruke Planner Connector**
+@no__t – 0Working med koblinger: Bruk Planner-koblingen @ no__t-0
 <br> med Audrie Gordon [Se nå](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Using-the-Planner-Connector/m-p/116886)
 
 **Potensialet med Office Graph i PowerApps**
 <br>med Audrie Gordon [Se nå](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/The-Power-of-Office-Graph-with-PowerApps/m-p/116888)
 
-**Å arbeide med koblinger: Project Online (PWA)**
+@no__t – 0Working med koblinger: Project online (PWA) **
 <br>med Audrie Gordon [Se nå](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Connecting-to-Project-Online-PWA/m-p/116889)
 
 ## <a name="sharepoint-series"></a>SharePoint-serien ##
@@ -150,5 +150,5 @@ Disse nettseminarene kan hjelpe deg med å dra nytte av verktøyene og funksjone
 **Bygging av dialogbokser eller popup-meldinger i PowerApps**
 <br>av Veronica Ward [Se nå](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Building-Dialogs-in-PowerApps-by-Veronica-Ward/m-p/117627#M39)
 
-**Se bak kulissene sammen med en PowerApps-utviklere – en nærmere titt på maler: Marie Hoeger**
+@no__t – 0Look bak gardinen med en PowerApps-utviklere – se nærmere på maler: Marie Hoeger @ no__t-0
 <br>med Audrie Gordon [Se nå](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Developer-Intro-and-Discussing-Templates/m-p/116848)

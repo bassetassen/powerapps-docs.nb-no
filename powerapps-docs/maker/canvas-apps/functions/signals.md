@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/29/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d375adeb8a20dfe2d9629a9c34944a8dcd80a8e7
-ms.sourcegitcommit: 562c7ed5fbb116be1cbb0f45e3f6e75e3e4cf011
+ms.openlocfilehash: a06217470482eccdf368279eaabcd297bbf73ce5
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451446"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71983351"
 ---
 # <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Signaler fra Acceleration, App, Compass, Connection og Location i PowerApps
 
@@ -26,12 +26,12 @@ Returnerer informasjon om appmiljøet, som hvor brukeren befinner seg i verden o
 
 ## <a name="description-and-syntax"></a>Beskrivelse og syntaks
 
-Signaler er verdier som kan endre når som helst, uavhengig av hvordan brukeren kan samhandle med appen. Formler som er basert på signaler automatisk beregnes på nytt når disse verdiene endres.
+Signaler er verdier som kan endres når som helst, uavhengig av hvordan brukeren kan samhandle med appen. Formler som er basert på signaler, beregnes automatisk på nytt når disse verdiene endres.
 
-Signaler returnerer vanligvis en [post](../working-with-tables.md#records) av informasjon. Du kan bruke og lagre denne informasjonen som en post, eller du kan trekke ut enkelte egenskaper ved bruk av **.** [operatoren](operators.md).
+Signaler returnerer vanligvis en [post](../working-with-tables.md#records) med informasjon. Du kan bruke og lagre denne informasjonen som en post, eller du kan trekke ut enkelte egenskaper ved bruk av **.** [operatoren](operators.md).
 
 > [!NOTE]
-> Den **akselerasjon** og **kompass** funksjoner returnerer nøyaktige verdier i en innebygd spiller som på iOS eller Android, men disse funksjonene returnerer nullverdier når du oppretter eller endrer en app i nettleseren.
+> Funksjonene **AKS ele rasjon** og **kompass** returnerer nøyaktige verdier i en opprinnelig spiller, som for eksempel på IOS eller Android, men disse funksjonene returnerer null verdier når du oppretter eller endrer en app i nett leseren.
 
 ### <a name="acceleration"></a>Acceleration
 
@@ -45,13 +45,13 @@ Signaler returnerer vanligvis en [post](../working-with-tables.md#records) av in
 
 ### <a name="app"></a>App
 
-Blant andre egenskaper, den **App** objektet inneholder et signal som angir hvilken skjerm vises.
+**App** -objektet inneholder et signal som angir hvilken skjerm som vises.
 
 | Egenskap | Beskrivelse |
 | --- | --- |
-| **App.ActiveScreen** |Skjermen som vises. Returnerer et skjermobjekt som du kan bruke til å referere til egenskaper til skjermen, eller sammenligne en annen skjerm for å bestemme hvilken skjerm vises. Du kan bruke den **[tilbake](function-navigate.md)** eller **[Navigate](function-navigate.md)** funksjonen for å endre skjermen som vises. |
+| **App.ActiveScreen** |Skjerm som vises. Returnerer et skjerm objekt, som du kan bruke til å referere til egenskaper på skjermen eller sammenligne med en annen skjerm for å bestemme hvilken skjerm som vises. Du kan bruke **[tilbake](function-navigate.md)** -eller **[Naviger](function-navigate.md)** -funksjonen til å endre skjermen som vises. |
 
-Mer informasjon: [**App** objektet](object-app.md) dokumentasjon.
+Mer informasjon: Dokumentasjon for [ **app** -objekt](object-app.md) .
 
 ### <a name="compass"></a>Compass
 **Kompass**-signalet returnerer kompassretningen øverst på skjermen. Overskriften er basert på magnetisk nord.
@@ -82,18 +82,18 @@ Når plasseringen endrer seg, vil tjenestene som er avhengig av plasseringen kon
 | **Location.Longitude** |Returnerer et tall, fra 0 to 180, som angir lengdegraden, som målt i grader vest for Greenwich i England. |
 
 ## <a name="examples"></a>Eksempler
-I et fotball-felt, en pitcheren kaster en telefon fra pitcherens mound til en mottaker på home-platen. Telefonen ligger flat mot bakken, toppen av skjermen peker mot mottakeren, og pitcheren legger ikke inn noen rotasjoner. På denne plasseringen har telefonen nettverkstjeneste som er forbruksmålt, men ingen trådløs Internett. **PlayBall**-skjermen vises.   
+I et felt i fotball kan en mugg inneholde en telefon fra Mound til en Catcher på hjemme platen. Telefonen ligger flat mot bakken, toppen av skjermen peker mot mottakeren, og pitcheren legger ikke inn noen rotasjoner. På denne plasseringen har telefonen nettverkstjeneste som er forbruksmålt, men ingen trådløs Internett. **PlayBall**-skjermen vises.   
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Location.Latitude** |Returnerer breddegraden til gjeldende plassering. Feltet er plassert på kartkoordinater 47,591 N, 122,333 W. |47,591<br><br>Breddegraden endres automatisk mens ballen beveger seg mellom pitcheren og mottakeren. |
+| **Location.Latitude** |Returnerer breddegraden til gjeldende plassering. Feltet befinner seg på kart koordinater 47,591 N, 122,333 W. |47,591<br><br>Breddegraden endres automatisk mens ballen beveger seg mellom pitcheren og mottakeren. |
 | **Location.Longitude** |Returnerer lengdegraden til gjeldende plassering. |122,333<br><br>Lengdegraden endres automatisk mens ballen beveger seg mellom pitcheren og mottakeren. |
 | **Plassering** |Returnerer breddegraden og lengdegraden til den gjeldende plasseringen, som en post. |{&nbsp;breddegrad:&nbsp;47,591, lengdegrad:&nbsp;122,333&nbsp;} |
-| **Compass.Heading** |Returnerer kompassretningen øverst på skjermen. I dette feltet er home-platen omtrent Sørvest fra pitcherens mound. |230,25 |
+| **Compass.Heading** |Returnerer kompassretningen øverst på skjermen. I dette feltet er Home-platen omtrent hoved kontor fra muggens Mound. |230,25 |
 | **Acceleration.X** |Returnerer akselerasjonen til enheten side til side. Pitcheren kaster telefonen rett frem med tanke på den øverste skjermkanten, slik at enheten ikke akselererer side til side. |0 |
 | **Acceleration.Y** |Returnerer akselerasjonen fra enheten foran og bakover. Pitcheren gir innledningsvis enheten en stor akselerasjon når han kastet enheten, fra 0-145 kilometer i timen (40 meter per sekund) i et halvt sekund. Etter at enheten er i luften og ignorerer friksjonen, akselererer ikke enheten ytterligere. Enheten akselererer når mottakeren tar tak i den, og får den til å stoppe. |8,2, mens pitcheren kaster enheten.<br><br>0, mens enheten er i luften.<br><br>-8.2, idet mottakeren får tak i enheten. |
 | **Acceleration.Z** |Returnerer akselerasjonen til enheten fra øverst til nederst. Mens enheten er i luften, opplever den effekten av tyngdekraften. |0, mens pitcheren kaster enheten.<br><br>1, mens enheten er i luften.<br><br>0, idet mottakeren får tak i enheten. |
-| **Akselerasjon** |Returnerer akselerasjonen som en post. |{ X: 0, Y: 264, Z: 0} som pitcheren kaster enheten. |
+| **Akselerasjon** |Returnerer akselerasjonen som en post. |KRYSSET 0, Y: 264, Z: 0} når muggen genererer enheten. |
 | **Connection.Connected** |Returnerer en boolsk verdi som indikerer om enheten er tilkoblet nettverket |**sann** |
 | **Connection.Metered** |Returnerer en boolsk verdi som indikerer om tilkoblingen er forbruksmålt |**sann** |
 | **App.ActiveScreen = PlayBall** |Returnerer en boolsk verdi som indikerer om **PlayBall** vises. |**sann** |

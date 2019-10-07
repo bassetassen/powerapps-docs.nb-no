@@ -1,212 +1,211 @@
 ---
-title: Opprett en avhengige rullegardinlisten i en lerretsapp | Microsoft Docs
-description: I PowerApps, kan du opprette en rullegardinliste som filtrerer en annen rullegardinlisten i en lerretsapp.
+title: Opprett en avhengig rulle gardin liste i en lerret-app | Microsoft Docs
+description: Opprett en rulle gardin liste i PowerApps som filtrerer en annen rulle gardin liste i en lerret-app.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/04/2019
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: dc1b3b87e2c1fdcd4ab7eb6634db7f9e7c049ec2
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 57abde44541a2a1e40e3a8ffc55a89e37a8c6478
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61550786"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71985765"
 ---
-# <a name="create-dependent-drop-down-lists-in-a-canvas-app"></a>Opprett avhengige rullegardinlister i en lerretsapp
+# <a name="create-dependent-drop-down-lists-in-a-canvas-app"></a>Opprett en avhengig rulle gardin liste i en lerret-app
 
-Når du oppretter avhengige (eller gjennomgripende) rullegardinlister, Velg brukere et alternativ i en liste til filteralternativer i en annen liste. Mange organisasjoner opprette avhengige lister for å hjelpe brukere med å fylle ut skjemaer mer effektivt. For eksempel brukere kan velge et land eller område til å filtrere en liste over byer, eller brukere kan velge en kategori for å vise bare kodene i denne kategorien.
+Når du oppretter avhengige (eller gjennom gripende) lister, velger brukerne et alternativ i en liste for å filtrere alternativer i en annen liste. Mange organisasjoner oppretter avhengige lister for å hjelpe brukere med å fylle ut skjemaer mer effektivt. Brukere kan for eksempel velge et land eller et område for å filtrere en liste over byer, eller brukerne kan velge en kategori for å vise bare kodene i denne kategorien.
 
-Som en anbefalt fremgangsmåte, kan du opprette en datakilde for verdiene i den "overordnede" og "underordnet" lister (for eksempel land/områder og byer) som er atskilt fra datakilden som brukere oppdatere ved hjelp av appen. Hvis du skal bruke denne fremgangsmåten, du kan bruke de samme overordnede og underordnede dataene i mer enn én app, og du kan oppdatere dataene uten å publisere appen eller apper som bruker dem på nytt. Du kan gjøre det samme resultatet ved hjelp av en samling eller statiske data, men det er ikke anbefalt for enterprise-scenarier.
+Som en anbefalt Fremgangs måte kan du opprette en data kilde for verdiene i listene «overordnet» og «underordnet» (for eksempel land/områder og byer) som er atskilt fra data kilden som brukere oppdaterer ved hjelp av appen. Hvis du tar denne tilnærmingen, kan du bruke samme overordnede og underordnede data i mer enn én app, og du kan oppdatere dataene uten å publisere appen eller appene som bruker dem. Du kan oppnå samme resultat ved å bruke en samling eller statiske data, men det anbefales ikke for scenarioer i bedrifter.
 
-For scenariet i dette emnet, kan du lagre ansatte Send problemer til en **hendelser** liste gjennom et skjema. Ansatte angi ikke bare plasseringen av butikk som hendelsen oppstod, men også avdeling i denne plasseringen. Ikke alle lokasjoner som har de samme avdelingene, så en **plasseringer** listen sikrer at ansatte ikke kan angi en avdeling for en plassering som ikke har denne avdelingen.
+For scenarioet i dette emnet, kan du lagre ansatte ved å sende problemer til en **hendelses** liste gjennom et skjema. Ansatte angir ikke bare plasseringen av lageret der hendelsen forekom, men også avdelingen i den plasseringen. Ikke alle lokasjoner har de samme avdelingene, så en **lokasjons** liste sikrer at ansatte ikke kan angi en avdeling for en plassering som ikke har den avdelingen.
 
-Dette emnet bruker Microsoft SharePoint-lister som datakilder, men alle datakilder i tabellform fungerer på samme måte.
+Dette emnet bruker Microsoft SharePoint-lister som data kilder, men alle tabell data kilder fungerer på samme måte.
 
-## <a name="create-data-sources"></a>Opprette datakilder
+## <a name="create-data-sources"></a>Opprett data kilder
 
-A **plasseringer** listen viser avdelinger for hver plassering.
+En **lokasjons** liste viser avdelingene på hver plassering.
 
 | Location | Avdeling |
 |----------------|------------------|
-| Eganville      | Bakeren           |
+| Eganville      | Bakeri           |
 | Eganville      | Deli             |
-| Eganville      | Produsere          |
-| Renfrew        | Bakeren           |
+| Eganville      | Får          |
+| Renfrew        | Bakeri           |
 | Renfrew        | Deli             |
-| Renfrew        | Produsere          |
-| Renfrew        | Apotek         |
-| Renfrew        | Blomstermotiv           |
-| Pembroke       | Bakeren           |
+| Renfrew        | Får          |
+| Renfrew        | Pharmacy         |
+| Renfrew        | Blomster           |
+| Pembroke       | Bakeri           |
 | Pembroke       | Deli             |
-| Pembroke       | Produsere          |
-| Pembroke       | Blomstermotiv           |
+| Pembroke       | Får          |
+| Pembroke       | Blomster           |
 
-En **hendelser** listen viser kontaktinformasjon og informasjon om hver hendelse. Opprette dato-kolonnen som en **dato** kolonne, men opprette de andre kolonnene som **enkelt linje med tekst** kolonner for å forenkle konfigurasjon og unngå [delegering](./delegation-overview.md) advarsler i Microsoft PowerApps.
+En **hendelses** liste viser kontakt informasjon og informasjon om hver hendelse. Opprett dato Kol onnen som en **dato** -kolonne, men Opprett de andre Kol Onnene som **én linje med tekst** -kolonner for å forenkle konfigurasjonen og unngå [delegerings](./delegation-overview.md) advarsler i Microsoft PowerApps.
 
-| Fornavn | Etternavn | Telefonnummer     | Location | Avdeling | Beskrivelse       | Date      |
+| For navn | Etter navn | Telefon nummer     | Location | Avdeling | Beskrivelse       | Date      |
 |------------|-----------|------------------|----------------|------------|-------------------------|-----------|
-| Tonya       | Cortez   | (206) 555 - 1022 | Eganville      | Produsere    | Jeg hadde et problem med...   | 2/12/2019 |
-| Moses     | Laflamme     | (425) 555 - 1044 | Renfrew        | Blomstermotiv     | Jeg har oppstått et problem... | 2/13/2019 |
+| Tonya       | Cortez   | (206) 555-1022 | Eganville      | Får    | Det har oppstått et problem med...   | 2/12/2019 |
+| Moses     | Laflamme     | (425) 555-1044 | Renfrew        | Blomster     | Det oppstod et problem... | 2/13/2019 |
 
-Egendefinerte SharePoint-lister inneholder som standard en **tittel** kolonnen at du kan ikke gi nytt navn til eller fjerne, og den må inneholde data før du kan lagre et element i listen. Å konfigurere kolonnen slik at den ikke krever data:
+Som standard inkluderer egen definerte SharePoint-lister en **Tittel** -kolonne som du ikke kan gi nytt navn til eller fjerne, og den må inneholde data før du kan lagre et element i listen. Slik konfigurerer du kolonnen slik at den ikke krever data:
 
-1. Velg tannhjulikonet nær hjørnet øverst til høyre, og velg deretter **listeinnstillinger**.
-1. På den **innstillinger** velger **tittel** i listen over kolonner.
-1. Under **krev at denne kolonnen inneholder informasjon**, og velg **Nei**.
+1. Velg tann hjul ikonet nær hjørnet øverst til høyre, og velg deretter **liste innstillinger**.
+1. Velg **Tittel** i listen over kolonner på **Innstillinger** -siden.
+1. Velg **Nei**under **Krev at denne kolonnen inneholder informasjon**.
 
-Etter denne endringen, kan du ignorere den **tittel** kolonnen, eller du kan [fjerne den](https://support.office.com/article/edit-a-list-column-in-sharepoint-online-77130c2e-76d1-4f80-af8b-4c6f47b264b8) fra standardvisningen hvis minst én annen kolonne vises.
+Når endringen er endret, kan du ignorere **Tittel** -kolonnen, eller du kan [fjerne den](https://support.office.com/article/edit-a-list-column-in-sharepoint-online-77130c2e-76d1-4f80-af8b-4c6f47b264b8) fra standard visningen hvis minst én annen kolonne vises.
 
 ## <a name="open-the-form"></a>Åpne skjemaet
 
-1. Åpne den **hendelser** listen, og velg deretter **PowerApps** > **tilpasse skjemaer**.
+1. Åpne **hendelses** listen, og velg deretter **powerapps**@no__t – 2**Tilpass skjemaer**.
 
     > [!div class="mx-imgBorder"]
-    > ![Åpne listen hendelser, og velg deretter PowerApps > Tilpass skjemaer. ](./media/dependent-drop-down-lists/open-form.png "Åpne listen hendelser, og velg deretter PowerApps > Tilpass skjemaer.")
+    > ![Åpne hendelses listen, og velg deretter powerapps > tilpasse skjemaer.](./media/dependent-drop-down-lists/open-form.png "Åpne hendelses listen, og velg deretter powerapps > tilpasse skjemaer.")
 
-    En nettleserfane åpnes med standardskjema i PowerApps Studio.
+    En nett leser kategori åpnes med standard skjemaet i PowerApps Studio.
 
-1. (valgfritt) I den **felt** ruten, Hold pekeren over den **tittel** feltet, velg ellipsen (...) som vises, og velg deretter **fjerne**.
+1. valg fritt Hold pekeren over **Tittel** -feltet i **felt** -ruten, Velg ellipsen (...) som vises, og velg deretter **Fjern**.
 
-    Hvis du har lukket den **felt** ruten, kan du åpne den på nytt ved å velge **SharePointForm1** i det venstre navigasjonsfeltet og deretter velge **Rediger felt** på **Egenskaper** fanen i ruten til høyre.
+    Hvis du har lukket **felt** -ruten, kan du åpne den igjen ved å velge **SharePointForm1** i det venstre navigasjons feltet, og deretter velge **Rediger felt** på **Egenskaper** -fanen i ruten til høyre.
 
-1. (valgfritt) Gjenta forrige trinn for å fjerne den **vedlegg** feltet fra skjemaet.
+1. valg fritt Gjenta det forrige trinnet for å fjerne **vedlegg** -feltet fra-skjemaet.
 
-    Skjemaet vises med bare feltene som du har lagt til.
+    Skjemaet vises med bare feltene du har lagt til.
 
     > [!div class="mx-imgBorder"]
-    > ![Skjema-uten tittel og vedlegg felt](./media/dependent-drop-down-lists/default-form.png)
+    > ![Form uten tittel-og Vedleggs felt @ no__t-1
 
 ## <a name="replace-the-controls"></a>Erstatt kontrollene
 
-1. I den **felt** ruten, velger du pilen ved siden **plassering**.
+1. Velg pilen ved siden av **plassering**i **felt** -ruten.
 
-    Hvis du har lukket den **felt** ruten, kan du åpne den på nytt ved å velge **SharePointForm1** i det venstre navigasjonsfeltet og deretter velge **Rediger felt** på **Egenskaper** fanen i ruten til høyre.
+    Hvis du har lukket **felt** -ruten, kan du åpne den igjen ved å velge **SharePointForm1** i det venstre navigasjons feltet, og deretter velge **Rediger felt** på **Egenskaper** -fanen i ruten til høyre.
 
-1. Åpne den **kontroll av typen** listen, og velg deretter **tillatt verdier**.
+1. Åpne **kontroll type** -listen, og velg deretter **tillatte verdier**.
 
     > [!div class="mx-imgBorder"]
-    > ![Tillatte verdier](./media/dependent-drop-down-lists/change-control.png)
+    > ![Allowed-verdier @ no__t-1
 
-    Inndata mekanismen endres til en **rullegardin** kontroll.
+    Inn data mekanismen endres til en **rulle** gardin-kontroll.
 
-1. Gjenta disse trinnene for den **avdeling** kort.
+1. Gjenta disse trinnene for **avdelings** kortet.
 
 ## <a name="add-the-locations-list"></a>Legg til listen over plasseringer
 
-1. Velg **Vis** > **datakilder** > **Legg til datakilde**.
+1. Velg **vis** > **data kilder** > **Legg til data kilde**.
 
-1. Velg eller Opprett en SharePoint-tilkobling, og deretter angi området som inneholder den **plasseringer** listen.
+1. Velg eller Opprett en SharePoint-tilkobling, og angi deretter området som inneholder listen over **plasseringer** .
 
-1. Merk av for denne listen, og velg deretter **koble til**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Data-ruten](./media/dependent-drop-down-lists/select-list.png)
-
-    Listen over tilkoblinger viser de **hendelser** -listen som skjemaet er basert på, og den **plasseringer** listen, som identifiserer steder og avdelinger i skjemaet.
+1. Merk av i avmerkings boksen for listen, og velg deretter **Koble til**.
 
     > [!div class="mx-imgBorder"]
-    > ![SharePoint-datakilder](./media/dependent-drop-down-lists/data-sources.png)
+    > @no__t 0Data-rute @ no__t-1
+
+    Listen over tilkoblinger viser **hendelses** listen, som skjemaet er basert på, og **lokasjoner** -listen, som vil identifisere steder og avdelinger i skjemaet.
+
+    > [!div class="mx-imgBorder"]
+    > 0SharePoint data kilder @ no__t-1 @no__t
 
 ## <a name="unlock-the-cards"></a>Lås opp kortene
 
-1. Velg den **plassering** kort, velg den **avansert** fanen i den høyre ruten, og velg deretter **Lås opp til å endre egenskapene**.
+1. Velg **lokasjons** kortet, velg **Avansert** -fanen i ruten til høyre, og velg deretter **Lås opp for å endre egenskaper**.
 
-1. Gjenta det forrige trinnet for den **avdeling** kort.
+1. Gjenta det forrige trinnet for **avdelings** kortet.
 
-## <a name="rename-the-controls"></a>Navngi kontrollene på nytt
+## <a name="rename-the-controls"></a>Gi nytt navn til kontrollene
 
-Hvis du gir nytt navn til kontrollene, du kan identifisere dem enklere og eksemplene er enklere å følge. For å oppdage andre anbefalte fremgangsmåter, kan du se gjennom den [koding standarder og retningslinjer hvitboken](https://aka.ms/powerappscanvasguidelines).
+Hvis du gir nytt navn til kontrollene, kan du identifisere dem enklere, og eksemplene er enklere å følge. Hvis du vil finne andre anbefalte Fremgangs måter, kan du se gjennom [kode standarder og retnings linjer](https://aka.ms/powerappscanvasguidelines).
 
-1. I den **plassering** kort, velg den **rullegardin** kontroll.
+1. Velg **rulle** gardin-kontrollen på **Lokasjon** -kortet.
 
-1. Gi nytt navn til den valgte kontrollen nær toppen av den høyre ruten, ved å skrive eller lime inn **ddLocation**.
+1. Nesten øverst i ruten til høyre, gi nytt navn til den valgte kontrollen ved å skrive eller lime inn **ddLocation**.
 
     > [!div class="mx-imgBorder"]
-    > ![Gi nytt navn til en kontroll](./media/dependent-drop-down-lists/rename-control.png)
+    > @no__t – 0Rename en kontroll @ no__t-1
 
-1. Gjenta de forrige to trinnene i den **avdeling** kort for å gi nytt navn til den **rullegardin** kontrollen til **ddDepartment**.
+1. Gjenta de forrige to trinnene i **avdeling** -kortet for å gi nytt navn til **rulle gardin** -kontrollen til **ddDepartment**.
 
-## <a name="configure-the-locations"></a>Konfigurer plasseringene
+## <a name="configure-the-locations"></a>Konfigurer stedene
 
-1. Angi den **elementer** -egenskapen for **ddlocation** til denne formelen:
+1. Angi **elementer** -egenskapen for **ddlocation** til denne formelen:
 
-    `Distinct(Locations; Location)`
+    `Distinct(Locations, Location)`
 
-1. (valgfritt) Mens du holder nede Alt-tasten, kan du åpne **ddLocation**, og Bekreft at listen viser de tre stedene.
+1. valg fritt Mens du holder nede Alt-tasten, åpner du **ddLocation**og bekrefter at listen viser de tre stedene.
 
-## <a name="configure-the-departments"></a>Konfigurer avdelingene
+## <a name="configure-the-departments"></a>Konfigurere avdelingene
 
-1. Velg **ddDepartment**, og deretter, på den **Egenskaper** fanen i den høyre ruten, velg **avhenger av.**
+1. Velg **ddDepartment**, og velg deretter i **Egenskaper** -fanen i ruten til høyre, **avhengig av.**
 
-1. Under **overordnet kontroll**, forsikre deg om at **ddLocation** vises i listen øvre og **resultatet** vises i den nederste listen.
+1. Sørg for at **ddLocation** vises i den øvre **listen, under** **overordnet kontroll**, i den nederste listen.
 
     > [!NOTE]
-    > Hvis du ikke vil skal samsvare med på en streng, men på den faktiske ID-en til raden med data, velger du **ID** i stedet for **resultatet**.
+    > Hvis du ikke vil ha treff på en streng, men på den faktiske ID-en for raden med data, velger du **ID** i stedet for **resultat**.
 
-1. Under **Matching feltet**, og velg **plasseringer** i øvre listen, velg **plassering** i den nederste listen, og velg deretter **Bruk**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Avhengig av koblingen](./media/dependent-drop-down-lists/depends-on.png)
-
-    Den **elementer** -egenskapen for **ddDepartment** er satt til denne formelen:
-
-    `Filter(Locations; Location = ddLocation.Selected.Result)`
-
-    Denne formelen filtrerer elementene i **ddDepartment** basert på hva brukeren velger i **ddLocation**. Slik konfigurasjon sikrer at "underordnet" listen over avdelinger gjenspeiler dataene for den "overordnede" plasseringen, som den **plasseringer** angir listen i SharePoint.
-
-1. På den **Egenskaper** fanen i den høyre ruten, åpner du listen siden **verdien**, og velg deretter **avdeling**.
-
-    Dette trinnet angir teksten som vises til alternativene fra den **avdeling** -kolonnen i den **plasseringer** listen i SharePoint.
+1. Velg **plasseringer** i den øvre listen under **samsvarende felt**, velg **plassering** i den nedre listen, og velg deretter **Bruk**.
 
     > [!div class="mx-imgBorder"]
-    > ![Avdelingsverdien](./media/dependent-drop-down-lists/dept-value.png)
+    > ![Depends på kobling @ no__t-1
 
-## <a name="test-the-form"></a>Teste skjemaet
+    **Items** -egenskapen for **ddDepartment** er satt til denne formelen:
 
-Mens du holder nede Alt-tasten, åpner du listen over plasseringer, velger du ett, åpne listen over avdelinger, og deretter velger du en.
+    `Filter(Locations, Location = ddLocation.Selected.Result)`
 
-Listen over plasseringer og avdelinger gjenspeiler informasjonen i den **plasseringer** listen i SharePoint.
+    Denne formelen filtrerer elementene i **ddDepartment** basert på hva brukeren velger i **ddLocation**. En slik konfigurasjon sikrer at den underordnede listen over avdelinger gjenspeiler dataene for den overordnede plasseringen, da **lokasjoner** -listen i SharePoint angir.
+
+1. Åpne listen ved siden av **verdi**i **Egenskaper** -fanen i ruten til høyre, og velg deretter **avdeling**.
+
+    Dette trinnet angir visnings teksten til alternativene fra **avdeling** -kolonnen i **lokasjoner** -listen i SharePoint.
+
+    > [!div class="mx-imgBorder"]
+    > ![Department-verdi @ no__t-1
+
+## <a name="test-the-form"></a>Test skjemaet
+
+Mens du holder nede Alt-tasten, åpner du listen over plasseringer, velger en, åpner listen over avdelinger, og deretter velger du en.
+
+Listene over lokasjoner og avdelinger gjenspeiler informasjonen i **lokasjoner** -listen i SharePoint.
 
 > [!div class="mx-imgBorder"]
-> ![Åpne listen over plasseringer, endre valget fra Renfrew til Pembroke og åpne deretter listen over avdelinger](./media/dependent-drop-down-lists/dropdowns.gif)
+> ![Open listen over plasseringer, endre utvalget fra Renfrew til Pembroke, og åpne deretter listen over avdelinger @ no__t-1
 
-## <a name="save-and-open-the-form-optional"></a>Lagre og åpne skjemaet (valgfritt)
+## <a name="save-and-open-the-form-optional"></a>Lagre og åpne skjemaet (valg fritt)
 
-1. Åpne den **filen** -menyen, og velg deretter **lagre** > **Publiser til SharePoint** > **Publiser til SharePoint**.
+1. Åpne **fil** -menyen, og velg deretter **Lagre** > **Publiser til SharePoint** > **Publiser til SharePoint**.
 
 1. Velg tilbakepilen øverst til venstre, og velg deretter **Tilbake til SharePoint**.
 
 1. Velg **Ny** i kommandolinjen for å åpne det egendefinerte skjemaet.
 
-## <a name="faq"></a>VANLIGE SPØRSMÅL
+## <a name="faq"></a>VANLIG
 
-**Jeg ser ikke alle data: kildene er helt tomt eller har feil data.**
-Kontroller om du viser riktig felt for kontrollen i én av følgende måter:
+**Jeg kan ikke se noen data: kildene er tomme eller har feil data.**
+Bekreft om du viser riktig felt for kontrollen din på én av følgende måter:
 
-- Velg en rullegardinlisten, og velg deretter den **verdien** -egenskapen i den **Egenskaper** fanen i ruten til høyre.
-
-    > [!div class="mx-imgBorder"]
-    > ![Endre rullegardin](./media/dependent-drop-down-lists/drop-down-display-field.png)
-
-- Velg en kombinasjonsboks, og kontroller deretter at teksten er feltet som du vil vise.
+- Velg en rulle gardin liste, og velg deretter **verdi** -egenskapen i **Egenskaper** -fanen i ruten til høyre.
 
     > [!div class="mx-imgBorder"]
-    > ![Kombinasjonsboks for endring](./media/dependent-drop-down-lists/combo-box-display-field.png)
+    > @no__t – 0Change-rullegardinliste @ no__t-1
 
-**Min rullegardinlisten underordnede inneholder dupliserte elementer.**
-Denne symptom sannsynligvis på grunn av ved hjelp av en **oppslag** kolonnen i SharePoint eller en **valg** -funksjonen i PowerApps. Hvis du vil fjerne dupliseringen, bryte en **Distinct** funksjonen rundt den riktig returneringen av data. Mer informasjon: [DISTINCT-funksjonen](functions/function-distinct.md).
+- Velg en kombinasjons boks, og kontroller at den primære teksten er feltet som du vil vise.
+
+    > [!div class="mx-imgBorder"]
+    > kombinasjons boks for ![Change @ no__t-1
+
+**Den underordnede rulle gardin listen inneholder like elementer.**
+Dette symptomet er sannsynligvis på grunn av bruk av en **oppslagskolonne** i SharePoint eller en **valg** funksjon i powerapps. Hvis du vil fjerne dupliseringen, kan du bryte en **DISTINCT** -funksjon på riktig måte som returnerer data. Mer informasjon: [DISTINCT-funksjonen](functions/function-distinct.md).
 
 ## <a name="known-limitations"></a>Kjente begrensninger
 
-Denne konfigurasjonen er tilgjengelig på **rullegardin** kontroller, i tillegg til **kombinasjonsboks** og **listeboks** kontroller som muliggjør én valg om gangen. Du kan ikke bruke den **avhenger av på** konfigurasjon for noen av disse kontrollene hvis de tillater flere valg. Denne tilnærmingen er ikke anbefalt for å arbeide med alternativsett i Common Data Service.
+Denne konfigurasjonen er tilgjengelig på **rulle** gardin-kontroller, samt **kombinasjons boks** -og **liste boks** kontroller som tillater ett valg om gangen. Du kan ikke bruke **avhengig** av konfigurasjonen for noen av disse kontrollene hvis de tillater flere valg. Denne Fremgangs måten anbefales ikke for å arbeide med alternativ sett i Common Data Service.
 
-Den **avhenger av på** konfigurasjonen ikke støtter statiske data eller samlinger. Hvis du vil konfigurere avhengige rullegardinlister med disse kildene, kan du redigere uttrykket direkte i formellinjen. I tillegg PowerApps ikke støtter bruk av to valg-felt i SharePoint uten noen samsvarende tabell med data, og du kan ikke definere **Matching feltet** i dette Grensesnittet.
+**Avhengig** av konfigurasjonen støtter ikke statiske data eller samlinger. Hvis du vil konfigurere en avhengig rulle gardin liste med disse kildene, redigerer du uttrykket direkte på formel linjen. I tillegg støtter ikke PowerApps å bruke to valgs felt i SharePoint uten samsvarende tabell med data, og du kan ikke definere **samsvarende felt** i dette bruker grensesnittet.

@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/23/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4eb020d854549b6dc8878f07ae26390523a1bc03
-ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
+ms.openlocfilehash: a2b04e6a752ade561ec1b95658bcacda759b1a1c
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215968"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992569"
 ---
 # <a name="and-or-and-not-functions-in-powerapps"></a>Funksjonene And, Or og Not i PowerApps
 
@@ -33,20 +32,20 @@ Funksjoner for boolsk logikk, som vanligvis brukes til å behandle resultatene a
 
 **Not**-funksjonen returnerer **sann** hvis argumentet er **usann**, og returnerer **usann** hvis argumentet er **sann**.
 
-Disse funksjonene fungerer på samme måte som de gjør i Excel. Du kan også bruke [operatorer](operators.md) til å utføre disse samme operasjoner, ved hjelp av enten Visual Basic eller JavaScript-syntaks:
+Disse funksjonene fungerer på samme måte som i Excel. Du kan også bruke [operatorer](operators.md) til å utføre samme operasjoner ved hjelp av Visual Basic eller JavaScript-syntaks:
 
-| Funksjonen notasjon | Visual Basic-operatoren notasjon | JavaScript-operatoren notasjon |
+| Funksjons notasjon | Visual Basic-operator | JavaScript-operator |
 | -------------|------------|--------|
-| **And( x; y )** | **x og y** | **x && y** |
-| **Or( x; y )** | **x eller y** | **x &#124; &#124; y** |
-| **Ikke (x)** | **Ikke x** | **! x** |
+| **Og (x, y)** | **x og y** | **x & & y** |
+| **Eller (x, y)** | **x eller y** | **x &#124; &#124; y** |
+| **Not (x)** | **Not x** | **! krysset** |
 
-Disse funksjonene fungerer med logiske verdier. Du kan ikke sende dem et tall eller en streng direkte. i stedet, må du gjøre en sammenligning eller en test. For eksempel denne logiske formelen **x > 1** returnerer den boolske verdien **SANN** Hvis **x** er større enn **1**. Hvis **x** er mindre enn **1**, evalueres formelen som **USANN**.
+Disse funksjonene fungerer med logiske verdier. Du kan ikke sende dem et tall eller en streng direkte. i stedet må du foreta en sammenligning eller en test. Denne logiske formelen **x > 1** evalueres for eksempel til den boolske verdien **sann** Hvis **x** er større enn **1**. Hvis **x** er mindre enn **1**, evalueres formelen som **Usann**.
 
 ## <a name="syntax"></a>Syntaks
 
-**And**( *LogicalFormula1*; *LogicalFormula2* [; *LogicalFormula3*; ... ] )<br>
-**Or**( *LogicalFormula1*; *LogicalFormula2* [; *LogicalFormula3*; ... ] )<br>
+**And**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
+**Or**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
 **Not**( *LogicalFormula* )
 
 - *LogicalFormula* – obligatorisk.  Logiske formler som skal evalueres og arbeides med.
@@ -55,31 +54,31 @@ Disse funksjonene fungerer med logiske verdier. Du kan ikke sende dem et tall el
 
 Eksemplene i denne delen bruker disse globale variablene:
 
-- **a** = *false*
-- **b** = *true*
+- **en** = -*Usann*
+- **b** = *sann*
 - **x** = 10
 - **y** = 100
 - **s** = "Hello World"
 
-For å opprette disse globale variablene i en app, kan du sette inn en [ **knappen** ](../controls/control-button.md) kontroll, og angi dens **OnSelect** egenskapen til denne formelen:
+Hvis du vil opprette disse globale variablene i en app, kan du sette inn en [**knapp**](../controls/control-button.md) -kontroll og angi **OnSelect** -egenskapen til denne formelen:
 
-```powerapps-comma
-Set( a; false );; Set( b; true );; Set( x; 10 );; Set( y; 100 );; Set( s; "Hello World" )
+```powerapps-dot
+Set( a, false ); Set( b, true ); Set( x, 10 ); Set( y, 100 ); Set( s, "Hello World" )
 ```
 
-Velg knappen (ved å klikke den mens du holder nede Alt-tasten), og angi deretter det **tekst** -egenskapen for en [ **etikett** ](../controls/control-text-box.md) kontroll til en formel i den første kolonnen i neste tabell.
+Velg knappen (ved å klikke den mens du holder nede Alt-tasten), og angi deretter **tekst** -egenskapen for en [**etikett**](../controls/control-text-box.md) -kontroll til en formel i den første kolonnen i neste tabell.
 
 | Formel | Beskrivelse | Resultat |
 |---------|-------------|--------|
-| **And( a; b )** | Tester verdiene for **en** og **b**.  Ett av argumentene er *USANN*, slik at funksjonen returnerer *USANN*. | *usann* |
-| **en And b** | Samme som det forrige eksemplet, ved hjelp av Visual Basic-notasjon. | *usann* |
-| **a && b** | Samme som det forrige eksemplet, ved hjelp av JavaScript-notasjon. | *usann* |
-| **Or( a; b )** | Tester verdiene for **en** og **b**. Ett av argumentene er *SANN*, slik at funksjonen returnerer *SANN*. | *sann* |
-| **en Or-b** | Samme som det forrige eksemplet, ved hjelp av Visual Basic-notasjon. | *sann* |
-| **a &#124;&#124; b** | Samme som det forrige eksemplet, ved hjelp av JavaScript-notasjon. | *sann* |
-| **Ikke (a)** | Tester verdien for **en**. Argumentet er *USANN*, slik at funksjonen returnerer det motsatte resultat. | *sann* |
-| **Ikke en** | Samme som det forrige eksemplet, ved hjelp av Visual Basic-notasjon. | *sann* |
-| **! a** | Samme som det forrige eksemplet, ved hjelp av JavaScript-notasjon. | *sann* |
-| **Len (&nbsp;s&nbsp;)&nbsp;<&nbsp;20 og&nbsp;ikke&nbsp;IsBlank (&nbsp;s&nbsp;)** | Tester om lengden på **s** er mindre enn 20 og om det er ikke en **tom** verdi. Lengden er mindre enn 20, og verdien er ikke tom. Resultatet er derfor *SANN*. | *sann* |
-| **Eller (&nbsp;Len (&nbsp;s&nbsp;)&nbsp;<&nbsp;10, x&nbsp;<&nbsp;100, y&nbsp;<&nbsp;100&nbsp;)** | Tester om lengden på **s** er mindre enn 10, om **x** er mindre enn 100, og om **y** er mindre enn 100. De første og tredje argumentene er false, men den andre er SANN. Derfor, returnerer funksjonen *SANN*. | *sann* |
-| **Ikke IsBlank (&nbsp;s&nbsp;)** | Tester om **s** er *tom*, som returnerer *USANN*. **Ikke** returnerer motsatt av dette resultatet, som er *SANN*. | *sann* |
+| **Og (a, b)** | Tester verdiene i **a** og **b**.  Ett av argumentene er *Usann*, så funksjonen returnerer *Usann*. | *usann* |
+| **a og b** | Samme som det forrige eksemplet, ved hjelp av Visual Basic NOTATION. | *usann* |
+| **en & & b** | Samme som det forrige eksemplet, ved hjelp av JavaScript-notasjon. | *usann* |
+| **Eller (a, b)** | Tester verdiene i **a** og **b**. Ett av argumentene er *True*, og funksjonen returnerer *sann*. | *sann* |
+| **a eller b** | Samme som det forrige eksemplet, ved hjelp av Visual Basic NOTATION. | *sann* |
+| **a &#124; &#124; b** | Samme som det forrige eksemplet, ved hjelp av JavaScript-notasjon. | *sann* |
+| **Not (a)** | Tester verdien til **a**. Argumentet er *Usann*, slik at funksjonen returnerer det motsatte resultatet. | *sann* |
+| **Ikke en** | Samme som det forrige eksemplet, ved hjelp av Visual Basic NOTATION. | *sann* |
+| **! av** | Samme som det forrige eksemplet, ved hjelp av JavaScript-notasjon. | *sann* |
+| **Len (&nbsp; @ no__t-2) &nbsp; @ no__t-4 @ no__t-520 og @ no__t-6Not @ no__t-7IsBlank (&nbsp;s @ no__t-9)** | Tester om lengden på **s** er mindre enn 20, og om det ikke er en **tom** verdi. Lengden er mindre enn 20, og verdien er ikke tom. Resultatet er derfor *sant*. | *sann* |
+| **Eller (&nbsp;Len (&nbsp;s @ no__t-3) &nbsp; @ no__t-5 @ no__t-610, x @ no__t-7 @ no__t-8 @ no__t-9100, y @ no__t-10 @ no__t-11 @ no__t-12100 @ no__t-13)** | Tester om lengden på **s** er mindre enn 10, om **x** er mindre enn 100, og om **y** er mindre enn 100. Første og tredje argument er USANN, men det andre er sant. Derfor returnerer funksjonen *sann*. | *sann* |
+| **Not IsBlank (&nbsp;s @ no__t-2)** | Tester om **s** er *tom*, som returnerer *Usann*. Returnerer **ikke** det motsatte av dette resultatet, som er *sant*. | *sann* |

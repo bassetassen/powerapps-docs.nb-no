@@ -8,18 +8,17 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d4cde32e52240e04a3499444d2c1325d0105a945
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: a49e79da6821e814a918722e70daa1b005f28777
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63320601"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993830"
 ---
 # <a name="button-control-in-powerapps"></a>Knappkontroll i PowerApps
 En kontroll som brukeren kan klikke eller trykke på for å samhandle med appen.
@@ -61,7 +60,7 @@ Konfigurer **[OnSelect](properties-core.md)** -egenskapen til en **Knapp**-kontr
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
+**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **halvfet**, **Normal**eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -118,7 +117,7 @@ Konfigurer **[OnSelect](properties-core.md)** -egenskapen til en **Knapp**-kontr
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-**[Navigate( *ScreenName*; *ScreenTransitionValue* )](../functions/function-navigate.md)**
+**[Navigate( *ScreenName*, *ScreenTransitionValue* )](../functions/function-navigate.md)**
 
 ## <a name="examples"></a>Eksempler
 ### <a name="add-a-basic-formula-to-a-button"></a>Slik legger du til en grunnleggende formel i en knapp
@@ -145,7 +144,7 @@ Legg til en formel som sletter **Tekstinndata**-kontrollen mellom oppføringene.
 1. Angi **[HintText](control-text-input.md)** -egenskapen for **Kilde** til «Sett inn et tall».
 2. Angi **[OnSelect](properties-core.md)** -egenskapen for **Add** til denne formelen:
    
-    **UpdateContext({Total:Total + Value(Source.Text)});;<br>UpdateContext({ClearInput: ""})**
+    **UpdateContext({Total:Total + Value(Source.Text)});<br>UpdateContext({ClearInput: ""})**
    
     > [!NOTE]
    > Adskill flere formler med semikolon « **;** ».

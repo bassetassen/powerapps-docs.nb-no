@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/08/2018
 ms.author: yijw
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4f3ad6f91a7870a84cf5aa74cb49d2f5705f2a31
-ms.sourcegitcommit: 9ec2853aec74e92ccd1e4a7ca54707cdf8b8cdd3
+ms.openlocfilehash: bca1fb3760727278e42676c9f0a5ec501f9002e0
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535290"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71985774"
 ---
 # <a name="install-and-configure-the-expense-report-sample-for-canvas-apps-in-powerapps"></a>Installer og konfigurer utgiftsrapporteksemplet for lerretsapper i PowerApps
 
@@ -34,7 +34,7 @@ Spor utgiftsrapporter fra sending til godkjennelse. Legg sammen elementer som in
 ![Åpningsskjerm for utgiftsrapport i PowerApps](./media/expense-report-install/expense-report-powerapp.png)
 
 > [!TIP]
-> Se [denne](https://youtu.be/h6E9cdrOvMU) videoen for å se hvordan du bruker eksemplet for utgiftsrapport.
+> Se [denne](https://youtu.be/kJXZPILfbwU) videoen for å se hvordan du bruker eksemplet for utgiftsrapport.
 
 ## <a name="prerequisites"></a>Forutsetninger
 
@@ -68,7 +68,7 @@ Denne listen inneholder utgiftsrapporten.
 5. Angi **Kostsenter** i tekstboksen **Kolonnenavn**.
 6. Velg **Valg** i alternativknapplisten **Informasjonstypen i denne kolonnen er**.
 7. Angi følgende verdier i tekstboksen **Skriv hvert valg på en egen linje**, hver av dem på en egen linje: 
-    - Microsoft
+    - Blir
     - Contoso
 8. Angi **Microsoft** i tekstboksen **Standardverdi**.
 9. Klikk på **OK**.
@@ -89,7 +89,7 @@ Denne listen inneholder utgiftsrapporten.
 5. Angi **Status** i tekstboksen **Kolonnenavn**.
 6. Velg **Valg** i alternativknapplisten **Informasjonstypen i denne kolonnen er**.
 7. Angi følgende verdier i tekstboksen **Skriv hvert valg på en egen linje**, hver av dem på en egen linje: 
-    - Åpne
+    - Opnar
     - Venter
     - Godkjent
 8. Angi **Åpen** i tekstboksen **Standardverdi**.
@@ -241,7 +241,7 @@ Denne listen lagrer linjeelementene som er knyttet til hver utgiftsrapport.
 
 1. Gå til https://web.powerapps.com i en nettleser.
 1. Logg deg på ved å angi samme legitimasjon som du brukte til å registrere deg.
-1. Velg **Apper** i venstre navigasjonsfelt, og velg deretter **Importer pakke (forhåndsversjon)**.
+1. Velg **Apper** i venstre navigasjonsfelt, og velg deretter **Importer pakke (forhåndsversjon)** .
 
     ![Et skjermbilde for Importer pakke](./media/expense-report-install/import-package.png)
 

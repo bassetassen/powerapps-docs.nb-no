@@ -1,26 +1,26 @@
 ---
 title: Bruk en eksempelapp | Microsoft Docs
 description: Trinnvise instruksjoner for å lage en lerretsapp som er basert på en eksempelapp i PowerApps
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/11/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1cac73bad25bf1179f88030ee1f02589189610e0
-ms.sourcegitcommit: 4201d95421a74da19c585239b34d7d8620c74113
+ms.openlocfilehash: f03240e2fb2e850df0f1b18fb126833fb5759326
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65546865"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71989717"
 ---
-# <a name="create-a-canvas-app-from-a-sample-in-powerapps"></a>Lage en lerretsapp fra en eksempelapp i PowerApps
+# <a name="create-a-canvas-app-from-a-sample-in-powerapps"></a>Opprett en lerret-app fra et utvalg i PowerApps
 I denne hurtiginnføringen skal du lage en lerretsapp fra en eksempelapp, slik at du kan studere utformingsmulighetene og oppdage konsepter du kan bruke når du utvikler dine egne lerretsapper.
 
 Hver eksempelapp viser et virkelig scenario, men bruker fiktive data. Hvis du vil lagre disse dataene, må du ha en skylagringskonto, for eksempel Dropbox, Google Drive eller OneDrive.
@@ -64,7 +64,7 @@ Hvis du ikke har en PowerApps-lisens, kan du [registrere deg gratis](../signup-f
 1. Klikk eller trykk på **Lagre** nær venstre kant. 
 
 ## <a name="next-steps"></a>Neste trinn
-I denne hurtiginnføringen laget du din egen app basert på en eksempelapp som bruker fiktive data lagret i skykontoen din. Hvis du vil ha mer hjelp lære hvordan du lager en app, kan du også automatisk generere en app basert på data i andre kilder, som Common Data Service, SharePoint eller Excel.
+I denne hurtiginnføringen laget du din egen app basert på en eksempelapp som bruker fiktive data lagret i skykontoen din. Hvis du vil ha mer informasjon om hvordan du oppretter en app, kan du også automatisk generere en app basert på data i andre kilder, for eksempel Common Data Service, SharePoint eller Excel.
 
 > [!div class="nextstepaction"]
 > [Generere en app](data-platform-create-app.md)

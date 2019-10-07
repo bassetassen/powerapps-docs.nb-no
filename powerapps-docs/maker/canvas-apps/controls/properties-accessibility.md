@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 01/26/2017
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e1baf96ab96dc6fe783fccdf243c0ae4ba6d0c1d
-ms.sourcegitcommit: b4df7d781cda50dfe2f6609f1cc4d2b531428b3c
+ms.openlocfilehash: 2c11e05c93d5a505408948178bf3efbd31f2dbf7
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70161274"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986157"
 ---
 # <a name="accessibility-properties-for-canvas-apps"></a>Tilgjengelighets egenskaper for lerret apper
 
@@ -50,7 +50,7 @@ Egenskapen **TabIndex** har to anbefalte verdier:
 | TabIndex-verdi | Virkemåte | Standard for |
 |----------------|----------|-------------|
 | 0 | Kontrollen deltar i hurtig navigasjon. | [**Knapp**](control-button.md), [**tekst inn data**](control-text-input.md), [**kombinasjons boks**](control-combo-box.md)og andre vanlige interaktive kontroller. |
-| &minus;Nr. | Kontrollen deltar ikke i hurtig navigasjon. | [**Etikett**](control-text-box.md), [**bilde**](control-image.md), [**ikon**](control-shapes-icons.md)og andre vanligvis ikke-interaktive kontroller. |
+| @no__t – 01 | Kontrollen deltar ikke i hurtig navigasjon. | [**Etikett**](control-text-box.md), [**bilde**](control-image.md), [**ikon**](control-shapes-icons.md)og andre vanligvis ikke-interaktive kontroller. |
 
 Navigasjons rekkefølge kommer vanligvis fra venstre mot høyre, deretter fra topp til bunn, i et «Z»-mønster. Rekkefølgen er basert på verdiene for **X** -og **Y** -egenskapen til kontrollene. Hvis kontroller dynamisk flyttes på skjermen, for eksempel ved å ha en formel for **X** eller **Y** basert på en tidtaker eller en annen kontroll, endres navigasjons rekkefølgen dynamisk også.
 

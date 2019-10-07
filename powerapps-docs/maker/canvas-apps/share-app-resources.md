@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/28/2016
 ms.author: archanan
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4f303cdfba474448321d230bb61b698e8f959e5f
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 86a479080fe259012b70aecea614f2eef518656b
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61535946"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71988938"
 ---
 # <a name="share-canvas-app-resources-in-powerapps"></a>Del lerretsappressurser i PowerApps
 
@@ -38,7 +38,7 @@ Noen av disse ressursene deles automatisk når du deler appen. Andre ressurser k
 
 Du kan også dele tilkoblinger, egendefinerte koblinger og lokale datagatewayer med hele organisasjonen.
 
-## <a name="connections"></a>Tilkoblinger
+## <a name="connections"></a>Koblingene
 
 Enkelte typer tilkoblinger, for eksempel SQL Server, deles automatisk, men krever at andre brukere oppretter sine egne tilkoblinger til datakilden eller kilder i appen.
 

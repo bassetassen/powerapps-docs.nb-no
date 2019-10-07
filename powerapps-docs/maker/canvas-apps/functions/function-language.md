@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/16/2016
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 45ffd324ff5409a49f1ec8c4c8ea3529c1cf5c5f
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 307950cf7e0aa67d7bf31daf29b3f8a3bb11d465
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61563203"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71984590"
 ---
 # <a name="language-function-in-powerapps"></a>Language-funksjonen i PowerApps
 Returnerer språkkoden for gjeldende bruker.
@@ -40,9 +39,9 @@ En *språkkode* kan være i ett av tre formater:
 
 PowerApps bruker formatet [IETF BCP-47](https://tools.ietf.org/html/bcp47) for språkkoder.  
 
-Hvis du vil se en liste over støttede språkkoder, skriver du inn **Value( "1"; )** i formellinjen eller avansert visning, og bla gjennom listen over språk som foreslås for det andre argumentet.  
+Hvis du vil se en liste over støttede språkkoder, skriver du inn **Value( "1", )** i formellinjen eller avansert visning, og bla gjennom listen over språk som foreslås for det andre argumentet.  
 
-**[Text](function-text.md)**- og **[Value](function-value.md)**-funksjonene er også språkkoder.  Bruk disse funksjonene for å oversette til og fra tekststrenger, ved å ta høyde for globale forskjeller.  Når du sender en språkkode til disse funksjonene og område ikke spiller noen rolle, kan du bruke bare språkdelen av koden.
+**[Text](function-text.md)** - og **[Value](function-value.md)** -funksjonene er også språkkoder.  Bruk disse funksjonene for å oversette til og fra tekststrenger, ved å ta høyde for globale forskjeller.  Når du sender en språkkode til disse funksjonene og område ikke spiller noen rolle, kan du bruke bare språkdelen av koden.
 
 ## <a name="syntax"></a>Syntaks
 **Language**()
@@ -79,7 +78,7 @@ En enkel tilnærming til lokalisering er å opprette et Excel-regneark som tilor
 
 Der du tidligere ville ha brukt teksten **«Hello»** i appen, bruker du nå heller denne formelen:
 
-* **LookUp( Table1; TextID = "Hello" && (LanguageTag = Left( Language(); 2 ) || IsBlank( LanguageTag ))).LocalizedText**  
+* **LookUp( Table1, TextID = "Hello" && (LanguageTag = Left( Language(), 2 ) || IsBlank( LanguageTag ))).LocalizedText**  
 
 Denne formelen vil slå opp riktig **LocalizedText**-verdi for språket til brukeren, og hvis det ikke finnes, brukes standard *blank*-versjon. 
 
@@ -93,7 +92,7 @@ Du kan oversette tekst ved behov ved bruk av en oversettingstjeneste, som for ek
 
 Der du tidligere ville ha brukt teksten **«Hello»** i appen, bruker du nå heller denne formelen:
 
-* **MicrosoftTranslator.Translate( "Hello"; Language() )**
+* **MicrosoftTranslator.Translate( "Hello", Language() )**
 
 Microsoft Translator-tjenesten bruker de samme språkkodene som **Language**-funksjonen returnerer.
 

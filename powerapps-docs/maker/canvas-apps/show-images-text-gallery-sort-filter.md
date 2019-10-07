@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/02/2015
 ms.author: aorth
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a557c73863dc25acb69627b51613e6e25f229bdb
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: 3a25654f0304fce9978ae1f7b1410cfb557ef32c
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63318356"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71995591"
 ---
 # <a name="show-sort-and-filter-data-in-a-powerapps-gallery"></a>Å vise, sortere og filtrere data i et PowerApps-galleri
 Opprett et galleri for å vise bilder og tekst om flere produkter, og sorter og filtrer informasjonen.
@@ -43,8 +42,8 @@ I PowerApps kan du bruke et galleri for å vise flere relaterte elementer, akkur
    1. Velg **Kontroller** på **Sett inn**-fanen, og velg deretter **Importer**:
       
       ![][1]  
-   2. Angi **[OnSelect](controls/properties-core.md)**-egenskapen for importkontrollen til følgende formel:  
-      **Samle inn (lager, Import1.Data)**
+   2. Angi **[OnSelect](controls/properties-core.md)** -egenskapen for importkontrollen til følgende formel:  
+      **Samle inn (beholdning, Import1. data)**
       
       ![][12]  
    3. Velg **Importdata**-knappen for å åpne Windows Utforsker. Velg *CreateFirstApp.zip*, og velg **Åpne**.
@@ -65,7 +64,7 @@ I PowerApps kan du bruke et galleri for å vise flere relaterte elementer, akkur
 4. Klikk eller trykk på alternativet i den høyre ruten, der tittelen og undertittelen overlapper grafikken:
    
     ![][15]
-5. Angi **[Element](controls/properties-core.md)**-egenskapen for galleriet til **Beholdning**:
+5. Angi **[Element](controls/properties-core.md)** -egenskapen for galleriet til **Beholdning**:
    
     ![][5]
 6. Gi nytt navn til galleriet for **ProductGallery** og flytt galleriet, slik at det ikke blokkerer andre kontroller. Endre størrelsen på galleriet, slik at den viser tre produkter:
@@ -79,15 +78,15 @@ I PowerApps kan du bruke et galleri for å vise flere relaterte elementer, akkur
    > Du endrer automatisk alle andre elementer i galleriet når du endrer det første elementet i et hvilket som helst galleri.  
    > 
    > 
-8. Angi **[Tekst](controls/properties-core.md)**-egenskapen for etiketten til følgende uttrykk:  
-    **ThisItem.UnitsInStock** <br/>
+8. Angi **[Tekst](controls/properties-core.md)** -egenskapen for etiketten til følgende uttrykk:  
+    **ThisItem. EnheterPåLager** <br/>
    
     Etiketten viser enhetene på lager for hvert produkt når du gjør dette:
 
 ![][8]  
 
 > [!NOTE]
-> **[Tekst](controls/properties-core.md)**-egenskapen til den øverste etiketten er satt til ```ThisItem.ProductName``` som standard. Du kan endre den til hvilket som helst element i samlingen. Hvis samlingen for eksempel har *ProductDescription*- eller *Pris*-felt, kan du angi etiketten til ```ThisItem.ProductDescription``` eller ```ThisItem.Price```.
+> **[Tekst](controls/properties-core.md)** -egenskapen til den øverste etiketten er satt til ```ThisItem.ProductName``` som standard. Du kan endre den til hvilket som helst element i samlingen. Hvis samlingen for eksempel har *ProductDescription*- eller *Pris*-felt, kan du angi etiketten til ```ThisItem.ProductDescription``` eller ```ThisItem.Price```.
 > 
 > 
 
@@ -103,7 +102,7 @@ Ved hjelp av disse trinnene importerte du data som inneholder JPG-bilder til en 
    ![][10]  
 6. Velg **Synlig** på **Figur**-fanen, og skriv deretter inn følgende formel i formellinjen:  
    
-    **IF(ThisItem.IsSelected; True)**
+    **If (ThisItem. IsSelected, True)**
    
     Et blått rektangel omslutter det gjeldende utvalget i et galleri. Velg noen gallerielementer for å bekrefte at rektanglet vises rundt hvert element du velger. Husk at du kan også åpne **Forhåndsvisning**![][2] for å se og teste det du oppretter.
 
@@ -119,13 +118,13 @@ I denne fremgangsmåten skal vi sortere elementene i galleriet i stigende og syn
 
 #### <a name="sort-in-ascending-or-descending-order"></a>Sortering i stigende eller synkende rekkefølge
 1. Velg et hvilket som helst element i galleriet *unntatt* det første.
-2. **[Element](controls/properties-core.md)**-egenskapen er satt til Beholdning (navnet på samlingen). Endre det til følgende:  
+2. **[Element](controls/properties-core.md)** -egenskapen er satt til Beholdning (navnet på samlingen). Endre det til følgende:  
    
-    **Sort(Inventory; ProductName)**
+    **Sort(Inventory, ProductName)**
    
     Når du gjør dette er elementene i galleriet allerede sortert etter navnet på produktet i stigende rekkefølge:  ![][11]  
    
-    Prøv synkende rekkefølge. Angi **[Element](controls/properties-core.md)**-egenskapen for galleriet til følgende formel:  
+    Prøv synkende rekkefølge. Angi **[Element](controls/properties-core.md)** -egenskapen for galleriet til følgende formel:  
    
     Sort(Inventory, ProductName, Descending)  
 
@@ -134,11 +133,11 @@ I denne fremgangsmåten skal vi sortere elementene i galleriet i stigende og syn
 2. Konfigurer glidebryteren slik at brukere ikke kan angi en verdi utenfor området for enheter på lager:  
    
    1. Velg **Min** på **Innhold**-fanen, og skriv deretter inn følgende uttrykk:  
-      ```Min(Inventory; UnitsInStock)```  
+      ```Min(Inventory, UnitsInStock)```  
    2. Velg **Maks** på **Innhold**-fanen, og skriv deretter inn følgende uttrykk:  
-      ```Max(Inventory; UnitsInStock)```
-3. Velg et hvilket som helst element i galleriet *unntatt* det første. Angi **[Element](controls/properties-core.md)**-egenskapen for galleriet til følgende uttrykk:  
-   ```Filter(Inventory; UnitsInStock<=StockFilter.Value)```
+      ```Max(Inventory, UnitsInStock)```
+3. Velg et hvilket som helst element i galleriet *unntatt* det første. Angi **[Element](controls/properties-core.md)** -egenskapen for galleriet til følgende uttrykk:  
+   ```Filter(Inventory, UnitsInStock<=StockFilter.Value)```
 4. Juster glidebryteren I **Forhåndsvisning** til en verdi som er mellom det høyeste og laveste antallet i galleriet. Galleriet viser bare de produktene som er mindre enn verdien du har valgt i galleriet når du justerer glidebryteren:  
    ![][13]  
 
@@ -146,8 +145,8 @@ La oss nå legge til filteret:
 
 1. Gå tilbake til utformeren.
 2. Velg **Tekst** på **Sett inn**-fanen, velg **Tekstinndata**, og endre navnet på den nye kontrollen til **NameFilter**. Flytt tekst-kontrollen nedenfor glidebryteren.
-3. Angi **[Element](controls/properties-core.md)**-egenskapen for galleriet til følgende uttrykk:  
-   ```Filter(Inventory; UnitsInStock<=StockFilter.Value && NameFilter.Text in ProductName)```
+3. Angi **[Element](controls/properties-core.md)** -egenskapen for galleriet til følgende uttrykk:  
+   ```Filter(Inventory, UnitsInStock<=StockFilter.Value && NameFilter.Text in ProductName)```
 4. Angi glidebryteren til *30* i **Forhåndsvisning**, og skriv bokstaven *g* i kontrollen for tekstinndata. Galleriet viser det eneste produktet med mindre enn 30 enheter på lager *og* som har et navn med bokstaven «g»:  
    ![][14]  
 

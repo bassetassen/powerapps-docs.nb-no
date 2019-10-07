@@ -1,24 +1,24 @@
 ---
 title: Lagre og publiser en lerretsapp | Microsoft Docs
 description: Trinnvise instruksjoner for å lagre og publisere lerretsapper for appopprettere
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 09/14/2017
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c255daf93cdb4807572f1a663c7bb87be0bb39e1
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 19d793b879d42e9446cc8ad366bc08879162185d
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61536728"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71995774"
 ---
 # <a name="save-and-publish-a-canvas-app-in-powerapps"></a>Lagre og publiser en lerretsapp i PowerApps
 Når du lagrer endringer i en lerretsapp, publiserer du den automatisk bare for deg selv og andre som har tillatelse til å redigere den. Når du er ferdig med å gjøre endringer, må du eksplisitt publisere appen for å gjøre den tilgjengelig for alle som den er delt med.
@@ -60,6 +60,6 @@ Klikk eller trykk på **Apper** på [powerapps.com](https://web.powerapps.com?ut
 Hvis du vil publisere den nyeste versjonen, klikker eller trykker du på **Publiser denne versjonen**, og klikk eller trykk deretter på **Publiser denne versjonen** i dialogboksen **Publiser**.
 
 ## <a name="next-steps"></a>Neste trinn
-* Finne og kjøre appen en [leseren](../../user/run-app-browser.md) eller på en [telefon](../../user/run-app-client.md).
+* Finn og Kjør appen i en [nett leser](../../user/run-app-browser.md) eller på en [telefon](../../user/run-app-client.md).
 * [Gi nytt navn til en app](set-name-tile.md) fra powerapps.com.
 * [Gjenopprett en app](restore-an-app.md) hvis du har flere versjoner av en app.

@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 03/01/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a76b039ace1b323f7e1160e919722cc83bc6d091
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 7865b2123f0d179d5d132cca838684f0c83cfd31
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61558523"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71994789"
 ---
 # <a name="get-started-with-canvas-app-formulas-in-powerapps"></a>Kom i gang med lerretsappformler i PowerApps
 
@@ -41,7 +40,7 @@ Dette emnet gir bare en oversikt over det å arbeide med formler. Bla gjennom [f
 
 ## <a name="show-a-simple-value"></a>Å vise en enkel verdi
 
-I Excel kan du angi en bestemt type data, for eksempel tallet **42** eller uttrykket **Hello World**, ved å skrive det inn i en celle. Denne cellen viser alltid disse dataene nøyaktig slik du skrev dem inn. I PowerApps kan du på samme måte angi data som ikke endres ved å angi **[tekst](controls/properties-core.md)**-egenskapen for en etikett til den nøyaktige sekvensen av tegn du vil bruke, omsluttet av doble anførselstegn.
+I Excel kan du angi en bestemt type data, for eksempel tallet **42** eller uttrykket **Hello World**, ved å skrive det inn i en celle. Denne cellen viser alltid disse dataene nøyaktig slik du skrev dem inn. I PowerApps kan du på samme måte angi data som ikke endres ved å angi **[tekst](controls/properties-core.md)** -egenskapen for en etikett til den nøyaktige sekvensen av tegn du vil bruke, omsluttet av doble anførselstegn.
 
 1. Velg **Ny** i **Fil**-menyen (nær den venstre kanten på skjermen).
 2. Under **Opprett app** velger du **Telefonoppsett** på **Tom app**-flisen.
@@ -52,56 +51,56 @@ I Excel kan du angi en bestemt type data, for eksempel tallet **42** eller uttry
 
     Dette feltet har to deler:
 
-   * *Egenskapslisten*:  Hver kontroll og skjerm har en [sett med egenskaper](reference-properties.md).  Bruk denne listen til å velge en bestemt egenskap.  
-   * *Formelen*:  Formelen skal beregnes for denne egenskapen, består av [verdier, operatorer og funksjoner](formula-reference.md).
+   * *Egenskaps liste*:  Hver kontroll og skjerm har et [sett med egenskaper](reference-properties.md).  Bruk denne listen til å velge en bestemt egenskap.  
+   * *Formel*:  Formelen som skal beregnes for denne egenskapen, som består av [verdier, operatorer og funksjoner](formula-reference.md).
 
      Du kan se og redigere egenskaper for den valgte kontrollen i formellinjen, eller for skjermen hvis ingen kontroller er valgt.  Du kan se navnet på den merkede kontrollen på **Innhold**-fanen:
 
      ![Innholdslinjen viser den merkede kontrollen](./media/working-with-formulas/content-tab-selection.png)
 
      Du kan endre navnet på den valgte kontrollen i **Innhold**-fanen ved å klikke på navnet.
-3. Legg til en **[Etikett](controls/control-text-box.md)**-kontroll til skjermen.
+3. Legg til en **[Etikett](controls/control-text-box.md)** -kontroll til skjermen.
 
     ![La til en TextBox-kontroll](./media/working-with-formulas/add-a-label.png)
 
-    Når du legger til en etikett, viser egenskapslisten automatisk  **[Tekst](controls/properties-core.md)**-egenskapen, som styrer hva kontrollen viser. Verdien for denne egenskapen er som standard **«Tekst»**.  
-4. Angi verdien for **[Tekst](controls/properties-core.md)**-egenskapen til **"Hello World"** ved å skrive inn denne strengen, omsluttet av doble anførselstegn i formellinjen:
+    Når du legger til en etikett, viser egenskapslisten automatisk  **[Tekst](controls/properties-core.md)** -egenskapen, som styrer hva kontrollen viser. Verdien for denne egenskapen er som standard **«Tekst»** .  
+4. Angi verdien for **[Tekst](controls/properties-core.md)** -egenskapen til **"Hello World"** ved å skrive inn denne strengen, omsluttet av doble anførselstegn i formellinjen:
 
     ![Å bruke etiketten "Hello World"](./media/working-with-formulas/label-hello-world.png)
 
     Etiketten gjenspeiler denne nye verdien når du skriver den inn.  Skjermen viser kanskje gule utropstegn-ikoner mens du skriver. Disse ikonene indikerer feil, men de går bort når du er ferdig med å skrive inn en gyldig verdi. En streng uten doble anførselstegn i begge ender er for eksempel ikke gyldig.
 
-    I Excel kan du vise et tall, for eksempel **42**, ved å skrive det inn i en celle eller ved å skrive inn en formel som løses til dette nummeret, for eksempel slik: **=SUM(30;12)**. Du kan oppnå den samme effekten i PowerApps ved å angi **Tekst**-egenskapen for en kontroll, for eksempel en etikett, til **42** eller **Sum(30;12)**. Cellen og etiketten viser alltid dette tallet uavhengig av andre endringer i regnearket eller appen.
+    I Excel kan du vise et tall, for eksempel **42**, ved å skrive det inn i en celle eller ved å skrive inn en formel som løses til dette nummeret, for eksempel slik: **=SUM(30,12)** . Du kan oppnå den samme effekten i PowerApps ved å angi **Tekst**-egenskapen for en kontroll, for eksempel en etikett, til **42** eller **Sum(30,12)** . Cellen og etiketten viser alltid dette tallet uavhengig av andre endringer i regnearket eller appen.
 
     > [!NOTE]
    > I PowerApps skal du ikke sette et likhetstegn eller et plusstegn før en formel, som du gjør i Excel. Formellinjen behandler som standard alt du skriver inn der som en formel. Du skal heller ikke omgi en formel med doble anførselstegn ("), som du gjorde tidligere for å angi en tekststreng.
-5. I **[Tekst](controls/properties-core.md)**-egenskapen for etiketten erstatter du **"Hello World"** med **Sum(1;2;3)**.
+5. I **[Tekst](controls/properties-core.md)** -egenskapen for etiketten erstatter du **"Hello World"** med **Sum(1,2,3)** .
 
     ![Å skrive inn den delvise funksjonen Sum(1,2,3 uten en avsluttende parentes viser feil](./media/working-with-formulas/label-sum-partial.png)
 
-    Mens du skriver inn, hjelper formellinjen deg ved å vise beskrivelsen og de forventede argumentene for denne funksjonen.  Som med det endelige doble anførselstegnet i **"Hello World"**, viser skjermbildet gule utropstegn for å indikere en feil før du skriver inn de avsluttende parentesene for denne formelen:
+    Mens du skriver inn, hjelper formellinjen deg ved å vise beskrivelsen og de forventede argumentene for denne funksjonen.  Som med det endelige doble anførselstegnet i **"Hello World"** , viser skjermbildet gule utropstegn for å indikere en feil før du skriver inn de avsluttende parentesene for denne formelen:
 
     ![Å bruke den komplette formelen Sum(1,2,3)](./media/working-with-formulas/label-sum.png)
 
 ## <a name="change-a-value-based-on-input"></a>Å endre en verdi basert på inndata
 
-I Excel kan du skrive inn **= A1 + A2** i en celle for å vise summen av verdiene som celle **A1** og **A2** inneholde. Hvis én eller begge av disse verdiene endres, viser cellen som inneholder formelen automatisk det oppdaterte resultatet.
+I Excel skriver du inn **= a1 + a2** i en celle for å vise summen av verdiene celle **a1** og **a2** inneholder. Hvis én eller begge av disse verdiene endres, viser cellen som inneholder formelen automatisk det oppdaterte resultatet.
 
-![Animasjon av Excel omberegner summen av to tall](./media/working-with-formulas/excel-recalc.gif)
+![Animasjon av Excel beregner summen av to tall på nytt](./media/working-with-formulas/excel-recalc.gif)
 
-Du kan oppnå et lignende resultat ved å legge til kontroller til en skjerm, og angi egenskapene for dem i PowerApps. Dette eksemplet viser en etikett med navnet **Label1** og to **[tekstinndata](controls/control-text-input.md)** kontroller, kalt **TextInput1** og  **TextInput2**.
+I PowerApps kan du oppnå et lignende resultat ved å legge til kontroller på en skjerm og angi egenskapene. Dette eksemplet viser en etikett-kontroll med navnet **Label1** og to **[tekst inn data](controls/control-text-input.md)** -kontroller, kalt **TextInput1** og **TextInput2**.
 
-![Illustrasjon av PowerApps omberegning summen av to tall](./media/working-with-formulas/recalc1.png)
+![Illustrasjon av PowerApps beregner summen av to tall](./media/working-with-formulas/recalc1.png)
 
-Uavhengig av hvilke tall du skriver inn i kontrollene for innskriving av tekst, viser etiketten alltid summen av disse tallene fordi **[Tekst](controls/properties-core.md)**-egenskapen dens er angitt til denne formelen:
+Uavhengig av hvilke tall du skriver inn i kontrollene for innskriving av tekst, viser etiketten alltid summen av disse tallene fordi **[Tekst](controls/properties-core.md)** -egenskapen dens er angitt til denne formelen:
 
 `TextInput1 + TextInput2`
 
-![Animasjon av PowerApps omberegning summen av to tall](./media/working-with-formulas/recalc2.gif)
+![Animasjon av PowerApps beregner summen av to tall](./media/working-with-formulas/recalc2.gif)
 
-I Excel, kan du bruke betinget formatering formler til å vise, for eksempel negative verdier i rødt. I PowerApps kan du bruke formler til å bestemme, ikke bare den primære verdien av en kontroll, men også egenskaper som formatering. I eksemplet nedenfor er en formel for den **[farge](controls/properties-color-border.md)** egenskapen for etiketten automatisk viser negative verdier i rødt. **[If](functions/function-if.md)**-funksjonen bør du kunne kjenne igjen fra Excel:
+I Excel kan du bruke formler for betinget formatering til å vise for eksempel negative verdier i rødt. I PowerApps kan du bruke formler til å bestemme, ikke bare den primære verdien av en kontroll, men også egenskaper som formatering. I det neste eksemplet viser en formel for **[farge](controls/properties-color-border.md)** -egenskapen for etiketten automatisk negative verdier i rødt. **[If](functions/function-if.md)** -funksjonen bør du kunne kjenne igjen fra Excel:
 
-`If( Value(Label1.Text) < 0; Red; Black )`
+`If( Value(Label1.Text) < 0, Red, Black )`
 
 ![Animasjon av betinget formatering](media/working-with-variables/recalc-color.gif)
 
@@ -115,14 +114,14 @@ Du kan konfigurere appen med formler, slik at brukere kan endre utseendet eller 
 2. Ordne glidebryterne slik at de ikke overlapper hverandre, legg til tre etiketter, og konfigurer dem til å vise **Rød**, **Grønn** og **Blå**:
 
     ![Ordne glidebryterne og legg til etiketter for hver fargekomponent](./media/working-with-formulas/three-sliders.png)
-3. Angi **Maks**-egenskapen for hver glidebryter til 255, som er den maksimale verdien for en fargekomponent for **[RGBA](functions/function-colors.md)**-funksjonen.
+3. Angi **Maks**-egenskapen for hver glidebryter til 255, som er den maksimale verdien for en fargekomponent for **[RGBA](functions/function-colors.md)** -funksjonen.
 
     Du kan angi **Maks**-egenskapen ved å velge den på **Innhold**-fanen eller i egenskapslisten:
 
     ![Å endre den maksimale verdien for hver glidebryter](./media/working-with-formulas/three-sliders-max.png)
-4. Velg skjermen ved å klikke bort fra en kontroll, og angi deretter skjermens  **[Fyll](controls/properties-color-border.md)**-egenskap til denne formelen:<br>**RGBA( Slider1.Value; Slider2.Value; Slider3.Value; 1 )**
+4. Velg skjermen ved å klikke bort fra en kontroll, og angi deretter skjermens  **[Fyll](controls/properties-color-border.md)** -egenskap til denne formelen:<br>**RGBA( Slider1.Value, Slider2.Value, Slider3.Value, 1 )**
 
-    Som allerede beskrevet får du tilgang til kontrollegenskaper ved å bruke **.** -operatoren.  **Slider1.Value** refererer til glidebryterens **[Verdi](controls/properties-core.md)**-egenskap, som gjenspeiler hvor brukeren har plassert glidebryteren mellom **Min.-** og **Maks**-verdiene. Når du skriver inn denne formelen, er hver kontroll den inneholder fargekodet mellom skjermen og formellinjen:
+    Som allerede beskrevet får du tilgang til kontrollegenskaper ved å bruke **.** -operatoren.  **Slider1.Value** refererer til glidebryterens **[Verdi](controls/properties-core.md)** -egenskap, som gjenspeiler hvor brukeren har plassert glidebryteren mellom **Min.-** og **Maks**-verdiene. Når du skriver inn denne formelen, er hver kontroll den inneholder fargekodet mellom skjermen og formellinjen:
 
     ![Endre formelen for fyllfargen for bakgrunnen på skjermen, men ikke fullført enda](./media/working-with-formulas/three-sliders-partial-rgba.png)
 
@@ -137,9 +136,9 @@ Du kan konfigurere appen med formler, slik at brukere kan endre utseendet eller 
 
 ## <a name="manage-app-behavior"></a>Å administrere virkemåte for apper
 
-Du kan bruke formler ikke bare til å utføre beregninger og endre utseendet, men også til å foreta deg noe. Du kan for eksempel angi **[OnSelect](controls/properties-core.md)**-egenskapen for en knapp til en formel som inkluderer **[Navigate](functions/function-navigate.md)**-funksjonen. Når en bruker velger denne knappen, vises skjermen som du angir i formelen.
+Du kan bruke formler ikke bare til å utføre beregninger og endre utseendet, men også til å foreta deg noe. Du kan for eksempel angi **[OnSelect](controls/properties-core.md)** -egenskapen for en knapp til en formel som inkluderer **[Navigate](functions/function-navigate.md)** -funksjonen. Når en bruker velger denne knappen, vises skjermen som du angir i formelen.
 
-Noen funksjoner, for eksempel **[Navigate](functions/function-navigate.md)** og **[Collect](functions/function-clear-collect-clearcollect.md)**, kan bare brukes i formler for virkemåte.  Formelreferansen gjenspeiler det hvis du kan bruke en funksjon bare i denne konteksten.  
+Noen funksjoner, for eksempel **[Navigate](functions/function-navigate.md)** og **[Collect](functions/function-clear-collect-clearcollect.md)** , kan bare brukes i formler for virkemåte.  Formelreferansen gjenspeiler det hvis du kan bruke en funksjon bare i denne konteksten.  
 
 Du kan utføre mer enn én handling i en formel for virkemåte hvis du atskiller funksjoner med et semikolon (;). Du kan for eksempel oppdatere en kontekstvariabel, sende data til en datakilde, og til slutt navigerer du til en annen skjerm.
 

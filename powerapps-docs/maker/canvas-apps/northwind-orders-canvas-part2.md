@@ -1,548 +1,547 @@
 ---
-title: Opprette et sammendrag av skjema i en lerretsapp | Microsoft Docs
-description: Opprette et sammendrag av skjema i en lerretsapp til å behandle data for Northwind Traders
+title: Opprett et sammendrags skjema i et arbeidsom råde program | Microsoft Docs
+description: Opprett et sammendrags skjema i en lerret-app for å administrere data for Gas tro nor delikat Esser
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/25/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5c40cb030241d142a2ee2a68d32f7fb839a350ff
-ms.sourcegitcommit: 55bc11ac6a964f22301c9fdadb06ee34e1399f83
+ms.openlocfilehash: d151249caebdb2a6f142943074a409bc626ff662
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66805921"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71995846"
 ---
-# <a name="create-a-summary-form-in-a-canvas-app"></a>Opprette et sammendrag av skjema i en lerretsapp
+# <a name="create-a-summary-form-in-a-canvas-app"></a>Opprett et sammendrags skjema i en lerret-app
 
-Følg trinnvise instruksjoner for å lage et sammendrag av skjema i en lerretsapp for administrasjon av fiktive data i databasen Northwind Traders. Dette emnet er en del av en serie som forklarer hvordan du bygger en business-app på relasjonelle data i Common Data Service. Utforsk disse emnene i denne sekvensen for best resultat:
+Følg trinn vise instruksjoner for å opprette et sammendrags skjema i en lerret-app for å administrere fiktive data i databasen Gas tro nor delikat Esser. Dette emnet er en del av en serie som forklarer hvordan du bygger et forretnings program på relasjonelle data i Common Data Service. Du får best resultat ved å utforske disse emnene i denne rekkefølgen:
 
-1. [Opprett en ordre galleri](northwind-orders-canvas-part1.md).
-2. Opprette et sammendrag av skjema (**dette emnet**).
-3. [Opprett et galleri i detalj](northwind-orders-canvas-part3.md).
+1. [Opprett et ordre Galleri](northwind-orders-canvas-part1.md).
+2. Opprett et sammendrags skjema (**dette emnet**).
+3. [Opprett et detalj Galleri](northwind-orders-canvas-part3.md).
 
 > [!div class="mx-imgBorder"]
-> ![Definisjonen av skjermen områder](media/northwind-orders-canvas-part1/orders-parts.png)
+> @no__t – 0Definition av skjerm områder @ no__t-1
 
 ## <a name="prerequisites"></a>Forutsetninger
 
-1. [Installere Northwind Traders database og apper](northwind-install.md).
-1. Se gjennom den [oversikt over lerretsapp](northwind-orders-canvas-overview.md) for Northwind Traders.
-1. [Opprett galleriet rekkefølge](northwind-orders-canvas-part1.md) deg selv, eller åpne den **Northwind ordrer (lerret) - begynne del 2** appen, som inneholder allerede galleriet.
+1. [Installer databasen Gas tro nor delikat Esser](northwind-install.md).
+1. Se gjennom [oversikten over lerretet](northwind-orders-canvas-overview.md) for Gas tro nor delikat Esser.
+1. [Opprett ordens galleriet](northwind-orders-canvas-part1.md) selv, eller åpne **del nor ordrer (lerret) – Start deler 2-** appen, som allerede inneholder dette galleriet.
 
 ## <a name="add-a-title-bar"></a>Å legge til en tittellinje
 
-Langs toppen av appen, kan du opprette en tittellinje, som skal inneholde handlingsknapper ved slutten av dette emnet.
+Opprett en tittel linje øverst i appen, som vil inneholde handlings knapper ved slutten av dette emnet.
 
-1. I den **trevisning** ruten velger **Screen1** å sikre at du ikke ved et uhell legger til en kontroll til galleriet rekkefølge:
-
-    > [!div class="mx-imgBorder"]
-    > ![Velg Screen1 i treet Vis-ruten](media/northwind-orders-canvas-part2/titlebar-01.png)
-
-1. På den **Sett inn** fanen og velge **etikett** til å sette inn en [ **etikett** ](controls/control-text-box.md) kontroll:
+1. I **tre visning** -ruten velger du **Screen1** for å sikre at du ikke ved et uhell legger til en kontroll i rekkefølge galleriet:
 
     > [!div class="mx-imgBorder"]
-    > ![Sett inn en etikett](media/northwind-orders-canvas-part2/titlebar-02.png)
+    > ![Select Screen1 i tre visnings ruten @ no__t-1
 
-    Den nye etiketten skal vises bare én gang, over galleriet. Hvis det vises i hvert element i galleriet, slette den første forekomsten av etiketten, kontroller at skjermen er valgt (som beskriver det forrige trinnet), og deretter sette inn etiketten på nytt.
-
-1. Flytt og endre størrelsen på den nye etiketten slik at den dekker toppen av skjermen:
+1. Velg **etikett** på **Sett inn** -fanen for å sette inn en [**etikett**](controls/control-text-box.md) -kontroll:
 
     > [!div class="mx-imgBorder"]
-    > ![Flytte og endre størrelse på etiketten](media/northwind-orders-canvas-part2/titlebar-03.png)
+    > @no__t – 0Insert en etikett @ no__t-1
 
-1. Dobbeltklikk teksten i etiketten, og skriv deretter inn **Northwind ordrer**.
+    Den nye etiketten skal bare vises én gang, over galleriet. Hvis det vises i hvert element i galleriet, sletter du den første forekomsten av etiketten, kontrollerer at skjermen er valgt (som foregående trinn beskriver), og deretter setter du inn etiketten på nytt.
 
-    Som et alternativ, kan du endre den **tekst** -egenskapen i formellinjen for å oppnå det samme resultatet:
-
-    > [!div class="mx-imgBorder"]
-    > ![Endre teksten i tittellinjen](media/northwind-orders-canvas-part2/titlebar-04.png)
-
-1. På den **Hjem** fanen, formatere etiketten:
-    - Øk skriftstørrelsen til 24 punkt.
-    - Gjøre teksten fet.
-    - Gjøre teksten hvit.
-    - Midtstill teksten.
-    - Legge til en mørkeblå fyll i bakgrunnen.
+1. Flytt og endre størrelsen på den nye etiketten for å dekke toppen av skjermen:
 
     > [!div class="mx-imgBorder"]
-    > ![Formateringsalternativene på Hjem-fanen](media/northwind-orders-canvas-part2/titlebar-05.png)
+    > @no__t – 0Move og endre størrelsen på etiketten @ no__t-1
 
-## <a name="add-an-edit-form-control"></a>Legg til en redigeringskontrollen for skjemaet
+1. Dobbelt klikk på teksten til etiketten, og skriv deretter inn **Gastronor-ordrer**.
 
-I denne delen, skal du legge til kontroller for å vise et sammendrag av hvilken som helst rekkefølge som brukeren velger i galleriet.
-
-1. På den **Sett inn** fanen, sette inn en [ **redigeringsskjema** ](controls/control-form-detail.md) kontroll:
+    Som et alternativ kan du endre **tekst** -egenskapen i formel linjen for å oppnå samme resultat:
 
     > [!div class="mx-imgBorder"]
-    > ![Legg til en redigeringskontrollen for skjemaet](media/northwind-orders-canvas-part2/form-01.png)
+    > @no__t – 0Change teksten i tittel linjen @ no__t-1
 
-    Som standard vises skjemaet i hjørnet øverst til venstre, der andre kontroller kan være vanskelig å finne:
+1. Formater etiketten i **hjem** -fanen:
+    - Øk skrift størrelsen til 24 punkt.
+    - Gjør teksten fet.
+    - Gjør teksten hvit.
+    - Midt Still teksten.
+    - Legg til et mørkt blått fyll i bakgrunnen.
 
     > [!div class="mx-imgBorder"]
-    > ![Rediger skjema-kontrollen i standardplasseringen](media/northwind-orders-canvas-part2/form-02.png)
+    > Alternativer for @no__t – 0Formatting på hjem-fanen @ no__t-1
 
-1. Flytt og endre størrelsen på skjemaet for å dekke hjørnet øverst til høyre på skjermen under tittellinjen:
+## <a name="add-an-edit-form-control"></a>Å legge til en redigerings skjema-kontroll
+
+I denne delen kan du legge til kontroller for å vise et sammendrag av hvilken som helst rekkefølge brukeren velger i galleriet.
+
+1. På **Sett inn** -fanen setter du inn en [**redigerings skjema**](controls/control-form-detail.md) -kontroll:
 
     > [!div class="mx-imgBorder"]
-    > ![Flytt og endre redigeringskontrollen for skjemaet](media/northwind-orders-canvas-part2/form-03.png)
+    > @no__t – 0Add en redigerings skjema-kontroll @ no__t-1
 
-1. I formellinjen, kan du angi den **DataSource** egenskapen for skjemaet til denne verdien:
+    Som standard vises skjemaet i hjørnet øverst til venstre, der andre kontroller kan gjøre det vanskelig å finne:
 
-    ```powerapps-comma
+    > [!div class="mx-imgBorder"]
+    > ![Edit skjema kontroll i standard plassering @ no__t-1
+
+1. Flytt og endre størrelsen på skjemaet for å dekke hjørnet øverst til høyre på skjermen under tittel linjen:
+
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Move og endre størrelsen på redigerings skjema-kontrollen @ no__t-1
+
+1. Angi **DataSource** -egenskapen for skjemaet til denne verdien i formel linjen:
+
+    ```powerapps-dot
     Orders
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi DataSource-egenskapen for redigeringskontrollen for skjemaet](media/northwind-orders-canvas-part2/form-04.png)
+    > ![Set DataSource-egenskapen for redigerings skjema-kontrollen @ no__t-1
 
-    Du kan angi den samme egenskapen i den **Egenskaper** fanen nær høyre kant, men denne tilnærmingen legger til felt som du ikke trenger i skjemaet. Hvis du bruker formellinjen, forblir skjemaet tom.
+    Du kan angi den samme egenskapen i **Egenskaper** -fanen nær høyre kant, men denne tilnærmingen legger til felt som du ikke trenger i skjemaet. Hvis du bruker formel linjen, forblir skjemaet tomt.
 
-## <a name="add-and-arrange-fields"></a>Legg til og ordne felt
+## <a name="add-and-arrange-fields"></a>Legge til og ordne felt
 
-1. I den **Egenskaper** fanen nær høyre kant, velg **Rediger felt** å åpne den **felt** ruten:
-
-    > [!div class="mx-imgBorder"]
-    > ![Åpne felt-ruten](media/northwind-orders-canvas-part2/form-05.png)
-
-1. I den **felt** ruten velger **Legg til felt**, og velg deretter merket for den **kunden** og **ansatte** felt.
+1. Velg **Rediger felt** i **Egenskaper** -fanen nær høyre kant, og åpne **felt** -ruten:
 
     > [!div class="mx-imgBorder"]
-    > ![Legge til feltene kunder og ansatte i redigeringskontrollen for skjemaet](media/northwind-orders-canvas-part2/form-06.png)
+    > @no__t – 0Open felt-ruten @ no__t-1
 
-1. Bla nedover til disse feltene vises, og Merk av i avmerkingsboksene:
+1. Velg **Legg til felt**i **felt** -ruten, og merk deretter av for feltene **kunde** og **ansatt** .
+
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Add feltene for kunde og ansatt i redigerings skjema-kontrollen @ no__t-1
+
+1. Rull ned til disse feltene vises, og Merk av i avmerkings boksene:
 
     - **Notater**
-    - **Ordredato**
-    - **Ordrenummer**
-    - **Ordrestatus**
+    - **Bestillings dato**
+    - **Bestillings nummer**
+    - **Bestillings status**
     - **Betalt dato**
 
     > [!div class="mx-imgBorder"]
-    > ![Legg til fem flere felt i redigeringskontrollen for skjemaet](media/northwind-orders-canvas-part2/form-07.png)
+    > @no__t – 0Add fem flere felt til redigerings skjema-kontrollen @ no__t-1
 
-1. Nederst i den **felt** ruten velger **Legg til**, og lukk deretter den **felt** ruten.
+1. Nederst i **felt** -ruten velger du **Legg til**, og deretter lukker du **felt** -ruten.
 
-    Skjemaet viser sju felt:
+    Skjemaet viser syv felt:
 
     > [!div class="mx-imgBorder"]
-    > ![Rediger skjema-kontrollen viser sju felt](media/northwind-orders-canvas-part2/form-08.png)
+    > ![Edit skjema kontrollen viser syv felt @ no__t-1
 
     > [!NOTE]
-    > Hvis alle felt som viser en rød Feilikonet, kan ha det oppstod et problem når dataene ble trukket fra kilden. For å løse feilen, kan du oppdatere dataene:
+    > Hvis et felt viser et rødt feil ikon, kan det ha oppstått et problem da data ble Hentet fra kilden. Hvis du vil løse feilen, kan du oppdatere dataene:
     >
     > 1. Velg **Datakilder** på **Vis**-fanen.
-    > 1. I den **Data** ruten velger **datakilder**.
-    > 1. Siden **ordrer**, velg ellipsen (...), velg **Oppdater**, og lukk deretter den **Data** ruten.
+    > 1. Velg **data kilder**i **data** -ruten.
+    > 1. Velg ellipsen (...) ved siden av **ordrer**, velg **Oppdater**, og lukk deretter **data** -ruten.
     >
-    > Hvis kombinasjonsboksen for navnet på kunden eller ansatt viser fremdeles feil, må du kontrollere den **primærtekst** og **SearchField** av hver, ved å merke den og deretter åpne den **Data** ruten. Begge feltene for kundeboksen bør settes til **nwind_company**. Etter den ansatte, må begge feltene være satt til **nwind_lastname**.
+    > Hvis kombinasjons boksen for kunden eller navnet på en ansatt fremdeles viser en feil, kan du kontrollere den **primære teksten** og **SearchField** i hver boks ved å merke den og deretter åpne **data** -ruten. For kunde-boksen må begge felt settes til **nwind_company**. For med arbeider-boksen må begge feltene settes til **nwind_lastname**.
 
-1. Skjemaet er valgt, endrer du antallet kolonner i skjemaet fra 3 til 12 i den **Egenskaper** fanen nær høyre kant.
+1. Når skjemaet er valgt, endrer du antallet kolonner i skjemaet fra 3 til 12 i **Egenskaper** -fanen nær høyre kant.
 
-    Dette trinnet legger til fleksibilitet som du ordner feltene:
+    Dette trinnet gir fleksibilitet når du ordner feltene:
 
     > [!div class="mx-imgBorder"]
-    > ![Endre deretter antall kolonner i redigeringskontrollen for skjemaet](media/northwind-orders-canvas-part2/form-08b.png)
+    > ![Change, antall kolonner i redigerings skjema-kontrollen @ no__t-1
 
-    Mange UI-utforminger, er avhengige av 12-spalter fordi de har plass til radene i 1, 2, 3, 4, 6 og 12 Kontroller jevnt. I dette emnet oppretter du rader som inneholder 1, 2 eller 4 kontroller.
+    Mange grensesnitt utforminger er avhengige av 12 Kol onne oppsett fordi de kan ha plass til rader med 1, 2, 3, 4, 6 og 12 kontroller. I dette emnet skal du opprette rader som inneholder 1, 2 eller 4 kontroller.
 
-1. Flytt og endre størrelsen på feltene ved å dra håndtakene deres, slik du ville gjøre en annen kontroll, slik at hver rad inneholder disse datakort i angitt rekkefølge:
+1. Flytt og endre størrelse på feltene ved å dra i håndtakene, på samme måte som med andre kontroller, slik at hver rad inneholder disse data kortene i den angitte rekkefølgen:
 
-    - Første rad: **Ordrenummer**, **ordrestatus**, **Bestillingsdato**, og **betalt dato**
-    - Andre rad: **Kunden** og **ansatt**
+    - Første rad: **Ordre nummer**, **ordre status**, **ordre dato**og **betalt dato**
+    - Andre rad: **Kunde** og **ansatt**
     - Tredje rad: **Notater**
 
     > [!NOTE]
-    > Du kan det være enklere å utvide den **notater**, **kunden**, og **ansatte** data kort før du ordne dem.
+    > Det kan være enklere å utvide **notat**-, **kunde**-og **ansatt** data kortene før du ordner dem.
 
     > [!div class="mx-imgBorder"]
-    > ![Flytt og endre felt](media/northwind-orders-canvas-part2/form-rearrange.gif)
+    > @no__t – 0Move og endre størrelse på felt @ no__t-1
 
-    Mer informasjon om hvordan du vil ordne felt i et skjema: [Forstå dataskjemaer for lerretsapper](working-with-form-layout.md).
+    Mer informasjon om hvordan du ordner felt i et skjema: [Forstå data skjema oppsett for lerret apper](working-with-form-layout.md).
 
-## <a name="hide-time-controls"></a>Skjul kontroller for tid
+## <a name="hide-time-controls"></a>Skjul tids kontroller
 
-I dette eksemplet trenger du ikke tid-deler av datofeltene fordi det nivået av tettheten kan ta oppmerksomheten bort brukeren. Hvis du sletter dem, kan du føre til problemer i formler som er avhengige av disse kontrollene til å oppdatere datoverdier eller fastslå plasseringen av en annen kontroll i datakortet. I stedet du vil skjule kontrollene tid ved å angi deres **Visible** egenskapen.
+I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dette nivået kan være distraherende for brukeren. Hvis du sletter dem, kan det hende at det oppstår problemer i formler som bruker disse kontrollene til å oppdatere dato verdier eller bestemme plasseringen til en annen kontroll i data kortet. I stedet skjuler du tids kontrollene ved å angi **Visible** -egenskapen.
 
-1. I den **trevisning** rute, velger du **Ordredato** datakort.
+1. Velg **bestillings dato** data kortet i **tre visnings** ruten.
 
-    Kortet kan ha et annet navn, men den inneholder **Ordredato**.
+    Kortet kan ha et annet navn, men det inneholder **ordre dato**.
 
-1. Velg time, minutt og kolon-skilletegn kontrollene i mens du holder nede SKIFT, den **Ordredato** datakort.
-
-    > [!div class="mx-imgBorder"]
-    > ![Velg klokkeslett kontrollene i Ordredato kort](media/northwind-orders-canvas-part2/form-09.png)
-
-1. Angi kontrollene **Visible** egenskapen til **USANN**.
-
-    Alle valgte kontroller forsvinner fra skjemaet:
+1. Mens du holder nede SKIFT-tasten velger du kontrollene time, minutt og kolon-skille tegn i data kortet **for ordre dato** .
 
     > [!div class="mx-imgBorder"]
-    > ![Angi synlig-egenskapen til USANN.](media/northwind-orders-canvas-part2/form-10.png)
+    > @no__t – 0Select tids kontrollene i Order date Card @ no__t-1
 
-1. Endre størrelsen på den [ **datovelger** ](controls/control-date-picker.md) kontrollen til å vise dato for fullført:
+1. Angi Controls **Visible** -egenskapen til **False**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Endre størrelse på datovelgeren](media/northwind-orders-canvas-part2/form-11.png)
-
-    Deretter kan du vil gjenta de forrige trinnene for den **betalt dato** felt.
-
-1. I den **trevisning** rute, velger tiden kontroller i den **betalt dato** datakort:
+    Alle de valgte kontrollene forsvinner fra skjemaet:
 
     > [!div class="mx-imgBorder"]
-    > ![Velg tid kontrollen i kortet betalt dato](media/northwind-orders-canvas-part2/form-12.png)
+    > ![Set synlig-egenskap til Usann. ](media/northwind-orders-canvas-part2/form-10.png)
 
-1. Angi de valgte kontrollene **Visible** egenskapen til **USANN**:
-
-    > [!div class="mx-imgBorder"]
-    > ![Angi synlig-egenskapen til USANN.](media/northwind-orders-canvas-part2/form-13.png)
-
-1. Endre størrelse på datovelgeren i den **dato betalt** kortet:
+1. Endre størrelsen på [**dato velger**](controls/control-date-picker.md) -kontrollen for å vise hele datoen:
 
     > [!div class="mx-imgBorder"]
-    > ![Endre størrelse på datovelgeren](media/northwind-orders-canvas-part2/form-14.png)
+    > @no__t – 0Resize dato velger-kontrollen @ no__t-1
 
-## <a name="connect-the-order-gallery"></a>Koble til galleriet rekkefølge
+    Deretter skal du gjenta de siste trinnene for feltet **betalt dato** .
 
-1. I den **trevisning** , skjule skjemaet for å lettere å søke etter navnet på galleriet rekkefølge, og deretter, hvis nødvendig, gi den nytt navn til **Gallery1**.
+1. I **tre visnings** ruten velger du tids kontrollene i data kortet **betalt dato** :
 
-1. Angi sammendrag skjemaets **element** egenskapen til dette uttrykket:
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Select klokkeslett-kontroll i betalt dato kort @ no__t-1
 
-    ```powerapps-comma
+1. Angi **Visible** -egenskapen for de valgte kontrollene til **Usann**:
+
+    > [!div class="mx-imgBorder"]
+    > ![Set synlig-egenskap til Usann. ](media/northwind-orders-canvas-part2/form-13.png)
+
+1. Endre størrelsen på dato velgeren på kortet **betalt for dato** :
+
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Resize dato velger-kontrollen @ no__t-1
+
+## <a name="connect-the-order-gallery"></a>Koble til ordre galleriet
+
+1. I **tre visnings** ruten kan du skjule skjemaet for enklere å finne navnet på rekkefølge galleriet, og deretter kan du endre navn på det til **Gallery1**.
+
+1. Angi **element** -egenskapen for sammendrags skjemaet til dette uttrykket:
+
+    ```powerapps-dot
     Gallery1.Selected
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi element-egenskapen for skjemaet](media/northwind-orders-canvas-part2/form-15.png)
+    > ![Set for skjemaet @ no__t-1
 
-    Skjemaet viser et sammendrag av fornuftig rekkefølge appbrukeren velger i listen.
-
-    > [!div class="mx-imgBorder"]
-    > ![Velg en ordre i listen for å vise oversikten i skjemaet](media/northwind-orders-canvas-part2/form-select.gif)
-
-## <a name="replace-a-data-card"></a>Erstatt et datakort
-
-**Ordrenummer** er en identifikator som Common Data Service-tilordner automatisk når du oppretter en post. Dette feltet har en [ **tekstinndata** ](controls/control-text-input.md) kontrollen som standard, men du vil erstatte den med en etikett slik at brukeren ikke kan redigere dette feltet.
-
-1. Velg skjemaet, velg **Rediger felt** i den **Egenskaper** fanen nær høyre kant, og velg deretter den **ordrenummer** felt:
+    Skjemaet viser et sammendrag av hvilken ordre brukeren velger i listen.
 
     > [!div class="mx-imgBorder"]
-    > ![Velg feltet rekkefølge](media/northwind-orders-canvas-part2/alt-01.png)
+    > @no__t – 0Select en ordre i listen for å vise oversikten i skjemaet @ no__t-1
 
-1. Åpne den **kontroll av typen** listen:
+## <a name="replace-a-data-card"></a>Bytt ut et data kort
 
-    > [!div class="mx-imgBorder"]
-    > ![Åpne den ** kontrollen typen ** liste](media/northwind-orders-canvas-part2/alt-02.png)
+**Ordre nummer** er en identifikator som Common data service tilordnes automatisk når du oppretter en post. Dette feltet har en [**tekst inn data**](controls/control-text-input.md) -kontroll som standard, men du erstatter den med en etikett slik at brukeren ikke kan redigere dette feltet.
 
-1. Velg den **Vis tekst** datakort:
-
-    > [!div class="mx-imgBorder"]
-    > ![Velg den ** Vis tekst ** datakort](media/northwind-orders-canvas-part2/alt-02b.png)
-
-1. Lukk den **felt** ruten.
-
-    Brukeren kan ikke lenger endre nummeret for:
+1. Velg skjemaet, velg **Rediger felt** i **Egenskaper** -fanen nær høyre kant, og velg deretter feltet **ordre nummer** :
 
     > [!div class="mx-imgBorder"]
-    > ![Ordrenummer er skrivebeskyttet](media/northwind-orders-canvas-part2/alt-03.png)
+    > @no__t – 0Select ordre nummer feltet @ no__t-1
 
-1. På den **Hjem** fanen, endre skriftstørrelse for hvor rekkefølgen til 20 punkt, slik at feltet er enklere å finne:
+1. Åpne **kontroll type** -listen:
 
     > [!div class="mx-imgBorder"]
-    > ![Endre den bestillingsnummer skriftstørrelse](media/northwind-orders-canvas-part2/alt-04.png)
+    > @no__t – 0Open * * Control type * * *. liste @ no__t-1
+
+1. Velg **visnings tekst** data kortet:
+
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Select * * visnings tekst * * data kort @ no__t-1
+
+1. Lukk **felt** -ruten.
+
+    Brukeren kan ikke lenger endre bestillings nummeret:
+
+    > [!div class="mx-imgBorder"]
+    > ![Order Number er skrivebeskyttet @ no__t-1
+
+1. På **hjem** -fanen kan du endre skrift størrelsen for ordens tallet til 20 punkter, slik at feltet er enklere å finne:
+
+    > [!div class="mx-imgBorder"]
+    > ![Change for bestillings nummeret @ no__t-1
 
 ## <a name="use-a-many-to-one-relationship"></a>Bruk en mange-til-én-relasjon
 
-Den **ordrer** enheten har en mange-til-én-relasjon med den **ansatte** enhet: hver ansatt kan opprette mange ordrer, men hver ordre kan tilordnes til bare én ansatt. Når brukeren velger en ansatt i den [ **kombinasjonsboks** ](controls/control-combo-box.md) kontroll, sin **valgt** egenskapen gir den ansattes hele post fra den **ansatte**  enhet. Som et resultat kan du konfigurere en [ **bilde** ](controls/control-image.md) kontrollen til å vise bildet av ansatt brukeren velger i kombinasjonsboksen.
+**Orders** -enheten har en mange-til-én-relasjon med **ansatte** -enheten: hver ansatt kan opprette mange ordrer, men hver ordre kan bare tilordnes én ansatt. Når brukeren velger en ansatt i [**kombinasjons boks**](controls/control-combo-box.md) kontrollen, vil den **valgte** egenskapen gi den ansattes fullstendige post fra **ansatte** -enheten. Som et resultat av dette kan du konfigurere en [**bilde**](controls/control-image.md) -kontroll til å vise bildet av den ansatte brukeren velger i kombinasjons boksen.
 
-1. Velg den **ansatte** datakort:
-
-    > [!div class="mx-imgBorder"]
-    > ![Velg datakortet](media/northwind-orders-canvas-part2/employee-01.png)
-
-1. I den **avansert** fanen nær høyre kant, låse opp datakortet slik at du kan redigere formler som var tidligere skrivebeskyttet:
+1. Velg **ansatt** data kortet:
 
     > [!div class="mx-imgBorder"]
-    > ![Låse opp datakortet](media/northwind-orders-canvas-part2/employee-02.png)
+    > @no__t – 0Select data kortet for ansatte @ no__t-1
 
-1. I datakortet, Reduser bredden på kombinasjonsboksen å gi plass til ansatte bildet:
-
-    > [!div class="mx-imgBorder"]
-    > ![Endre størrelsen på kombinasjonsboksen kontrollen](media/northwind-orders-canvas-part2/employee-03b.png)
-
-1. På den **Sett inn** fanen og velge **Media** > **bilde**:
+1. Lås opp data kortet i **Avansert** -fanen nær høyre kant, slik at du kan redigere formler som tidligere er skrivebeskyttet:
 
     > [!div class="mx-imgBorder"]
-    > ![Sett inn et bilde](media/northwind-orders-canvas-part2/employee-04.png)
+    > @no__t – 0Unlock data kortet for ansatte @ no__t-1
 
-    Et bilde vises i datakortet, som utvider til plass til den:
-
-    > [!div class="mx-imgBorder"]
-    > ![Ansatte datakort med bilde-kontrollen](media/northwind-orders-canvas-part2/employee-05.png)
-
-1. Endre størrelse på bildet, og Flytt den til høyre for kombinasjonsboksen:
+1. Reduser bredden på kombinasjons boksen i data kortet for å få plass til bildet på den ansatte:
 
     > [!div class="mx-imgBorder"]
-    > ![Flytte og endre størrelse på bilde-kontrollen](media/northwind-orders-canvas-part2/employee-06.png)
+    > @no__t – 0Resize kombinasjons boks kontrollen @ no__t-1
 
-1. Angi den **bilde** egenskapen til bildet til denne formelen, erstatter nummeret på slutten av DataCardValue om nødvendig:
+1. Velg **Media** > **bilde**på **Sett inn** -fanen:
 
-    ```powerapps-comma
+    > [!div class="mx-imgBorder"]
+    > ![Insert et bilde @ no__t-1
+
+    Et bilde vises i data kortet, som utvides for å få plass til det:
+
+    > [!div class="mx-imgBorder"]
+    > 0Employee data kort med bilde kontroll @ no__t-1 @no__t
+
+1. Endre størrelsen på bildet, og Flytt det til høyre for kombinasjons boksen:
+
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Move og endre størrelsen på bilde-kontrollen @ no__t-1
+
+1. Angi **bilde** -egenskapen for bildet til denne formelen, og erstatt nummeret på slutten av DataCardValue om nødvendig:
+
+    ```powerapps-dot
     DataCardValue7.Selected.Picture
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi bilde-egenskapen for bildet](media/northwind-orders-canvas-part2/employee-07.png)
+    > ![Set image-egenskapen for bildet @ no__t-1
 
-    Bildet av den valgte ansatt vises.
+    Bildet av den valgte ansatte vises.
 
-1. Mens du holder nede Alt-tasten, velg en annen ansatt i kombinasjonsboksen å bekrefte at endres bildet også.
-
-    > [!div class="mx-imgBorder"]
-    > ![Velg en ansatt som skal vise bildet av den ansatte](media/northwind-orders-canvas-part2/employee-select.gif)
-
-## <a name="add-a-save-icon"></a>Legg til en lagre-ikonet
-
-1. I den **trevisning** ruten velger **Screen1**, og velg deretter **Sett inn** > **ikoner**  >  **Kontroller**:
+1. Mens du holder nede Alt-tasten velger du en annen ansatt i kombinasjons boksen for å bekrefte at bildet også endres.
 
     > [!div class="mx-imgBorder"]
-    > ![Sett inn hakemerkeikonet](media/northwind-orders-canvas-part2/save-01.png)
+    > @no__t – 0Select en ansatt for å vise den ansattes bilde @ no__t-1
 
-    Den [ **Kontroller** ](controls/control-shapes-icons.md) ikonet vises i hjørnet øverst til venstre som standard, der andre kontroller kan gjøre ikonet vanskelig å finne:
+## <a name="add-a-save-icon"></a>Legg til et lagrings ikon
 
-    > [!div class="mx-imgBorder"]
-    > ![Standardplasseringen-ikonet](media/northwind-orders-canvas-part2/save-02.png)
-
-1. På den **Hjem** endrer du den **farge** -egenskapen for ikonet til hvit, endre størrelse på ikonet, og Flytt den nær høyre kant av tittellinjen:
+1. Velg **Screen1**i **tre visnings** ruten, og velg deretter **Sett inn** > -**ikoner** > **Sjekk**:
 
     > [!div class="mx-imgBorder"]
-    > ![Konfigurer farge, størrelse og plassering for lagring ikon](media/northwind-orders-canvas-part2/save-03.png)
+    > ![Insert for utsjekkings merke @ no__t-1
 
-1. I den **trevisning** ruten bekrefte at skjemanavn er **Form1**, og angi deretter ikonets **OnSelect** egenskapen til denne formelen:
+    [**Sjekk**](controls/control-shapes-icons.md) ikonet vises i øvre venstre hjørne som standard, der andre kontroller kan gjøre det vanskelig å finne ikonet:
 
-    ```powerapps-comma
+    > [!div class="mx-imgBorder"]
+    > ![Icon i standard plassering @ no__t-1
+
+1. På **hjem** -fanen endrer du **farge** -egenskapen for ikonet til hvit, endrer størrelse på ikonet og flytter det nær høyre kant av tittel linjen:
+
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Configure farge, størrelse og plassering for lagrings ikonet @ no__t-1
+
+1. Kontroller at navnet på skjemaet er **Form1**i **tre visnings** ruten, og angi deretter **OnSelect** -egenskapen for ikonet til denne formelen:
+
+    ```powerapps-dot
     SubmitForm( Form1 )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi lagre ikonets OnSelect-egenskap](media/northwind-orders-canvas-part2/save-04.png)
+    > ![Set for OnSelect-egenskapen @ no__t-1
 
-    Når brukeren velger ikonet, den [ **SubmitForm** ](functions/function-form.md) funksjonen samler alle endrede verdiene i skjemaet, og sender dem til datakilden. Prikkene mars langs toppen av skjermen når dataene er sendt, og galleriet rekkefølge gjenspeiler endringene når prosessen er fullført.
+    Når brukeren velger ikonet, samler [**SubmitForm**](functions/function-form.md) -funksjonen alle endrede verdier i skjemaet og sender dem til data kilden. Punkter per time øverst på skjermen etter hvert som dataene sendes inn, og ordre galleriet gjenspeiler endringene etter at prosessen er fullført.
 
-1. Angi ikonets **DisplayMode** egenskapen til denne formelen:
+1. Angi **Display Mode** -egenskapen for ikonet til denne formelen:
 
-    ```powerapps-comma
-    If( Form1.Unsaved; DisplayMode.Edit; DisplayMode.Disabled )
+    ```powerapps-dot
+    If( Form1.Unsaved, DisplayMode.Edit, DisplayMode.Disabled )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi ikonets DisplayMode egenskapen](media/northwind-orders-canvas-part2/save-05.png)
+    > ![Set ikonets Display Mode-egenskap @ no__t-1
 
-    Hvis alle endringer i skjemaet har blitt lagret, ikonet er deaktivert og vises i den **DisabledColor**, som du vil angi neste.
+    Hvis alle endringer i skjemaet er lagret, er ikonet deaktivert og vises i **DisabledColor**, som du angir neste.
 
-1. Angi ikonets **DisabledColor** egenskapen til denne verdien:
+1. Angi **DisabledColor** -egenskapen for ikonet til denne verdien:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Gray
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi ikonets DisabledColor egenskapen](media/northwind-orders-canvas-part2/save-06.png)
+    > ![Set ikonets DisabledColor-egenskap @ no__t-1
 
-    Brukeren kan lagre endringer i en ordre ved å velge ikonet kontroller, som deretter er deaktivert og nedtonet før brukeren gjør en annen endring:
-
-    > [!div class="mx-imgBorder"]
-    > ![Lagre endringer](media/northwind-orders-canvas-part2/save-submit.gif)
-
-## <a name="add-a-cancel-icon"></a>Legg til en Avbryt-ikon
-
-1. På den **Sett inn** fanen og velge **ikoner** > **Avbryt**:
+    Brukeren kan lagre endringer i en rekkefølge ved å velge avmerkings ikonet, som deretter er deaktivert og nedtonet til brukeren gjør en annen endring:
 
     > [!div class="mx-imgBorder"]
-    > ![Legg til Avbryt-ikon](media/northwind-orders-canvas-part2/save-07.png)
+    > @no__t – 0saving endringer @ no__t-1
+
+## <a name="add-a-cancel-icon"></a>Legg til et Avbryt-ikon
+
+1. Velg **ikoner**@no__t – 2**Avbryt**på **Sett inn** -fanen:
+
+    > [!div class="mx-imgBorder"]
+    > ![Add Avbryt-ikon @ no__t-1
 
     Ikonet vises i hjørnet øverst til venstre som standard, der andre kontroller kan gjøre ikonet vanskelig å finne:
 
     > [!div class="mx-imgBorder"]
-    > ![Avbryt-ikon i standardplasseringen](media/northwind-orders-canvas-part2/save-08.png)
+    > ![Cancel ikon i standard plassering @ no__t-1
 
-1. På den **Hjem** endrer ikonets **farge** egenskapen til hvit, endre størrelse på ikonet, og Flytt den til venstre for ikonet for avmerkingsboksen:
+1. Endre ikonets **farge** -egenskap til hvit i **hjem** -fanen, endre størrelsen på ikonet, og Flytt det til venstre for avmerkings ikonet:
 
     > [!div class="mx-imgBorder"]
-    > ![Endre farge, størrelse og plassering for Avbryt-ikon](media/northwind-orders-canvas-part2/save-09.png)
+    > @no__t – 0Change farge, størrelse og plassering for Avbryt-ikonet @ no__t-1
 
-1. Angi på Avbryt-ikonet **OnSelect** egenskapen til denne formelen:
+1. Angi **OnSelect** -egenskapen for Avbryt-ikonet til denne formelen:
 
-    ```powerapps-comma
+    ```powerapps-dot
     ResetForm( Form1 )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi OnSelect-egenskapen på Avbryt-ikonet](media/northwind-orders-canvas-part2/save-10.png)
+    > ![Set Avbryt-ikonets OnSelect-egenskap @ no__t-1
 
-    Den [ **ResetForm** ](functions/function-form.md) funksjonen sletter alle endringer i skjemaet, som returnerer den til den opprinnelige tilstanden.
+    [**Reset form**](functions/function-form.md) -funksjonen forkaster alle endringer i skjemaet, som returnerer den til sin opprinnelige tilstand.
 
-1. Angi på Avbryt-ikonet **DisplayMode** egenskapen til denne formelen:
+1. Angi **Display Mode** -egenskapen for Avbryt-ikonet til denne formelen:
 
-    ```powerapps-comma
-    If( Form1.Unsaved Or Form1.Mode = FormMode.New; DisplayMode.Edit; DisplayMode.Disabled )
+    ```powerapps-dot
+    If( Form1.Unsaved Or Form1.Mode = FormMode.New, DisplayMode.Edit, DisplayMode.Disabled )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi på Avbryt-ikonet DisplayMode egenskapen](media/northwind-orders-canvas-part2/save-11.png)
+    > ![Set Avbryt-ikonets Display Mode-egenskap @ no__t-1
 
-    Denne formelen avviker litt fra den til kontroller-ikonet. På Avbryt-ikonet er deaktivert hvis alle endringene er lagret eller skjemaet er i **ny** modus, som du vil aktivere neste. I så fall **ResetForm** forkaster den nye posten.
+    Denne formelen er litt forskjellig fra den som er merket for avmerkings ikonet. Avbryt-ikonet er deaktivert hvis alle endringene er lagret, eller skjemaet er i **ny** modus, som du aktiverer neste. I dette tilfellet, forkaster **reset form** den nye posten.
 
-1. Angi på Avbryt-ikonet **DisabledColor** egenskapen til denne verdien:
+1. Angi **DisabledColor** -egenskapen for Avbryt-ikonet til denne verdien:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Gray
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi på Avbryt-ikonet DisabledColor egenskapen](media/northwind-orders-canvas-part2/save-12.png)
+    > ![Set Avbryt-ikonets DisabledColor-egenskap @ no__t-1
 
-    Brukeren kan avbryte endringer i en ordre, og kontroller og Avbryt ikonene er deaktivert og nedtonet hvis alle endringene er lagret:
-
-    > [!div class="mx-imgBorder"]
-    > ![Lagre og avbryting av endringer](media/northwind-orders-canvas-part2/save-cancel.gif)
-
-## <a name="add-an-add-icon"></a>Legge til et ikon for Legg til
-
-1. På den **Sett inn** fanen og velge **ikoner** > **Legg til**.
+    Brukeren kan avbryte endringer i en ordre, og kontroll-og avbrudds ikonene er deaktivert og nedtonet hvis alle endringene er lagret:
 
     > [!div class="mx-imgBorder"]
-    > ![Sett inn en Add-ikon](media/northwind-orders-canvas-part2/save-13.png)
+    > ![Saving og Annullerer endringer @ no__t-1
 
-    Den **Legg til** ikonet vises i hjørnet øverst til venstre som standard, der andre kontroller kan være vanskelig å finne:
+## <a name="add-an-add-icon"></a>Legg til et Legg til-ikon
 
-    > [!div class="mx-imgBorder"]
-    > ![Standardplasseringen for Legg til-ikon](media/northwind-orders-canvas-part2/save-14.png)
-
-1. På den **Hjem** fanen, angir du **farge** -egenskapen for ikonet Legg til hvit, endre størrelse på ikonet, og Flytt den til venstre for på Avbryt-ikonet:
+1. På **Sett inn** -fanen velger du **ikoner** > **Legg til**.
 
     > [!div class="mx-imgBorder"]
-    > ![Endre farge, størrelse og plassering av ikonet Legg til](media/northwind-orders-canvas-part2/save-15.png)
+    > @no__t – 0Insert et Legg til-ikon @ no__t-1
 
-1. Angi ikonet Legg til **OnSelect** egenskapen til denne formelen:
+    **Legg til** -ikonet vises i øvre venstre hjørne som standard, der andre kontroller kan gjøre det vanskelig å finne:
 
-    ```powerapps-comma
+    > [!div class="mx-imgBorder"]
+    > ![Default plassering av Legg til-ikon @ no__t-1
+
+1. Angi **farge** -egenskapen for Legg til-ikonet til hvit i **hjem** -fanen, endre størrelsen på ikonet, og Flytt det til venstre for Avbryt-ikonet:
+
+    > [!div class="mx-imgBorder"]
+    > ![Change farge, størrelse og plassering for Legg til-ikonet @ no__t-1
+
+1. Angi **OnSelect** -egenskapen for Legg til-ikonet til denne formelen:
+
+    ```powerapps-dot
     NewForm( Form1 )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi OnSelect-egenskapen for ikonet Legg til](media/northwind-orders-canvas-part2/save-15b.png)
+    > ![Set Add-ikonets OnSelect-egenskap @ no__t-1
 
-    Den [ **NewForm** ](functions/function-form.md) funksjonen viser en tom post i skjemaet.  
+    [**NewForm**](functions/function-form.md) -funksjonen viser en tom post i skjemaet.  
 
-1. Angi ikonet Legg til **DisplayMode** egenskapen til denne formelen:
+1. Angi **Display Mode** -egenskapen for Legg til-ikonet til denne formelen:
 
-    ```powerapps-comma
-    If( Form1.Unsaved Or Form1.Mode = FormMode.New; DisplayMode.Disabled; DisplayMode.Edit )
+    ```powerapps-dot
+    If( Form1.Unsaved Or Form1.Mode = FormMode.New, DisplayMode.Disabled, DisplayMode.Edit )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi egenskapen for ikonet Legg til DisplayMode](media/northwind-orders-canvas-part2/save-16.png)
+    > ![Set Add-ikonets Display Mode-egenskap @ no__t-1
 
-    Formelen deaktiverer Legg til ikonet under disse betingelsene:
+    Formelen deaktiverer Legg til-ikonet under disse betingelsene:
 
-    - Brukeren gjør endringer, men ikke lagre eller avbryte dem, som er den motsatte virkemåten fra ikonene kontroll og Avbryt.
-    - Brukeren velger ikonet Legg til, men endrer ikke.
+    - Brukeren gjør endringer, men lagrer eller avbryter dem ikke, noe som er den motsatte virke måten fra sjekk-og avbrudds ikonene.
+    - Brukeren velger Legg til-ikonet, men gjør ingen endringer.
 
-1. Angi ikonet Legg til **DisabledColor** egenskapen til denne verdien:
+1. Angi **DisabledColor** -egenskapen for Legg til-ikonet til denne verdien:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Gray
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi egenskapen for ikonet Legg til DisabledColor](media/northwind-orders-canvas-part2/save-17.png)
+    > ![Set Add-ikonets DisabledColor-egenskap @ no__t-1
 
-    Brukeren kan opprette en ordre hvis de ikke gjøre endringer eller lagre eller annullere alle endringer de har gjort. (Hvis brukeren velger dette ikonet, de kan ikke velge den på nytt før de gjør en eller flere endringer og deretter lagre eller avbryte endringene):
+    Brukeren kan opprette en ordre hvis de ikke gjør noen endringer, eller de lagrer eller avbryter eventuelle endringer som er gjort. (Hvis brukeren velger dette ikonet, kan de ikke velge det igjen før de gjør én eller flere endringer og deretter lagrer eller avbryter disse endringene):
 
     > [!div class="mx-imgBorder"]
-    > ![Opprette en ordre](media/northwind-orders-canvas-part2/save-new.gif)
+    > @no__t – 0Create en ordre @ no__t-1
 
 > [!NOTE]
-> Hvis du oppretter og lagrer en ordre, må du kanskje bla nedover i galleriet rekkefølge for å vise den nye bestillingen. Den vil ikke ha en Totalpris fordi du ikke har lagt til en hvilken som helst Ordredetaljer ennå.
+> Hvis du oppretter og lagrer en ordre, kan det hende du må bla nedover i ordre galleriet for å vise den nye bestillingen. Den har ikke en total pris fordi du ikke har lagt til noen ordre detaljer ennå.
 
-## <a name="add-a-trash-icon"></a>Legg til et Papirkurv-ikon
+## <a name="add-a-trash-icon"></a>Legg til et papir kurv ikon
 
-1. På den **Sett inn** fanen og velge **ikoner** > **Papirkurv**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Sett inn en Papirkurv-ikon](media/northwind-orders-canvas-part2/save-18.png)
-
-    Den **Papirkurv** ikonet vises i hjørnet øverst til venstre som standard, der andre kontroller kan være vanskelig å finne:
+1. På **Sett inn** -fanen velger du **ikoner** > **papir kurv**.
 
     > [!div class="mx-imgBorder"]
-    > ![Standardplasseringen for papirkurvikonet](media/northwind-orders-canvas-part2/save-19.png)
+    > @no__t – 0Insert et papir kurv ikon @ no__t-1
 
-1. På den **Hjem** endrer du på Papirkurv-ikonet **farge** egenskapen til hvit, endre størrelse på ikonet, og Flytt den til venstre for ikonet Legg til:
+    **Papir kurv** ikonet vises i øvre venstre hjørne som standard, der andre kontroller kan gjøre det vanskelig å finne:
 
     > [!div class="mx-imgBorder"]
-    > ![Endre farge, størrelse og plassering av Papirkurv-ikonet](media/northwind-orders-canvas-part2/save-20.png)
+    > ![Default plassering av papir kurv ikonet @ no__t-1
 
-1. Angi på Papirkurv-ikonet **OnSelect** egenskapen til denne formelen:
+1. På **hjem** -fanen kan du endre **farge** -egenskapen for papir kurven til hvit, endre størrelse på ikonet og flytte det til venstre for Legg til-ikonet:
 
-    ```powerapps-comma
-    Remove( Orders; Gallery1.Selected )
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Change farge, størrelse og plassering for papir kurv ikonet @ no__t-1
+
+1. Angi **OnSelect** -egenskapen for avfall-ikonet til denne formelen:
+
+    ```powerapps-dot
+    Remove( Orders, Gallery1.Selected )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi OnSelect-egenskapen på Papirkurv-ikonet](media/northwind-orders-canvas-part2/save-21.png)
+    > ![Set for OnSelect-egenskapen @ no__t-1
 
-    Den [ **fjerne** ](functions/function-remove-removeif.md) funksjonen fjerner en post fra en datakilde. I denne formelen fjerner funksjonen posten som er valgt i galleriet rekkefølge. Papirkurvikonet vises nær sammendrag skjemaet (ikke i rekkefølge-galleriet) fordi skjemaet viser mer informasjon om posten, slik at brukeren kan enklere å identifisere posten som formelen, slettes.
+    [**Remove**](functions/function-remove-removeif.md) -funksjonen fjerner en post fra en data kilde. I denne formelen fjerner funksjonen posten som er valgt i ordre galleriet. Papir kurv ikonet vises nær sammendrags skjemaet (ikke i ordre galleriet) fordi skjemaet viser flere detaljer om posten, slik at brukeren enklere kan identifisere posten som formelen skal slette.
 
-1. Angi på Papirkurv-ikonet **DisplayMode** egenskapen til denne formelen:
+1. Angi **Display Mode** -egenskapen for avfall-ikonet til denne formelen:
 
-    ```powerapps-comma
-    If( Form1.Mode = FormMode.New; DisplayMode.Disabled; DisplayMode.Edit )
+    ```powerapps-dot
+    If( Form1.Mode = FormMode.New, DisplayMode.Disabled, DisplayMode.Edit )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi på Papirkurv-ikonet DisplayMode egenskapen](media/northwind-orders-canvas-part2/save-22.png)
+    > ![Set for Display Mode-egenskapen @ no__t-1
 
-    Denne formelen deaktiverer papirkurvikonet Hvis brukeren oppretter en post. Før brukeren lagrer posten, den **fjerne** -funksjonen har ingen posten som skal slettes.
+    Denne formelen deaktiverer papir kurv ikonet hvis brukeren oppretter en post. Før brukeren lagrer posten, har ikke **Remove** -funksjonen en post å slette.
 
-1. Angi på Papirkurv-ikonet **DisabledColor** egenskapen til denne verdien:
+1. Angi **DisabledColor** -egenskapen for avfall-ikonet til denne verdien:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Gray
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Angi på Papirkurv-ikonet DisabledColor egenskapen](media/northwind-orders-canvas-part2/save-23.png)
+    > ![Set for DisabledColor-egenskapen @ no__t-1
 
     Brukeren kan slette en ordre.
 
     > [!div class="mx-imgBorder"]
-    > ![Sletting av ordrer](media/northwind-orders-canvas-part2/save-delete.gif)
+    > @no__t – 0Deleting ordrer @ no__t-1
 
-## <a name="summary"></a>Sammendrag
+## <a name="summary"></a>Oversikt
 
-Hvis du vil kort oppsummering, du har lagt til et skjema der brukeren kan vise og redigere et sammendrag av hver ordre, og du brukte disse elementene:
+Du har lagt til et skjema der brukeren kan vise og redigere et sammendrag av hver ordre i oppsummering, og du brukte disse elementene:
 
-- Et skjema som viser data fra den **ordrer** enhet: **Form1.DataSource =** `Orders`
-- En tilkobling mellom skjemaet og galleriet rekkefølge: **Form1.Item =** `Gallery1.Selected`
-- En annen kontroll for den **ordrenummer** felt: **Vis tekst**
-- En mange-til-én-relasjon til å vise den ansattes bilde i den **ansatte** datakort: `DataCardValue1.Selected.Picture`
-- Et ikon for å lagre endringer i en ordre: `SubmitForm( Form1 )`
-- Et ikon for å avbryte endringer i en ordre: `ResetForm( Form1 )`
+- Et skjema som viser data fra **Orders** -enheten: **Form1. DataSource =** `Orders`
+- En tilkobling mellom skjemaet og ordre galleriet: **Form1. Item =** `Gallery1.Selected`
+- En alternativ kontroll for feltet **for ordre nummer** : **Vis tekst**
+- En mange-til-én-relasjon for å vise den ansattes bilde i data kortet for **ansatte** : `DataCardValue1.Selected.Picture`
+- Et ikon for å lagre endringer i en rekkefølge: `SubmitForm( Form1 )`
+- Et ikon for å avbryte endringer i en rekkefølge: `ResetForm( Form1 )`
 - Et ikon for å opprette en ordre: `NewForm( Form1 )`
-- Et ikon for å slette en ordre: `Remove( Orders; Gallery1.Selected )`
+- Et ikon for å slette en ordre: `Remove( Orders, Gallery1.Selected )`
 
 ## <a name="next-step"></a>Neste trinn
 
-I neste emne, skal du legge til en annen galleriet for å vise produktene i hver ordre, og du vil endre disse detaljene ved hjelp av den [ **Patch** ](functions/function-patch.md) funksjonen.
+I neste emne kan du legge til et annet galleri for å vise produktene i hver ordre, og du kan endre disse detaljene ved hjelp av [**patch**](functions/function-patch.md) -funksjonen.
 
 > [!div class="nextstepaction"]
-> [Opprett detalj-galleri](northwind-orders-canvas-part3.md)
+> [Opprett detalj galleriet](northwind-orders-canvas-part3.md)

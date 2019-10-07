@@ -8,17 +8,17 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/02/2016
 ms.author: lanced
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d70756e275ff129265661211f4dc6d95e6cefa96
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 565f751017bc8c145c34058bd4dd57d047127d45
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61545445"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71987190"
 ---
 # <a name="connect-to-excel-from-powerapps"></a>Å koble til Excel fra PowerApps
 ![Excel](./media/connection-excel/excelicon.png)
@@ -31,7 +31,7 @@ Excel er en *type* tilkobling. Slik viser du Excel-data i appen din:
 4. Vis denne informasjonen i appen ved [å generere appen automatisk](../get-started-create-from-data.md) eller ved legge til og konfigurere for eksempel en **Galleri**-kontroll.
 
 > [!NOTE]
-> Når du kobler til Excel-tabellen fra PowerApps, vil PowerApps opprette en kolonne kalt **\_PowerAppsId_**, med en unik ID for hver rad i Excel-tabellen.
+> Når du kobler til Excel-tabellen fra PowerApps, vil PowerApps opprette en kolonne kalt **\_PowerAppsId_** , med en unik ID for hver rad i Excel-tabellen.
 
 [Oversikt over skylagring-tilkoblingen](cloud-storage-blob-connections.md) viser deg hvordan du legger til tilkoblingen, legger til en Excel-tabell som datakilde, og bruker Excel-dataen i appen din.
 

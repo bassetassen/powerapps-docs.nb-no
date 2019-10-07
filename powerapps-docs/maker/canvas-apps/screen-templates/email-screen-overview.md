@@ -1,168 +1,167 @@
 ---
-title: E-post-skjermen malen | Microsoft Docs
-description: Forstå hvordan e-post-skjermen malen for lerret-apper fungerer, og Utvid skjermen for din egen brukstilfeller
+title: Skjerm bilde for e-post | Microsoft Docs
+description: Forstå hvordan malen for e-postskjermen for lerret apps fungerer, og Utvid skjermen for dine egne bruks tilfeller
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 12/29/2018
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a1aad5ca9e8c7f8b55b1645b04d6c8dc0b9c707b
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 2fd03b1a54b54c1abe1d6c30270861b6fc9b8054
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61539235"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71989343"
 ---
-# <a name="overview-of-the-email-screen-template-for-canvas-apps"></a>Oversikt over e-post-skjermen malen for lerretsapper
+# <a name="overview-of-the-email-screen-template-for-canvas-apps"></a>Oversikt over malen for e-postskjermen for lerret apper
 
-I en lerretsapp, kan du legge til en e postskjermen som lar brukerne sende en e-post fra Office 365 Outlook-kontoen deres. Brukere kan søke etter mottakere i deres orgs og legge til eksterne e-postadresser, også. Du kan legge til støtte for bilde-vedlegg, endre brukerdataene som vises i galleriet for søk, og gjøre andre tilpasninger.
+Legg til en e-postskjerm i en lerret-app som lar brukere sende en e-postmelding fra sin Office 365 Outlook-konto. Brukere kan også søke etter mottakere i sine organisasjoner og legge til eksterne e-postadresser. Du kan legge til støtte for bilde vedlegg, endre bruker dataene som vises i søke galleriet, og gjøre andre tilpasninger.
 
-Du kan også legge til andre malbaserte skjermer som viser ulike data fra Office 365, for eksempel en brukers [kalender](calendar-screen-overview.md), [personer](people-screen-overview.md) i en organisasjon, og [tilgjengelighet](meeting-screen-overview.md) av personer brukerne vil kanskje invitere til et møte.
+Du kan også legge til andre mal BAS ert skjermer som viser ulike data fra Office 365, som for eksempel en brukers [Kalender](calendar-screen-overview.md), [personer](people-screen-overview.md) i en organisasjon, og [tilgjengelighet](meeting-screen-overview.md) for personer som bruker kanskje ønsker å invitere til et møte.
 
 Denne oversikten lærer deg:
 > [!div class="checklist"]
-> * Slik bruker du standard e-post-skjermen.
-> * Hvordan til å endre den.
-> * Slik integrerer dem i en app.
+> * Slik bruker du standard skjermen for e-post.
+> * Hvordan du endrer den.
+> * Slik integrerer du den i en app.
 
-Hvis en nærmere titt på denne skjermen standard funksjonalitet, kan du se den [e-post-skjermen referanse](email-screen-reference.md).
+Hvis du vil ha en dypere innsikt i denne skjermens standard funksjon, kan du se [referanse til e-post-skjermen](email-screen-reference.md).
 
-## <a name="prerequisite"></a>Forutsetning
+## <a name="prerequisite"></a>Nødvendig
 
-Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontroller som du [oppretter en app i PowerApps](../data-platform-create-app-scratch.md).
+Kjennskap til hvordan du legger til og konfigurerer skjermer og andre kontroller mens du [oppretter en app i powerapps](../data-platform-create-app-scratch.md).
 
-## <a name="default-functionality"></a>Standard-funksjonalitet
+## <a name="default-functionality"></a>Standard funksjonalitet
 
-Å legge til en skjerm for e-post fra malen:
+Slik legger du til en e-postskjerm fra malen:
 
-1. [Logg deg på](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) til PowerApps, og deretter opprette en app eller åpne en eksisterende app i PowerApps Studio.
+1. [Logg deg](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) på powerapps, og opprett deretter en app eller åpne en eksisterende app i PowerApps Studio.
 
-    Dette emnet viser en telefonapp, men samme konsepter gjelder for en nettbrett-app.
+    Dette emnet viser en telefon app, men de samme begrepene gjelder for en tavle-app.
 
-1. På den **Hjem** -fanen på båndet, velg **ny skjerm** > **e-post**.
+1. Velg **ny skjerm** > **e-post**på **hjem** -fanen på båndet.
 
-    Som standard ser skjermen omtrent slik ut:
+    Som standard ser skjermen lik dette:
 
-    ![E postskjermen](media/email-screen/email-screen-full.png)
+    ![E-post-skjerm](media/email-screen/email-screen-full.png)
 
 Noen nyttige notater:
 
-* Begynn å skrive navnet i tekstinndata-boksen under «Til» for å søke etter brukere i organisasjonen.
-* Når du søker etter personer, returneres bare de øverste 15 resultatene.
-* Hvis du vil legge til e-postadresser for e-postmottakere utenfor organisasjonen, Skriv ut full, gyldig e-postadressen, og velg "+" ikonet som vises til høyre for den.
-* Du må legge til minst én person som en mottaker, og angi et emne for å sende en e-post.
-* Når du har sendt e-postmeldingen, vil innholdet i emnelinjen og meldingsteksten, i tillegg til listen over mottakere alle slettes.
+* Hvis du vil søke etter brukere i organisasjonen, begynner du å skrive inn navnet i tekst inn data-boksen under til.
+* Når du søker etter personer, blir bare de 15 øverste resultatene returnert.
+* Hvis du vil legge til e-postadresser for e-postmottakere utenfor organisasjonen, skriver du inn den fullstendige, gyldige e-postadressen og velger +-ikonet som vises til høyre for den.
+* Du må legge til minst én person som mottaker og angi et emne for å sende en e-post.
+* Etter at du har sendt e-postmeldingen, slettes også innholdet i Emne linjen og meldings teksten, i tillegg til mottaker listen.
 
 ## <a name="modify-the-screen"></a>Endre skjermen
 
-Du kan endre standardfunksjonaliteten til denne skjermen i noen vanlige måter:
+Du kan endre standard funksjonaliteten til dette skjerm bildet på noen få vanlige måter:
 
-* [Legge til støtte for bilde-vedlegg](email-screen-overview.md#add-image-attachment-support)
-* [Vis forskjellige data for personer](email-screen-overview.md#show-different-data-for-people)
+* [Legg til støtte for bilde vedlegg](email-screen-overview.md#add-image-attachment-support)
+* [Å vise ulike data for personer](email-screen-overview.md#show-different-data-for-people)
 
-Hvis du vil endre skjermen ytterligere, kan du bruke den [e-post-skjermen referanse](./email-screen-reference.md) som en veiledning.
+Hvis du vil endre skjermen videre, kan du bruke [referanse til e-post](./email-screen-reference.md) som en veiledning.
 
 > [!IMPORTANT]
-> De følgende trinnene antar at du har lagt til bare én e postskjermen til appen. Hvis du har lagt til mer enn én, kontrollnavnene (som **iconMail1**) avsluttes med et annet nummer, og du må justere formlene i henhold til dette.
+> De følgende trinnene forutsetter at du har lagt til bare én e-postskjerm i appen. Hvis du har lagt til mer enn ett, avsluttes kontroll navn (for eksempel **iconMail1**) seg med et annet tall, og du må justere formlene i henhold til dette.
 
-### <a name="add-image-attachment-support"></a>Legge til støtte for bilde-vedlegg
+### <a name="add-image-attachment-support"></a>Legg til støtte for bilde vedlegg
 
-Dette gjør at brukere kan sende en enkelt avbildning med e-posten som et vedlegg.
+Dette gjør at brukerne kan sende ett enkelt bilde med e-post som et vedlegg.
 
-1. På den **Sett inn** fanen og velge **Media**, og velg deretter **Legg til bilde**.
-1. Angi den nye kontrollen **Y** egenskapen til dette uttrykket:
+1. Velg **Media**på **Sett inn** -fanen, og velg deretter **Legg til bilde**.
+1. Angi **Y** -egenskapen for den nye kontrollen til dette uttrykket:
 
     `TextEmailMessage1.Y + TextEmailMessage1.Height + 20`
     
-1. Med den **AddMediaWithImage** kontrollen settes inn, angi høyden til å være mindre enn 210.
-1. Velg i trevisningen kontrollen **AddMediaWithImage** > **...**   >  **Endre rekkefølgen på** > **Plasser lengst bak**.
-   Dette hindrer at kontrollen økt foran den **PeopleBrowseGallery** kontroll.
-1. Endre den **høyde** -egenskapen for **EmailPeopleGallery** til denne formelen:
+1. Når **AddMediaWithImage** -kontrollen er satt inn, setter du høyden til mindre enn 210.
+1. Velg **AddMediaWithImage** >  i kontroll tre visningen. **.** .  > **Omorganiser** > **Send lengst bak**.
+   Dette hindrer at kontrollen sitter foran **PeopleBrowseGallery** -kontrollen.
+1. Endre **Height** -egenskapen for **EmailPeopleGallery** til denne formelen:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Min( 
         ( EmailPeopleGallery1.TemplateHeight + EmailPeopleGallery1.TemplatePadding * 2 ) *
-            RoundUp( CountRows( EmailPeopleGallery1.AllItems ) / 2; 0 ); 
+            RoundUp( CountRows( EmailPeopleGallery1.AllItems ) / 2, 0 ), 
         304
     )
     ```
 
-1. Angi den **ShowScrollbar** -egenskapen for **EmailPeopleGallery** til dette uttrykket:
+1. Angi **ShowScrollbar** -egenskapen for **EmailPeopleGallery** til dette uttrykket:
 
     ```EmailPeopleGallery1.Height >= 304```
     
-    Dette hindrer at Maks høyden automatisk installasjon av **AddMediaWithImage** kontroll av siden.
+    Dette hindrer den maksimale høyden i å skyve **AddMediaWithImage** -kontrollen bort fra siden.
     
-1. Endre den **OnSelect** -egenskapen for den **iconMail** kontrollen som denne formelen:
+1. Endre **OnSelect** -egenskapen for **iconMail** -kontrollen til denne formelen:
 
-    ```powerapps-comma
-    Set( _emailRecipientString; Concat(MyPeople; Mail & ";") );;
-    If( IsBlank( UploadedImage1 );
-        'Office365'.SendEmail( _emailRecipientString; 
-            TextEmailSubject1.Text; 
-            TextEmailMessage1.Text; 
+    ```powerapps-dot
+    Set( _emailRecipientString, Concat(MyPeople, Mail & ";") );
+    If( IsBlank( UploadedImage1 ),
+        'Office365'.SendEmail( _emailRecipientString, 
+            TextEmailSubject1.Text, 
+            TextEmailMessage1.Text, 
             { Importance: "Normal" }
-        );
-        'Office365'.SendEmail( _emailRecipientString; 
-            TextEmailSubject1.Text; 
-            TextEmailMessage1.Text; 
+        ),
+        'Office365'.SendEmail( _emailRecipientString, 
+            TextEmailSubject1.Text, 
+            TextEmailMessage1.Text, 
             {
-                Importance: "Normal";
+                Importance: "Normal",
                 Attachments: Table(
                     {
-                        Name: "Image.jpg"; 
+                        Name: "Image.jpg", 
                         ContentBytes: UploadedImage1.Image
                     }
                 )
             }
         )
-    );;
-    Reset( TextEmailSubject1 );;
-    Reset( TextEmailMessage1 );;
-    Reset( AddMediaButton1 );;
+    );
+    Reset( TextEmailSubject1 );
+    Reset( TextEmailMessage1 );
+    Reset( AddMediaButton1 );
     Clear( MyPeople )
     ```
     
-    Denne formelen kontrollerer om en opplastede avbildningen. Hvis det ingen finnes, deretter den bruker den samme `Office365.SendEmail` som før operasjonen. Hvis det er et bilde, legges den som et vedlegg i tabellen vedlegg.
-    Etter sending av e-postmeldingen, ytterligere **tilbakestille** utføres operasjonen på **AddMediaButton** fjerne den opplastede avbildningen.
+    Denne formelen søker etter en opplastet avbildning. Hvis det ikke finnes noen, bruker den samme `Office365.SendEmail`-operasjonen som før. Hvis det finnes et bilde, legges det til som et vedlegg i Vedleggs tabellen.
+    Når du har sendt e-postmeldingen, utføres en ekstra **reset** -operasjon på **AddMediaButton** for å fjerne den opplastede avbildningen.
 > [!NOTE]
-> Hvis du vil legge til mer enn ett vedlegg i en e-post, kan du legge til poster i tabellen vedlegg.
+> Hvis du vil legge til mer enn ett vedlegg i en e-post, kan du legge til poster i vedlegg-tabellen.
 
-### <a name="show-different-data-for-people"></a>Vis forskjellige data for personer
+### <a name="show-different-data-for-people"></a>Å vise ulike data for personer
 
-Denne skjermen bruker den [Office365Users.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) operasjonen til å søke etter brukere i din organisasjon. Den gir flere felt for hver hendelse utover hva, vises i den **PeopleBrowseGallery** kontroll. Det er enkelt å legge til eller endre feltene i galleriet:
+Denne skjermen bruker [Office365Users. SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) -operasjonen til å søke etter brukere i organisasjonen. Det gir flere felt for hver hendelse utover det som vises i **PeopleBrowseGallery** -kontrollen. Det er enkelt å legge til eller endre felt i galleriet:
 
-1. I den **PeopleBrowseGallery** kontroll, velg en etikett til å endre (eller Legg til en og holde dem valgt).
+1. Velg en etikett i **PeopleBrowseGallery** -kontrollen for å endre (eller Legg til en og Behold den valgt).
 
-1. Med sin **tekst** egenskapen som er valgt, på formellinjen, erstatter innholdet med `ThisItem.`
+1. Når **tekst** -egenskapen er valgt, erstatter du innholdet med `ThisItem.` i formel linjen.
 
     IntelliSense viser en liste over felt som du kan velge.
 
 1. Velg feltet du vil bruke.
 
-    Den **tekst** egenskapen oppdateringer til `ThisItem.{FieldSelection}`.
+    **Tekst** -egenskapen oppdateres til `ThisItem.{FieldSelection}`.
 
-## <a name="integrate-the-screen-into-an-app"></a>Integrere skjermen i en app
+## <a name="integrate-the-screen-into-an-app"></a>Integrer skjermen i en app
 
-E postskjermen er en kraftig gruppe av kontroller i seg selv, men det utfører vanligvis beste som en del av en større, mer allsidig app. Du kan integrere dette skjermbildet i en større app på en rekke måter, inkludert [kobling til skjermbildet kalender](email-screen-overview.md#linking-to-the-calendar-screen).
+E-skjermen er en kraftig gruppe med kontroller i sin egen rettighet, men den fungerer vanligvis best som en del av en større, mer fleksibel app. Du kan integrere denne skjermen i en større app på en rekke måter, inkludert [kobling til kalender-skjermen](email-screen-overview.md#linking-to-the-calendar-screen).
 
 ### <a name="linking-to-the-calendar-screen"></a>Koble til kalender-skjermen
 
-Følg trinnene som er beskrevet i delen «Vis hendelsen deltakere» i [oversikt over kalender-skjermen](./calendar-screen-overview.md#show-event-attendees) men, i det siste trinnet, angi den **Navigate** funksjonen til å åpne skjermbildet e-post. Når du har fullført trinnene, den **MyPeople** samling er utfylt, som gjør at brukere kan sende e-post for personer som er at du deltok den valgte hendelsen.
+Følg trinnene som er beskrevet i delen «Vis hendelses deltakere» i [Oversikt over kalender-skjermen](./calendar-screen-overview.md#show-event-attendees) , men i det siste trinnet kan du angi funksjonen **Naviger** til å åpne e-postskjermen. Etter at du har fullført disse trinnene, fylles **MyPeople** -samlingen ut, slik at brukere kan sende e-post til personene som deltar på den valgte hendelsen.
 
 > [!NOTE]
-> Sende denne e-post, sender en egen e-post fra den faktiske hendelsen i Outlook.
+> Hvis du sender denne e-posten, sendes en egen e-postmelding fra den faktiske hendelsen i Outlook.
 
 ## <a name="next-steps"></a>Neste trinn
 
-* [Vis referansedokumentasjon for denne skjermen](./email-screen-reference.md).
-* [Finn ut mer om Office 365-brukere-kobling i PowerApps](../connections/connection-office365-users.md).
-* [Se alle tilgjengelige tilkoblinger i PowerApps](../connections-list.md).
+* [Vis referanse dokumentasjonen for dette skjerm bildet](./email-screen-reference.md).
+* [Les mer om Office 365 brukere-koblingen i powerapps](../connections/connection-office365-users.md).
+* [Se alle tilgjengelige tilkoblinger i powerapps](../connections-list.md).

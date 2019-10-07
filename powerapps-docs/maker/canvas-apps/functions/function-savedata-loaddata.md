@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 01/31/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3fb23fec6f6885a55b054889b90fed0c5efafd5e
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: e716de7a3551e2195d3f3459540a6f68acb4fd51
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61520494"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992276"
 ---
 # <a name="savedata-and-loaddata-functions-in-powerapps"></a>Funksjonene SaveData og LoadData i PowerApps
 Lagrer og laster inn en [samling](../working-with-data-sources.md#collections) på nytt.
@@ -29,18 +28,18 @@ Lagrer og laster inn en [samling](../working-with-data-sources.md#collections) p
 
 **LoadData**-funksjonen laster inn en samling på nytt ut fra navnet som tidligere ble lagret med **SaveData**. Du kan ikke bruke denne funksjonen til å laste inn en samling fra en annen kilde.  
 
-Bruk disse funksjonene til å forbedre ytelsen for oppstart av appen ved å bufre data i den **[App.OnStart](../controls/control-screen.md#additional-properties)** formelen på en første kjøring og deretter laste inn den lokale hurtigbufferen ved senere kjøringer på nytt. Du kan også bruke disse funksjonene til å legge til [enkle frakoblede funksjoner](../offline-apps.md) i appen.
+Bruk disse funksjonene til å forbedre program oppstarts ytelsen ved å bufre data i **[appen. OnStart](../controls/control-screen.md#additional-properties)** formel ved første kjøring og deretter laste inn den lokale hurtig bufferen på nytt ved etterfølgende kjøringer. Du kan også bruke disse funksjonene til å legge til [enkle frakoblede funksjoner](../offline-apps.md) i appen din.
 
-Du kan ikke bruke disse funksjonene i en nettleser, når du redigerer appen i PowerApps Studio, eller når du kjører appen i web-spiller. Hvis du vil teste appen din, kan du kjøre den i PowerApps Mobile på en iPhone eller Android-enheten.
+Du kan ikke bruke disse funksjonene i en nett leser, enten når du redigerer appen i PowerApps Studio eller når du kjører appen i web spilleren. Hvis du vil teste appen, kan du kjøre den i PowerApps Mobile på en iPhone-eller Android-enhet.
 
-Disse funksjonene er begrenset av mengden minne tilgjengelig app fordi de fungerer på en samling i minnet. Tilgjengelig minne kan variere avhengig av enheten og operativsystemet, minnet som bruker PowerApps-spiller og kompleksiteten til appen når det gjelder skjermer og kontroller. Hvis du lagrer mer enn et par MB med data, kan du teste appen din med forventede scenarier på enheter som du forventer at appen kan kjøre. Du bør generelt forvente å ha mellom 30 og 70 MB tilgjengelig minne.  
+Disse funksjonene er begrenset av mengden tilgjengelig app-minne fordi de opererer på en samling i minnet. Tilgjengelig minne kan variere avhengig av enheten og operativ systemet, minnet som PowerApps-spilleren bruker, og kompleksiteten til appen i henhold til skjermer og kontroller. Hvis du lagrer mer enn noen få megabyte med data, kan du teste appen med forventede scenarioer på enhetene som du forventer at appen skal kjøre. Du bør vanligvis forvente å ha mellom 30 og 70 megabyte av tilgjengelig minne.  
 
-**LoadData** oppretter ikke samlingen. Funksjonen fyller bare opp en eksisterende samling. Du må først opprette samlingen med riktige [kolonner](../working-with-tables.md#columns) ved hjelp av **[Collect](function-clear-collect-clearcollect.md)**. Den innlastede data vil bli lagt til samlingen. Bruk den **[tydelig](function-clear-collect-clearcollect.md)** funksjonen først hvis du vil starte med en tom samling.
+**LoadData** oppretter ikke samlingen. Funksjonen fyller bare opp en eksisterende samling. Du må først opprette samlingen med riktige [kolonner](../working-with-tables.md#columns) ved hjelp av **[Collect](function-clear-collect-clearcollect.md)** . De lastede dataene legges til i samlingen. Bruk **[Clear](function-clear-collect-clearcollect.md)** -funksjonen først hvis du vil starte med en tom samling.
 
 Dataene krypteres og lagres på en privat plassering på den lokale enheten, isolert fra andre brukere og andre apper.
 
 ## <a name="syntax"></a>Syntaks
-**SaveData**( *Samling*; *Navn* )<br>**LoadData**( *Samling*; *Navn* [; *IgnoreNonexistentFile* ])
+**SaveData**( *Samling*, *Navn* )<br>**LoadData**( *Samling*, *Navn* [, *IgnoreNonexistentFile* ])
 
 * *Samling* – obligatorisk.  Samlingen som skal lagres eller lastes inn.
 * *Navn* – obligatorisk.  Navnet på lagringen. Du må bruke samme navn for å lagre og laste inn det samme settet med data. Navneområdet er ikke delt med andre apper eller brukere.
@@ -50,6 +49,6 @@ Dataene krypteres og lagres på en privat plassering på den lokale enheten, iso
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Hvis (tilkobling.tilkoblet; ClearCollect (LocalTweets; Twitter.SearchTweet («PowerApps»; {maxResults: 100})); LoadData (LocalTweets; «Tweeter»; SANN))** |Hvis enheten er koblet til, lastes samlingen LocalTweets inn fra Twitter-tjenesten. Ellers lastes samlingen inn fra den lokale filbufferen. |Innholdet gjengis uansett enheten er tilkoblet eller frakoblet. |
-| **SaveData(LocalTweets; «Tweeter»)** |Lagre samlingen LocalTweets som en lokal filbuffer på enheten. |Dataene lagres lokalt slik at **LoadData** kan laste det inn i en samling. |
+| @no__t – 0If (tilkobling. tilkoblet, ClearCollect (LocalTweets, Twitter. SearchTweet («PowerApps», {maxResults: 100})), LoadData (LocalTweets, "Tweeter", True)) ** |Hvis enheten er koblet til, lastes samlingen LocalTweets inn fra Twitter-tjenesten. Ellers lastes samlingen inn fra den lokale filbufferen. |Innholdet gjengis uansett enheten er tilkoblet eller frakoblet. |
+| **SaveData(LocalTweets, «Tweeter»)** |Lagre samlingen LocalTweets som en lokal filbuffer på enheten. |Dataene lagres lokalt slik at **LoadData** kan laste det inn i en samling. |
 

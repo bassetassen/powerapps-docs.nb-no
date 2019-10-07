@@ -8,17 +8,17 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2016
 ms.author: lanced
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 10a6178c63495b929eb6e5885ded9394b31a11ef
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: b89f23ac1dec941fcc2f5d7bd03f927c08691f77
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61546075"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71994067"
 ---
 # <a name="connect-to-cloud-storage-from-powerapps"></a>Å koble til lagring i skyen fra PowerApps
 PowerApps tilbyr flere tilkoblinger for lagring i skyen. Ved hjelp av noen av disse tilkoblingene kan du lagre en Excel-fil og bruke informasjonen i den i hele appen. Disse tilkoblingene omfatter:  
@@ -57,7 +57,7 @@ PowerApps tilbyr flere tilkoblinger for lagring i skyen. Ved hjelp av noen av di
 
 ## <a name="using-the-excel-data-in-your-app"></a>Å bruke Excel-data i appen
 1. Velg **Galleri** på **Sett inn**-fanen, og velg deretter en **Med tekst**-gallerikontroll.
-2. Angi **[Elementer](../controls/properties-core.md)**-egenskapen for galleriet i Excel-tabellen. Hvis Excel-tabellen eksempelvis heter **Tabell1**, angir du den som Tabell1:  
+2. Angi **[Elementer](../controls/properties-core.md)** -egenskapen for galleriet i Excel-tabellen. Hvis Excel-tabellen eksempelvis heter **Tabell1**, angir du den som Tabell1:  
    
     ![Elementegenskaper](./media/cloud-storage-blob-connections/itemsproperty.png)  
    

@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 03/01/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1b598cc863ec01bcb2a66a9510cb48ec5203e679
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 099afb1e89d1551c6c6b969c3ae3688a3cdec777
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61559709"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992964"
 ---
 # <a name="char-function-in-powerapps"></a>Char-funksjonen i PowerApps
 
@@ -27,7 +26,7 @@ Oversetter en tegnkode til en streng.
 
 ## <a name="description"></a>Beskrivelse
 
-Den **Char** funksjonen oversetter et tall til en streng med det tilsvarende ASCII-tegnet.
+**Char** -funksjonen oversetter et tall til en streng med tilsvarende ASCII-tegn.
 
 ## <a name="syntax"></a>Syntaks
 
@@ -39,51 +38,51 @@ Den **Char** funksjonen oversetter et tall til en streng med det tilsvarende ASC
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Char (65)** |Returnerer tegnet som samsvarer med ASCII-koden 65. |"A" |
-| **Char( 105 )** |Returnerer tegnet som samsvarer med ASCII-koden 105. |"i" |
+| **Char (65)** |Returnerer tegnet som samsvarer med ASCII-koden 65. |AV |
+| **Char( 105 )** |Returnerer tegnet som samsvarer med ASCII-koden 105. |utdrag |
 | **Char( 35 )** |Returnerer tegnet som samsvarer med ASCII-koden 35. |"#" |
 
-### <a name="display-a-character-map"></a>Vise et Tegnkart
+### <a name="display-a-character-map"></a>Vis et Tegnkart
 
-1. På en tom skjerm i en nettbrett-app, kan du legge til en [ **galleriet** ](../controls/control-gallery.md) kontroll med en **tom vannrett** oppsett, og deretter angi følgende egenskaper:
+1. Legg til en [**Galleri**](../controls/control-gallery.md) -kontroll med et **tomt vannrett** oppsett på en tom skjerm i en tavle-app, og angi deretter disse egenskapene:
 
-    - **Elementer**: `[0;1;2;3;4;5;6;7]`
+    - **Elementer**: `[0,1,2,3,4,5,6,7]`
     - **Bredde**: 800
     - **Høyde**: 500
     - **TemplateSize**: 100
     - **TemplatePadding**: 0
 
-1. I galleriet, kan du legge til en **galleriet** kontroll med en **tom loddrett** oppsett, og deretter angi følgende egenskaper:
+1. Legg til en **Galleri** -kontroll med et **tomt loddrett** oppsett i galleriet, og angi deretter disse egenskapene:
 
-    - **Elementer**: `ForAll( [0;2;3;4;5;6;7;8;9;10;11;12;13;14;15]; Value + ThisItem.Value * 16 )`
+    - **Elementer**: `ForAll( [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 )`
     - **Bredde**: 100
     - **Høyde**: 500
     - **TemplateSize**: 30
     - **TemplatePadding**: 0
 
-    Verdien for den **elementer** egenskapen multipliserer 16 ved kolonnenummeret levert av kolonnen verdi den **elementer** egenskapen fra første galleriet (0-7 i `ThisItem.Value`). Formelen deretter legger til resultatet i en av rad tallene fra det andre galleriet (0-15 i oppføringen omfang som den [ **ForAll** ](function-forall.md) funksjonen gir).
+    Verdien for **Items** -egenskapen multipliserer 16 etter Kol onne nummeret som er angitt i verdi-kolonnen for **Items** -egenskapen fra det første galleriet (0-7 i `ThisItem.Value`). Formelen legger deretter til resultatet i ett av rad numrene fra det andre galleriet (0-15 i post omfanget som [**ForAll**](function-forall.md) -funksjonen gir).
 
-1. I det andre (loddrette) galleriet, kan du legge til en **etikett** kontroll, og angi følgende egenskaper:
+1. I det andre galleriet (loddrett), Legg til en **etikett** -kontroll, og angi disse egenskapene:
 
     - **Tekst**: `ThisItem.Value`
     - **Bredde**: 50
 
-1. I det andre (loddrette) galleriet, Legg til en annen **etikett** kontroll, og angi følgende egenskaper:
+1. I det andre galleriet (loddrett), Legg til en ny **etikett** -kontroll, og angi disse egenskapene:
 
     - **Tekst**: `Char( ThisItem.Value )`
     - **Bredde**: 50
     - **X**: 50
 
-Du har opprettet et diagram av de første 128 ASCII-tegnene. Tegnene som vises som en liten firkant ikke kan skrives ut.
+Du har opprettet et diagram med de første 128 ASCII-tegnene. Tegn som vises som en liten firkant, kan ikke skrives ut.
 
-![Først 128 ASCII-tegn](media/function-char/chart-lower.png)
+![Første 128 ASCII-tegn](media/function-char/chart-lower.png)
 
-Hvis du vil vise de utvidede ASCII-tegnene, kan du angi den **elementer** -egenskapen for det andre galleriet til denne formelen, som legger til 128 til hver tegnverdien:
+Hvis du vil vise de utvidede ASCII-tegnene, kan du angi **elementer** -egenskapen for det andre galleriet til denne formelen, som legger til 128 i hver tegn verdi:
 
-`ForAll( [0;2;3;4;5;6;7;8;9;10;11;12;13;14;15]; Value + ThisItem.Value * 16 + 128)`
+`ForAll( [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 + 128)`
 
 ![Utvidede ASCII-tegn](media/function-char/chart-higher.png)
 
-Hvis du vil vise tegnene i en annen skrift, kan du angi den **skrift** -egenskapen for den andre etiketten til en verdi som **"Dansende Script"**.
+Hvis du vil vise tegnene i en annen skrift, kan du angi egenskapen **font** for den andre etiketten til en verdi, for eksempel **Dancing script**.
 
-![Dansende skript](media/function-char/chart-higher-dancing-script.png)
+![Dancing-skript](media/function-char/chart-higher-dancing-script.png)

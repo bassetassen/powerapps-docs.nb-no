@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 66813cf8c31fad82eeb25fd515acad4a5ea1f756
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 9fdd7f25a729fa71111e1fd5d82e04b7cea874f3
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61548804"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986430"
 ---
 # <a name="pdf-viewer-control-experimental-in-powerapps"></a>Kontroll for PDF-visningsprogram (eksperimentell) i PowerApps
 En eksperimentell kontroll som viser innholdet i en PDF-fil.
@@ -27,17 +27,17 @@ En eksperimentell kontroll som viser innholdet i en PDF-fil.
 Vis tekst, grafikk og annet innhold i en PDF-fil ved å legge til denne typen kontroll, og sette inn den tilhørende **dokument**-egenskapen til nettadressen, omsluttet av doble anførselstegn, av filen som du vil vise.
 
 ## <a name="limitations"></a>Begrensninger
-1. Sikkerhetsarkitekturen til PowerApps krever PDF-visningsprogrammet støtter bare HTTPS-koblinger, ikke HTTP.  
+1. Sikkerhets arkitekturen for PowerApps krever at PDF-visningsprogrammet støtter bare HTTPS-koblinger, ikke HTTP.  
 
-2. Den **dokumentet** egenskapen må koble direkte til PDF-filen. Serveromadresseringer eller HTML-visninger av dokumentet støttes ikke.
+2. **Dokument** egenskapen må koble direkte til PDF-filen. Mappeomadressering eller HTML-visninger av dokumentet støttes ikke.
 
-3. Serveren som er vert dokumentet må ikke kreve godkjenning.
+3. Serveren som er vert for dokumentet, må ikke kreve godkjenning.
 
-4. Du kan ikke være kan vise et PDF-dokument i appen Hvis dokumentet ligger på en server med restriktive på tvers av ressursdeling (CORS)-innstillinger. Hvis du vil løse dette problemet, må serveren som er vert for PDF-dokumenter tillate på tvers av-forespørsler fra powerapps.com.
+4. Det kan hende at du ikke kan vise et PDF-dokument i appen Hvis dokumentet ligger på en server som har restriktive innstillinger for ressurs deling (CORS). Hvis du vil løse dette problemet, må serveren som er vert for PDF-dokumenter tillate forespørsler på tvers av data fra powerapps.com.
 
-App-brukere kan omgå disse begrensningene ved å åpne PDF-dokumenter i en ekstern nettleser, som du blir bedt om Hvis kontrollen ikke kan åpne et dokument. Dette alternativet er også tilgjengelig i systemmenyen for alle eksterne dokumenter.
+App-brukere kan omgå disse begrensningene ved å åpne PDF-dokumenter i en ekstern nett leser, som du blir spurt om kontrollen ikke kan åpne et dokument. Dette alternativet er også tilgjengelig i systemmenyen for alle eksterne dokumenter.
 
-Applagere kan omgå disse begrensningene ved å inkludere PDF-dokumenter som medieressursene i appen. På den måten visningsprogram for PDF-kontrollen kan alltid vise dokumentet.
+Apper i appen kan omgå disse begrensningene ved å inkludere PDF-dokumenter som medie ressurser i appen. På den måten kan PDF Viewer-kontrollen alltid vise dokumentet.
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 **Dokument** – nettadressen, omsluttet av doble anførselstegn, for en PDF-fil.
@@ -109,9 +109,9 @@ Legg til en kontroll for et **PDF-visningsprogram**, og angi **Dokument**-egensk
 
   **"https://blog.mozilla.org/security/files/2015/05/HTTPS-FAQ.pdf"**
 
-    The control shows the PDF file.
+Kontrollen viser PDF-filen.
 
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
+Lurer du på hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
 

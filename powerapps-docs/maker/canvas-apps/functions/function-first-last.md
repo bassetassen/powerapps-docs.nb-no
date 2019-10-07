@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a66cf920f37870d13db187fe02a873bac7a44aa6
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 48e8311d5da00b02cbefbf6f47661c89adcc80a5
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61551104"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992733"
 ---
 # <a name="first-firstn-last-and-lastn-functions-in-powerapps"></a>Funksjonene First, FirstN, Last og LastN i PowerApps
 Returnerer den første eller siste gruppen av [poster](../working-with-tables.md#records) i en tabell.
@@ -42,7 +41,7 @@ Returnerer den første eller siste gruppen av [poster](../working-with-tables.md
 
 * *Tabell* – obligatorisk. Tabellen som funksjonen skal arbeide med.
 
-**FirstN**( *Table* [; *NumberOfRecords* ] )<br>**LastN**( *Table* [; *NumberOfRecords* ] )
+**FirstN**( *Table* [, *NumberOfRecords* ] )<br>**LastN**( *Table* [, *NumberOfRecords* ] )
 
 * *Tabell* – obligatorisk. Tabellen funksjonen skal arbeide med.
 * *NumberOfRecords* – valgfritt.  Antall poster funksjonen skal returnere. Hvis du ikke angir dette argumentet, returnerer funksjonen én post.
@@ -52,5 +51,5 @@ Denne formelen returnerer den første posten fra en tabell kalt **Ansatte**:<br>
 **First(Employees)**
 
 Denne formelen returnerer de siste 15 postene fra en tabell kalt **Employees**:<br>
-**LastN(Employees; 15)**
+**LastN(Employees, 15)**
 

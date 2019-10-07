@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 16226203262d5ecacc8fc49a88c9934dd0f673e6
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: d29fa336ae96a164a6f189010c66deff970ba5a7
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61562880"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71984907"
 ---
 # <a name="hashtags-function-in-powerapps"></a>HashTags-funksjonen i PowerApps
 Henter ut emneknaggene (#strenger) fra en streng.
@@ -40,13 +40,13 @@ Henter ut emneknaggene (#strenger) fra en streng.
 
 ## <a name="examples"></a>Eksempler
 ### <a name="step-by-step"></a>Trinn for trinn
-1. Legg til en **[Tekstinndata](../controls/control-text-input.md)**-kontroll, gi den navnet **Tweet**, og skriv inn denne setningen:
+1. Legg til en **[Tekstinndata](../controls/control-text-input.md)** -kontroll, gi den navnet **Tweet**, og skriv inn denne setningen:
    
     **This #app is #AMAZING and can #coUnt123 or #123abc but not #1-23 or #$\*(#\@")**
-2. Legg til et loddrett egendefinert galleri, og angi **[Elementer](../controls/properties-core.md)**-egenskapen som denne funksjonen:
+2. Legg til et loddrett egendefinert galleri, og angi **[Elementer](../controls/properties-core.md)** -egenskapen som denne funksjonen:
    
     **HashTags(Tweet.Text)**
-3. Legg til en **[Etikett](../controls/control-text-box.md)**-kontroll i malgalleriet.
+3. Legg til en **[Etikett](../controls/control-text-box.md)** -kontroll i malgalleriet.
    
     Galleriet viser disse emneknaggene:
    

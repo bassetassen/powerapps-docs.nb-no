@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/08/2018
 ms.author: yijw
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9d1b7eaecc7bd519e9423e6e64387cb6cad76c7f
-ms.sourcegitcommit: 9ec2853aec74e92ccd1e4a7ca54707cdf8b8cdd3
+ms.openlocfilehash: 5f8744d7cc6b6048debc18775e7bf3ad7cbbff22
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535273"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71990221"
 ---
 # <a name="install-and-configure-the-help-desk-sample-in-powerapps"></a>Installer og konfigurer brukerstøtteeksemplet i PowerApps
 
@@ -177,7 +177,7 @@ Denne listen lagrer forespørsler til teknisk støtte.
 1. Gå til https://web.powerapps.com i en nettleser.
 2. Logg deg på ved å angi samme legitimasjon som du brukte til å registrere deg.
 3. I menyen til venstre velger du **Apper**. 
-4. Klikk på **importer pakke (forhåndsvisning)**.
+4. Klikk på **importer pakke (forhåndsvisning)** .
     
    ![Et skjermbilde for Importer pakke](./media/help-desk-install/import-package.png)
 
@@ -209,7 +209,7 @@ Denne listen lagrer forespørsler til teknisk støtte.
 
     ![Å importere Innstillinger-skjermen](./media/help-desk-install/import-done.png)
 
-## <a name="configure-the-app-to-use-the-sharepoint-list"></a>Konfigurer appen for å bruke SharePoint-listen
+## <a name="configure-the-app-to-use-the-sharepoint-list"></a>Konfigurere appen til å bruke SharePoint-listen
 
 1. Under neste trinn klikker du på **Åpne app**.
 2. Klikk på **Tillat** når du blir spurt om tillatelse.
@@ -217,7 +217,7 @@ Denne listen lagrer forespørsler til teknisk støtte.
 ### <a name="delete-connections"></a>Å slette tilkoblinger
 
 1. Velg **Datakilder** på **Vis**-fanen.
-1. I den **Data** ruten, velg ellipsen (...) ved siden **brukerstøtte**, og velg deretter **fjerne**.
+1. Velg ellipsen (...) ved siden av **bruker støtte**i **data** -ruten, og velg deretter **Fjern**.
 
 ### <a name="helpdesk-list"></a>Kundestøtte-liste
 
@@ -228,8 +228,8 @@ Denne listen lagrer forespørsler til teknisk støtte.
     > [!TIP] 
     > Hvis området ikke vises i listen, skriv eller lim inn adressen til SharePoint-området i tekstboksen, og velg **Gå til**.
 
-1. I den **Search** boksen øverst i listen, Skriv eller Lim inn **brukerstøtte**.
-1. Velg avmerkingsboksen ved siden **brukerstøtte**, og velg deretter **koble til**.
+1. Skriv eller lim inn **bruker støtte**i **Søk** -boksen øverst i listen.
+1. Velg avmerkings boksen ved siden av **bruker støtte**, og velg deretter **Koble til**.
 
 ### <a name="update-admin-list"></a>Å oppdatere administratorliste
 
@@ -241,7 +241,7 @@ Denne listen lagrer forespørsler til teknisk støtte.
     ![Å oppdatere administratorliste](./media/help-desk-install/Change-admin.png)
     
    > [!TIP]
-   > Hvis du har mer enn én administrator, kan du bruke et komma til å avgrense i listen over administratorer. Eksempel: "admin1@microsoft.com","admin2@microsoft.com".
+   > Hvis du har mer enn én administrator, kan du bruke et komma til å avgrense listen over administratorer. Eksempel: "admin1@microsoft.com","admin2@microsoft.com".
    > For å sikre at adressene i AdminList samsvarer med formatet PowerApps forventer, velger du Vis > Variabler > Global > MyProfile og ser på e-postkolonnen for å vise det forventede e-postformatet.
 
 1. Velg **Fil** > **Lagre** > **Publiser** > **Publiser denne versjonen**.
@@ -251,7 +251,7 @@ Denne listen lagrer forespørsler til teknisk støtte.
 1.  På menyen til venstre klikker du på **Flyter**.
 2.  Logg deg på ved å angi samme legitimasjon som du brukte til å registrere deg, dersom du blir bedt om å logge deg på.
 3.  Velg **Mine flyter** i menyen øverst.
-4.  Siden den **blyantikonet** flyter, klikker du på blyantikonet. 
+4.  Klikk på blyant ikonet ved siden av **HelpDeskFlow** -flyten. 
  
     ![Å redigere Flyt-skjermen](./media/help-desk-install/edit-flow.png)
 
@@ -275,7 +275,7 @@ Denne listen lagrer forespørsler til teknisk støtte.
 ## <a name="play-the-app"></a>Spill av appen
 
 1. Klikk på **Apper** i nettleseren.
-2. Klikk på ellipsen (...) ved siden av kundestøtte-appen.
+2. Klikk på ellipsen (...) ved siden av Help Desk-appen.
 3. Klikk på **Åpne**. 
 
 > [!TIP]

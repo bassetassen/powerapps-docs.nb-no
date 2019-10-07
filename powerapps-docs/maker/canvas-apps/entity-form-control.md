@@ -6,25 +6,24 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 03/11/2017
 ms.author: aneesa
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ee8573cb9ae4df5ac42deefad4ac67aede3a3502
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: a1bffa509f382c2f706c2163d89c5788f8607ec7
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61547833"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993035"
 ---
 # <a name="use-the-entity-form-control"></a>Bruke enhetsskjemakontrollen
 Opprett apper på en raskere måte ved å bruke **enhetsskjemakontrollen** til å legge til funksjonsrike skjemaer for Common Data Service-enheter.
 
-For en innføring i den **enhetsskjemakontrollen** kontroll, kan du lese dette blogginnlegget: [Ny enhetsskjemakontroll (eksperimentell funksjon) for Common Data Service-](https://powerapps.microsoft.com/blog/new-entity-form-control-experimental-feature-for-common-data-service/).
+Hvis du vil ha en innføring i **enhets skjema** kontrollen, kan du se dette blogg innlegget: [Ny enhets skjema kontroll (eksperimentell funksjon) for Common data service](https://powerapps.microsoft.com/blog/new-entity-form-control-experimental-feature-for-common-data-service/).
 
 > [!IMPORTANT]
 > Vær oppmerksom på at **enhetsskjemakontrollen** er en eksperimentell funksjon, som beskrevet i blogginnlegget, og unngå å bruke **enhetsskjemakontrollen** i produksjonsapper for øyeblikket.
@@ -46,15 +45,15 @@ Dette er nøkkelegenskapene i en **enhetsskjemakontroll**.
 **Item** – angir posten i datakilden som **enhetsskjemakontrollen** viser. Denne egenskapen brukes bare når **Pattern** er satt til **FormPattern.Details**.
 
 **Valgte** – henter posten som er valgt.  
-Eksempel: Hvis den **enhetsskjemakontrollen** kontroll viser en liste over poster for salgsordrer, den **valgt** egenskapen gir deg posten som er valgt for øyeblikket. Du kan også åpne et felt i en post. (For eksempel kan du angi verdien for **Konto**-feltet i den valgte posten som **Selected.Account**.)
+Eksempel Hvis **enhets skjema** kontrollen viser en liste over salgs ordre poster, vil den **valgte** egenskapen gi deg posten som er valgt for øyeblikket. Du kan også åpne et felt i en post. (For eksempel kan du angi verdien for **Konto**-feltet i den valgte posten som **Selected.Account**.)
 
 **SelectableFields** – angir hvilke felt som skal vises som koblinger. Angi verdien for denne egenskapen ved hjelp av denne syntaksen:  
-**{Field1Name : true; Field2Name : true}**  
-Eksempel: Hvis du vil den **SalesOrderId** og **kontoen** feltet skal vises som koblinger i et skjema, angir du **SelectableFields** -egenskapen for skjemaet til denne verdien:  
-**{SalesOrderId : true; Account : true}**
+**{Field1Name : true, Field2Name : true}**  
+Eksempel Hvis du vil at **SalesOrderId** -og **konto** -feltene skal vises som koblinger i et skjema, angir du **SelectableFields** -egenskapen for dette skjemaet til denne verdien:  
+**{SalesOrderId : true, Account : true}**
 
 **SelectedField** – bestemmer hvilket felt som ble trykket eller klikket på. Dette gjelder bare for feltene som er angitt som **SelectableFields**.  
-Eksempel: Hvis du angir den **SelectableFields** egenskapen til **{SalesOrderId: true; konto: true}** og brukeren klikker eller trykker på den **kontoen** felt,  **SelectedField.Account** er satt til sann.
+Eksempel Hvis du angir **SelectableFields** -egenskapen til **{SalesOrderId: True, Account: True}** og brukeren klikker eller trykker på **konto** -feltet, **SelectedField. Account** er satt til True.
 
 **OnFieldSelect** – hvordan en app reagerer når brukeren klikker eller trykker på et felt. Dette gjelder bare for feltene som er angitt som **SelectableFields**.
 
@@ -97,7 +96,7 @@ Disse fem prosedyrene gir deg et fullstendig eksempel på hvordan du bruker **en
 2. Gi den første skjermen navnet **SalesOrderListScreen**.
    
     ![](media/entity-form-control/entityform-tutorial-01-02.png)
-3. På **Sett inn**-fanen klikker eller trykker du på **Skjemaer**, og klikker eller trykker deretter på **Enhetsskjema (eksperimentell)**.  
+3. På **Sett inn**-fanen klikker eller trykker du på **Skjemaer**, og klikker eller trykker deretter på **Enhetsskjema (eksperimentell)** .  
    
     En **enhetsskjemakontroll** legges til på skjermen.  
    
@@ -191,7 +190,7 @@ La oss se nærmere på hvordan ruten for skjematilpassing setter opp navigasjon 
 
 Dette ble konfigurert automatisk da vi brukte ruten for skjematilpassing til å angi at **SalesOrderId**-feltet navigerer til **SalesOrderDetailsScreen**. Verdiene i **SalesOrderId**-feltet vises derfor som koblinger.
 
-Den **OnFieldSelect** -egenskapen for den **SalesOrderListForm** er satt til en [ **Hvis** ](functions/function-if.md) -funksjonen, som bestemmer om brukeren klikker eller trykker på den **salgsordre-ID** felt: **SalesOrderListForm.SelectedField.SalesOrderId = true**.  
+**OnFieldSelect** -egenskapen for **SalesOrderListForm** er satt til en [**IF**](functions/function-if.md) -funksjon, som bestemmer om brukeren klikker eller trykker på feltet **for salgs ordre-ID** : **SalesOrderListForm. SelectedField. SalesOrderId = True**.  
 
 Hvis funksjonen evalueres som sann, åpnes **SalesOrderDetailsScreen** med kontekstvariabelen med navnet **NavigationContext** som vi brukte tidligere.  
 

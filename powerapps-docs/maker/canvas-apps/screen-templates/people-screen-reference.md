@@ -1,147 +1,146 @@
 ---
-title: Personer-skjermen malreferansen | Microsoft Docs
-description: Forstå detaljene for hvordan personer-skjermen malen for lerret-apper fungerer i PowerApps
+title: Referanse til personer-skjerm malen | Microsoft Docs
+description: Få informasjon om hvordan malen for personer-skjermen for lerret apps fungerer i PowerApps
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 1/2/2019
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 09b92a1e2bc87ac6f4e2ec651aa67a845e0f07b1
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 0a1626583300e6fe696415a91de68ff08596f081
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61540783"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71989397"
 ---
-# <a name="reference-information-about-the-people-screen-template-for-canvas-apps"></a>Referanseinformasjon om personer-skjermen malen for lerretsapper
+# <a name="reference-information-about-the-people-screen-template-for-canvas-apps"></a>Referanse informasjon om malen for personer-skjermen for lerret apper
 
-Forstå hvordan hver betydelige kontroll i malen personer skjerm bidrar til skjermens overordnede standardfunksjonaliteten for lerret-apper i PowerApps. Dette dypdykket noe presenterer formler for virkemåte og verdiene i andre egenskaper som bestemmer hvordan kontrollene svare på inndata fra brukeren. Hvis en på høyt nivå gjennomgang av denne skjermen standard funksjonalitet, kan du se den [personer-skjermen oversikt over](people-screen-overview.md).
+For å få en lerret-app i PowerApps kan du forstå hvordan hver omfattende kontroll i personer-skjerm-malen bidrar til skjermens generelle standard funksjon. Denne dype Fremgangs måten presenterer virke måte formler og verdiene til andre egenskaper som bestemmer hvordan kontrollene svarer på bruker inn data. Hvis du vil ha en høy nivå diskusjon av denne skjermens standard funksjon, kan du se [Oversikt over personer-skjermen](people-screen-overview.md).
 
-Dette emnet uthever noen viktige kontroller og forklarer uttrykk eller formler til hvilke ulike egenskaper (slik som **elementer** og **OnSelect**) av disse kontrollene er angitt:
+Dette emnet uthever noen viktige kontroller og forklarer uttrykkene eller formlene som ulike egenskaper (for eksempel **elementer** og **OnSelect**) til disse kontrollene er angitt for:
 
-* [Tekstboks for søk](#text-search-box)
-* [Bruker-Bla gjennom-galleriet](#user-browse-gallery) (+ underordnede kontroller)
-* [Personer lagt til galleriet](#people-added-gallery) (+ underordnede kontroller)
+* [Tekst søkeboks](#text-search-box)
+* [Bruker-Browse-Galleri](#user-browse-gallery) (+ underordnede kontroller)
+* [Personer lagt til galleri](#people-added-gallery) (+ underordnede kontroller)
 
-## <a name="prerequisite"></a>Forutsetning
+## <a name="prerequisite"></a>Nødvendig
 
-Kjennskap til hvordan du legger til og konfigurerer skjermbilder og andre kontroller som du [oppretter en app i PowerApps](../data-platform-create-app-scratch.md).
+Kjennskap til hvordan du legger til og konfigurerer skjermer og andre kontroller mens du [oppretter en app i powerapps](../data-platform-create-app-scratch.md).
 
 ## <a name="text-search-box"></a>Boks for tekstsøk
 
-![TextSearchBox kontroll](media/people-screen/people-search-box.png)
+![TextSearchBox-kontroll](media/people-screen/people-search-box.png)
 
-Et par andre kontroller samhandle eller har en avhengighet på tekstboksen for søk:
+Et par andre kontroller samhandler eller har en avhengighet på tekst søk-boksen:
 
-* Hvis en bruker starter å skrive inn tekst, **UserBrowseGallery** blir synlig.
-* Når en bruker velger en person i **UserBrowseGallery**, search innholdet tilbakestilles.
+* Hvis en bruker begynner å skrive inn tekst, blir **UserBrowseGallery** synlig.
+* Når en bruker velger en person i **UserBrowseGallery**, tilbakestilles søke innholdet.
 
-## <a name="user-browse-gallery"></a>Bruker-Bla gjennom-galleriet
+## <a name="user-browse-gallery"></a>Galleri for bruker visning
 
-![UserBrowseGallery kontroll](media/people-screen/people-browse-gall.png)
+![UserBrowseGallery-kontroll](media/people-screen/people-browse-gall.png)
 
-* Egenskap: **Elementer**<br>
-    Verdi: Logikk for å slå opp brukere når brukeren starter å skrive inn:
+* Gjelder **Elementene**<br>
+    Revaluer Logikk for å slå opp brukere når brukeren begynner å skrive:
     
-    ```powerapps-comma
-    If( !IsBlank( Trim( TextSearchBox.Text ) ); 
+    ```powerapps-dot
+    If( !IsBlank( Trim( TextSearchBox.Text ) ), 
         'Office365Users'.SearchUser(
             {
-                searchTerm: Trim( TextSearchBox.Text ); 
+                searchTerm: Trim( TextSearchBox.Text ), 
                 top: 15
             }
         )
     )
     ```
     
-Elementene i dette galleriet fylles som søkeresultater fra den [Office365.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) operasjonen. Operasjonen tar teksten `Trim(TextSearchBox)` som søket term og returnerer resultatene topp 15 som er basert på dette søket. **TextSearchBox** er pakket i en `Trim()` funksjonen fordi et bruker-Søk etter mellomrom er ugyldig.
+Elementene i dette galleriet er fylt ut av søke resultater fra [office365. SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) -operasjonen. Operasjonen tar teksten i `Trim(TextSearchBox)` som søke ordet og returnerer de 15 høyeste resultatene basert på søket. **TextSearchBox** er pakket i en `Trim()`-funksjon fordi en bruker søker etter mellomrom er ugyldig.
 
-Den `Office365Users.SearchUser` operasjonen er pakket i en `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` funksjonen, da du trenger bare å ringe operasjonen når søkeboksen inneholder brukerangitt tekst. Dette forbedrer ytelsen.
+@No__t-0-operasjonen brytes i en `If(!IsBlank(Trim(TextSearchBox.Text)) ... )`-funksjon fordi du bare trenger å kalle operasjonen når søke boksen inneholder brukerangitt tekst. Dette forbedrer ytelsen.
 
-### <a name="userbrowsegallery-title-control"></a>UserBrowseGallery tittel kontroll
+### <a name="userbrowsegallery-title-control"></a>UserBrowseGallery tittel-kontroll
 
-![UserBrowseGallery tittel kontroll](media/people-screen/people-browse-gall-title.png)
+![UserBrowseGallery tittel-kontroll](media/people-screen/people-browse-gall-title.png)
 
-* Egenskap: **Tekst**<br>Verdi: `ThisItem.DisplayName`
+* Gjelder **Tekst**<br>Verdi: `ThisItem.DisplayName`
 
-  Viser personens visningsnavn fra deres Office 365-profilen.
+  Viser personens visnings navn fra Office 365-profilen.
 
-* Egenskap: **OnSelect**<br>
-    Verdi: Kode for å legge til brukeren i en samling med app-nivå, og velg deretter brukeren:
+* Gjelder **OnSelect**<br>
+    Revaluer Kode for å legge til brukeren i en samling på en app-nivå, og velg deretter brukeren:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Concurrent(
-        Set( _selectedUser; ThisItem );
-        Reset( TextSearchBox );
-        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ); 
-            Collect( MyPeople; ThisItem )
+        Set( _selectedUser, ThisItem ),
+        Reset( TextSearchBox ),
+        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
+            Collect( MyPeople, ThisItem )
         )
     )
     ```
-Å velge denne kontrollen har tre ting samtidig:
+Hvis du velger denne kontrollen, vil tre ting samtidig:
 
-   * Sett den  **\_selectedUser** variabel som skal det merkede elementet.
-   * Tilbakestiller søketermen i **TextSearchBox**.
-   * Legger til det valgte elementet til den **MyPeople** samling, en samling av alle personene appbrukeren har valgt.
+   * Angir den **\_selectedUser-** variabelen til det valgte elementet.
+   * Tilbakestiller søke ordet i **TextSearchBox**.
+   * Legger til det valgte elementet i **MyPeople** -samlingen, en samling av alle personene som appen bruker har valgt.
 
 ### <a name="userbrowsegallery-profileimage-control"></a>UserBrowseGallery ProfileImage-kontroll
 
 ![UserBrowseGallery ProfileImage-kontroll](media/people-screen/people-browse-gall-image.png)
 
-* Egenskap: **Bilde**<br>
-    Verdi: Logikk for å hente en brukers profilbilde.
+* Gjelder **Bilde**<br>
+    Revaluer Logikk for å hente brukerens profil bilde.
 
-    ```powerapps-comma
+    ```powerapps-dot
     If( !IsBlank( ThisItem.Id ) && 
-            'Office365Users'.UserPhotoMetadata( ThisItem.Id ).HasPhoto;
+            'Office365Users'.UserPhotoMetadata( ThisItem.Id ).HasPhoto,
         'Office365Users'.UserPhoto( ThisItem.Id )
     )
     ```
 
-Den **bilde** kontrollen henter brukerens bilde med den [Office365Users.UserPhoto](https://docs.microsoft.com/connectors/office365users/#get-user-photo--v1-) operasjonen. Men før du gjør som, ser etter to ting:
+**Bilde** kontrollen henter brukerens bilde med [Office365Users. UserPhoto](https://docs.microsoft.com/connectors/office365users/#get-user-photo--v1-) -operasjonen. Men før du gjør det, ser det etter to ting:
   
-   * Om ID-feltet er tomt eller ikke tomt. Dette hindrer at den **bilde** kontroll fra forsøk på å hente en Brukerfoto før galleriet har fylt ut med søkeresultater.
-   * Angir om brukeren har et bilde (med den [Office365Users.UserPhotoMetadata](https://docs.microsoft.com/connectors/office365users/#get-user-photo-metadata) operasjonen). Dette hindrer at den `Office365Users.UserPhoto` lookup returnerer et unntak hvis brukeren ikke har en profilbilde.
+   * Om ID-feltet er tomt eller ikke tomt. Dette hindrer at **bilde** -kontrollen prøver å hente et bruker bilde før galleriet er fylt ut med søke resultater.
+   * Om brukeren har et bilde (med [Office365Users. UserPhotoMetadata](https://docs.microsoft.com/connectors/office365users/#get-user-photo-metadata) -operasjonen). Dette hindrer at oppslaget på @no__t 0 returnerer et unntak hvis brukeren ikke har et profil bilde.
 
-Vær oppmerksom på at hvis et bilde ikke er hentet, **bilde** kontrollen er tom, og den **iconUser** kontrollen er synlig i stedet.
+Vær oppmerksom på at hvis et bilde ikke hentes, er **bilde** kontrollen tom, og **iconUser** -kontrollen vises i stedet.
 
-## <a name="people-added-gallery"></a>La personer til galleriet
+## <a name="people-added-gallery"></a>Personer-lagt til galleri
 
-![PeopleAddedGallery kontroll](media/people-screen/people-people-gall.png)
+![PeopleAddedGallery-kontroll](media/people-screen/people-people-gall.png)
 
-* Egenskap: **Elementer**<br>
+* Gjelder **Elementene**<br>
     Verdi: `MyPeople`
 
-Dette er samlingen av personer initialisert eller legges til ved å velge den **UserBrowseGallery tittel** kontroll.
+Dette er samlingen av personer som er initialisert eller lagt til ved å velge **UserBrowseGallery title** -kontrollen.
 
-### <a name="peopleaddedgallery-title-control"></a>PeopleAddedGallery tittel kontroll
+### <a name="peopleaddedgallery-title-control"></a>PeopleAddedGallery tittel-kontroll
 
-![PeopleAddedGallery tittel kontroll](media/people-screen/people-people-gall-title.png)
+![PeopleAddedGallery tittel-kontroll](media/people-screen/people-people-gall-title.png)
 
-* Egenskap: **OnSelect**<br>
-    Verdi: `Set( _selectedUser; ThisItem )`
+* Gjelder **OnSelect**<br>
+    Verdi: `Set( _selectedUser, ThisItem )`
 
-Sett den **_selectedUser** variabel som skal det valgte elementet i **EmailPeopleGallery**.
+Angir **_selectedUser** -variabelen til elementet som er valgt i **EmailPeopleGallery**.
 
-### <a name="peopleaddedgallery-iconremove-control"></a>PeopleAddedGallery iconRemove kontroll
+### <a name="peopleaddedgallery-iconremove-control"></a>PeopleAddedGallery iconRemove-kontroll
 
-![PeopleAddedGallery iconRemove kontroll](media/people-screen/people-people-gall-delete.png)
+![PeopleAddedGallery iconRemove-kontroll](media/people-screen/people-people-gall-delete.png)
 
-* Egenskap: **OnSelect**<br>
-    Verdi: `Remove( MyPeople; LookUp( MyPeople; UserPrincipalName = ThisItem.UserPrincipalName ) )`
+* Gjelder **OnSelect**<br>
+    Verdi: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
 
-Slår opp posten i den **MyPeople** samling, der **UserPrincipalName** samsvarer med den **UserPrincipalName** for det valgte elementet, og deretter fjerner som registrerer fra den samling.
+Slår opp posten i **MyPeople** -samlingen, der **userPrincipalName** Sams varer med **userPrincipalName** for det valgte elementet, og fjerner deretter posten fra samlingen.
 
 ## <a name="next-steps"></a>Neste trinn
 
-* [Finn ut mer om denne skjermen](./people-screen-overview.md).
-* [Finn ut mer om Office 365 Outlook connector](../connections/connection-office365-outlook.md).
-* [Finn ut mer om Office 365-brukere connector](../connections/connection-office365-users.md).
+* [Les mer om dette skjerm bildet](./people-screen-overview.md).
+* [Les mer om Office 365 Outlook Connector](../connections/connection-office365-outlook.md).
+* [Finn ut mer om koblingen til Office 365-brukere](../connections/connection-office365-users.md).

@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/16/2016
 ms.author: jamesol
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 65a828d33add99bbee086f24c3a4892abfaae048
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 3348db5897b0c58d7addef775d2a871809fc491b
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61536965"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71995209"
 ---
 # <a name="share-excel-data-used-by-your-app"></a>Å dele Excel-data som brukes av appen
 Du kan dele Excel-data med appbrukerne i en [skykonto](connections/cloud-storage-blob-connections.md), for eksempel OneDrive.
@@ -52,7 +52,7 @@ Hvis du vil ha mer informasjon, kan du se [Dele mapper i Dropbox](https://www.dr
    > Del selve filen og ikke mappen som inneholder filen i OneDrive for Business.
 3. I dialogboksen velger du **E-post**.
    
-    ![Del via e-post](./media/share-app-data/onedrive-email.png)
+    ![Del per e-post](./media/share-app-data/onedrive-email.png)
 4. Angi e-postadressene som appbrukerne logger seg på OneDrive med, og velg deretter **Del**.  
    
     ![Å angi en bruker](./media/share-app-data/onedrive-perms.png)

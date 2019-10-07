@@ -8,17 +8,17 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2016
 ms.author: lanced
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f001e3da66605db1eb96d74078a3f8b1fdf518f2
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: ca79c60e90c330f21af6ed8a12b98c3667535bb8
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61529156"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71987415"
 ---
 # <a name="connect-to-sql-server-from-powerapps"></a>Koble til SQL Server fra PowerApps
 ![SQL Server-ikon](./media/connection-azure-sqldatabase/sqlicon.png)
@@ -52,7 +52,7 @@ Koble til SQL Server, i Azure eller en lokal database, slik at du kan vise infor
     ![Legge til en SQL Server-tilkobling](./media/connection-azure-sqldatabase/add-sql-connection.png)
 5. Gjør ett av disse trinnene:
    
-   * Angi **Koble til direkte (skytjenester)**, og skriv deretter eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen du vil bruke.
+   * Angi **Koble til direkte (skytjenester)** , og skriv deretter eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen du vil bruke.
      
        ![Koble til en database i Azure](./media/connection-azure-sqldatabase/connect-azure.png)
    * Angi **Koble til med lokal datagateway**, skriv inn eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen som du vil bruke, og angi godkjenningstypen og gatewayen.
@@ -75,7 +75,7 @@ Koble til SQL Server, i Azure eller en lokal database, slik at du kan vise infor
 3. Klikk eller trykk på **Ny tilkobling** i øvre høyre hjørne, og klikk eller trykk deretter på **SQL Server**.
 4. Gjør ett av disse trinnene:
    
-   * Angi **Koble til direkte (skytjenester)**, og skriv deretter eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen du vil bruke.
+   * Angi **Koble til direkte (skytjenester)** , og skriv deretter eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen du vil bruke.
      
        ![Koble til en database i Azure](./media/connection-azure-sqldatabase/connect-azure-portal.png)
    * Angi **Koble til med lokal datagateway**, skriv eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen som du vil bruke, og angi godkjenningstypen og gatewayen.
@@ -96,7 +96,7 @@ Koble til SQL Server, i Azure eller en lokal database, slik at du kan vise infor
 4. Klikk eller trykk på **Ny tilkobling**, klikk eller trykk på **SQL Server** og klikk eller trykk deretter på **Koble til**.
 5. Gjør ett av disse trinnene:
    
-   * Angi **Koble til direkte (skytjenester)**, og skriv deretter eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen du vil bruke.
+   * Angi **Koble til direkte (skytjenester)** , og skriv deretter eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen du vil bruke.
      
        ![Koble til en database i Azure](./media/connection-azure-sqldatabase/connect-azure-fromblank.png)
    * Angi **Koble til med lokal datagateway**, skriv eller lim inn servernavnet, databasenavnet, brukernavnet og passordet for databasen som du vil bruke, og angi godkjenningstypen og gatewayen.

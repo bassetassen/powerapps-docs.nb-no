@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/23/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0b710346c5e264fc13ee3cacb00073a32a4de0f0
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: 9204c26cc54f4230496943d48934af75d21c5319
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63318309"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71995120"
 ---
 # <a name="show-data-in-a-line-pie-or-bar-chart-in-powerapps"></a>Å vise data i en linje, sektor- eller liggende stolpediagram i PowerApps
 
@@ -48,9 +47,9 @@ I disse trinnene importerer vi eksempeldataene til en samling, kalt **ProductRev
 
     ![][11]  
 
-2. Angi kontrollens **[OnSelect](controls/properties-core.md)**-egenskap til følgende funksjon:  
+2. Angi kontrollens **[OnSelect](controls/properties-core.md)** -egenskap til følgende funksjon:  
 
-   ```Collect(ProductRevenue; Import1.Data)```
+   ```Collect(ProductRevenue, Import1.Data)```
 
 3. Trykk F5 for å åpne forhåndsvisningsmodus, og velg deretter **Importer data**-knappen.
 
@@ -77,7 +76,7 @@ I disse trinnene importerer vi eksempeldataene til en samling, kalt **ProductRev
 
     ![][10]
 
-4. Angi **[Element](controls/properties-core.md)**-egenskapen til sektordiagrammet til dette uttrykket: `ProductRevenue.Revenue2014`
+4. Angi **[Element](controls/properties-core.md)** -egenskapen til sektordiagrammet til dette uttrykket: `ProductRevenue.Revenue2014`
 
     ![][2]  
 
@@ -92,7 +91,7 @@ Nå skal vi bruke denne ProductRevenue-samlingen i et liggende stolpediagram:
 
 2. Velg **Diagrammer** på **Sett inn**-fanen, og velg deretter **Stolpediagram**.
 
-3. Velg midten av dette stolpediagrammet. Angi **[Element](controls/properties-core.md)**-egenskapen for stolpediagrammet til ```ProductRevenue```:
+3. Velg midten av dette stolpediagrammet. Angi **[Element](controls/properties-core.md)** -egenskapen for stolpediagrammet til ```ProductRevenue```:
 
     ![][12]  
 

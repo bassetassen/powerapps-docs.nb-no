@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/05/2017
 ms.author: jasongre
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: fb7c2ac88c24197d014ebdc1b2b6a50e4802e0bf
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: f29b3a782ce62c475c80804225787a0a42e85a2c
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63319368"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993621"
 ---
 # <a name="data-table-control-in-powerapps"></a>Datatabell-kontrollen i PowerApps
 Viser et sett med data i et tabellformat.
@@ -84,8 +83,8 @@ PowerApps introduserte **Datatabell**-kontrollen 5. mai 2017. Denne delen inneho
 * [**Y**](properties-size-location.md) – avstanden mellom **Datatabell**-kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller den øvre kanten til skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-* [**Filter(DataSource; Formula)**](../functions/function-filter-lookup.md)(*DataSource*, *Formula*)
-* [**Search(DataSource; SearchString; Column)**](../functions/function-filter-lookup.md)(*DataSource*, *SearchString*, *Column*)
+* [**Filter(DataSource, Formula)** ](../functions/function-filter-lookup.md)(*DataSource*, *Formula*)
+* [**Search(DataSource, SearchString, Column)** ](../functions/function-filter-lookup.md)(*DataSource*, *SearchString*, *Column*)
 
 ## <a name="examples"></a>Eksempler
 ### <a name="basic-usage"></a>Grunnleggende bruk
@@ -122,7 +121,7 @@ PowerApps introduserte **Datatabell**-kontrollen 5. mai 2017. Denne delen inneho
 
 ### <a name="restyle-the-header-for-the-data-table-control"></a>Endring av stilen på overskriften for datatabellkontrollen
 1. Mens **Datatabell**-kontrollen er valgt, klikker eller trykker du på **Advanced**-fanen, i ruten til høyre.
-2. Klikk eller trykk på feltet for **HeadingFill**-egenskapen, og endre deretter verdien til **RGBA(62;96;170;1)**.
+2. Klikk eller trykk på feltet for **HeadingFill**-egenskapen, og endre deretter verdien til **RGBA(62,96,170,1)** .
 3. Klikk eller trykk på feltet for **HeadingColor**-egenskapen, og endre deretter verdien til **Hvit**.
 4. Klikk eller trykk på feltet for **HeadingSize**-egenskapen, og endre deretter verdien til **14**.
    

@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/08/2015
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 20e06f7c03d0aca18b8351e546ccee3fff528f56
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 7750ad239df87e99d2321be20293b64153110fc1
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61537645"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71991816"
 ---
 # <a name="updatecontext-function-in-powerapps"></a>UpdateContext-funksjonen i PowerApps
 Oppretter eller oppdaterer[kontekstvariabler](../working-with-variables.md#use-a-context-variable) på den gjeldende skjermen.
@@ -54,7 +53,7 @@ I eksemplene senere i dette emnet ser du at kontekstvariabler kan inneholde fler
 
 En kontekstvariabel inneholder verdien til appen lukkes.  Hvis du definerer en kontekstvariabel og angir verdien på et bestemt skjermbilde, vil denne informasjonen forbli intakt selv om brukeren bytter til et annet skjermbilde.  Når appen lukkes, går verdien til kontekstvariabelen tapt, og den må opprettes på nytt når appen er lastet inn på nytt.  
 
-Alle kontekstvariabler er begrenset til ett skjermbilde. Hvis du vil definere en kontekstvariabel på ett skjermbilde og endre denne variabelen fra et annet skjermbilde, må du opprette en formel som er basert på **[Navigate](function-navigate.md)**-funksjonen.  Eller bruk en global variabel.
+Alle kontekstvariabler er begrenset til ett skjermbilde. Hvis du vil definere en kontekstvariabel på ett skjermbilde og endre denne variabelen fra et annet skjermbilde, må du opprette en formel som er basert på **[Navigate](function-navigate.md)** -funksjonen.  Eller bruk en global variabel.
 
 **UpdateContext** har ingen returverdi, og du kan kun bruke den i en [formel for virkemåte](../working-with-formulas-in-depth.md).
 
@@ -63,11 +62,11 @@ Alle kontekstvariabler er begrenset til ett skjermbilde. Hvis du vil definere en
 
 * *UpdateRecord* – obligatorisk. En post som inneholder navnet på minst én kolonne og en verdi for denne kolonnen. En kontekstvariabel opprettes eller oppdateres for hver kolonne og verdi som du angir.
 
-**UpdateContext**({ *ContextVariable1*: *Value1* [; *ContextVariable2*: *Value2* [;...]]} )
+**UpdateContext**({ *ContextVariable1*: *Verdi1* [, *ContextVariable2*: *Verdi2* [,...] ] } )
 
 * *ContextVariable1* – obligatorisk.  Navnet på en kontekstvariabel som skal opprettes eller oppdateres.
 * *Value1* – obligatorisk.  Verdien som skal tilordnes kontekstvariabelen.
-* *ContextVariable2*: *Value2*,... – valgfritt. Ekstra kontekstvariabler å opprette eller oppdatere, og tilknyttede verdier.
+* *ContextVariable2*: *Verdi2*,... – valg fritt. Ekstra kontekstvariabler å opprette eller oppdatere, og tilknyttede verdier.
 
 ## <a name="examples"></a>Eksempler
 
@@ -75,18 +74,18 @@ Alle kontekstvariabler er begrenset til ett skjermbilde. Hvis du vil definere en
 | --- | --- | --- |
 | **UpdateContext( {&nbsp;Counter:&nbsp;1&nbsp;} )** |Oppretter eller endrer kontekstvariabelen **Teller**, og angir verdien dens til **1**. |**Counter** har verdien **1**. Du kan referere til denne variabelen med navnet **Counter** i en formel. |
 | **UpdateContext( {&nbsp;Counter:&nbsp;2&nbsp;} )** |Angir verdien for kontekstvariabelen **Counter** fra det forrige eksemplet som **2**. |**Counter** har verdien **2**. |
-| **UpdateContext( {&nbsp;Name:&nbsp;"Lily";&nbsp;Score:&nbsp;10&nbsp;} )** |Oppretter eller endrer kontekstvariablene **Name** og **Score**, angir verdiene til henholdsvis **Lily** og **10**. |**Name** har verdien **Lily**, og **Score** har verdien **10**. |
-| **UpdateContext( {&nbsp;Person:&nbsp;{&nbsp;Name:&nbsp;"Milton"; Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;} )** |Oppretter eller endrer kontekstvariabelen **Person**, og angir verdien dens som en post. Posten inneholder to kolonner, kalt **Navn** og **Adresse**. Verdien til **Navn**-kolonnen er **Milton**, og verdien til **Adresse**-kolonnen er **1 Main St**. |**Person** har posten **{&nbsp;Name:&nbsp;"Milton"; Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;}** som verdi.<br><br>Du kan referere til denne posten som helhet med navnet **Person** eller referer til en individuell kolonne for denne posten med **Person.Name** eller **Person.Address**. |
-| **UpdateContext ({&nbsp;Person: Patch (&nbsp;Person;&nbsp;{adresse:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}&nbsp;)}&nbsp;)** |Fungerer med **[Patch](function-patch.md)**-funksjonen for å oppdatere kontekstvariabelen **Person**, ved å angi verdien til **Adresse**-kolonnen som **2 Main St**. |**Person** har nå posten **{&nbsp;Name:&nbsp;"Milton"; Address:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}&nbsp;}** som verdi. |
+| **UpdateContext( {&nbsp;Name:&nbsp;"Lily",&nbsp;Score:&nbsp;10&nbsp;} )** |Oppretter eller endrer kontekstvariablene **Name** og **Score**, angir verdiene til henholdsvis **Lily** og **10**. |**Name** har verdien **Lily**, og **Score** har verdien **10**. |
+| **UpdateContext( {&nbsp;Person:&nbsp;{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;} )** |Oppretter eller endrer kontekstvariabelen **Person**, og angir verdien dens som en post. Posten inneholder to kolonner, kalt **Navn** og **Adresse**. Verdien til **Navn**-kolonnen er **Milton**, og verdien til **Adresse**-kolonnen er **1 Main St**. |**Person** har posten **{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;}** som verdi.<br><br>Du kan referere til denne posten som helhet med navnet **Person** eller referer til en individuell kolonne for denne posten med **Person.Name** eller **Person.Address**. |
+| **UpdateContext ({&nbsp;Person: Oppdatering (&nbsp;Person, &nbsp; {Address: &nbsp; "2 @ no__t-3Main @ no__t-4St" &nbsp;} &nbsp;)} &nbsp;)** |Fungerer med **[Patch](function-patch.md)** -funksjonen for å oppdatere kontekstvariabelen **Person**, ved å angi verdien til **Adresse**-kolonnen som **2 Main St**. |**Person** har nå posten **{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}&nbsp;}** som verdi. |
 
 ### <a name="step-by-step-example"></a>Trinnvis veiledning – eksempel
 1. Gi standardskjermbildet navnet **Kilde**, legg til et annet skjermbilde, og gi det navnet **Mål**.
-2. Legg til to knapper på **Kilde**-skjermbildet, og angi  **[Tekst](../controls/properties-core.md)**-egenskapene slik at den ene er konfigurert for **engelsk** og den andre for **spansk**.
-3. Angi **[OnSelect](../controls/properties-core.md)**-egenskapen for **Engelsk**-knappen til dette uttrykket:<br>**Navigate(Target; ScreenTransition.Fade; {Language:"English"})**
-4. Angi **[OnSelect](../controls/properties-core.md)**-egenskapen for **Spansk**-knappen til dette uttrykket:<br>**Navigate(Target; ScreenTransition.Fade; {Language:"Spanish"})**
-5. På **Mål**-skjermbildet legger du til en etikett, og angir **[Tekst](../controls/properties-core.md)**-egenskapen til dette uttrykket:<br>**If(Language="English"; "Hello!"; "Hola!")**
+2. Legg til to knapper på **Kilde**-skjermbildet, og angi  **[Tekst](../controls/properties-core.md)** -egenskapene slik at den ene er konfigurert for **engelsk** og den andre for **spansk**.
+3. Angi **[OnSelect](../controls/properties-core.md)** -egenskapen for **Engelsk**-knappen til dette uttrykket:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"English"})**
+4. Angi **[OnSelect](../controls/properties-core.md)** -egenskapen for **Spansk**-knappen til dette uttrykket:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"Spanish"})**
+5. På **Mål**-skjermbildet legger du til en etikett, og angir **[Tekst](../controls/properties-core.md)** -egenskapen til dette uttrykket:<br>**If(Language="English", "Hello!", "Hola!")**
 6. Velg **Figurer** på **Mål**-skjermbildet på **Sett inn**-fanen, og velg deretter Tilbake-pilen.
-7. Angi Tilbake-pilens **[OnSelect](../controls/properties-core.md)**-egenskap til denne formelen:<br>**Navigate(Source; ScreenTransition.Fade)**
+7. Angi Tilbake-pilens **[OnSelect](../controls/properties-core.md)** -egenskap til denne formelen:<br>**Navigate(Source, ScreenTransition.Fade)**
 8. Trykk på F5 i **Kilde**-skjermbildet, og velg deretter knappen for begge språk.
 
     Etiketten vises på språket som tilsvarer knappen du har valgt på **Mål**-skjermbildet.

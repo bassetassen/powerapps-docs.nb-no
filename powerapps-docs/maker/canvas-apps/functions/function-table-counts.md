@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 8a904db98226152a5e485184e82461634902d6b9
-ms.sourcegitcommit: 39b32abb19ad9fae98ca986ded6974bcbbb3cea7
+ms.openlocfilehash: 70950a52050226a25270be7531f4589671f0d46f
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68473933"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71983889"
 ---
 # <a name="count-counta-countif-and-countrows-functions-in-powerapps"></a>Funksjonene Count, CountA, CountIf og CountRows i PowerApps
 Teller alle [poster](../working-with-tables.md#records) i en [tabell](../working-with-tables.md), eller teller alle poster som oppfyller en betingelse.
@@ -43,7 +42,7 @@ Hver av disse funksjonene returnerer et tall.
 
 * *SingleColumnTable* – nødvendig.  Kolonne med poster som skal telles.  
 
-**CountIf**( *Table*; *LogicalFormula* )
+**CountIf**( *Table*, *LogicalFormula* )
 
 * *Tabell* – obligatorisk.  En tabell med poster som skal telles.
 * *LogicalFormula* – obligatorisk.  Formelen som skal evalueres for hver post i tabellen.  Postene som returneres som **sann** for denne formelen, blir talt.  Formelen kan referere til kolonner i tabellen.
@@ -56,7 +55,7 @@ Hver av disse funksjonene returnerer et tall.
 1. Importer eller opprett en [samling](../working-with-data-sources.md#collections) kalt **Beholdning**, som den første underprosedyren i [Vis bilder og tekst i et galleri](../show-images-text-gallery-sort-filter.md) beskriver.
 2. Legg til en etikett, og angi **[Tekst](../controls/properties-core.md)** -egenskapen til denne formelen:
    
-    **CountIf(Inventory; UnitsInStock < 30)**
+    **CountIf(Inventory, UnitsInStock < 30)**
    
     Etiketten viser **2**, fordi to av produktene (Ganymedes og Callisto) har færre enn 30 enheter på lager.
 3. Legg til en annen etikett, og angi **[Tekst](../controls/properties-core.md)** -egenskapen til denne formelen:

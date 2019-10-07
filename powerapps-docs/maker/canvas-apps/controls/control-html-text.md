@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d41ef04d3cd070373f6772bdfced029a7d09e244
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 5706b2c1b21c0135cc60678b6cf3f882df6fa56c
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61544227"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986622"
 ---
 # <a name="html-text-control-in-powerapps"></a>HTML-tekstkontrollen i PowerApps
 En boks som viser tekst og konverterer HTML-koder til formatering.
@@ -43,9 +42,9 @@ En **HTML-tekst**-kontroll viser ikke bare ren tekst og tall, men konverterer og
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt som **Deaktivert**.
 
-**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
+**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)** -egenskapen er angitt som **Deaktivert**.
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
@@ -76,10 +75,10 @@ En **HTML-tekst**-kontroll viser ikke bare ren tekst og tall, men konverterer og
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Find**( *FindString*; *WithinString* )](../functions/function-find.md)
+[**Find**( *FindString*, *WithinString* )](../functions/function-find.md)
 
 ## <a name="example"></a>Eksempel
-1. Legg til en **[Etikett](control-text-box.md)**-kontroll, kalt **Kilde**, og angi **[Tekst](properties-core.md)**-egenskapen til denne strengen:
+1. Legg til en **[Etikett](control-text-box.md)** -kontroll, kalt **Kilde**, og angi **[Tekst](properties-core.md)** -egenskapen til denne strengen:
 
 «\<p > Vi har\&nbsp;gjort en uvanlig \&dyp\& globalisering og lokalisering.\<p>»
 
@@ -88,7 +87,7 @@ Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](..
 1. Legg til en **HTML-tekst**-kontroll, og angi dens **HTMLText**-egenskap til denne verdien:<br>
    **Source.Text**
    
-     **HTML-tekst**-kontrollen viser den samme teksten som **[Etikett](control-text-box.md)**-kontrollen, men konverterer kodene til de aktuelle tegnene.
+     **HTML-tekst**-kontrollen viser den samme teksten som **[Etikett](control-text-box.md)** -kontrollen, men konverterer kodene til de aktuelle tegnene.
 
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
@@ -103,4 +102,4 @@ Det må være tilstrekkelig fargekontrast mellom:
 * **HtmlText** må være til stede.
 
 ### <a name="keyboard-support"></a>Tastaturstøtte
-* **HtmlText** kan ikke inneholde interaktive elementer som `<button>`, `<a>` eller `<input>`. **[TabIndex](properties-accessibility.md)**-systemet i PowerApps tar ikke hensyn til elementene i **HtmlText**.
+* **HtmlText** kan ikke inneholde interaktive elementer som `<button>`, `<a>` eller `<input>`. **[TabIndex](properties-accessibility.md)** -systemet i PowerApps tar ikke hensyn til elementene i **HtmlText**.

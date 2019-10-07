@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/09/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: abb64d57e53f292dc42cb44ef2b1c9f35bbad944
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: e04a4e4e00d1f35f36b7e5d68cfb32d83b19b86b
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61564006"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992550"
 ---
 # <a name="rand-function-in-powerapps"></a>Rand-funksjonen i PowerApps
 Returnerer et pseudo-tilfeldig tall.
@@ -63,7 +62,7 @@ Når den brukes i en [virkemåteformel](../working-with-formulas-in-depth.md) bl
 #### <a name="create-a-table-of-random-numbers"></a>Slik oppretter du en tabell med tilfeldige tall
 1. Legg til en **[Knapp](../controls/control-button.md)** , og angi **[OnSelect](../controls/properties-core.md)** -egenskapen til denne formelen:
 
-    **ClearCollect( RandomNumbers; ForAll( [ 1; 2; 3; 4; 5 ]; Rand() ))**
+    **ClearCollect( RandomNumbers, ForAll( [ 1, 2, 3, 4, 5 ], Rand() ))**
 
     Denne formelen oppretter én kolonnetabell som brukes til å oppdatere fem ganger, noe som resulterer i fem tilfeldige tall.
 
@@ -81,4 +80,4 @@ Når den brukes i en [virkemåteformel](../working-with-formulas-in-depth.md) bl
 
     ![Den samme skjermen som viser en datatabell med et nytt sett med fem forskjellige desimalverdier0.414, 0.128, 0.860, 0.303, 0.568](media/function-rand/rand-collection-2.png)
 
-Hvis du vil generere et enkelt tilfeldig tall i stedet for en tabell, kan du bruke **Set( RandomNumber; Rand() )** .
+Hvis du vil generere et enkelt tilfeldig tall i stedet for en tabell, kan du bruke **Set( RandomNumber, Rand() )** .

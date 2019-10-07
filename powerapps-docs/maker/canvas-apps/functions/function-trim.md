@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 09/09/2016
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5997df0d6e2a6a2d6732d10cefa146f4ba6e33dc
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 79f035271b2a98faf6ddb7bba716c7107e311183
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61548485"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71991925"
 ---
 # <a name="trim-and-trimends-functions-in-powerapps"></a>Funksjonene Trim og TrimEnds i PowerApps
 Fjerner ekstra mellomrom fra en tekststreng.
@@ -53,8 +52,8 @@ Følgende eksempler bruker en enkeltkolonnesamling kalt **Mellomrom**, som inneh
 
 ![](media/function-trim/input-strings.png)
 
-Hvis du vil opprette denne samlingen, angir du **OnSelect**-egenskapen til en **[Button](../controls/control-button.md)**-kontroll til denne formelen, åpner Forhåndsvisningsmodus, og deretter klikker eller trykker du på knappen:
-<br>**ClearCollect( Spaces; [ "&nbsp;&nbsp;&nbsp;Jane&nbsp;&nbsp;&nbsp;Doe&nbsp;&nbsp;&nbsp;"; "&nbsp;&nbsp;&nbsp;&nbsp;Jack&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;Jill"; "Already&nbsp;trimmed"; "&nbsp;&nbsp;&nbsp;Venus,&nbsp;&nbsp;&nbsp;Earth,&nbsp;&nbsp;&nbsp;Mars&nbsp;&nbsp;"; "Oil&nbsp;and&nbsp;Water&nbsp;&nbsp;&nbsp;" ] )**
+Hvis du vil opprette denne samlingen, angir du **OnSelect**-egenskapen til en **[Button](../controls/control-button.md)** -kontroll til denne formelen, åpner Forhåndsvisningsmodus, og deretter klikker eller trykker du på knappen:
+<br>**ClearCollect( Spaces, [ "&nbsp;&nbsp;&nbsp;Jane&nbsp;&nbsp;&nbsp;Doe&nbsp;&nbsp;&nbsp;", "&nbsp;&nbsp;&nbsp;&nbsp;Jack&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;Jill", "Already&nbsp;trimmed", "&nbsp;&nbsp;&nbsp;Venus,&nbsp;&nbsp;&nbsp;Earth,&nbsp;&nbsp;&nbsp;Mars&nbsp;&nbsp;", "Oil&nbsp;and&nbsp;Water&nbsp;&nbsp;&nbsp;" ] )**
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
@@ -62,5 +61,5 @@ Hvis du vil opprette denne samlingen, angir du **OnSelect**-egenskapen til en **
 | **TrimEnds(&nbsp;Spaces&nbsp;)** |Trimmer alle mellomrom fra starten og slutten av hver streng i **Spaces**-samlingen. |<style> img { max-width: none } </style> ![](media/function-trim/output-trimends.png) |
 
 > [!NOTE]
-> Ekstra mellomrom vises ikke hvis du viser en samling ved å klikke eller trykke på **Samlinger** på **Fil**-menyen. Hvis du vil kontrollere lengden, kan du bruke **[Len](function-len.md)**-funksjonen.
+> Ekstra mellomrom vises ikke hvis du viser en samling ved å klikke eller trykke på **Samlinger** på **Fil**-menyen. Hvis du vil kontrollere lengden, kan du bruke **[Len](function-len.md)** -funksjonen.
 

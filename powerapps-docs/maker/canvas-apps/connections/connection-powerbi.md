@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/12/2016
 ms.author: lanced
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 73ce15ff171ce72b9364844ed77f6e3aed079a64
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 5efcc877de7a16524c57121a91488189d4058437
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61556853"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71987148"
 ---
 # <a name="connect-to-power-bi-from-powerapps"></a>Å koble til Power BI fra PowerApps
 ![Power BI](./media/connection-powerbi/powerbiicon.png)
@@ -71,7 +71,7 @@ Ingen.
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | verdi |matrise |nei |En matrise for datavarslene som du har satt opp i Power BI-tjenesten. Hvert element i matrisen inkluderer: <ul><li>alertTitle: tittel på varslingen</li><li>alertTitle: ID-en for varslingen</li><li>groupId: ID-en for gruppen som varselet ble opprettet i</li></ul> |
 
@@ -83,13 +83,13 @@ Vise statusen for et varsel.
 
 #### <a name="input-properties"></a>Inndataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | alertId |heltall |ja |ID-en for varselet, slik det er returnert av GetAlerts |
 
 #### <a name="output-properties"></a>Utdataegenskaper
 
-| Egenskapsnavn | Datatype | Kreves | Beskrivelse |
+| Egenskapsnavn | Datatype | Krevde | Beskrivelse |
 | --- | --- | --- | --- |
 | tileValue |tall |nei |Verdien for flisen når varselet ble utløst |
 | tileUrl |streng |nei |Nettadressen for flisen som har varselet |

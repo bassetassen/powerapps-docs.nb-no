@@ -1,24 +1,24 @@
 ---
 title: Generer en lerretsapp fra Excel | Microsoft Docs
 description: Bruk PowerApps til å generere en lerretsapp automatisk ved hjelp av en Excel-fil som er lagret på en skylagringskonto.
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 01/14/2019
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7ab85f09ebf88c30b35c963242895cd74ca6a966
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 576e61e6e4ea1aad317fdec8f49f76bfcd1e0b6a
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61555041"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71990259"
 ---
 # <a name="generate-a-canvas-app-from-excel-in-powerapps"></a>Generer en lerretsapp fra Excel i PowerApps
 
@@ -67,49 +67,49 @@ Hvis du ønsker å følge dette emnet helt etter boken, kan du laste ned [Floori
 
 1. Du kan også filtrere listen ved å skrive inn ett eller flere tegn i søkefeltet.
 
-    For eksempel skriver eller limer inn **Elskede** å vise bare posten som at strengen vises i produktets navn, kategori eller oversikt.
+    Du kan for eksempel skrive eller lime inn **Honey** for å vise den eneste posten som denne strengen vises for i produkt navnet, kategorien eller oversikten.
 
-    ![Filter-eksempel](./media/get-started-create-from-data/filter-example.png)
+    ![Filter eksempel](./media/get-started-create-from-data/filter-example.png)
 
-1. Legge til en post:
+1. Legg til en post:
 
-    1. Velg på pluss-ikonet.
+    1. Velg pluss ikonet.
 
         ![Pluss-ikonet](./media/get-started-create-from-data/plus-icon.png)
 
-    1. Legg til dataene du vil bruke, og velg deretter på hakeikonet for å lagre endringene.
+    1. Legg til de ønskede dataene, og velg deretter merke ikonet for å lagre endringene.
 
-        ![Lagre-ikon](./media/get-started-create-from-data/save-icon.png)
+        ![Lagre ikon](./media/get-started-create-from-data/save-icon.png)
 
-1. Redigere en post:
+1. Rediger en post:
 
-    1. Velg pilen for posten som du vil redigere.
+    1. Velg pilen for posten du vil redigere.
 
         ![Neste-pil](./media/get-started-create-from-data/next-arrow.png)
 
-    1. Velg blyantikonet.
+    1. Velg blyant ikonet.
 
         ![Blyantikon](./media/get-started-create-from-data/pencil-icon.png)
 
-    1. Oppdater ett eller flere felt, og velg deretter på hakeikonet for å lagre endringene.
+    1. Oppdater ett eller flere felt, og velg merke ikonet for å lagre endringene.
 
-        ![Lagre-ikon](./media/get-started-create-from-data/save-icon.png)
+        ![Lagre ikon](./media/get-started-create-from-data/save-icon.png)
 
-        Velg Avbryt-ikonet for å forkaste endringene som et alternativ.
+        Som et alternativ kan du velge Avbryt-ikonet for å forkaste endringene.
 
-1. Slette en post:
+1. Slett en post:
 
-    1. Velg Neste-pilen for posten som du vil slette.
+    1. Velg den neste pilen for posten du vil slette.
 
         ![Neste-pil](./media/get-started-create-from-data/next-arrow.png)
 
-    1. Velg papirkurvikonet.
+    1. Velg papir kurv ikonet.
 
         ![Papirkurv-ikon](./media/get-started-create-from-data/trash-icon.png)
 
 ## <a name="next-steps"></a>Neste trinn
 
-Tilpass standard Bla gjennom-skjermen slik at den passer dine behov. Du kan for eksempel sortere og filtrere listen etter produktnavn bare, og ikke kategori eller oversikt.
+Tilpass standard Bla gjennom-skjermen slik at den passer dine behov. Du kan for eksempel sortere og filtrere listen etter produkt navn, ikke kategori eller oversikt.
 
 > [!div class="nextstepaction"]
 > [Å tilpasse en standard Bla gjennom-skjerm](customize-layout-sharepoint.md).

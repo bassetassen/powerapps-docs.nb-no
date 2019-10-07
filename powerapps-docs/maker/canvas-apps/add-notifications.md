@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 08/08/2017
 ms.author: kaagar
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a32dd9f483682ba462aae1d3bd9d257d3204b8f5
-ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
+ms.openlocfilehash: 22dfcb085c2de4aabd849e0a1fedc8a231f0e55f
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64670438"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71987362"
 ---
 # <a name="send-a-push-notification-in-powerapps"></a>Send et push-varsel i PowerApps
 Push-varsler brukes hovedsakelig i mobilapper for forbruker- og forretningsscenarioer for å engasjere brukere og hjelpe dem med å prioritere viktige oppgaver. I PowerApps kan du sende varsler ved å bruke PowerApps Notification-koblingen. Du kan sende opprinnelige push-varsler til alle apper du lager i PowerApps. Vi har planer om å legge til flere typer varsler i fremtiden.
@@ -81,15 +80,15 @@ Du kan sende et push-varsel fra en app til en annen, eller til den samme appen.
 
 ## <a name="load-a-specific-page-and-context-when-a-user-taps-the-notification"></a>Last inn en bestemt side og kontekst når brukeren trykker på varselet
 ### <a name="pass-parameters"></a>Send parametre
-Push-varselet kan sende bestemte parametre til appen. Bruk for eksempel *Param("CaseID")* for å lese **CaseID**-verdien. Denne parameteren kan raskt identifiseres ved å legge til en **Etikett**-kontroll i appen. Angi**Tekst**-egenskapen for denne kontrollen til **Param("CaseID")**. Hvis brukeren åpner appen fra listen **Alle apper**, er verdien tom. Hvis brukeren åpner appen fra en annen plassering på enheten, er verdien utfylt med**Saks-ID**-verdien.
+Push-varselet kan sende bestemte parametre til appen. Bruk for eksempel *Param("CaseID")* for å lese **CaseID**-verdien. Denne parameteren kan raskt identifiseres ved å legge til en **Etikett**-kontroll i appen. Angi**Tekst**-egenskapen for denne kontrollen til **Param("CaseID")** . Hvis brukeren åpner appen fra listen **Alle apper**, er verdien tom. Hvis brukeren åpner appen fra en annen plassering på enheten, er verdien utfylt med**Saks-ID**-verdien.
 
 ### <a name="set-the-start-page"></a>Å angi startside
 Du kan for eksempel angi at appen skal åpne siden **Saksdetaljer** når du åpner appen:
 
 1. Legg til en **Tidtaker**-kontroll, og angi **OnTimerEnd**-egenskapen for denne kontrollen i denne formelen:
-   <br>**Navigate(EditCase; ScreenTransition.None)**
+   <br>**Navigate(EditCase, ScreenTransition.None)**
 2. (valgfritt) Skjul **Tidtaker**-kontrollen ved å angi kontrollens egenskap for **Synlighet** som **usann**.
-3. Angi**OnVisible**-egenskapen for skjermbildet til **Timer.Start()**.
+3. Angi**OnVisible**-egenskapen for skjermbildet til **Timer.Start()** .
 
 > [!TIP]
 > Det er en god ide å opprette en unik førsteside for varselet i appen:
@@ -115,10 +114,10 @@ Du kan for eksempel angi at appen skal åpne siden **Saksdetaljer** når du åpn
 ### <a name="sample-formulas"></a>Eksempler på formler
 Send et enkelt varsel.
 
-```powerapps-comma
+```powerapps-dot
 PowerAppsNotification.SendPushNotification(
     {
-        recipients: ["f60ccf6f-7579-4f92-967c-2920473c966b"; "72f988bf-86f1-41af-91ab-2d7cd011db47"];
+        recipients: ["f60ccf6f-7579-4f92-967c-2920473c966b", "72f988bf-86f1-41af-91ab-2d7cd011db47"],
         message: "A new case was assigned to you."
     }
 )
@@ -126,12 +125,12 @@ PowerAppsNotification.SendPushNotification(
 
 Send et varsel som åpner en app og sender bestemte parametere.
 
-```powerapps-comma
+```powerapps-dot
 PowerAppsNotification.SendPushNotification(
     {
-        recipients: ["email1@contoso.com"; "email2@contoso.com"];
-        message: "message in the notif toast";
-        params: Table({key:"notificationKey"; value:"The value for notificationKey"});
+        recipients: ["email1@contoso.com", "email2@contoso.com"],
+        message: "message in the notif toast",
+        params: Table({key:"notificationKey", value:"The value for notificationKey"}),
         openApp: true
     }
 )

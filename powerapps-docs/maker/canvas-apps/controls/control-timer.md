@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5d20e2324f2efb4f866ed4fc183f289733c10a41
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 00863f00768a0c4eec95ecec778c2da219fd08d3
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61560471"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986195"
 ---
 # <a name="timer-control-in-powerapps"></a>Tidtaker-kontrollen i PowerApps
 En kontroll som kan finne ut hvordan appen responderer etter en viss tid har passert.
@@ -28,7 +27,7 @@ En kontroll som kan finne ut hvordan appen responderer etter en viss tid har pas
 Tidtakere kan for eksempel bestemme hvor lenge en kontroll skal vises, eller endre andre egenskaper for en kontroll etter en viss tid har passert.
 
 > [!NOTE]
-> I PowerApps Studio Kjør tidtakere bare i forhåndsvisningsmodus.
+> I PowerApps Studio kjører tid takerne bare i forhånds visnings modus.
 
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
@@ -55,11 +54,11 @@ Tidtakere kan for eksempel bestemme hvor lenge en kontroll skal vises, eller end
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt til **Deaktivert**.
 
-**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt som **Deaktivert**.
 
-**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
+**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)** -egenskapen er angitt som **Deaktivert**.
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
@@ -69,7 +68,7 @@ Tidtakere kan for eksempel bestemme hvor lenge en kontroll skal vises, eller end
 
 **[Skrift](properties-text.md)** – navnet på skriftserien som teksten vises i.
 
-**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
+**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **halvfet**, **Normal**eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -124,11 +123,11 @@ Tidtakere kan for eksempel bestemme hvor lenge en kontroll skal vises, eller end
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 2. Angi tidtakerens **Varighet**-egenskap til **10000**, og **Gjenta**- og **Autostart**-egenskapene til **sann**.
-3. (valgfritt) Gjør det enklere å lese av tidtakeren ved å angi **[Høyde](properties-size-location.md)**-egenskapen for tidtakeren til **160**, **[Bredde](properties-size-location.md)**-egenskapen til **600**, og **[Størrelse](properties-text.md)**-egenskapen til **60**.
-4. Legg til en etikett og angi **[Tekst](properties-core.md)**-egenskapen til denne formelen:
-   <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000; 0)**
+3. (valgfritt) Gjør det enklere å lese av tidtakeren ved å angi **[Høyde](properties-size-location.md)** -egenskapen for tidtakeren til **160**, **[Bredde](properties-size-location.md)** -egenskapen til **600**, og **[Størrelse](properties-text.md)** -egenskapen til **60**.
+4. Legg til en etikett og angi **[Tekst](properties-core.md)** -egenskapen til denne formelen:
+   <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000, 0)**
 
-    Vil du ha mer informasjon om **[RoundUp](../functions/function-round.md)**-funksjonen, eller [andre funksjoner](../formula-reference.md)?
+    Vil du ha mer informasjon om **[RoundUp](../functions/function-round.md)** -funksjonen, eller [andre funksjoner](../formula-reference.md)?
 
     Etiketten viser hvor mange sekunder som gjenstår før tidtakeren startes på nytt.
 
@@ -136,40 +135,40 @@ Tidtakere kan for eksempel bestemme hvor lenge en kontroll skal vises, eller end
 1. Legg til en tidtaker, og gi den navnet **Varselinntoning**.
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
-2. Angi tidtakerens **varighet** til **5000**, **Gjenta**-egenskapen til **sann** og **[Tekst](properties-core.md)**-egenskapen til **Veksle animasjon**.
-3. (valgfritt) Gjør det enklere å lese av tidtakeren ved å angi **[Høyde](properties-size-location.md)**-egenskapen for tidtakeren til **160**, **[Bredde](properties-size-location.md)**-egenskapen til **600**, og **[Størrelse](properties-text.md)**-egenskapen til **60**.
-4. Legg til en etikett, og sett **[Tekst](properties-core.md)**-egenskapen til å vise **Velkommen!** og angi **[farge](properties-color-border.md)**-egenskapen til denne formelen:
-   <br>**ColorFade(Color.BlueViolet; FadeIn.Value/5000)**
+2. Angi tidtakerens **varighet** til **5000**, **Gjenta**-egenskapen til **sann** og **[Tekst](properties-core.md)** -egenskapen til **Veksle animasjon**.
+3. (valgfritt) Gjør det enklere å lese av tidtakeren ved å angi **[Høyde](properties-size-location.md)** -egenskapen for tidtakeren til **160**, **[Bredde](properties-size-location.md)** -egenskapen til **600**, og **[Størrelse](properties-text.md)** -egenskapen til **60**.
+4. Legg til en etikett, og sett **[Tekst](properties-core.md)** -egenskapen til å vise **Velkommen!** og angi **[farge](properties-color-border.md)** -egenskapen til denne formelen:
+   <br>**ColorFade(Color.BlueViolet, FadeIn.Value/5000)**
 
-    Vil du ha mer informasjon om **[ColorFade](../functions/function-colors.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
+    Vil du ha mer informasjon om **[ColorFade](../functions/function-colors.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 
 5. Velg at knappen for tidtakeren skal starte eller stoppe animasjonen. Teksten i etiketten tones til hvit, returnerer til full intensitet og gjentar prosessen.
 
 ## <a name="accessibility-guidelines"></a>Retningslinjer for tilgjengelighet
-De samme retningslinjene for den **[knappen](control-button.md)** kontrollen gjelder den **tidtaker** kontroll hvis brukere kan samhandle med den.
+De samme retnings linjene for **[knapp](control-button.md)** -kontrollen gjelder for **tid taker** kontrollen hvis brukerne kan samhandle med den.
 
-### <a name="background-timers"></a>Bakgrunn tidtakere
-Bakgrunn tidtakere kjøres automatisk, og er skjult. Bruke dem i en støttende rolle hvor lang tid det er lite interessant for brukeren. Du kan for eksempel oppdatere data hvert minutt, eller Vis en varslingsmelding bare for en viss tid.
+### <a name="background-timers"></a>Bakgrunns tid takere
+Bakgrunns tid takere kjøres automatisk og er skjult. Bruk dem i en støtte rolle der den brukte tiden er lite interessant for brukeren. Du kan for eksempel oppdatere data hvert minutt eller bare vise en varslings melding i en bestemt tids periode.
 
-Bakgrunn tidtakere bør ha deres **[Visible](properties-core.md)** egenskapen satt til false, slik at de er skjult fra alle brukere.
+Bakgrunns tid takere bør ha **[Visible](properties-core.md)** -egenskapen satt til False, slik at de er skjult for alle brukere.
 
-### <a name="timing-considerations"></a>Viktige faktorer tidsberegning
-Hvis en **tidtaker** kjøringer automatisk, bør du vurdere å om brukere har nok tid til å lese og bruke innholdet. Brukere av tastatur og Skjermleser kan trenge mer tid til å respondere på en planlagt hendelse.
+### <a name="timing-considerations"></a>Vurderings vurderinger
+Hvis en **tidtaker** kjører automatisk, bør du vurdere om brukerne har nok tid til å lese og bruke innhold. Det kan hende at brukere av tastatur og skjerm leser trenger mer tid til å reagere på en tidsavbrutt hendelse.
 
-Alle disse strategiene er tilstrekkelig:
-* Tillat brukere å avbryte den planlagte hendelsen.
-* Tillat brukere å justere tidsbegrensningen før den begynner.
-* Advar 20 sekunder før tidsgrensen utløper, og gjør det enkelt å utvide grensen.
+Noen av disse strategiene er tilstrekkelig:
+* Tillat at brukere avbryter tidsavbrutt-hendelsen.
+* Tillat at brukere justerer tids grensen før den starter.
+* Varsle 20 sekunder før tids grensen utløper, og angi en enkel måte å forlenge grensen på.
 
 Noen scenarioer er fritatt fra disse kravene. Finn ut mer i [WCAG 2.0-retningslinjen for tidsbegrensninger](https://www.w3.org/TR/WCAG20/#time-limits).
 
 ### <a name="screen-reader-support"></a>Kundestøtte for skjermlesere
-* Hvis en tidtaker utløser endringer på den gjeldende skjermen, kan du bruke en [dynamiske området](../accessible-apps-live-regions.md) å fortelle-Skjermleser brukerne hva som er endret.
+* Hvis en tidtaker utløser endringer på gjeldende skjerm, kan du bruke et [aktivt område](../accessible-apps-live-regions.md) til å fortelle skjerm lesere brukerne som er endret.
 
     > [!NOTE]
-    > Hvis tidtakeren er synlig, og kjører, skjermlesere leser opp hvor lang tid hver fem sekunder.
+    > Hvis tid takeren er synlig og kjører, vil skjerm lesere annonsere den brukte tiden hvert femte sekund.
 
-* Ikke bruk av **[tekst](properties-core.md)** egenskapen for en kontroll for tidssensitiv og viktig informasjon. Skjermlesere lese opp ikke endringer i  **[tekst](properties-core.md)**.
-* For interaktive tidtakere:
+* Ikke bruk **[tekst](properties-core.md)** -egenskapen for en kontroll for tids sensitiv og viktig informasjon. Skjerm lesere vil ikke annonsere endringer til **[tekst](properties-core.md)** .
+* For interaktive tid takere:
     * **[Tekst](properties-core.md)** må foreligge.
-    * Vurder å legge til en **[etikett](control-text-box.md)** kontrollen til å vise hvor lang tid. Bruk tidtakerens **[tekst](properties-core.md)** til å instruere brukeren om å starte eller stoppe tidtakeren.
+    * Vurder å legge til en **[etikett](control-text-box.md)** -kontroll for å vise brukt tid. Bruk tid takerens **[tekst](properties-core.md)** -egenskap til å instruere brukeren om å starte eller stoppe tid takeren.

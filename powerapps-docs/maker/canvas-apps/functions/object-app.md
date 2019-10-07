@@ -1,126 +1,125 @@
 ---
-title: App-objektet | Microsoft Docs
-description: Referanseinformasjon, inkludert syntaks og eksempler på App-objektet i PowerApps
+title: App-objekt | Microsoft Docs
+description: Referanse informasjon, inkludert syntaks og eksempler, for app-objektet i PowerApps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/29/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 232accd1050fb84816e86ea95069b8c8778f6586
-ms.sourcegitcommit: 562c7ed5fbb116be1cbb0f45e3f6e75e3e4cf011
+ms.openlocfilehash: b0ab20ce5e0700337bb059644c458a2665d20f1e
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451614"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71983574"
 ---
 # <a name="app-object-in-powerapps"></a>App-objekt i PowerApps
 
-Gir informasjon om den kjørende appen og kontroll over appens virkemåte.
+Gir informasjon om appen som kjører, og kontroll over appens virke måte.
 
 ## <a name="description"></a>Beskrivelse
 
-Som en kontroll, den **App** objektet inneholder egenskaper som identifiserer hvilken skjerm vises, og som ber brukeren om å lagre endringene slik at de ikke er brutt. Alle apper har en **App** objektet.
+På samme måte som en kontroll, inneholder **app** -objektet egenskaper som identifiserer hvilken skjerm som vises, og som ber brukeren om å lagre endringer slik at de ikke går tapt. Hver app har et **app** -objekt.
 
-Du kan skrive formler for noen egenskaper for den **App** objektet. På toppen av den **trevisning** rute, velger du **App** objekt som du ville alle andre kontroll eller skjerm. Vis og Rediger ett av objektets egenskaper ved å velge den i rullegardinlisten til venstre for formellinjen.
-
-> [!div class="mx-imgBorder"]
-> ![App-objektet i treet Vis-ruten](media/object-app/appobject.png)
-
-## <a name="activescreen-property"></a>ActiveScreen egenskapen
-
-Den **ActiveScreen** egenskapen identifiserer skjermen som vises.
-
-Denne egenskapen returnerer et skjermobjekt som du kan bruke til å referere til egenskaper til skjermen, eller sammenligne en annen skjerm for å bestemme hvilken skjerm vises. Du kan også bruke uttrykket **App.ActiveScreen.Name** til å hente navnet på skjermen som vises.
-
-Bruk den **[tilbake](function-navigate.md)** eller **[Navigate](function-navigate.md)** funksjonen for å endre skjermen som vises.
-
-## <a name="onstart-property"></a>OnStart egenskapen
-
-Den **OnStart** egenskapen som kjøres når brukeren starter appen. Applagere bruker ofte denne egenskapen for å utføre disse oppgavene:
-
-- Hente og hurtigbufring av data til samlinger ved å bruke den **[samle inn](function-clear-collect-clearcollect.md)** funksjonen.
-- Konfigurer globale variabler ved å bruke den **[angi](function-set.md)** funksjonen.
-- Naviger til en innledende skjermen ved hjelp av den **[Navigate](function-navigate.md)** funksjonen.
-
-Denne formelen evalueres før den første skjermen vises. Ingen skjermen er lastet inn, slik at du ikke kan angi kontekstvariabler med den **[UpdateContext](function-updatecontext.md)** funksjonen. Du kan imidlertid overføre kontekstvariablene med den **Navigate** funksjonen.
-
-Når du har endret den **OnStart** -egenskapen, teste den ved å hvile over den **App** objektet i den **trevisning** ruten, å velge ellipsen (...) som vises, og deretter velge **Kjøre OnStart**. I motsetning til når appen er lastet for første gang, angis eksisterende samlinger og variabler allerede. Starte med tom samlinger, kan du bruke den **[ClearCollect](function-clear-collect-clearcollect.md)** funksjonen i stedet for den **samle inn** funksjonen.
+Du kan skrive formler for noen egenskaper for **app** -objektet. Velg **app** -objektet øverst i **tre visnings** ruten, som en hvilken som helst annen kontroll eller skjerm. Vis og rediger et av objektets egenskaper ved å velge det i rulle gardin listen til venstre for formel linjen.
 
 > [!div class="mx-imgBorder"]
-> ![App-element hurtigmenyen for kjøre OnStart](media/object-app/appobject-runonstart.png)
+> ![The app-objekt i tre visnings ruten @ no__t-1
 
-## <a name="confirmexit-properties"></a>ConfirmExit egenskaper
+## <a name="activescreen-property"></a>ActiveScreen-egenskapen
 
-Ingen vil mister ulagrede endringer. Bruk den **ConfirmExit** og **ConfirmExitMessage** egenskaper for å gi brukeren en advarsel før de lukker appen.
+Egenskapen **ActiveScreen** identifiserer skjermen som vises.
+
+Denne egenskapen returnerer et skjerm objekt, som du kan bruke til å referere til egenskapene til skjermen eller sammenligne med en annen skjerm for å bestemme hvilken skjerm som vises. Du kan også bruke Expression- **app.ActiveScreen.name** til å hente navnet på skjermen som vises.
+
+Bruk **[tilbake](function-navigate.md)** -eller **[Naviger](function-navigate.md)** -funksjonen til å endre skjermen som vises.
+
+## <a name="onstart-property"></a>OnStart-egenskapen
+
+Egenskapen **OnStart** kjører når brukeren starter appen. App-produsenter bruker ofte denne egenskapen til å utføre disse oppgavene:
+
+- Hent og bufre data til samlinger ved hjelp av **[Collect](function-clear-collect-clearcollect.md)** -funksjonen.
+- Konfigurer globale variabler ved hjelp av **[Set](function-set.md)** -funksjonen.
+- Gå til en start skjerm ved hjelp av **[Naviger](function-navigate.md)** -funksjonen.
+
+Denne formelen evalueres før den første skjermen vises. Ingen skjerm bilder er lastet inn, så du kan ikke angi kontekst variabler med **[UpdateContext](function-updatecontext.md)** -funksjonen. Du kan imidlertid sende kontekst variabler med **Naviger** -funksjonen.
+
+Når du endrer egenskapen **OnStart** , kan du teste den ved å holde pekeren over **app** -objektet i **tre visnings** ruten, velge ellipsen (...) som vises, og deretter velge **Kjør OnStart**. I motsetning til når appen lastes inn for første gang, vil eksisterende samlinger og variabler allerede være angitt. Hvis du vil starte med tomme samlinger, kan du bruke **[ClearCollect](function-clear-collect-clearcollect.md)** -funksjonen i stedet for **Collect** -funksjonen.
+
+> [!div class="mx-imgBorder"]
+> hurtig menyen ![App for kjøring OnStart @ no__t-1
+
+## <a name="confirmexit-properties"></a>Egenskaper for ConfirmExit
+
+Ingen ønsker å miste ulagrede endringer. Bruk **ConfirmExit** -og **ConfirmExitMessage** -egenskapene til å advare brukeren før de avslutter appen.
 
 > [!NOTE]
-> **ConfirmExit** virker ikke i apper som er innebygd i, for eksempel Power BI og SharePoint.
+> **ConfirmExit** fungerer ikke i apper som er innebygd i, for eksempel Power bi og SharePoint.
 
 > [!NOTE]
-> I øyeblikket, disse egenskapene kan referere til kontroller i bare den første skjermen hvis den **forsinket innlasting** forhåndsvisningsfunksjonen er aktivert (som det er som standard for nye apper). Hvis referanser blir gjort, PowerApps Studio viser ikke en feil, men den resulterende publiserte appen åpnes ikke i PowerApps Mobile eller en nettleser. Vi arbeider aktivt for å fjerne denne begrensningen. I mellomtiden kan du slå av **forsinket innlasting** i **filen** > **appinnstillinger** > **avanserte innstillinger**(under **forhåndsvisningsfunksjoner**).
+> Nå kan disse egenskapene referere til kontroller på bare den første skjermen hvis forhånds visnings funksjonen for **Forsinket innlasting** er aktivert (som den er som standard for nye apper). Hvis det utføres referanser, PowerApps Studio ikke en feil melding, men den endelige, publiserte appen åpnes ikke i PowerApps Mobile eller en nett leser. Vi jobber aktivt med å løfte denne begrensningen. I mellom tiden kan du slå av **forsinket belastning** i **fil**@no__t – 2**App-innstillinger** > **Avanserte innstillinger** (under **forhånds visnings funksjoner**).
 
 ### <a name="confirmexit"></a>ConfirmExit
 
-**ConfirmExit** er en boolsk egenskap som, når *SANN*, åpnes en bekreftelsesdialogboks før appen lukkes. Denne egenskapen er som standard *USANN*, og det vises ingen dialogboks.
+**ConfirmExit** er en boolsk egenskap som, når *sann*, åpner en bekreftelses dialog boks før appen lukkes. Som standard er denne egenskapen *Usann*, og ingen dialog boks vises.
 
-Bruk denne egenskapen til å vise en bekreftelsesdialogboks Hvis brukeren har gjort endringer, men ikke lagret dem. Bruke en formel som kan kontrollere variabler og kontrollegenskaper (for eksempel den **Unsaved** -egenskapen for den [ **redigeringsskjema** ](../controls/control-form-detail.md) kontroll).
+Bruk denne egenskapen til å vise en bekreftelses dialog boks hvis brukeren har gjort endringer, men ikke lagret dem. Bruk en formel som kan kontrollere variabler og kontroll egenskaper (for eksempel egenskapen **ulagre** for [**redigerings skjema**](../controls/control-form-detail.md) -kontrollen).
 
-Bekreftelsesdialogboksen vises i alle situasjoner der data kan gå tapt, som i disse eksemplene:
+Bekreftelses dialog boksen vises i alle situasjoner der data kan gå tapt, som i disse eksemplene:
 
-- Kjører den [ **Avslutt** ](function-exit.md) funksjonen.
-- Hvis appen kjøres i en nettleser:
-  - Lukke nettleseren eller nettleserfanen som appen kjører.
-  - Å velge leserens tilbake-knappen.
-- Hvis appen kjøres i PowerApps Mobile (iOS eller Android):
-  - Kjører den [ **Start** ](function-param.md) funksjonen.<br>Den **Start** funksjonen utløser ikke dialogboksen i en nettleser fordi en annen kategori åpner slik at dataene ikke går tapt.
-  - Sveipe for å bytte til en annen app i PowerApps Mobile.
-  - Å velge på Tilbake-knappen på en Android-enhet.
+- Kjører [**Avslutt**](function-exit.md) -funksjonen.
+- Hvis appen kjører i en nett leser:
+  - Lukke nett leseren eller nett leser fanen der appen kjører.
+  - Å velge tilbake-knappen i nett leseren.
+- Hvis appen kjører i PowerApps Mobile (iOS eller Android):
+  - Kjører [**Start**](function-param.md) funksjonen.<br>**Start** funksjonen utløser ikke dialog boksen i en nett leser fordi en annen fane åpnes slik at data ikke går tapt.
+  - Dra for å bytte til en annen app i PowerApps Mobile.
+  - Velge tilbakeknappen på en Android-enhet.
 
-Nøyaktig utseendet på bekreftelsesdialogboksen kan variere på tvers av enheter og versjoner av PowerApps.
+Det nøyaktige utseendet på bekreftelses dialog boksen kan variere på tvers av enheter og versjoner av PowerApps.
 
-Dialogboksen vises ikke i PowerApps Studio.
+Bekreftelses dialog boksen vises ikke i PowerApps Studio.
 
 ### <a name="confirmexitmessage"></a>ConfirmExitMessage
 
-Som standard viser bekreftelsesdialogboksen en standardmelding, for eksempel **"Du kan har ulagrede endringer."** på brukerens språk.
+Som standard viser dialog boksen bekreftelse en generell melding, for eksempel **«du kan ha ulagrede endringer.»** på brukerens språk.
 
-Bruk **ConfirmExitMessage** til å gi en egendefinert melding i bekreftelsesdialogboksen. Hvis denne egenskapen er *tom*, brukes standardverdien. Egendefinerte meldinger er avkortet trenger for å passe i bekreftelsesdialogboksen, og bør meldingen til noen få linjer maksimalt.
+Bruk **ConfirmExitMessage** til å angi en egen definert melding i bekreftelses dialog boksen. Hvis denne egenskapen er *tom*, brukes standard verdien. Egen definerte meldinger avkortes som nødvendig for å passe i bekreftelses dialog boksen, så du kan holde meldingen til et par linjer.
 
-I en nettleser, kanskje bekreftelsesdialogboksen vises med en standardmelding fra nettleseren.
+I en nett leser kan bekreftelses dialog boksen vises med en generisk melding fra nett leseren.
 
 ### <a name="example"></a>Eksempel
 
-1. Opprette en app som inneholder to skjemakontroller, **AccountForm** og **ContactForm**.
+1. Opprett en app som inneholder to skjema kontroller, **AccountForm** og **ContactForm**.
 
-1. Angi den **App** objektets **ConfirmExit** egenskapen til dette uttrykket:
+1. Angi **app** -objektets **ConfirmExit** -egenskap til dette uttrykket:
 
-    ```powerapps-comma
+    ```powerapps-dot
     AccountForm.Unsaved Or ContactForm.Unsaved
     ```
 
-    Denne dialogboksen vises hvis brukeren endrer data i begge formene og deretter prøver å lukke appen uten å lagre disse endringene.
+    Denne dialog boksen vises hvis brukeren endrer data i et av skjemaene, og deretter prøver å lukke appen uten å lagre disse endringene.
 
     > [!div class="mx-imgBorder"]
-    > ![Generisk bekreftelsesdialogboks](media/object-app/confirm-native.png)
+    > dialog boks for bekreftelse av ![Generic @ no__t-1
 
-1. Angi den **App** objektets **ConfirmExitMessage** egenskapen til denne formelen:
+1. Angi **app** -objektets **ConfirmExitMessage** -egenskap til denne formelen:
 
-    ```powerapps-comma
-    If( AccountsForm.Unsaved;
-        "Accounts form has unsaved changes.";
+    ```powerapps-dot
+    If( AccountsForm.Unsaved,
+        "Accounts form has unsaved changes.",
         "Contacts form has unsaved changes."
     )
     ```
 
-    Denne dialogboksen vises hvis brukeren endrer data i skjemaet kontoen, og deretter prøver å lukke appen uten å lagre disse endringene.
+    Denne dialog boksen vises hvis brukeren endrer data i konto skjemaet, og deretter prøver å lukke appen uten å lagre disse endringene.
 
     > [!div class="mx-imgBorder"]
-    > ![Skjema-spesifikke bekreftelsesdialogboks](media/object-app/confirm-native-custom.png)
+    > @no__t – 0Form-spesifikk bekreftelses dialog boks @ no__t-1

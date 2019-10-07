@@ -6,22 +6,21 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d909b41dd61fca079fc409b51373af0789a3db84
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: f62aa84867a3aa4eae582b3fde320e84becdeeff
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61548712"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986316"
 ---
-# <a name="label-control-in-canvas-apps"></a>Etikettkontrollen i lerretsapper
+# <a name="label-control-in-canvas-apps"></a>Etikett-kontrollen i lerret apps
 
 En boks som viser data som tekst, tall, datoer eller valuta.
 
@@ -31,7 +30,7 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 
 ## <a name="key-properties"></a>Nøkkelegenskaper
 
-**[AutoHeight](properties-core.md)**  – angis som SANN for å tillate at etiketten øker i høyde for å vise all tekst automatisk. Angis som usann for å avkorte teksten til den tilordnede høyden.
+**[Autoheight](properties-core.md)** – satt til sann for å tillate at etiketten automatisk øker høyden for å vise all tekst. Angis som usann for å avkorte teksten til den tilordnede høyden.
 
 **[Farge](properties-color-border.md)**  – fargen på teksten i kontrollen.
 
@@ -45,7 +44,7 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 
 **[Juster](properties-text.md)**  – plasseringen av teksten i forhold til den vannrette midten av kontrollen.
 
-**AutoHeight** – om en etikett automatisk øker **[Høyde](properties-size-location.md)**-egenskapen hvis  **[Tekst](properties-core.md)**-egenskapen inneholder flere tegn enn kontrollen kan vise om gangen.
+**AutoHeight** – om en etikett automatisk øker **[Høyde](properties-size-location.md)** -egenskapen hvis  **[Tekst](properties-core.md)** -egenskapen inneholder flere tegn enn kontrollen kan vise om gangen.
 
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.
 
@@ -55,11 +54,11 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 
 **[DisplayMode](properties-core.md)** – om kontrollen tillater brukerinndata (**Rediger**), bare viser data (**Vis**) eller er deaktivert (**Deaktivert**).
 
-**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt til **Deaktivert**.
+**[DisabledBorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt til **Deaktivert**.
 
-**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)**-egenskap er angitt som **Deaktivert**.
+**[DisabledColor](properties-color-border.md)** – fargen på kontrollens tekst hvis kontrollens **[DisplayMode](properties-core.md)** -egenskap er angitt som **Deaktivert**.
 
-**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)**-egenskapen er angitt som **Deaktivert**.
+**[DisabledFill](properties-color-border.md)** – bakgrunnsfargen på en kontroll hvis **[DisplayMode](properties-core.md)** -egenskapen er angitt som **Deaktivert**.
 
 **[Fyll](properties-color-border.md)** – bakgrunnsfargen på kontrollen.
 
@@ -67,7 +66,7 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 
 **[FocusedBorderThickness](properties-color-border.md)** – fargen på kontrollens kantlinje når kontrollen er fokusert.
 
-**[FontWeight](properties-text.md)**  – vekten på teksten i en kontroll: **Fet**, **Halvfet**, **Normal**, eller **lysere**.
+**[FontWeight](properties-text.md)** – tykkelsen på teksten i en kontroll: **Fet**, **halvfet**, **Normal**eller **lysere**.
 
 **[Høyde](properties-size-location.md)** – avstanden mellom kontrollens øvre og nedre kant.
 
@@ -81,15 +80,15 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 
 **[LineHeight](properties-text.md)** – avstanden mellom linjer med tekst, elementer i en liste eller lignende.
 
-**[Live](properties-accessibility.md)**  – hvordan en skjermleser kunngjør endringer til verdien for etikettens **tekst** egenskapen.
+**[Live](properties-accessibility.md)** – hvordan en skjerm leser annonserer endringer i verdien til etikettens **tekst** -egenskap.
 
-* Når satt til **av**, skjermleseren ikke si endringer.
-* Når satt til **Polite**, skjermleseren er ferdig med å snakke før kunngjøring eventuelle endringer som oppstod under skjermleseren ble snakke.
-* Når satt til **Assertive**, skjermleseren avbryter seg selv for å informere om eventuelle endringer som oppstod under skjermleseren ble snakke.
+* Når det er **merket av**for dette, vil ikke skjerm leseren annonsere endringer.
+* Når det er satt til **Polite**, full føres skjerm leseren å snakke før eventuelle endringer som ble funnet mens skjerm leseren ble snakke.
+* Når det er satt til **assertive**, avbryter skjerm leseren seg selv for å annonsere eventuelle endringer som oppstod mens skjerm leseren ble snakke.
 
 **[OnSelect](properties-core.md)** – hvordan appen responderer når brukeren klikker eller trykker på en kontroll.
 
-**Overflyt** – om et rullefelt vises i en etikett hvis **Bryt**-egenskapen er satt til **sann** og verdien av kontrollens **[Tekst](properties-core.md)**-egenskap inneholder flere tegn enn kontrollen kan vise om gangen.
+**Overflyt** – om et rullefelt vises i en etikett hvis **Bryt**-egenskapen er satt til **sann** og verdien av kontrollens **[Tekst](properties-core.md)** -egenskap inneholder flere tegn enn kontrollen kan vise om gangen.
 
 **[PaddingBottom](properties-size-location.md)** – avstanden mellom teksten i en kontroll og den nederste kanten av kontrollen.
 
@@ -105,7 +104,7 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 
 **[PressedFill](properties-color-border.md)** – bakgrunnsfargen i en kontroll når brukeren trykker eller klikker på kontrollen.
 
-**Rollen** -rollen semantisk for etiketteksten, for eksempel Overskrift 1. Stilen som brukes på etiketten, endres ikke, men gjør utdataene semantisk riktig for tolkning av skjermlesere.
+**Rolle** – den semantiske rollen til etiketteksten, for eksempel Overskrift 1. Endrer ikke stilen til etiketten, men gjør utdataene semantisk riktig for tolking av skjerm lesere.
 
 **[Størrelse](properties-text.md)** – skriftstørrelsen på teksten som vises på en kontroll.
 
@@ -131,34 +130,34 @@ En etikett viser data som du angir som en litteral tekststreng. Det vises nøyak
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 
-[**Tekst**( *Tall*; «*FormatCodes*» )](../functions/function-text.md)
+[**Tekst**( *Tall*, «*FormatCodes*» )](../functions/function-text.md)
 
 ## <a name="examples"></a>Eksempler
 
 ### <a name="show-a-literal-string"></a>Vise en litteral streng
 
-* Legg til en etikett, og sett **[Tekst](properties-core.md)**-egenskapen til **«God dag, verden»** (inkludert de doble anførselstegnene).
+* Legg til en etikett, og sett **[Tekst](properties-core.md)** -egenskapen til **«God dag, verden»** (inkludert de doble anførselstegnene).
   
     Lurer du på hvordan du [legger til og konfigurerer en kontroll](../add-configure-controls.md)?
 
 ### <a name="show-the-result-of-a-formula"></a>Vise resultatet av en formel
 
-* Legg til en etikett, og angi **[Tekst](properties-core.md)**-egenskapen som en formel, som denne:<br>
+* Legg til en etikett, og angi **[Tekst](properties-core.md)** -egenskapen som en formel, som denne:<br>
   **Today()**
   
     > [!NOTE]
   > Når du angir en formel, bruker du ikke anførselstegn med mindre ett av argumentene i formelen er en litteral streng. I så fall må du omslutte argumentet i doble anførselstegn og ikke hele formelen.
   
-    Vil du ha mer informasjon om **[Today](../functions/function-now-today-istoday.md)**-funksjonen eller [andre funksjoner](../formula-reference.md)?
+    Vil du ha mer informasjon om **[Today](../functions/function-now-today-istoday.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 
 ### <a name="show-data-in-a-gallery"></a>Vise data i et galleri
 
 I denne prosedyren oppretter du en samling kalt **CityPopulations**, som inneholder data om innbyggertallet for forskjellige byer i Europa. Deretter viser du dataene i et galleri som inneholder tre etiketter, og du angir hvilken type data som skal vises i hver etikett.
 
-1. Legg til en knapp, og angi knappens **[OnSelect](properties-core.md)**-egenskap til denne formelen:<br>
-   **ClearCollect(CityPopulations; {City:"London"; Country:"United Kingdom"; Population:8615000}; {City:"Berlin"; Country:"Germany"; Population:3562000}; {City:"Madrid"; Country:"Spain"; Population:3165000}; {City:"Rome"; Country:"Italy"; Population:2874000}; {City:"Paris"; Country:"France"; Population:2273000}; {City:"Hamburg"; Country:"Germany"; Population:1760000}; {City:"Barcelona"; Country:"Spain"; Population:1602000}; {City:"Munich"; Country:"Germany"; Population:1494000}; {City:"Milan"; Country:"Italy"; Population:1344000})**
+1. Legg til en knapp, og angi knappens **[OnSelect](properties-core.md)** -egenskap til denne formelen:<br>
+   **ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
 2. Trykk på F5, velg knappen, og trykk deretter på ESC.
-3. Legg til et tekstgalleri, og sett **[Elementer](properties-core.md)**-egenskapen til **CityPopulations**.
+3. Legg til et tekstgalleri, og sett **[Elementer](properties-core.md)** -egenskapen til **CityPopulations**.
 
     Når galleriet er valgt, viser den høyre ruten alternativene for galleriet.
 4. Angi den øverste listen i **Gallery1**-ruten til **Populasjon**, angi den midterste listen til **By**, og angi den nederste listen som **Land**.
@@ -167,7 +166,7 @@ I denne prosedyren oppretter du en samling kalt **CityPopulations**, som innehol
 
 Til tross for navnet er det ikke nødvendig å bruke en **etikett**-kontroll som en etikett for en annen kontroll. Den kan brukes til å vise alle slags tekstsekvenser.
 
-En **etikett** kan brukes som en knapp eller kobling ved å angi **[OnSelect](properties-core.md)**-virkemåte. Når den brukes på denne måten, foreligger det lignende tilgjengelighetshensyn som ved knapper.
+En **etikett** kan brukes som en knapp eller kobling ved å angi **[OnSelect](properties-core.md)** -virkemåte. Når den brukes på denne måten, foreligger det lignende tilgjengelighetshensyn som ved knapper.
 
 ### <a name="color-contrast"></a>Fargekontrast
 
@@ -179,7 +178,7 @@ Det må være tilstrekkelig fargekontrast mellom:
 ### <a name="screen-reader-support"></a>Støtte for skjermleser
 
 * **[Tekst](properties-core.md)** må foreligge.
-* **[Live](properties-accessibility.md)**  må være satt til **Polite** eller **Assertive** Hvis en skjermleseren skal si endringer til verdien for den **tekst** egenskapen.
+* **[Live](properties-accessibility.md)** bør være satt til **Polite** eller **assertive** hvis en skjerm leser skal annonsere endringer til verdien til **text** -egenskapen.
 
   > [!NOTE]
   > Skjermlesere behandler **etiketter** som knapper når **[TabIndex](properties-accessibility.md)** er null eller større.

@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 09/14/2019
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: dceb9eee8eb5a0ed11a4b44fb2df6d63ba5e9cae
-ms.sourcegitcommit: 5899d37e38ed7111d5a9d9f3561449782702a5e9
+ms.openlocfilehash: 1b9f819ab7e047b68e60b9c78e6f7f000502abb8
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: nb-NO
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71038246"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993332"
 ---
 # <a name="screen-control-in-powerapps"></a>Skjermkontroll i PowerApps
 
@@ -55,13 +54,13 @@ De fleste apper har flere **skjerm**-kontroller som inneholder **[etikett](contr
 
 ## <a name="related-functions"></a>Relaterte funksjoner
 
-[**Distinct**( *DataSource*; *ColumnName* )](../functions/function-distinct.md)
+[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Eksempel
 
 1. Legg til en **[Radio](control-radio.md)** -kontroll, gi den navnet **ScreenFills**, og angi **[Elementer](properties-core.md)** -egenskapen dens til denne verdien:
 
-    `["Red"; "Green"]`
+    `["Red", "Green"]`
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 
@@ -69,17 +68,17 @@ De fleste apper har flere **skjerm**-kontroller som inneholder **[etikett](contr
 
 1. Legg til en **[figur](control-shapes-icons.md)** -kontroll (for eksempel en pil) i **kilde**, og angi **[OnSelect](properties-core.md)** -egenskapen til denne formelen:
 
-    `Navigate(Target; ScreenTransition.Fade)`
+    `Navigate(Target, ScreenTransition.Fade)`
 
     Vil du ha mer informasjon om **[Navigate](../functions/function-navigate.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 
 1. Legg til en **[figur](control-shapes-icons.md)** -kontroll (som for eksempel en pil) i **Mål**, og angi **[OnSelect](properties-core.md)** -egenskapen til denne formelen:
 
-    `Navigate(Source; ScreenTransition.Fade)`
+    `Navigate(Source, ScreenTransition.Fade)`
 
 1. Angi **[Fyll](properties-color-border.md)** -egenskapen for **Mål** til denne formelen:
 
-    `If("Red" in ScreenFills.Selected.Value; RGBA(255; 0; 0; 1); RGBA(54; 176; 75; 1))`
+    `If("Red" in ScreenFills.Selected.Value, RGBA(255, 0, 0, 1), RGBA(54, 176, 75, 1))`
 
 1. Velg **kilde** -skjermen, og velg deretter et alternativ i **[radio](control-radio.md)** -kontrollen mens du holder nede Alt-tasten, og velg deretter **[figur](control-shapes-icons.md)** -kontrollen.
 
