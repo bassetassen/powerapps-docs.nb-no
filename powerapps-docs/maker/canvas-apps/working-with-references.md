@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71989462"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-record-references-and-polymorphic-lookups-in-canvas-apps"></a>Forstå post referanser og polymorfiske oppslag i lerret apper
 
@@ -78,10 +79,10 @@ Du trenger en formel som kan tilpasses dette avviket. Du må også legge til dat
 
 Med disse data kildene på plass kan du bruke denne formelen til å vise navnet på en bruker eller et team:
 
-```powerapps-dot
-If( IsType( ThisItem.Owner, [@Teams] ),
-    "Team: " & AsType( ThisItem.Owner, [@Teams] ).'Team Name',
-    "User: " & AsType( ThisItem.Owner, [@Users] ).'Full Name' )
+```powerapps-comma
+If( IsType( ThisItem.Owner; [@Teams] );
+    "Team: " & AsType( ThisItem.Owner; [@Teams] ).'Team Name';
+    "User: " & AsType( ThisItem.Owner; [@Users] ).'Full Name' )
 ```
 
 > [!div class="mx-imgBorder"]
@@ -100,10 +101,10 @@ Hvis du vil bruke noen av feltene i en post referanse, må du først bruke **AsT
 
 Deretter erstatter du den forrige formelen med denne:
 
-```powerapps-dot
+```powerapps-comma
 IfError(
-    "Team: " & AsType( ThisItem.Owner, [@Teams] ).'Team Name',
-    "User: " & AsType( ThisItem.Owner, [@Users] ).'Full Name' )
+    "Team: " & AsType( ThisItem.Owner; [@Teams] ).'Team Name';
+    "User: " & AsType( ThisItem.Owner; [@Users] ).'Full Name' )
 ```
 
 ## <a name="filter-based-on-an-owner"></a>Filter basert på en eier
@@ -120,8 +121,8 @@ Legg til en **kombinasjons boks** kontroll over galleriet, og angi disse egenska
 
 Hvis du vil filtrere galleriet etter en bestemt bruker som er valgt fra denne kombinasjons boksen, kan du angi **element** -egenskapen for galleriet til denne formelen:
 
-```powerapps-dot
-Filter( Accounts, Owner = ComboBox1.Selected )
+```powerapps-comma
+Filter( Accounts; Owner = ComboBox1.Selected )
 ```
 
 > [!div class="mx-imgBorder"]
@@ -136,7 +137,7 @@ Du kan få litt fancier ved å støtte filtrering ved hjelp av en bruker eller e
 
 1. Lag litt plass nær toppen av skjermen ved å endre størrelsen på galleriet og flytte kombinasjons boksen, sett inn en [ **radio** kontroll](controls/control-radio.md) over galleriet, og angi deretter disse egenskapene for den nye kontrollen:
 
-    - **Elementer**: `[ "All", "Users", "Teams" ]`
+    - **Elementer**: `[ "All"; "Users"; "Teams" ]`
     - **Oppsett**: `Layout.Horizontal`
 
 1. Angi denne egenskapen for **kombinasjons boks** kontrollen (hvis kombinasjons boksen forsvinner, og velg **brukere** i radio-kontrollen):
@@ -152,8 +153,8 @@ Du kan få litt fancier ved å støtte filtrering ved hjelp av en bruker eller e
 
 1. Til slutt angir du **elementer** -egenskapen for **Galleri** -kontrollen til denne formelen:
 
-    ```powerapps-dot
-    Filter( Accounts,
+    ```powerapps-comma
+    Filter( Accounts;
         Radio1.Selected.Value = "All"
         Or (Radio1.Selected.Value = "Users" And Owner = ComboBox1.Selected)
         Or (Radio1.Selected.Value = "Teams" And Owner = ComboBox1_1.Selected)
@@ -179,8 +180,8 @@ Hvis du vil filtrere etter eier typen, kan du bruke **IsType** -funksjonen, men 
 
 Du kan oppdatere **eier** feltet på samme måte som med alle andre oppslag. Slik angir du eieren av den gjeldende valgte kontoen til det første teamet:
 
-```powerapps-dot
-Patch( Accounts, Gallery1.Selected, { Owner: First( Teams ) } )
+```powerapps-comma
+Patch( Accounts; Gallery1.Selected; { Owner: First( Teams ) } )
 ```
 
 Denne Fremgangs måten er ikke forskjellig fra et vanlig oppslag fordi appen kjenner til typen for **første (Team)** . Hvis du vil bruke den første brukeren i stedet, erstatter du den delen med **først (brukere)** . **Patch** -funksjonen vet at **eier** -feltet kan settes til én av disse to enhets typene.
@@ -206,8 +207,8 @@ Slik legger du til denne funksjonen i appen:
 
 1. Velg den kopierte **radio** -kontrollen, og endre deretter disse egenskapene:
 
-    - Elementer: `[ "Users", "Teams" ]`
-    - Standard: `If( IsType( Gallery1.Selected.Owner, Users ), "Users", "Teams" )`
+    - Elementer: `[ "Users"; "Teams" ]`
+    - Standard: `If( IsType( Gallery1.Selected.Owner; Users ); "Users"; "Teams" )`
 
     > [!div class="mx-imgBorder"]
     > @no__t – 0Removed alt valg fra Radio kontrollen @ no__t-1 
@@ -216,9 +217,9 @@ Slik legger du til denne funksjonen i appen:
 
 1. Velg den synlige **kombinasjons boks** -kontrollen, og angi deretter **DefaultSelectedItems** -egenskapen til denne formelen:
 
-    ```powerapps-dot
-    If( IsType( Gallery1.Selected.Owner, Users ),
-        AsType( Gallery1.Selected.Owner, Users ),
+    ```powerapps-comma
+    If( IsType( Gallery1.Selected.Owner; Users );
+        AsType( Gallery1.Selected.Owner; Users );
         Blank()
     )
     ```
@@ -232,9 +233,9 @@ Slik legger du til denne funksjonen i appen:
 
 1. Velg den synlige **kombinasjons boks** kontrollen for Teams, og angi deretter **DefaultSelectedItems** -egenskapen til denne formelen:
 
-    ```powerapps-dot
-    If( IsType( Gallery1.Selected.Owner, Teams ),
-        AsType( Gallery1.Selected.Owner, Teams ),
+    ```powerapps-comma
+    If( IsType( Gallery1.Selected.Owner; Teams );
+        AsType( Gallery1.Selected.Owner; Teams );
         Blank()
     )
     ```
@@ -246,10 +247,10 @@ Slik legger du til denne funksjonen i appen:
 
 1. Angi **OnSelect** -egenskapen for knappen til denne formelen:
 
-    ```powerapps-dot
-    Patch( Accounts, Gallery1.Selected,
-        { Owner: If( Radio1_1.Selected.Value = "Users",
-                ComboBox1_2.Selected,
+    ```powerapps-comma
+    Patch( Accounts; Gallery1.Selected;
+        { Owner: If( Radio1_1.Selected.Value = "Users";
+                ComboBox1_2.Selected;
                 ComboBox1_3.Selected ) } )
     ```
 
@@ -293,10 +294,10 @@ Du kan vise et **eier** felt i et skjema ved å legge til et egen definert kort.
 
 1. Sett inn en **etikett** -kontroll i det egen definerte kortet, og angi deretter **tekst** -egenskapen for etiketten til formelen du brukte i galleriet:
 
-    ```powerapps-dot
-    If( IsType( ThisItem.Owner, Teams ),
-        "Team: " & AsType( ThisItem.Owner, Teams ).'Team Name',
-        "User: " & AsType( ThisItem.Owner, Users ).'Full Name' )
+    ```powerapps-comma
+    If( IsType( ThisItem.Owner; Teams );
+        "Team: " & AsType( ThisItem.Owner; Teams ).'Team Name';
+        "User: " & AsType( ThisItem.Owner; Users ).'Full Name' )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -335,14 +336,14 @@ Behandling av feltene **kunde** og **eier** er så likt at du kan kopiere appen 
 | **Element** egenskap for Galleri | **Plan** | **Kontaktmappe** |
 | **Element** -egenskapen for skjemaet | **Plan** | **Kontaktmappe** |
 | Det første argumentet for **oppdatering**<br>i **OnSelect** -egenskapen for knappen | **Plan** | **Kontaktmappe** |
-| **Element** -egenskapen til filter radioen | **[&nbsp; "alle", &nbsp; "brukere", &nbsp; "Teams" &nbsp;]** | **[&nbsp; «alle», &nbsp;-kontoer», &nbsp; kontakter &nbsp;]** |
-| **Element** egenskap for oppdaterings radio | **[«Brukere», «Team»]** | **[«Kontoer», «kontakter»]** |
+| **Element** -egenskapen til filter radioen | **[&nbsp; "alle"; &nbsp; "brukere"; &nbsp; "Teams" &nbsp;]** | **[&nbsp; «alle»; &nbsp;-kontoer»; &nbsp; kontakter &nbsp;]** |
+| **Element** egenskap for oppdaterings radio | **[«Brukere»; «Team»]** | **[«Kontoer»; «kontakter»]** |
 | **Synlig** -egenskapen for kombinasjons boksen | **"Brukere"** og **"Teams"** | **«Kontoer»** og **«kontakter»** |
 
 Det nye galleriet skal for eksempel ha denne **element** -egenskapen:
 
-```powerapps-dot
-Filter( Contacts,
+```powerapps-comma
+Filter( Contacts;
     Radio1.Selected.Value = "All"
     Or (Radio1.Selected.Value = "Accounts" And 'Company Name' = ComboBox1.Selected)
     Or (Radio1.Selected.Value = "Contacts" And 'Company Name' = ComboBox1_1.Selected)
@@ -360,11 +361,11 @@ To viktige forskjeller mellom **kunden** og **eieren** krever en oppdatering av 
 
 Begge disse endringene er i den samme formelen, som vises i det egen definerte kortet i skjemaet, i tillegg til i **tekst** -egenskapen i galleriets etikett-kontroll:
 
-```powerapps-dot
-If( IsBlank( ThisItem.'Company Name' ), "",
-    IsType( ThisItem.'Company Name', [@Accounts] ),
-        "Account: " & AsType( ThisItem.'Company Name', [@Accounts] ).'Account Name',
-    "Contact: " & AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name'
+```powerapps-comma
+If( IsBlank( ThisItem.'Company Name' ); "";
+    IsType( ThisItem.'Company Name'; [@Accounts] );
+        "Account: " & AsType( ThisItem.'Company Name'; [@Accounts] ).'Account Name';
+    "Contact: " & AsType( ThisItem.'Company Name'; [@Contacts] ).'Full Name'
 )
 ```
 
@@ -396,12 +397,12 @@ På nytt må du legge til en data kilde: denne gangen for **telefakser**. Velg *
 
 En viktig forskjell for **angående** er at det ikke er begrenset til **kontoer** og **kontakter**. Listen over enheter er faktisk utvidbar med egen definerte enheter. Meste parten av appen kan ha plass til dette punktet uten endringer, men du må oppdatere formelen for etiketten i galleriet og skjemaet:
 
-```powerapps-dot
-If( IsBlank( ThisItem.Regarding ), "",
-    IsType( ThisItem.Regarding, [@Accounts] ),
-        "Account: " & AsType( ThisItem.Regarding, [@Accounts] ).'Account Name',
-    IsType( ThisItem.Regarding, [@Contacts] ),
-        "Contacts: " & AsType( ThisItem.Regarding, [@Contacts] ).'Full Name',
+```powerapps-comma
+If( IsBlank( ThisItem.Regarding ); "";
+    IsType( ThisItem.Regarding; [@Accounts] );
+        "Account: " & AsType( ThisItem.Regarding; [@Accounts] ).'Account Name';
+    IsType( ThisItem.Regarding; [@Contacts] );
+        "Contacts: " & AsType( ThisItem.Regarding; [@Contacts] ).'Full Name';
     ""
 )
 ```
@@ -502,11 +503,11 @@ Poster kommer fra **aktivitets** enheten, men du kan likevel bruke **IsType** -f
 
 Ved å bruke denne formelen kan du vise oppførings typen i en etikett-kontroll i galleriet:
 
-```powerapps-dot
-If( IsType( ThisItem, [@Faxes] ), "Fax",
-    IsType( ThisItem, [@'Phone Calls'] ), "Phone Call",
-    IsType( ThisItem, [@'Email Messages'] ), "Email Message",
-    IsType( ThisItem, [@Chats] ), "Chat",
+```powerapps-comma
+If( IsType( ThisItem; [@Faxes] ); "Fax";
+    IsType( ThisItem; [@'Phone Calls'] ); "Phone Call";
+    IsType( ThisItem; [@'Email Messages'] ); "Email Message";
+    IsType( ThisItem; [@Chats] ); "Chat";
     "Unknown"
 )
 ```
@@ -516,14 +517,14 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
 
 Du kan også bruke **AsType** for å få tilgang til feltene av den bestemte typen. Denne formelen bestemmer for eksempel typen for hver aktivitet og, for telefon samtaler, viser telefon nummeret og samtale retningen fra **Telefon nummer** enheten:
 
-```powerapps-dot
-If( IsType( ThisItem, [@Faxes] ), "Fax",
-    IsType( ThisItem, [@'Phone Calls'] ),
+```powerapps-comma
+If( IsType( ThisItem; [@Faxes] ); "Fax";
+    IsType( ThisItem; [@'Phone Calls'] );
        "Phone Call: " &
-       AsType( ThisItem, [@'Phone Calls'] ).'Phone Number' &
-       " (" & AsType( ThisItem, [@'Phone Calls'] ).Direction & ")",
-    IsType( ThisItem, [@'Email Messages'] ), "Email Message",
-    IsType( ThisItem, [@Chats] ), "Chat",
+       AsType( ThisItem; [@'Phone Calls'] ).'Phone Number' &
+       " (" & AsType( ThisItem; [@'Phone Calls'] ).Direction & ")";
+    IsType( ThisItem; [@'Email Messages'] ); "Email Message";
+    IsType( ThisItem; [@Chats] ); "Chat";
     "Unknown"
 )
 ```
@@ -559,7 +560,7 @@ Andre enn denne forskjellen bruker du **angående** -oppslag på samme måte som
 >
 > Det er imidlertid mulig **å gjøre en** -til-mange-relasjon tilgjengelig, slik at du kan filtrere en liste over notater for en post som er aktivert for vedlegg. Du kan også bruke [**Relater**](functions/function-relate-unrelate.md) -funksjonen til å legge til et notat i **Notes** -tabellen for en post, men notatet må opprettes først, som i dette eksemplet:
 >
->`Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note" } ) )`
+>`Relate( ThisItem.Notes; Patch( Notes; Defaults( Notes ); { Title: "A new note" } ) )`
 
 ## <a name="activity-parties"></a>Aktivitets parter
 

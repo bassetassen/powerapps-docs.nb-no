@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71994846"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="color-enumeration-and-colorfade-colorvalue-and-rgba-functions-in-powerapps"></a>Color-opplisting og funksjonene ColorFade, ColorValue og RGBA i PowerApps
 
@@ -62,12 +63,12 @@ Hvis du angir en **farge** opplistings verdi eller bygger en **ColorValue** -for
 
 - *CSSColor* – obligatorisk.  En fargedefinisjon for gjennomgripende stilark (CSS). Du kan angi et navn, for eksempel **OliveDrab**, eller en heksadesimal verdi, for eksempel **#6b8e23** eller **#7fffd420**. Heksadesimale verdier kan ta formen av enten #*rrggbb* eller #*rrggbbaa*.
 
-**RGBA**( *Red*, *Green*, *Blue*, *Alpha* )
+**RGBA**( *Red*; *Green*; *Blue*; *Alpha* )
 
 - *Red*, *Green*, *Blue* – obligatorisk.  Farge komponent verdier, som er fra 0 (ingen metning) til 255 (full metning).
 - *Alpha* – obligatorisk.  Alfa komponent, som strekker seg fra 0 (helt gjennomsiktig) til 1 (fullstendig ugjennomsiktig). Du kan også bruke en prosentandel, fra 0 til 100 %.
 
-**ColorFade**( *Color*, *FadeAmount* )
+**ColorFade**( *Color*; *FadeAmount* )
 
 - *Color* – obligatorisk.  En fargeverdi, for eksempel **Color.Red**, eller utdataene fra **ColorValue** eller **RGBA**.
 - *FadeAmount* – obligatorisk.  Et tall mellom -1 og 1. -1 gjør en farge fullstendig mørkere, 0 påvirker ikke fargen, og 1 gjør en farge hvit lysere. Du kan også bruke en prosent del fra-100% til 100%.

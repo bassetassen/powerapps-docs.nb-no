@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71985660"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-delegation-in-a-canvas-app"></a>Forstå delegering i en lerretsapp
 PowerApps inneholder et kraftig sett med funksjoner for filtrering, sortering og forming av data tabeller i en lerret-app: Funksjonene **[filter](functions/function-filter-lookup.md)** , **[sort](functions/function-sort.md)** og **[AddColumns](functions/function-table-shaping.md)** til å gi navn til bare noen få. Med disse funksjonene kan du gi brukerne fokusert tilgang til informasjonen de trenger. For de med databasebakgrunn vil bruk av disse funksjonene tilsvare skriving av en databasespørring.
@@ -93,10 +94,10 @@ Andre mengdefunksjoner, for eksempel **[StdevP](functions/function-aggregates.md
 
 Som i dette eksemplet bruker også beslutningstakere **AddColumns** og **LookUp** til å flette inn informasjon fra én tabell til en annen, vanligvis kalt en kobling i database språket:
 
-```powerapps-dot
-AddColumns( Products, 
-    "Supplier Name", 
-    LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name 
+```powerapps-comma
+AddColumns( Products; 
+    "Supplier Name"; 
+    LookUp( Suppliers; Suppliers.ID = Product.SupplierID ).Name 
 )
 ```
 

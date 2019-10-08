@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992483"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="download-launch-and-param-functions-in-canvas-apps"></a>Funksjonene Last ned, start og param i lerret-apper
 Laster ned eller åpner en nettside eller en app med parametere.  
@@ -37,7 +38,7 @@ I Internet Explorer og Microsoft Edge åpner **Start** funksjonen et nettsted el
 
 * *Adresse* – obligatorisk.  Adressen til en nettressurs som skal lastes ned.
 
-**Launch**( *Adresse* [, *ParameterName1*, *ParameterValue1*,...])
+**Launch**( *Adresse* [; *ParameterName1*; *ParameterValue1*;...])
 
 * *Adresse* – obligatorisk.  Adressen til en nettside eller ID-en til en app som skal startes.
 * *Parameternavn* – valgfritt.  Parameternavn.

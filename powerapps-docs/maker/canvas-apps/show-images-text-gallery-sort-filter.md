@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71995591"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="show-sort-and-filter-data-in-a-powerapps-gallery"></a>Å vise, sortere og filtrere data i et PowerApps-galleri
 Opprett et galleri for å vise bilder og tekst om flere produkter, og sorter og filtrer informasjonen.
@@ -120,7 +121,7 @@ I denne fremgangsmåten skal vi sortere elementene i galleriet i stigende og syn
 1. Velg et hvilket som helst element i galleriet *unntatt* det første.
 2. **[Element](controls/properties-core.md)** -egenskapen er satt til Beholdning (navnet på samlingen). Endre det til følgende:  
    
-    **Sort(Inventory, ProductName)**
+    **Sort(Inventory; ProductName)**
    
     Når du gjør dette er elementene i galleriet allerede sortert etter navnet på produktet i stigende rekkefølge:  ![][11]  
    
@@ -133,11 +134,11 @@ I denne fremgangsmåten skal vi sortere elementene i galleriet i stigende og syn
 2. Konfigurer glidebryteren slik at brukere ikke kan angi en verdi utenfor området for enheter på lager:  
    
    1. Velg **Min** på **Innhold**-fanen, og skriv deretter inn følgende uttrykk:  
-      ```Min(Inventory, UnitsInStock)```  
+      ```Min(Inventory; UnitsInStock)```  
    2. Velg **Maks** på **Innhold**-fanen, og skriv deretter inn følgende uttrykk:  
-      ```Max(Inventory, UnitsInStock)```
+      ```Max(Inventory; UnitsInStock)```
 3. Velg et hvilket som helst element i galleriet *unntatt* det første. Angi **[Element](controls/properties-core.md)** -egenskapen for galleriet til følgende uttrykk:  
-   ```Filter(Inventory, UnitsInStock<=StockFilter.Value)```
+   ```Filter(Inventory; UnitsInStock<=StockFilter.Value)```
 4. Juster glidebryteren I **Forhåndsvisning** til en verdi som er mellom det høyeste og laveste antallet i galleriet. Galleriet viser bare de produktene som er mindre enn verdien du har valgt i galleriet når du justerer glidebryteren:  
    ![][13]  
 
@@ -146,7 +147,7 @@ La oss nå legge til filteret:
 1. Gå tilbake til utformeren.
 2. Velg **Tekst** på **Sett inn**-fanen, velg **Tekstinndata**, og endre navnet på den nye kontrollen til **NameFilter**. Flytt tekst-kontrollen nedenfor glidebryteren.
 3. Angi **[Element](controls/properties-core.md)** -egenskapen for galleriet til følgende uttrykk:  
-   ```Filter(Inventory, UnitsInStock<=StockFilter.Value && NameFilter.Text in ProductName)```
+   ```Filter(Inventory; UnitsInStock<=StockFilter.Value && NameFilter.Text in ProductName)```
 4. Angi glidebryteren til *30* i **Forhåndsvisning**, og skriv bokstaven *g* i kontrollen for tekstinndata. Galleriet viser det eneste produktet med mindre enn 30 enheter på lager *og* som har et navn med bokstaven «g»:  
    ![][14]  
 

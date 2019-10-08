@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71991925"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="trim-and-trimends-functions-in-powerapps"></a>Funksjonene Trim og TrimEnds i PowerApps
 Fjerner ekstra mellomrom fra en tekststreng.
@@ -53,7 +54,7 @@ Følgende eksempler bruker en enkeltkolonnesamling kalt **Mellomrom**, som inneh
 ![](media/function-trim/input-strings.png)
 
 Hvis du vil opprette denne samlingen, angir du **OnSelect**-egenskapen til en **[Button](../controls/control-button.md)** -kontroll til denne formelen, åpner Forhåndsvisningsmodus, og deretter klikker eller trykker du på knappen:
-<br>**ClearCollect( Spaces, [ "&nbsp;&nbsp;&nbsp;Jane&nbsp;&nbsp;&nbsp;Doe&nbsp;&nbsp;&nbsp;", "&nbsp;&nbsp;&nbsp;&nbsp;Jack&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;Jill", "Already&nbsp;trimmed", "&nbsp;&nbsp;&nbsp;Venus,&nbsp;&nbsp;&nbsp;Earth,&nbsp;&nbsp;&nbsp;Mars&nbsp;&nbsp;", "Oil&nbsp;and&nbsp;Water&nbsp;&nbsp;&nbsp;" ] )**
+<br>**ClearCollect( Spaces; [ "&nbsp;&nbsp;&nbsp;Jane&nbsp;&nbsp;&nbsp;Doe&nbsp;&nbsp;&nbsp;"; "&nbsp;&nbsp;&nbsp;&nbsp;Jack&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;Jill"; "Already&nbsp;trimmed"; "&nbsp;&nbsp;&nbsp;Venus,&nbsp;&nbsp;&nbsp;Earth,&nbsp;&nbsp;&nbsp;Mars&nbsp;&nbsp;"; "Oil&nbsp;and&nbsp;Water&nbsp;&nbsp;&nbsp;" ] )**
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |

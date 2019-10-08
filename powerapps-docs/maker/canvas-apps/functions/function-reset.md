@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71984057"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="reset-function-in-powerapps"></a>Reset-funksjonen i PowerApps
 Tilbakestiller en kontroll til standardverdien, forkaster brukerendringer.  
@@ -28,7 +29,7 @@ Tilbakestiller en kontroll til standardverdien, forkaster brukerendringer.
 
 Du kan ikke tilbakestille kontroller som er innenfor en [**Galleri-** ](../controls/control-gallery.md) eller [**Redigeringsskjema**](../controls/control-form-detail.md)-kontroll utenfor disse kontrollene.  Du kan tilbakestille kontroller fra formler i kontrollene innenfor det samme galleriet eller skjemaet.  Du kan også tilbakestille alle kontrollene i et skjema med [**ResetForm**](function-form.md)-funksjonen. 
 
-Å bruke **Reset**-funksjonen er et alternativ til å veksle mellom **Reset**-egenskapen for inndatakontroller, og dette foretrekkes.  **Reset**-egenskapen kan være et bedre valg hvis mange kontroller må tilbakestilles sammen fra flere formler.  Å veksle mellom **Reset**-egenskapen kan gjøres fra en [**Knapp**](../controls/control-button.md)-kontroll med formelen **Reset = Button.Pressed** eller fra en variabel med **Reset = MyVar** og veksling mellom **MyVar** og formelen **Button.OnSelect = Set( MyVar, true ); Set( MyVar, false )** .    
+Å bruke **Reset**-funksjonen er et alternativ til å veksle mellom **Reset**-egenskapen for inndatakontroller, og dette foretrekkes.  **Reset**-egenskapen kan være et bedre valg hvis mange kontroller må tilbakestilles sammen fra flere formler.  Å veksle mellom **Reset**-egenskapen kan gjøres fra en [**Knapp**](../controls/control-button.md)-kontroll med formelen **Reset = Button.Pressed** eller fra en variabel med **Reset = MyVar** og veksling mellom **MyVar** og formelen **Button.OnSelect = Set( MyVar; true );; Set( MyVar; false )** .    
 
 Inndatakontroller er også tilbakestilt når **Standard**-egenskapen endres.
 

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71995642"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="overview-of-the-meeting-screen-template-for-canvas-apps"></a>Oversikt over malen for møte skjermen for lerret apper
 
@@ -58,10 +59,10 @@ Noen nyttige notater:
 * Hvis du vil opprette et møte, må du legge til minst én person som deltaker, oppgi et emne og velge et møte tids punkt i **tids plan** -fanen.
 * Når du har sendt møte innkallelsen, fjernes all informasjon om dette møtet.
 * **OnSelect** -setningen til Send-ikonet (hjørnet øverst til høyre) inneholder denne formelen:
-    ```powerapps-dot
-    Set( _myCalendarName, 
-        LookUp( 'Office365'.CalendarGetTables().value, DisplayName = "Calendar" ).Name 
-    );
+    ```powerapps-comma
+    Set( _myCalendarName; 
+        LookUp( 'Office365'.CalendarGetTables().value; DisplayName = "Calendar" ).Name 
+    );;
     ```
 * «Kalender» er standard visnings navn for de fleste Office-brukerens kalendere, men organisasjonen kan være forskjellig. I så fall kan du endre «kalender» til ønsket vilkår for organisasjonen.
 * Du får en feil melding hvis du prøver å planlegge et møte som forekommer tidligere, eller legge til mer enn 20 personer i et møte.

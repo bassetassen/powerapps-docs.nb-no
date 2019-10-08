@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71984945"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="find-function-in-powerapps"></a>Find-funksjonen i PowerApps
 Finner en tekststreng inni en annen tekststreng, hvis den finnes.
@@ -29,7 +30,7 @@ Finner en tekststreng inni en annen tekststreng, hvis den finnes.
 **Find** returnerer startposisjonen til tekststrengen som ble funnet.  Posisjon 1 er det første tegnet i tekststrengen. **Find** returnerer *tom* hvis tekststrengen du søker i ikke inneholder tekststrengen du søker etter.
 
 ## <a name="syntax"></a>Syntaks
-**Find**( *FindString*, *WithinString* [, *StartingPosition* ] )
+**Find**( *FindString*; *WithinString* [; *StartingPosition* ] )
 
 * *FindString* – obligatorisk.  Tekststrengen du vil finne.
 * *WithinString* – obligatorisk.  Tekststrengen som inneholder tekststrengen du vil finne.

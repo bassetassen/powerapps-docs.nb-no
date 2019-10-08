@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71985505"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="concurrent-function-in-powerapps"></a>Concurrent-funksjonen i PowerApps
 Evaluerer flere formler samtidig mot hverandre.
@@ -30,7 +31,7 @@ Bruk **Concurrent** i egenskapen [**OnStart**](../controls/control-screen.md) i 
 
 Du kan ikke forutse rekkefølgen formlene i **Concurrent**-funksjonen begynner og avslutter evalueringen. Formler i **Concurrent**-funksjonen bør ikke inneholde avhengigheter på andre formler i samme **Concurrent**-funksjon, og PowerApps viser en feilmelding hvis du prøver dette. Du kan helt trygt ha avhengigheter på formler utenfor **Concurrent**-funksjonen, da de fullføres før **Concurrent**-funksjonen starter. Formler etter **samtidige** funksjoner kan trygt ta avhengigheter på formler i: alle full fører før **samtidige** funksjoner full føres og flyttes til den neste formelen i en kjede (Hvis du **bruker operatoren** ). Vær oppmerksom på umerkelige rekkefølgeavhengigheter hvis du påkaller funksjoner eller tjenestemetoder som har bivirkninger.
 
-Du kan koble sammen formler med operatoren **;** **i et argument for samtidig**. For eksempel: **Concurrent( Set( a, 1 ); Set( b, a+1 ), Set( x, 2 ); Set( y, x+2 ) )** evaluerer **Set( a, 1 ); Set( b, a+1 )** samtidig med **Set( x, 2 ); Set( y, x+2 )** . I dette tilfellet er det helt greit med avhengigheter inni formlene: **a** angis før **b**, og **x** angis før **y**.
+Du kan koble sammen formler med operatoren **;** **i et argument for samtidig**. For eksempel: **Concurrent( Set( a; 1 );; Set( b; a+1 ); Set( x; 2 );; Set( y; x+2 ) )** evaluerer **Set( a; 1 );; Set( b; a+1 )** samtidig med **Set( x; 2 );; Set( y; x+2 )** . I dette tilfellet er det helt greit med avhengigheter inni formlene: **a** angis før **b**, og **x** angis før **y**.
 
 Det kan hende at bare en håndfull formler evalueres samtidig, avhengig av enheten eller nettleseren som kjører appen. **Concurrent** bruker de tilgjengelige egenskapene og avsluttes ikke før alle formlene har blitt evaluert.
 
@@ -39,7 +40,7 @@ Hvis du aktiverer **Feiladministrasjon på formelnivå** (i avanserte innstillin
 Du kan bare bruke **Concurrent** i [formler for virkemåte](../working-with-formulas-in-depth.md).
 
 ## <a name="syntax"></a>Syntaks
-**Concurrent**( *Formula1*, *Formula2* [, ...] )
+**Concurrent**( *Formula1*; *Formula2* [; ...] )
 
 * *Formula* – obligatorisk. Formler som skal evalueres samtidig. Du må oppgi minst to formler.
 
@@ -55,11 +56,11 @@ Du kan bare bruke **Concurrent** i [formler for virkemåte](../working-with-form
 
 2. Legg til en **[Knapp](../controls/control-button.md)** -kontroll, og angi **OnSelect**-egenskapen til denne formelen:
 
-    ```powerapps-dot
-    ClearCollect( Product, '[SalesLT].[Product]' );
-    ClearCollect( Customer, '[SalesLT].[Customer]' );
-    ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ); 
-    ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
+    ```powerapps-comma
+    ClearCollect( Product; '[SalesLT].[Product]' );;
+    ClearCollect( Customer; '[SalesLT].[Customer]' );;
+    ClearCollect( SalesOrderDetail; '[SalesLT].[SalesOrderDetail]' );; 
+    ClearCollect( SalesOrderHeader; '[SalesLT].[SalesOrderHeader]' )
     ```
 
 3. Slå på utviklerverktøyene for å overvåke nettverkstrafikken mens appen kjører, i [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) eller [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/).
@@ -78,12 +79,12 @@ Du kan bare bruke **Concurrent** i [formler for virkemåte](../working-with-form
 
 1. Legg til en ny **[Knapp](../controls/control-button.md)** -kontroll, og angi **OnSelect**-egenskapen til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Concurrent( 
-        ClearCollect( Product, '[SalesLT].[Product]' ), 
-        ClearCollect( Customer, '[SalesLT].[Customer]' ),
-        ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),
-        ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
+        ClearCollect( Product; '[SalesLT].[Product]' ); 
+        ClearCollect( Customer; '[SalesLT].[Customer]' );
+        ClearCollect( SalesOrderDetail; '[SalesLT].[SalesOrderDetail]' );
+        ClearCollect( SalesOrderHeader; '[SalesLT].[SalesOrderHeader]' )
     )
     ```
 
@@ -111,19 +112,19 @@ Du kan bare bruke **Concurrent** i [formler for virkemåte](../working-with-form
 
 3. Legg til en **Knapp**-kontroll, og angi **OnSelect**-egenskapen til denne formelen:
 
-    ```powerapps-dot
-    Set( StartTime, Value( Now() ) );
+    ```powerapps-comma
+    Set( StartTime; Value( Now() ) );;
     Concurrent(
-        Set( FRTrans, MicrosoftTranslator.Translate( TextInput1.Text, "fr" ) ); 
-            Set( FRTransTime, Value( Now() ) ),
-        Set( DETrans, MicrosoftTranslator.Translate( TextInput1.Text, "de" ) ); 
-            Set( DETransTime, Value( Now() ) )
-    );
-    Collect( Results,
+        Set( FRTrans; MicrosoftTranslator.Translate( TextInput1.Text; "fr" ) );; 
+            Set( FRTransTime; Value( Now() ) );
+        Set( DETrans; MicrosoftTranslator.Translate( TextInput1.Text; "de" ) );; 
+            Set( DETransTime; Value( Now() ) )
+    );;
+    Collect( Results;
         { 
-            Input: TextInput1.Text,
-            French: FRTrans, FrenchTime: FRTransTime - StartTime, 
-            German: DETrans, GermanTime: DETransTime - StartTime, 
+            Input: TextInput1.Text;
+            French: FRTrans; FrenchTime: FRTransTime - StartTime; 
+            German: DETrans; GermanTime: DETransTime - StartTime; 
             FrenchFaster: FRTransTime < DETransTime
         }
     )

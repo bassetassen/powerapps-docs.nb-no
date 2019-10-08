@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71989343"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="overview-of-the-email-screen-template-for-canvas-apps"></a>Oversikt over malen for e-postskjermen for lerret apper
 
@@ -86,10 +87,10 @@ Dette gjør at brukerne kan sende ett enkelt bilde med e-post som et vedlegg.
    Dette hindrer at kontrollen sitter foran **PeopleBrowseGallery** -kontrollen.
 1. Endre **Height** -egenskapen for **EmailPeopleGallery** til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Min( 
         ( EmailPeopleGallery1.TemplateHeight + EmailPeopleGallery1.TemplatePadding * 2 ) *
-            RoundUp( CountRows( EmailPeopleGallery1.AllItems ) / 2, 0 ), 
+            RoundUp( CountRows( EmailPeopleGallery1.AllItems ) / 2; 0 ); 
         304
     )
     ```
@@ -102,31 +103,31 @@ Dette gjør at brukerne kan sende ett enkelt bilde med e-post som et vedlegg.
     
 1. Endre **OnSelect** -egenskapen for **iconMail** -kontrollen til denne formelen:
 
-    ```powerapps-dot
-    Set( _emailRecipientString, Concat(MyPeople, Mail & ";") );
-    If( IsBlank( UploadedImage1 ),
-        'Office365'.SendEmail( _emailRecipientString, 
-            TextEmailSubject1.Text, 
-            TextEmailMessage1.Text, 
+    ```powerapps-comma
+    Set( _emailRecipientString; Concat(MyPeople; Mail & ";") );;
+    If( IsBlank( UploadedImage1 );
+        'Office365'.SendEmail( _emailRecipientString; 
+            TextEmailSubject1.Text; 
+            TextEmailMessage1.Text; 
             { Importance: "Normal" }
-        ),
-        'Office365'.SendEmail( _emailRecipientString, 
-            TextEmailSubject1.Text, 
-            TextEmailMessage1.Text, 
+        );
+        'Office365'.SendEmail( _emailRecipientString; 
+            TextEmailSubject1.Text; 
+            TextEmailMessage1.Text; 
             {
-                Importance: "Normal",
+                Importance: "Normal";
                 Attachments: Table(
                     {
-                        Name: "Image.jpg", 
+                        Name: "Image.jpg"; 
                         ContentBytes: UploadedImage1.Image
                     }
                 )
             }
         )
-    );
-    Reset( TextEmailSubject1 );
-    Reset( TextEmailMessage1 );
-    Reset( AddMediaButton1 );
+    );;
+    Reset( TextEmailSubject1 );;
+    Reset( TextEmailMessage1 );;
+    Reset( AddMediaButton1 );;
     Clear( MyPeople )
     ```
     

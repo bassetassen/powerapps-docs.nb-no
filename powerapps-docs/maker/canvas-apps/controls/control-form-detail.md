@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71986715"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="edit-form-and-display-form-controls-in-powerapps"></a>Kontroller for Redigeringsskjema og Visningsskjema i PowerApps
 Vis, rediger og opprett en post i en datakilde.
@@ -37,7 +38,7 @@ Du kan også angi **Element**-egenskapen for et skjema ved hjelp av **Rullegardi
 
 ```First(Accounts)```
 
-```Lookup(Accounts, "Fabrikam" in name)```
+```Lookup(Accounts; "Fabrikam" in name)```
 
 Hver enkelt skjemakontroll inneholder én eller flere **[Kort](control-card.md)** -kontroller. Ved å angi **[DataField](control-card.md)** -egenskapen for et kort [angir du hvilket felt kortet viser samt andre detaljer](../add-form.md).
 
@@ -152,7 +153,7 @@ Skjemaet bytter fra **Ny**-modus til **Redigeringsmodus** når noen av disse end
 
 * Denne egenskapen gjelder bare for **Redigeringsskjema**-kontrollen.
 * Bruk denne egenskapen for å trekke ut feltverdiene fra kortene i kontrollen.  Deretter kan du bruke disse verdiene til å oppdatere datakilden manuelt med et **[Patch](../functions/function-patch.md)** -funksjonskall eller en annen metode som eksponeres av tilkoblingen.  Du trenger ikke å bruke denne egenskapen hvis du bruker **[SubmitForm](../functions/function-form.md)** -funksjonen.
-* Denne egenskapen returnerer en post med verdier.  Hvis for eksempel skjema-kontrollen inneholder kort kontroller for **navn** -og **antall** -felt, og verdiene i **[oppdaterings](control-card.md)** egenskapene for disse kortene returnerer «kontroll program» og 10, blir **oppdaterings** egenskapen for skjema-kontrollen Returnerer **{Name: "Kontroll program", antall: 10}** .
+* Denne egenskapen returnerer en post med verdier.  Hvis for eksempel skjema-kontrollen inneholder kort kontroller for **navn** -og **antall** -felt, og verdiene i **[oppdaterings](control-card.md)** egenskapene for disse kortene returnerer «kontroll program» og 10, blir **oppdaterings** egenskapen for skjema-kontrollen Returnerer **{Name: "Kontroll program"; antall: 10}** .
 
 **Valid** – om kontrollene **[Kort](control-card.md)** eller **Redigeringsskjema** inneholder valide oppføringer, klare til å sendes til datakilden.
 
@@ -160,7 +161,7 @@ Skjemaet bytter fra **Ny**-modus til **Redigeringsmodus** når noen av disse end
 * **Gyldig**-egenskapen til en **Skjema**-kontroll samler **Gyldig**-egenskapene for alle **[Kort](control-card.md)** -kontrollene i skjemaet. **Gyldig**-egenskapen for et skjema er **sann** bare hvis dataene i alle kortene i skjemaet er gyldige. Hvis ikke er **Gyldig**-egenskapen for skjemaet **usann**.
 * Angi **DisplayMode** for knappen til denne formelen for å aktivere en knapp så den lagrer endringer bare når dataene i et skjema er gyldige, men fremdeles ikke har blitt sendt inn:
   
-    **SubmitButton.DisplayMode = If(IsBlank( Form.Error ) || Form.Valid, DisplayMode.Edit, DisplayMode.Disabled)**
+    **SubmitButton.DisplayMode = If(IsBlank( Form.Error ) || Form.Valid; DisplayMode.Edit; DisplayMode.Disabled)**
 
 ## <a name="additional-properties"></a>Tilleggsegenskaper
 **[BorderColor](properties-color-border.md)** – fargen på kontrollens kantlinje.

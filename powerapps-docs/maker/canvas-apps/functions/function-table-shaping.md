@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992221"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="addcolumns-dropcolumns-renamecolumns-and-showcolumns-functions-in-powerapps"></a>Funksjonene AddColumns, DropColumns, RenameColumns og ShowColumns i PowerApps
 Former en [tabell](../working-with-tables.md) ved å legge til, slippe, gi nytt navn til og velge dens [kolonner](../working-with-tables.md#columns).
@@ -53,10 +54,10 @@ Resultatet er en ny tabell med transformasjonen som brukes for alle disse funksj
 
 Argumentene til disse funksjonene støtter delegering. Eksempel: en **filter** funksjon som brukes som et argument for å hente relaterte poster, søker gjennom alle oppføringer, selv om **[dbo]. [ AllListings]-** data kilden inneholder en million rader:
 
-```powerapps-dot
-AddColumns( RealEstateAgents, 
-    "Listings",  
-    Filter(  '[dbo].[AllListings]', ListingAgentName = AgentName ) 
+```powerapps-comma
+AddColumns( RealEstateAgents; 
+    "Listings";  
+    Filter(  '[dbo].[AllListings]'; ListingAgentName = AgentName ) 
 )
 ```
 
@@ -65,24 +66,24 @@ Utdataene til disse funksjonene er imidlertid underlagt [grensen for antall post
 Hvis du bruker **AddColumns** på denne måten, må **filteret** foreta separate kall til data kilden for hver av disse første postene i **RealEstateAgents**, noe som for år saker mye nettverks chatter. Hvis **[dbo]. [ AllListings]** er liten nok og endres ikke ofte, kan du kalle **Collect** -funksjonen i [**OnStart**](signals.md#app) for å bufre data kilden i appen når den starter. Som et alternativ kan du omstrukturere appen slik at du bare drar i de relaterte postene når brukeren ber om dem.  
 
 ## <a name="syntax"></a>Syntaks
-**AddColumns**( *Table*, *ColumnName1*, *Formula1* [, *ColumnName2*, *Formula2*, ... ] )
+**AddColumns**( *Table*; *ColumnName1*; *Formula1* [; *ColumnName2*; *Formula2*; ... ] )
 
 * *Table* – obligatorisk.  Tabellen som funksjonen skal arbeide med.
 * *ColumnName(s)* – obligatorisk. Navn på kolonnen(e) som skal legges til.  Du må angi en streng (for eksempel **"Name"** inkludert anførselstegn) for dette argumentet.
 * *Formula(s)* – obligatorisk.  Formlene som skal evalueres for hver post. Resultatet er lagt til som verdien for den tilsvarende nye kolonnen. Du kan referere til andre kolonner i tabellen i denne formelen.
 
-**DropColumns**( *Table*, *ColumnName1* [, *ColumnName2*, ... ] )
+**DropColumns**( *Table*; *ColumnName1* [; *ColumnName2*; ... ] )
 
 * *Table* – obligatorisk.  Tabellen som funksjonen skal arbeide med.
 * *ColumnName(s)* – obligatorisk. Navn på kolonnen(e) som skal utelates. Du må angi en streng (for eksempel **"Name"** inkludert anførselstegn) for dette argumentet.
 
-**RenameColumns**( *tabell*, *OldColumnName1*, *NewColumnName1* [, *OldColumnName2*, *NewColumnName2*,...])
+**RenameColumns**( *tabell*; *OldColumnName1*; *NewColumnName1* [; *OldColumnName2*; *NewColumnName2*;...])
 
 * *Tabell* – obligatorisk.  Tabellen som funksjonen skal arbeide med.
 * *OldColumnName* – obligatorisk. Navnet på en kolonne som skal få nytt navn, fra den opprinnelige tabellen. Dette elementet vises først i argumentparet (eller først i hvert argumentpar hvis formelen inneholder mer enn ett par). Dette navnet må være en streng (for eksempel **"Name"** inkludert doble anførselstegn).
 * *NewColumnName* – obligatorisk. Erstatningsnavn. Dette elementet vises sist i argumentparet (eller sist i hvert argumentpar hvis formelen inneholder mer enn ett par). Du må angi en streng (for eksempel **"Customer Name"** inkludert doble anførselstegn) for dette argumentet.
 
-**ShowColumns**( *Table*, *ColumnName1* [, *ColumnName2*, ... ] )
+**ShowColumns**( *Table*; *ColumnName1* [; *ColumnName2*; ... ] )
 
 * *Table* – obligatorisk.  Tabellen som funksjonen skal arbeide med.
 * *ColumnName(s)* – obligatorisk. Navn på kolonnen(e) som skal inkluderes. Du må angi en streng (for eksempel **"Name"** inkludert anførselstegn) for dette argumentet.
@@ -96,12 +97,12 @@ Ingen av disse eksemplene endrer **IceCreamSales**-datakilden. Hver funksjon tra
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )** |Legger til en **Revenue**-kolonne i resultatet.  For hver post evalueres **UnitPrice * QuantitySold**, og resultatet plasseres i den nye kolonnen. |<style> img { max-width: none; } </style> ![](media/function-table-shaping/icecream-add-revenue.png) |
-| **DropColumns( IceCreamSales, "UnitPrice" )** |Utelater **UnitPrice**-kolonnen fra resultatet. Bruk denne funksjonen til å utelate kolonner, og bruk **ShowColumns** til å inkludere dem. |![](media/function-table-shaping/icecream-drop-price.png) |
-| **ShowColumns( IceCreamSales, "Flavor" )** |Inkluderer bare **Flavor**-kolonnen i resultatet. Bruk denne funksjonen til å inkludere kolonner, og bruk **DropColumns** til å utelate dem. |![](media/function-table-shaping/icecream-select-flavor.png) |
-| **RenameColumns( IceCreamSales, "UnitPrice", "Price")** |Gir nytt navn til kolonnen **enhets pris** i resultatet. |![](media/function-table-shaping/icecream-rename-price.png) |
-| **RenameColumns( IceCreamSales, "UnitPrice", "Price", "QuantitySold", "Number")** |Gir nytt navn til kolonnene **UnitPrice** og **QuantitySold** i resultatet. |![](media/function-table-shaping/icecream-rename-price-quant.png) |
-| **DropColumns(<br>RenameColumns(<br>AddColumns( IceCreamSales, "Revenue",<br>UnitPrice * QuantitySold ),<br>"UnitPrice", "Price" ),<br>"Quantity" )** |Utfører transformeringene av den følgende tabellen i rekkefølge fra innsiden av formelen: <ol><li>Legger til en **Revenue**-kolonne basert på per post-beregningen av **UnitPrice * Quantity**.<li>Endrer navnet **UnitPrice** til **Price**.<li>Utelater **Quantity**-kolonnen.</ol>  Vær oppmerksom på at rekkefølgen er viktig. For eksempel kan vi ikke beregne med **UnitPrice** når den har fått nytt navn. |![](media/function-table-shaping/icecream-all-transforms.png) |
+| **AddColumns( IceCreamSales; "Revenue"; UnitPrice * QuantitySold )** |Legger til en **Revenue**-kolonne i resultatet.  For hver post evalueres **UnitPrice * QuantitySold**, og resultatet plasseres i den nye kolonnen. |<style> img { max-width: none; } </style> ![](media/function-table-shaping/icecream-add-revenue.png) |
+| **DropColumns( IceCreamSales; "UnitPrice" )** |Utelater **UnitPrice**-kolonnen fra resultatet. Bruk denne funksjonen til å utelate kolonner, og bruk **ShowColumns** til å inkludere dem. |![](media/function-table-shaping/icecream-drop-price.png) |
+| **ShowColumns( IceCreamSales; "Flavor" )** |Inkluderer bare **Flavor**-kolonnen i resultatet. Bruk denne funksjonen til å inkludere kolonner, og bruk **DropColumns** til å utelate dem. |![](media/function-table-shaping/icecream-select-flavor.png) |
+| **RenameColumns( IceCreamSales; "UnitPrice"; "Price")** |Gir nytt navn til kolonnen **enhets pris** i resultatet. |![](media/function-table-shaping/icecream-rename-price.png) |
+| **RenameColumns( IceCreamSales; "UnitPrice"; "Price"; "QuantitySold"; "Number")** |Gir nytt navn til kolonnene **UnitPrice** og **QuantitySold** i resultatet. |![](media/function-table-shaping/icecream-rename-price-quant.png) |
+| **DropColumns(<br>RenameColumns(<br>AddColumns( IceCreamSales; "Revenue";<br>UnitPrice * QuantitySold );<br>"UnitPrice"; "Price" );<br>"Quantity" )** |Utfører transformeringene av den følgende tabellen i rekkefølge fra innsiden av formelen: <ol><li>Legger til en **Revenue**-kolonne basert på per post-beregningen av **UnitPrice * Quantity**.<li>Endrer navnet **UnitPrice** til **Price**.<li>Utelater **Quantity**-kolonnen.</ol>  Vær oppmerksom på at rekkefølgen er viktig. For eksempel kan vi ikke beregne med **UnitPrice** når den har fått nytt navn. |![](media/function-table-shaping/icecream-all-transforms.png) |
 
 ### <a name="step-by-step"></a>Trinn for trinn
 
@@ -109,12 +110,12 @@ La oss prøve noen av eksemplene fra tidligere i dette emnet.
 
 1. Opprett en samling ved å legge til en **[knapp](../controls/control-button.md)** -kontroll og angi **OnSelect** -egenskapen til denne formelen:
 
-    ```powerapps-dot
-    ClearCollect( IceCreamSales, 
+    ```powerapps-comma
+    ClearCollect( IceCreamSales; 
         Table(
-            { Flavor: "Strawberry", UnitPrice: 1.99, QuantitySold: 20 }, 
-            { Flavor: "Chocolate", UnitPrice: 2.99, QuantitySold: 45 },
-            { Flavor: "Vanilla", UnitPrice: 1.50, QuantitySold: 35 }
+            { Flavor: "Strawberry"; UnitPrice: 1,99; QuantitySold: 20 }; 
+            { Flavor: "Chocolate"; UnitPrice: 2,99; QuantitySold: 45 };
+            { Flavor: "Vanilla"; UnitPrice: 1,50; QuantitySold: 35 }
         )
     )
     ```
@@ -123,9 +124,9 @@ La oss prøve noen av eksemplene fra tidligere i dette emnet.
 
 1. Legg til en ny **knapp** -kontroll, angi **OnSelect** -egenskapen til denne formelen, og kjør den:
 
-    ```powerapps-dot
-    ClearCollect( FirstExample, 
-        AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )
+    ```powerapps-comma
+    ClearCollect( FirstExample; 
+        AddColumns( IceCreamSales; "Revenue"; UnitPrice * QuantitySold )
     ) 
     ```
 1. Velg **samlinger**på **fil** -menyen, og velg deretter **IceCreamSales** for å vise denne samlingen.

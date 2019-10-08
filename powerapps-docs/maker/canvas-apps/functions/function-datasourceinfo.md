@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71985325"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="datasourceinfo-function-in-powerapps"></a>DataSourceInfo-funksjonen i PowerApps
 Returnerer informasjon om en [datakilde](../working-with-data-sources.md).
@@ -58,7 +59,7 @@ Du kan bruke **DataSourceInfo** til å få informasjon om en bestemt kolonne for
 | **DataSourceInfo.ReadPermission** |Boolsk |Har den gjeldende brukeren tillatelse til å lese poster i denne datakilden? Hvis det ikke er angitt av datakilden, returneres **sann**. |
 
 ## <a name="syntax"></a>Syntaks
-**DataSourceInfo**( *DataSource*, *Information*, *ColumnName* )
+**DataSourceInfo**( *DataSource*; *Information*; *ColumnName* )
 
 * *DataSource* – obligatorisk. Datakilden som skal oppdateres.
 * *Information* – obligatorisk. Typen informasjon som du vil hente.
@@ -83,14 +84,14 @@ Datakilden har også gitt deg denne informasjonen:
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.DisplayName,&nbsp;"Quantity"&nbsp;)** |Returnerer visningsnavnet for **Quantity**-kolonnen i datakilden **IceCream**. |"Quantity on Hand" |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.MaxLength,&nbsp;"Flavor"&nbsp;)** |Returnerer den maksimale lengden på strengen for **Flavor**-kolonnen i datakilden **IceCream**. |30 |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.Required,&nbsp;"Flavor"&nbsp;)** |Er **Smak**-kolonnen i datakilden **IceCream** påkrevd? |**sann** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.Required,&nbsp;"Quantity"&nbsp;)** |Er **Antall**-kolonnen i datakilden **IceCream** påkrevd? |**usann** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.Required,&nbsp;"Quantity"&nbsp;)** |Returnerer den numeriske maksimalverdien for **Quantity**-kolonnen i datakilden **IceCream**. |100 |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.MinValue,&nbsp;"Quantity"&nbsp;)** |Returnerer den numeriske minimumsverdien for **Quantity**-kolonnen i datakilden **IceCream**. |0 |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.ReadPermission)** |Kan den gjeldende brukeren lese poster i datakilden **IceCream**? |**sann** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.EditPermission)** |Kan den gjeldende brukeren endre poster i datakilden **IceCream**? |**sann** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.CreatePermission)** |Kan den gjeldende brukeren opprette poster i datakilden **IceCream**? |**usann** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.DeletePermission)** |Kan den gjeldende brukeren slette poster i datakilden **IceCream**? |**usann** |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.DisplayName;&nbsp;"Quantity"&nbsp;)** |Returnerer visningsnavnet for **Quantity**-kolonnen i datakilden **IceCream**. |"Quantity on Hand" |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.MaxLength;&nbsp;"Flavor"&nbsp;)** |Returnerer den maksimale lengden på strengen for **Flavor**-kolonnen i datakilden **IceCream**. |30 |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.Required;&nbsp;"Flavor"&nbsp;)** |Er **Smak**-kolonnen i datakilden **IceCream** påkrevd? |**sann** |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.Required;&nbsp;"Quantity"&nbsp;)** |Er **Antall**-kolonnen i datakilden **IceCream** påkrevd? |**usann** |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.Required;&nbsp;"Quantity"&nbsp;)** |Returnerer den numeriske maksimalverdien for **Quantity**-kolonnen i datakilden **IceCream**. |100 |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.MinValue;&nbsp;"Quantity"&nbsp;)** |Returnerer den numeriske minimumsverdien for **Quantity**-kolonnen i datakilden **IceCream**. |0 |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.ReadPermission)** |Kan den gjeldende brukeren lese poster i datakilden **IceCream**? |**sann** |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.EditPermission)** |Kan den gjeldende brukeren endre poster i datakilden **IceCream**? |**sann** |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.CreatePermission)** |Kan den gjeldende brukeren opprette poster i datakilden **IceCream**? |**usann** |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.DeletePermission)** |Kan den gjeldende brukeren slette poster i datakilden **IceCream**? |**usann** |
 

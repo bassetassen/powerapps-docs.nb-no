@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71995676"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="overview-of-the-people-screen-template-for-canvas-apps"></a>Oversikt over malen for personer-skjermen for lerret apper
 
@@ -94,19 +95,19 @@ Personer-skjermen bufrer personene som er valgt i **MyPeople** -samlingen. Hvis 
 1. Angi **OnSelect** -egenskapen for **museikon** til `Back()`.
 1. Angi **OnSelect** -egenskapen for **SendIcon** til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Office365.SendEmail( 
-        Concat( MyPeople, UserPrincipalName & ";" ), 
-        SubjectLine.Text, 
+        Concat( MyPeople; UserPrincipalName & ";" ); 
+        SubjectLine.Text; 
         MessageBody.Text 
     )
     ```
     
-    Her bruker du Outlook Connector til å sende en e-post. Du sender det `Concat(MyPeople, UserPrincipalName & ";")` som listen over mottakere. Denne formelen setter sammen alle e-postadressene i **MyPeople** -samlingen til én enkelt streng med semikolon som skiller dem. Dette er ikke det samme som å skrive ut en streng med e-postadresser atskilt med semikolon i «til»-linjen i e-postklienten.
+    Her bruker du Outlook Connector til å sende en e-post. Du sender det `Concat(MyPeople; UserPrincipalName & ";")` som listen over mottakere. Denne formelen setter sammen alle e-postadressene i **MyPeople** -samlingen til én enkelt streng med semikolon som skiller dem. Dette er ikke det samme som å skrive ut en streng med e-postadresser atskilt med semikolon i «til»-linjen i e-postklienten.
     * Du sender `SubjectLine.Text` som emne for meldingen, og `MessageBody.Text` som brød teksten i meldingen.
 1. På personer-skjermen, i hjørnet øverst til høyre, setter du inn **e-post** -ikonet.
    Endre ikon fargen til det som passer deg.
-1. Angi **OnSelect** -egenskapen for **SendIcon** til `Navigate( EmailScreen, None )`.
+1. Angi **OnSelect** -egenskapen for **SendIcon** til `Navigate( EmailScreen; None )`.
 
     Du har nå en app med to skjerm bilder der du kan velge brukere, skrive en e-postmelding til dem, og deretter sende den. Prøv gjerne å teste det ut, men vær forsiktig, fordi appen sender e-postmeldinger til alle du legger til i **MyPeople** -samlingen.
 

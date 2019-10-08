@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71984729"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="iferror-function-in-powerapps"></a>IfError-funksjonen i PowerApps
 
@@ -33,18 +34,18 @@ Oppdager feil, og oppgir en alternativ verdi eller utfører en handling.
 
 Bruk **IfError** til å erstatte feil verdier med gyldige verdier. Bruk for eksempel denne funksjonen hvis bruker inn data kan resultere i en divisjon med null. Bygg en formel for å erstatte resultatet med 0 eller en annen verdi som passer for appen din, slik at data under beregningen kan fortsette. Formelen kan være så enkelt som dette eksemplet:
 
-```powerapps-dot
-IfError( 1/x, 0 )
+```powerapps-comma
+IfError( 1/x; 0 )
 ```
 
 Hvis verdien for **x** ikke er null, returnerer formelen **1/x**. Ellers gir **1/x** en feil, og formelen returnerer i stedet 0.
 
 Bruk formler for **IfError** i [virke måte](../working-with-formulas-in-depth.md) for å utføre en handling og se etter en feil før du utfører flere handlinger, som i dette mønsteret:
 
-```powerapps-dot
+```powerapps-comma
 IfError(
-    Patch( DS1, ... ), Notify( "problem in the first action" ),
-    Patch( DS2, ... ), Notify( "problem in the second action" )
+    Patch( DS1; ... ); Notify( "problem in the first action" );
+    Patch( DS2; ... ); Notify( "problem in the second action" )
 )
 ```
 
@@ -54,7 +55,7 @@ Hvis formelen ikke finner noen feil, og du har angitt det valg frie *DefaultResu
 
 ## <a name="syntax"></a>Syntaks
 
-**IfError**( *verdi1*, *Fallback1* [, *verdi2*, *Fallback2*,... [, *DefaultResult* ]] )
+**IfError**( *verdi1*; *Fallback1* [; *verdi2*; *Fallback2*;... [; *DefaultResult* ]] )
 
 * *Verdi (er)* – obligatorisk. Formlene som skal testes for en feilverdi.
 * *Fallback* – obligatorisk. Formlene som evalueres og verdiene som skal returneres hvis samsvarende *verdi* argumenter returnerte en feil.
@@ -64,9 +65,9 @@ Hvis formelen ikke finner noen feil, og du har angitt det valg frie *DefaultResu
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **IfError( 1, 2 )** |Det første argumentet er ikke en feil. Funksjonen har ingen andre feil som skal kontrolleres, og ingen standard retur verdi. Funksjonen returnerer det siste *verdi* argumentet som ble evaluert.   | 1 |
-| **IfError( 1/0, 2 )** | Det første argumentet returnerer en feil verdi (på grunn av en deling med null). Funksjonen evaluerer det andre argumentet og returnerer det som resultatet. | 2 |
-| **IfError( 1/0, Notify( «Det oppstod et internt problem», NotificationType.Error ) )** | Det første argumentet returnerer en feil verdi (på grunn av en deling med null). Funksjonen evaluerer det andre argumentet og viser en melding til brukeren. Returverdien til **IfError** er returverdien til **Notify**, påtvunget til den samme typen som det første argumentet til **IfError** (et tall). | 1 |
+| **IfError( 1; 2 )** |Det første argumentet er ikke en feil. Funksjonen har ingen andre feil som skal kontrolleres, og ingen standard retur verdi. Funksjonen returnerer det siste *verdi* argumentet som ble evaluert.   | 1 |
+| **IfError( 1/0; 2 )** | Det første argumentet returnerer en feil verdi (på grunn av en deling med null). Funksjonen evaluerer det andre argumentet og returnerer det som resultatet. | 2 |
+| **IfError( 1/0; Notify( «Det oppstod et internt problem»; NotificationType.Error ) )** | Det første argumentet returnerer en feil verdi (på grunn av en deling med null). Funksjonen evaluerer det andre argumentet og viser en melding til brukeren. Returverdien til **IfError** er returverdien til **Notify**, påtvunget til den samme typen som det første argumentet til **IfError** (et tall). | 1 |
 | **IfError (1, 2, 3, 4, 5)** | Det første argumentet er ikke en feil. funksjonen evaluerer ikke den tilsvarende Reserve verdien for argumentet. Det tredje argumentet er ikke en feil, så funksjonen evaluerer ikke den tilsvarende Reserve verdien for argumentet. Det femte argumentet har ingen tilsvarende Reserve, og er standard resultatet. Funksjonen returnerer resultatet fordi formelen ikke inneholder feil. | 5 |
 
 ### <a name="step-by-step"></a>Trinn for trinn
@@ -77,7 +78,7 @@ Hvis formelen ikke finner noen feil, og du har angitt det valg frie *DefaultResu
 
 3. Angi formelen for **Tekst**-egenskapen til **Label1** til:
 
-    **IfError( Value( TextInput1.Text ), -1 )**
+    **IfError( Value( TextInput1.Text ); -1 )**
 
 4. Skriv inn **1234** i **TextInput1**.  
 

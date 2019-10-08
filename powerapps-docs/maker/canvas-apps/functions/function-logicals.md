@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992569"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="and-or-and-not-functions-in-powerapps"></a>Funksjonene And, Or og Not i PowerApps
 
@@ -44,8 +45,8 @@ Disse funksjonene fungerer med logiske verdier. Du kan ikke sende dem et tall el
 
 ## <a name="syntax"></a>Syntaks
 
-**And**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
-**Or**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
+**And**( *LogicalFormula1*; *LogicalFormula2* [; *LogicalFormula3*; ... ] )<br>
+**Or**( *LogicalFormula1*; *LogicalFormula2* [; *LogicalFormula3*; ... ] )<br>
 **Not**( *LogicalFormula* )
 
 - *LogicalFormula* – obligatorisk.  Logiske formler som skal evalueres og arbeides med.
@@ -62,8 +63,8 @@ Eksemplene i denne delen bruker disse globale variablene:
 
 Hvis du vil opprette disse globale variablene i en app, kan du sette inn en [**knapp**](../controls/control-button.md) -kontroll og angi **OnSelect** -egenskapen til denne formelen:
 
-```powerapps-dot
-Set( a, false ); Set( b, true ); Set( x, 10 ); Set( y, 100 ); Set( s, "Hello World" )
+```powerapps-comma
+Set( a; false );; Set( b; true );; Set( x; 10 );; Set( y; 100 );; Set( s; "Hello World" )
 ```
 
 Velg knappen (ved å klikke den mens du holder nede Alt-tasten), og angi deretter **tekst** -egenskapen for en [**etikett**](../controls/control-text-box.md) -kontroll til en formel i den første kolonnen i neste tabell.

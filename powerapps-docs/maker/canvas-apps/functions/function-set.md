@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992200"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="set-function-in-powerapps"></a>Set-funksjonen i PowerApps
 Angir verdien for en global variabel.
@@ -50,7 +51,7 @@ Globale variabler kan ikke bruke samme navn som en eksisterende samling eller ko
 **Set** har ingen returverdi, og du kan bruke den i en [formel for virkemåte](../working-with-formulas-in-depth.md).
 
 ## <a name="syntax"></a>Syntaks
-**Set**( *VariableName*, *Value* )
+**Set**( *VariableName*; *Value* )
 
 * *VariableName* – obligatorisk.  Navnet på en global variabel som skal opprettes eller oppdateres.
 * *Value* – obligatorisk.  Verdien som skal tilordnes kontekstvariabelen.
@@ -59,10 +60,10 @@ Globale variabler kan ikke bruke samme navn som en eksisterende samling eller ko
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Set(&nbsp;Counter,&nbsp;1&nbsp;)** |Oppretter eller endrer den globale variabelen **Counter**, og angir verdien dens til **1**. |**Counter** har verdien **1**. Du kan referere til denne variabelen med navnet **Counter** i en formel på enhver skjerm. |
-| **Set(&nbsp;Counter,&nbsp;2&nbsp;)** |Angir verdien for den global variabelen **Counter** fra det forrige eksemplet som **2**. |**Counter** har verdien **2**. |
-| **Set(&nbsp;Counter,&nbsp;Counter + 1&nbsp;)** |Øker verdien til den global variabelen **Counter** fra det forrige eksemplet til **3**. |**Counter** har verdien **3**. |
-| **Set(&nbsp;Name,&nbsp;"Lily" )** |Oppretter eller endrer den globale variabelen **Name**, og angir verdien dens til **Lily**. |**Name** har verdien **Lily**. |
-| **Set(&nbsp;Person,&nbsp;{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;} )** |Oppretter eller endrer den globale variabelen **Person**, og angir verdien dens som en post. Posten inneholder to kolonner, kalt **Name** og **Address**. Verdien til **Name**-kolonnen er **Milton**, og verdien til **Address**-kolonnen er **1 Main St**. |**Person** har posten **{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}** som verdi.<br><br>Du kan referere til denne posten som helhet med navnet **Person** eller referer til en individuell kolonne for denne posten med **Person.Name** eller **Person.Address**. |
-| **Set(&nbsp;Person, Patch(&nbsp;Person,&nbsp;{Address:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}&nbsp;)&nbsp;)** |Fungerer med **[Patch](function-patch.md)** -funksjonen for å oppdatere den globale variabelen **Person** ved å angi verdien til **Address**-kolonnen som **2 Main St**. |**Person** har nå posten **{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}** som verdi. |
+| **Set(&nbsp;Counter;&nbsp;1&nbsp;)** |Oppretter eller endrer den globale variabelen **Counter**, og angir verdien dens til **1**. |**Counter** har verdien **1**. Du kan referere til denne variabelen med navnet **Counter** i en formel på enhver skjerm. |
+| **Set(&nbsp;Counter;&nbsp;2&nbsp;)** |Angir verdien for den global variabelen **Counter** fra det forrige eksemplet som **2**. |**Counter** har verdien **2**. |
+| **Set(&nbsp;Counter;&nbsp;Counter + 1&nbsp;)** |Øker verdien til den global variabelen **Counter** fra det forrige eksemplet til **3**. |**Counter** har verdien **3**. |
+| **Set(&nbsp;Name;&nbsp;"Lily" )** |Oppretter eller endrer den globale variabelen **Name**, og angir verdien dens til **Lily**. |**Name** har verdien **Lily**. |
+| **Set(&nbsp;Person;&nbsp;{&nbsp;Name:&nbsp;"Milton"; Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;} )** |Oppretter eller endrer den globale variabelen **Person**, og angir verdien dens som en post. Posten inneholder to kolonner, kalt **Name** og **Address**. Verdien til **Name**-kolonnen er **Milton**, og verdien til **Address**-kolonnen er **1 Main St**. |**Person** har posten **{&nbsp;Name:&nbsp;"Milton"; Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}** som verdi.<br><br>Du kan referere til denne posten som helhet med navnet **Person** eller referer til en individuell kolonne for denne posten med **Person.Name** eller **Person.Address**. |
+| **Set(&nbsp;Person; Patch(&nbsp;Person;&nbsp;{Address:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}&nbsp;)&nbsp;)** |Fungerer med **[Patch](function-patch.md)** -funksjonen for å oppdatere den globale variabelen **Person** ved å angi verdien til **Address**-kolonnen som **2 Main St**. |**Person** har nå posten **{&nbsp;Name:&nbsp;"Milton"; Address:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}** som verdi. |
 

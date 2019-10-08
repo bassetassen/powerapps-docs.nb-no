@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71985578"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="data-types-in-canvas-apps"></a>Data typer i lerret apper
 
@@ -39,9 +40,9 @@ Denne artikkelen inneholder detaljer om data typene som lerret apps støtter. N�
 | **Mediefil** | En URI-tekst streng til en video-eller lyd innspilling. | **MyVideo** lagt til som en app-ressurs<br>**"https://northwindtraders.com/intro.mp4 "**<br>**"appres://blobmanager/3ba411c..."** |
 | **Rekke** | Et flyt tall. | **123**<br>**-4,567**<br>**8.903e121** |
 | **Alternativ sett** | Et valg fra et sett med alternativer, som støttes av et tall. Denne data typen kombinerer en tekst etikett som lokaliseres, med en numerisk verdi. Etiketten vises i appen, og den numeriske verdien lagres og brukes for sammenligninger. | **ThisItem. OrderStatus** |
-| **Registrerer** | En post med data verdier. Denne sammensatte data typen inneholder forekomster av andre data typer som er oppført i dette emnet. Mer informasjon: Å [arbeide med tabeller](../working-with-tables.md). | **{Company: «Gas tro nor delikat Esser» <br>Staff: 35, <br>NonProfit: False}** |
+| **Registrerer** | En post med data verdier. Denne sammensatte data typen inneholder forekomster av andre data typer som er oppført i dette emnet. Mer informasjon: Å [arbeide med tabeller](../working-with-tables.md). | **{Company: «Gas tro nor delikat Esser» <br>Staff: 35; <br>NonProfit: False}** |
 | **Post referanse** | En referanse til en post i en enhet. Slike referanser brukes ofte med polymorfiske oppslag. Mer informasjon: [Arbeid med referanser](../working-with-references.md).| **Først (kontoer). Ren** |
-| **Tegn** | En tabell med poster.  Alle postene må ha samme navn for feltene med de samme data typene, og utelatte felt behandles som *tomme*. Denne sammensatte data typen inneholder forekomster av andre data typer som er oppført i dette emnet. Mer informasjon: Å [arbeide med tabeller](../working-with-tables.md). | **Table ({for navn: «Sidney», <br>LastName: "Higa"}, <br> {for navn: "Nina", <br>LastName: «Anderson»})**
+| **Tegn** | En tabell med poster.  Alle postene må ha samme navn for feltene med de samme data typene, og utelatte felt behandles som *tomme*. Denne sammensatte data typen inneholder forekomster av andre data typer som er oppført i dette emnet. Mer informasjon: Å [arbeide med tabeller](../working-with-tables.md). | **Table ({for navn: «Sidney»; <br>LastName: "Higa"}; <br> {for navn: "Nina"; <br>LastName: «Anderson»})**
 | **Tekst** | En Unicode-tekst streng. | **"Hello, World"** |
 | **Tid** | Et tidspunkt uten dato, i tids sonen til appens bruker. | **Klokkeslett (11, 23, 45)** |
 | **To alternativer** | Et valg fra et sett med to alternativer, som støttes av en boolsk verdi. Denne data typen kombinerer en tekst etikett som lokaliseres, med en boolsk verdi. Etiketten vises i appen, og den boolske verdien lagres og brukes til sammenligninger. | **ThisItem. avgiftspliktig** |
@@ -82,7 +83,7 @@ Lerret apper refererer til hvert bilde eller en annen mediefil, enten det er i s
 
 **Bilde** -egenskapen til en bilde kontroll godtar for eksempel ikke bare program ressurser, men også koblinger til bilder på nettet, for eksempel « https://northwindtraders.com/logo.jpg ». Egenskapen godtar også innebygde bilder som bruker data- [URI-skjemaet](https://en.wikipedia.org/wiki/Data_URI_scheme), som i dette eksemplet:
 
-```powerapps-dot
+```powerapps-comma
 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFAQMAAACtnVQoAAAABlBMVEUAAAB0J3UMNU6VAAAAAXRSTlMAQObYZgAAABRJREFUCNdjUGJgCGVg6GgAkkA2AA8/AffqCEBsAAAAAElFTkSuQmCC"
 ```
 
@@ -175,11 +176,11 @@ Lerret apper bruker tids sone informasjonen i **Datetimeoffset** -felt ved konve
 
 Lerrets programmer leser og skriver verdier av [**time**](https://docs.microsoft.com/sql/t-sql/data-types/time-transact-sql) -data typen i SQL Server som tekst strenger i [formatet ISO 8601 Duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). Du må for eksempel analysere dette streng formatet og bruke [**klokkeslett**](function-date-time.md) -funksjonen til å konvertere tekst strengen **"PT2H1M39S"** til en **klokkeslett** verdi:
 
-```powerapps-dot
+```powerapps-comma
 First(
     ForAll(
-        MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
-        Time( Value( hours ), Value( minutes ), Value( seconds ) )
+        MatchAll( "PT2H1M39S"; "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" );
+        Time( Value( hours ); Value( minutes ); Value( seconds ) )
     )
 ).Value
 ```
@@ -202,18 +203,18 @@ Når en app-bruker velger et alternativ og lagrer denne endringen, overfører ap
 
 Etikettene er bare til visnings formål. Du kan ikke utføre direkte sammenligninger med etikettene fordi de er spesifikke for et språk. I stedet har hvert alternativ sett en opplisting som fungerer med det underliggende antallet eller den boolske verdien. Du kan for eksempel ikke bruke denne formelen:
 
-`If( ThisItem.OrderStatus = "Active", ...`
+`If( ThisItem.OrderStatus = "Active"; ...`
 
 Men du kan bruke denne formelen:
 
-`If( ThisItem.OrderStatus = OrderStatus.Active, ...`
+`If( ThisItem.OrderStatus = OrderStatus.Active; ...`
 
 For globale alternativ sett (hvilke enheter som deler), er navnet på tilgangs angivelses opplistingen lik navnet på det globale alternativ settet. For lokale alternativ sett (som er tilknyttet en enhet), kan navnet inneholde navnet på enheten. Denne virke måten unngår konflikter hvis flere enheter har et alternativ sett som har samme navn. **Kontoer** -enheten kan for eksempel ha et **OrderStatus** alternativ sett, og navnet kan være **OrderStatus (kontoer)** . Dette navnet inneholder ett eller flere mellomrom og parenteser, så du må omslutte det med enkle anførsels tegn hvis du refererer til det i en formel.
 
 I tillegg kan verdiene for to alternativer også oppføre seg som boolske verdier. En verdi med to alternativer kalt **TaxStatus** kan for eksempel ha etikettene **avgiftspliktig** og **ikke-avgiftspliktig**, som Sams varer med henholdsvis *sann* og *Usann* . Hvis du vil demonstrere, kan du bruke denne formelen:
 
-`If( ThisItem.Taxable = TaxStatus.Taxable, ...`
+`If( ThisItem.Taxable = TaxStatus.Taxable; ...`
 
 Du kan også bruke den tilsvarende formelen:
 
-`If( ThisItem.Taxable, ...`
+`If( ThisItem.Taxable; ...`

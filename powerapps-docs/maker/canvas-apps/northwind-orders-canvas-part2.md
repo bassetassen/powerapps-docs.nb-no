@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71995846"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-summary-form-in-a-canvas-app"></a>Opprett et sammendrags skjema i en lerret-app
 
@@ -96,7 +97,7 @@ I denne delen kan du legge til kontroller for å vise et sammendrag av hvilken s
 
 1. Angi **DataSource** -egenskapen for skjemaet til denne verdien i formel linjen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Orders
     ```
 
@@ -215,7 +216,7 @@ I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dett
 
 1. Angi **element** -egenskapen for sammendrags skjemaet til dette uttrykket:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gallery1.Selected
     ```
 
@@ -294,7 +295,7 @@ I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dett
 
 1. Angi **bilde** -egenskapen for bildet til denne formelen, og erstatt nummeret på slutten av DataCardValue om nødvendig:
 
-    ```powerapps-dot
+    ```powerapps-comma
     DataCardValue7.Selected.Picture
     ```
 
@@ -327,7 +328,7 @@ I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dett
 
 1. Kontroller at navnet på skjemaet er **Form1**i **tre visnings** ruten, og angi deretter **OnSelect** -egenskapen for ikonet til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     SubmitForm( Form1 )
     ```
 
@@ -338,8 +339,8 @@ I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dett
 
 1. Angi **Display Mode** -egenskapen for ikonet til denne formelen:
 
-    ```powerapps-dot
-    If( Form1.Unsaved, DisplayMode.Edit, DisplayMode.Disabled )
+    ```powerapps-comma
+    If( Form1.Unsaved; DisplayMode.Edit; DisplayMode.Disabled )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -349,7 +350,7 @@ I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dett
 
 1. Angi **DisabledColor** -egenskapen for ikonet til denne verdien:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gray
     ```
 
@@ -380,7 +381,7 @@ I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dett
 
 1. Angi **OnSelect** -egenskapen for Avbryt-ikonet til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ResetForm( Form1 )
     ```
 
@@ -391,8 +392,8 @@ I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dett
 
 1. Angi **Display Mode** -egenskapen for Avbryt-ikonet til denne formelen:
 
-    ```powerapps-dot
-    If( Form1.Unsaved Or Form1.Mode = FormMode.New, DisplayMode.Edit, DisplayMode.Disabled )
+    ```powerapps-comma
+    If( Form1.Unsaved Or Form1.Mode = FormMode.New; DisplayMode.Edit; DisplayMode.Disabled )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -402,7 +403,7 @@ I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dett
 
 1. Angi **DisabledColor** -egenskapen for Avbryt-ikonet til denne verdien:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gray
     ```
 
@@ -433,7 +434,7 @@ I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dett
 
 1. Angi **OnSelect** -egenskapen for Legg til-ikonet til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     NewForm( Form1 )
     ```
 
@@ -444,8 +445,8 @@ I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dett
 
 1. Angi **Display Mode** -egenskapen for Legg til-ikonet til denne formelen:
 
-    ```powerapps-dot
-    If( Form1.Unsaved Or Form1.Mode = FormMode.New, DisplayMode.Disabled, DisplayMode.Edit )
+    ```powerapps-comma
+    If( Form1.Unsaved Or Form1.Mode = FormMode.New; DisplayMode.Disabled; DisplayMode.Edit )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -458,7 +459,7 @@ I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dett
 
 1. Angi **DisabledColor** -egenskapen for Legg til-ikonet til denne verdien:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gray
     ```
 
@@ -492,8 +493,8 @@ I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dett
 
 1. Angi **OnSelect** -egenskapen for avfall-ikonet til denne formelen:
 
-    ```powerapps-dot
-    Remove( Orders, Gallery1.Selected )
+    ```powerapps-comma
+    Remove( Orders; Gallery1.Selected )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -503,8 +504,8 @@ I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dett
 
 1. Angi **Display Mode** -egenskapen for avfall-ikonet til denne formelen:
 
-    ```powerapps-dot
-    If( Form1.Mode = FormMode.New, DisplayMode.Disabled, DisplayMode.Edit )
+    ```powerapps-comma
+    If( Form1.Mode = FormMode.New; DisplayMode.Disabled; DisplayMode.Edit )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -514,7 +515,7 @@ I dette eksemplet trenger du ikke klokkeslett delene av dato feltene, fordi dett
 
 1. Angi **DisabledColor** -egenskapen for avfall-ikonet til denne verdien:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gray
     ```
 
@@ -537,7 +538,7 @@ Du har lagt til et skjema der brukeren kan vise og redigere et sammendrag av hve
 - Et ikon for å lagre endringer i en rekkefølge: `SubmitForm( Form1 )`
 - Et ikon for å avbryte endringer i en rekkefølge: `ResetForm( Form1 )`
 - Et ikon for å opprette en ordre: `NewForm( Form1 )`
-- Et ikon for å slette en ordre: `Remove( Orders, Gallery1.Selected )`
+- Et ikon for å slette en ordre: `Remove( Orders; Gallery1.Selected )`
 
 ## <a name="next-step"></a>Neste trinn
 

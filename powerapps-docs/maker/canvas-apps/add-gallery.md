@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71987581"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="show-a-list-of-items-in-powerapps"></a>Vis en liste over elementer i PowerApps
 
@@ -98,20 +99,20 @@ Før du utfører andre tilpasninger, må du sørge for at oppsettet for **Galler
 
 1. Angi **[Elementer](controls/properties-core.md)** -egenskapen for **Galleri**-kontrollen til denne formelen:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Sort
         (If
-            (IsBlank(TextSearchBox1.Text),
-            FlooringEstimates,
+            (IsBlank(TextSearchBox1.Text);
+            FlooringEstimates;
             Filter(
-                FlooringEstimates,
+                FlooringEstimates;
                 TextSearchBox1.Text in Text(Name)
             )
-        ),
-        Name,
+        );
+        Name;
         If(
-            SortDescending1,
-            SortOrder.Descending,
+            SortDescending1;
+            SortOrder.Descending;
             SortOrder.Ascending
         )
     )
@@ -130,16 +131,16 @@ Før du utfører andre tilpasninger, må du sørge for at oppsettet for **Galler
 ## <a name="highlight-the-selected-item"></a>Merk det valgte elementet
 Angi **Galleri** -kontrollens **TemplateFill** -egenskap til en formel som ligner på dette eksemplet, men du kan angi forskjellige farger hvis du vil:
 
-**If(ThisItem.IsSelected, LightCyan, White)**
+**If(ThisItem.IsSelected; LightCyan; White)**
 
 ## <a name="change-the-default-selection"></a>Endring av standardutvalget
 Angi **Galleri**-kontrollens **Standard**-egenskap til posten du vil merke som standard. Du kan for eksempel angi det femte elementet i **FlooringEstimates** -data kilden:
 
-**Last(FirstN(FlooringEstimates, 5))**
+**Last(FirstN(FlooringEstimates; 5))**
 
 I dette eksemplet angir du det første elementet i **Hardwood**-kategorien for **FlooringEstimates**-datakilden:
 
-**First(Filter(FlooringEstimates, Category = "Hardwood"))**
+**First(Filter(FlooringEstimates; Category = "Hardwood"))**
 
 ## <a name="next-steps"></a>Neste trinn
 Finn ut hvordan du arbeider med [skjemaer](working-with-forms.md) og [formler](working-with-formulas.md).

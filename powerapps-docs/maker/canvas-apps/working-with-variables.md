@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71994822"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-canvas-app-variables-in-powerapps"></a>Slik fungerer lerretsappvariabler i PowerApps
 
@@ -58,7 +59,7 @@ Formelen for **Label1** har blitt automatisk beregnet på nytt, og viser den nye
 
 I PowerApps kan du bruke formler til å bestemme, ikke bare den primære verdien av en kontroll, men også egenskaper som formatering. I eksemplet nedenfor er en formel for **[Farge](controls/properties-color-border.md)** -egenskapen for etiketten som automatisk viser negative verdier i rødt. **[If](functions/function-if.md)** -funksjonen bør du kunne kjenne igjen fra Excel:
 
-`If( Value(Label1.Text) < 0, Red, Black )`
+`If( Value(Label1.Text) < 0; Red; Black )`
 
 ![Animasjon av betinget formatering](media/working-with-variables/recalc-color.gif)
 
@@ -104,7 +105,7 @@ Vi krever en variabel som inneholder den løpende summen, hvis du vil opprette k
 
 Slik fungerer globale variabler:
 
-* Du kan angi verdien for den globale variabelen med **[Set](functions/function-set.md)** -funksjonen.  **Set(MyVar, 1)** angir den globale variabelen **MyVar** til en verdi på **1**.
+* Du kan angi verdien for den globale variabelen med **[Set](functions/function-set.md)** -funksjonen.  **Set(MyVar; 1)** angir den globale variabelen **MyVar** til en verdi på **1**.
 * Du bruker den globale variabelen ved å referere til navnet som brukes med **Set**-funksjonen.  **MyVar** vil returnere **1** i dette tilfellet.
 * Globale variabler kan inneholde en hvilken som helst verdi, inkludert strenger, tall, poster, og [tabeller](working-with-tables.md).
 
@@ -126,7 +127,7 @@ La oss gjenoppbygge kalkulatoren vår ved hjelp av en global variabel:
 
 4. For å angi den løpende totalsummen til **0** hver gang en bruker velger **Tøm**-knappen, kan du angi **[OnSelect](controls/properties-core.md)** -egenskapen til denne formelen:
 
-    **Set( RunningTotal, 0 )**
+    **Set( RunningTotal; 0 )**
 
     ![OnSelect-egenskapen for Clear-knappen er satt til set-funksjonen](media/working-with-variables/global-variable-2.png)
 
@@ -180,11 +181,11 @@ Når brukeren åpner appen, har alle variablene Start verdien *tom*.
 
 Du kan bruke variabel ens navn til å lese verdien. Du kan for eksempel definere en variabel med denne formelen:
 
-`Set( Radius, 12 )`
+`Set( Radius; 12 )`
 
 Deretter kan du bare bruke **radius** hvor du kan bruke et tall, og det blir erstattet med **12**:
 
-`Pi() * Power( Radius, 2 )`
+`Pi() * Power( Radius; 2 )`
 
 Hvis du gir en kontekst variabel samme navn som en global variabel eller en samling, prioriteres kontekst variabelen. Du kan imidlertid fremdeles referere til den globale variabelen eller samlingen hvis du bruker [operatoren untvetydighet](functions/operators.md#disambiguation-operator) **@ [radius]** .
 
@@ -236,7 +237,7 @@ La oss gjenoppbygge kalkulatoren vår ved hjelp av en kontekstvariabel:
 
 7. Du kan angi verdien til en kontekstvariabel mens du navigerer til en skjerm. Dette er nyttig for å overføre «kontekst» eller «parametere» fra en skjerm til en annen. Hvis du vil demonstrere denne teknikken, kan du sette inn en skjerm, sette inn en knapp, og angi **OnSelect** -egenskapen til denne formelen:
 
-    **Navigate( Screen1, None, { RunningTotal: -1000 } )**
+    **Navigate( Screen1; None; { RunningTotal: -1000 } )**
 
     ![OnSelect-egenskapen til en knapp](media/working-with-variables/context-variable-5.png)
 
@@ -270,7 +271,7 @@ La oss opprette kalkulatoren vår ved å bruke en samling:
 
 3. For å oppdatere den løpende summen hver gang en bruker velger **Legg til**-knappen, kan du angi **[OnSelect](controls/properties-core.md)** -egenskapen til denne formelen:
 
-    **Collect( PaperTape, TextInput1.Text )**
+    **Collect( PaperTape; TextInput1.Text )**
 
     Den eneste forekomsten av denne formelen oppretter **PaperTape** som en samling som inneholder en tabell med én kolonne med tekst strenger. Du kan referere **PaperTape** hvor som helst i denne appen. Når en bruker åpner denne appen, er **PaperTape** en tom tabell.
 
@@ -286,7 +287,7 @@ La oss opprette kalkulatoren vår ved å bruke en samling:
 
 5. Legg til en etikett og angi **[Tekst](controls/properties-core.md)** -egenskapen til denne formelen for å vise den løpende summen:
 
-    **Sum( PaperTape, Value )**
+    **Sum( PaperTape; Value )**
 
     ![Tekst-egenskapen til etiketten](media/working-with-variables/papertape-3.png)
 
@@ -310,7 +311,7 @@ La oss opprette kalkulatoren vår ved å bruke en samling:
 
 10. Hvis du vil lagre og hente samlingen, legger du til to ekstra knappe kontroller og angir **tekst** egenskapene for å **laste inn** og **Lagre**. Angi **OnSelect** -egenskapen for **Last inn** -knappen til denne formelen:
 
-     **Clear( PaperTape ); LoadData( PaperTape, "StoredPaperTape", true )**
+     **Clear( PaperTape );; LoadData( PaperTape; "StoredPaperTape"; true )**
 
      Du må fjerne samlingen først fordi **LoadData** vil føye til de lagrede verdiene til slutten av samlingen.
 
@@ -318,7 +319,7 @@ La oss opprette kalkulatoren vår ved å bruke en samling:
 
 11. Angi **OnSelect** -egenskapen for **Lagre** -knappen til denne formelen:
 
-     **SaveData( PaperTape, "StoredPaperTape" )**
+     **SaveData( PaperTape; "StoredPaperTape" )**
 
      ![OnSelect *-egenskap for Lagre-knappen](media/working-with-variables/papertape-6.png)
 

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992697"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="editform-newform-submitform-resetform-and-viewform-functions-in-powerapps"></a>Funksjonene EditForm, NewForm, SubmitForm, ResetForm og ViewForm i PowerApps
 Vis, rediger eller opprett et element, lagre innholdet og tilbakestill kontrollene i en **[Redigeringskjema](../controls/control-form-detail.md)** -kontroll.
@@ -110,12 +111,12 @@ Se [Forstå dataskjemaer](../working-with-forms.md) utfyllende eksempler.
    * Hvis innsendingen mislyktes, viser**ErrorText** en brukervennlig feilmelding, og det gjeldende skjermbildet forblir synlig slik at brukeren kan rette opp problemet og prøve på nytt.
 4. Legg til en Knapp-kontroll, angi kontrollens **[Text](../controls/properties-core.md)** -egenskap til å vise **Avbryt**, og angi kontrollens **[OnSelect](../controls/properties-core.md)** -egenskap til denne formelen:
    
-    **ResetForm( EditForm ); Back()**
+    **ResetForm( EditForm );; Back()**
    
     Når en bruker velger **Avbryt**-knappen, tilbakestilles verdiene i Skjema-kontrollen til de opprinnelige verdiene, slik de var før brukeren begynte å redigere. Det forrige skjermbildet vises på nytt, og Skjema-kontrollen returneres til **Rediger**-modus hvis den var i **Ny**-modus.
 5. Legg til en Knapp-kontroll, angi kontrollens **[Tekst](../controls/properties-core.md)** -egenskap til å vise **Ny**, og angi kontrollens **[OnSelect](../controls/properties-core.md)** -egenskap til denne formelen:
    
-    **NewForm( EditForm ); Navigate( EditScreen, None )**
+    **NewForm( EditForm );; Navigate( EditScreen; None )**
    
     Når brukeren velger **Ny**-knappen, veksler Skjema-kontrollen til **Ny**-modusen, standardverdiene for Skjema-kontrollens datakilde fyller ut kontrollen, og skjermbildet som inneholder Skjema-kontrollen vises på nytt. Når **SubmitForm**-funksjonen kjører, opprettes en post i stedet for å oppdateres.
 

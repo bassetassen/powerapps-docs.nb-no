@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992733"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="first-firstn-last-and-lastn-functions-in-powerapps"></a>Funksjonene First, FirstN, Last og LastN i PowerApps
 Returnerer den første eller siste gruppen av [poster](../working-with-tables.md#records) i en tabell.
@@ -41,7 +42,7 @@ Returnerer den første eller siste gruppen av [poster](../working-with-tables.md
 
 * *Tabell* – obligatorisk. Tabellen som funksjonen skal arbeide med.
 
-**FirstN**( *Table* [, *NumberOfRecords* ] )<br>**LastN**( *Table* [, *NumberOfRecords* ] )
+**FirstN**( *Table* [; *NumberOfRecords* ] )<br>**LastN**( *Table* [; *NumberOfRecords* ] )
 
 * *Tabell* – obligatorisk. Tabellen funksjonen skal arbeide med.
 * *NumberOfRecords* – valgfritt.  Antall poster funksjonen skal returnere. Hvis du ikke angir dette argumentet, returnerer funksjonen én post.
@@ -51,5 +52,5 @@ Denne formelen returnerer den første posten fra en tabell kalt **Ansatte**:<br>
 **First(Employees)**
 
 Denne formelen returnerer de siste 15 postene fra en tabell kalt **Employees**:<br>
-**LastN(Employees, 15)**
+**LastN(Employees; 15)**
 

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71993259"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="toggle-control-in-powerapps"></a>Vekslekontrollen i PowerApps
 En kontroll som brukeren kan slå på eller av ved å flytte håndtaket.
@@ -105,14 +106,14 @@ En veksleknapp er utformet for nylige GUI-er, men den fungerer på samme måte s
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**If**(*Betingelse*, *Resultat*)](../functions/function-if.md)
+[**If**(*Betingelse*; *Resultat*)](../functions/function-if.md)
 
 ## <a name="example"></a>Eksempel
 1. Legg til en veksleknapp, og gi den navnet **MemberDiscount**.
 
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
 2. Legg til en etikett og angi **[Tekst](properties-core.md)** -egenskapen til denne formelen:
-   <br>’**If(MemberDiscount.Value = true, "Price: $75", "Price: $100")**
+   <br>’**If(MemberDiscount.Value = true; "Price: $75"; "Price: $100")**
 
     Vil du ha mer informasjon om **[If](../functions/function-if.md)** -funksjonen eller [andre funksjoner](../formula-reference.md)?
 3. Trykk på F5, og endre verdien for **MemberDiscount**.

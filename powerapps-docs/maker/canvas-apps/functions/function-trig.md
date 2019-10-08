@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71984092"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="acos-acot-asin-atan-atan2-cos-cot-degrees-pi-radians-sin-and-tan-functions-in-powerapps"></a>Funksjonene Acos, Acot, Asin, Atan, Atan2, Cos, Cot, Degrees, Pi, Radians, Sin og Tan i PowerApps
 Beregner trigonometriske verdier.
@@ -42,7 +43,7 @@ Beregner trigonometriske verdier.
 
 **Atan**-funksjonen returnerer arctangensen, eller invers tangens, til argumentet. Arctangensen er vinkelen hvis tangens er argumentet. Den returnerte vinkelen er angitt i radianer i området -&pi;/2 til &pi;/2.
 
-**Atan2**-funksjonen returnerer arctangensen, eller invers tangens, til de angitte*x*- og *y*-koordinatene som argumenter. Arctangensen er vinkelen fra *x*-aksen til en linje som inneholder origo (0,0) og et punkt med koordinater (*x*, *y*). Vinkelen er angitt i radianer mellom -&pi; og &pi;, ekskludert -&pi;.  Et positivt resultat representerer en vinkel mot klokken fra *x*-aksen, et negativt resultat representerer en vinkel med klokken.  **Atan2(&nbsp;*a*,&nbsp;*b*&nbsp;)** er lik **Atan(&nbsp;*b*/*a*&nbsp;)** , bortsett fra at ***a*** kan være lik 0 (null) med **Atan2**-funksjonen.
+**Atan2**-funksjonen returnerer arctangensen, eller invers tangens, til de angitte*x*- og *y*-koordinatene som argumenter. Arctangensen er vinkelen fra *x*-aksen til en linje som inneholder origo (0,0) og et punkt med koordinater (*x*, *y*). Vinkelen er angitt i radianer mellom -&pi; og &pi;, ekskludert -&pi;.  Et positivt resultat representerer en vinkel mot klokken fra *x*-aksen, et negativt resultat representerer en vinkel med klokken.  **Atan2(&nbsp;*a*;&nbsp;*b*&nbsp;)** er lik **Atan(&nbsp;*b*/*a*&nbsp;)** , bortsett fra at ***a*** kan være lik 0 (null) med **Atan2**-funksjonen.
 
 ### <a name="helper-functions"></a>Hjelpefunksjoner
 **Degrees**-funksjonen konverterer radianer til grader.  &pi; radianer er lik 180 grader.
@@ -75,7 +76,7 @@ Hvis et argument resulterte i en underliggende verdi, ville resultatet være *to
 
 * *SingleColumnTable* – obligatorisk. En tabell med én kolonne med tall som funksjonen skal arbeide med.
 
-**Atan2**( *X*, *Y* )
+**Atan2**( *X*; *Y* )
 
 * *X* – obligatorisk.  *X* – aksekoordinat.
 * *Y* – obligatorisk.  *Y* – aksekoordinat.
@@ -96,17 +97,17 @@ Hvis et argument resulterte i en underliggende verdi, ville resultatet være *to
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Cos(&nbsp;1.047197&nbsp;)** |Returnerer cosinusen til 1,047197 radianer eller 60 grader. |0,5 |
+| **Cos(&nbsp;1,047197&nbsp;)** |Returnerer cosinusen til 1,047197 radianer eller 60 grader. |0,5 |
 | **Cot(&nbsp;Pi()/4&nbsp;)** |Returnerer cotangensen til 0,785398... radianer eller 45 grader. |1 |
 | **Sin(&nbsp;Pi()/2&nbsp;)** |Returnerer sinusen til 1,570796... radianer eller 90 grader. |1 |
 | **Tan(&nbsp;Radians(60)&nbsp;)** |Returnerer tangensen til 1,047197... radianer eller 60 grader. |1,732050... |
-| **Acos(&nbsp;0.5&nbsp;)** |Returnerer arccosinusen til 0,5 i radianer. |1,047197... |
+| **Acos(&nbsp;0,5&nbsp;)** |Returnerer arccosinusen til 0,5 i radianer. |1,047197... |
 | **Acot(&nbsp;1&nbsp;)** |Returnerer arccotangensen til 1 i radianer. |0,785398... |
 | **Asin(&nbsp;1&nbsp;)** |Returnerer arcsinusen til 1 i radianer. |1,570796... |
-| **Atan(&nbsp;1.732050&nbsp;)** |Returnerer arctangensen til 1,732050 i radianer. |1,047197... |
-| **Atan2(&nbsp;5,&nbsp;3&nbsp;)** |Returnerer arctangensen for vinkelen fra *x*-aksen til linjen som inneholder origo (0,0), og koordinaten (5,3) som er omtrent 31 grader. |0,540419... |
-| **Atan2(&nbsp;4,&nbsp;4&nbsp;)** |Returnerer arctangensen for vinkelen fra *x*-aksen til linjen som inneholder origo (0,0), og koordinaten (4,4) som er nøyaktig &pi;/4 radianer eller 45 grader. |0,785398... |
-| **Degrees(&nbsp;1.047197&nbsp;)** |Returnerer det tilsvarende antallet grader for 1,047197 radianer. |60 |
+| **Atan(&nbsp;1,732050&nbsp;)** |Returnerer arctangensen til 1,732050 i radianer. |1,047197... |
+| **Atan2(&nbsp;5;&nbsp;3&nbsp;)** |Returnerer arctangensen for vinkelen fra *x*-aksen til linjen som inneholder origo (0,0), og koordinaten (5,3) som er omtrent 31 grader. |0,540419... |
+| **Atan2(&nbsp;4;&nbsp;4&nbsp;)** |Returnerer arctangensen for vinkelen fra *x*-aksen til linjen som inneholder origo (0,0), og koordinaten (4,4) som er nøyaktig &pi;/4 radianer eller 45 grader. |0,785398... |
+| **Degrees(&nbsp;1,047197&nbsp;)** |Returnerer det tilsvarende antallet grader for 1,047197 radianer. |60 |
 | **Pi()** |Returnerer det transcendentale tallet &pi;. |3,141592... |
 | **Radians(&nbsp;15&nbsp;)** |Returnerer det tilsvarende antallet radianer for 15 grader. |0,261799... |
 

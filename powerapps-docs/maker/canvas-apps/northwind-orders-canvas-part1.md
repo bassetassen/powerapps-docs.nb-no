@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71990953"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-an-order-gallery-in-a-canvas-app"></a>Opprett et ordre galleri i en lerret-app
 
@@ -105,8 +106,8 @@ Følg trinn vise instruksjoner for å opprette et ordre galleri i en lerret-app 
 
 1. Angi **element** -egenskapen for galleriet til denne formelen i formel linjen:
 
-    ```powerapps-dot
-    Sort( Orders, 'Order Number', Descending )
+    ```powerapps-comma
+    Sort( Orders; 'Order Number'; Descending )
     ```
 
     [**Sorterings**](functions/function-sort.md) funksjonen bestiller listen slik at den nyeste ordren (som har det høyeste ordre nummeret) vises først.
@@ -132,7 +133,7 @@ Følg trinn vise instruksjoner for å opprette et ordre galleri i en lerret-app 
 
 1. Angi etikettens **tekst** -egenskap i formel linjen til dette uttrykket:
 
-    ```powerapps-dot
+    ```powerapps-comma
     "Order " & ThisItem.'Order Number'
     ```
 
@@ -148,7 +149,7 @@ Følg trinn vise instruksjoner for å opprette et ordre galleri i en lerret-app 
 
 1. Angi etikettens **tekst** -egenskap i formel linjen til dette uttrykket:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ThisItem.Customer.Company
     ```
 
@@ -192,7 +193,7 @@ I denne prosedyren vil du legge til plass i galleriet for en etikett og konfigur
 
 1. Angi **tekst** -egenskapen for den nye etiketten til dette uttrykket:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ThisItem.'Order Status'
     ```
 
@@ -215,12 +216,12 @@ I denne prosedyren vil du legge til plass i galleriet for en etikett og konfigur
 
 1. Angi **farge** -egenskapen for status etiketten til denne formelen i formel linjen:
 
-    ```powerapps-dot
-    Switch( ThisItem.'Order Status',
-        'Orders Status'.Closed, Green,
-        'Orders Status'.New, Black,
-        'Orders Status'.Invoiced, Blue,
-        'Orders Status'.Shipped, Purple
+    ```powerapps-comma
+    Switch( ThisItem.'Order Status';
+        'Orders Status'.Closed; Green;
+        'Orders Status'.New; Black;
+        'Orders Status'.Invoiced; Blue;
+        'Orders Status'.Shipped; Purple
     )
     ```
 
@@ -250,8 +251,8 @@ I denne prosedyren vil du legge til plass i galleriet for en etikett og konfigur
 
 1. Angi **tekst** -egenskapen for ny etikett i formel linjen:
 
-    ```powerapps-dot
-    Text( Sum( ThisItem.'Order Details', Quantity * 'Unit Price' ), "[$-en-US]$ #,###.00" )
+    ```powerapps-comma
+    Text( Sum( ThisItem.'Order Details'; Quantity * 'Unit Price' ); "[$-en-US]$ #,###.00" )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -282,8 +283,8 @@ For å oppsummering, begynte du å bygge en nett BAS ert nett BAS ert lerrets Ap
 - Et uttrykk for å vise ordre nummeret: `"Orders " & ThisItem.OrderNumber`
 - Et felt i en mange-til-én-relasjon: `ThisItem.Customer.Company`
 - En etikett som viser navnet på et alternativ i et sett: `ThisItem.'Order Status'`
-- En etikett som endrer format basert på hvilket alternativ i et sett etiketten viser: `Switch( ThisItem.'Order Status', 'Orders Status'.Closed, Green, ...`
-- En kompleks aggregat funksjon over en én-til-mange-relasjon: `Sum( ThisItem.'Order Details', Quantity * 'Unit Price' )`
+- En etikett som endrer format basert på hvilket alternativ i et sett etiketten viser: `Switch( ThisItem.'Order Status'; 'Orders Status'.Closed; Green; ...`
+- En kompleks aggregat funksjon over en én-til-mange-relasjon: `Sum( ThisItem.'Order Details'; Quantity * 'Unit Price' )`
 
 ## <a name="next-topic"></a>Neste emne
 

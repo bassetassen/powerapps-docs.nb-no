@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71986585"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="list-box-control-in-powerapps"></a>Liste-kontrollen i PowerApps
 En liste der brukeren kan velge ett eller flere elementer.
@@ -125,11 +126,11 @@ Når du legger til et galleri, eller en liste, viser egenskapslisten **Elementer
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
+[**Distinct**( *DataSource*; *ColumnName* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Eksempel
 1. Legg til en **Liste**-kontroll, gi den navnet **CategoryList**, og angi **[Elementer](properties-core.md)** -egenskapen som denne formelen:<br>
-   **["Carpet","Hardwood","Tile"]**
+   **["Carpet";"Hardwood";"Tile"]**
    
     Vet du ikke hvordan du [legger til, gir navn til og konfigurerer en kontroll](../add-configure-controls.md)?
    
@@ -137,9 +138,9 @@ Når du legger til et galleri, eller en liste, viser egenskapslisten **Elementer
 2. Legg til tre **[Rullegardin](control-drop-down.md)** -kontroller, flytt dem under **CategoryList**, og gi dem navnene **CarpetList**, **HardwoodList** og **TileList**.
 3. Angi **[Elementer](properties-core.md)** -egenskapen til hver av **[Rullegardin](control-drop-down.md)** -kontrollene til en av disse verdiene:
    
-   * CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
-   * HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
-   * TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
+   * CarpetList: **["Caserta Stone Beige";"Ageless Beauty Clay"; "Lush II Tundra"]**
+   * HardwoodList: **["Golden Teak";"Natural Hickory"; "Victoria Mahogany"]**
+   * TileList: **["Honey Onyx Marble";"Indian Autumn Slate"; "Panaria Vitality Ceramic"]**
      
      ![Navn på gulvbelegg i rullegardinlister](./media/control-list-box/flooring-names.png)
 4. Angi **[Synlig](properties-core.md)** -egenskapen til hver **[Rullegardin](control-drop-down.md)** -kontroll som en av disse verdiene:

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71984072"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="select-function-in-powerapps"></a>Select-funksjonen i PowerApps
 Simulerer en valgt handling på en kontroll som fører til at **OnSelect**-formelen evalueres.
@@ -83,7 +84,7 @@ En kontroll kan ikke **Select** seg selv direkte eller indirekte gjennom andre k
 
 5. Angi **OnSelect**-egenskapen for bildekontrollen i denne formelen:
 
-    **Varsle( «Bildet er valgt», vellykket )**
+    **Varsle( «Bildet er valgt»; vellykket )**
 
 6. Klikk eller trykk på de ulike elementene i galleriet mens du holder nede ALT-tasten.
 

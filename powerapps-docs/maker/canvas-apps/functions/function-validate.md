@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71991743"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="validate-function-in-powerapps"></a>Funksjonen Validate i PowerApps
 Funksjonen **Validate** kontrollerer hvorvidt verdien av en [enkeltkolonne](../working-with-tables.md#columns) eller en fullstendig [post](../working-with-tables.md#records) er gyldig for en [datakilde](../working-with-data-sources.md).  
@@ -40,13 +41,13 @@ Det varierer hvor mye valideringsinformasjon datakildene gir, og det kan forekom
 Hvis **Validate** finner et problem, vil funksjonen returnere en feilmelding som du kan vise til brukeren av appen. Hvis alle verdiene er gyldige, vil **Validate** returnere [tom](function-isblank-isempty.md). Når du arbeider med en [samling](../working-with-data-sources.md#collections) som ikke har noen valideringsinformasjon, vil verdiene alltid være gyldige.
 
 ## <a name="syntax"></a>Syntaks
-**Validate**( *DataSource*, *Column*, *Value* )
+**Validate**( *DataSource*; *Column*; *Value* )
 
 * *DataSource* – obligatorisk. Datakilden det skal valideres med.
 * *Column* – obligatorisk. Kolonnen som skal valideres.
 * *Value* – obligatorisk. Verdien for den valgte kolonnen som skal valideres.
 
-**Validate**( *DataSource*, *OriginalRecord*, *Updates* )
+**Validate**( *DataSource*; *OriginalRecord*; *Updates* )
 
 * *DataSource* – obligatorisk. Datakilden det skal valideres med.
 * *OriginalRecord* – obligatorisk.  Posten som inneholder oppdateringer som skal valideres.
@@ -59,13 +60,13 @@ I disse eksemplene må verdiene i **Prosent**-kolonnen i datakilden for **Result
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Validate( Scores, Percentage, 10 )** |Kontrollerer om **10** er en gyldig verdi for **Prosent**-kolonnen i datakilden for **Resultater**. |*tom* |
-| **Validate( Scores, Percentage, 120 )** |Kontrollerer om **120** er en gyldig verdi for **Prosent**-kolonnen i datakilden for **Resultater**. |«Verdiene må være mellom 0 og 100.» |
+| **Validate( Scores; Percentage; 10 )** |Kontrollerer om **10** er en gyldig verdi for **Prosent**-kolonnen i datakilden for **Resultater**. |*tom* |
+| **Validate( Scores; Percentage; 120 )** |Kontrollerer om **120** er en gyldig verdi for **Prosent**-kolonnen i datakilden for **Resultater**. |«Verdiene må være mellom 0 og 100.» |
 
 ### <a name="validate-with-a-complete-record"></a>Å validere med en fullstendig post
 
 | Formel | Beskrivelse | Resultat |
 | --- | --- | --- |
-| **Validate( Scores, EditRecord, Gallery.Updates )** |Kontrollerer om verdier i alle kolonner er gyldige for datakilden **Poengsummer**. I dette eksemplet er verdien i **Prosent**-kolonnen **10**. |*tom* |
-| **Validate( Scores, EditRecord, Gallery.Updates )** | Kontrollerer om verdier i alle kolonner er gyldige for datakilden **Poengsummer**. I dette eksemplet er verdien i **Prosent**-kolonnen **120**. |«Verdiene må være mellom 0 og 100.» |
+| **Validate( Scores; EditRecord; Gallery.Updates )** |Kontrollerer om verdier i alle kolonner er gyldige for datakilden **Poengsummer**. I dette eksemplet er verdien i **Prosent**-kolonnen **10**. |*tom* |
+| **Validate( Scores; EditRecord; Gallery.Updates )** | Kontrollerer om verdier i alle kolonner er gyldige for datakilden **Poengsummer**. I dette eksemplet er verdien i **Prosent**-kolonnen **120**. |«Verdiene må være mellom 0 og 100.» |
 

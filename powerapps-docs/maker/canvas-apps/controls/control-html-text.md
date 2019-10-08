@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71986622"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="html-text-control-in-powerapps"></a>HTML-tekstkontrollen i PowerApps
 En boks som viser tekst og konverterer HTML-koder til formatering.
@@ -75,7 +76,7 @@ En **HTML-tekst**-kontroll viser ikke bare ren tekst og tall, men konverterer og
 **[Y](properties-size-location.md)** – avstanden mellom kontrollens øvre kant og den øvre kanten til kontrollens overordnede beholder (eller skjermen, hvis det ikke finnes noen overordnet beholder).
 
 ## <a name="related-functions"></a>Relaterte funksjoner
-[**Find**( *FindString*, *WithinString* )](../functions/function-find.md)
+[**Find**( *FindString*; *WithinString* )](../functions/function-find.md)
 
 ## <a name="example"></a>Eksempel
 1. Legg til en **[Etikett](control-text-box.md)** -kontroll, kalt **Kilde**, og angi **[Tekst](properties-core.md)** -egenskapen til denne strengen:

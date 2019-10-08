@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71995624"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="change-screen-size-and-orientation-of-a-canvas-app-in-powerapps"></a>Endring av skjermstørrelse og -retning for en lerretsapp i PowerApps
 Tilpass en lerretsapp ved å endre skjermstørrelsen og -retningen.
@@ -47,7 +48,7 @@ Opprett en app, eller åpne en for redigering, og velg deretter **program innsti
 
     Hvis du deaktiverer denne innstillingen, justeres appen til størrelses forholdet for enheten den kjører på, og den tar opp all tilgjengelig plass. Appen skaleres ikke, og derfor kan skjermer vise mer informasjon.
 
-    Når denne innstillingen er deaktivert, deaktiveres **Lås størrelses forhold** automatisk og deaktivert. I tillegg er **Width** -egenskapen for alle skjermer satt til `Max(App.Width, App.DesignWidth)`, og **Height** -egenskapen er satt til `Max(App.Height, App.DesignHeight)` slik at de sporer dimensjonene i vinduet der appen kjører. Med denne endringen kan du opprette apper som svarer på ulike enheter og vindus dimensjoner. Mer informasjon: [Opprett svar oppsett](create-responsive-layout.md)
+    Når denne innstillingen er deaktivert, deaktiveres **Lås størrelses forhold** automatisk og deaktivert. I tillegg er **Width** -egenskapen for alle skjermer satt til `Max(App.Width; App.DesignWidth)`, og **Height** -egenskapen er satt til `Max(App.Height; App.DesignHeight)` slik at de sporer dimensjonene i vinduet der appen kjører. Med denne endringen kan du opprette apper som svarer på ulike enheter og vindus dimensjoner. Mer informasjon: [Opprett svar oppsett](create-responsive-layout.md)
 
 1. Angi enten **På** eller **Av** under **Lås størrelsesforhold**.
 

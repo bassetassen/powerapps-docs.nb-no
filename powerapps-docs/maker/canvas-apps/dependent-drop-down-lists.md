@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71985765"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-dependent-drop-down-lists-in-a-canvas-app"></a>Opprett en avhengig rulle gardin liste i en lerret-app
 
@@ -138,7 +139,7 @@ Hvis du gir nytt navn til kontrollene, kan du identifisere dem enklere, og eksem
 
 1. Angi **elementer** -egenskapen for **ddlocation** til denne formelen:
 
-    `Distinct(Locations, Location)`
+    `Distinct(Locations; Location)`
 
 1. valg fritt Mens du holder nede Alt-tasten, åpner du **ddLocation**og bekrefter at listen viser de tre stedene.
 
@@ -158,7 +159,7 @@ Hvis du gir nytt navn til kontrollene, kan du identifisere dem enklere, og eksem
 
     **Items** -egenskapen for **ddDepartment** er satt til denne formelen:
 
-    `Filter(Locations, Location = ddLocation.Selected.Result)`
+    `Filter(Locations; Location = ddLocation.Selected.Result)`
 
     Denne formelen filtrerer elementene i **ddDepartment** basert på hva brukeren velger i **ddLocation**. En slik konfigurasjon sikrer at den underordnede listen over avdelinger gjenspeiler dataene for den overordnede plasseringen, da **lokasjoner** -listen i SharePoint angir.
 

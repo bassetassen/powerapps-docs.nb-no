@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992383"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="replace-and-substitute-functions-in-powerapps"></a>Funksjonene Replace og Substitute i PowerApps
 Erstatt en del av en tekststreng med en annen streng.
@@ -31,28 +32,28 @@ Erstatt en del av en tekststreng med en annen streng.
 Hvis du angir en enkelt streng, er returverdien den endrede strengen. Hvis du angir en [enkeltkolonnetabell](../working-with-tables.md) som inneholder strenger, vil returverdien være en enkeltkolonnetabell med endrede strenger. Hvis du har en flerkolonnetabell, kan du gjøre den om til en enkeltkolonnetabell, som beskrevet i [arbeid med tabeller](../working-with-tables.md).
 
 ## <a name="syntax"></a>Syntaks
-**Replace**( *String*, *StartingPosition*, *NumberOfCharacters*, *NewString* )
+**Replace**( *String*; *StartingPosition*; *NumberOfCharacters*; *NewString* )
 
 * *String* – obligatorisk. Strengen det skal arbeides i.
 * *StartingPosition* – obligatorisk. Tegnplassering hvor erstatningen skal begynne. Det første tegnet i *String* er i posisjon 1.
 * *NumberOfCharacters* – obligatorisk. Antallet tegn som skal erstattes i *String*.
 * *NewString* – obligatorisk. Erstatningsstrengen. Antall tegn i dette argumentet kan være forskjellig fra *NumberOfCharacters*-argumentet.
 
-**Substitute**( *String*, *OldString*, *NewString* [, *InstanceNumber* ] )
+**Substitute**( *String*; *OldString*; *NewString* [; *InstanceNumber* ] )
 
 * *String* – obligatorisk. Strengen det skal arbeides i.
 * *OldString* – obligatorisk. Strengen som skal erstattes.
 * *NewString* – obligatorisk. Erstatningsstrengen. *OldString* og *NewString* kan ha forskjellig lengde.
 * *InstanceNumber* – valgfritt. Bruk dette argumentet til å angi hvilken forekomst av *OldString* som skal erstattes hvis *strengen* inneholder mer enn én forekomst. Hvis du ikke angir dette argumentet, blir alle forekomster erstattet.
 
-**Replace**( *SingleColumnTable*, *StartingPosition*, *NumberOfCharacters*, *NewString* )
+**Replace**( *SingleColumnTable*; *StartingPosition*; *NumberOfCharacters*; *NewString* )
 
 * *SingleColumnTable* – obligatorisk. En enkeltkolonnetabell med strenger som det skal arbeides i.
 * *StartingPosition* – obligatorisk. Tegnplassering hvor erstatningen skal begynne.  Det første tegnet i hver streng i tabellen er i posisjon 1.
 * *NumberOfCharacters* – obligatorisk. Antall tegn som skal erstattes i hver streng.
 * *NewString* – obligatorisk.  Erstatningsstrengen. Antall tegn i dette argumentet kan være forskjellig fra *NumberOfCharacters*-argumentet.
 
-**Substitute**( *SingleColumnTable*, *OldString*, *NewString* [, *InstanceNumber* ] )
+**Substitute**( *SingleColumnTable*; *OldString*; *NewString* [; *InstanceNumber* ] )
 
 * *SingleColumnTable* – obligatorisk. En enkeltkolonnetabell med strenger som det skal arbeides i.
 * *OldString* – obligatorisk.  Strengen som skal erstattes.
@@ -70,9 +71,9 @@ Hvis du angir en enkelt streng, er returverdien den endrede strengen. Hvis du an
 | **Substitute ("kvartal @ no__t-11, &nbsp;2018", "1", "2", 1)** | Erstatter bare den første forekomsten av "1" med "2" fordi det fjerde argumentet (*InstanceNumber*) leveres med 1. |  "Kvartal 2, 2018" |
 | **Substitute ("kvartal @ no__t-11, &nbsp;2011", "1", "2", 3)** | Erstatter bare den tredje forekomsten av "1" med "2" fordi det fjerde argumentet (*InstanceNumber*) leveres med en 3. | "Kvartal 1, 2012" |
 | **Substitute ("kvartal @ no__t-11, &nbsp;2011", "1", "2")** | Erstatter alle forekomster av "1" med "2" fordi det fjerde argumentet (*InstanceNumber*) ikke er angitt. | "Kvartal 2, 2022" |
-| **Replace (<br> [&nbsp; "kvartal @ no__t-31, &nbsp;2018", <br> "kvartal @ no__t-62, &nbsp;2011", <br> "kvartal @ no__t-94, 02019"], 19, 1, "3")** | Erstatter det niende tegnet i hver post i en tabell med én kolonne med «3». | [&nbsp; "kvartal @ no__t-13, &nbsp;2018",<br>"Kvartal @ no__t-03, &nbsp;2011",<br>"Kvartal @ no__t-03, &nbsp;2019" &nbsp;] |
-| **Substitute (<br> [@no__t – 2» @ no__t-31, &nbsp;2018», <br> "kvartal @ no__t-61, &nbsp;2011", <br> "Q1, &nbsp;2019" 0], 1 "1", "3", 1)** | Fordi det fjerde argumentet (*InstanceNumber*) leveres med verdien 1, erstattes bare den første forekomsten av «1» i hver post i en tabell med én kolonne med «3». | [@no__t – 0 "kvartal @ no__t-13, &nbsp;2018",<br>"Kvartal @ no__t-03, &nbsp;2011",<br>«Q3, &nbsp;2019 "&nbsp;] |
-| **Substitute (<br> [&nbsp;» @ no__t-31, &nbsp;2018», <br> "kvartal @ no__t-61, &nbsp;2011", <br> "Q1, &nbsp;2019" 0], 1 "1", "3")** | Fordi det fjerde argumentet (*InstanceNumber*) ikke er angitt, erstattes alle forekomster av «1» i hver post i en tabell med én kolonne med «3». | [@no__t – 0 "kvartal @ no__t-13, &nbsp;2038",<br>"Kvartal @ no__t-03, &nbsp;2033",<br>«Q3, &nbsp;2039 "&nbsp;] |  
+| **Replace (<br> [&nbsp; "kvartal @ no__t-31, &nbsp;2018"; <br> "kvartal @ no__t-62, &nbsp;2011"; <br> "kvartal @ no__t-94, 02019"]; 19; 1; "3")** | Erstatter det niende tegnet i hver post i en tabell med én kolonne med «3». | [&nbsp; "kvartal @ no__t-13, &nbsp;2018",<br>"Kvartal @ no__t-03, &nbsp;2011",<br>"Kvartal @ no__t-03, &nbsp;2019" &nbsp;] |
+| **Substitute (<br> [@no__t – 2» @ no__t-31; &nbsp;2018»; <br> "kvartal @ no__t-61, &nbsp;2011"; <br> "Q1, &nbsp;2019" 0]; 1 "1"; "3"; 1)** | Fordi det fjerde argumentet (*InstanceNumber*) leveres med verdien 1, erstattes bare den første forekomsten av «1» i hver post i en tabell med én kolonne med «3». | [@no__t – 0 "kvartal @ no__t-13, &nbsp;2018",<br>"Kvartal @ no__t-03, &nbsp;2011",<br>«Q3, &nbsp;2019 "&nbsp;] |
+| **Substitute (<br> [&nbsp;» @ no__t-31; &nbsp;2018»; <br> "kvartal @ no__t-61, &nbsp;2011"; <br> "Q1, &nbsp;2019" 0]; 1 "1"; "3")** | Fordi det fjerde argumentet (*InstanceNumber*) ikke er angitt, erstattes alle forekomster av «1» i hver post i en tabell med én kolonne med «3». | [@no__t – 0 "kvartal @ no__t-13, &nbsp;2038",<br>"Kvartal @ no__t-03, &nbsp;2033",<br>«Q3, &nbsp;2039 "&nbsp;] |  
  
 
 

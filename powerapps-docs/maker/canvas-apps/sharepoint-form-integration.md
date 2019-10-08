@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71988366"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-sharepoint-forms-integration"></a>Forstå integrasjon for SharePoint-skjemaer
 Du kan nå enkelt [tilpasse alle SharePoint-listeskjemaer](customize-list-form.md) i PowerApps. I denne artikkelen forklarer vi i detalj hvordan disse skjemaene fungerer, og hvordan du kan tilpasse dem enda mer.
@@ -37,11 +38,11 @@ Det standardgenererte skjemaet består av følgende kontroller med tilhørende s
 
     * **Element** – det valgte elementet fra listen. For å gjøre det enkelt er dette satt som First() element i listen når du jobber i PowerApps Studio.
 
-        **If(IsBlank(SharePointIntegration.Selected) || IsEmpty(SharePointIntegration.Selected),First('*YourListName*'),SharePointIntegration.Selected)**
+        **If(IsBlank(SharePointIntegration.Selected) || IsEmpty(SharePointIntegration.Selected);First('*YourListName*');SharePointIntegration.Selected)**
 
     * **OnSuccess** – Når elementet er opprettet eller lagret, blir skjemaet nullstilt, og SharePoint skjuler skjemaet.
 
-        **ResetForm(SharePointForm1); RequestHide()**
+        **ResetForm(SharePointForm1);; RequestHide()**
 
 * **SharePointIntegration** – Kontrollen som kommuniserer brukerhandlinger mellom SharePoint og PowerApps.
 

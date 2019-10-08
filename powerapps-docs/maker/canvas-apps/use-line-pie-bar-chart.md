@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71995120"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="show-data-in-a-line-pie-or-bar-chart-in-powerapps"></a>Å vise data i en linje, sektor- eller liggende stolpediagram i PowerApps
 
@@ -49,7 +50,7 @@ I disse trinnene importerer vi eksempeldataene til en samling, kalt **ProductRev
 
 2. Angi kontrollens **[OnSelect](controls/properties-core.md)** -egenskap til følgende funksjon:  
 
-   ```Collect(ProductRevenue, Import1.Data)```
+   ```Collect(ProductRevenue; Import1.Data)```
 
 3. Trykk F5 for å åpne forhåndsvisningsmodus, og velg deretter **Importer data**-knappen.
 

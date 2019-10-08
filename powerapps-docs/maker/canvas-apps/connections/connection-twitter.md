@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: nb-NO
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71987233"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="connect-to-twitter-from-powerapps"></a>Å koble til Twitter fra PowerApps
 ![Twitter](./media/connection-twitter/twittericon.png)
@@ -65,7 +66,7 @@ Twitter-tilkobling er opprettet og lagt til i appen din. Den er nå klar til å 
 
        Angi Elementer-egenskapen i Galleri-kontrollen til følgende formel:  
 
-       `Twitter.UserTimeline(Tweep.Text, {maxResults:5}).TweetText`
+       `Twitter.UserTimeline(Tweep.Text; {maxResults:5}).TweetText`
 
        Galleri-kontrollen viser automatisk tweetene til Twitter-brukernavnet du skrev inn.
 
@@ -94,7 +95,7 @@ Twitter-tilkobling er opprettet og lagt til i appen din. Den er nå klar til å 
 
        Angi Elementer-egenskapen i Galleri-kontrollen til følgende formel:  
 
-       `Twitter.Followers(Tweep.Text, {maxResults:5})`
+       `Twitter.Followers(Tweep.Text; {maxResults:5})`
 
        Galleri-kontrollen viser automatisk hvem som følger Twitter-brukernavnet du skrev inn.
 
@@ -123,7 +124,7 @@ Twitter-tilkobling er opprettet og lagt til i appen din. Den er nå klar til å 
 
        Angi Elementer-egenskapen i Galleri-kontrollen til følgende formel:  
 
-       `Twitter.Following(Tweep.Text, {maxResults:5})`
+       `Twitter.Following(Tweep.Text; {maxResults:5})`
 
        Galleri-kontrollen viser automatisk de andre brukernavnene du følger.
 
@@ -160,8 +161,8 @@ Du kan alternativt bruke en Tekstinndata-kontroll for å skrive inn et Twitter-b
     > [!TIP]
    > Vis de fem første resultatene ved bruk av maxResults:  
 
-    `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5}).TweetText`
-2. Angi galleriets **Element**-egenskap til `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5})`.
+    `Twitter.SearchTweet(SearchTerm.Text; {maxResults:5}).TweetText`
+2. Angi galleriets **Element**-egenskap til `Twitter.SearchTweet(SearchTerm.Text; {maxResults:5})`.
 
     Når galleriet er valgt, viser den høyre ruten alternativene for galleriet.
 3. Velg **TweetText** fra den første listen, velg **TweetedBy** fra den andre listen, og velg **CreatedAt** fra den tredje listen.
