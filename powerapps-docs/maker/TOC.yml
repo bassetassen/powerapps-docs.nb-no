@@ -1318,6 +1318,8 @@
           href: ./common-data-service/set-managed-properties-metadata.md
         - name: Publiser endringer
           href: ./common-data-service/publish-changes-for-use-customer-service-hub.md
+        - name: Beste praksis
+          href: ./common-data-service/solution-best-practices.md
     - name: Arbeid med dataflyter
       href: ./common-data-service/self-service-data-prep-with-dataflows.md
       items:
