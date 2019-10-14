@@ -1050,7 +1050,7 @@
       href: ./model-driven-apps/app-for-outlook-customize.md
     - name: For utviklere
       href: ../developer/model-driven-apps/overview.md
-- name: Portaler (forhåndsversjon)
+- name: Portaler
   items:
     - name: Hva er PowerApps-portaler?
       href: ./portals/overview.md
@@ -1058,9 +1058,9 @@
       items:
         - name: Portalmaler
           href: ./portals/portal-templates.md
-        - name: Opprett en portal
+        - name: Opprett en startportal
           href: ./portals/create-portal.md
-        - name: Opprett en Dynamics 365-portal
+        - name: Opprett en portal med Dynamics 365-miljø
           href: ./portals/create-dynamics-portal.md
         - name: Oppbygning av portalutforming
           href: ./portals/portal-designer-anatomy.md
@@ -1072,10 +1072,10 @@
           href: ./portals/compose-page.md
         - name: Arbeid med maler
           href: ./portals/work-with-templates.md
+        - name: Rediger CSS
+          href: ./portals/edit-css.md
     - name: Behandle eksisterende portaler
       href: ./portals/manage-existing-portals.md
-    - name: Konfigurere områdeinnstillinger
-      href: ./portals/configure-site-settings.md
     - name: Avansert portaladministrasjon
       items:
         - name: Oversikt
@@ -1108,9 +1108,17 @@
           href: ./portals/admin/update-portal-domain.md
         - name: Tøm bufferen på serversiden
           href: ./portals/admin/clear-server-side-cache.md
-        - name: Overfør konfigurasjon av Dynamics 365 Portals
+        - name: Overfør portalkonfigurasjon
           href: ./portals/admin/migrate-portal-configuration.md
-    - name: Avanserte portaltilpasninger
+        - name: Om livssyklus for portaler
+          href: ./portals/admin/portal-lifecycle.md
+    - name: Avansert portalkonfigurasjon
+      items:
+        - name: Oversikt
+          href: ./portals/configure/configure-portal.md
+        - name: Konfigurere områdeinnstillinger
+          href: ./portals/configure/configure-site-settings.md
+    - name: Avansert portaltilpasning
       items:
         - name: Arbeide med Liquid-maler
           items:
@@ -1156,6 +1164,18 @@
                   href: ./portals/liquid/render-site-header-primary-navigation.md
         - name: OAuth 2.0 underforstått tillatelsesflyt
           href: ./portals/oauth-implicit-grant-flow.md
+    - name: Dokumentlagring i portaler
+      items:
+        - name: Konfigurering av notater
+          href: ./portals/configure-notes.md
+        - name: Azure Storage
+          items:
+            - name: Aktiver Azure Storage
+              href: ./portals/enable-azure-storage.md
+            - name: Legg til Azure Storage-nettressursen i et skjema
+              href: ./portals/add-web-resource.md
+        - name: Behandle SharePoint-dokumenter
+          href: ./portals/manage-sharepoint-documents.md
     - name: Kjente problemer
       href: ./portals/known-issues.md
     - name: Vanlige spørsmål om PowerApps-portaler
